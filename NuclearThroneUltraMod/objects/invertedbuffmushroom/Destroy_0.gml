@@ -12,6 +12,9 @@ repeat(am)
 	}
 	ang+=angStep;
 }
-snd_play(sndExplosionL);
-with instance_create(x,y,PurpleExplosion)
-	team = other.team;
+if !sleeping
+{
+	snd_play(sndExplosionL);
+	with instance_create(x,y,PurpleExplosion)
+		team = other.team;
+}

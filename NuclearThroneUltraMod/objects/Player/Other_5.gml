@@ -97,9 +97,12 @@ if ultra_got[62]//Viking armour up ultra
 
 if race==10 && canHeal//Rebel pasive
 {
-	//(maxhealth-my_health)/2
 	if my_health < maxhealth
+	{
 		my_health += min(maxhealth, ceil((maxhealth-my_health)*0.5));
+		if my_health < maxhealth
+			my_health += 1;
+	}
 }
 else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 {
@@ -731,7 +734,7 @@ if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(
 }
 
 //SKINS
-if ( firedthislevel=false && race = 10 && area < 100 && area != 10 && loops>0 )
+if ( firedthislevel=false && race == 10 && area < 100 && area != 10 && loops>0 )
 scrUnlockBSkin(10,"FOR COMPLETING A MAIN AREA#ON LOOP#WITHOUT FIRING AS REBEL",0);
 
 if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
@@ -876,7 +879,6 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		//PLANT
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;
-		hardshell = other.hardshell;
 		visitedCrib = other.visitedCrib;
 		meltingd = other.meltingd;
 		heavyheart = other.heavyheart;

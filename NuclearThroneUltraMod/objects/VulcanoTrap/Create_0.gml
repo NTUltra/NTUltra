@@ -20,7 +20,7 @@ if instance_exists(Player)
 {
 	if Player.skill_got[29]	//Hypersomnia
 	{
-		alarm[0] += 70;
+		alarm[0] += 90;
 		scrGiveSnooze(0,0);
 	}
 }

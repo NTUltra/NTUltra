@@ -1,6 +1,7 @@
 /// @description COLLECT HP
 if !instance_exists(Player)
 	exit;
+rerolls = 0;
 if scrIsCrown(32)//Crown of misfortune
 {
 	if scrIsCrown(5)//Crown of guns

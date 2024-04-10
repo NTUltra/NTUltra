@@ -1,5 +1,5 @@
 /// @description Bigger boom
-if existTime > 15
+if !sleeping && existTime > 15
 {
 	
 	var ang = 0;

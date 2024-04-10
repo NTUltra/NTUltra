@@ -103,4 +103,17 @@ if instance_exists(Player)
 	{
 		instance_create(x,y,CorrosionDrawer)
 	}
+	if Player.skill_got[45]
+	{
+		if !instance_exists(PlayerAlarms3)
+			instance_create(x,y,PlayerAlarms3);
+		with PlayerAlarms3 {
+			alarm[0] = 60;
+			alarm[1] = 120;
+			enemyHealthWasChanged = true;
+			detectedEnemyHealth = 0;
+			adrenalineAmmoTimer = adrenalineAmmoCooldown;
+			adrenalineHealTimer = adrenalineHealCooldown;
+		}
+	}
 }

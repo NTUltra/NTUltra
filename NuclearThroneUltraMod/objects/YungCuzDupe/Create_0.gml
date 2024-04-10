@@ -6,7 +6,6 @@ hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
 alienIntestines = 0;
 alienDir = 5;
-hardshell=true;
 isAlkaline=false;
 metabolism = 0;
 hammerheadtimer=0;

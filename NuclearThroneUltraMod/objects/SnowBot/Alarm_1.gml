@@ -1,6 +1,6 @@
 alarm[1] = actTime + random(actTime);
 
-
+sleeping = false;
 scrTarget()
 meleedamage = 0
 sprite_index = spr_idle

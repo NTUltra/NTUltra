@@ -423,7 +423,6 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;
-		hardshell = other.hardshell;
 		visitedCrib = other.visitedCrib;
 		meltingd = other.meltingd;
 		heavyheart = other.heavyheart;

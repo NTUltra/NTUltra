@@ -5,7 +5,7 @@ mySize = 2
 
 
 event_inherited()
-firstTime = true;
+
 spr_idle = sprInvLaserCrystalIdle;
 spr_walk = sprInvLaserCrystalIdle;
 spr_hurt = sprInvLaserCrystalHurt;
@@ -27,3 +27,7 @@ alarm[4] = 30;
 
 loops = GetPlayerLoops();
 droprate = 12;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

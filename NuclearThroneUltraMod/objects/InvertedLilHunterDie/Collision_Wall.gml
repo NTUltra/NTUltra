@@ -5,7 +5,7 @@ if alarm[4] < 1
 	if bounces > 5
 	{
 		speed = 0;
-		alarm[4] = 15;
+		alarm[4] = 20;
 	}
 
 	snd_play(sndExplosionS)

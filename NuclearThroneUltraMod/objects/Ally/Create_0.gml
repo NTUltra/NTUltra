@@ -13,6 +13,7 @@ spr_dead = sprAllyDead
 throwSpeed = 6;
 throwDamage = 6;
 throwDirection = direction;
+isInFight = 0;
 if instance_exists(Player)
 {
 	if Player.skill_got[20]
@@ -26,9 +27,9 @@ if instance_exists(Player)
 		raddrop += 1;
 	}
 	if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
-		maxhealth=30;
+		maxhealth = 31;
 	else
-		maxhealth = 12;
+		maxhealth = 13;
 	loops = Player.loops;
 	if scrIsHardMode()
 	{
@@ -69,8 +70,6 @@ if instance_exists(Player)
 sprite_index = spr_appear;
 meleedamage = 0
 mySize = 1
-
-
 
 image_speed = 0.5
 friction = 0.4

@@ -29,7 +29,7 @@ if instance_exists(Player){
 with CorpseCollector {
 	px = other.x;
 	py = other.y;
-	alarm[0] = clamp(alarm[0] + 30,60,alarm[0]);
+	alarm[0] = max(alarm[0],60);
 }
 alarm[0] = 30;
 alarm[4] = 40;

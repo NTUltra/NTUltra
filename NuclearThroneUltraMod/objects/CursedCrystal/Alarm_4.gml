@@ -1,6 +1,6 @@
 /// @description very fair teleport
 alarm[4] = 15 + random(45)
-if firstTime
+if sleeping
 	exit;
 if ammo < 1 && alarm[2] < 1 && !place_meeting(x,y,Tangle){
 	if instance_exists(Player) {

@@ -1,5 +1,5 @@
 alarm[1] = 20+random(20)
-
+sleeping = false;
 if instance_exists(Player)
 {
 if Player.loops>0

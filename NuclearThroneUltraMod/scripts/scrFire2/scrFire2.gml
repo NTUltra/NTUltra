@@ -2271,7 +2271,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 14;
+		dmg = 13;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2287,7 +2287,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 11;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2303,7 +2303,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 11;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2315,7 +2315,7 @@ function scrFire2(hasTailNow) {
 	var l = 32;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 15;
+		dmg = 13;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2324,7 +2324,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 11;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2333,7 +2333,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 13;
+		dmg = 11;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -16444,6 +16444,45 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 4
 	wkick = 2
 
+	break;
+	
+	//WOMBO COMBO SUCKER PUNCHER
+	case 743:
+	
+	with instance_create(x,y,WomboComboBurst)
+	{
+	creator = other.id
+	ammo = 3
+	time = 4
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
+	/*
+	snd_play_fire(sndSlugger)
+	var leftHook = altFire ? 1 : -1;
+	with instance_create(x,y,SmallSuckerPunch)
+	{
+		motion_add(aimDirection,16)
+		hook = leftHook;
+		direction += 20 * -hook * other.accuracy;
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,SuckerPunchBurst)
+	{
+		hook = leftHook*-1;
+		creator = other.id
+		ammo = 1
+		time = 2
+		team = other.team;
+		alarm[0] = 5;
+	}
+	altFire = !altFire;
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 12
+	wkick = 8
+	*/
 	break;
 	
 	}//end of switch part 2!

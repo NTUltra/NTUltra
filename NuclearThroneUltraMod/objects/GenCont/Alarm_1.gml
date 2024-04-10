@@ -240,6 +240,7 @@ if instance_exists(Player)
 			y = f.y+o;
 		}
 		scrForcePosition60fps();
+		alarm[2] = 5;
 	}
 	with Crown
 	{

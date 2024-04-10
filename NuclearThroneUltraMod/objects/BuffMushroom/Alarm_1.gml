@@ -1,4 +1,5 @@
 ///@description AI
+sleeping = false;
 alarm[1] = actTime + random(actTime)
 scrTarget()
 if target != noone {

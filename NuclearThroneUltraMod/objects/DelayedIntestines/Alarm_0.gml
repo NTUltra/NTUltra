@@ -6,11 +6,11 @@ if instance_exists(creator)
 }
 var ys = scale;
 var tentacleLength = tl;
-var am = lerp(1,24,min(1,alienIntestines / 320))
+var am = round(lerp(1,26,min(1,alienIntestines / 320)))
 if am > 0
 {
 	var i = 0;
-	var ang = aim + 180;
+	var ang = aim + 180 + random_range(90,-90);
 	var angStep = 360/am;
 	repeat(am)
 	{

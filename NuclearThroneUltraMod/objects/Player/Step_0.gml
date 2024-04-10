@@ -81,6 +81,7 @@ else if scrIsGamemode(48)
 	representingCost = 0;
 	ignoreAmmo = true;
 }
+representingCost *= ammoReduction;
 if !instance_exists(LevCont) and visible = 1
 {
 
@@ -883,7 +884,7 @@ instance_create(x+32,y,AmmoPickup);
 					event_user(0);
 				scrFire();
 			}
-    		autoFire = max(wep_load[wep],6);
+    		autoFire = 6;
 			clicked = 0;
 		}
 		else if (wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey && canPuffyCheek <= 0
@@ -912,6 +913,23 @@ if KeyCont.key_swap[p] = 1 and bwep != 0
 	if ultra_got[68] && altUltra {
 		snd_play(sndMorphStart);
 		instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+		var len = 20;
+		var dirr = random(360);
+		repeat(4)
+		{
+			instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+			dirr += 72;
+		}
+		if skill_got[5]
+		{
+			var len = 40;
+			dirr += 36;
+			repeat(4)
+			{
+				instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+				dirr += 72;
+			}
+		}
 	}
 	if ultra_got[27]{
 		if altUltra
@@ -2259,9 +2277,9 @@ if race==18
 if moddelay > -30*modQueue
 {
 	if is60fps
-		moddelay -= 0.35;
+		moddelay -= 0.3;
 	else
-		moddelay -= 0.7;
+		moddelay -= 0.6;
 }
 /* */
 ///Rogue  heat
@@ -2390,6 +2408,8 @@ if hammerheadcounter > 0
 	{
 		nearWall = true;
 		mask_index = msk;
+		if roll != 0
+			mask_index = mskPlayer;
 		if place_meeting(x+hspeed * 1.5,y+vspeed * 1.5,Wall)
 		{
 			if is60fps
@@ -2399,7 +2419,7 @@ if hammerheadcounter > 0
 
 			alarm[5]=12;//timer before hammerhead continuation stops
 			
-			if hammerheadtimer > 5 || instance_exists(SheepStorm)
+			if hammerheadtimer > 5 || roll != 0 || instance_exists(SheepStorm) || instance_exists(CrystalShield)
 			{
 				hammerheadcounter --;
 				if (hammerheadDig <= 0)

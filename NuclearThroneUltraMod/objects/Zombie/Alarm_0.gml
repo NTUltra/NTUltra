@@ -132,6 +132,10 @@ repeat(clamp(Player.loops + 1, 1, 10))
 		raddrop = floor(raddrop*0.25);
 		existTime = 20;
 		alarm[1] *= 0.2;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] += 20;
+			scrGiveSnooze();
+		}
 	}
 	//x = xstart + random_range(-10, 10);
 	//y = ystart + random_range(-10, 10);

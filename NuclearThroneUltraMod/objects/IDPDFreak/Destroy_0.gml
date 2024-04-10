@@ -1,7 +1,7 @@
 scrDrop(90,0)
 
 event_inherited();
-if lifes > 0
+if !sleeping && lifes > 0
 {
 	with instance_create(x,y,RevivePopo)
 	{

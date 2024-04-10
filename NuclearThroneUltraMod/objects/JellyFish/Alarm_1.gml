@@ -1,6 +1,6 @@
 ///@description AI
 alarm[1] = actTime+random(actTime)//30 + 10
-
+sleeping = false;
 
 scrTarget()
 if target != noone

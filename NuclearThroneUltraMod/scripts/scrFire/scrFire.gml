@@ -33,17 +33,24 @@ function scrFire() {
 			canPuffyCheek = 3;
 		}
 		//Nerves of steel
-		if skill_got[41] && armour < maxarmour
+		if skill_got[41]
 		{
-			if race == 25
+			if armour < maxarmour
 			{
-				//reload *= 0.55;
-				reload -= wep_load[wep]*0.44;
+				if race == 25
+				{
+					//reload *= 0.55;
+					reload -= wep_load[wep]*0.42;
+				}
+				else
+				{
+					reload -= wep_load[wep]*0.4;
+					//reload *= 0.6;
+				}
 			}
-			else
+			else if armour == maxarmour
 			{
-				reload -= wep_load[wep]*0.4;
-				//reload *= 0.6;
+				reload -= wep_load[wep]*0.15;
 			}
 		}
 		queueshot = max(queueshot-1,0);
@@ -55,6 +62,14 @@ function scrFire() {
 			//ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
 			rad -= wep_rad[wep]
 			rad = max(rad,0);
+		}
+		if ammoReduction < 1
+		{
+			ammo[wep_type[wep]] += wep_cost[wep] * ammoReduction
+			ammoReduction = 1;
+			with instance_create(x,y,QuickSwapperFX) {
+				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);	
+			}
 		}
 		with Player {
 			if scrIsCrown(13)
@@ -3590,7 +3605,7 @@ function scrFire() {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
 	{
-	dmg = 26//shovel is 8 sledge = 16
+	dmg = 32//shovel is 8 sledge = 16
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
@@ -5364,11 +5379,15 @@ function scrFire() {
 	}
 	if !scrIsCrown(29)//Crown of purity
 	{
-		var reloadBoost = 0.09;
+		var reloadBoost = 0.075;
 		if Player.skill_got[30] == 1
-			reloadBoost = 0.16;
+		{
+			reloadBoost = 0.12;
+		}
 		if Player.ultra_got[65]
-			reloadBoost += 0.05;
+		{
+			reloadBoost += 0.06;
+		}
 	
 		if wepmod1==12
 			reload -= wep_load[wep]*reloadBoost

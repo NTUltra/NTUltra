@@ -13,12 +13,12 @@ if walk > 0
 }
 
 
-if firstAct && target != noone && instance_exists(target) && alarm[2] < 1
+if !sleeping && target != noone && instance_exists(target) && alarm[2] < 1
 {
 	if instance_exists(target)
 	mp_potential_step(target.x,target.y,1,0)
 }
 if speed > maxSpeed
 	speed = maxSpeed;
-if !firstAct
+if sleeping
 	speed = 0;

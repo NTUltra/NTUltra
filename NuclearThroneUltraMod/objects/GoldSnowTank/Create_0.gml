@@ -24,3 +24,7 @@ isLoop = GetPlayerLoops() > 1
 fireLaser = GetPlayerLoops() > 4
 maxSpeed = 1.5;
 isInverted = false;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

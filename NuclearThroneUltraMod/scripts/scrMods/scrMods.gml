@@ -26,7 +26,14 @@ function scrMods() {
 				notToxi--;
 		}
 		until ( (choice != 1 || notToxi < 0) && choice <= 18 )
-		UberCont.randomDailyMod += 69;
+		UberCont.randomDailyMod += 2;
+		if UberCont.randomDailyMod > 18
+		{
+			if UberCont.randomDailyMod > 19
+				UberCont.randomDailyMod = 1;
+			else
+				UberCont.randomDailyMod = 0;
+		}
 		return choice;
 	}
 	do 

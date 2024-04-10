@@ -1,7 +1,7 @@
 ///scrCollectAmmo();
 // /@description
 ///@param
-function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false) {
+function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false, ammoPickup = true) {
 	if scrIsGamemode(48)
 		return;
 	var type = 0;
@@ -20,10 +20,12 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		if st == 0
 			sa = sam;
 	}
-	if Player.skill_got[36]
+	if Player.skill_got[36] && ammoPickup
 	{
+		var spd = speed;
 		speed = 6;
-		scrRaddrop(2);
+		scrRaddrop(2 * gain_multiplier);
+		speed = spd;
 	}
 	var randomAmmo = true;
 
@@ -122,16 +124,16 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 
 	extra = 0
 	//RUSH CROWN
-	if scrIsCrown(4)
+	if ammoPickup && scrIsCrown(4)
 		extra = 1
-	if Player.race == 12 && Player.skill_got[5]=0//Yung Cuz Passive
+	if ammoPickup && Player.race == 12 && Player.skill_got[5]=0//Yung Cuz Passive
 		extra+=Player.typ_ammo[type]*(instance_number(YungCuzDupe)*0.4);
-	if Player.race == 12 && Player.skill_got[5]=1//Yung Cuz Thronebutt
+	if ammoPickup && Player.race == 12 && Player.skill_got[5]=1//Yung Cuz Thronebutt
 		extra+=Player.typ_ammo[type]*(instance_number(YungCuzDupe)*0.8);
 
-	if scrIsGamemode(9) //Casual mode
+	if ammoPickup && scrIsGamemode(9) //Casual mode
 		extra += 0.5;
-
+	
 	if isCursed
 		gain_multiplier += 0.5
 	if isSuperCursed

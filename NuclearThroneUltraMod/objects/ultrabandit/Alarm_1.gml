@@ -1,5 +1,6 @@
 ///AI
 alarm[1] = 9 + random(4);
+sleeping = false;
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {

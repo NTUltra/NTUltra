@@ -19,6 +19,13 @@ repeat(5)
 		existTime = 30;
 		wasResurrected = true;
 		alarm[1] = 0;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] = 60
+			charge = false;
+			scrGiveSnooze();
+			speed = 1;
+			image_angle = 0;
+		}
 	}
 	ps ++;
 }

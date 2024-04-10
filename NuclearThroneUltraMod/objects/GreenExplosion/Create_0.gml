@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+moodAmount = 2;
 dmg = 12;
 if myExplosionMask > 0
 with myExplosionMask {

@@ -1,4 +1,4 @@
-if existTime > 15
+if !sleeping && existTime > 15
 {
 	with instance_create(x,y,PurpleExplosion)
 		team = other.team

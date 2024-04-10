@@ -1,5 +1,5 @@
 scrDrop(droprate,0)
-if existTime > 20
+if !sleeping && existTime > 20
 {
 	snd_play(sndExplosionL)
 	ang = random(360)

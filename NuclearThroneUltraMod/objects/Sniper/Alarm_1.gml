@@ -1,5 +1,5 @@
 alarm[1] = actTime+random(actTime)
-
+sleeping = false;
 
 scrTarget()
 if gonnafire = 0

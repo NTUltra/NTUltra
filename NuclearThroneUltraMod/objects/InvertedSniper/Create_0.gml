@@ -24,3 +24,6 @@ alarm[1] = 60+random(90)
 gonnafire = 0
 wkick = 0
 
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

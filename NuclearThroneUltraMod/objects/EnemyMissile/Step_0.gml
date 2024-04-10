@@ -29,5 +29,6 @@ target=0
 motion_add(direction,1);
 if speed>2
 speed=2;
-
+if alarm[3] < 20
+	speed = 0;
 image_angle=direction;

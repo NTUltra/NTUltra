@@ -282,10 +282,10 @@ if instance_exists(Player)
 		}
 	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 200;
+			var t = 290;
 		    if race = 25
 		    {
-				t = 230;
+				t = 220;
 		    }
 			if !justAsheep
 			{
@@ -295,7 +295,6 @@ if instance_exists(Player)
 					{
 						alarm[1]+=t;
 						scrGiveSnooze();
-						
 					}
 			    }
 			}

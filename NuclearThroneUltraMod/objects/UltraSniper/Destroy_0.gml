@@ -1,6 +1,7 @@
 scrDrop(40,10)
 scrDrop(6,0)
-instance_create(x,y,BigGreenExplosion);
+if !sleeping
+	instance_create(x,y,BigGreenExplosion);
 event_inherited();
 with Player
 {

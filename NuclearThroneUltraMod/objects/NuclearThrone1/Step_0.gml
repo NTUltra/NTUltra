@@ -39,6 +39,11 @@ if immune
 }
 if !active
 {
+	with PlayerAlarms3
+	{
+		if alarm[0] > 0
+			alarm[0] = 5;
+	}
 	with enemy
 	{
 		if y < other.y + 32

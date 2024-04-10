@@ -12,7 +12,11 @@ repeat(am)
 {
 	with instance_create(x,y,myBat)
 	{
-		motion_add(ang,4);	
+		motion_add(ang,4);
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] += 60;
+			scrGiveSnooze();
+		}
 	}
 	ang += angStep;
 }

@@ -1,7 +1,7 @@
 scrTarget()
-firstTime = false;
+sleeping = false;
 alarm[1] = 6+random(5)
-if target != noone && existTime > 40 && !firstTime
+if target != noone && existTime > 40
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{

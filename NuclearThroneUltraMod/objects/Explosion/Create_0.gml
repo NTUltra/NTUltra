@@ -13,6 +13,7 @@ poppop = false;
 dmg = 5;
 myExplosionMask = -1;
 myScorchMark = noone;
+moodAmount = 1;
 var um = GetPlayerUltramod()
 if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 {

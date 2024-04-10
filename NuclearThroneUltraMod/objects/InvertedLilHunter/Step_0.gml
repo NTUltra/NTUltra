@@ -82,7 +82,7 @@ if instance_exists(projectile)
     
     }
 }
-
+/*
 if instance_exists(Player)
 {
 if alarm[1]>60
@@ -95,4 +95,4 @@ alarm[2]=20;}
 }
 
 }
-
+*/

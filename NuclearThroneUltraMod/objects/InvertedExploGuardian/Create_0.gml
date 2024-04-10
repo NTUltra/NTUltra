@@ -19,3 +19,7 @@ spr_charge = sprInvertedExploGuardianCharge;
 spr_charge_hurt = sprInvertedExploGuardianChargeHurt;
 spr_fire = sprInvertedExploGuardianFire;
 exploBullet = InvertedExploGuardianBullet;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

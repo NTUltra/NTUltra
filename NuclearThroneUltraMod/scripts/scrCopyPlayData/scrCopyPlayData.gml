@@ -97,7 +97,6 @@ function scrCopyPlayData(){
 		maxSpeed: Player.maxSpeed,
 		hammerheadcounter: Player.hammerheadcounter,
 		lag: Player.lag,
-		hardshell: Player.hardshell,
 		visitedCrib: Player.visitedCrib,
 		meltingd: Player.meltingd,
 		heavyheart: Player.heavyheart,

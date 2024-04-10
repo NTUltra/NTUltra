@@ -1,5 +1,5 @@
 ///@description AI
-firstTime = false;
+sleeping = false;
 alarm[1] = actTime + random(actTime)
 walk = max(walk,alarm[1]);
 scrTarget()

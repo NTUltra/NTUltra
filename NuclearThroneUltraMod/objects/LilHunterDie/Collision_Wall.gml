@@ -8,3 +8,7 @@ if alarm[3] < 1
 		speed=0;
 	}
 }
+else
+{
+	speed = 0;	
+}

@@ -24,7 +24,19 @@ close = 0
 alarm[2] = 5
 
 
-repeat(10)
-instance_create(x,y,ToxicGas)
+
 
 scrInitDrops(1);
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+{
+	sleeping = true;
+	alarm[1] += 60;
+	scrGiveSnooze();
+}
+else
+{
+	repeat(10)
+		instance_create(x,y,ToxicGas)	
+}

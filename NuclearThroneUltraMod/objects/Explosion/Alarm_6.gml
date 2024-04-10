@@ -2,7 +2,7 @@
 var sw = sprite_width * 0.5;
 var sh = sprite_height * 0.5;
 var maxi = sprite_width + sprite_height;
-repeat(3)
+repeat(moodAmount)
 {
 	var burning = false;
 	burning = scrMoodSwingFlameSpread(maxi);

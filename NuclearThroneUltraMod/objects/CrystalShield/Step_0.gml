@@ -49,7 +49,7 @@ image_index = 0
 	{
 		var canTeleport = false;
 		with Player {
-			if !place_meeting(mouse_x,mouse_y,Wall) && place_meeting(mouse_x,mouse_y,Floor)
+			if !place_meeting(mouse_x,mouse_y,WallHitMe) && place_meeting(mouse_x,mouse_y,Floor)
 			{
 				canTeleport = true
 				x = mouse_x;
@@ -86,7 +86,7 @@ if KeyCont.key_spec[p] = 3
 	{
 		var canTeleport = false;
 		with Player {
-			if !place_meeting(mouse_x,mouse_y,Wall) && place_meeting(mouse_x,mouse_y,Floor)
+			if !place_meeting(mouse_x,mouse_y,WallHitMe) && place_meeting(mouse_x,mouse_y,Floor)
 			{
 				canTeleport = true
 				x = mouse_x;
@@ -117,7 +117,7 @@ if KeyCont.key_spec[p] = 3
 if Player.ultra_got[6]=1 && !Player.altUltra{
 mask_index=mskMovingShield;
 
-if place_meeting(x+hspeed,y+vspeed,Wall){
+if place_meeting(x+hspeed,y+vspeed,WallHitMe){
 	move_contact_solid(direction,max(1,min(Player.maxSpeed,speed)))
 	if !place_free(x+hspeed,y){
 		hspeed *= 0.5
@@ -139,7 +139,7 @@ if place_meeting(x+hspeed,y+vspeed,Wall){
 			vspeed = 0
 		}
 	}
-	if place_meeting(x,y,Wall)
+	if place_meeting(x,y,WallHitMe)
 	{
 		/*
 			You should never have to do this
@@ -170,7 +170,7 @@ if place_meeting(x+hspeed,y+vspeed,Wall){
 		    // code here
 			xx = tryStepsX[i];
 			yy = tryStepsY[i];
-			if !place_meeting(xx,yy,Wall)
+			if !place_meeting(xx,yy,WallHitMe)
 			{
 				x = xx;
 				y = yy;

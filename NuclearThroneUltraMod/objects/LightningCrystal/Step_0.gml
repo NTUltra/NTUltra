@@ -25,9 +25,9 @@ alarm[0] = 2+random(4)
 }
             }
 }
-else if firstTime && random(300)<5{//random lightning
+else if !sleeping && random(300)<5{//random lightning
 alarm[3]=10;
 ammo = 1
 }
-if firstTime
+if sleeping
 	speed = 0;

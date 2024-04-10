@@ -28,15 +28,16 @@ speed /= mySize
 scrDrop(30,17)
 
 BackCont.shake += 5
-
-snd_play(sndExplosionCar);
-repeat(3)
+if !sleeping
 {
-instance_create(x+random(6)-3,y+random(6)-3,Explosion)
-}
+	snd_play(sndExplosionCar);
+	repeat(3)
+	{
+	instance_create(x+random(6)-3,y+random(6)-3,Explosion)
+	}
 
-repeat(3)
-{
-instance_create(x+random(8)-4,y+random(8)-4,SmallExplosion)
+	repeat(3)
+	{
+	instance_create(x+random(8)-4,y+random(8)-4,SmallExplosion)
+	}
 }
-

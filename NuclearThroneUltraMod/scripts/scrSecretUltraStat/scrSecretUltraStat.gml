@@ -168,13 +168,13 @@ function scrSecretUltraStat() {
 	//WEAPON SMITH WEAPONSMITH
 	//66
 	secret_ultra_name[20] = "QUICK SWAPPER"
-	secret_ultra_text[20] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU <aq>IMMUNE<aq> FOR A SHORT DURATION##<p>PORTALS<p> SPIT OUT A NEW <pi>RANDOM<pi> WEAPON#UPON ENTERING AN AREA"
+	secret_ultra_text[20] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU <aq>IMMUNE<aq> FOR A SHORT DURATION#FIRST SHOT FIRED WHEN PICKING UP A WEAPON#COSTS 50% LESS AMMO##<p>PORTALS<p> SPIT OUT A NEW <pi>RANDOM<pi> WEAPON#UPON ENTERING AN AREA"
 	secret_ultra_tips[20] = "slide swapping!"
 	secret_ultra_hint[20] = "SINGLE ARMAMENT";
 	secret_ultra_unlk[20] = "HOLD ONLY ONE WEAPON";
 	//68
 	secret_ultra_name[21] = "ENGINUITY"
-	secret_ultra_text[21] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>"
+	secret_ultra_text[21] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>#<p>THRONEBUTT<p> INCREASES MORPH AMOUNT"
 	secret_ultra_tips[21] = "moldable weapons"
 	secret_ultra_hint[21] = "REMORPH";
 	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON OR MOD";
@@ -305,7 +305,13 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[37] = "eating guns from other dimensions"
 	secret_ultra_hint[37] = "SPOILED FOOD";
 	secret_ultra_unlk[37] = "BE CURSED ROBOT\nBY EATING A CURSED WEAPON\nUSING A-SKIN";
-	
+	/*
+	secret_ultra_name[38] = "CRYSTALINE TORPEDO"
+	secret_ultra_text[38] = "+2 MAX HP#ACTIVE COSTS 1 HP#WHILE SHIELDING#LAUNCH YOURSELF INTO A MASSIVE CRYSTAL TORPEDO#BREAK WALLS AND DEAL TONS OF DAMAGE#COMPLETLY <aq>IMMUNE<aq> WHILE SHIELDING"
+	secret_ultra_tips[38] = "the boulder"
+	secret_ultra_hint[38] = "CAVES";
+	secret_ultra_unlk[38] = "REACH LEVEL ULTRA IN CRYSTAL CAVES";
+	*/
 	maxsecretultra = array_length(secret_ultra_name);
 	//109
 	secret_ultra_name[maxsecretultra + 1] = "TRASH"

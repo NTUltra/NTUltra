@@ -30,6 +30,6 @@ else
 {
 	if speed > maxSpeed
 		speed = maxSpeed
-	if firstTime
+	if sleeping
 		speed = 0;
 }

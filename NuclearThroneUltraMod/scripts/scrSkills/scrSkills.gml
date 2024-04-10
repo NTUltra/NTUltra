@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 44;
+	maxskill = 45;
 
 
 	dir = 0
@@ -173,7 +173,7 @@ function scrSkills() {
 	
 	skill_name[9] = "SECOND STOMACH"
 	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#DOUBLE <r>HP<r> FROM MEDCHESTS"
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS"
 	skill_tips[9] = "stomach rumbles"
 	if isHand
 	{
@@ -312,6 +312,11 @@ function scrSkills() {
 		skill_text[20] = "<w>CORPSES<w> FLY & HIT HARDER#TOSS <w>ALLIES<w> FURTHER";
 		skill_detail[20] = "<w>CORPSES<w> FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS#TOSS <w>ALLIES<w> FURTHER#ALLIES DEAL MORE DAMAGE WHILE FLYING"
 	}
+	if instance_exists(Player) && (Player.race == 14)
+	{
+		skill_text[20] = "<w>CORPSES<w> FLY & HIT HARDER#THROW <w>WEAPONS<w> FURTHER";
+		skill_detail[20] = "<w>CORPSES<w> FLY & HIT HARDER#FAST CORPSES CAN DESTROY WALLS#THROW <w>WEAPONS<w> FURTHER"
+	}
 	skill_tips[20] = "see them fly"
 	skill_msnd[20] =  sndMutImpactWrists
 	skill_bons[20] = "+15% CORPSE SPEED";
@@ -402,7 +407,7 @@ function scrSkills() {
 		skill_text[29] = "<w>ENEMIES<w> DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#AFTER YOU ENGAGE FIRE"
 	if scrIsGamemode(25)
 		skill_text[29] = "<w>ENEMIES<w> DON'T ATTACK YOU#FOR A COUPLE OF SECONDS#WHEN THEY SPAWN IN"
-	skill_detail[29] = skill_text[29] + "##<b>IDPD<b> AND SOME BOSSES#SPAWN IN <aq>SLEEPY<aq>";
+	skill_detail[29] = skill_text[29] + "##<b>IDPD<b> AND SOME BOSSES#SPAWN IN <aq>SLEEPY<aq>#SLEEPING ENEMIES DON'T EXPLODE";
 	skill_tips[29] = "sleep"
 	skill_msnd[29] =  sndHypersomnia
 	skill_bons[29] = "+2 SLEEP SECONDS";
@@ -421,7 +426,7 @@ function scrSkills() {
 	else
 	skill_name[31] = "TOUGH SHELL"
 	skill_text[31] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
-	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN 1 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>"
+	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN 2 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>##NOTHING CAN DEAL MORE#THAN 8 DAMAGE TO YOU"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE";
@@ -481,7 +486,7 @@ function scrSkills() {
 	
 	skill_name[36] = "ABSORBING PORES"
 	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
-	skill_detail[36] = "<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> 1<r>HP<r>"
+	skill_detail[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w> ALL YOUR WEAPONS#<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> 2<r>HP<r>"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	skill_bons[36] = "-5 RADS REQUIRED"
@@ -499,9 +504,9 @@ function scrSkills() {
 	skill_msnd[37] =  sndMutEcstaticFists
 	skill_bons[37] = "+5% DAMAGE INCREASE"
 	
-	skill_name[38] = "METABOLISM"
-	skill_text[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
-	skill_detail[38] = "<aq>NEGATE<aq> EVERY THIRD HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD##ALLOWS SELF INFLICTED DAMAGE"
+	skill_name[38] = "ENRICHED METABOLISM"
+	skill_text[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
+	skill_detail[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD##ALLOWS SELF INFLICTED DAMAGE"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
 	skill_bons[38] = "+25% AMMO"
@@ -521,8 +526,8 @@ function scrSkills() {
 	skill_bons[40] = "-5% AMMO COST"
 	
 	skill_name[41] = "NERVES OF STEEL"
-	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#SIGNIFICANTLY REDUCE <w>RELOAD TIME<w>";
-	skill_detail[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 40% OF BASE RELOAD TIME#AND +20% CONSTANT RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
+	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN FULL ON ARMOUR:#SLIGHTLY INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
+	skill_detail[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN FULL ON ARMOUR:#+15% PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>:#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 40% OF BASE RELOAD TIME#AND +20% CONSTANT RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#SIGNIFICANTLY REDUCE <w>RELOAD TIME<w>";
@@ -556,6 +561,13 @@ function scrSkills() {
 	skill_tips[44] = "the night sky protects me"
 	skill_msnd[44] =  sndMutSereneDream;
 	skill_bons[44] = "+5% RECHARGE RATE"
+	
+	skill_name[45] = "ADRENALINE FUEL"
+	skill_text[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>";
+	skill_detail[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>##PRIORITIZES SECONDARY AMMO#CAN QUEUE ONE HEAL#WHEN AT FULL HEALTH";
+	skill_tips[45] = "rush of adrenaline"
+	skill_msnd[45] =  sndMutAdrenalineFuel;
+	skill_bons[45] = "+5% HEAL RATE"
 	
 	/*
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION

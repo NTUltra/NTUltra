@@ -11,6 +11,8 @@ right = -1
 
 speed = 3.4
 
+if sleeping
+	speed = 0;
 if instance_exists(Player)
 {
 if close = 0 and point_distance(x,y,Player.x,Player.y) < 128

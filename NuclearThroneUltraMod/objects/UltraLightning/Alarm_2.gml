@@ -36,23 +36,24 @@ if al > 0 && alarm[0] < 1
 										snd_play(sndSpark2);
 									else
 										snd_play(sndSpark1);
-								}
-								else
-									snd_play(sndSpark1);
-								sprite_index = spr_hurt
-								image_index = 0
-								if (Player.skill_got[43] && team != 0)
-								{
-									scrMoodSwingStun(6);
-									if Player.ultra_got[97] && !Player.altUltra {
-										scrMoodSwingIcicle(2, id);
-										scrMoodSwingFlameSpread(24);
+								
+									sprite_index = spr_hurt
+									image_index = 0
+									if (Player.skill_got[43] && team != 0)
+									{
+										scrMoodSwingStun(6);
+										if Player.ultra_got[97] && !Player.altUltra {
+											scrMoodSwingIcicle(2, id);
+											scrMoodSwingFlameSpread(24);
+										}
+									}
+									else
+									{
+										motion_add(other.image_angle,4)
 									}
 								}
 								else
-								{
-									motion_add(other.image_angle,4)
-								}
+									snd_play(sndSpark1);
 								scrForcePosition60fps();
 								if speed > maxSpeed+1
 									speed = maxSpeed+1;

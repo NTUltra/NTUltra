@@ -432,6 +432,14 @@ with HealFX
 {
 	draw_self();
 }
+with Snooze
+{
+	draw_self();
+}
+with SnoozeEnd
+{
+	draw_self();	
+}
 if instance_exists(Player){
 	if Player.ultra_got[74] && Player.altUltra
 	{

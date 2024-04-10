@@ -16,6 +16,7 @@ if !place_meeting(x,y,Morph)
 {
 	with instance_create(x,y,SnowTankExplo)
 	{
+		sleeping = other.sleeping;
 		itemDropChance = other.itemDropChance;
 		itemDropChanceIndex = other.itemDropChanceIndex;
 		weaponDropChance = other.weaponDropChance;
@@ -28,6 +29,8 @@ if !place_meeting(x,y,Morph)
 		my_health=other.my_health;
 		if other.isInverted
 			alarm[0] = 6;
+		if sleeping
+			alarm[0] = 1;
 		
 	}
 }

@@ -1,4 +1,4 @@
-if existTime > 15
+if !sleeping && existTime > 15
 {
 	snd_play(sndExplosion);
 with instance_create(x,y,Explosion)

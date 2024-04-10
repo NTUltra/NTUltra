@@ -13,7 +13,7 @@ if walk > 0
 
 }
 
-if target != noone
+if !sleeping && target != noone
 {
 	if instance_exists(target)
 		mp_potential_step(target.x,target.y,acc,0)
@@ -28,5 +28,5 @@ if speed > maxSpeed
 if instance_exists(Player) && sprite_index = spr_hurt
 	motion_add(point_direction(x,y,Player.x,Player.y),acc);
 
-if firstTime
+if sleeping
 	speed = 0;

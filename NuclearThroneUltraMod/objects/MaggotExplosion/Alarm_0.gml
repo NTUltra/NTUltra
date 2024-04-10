@@ -8,7 +8,6 @@ repeat(6)
 	{
 		wasResurrected = true;
 		existTime = 30;
-		firstTime = false;
 		if sleepy {
 			alarm[1] += 40;
 			scrGiveSnooze();

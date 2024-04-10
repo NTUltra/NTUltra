@@ -12,12 +12,14 @@ if instance_exists(Player)
 	vspeed = y - yprevious;
 	
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
-		angle += rotationSpeed;
-	if (UberCont.normalGameSpeed == 60)
 	{
-		hspeed *= 2;
-		vspeed *= 2;
-		angle -= rotationSpeed*0.5;
+		angle += rotationSpeed;
+		if (UberCont.normalGameSpeed == 60)
+		{
+			hspeed *= 2;
+			vspeed *= 2;
+			angle -= rotationSpeed*0.5;
+		}
 	}
 	if Player.x < x
 		right = -1

@@ -39,3 +39,7 @@ if loops > 2
 	maxSpeed = 5.25;
 }
 scrAddDrops(1);
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

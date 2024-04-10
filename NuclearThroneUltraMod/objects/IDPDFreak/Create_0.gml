@@ -92,3 +92,6 @@ else if loops > 3
 }
 
 offsetStep = (bulletMaxOffset/maxAmmo)*bulletGap;
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

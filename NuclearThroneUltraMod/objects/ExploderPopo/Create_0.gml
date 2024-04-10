@@ -44,3 +44,7 @@ else
 lastx = x
 lasty = y
 }
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

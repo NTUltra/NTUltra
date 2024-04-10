@@ -1,5 +1,5 @@
 alarm[1] = 5+random(10)
-
+sleeping = false;
 rest = 0
 scrTarget()
 if target != noone

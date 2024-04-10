@@ -17,7 +17,7 @@ if instance_exists(creator)
 	{
 		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18);
 		hook = other.hook
-		direction += 20*-hook*acc;
+		direction += other.aimOffset*-hook*acc;
 		image_angle = direction
 		team = other.team
 		scrCopyWeaponMod(other);

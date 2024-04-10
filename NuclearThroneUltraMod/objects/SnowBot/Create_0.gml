@@ -26,3 +26,7 @@ acc = 1.1 + clamp(loops*0.15,0,0.3);
 maxChargeSpeed = 6.8 + clamp(loops*0.2,0,3);
 if loops > 0
 	actTime = 10;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

@@ -39,59 +39,6 @@ BackCont.shake += 5
 snd_play(sndLilHunterLand)
 alarm[5]=10;
 instance_create(x,y,WallBreak);
-var ang = random(360);
-var am = 18;
-var angstep = 360/am;
-repeat(am)
-{
-	with instance_create(x,y,TrapFire)//Trapfire
-	{
-		sprite_index = sprFireLilHunter
-		motion_add(ang,3)
-		image_angle = direction
-		team = other.team
-	}
-	
-ang += angstep;
-}
-var ang = random(360);
-repeat(5)
-{
-	with instance_create(x,y,EnemyBouncerBullet)
-	{
-	motion_add(ang,2)
-	image_angle = direction;
-	team = other.team
-	}
-	ang += 72;
-}
-var lps = GetPlayerLoops()
-if lps > 3
-{
-	var am = 4;
-	ang = 0;
-	if lps > 4
-		am = 8;
-	var angStep = 360/am;
-	var ps = 3;
-	if lps > 7
-		ps = 3.5;
-	if lps > 8
-		ps = 4;
-	if lps > 9
-		ps = 4.5;
-	repeat(am)
-	{
-		with instance_create(x,y,EnemyBullet1Square)
-		{
-			sprite_index = sprIDPDSquareBullet;
-			motion_add(ang,ps);
-			image_angle = direction
-			team = other.team
-		}
-		ang += angStep;
-	}	
-}
 shadowdraw=false;
 repeat(4)
 {
@@ -100,14 +47,76 @@ motion_add(random(360),3+random(1))
 }
 
 z = 0
-alarm[1] = 20+random(10)
+alarm[1] = 20+random(10);
+var bonk = true;
 if intro = 0
 {
-snd_play_2d(sndLilHunterAppear)
-instance_create(x,y,DramaCamera)
-intro = 1
+	snd_play_2d(sndLilHunterAppear)
+	instance_create(x,y,DramaCamera)
+	intro = 1
+	if instance_exists(Player) && Player.skill_got[29] {
+		alarm[1] += 60;
+		alarm[5] = 0;
+		scrGiveSnooze();
+		bonk = false;
+	}
 }
-
+if bonk
+{
+	var ang = random(360);
+	var am = 18;
+	var angstep = 360/am;
+	repeat(am)
+	{
+		with instance_create(x,y,TrapFire)//Trapfire
+		{
+			sprite_index = sprFireLilHunter
+			motion_add(ang,3)
+			image_angle = direction
+			team = other.team
+		}
+	
+	ang += angstep;
+	}
+	var ang = random(360);
+	repeat(5)
+	{
+		with instance_create(x,y,EnemyBouncerBullet)
+		{
+		motion_add(ang,2)
+		image_angle = direction;
+		team = other.team
+		}
+		ang += 72;
+	}
+	var lps = GetPlayerLoops()
+	if lps > 3
+	{
+		var am = 4;
+		ang = 0;
+		if lps > 4
+			am = 8;
+		var angStep = 360/am;
+		var ps = 3;
+		if lps > 7
+			ps = 3.5;
+		if lps > 8
+			ps = 4;
+		if lps > 9
+			ps = 4.5;
+		repeat(am)
+		{
+			with instance_create(x,y,EnemyBullet1Square)
+			{
+				sprite_index = sprIDPDSquareBullet;
+				motion_add(ang,ps);
+				image_angle = direction
+				team = other.team
+			}
+			ang += angStep;
+		}	
+	}
+}
 spr_idle = sprLilHunterLandEnd
 sprite_index = spr_idle
 image_index = 0

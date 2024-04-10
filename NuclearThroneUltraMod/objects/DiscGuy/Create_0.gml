@@ -30,3 +30,7 @@ instance_exists(Player) && Player.area != 106 && Player.area != 125//HARD MODE
 	instance_destroy(id,false);
 	instance_create(x,y,UltraDiscGuy);
 }
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

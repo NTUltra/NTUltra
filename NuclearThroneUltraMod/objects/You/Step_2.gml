@@ -80,13 +80,12 @@ speed = Player.maxSpeed
 ///tough shell
 if (Player.skill_got[31])
 {
-if ( lsthealth > my_health && hardshell == true )
+if ( lsthealth > my_health)
 {
 
 if (( lsthealth-my_health > 2 ) && ( lsthealth-2 != 0 )  )
     {
     my_health+=1;
-    hardshell=false;
     }
     
     if my_health>maxhealth
@@ -94,8 +93,6 @@ if (( lsthealth-my_health > 2 ) && ( lsthealth-2 != 0 )  )
 
 }
 
-if (sprite_index!=spr_hurt)
-hardshell=true;
 }
 
 /* */

@@ -9,6 +9,6 @@ friction = 0.1
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 longarms = 0;
-dmg=12;
+dmg=11;
 wallPierce = 0;
 alarm[4] = 6;

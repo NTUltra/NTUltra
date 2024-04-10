@@ -51,10 +51,10 @@ else if image_xscale>0.22 && alarm[11] < 1
 				if my_health < maxhealth && !outOfCombat
 				{
 					var n = instance_nearest(x,y,enemy)
-					if  n != noone && point_distance(x,y,n.x,n.y) < 300 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
+					if  n != noone && point_distance(x,y,n.x,n.y) < 250 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 					{
 						toxicConsume += other.consumeAmount;
-						if toxicConsume > 80
+						if toxicConsume > 65
 						{	
 							toxicConsume = 0;
 							my_health ++;

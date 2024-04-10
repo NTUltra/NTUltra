@@ -1,5 +1,9 @@
 raddrop = 50
-maxhealth = 480
+maxhealth = 440
+loops = GetPlayerLoops();
+
+if loops > 0
+	maxhealth = 480
 scrBossHealthBuff();
 meleedamage = 5
 mySize = 6;
@@ -44,7 +48,6 @@ actTime = 14;
 scrTarget();
 angle = random(360);
 myBat = SquareBat;
-loops = GetPlayerLoops();
 reachHalfHealth = false;
 if loops > 2
 {
@@ -73,7 +76,7 @@ fireDelay = 0;
 scrAddDrops(3);
 
 if instance_exists(Player) && Player.skill_got[29] {
-	alarm[1] += 60;
-	alarm[6] += 60;
+	alarm[1] += 90;
+	alarm[6] += 90;
 	scrGiveSnooze();
 }

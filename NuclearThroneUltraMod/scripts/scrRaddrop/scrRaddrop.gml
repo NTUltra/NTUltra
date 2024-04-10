@@ -33,7 +33,7 @@ function scrRaddrop(amountOfRads = raddrop, xx = x, yy = y) {
 
 	do {if amountOfRads > 12//15
 	{amountOfRads -= 10
-	with instance_create(x,y,BigRad)
+	with instance_create(xx,yy,BigRad)
 	{motion_add(other.direction,other.speed+1)
 	motion_add(random(360),random(amountOfRads*0.5)+3)
 	repeat(speed)
@@ -43,7 +43,7 @@ function scrRaddrop(amountOfRads = raddrop, xx = x, yy = y) {
 
 	repeat(amountOfRads)
 	{
-	with instance_create(x,y,Rad)
+	with instance_create(xx,yy,Rad)
 	{motion_add(other.direction,other.speed+1)
 	motion_add(random(360),random(amountOfRads*0.5)+3)
 	repeat(speed)

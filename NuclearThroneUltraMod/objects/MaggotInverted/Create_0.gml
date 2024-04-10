@@ -15,6 +15,8 @@ alarm[1] = 10+random(10)
 charge = false;
 loops = GetPlayerLoops();
 maxSpeed = 2.5;
-firstTime = true;
 if loops > 0
 	maxSpeed = 3;
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

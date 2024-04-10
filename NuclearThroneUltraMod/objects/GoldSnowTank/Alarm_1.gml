@@ -1,4 +1,5 @@
 alarm[1] = 2+random(6)//40+random(30)
+sleeping = false;
 rest = 0
 scrTarget()
 if target != noone

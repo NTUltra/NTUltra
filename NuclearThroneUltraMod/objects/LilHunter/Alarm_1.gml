@@ -1,5 +1,4 @@
 alarm[1] = 11+random(8)
-
 canDodge = true;
 if loop
 	alarm[1] -= 6;

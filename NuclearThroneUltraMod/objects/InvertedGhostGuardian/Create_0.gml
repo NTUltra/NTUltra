@@ -22,3 +22,6 @@ for (var i = 0; i < am; i++) {
 		ownerAngleRotationSpeed ++;
 	}
 }
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

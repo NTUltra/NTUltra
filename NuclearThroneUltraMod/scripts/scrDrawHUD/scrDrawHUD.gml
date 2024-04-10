@@ -71,7 +71,7 @@ function scrDrawHUD() {
 		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
 		draw_sprite_ext(sprHealthFill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
-		if dataRef.metabolism == 2
+		if dataRef.metabolism == 3
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
 		
 		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
@@ -83,6 +83,20 @@ function scrDrawHUD() {
 			else if dataRef.chickenFocusDelayTime > 0
 				focusIndex = 2;
 			draw_sprite_ext(sprChickenFocusBarFill,focusIndex,vx+hx+2,vy+18,clamp(84*(dataRef.chickenFocus/dataRef.chickenFocusMax),0,84),1,0,c_white,1)
+		}
+		if dataRef.skill_got[45] && instance_exists(PlayerAlarms3)
+		{
+			if instance_exists(AdrenalineHeal)
+			{
+				draw_sprite_ext(sprHealthBarAdrenaline,sprite_get_number(sprHealthBarAdrenaline) - 1,vx+hx,vy+4,1,1,0,c_white,1)
+			}
+			else
+			{
+				var adrenalineColour = make_colour_rgb(72,253,8);
+				if !PlayerAlarms3.detectedCombat
+					adrenalineColour = make_colour_rgb(72,156,17);
+				draw_sprite_ext(sprHealthBarAdrenaline,round(lerp(sprite_get_number(sprHealthBarAdrenaline) - 1,0,max(1,PlayerAlarms3.adrenalineHealTimer) / PlayerAlarms3.adrenalineHealCooldown)),vx+hx,vy+4,1,1,0,adrenalineColour,1)
+			}
 		}
 		vy += yo;
 		//if dataRef.alarm[3] > 0
@@ -284,7 +298,12 @@ function scrDrawHUD() {
 				draw_set_color(c_red);
 			draw_text(xx,yy,rc)
 		}
-	
+	}
+	if dataRef.ultra_got[19] && dataRef.altUltra {
+		var xx =vx+__view_get( e__VW.WView, 0 )-16-16;
+		var yy =vy+40;
+		var w = 28;
+		draw_sprite(sprKillKillKillHUD,dataRef.canKillKillKill,xx-2,yy-3)	
 	}
 	//ULTRA ICON
 	dir=0;

@@ -12,7 +12,7 @@ if sprite_index != spr_hurt
 motion_add(direction,0.6)
 }
 
-if firstAct && target != noone && instance_exists(target) && alarm[2] < 1
+if !sleeping && target != noone && instance_exists(target) && alarm[2] < 1
 {
 	if instance_exists(target)
 		mp_potential_step(target.x,target.y,1.25,0)
@@ -20,5 +20,5 @@ if firstAct && target != noone && instance_exists(target) && alarm[2] < 1
 
 if speed > maxSpeed
 	speed = maxSpeed;
-if !firstAct
+if sleeping
 	speed = 0;

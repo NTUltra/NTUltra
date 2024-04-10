@@ -38,3 +38,7 @@ if loops > 0
 	actTime = 15;
 }
 alarm[0] = 1;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

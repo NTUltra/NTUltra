@@ -9,18 +9,20 @@ if alarm[2] > 0
 		event_perform(ev_alarm,0);	
 	}
 }
-
-var ang = random(360);
-var am = 30;
-var angStep = 360/am;
-var spawn = TrapFire;
-if isInverted
-	spawn = EnemyIceFlame;
-repeat(am)
+if !sleeping
 {
-	with instance_create(x,y,spawn)
-	{motion_add(ang,1.75+random(1))
-	team = other.team
+	var ang = random(360);
+	var am = 30;
+	var angStep = 360/am;
+	var spawn = TrapFire;
+	if isInverted
+		spawn = EnemyIceFlame;
+	repeat(am)
+	{
+		with instance_create(x,y,spawn)
+		{motion_add(ang,1.75+random(1))
+		team = other.team
+		}
+		ang += angStep;
 	}
-	ang += angStep;
 }

@@ -225,7 +225,6 @@ function scrLoadRun(){
 					Player.maxSpeed = encryptedRun.maxSpeed;
 				Player.hammerheadcounter = encryptedRun.hammerheadcounter;
 				Player.lag = encryptedRun.lag;
-				Player.hardshell = encryptedRun.hardshell;
 				Player.visitedCrib = encryptedRun.visitedCrib;
 				Player.meltingd = encryptedRun.meltingd;
 				Player.heavyheart = encryptedRun.heavyheart;

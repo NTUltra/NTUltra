@@ -164,7 +164,7 @@ function scrLoseSkill(skillIndex){
 		break;
 		case 41: //NERVES OF STEEL
 			maxhealth += 2;
-			if gotMinimumArmour && !scrIsCrown(10)
+			if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
 			{
 				maxarmour -= 1;
 				armour = 0;

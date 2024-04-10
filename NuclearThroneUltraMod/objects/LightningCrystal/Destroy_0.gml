@@ -3,7 +3,7 @@ scrDrop(1,5)
 event_inherited()
 
 
-if loops > 8
+if !sleeping && loops > 8
 {
 	var ang = random(360);
 	var am = 6;

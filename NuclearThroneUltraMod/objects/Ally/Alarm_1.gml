@@ -28,10 +28,12 @@ if (target == noone || !instance_exists(target)) || (random(8)<1)
 }
 if target != noone && instance_exists(target) && target.team != 2 && target.my_health > 0
 {
-
 	//GOT A TARGET
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 400
+	var tDis = point_distance(x,y,target.x,target.y);
+	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and tDis < 400
 	{
+		isInFight = 20;
+		mp_potential_step(target.x,target.y,0.5,false);
 		if random(10) < 9
 		{
 			//FIRE
@@ -48,7 +50,10 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 			if instance_exists(Player)
 			{
 				if Player.skill_got[5] = 1
+				{
 					alarm[1] = 5
+					isInFight += 5;
+				}
 				else
 					alarm[1] = 10
 			}
@@ -76,9 +81,18 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 	}
 	else 
 	{
-		cantFightRightNow = true;
-		if random(5) < 3
+		if tDis < 180 && isInFight > 0
 		{
+			mp_potential_step(target.x,target.y,3,false);
+			walk = max(1,walk);
+			speed = 0.5;
+			isInFight -= 1;
+			alarm[1] = 1;
+		}
+		else if random(5) < 3
+		{
+			cantFightRightNow = true;
+			isInFight = 0;
 			//CANT SEE TARGET
 			motion_add(random(360),0.4)
 			if instance_exists(Player)
@@ -96,6 +110,8 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 		}
 		else
 		{
+			cantFightRightNow = true;
+			isInFight = 0;
 			alarm[1] += 2;	
 		}
 	}
@@ -103,6 +119,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 else
 {
 	cantFightRightNow = true;
+	isInFight = 0;
 	if random(4) < 1
 	{
 		//GOT NO TARGET
@@ -119,6 +136,7 @@ else
 }
 if cantFightRightNow && instance_exists(Player) && /*point_distance(x,y,Player.x,Player.y) > 52 || */collision_line(x,y,Player.x,Player.y,Wall,false,false)
 {
+	isInFight = 0;
 	//mp_potential_step(Player.x,Player.y,1,false)
 	//path_end();
 	mp_potential_path(path,Player.x,Player.y,maxSpeed,pathLength,0);

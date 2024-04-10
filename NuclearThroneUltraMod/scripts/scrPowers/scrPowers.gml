@@ -22,11 +22,11 @@ function scrPowers(raceOverwrite = -1) {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 20
-				alienIntestines += 0.4;
+				alienIntestines += 0.5;
 			else
 				alienIntestines += 0.16;
 			if loops > 0
-				alienIntestines += 0.02;
+				alienIntestines += 0.03;
 			if race == 25
 			{
 				alienIntestines += 0.035;	
@@ -35,11 +35,11 @@ function scrPowers(raceOverwrite = -1) {
 		else
 		{
 			if alienIntestines < 20
-				alienIntestines += 0.8;
+				alienIntestines += 1;
 			else
 				alienIntestines += 0.32;
 			if loops > 0
-				alienIntestines += 0.04;
+				alienIntestines += 0.06;
 			if race == 25
 			{
 				alienIntestines += 0.07;	
@@ -1059,6 +1059,23 @@ function scrPowers(raceOverwrite = -1) {
 			//Weapon smith enginuity ultra
 			snd_play(sndMorphStart);
 			instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+			var len = 20;
+			var dirr = random(360);
+			repeat(3)
+			{
+				instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+				dirr += 120;
+			}
+			if skill_got[5]
+			{
+				var len = 40;
+				dirr += 60;
+				repeat(3)
+				{
+					instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+					dirr += 120;
+				}
+			}
 			var wantTier = wep_area[wep];
 			wep ++;
 			if wep > maxwep
@@ -2205,6 +2222,7 @@ function scrPowers(raceOverwrite = -1) {
 		//CRYSTAL
 		if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
 		{
+			//instance_create(x,y,CrystalTorpedo)
 			instance_create(x,y,CrystalShield)
 		}
 		//HANDS

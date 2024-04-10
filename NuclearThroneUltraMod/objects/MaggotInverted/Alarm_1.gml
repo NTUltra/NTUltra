@@ -1,5 +1,5 @@
 scrTarget()
-firstTime = false;
+sleeping = false;
 alarm[1] = 5+random(5)
 if target != noone
 {

@@ -1,4 +1,5 @@
 alarm[1] = 20+random(20)
+sleeping = false;
 scrTarget()
 if target != noone
 {

@@ -16,18 +16,18 @@ if !instance_exists(GenCont)
 			num = 4;
 		if UberCont.opt_ammoicon
 		{
-			dir = instance_create(x,y,PopupText)
-			dir.sprt = sprArmourIconPickup;
-			dir.mytext = "+"+string(num)
+			popupT = instance_create(x,y,PopupText)
+			popupT.sprt = sprArmourIconPickup;
+			popupT.mytext = "+"+string(num)
 			if Player.armour >= Player.maxarmour
-			dir.mytext = "MAX"
+			popupT.mytext = "MAX"
 		}
 		else
 		{
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "+"+string(num)+" HP"
+			popupT = instance_create(x,y,PopupText)
+			popupT.mytext = "+"+string(num)+" HP"
 			if Player.armour >= Player.maxarmour
-			dir.mytext = "MAX ARMOUR"
+			popupT.mytext = "MAX ARMOUR"
 		}
 		with Player
 		{
@@ -64,6 +64,25 @@ if !instance_exists(GenCont)
 		}
 	
 		var  mHpI = 1;
+		if UberCont.opt_ammoicon
+		{
+			var popupT = instance_create(x,y,PopupText)
+			popupT.spr = sprHPIconPickup;
+			popupT.mytext = "+"+string(num)
+			if other.my_health = other.maxhealth
+			popupT.mytext = "MAX"
+			else if other.my_health > other.maxhealth
+			popupT.mytext = "+"+string(ceil(num))+"#OVERHEAL!"
+		}
+		else
+		{
+			var popupT = instance_create(x,y,PopupText)
+			popupT.mytext = "+"+string(num)+" HP"
+			if other.my_health = other.maxhealth
+			popupT.mytext = "MAX HP"
+			else if other.my_health > other.maxhealth
+			popupT.mytext = "+"+string(num)+" HP#OVERHEAL!"
+		}
 		with other {
 			//OVERHEAL
 			if my_health >= maxhealth
@@ -72,6 +91,12 @@ if !instance_exists(GenCont)
 				if skill_got[9]
 					other.num = 2;
 				my_health += other.num;
+				var maxCap = max(maxhealth*2,20);
+				my_health = min(my_health,maxCap);
+				if (my_health == maxCap)
+				{
+					popupT.myText = "MAX OVERHEAL!";
+				}
 				/*
 				var overheal = min(my_health,maxhealth) + other.num - maxhealth;
 				my_health += other.num-overheal;
@@ -106,27 +131,6 @@ if !instance_exists(GenCont)
 				    maxhealth = min(maxhealth + mHpI,targetHealth);
 			    }
 			}
-		}
-
-
-		if UberCont.opt_ammoicon
-		{
-			dir = instance_create(x,y,PopupText)
-			dir.spr = sprHPIconPickup;
-			dir.mytext = "+"+string(num)
-			if other.my_health = other.maxhealth
-			dir.mytext = "MAX"
-			else if other.my_health > other.maxhealth
-			dir.mytext = "+"+string(ceil(num))+"#OVERHEAL!"
-		}
-		else
-		{
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "+"+string(num)+" HP"
-			if other.my_health = other.maxhealth
-			dir.mytext = "MAX HP"
-			else if other.my_health > other.maxhealth
-			dir.mytext = "+"+string(num)+" HP#OVERHEAL!"
 		}
 	}
 }

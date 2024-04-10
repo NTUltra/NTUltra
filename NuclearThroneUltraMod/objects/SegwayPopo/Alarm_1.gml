@@ -1,5 +1,5 @@
 alarm[1] = 10+random(15)//20 20
-
+sleeping = false;
 if team=2
 scrRogueTarget()
 else

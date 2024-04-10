@@ -23,9 +23,12 @@ if instance_exists(Player) && Player.skill_got[29]
 ang=0;
 
 walk = 0
-firstAct = false;
 
 maxSpeed = 3.1;
 loops = GetPlayerLoops();
 if loops > 0
 	maxSpeed += 0.22;
+	
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

@@ -1513,7 +1513,7 @@ function scrWeapons() {
 	wep_load[135] = 37
 	wep_cost[135] = 0
 	wep_sprt[135] = sprLollipop
-	wep_area[135] = 16
+	wep_area[135] = 15
 	wep_text[135] = "lick it"
 	wep_swap[135] = sndSwapHammer
 	wep_rad[135] = 0;
@@ -3050,7 +3050,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 28
+	wep_load[272] = 29
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 15
@@ -3084,7 +3084,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 44
+	wep_load[275] = 45
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18
@@ -3737,7 +3737,7 @@ function scrWeapons() {
 	wep_load[333] = 7
 	wep_cost[333] = 0.5
 	wep_sprt[333] = sprHyperGatlingBazooka
-	wep_area[333] = 12
+	wep_area[333] = 13
 	wep_text[333] = "bazooka minigun"
 	wep_swap[333] = sndSwapExplosive
 	wep_rad[333] = 0;
@@ -4955,7 +4955,7 @@ function scrWeapons() {
 	wep_load[440] = 26
 	wep_cost[440] = 2
 	wep_sprt[440] = sprPenetrator
-	wep_area[440] = 6
+	wep_area[440] = 5
 	wep_text[440] = "damage scales upon each pierce"
 	wep_swap[440] = sndSwapBow
 	wep_rad[440] = 0;
@@ -5440,7 +5440,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 0
 	wep_auto[484] = 0
-	wep_load[484] = 15
+	wep_load[484] = 16
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 14
@@ -6986,7 +6986,7 @@ function scrWeapons() {
 	wep_load[624] = 45
 	wep_cost[624] = 9
 	wep_sprt[624] = sprSuperHeavyNader
-	wep_area[624] = 12
+	wep_area[624] = 13
 	wep_text[624] = "hi there"
 	wep_swap[624] = sndSwapExplosive
 	wep_rad[624] = 0;
@@ -7396,7 +7396,7 @@ function scrWeapons() {
 	wep_load[661] = 35
 	wep_cost[661] = 4
 	wep_sprt[661] = sprRollOutTheBoom
-	wep_area[661] = 14
+	wep_area[661] = 15
 	wep_text[661] = "weapons that are full sentences"
 	wep_swap[661] = sndSwapShotgun
 	wep_rad[661] = 0;
@@ -7652,7 +7652,7 @@ function scrWeapons() {
 	wep_load[684] = 45
 	wep_cost[684] = 36
 	wep_sprt[684] = sprBouncerCannon
-	wep_area[684] = 12
+	wep_area[684] = 13
 	wep_text[684] = "bounce and pounce"
 	wep_swap[684] = sndSwapMachinegun
 	wep_rad[684] = 0;
@@ -7989,7 +7989,7 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 27
+	wep_load[714] = 28
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 15
@@ -8047,7 +8047,7 @@ function scrWeapons() {
 	wep_load[719] = 25
 	wep_cost[719] = 10
 	wep_sprt[719] = sprSniperScythe
-	wep_area[719] = 13
+	wep_area[719] = 14
 	wep_text[719] = "is that a reference to what I think it is?"
 	wep_swap[719] = sndSwapSword
 	wep_rad[719] = 0;
@@ -8304,6 +8304,17 @@ function scrWeapons() {
 	wep_text[742] = "fires maggots"
 	wep_swap[742] = sndSwapBow
 	wep_rad[742] = 0;
+	
+	wep_name[743] = "WOMBO COMBO SUCKER PUNCHER"
+	wep_type[743] = 2
+	wep_auto[743] = 3
+	wep_load[743] = 25
+	wep_cost[743] = 5
+	wep_sprt[743] = sprWomboComboSuckerPuncher
+	wep_area[743] = 15
+	wep_text[743] = "consecutive normal punches"
+	wep_swap[743] = sndSwapShotgun
+	wep_rad[743] = 0;
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

@@ -4,7 +4,6 @@ meleedamage = 3
 mySize = 1
 droprate = 5.5;
 event_inherited()
-firstTime = true;
 spr_idle = sprFreak1Idle
 spr_walk = sprFreak1Walk
 spr_hurt = sprFreak1Hurt
@@ -30,3 +29,9 @@ if loops > 0
 }
 fuseAmount = 0;
 shadowY = 0;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+{
+	sleeping = true;
+}

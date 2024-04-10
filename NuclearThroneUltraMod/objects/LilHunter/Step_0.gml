@@ -82,17 +82,16 @@ if instance_exists(projectile)
     
     }
 }
-
+/*
 if instance_exists(Player)
 {
-if alarm[1]>60
-{
-
-if point_distance(x,y,Player.x,Player.y)<290
-{alarm[1]=60;
-alarm[2]=20;}
-
+	if alarm[1]>60
+	{
+		if point_distance(x,y,Player.x,Player.y)<290
+		{
+			alarm[1]=60;
+			alarm[2]=20;
+		}
+	}
 }
-
-}
-
+*/

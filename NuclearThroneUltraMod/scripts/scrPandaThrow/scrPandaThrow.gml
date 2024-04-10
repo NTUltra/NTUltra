@@ -19,6 +19,12 @@ function scrPandaThrow(){
 			alarm[0] += floor(other.wep_load[other.wep] * 0.125);
 			team=other.team;
 			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
+			if other.skill_got[20]
+				speed += 6;
+			if collision_line(x,y,x+hspeed,y+vspeed,Wall,false,false)
+			{
+				speed *= -0.8;	
+			}
 			scrWeapons()
 			if other.ultra_got[54]=1
 			{

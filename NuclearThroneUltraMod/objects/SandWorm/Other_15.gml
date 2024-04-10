@@ -13,7 +13,7 @@ if target != noone
 	var ps = 5;
 	repeat(4)
 	{
-		with instance_create(x + (xOffset*image_xscale),y-yOffset,Maggot)
+		with instance_create(x + (xOffset*image_xscale),y-yOffset,myMaggot)
 		{
 			ignoreOverlap = true;
 			raddrop = 0;
@@ -25,6 +25,13 @@ if target != noone
 			existTime = 30;
 			wasResurrected = true;
 			alarm[1] = 0;
+			if instance_exists(Player) && Player.skill_got[29] {
+				alarm[1] = 60
+				charge = false;
+				scrGiveSnooze();
+				speed = 1;
+				image_angle = 0;
+			}
 		}
 		ps ++;
 	}

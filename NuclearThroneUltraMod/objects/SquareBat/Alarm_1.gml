@@ -1,5 +1,6 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
+sleeping = false;
 scrTarget()
 if target != noone {
 	var dis = point_distance(target.x, target.y, x, y);

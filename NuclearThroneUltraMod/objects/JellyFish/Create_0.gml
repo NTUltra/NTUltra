@@ -34,3 +34,7 @@ if loops > 2
 	length ++;
 if loops > 4
 	length ++;
+	
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

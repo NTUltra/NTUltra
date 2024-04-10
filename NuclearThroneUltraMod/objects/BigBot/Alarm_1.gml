@@ -1,5 +1,6 @@
 ///@description AI
 alarm[1] = actTime;
+sleeping = false;
 if firstEntry
 {
 	alarm[2] = fireDelay;	

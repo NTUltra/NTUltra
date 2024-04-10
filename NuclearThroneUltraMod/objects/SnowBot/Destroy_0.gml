@@ -5,7 +5,7 @@ scrDrop(28,4)
 
 event_inherited()
 
-if GetPlayerLoops() > 6
+if !sleeping && GetPlayerLoops() > 6
 {
 	instance_create(x,y,BigWallBreak);
 	var ang = random(360);

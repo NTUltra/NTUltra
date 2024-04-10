@@ -15,3 +15,7 @@ spr_dead = sprInvertedNewGuardianDead;
 spr_appear = sprInvertedNewGuardianAppear;
 spr_disappear = sprInvertedNewGuardianDisappear;
 spr_fire = sprInvertedNewGuardianFire;
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

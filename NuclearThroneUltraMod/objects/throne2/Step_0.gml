@@ -10,15 +10,18 @@ if instance_exists(Player) && crossAmmo < 1
 	vspeed = y - yprevious;
 	
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
-		angle += rotationSpeed; 
+	{
+		angle += rotationSpeed;
+		if (UberCont.normalGameSpeed == 60)
+		{
+			angle -= rotationSpeed*0.5;
+		}
+	}
 	if Player.x < x
 		right = -1
 	else if Player.x > x
 		right = 1
-	if (UberCont.normalGameSpeed == 60)
-	{
-		angle -= rotationSpeed*0.5;
-	}
+	
 }
 if speed > 3
 speed = 3;

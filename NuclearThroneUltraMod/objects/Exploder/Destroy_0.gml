@@ -1,5 +1,7 @@
 event_inherited()
 scrDrop(5,0);
+if !sleeping
+{
 var dir = random(360)
 if instance_exists(Player)
 {
@@ -59,7 +61,7 @@ else{
     }
 }
 
-
+}
 
 
 BackCont.shake += 10

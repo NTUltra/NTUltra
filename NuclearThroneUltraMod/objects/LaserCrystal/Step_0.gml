@@ -24,5 +24,5 @@ if alarm[2] > 6
 	
 	
 }
-if firstTime
+if sleeping
 	speed = 0;

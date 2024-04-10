@@ -5,6 +5,9 @@ event_inherited()
 if !place_meeting(x,y,Morph)
 with instance_create(x,y,SnowTankExplo)
 {
+	sleeping = other.sleeping;
+	if sleeping 
+		alarm[0] = 1;
 	itemDropChance = other.itemDropChance;
 	itemDropChanceIndex = other.itemDropChanceIndex;
 	weaponDropChance = other.weaponDropChance;

@@ -7,7 +7,7 @@ if instance_exists(Player)
 }
 
 dmg = 10;
-
+moodAmount = 2;
 //Crown of death
 if instance_exists(Player) && scrIsCrown(3) && object_index == RogueExplosion
 {

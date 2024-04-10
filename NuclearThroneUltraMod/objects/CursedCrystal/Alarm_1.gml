@@ -1,6 +1,6 @@
 ///@description AI
 alarm[1] = 14+random(12)
-firstTime = false;
+sleeping = false;
 if instance_exists(Player)
 {
 if Player.loops>0

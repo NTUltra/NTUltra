@@ -23,13 +23,16 @@ if place_meeting(x,y,Floor) || place_meeting(x,y,FloorExplo)
 {
 	scrDrop(13,0)
 }
-snd_play(sndExplosionL);
-if isInverted
+if !sleeping
 {
-	with instance_create(x,y,PurpleExplosion)
-		team = other.team;
-}
-else
-{
-	instance_create(x,y,GreenExplosion);
+	snd_play(sndExplosionL);
+	if isInverted
+	{
+		with instance_create(x,y,PurpleExplosion)
+			team = other.team;
+	}
+	else
+	{
+		instance_create(x,y,GreenExplosion);
+	}
 }

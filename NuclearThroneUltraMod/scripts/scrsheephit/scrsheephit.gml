@@ -27,13 +27,13 @@ function scrSheepHit(){
 						{
 							if alarm[1]>0
 							{
-								alarm[1]+=200;
+								alarm[1] += 290;
 								scrGiveSnooze();
 							}
 						}
 						with PlayerAlarms2
 						{
-							alarm[0] = 200;
+							alarm[0] = 260;
 						}
 					}
 				}

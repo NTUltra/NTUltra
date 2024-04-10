@@ -19,9 +19,11 @@ charge = false;
 loops = GetPlayerLoops();
 maxSpeed = 2;
 actTime = 25;
-firstTime = true;
 if loops > 0
 {
 	maxSpeed = 3;
 	actTime = 10;
 }
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

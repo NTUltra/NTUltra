@@ -8,7 +8,7 @@ if instance_exists(enemy)
 	}
 }
 alarm[1] = actTime+random(actTime)
-firstTime = false;
+
 
 if target != noone
 {

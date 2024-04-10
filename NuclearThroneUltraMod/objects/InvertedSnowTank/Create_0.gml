@@ -35,3 +35,7 @@ if instance_exists(Player)
 }
 
 isLoop = GetPlayerLoops() > 1
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

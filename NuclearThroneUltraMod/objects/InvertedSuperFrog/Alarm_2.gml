@@ -1,3 +1,4 @@
+if !sleeping
 with instance_create(x,y,EnemyBullet2)
 {
 motion_add(random(360),4)

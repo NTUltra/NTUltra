@@ -55,3 +55,4 @@ hasBeenEaten = false;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 
 /*  */
+alarm[2] = 5;

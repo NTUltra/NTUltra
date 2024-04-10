@@ -51,7 +51,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
 	if ultra_got[66] && altUltra
-		prange = 48;
+		prange = 52;
 	if targetPickup == noone || point_distance(x,y,targetPickup.x,targetPickup.y) >= prange
 		targetPickup = instance_nearest(x,y,ThrowWep);
 	
@@ -285,6 +285,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					alarm[3] = max(alarm[3],4);
 					snd_hurt = sndDamageNegate;
 					scrGiveEuphoriaShield();
+					ammoReduction = 0.5;
 				}
 				with instance_create(tx,ty,WepPickup)
 				{
@@ -412,6 +413,7 @@ if my_health < prevhealth
 		{
 			my_health = 0;
 			prevhealth = 0;
+			armour = 0;
 		}
 		else if ultra_got[40] && my_health <= 0 && instance_exists(Ally) && instance_number(Ally) > 1
 		{
@@ -475,7 +477,7 @@ if skill_got[2] && tookHit && !exception
 if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 {
 	metabolism += 1;
-	if metabolism > 2
+	if metabolism > 3
 	{
 		metabolism = 0;
 		my_health = prevhealth;
@@ -483,9 +485,9 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 		snd_play_2d(sndMetabolism,0.1);
 		//scrGiveEuphoriaShield();
 		if race == 25//Doctor
-			scrCollectAmmo(1.75);
+			scrCollectAmmo(3.25);
 		else
-			scrCollectAmmo(1.5);
+			scrCollectAmmo(3);
 		tookHit = false;
 	}
 }
@@ -503,20 +505,29 @@ if scrIsCrown(18) && !exception
 var damageReduced = 0;
 if (skill_got[31])
 {
-	if (tookHit && hardshell == true )
+	if (tookHit)
 	{
-	var dmgTaken = prevhealth-my_health;
-	    if (( dmgTaken > 4 ) && ( prevhealth-4 != 0 ) && race = 25  )
+		var dmgTaken = prevhealth - my_health;
+		var maxDmg = 9;
+		if race == 25
+			maxDmg = 10;
+		var megaBreak = false;
+		if dmgTaken > maxDmg
+		{
+			var restore = dmgTaken - 8;
+			my_health += restore;
+			damageReduced += restore;
+			megaBreak = true;
+		}
+	    else if (race == 25 && ( dmgTaken > 4 ) )
 	    {
-	    my_health+=2;
-		damageReduced += 2;
-	    hardshell=false;
+		    my_health += 2;
+			damageReduced += 2;
 	    }
-	    else if (( dmgTaken > 1 ) && ( prevhealth-1 != 0 )  )
+	    else if (( dmgTaken > 2 ))
 	    {
-	    my_health+=1;
-		damageReduced += 1;
-	    hardshell=false;
+		    my_health += 1;
+			damageReduced += 1;
 	    }
 		if damageReduced > 0
 		{
@@ -526,11 +537,24 @@ if (skill_got[31])
 			{
 				speed *= 1.6;
 			}
+			if megaBreak
+			{
+				snd_play(sndWallBreakRock);
+				Sleep(100);
+				BackCont.shake += 40;
+				repeat(4)
+					with instance_create(x,y,Smoke)
+					{
+						speed *= 2;
+					}
+				repeat(6)
+					with instance_create(x,y,Debris)
+					{
+						speed *= 3;
+					}
+			}
 		}
 	}
-
-	if (sprite_index!=spr_hurt)
-		hardshell=true;
 }
 
 /* */
@@ -577,7 +601,7 @@ if armour > 0
 		canAnimateDuringImmune = 0;
 		hurtTime = 0;
 		snd_play(sndLostArmour);
-		alarm[3] = max(alarm[3],7);//before your armour lowers again}
+		alarm[3] = max(alarm[3],5);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -782,7 +806,7 @@ if(my_health <= 0 && maxhealth > 0)
 		my_health = 1;
 		BackCont.shake += 10;
 		Sleep(50);
-		alarm[3] += 18;
+		alarm[3] += 16;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 	}
@@ -796,7 +820,7 @@ if(my_health <= 0 && maxhealth > 0)
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMutLastWish);
 		scrGiveEuphoriaShield();
-		alarm[3] += 20;
+		alarm[3] += 17;
 	}
 	else if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
 	{
@@ -911,7 +935,7 @@ if rollIframe > 0
 	}
 	if rollIframe > 0
 	{
-		mask_index = mskPickupThroughWall;	
+		mask_index = mskPickupThroughWall;
 		var hitEnems = ds_list_create();
 		var al = collision_circle_list(x,y,22,enemy,false,false,hitEnems,false);
 		for (var i = 0; i < al; i++) {

@@ -14,7 +14,7 @@ if target != noone
 			{
 				if Player.skill_got[29]	//Insomnia
 				{
-					alarm[1] += 30;
+					alarm[1] += 60;
 					scrGiveSnooze();
 				}
 			}

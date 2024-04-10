@@ -4,7 +4,6 @@ meleedamage = 5
 mySize = 2
 
 event_inherited()
-firstTime = true
 spr_idle = sprRhinoFreakIdle
 spr_walk = sprRhinoFreakWalk
 spr_hurt = sprRhinoFreakHurt
@@ -24,3 +23,7 @@ walk = 0
 
 with instance_create(x,y,WallBreak)
 	canSpawnSwarm = false;
+	
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

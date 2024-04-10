@@ -30,7 +30,7 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 					if object_index != Disc
 						deflected = true;
 				}
-				else if typ == 2
+				else if typ == 2 || (typ == 0 && canBeMoved)
 				{
 					snd_play(sndProjectileDestroy,0.1,true);
 					BackCont.shake += 1;

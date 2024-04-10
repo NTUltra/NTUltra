@@ -41,9 +41,11 @@ speed = 1.5
 }
 
 
-if target != noone && existTime > 40
+if !sleeping && target != noone && existTime > 40
 {
 	if instance_exists(target)
 	mp_potential_step(target.x,target.y,2,0)
 }
+if sleeping
+	speed = 0;
 

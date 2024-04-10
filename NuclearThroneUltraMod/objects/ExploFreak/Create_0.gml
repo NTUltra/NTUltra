@@ -22,7 +22,9 @@ if instance_exists(Player) && Player.skill_got[29]
 	alarm[2] += 30;
 walk = 0
 
-firstAct = false;
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;
 maxSpeed = 3;
 loops = GetPlayerLoops();
 if loops > 0

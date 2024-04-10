@@ -60,6 +60,13 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_name[8] = "VENGEFUL"
 	    ultra_text[8] = "SIGNIFICANTLY SHORTER <p>SHIELD<p>#<pi>DEFLECTED<pi> PROJECTILES#HOME IN ON ENEMIES#<aq>INVULNERABLE<aq> TO ALL DAMAGE#WHILE <p>SHIELDING<p>"
 	    ultra_tips[8] = "homing effects wear of#when you're not shielding"
+		/*
+		if altOverride || (instance_exists(Player) && Player.race == 2 && Player.altUltra)
+		{
+			ultra_name[8] = "CRYSTALINE TORPEDO"
+		    ultra_text[8] = "+2 MAX HP#ACTIVE COSTS 1 HP#WHILE SHIELDING#LAUNCH YOURSELF INTO A MASSIVE CRYSTAL TORPEDO#BREAK WALLS AND DEAL TONS OF DAMAGE#COMPLETLY <aq>IMMUNE<aq> WHILE SHIELDING"
+		    ultra_tips[8] = "the boulder"
+		}*/
 
 	//EYES 
 	ultra_name[9] = "PROJECTILE STYLE"
@@ -507,7 +514,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 17 && (Player.altUltra))
 	{
 		ultra_name[66] = "QUICK SWAPPER"
-		ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU <aq>IMMUNE<aq> FOR A SHORT DURATION##<p>PORTALS<p> SPIT OUT A NEW <pi>RANDOM<pi> WEAPON#UPON ENTERING AN AREA"
+		ultra_text[66] = "INCREASE WEAPON PICKUP RANGE##YOU DROP WEAPONS AT YOUR FEET##DROPPING A WEAPON#MAKES YOU <aq>IMMUNE<aq> FOR A SHORT DURATION#FIRST SHOT FIRED WHEN PICKING UP A WEAPON#COSTS 50% LESS AMMO##<p>PORTALS<p> SPIT OUT A NEW <pi>RANDOM<pi> WEAPON#UPON ENTERING AN AREA"
 		ultra_tips[66] = "slide swapping!"
 	}
 
@@ -521,7 +528,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	if altOverride || (instance_exists(Player) && Player.race == 17 && Player.altUltra)
 	{
 		ultra_name[68] = "ENGINUITY"
-		ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>"
+		ultra_text[68] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>#<p>THRONEBUTT<p> INCREASES MORPH AMOUNT"
 		ultra_tips[68] = "moldable weapons"
 	}
 	

@@ -63,18 +63,37 @@ speed = Player.maxSpeed
 ///tough shell
 if (skill_got[31])
 {
-if ( prevhealth > my_health && hardshell == true )
+if ( prevhealth > my_health)
 {
 
-	if (( prevhealth-my_health > 1 ) && ( prevhealth-1 != 0 )  )
+	var dmgTaken = prevhealth-my_health;
+	var maxDmg = 9;
+	var megaBreak = false;
+	if dmgTaken > maxDmg
+	{
+		var restore = dmgTaken - maxDmg;
+		my_health += restore;
+		damageReduced += restore;
+		megaBreak = true;
+	}
+	else if (dmgTaken > 2 )
     {
-	    my_health+=1;
-	    hardshell=false;
+	    my_health += 1;
 		snd_play(sndHitRock);
-		repeat(4)
-		with instance_create(x,y,Debris)
+		repeat(3)
+			with instance_create(x,y,Debris)
+			{
+				speed *= 1.6;
+			}
+		if megaBreak
 		{
-			speed *= 1.6;
+			snd_play(sndExplosionS);
+			BackCont.shake += 5;
+			repeat(3)
+			with instance_create(x,y,Debris)
+			{
+				speed *= 3;
+			}
 		}
     }
     
@@ -82,8 +101,6 @@ if ( prevhealth > my_health && hardshell == true )
     my_health=maxhealth;
 }
 
-if (sprite_index!=spr_hurt)
-hardshell=true;
 }
 
 /* */

@@ -8,7 +8,7 @@ exit;
 /*
 if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exists(GenCont)
 {
-	instance_create(x,y,FPSHACK);
+	instance_create(x,yimm,FPSHACK);
 }*/
 with GameRender
 {
@@ -696,7 +696,6 @@ hammerheadDig = 0;
 digSurface = -1;
 nearWall = false;
 lag = -1;
-hardshell = true;
 
 visitedCrib = false;
 fromCribToVault = false;
@@ -869,3 +868,4 @@ if scrToxicWeapons(wep, wep_name[wep])
 {
 	toxicweaponsfound += 1;	
 }
+ammoReduction = 1;

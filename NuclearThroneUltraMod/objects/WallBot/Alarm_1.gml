@@ -1,4 +1,5 @@
 ///@description AI
+sleeping = false;
 alarm[1] = actTime;
 sprite_index = spr_fire;
 alarm[2] = 5;

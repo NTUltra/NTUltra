@@ -76,13 +76,12 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		var text = "";
 		var unlockHint = "";//"REACH LEVEL ULTRA AS" + race_name[race];
 		var howToUnlock = "";
-		canShowThis = true;
 		if j == 4
 		{
 			canShowThis = false;
 			var drawIndex = 0;
 			var u = race;
-			if u > 9		//Chicken has two secret ultras
+			if u > 9	//Chicken has two secret ultras
 				u ++;
 			if u > 14	//Sheep has two secret ultras
 				u ++;

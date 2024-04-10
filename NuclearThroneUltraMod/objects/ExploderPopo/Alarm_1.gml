@@ -1,6 +1,6 @@
 ///@description AI
 alarm[1] = actTime+random(actTime)
-
+sleeping = false;
 
 if team == 2
 scrRogueTarget()

@@ -21,3 +21,7 @@ motion_add(point_direction(Player.x,Player.y,x,y)+180,1)
 close = 0
 
 scrInitDrops(1);
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;

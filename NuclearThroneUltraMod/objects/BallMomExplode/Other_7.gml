@@ -49,8 +49,9 @@ else
 {
 	image_speed = 0;
 	image_index = image_number - 1;
-	if ! hasTriedPortal
+	if !hasTriedPortal
 	{
+		hasTriedPortal = true;
 		alarm[0] = 20;	
 	}
 }

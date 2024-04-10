@@ -37,3 +37,7 @@ if loops > 6
 	canSniperTogether = 5;
 }
 scrAddDrops(1);
+
+sleeping = false;
+if instance_exists(Player) && Player.skill_got[29]
+	sleeping = true;
