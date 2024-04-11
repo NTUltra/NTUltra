@@ -23,7 +23,7 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/703317/301800");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/712785/301900");
 		}
 	var txt0 = @"#UPDATE [30.19.00]
 	
@@ -39,6 +39,7 @@ function scrDrawUpdate() {
 	  FIRE AND TOXIC
 	* ADJUSTED TOUGH SHELL
 	* ADJUSTED ENRICHED METABOLISM
+	* MINOR BUFF TO NERVES OF STEEL
 	* NERFED MOOD SWING
 	
 	* BUFFED REBEL

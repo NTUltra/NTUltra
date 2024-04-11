@@ -43,7 +43,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 			wkick = 4
 			with instance_create(x,y,AllyBullet)
 			{
-				motion_add(other.gunangle+random(20)-10,9)
+				motion_add(other.gunangle+random(12)-6,9)
 				image_angle = direction
 				team = other.team
 			}

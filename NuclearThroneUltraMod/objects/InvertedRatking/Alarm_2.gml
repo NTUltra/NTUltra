@@ -4,8 +4,15 @@ spawns += 1
 ammo -= 1
 alarm[2] = 4
 sprite_index = spr_fire
-with instance_create(x,y,InvertedFastRat)
-motion_add(other.gunangle+random(40)-20,3+random(2))
+	with instance_create(x,y,InvertedFastRat)
+	{
+		motion_add(other.gunangle+random(40)-20,3+random(2))
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] = 60
+			scrGiveSnooze();
+			speed = 1;
+		}
+	}
 }
 else
 {

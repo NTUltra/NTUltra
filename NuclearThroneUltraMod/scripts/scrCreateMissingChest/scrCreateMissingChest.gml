@@ -6,6 +6,9 @@ function scrCreateMissingChest(typeOfChest, chestGoal){
 		return;
 	if !instance_exists(Player) || !instance_exists(Floor)
 		return;
+	if isOneWeaponOnlyModes() && (typeOfChest == WeaponChest || typeOfChest == UltraChest)
+		return;
+	
 	var px = Player.x;
 	var py = Player.y;
 	var furthest = instance_furthest(px,py,Floor);

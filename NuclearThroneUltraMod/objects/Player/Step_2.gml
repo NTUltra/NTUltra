@@ -483,7 +483,8 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 		my_health = prevhealth;
 		audio_stop_sound(snd_hurt);
 		snd_play_2d(sndMetabolism,0.1);
-		//scrGiveEuphoriaShield();
+		scrGiveEuphoriaShield();
+		alarm[3] = max(alarm[3],6);
 		if race == 25//Doctor
 			scrCollectAmmo(3.25);
 		else
@@ -584,7 +585,7 @@ if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
 {lag-=1;
 
 
-alarm[3] = max(alarm[3],14);//before your lag lowers again}
+alarm[3] = max(alarm[3],12);//before your lag lowers again}
 }
 }
 
@@ -601,7 +602,7 @@ if armour > 0
 		canAnimateDuringImmune = 0;
 		hurtTime = 0;
 		snd_play(sndLostArmour);
-		alarm[3] = max(alarm[3],5);//before your armour lowers again}
+		alarm[3] = max(alarm[3],4);//before your armour lowers again}
 		if skill_got[28] == 1
 		{
 			//rage = 0;
@@ -738,7 +739,7 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 18;
+			alarm[3] += 17;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
@@ -751,7 +752,7 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 15;
+		alarm[3] += 14;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
@@ -806,7 +807,7 @@ if(my_health <= 0 && maxhealth > 0)
 		my_health = 1;
 		BackCont.shake += 10;
 		Sleep(50);
-		alarm[3] += 16;
+		alarm[3] += 14;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 	}
@@ -820,7 +821,7 @@ if(my_health <= 0 && maxhealth > 0)
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMutLastWish);
 		scrGiveEuphoriaShield();
-		alarm[3] += 17;
+		alarm[3] += 16;
 	}
 	else if (skill_got[40] && my_health <= 0 && maxhealth > 0 && scrHasAmmo())
 	{

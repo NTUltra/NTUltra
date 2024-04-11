@@ -33,7 +33,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 			if canAmmo
 			{
 				scrSwapWeps();
-				scrCollectAmmo(0.20, false, false, false);
+				scrCollectAmmo(0.3, false, false, false);
 				scrSwapWeps();
 			}
 			if canHeal

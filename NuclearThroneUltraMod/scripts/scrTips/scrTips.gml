@@ -121,7 +121,6 @@ function scrTips() {
 	"there are a ton of gamemodes to unlock and try",
 	"there are more than 700 weapons",
 	"director weapons can pierce shields/deflects",
-	"respect each other",
 	"damn squares",
 	"you can toggle mutation details using#[Right Mouse Button]",
 	"charge proto statues with radiation#then blow up the statue#to enter the crownvault",

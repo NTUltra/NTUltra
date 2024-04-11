@@ -17,7 +17,6 @@ else
 {
 	nameHover = 0;	
 }
-draw_text(x,y-16,string(isInFight));
 /*
 draw_path(currentPath,
 path_get_point_x(currentPath,0),

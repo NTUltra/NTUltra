@@ -14,8 +14,10 @@ throwSpeed = 6;
 throwDamage = 6;
 throwDirection = direction;
 isInFight = 0;
+accuracy = 1;
 if instance_exists(Player)
 {
+	accuracy = Player.accuracy;
 	if Player.skill_got[20]
 	{
 		throwSpeed = 12;

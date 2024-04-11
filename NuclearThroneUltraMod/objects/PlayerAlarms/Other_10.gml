@@ -108,9 +108,11 @@ if instance_exists(Player)
 		if !instance_exists(PlayerAlarms3)
 			instance_create(x,y,PlayerAlarms3);
 		with PlayerAlarms3 {
-			alarm[0] = 60;
+			alarm[0] = 15;
 			alarm[1] = 120;
 			enemyHealthWasChanged = true;
+			playerHealthWasChanged = true;
+			detectedPlayerHealth = 0;
 			detectedEnemyHealth = 0;
 			adrenalineAmmoTimer = adrenalineAmmoCooldown;
 			adrenalineHealTimer = adrenalineHealCooldown;
