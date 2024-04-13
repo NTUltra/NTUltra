@@ -27,6 +27,14 @@ if instance_exists(creator)
 	BackCont.viewy2 += lengthdir_y(16,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 14
 	creator.wkick = 8
+	with creator
+	{
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,0.5);
+			motion_add(aimDirection+180,0.5)
+		}	
+	}
 }
 
 

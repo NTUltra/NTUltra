@@ -669,6 +669,7 @@ function scrWeapons() {
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
 	wep_popup[59] = "LIGHTNING DAMAGE DOES STACKS";
+	//35! dmg 45
 
 	//BELOW THIS IS MODDED by Juul (Erdeppol/CouchPotato)
 	wep_name[60] = "BLOOD LAUNCHER SHOTGUN"
@@ -1220,6 +1221,7 @@ function scrWeapons() {
 	wep_text[108] = "cold touch of death"
 	wep_swap[108] = sndSwapHammer
 	wep_rad[108] = 0;
+	wep_popup[108] = "REVERSE RECOIL";
 
 	wep_name[109] = "BLOOD GLOVE"
 	wep_type[109] = 4
@@ -1385,6 +1387,7 @@ function scrWeapons() {
 	wep_text[123] = "cold hands"
 	wep_swap[123] = sndSwapFrost
 	wep_rad[123] = 0;
+	wep_popup[123] = "DASH NEGATED WHEN USING EXTRA FEET";
 
 	wep_name[124] = "LIGHTNING HAMMER"
 	wep_type[124] = 0
@@ -3579,7 +3582,7 @@ function scrWeapons() {
 
 	wep_name[319] = "TOXIC ION CANNON"
 	wep_type[319] = 4
-	wep_auto[319] = 1
+	wep_auto[319] = 3
 	wep_load[319] = 16
 	wep_cost[319] = 2
 	wep_sprt[319] = sprToxicIonCannon
@@ -3624,7 +3627,7 @@ function scrWeapons() {
 	wep_name[323] = "THUNDER KRAKEN"
 	wep_type[323] = 5
 	wep_auto[323] = 0
-	wep_load[323] = 20
+	wep_load[323] = 18
 	wep_cost[323] = 2
 	wep_sprt[323] = sprThunderCrack
 	wep_area[323] = 9
@@ -3875,6 +3878,7 @@ function scrWeapons() {
 	wep_text[345] = "connected"
 	wep_swap[345] = sndSwapEnergy
 	wep_rad[345] = 0;
+	wep_popup[345] = "LIGHTNING CONNECTS#THE ELECTRO BALLS";
 
 	wep_name[346] = "AUTO BULLET SHOTGUN"
 	wep_type[346] = 1
@@ -3930,6 +3934,7 @@ function scrWeapons() {
 	wep_text[350] = "this is the 350th weapon!"
 	wep_swap[350] = sndSwapHammer
 	wep_rad[350] = 0;
+	wep_popup[123] = "DASH NEGATED WHEN USING EXTRA FEET";
 
 	wep_name[351] = "BULLET DISPERSE DISPERSE GUN"
 	wep_type[351] = 1
@@ -5022,7 +5027,7 @@ function scrWeapons() {
 	wep_cost[446] = 2
 	wep_sprt[446] = sprAutoHandCannon
 	wep_area[446] = 16
-	wep_text[446] = "trusty old revolver"
+	wep_text[446] = "all rights reserved by business hog"
 	wep_swap[446] = sndSwapPistol
 	wep_rad[446] = 0;
 	
@@ -5598,7 +5603,7 @@ function scrWeapons() {
 	wep_cost[498] = 8
 	wep_sprt[498] = sprDevastator
 	wep_area[498] = 15
-	wep_text[498] = "a devestating development"
+	wep_text[498] = "a devastating development"
 	wep_swap[498] = sndSwapEnergy
 	wep_rad[498] = 0;
 	
@@ -5929,7 +5934,7 @@ function scrWeapons() {
 	wep_cost[528] = 0
 	wep_sprt[528] = sprShovelCrash
 	wep_area[528] = 12//4 originally?
-	wep_text[528] = "beautifull flower"
+	wep_text[528] = "beautiful flower"
 	wep_swap[528] = sndSwapHammer
 	wep_rad[528] = 0;
 	
@@ -6194,7 +6199,7 @@ function scrWeapons() {
 	wep_cost[552] = 4.5
 	wep_sprt[552] = sprSuperWrongDirection
 	wep_area[552] = 14
-	wep_text[552] = "lost completly"
+	wep_text[552] = "lost completely"
 	wep_swap[552] = sndSwapBow
 	wep_rad[552] = 0;
 	
@@ -7560,7 +7565,7 @@ function scrWeapons() {
 	wep_name[676] = "MICRO ASSAULT RIFLE"
 	wep_type[676] = 1
 	wep_auto[676] = 3
-	wep_load[676] = 12
+	wep_load[676] = 15
 	wep_cost[676] = 3
 	wep_sprt[676] = sprMicroAssaultRifle
 	wep_area[676] = 1
@@ -7571,7 +7576,7 @@ function scrWeapons() {
 	wep_name[677] = "SUPER MICRO ASSAULT RIFLE"
 	wep_type[677] = 1
 	wep_auto[677] = 3
-	wep_load[677] = 12
+	wep_load[677] = 15
 	wep_cost[677] = 12
 	wep_sprt[677] = sprSuperMicroAssaultRifle
 	wep_area[677] = 12
@@ -7954,11 +7959,11 @@ function scrWeapons() {
 	wep_name[711] = "METAL PIPE"
 	wep_type[711] = 0
 	wep_auto[711] = 0
-	wep_load[711] = 13
+	wep_load[711] = 11
 	wep_cost[711] = 0
 	wep_sprt[711] = sprMetalPipe
 	wep_area[711] = 0
-	wep_text[711] = "a little bit of something"
+	wep_text[711] = "melee can deflect enemy bullets#except for pink squares#flames and toxic"
 	wep_swap[711] = sndSwapMachinegun
 	wep_rad[711] = 0;
 	wep_popup[711] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
@@ -8315,6 +8320,108 @@ function scrWeapons() {
 	wep_text[743] = "consecutive normal punches"
 	wep_swap[743] = sndSwapShotgun
 	wep_rad[743] = 0;
+	
+	wep_name[744] = "LASER FLAK CANNON"
+	wep_type[744] = 5
+	wep_auto[744] = 0
+	wep_load[744] = 24
+	wep_cost[744] = 3
+	wep_sprt[744] = sprLaserFlakCannon
+	wep_area[744] = 11
+	wep_text[744] = "would smack"
+	wep_swap[744] = sndSwapExplosive
+	wep_rad[744] = 0;
+	
+	wep_name[745] = "DOUBLE LASER MINIGUN"
+	wep_type[745] = 5
+	wep_auto[745] = 1
+	wep_load[745] = 1
+	wep_cost[745] = 0.75
+	wep_sprt[745] = sprDoubleLaserMinigun
+	wep_area[745] = 8
+	wep_text[745] = "nuclear powered"
+	wep_swap[745] = sndSwapEnergy
+	wep_rad[745] = 0;
+	
+	wep_name[746] = "SUCK CANNON"
+	wep_type[746] = 5
+	wep_auto[746] = 0
+	wep_load[746] = 6
+	wep_cost[746] = 1.5
+	wep_sprt[746] = sprSuckCannon
+	wep_area[746] = 7
+	wep_text[746] = "suck up enemy projectiles!"
+	wep_swap[746] = sndSwapEnergy
+	wep_rad[746] = 0;
+	wep_popup[746] = "HOLD TO SUCK UP ENEMY PROJECTILES";
+	
+	wep_name[747] = "YOYO MINIGUN"
+	wep_type[747] = 3
+	wep_auto[747] = 1
+	wep_load[747] = 4
+	wep_cost[747] = 1.5
+	wep_sprt[747] = sprYoyoMinigun
+	wep_area[747] = 11
+	wep_text[747] = "yo! yo! yo!"
+	wep_swap[747] = sndSwapBow
+	wep_rad[747] = 0;
+	
+	wep_name[748] = "LIGHTNING DRAGON"
+	wep_type[748] = 4
+	wep_auto[748] = 3
+	wep_load[748] = 4
+	wep_cost[748] = 1
+	wep_sprt[748] = sprLightningDragon
+	wep_area[748] = 16
+	wep_text[748] = "sparkles!"
+	wep_swap[748] = sndSwapDragon
+	wep_rad[748] = 0;
+	
+	wep_name[749] = "SUPER BLOOD ROCKET GUN"
+	wep_type[749] = 4
+	wep_auto[749] = 0
+	wep_load[749] = 10
+	wep_cost[749] = 4
+	wep_sprt[749] = sprSuperBloodRocketGun
+	wep_area[749] = 17
+	wep_text[749] = "I see red"
+	wep_swap[749] = sndSwapExplosive
+	wep_rad[749] = 0;
+	
+	wep_name[750] = "MORPH-O-MINIGUN"
+	wep_type[750] = 1
+	wep_auto[750] = 1
+	wep_load[750] = 2
+	wep_cost[750] = 1.5
+	wep_sprt[750] = sprMorphOMinigun
+	wep_area[750] = 7
+	wep_text[750] = "blaster from space"
+	wep_swap[750] = sndSwapPistol
+	wep_rad[750] = 0;
+	
+	wep_name[751] = "SUPER COFFEE CANNON"
+	wep_type[751] = 1
+	wep_auto[751] = 1
+	wep_load[751] = 2
+	wep_cost[751] = 4
+	wep_sprt[751] = sprSuperCoffeeCannon
+	wep_area[751] = 32
+	wep_text[751] = "tttttime forrrrrr sommeeeee morrrrrrrre coffeeeeeeeeee!"
+	wep_swap[751] = sndSwapMachinegun
+	wep_rad[751] = -2;
+	wep_popup[751] = "MAKES YOU MUCH FASTER#FEEDS YOU RADS!";
+	
+	wep_name[752] = "VOID RIPPER"
+	wep_type[752] = 0
+	wep_auto[752] = 0
+	wep_load[752] = 25//16 usual
+	wep_cost[752] = 0
+	wep_sprt[752] = sprVoidSword
+	wep_area[752] = 23
+	wep_text[752] = "not of this world"
+	wep_swap[752] = sndSwapSword
+	wep_rad[752] = 0;
+	wep_popup[752] = "CUTS EVERYTHING";
 
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

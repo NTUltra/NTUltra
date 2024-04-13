@@ -2824,7 +2824,7 @@ function scrFire() {
 	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 	{
-		dmg = 4
+		dmg = 5
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2840,7 +2840,7 @@ function scrFire() {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 			{
-				dmg = 4
+				dmg = 5
 				longarms = 0
 				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3

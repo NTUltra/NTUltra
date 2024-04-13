@@ -1,5 +1,10 @@
 /// @description Checking wether or not some damage was dealt since last check
 alarm[1] = 60;
+if !detectedCombat
+{
+	alarm[1] = 30;
+	exit;
+}
 if instance_exists(Player)
 {
 	if Player.my_health != detectedPlayerHealth

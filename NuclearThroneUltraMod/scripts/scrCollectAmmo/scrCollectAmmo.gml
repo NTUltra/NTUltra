@@ -1,7 +1,7 @@
 ///scrCollectAmmo();
 // /@description
 ///@param
-function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false, ammoPickup = true) {
+function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false, ammoPickup = true, topHUD = false) {
 	if scrIsGamemode(48)
 		return;
 	var type = 0;
@@ -144,25 +144,46 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
 		Player.ammo[type] = Player.typ_amax[type]
 
-	if (UberCont.opt_ammoicon)
+	if !topHUD
 	{
-		dir = instance_create(x,y,PopupText)
+		if (UberCont.opt_ammoicon)
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.sprt = sprAmmoIconsPickup
+			dir.ii = type-1;
+			dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
+			if Player.ammo[type] == Player.typ_amax[type]
+				dir.mytext = "MAX"//+string(Player.typ_name[type])
+	
+			snd_play(sndAmmoPickup)
+		}
+		else
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))+" "+string(Player.typ_name[type])
+			if Player.ammo[type] == Player.typ_amax[type]
+				dir.mytext = "MAX "+string(Player.typ_name[type])
+
+			snd_play(sndAmmoPickup)
+		}
+	}
+	else
+	{
+		snd_play_2d(sndSmallAmmoGain,0.1);
+		dir = instance_create(x,y,AmmoPopUp)
 		dir.sprt = sprAmmoIconsPickup
 		dir.ii = type-1;
 		dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
 		if Player.ammo[type] == Player.typ_amax[type]
 			dir.mytext = "MAX"//+string(Player.typ_name[type])
-	
-		snd_play(sndAmmoPickup)
+		with dir {
+			with AmmoPopUp
+			{
+				if id != other.id
+				{
+					xo += 4;
+				}
+			}	
+		}
 	}
-	else
-	{
-		dir = instance_create(x,y,PopupText)
-		dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))+" "+string(Player.typ_name[type])
-		if Player.ammo[type] == Player.typ_amax[type]
-			dir.mytext = "MAX "+string(Player.typ_name[type])
-
-		snd_play(sndAmmoPickup)
-	}
-
 }

@@ -73,7 +73,6 @@ if ( prevhealth > my_health)
 	{
 		var restore = dmgTaken - maxDmg;
 		my_health += restore;
-		damageReduced += restore;
 		megaBreak = true;
 	}
 	else if (dmgTaken > 2 )

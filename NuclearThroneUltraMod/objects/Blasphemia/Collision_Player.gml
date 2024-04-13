@@ -37,6 +37,15 @@ if KeyCont.key_pick[other.p] == 1
 			curse = 0
 			sprite_index = wep_sprt[wep]
 		}
+		with other
+		{
+			wep = 0;
+			if ultra_got[29] && altUltra && bwep != 0//ROBOT EXCLUSIVE TASTE
+			{
+				maxhealth += 4;
+			}
+			scrSwapWeps();
+		}
 	}
 	else if !audio_is_playing(sndMutant6No)
 	{

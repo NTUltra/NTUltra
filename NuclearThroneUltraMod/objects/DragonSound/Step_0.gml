@@ -1,4 +1,4 @@
-if instance_exists(DragonBurst)||instance_exists(UltraFlameBurst)
+if instance_exists(DragonBurst)||instance_exists(UltraFlameBurst)||instance_exists(LightningDragonBurst)
 timeout = 0
 else
 {

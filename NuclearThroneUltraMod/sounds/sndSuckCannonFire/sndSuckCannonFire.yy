@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndSuckCannonFire",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.033288,
+  "name":"sndSuckCannonFire",
+  "parent":{
+    "name":"Energy",
+    "path":"folders/Sounds/Weapons/Energy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndSuckCannonFire.ogg",
+  "type":0,
+  "volume":1.0,
+}

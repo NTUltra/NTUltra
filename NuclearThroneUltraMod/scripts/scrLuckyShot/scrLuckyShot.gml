@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrLuckyShot(){
-	var chance = 1.9;
+	var chance = 2;
 	var ran = 10;
 	if Player.race == 25
 		chance = 2.1
@@ -11,7 +11,7 @@ function scrLuckyShot(){
 		snd_play_2d(sndLuckyShotProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)
 	    {
-			sprite_index=sprLuckyShot;
+			sprite_index = sprLuckyShot;
 	    }
     
 	    var wepammo = Player.wep_type[Player.wep]

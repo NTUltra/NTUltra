@@ -15,7 +15,7 @@ repeat(am)
 	team = other.team}
 	ang += angstep;
 }
-	snd_play(sndExplosionS);
+	snd_play(sndExplosionS,0.02,false,true,3,false,true,0.6,false,id,0,96);
 	BackCont.shake += 5
 	
 // Inherit the parent event

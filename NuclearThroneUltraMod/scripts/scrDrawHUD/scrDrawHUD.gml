@@ -113,6 +113,22 @@ function scrDrawHUD() {
 		draw_sprite(sprLoseAmmoHealth,BouncyFatFX.image_index,vx,vy);	
 	}
 
+	//AMMO POPUP ADRENALINE
+	with AmmoPopUp
+	{
+		if visible = 1
+		{
+			var xxx = round(vx + 62 + xo);
+			var yy = round(vy + 34);
+			draw_set_color(c_black)
+			draw_text(xxx,yy+1,string_hash_to_newline(string(mytext)))
+			draw_text(xxx+1,yy+1,string_hash_to_newline(string(mytext)))
+			draw_text(xxx+1,yy,string_hash_to_newline(string(mytext)))
+			draw_set_color(theColour)
+			draw_sprite(sprt,ii,xxx+(string_width(string_hash_to_newline(string(mytext)))*0.5),yy);
+			draw_text(xxx,yy,string_hash_to_newline(string(mytext)))
+		}
+	}
 
 	//VIKING ARMOUR
 	var armour = dataRef.armour;

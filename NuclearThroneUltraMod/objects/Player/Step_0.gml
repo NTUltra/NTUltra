@@ -403,7 +403,9 @@ if !instance_exists(LevCont) and visible = 1
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "FIRE EVERY GUN";
-			instance_create(x+32,y,UltraDiscGuy);
+			repeat(40)
+			instance_create(x+32,y,Raven);
+			
 			instance_create(x+32,y,Thief);
 						instance_create(x+32,y,InvertedThief);
 instance_create(x+32,y,AmmoPickup);
@@ -1539,6 +1541,10 @@ if ultra_got[108] && place_meeting(x,y,HandTrail)
 if wep == 531//Coffee makes you faster
 {
 	tempMaxSpeed += 1;
+}
+if wep == 751//Coffee makes you faster
+{
+	tempMaxSpeed += 2;
 }
 outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
