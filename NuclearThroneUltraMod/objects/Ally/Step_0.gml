@@ -59,7 +59,7 @@ if instance_exists(Player) && alarm[0] < 1
 	{
 		if target != noone && instance_exists(target)
 		{
-			if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) > 64
+			if !collision_line(x,y,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) > 64 && !place_meeting(x,y,enemy)
 			{
 				motion_add(point_direction(x,y,target.x,target.y),1);	
 			}

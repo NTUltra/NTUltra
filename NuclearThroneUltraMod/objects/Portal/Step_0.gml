@@ -34,10 +34,24 @@ with WepPickup
 			x += lengthdir_x(2,point_direction(x,y,Portal.x,Portal.y))
 			y += lengthdir_y(2,point_direction(x,y,Portal.x,Portal.y))
 		}
-		if point_distance(x,y,Portal.x,Portal.y) < 16
+	}
+}
+var n = instance_nearest(x,y,ThrowWep);
+with n {
+	if (point_distance(x,y,Portal.x,Portal.y) < 96 || t == 4) and collision_line(x,y,Portal.x,Portal.y,Wall,0,0) < 0
+	{
+		//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
+			x += lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
+		//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
+			y += lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y))
+		image_angle -= 15*rotspeed
+
+		if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
 		{
-			x = -50000
-			y = -50000
+			//mask_index = mskPickupThroughWall;
+			persistent = true;
+			x += lengthdir_x(2,point_direction(x,y,Portal.x,Portal.y))
+			y += lengthdir_y(2,point_direction(x,y,Portal.x,Portal.y))
 		}
 	}
 }
@@ -137,7 +151,7 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 						instance_create(other.x,other.y,Smoke);
 					}
 				}
-		    instance_create(other.x,other.y,Smoke);
+				instance_create(other.x,other.y,Smoke);
 		    }
 		} 
 	}

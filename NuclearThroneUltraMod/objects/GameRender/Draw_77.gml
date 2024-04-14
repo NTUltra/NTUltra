@@ -92,3 +92,15 @@ if instance_exists(VoidStyle) && VoidStyle.image_index < 8
 	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,a);
 	gpu_set_blendmode(bm_normal);
 }
+if instance_exists(VoidRipperBurst)
+{
+	gpu_set_blendmode(bm_subtract);
+	var a = 1;
+	var voidTime = 0;
+	if VoidRipperBurst.alarm[0] > 0
+		voidTime = sin((15/(VoidRipperBurst.alarm[0]*0.5))*1.57);
+	a = lerp(0,1,clamp(voidTime,0,1));
+	if a > 0
+	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,a);
+	gpu_set_blendmode(bm_normal);
+}

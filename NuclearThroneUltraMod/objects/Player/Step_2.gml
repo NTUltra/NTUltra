@@ -1019,7 +1019,7 @@ if my_health <= 0 && armour < 1
 		Sleep(min(40,20 + (phoenixrevives*2)));
 		BackCont.shake += min(50,20 + (phoenixrevives*2));
 	}
-	else if race = 9 and bleed < 150 and !(altUltra && ultra_got[33])
+	else if race = 9 and bleed < 150 and !(altUltra && ultra_got[33]) and !outOfCombat
 	{
 		if bleed == 0
 		{

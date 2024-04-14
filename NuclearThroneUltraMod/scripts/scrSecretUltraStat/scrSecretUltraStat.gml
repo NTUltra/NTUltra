@@ -305,13 +305,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[37] = "eating guns from other dimensions"
 	secret_ultra_hint[37] = "SPOILED FOOD";
 	secret_ultra_unlk[37] = "BE CURSED ROBOT\nBY EATING A CURSED WEAPON\nUSING A-SKIN";
-	/*
-	secret_ultra_name[38] = "CRYSTALINE TORPEDO"
-	secret_ultra_text[38] = "+2 MAX HP#ACTIVE COSTS 1 HP#WHILE SHIELDING#LAUNCH YOURSELF INTO A MASSIVE CRYSTAL TORPEDO#BREAK WALLS AND DEAL TONS OF DAMAGE#COMPLETLY <aq>IMMUNE<aq> WHILE SHIELDING"
-	secret_ultra_tips[38] = "the boulder"
-	secret_ultra_hint[38] = "CAVES";
-	secret_ultra_unlk[38] = "REACH LEVEL ULTRA IN CRYSTAL CAVES";
-	*/
+	
 	maxsecretultra = array_length(secret_ultra_name);
 	//109
 	secret_ultra_name[maxsecretultra + 1] = "TRASH"
@@ -319,6 +313,15 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[maxsecretultra + 1] = "challenge run"
 	secret_ultra_hint[maxsecretultra + 1] = "";
 	secret_ultra_unlk[maxsecretultra + 1] = "WIELD NO WEAPON";
+	
+	/*
+	secret_ultra_name[38] = "CRYSTALINE TORPEDO"
+	secret_ultra_text[38] = "+2 MAX HP#ACTIVE COSTS 1 HP#WHILE SHIELDING#LAUNCH YOURSELF INTO A MASSIVE CRYSTAL TORPEDO#BREAK WALLS AND DEAL TONS OF DAMAGE#COMPLETLY <aq>IMMUNE<aq> WHILE SHIELDING"
+	secret_ultra_tips[38] = "the boulder"
+	secret_ultra_hint[38] = "CAVES";
+	secret_ultra_unlk[38] = "REACH LEVEL ULTRA IN CRYSTAL CAVES";
+	*/
+	
 	/*
 	var dir = 0
 	repeat(maxsecretultra)

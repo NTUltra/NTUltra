@@ -53,7 +53,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			{
 				type = st;
 			}
-			if (pa < pc)
+			else if (pa < pc)
 			{
 				type = pt;
 			}

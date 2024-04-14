@@ -775,6 +775,7 @@ image_speed = 0.4
 if scrIsGamemode(5) //1HP gamemode
 {
     my_health = 1;
+	prevhealth = 1;
     maxhealth = my_health
 }
 

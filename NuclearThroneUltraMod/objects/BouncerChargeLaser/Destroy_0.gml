@@ -24,9 +24,9 @@ if instance_exists(Player)
 		with instance_create(x,y,Laser)
 		{
 			sprite_index=sprBouncingLaser;
-			laserhit = ceil(other.rate*0.4);
+			laserhit = ceil(other.rate*0.25);
 			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(2)-1)*other.creator.accuracy
-			image_yscale=0.2+other.rate*0.25
+			image_yscale=0.2+other.rate*0.2
 			team = other.team
 			scrCopyWeaponMod(other);
 			event_perform(ev_alarm,0)

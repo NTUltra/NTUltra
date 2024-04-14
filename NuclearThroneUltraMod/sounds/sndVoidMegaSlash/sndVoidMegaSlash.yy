@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndVoidMegaSlash",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.079906,
+  "name":"sndVoidMegaSlash",
+  "parent":{
+    "name":"Melee",
+    "path":"folders/Sounds/Weapons/Melee.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndVoidMegaSlash.ogg",
+  "type":0,
+  "volume":1.0,
+}

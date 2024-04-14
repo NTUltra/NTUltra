@@ -3,14 +3,17 @@ if other.team != team and other.my_health > 0
 	instance_destroy()
 	with other
 	{
-		if other.object_index == Player && sprite_index != spr_hurt {
-			snd_play(snd_hurt, hurt_pitch_variation,true)
-			hitBy = other.sprite_index;
-			DealDamage(other.dmg)
-			sprite_index = spr_hurt
-			image_index = 0
-			Sleep(20);
-			motion_add(other.direction,6)
+		if other.object_index == Player {
+			if (sprite_index != spr_hurt)
+			{
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+				hitBy = other.sprite_index;
+				DealDamage(other.dmg)
+				sprite_index = spr_hurt
+				image_index = 0
+				Sleep(20);
+				motion_add(other.direction,6)
+			}
 		}
 		else
 		{

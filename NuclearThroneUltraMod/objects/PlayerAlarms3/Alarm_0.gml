@@ -6,7 +6,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 		if !outOfCombat
 		{
 			var n = instance_nearest(x,y,enemy)
-			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 250 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
+			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 300 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 			{
 				canAdrenaline = true;
 			}
@@ -32,9 +32,11 @@ if enemyHealthWasChanged || playerHealthWasChanged
 			}
 			if canAmmo
 			{
-				scrSwapWeps();
-				scrCollectAmmo(0.28, false, false, false, true);
-				scrSwapWeps();
+				//scrSwapWeps();
+				scrCollectAmmo(0.25, false, false, false, true);
+				if wep_rad[wep] > 0 || wep_rad[bwep] > 0 || wep_rad[cwep] > 0
+					scrRaddrop(1);
+				//scrSwapWeps();
 			}
 			if canHeal
 			{

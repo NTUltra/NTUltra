@@ -23,7 +23,7 @@ if place_meeting(x,y,Floor) || place_meeting(x,y,FloorExplo)
 {
 	scrDrop(13,0)
 }
-if !sleeping
+if !sleeping && existTime > 20
 {
 	snd_play(sndExplosionL);
 	if isInverted

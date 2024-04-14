@@ -111,3 +111,25 @@ if speed > 1
 	}
 	mask_index = msk;
 }
+if visible
+{
+	var n = instance_nearest(x,y,Portal);
+	if n != noone && point_distance(x,y,n.x,n.y) < 24
+	{
+		if n.sprite_index == sprProtoPortalDormant ||  n.sprite_index == sprInvertedPortalDormant
+			exit;
+		snd_play(sndWepPortal,0.1,false,true,1,false,false);
+		visible = false;
+		speed = 0;
+		var portalDepth = n.depth;
+		with instance_create(x,y,ImpactFX)
+		{
+			sprite_index = sprWepPortal;
+			image_angle=other.image_angle;
+			depth = portalDepth - 1;
+		}
+		persistent = true
+		dontteleport=true;
+		instance_destroy();
+	}
+}

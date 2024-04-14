@@ -25,7 +25,7 @@
   ],
   "name":"sprSplinter",
   "nineSlice":null,
-  "origin":3,
+  "origin":9,
   "parent":{
     "name":"Projectiles",
     "path":"folders/Sprites/Projectiles.yy",
@@ -83,7 +83,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":1,
     "yorigin":3,
   },
   "swatchColours":null,

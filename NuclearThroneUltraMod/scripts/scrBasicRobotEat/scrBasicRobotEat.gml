@@ -8,9 +8,9 @@ function scrBasicRobotEat(xx,yy,eatWep){
 		scrRaddrop(12,xx,yy);
 		scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
 	}
-	else if string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131//heavy hyper shit
+	else if wep_area[eatWep] > 17 || (string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131)//heavy hyper shit
 	{
-		scrUnlockBSkin(8,"FOR EATING A HYPER WEAPON",0);
+		scrUnlockBSkin(8,"FOR EATING A HYPER#OR TIER 18+ WEAPON",0);
 	}
 	if string_copy(wep_name[eatWep],0,4) = "GOLD"
 	{

@@ -11,11 +11,12 @@ if instance_exists(Player)
 	y += lengthdir_y(8,direction);
 	var dir = 0
 	do {
+		var n = instance_place(x,y,hitme)
 		dir += 1;
 		x += lengthdir_x(4,direction);
 		y += lengthdir_y(4,direction);
 	}
-	until dir > 150 or collision_point(x,y,Wall,false,false) or place_meeting(x,y,hitme)
+	until dir > 150 or collision_point(x,y,Wall,false,false) or (n != noone && n.team != team)
 	
 	alarm[1] = 6
 	scrForcePosition60fps();

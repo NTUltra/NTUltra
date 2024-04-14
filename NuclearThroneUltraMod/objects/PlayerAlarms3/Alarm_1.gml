@@ -1,10 +1,5 @@
 /// @description Checking wether or not some damage was dealt since last check
 alarm[1] = 60;
-if !detectedCombat
-{
-	alarm[1] = 30;
-	exit;
-}
 if instance_exists(Player)
 {
 	if Player.my_health != detectedPlayerHealth
@@ -15,11 +10,12 @@ if instance_exists(Player)
 	}
 	else
 	{
-		playerHealthWasChanged = false;	
+		alarm[3] = 60;
+		alarm[1] = 90;
 	}
 }
 var totalHp = 0;
-if instance_number(enemy) < 30
+if instance_number(enemy) < 20
 {
 	with enemy
 	{
@@ -33,7 +29,8 @@ if instance_number(enemy) < 30
 	}
 	else
 	{
-		enemyHealthWasChanged = false;	
+		alarm[2] = 60;
+		alarm[1] = 90;
 	}
 }
 else

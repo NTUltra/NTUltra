@@ -67,6 +67,7 @@ with instance_create(x,y,WepPickupForOneWepOnly)
 	isPermanent = other.isPermanent;
 	hasBeenEaten = other.hasBeenEaten;
 	persistent=other.persistent;
+	visible = other.visible;
 	if persistent
 		wasThrown = true;
 	sprite_index = wep_sprt[wep]

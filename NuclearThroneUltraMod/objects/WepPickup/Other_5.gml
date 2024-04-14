@@ -1,3 +1,2 @@
 if !instance_exists(Player)
-instance_destroy()
-
+	instance_destroy()

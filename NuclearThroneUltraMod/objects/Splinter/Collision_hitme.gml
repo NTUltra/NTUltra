@@ -21,7 +21,7 @@ instance_destroy()
 		}
 		with instance_create(x,y,BoltStick)
 		{
-			sprite_index = sprSplinterStick
+			sprite_index = other.boltStick
 			image_angle = other.image_angle
 			target = other.target
 		}

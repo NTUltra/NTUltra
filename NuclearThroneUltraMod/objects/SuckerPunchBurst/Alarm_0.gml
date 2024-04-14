@@ -22,17 +22,17 @@ if instance_exists(creator)
 		team = other.team
 		scrCopyWeaponMod(other);
 	}
-
-	BackCont.viewx2 += lengthdir_x(16,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(16,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180;
+	BackCont.viewx2 += lengthdir_x(16,a)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(16,a)*UberCont.opt_shake
 	BackCont.shake += 14
 	creator.wkick = 8
 	with creator
 	{
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.5);
-			motion_add(aimDirection+180,0.5)
+			scrMoveContactSolid(a,0.5);
+			motion_add(a,0.5)
 		}	
 	}
 }

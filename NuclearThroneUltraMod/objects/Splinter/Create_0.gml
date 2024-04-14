@@ -21,3 +21,6 @@ um = GetPlayerUltramod();
 xprev = x;
 yprev = y;
 hitEntities = [];
+boltStick = sprSplinterStick;
+trailShrinkRate = 0.11;
+trailSize = 0.75;

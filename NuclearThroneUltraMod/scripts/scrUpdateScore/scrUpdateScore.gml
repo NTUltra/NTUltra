@@ -23,14 +23,14 @@ function scrUpdateScore(theOther, isPerliminary = false){
 		runScore[5] = theOther.loops;
 		runScore[6] = theOther.race;
 		runScore[7] = theOther.bskin;
-		if getUltraMutation() != 255 || array_length(runScore) <= 14
+		if (getUltraMutation() != 255 || theOther.boostLevel >= theOther.maxlevel) || array_length(runScore) <= 14
 			runScore[8] = theOther.altUltra;
 		runScore[9] = theOther.wep;
 		runScore[10] = theOther.bwep;
 		runScore[11] = theOther.cwep;
 		runScore[12] = string_replace_all(string(theOther.crown)," ","");
 		runScore[13] = theOther.ultramod;
-		if getUltraMutation() != 255 || array_length(runScore) <= 14//Keep ultra display after using lives
+		if (getUltraMutation() != 255 || theOther.boostLevel >= theOther.maxlevel) || array_length(runScore) <= 14//Keep ultra display after using lives
 		{
 			runScore[14] = getUltraMutation();//Its possible to start with an ultra such as fish's buddy, but then have no new mutations.
 			runScore[15] = scrGetAllMutations();//Can be empty what then
@@ -95,14 +95,14 @@ function scrUpdateScore(theOther, isPerliminary = false){
 				runScore[5] = theOther.loops;
 				runScore[6] = theOther.race;
 				runScore[7] = theOther.bskin
-				if getUltraMutation() != 255 || array_length(runScore) <= 14
+				if (getUltraMutation() != 255 || theOther.boostLevel < theOther.maxlevel) || array_length(runScore) <= 14
 					runScore[8] = theOther.altUltra;
 				runScore[9] = theOther.wep;
 				runScore[10] = theOther.bwep;
 				runScore[11] = theOther.cwep;
 				runScore[12] = string_replace_all(string(theOther.crown)," ","");
 				runScore[13] = theOther.ultramod;
-				if getUltraMutation() != 255 || array_length(runScore) <= 14
+				if (getUltraMutation() != 255 || theOther.boostLevel >= theOther.maxlevel) || array_length(runScore) <= 14
 				{
 					runScore[14] = getUltraMutation();
 					runScore[15] = scrGetAllMutations();

@@ -8,6 +8,7 @@ audio_stop_sound(sndFrogLoopButt);
 audio_stop_sound(sndFishRollUpgLoop);
 scroll = 0;
 scrollWidth = 0;
+scrollSpeed = 24;
 selectedIndex = -1;
 with KeyCont
 {
@@ -276,6 +277,16 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 					skill = i;
 				}
 			}
+			var spd = scrollSpeed;
+			do {
+				with SkillIcon {
+					x -= spd;
+				}
+				with UltraIcon {
+					x -= spd;
+				}
+				scroll += spd;
+			} until (scroll >= scrollWidth * 0.5)
 		}
 	    else if !scrIsCrown(8)
 		{
@@ -525,6 +536,16 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				}
 			}
 		}
+		var spd = scrollSpeed;
+		do {
+			with SkillIcon {
+				x -= spd;
+			}
+			with UltraIcon {
+				x -= spd;
+			}
+			scroll += spd;
+		} until (scroll >= scrollWidth * 0.5)
 		scrollWidth = max(scrollWidth,0);
 	}
     else

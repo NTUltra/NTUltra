@@ -107,7 +107,7 @@ else
 	length += speed;
 if (point_distance(tx,ty,x,y) > maxlength && speed > 0)
 {
-	speed = -3;
+	speed = returnSpeed;
 }
 else if (length <= 2 && speed < 0)
 {

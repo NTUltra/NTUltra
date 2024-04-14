@@ -82,13 +82,16 @@ if owner != noone && instance_exists(owner)
 		}
 	}
 	dust = !dust;
+	var s = 1;
+	if UberCont.normalGameSpeed == 60
+		s = 0.5;
 	var pickups = ds_list_create();
 	var pl = instance_place_list(x,y,Pickup,pickups,false);
 	for (var i = 0; i < pl; i++)
 	{
 		with pickups[| i] {
-			x += lengthdir_x(1,other.image_angle + 180);
-			y += lengthdir_y(1,other.image_angle + 180);
+			x += lengthdir_x(s,other.image_angle + 180);
+			y += lengthdir_y(s,other.image_angle + 180);
 		}
 	}
 	var weppickups = ds_list_create();
@@ -96,8 +99,8 @@ if owner != noone && instance_exists(owner)
 	for (var i = 0; i < wpl; i++)
 	{
 		with weppickups[| i] {
-			x += lengthdir_x(1,other.image_angle + 180);
-			y += lengthdir_y(1,other.image_angle + 180);
+			x += lengthdir_x(s,other.image_angle + 180);
+			y += lengthdir_y(s,other.image_angle + 180);
 		}
 	}
 	var enems = ds_list_create();

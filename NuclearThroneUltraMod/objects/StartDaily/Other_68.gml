@@ -174,6 +174,7 @@ if (type == network_type_data) {
 				with Player
 				{
 					my_health = 1;
+					prevhealth = 1;
 					maxhealth = my_health;
 				}
 			}

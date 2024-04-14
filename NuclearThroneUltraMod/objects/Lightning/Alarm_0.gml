@@ -152,33 +152,36 @@ for(var i = floor(ammo); i > 0; i -= 1)
 	xscale = -point_distance(xxx,yyy,oldx,oldy)*0.5;
 	if ultraMod == ultramods.lightningPellet
 	{
-		snd_play(sndPopgun,0.1,true);
-		var odd = false;
-		if i > 0
+		if ammo % 2 == 0
 		{
-			odd = round(i) % 3 == 0
-		}
-		with instance_create(xxx,yyy,Bullet2)
-		{
-			direction = other.direction;
-			if odd
-				direction += 90;
-			else
-				direction -= 90;
-			image_angle = direction;
-			speed = 7;
-			team = other.team;
-			alarm[11] = 0;
-		}
-		if i <= 0
-		{
+			snd_play(sndPopgun,0.1,true);
+			var odd = false;
+			if i > 0
+			{
+				odd = round(i) % 3 == 0
+			}
 			with instance_create(xxx,yyy,Bullet2)
 			{
 				direction = other.direction;
+				if odd
+					direction += 90;
+				else
+					direction -= 90;
 				image_angle = direction;
 				speed = 7;
 				team = other.team;
 				alarm[11] = 0;
+			}
+			if i <= 0
+			{
+				with instance_create(xxx,yyy,Bullet2)
+				{
+					direction = other.direction;
+					image_angle = direction;
+					speed = 7;
+					team = other.team;
+					alarm[11] = 0;
+				}
 			}
 		}
 		instance_destroy(id,false);	

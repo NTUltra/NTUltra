@@ -1,7 +1,6 @@
 event_inherited()
 
 if circleMode {
-	
 	if target != noone && instance_exists(target)
 	{
 		var lerpp = lp;
@@ -52,6 +51,14 @@ else
 		var dir = point_direction(x,y,nx,ny);
 		motion_add(dir,0.8);
 	}
+}
+if place_meeting(x,y,Wall)
+{
+	mask_index = mskSquareBatBig;	
+}
+else
+{
+	mask_index = mskSquareBat;	
 }
 if speed > maxSpeed && my_health > 0
 	speed = maxSpeed

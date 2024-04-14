@@ -1,6 +1,6 @@
 /// @description Explooode
 
-if !sleeping
+if !sleeping && existTime > 20
 {
 	snd_play(sndExplosionL);
 	with instance_create(x,y,PurpleExplosion)

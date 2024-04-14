@@ -294,6 +294,10 @@ with MeleeParent
 	if visible
 		draw_self();	
 }
+with VoidRipperBurst
+{
+	draw_self();	
+}
 /*
 with GhettoBlast
 {

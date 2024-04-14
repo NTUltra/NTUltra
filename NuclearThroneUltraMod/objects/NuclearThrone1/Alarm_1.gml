@@ -35,7 +35,7 @@ if target != noone && instance_exists(target)
 		event_user(2);
 	}
 	walkDir = 0;
-	if target.y < y - 16 && ran > 50 || target.y - 64 < y
+	if target.y < y - 48 && ran > 50 || target.y - 96 < y
 	{
 		//Above me
 		walk = alarm[1];

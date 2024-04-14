@@ -13,7 +13,7 @@ if speed<1 && alarm[1] < 1
 else if um == 0 || alarm[11] < 1
 {
 	scrBoltMarrow(1,2);
-	with scrBoltTrail(trailColour,0.11,0.75)
+	with scrBoltTrail(trailColour,trailShrinkRate,trailSize)
 	{
 		image_speed -= 0.1;
 	}

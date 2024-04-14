@@ -718,7 +718,7 @@ function scrDrawHUD() {
 	{
 		var wepName = dataRef.wep_name[dataRef.cwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.cwep]);
-		if dataRef.wep_area[dataRef.wep] >= 0
+		if dataRef.wep_area[dataRef.cwep] >= 0
 		{
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
 			+ "\n" + wepName);
@@ -810,7 +810,7 @@ function scrDrawHUD() {
 	{
 		var wepName = dataRef.wep_name[dataRef.bwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.bwep]);
-		if dataRef.wep_area[dataRef.wep] >= 0
+		if dataRef.wep_area[dataRef.bwep] >= 0
 		{
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
 			+ "\n" + wepName);

@@ -6,7 +6,7 @@ function scrSleepyPopo(){
 	{
 		if Player.skill_got[29]//insomnia
 		{
-			alarm[1] += 45;
+			alarm[1] += 50;
 			scrGiveSnooze(0);
 		}
 	}

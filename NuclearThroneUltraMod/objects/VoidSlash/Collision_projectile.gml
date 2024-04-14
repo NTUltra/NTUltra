@@ -1,11 +1,5 @@
-if other.isGrenade && team == 2
-{
-	BackCont.shake += 2;
-	snd_play(sndRicochet,0.1,true);
-	with other
-		scrDeflectNade(other.direction);
-}
-else if team != other.team && other.typ != 0
+
+if /*team != other.team && */other.typ != 0
 {
 	BackCont.shake += 1;
 	with other

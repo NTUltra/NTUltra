@@ -156,7 +156,7 @@ function scrRaces() {
 	race_dskin[8] = 0
 	race_eskin[8] = 0
 	race_fskin[8] = 0
-	race_bskin_lock[8] = "EAT A HYPER WEAPON"
+	race_bskin_lock[8] = "EAT A TIER 18+ OR HYPER WEAPON"
 	race_cskin_lock[8] = "EAT AN ULTRA WEAPON"
 
 

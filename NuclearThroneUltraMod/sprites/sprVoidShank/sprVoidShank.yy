@@ -27,7 +27,7 @@
   ],
   "name":"sprVoidShank",
   "nineSlice":null,
-  "origin":9,
+  "origin":3,
   "parent":{
     "name":"Melee Atacks",
     "path":"folders/Sprites/Projectiles/Melee Atacks.yy",
@@ -89,7 +89,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":31,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

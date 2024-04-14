@@ -1,6 +1,12 @@
 /// @description become visible again
 visible = true;
-if instance_exists(Floor)
+if instance_exists(Player)
+{
+	x = Player.x;
+	y = Player.y;
+	scrForcePosition60fps();
+}
+else if instance_exists(Floor)
 {
 	if collision_point(x,y,Wall,false,false) || !collision_point(x,y,Floor,false,false)
 	{

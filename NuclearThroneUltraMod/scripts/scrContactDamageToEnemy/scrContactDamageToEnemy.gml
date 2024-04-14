@@ -65,7 +65,7 @@ function scrContactDamageToEnemy(hitEnemy){
 		}
 
 		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 25 && !justAsheep && !hitEnemy.isSnooze && !instance_exists(HumphryDiscipline)//is it a melee enemy?
-		&& collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false) == noone
+		&& !collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false)
 		{
 			if meleeimmunity < 1
 			{

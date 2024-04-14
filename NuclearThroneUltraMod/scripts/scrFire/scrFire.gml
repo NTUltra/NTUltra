@@ -63,15 +63,15 @@ function scrFire() {
 			rad -= wep_rad[wep]
 			rad = max(rad,0);
 		}
-		if ammoReduction < 1
-		{
-			ammo[wep_type[wep]] += wep_cost[wep] * ammoReduction
-			ammoReduction = 1;
-			with instance_create(x,y,QuickSwapperFX) {
-				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);	
-			}
-		}
 		with Player {
+			if ammoReduction < 1
+			{
+				ammo[wep_type[wep]] += wep_cost[wep] * ammoReduction
+				ammoReduction = 1;
+				with instance_create(x,y,QuickSwapperFX) {
+					image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);	
+				}
+			}
 			if scrIsCrown(13)
 			{
 				if ammo[wep_type[wep]] <= 0
@@ -962,7 +962,7 @@ function scrFire() {
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
-	wkick -= 3
+	wkick = 3
 
 	break;
 
@@ -1089,7 +1089,8 @@ function scrFire() {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,7)
+	if !skill_got[2]
+		motion_add(aimDirection,7)
 	BackCont.viewx2 += lengthdir_x(32,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(32,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -4070,7 +4071,7 @@ function scrFire() {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+(random(16)-8)*other.accuracy,14.25+random(2))
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,14.5+random(2))
 	image_angle = direction
 	team = other.team}
 

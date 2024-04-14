@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"sprJackHammer",
   "bboxMode":1,
-  "bbox_bottom":12,
+  "bbox_bottom":15,
   "bbox_left":0,
-  "bbox_right":19,
+  "bbox_right":23,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -22,7 +22,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":13,
+  "height":16,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"acafb445-36de-429d-b68f-7a8924f3b692","blendMode":0,"displayName":"default","isLocked":false,"name":"acafb445-36de-429d-b68f-7a8924f3b692","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -110,5 +110,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":20,
+  "width":24,
 }
