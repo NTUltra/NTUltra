@@ -253,19 +253,19 @@ if instance_exists(Player)
 		
 		if loops > 0
 		{
-			buffs = min(2 + ceil(loops*1.5), 15);
-		with enemy {
-			if buffs > 0 && my_health > 3 && my_health <= 110
-			{
-				buffs --;
-				super = true;
-				raddrop *= 1.25;
-				maxhealth = my_health;
-				var healthBuff = min(50, maxhealth);
-				maxhealth += healthBuff;
-				my_health = maxhealth;
-			}	
-		}
+			buffs = min(ceil(loops * 2), 15);
+			with enemy {
+				if buffs > 0 && my_health > 3 && my_health <= 110
+				{
+					buffs --;
+					super = true;
+					raddrop *= 1.25;
+					maxhealth = my_health;
+					var healthBuff = min(50, maxhealth);
+					maxhealth += healthBuff;
+					my_health = maxhealth;
+				}	
+			}
 		}
 	    if scrIsHardMode() && area == 1//HARD MODE
 		{

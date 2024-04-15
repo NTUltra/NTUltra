@@ -25,7 +25,7 @@ motion_add(random(360),random(2))
 }
 
 }
-until dir > 60 or (!pierceWall && place_meeting(x,y,Wall))
+until dir > 7 or (!pierceWall && place_meeting(x,y,Wall))
 alarm[1] = 2
 
 	scrForcePosition60fps();

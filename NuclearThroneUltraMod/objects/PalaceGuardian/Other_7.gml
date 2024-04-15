@@ -32,6 +32,7 @@ else if (sprite_index == spr_disappear && !place_meeting(x,y,Tangle))
 		} until (point_distance(Player.x,Player.y,targetFloor.x,targetFloor.y) > 40 || tries > 10);
 		x = targetFloor.x;
 		y = targetFloor.y;
+		scrForcePosition60fps();
 		sprite_index = spr_appear;
 		spr_idle = spr_appear;
 		spr_walk = spr_appear;

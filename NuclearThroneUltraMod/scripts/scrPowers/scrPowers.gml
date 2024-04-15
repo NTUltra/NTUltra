@@ -64,205 +64,7 @@ function scrPowers(raceOverwrite = -1) {
 			delay += 5;
 		}
 		
-	if race == 26//Good O'l Humphry
-	{
-		var insufficientFunds = true;
-		var failText = "NOT ENOUGH AMMO";
-		var cost = 8;
-		if ultra_got[104] && altUltra
-		{
-			var t1 = wep_type[wep];
-			var t2 = wep_type[bwep];
-			var al = 6;//weapon types total
-			var takePercentage = 0.015//0.015//1.5%%//0.0075;//0.75%
-			for (var i = 1; i < al; i++) {
-				if (i != t1 && i != t2)
-				{
-					if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
-					{
-						ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
-						insufficientFunds = false;
-					}
-				}
-			}
-		}
-		else {
-			failText = "NOT ENOUGH SKILL";
-			var cost = 8;
-			if ultra_got[104] && !altUltra
-				cost = 10
-			if loops > 0
-				cost += (humphrySkill * 0.1);
-			if humphrySkill >= cost//used to be 50//10%?
-			{
-				insufficientFunds = false;
-			}
-		}
-		
-		if (insufficientFunds)
-		{
-			snd_play_2d(snd_lowa,0,true,false,10);
-			snd_play(sndEmpty)
-			dir = instance_create(x,y,PopupText);
-			dir.mytext = failText;
-			dir.theColour=c_red;
-			drawempty = 30
-		}
-		else
-		{
-			var effective = false;
-			if ultra_got[104] && altUltra
-			{
-				snd_play_fire(sndDirector);
-				BackCont.shake += 8
-				with projectile
-				{
-					if team != other.team
-					{
-						if isGrenade
-						{
-							with instance_create(x,y,Notice)
-							{
-								image_speed = 0.4;
-								sprite_index = sprHumphryDestroyProjectile;	
-							}
-							instance_destroy(id,false);	
-						}
-						else if typ == 1 && canBeMoved
-						{
-							team = other.team;
-							if instance_exists(enemy)
-							{
-								var n = instance_nearest(x,y,enemy);
-								direction = point_direction(x,y,n.x,n.y);
-							}
-							else
-								direction = random(360);
-							image_angle = direction;
-							scrRedirectFx();
-							event_user(15);
-							speed *= 1.2;
-							speed += 1;
-						}
-						else
-						{
-							with instance_create(x,y,Notice)
-							{
-								image_speed = 0.4;
-								sprite_index = sprHumphryDestroyProjectile;	
-							}
-							instance_destroy();
-						}
-					}
-				}
-			}
-			else
-			{
-				var buffActive = ultra_got[104] * 0.6;
-				with projectile
-				{
-					if (team!= other.team
-					&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
-					{
-						if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 2)
-						{
-							image_xscale *= 0.75;
-							image_yscale *= 0.75;
-							effective = true;
-							speed = max(speed*0.4,2);
-							if canBeMoved {
-								x = xprevious;
-								y = yprevious;
-							}
-						} else if (other.ultra_got[104])
-						{
-							effective = true;
-							with instance_create(x,y,Notice)
-							{
-								image_speed = 0.4;
-								sprite_index = sprHumphryDestroyProjectile;	
-							}
-							if isGrenade
-								instance_destroy(id,false);
-							else
-								instance_destroy();	
-						}
-					}
-				}
-			}
-			var duration = 10;
-			var confspr = sprEnemyConfusion;
-			if ultra_got[104] && !altUltra
-			{
-				duration += 10;
-				confspr = sprEnemyUltraConfusion;
-			}
-			if !instance_exists(HumphryDiscipline) && !instance_exists(HumphryDelay)
-			with enemy
-			{
-				effective = true;
-				speed = 0;
-				
-				if instance_exists(myConfusion)
-				{
-					if alarm[1] > 1
-					{
-						var mydur = duration * 0.5;
-						with myConfusion
-						{
-							alarm[0] += mydur;
-							image_speed = 0.4;
-							image_index = 0;
-						}
-						alarm[11] += mydur
-						alarm[1] += mydur;
-					}
-				}
-				else
-				{
-					if alarm[1] > 1
-					{
-						alarm[11] += duration
-						alarm[1] += duration;
-						myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
-						with myConfusion {
-							myEnemy = other.id;
-							image_xscale = choose(1,-1);
-							image_speed = 0.4;
-							sprite_index = confspr;
-							alarm[0] = duration;
-						}
-					}
-				}
-			}
-			
-			if (effective)
-			{
-				humphrySkill -= cost;
-				Sleep(40);
-				if ultra_got[104] && !altUltra
-					snd_play_2d(sndHumphryHaltUpg);
-				else
-					snd_play_2d(sndHumphryHalt);
-				if instance_exists(HumphryDiscipline)
-				{
-					with HumphryDiscipline
-					{
-						alarm[0] += 5;
-					}
-				}
-				else
-				{
-					instance_create(x,y,HumphryDiscipline);
-				}
-			}
-			else
-			{
-				snd_play_2d(sndChickenStart);
-			}
-		}
-	}
-
+	
 	if race == 23 //Frog
 	{
 	if skill_got[5]=1
@@ -365,9 +167,9 @@ function scrPowers(raceOverwrite = -1) {
 				scrEmptyRad();
 
 		}
-		else // if alarm[3]<1 
+		else if my_health > 1 || !scrIsGamemode(9)
 		{
-		//Regular active  
+		//Regular active 
 			if my_health == 1 && skill_got[32] && isAlkaline
 			{
 				isAlkaline = false;
@@ -969,88 +771,6 @@ function scrPowers(raceOverwrite = -1) {
 		}
 	}
 
-	if race == 18//ANGEL
-	{
-		var takePercentage = 0.4;
-		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-	    if wepType != 0
-	    {
-			if wepType != wep_type[bwep] && wepType != wep_type[wep]
-				takePercentage *= 3;
-			var cost = typ_ammo[wepType]*takePercentage;
-			if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
-			{
-				snd_hurt = sndDamageNegate;
-				instance_create(x,y,AngelActive);
-				if ultra_got[72] {
-					snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
-					if altUltra {//Angel mirror
-						instance_create(x,y,AngelActiveMouse);	
-					}
-				} else {
-					snd_play_2d(sndAngelActive,0.1,false,false,2,1);
-				}
-				ammo[wepType]-= cost//2.5?
-				var heal = 0;
-				if  ammo[wepType] <= 0
-				{
-					if scrIsCrown(13)
-					{
-						with Crown {
-							event_user(0);	
-						}
-					}
-					if ultra_got[70]
-						heal += 2;
-				}
-				if UberCont.opt_ammoicon
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.sprt = sprAmmoIconsPickup
-					dir.ii = wepType-1;
-					dir.theColour = c_red;
-					dir.mytext = "-"+string(round(cost));
-				}
-				else
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.theColour = c_red;
-					dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wepType])
-				}
-				//HEAL
-				if (skill_got[5])
-				{
-					angelHeal = !angelHeal;
-					if (angelHeal)
-					{
-						heal ++;
-					}
-				}
-				if heal > 0
-				{
-					if heal > 2
-						snd_play_2d(sndHealthPickupUpg)
-					scrHeal(heal);
-				}
-			    Sleep(40);
-			}
-			else
-			{
-				snd_play_2d(sndEmpty);
-				dir = instance_create(x,y,PopupText);
-				dir.theColour = c_red;
-				dir.mytext = "NOT ENOUGH AMMO";
-			}
-		}
-		else
-		{
-			snd_play_2d(sndEmpty);
-		    dir = instance_create(x,y,PopupText);
-			dir.theColour = c_red;
-		    dir.mytext = "THIS DOESN'T USE AMMO";
-		}
-
-	}
 
 	if race == 17
 	{
@@ -2225,6 +1945,301 @@ function scrPowers(raceOverwrite = -1) {
 			//instance_create(x,y,CrystalTorpedo)
 			instance_create(x,y,CrystalShield)
 		}
+		//ANGEL
+		if race == 18 && !instance_exists(AngelActive) && !instance_exists(AngelActiveDelay)//ANGEL
+		{
+			var takePercentage = 0.4;
+			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			if wepType != 0
+			{
+				if wepType != wep_type[bwep] && wepType != wep_type[wep]
+					takePercentage *= 3;
+				var cost = typ_ammo[wepType]*takePercentage;
+				if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
+				{
+					snd_hurt = sndDamageNegate;
+					instance_create(x,y,AngelActive);
+					if ultra_got[72] {
+						snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
+						if altUltra {//Angel mirror
+							instance_create(x,y,AngelActiveMouse);	
+						}
+					} else {
+						snd_play_2d(sndAngelActive,0.1,false,false,2,1);
+					}
+					ammo[wepType]-= cost//2.5?
+					var heal = 0;
+					if  ammo[wepType] <= 0
+					{
+						if scrIsCrown(13)
+						{
+							with Crown {
+								event_user(0);	
+							}
+						}
+						if ultra_got[70]
+							heal += 2;
+					}
+					if UberCont.opt_ammoicon
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprAmmoIconsPickup
+						dir.ii = wepType-1;
+						dir.theColour = c_red;
+						dir.mytext = "-"+string(round(cost));
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.theColour = c_red;
+						dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wepType])
+					}
+					//HEAL
+					if (skill_got[5])
+					{
+						angelHeal = !angelHeal;
+						if (angelHeal)
+						{
+							heal ++;
+						}
+					}
+					if heal > 0
+					{
+						if heal > 2
+							snd_play_2d(sndHealthPickupUpg)
+						scrHeal(heal);
+					}
+					Sleep(40);
+				}
+				else
+				{
+					if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
+					{
+						snd_play_2d(sndEmpty);
+						dir = instance_create(x,y,PopupTextLockoutPlayer);
+						dir.theColour = c_red;
+						dir.mytext = "NOT ENOUGH AMMO";
+					}
+				}
+			}
+			else
+			{
+				if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
+				{
+					snd_play_2d(sndEmpty);
+					dir = instance_create(x,y,PopupTextLockoutPlayer);
+					dir.theColour = c_red;
+					dir.mytext = "THIS DOESN'T USE AMMO";
+				}
+			}
+
+		}
+		
+		//Good O'l Humphry
+		if race == 26 && !instance_exists(HumphryDiscipline) && !instance_exists(HumphryDelay)//Good O'l Humphry
+		{
+			var insufficientFunds = true;
+			var failText = "NOT ENOUGH AMMO";
+			var cost = 8;
+			if ultra_got[104] && altUltra
+			{
+				var t1 = wep_type[wep];
+				var t2 = wep_type[bwep];
+				var al = 6;//weapon types total
+				var takePercentage = 0.015//0.015//1.5%%//0.0075;//0.75%
+				for (var i = 1; i < al; i++) {
+					if (i != t1 && i != t2)
+					{
+						if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
+						{
+							ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
+							insufficientFunds = false;
+						}
+					}
+				}
+			}
+			else {
+				failText = "NOT ENOUGH SKILL";
+				var cost = 8;
+				if ultra_got[104] && !altUltra
+					cost = 14
+				if loops > 0
+				{
+					cost += 2;
+					cost += (humphrySkill * 0.15);
+				}
+				if humphrySkill >= cost//used to be 50//10%?
+				{
+					insufficientFunds = false;
+				}
+			}
+		
+			if (insufficientFunds)
+			{
+				if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
+				{
+					snd_play_2d(snd_lowa,0,true,false,10);
+					snd_play(sndEmpty)
+					dir = instance_create(x,y,PopupTextLockoutPlayer);
+					dir.mytext = failText;
+					dir.theColour=c_red;
+					drawempty = 30
+				}
+			}
+			else
+			{
+				var effective = false;
+				if ultra_got[104] && altUltra
+				{
+					snd_play_fire(sndDirector);
+					BackCont.shake += 8
+					with projectile
+					{
+						if team != other.team
+						{
+							if isGrenade
+							{
+								with instance_create(x,y,Notice)
+								{
+									image_speed = 0.4;
+									sprite_index = sprHumphryDestroyProjectile;	
+								}
+								instance_destroy(id,false);	
+							}
+							else if typ == 1 && canBeMoved
+							{
+								team = other.team;
+								if instance_exists(enemy)
+								{
+									var n = instance_nearest(x,y,enemy);
+									direction = point_direction(x,y,n.x,n.y);
+								}
+								else
+									direction = random(360);
+								image_angle = direction;
+								scrRedirectFx();
+								event_user(15);
+								speed *= 1.2;
+								speed += 1;
+							}
+							else
+							{
+								with instance_create(x,y,Notice)
+								{
+									image_speed = 0.4;
+									sprite_index = sprHumphryDestroyProjectile;	
+								}
+								instance_destroy();
+							}
+						}
+					}
+				}
+				else
+				{
+					var buffActive = ultra_got[104] * 0.6;
+					with projectile
+					{
+						if (team!= other.team
+						&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
+						{
+							if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 2)
+							{
+								image_xscale *= 0.75;
+								image_yscale *= 0.75;
+								effective = true;
+								speed = max(speed*0.4,2);
+								if canBeMoved {
+									x = xprevious;
+									y = yprevious;
+								}
+							} else if (other.ultra_got[104])
+							{
+								effective = true;
+								with instance_create(x,y,Notice)
+								{
+									image_speed = 0.4;
+									sprite_index = sprHumphryDestroyProjectile;	
+								}
+								if isGrenade
+									instance_destroy(id,false);
+								else
+									instance_destroy();	
+							}
+						}
+					}
+				}
+				var duration = 10;
+				var confspr = sprEnemyConfusion;
+				if ultra_got[104] && !altUltra
+				{
+					duration += 8;
+					confspr = sprEnemyUltraConfusion;
+				}
+				with enemy
+				{
+					effective = true;
+					speed = 0;
+				
+					if instance_exists(myConfusion)
+					{
+						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
+						{
+							var mydur = duration * 0.5;
+							with myConfusion
+							{
+								alarm[0] += mydur;
+								image_speed = 0.4;
+								image_index = 0;
+							}
+							alarm[11] += mydur
+							alarm[1] += mydur;
+						}
+					}
+					else
+					{
+						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
+						{
+							alarm[11] += duration
+							alarm[1] += duration;
+							myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
+							with myConfusion {
+								myEnemy = other.id;
+								image_xscale = choose(1,-1);
+								image_speed = 0.4;
+								sprite_index = confspr;
+								alarm[0] = duration;
+							}
+						}
+					}
+				}
+			
+				if (effective)
+				{
+					humphrySkill -= cost;
+					Sleep(40);
+					if ultra_got[104] && !altUltra
+						snd_play_2d(sndHumphryHaltUpg);
+					else
+						snd_play_2d(sndHumphryHalt);
+					if instance_exists(HumphryDiscipline)
+					{
+						with HumphryDiscipline
+						{
+							alarm[0] += 5;
+						}
+					}
+					else
+					{
+						instance_create(x,y,HumphryDiscipline);
+					}
+				}
+				else
+				{
+					snd_play_2d(sndChickenStart);
+				}
+			}
+		}
+
 		//HANDS
 		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
 		{

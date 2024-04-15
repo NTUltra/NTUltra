@@ -11,7 +11,9 @@ function scrBossKill() {
 			instance_create(x,y,UltraChest);
 		}
 		else if Player.race == 20//Business hog
+		{
 			instance_create(x,y,GoldChest);
+		}
 			
 		if Player.ultra_got[2]
 		{

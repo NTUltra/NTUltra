@@ -1,5 +1,4 @@
 /// @description Become visible again
-debug("ALARM VISIBLE AGAIN");
 visible = true;
 if instance_exists(Player)
 {

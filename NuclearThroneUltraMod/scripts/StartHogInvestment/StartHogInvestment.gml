@@ -6,7 +6,8 @@ function StartHogInvestment(){
 	{
 		usedHogInvestment = true;
 		//skillsChosen=10;
-		hogpoints = 3;//1 is the deadzone so only get 2 when set to 3
+		hogpoints = 2;//1 is the deadzone so only get 2 when set to 3
 		skillpoints += 2;
+		skillsChosen -= 1;
 	}
 }

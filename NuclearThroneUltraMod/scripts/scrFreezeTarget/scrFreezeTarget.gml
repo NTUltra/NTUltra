@@ -27,7 +27,7 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 		stunTime *= 0.5;
 	if alarm[11] < 60
 		alarm[11] += stunTime + 5;
-	if alarm[1] > 0 && alarm[1] < 60
+	if alarm[1] > 0 && alarm[1] < 20 && alarm[11] < 20
 			alarm[1] += stunTime;
 			
 		if mySize < 8

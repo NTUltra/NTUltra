@@ -18,8 +18,10 @@ oneweponly = false;
 if isOneWeaponOnlyModes()
 {
 	oneweponly = true;
-	sprite_index = sprEliteWepChest;
 	sprite_index = sprWeaponChestReplaced;
+	shadowSprite = shd16;
+	wep = 0;
+	curse = 0;
 }
 else
 {
@@ -28,6 +30,12 @@ else
 	{
 		sprite_index = sprCursedEliteWeaponChest;
 	}
+}
+if scrIsCrown(9)//Crown of love
+{
+	alarm[1] = 10;
+	if !instance_exists(GenCont)
+		event_perform(ev_alarm,1);
 }
 scrWeapons()
 SetSeedWeapon();

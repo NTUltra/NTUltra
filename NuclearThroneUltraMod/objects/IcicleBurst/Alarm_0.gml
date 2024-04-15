@@ -23,6 +23,7 @@ snd_play_fire(choose(sndFrost1,sndFrost2))
 with instance_create(x,y,FrostIcicle)
 {
 	dmg += 1;
+	freezetime = 1;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(other.aimOffset+(random(other.accuracyRange)-(other.accuracyRange*0.5)))*other.accuracy,20 + random(5))
 	scrCopyWeaponMod(other);
 	image_angle = direction

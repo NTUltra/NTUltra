@@ -16,7 +16,7 @@ motion_add(random(360),random(4))
 //instance_create(x,y,Explosion);
 Sleep(20)
 dir = 0
-do {dir += 1 x += lengthdir_x(28,direction) y += lengthdir_y(28,direction)
+do {dir += 1 x += lengthdir_x(32,direction) y += lengthdir_y(32,direction)
 if point_distance(x,y,Player.x,Player.y)>60
 {
 	var randir = random(360);

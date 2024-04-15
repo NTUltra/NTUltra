@@ -4,10 +4,10 @@ typ = 1
 visible=false;
 aimed = false;
 pierceWall = false;
-step = 24;
+step = 32;
 if instance_exists(Player){
 	if Player.ultra_got[16]//Melting doomed
-		step = 18;
+		step = 24;
 	if Player.ultra_got[74] && Player.altUltra
 		pierceWall = true;
 }

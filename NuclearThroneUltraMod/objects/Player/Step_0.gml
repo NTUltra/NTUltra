@@ -403,12 +403,11 @@ if !instance_exists(LevCont) and visible = 1
 
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "FIRE EVERY GUN";
-			repeat(40)
-			instance_create(x+32,y,Raven);
+			//repeat(40)
+			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,Thief);
-						instance_create(x+32,y,InvertedThief);
-instance_create(x+32,y,AmmoPickup);
+			instance_create(x+32,y,GoldenSniper);
+			instance_create(x+32,y,AmmoPickup);
 
 			/*
 			wep = 0;

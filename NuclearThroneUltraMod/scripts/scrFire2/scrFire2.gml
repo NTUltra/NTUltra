@@ -4614,8 +4614,11 @@ function scrFire2(hasTailNow) {
 	{
 		dmgAdd += 2;
 	}
-	
-	repeat(5)
+	var am = 5;
+	if altFire
+		am = 6;
+	altFire = !altFire;
+	repeat(am)
 	{
 		with instance_create(x,y,EnemyBullet2)
 		{

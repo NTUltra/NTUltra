@@ -620,11 +620,11 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_name[79] = "INVESTMENT"
 		if GetPlayerLoops() > 1
 		{
-			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH THE NEXT LOOP#YOU CAN CHOOSE TWO RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+			ultra_text[79] = "GAIN <w>NOTHING<w> NOW#IF YOU REACH THE NEXT <w>LOOP<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 		}
 		else
 		{
-			ultra_text[79] = "GAIN NOTHING NOW#IF YOU REACH LOOP 2#YOU CAN CHOOSE TWO RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+			ultra_text[79] =  "GAIN <w>NOTHING<w> NOW#IF YOU REACH <w>LOOP 2<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 		}
 	    ultra_tips[79] = "are you that good?"
     
@@ -769,7 +769,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"
-	    ultra_text[104] = "SLIGHTLY INCREASE ACTIVE COST (+2 SKILL)#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
+	    ultra_text[104] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon

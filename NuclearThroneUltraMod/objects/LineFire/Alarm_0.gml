@@ -17,7 +17,7 @@ motion_add(random(360),random(4))
 //instance_create(x,y,Explosion);
 Sleep(20)
 dir = 0
-do {dir += 1 x += lengthdir_x(3,direction) y += lengthdir_y(3,direction)
+do {dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
 	scrForcePosition60fps();
 //repeat(2){
 with instance_create(x,y,Flame)
@@ -28,7 +28,7 @@ move_contact_solid(direction,4)}
 //}
 
 }
-until dir > 60 or place_meeting(x,y,Wall)
+until dir > 50 or place_meeting(x,y,Wall)
 alarm[1] = 2
 
 speed = 3
