@@ -6,7 +6,7 @@ function scrCreateMissingChest(typeOfChest, chestGoal){
 		return;
 	if !instance_exists(Player) || !instance_exists(Floor)
 		return;
-	if isOneWeaponOnlyModes() && (typeOfChest == WeaponChest || typeOfChest == UltraChest)
+	if (isOneWeaponOnlyModes() && (typeOfChest == WeaponChest || typeOfChest == UltraChest))
 		return;
 	
 	var px = Player.x;

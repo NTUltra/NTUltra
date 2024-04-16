@@ -35,7 +35,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 					Sleep(10)
 					if object_index == Player
 						hitBy = other.sprite_index;
-					if my_health-2 < immunelimit
+					if my_health-other.dmg < immunelimit
 						my_health = immunelimit
 					else
 					{
@@ -43,7 +43,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 						image_index = 0
 						Sleep(10)
 						BackCont.shake += 3
-						DealDamage(2)
+						DealDamage(other.dmg)
 					}
 				}
 			}
@@ -56,7 +56,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 				Sleep(10)
 				BackCont.shake += 3
 				snd_play(snd_hurt, hurt_pitch_variation)
-				DealDamage(2);
+				DealDamage(other.dmg);
 			}
 		}
 	}

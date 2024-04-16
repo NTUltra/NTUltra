@@ -54,6 +54,41 @@ if alienIntestines > 0
 		draw_sprite_ext(sprAlienIntestines1,wave,x,yy,abs(right),image_yscale,alienIntestines*alienDir,c_white,1);
 	}
 }
+if race = 3 and (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+{
+	if bskin == 6
+	{
+		if skill_got[5]
+			draw_sprite_ext(sprMindPowerVoidTB,wave,x,yy,right,1,0,c_white,1)
+		else
+			draw_sprite_ext(sprMindPowerVoid,wave,x,yy,right,1,0,c_white,1)
+	}
+	else
+	{
+		if skill_got[5]
+			draw_sprite_ext(sprMindPowerTB,wave,x,yy,right,1,0,c_white,1)
+		else
+			draw_sprite_ext(sprMindPower,wave,x,yy,right,1,0,c_white,1)
+	}
+}
+else if ultra_got[10] && !altUltra
+{
+	if bskin == 6
+	{
+		if skill_got[5]
+			draw_sprite_ext(sprMonsterStyleVoidTB,wave,x,yy,right,1,0,c_white,1)
+		else
+			draw_sprite_ext(sprMonsterStyleVoid,wave,x,yy,right,1,0,c_white,1)
+	}
+	else
+	{
+		if skill_got[5]
+			draw_sprite_ext(sprMonsterStyleTB,wave,x,yy,right,1,0,c_white,1)
+		else
+			draw_sprite_ext(sprMonsterStyle,wave,x,yy,right,1,0,c_white,1)
+	}
+}
+
 if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0))
 {
 	shader_set(shdDrawWhite);
@@ -262,14 +297,6 @@ draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(w
 }}
 }
 
-if race = 3 and (KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
-{
-draw_sprite_ext(sprMindPower,wave,x,yy,right,1,0,c_white,1)
-}
-else if ultra_got[10] && !altUltra
-{
-	draw_sprite_ext(sprMonsterStyle,wave,x,yy,right,1,0,c_white,1)
-}
 //else if ultra_got[11]=1// keep the animations goin on brainwashed enemies
 //{wave+=1;}
 

@@ -77,7 +77,10 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
 
 with WaterMine
 draw_self();
-
+with Feather
+{
+	event_perform(ev_draw,0);
+}
 with AtomPulse
 {
 	event_perform(ev_draw,0);	
@@ -294,6 +297,10 @@ with MeleeParent
 	if visible
 		draw_self();	
 }
+with SquareWave
+{
+	draw_self();	
+}
 with VoidRipperBurst
 {
 	draw_self();	
@@ -476,7 +483,7 @@ if Player.ultra_got[11] {
     //draw_text(x,y,string(team));
         if  team>=5
         {
-			draw_sprite_ext(sprMindPower,Player.wave,x,y,right,1,0,c_white,1)
+			draw_sprite_ext(sprMindPowerV,Player.wave,x,y,right,1,0,c_white,1)
         //draw_text(x,y,"I am a fool")
         //draw_text(target.x,target.y,"target")
         }

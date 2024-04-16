@@ -3,7 +3,10 @@ if other.team != team and other.my_health > 0
 with other
 {
 	snd_play(snd_hurt, hurt_pitch_variation,true)
-	DealDamage(other.dmg)
+	if UberCont.normalGameSpeed == 60
+		DealDamage(other.dmg * 0.5,true,true,true)
+	else
+		DealDamage(other.dmg,true,true,true)
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.image_angle,4)

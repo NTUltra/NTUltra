@@ -12,6 +12,7 @@ repeat(am)
 	with instance_create(x,y,TrapFire)//Trapfire
 	{
 		sprite_index = sprFireLilHunter
+		dmg += 1;
 		motion_add(ang,4)
 		image_angle = direction
 		team = other.team

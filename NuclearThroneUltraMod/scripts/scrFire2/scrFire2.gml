@@ -16557,7 +16557,7 @@ function scrFire2(hasTailNow) {
 				if owner == other.id
 				{
 					released = false;
-					alarm[0] = min(60, alarm[0] + other.wep_load[746] + 6);
+					alarm[0] = min(60, alarm[0] + other.wep_load[746] + 5);
 					accuracy = other.accuracy;
 				}
 			}
@@ -17039,5 +17039,125 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
+	//SQUARAGON
+	case 761:
+	if skill_got[17]
+		snd_play_fire(sndSquaragonUpg);
+	else
+		snd_play_fire(sndSquaragon);
+	with instance_create(x + lengthdir_x(28,aimDirection),y + lengthdir_y(28,aimDirection),SquareWave)
+	{
+		creator = other.id;
+		image_angle = aimDirection
+		motion_add(image_angle,8);
+		if other.altFire
+			image_xscale = -1;
+		team = other.team
+		sprite_index = sprEnergySquare;
+		mask_index = mskEnergySquare;
+	}
+	altFire = !altFire;
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,1);
+		motion_add(aimDirection+180,1)
+	}
+	
+	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 2;
+
+	break;
+	
+	//MICRO LAUNCHER SHOTGUN
+	case 762:
+
+	snd_play(sndMicroLauncher,0.03,true);
+	repeat(5)
+	{
+		with instance_create(x,y,MicroNade)
+		{
+			direction = aimDirection+(random(30)-15) * other.accuracy;
+			image_angle = direction;
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+	}
+
+	BackCont.viewx2 += lengthdir_x(24,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(24,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 6
+
+	break;
+	
+	//BLOOD MINIGUN
+	case 763:
+
+	snd_play_fire(sndBloodPistol)
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,BloodBullet)
+	{motion_add(aimDirection+(random(30)-15)*other.accuracy,22)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2.2
+	wkick = 2
+
+	break;
+	
+	//ULTRA SUCK CANNON
+	case 764:
+		var exists = false;
+		with UltraSuckCannon
+		{
+			if owner == other.id
+				exists = true;
+		}
+		if Player.skill_got[42]
+			scrActivateTail(hasTailNow);
+		if !exists
+		{
+			BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += 3
+			snd_play_2d(sndUltraSuckCannonFire,0,true);
+			with instance_create(x,y,UltraSuckCannon)
+			{
+				image_angle = aimDirection;
+				accuracy = other.accuracy;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = other.wep_load[746] + 5;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 5;
+				camShake = 3;
+				wkick = 4;
+			}
+		}
+		else
+		{
+			with UltraSuckCannon
+			{
+				if owner == other.id
+				{
+					released = false;
+					alarm[0] = min(40, alarm[0] + other.wep_load[746] + 4);
+					accuracy = other.accuracy;
+				}
+			}
+		}
+	break;
 	}//end of switch part 2!
 }

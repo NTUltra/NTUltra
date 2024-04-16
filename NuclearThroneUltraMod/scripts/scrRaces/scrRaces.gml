@@ -12,6 +12,7 @@ function scrRaces() {
 	race_dskin[0] = 0
 	race_eskin[0] = 0
 	race_fskin[0] = 0
+	race_gskin[0] = 0
 	race_bskin_lock[0] = ""
 	race_cskin_lock[0] = ""
 
@@ -30,6 +31,7 @@ function scrRaces() {
 	race_dskin[1] = 0
 	race_eskin[1] = 0
 	race_fskin[1] = 0
+	race_gskin[1] = 0
 	race_bskin_lock[1] = "REACH LOOP#WITH GAMEMODE:# FISH'S PARTNER ONLY"
 	race_cskin_lock[1] = "LOOP WITH#EVERY CHARACTER"
 
@@ -48,6 +50,7 @@ function scrRaces() {
 	race_dskin[2] = 0
 	race_eskin[2] = 0
 	race_fskin[2] = 0
+	race_gskin[2] = 0
 	race_bskin_lock[2] = "REACH CURSED CAVES#AS CRYSTAL"
 	race_cskin_lock[2] = "REACH INVERTED CAVES#AS CRYSTAL"
 
@@ -66,6 +69,7 @@ function scrRaces() {
 	race_dskin[3] = 0
 	race_eskin[3] = 0
 	race_fskin[3] = 0
+	race_gskin[3] = 0
 	race_bskin_lock[3] = "REACH PIZZA SEWERS#AS EYES"
 	race_cskin_lock[3] = "LOOP WITH EAGLE EYES#AS EYES"
 
@@ -84,6 +88,7 @@ function scrRaces() {
 	race_dskin[4] = 0
 	race_eskin[4] = 0
 	race_fskin[4] = 0
+	race_gskin[4] = 0
 	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH#CROWN OF PROTECTION#AND CROWN OF LIFE#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
@@ -102,6 +107,7 @@ function scrRaces() {
 	race_dskin[5] = 0
 	race_eskin[5] = 0
 	race_fskin[5] = 0
+	race_gskin[5] = 0
 	race_bskin_lock[5] = "REACH WONDERLAND#IN UNDER 8 MINUTES#AS PLANT"
 	race_cskin_lock[5] = "KILL 2.000#ENEMIES IN ONE RUN#AS PLANT"
 
@@ -120,6 +126,7 @@ function scrRaces() {
 	race_dskin[6] = 0
 	race_eskin[6] = 0
 	race_fskin[6] = 0
+	race_gskin[6] = 0
 	race_bskin_lock[6] = "UNLOCK ALL#GOLDEN WEAPONS#FOR ONE CHARACTER"
 	race_cskin_lock[6] = "UNLOCK#A GOLDEN WEAPON#FOR ALL CHARACTERS"
 
@@ -138,6 +145,7 @@ function scrRaces() {
 	race_dskin[7] = 0
 	race_eskin[7] = 0
 	race_fskin[7] = 0
+	race_gskin[7] = 0
 	race_bskin_lock[7] = "DEFEAT#TECHNOMANCER#AS STEROIDS"
 	race_cskin_lock[7] = "DEFEAT#INVERTED BIG MACHINE#AS STEROIDS"
 
@@ -156,6 +164,7 @@ function scrRaces() {
 	race_dskin[8] = 0
 	race_eskin[8] = 0
 	race_fskin[8] = 0
+	race_gskin[8] = 0
 	race_bskin_lock[8] = "EAT A TIER 18+ OR HYPER WEAPON"
 	race_cskin_lock[8] = "EAT AN ULTRA WEAPON"
 
@@ -174,6 +183,7 @@ function scrRaces() {
 	race_dskin[9] = 0
 	race_eskin[9] = 0
 	race_fskin[9] = 0
+	race_gskin[9] = 0
 	race_bskin_lock[9] = "ACQUIRE#THE BLACK SWORD"
 	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
 
@@ -192,6 +202,7 @@ function scrRaces() {
 	race_dskin[10] = 0
 	race_eskin[10] = 0
 	race_fskin[10] = 0
+	race_gskin[10] = 0
 	race_bskin_lock[10] = "COMPLETE A#MAIN AREA ON LOOP#WITHOUT FIRING#AS REBEL"
 	race_cskin_lock[10] = "REACH B?N??T L?N?"
 
@@ -210,6 +221,7 @@ function scrRaces() {
 	race_dskin[11] = 0
 	race_eskin[11] = 0
 	race_fskin[11] = 0
+	race_gskin[11] = 0
 	race_bskin_lock[11] = "REACH THE PALACE#ONLY USING#ANY STARTING WEAPON#AS HUNTER"
 	race_cskin_lock[11] = "KILL AN HARD MODE#ULTRA SNIPER BOT#AS HUNTER"
 
@@ -228,6 +240,7 @@ function scrRaces() {
 	race_dskin[12] = 0
 	race_eskin[12] = 0
 	race_fskin[12] = 0
+	race_gskin[12] = 0
 	race_bskin_lock[12] = "GO TO THE CRIB"
 	race_cskin_lock[12] = "AS YUNG CUZ#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
 
@@ -246,6 +259,7 @@ function scrRaces() {
 	race_dskin[13] = 0
 	race_eskin[13] = 0
 	race_fskin[13] = 0
+	race_gskin[13] = 0
 	race_bskin_lock[13] = "SAVE A LOST SHEEP#AS SHEEP"
 	race_cskin_lock[13] = "COMPLETE A#MAIN AREA#WITHOUT FIRING#AFTER THE SCRAPYARD#AS SHEEP"
 
@@ -264,6 +278,7 @@ function scrRaces() {
 	race_dskin[14] = 0
 	race_eskin[14] = 0
 	race_fskin[14] = 0
+	race_gskin[14] = 0
 	race_bskin_lock[14] = "CONVERT A#GOLDEN WEAPON#INSIDE OF A PORTAL"
 	race_cskin_lock[14] = "LOOP BY#ONLY THROWING WEAPONS#AND NOT USING THEM"
 
@@ -282,6 +297,7 @@ function scrRaces() {
 	race_dskin[15] = 0
 	race_eskin[15] = 0
 	race_fskin[15] = 0
+	race_gskin[15] = 0
 	race_bskin_lock[15] = "COMPLETE A#MAIN AREA#AFTER THE SEWERS#WITHOUT FIRING#AS ATOM"
 	race_cskin_lock[15] = "COMPLETE FIVE#AREAS IN A ROW#USING CROWN OF HASTE#AS ATOM"
 
@@ -300,6 +316,7 @@ function scrRaces() {
 	race_dskin[16] = 0
 	race_eskin[16] = 0
 	race_fskin[16] = 0
+	race_gskin[16] = 0
 	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 4 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
@@ -318,6 +335,7 @@ function scrRaces() {
 	race_dskin[17] = 0
 	race_eskin[17] = 0
 	race_fskin[17] = 0
+	race_gskin[17] = 0
 	race_bskin_lock[17] = "HOLD TO COMBINE TWO#GOLDEN WEAPONS"
 	race_cskin_lock[17] = "ADD FOUR MODS#TO ONE WEAPON"
 
@@ -336,6 +354,7 @@ function scrRaces() {
 	race_dskin[18] = 0
 	race_eskin[18] = 0
 	race_fskin[18] = 0
+	race_gskin[18] = 0
 	race_bskin_lock[18] = "TRY 10 DIFFERENT CROWNS#AT LEAST ONCE#(WITH ANY CHARACTER)"
 	race_cskin_lock[18] = "DEFLECT A PROJECTILE#THAT IS DEFLECTED#BY A CROWN GUARDIANS#WITHOUT USING MELEE#AS ANGEL"
 
@@ -354,6 +373,7 @@ function scrRaces() {
 	race_dskin[19] = 0
 	race_eskin[19] = 0
 	race_fskin[19] = 0
+	race_gskin[19] = 0
 	race_bskin_lock[19] = "HAVE THREE LIVES"
 	race_cskin_lock[19] = "REACH THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON"
 
@@ -372,6 +392,7 @@ function scrRaces() {
 	race_dskin[20] = 0
 	race_eskin[20] = 0
 	race_fskin[20] = 0
+	race_gskin[20] = 0
 	race_bskin_lock[20] = "REACH AND#BEAT THE THRONE#USING ONLY#GOLD WEAPONS#AS BUSINESS HOG"
 	race_cskin_lock[20] = "SUCCESSFULLY USE#THE INVESTMENT ULTRA"
 
@@ -390,6 +411,7 @@ function scrRaces() {
 	race_dskin[21] = 0
 	race_eskin[21] = 0
 	race_fskin[21] = 0
+	race_gskin[21] = 0
 	race_bskin_lock[21] = "REACH THE PALACE#WITHOUT LEVELING UP#AS HORROR"
 	race_cskin_lock[21] = "COMPLETE A#MAIN AREA ON LOOP#USING ONLY THE BEAM"
 
@@ -408,6 +430,7 @@ function scrRaces() {
 	race_dskin[22] = 0
 	race_eskin[22] = 0
 	race_fskin[22] = 0
+	race_gskin[22] = 0
 	race_bskin_lock[22] = "SURVIVE IN#THE GAMEMODE#VAN FAN#FOR ATLEAST#30 SECONDS#AS ROGUE"
 	race_cskin_lock[22] = "USE 8 PORTAL STRIKES#IN ONE AREA"
 
@@ -428,6 +451,7 @@ function scrRaces() {
 	race_dskin[23] = 0
 	race_eskin[23] = 0
 	race_fskin[23] = 0
+	race_gskin[23] = 0
 	race_bskin_lock[23] = "USE TWO DIFFERENT#TOXIC WEAPONS#IN THE SAME RUN#AS FROG"
 	race_cskin_lock[23] = "REACH AND BEAT#THE THRONE#AS FROG#ON THE GAMEMODE:#DISC ROOM#WITH SETTINGS:#ATLEAST 6 DISCS#ATLEAST 2 DAMAGE"
 
@@ -446,6 +470,7 @@ function scrRaces() {
 	race_dskin[24] = 0
 	race_eskin[24] = 0
 	race_fskin[24] = 0
+	race_gskin[24] = 0
 	race_bskin_lock[24] = "BURN A FROZEN ENEMY#AS ELEMENTOR"
 	race_cskin_lock[24] = "SUMMON 4 TINY KRAKENS#IN ONE AREA#USING CROWN OF DROWNING#AS ELEMENTOR"
 
@@ -464,6 +489,7 @@ function scrRaces() {
 	race_dskin[25] = 0
 	race_eskin[25] = 0
 	race_fskin[25] = 0
+	race_gskin[25] = 0
 	race_bskin_lock[25] = "REACH LEVEL 7#BEFORE THE LABS#WHILE USING#THE MAIN PATH#AS DOCTOR"
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
@@ -481,6 +507,7 @@ function scrRaces() {
 	race_dskin[26] = 0
 	race_eskin[26] = 0
 	race_fskin[26] = 0
+	race_gskin[26] = 0
 	race_bskin_lock[26] = "PERFORM 20 CLOSE DODGES#USING EXTRA FEET#IN ONE RUN#AS HUMPHRY"//"COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
 	race_cskin_lock[26] = "REACH 500 SKILL!"
 	
@@ -498,6 +525,7 @@ function scrRaces() {
 	race_dskin[27] = 0
 	race_eskin[27] = 0
 	race_fskin[27] = 0
+	race_gskin[27] = 0
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
 	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONE BUTT)"
 

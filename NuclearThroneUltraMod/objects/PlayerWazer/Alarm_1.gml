@@ -1,5 +1,5 @@
 /// @description shrink end
-if alarm[0] < 1
+if alarm[0] < 1 || ending
 {
 	alarm[1] = 1;
 

@@ -41,6 +41,7 @@ if awake {
 	    with instance_create(x,y,TrapFire)
 	    {
 	    sprite_index = sprFireLilHunter
+		dmg += 1;
 	    motion_add(other.direction+random(60)-30,4+random(4))
 	    image_angle = direction
 	    team = other.team
@@ -68,6 +69,7 @@ if awake {
 	    with instance_create(x,y,TrapFire)
 	    {
 	    sprite_index = sprFireLilHunter
+		dmg += 1;
 	    motion_add(other.direction+random(60)-30,2+random(6))
 	    image_angle = direction
 	    team = other.team
@@ -103,6 +105,7 @@ if awake {
 	    with instance_create(x,y,TrapFire)
 	    {
 	    sprite_index = sprFireLilHunter
+		dmg += 1;
 	    motion_add(other.direction+random(60)-30,2+random(4))
 	    image_angle = direction
 	    team = other.team
@@ -173,6 +176,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
+	dmg += 1;
     motion_add(other.direction+random(60)-30,4+random(5))
     image_angle = direction
     team = other.team
@@ -200,6 +204,7 @@ if awake {
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
+	dmg += 1;
     motion_add(other.direction+random(60)-30,2+random(5))
     image_angle = direction
     team = other.team

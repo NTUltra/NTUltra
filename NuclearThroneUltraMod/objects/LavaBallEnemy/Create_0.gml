@@ -11,6 +11,7 @@ spr_hurt = sprLavaBallHurt
 spr_dead = sprLavaBallDead
 spr_fire = sprLavaBallFire
 
+maxSpeed = 1.75;
 
 snd_dead = sndWallBreak;
 snd_hurt = sndHitRock;

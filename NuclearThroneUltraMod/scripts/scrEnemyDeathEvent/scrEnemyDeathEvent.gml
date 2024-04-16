@@ -168,7 +168,12 @@ function scrEnemyDeathEvent(){
 				other.raddrop = round(other.raddrop*0.75);
 			}
 			if isdoc
-				other.raddrop = round(other.raddrop*0.5);
+			{
+				if Player.ultra_got[97] && Player.altUltra
+					other.raddrop = round(other.raddrop*0.75);
+				else
+					other.raddrop = round(other.raddrop*0.5);
+			}
 
 			if ultra_got[15]//POWER OVERWHELMING! melting c ultra
 				other.raddrop += 2;

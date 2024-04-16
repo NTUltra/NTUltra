@@ -391,6 +391,12 @@ function scrLoadRace() {
 		spr_hurt=sprMutant22DHurt;
 		spr_dead=sprMutant22DDead;
 		break;
+		case 25:
+		spr_idle=sprMutant25DIdle;
+		spr_walk=sprMutant25DWalk;
+		spr_hurt=sprMutant25DHurt;
+		spr_dead=sprMutant25DDead;
+		break;
 	}
 	}
 	else if bskin=4//eskin
@@ -480,6 +486,18 @@ function scrLoadRace() {
 		spr_walk=sprMutant22DWalk;
 		spr_hurt=sprMutant22DHurt;
 		spr_dead=sprMutant22DDead;
+		break;
+	}
+	}
+	else if bskin=6//gskin
+	{
+	switch (race)
+	{
+		case 3:
+		spr_idle=sprMutant3GIdle;
+		spr_walk=sprMutant3GWalk;
+		spr_hurt=sprMutant3GHurt;
+		spr_dead=sprMutant3GDead;
 		break;
 	}
 	}

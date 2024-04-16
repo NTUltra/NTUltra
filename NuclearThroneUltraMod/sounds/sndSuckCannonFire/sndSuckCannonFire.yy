@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.033288,
+  "duration":0.390884,
   "name":"sndSuckCannonFire",
   "parent":{
     "name":"Energy",

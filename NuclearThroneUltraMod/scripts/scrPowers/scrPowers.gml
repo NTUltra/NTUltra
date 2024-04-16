@@ -2168,7 +2168,7 @@ function scrPowers(raceOverwrite = -1) {
 						}
 					}
 				}
-				var duration = 10;
+				var duration = 11;
 				var confspr = sprEnemyConfusion;
 				if ultra_got[104] && !altUltra
 				{

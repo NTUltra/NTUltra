@@ -4,9 +4,7 @@ if isOneWeaponOnlyModes()
 	oneweponly = true;
 else
 	oneweponly = false;
-
 event_inherited()
-
 /*
 if instance_exists(Player)
 {
@@ -67,6 +65,6 @@ explainTimer = 0;
 
 if isOneWeaponOnlyModes()
 {
-	alarm[0] = 1;
+	alarm[2] = 1;
 }
 alarm[6] = 5;

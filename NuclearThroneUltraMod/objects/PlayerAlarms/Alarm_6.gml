@@ -5,9 +5,9 @@ with Player
 	if !outOfCombat
 	{
 		humphrySkill *= other.humphryAmount;
-		if humphrySkill > 200
+		if humphrySkill > 250
 			humphrySkill *= 0.95;
-		if humphrySkill > 300
+		if humphrySkill > 350
 			humphrySkill *= 0.9;
 		if humphrySkill > 500
 			humphrySkill *= 0.85;

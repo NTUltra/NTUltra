@@ -83,7 +83,7 @@ if random(4)<1+min(loops-1,2) && loops>0//elite
 		    spr_hurt=sprRogueBuffPopoHurt;
 		    spr_dead=sprRogueBuffPopoDead;
 		}
-		{
+		else {
 			spr_idle=sprRogueExploderPopo;
 		    spr_walk=sprRogueExploderPopoWalk;
 		    spr_hurt=sprRogueExploderPopoHurt;

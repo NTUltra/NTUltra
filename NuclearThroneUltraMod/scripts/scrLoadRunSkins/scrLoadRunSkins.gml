@@ -16,6 +16,18 @@ function scrLoadRunSkins(race,bskin,altUltra,area){
 		bskin = 2;
 		altUltra = true;
 	}
+	else if bskin == 6
+	{
+		switch (race)
+		{
+			case 3:
+				spr_idle = sprMutant3GIdle;
+				spr_walk = sprMutant3GWalk;
+				spr_hurt = sprMutant3GHurt;
+				spr_dead = sprMutant3GDead;
+			break;
+		}
+	}
 	if bskin = 1
 	{
 		switch (race)

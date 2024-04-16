@@ -5,7 +5,8 @@ function scrUnlockAltSkin(raceIndex, altIndex) {
 	(
 		(UberCont.race_dskin[raceIndex] == 0 && altIndex == 0 ) ||
 		(UberCont.race_eskin[raceIndex] == 0 && altIndex == 1 ) ||
-		(UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 )
+		(UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 ) ||
+		(UberCont.race_gskin[raceIndex] == 0 && altIndex == 3 )
 	) && 
 	(isValidGamemodeToUnlock() ))
 	{
@@ -15,6 +16,8 @@ function scrUnlockAltSkin(raceIndex, altIndex) {
 			UberCont.race_eskin[raceIndex] = 1;
 		else if (UberCont.race_fskin[raceIndex] == 0 && altIndex == 2 )
 			UberCont.race_fskin[raceIndex] = 1;
+		else if (UberCont.race_gskin[raceIndex] == 0 && altIndex == 3 )
+			UberCont.race_gskin[raceIndex] = 1;
 
 		with instance_create(x,y,UnlockPopup)
 		{

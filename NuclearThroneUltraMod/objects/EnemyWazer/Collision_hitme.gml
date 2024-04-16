@@ -1,5 +1,5 @@
 /// @description iframes
-if other.team != team and other.my_health > 0
+if other.team != team and other.my_health > 0 && !ending
 {
 	with other
 	{

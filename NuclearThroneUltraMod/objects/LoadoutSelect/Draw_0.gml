@@ -201,6 +201,9 @@ if (hasNoMenuOpen()
 				case 5:
 					letter = "F";
 				break;
+				case 6:
+					letter = "G";
+				break;
 				default:
 					letter = "A";
 				break;

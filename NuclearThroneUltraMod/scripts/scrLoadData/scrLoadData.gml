@@ -9,6 +9,7 @@ function scrLoadData() {
 	race_dskin[dir] = ini_read_real("DATA","dskin"+string(dir),race_dskin[dir]);
 	race_eskin[dir] = ini_read_real("DATA","eskin"+string(dir),race_eskin[dir]);
 	race_fskin[dir] = ini_read_real("DATA","fskin"+string(dir),race_fskin[dir]);
+	race_gskin[dir] = ini_read_real("DATA","gskin"+string(dir),race_gskin[dir]);
 	skin[dir] = ini_read_real("DATA","skin"+string(dir),0);
 	crown_start[dir] = ini_read_real("DATA","crown_start"+string(dir),false);
 

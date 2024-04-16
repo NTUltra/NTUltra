@@ -22,6 +22,7 @@ if atk=2//BLUE BALL OF FIRE!
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
+	dmg += 1;
     motion_add(other.direction+random(60)-30,2+random(6))
     image_angle = direction
     team = other.team
@@ -51,6 +52,7 @@ appear=true;
     with instance_create(x,y,TrapFire)
     {
     sprite_index = sprFireLilHunter
+	dmg += 1;
     motion_add(other.direction+random(60)-30,2+random(6))
     image_angle = direction
     team = other.team

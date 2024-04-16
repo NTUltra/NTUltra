@@ -263,8 +263,8 @@ function scrDrawBloom() {
 	with InvertedHotDrakeSplitBall
 	draw_sprite_ext(sprInvertedHotDrakeSplitBallBloom,image_index,x - vx,y - vy,3,3,image_angle,c_white,ba)
 
-	with LavaBallEnemy
-	draw_sprite_ext(sprHotDrakeFlameCannonBloom,image_index,x - vx,y - vy,2,2,image_angle,c_white,ba)
+	//with LavaBallEnemy
+	////draw_sprite_ext(sprHotDrakeFlameCannonBloom,image_index,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with WeaponCharge
 	draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,2,2,image_angle,c_white,ba)
 

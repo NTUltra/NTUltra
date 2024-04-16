@@ -15,24 +15,39 @@ if instance_exists(creator)
 	}
 	//var al = ds_list_size(suckedProjectiles);
 	var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-	var range = min(ammo * 2,30);
-	//for (var i = 0; i < alol; i++)
-	//{
+	var range = min(ammo * 2,maxRange);
 	if ammo < ds_list_size(suckedProjectiles) && ammo >= 0
-		with instance_create(x,y,suckedProjectiles[| ammo])
+	{
+		if sprite_exists(suckedProjectiles[| ammo])
 		{
-			motion_add(dir + ((random(range) - (range * 0.5)) * other.accuracy),12 + random(4));
-			team = other.team;
-			scrCopyWeaponMod(other);
-			image_angle = direction;
-			event_user(15);
+			with instance_create(x,y,MovingCorpse)
+			{
+				mySize = 2;
+				sprite_index = other.suckedProjectiles[| other.ammo];
+				image_xscale = choose(1,-1);
+				mask_index = sprite_index;
+				motion_add(dir + ((random(range) - (range * 0.5)) * other.accuracy),other.projectileSpeed + random(2));
+				if instance_exists(Player) && Player.skill_got[20] {
+					speed += 3;
+				}
+			}
 		}
-	//}
-
-	BackCont.viewx2 += lengthdir_x(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(5,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.shake += 4
-	creator.wkick = 4
+		else
+		{
+			with instance_create(x,y,suckedProjectiles[| ammo])
+			{
+				motion_add(dir + ((random(range) - (range * 0.5)) * other.accuracy),other.projectileSpeed + random(4));
+				team = other.team;
+				scrCopyWeaponMod(other);
+				image_angle = direction;
+				event_user(15);
+			}
+		}
+	}
+	BackCont.viewx2 += lengthdir_x(wkick + 1,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(wkick + 1,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	BackCont.shake += wkick
+	creator.wkick = wkick
 }
 if ammo <= 0
 	instance_destroy()

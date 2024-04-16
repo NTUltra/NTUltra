@@ -4,5 +4,6 @@ image_angle = random(360)
 rotation = random_range(5,-5);
 typ = 0//2 //0 = nothing, 1 = deflectable, 2 = destructable
 team = 1
+dmg = 2;
 alarm[2] = 1
 friction = 0.022;

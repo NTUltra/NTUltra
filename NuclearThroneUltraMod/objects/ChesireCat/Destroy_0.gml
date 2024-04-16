@@ -1,12 +1,9 @@
 event_inherited()
 if !instance_exists(SurvivalWave) && !scrIsCrown(19)
 	TopCont.darkness = 0;
-if alarm[5] >  0
+with myWazer
 {
-	with myWazer
-	{
-		event_perform(ev_alarm,0);	
-	}
+	event_perform(ev_alarm,0);	
 }
 
 Sleep(200)

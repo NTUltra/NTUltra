@@ -5,6 +5,7 @@ repeat(50){//flame wall of death baby yes
 with instance_create(x,y+96,TrapFire)
     {
     sprite_index = sprFireLilHunter
+	dmg += 1;
     motion_add(other.direction+random(180)-90,3+random(6))
     move_contact_solid(direction,16);
     image_angle = direction

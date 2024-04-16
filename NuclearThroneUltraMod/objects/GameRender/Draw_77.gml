@@ -92,6 +92,12 @@ if instance_exists(VoidStyle) && VoidStyle.image_index < 8
 	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,a);
 	gpu_set_blendmode(bm_normal);
 }
+if instance_exists(VoidDeath)
+{
+	gpu_set_blendmode(bm_subtract);
+	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,1);
+	gpu_set_blendmode(bm_normal);
+}
 if instance_exists(VoidRipperBurst)
 {
 	gpu_set_blendmode(bm_subtract);

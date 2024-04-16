@@ -65,7 +65,7 @@ function scrDrawStats() {
 	var skillstats  = "";
 	var skillnames = "";
 	var whiteEnter = "";
-	var maxSkill = UberCont.maxskill;
+	var maxSkill = UberCont.maxskill + 1;
 	var dir = 0;
 	var totSkills = 0;
 	repeat(maxSkill)
@@ -124,15 +124,15 @@ function scrDrawStats() {
 	for (i = 1; i < maxSecretUltra; i++) {
 		if (i == 26)
 		{
-			ultrastats += string(UberCont.ctot_secret_ultra_taken[i])+"#";
-			totUltras += UberCont.ctot_secret_ultra_taken[i];
-			if UberCont.ctot_secret_ultra_taken[i] < 1
+			ultrastats += string(UberCont.ctot_secret_ultra_taken[0])+"#";
+			totUltras += UberCont.ctot_secret_ultra_taken[0];
+			if UberCont.ctot_secret_ultra_taken[0] < 1
 			{
-				ultranames += scrCensorString(UberCont.secret_ultra_name[i]);
+				ultranames += scrCensorString(UberCont.secret_ultra_name[0]);
 				ultranames += "#"
 			}
 			else
-				ultranames += UberCont.secret_ultra_name[i]+"#";
+				ultranames += UberCont.secret_ultra_name[0]+"#";
 		}
 		ultrastats += string(UberCont.ctot_secret_ultra_taken[i])+"#";
 		totUltras += UberCont.ctot_secret_ultra_taken[i];

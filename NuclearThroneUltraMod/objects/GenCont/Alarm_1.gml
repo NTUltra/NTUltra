@@ -172,12 +172,26 @@ if instance_exists(Player)
 				x = BigMachine.x - 32;
 				y = BigMachine.y + 128;
 				scrForcePosition60fps();
+				with instance_nearest(x,y,WeaponChest)
+				{
+					x = BigMachine.x;
+					y = BigMachine.y - 64;
+					friction = 2;
+					speed = 0;
+				}
 			}
 			if instance_exists(InvertedBigMachine)
 			{
 				x = InvertedBigMachine.x - 32;
 				y = InvertedBigMachine.y + 128;
 				scrForcePosition60fps();
+				with instance_nearest(x,y,WeaponChest)
+				{
+					x = InvertedBigMachine.x;
+					y = InvertedBigMachine.y - 64;
+					friction = 2;
+					speed = 0;
+				}
 			}
 			with enemy
 			{

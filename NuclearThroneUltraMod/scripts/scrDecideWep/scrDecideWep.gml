@@ -72,7 +72,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 			if wep_area[wep]  <= wepTier
 				triesForSpecificTier++;
-				if tries > 1000
+				if tries > max(maxTries,1000)
 				{
 					triesForSpecificTier = 0;
 					if wepTier-tooBad - 1 > 0

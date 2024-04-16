@@ -19,13 +19,6 @@ function scrRogueTarget() {
 		target=noone;
 		instance_destroy();
 		}
-
-		if instance_exists(Player)
-		{
-		mp_potential_step(Player.x,Player.y,2,false);
-		motion_add(point_direction(x,y,Player.x,Player.y),1);
-		}
-
 	}
 	else
 	{

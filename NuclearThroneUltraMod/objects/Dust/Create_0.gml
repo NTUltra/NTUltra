@@ -1,4 +1,4 @@
-depth = 7;
+depth = 6;
 image_angle = random(360)
 motion_add(image_angle,random(2))
 friction = 0.3

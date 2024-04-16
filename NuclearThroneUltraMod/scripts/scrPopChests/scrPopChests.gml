@@ -254,7 +254,9 @@ function scrPopChests() {
 	if instance_exists(Player)
 	{
 		if Player.area == 134 || Player.area == 136 || (Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23])))
+		{
 			scrCreateMissingChest(UltraChest,1);
+		}
 		if UberCont.canSpawnInversionShards && scrIsInInvertedArea() && Player.area != 100 && Player.area != 104
 		{
 			var mindis = 64

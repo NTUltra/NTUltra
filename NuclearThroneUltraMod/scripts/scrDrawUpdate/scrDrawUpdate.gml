@@ -23,9 +23,53 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/716030/302100");
+		}
+	var txt0 = @"#UPDATE [30.21.00]
+	
+	* NEW LAVABALL ENEMY ART!
+	  (BY YUVO)
+	
+	* NEW SECRET SKINS FOR
+	  EYES
+	  DOCTOR (BY DAPH & YOKU)
+	
+	* NEW WEAPONS
+	  SQUARAGON
+	  MICRO LAUNCHER SHOTGUN
+	  BLOOD MINIGUN
+	  ULTRA SUCK CANNON
+	  
+	* HUMPHRY ACTIVE CHANGES
+	
+	* ANGEL ACTIVE CHANGES
+	
+	* BUSINESS HOG INVESTMENT NERF
+	
+	* INCREASED DAMAGE BLUE FIRE
+	* GOLDEN SNIPER ATTACK CHANGED
+	
+	PRESS [T] FOR UPDATES ON TWITTER
+	PRESS [D] TO JOIN THE DISCORD
+	PRESS [C] FOR FULL CHANGELOG
+	
+	PRESS [SPACE] FOR PAGE 2"
+	}
+	else
+	{
+		if keyboard_check_pressed(ord("D"))
+		{
+			url_open("https://discord.gg/kmp5t2TK6j");
+		}
+		if keyboard_check_pressed(ord("T"))
+		{
+			url_open("https://twitter.com/Erdeppol");
+		}
+		if keyboard_check_pressed(ord("C"))
+		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/714542/302000");
 		}
-	var txt0 = @"#UPDATE [30.20.00]
+	var txt0=@"#UPDATE [30.20.00]
 	
 	* NEW WEAPONS
 	  LASER FLAK CANNON
@@ -48,50 +92,6 @@ function scrDrawUpdate() {
 	  
 	* BUFFED ADRENALINE FUEL
 	* INCREASED BOSS HEALTH SCALING
-	
-	PRESS [T] FOR UPDATES ON TWITTER
-	PRESS [D] TO JOIN THE DISCORD
-	PRESS [C] FOR FULL CHANGELOG
-	
-	PRESS [SPACE] FOR PAGE 2"
-	}
-	else
-	{
-		if keyboard_check_pressed(ord("D"))
-		{
-			url_open("https://discord.gg/kmp5t2TK6j");
-		}
-		if keyboard_check_pressed(ord("T"))
-		{
-			url_open("https://twitter.com/Erdeppol");
-		}
-		if keyboard_check_pressed(ord("C"))
-		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/712785/301900");
-		}
-	var txt0=@"#UPDATE [30.19.00]
-	
-	* NEW WEAPON
-	  WOMBO COMBO SUCKER PUNCHER
-	
-	* NEW MUTATION
-	  ADRENALINE FUEL
-	  
-	* BUFFED HYPERSOMNIA
-	* BUFFED ALIEN INTESTINES
-	* SERENE DREAMS NOW DESTROYS
-	  FIRE AND TOXIC
-	* ADJUSTED TOUGH SHELL
-	* ADJUSTED ENRICHED METABOLISM
-	* MINOR BUFF TO NERVES OF STEEL
-	* NERFED MOOD SWING
-	
-	* BUFFED REBEL
-	* PANDA NOW THROWS FURTHER
-	  WITH IMPACT WRISTS
-	  
-	* BUFFED WEAPON SMITH'S
-	  SECRET ULTRAS
 	
 	PRESS [T] FOR UPDATES ON TWITTER
 	PRESS [D] TO JOIN THE DISCORD

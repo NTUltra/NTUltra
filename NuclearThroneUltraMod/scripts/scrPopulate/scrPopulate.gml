@@ -575,11 +575,29 @@ function scrPopulate() {
     if Player.area = 2 {
         with Floor {
             if sprite_index = sprFloor2 and image_index = 1 or image_index = 5
-            instance_create(x, y, PizzaEntrance)
+				instance_create(x, y, PizzaEntrance)
         }
-        do {
-            with instance_nearest(10016 + random(240) - 120, 10016 + random(240) - 120, PizzaEntrance) instance_destroy()
-        }
-        until instance_number(PizzaEntrance) <= 1
+		if !instance_exists(PizzaEntrance)
+		{
+			with Floor {
+				if !styleb
+				{
+					instance_create(x, y, PizzaEntrance)	
+				}
+			}
+		}
+		if !instance_exists(PizzaEntrance)
+		{
+			with instance_nearest(x,y,Floor) {
+				instance_create(x, y, PizzaEntrance)	
+			}
+		}
+		if instance_number(PizzaEntrance) > 1
+		{
+			do {
+	            with instance_nearest(10016 + random(240) - 120, 10016 + random(240) - 120, PizzaEntrance) instance_destroy()
+	        }
+	        until instance_number(PizzaEntrance) <= 1
+		}
     }
 }

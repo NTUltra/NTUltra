@@ -1656,7 +1656,7 @@ function scrWeapons() {
 	wep_name[148] = "HAND SHOTGUN"
 	wep_type[148] = 2
 	wep_auto[148] = 0
-	wep_load[148] = 30
+	wep_load[148] = 28
 	wep_cost[148] = 2
 	wep_sprt[148] = sprPistole
 	wep_area[148] = -1
@@ -7401,7 +7401,7 @@ function scrWeapons() {
 	wep_load[661] = 35
 	wep_cost[661] = 4
 	wep_sprt[661] = sprRollOutTheBoom
-	wep_area[661] = 15
+	wep_area[661] = 16
 	wep_text[661] = "weapons that are full sentences"
 	wep_swap[661] = sndSwapShotgun
 	wep_rad[661] = 0;
@@ -8052,7 +8052,7 @@ function scrWeapons() {
 	wep_load[719] = 25
 	wep_cost[719] = 10
 	wep_sprt[719] = sprSniperScythe
-	wep_area[719] = 14
+	wep_area[719] = 15
 	wep_text[719] = "is that a reference to what I think it is?"
 	wep_swap[719] = sndSwapSword
 	wep_rad[719] = 0;
@@ -8061,7 +8061,7 @@ function scrWeapons() {
 	wep_type[720] = 4
 	wep_auto[720] = 0
 	wep_load[720] = 70
-	wep_cost[720] = 14
+	wep_cost[720] = 20
 	wep_sprt[720] = sprRogueVanCannon
 	wep_area[720] = -1
 	wep_text[720] = "rogue power"
@@ -8071,12 +8071,12 @@ function scrWeapons() {
 	wep_name[721] = "SPADER"
 	wep_type[721] = 0
 	wep_auto[721] = 2
-	wep_load[721] = 46
+	wep_load[721] = 48
 	wep_cost[721] = 0
 	wep_sprt[721] = sprSpader
 	wep_area[721] = 11
 	wep_text[721] = "shoveling"
-	wep_swap[721] = sndSwapHammer
+	wep_swap[721] = sndSwapMotorized
 	wep_rad[721] = 0;
 	
 	wep_name[722] = "HEAVY SCREWDRIVER"
@@ -8324,7 +8324,7 @@ function scrWeapons() {
 	wep_name[744] = "LASER FLAK CANNON"
 	wep_type[744] = 5
 	wep_auto[744] = 0
-	wep_load[744] = 24
+	wep_load[744] = 27
 	wep_cost[744] = 3
 	wep_sprt[744] = sprLaserFlakCannon
 	wep_area[744] = 11
@@ -8338,7 +8338,7 @@ function scrWeapons() {
 	wep_load[745] = 1
 	wep_cost[745] = 0.75
 	wep_sprt[745] = sprDoubleLaserMinigun
-	wep_area[745] = 8
+	wep_area[745] = 13
 	wep_text[745] = "nuclear powered"
 	wep_swap[745] = sndSwapEnergy
 	wep_rad[745] = 0;
@@ -8346,7 +8346,7 @@ function scrWeapons() {
 	wep_name[746] = "SUCK CANNON"
 	wep_type[746] = 5
 	wep_auto[746] = 0
-	wep_load[746] = 6
+	wep_load[746] = 5
 	wep_cost[746] = 1.5
 	wep_sprt[746] = sprSuckCannon
 	wep_area[746] = 7
@@ -8510,7 +8510,52 @@ function scrWeapons() {
 	wep_text[760] = "fuel required"
 	wep_swap[760] = sndSwapEnergy
 	wep_rad[760] = 0;
-
+	
+	wep_name[761] = "SQUARAGON"
+	wep_type[761] = 5
+	wep_auto[761] = 1
+	wep_load[761] = 4
+	wep_cost[761] = 1
+	wep_sprt[761] = sprSquaragon
+	wep_area[761] = 16
+	wep_text[761] = "square of death"
+	wep_swap[761] = sndSwapEnergy
+	wep_rad[761] = 0;
+	
+	wep_name[762] = "MICRO LAUNCHER SHOTGUN"
+	wep_type[762] = 4
+	wep_auto[762] = 1
+	wep_load[762] = 10
+	wep_cost[762] = 4
+	wep_sprt[762] = sprMicroLauncherShotgun
+	wep_area[762] = 16
+	wep_text[762] = "railshotgun"
+	wep_swap[762] = sndSwapExplosive
+	wep_rad[762] = 0;
+	
+	wep_name[763] = "BLOOD MINIGUN"
+	wep_type[763] = 1
+	wep_auto[763] = 1
+	wep_load[763] = 0.5
+	wep_cost[763] = 1
+	wep_sprt[763] = sprBloodMinigun
+	wep_area[763] = 5
+	wep_text[763] = "i'm bleeding out here!"
+	wep_swap[763] = sndSwapMachinegun
+	wep_rad[763] = 0;
+	
+	wep_name[764] = "ULTRA SUCK CANNON"
+	wep_type[764] = 5
+	wep_auto[764] = 0
+	wep_load[764] = 4
+	wep_cost[764] = 1.5
+	wep_sprt[764] = sprSuckCannon
+	wep_area[764] = 21
+	wep_text[764] = "suck it all"
+	wep_swap[764] = sndSwapEnergy
+	wep_rad[764] = 9;
+	wep_popup[746] = "HOLD TO SUCK UP ANY ENEMY PROJECTILE#CAN SUCK SMALLER ENEMIES";
+	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
 	for (var wi = 0; wi < maxwep; wi++) {

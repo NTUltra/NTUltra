@@ -5,3 +5,4 @@ with instance_create(x,y,ChestOpen)
 instance_create(x,y,FXChestOpen)
 
 scrChestOasis();
+debug("I AM BEING ENDED");

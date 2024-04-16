@@ -20,7 +20,16 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 		bskin = 2;
 		altUltra = true;
 	}
-	if bskin = 1
+	else if bskin == 6//gskin
+	{
+	switch (race)
+	{
+	case 3:
+	return sprMutant3GIdle;
+	break;
+	}
+	}
+	else if bskin = 1
 	{
 	switch (race)
 	{
@@ -136,6 +145,8 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant24BIdle;
 	break;
 	case 25:
+	if altUltra
+		return sprMutant25DIdle;
 	return sprMutant25BIdle;
 	break;
 	case 26:
@@ -240,6 +251,8 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant24CIdle;
 	break;
 	case 25:
+	if altUltra
+		return sprMutant25DIdle;
 	return sprMutant25CIdle;
 	break;
 	case 26:
@@ -360,6 +373,8 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant24Idle;
 	break;
 	case 25:
+	if altUltra
+		return sprMutant25DIdle;
 	return sprMutant25Idle;
 	break;
 	case 26:

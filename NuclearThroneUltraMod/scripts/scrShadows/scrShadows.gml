@@ -301,8 +301,11 @@ function scrShadows() {
 		{
 			if race == 14
 				draw_sprite(shdPanda,0,x-vx,py-vy)
-			else if race=18
-				draw_sprite(shd24,0,x-vx,py-vy+12)
+			else if race = 18
+			{
+				if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
+					draw_sprite(shd24,0,x-vx,py-vy+12)
+			}
 			else
 				draw_sprite(shd24,0,x-vx,py-vy)
 		}

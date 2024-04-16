@@ -8,6 +8,7 @@ function scrSaveData() {
 		ini_write_real("DATA","dskin"+string(dir),race_dskin[dir]);
 		ini_write_real("DATA","eskin"+string(dir),race_eskin[dir]);
 		ini_write_real("DATA","fskin"+string(dir),race_fskin[dir]);
+		ini_write_real("DATA","gskin"+string(dir),race_gskin[dir]);
 		ini_write_real("DATA","skin"+string(dir),skin[dir]);
 		ini_write_real("DATA","crown_start"+string(dir),crown_start[dir]);
 		var wepdir = 0;

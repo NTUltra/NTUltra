@@ -1,12 +1,14 @@
 event_inherited()
 
 scrRoguePopo();
+if team == 2
+	scrRogueTarget();
 if walk > 0
 {
-walk -= 1
-motion_add(direction,1)
-if target != noone
-mp_potential_step(target.x,target.y,2,false)
+	walk -= 1
+	motion_add(direction,1)
+	if target != noone
+	mp_potential_step(target.x,target.y,2,false)
 }
 
 if dodge > 0
@@ -77,8 +79,7 @@ if instance_exists(Player)
 
 if control = 1 
 {
-	if team == 2
-		scrRogueTarget();
+	
 	if target != noone && instance_exists(target)
 	{
 		var str = 1.75;

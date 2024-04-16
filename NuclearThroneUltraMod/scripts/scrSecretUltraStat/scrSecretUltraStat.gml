@@ -245,7 +245,7 @@ function scrSecretUltraStat() {
 	//DOCTOR
 	//97
 	secret_ultra_name[29] = "BEEKEEPER"
-	secret_ultra_text[29] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>"
+	secret_ultra_text[29] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>#ENEMIES HOLD 25% MORE <g>RADS<g>"
 	secret_ultra_tips[29] = "retired to a farm"
 	secret_ultra_hint[29] = "BOLT SPECIALIST";
 	secret_ultra_unlk[29] = "HAVE NO WEAPON MUTATIONS\nEXCEPT FOR BOLT MARROW";

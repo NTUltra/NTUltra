@@ -95,11 +95,18 @@ if race=16
 if ultra_got[62]//Viking armour up ultra
 	    armour++;
 
-if race==10 && canHeal//Rebel pasive
+if race == 10 && canHeal//Rebel pasive
 {
 	if my_health < maxhealth
 	{
 		my_health += min(maxhealth, ceil((maxhealth-my_health)*0.5));
+		if my_health < maxhealth
+			my_health += 1;
+	}
+}
+if (ultra_got[47] && !altUltra) {
+	repeat(4)
+	{
 		if my_health < maxhealth
 			my_health += 1;
 	}
@@ -131,10 +138,10 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 	maxhealth = targetHealth;
 	
 }
-if ((ultra_got[40] = 1 || (ultra_got[47] && altUltra)) && canHeal)
+if ((ultra_got[40] = 1) && canHeal)
 {
 	//Rebel Ultra D YUNG CUZ ULTRA C
-	my_health=max(my_health,maxhealth);
+	my_health = max(my_health,maxhealth);
 }
 
 //CROWN OF LIFE

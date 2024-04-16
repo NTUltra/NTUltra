@@ -19,7 +19,7 @@ if instance_exists(Player)
 {
 	if Player.race == 24
 	{
-		dmg += 0.5;
+		dmg += 0.25;
 		image_xscale += 0.1;
 		image_yscale += 0.1;
 		friction -= 0.02;

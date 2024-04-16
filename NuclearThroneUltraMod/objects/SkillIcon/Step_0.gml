@@ -38,7 +38,7 @@ if selected && visible
 		with GameRender {
 			event_user(0);
 		}
-		if skill != 37
+		if skill != maxskill + 1 && skill != 27
 			Player.totalSkills ++;
 		if skill == 1
 		{
@@ -406,6 +406,7 @@ if selected && visible
 			{
 				if ctot_skill_taken[dir] <= 0
 					gotEmAll = false;
+				dir += 1;
 			}
 			if gotEmAll
 			{

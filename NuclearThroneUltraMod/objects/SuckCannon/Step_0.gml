@@ -1,7 +1,8 @@
 /// @description Suck in the bullets
 if owner != noone && instance_exists(owner)
 {
-	BackCont.shake += 1;
+	if BackCont.shake < 2
+		BackCont.shake += 1;
 	x = owner.x;
 	y = owner.y;
 	prevangle = image_angle;
@@ -24,7 +25,7 @@ if owner != noone && instance_exists(owner)
 		with projs[| i] {
 			if team != other.team && canBeMoved
 			{
-				if typ == 3
+				if typ == other.cantSuck
 				{
 					x = xprevious;
 					y = yprevious;
@@ -55,36 +56,67 @@ if owner != noone && instance_exists(owner)
 
 	if dust
 	{
-		var ang = image_angle - 30;
-		var angStep = 15;
-		var minDis = 48;
-		for (var i = 0; i < 4; i ++)
+		if object_index == UltraSuckCannon
 		{
-			var xx = x;
-			var yy = y;
-			var dis = minDis;
-			var step = 26;
-			for (var j = 0; j < 3; j ++)
+			var ang = image_angle - 40;
+			var angStep = 20;
+			var minDis = 56;
+			for (var i = 0; i < 4; i ++)
 			{
-				var myAng = ang+random_range(8,-8);
-				var xx = x + lengthdir_x(dis,myAng);
-				var yy = y + lengthdir_y(dis,myAng);
-				if (collision_point(xx,yy,Floor,false,false))
-					with instance_create(xx,yy,Dust)
-					{
-						depth = 6;
-						motion_add(myAng + 180,	2 + random(3));
-					}
-				dis += step;
-				step += 1;
+				var xx = x;
+				var yy = y;
+				var dis = minDis;
+				var step = 32;
+				for (var j = 0; j < 3; j ++)
+				{
+					var myAng = ang+random_range(8,-8);
+					var xx = x + lengthdir_x(dis,myAng);
+					var yy = y + lengthdir_y(dis,myAng);
+					if (collision_point(xx,yy,Floor,false,false))
+						with instance_create(xx,yy,choose(Smoke,Dust))
+						{
+							depth = 6;
+							motion_add(myAng + 180,	2 + random(3));
+						}
+					dis += step;
+					step += 1;
+				}
+				ang += angStep;
 			}
-			ang += angStep;
+		}
+		else
+		{
+			var ang = image_angle - 30;
+			var angStep = 15;
+			var minDis = 48;
+			for (var i = 0; i < 4; i ++)
+			{
+				var xx = x;
+				var yy = y;
+				var dis = minDis;
+				var step = 26;
+				for (var j = 0; j < 3; j ++)
+				{
+					var myAng = ang+random_range(8,-8);
+					var xx = x + lengthdir_x(dis,myAng);
+					var yy = y + lengthdir_y(dis,myAng);
+					if (collision_point(xx,yy,Floor,false,false))
+						with instance_create(xx,yy,Dust)
+						{
+							depth = 6;
+							motion_add(myAng + 180,	2 + random(3));
+						}
+					dis += step;
+					step += 1;
+				}
+				ang += angStep;
+			}
 		}
 	}
 	dust = !dust;
-	var s = 1;
+	var s = suckStrength;
 	if UberCont.normalGameSpeed == 60
-		s = 0.5;
+		s = suckStrength * 0.5;
 	var pickups = ds_list_create();
 	var pl = instance_place_list(x,y,Pickup,pickups,false);
 	for (var i = 0; i < pl; i++)
@@ -121,6 +153,21 @@ if owner != noone && instance_exists(owner)
 					DealDamage(other.dmg * 0.5, true);
 				else
 					DealDamage(other.dmg,true);
+				if team != 0 && mySize <= other.canSuckEnem && my_health <= 0
+				{
+					morphMe = 6;
+					with other
+					{
+						ds_list_add(suckedProjectiles,other.spr_dead);	
+					}
+					with instance_create(x,y,SuckProjectile)
+					{
+						rotation = choose(30,-30);
+						sprite_index = other.spr_dead;
+						owner = o;
+						BackCont.shake += 2;
+					}
+				}
 			}
 		}
 	}
@@ -129,15 +176,15 @@ if owner != noone && instance_exists(owner)
 		if scrChargeRelease() || ds_list_size(suckedProjectiles) > 50
 		{
 			if !released
-				snd_play(sndSuckCannonRelease);
+				snd_play(sndRelease);
 			released = true;
 			event_user(0);
 		}
 	}
-	if !audio_is_playing(sndSuckCannonLoop)
-		snd_loop(sndSuckCannonLoop);
-	if audio_is_playing(sndSuckCannonLoop)
-		audio_sound_pitch(sndSuckCannonLoop,pitch);
+	if !audio_is_playing(loopSnd)
+		snd_loop(loopSnd);
+	if audio_is_playing(loopSnd)
+		audio_sound_pitch(loopSnd,pitch);
 	pitch += abs(angle_difference(image_angle,prevangle))*0.02;
 	pitch = clamp(pitch - 0.1,0.96,1.8);
 	BackCont.viewx2 += lengthdir_x(1,image_angle)*UberCont.opt_shake

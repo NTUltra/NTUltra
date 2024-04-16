@@ -43,7 +43,11 @@ function TargetWepTypeForAmmoConsumption(takePercentage){
 			}
 		}
 		if wepType == 0
+		{
 			wepType = bt;
+			if bwep == 0
+				wepType = pt;
+		}
 	}
 	return wepType
 }

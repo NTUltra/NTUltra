@@ -97,6 +97,12 @@ if (selected && visible &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			scrUltras(true, false);
+			spr_idle = sprMutant3GIdle;
+			spr_walk = sprMutant3GWalk;
+			spr_hurt = sprMutant3GHurt;
+			spr_dead = sprMutant3GDead;
+			bskin = 6;
+			scrUnlockAltSkin(race, 3);
 		}
 	}
 	else if skill == 13 && isAlternative
@@ -153,6 +159,17 @@ if (selected && visible &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
 			altUltra = true;
 			scrUltras(true, false);
+		}
+	}
+	else if skill == 47 {
+		with Player {
+			if (ultra_got[47] && !altUltra) {
+				repeat(4)
+				{
+					if my_health < maxhealth
+						my_health += 1;
+				}
+			}	
 		}
 	}
 	else if skill == 50 && Player.race == 13 && isAlternative
@@ -578,6 +595,11 @@ if (selected && visible &&
 				//Secret Beekeeper ultra
 				altUltra = true;
 				scrUltras(true, false);
+				scrUnlockAltSkin(race, 0);
+				spr_idle=sprMutant25DIdle;
+				spr_walk=sprMutant25DWalk;
+				spr_hurt=sprMutant25DHurt;
+				spr_dead=sprMutant25DDead;
 			}
 			else
 			{

@@ -14,7 +14,7 @@ else if hspeed < 0
 right = -1
 
 
-if speed > 2.5
-speed = 2.5
+if speed > maxSpeed
+speed = maxSpeed
 
 

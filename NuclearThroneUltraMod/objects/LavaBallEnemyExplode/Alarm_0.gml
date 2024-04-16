@@ -9,6 +9,7 @@ repeat(am)
 	with instance_create(x,y,TrapFire)
 	{motion_add(ang,ps)
 		sprite_index = sprFireLilHunter
+		dmg += 1;
 	team = other.team}
 	ang += angStep;
 }
@@ -21,7 +22,8 @@ repeat(am)
 	{
 		motion_add(ang,ps + 1.8)
 		image_speed -= 0.05;
-		sprite_index = sprFireLilHunter
+		sprite_index = sprFireLilHunter;
+		dmg += 1;
 		team = other.team
 	}
 	ang += angStep;

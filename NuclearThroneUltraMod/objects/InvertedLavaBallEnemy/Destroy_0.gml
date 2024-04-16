@@ -8,7 +8,7 @@ var am = 30;
 var angStep = 360/am;
 repeat(am)
 {
-	with instance_create(x,y,TrapFire)
+	with instance_create(x,y,EnemyIceFlame)
 	{
 		motion_add(random(360),3)
 		team = other.team
@@ -20,7 +20,7 @@ am += 10;
 var angStep = 360/am;
 repeat(am)
 {
-	with instance_create(x,y,TrapFire)
+	with instance_create(x,y,EnemyIceFlame)
 	{
 		motion_add(random(360),3.8)
 		team = other.team

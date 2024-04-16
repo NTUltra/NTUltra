@@ -2206,7 +2206,7 @@ if race==18
 				o = 8;
 		     var wall = instance_nearest(x,y,WallHitMe);
      
-		        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>16&&point_distance(x,y,ground.x,ground.y)>28//OUT OF BOUNDS
+		        if !place_meeting(x,y,Floor)&&point_distance(x,y,wall.x,wall.y)>38&&point_distance(x,y,ground.x,ground.y)>52//OUT OF BOUNDS
 		        {
 		        motion_add(direction+180,speed);
 				if is60fps
@@ -2225,9 +2225,9 @@ if race==18
 			    {
 				    //var wall = instance_nearest(x,y,Wall);
 					if is60fps
-						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.3);
+						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.35);
 					else
-						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.6);
+						motion_add(point_direction(x,y,ground.x+o,ground.y+o),0.7);
 			    }
 			    else
 			    {

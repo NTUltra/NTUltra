@@ -738,7 +738,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 25 && Player.altUltra)
 	{
 		ultra_name[97] = "BEEKEEPER"
-		ultra_text[97] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>"
+		ultra_text[97] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>#ENEMIES HOLD 25% MORE <g>RADS<g>"
 		ultra_tips[97] = "retired to a farm"
 	}
     

@@ -8,6 +8,7 @@ repeat(am)
 	{	
 		motion_add(ang,ps)
 		sprite_index = sprFireLilHunter
+		dmg += 1;
 		team = other.team
 	}
 	ang += angStep;

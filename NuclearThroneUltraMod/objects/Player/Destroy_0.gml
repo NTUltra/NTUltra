@@ -19,7 +19,23 @@ if scrIsGamemode(8)
 			scrUnlockBSkin(22,"FOR SURVIVING THE VANS!#FOR ATLEAST 30 SECONDS",8);
 	}
 }
-
+if race == 3 && bskin == 6
+{
+	with instance_create(x,y,PortalEnviromentReplacer)
+	{
+		area = 137;
+		prevArea = 137;
+		maxRadius = 400;
+	}
+	with TopDecal
+		instance_destroy();
+	with Bones
+		instance_destroy();
+	__background_set_colour( make_color_rgb(0,0,0) )
+	instance_create(x,y,VoidDeath);
+	speed = 0;
+	BackCont.shake += 100;
+}
 if skill_got[18]//Last wish
 {
 with UberCont
