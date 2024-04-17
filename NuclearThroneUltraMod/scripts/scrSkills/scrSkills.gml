@@ -513,7 +513,7 @@ function scrSkills() {
 	
 	skill_name[39] = "ALIEN INTESTINES"
 	skill_text[39] = "<g>ACTIVE<g> SPAWNS <p>TENTACLES<p>"
-	skill_detail[39] = "WHENEVER YOU TRY TO USE YOUR <g>ACTIVE<g>#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
+	skill_detail[39] = "WHENEVER YOU TRY TO USE YOUR <g>ACTIVE<g>#OR WHEN YOU RELEASE YOUR ACTIVE#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
 	skill_tips[39] = "spatial anomaly"
 	skill_msnd[39] =  sndMutAlienIntestines
 	skill_bons[39] = "CHARGES FASTER"

@@ -2009,6 +2009,7 @@
     {"name":"scrInitDrops","order":72,"path":"scripts/scrInitDrops/scrInitDrops.yy",},
     {"name":"scrInitOptions","order":9,"path":"scripts/scrInitOptions/scrInitOptions.yy",},
     {"name":"scrInvertedRavenLift","order":4,"path":"scripts/scrInvertedRavenLift/scrInvertedRavenLift.yy",},
+    {"name":"scrAlienIntestinesAttack","order":23,"path":"scripts/scrAlienIntestinesAttack/scrAlienIntestinesAttack.yy",},
     {"name":"scrIsChargeWeapon","order":84,"path":"scripts/scrIsChargeWeapon/scrIsChargeWeapon.yy",},
     {"name":"scrIsCrown","order":31,"path":"scripts/scrIsCrown/scrIsCrown.yy",},
     {"name":"scrIsGamemode","order":28,"path":"scripts/scrIsGamemode/scrIsGamemode.yy",},

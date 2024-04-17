@@ -155,7 +155,7 @@ if canAlt
 		sprite_index = sprAirLord;
 	}
 	else if skill == 97 && Player.race == 25 && (Player.unlockAlternativeUltras || isAlternative || !Player.skill_got[13] && !Player.skill_got[16]
-	&& !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && !Player.skill_got[42])
+	&& !Player.skill_got[17] && !Player.skill_got[15] && !Player.skill_got[14] && !Player.skill_got[42] && !Player.skill_got[43])
 	{
 		sprite_index = sprBeeKeeper;
 	}

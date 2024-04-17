@@ -2270,6 +2270,7 @@
     {"id":{"name":"scrInitDrops","path":"scripts/scrInitDrops/scrInitDrops.yy",},},
     {"id":{"name":"scrInitOptions","path":"scripts/scrInitOptions/scrInitOptions.yy",},},
     {"id":{"name":"scrInvertedRavenLift","path":"scripts/scrInvertedRavenLift/scrInvertedRavenLift.yy",},},
+    {"id":{"name":"scrAlienIntestinesAttack","path":"scripts/scrAlienIntestinesAttack/scrAlienIntestinesAttack.yy",},},
     {"id":{"name":"scrIsChargeWeapon","path":"scripts/scrIsChargeWeapon/scrIsChargeWeapon.yy",},},
     {"id":{"name":"scrIsCrown","path":"scripts/scrIsCrown/scrIsCrown.yy",},},
     {"id":{"name":"scrIsGamemode","path":"scripts/scrIsGamemode/scrIsGamemode.yy",},},

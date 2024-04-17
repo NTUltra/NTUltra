@@ -7905,7 +7905,7 @@ function scrWeapons() {
 	wep_load[706] = 23
 	wep_cost[706] = 10
 	wep_sprt[706] = sprDenseGun
-	wep_area[706] = 0
+	wep_area[706] = 1
 	wep_text[706] = "a dense amount of bullets"
 	wep_swap[706] = sndSwapPistol
 	wep_rad[706] = 0;
@@ -7917,7 +7917,7 @@ function scrWeapons() {
 	wep_load[707] = 35
 	wep_cost[707] = 2.5
 	wep_sprt[707] = sprSmallMissileBombThrower
-	wep_area[707] = 1
+	wep_area[707] = 0
 	wep_text[707] = "carepackage"
 	wep_swap[707] = sndSwapExplosive
 	wep_rad[707] = 0;
