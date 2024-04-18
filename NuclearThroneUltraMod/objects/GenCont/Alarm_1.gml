@@ -307,6 +307,5 @@ if scrIsGamemode(48) {
 		with Player {
 			ammo[1] = totalHealth*0.1;
 		}
-	}
-	
+	}	
 }

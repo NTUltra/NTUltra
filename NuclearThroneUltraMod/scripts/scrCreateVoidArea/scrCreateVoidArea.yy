@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCreateVoidArea",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateVoidArea",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
