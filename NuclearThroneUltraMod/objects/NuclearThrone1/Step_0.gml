@@ -16,7 +16,7 @@ if immune
 	if !active && !intro
 	{
 		if instance_exists(Player)
-		if (Player.y < y + 128 && !instance_exists(becomenemy) && !instance_exists(IDPDTank))
+		if (Player.y < y + 132 && !instance_exists(becomenemy) && !instance_exists(IDPDTank))
 		{
 			immune = false;
 			scrUnlockCharacter(22,"FOR REACHING THE THRONE#HAVE A SEAT");
@@ -77,6 +77,10 @@ if !active
 			else
 				sprite_index = sprThroneFlameEnd;
 		}
+		with ThroneSitter
+		{
+			sprite_index = sprThroneCorpseDead;
+		}
 		alarm[0] = 30;//Become active time
 	}
 }
@@ -91,6 +95,12 @@ else
 			vspeed += walkDir*2;
 		//if isInverted && vspeed > 0 && loops < 1
 		//	vspeed *= 0.83;
+		with PalaceGuardianNest {
+			if other.y + 64 > breakY
+			{
+				my_health = 0;	
+			}
+		}
 	}
 }
 if my_health < maxhealth*0.6 && difficultyStep < 1

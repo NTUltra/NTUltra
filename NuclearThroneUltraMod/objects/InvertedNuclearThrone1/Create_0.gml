@@ -2,7 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 1720//1700
+with ThroneSitter
+{
+	instance_destroy();	
+}
+maxhealth = 1640//1700
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 raddrop = 600;

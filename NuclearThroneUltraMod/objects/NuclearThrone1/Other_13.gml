@@ -33,7 +33,15 @@ with ThroneFlame
 active = true;
 intro = false;
 immune = false;
-
+with BigGenerator
+{
+	if spr_idle == spr_inactive
+	{
+		sprite_index = spr_activate;
+		spr_idle = spr_activate;
+		image_index = 0;
+	}
+}
 my_health = maxhealth;
 EnemyHealthAdjustments();
 with NuclearThrone1Side

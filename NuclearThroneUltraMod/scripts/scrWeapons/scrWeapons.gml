@@ -7499,7 +7499,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 11
+	wep_load[670] = 14
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 2
@@ -8555,6 +8555,17 @@ function scrWeapons() {
 	wep_swap[764] = sndSwapEnergy
 	wep_rad[764] = 9;
 	wep_popup[746] = "HOLD TO SUCK UP ANY ENEMY PROJECTILE#CAN SUCK SMALLER ENEMIES";
+	
+	wep_name[767] = "GOLDEN MICRO MACHINEGUN"
+	wep_type[767] = 1
+	wep_auto[767] = 1
+	wep_load[767] = 3.5
+	wep_cost[767] = 0.75
+	wep_sprt[767] = sprGoldenMicroMachinegun
+	wep_area[767] = 17
+	wep_text[767] = "goldscan"
+	wep_swap[767] = sndSwapPistol
+	wep_rad[767] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

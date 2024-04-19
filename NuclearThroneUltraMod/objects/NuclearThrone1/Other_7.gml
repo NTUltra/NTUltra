@@ -11,7 +11,7 @@ if (sprite_index == spr_activate)
 	image_speed = 0;
 	meleedamage = 10;
 }
-if active && ! intro{
+if active && !intro {
 	if sprite_index == spr_hurt
 	{
 		if disable

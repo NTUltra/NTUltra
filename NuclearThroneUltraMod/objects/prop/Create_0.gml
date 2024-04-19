@@ -12,7 +12,6 @@ depth = 2;
 snd_hurt = sndHitPlant
 hurt_pitch_variation = 0;
 frozen=noone;
-image_xscale = choose(1,-1)
 shadowSprite = shd24;
 shadowYoffset = 0;
 shadowXoffset = 0;

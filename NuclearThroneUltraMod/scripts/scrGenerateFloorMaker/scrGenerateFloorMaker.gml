@@ -226,6 +226,35 @@ function scrGenerateFloorMaker(limiter) {
 			else
 			{
 				instance_create(x,y,NuclearThrone1);
+				var yy = y + 404;
+				var i = 0;
+				repeat(5)
+				{
+					with instance_create(x - 96, yy, PalaceGuardianNest) {
+						image_index = i;	
+					}
+					i += 2;
+					yy += 132;
+				}
+				var yy = y + 404;
+				var i = 0;
+				repeat(5)
+				{
+					with instance_create(x + 128, yy, PalaceGuardianNest)
+					{
+						breakY -= 32;
+						image_index = i;
+					}
+					i += 2;
+					yy += 132;
+				}
+				with instance_create(x - 160, y + 320, BigGenerator)
+					image_xscale = -1;
+				instance_create(x + 192, y + 320, BigGenerator);
+				with instance_create(x - 160, y + 480, BigGenerator)
+					image_xscale = -1;
+				instance_create(x + 192, y + 480, BigGenerator);
+
 			}
 			if GetPlayerLoops() > 1
 				instance_create(x,y + 512, WantTank);

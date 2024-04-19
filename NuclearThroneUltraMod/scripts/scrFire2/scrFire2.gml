@@ -4865,6 +4865,7 @@ function scrFire2(hasTailNow) {
 		ldx = 0;
 		ldy = 0;
 	}
+	altFire = !altFire;
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileSpeed = 12;
@@ -4873,6 +4874,8 @@ function scrFire2(hasTailNow) {
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 3
+		if other.altFire
+			ammo += 1;
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -4894,6 +4897,8 @@ function scrFire2(hasTailNow) {
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 3
+		if !other.altFire
+			ammo += 1;
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5749,6 +5754,7 @@ function scrFire2(hasTailNow) {
 		ldx = 0;
 		ldy = 0;
 	}
+	altFire = !altFire;
 	with instance_create(x+ldx,y+ldy,EraserBurst)
 	{
 		projectileSpeed = 12.25;
@@ -5757,6 +5763,8 @@ function scrFire2(hasTailNow) {
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
 		ammo = 3
+		if other.altFire
+			ammo += 1;
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5778,6 +5786,8 @@ function scrFire2(hasTailNow) {
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id;
 		ammo = 3
+		if !other.altFire
+			ammo += 1;
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -14440,7 +14450,7 @@ function scrFire2(hasTailNow) {
 		py = yy;
 		with instance_create(xx,yy,NarrowShank)
 		{
-			dmg += 2;
+			dmg += 1;
 			longarms = 0
 			
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -17159,5 +17169,33 @@ function scrFire2(hasTailNow) {
 			}
 		}
 	break;
+	
+	//GOLDENMICRO MACHINEGUN
+	case 767:
+
+	//snd_play_fire(sndPistol)
+	snd_play(sndMicroSmg,0.02,true);
+	if altFire
+	{
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	}
+	altFire = !altFire;
+	with instance_create(x,y,MicroBullet)
+	{
+	direction = aimDirection+(random(10)-5)*other.accuracy;
+	image_angle = direction;
+	team = other.team
+	scrGiveProjectileStats();
+	event_perform(ev_alarm,0);
+	}
+
+	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
+	wkick = 2
+
+	break;
+	
 	}//end of switch part 2!
 }

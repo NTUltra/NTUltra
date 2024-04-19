@@ -6,3 +6,4 @@ instance_create(x,y,GreenExplosion);
 l = 28;
 ang = random(360);
 angstep = 120;
+team = -1

@@ -44,10 +44,11 @@ if target != noone && instance_exists(target)
 		bigballs = false;
 		maxSpeed = 5;
 	}
-	else if ((target.y - y > 170 && ran > 50) || ran > 90 || target.y - y > 210)
+	else if ((target.y - y > 180 && ran > 40) || ran > 94 || target.y - y > 220)
 	{
 		//below me
-		walk = alarm[1]-1;
+		walk = ceil(aTime*0.75);
+		alarm[1] = walk;
 		walkDir = 1.01;
 		if target.y - y > 260
 			walkDir += 0.3;

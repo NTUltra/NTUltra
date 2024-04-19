@@ -13,7 +13,7 @@ x += 16;
 y += 16;
 y += 64;
 yStart = y;
-maxhealth = 1760//retail has 1500 but the parts take 100 health each away upon destruction
+maxhealth = 1700//retail has 1500 but the parts take 100 health each away upon destruction
 scrBossHealthBuff();
 isInverted = false;
 mySize = 8;
@@ -132,3 +132,4 @@ tookDamageThisFrame = 0;
 version = 2;
 yReset = y;
 maxSpeed = 3;
+instance_create(x,y,ThroneSitter);

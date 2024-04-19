@@ -1,5 +1,6 @@
 function scrLoadRace() {
 	snd_good = [];
+	spr_sit = sprMutant19Sit;
 	//RACE STUFF not using the stupid functions
 	if bskin = 1
 	{

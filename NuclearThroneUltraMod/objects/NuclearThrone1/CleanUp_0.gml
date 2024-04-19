@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Clean beam
 if audio_is_playing(sndNothingBeamLoop)
 {
 	snd_play_2d(sndNothingBeamEnd);
