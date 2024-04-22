@@ -78,30 +78,7 @@ function scrEndOfRun(){
 		partnerTurn = 1;
 		partnerDied = false;
 		beatTheGame = false;
-		if instance_exists(GameRender) {
-			with GameRender
-			{
-				alarm[6] = 60;
-				var al = array_length(other.foundRoutes);
-				allRoutes = [];
-				var j = 0;
-				for (var i = 0; i < al; i ++)
-				{
-					var routePart = string_split(other.foundRoutes[i],">",true);
-					allRoutes[j] = routePart[0];
-					j++;
-					allRoutes[j] = routePart[1];
-					j++;
-				}
-				route = string_split(other.routeString,">",true);
-				if array_length(route) == 1
-					route[1] = route[0];
-				time = 0;
-				loop = 0;
-				routeIndex = 0;
-				loop = 0;
-			}
-		}
+		scrTranslateRoute();
 		routeString = "";
 		previousRoute = 0;
 		time_frame = 0;
@@ -120,5 +97,6 @@ function scrEndOfRun(){
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;
+		portalEssence = 0;
 	}
 }

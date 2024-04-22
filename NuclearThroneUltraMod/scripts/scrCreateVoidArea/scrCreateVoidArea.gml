@@ -3,23 +3,33 @@
 ///@param
 function scrCreateVoidArea(){
 	var ham = 5;
-	var vam = 8;
+	var vam = 7;
+	var bam = 2;
 	for (var fxx = -32 * ham; fxx < 32 * ham; fxx += 32;)
 	{
-		for (var fyy = -32 * vam; fyy < 32 * ham; fyy += 32;)
+		for (var fyy = -32 * vam; fyy < 32 * bam; fyy += 32;)
 		{
 			instance_create(x + fxx,y + fyy,Floor);
 		}
 	}
 	if !instance_exists(VoidFiend)
 	{
-		var xo = x + 96;
-		var yo = y - 224;
+		instance_create(x,y,VoidExit);
+		var xo = x;
+		var yo = y + 64;
+		instance_create(x,y,DarkOverlay);
+		instance_create(x,y,TextHandler);
+		var xo = x + 128;
+		var yo = y - 160;
 		instance_create(xo, yo, VoidBench);
 		instance_create(xo, yo, VoidFiend);
 		var xo = x - 96;
-		var yo = y - 192;
+		var yo = y - 128;
 		//instance_create(xo, yo, VoidBench);
 		instance_create(xo, yo, VoidMaster);
+		var xo = x;
+		var yo = y - 218//192;
+		instance_create(xo, yo, VoidSeer);
+		
 	}
 }

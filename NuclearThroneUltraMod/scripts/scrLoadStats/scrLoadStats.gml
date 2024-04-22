@@ -92,4 +92,5 @@ function scrLoadStats() {
 	}
 	foundRoutes = array_unique(foundRoutes);
 	tot_time = real(string_digits(ini_read_real("STATS","tottime",0)));
+	ctot_void_entered = ini_read_real("STATS","ctotvoidentered",0);
 }

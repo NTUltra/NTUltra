@@ -61,7 +61,7 @@ function scrDrawGameOver() {
 	}
 
 
-	if (UberCont.canRestart && keyboard_check_pressed(ord("R")) ) and gameovertime > 30
+	if (UberCont.canRestart && keyboard_check_pressed(ord("R")) ) and gameovertime > 30 && !instance_exists(PlayerInFakeDeath)
 	{//QUICK RESTART
 		with SurvivalWave
 			instance_destroy();
@@ -125,7 +125,7 @@ function scrDrawGameOver() {
 			room_restart()
 		exit;
 	}
-	if (keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) and gameovertime > 40 && !instance_exists(PlayerSpawn)
+	if ((keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) && gameovertime > 40 && !instance_exists(PlayerSpawn) && !instance_exists(PlayerInFakeDeath))
 	{
 		debug("GAMEOVER QUIT");
 		with UberCont

@@ -201,6 +201,9 @@ function scrShadows() {
 	draw_sprite(shd96,0,x-vx,y-vy+27)
 	with InvertedBigMachineLaser
 	draw_sprite(shd16,0,x-vx,y-vy);
+	with VoidMaster
+		if sprite_index == spr_idle
+			draw_sprite(sprVoidMasterShadow,0,x-vx,y-vy)
 
 	with ChesireCat
 	{

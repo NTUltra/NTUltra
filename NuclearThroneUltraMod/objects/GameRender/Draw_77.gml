@@ -98,6 +98,16 @@ if instance_exists(VoidDeath)
 	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,1);
 	gpu_set_blendmode(bm_normal);
 }
+if instance_exists(DarkOverlay)
+{
+	gpu_set_blendmode(bm_subtract);
+	repeat(instance_number(DarkOverlay))
+	{
+		draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,1);
+	}
+	gpu_set_blendmode(bm_normal);	
+}
+
 if instance_exists(VoidRipperBurst)
 {
 	gpu_set_blendmode(bm_subtract);

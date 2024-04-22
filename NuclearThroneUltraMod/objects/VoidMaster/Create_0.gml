@@ -1,8 +1,12 @@
 /// @description Init
+event_inherited();
 image_speed = 0;
 spr_intro = sprVoidMasterIntro;
 spr_idle = sprVoidMasterIdle;
 alarm[0] = 15;
 depth = 3;
-text = "";
-talking = false;
+dialogueStep = 0;
+with instance_create(x,y,BallBossPlateau)
+{
+	sprite_index = sprVoidMasterPlateau;
+}

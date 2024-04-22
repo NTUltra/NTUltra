@@ -1705,6 +1705,23 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
+		with VoidExit
+		{
+			if place_meeting(x,y,Player)
+			{
+				var yy = y-oy-18;
+				var xx = x-ox-2;
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+
+				draw_set_color(c_black)
+				draw_text_transformed(xx,yy-30,string_hash_to_newline(string(name)),1,1,textAngle)
+				draw_text_transformed(xx+1,yy-30,string_hash_to_newline(string(name)),1,1,textAngle)
+				draw_text_transformed(xx+1,yy-31,string_hash_to_newline(string(name)),1,1,textAngle)
+				draw_set_color(c_white)
+				draw_text_transformed(xx,yy-31,string_hash_to_newline(string(name)),1,1,textAngle)
+				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			}
+		}
 		with TheMultiCrown
 		{
 			if place_meeting(x,y,Player)
@@ -2224,5 +2241,21 @@ function scrDrawHUD() {
         {
             scrDrawSecretFinder(ox,oy);
         }
+	}
+	if (UberCont.ctot_void_entered > 0 && (instance_exists(TextHandler) || instance_exists(LevCont) || instance_exists(GenCont)))
+	{
+		var vw = camera_get_view_width(view_camera[0]);
+		draw_set_halign(fa_left)
+		draw_set_valign(fa_middle)
+		var ty = vy + 24
+		var m = round(vx + vw * 0.5)
+		draw_sprite(sprPortalEssenceHUD,0,m - 2, ty);
+		var tx = m + 2;
+		var pe = UberCont.portalEssence
+		draw_text_colour(tx, ty + 1,pe,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tx + 1, ty + 1,pe,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tx + 1, ty,pe,c_black,c_black,c_black,c_black,1);
+		draw_text(tx, ty,pe);
+		draw_set_valign(fa_top)
 	}
 }
