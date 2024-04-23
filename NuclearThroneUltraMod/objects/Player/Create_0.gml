@@ -240,7 +240,7 @@ with UberCont {
 		if isLeaderboardGamemode {
 			UberCont.opt_gamemode = [0];
 			instance_create(0,0,StartDaily);
-			// canRestart = false;
+			canRestart = false;
 		}
 	    else if scrIsGamemode(26) {
 			instance_create(0,0,StartDaily);
@@ -375,7 +375,7 @@ if race == 7 && bskin == 2
 if race == 25
 {
 	//Better mutations
-	maxRadPickedUp = 145;
+	maxRadPickedUp = 125;
 }
 if race == 14//Panda
 {
@@ -635,7 +635,11 @@ if race = 11//HUNTER
 	accuracy = 0.8;	
 }
 standartAccuracy = accuracy;
-
+if race == 25 // DOCTOR
+{
+	level = 2;
+	skillsChosen += 1;
+}
 
 if scrIsGamemode(9)
 {

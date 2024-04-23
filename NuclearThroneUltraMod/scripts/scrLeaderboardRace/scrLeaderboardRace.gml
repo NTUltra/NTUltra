@@ -29,7 +29,7 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	break;
 	}
 	}
-	else if bskin = 1
+	if bskin = 1
 	{
 	switch (race)
 	{

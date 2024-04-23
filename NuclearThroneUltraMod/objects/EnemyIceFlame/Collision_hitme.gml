@@ -10,14 +10,13 @@ if other.team != team && (image_index<5)
 				var immunelimit = 0;
 				if Player.skill_got[14] = 1
 				{
-					immunelimit = 5;
-					if object_index == Player
-					{
-						boilingAmount = boilingMax;
-						if alarm[4] < 1
-							alarm[4] = 1;
-					}
+					immunelimit = 4;
+					boilingAmount = boilingMax;
+					if alarm[4] < 1
+						alarm[4] = 1;
 					if race=25
+						immunelimit = 5;
+					if ultra_got[97] && !altUltra//Mutation Doctor Ultra A
 						immunelimit = 999;
 						
 				}
@@ -60,14 +59,16 @@ if other.team != team && (image_index<5)
 					var immunelimit = 0;
 					if Player.skill_got[14] = 1
 					{
-						immunelimit = 5;
+						immunelimit = 4;
 						if object_index == Player
 						{
 							boilingAmount = boilingMax;
 							if alarm[4] < 1
 								alarm[4] = 1;
 						}
-						if race=25
+						if Player.race=25
+							immunelimit = 5;
+						if Player.ultra_got[97] && !Player.altUltra//Mutation Doctor Ultra A
 							immunelimit = 999;
 						
 					}

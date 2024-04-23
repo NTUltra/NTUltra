@@ -199,7 +199,7 @@ if instance_exists(Player)
 			hammerheadcounter = 25;
 			if race=25
 			{
-				hammerheadcounter += 5;
+				hammerheadcounter += 6;
 			}
 	
 	    }
@@ -282,10 +282,10 @@ if instance_exists(Player)
 		}
 	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 290;
+			var t = 290;//9.5S
 		    if race = 25
 		    {
-				t = 220;
+				t = 406;
 		    }
 			if !justAsheep
 			{

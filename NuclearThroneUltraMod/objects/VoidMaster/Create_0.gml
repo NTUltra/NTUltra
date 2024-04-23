@@ -10,3 +10,5 @@ with instance_create(x,y,BallBossPlateau)
 {
 	sprite_index = sprVoidMasterPlateau;
 }
+loops = GetPlayerLoops();
+introSpiel = true;

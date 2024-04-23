@@ -30,7 +30,7 @@ if(morphMe == 0){
 				alarm[0] = 2;
 				speed += 6.5;
 				if Player.race=25
-					speed += 1;
+					speed += 2;
 			}
 			if mySize > 0
 			{

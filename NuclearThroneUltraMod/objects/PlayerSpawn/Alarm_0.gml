@@ -1,7 +1,8 @@
 /// @description Respawn
 with Player
 {instance_destroy();}
-
+if !instance_exists(PlayerAlarms)
+	instance_create(x,y,PlayerAlarms);
 if (myCorpse == -1 || !instance_exists(myCorpse))
 	myCorpse = id;
 instance_create(myCorpse.x,myCorpse.y,Player);

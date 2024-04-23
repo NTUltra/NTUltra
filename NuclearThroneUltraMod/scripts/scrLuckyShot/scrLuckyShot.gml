@@ -5,7 +5,7 @@ function scrLuckyShot(){
 	var chance = 2;
 	var ran = 10;
 	if Player.race == 25
-		chance = 2.1
+		chance = 2.5
 	if Player.skill_got[6] = 1 and random(ran) < chance//0.214% 0.23%
     {
 		snd_play_2d(sndLuckyShotProc,0,true);

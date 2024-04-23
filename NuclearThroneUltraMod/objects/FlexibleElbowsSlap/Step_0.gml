@@ -18,7 +18,10 @@ if time == 1
 		snd_play(sndExplosion);
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
-		DealDamage(10,false,true,false);
+		if instance_exists(Player) && Player.race == 25
+			DealDamage(15,false,true,false);
+		else
+			DealDamage(10,false,true,false);
 		sprite_index = spr_hurt;
 		snd_play(snd_hurt, hurt_pitch_variation,true);
 		image_index = 0

@@ -112,7 +112,7 @@ function scrModHit(projectileRef) {
 		    if skill_got[30]//power craving
 			{
 				if race == 25
-					moddelay += 14;
+					moddelay += 12;
 				else
 					moddelay += 16;
 				wepRate += 1;

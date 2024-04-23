@@ -40,8 +40,8 @@
     "path":"sprites/sprGhostSpearShank/sprGhostSpearShank.yy",
   },
   "spriteMaskId":{
-    "name":"mskLanceSlash",
-    "path":"sprites/mskLanceSlash/mskLanceSlash.yy",
+    "name":"mskLanceSlashGhost",
+    "path":"sprites/mskLanceSlashGhost/mskLanceSlashGhost.yy",
   },
   "visible":false,
 }

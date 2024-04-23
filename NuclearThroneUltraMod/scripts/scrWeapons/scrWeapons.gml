@@ -336,7 +336,7 @@ function scrWeapons() {
 
 	wep_name[30] = "SPLINTER GUN"
 	wep_type[30] = 3
-	wep_auto[30] = 0
+	wep_auto[30] = 2
 	wep_load[30] = 18
 	wep_cost[30] = 1
 	wep_sprt[30] = sprSplinterGun
@@ -3053,7 +3053,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 29
+	wep_load[272] = 35
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 15
@@ -3087,7 +3087,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 45
+	wep_load[275] = 55
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18
@@ -5445,7 +5445,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 0
 	wep_auto[484] = 0
-	wep_load[484] = 16
+	wep_load[484] = 20
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 14
@@ -7994,7 +7994,7 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 28
+	wep_load[714] = 34
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 15
@@ -8379,11 +8379,11 @@ function scrWeapons() {
 	
 	wep_name[749] = "SUPER BLOOD ROCKET GUN"
 	wep_type[749] = 4
-	wep_auto[749] = 0
+	wep_auto[749] = 3
 	wep_load[749] = 10
 	wep_cost[749] = 4
 	wep_sprt[749] = sprSuperBloodRocketGun
-	wep_area[749] = 17
+	wep_area[749] = 19
 	wep_text[749] = "I see red"
 	wep_swap[749] = sndSwapExplosive
 	wep_rad[749] = 0;

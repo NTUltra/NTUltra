@@ -6,7 +6,7 @@ function scrApplyEagleEyes(){
 	{
 		if race=25
 		{
-			accuracy = standartAccuracy*0.25//0.3//in case you have build up rage use the standart
+			accuracy = standartAccuracy*0.23//0.3//in case you have build up rage use the standart
 		}
 		else
 		{

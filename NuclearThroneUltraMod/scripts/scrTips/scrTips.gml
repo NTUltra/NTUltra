@@ -296,7 +296,7 @@ function scrTips() {
 	if Player.area = 118
 	tip = choose("the inverted palace","regular portals","greatness awaits","to evade","one more step");
 	if Player.area = 10
-	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good strating weapon","they heal off of corpses","this route is difficult!");
+	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good starting weapon","they heal off of corpses","this route is difficult!");
 	if Player.area = 106
 	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted worlds are great","visit inverted world on loop","good luck getting through this"
 	,"white ravens")

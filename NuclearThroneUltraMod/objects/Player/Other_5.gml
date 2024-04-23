@@ -354,8 +354,8 @@ if looping && area != 104
 	debug("Looping now");
 	if loops > 0 && scrIsHardMode()
 	{
-		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",34)
-		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON INFINITE LEVELS#SLOW LEVELING#HARD MODE",40)
+		scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON HARD MODE",0)
+		//scrUnlockGameMode(35,"FOR REACHING LOOP 2#ON INFINITE LEVELS#SLOW LEVELING#HARD MODE",40)
 	}
 	if scrCheckLoopAll()
 		scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
@@ -367,7 +367,7 @@ if looping && area != 104
 	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
 	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
-	if loops>1 && race = 4
+	if loops>2 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
 
 	if scrIsGamemode(14)

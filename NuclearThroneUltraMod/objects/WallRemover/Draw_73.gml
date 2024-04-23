@@ -4,7 +4,7 @@ draw_circle_width_colour(x,y,radius,3,c_red);
 draw_set_alpha(1);
 scrActivateAllOutOfRange();
 var newcollision = ds_list_create();
-var al = collision_circle_list(x,y,radius,Wall,false,false,newcollision,false);
+var al = collision_circle_list(x,y,radius,WallHitMe,false,false,newcollision,false);
 for (var i = 0; i < al; i ++)
 {
 	with newcollision[| i] {

@@ -486,7 +486,7 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 		scrGiveEuphoriaShield();
 		alarm[3] = max(alarm[3],6);
 		if race == 25//Doctor
-			scrCollectAmmo(3.25);
+			scrCollectAmmo(3.35);
 		else
 			scrCollectAmmo(3);
 		tookHit = false;
@@ -511,7 +511,7 @@ if (skill_got[31])
 		var dmgTaken = prevhealth - my_health;
 		var maxDmg = 9;
 		if race == 25
-			maxDmg = 10;
+			maxDmg = 8;
 		var megaBreak = false;
 		if dmgTaken > maxDmg
 		{
@@ -715,7 +715,7 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(16,alarm[3]);
+				alarm[3] = max(17,alarm[3]);
 			else
 				alarm[3] = max(alarm[3],14);//duration
 			canAnimateDuringImmune = 0;
@@ -844,9 +844,9 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		my_health = 1;
 		var al = 6;//weapon types total
-		var takePercentage = 0.71; 
+		var takePercentage = 0.71;
 		if race == 25
-			takePercentage = 0.67;
+			takePercentage = 0.54;
 		var baseammo;
 		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;

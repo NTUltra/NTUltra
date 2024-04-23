@@ -45,10 +45,10 @@ function scrCollectHP(num = 2){
 			}
 			snd_play(sndHealthPickupUpg)
 			
-		if Player.race=25 && random(10)<5//mutation smith/doctor
-		num = 5
-		else
-		num = 4;
+			if Player.race=25 && random(10)<5//mutation smith/doctor
+				num = 5
+			else
+				num = 4;
 
 		}
 		else

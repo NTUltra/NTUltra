@@ -127,7 +127,7 @@ function scrEnemyDeathEvent(){
 					    instance_create(x-5,y-16,Notice);
 					    instance_create(x+5,y-16,Notice);
 						if skill_got[29]//Insomnia
-							t = 200;
+							t = 290;
 					}
 				}
 			}
@@ -138,7 +138,7 @@ function scrEnemyDeathEvent(){
 					instance_create(x-5,y-16,Notice);
 					instance_create(x+5,y-16,Notice);
 					if skill_got[29]//Insomnia
-						t = 200;
+						t = 290;
 				}
 			}
 			//Insomnia should not trigger again after first justASheep
@@ -245,7 +245,7 @@ function scrEnemyDeathEvent(){
 				var m = 0.39;
 				if isdoc
 				{
-					m = 0.425;
+					m = 0.48;
 				}
 				if reload < 0
 				{
@@ -288,7 +288,7 @@ function scrEnemyDeathEvent(){
 			{
 				rage+=1;
 				if isdoc
-					rage += 0.05;
+					rage += 0.25;
 				if rage>500//MAX RAGE
 					rage=500;//340
 				rageIndicator += 1;

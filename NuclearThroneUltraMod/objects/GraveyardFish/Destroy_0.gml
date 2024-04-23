@@ -32,8 +32,8 @@ with WeaponChest
 	if sprite_index == sprCursedEliteWeaponChest
 		sprite_index = sprEliteWepChest;
 }
-if UberCont.area == 126 || UberCont.area == 127
-	scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
+//if UberCont.area == 126 || UberCont.area == 127
+//	scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 with myCorpse
 {
 	alarm[0] += 60;//Wait a little longer with spawning a portal	

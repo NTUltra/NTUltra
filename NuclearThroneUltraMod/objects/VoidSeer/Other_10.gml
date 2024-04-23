@@ -1,49 +1,40 @@
 /// @description Dialogue
-switch (dialogueStep)
+if killerSequence
 {
-	case 1:
-		if killerSequence
-		{
+	switch (dialogueStep)
+	{
+		case 1:
 			with TextHandler
 			{
-				useFont = true;
-				text = "QASOID12&(*95408mnMLFoi&FN";
+				useFont = other.cantUnderstand;
+				text = "MASSIVE RADIATION DETECTED";
 			}
 			alarm[2] = 30;
 			BackCont.shake += 10;
-		}
-	break;
-	case 2:
-		if killerSequence
-		{
+		break;
+		case 2:
 			with instance_create(x,y,DarkOverlay)
 			{
 				alarm[0] = 40;
 			}
 			with TextHandler
 			{
-				useFont = true;
-				text = "9348DKOMNSG0U23@";
+				useFont = other.cantUnderstand;
+				text = "INTRUDER";
 			}
 			alarm[2] = 15;
 			BackCont.shake += 10;
-		}
-	break;
-	case 3:
-		if killerSequence
-		{
+		break;
+		case 3:
 			with TextHandler
 			{
-				useFont = true;
-				text = "45654opjiOIFDJSF134-0D";
+				useFont = other.cantUnderstand;
+				text = "KILL ON SIGHT";
 			}
 			alarm[2] = 50;
 			BackCont.shake += 10;
-		}
-	break;
-	case 4:
-		if killerSequence
-		{
+		break;
+		case 4:
 			audio_stop_sound(sndVoidEyeCreeping);
 			snd_play(sndVoidCreepEnd);
 			with instance_create(x,y,DarkOverlay)
@@ -55,11 +46,13 @@ switch (dialogueStep)
 			alarm[2] = 50;
 			alarm[3] = 1;
 			BackCont.shake += 10;
-		}
-	break;
-	case 5:
-		if killerSequence
-		{
+			if !cantUnderstand
+			{
+				dialogueStep = 18;
+				alarm[2] = 15;
+			}
+		break;
+		case 5:
 			with instance_create(x,y,DarkOverlay)
 			{
 				alarm[0] = 90;
@@ -69,11 +62,8 @@ switch (dialogueStep)
 				snd_play(sndVoidMegaSlash);
 			}
 			alarm[2] = 10;
-		}
-	break;
-	case 6:
-		if killerSequence
-		{
+		break;
+		case 6:
 			with Player {
 				visible = false;
 				instance_create(x,y,VoidSlash);
@@ -98,22 +88,16 @@ switch (dialogueStep)
 				}
 			}
 			alarm[2] = 120;
-		}
-	break;
-	case 7:
-		if killerSequence
-		{
+		break;
+		case 7:
 			with TextHandler
 			{
-				useFont = true;
-				text = "DIlOSFJ1344@12(%$sdFBH";
+				useFont = other.cantUnderstand;
+				text = "PORTAL ESSENCE DETECTED\nREVERTING DEATH";
 			}
 			alarm[2] = 40;
-		}
-	break;
-	case 8:
-		if killerSequence
-		{
+		break;
+		case 8:
 			with DataRef {
 				hitBy = sprVoidSeerKillCancel;
 			}
@@ -123,11 +107,8 @@ switch (dialogueStep)
 				text = "";
 			}
 			alarm[2] = 15;
-		}
-	break;
-	case 9:
-		if killerSequence
-		{
+		break;
+		case 9:
 			with instance_create(x,y,DarkOverlay)
 			{
 				alarm[0] = 30;
@@ -141,51 +122,33 @@ switch (dialogueStep)
 				instance_destroy();	
 			}
 			alarm[2] = 10;
-		}
-	break;
-	case 10:
-		if killerSequence
-		{
+		break;
+		case 10:
 			with TextHandler
 				text = "APOLOGIES";
 			alarm[2] = 60;
-		}
-	break;
-	case 11:
-		if killerSequence
-		{
+		break;
+		case 11:
 			with TextHandler
 				text = "TOOK A LITTLE TO GET YOUR LANGUAGE";
 			alarm[2] = 65;
-		}
-	break;
-	case 12:
-		if killerSequence
-		{
+		break;
+		case 12:
 			with TextHandler
 				text = "I SEE YOU HAVE GONE THROUGH MANY PORTALS";
 			alarm[2] = 70;
-		}
-	break;
-	case 13:
-		if killerSequence
-		{
+		break;
+		case 13:
 			with TextHandler
 				text = "WE CAN HELP EACH OTHER";
 			alarm[2] = 50;
-		}
-	break;
-	case 14:
-		if killerSequence
-		{
+		break;
+		case 14:
 			with TextHandler
 				text = "";
 			alarm[2] = 10;
-		}
-	break;
-	case 15:
-		if killerSequence
-		{
+		break;
+		case 15:
 			with VoidMaster
 			{
 				visible = true;
@@ -201,36 +164,229 @@ switch (dialogueStep)
 				alarm[0] = 4;
 			}
 			alarm[2] = 5;
-		}
-	break;
-	case 16:
-		if killerSequence
-		{
+		break;
+		case 16:
 			with TextHandler
 				text = "WE CAN TRADE FOR YOUR PORTAL ESSENCE\nWE NEED THEM TO GET OUT OF HERE";
 			UberCont.ctot_void_entered += 1;
 			alarm[2] = 90;
-		}
-	break;
-	case 17:
-		if killerSequence
-		{
+		break;
+		case 17:
 			with TextHandler
 				text = "YOU GET PORTAL ESSENCE BY TAKING PORTALS";
 			alarm[2] = 70;
-		}
-	break;
-	case 18:
-		if killerSequence
-		{
+		break;
+		case 18:
 			with TextHandler
+			{
 				text = "";
+				showCanSkip = true;
+			}
 			with VoidExit
 			{
 				alarm[0] = 4;
 			}
-		}
-	break;
-	//var race = Player.race;
-	//var raceName = Player.race_name[Player.race];
+			killerSequence = false;
+			hasShitToSay = true;
+		break;
+		//YV KILLER SEQUENCE
+		case 19:
+			alarm[4] = 1;
+			snd_play(sndMutant6LowA);
+			with instance_create(x,y,StartAreaBuffer)
+			{
+				alarm[0] = 9;
+			}
+			BackCont.shake += 5
+			with Player {
+				other.previousWep = wep;
+				other.previousBwep = bwep;
+				wep = 39;
+				bwep = 0;
+			}
+			alarm[2] = 15;
+		break;
+		case 20:
+			with StartAreaBuffer
+			{
+				instance_destroy();	
+			}
+			with Player {
+				var pw = wep;
+				wep = 39;
+				ammo[0] = max(1,ammo[0]);
+				UberCont.mouse__x = other.x;
+				UberCont.mouse__y = other.y;
+				scrFire();
+				wep = other.previousWep;
+				bwep = other.previousBwep;
+				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+				BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
+				BackCont.shake += 15
+				snd_play_2d(sndHeavyRevolver);
+				snd_play_2d(sndPopPopUpg);
+			}
+			with instance_create(x,y,StartAreaBuffer)
+			{
+				alarm[0] = 11;
+			}
+			alarm[2] = 12;
+		break;
+		case 21:
+			if sprite_index != spr_dead
+			{
+				sprite_index = spr_dead;
+				image_index = 0;
+				image_speed = 0.4;
+				snd_play(sndVenuz);
+			}
+			BackCont.shake += 50;
+			with Player {
+				wep = other.previousWep;
+				bwep = other.previousBwep;
+			}
+			alarm[2] = 6;
+		break;
+		case 22:
+			//YV Kills the fucker
+			with VoidMaster
+			{
+				visible = true;
+				alarm[0] = 4;
+				hasShitToSay = true;
+			}
+			with VoidBench
+			{
+				visible = true;	
+			}
+			with VoidFiend
+			{
+				visible = true;
+				alarm[0] = 4;
+				hasShitToSay = true;
+			}
+			alarm[2] = 5;
+		break;
+		case 23:
+			with TextHandler
+			{
+				text = "";
+				showCanSkip = true;
+			}
+			with VoidExit
+			{
+				alarm[0] = 4;
+			}
+			killerSequence = false;
+			alarm[2] = 5;
+		break;
+	}
 }
+else
+{
+	if array_length(textQueue) > 0
+	{
+		with TextHandler
+		{
+			text = scrText(other.race, other.textQueue[other.dialogueStep]);
+		}
+		hasShitToSay = false;
+		alarm[2] = textQueueTime[dialogueStep];
+	}
+	else
+	{
+		with TextHandler {
+			text = "";	
+		}
+		hasShitToSay = false;
+	}
+}
+
+
+
+
+
+/*
+	switch (race)
+	{
+		case 1://Fish
+		
+		break;
+		case 2://Crystal
+		
+		break;
+		case 3://Eyes
+		
+		break;
+		case 4://Melting
+		
+		break;
+		case 5://Plant
+		
+		break;
+		case 6://YV
+		
+		break;
+		case 7://Steroids
+		
+		break;
+		case 8://Robot
+		
+		break;
+		case 9://Chicken
+		
+		break;
+		case 10://Rebel
+		
+		break;
+		case 11://Hunter
+		
+		break;
+		case 12://YC
+		
+		break;
+		case 13://Sheep
+		
+		break;
+		case 14://Panda
+		
+		break;
+		case 15://Atom
+		
+		break;
+		case 16://Viking
+		
+		break;
+		case 17://WEAPONSMITH
+		
+		break;
+		case 18://Angel
+		
+		break;
+		case 19://Skeleton
+		
+		break;
+		case 20://Business Hog
+		
+		break;
+		case 21://Horror
+		
+		break;
+		case 22://Rogue
+		
+		break;
+		case 23://Frog
+		
+		break;
+		case 24://Elementor
+		
+		break;
+		case 25://Doctor
+		
+		break;
+		case 26://Hands
+		
+		break;
+	}
+	*/

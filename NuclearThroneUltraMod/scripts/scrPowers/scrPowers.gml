@@ -29,7 +29,7 @@ function scrPowers(raceOverwrite = -1) {
 				alienIntestines += 0.03;
 			if race == 25
 			{
-				alienIntestines += 0.035;	
+				alienIntestines += 0.06;	
 			}
 		}
 		else
@@ -42,7 +42,7 @@ function scrPowers(raceOverwrite = -1) {
 				alienIntestines += 0.06;
 			if race == 25
 			{
-				alienIntestines += 0.07;	
+				alienIntestines += 0.12;
 			}
 		}
 	}
@@ -147,7 +147,7 @@ function scrPowers(raceOverwrite = -1) {
 				if markedForRev
 				{
 					snd_play(sndNecromancerRevive);
-					scrDoctorThroneButt();
+					scrDoctorThroneButt(4,2);
 				}
 			}
 

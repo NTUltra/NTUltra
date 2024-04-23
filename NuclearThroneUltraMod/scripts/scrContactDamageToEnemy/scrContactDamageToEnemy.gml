@@ -15,7 +15,7 @@ function scrContactDamageToEnemy(hitEnemy){
 			if skill_got[8]
 			{
 				if race == 25
-					contactDmg = 8//dmg dealt by gamma guts
+					contactDmg = 9//dmg dealt by gamma guts
 				else
 					contactDmg = 7//dmg dealt by gamma guts (if you want to change it also change it in AngelActive
 			}
@@ -89,7 +89,12 @@ function scrContactDamageToEnemy(hitEnemy){
 					        image_index = 0
 					        snd_play(snd_hurt, hurt_pitch_variation)
 							if skill_got[8]
-								DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
+							{
+								if race == 25
+									DealDamage(ceil(hitEnemy.meleedamage*0.25),false,false,false);
+								else
+									DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
+							}
 							else
 								DealDamage(hitEnemy.meleedamage,false,false,false)
 					        motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)

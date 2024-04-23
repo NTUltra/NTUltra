@@ -26,6 +26,8 @@ function scrLoadStats() {
 		ctot_played[dir] = ini_read_real("STATS","ctotplayed"+string(dir),0);
 
 		ctot_loop[dir] = ini_read_real("STATS","ctotloop"+string(dir),0);
+		
+		char_void_entered[dir] = ini_read_real("STATS","charvoidentered"+string(dir),0);
 
 		cbst_kill[dir] = ini_read_real("STATS","cbstkill"+string(dir),0);
 

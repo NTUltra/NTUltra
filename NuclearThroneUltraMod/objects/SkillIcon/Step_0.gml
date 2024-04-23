@@ -82,16 +82,16 @@ if selected && visible
 		{
 			if Player.race == 25//Plutonium hunger
 			{
-				Player.betterpluto = 106;
+				Player.betterpluto = 108;
 			}
 			else
 			{
-				Player.betterpluto = 98;	
+				Player.betterpluto = 90//98;
 			}
 		}
 		else if skill = 4 && Player.race == 25//rabitpaw
 		{
-			Player.betterrabbitpaw+=0.04;
+			Player.betterrabbitpaw += 0.07;
 		}
 		else if skill = 5 && Player.race=2
 		{
@@ -116,33 +116,33 @@ if selected && visible
 	
 		if Player.race == 25
 		{
-		Player.typ_amax[1] = 255+Player.skill_got[10]*345
-		Player.typ_amax[2] = 55+Player.skill_got[10]*55
-		Player.typ_amax[3] = 55+Player.skill_got[10]*55
-		Player.typ_amax[4] = 55+Player.skill_got[10]*55
-		Player.typ_amax[5] = 55+Player.skill_got[10]*55
+			Player.typ_amax[1] = 255+Player.skill_got[10]*375
+			Player.typ_amax[2] = 55+Player.skill_got[10]*60
+			Player.typ_amax[3] = 55+Player.skill_got[10]*60
+			Player.typ_amax[4] = 55+Player.skill_got[10]*60
+			Player.typ_amax[5] = 55+Player.skill_got[10]*60
 		}
 		else
 		{
-		Player.typ_amax[1] = 255+Player.skill_got[10]*300
-		Player.typ_amax[2] = 55+Player.skill_got[10]*44
-		Player.typ_amax[3] = 55+Player.skill_got[10]*44
-		Player.typ_amax[4] = 55+Player.skill_got[10]*44
-		Player.typ_amax[5] = 55+Player.skill_got[10]*44
+			Player.typ_amax[1] = 255+Player.skill_got[10]*300
+			Player.typ_amax[2] = 55+Player.skill_got[10]*44
+			Player.typ_amax[3] = 55+Player.skill_got[10]*44
+			Player.typ_amax[4] = 55+Player.skill_got[10]*44
+			Player.typ_amax[5] = 55+Player.skill_got[10]*44
 		}
 
 		}
 		else if skill = 13 && Player.race = 25//Long arms
 		{
-			Player.bettermelee = 0.2;
+			Player.bettermelee = 0.25;
 			if Player.ultra_got[97] && !Player.altUltra
 				Player.bettermelee += 0.2;
 		}
 		else if skill= 16 && Player.race = 25//recycle gland
 		{
-			Player.betterrecyclegland = 5;
+			Player.betterrecyclegland = 9;
 			if Player.ultra_got[97] && !Player.altUltra
-				Player.betterrecyclegland = 15;
+				Player.betterrecyclegland = 16;
 
 		}
 		else if skill = 17 && Player.race = 25
@@ -161,7 +161,7 @@ if selected && visible
 		else if skill == 42//Tail end
 		{
 			if Player.race == 25
-				Player.betterTail = 1.6;
+				Player.betterTail = 1.65;
 			if Player.ultra_got[97] && !Player.altUltra
 				Player.betterTail = 2;
 		}
@@ -340,9 +340,18 @@ if selected && visible
 					Player.gotMinimumArmour = true;
 				Player.maxarmour = max(1,Player.maxarmour);
 				Player.armour = clamp(Player.armour + 1, 1, Player.maxarmour);
-				Player.maxhealth -= 2
-				if Player.my_health > Player.maxhealth
-					Player.my_health -= 2;
+				if Player.race == 25
+				{
+					Player.maxhealth -= 1;
+					if Player.my_health > Player.maxhealth
+						Player.my_health -= 1;
+				}
+				else
+				{
+					Player.maxhealth -= 2
+					if Player.my_health > Player.maxhealth
+						Player.my_health -= 2;
+				}
 				Player.prevhealth = Player.my_health;
 			}
 			Player.exception = true;

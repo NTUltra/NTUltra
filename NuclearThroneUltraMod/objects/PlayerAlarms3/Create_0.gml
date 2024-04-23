@@ -4,7 +4,7 @@ adrenalineHealCooldown = 39;
 detectedCombat = false;
 if instance_exists(Player) && Player.race == 25
 {
-	adrenalineHealCooldown = 37;
+	adrenalineHealCooldown = 31;
 }
 adrenalineAmmoTimer = adrenalineAmmoCooldown;
 adrenalineHealTimer = adrenalineHealCooldown;

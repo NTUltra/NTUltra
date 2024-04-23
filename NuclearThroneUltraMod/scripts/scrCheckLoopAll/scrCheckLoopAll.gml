@@ -7,10 +7,10 @@ function scrCheckLoopAll() {
 	repeat(racemax)
 	{
 
-	if ctot_loop[dir]>0
-	thisonelooped++;
+		if ctot_loop[dir]>0
+			thisonelooped++;
 
-	dir++;
+		dir++;
 	}
 
 

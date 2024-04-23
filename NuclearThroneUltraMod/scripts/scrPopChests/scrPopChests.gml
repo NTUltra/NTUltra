@@ -137,7 +137,7 @@ function scrPopChests() {
 		
 		wepChestGol = gol;
 		if(Player.skill_got[23] && Player.race == 25){//OPEN MIND
-			wepChestGol += choose(1,0,0,0,0);
+			wepChestGol += choose(1,0,0,0);
 		}
 	
 		if scrIsCrown(15)//CROWN OF CHOICE
@@ -194,7 +194,7 @@ function scrPopChests() {
 			wepChestGol = 0;
 			healthChestGol = 0;
 		}
-		if Player.area == 119 || Player.area = 120
+		if Player.area == 119 || Player.area = 120 || Player.area == 137
 		{
 			gol = 0
 			wepChestGol = 0;
@@ -340,7 +340,7 @@ function scrPopChests() {
 					}
 				}
 			}
-			if Player.race == 25
+			if Player.race == 25 && !Player.skill_got[23]
 			{
 				with RadChest
 				{

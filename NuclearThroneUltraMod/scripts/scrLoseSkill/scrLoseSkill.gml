@@ -163,7 +163,14 @@ function scrLoseSkill(skillIndex){
 			alienIntestines = 0;
 		break;
 		case 41: //NERVES OF STEEL
-			maxhealth += 2;
+			if race == 25
+			{
+				maxhealth += 1;
+			}
+			else
+			{
+				maxhealth += 2;
+			}
 			if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
 			{
 				maxarmour -= 1;

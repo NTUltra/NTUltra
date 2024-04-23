@@ -39,18 +39,23 @@ function scrFire() {
 			{
 				if race == 25
 				{
-					//reload *= 0.55;
-					reload -= wep_load[wep]*0.42;
+					reload -= wep_load[wep]*0.36;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.4;
-					//reload *= 0.6;
+					reload -= wep_load[wep]*0.39;
 				}
 			}
 			else if armour == maxarmour
 			{
-				reload -= wep_load[wep]*0.15;
+				if race == 25
+				{
+					reload -= wep_load[wep]*0.14;
+				}
+				else
+				{
+					reload -= wep_load[wep]*0.15;
+				}
 			}
 		}
 		queueshot = max(queueshot-1,0);
@@ -5380,7 +5385,7 @@ function scrFire() {
 	}
 	if !scrIsCrown(29)//Crown of purity
 	{
-		var reloadBoost = 0.075;
+		var reloadBoost = 0.07;
 		if Player.skill_got[30] == 1
 		{
 			reloadBoost = 0.12;

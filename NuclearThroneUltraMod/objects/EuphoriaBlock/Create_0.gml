@@ -1,5 +1,10 @@
 /// @description Init
 image_speed = 0.45;
+if instance_exists(Player) && Player.race == 25
+{
+	image_xscale = 1.25;
+	image_yscale = 1.25;
+}
 /*
 //Na this is not intutive and not needed
 dmg = 0;

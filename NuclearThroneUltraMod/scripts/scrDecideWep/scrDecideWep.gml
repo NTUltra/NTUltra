@@ -30,6 +30,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		{
 			wepTier += choose(1,2);
 			minWepArea = min(7,dataRef.hard+wepTier);
+			minWepArea = floor(minWepArea);
 			maxTries += 20;
 		}
 			
@@ -48,10 +49,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 		}
 		wepTier += dataRef.hard;
-		if wepTier < 0
-		{
-			wepTier = 0;
-		}
+		wepTier = floor(wepTier);
 		wepTier = max(1,wepTier);
 		if dataRef.race == 17
 		{
@@ -61,23 +59,21 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		var maxValidTierWep = 0;
 		if scrIsGamemode(31)//Only melee
 		{
-			var tries = 0;
 			var tooBad = 0;
 			do {
 				wep = irandom(maxwep-1)+1;
-			//Non melee has been excluded, but not every tier has multiple melees so do some shit
-			if wep_area[wep]  <= wepTier && wep_area[wep] > wep_area[maxValidTierWep]
-			{
-				maxValidTierWep = wep;
-			}
-			if wep_area[wep]  <= wepTier
-				triesForSpecificTier++;
-				if tries > max(maxTries,1000)
+				//Non melee has been excluded, but not every tier has multiple melees so do some shit
+				if wep_area[wep]  <= wepTier && wep_area[wep] > wep_area[maxValidTierWep]
+				{
+					maxValidTierWep = wep;
+				}
+				if wep_area[wep]  <= wepTier
+					triesForSpecificTier++;
+				if triesForSpecificTier > max(maxTries,1000)
 				{
 					triesForSpecificTier = 0;
 					if wepTier-tooBad - 1 > 0
 						tooBad ++;
-					tries = 0;
 				}
 			}
 			until (
@@ -94,8 +90,11 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				{
 					maxValidTierWep = wep;
 				}
-				if wep_area[wep]  <= wepTier
+				else
+				{
+				//if wep_area[wep]  <= wepTier
 					triesForSpecificTier++;
+				}
 				infiniteTries --;
 			}
 			until (

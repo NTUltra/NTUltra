@@ -2,7 +2,7 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 {
 	with other
 	{
-		var immunelimit = 5;
+		var immunelimit = 4;
 		var immune;
 		immune = 0
 		if object_index=Player || object_index == YungCuzDupe//optimise variable_local_exists("skill_got")
@@ -12,9 +12,9 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 				immune = 1
 
 				if Player.race=25
-					immunelimit=6;
+					immunelimit = 5;
 			
-				if Player.ultra_got[97]//Mutation Doctor Ultra A
+				if Player.ultra_got[97] && !altUltra//Mutation Doctor Ultra A
 					immunelimit = 999;
 			
 			}

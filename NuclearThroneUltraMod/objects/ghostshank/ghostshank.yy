@@ -39,8 +39,8 @@
     "path":"sprites/sprGhostShank/sprGhostShank.yy",
   },
   "spriteMaskId":{
-    "name":"mskShank",
-    "path":"sprites/mskShank/mskShank.yy",
+    "name":"mskShankGhost",
+    "path":"sprites/mskShankGhost/mskShankGhost.yy",
   },
   "visible":false,
 }

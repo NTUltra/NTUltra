@@ -4,7 +4,7 @@ if instance_exists(Player) && visible
 {
 	if sprite_index == spr_intro && image_speed == 0
 	{
-		if point_distance(x,y,Player.x,Player.y) < 96
+		if point_distance(x,y,Player.x,Player.y) < 128
 		{
 			image_speed = 0.4;
 			with VoidBench

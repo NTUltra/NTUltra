@@ -39,6 +39,9 @@
     "name":"sprVoidFiendBenchIntro",
     "path":"sprites/sprVoidFiendBenchIntro/sprVoidFiendBenchIntro.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskPickupThroughWall",
+    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
+  },
   "visible":true,
 }

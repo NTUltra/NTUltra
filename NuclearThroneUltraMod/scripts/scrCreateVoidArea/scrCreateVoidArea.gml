@@ -14,6 +14,7 @@ function scrCreateVoidArea(){
 	}
 	if !instance_exists(VoidFiend)
 	{
+		instance_create(x,y,Translations);
 		instance_create(x,y,VoidExit);
 		var xo = x;
 		var yo = y + 64;
@@ -30,6 +31,5 @@ function scrCreateVoidArea(){
 		var xo = x;
 		var yo = y - 218//192;
 		instance_create(xo, yo, VoidSeer);
-		
 	}
 }

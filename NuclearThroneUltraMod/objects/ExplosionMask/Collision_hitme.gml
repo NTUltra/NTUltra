@@ -7,21 +7,21 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 	var dealDmg = dmg;
 	with other
 	{
-		var immunelimit = 5;
+		var immunelimit = 4;
 		var dealtDamage = false;
 		var immune = false
 		if object_index == Player && Player.skill_got[14]{
 			immune = true
 
 			if Player.race=25//Mutation smith
-				immunelimit=6;
+				immunelimit = 5;
 
 			if Player.ultra_got[97] && !Player.altUltra//Mutation Doctor Ultra A
 				immunelimit = 999;
 		}
 		if Player.skill_got[14] && object_index == YungCuzDupe
 		{
-			immunelimit = 5;
+			immunelimit = 4;
 			if my_health > immunelimit
 			{
 				dealtDamage = true;

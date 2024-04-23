@@ -1,11 +1,11 @@
 ///scrDoctorThroneButt();
 // /@description
 ///@param
-function scrDoctorThroneButt(){
+function scrDoctorThroneButt(theDamage = 5, theRad = 3){
 	if skill_got[5] {
 		snd_play_2d(sndSharpTeeth);
 		snd_play(sndUltraGrenadeSuck);
-		repeat(2)
+		repeat(theRad)
 		{
 			with instance_create(x,y,Rad)
 			{
@@ -16,11 +16,11 @@ function scrDoctorThroneButt(){
 			}
 		}
 		with enemy {
-			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if point_distance(x,y,other.x,other.y) < 250
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(5)
-				DealDamage(4);
+				DealDamage(theDamage);
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,6)

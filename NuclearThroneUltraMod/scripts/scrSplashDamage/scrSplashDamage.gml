@@ -2,11 +2,17 @@
 // /@description
 ///@param
 function scrSplashDamage(dmg, range){
-	if instance_exists(Player) && Player.ultra_got[97] && !Player.altUltra
+	if instance_exists(Player)
 	{
-		if team != Player.team
-			exit;
-		range *= 1.5;
+		if Player.race == 25
+			range *= 1.1;
+		if Player.ultra_got[97] && !Player.altUltra
+		{
+			if team != Player.team
+				exit;
+			range *= 1.5;
+			dmg *= 1.1;
+		}
 	}
 	var direct = other.id;
 	var hits = ds_list_create();

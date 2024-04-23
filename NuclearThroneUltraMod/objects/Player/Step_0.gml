@@ -1008,8 +1008,8 @@ if (rad > mr)
 		}
 		level += 1;
 		UberCont.highestReachedLevel = max(UberCont.highestReachedLevel, level);
-		if level==7 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
-			scrUnlockBSkin(25,"FOR REACHING LEVEL 7#BEFORE THE LABS#AS MUTATION DOCTOR",0);
+		if level==8 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
+			scrUnlockBSkin(25,"FOR REACHING LEVEL 8#BEFORE THE LABS#AS MUTATION DOCTOR",0);
 
 		repeat(level-6)
 			instance_create(x,y,IDPDSpawn)
@@ -1305,7 +1305,10 @@ if (!instance_exists(LevCont))
 		}
 		if skill_got[41] && armour < maxarmour
 		{
-			reload -= 0.2;
+			if race == 25
+				reload -= 0.18;
+			else
+				reload -= 0.2;
 		}
 		if skill_got[22]
 		{
@@ -1315,7 +1318,7 @@ if (!instance_exists(LevCont))
 				reduction = (1-(armour/maxarmour))*0.7
 			else if race == 25
 			{
-				reduction = (1-(my_health/maxhealth))*0.73
+				reduction = (1-(my_health/maxhealth))*0.75
 			}
 			else
 			{
@@ -1334,9 +1337,9 @@ if (!instance_exists(LevCont))
 			creload -= 0.1;
 			if race == 25
 			{
-				reload -= 0.035;
-				breload -= 0.035;
-				creload -= 0.035;
+				reload -= 0.020;
+				breload -= 0.020;
+				creload -= 0.020;
 			}
 		}
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
@@ -1874,7 +1877,7 @@ if (instance_exists(enemy))
 	{
 		homeBoost += 0.8;
 		if race == 25
-			homeBoost += 0.1;
+			homeBoost += 0.15;
 	}
 	///homing projectiles mod
 	var modHomeBoost = 0.25;
@@ -2041,22 +2044,35 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
-		if scrDrop(60,5) != noone
-			snd_play(sndExtraFeetDodge);
+		if race == 25 {
+			if scrDrop(70,7) != noone
+				snd_play(sndExtraFeetDodge);
+			else
+			{
+				snd_play(sndExtraFeetDodgeFail);
+				var am = 4;
+				repeat(am)
+					with instance_create(x,y,Rad)
+					{
+						motion_add(random(360),4)
+					}
+			}
+		}
 		else
 		{
-			snd_play(sndExtraFeetDodgeFail);
-			var am = 2;
-			if race == 25
-				am ++;
-			repeat(am)
-				with instance_create(x,y,Rad)
-				{
-					motion_add(random(360),4)
-				}
+			if scrDrop(60,5) != noone
+				snd_play(sndExtraFeetDodge);
+			else
+			{
+				snd_play(sndExtraFeetDodgeFail);
+				var am = 2;
+				repeat(am)
+					with instance_create(x,y,Rad)
+					{
+						motion_add(random(360),4)
+					}
+			}
 		}
-		
-		
 	}
 	if instance_exists(projectile) && alarm[3] < 1
 	{
