@@ -48,6 +48,7 @@ function scrEndOfRun(){
 		radUp = false;
 		maxHpIncrease = 0;
 		highestReachedLevel = 0;
+		hadUnlockDisablePopup = false;
 		globalMutationsChosen = 0;
 		seedWeaponSmith = 0;
 		canSave = false;

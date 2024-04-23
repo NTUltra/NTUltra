@@ -650,7 +650,7 @@ if (tookHit)
 	//Took a hit?
 	if (skill_got[32] && isAlkaline/* && lag < 1 && armour < 1*/ && exception=false)//Alkaline Savila
 	{
-		var damageTaken = (prevhealth - my_health) + damageReduced;
+		var damageTaken = (prevhealth - my_health) - damageReduced;
 		//Needs to be healable or lethal
 		if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 		{
@@ -708,6 +708,8 @@ if (tookHit)
 					pt.mytext = "+"+string(healTaken)+" HP";
 			}
 			Sleep(50);
+			scrGiveEuphoriaShield();
+			alarm[3] = max(alarm[3],6);
 		}
 	}
 	if skill_got[12]//euphoria resistance?

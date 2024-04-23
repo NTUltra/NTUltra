@@ -213,3 +213,4 @@ partnerTurn = 1;//Turn for the one to take a pause
 partnerDied = false;
 keepRanChar = 0;
 highestReachedLevel = 0;
+hadUnlockDisablePopup = false;

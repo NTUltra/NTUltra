@@ -3087,7 +3087,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 55
+	wep_load[275] = 60
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18

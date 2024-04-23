@@ -65,6 +65,16 @@ function scrSpawnEndLevelPortal(){
 								exit;
 							}
 						}
+						if instance_exists(Portal)
+						{
+							with Floor
+							{
+								if (point_distance(x,y,other.x,other.y) < 64 && point_distance(x,y,other.x,other.y) > 256)
+								{
+									dir = id;
+								}
+							}
+						}
 					    with instance_create(dir.x+16,dir.y+16,Portal)
 							type = 1
 						

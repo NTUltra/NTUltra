@@ -999,8 +999,9 @@ if (rad > mr)
 	{
 		//rad -= level*60
 		rad -= mr;
-		if scrIsGamemode(22) && isValidGamemodeToUnlock() && UberCont.highestReachedLevel + 1 > 19
+		if !UberCont.hadUnlockDisablePopup && scrIsGamemode(22) && isValidGamemodeToUnlock() && UberCont.highestReachedLevel + 1 > 19
 		{
+			UberCont.hadUnlockDisablePopup = true;
 			with instance_create(x,y,UnlockPopup)
 			{
 				mytext="FROM NOW ON#UNLOCKS ARE DISABLED!";
