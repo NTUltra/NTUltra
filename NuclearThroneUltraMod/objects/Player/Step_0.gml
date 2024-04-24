@@ -84,7 +84,75 @@ else if scrIsGamemode(48)
 representingCost *= ammoReduction;
 if !instance_exists(LevCont) and visible = 1
 {
-
+	if jump > 0
+	{
+		if (jump > halfJump - jumpApex && jump < halfJump + jumpApex)
+		{
+			if UberCont.normalGameSpeed == 60
+				jump -= 0.25;
+			else
+				jump -= 0.5;
+		}
+		else
+		{
+			if UberCont.normalGameSpeed == 60
+				jump -= 0.5;
+			else
+				jump -= 1;
+		}
+		if jump <= jumpVulnerabilityWindow
+		{
+			mask_index = mskPlayer;
+		}
+		if jump < halfJump
+		{
+			var msk = mask_index;
+			mask_index = mskPlayer
+			if place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor)
+			{
+				var t = instance_nearest(x - 16 + lengthdir_x(4,direction),y - 16 + lengthdir_y(4,direction),Floor);
+				if t != noone
+				{
+					var o = 16;
+					if t.object_index == FloorExplo
+					{
+						o = 8;
+						with t
+						{
+							if place_meeting(x,y,WallHitMe)
+							{
+								//OHNO A WALL ON TOP OF THIS ONE Try ano
+								o += lengthdir_x(24,other.direction);
+								o += lengthdir_y(24,other.direction);
+							}
+						}
+					}
+					var pt = 1 - (jump/halfJump);
+					var tx = t.x + o;
+					var ty = t.y + o;
+					var pdir = point_direction(x,y,tx,ty);
+					var len = point_distance(x,y,tx,ty) * pt;
+					x += lengthdir_x(len,pdir);
+					y += lengthdir_y(len,pdir)
+				}
+			}
+			mask_index = msk;
+		}
+		if jump <= 0
+		{
+			maxJump = defaultMaxJump;
+			halfJump = maxJump * 0.5;
+			/*
+			if place_meeting(x,y,WallHitMe)
+			{
+				instance_create(x,y,SmallWallBreak);
+			}
+			else if !place_meeting(x,y,Floor)
+			{
+				instance_create(x,y,FloorExplo);	
+			}*/
+		}
+	}
 	if roll = 0
 	{
 		if canMove
@@ -299,6 +367,7 @@ if !instance_exists(LevCont) and visible = 1
 	back = -1
 
 		scrPowers();
+		scrSecondaryPowers();
 		if !chickenFocusInUse && chickenFocus < chickenFocusMax
 		{
 			if chickenFocusDelayTime <= 0
@@ -323,10 +392,13 @@ if !instance_exists(LevCont) and visible = 1
 		//rolling
 		image_speed = 0.4;
 		speed = 6.3*max(1,(skill_got[2]*1.3))//the rolling speed code is far below
+		var r = right;
+		if jump > 0
+			r *= -1;
 		if is60fps
-			angle += (50*right*max(1,(skill_got[2]*1.3)))*0.5
+			angle += (50*r*max(1,(skill_got[2]*1.3)))*0.5
 		else
-			angle += 50*right*max(1,(skill_got[2]*1.3))
+			angle += 50*r*max(1,(skill_got[2]*1.3))
 
 		if speed = 0
 		{if sprite_index != spr_hurt
@@ -379,7 +451,7 @@ if !instance_exists(LevCont) and visible = 1
 			}
 		}
 		else{
-		instance_create(x+random(6)-3,y+random(6),Dust)
+			instance_create(x+random(6)-3,y+random(6) - jumpY,Dust)
 			if angle > 360 or -angle > 360
 			{
 				angle = 0
@@ -387,6 +459,7 @@ if !instance_exists(LevCont) and visible = 1
 			}
 		}
 	}
+	
 	//Cheats
 	var thing;
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
@@ -883,7 +956,23 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
-				scrFire();
+				var shootIt = true;
+				if jump > 0
+				{
+					y -= jumpY;
+					var msk = mask_index;
+					mask_index = mskPlayer;
+					if !place_meeting(x,y,Wall)
+					{
+						scrFire();
+					}
+					y += jumpY;
+					mask_index = msk;
+				}
+				else
+				{
+					scrFire();
+				}
 			}
     		autoFire = 6;
 			clicked = 0;
@@ -898,7 +987,22 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				with YungCuzDupe
 					event_user(0);
-				scrFire();
+				if jump > 0
+				{
+					y -= jumpY;
+					var msk = mask_index;
+					mask_index = mskPlayer;
+					if !place_meeting(x,y,Wall)
+					{
+						scrFire();
+					}
+					y += jumpY;
+					mask_index = msk;
+				}
+				else
+				{
+					scrFire();
+				}
 			}
 		}
 	}
@@ -1474,7 +1578,22 @@ if (!instance_exists(LevCont))
 			{
 				with YungCuzDupe
 					event_user(0);
-				scrFire();
+				if jump > 0
+				{
+					y -= jumpY;
+					var msk = mask_index;
+					mask_index = mskPlayer;
+					if !place_meeting(x,y,Wall)
+					{
+						scrFire();
+					}
+					y += jumpY;
+					mask_index = msk;
+				}
+				else
+				{
+					scrFire();
+				}
 			}
 			if reload > 0 && !canInfiniteFire
 				can_shoot = 0;
@@ -1584,7 +1703,7 @@ maxSpeed -= tempMaxSpeed;
 if roll = 1
 {
 speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
-	if mask_index == mskPickupThroughWall
+	if jump <= 0 && mask_index == mskPickupThroughWall
 	{
 		var msk = mask_index;
 		mask_index = mskPlayer;
@@ -1647,7 +1766,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 			var isCold = ultra_got[94];
 			var isHot = ultra_got[95];
 			//SNOW & ICE TEST
-			if (!skill_got[2] && race!=18 && race != 15)
+			if (!skill_got[2] && race!=18 && race != 15 && jump <= 0)
 			{
 				if (gs == sprFloor5B || gs == sprFloor107B) // Ice
 				{
@@ -1752,7 +1871,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 			{
 				if !skill_got[14]
 				{
-					if !skill_got[2] && race!=18 && race != 15
+					if !skill_got[2] && race!=18 && race != 15 && jump <= 0
 					{
 						if is60fps
 							hotfloor += 0.5;
@@ -1801,7 +1920,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 			{
 				if (!skill_got[14])
 				{
-					if !skill_got[2] && race!=18 && race != 15
+					if !skill_got[2] && race!=18 && race != 15 && jump <= 0
 					{
 						friction = 0.1
 						//when player isn't frozen increase the time that determines when it should get frozeen
@@ -2430,7 +2549,7 @@ if hammerheadcounter > 0
 	{
 		nearWall = true;
 		mask_index = msk;
-		if roll != 0
+		if roll != 0 || jump > 0
 			mask_index = mskPlayer;
 		if place_meeting(x+hspeed * 1.5,y+vspeed * 1.5,Wall)
 		{

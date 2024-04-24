@@ -919,12 +919,13 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 audio_listener_position(x, y, depth*10);
 
 exception = false;
-if rollIframe > 0
+if rollIframe > 0 && jump <= 0
 {
 	if UberCont.normalGameSpeed == 60
 		rollIframe -= 0.5;
 	else
 		rollIframe --;
+		
 	mask_index = mskPlayer;
 	if place_meeting(x,y,WallHitMe)
 	{

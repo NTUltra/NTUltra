@@ -184,7 +184,7 @@ with Player
 		event_perform(ev_draw,0)}
 	}
 	*/
-	if race == 18 && !instance_exists(PlayerInPortal)
+	if (race == 18 || jump > 0) && !instance_exists(PlayerInPortal)
 		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
 

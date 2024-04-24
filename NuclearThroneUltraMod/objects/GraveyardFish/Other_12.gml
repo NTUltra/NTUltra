@@ -2,8 +2,13 @@
 snd_play_2d(sndHyperCrystalSearch);
 var allFloors = [];
 var i = 0;
-var px = Player.x;
-var py = Player.y;
+var px = x;
+var py = y;
+if instance_exists(Player)
+{
+	px = Player.x;
+	py = Player.y;
+}
 scrActivateAllOutOfRange();
 with Floor {
 	var o = 16;

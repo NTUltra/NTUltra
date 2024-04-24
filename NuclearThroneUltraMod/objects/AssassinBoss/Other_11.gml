@@ -21,7 +21,7 @@ if target != noone && instance_exists(target)
 			var o = 16;
 			if object_index == FloorExplo
 				o = 8;
-			if !goodEnough && point_distance(x + o, y + o,other.target.x,other.target.y) > 128 && point_distance(x + o, y + o,other.x,other.y) > 50
+			if !goodEnough && point_distance(x + o, y + o,other.target.x,other.target.y) > 350 && point_distance(x + o, y + o,other.x,other.y) > 50
 			{
 				tx = x + o;
 				ty = y + o;

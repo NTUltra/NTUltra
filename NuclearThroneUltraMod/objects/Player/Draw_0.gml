@@ -3,6 +3,18 @@ if hammerheadDig > 0
 {
 	yy += 6;
 }
+if jump > 0
+{
+	if jump > halfJump
+	{
+		jumpY = min(visualJumpHeight,lerp(visualJumpHeight,0,(jump-halfJump)/halfJump));
+	}
+	else
+	{
+		jumpY = min(visualJumpHeight,lerp(0,visualJumpHeight,jump/halfJump));
+	}
+	yy = y - jumpY;
+}
 var aimDirection = point_direction(x,yy,UberCont.mouse__x,UberCont.mouse__y);
 if (drawTailIntro == 1) {
 	draw_sprite_ext(sprTailIntro,tailWave,x,yy,-right,1,0,c_white,1);

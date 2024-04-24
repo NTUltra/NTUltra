@@ -302,7 +302,12 @@ function scrShadows() {
 			py -= 2;
 		if visible = 1
 		{
-			if race == 14
+			if jump > 0
+			{
+				if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
+					draw_sprite(shd24,0,x-vx,py-vy)
+			}
+			else if race == 14
 				draw_sprite(shdPanda,0,x-vx,py-vy)
 			else if race = 18
 			{

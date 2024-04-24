@@ -1300,29 +1300,42 @@ function scrPowers(raceOverwrite = -1) {
 	//FISH
 	if race == 1
 	{
-		if speed < 0.4
-			direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		speed = 4;
-		if skill_got[2] == 1
-		{
-			speed = 8;
-		}
-		roll = 1
-		rollIframe = 5;
-		alarm[3] += rollIframe;
-		mask_index = mskPickupThroughWall;
-		if skill_got[5]
-		{
-			snd_play_2d(sndFishRollUpg);
-			if !audio_is_playing(sndFishRollUpgLoop)
-				snd_loop(sndFishRollUpgLoop);
+		if true {
+			if jump > jumpVulnerabilityWindow
+			{
+				jump += 5;
+				maxJump += 5;
+				halfJump += 2.5;
+				scrFishRoll();
+				rollIframe = 0;
+			}
+			else
+			{
+				jump = maxJump;
+				scrFishRoll();
+				rollIframe = 0;
+				var dang = direction;
+				with instance_create(x,y,AnimDestroy)
+				{
+					image_angle = dang;
+				}
+				with instance_create(x,y,AnimDestroy)
+				{
+				}
+				repeat(3)
+				{
+					with instance_create(x+random(6)-3,y+random(6),Dust)
+					{
+						motion_add(dang,2);	
+					}
+					dang += 120;
+				}
+			}
 		}
 		else
 		{
-			snd_play_2d(sndRoll)
+			scrFishRoll();
 		}
-
-		instance_create(x,y,Dust)
 	}
 	
 	//HANDS
@@ -2438,7 +2451,7 @@ function scrPowers(raceOverwrite = -1) {
 						lerpCalcBack = (lerpCalc/target.mySize)*0.75;
 						if target.meleedamage > other.skill_got[8]*7//Gamma guts
 						{
-							lerpCalcBack *= 0.75;
+							lerpCalcBack *= 0.5;// 0.75
 						}
 					}
 					else//ULTRA D

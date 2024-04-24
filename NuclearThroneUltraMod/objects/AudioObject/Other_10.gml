@@ -1,5 +1,5 @@
 /// @description Slowmo sound
-if !wasMinipulated
+if !wasMinipulated && mySound != MusCont.song
 {
 	audio_sound_pitch(mySound,0.75);
 	wasMinipulated = true;
