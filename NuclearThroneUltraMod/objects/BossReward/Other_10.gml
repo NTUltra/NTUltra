@@ -12,11 +12,7 @@ switch(array_length(UberCont.collectedRewards))
 		name += "INCREASE THE VALUE OF RADIATION BY 10%";
 	break;
 	case 2:
-		//One hit wonder
-		if scrIsGamemode(32)
-			name += "GAIN ONE MUTATION";
-		else
-			name += "GAIN 1 MAX HP";
+		name += "GAIN 10 PORTAL ESSENCE";
 	break;
 	case 3:
 		name += "UNLOCK THE MUTATION REROLL STATION";
@@ -26,7 +22,7 @@ switch(array_length(UberCont.collectedRewards))
 	break;
 	case 5:
 		if scrIsGamemode(32)
-			name += "GAIN ONE ULTRA MUTATION";
+			name += "GAIN ONE MUTATION";
 		else
 			name += "GAIN 1 MAX HP";
 	break;

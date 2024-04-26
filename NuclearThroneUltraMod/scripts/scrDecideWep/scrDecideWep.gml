@@ -92,8 +92,8 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				}
 				else
 				{
-				//if wep_area[wep]  <= wepTier
-					triesForSpecificTier++;
+					if wepTier >= maxAreaGoodEnough || wep_area[wep]  <= wepTier
+						triesForSpecificTier++;
 				}
 				infiniteTries --;
 			}
@@ -134,5 +134,6 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	{
 		wep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 	}
+	debug("RETURN WEP: ", wep);
 	return wep;
 }

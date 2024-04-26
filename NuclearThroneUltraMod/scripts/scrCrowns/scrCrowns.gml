@@ -21,9 +21,9 @@ function scrCrowns() {
 
 	crown_name[3] = "[CROWN OF DEATH]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[3] = "-1 MAX <gb>ARMOUR<gb>#BIGGER EXPLOSIONS"
+		crown_text[3] = "<w>-1<w> <gb>MAX ARMOUR<gb>#BIGGER EXPLOSIONS"
 	else
-		crown_text[3] = "-1 <r>MAX HP<r>#BIGGER <w>EXPLOSIONS<w>"
+		crown_text[3] = "<w>-1<w> <r>MAX HP<r>#BIGGER <w>EXPLOSIONS<w>"
 	crown_used[3] = 0
 	crown_tips[3] = "nothing goes unpunished"
 
@@ -126,9 +126,9 @@ function scrCrowns() {
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	crown_text[20] = "EVERY OTHER <w>WEAPON<w> DROP GIVES 1 <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>"
+	crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#EVERY OTHER <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>"
 	crown_used[20] = 0
-	crown_tips[20] = "stay safe"//Always use protection..  that joke is too predictable
+	crown_tips[20] = "stay safe"
 	
 	crown_name[21] = "[CROWN OF RISK]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
@@ -188,7 +188,7 @@ function scrCrowns() {
 	
 	//Daily
 	crown_name[30] = "[CROWN OF MERCENARY]"
-	crown_text[30] = "+2 <r>MAX HP<r># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
+	crown_text[30] = "<w>+2<w> <r>MAX HP<r># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 		crown_text[30] = "+2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	crown_used[30] = 0
@@ -196,7 +196,7 @@ function scrCrowns() {
 	
 	//Mercenary
 	crown_name[31] = "[CROWN OF BOUNTY]"
-	crown_text[31] = "-2 <r>MAX HP<r># AT THE END OF EACH AREA#GAIN 40 <w>KILLS<w>"
+	crown_text[31] = "<w>-2<w> <r>MAX HP<r># AT THE END OF EACH AREA#GAIN 40 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 		crown_text[31] = "-2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#GAIN 40 <w>KILLS<w>"
 	crown_used[31] = 0

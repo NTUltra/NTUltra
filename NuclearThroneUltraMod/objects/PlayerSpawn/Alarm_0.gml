@@ -1,11 +1,10 @@
 /// @description Respawn
 with Player
 {instance_destroy();}
-if !instance_exists(PlayerAlarms)
-	instance_create(x,y,PlayerAlarms);
 if (myCorpse == -1 || !instance_exists(myCorpse))
 	myCorpse = id;
 instance_create(myCorpse.x,myCorpse.y,Player);
+instance_create(x,y,WallBreak);
 instance_destroy(myCorpse);
 if race == 9//Delete chicken head
 	with Corpse
@@ -32,14 +31,14 @@ with Player//Data to keep
 	canCrownOfProtection = other.canCrownOfProtection;
 	if scrIsCrown(20)//Crown of protection re-apply
 	{
-		if maxarmour < 1
-				gotMinimumArmour = true;
+		//if maxarmour < 1
+		//		gotMinimumArmour = true;
 			canCrownOfProtection = true;
 			maxarmour = max(maxarmour, 1);
 			armour = clamp(armour, 0, maxarmour);
 	}
 	canblacksword = other.canblacksword;
-	gotMinimumArmour = other.gotMinimumArmour;
+	//gotMinimumArmour = other.gotMinimumArmour;
 	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;
 	firedthislevel = other.firedthislevel;
@@ -58,7 +57,7 @@ with Player//Data to keep
 	crown = other.crown
 	if scrIsCrown(20)  && maxarmour < 0{
 		maxarmour += 1;
-		gotMinimumArmour = true;
+		//gotMinimumArmour = true;
 	}
 	if scrIsCrown(13) {
 		scrWeaponAdjustCost(2);	
@@ -244,3 +243,5 @@ instance_destroy();
 with GameRender {
 	event_user(0);
 }
+if !instance_exists(PlayerAlarms)
+	instance_create(x,y,PlayerAlarms);

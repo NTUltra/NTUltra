@@ -19,23 +19,6 @@ if scrIsGamemode(8)
 			scrUnlockBSkin(22,"FOR SURVIVING THE VANS!#FOR ATLEAST 30 SECONDS",8);
 	}
 }
-if race == 3 && bskin == 6
-{
-	with instance_create(x,y,PortalEnviromentReplacer)
-	{
-		area = 137;
-		prevArea = 137;
-		maxRadius = 400;
-	}
-	with TopDecal
-		instance_destroy();
-	with Bones
-		instance_destroy();
-	__background_set_colour( make_color_rgb(0,0,0) )
-	instance_create(x,y,VoidDeath);
-	speed = 0;
-	BackCont.shake += 100;
-}
 if skill_got[18]//Last wish
 {
 with UberCont
@@ -52,11 +35,30 @@ if ultra_got[87] && altUltra
 audio_stop_sound(sndHorrorLoop);
 audio_stop_sound(sndHorrorLoopTB);
 if actualLives < 1 && !reincarnate
+{
 	with MusCont
 	{
 	if audio_exists(song)
 	audio_stop_sound(song);
 	}
+	if race == 3 && bskin == 6
+	{
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 137;
+			prevArea = 137;
+			maxRadius = 400;
+		}
+		with TopDecal
+			instance_destroy();
+		with Bones
+			instance_destroy();
+		__background_set_colour( make_color_rgb(0,0,0) )
+		instance_create(x,y,VoidDeath);
+		speed = 0;
+		BackCont.shake += 100;
+	}
+}
 
 if ultra_got[40]==1
 {
@@ -402,7 +404,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	crownvisits = other.crownvisits;
 	gunGameKill = other.gunGameKill;
 	canCrownOfProtection = other.canCrownOfProtection;
-	gotMinimumArmour = other.gotMinimumArmour;
+	//gotMinimumArmour = other.gotMinimumArmour;
 	freeArmourStrike = other.freeArmourStrike;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
 	{

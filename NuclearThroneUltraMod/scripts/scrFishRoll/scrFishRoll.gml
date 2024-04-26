@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrFishRoll(){
+	reachedRollEnd = false;
+	angle = 0;
 	if speed < 0.4
 		direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	speed = 4;
@@ -23,5 +25,5 @@ function scrFishRoll(){
 	{
 		snd_play_2d(sndRoll)
 	}
-	instance_create(x,y,Dust)
+	instance_create_depth(x,y-jumpY,depth + 2,Dust)
 }

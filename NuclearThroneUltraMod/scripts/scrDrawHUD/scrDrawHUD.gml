@@ -1724,18 +1724,18 @@ function scrDrawHUD() {
 		}
 		with VoidNPC
 		{
-			if place_meeting(x,y,Player) && hasShitToSay && KeyCont.key_pick[0] = 1 && sprite_index == spr_idle && TextHandler.text == ""
+			if place_meeting(x,y,Player) && hasShitToSay && sprite_index == spr_idle && TextHandler.text == ""
 			{
 				var yy = y-oy-18;
 				var xx = x-ox-2;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
 
 				draw_set_color(c_black)
-				draw_text_transformed(xx,yy-30,string_hash_to_newline(string(name)),1,1,textAngle)
-				draw_text_transformed(xx+1,yy-30,string_hash_to_newline(string(name)),1,1,textAngle)
-				draw_text_transformed(xx+1,yy-31,string_hash_to_newline(string(name)),1,1,textAngle)
+				draw_text(xx,yy-talkPopupY,string_hash_to_newline(string(name)))
+				draw_text(xx+1,yy-talkPopupY,string_hash_to_newline(string(name)))
+				draw_text(xx+1,yy-talkPopupY-1,string_hash_to_newline(string(name)))
 				draw_set_color(c_white)
-				draw_text_transformed(xx,yy-31,string_hash_to_newline(string(name)),1,1,textAngle)
+				draw_text(xx,yy-talkPopupY-1,string_hash_to_newline(string(name)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

@@ -919,23 +919,26 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 audio_listener_position(x, y, depth*10);
 
 exception = false;
-if rollIframe > 0 && jump <= 0
+if rollIframe > 0
 {
 	if UberCont.normalGameSpeed == 60
 		rollIframe -= 0.5;
 	else
 		rollIframe --;
-		
-	mask_index = mskPlayer;
-	if place_meeting(x,y,WallHitMe)
+	
+	if jump <= 0
 	{
-		move_outside_solid(direction+180,8);
-		move_contact_solid(direction,max(1,min(maxSpeed,speed)))
-		if !place_free(x+hspeed,y){hspeed /= 2
-		if !place_free(x+hspeed,y) hspeed = 0}
-		if !place_free(x,y+vspeed){vspeed /= 2
-		if !place_free(x,y+vspeed)vspeed = 0}
-		//speed  = 0;
+		mask_index = mskPlayer;
+		if place_meeting(x,y,WallHitMe)
+		{
+			move_outside_solid(direction+180,8);
+			move_contact_solid(direction,max(1,min(maxSpeed,speed)))
+			if !place_free(x+hspeed,y){hspeed /= 2
+			if !place_free(x+hspeed,y) hspeed = 0}
+			if !place_free(x,y+vspeed){vspeed /= 2
+			if !place_free(x,y+vspeed)vspeed = 0}
+			//speed  = 0;
+		}
 	}
 	if rollIframe > 0
 	{

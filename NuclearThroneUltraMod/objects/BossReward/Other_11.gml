@@ -17,23 +17,8 @@ switch(array_length(UberCont.collectedRewards))
 		snd_play(other.snd_chst);
 	break;
 	case 2:
-		//One hit wonder
-		if scrIsGamemode(32)
-		{
-			with Player
-			{
-				skillpoints ++;
-				skillsChosen--;
-			}
-		}
-		else
-		{
-			with Player
-			{
-				maxhealth += 1;
-				my_health += 1;
-			}
-			UberCont.maxHpIncrease += 1
+		with UberCont {
+			portalEssence += 10;	
 		}
 		snd_play(other.snd_chst);
 	break;
@@ -62,6 +47,25 @@ switch(array_length(UberCont.collectedRewards))
 			with Player
 			{
 				skillpoints ++;
+				skillsChosen--;
+			}
+		}
+		else
+		{
+			with Player
+			{
+				maxhealth += 1;
+				my_health += 1;
+			}
+			UberCont.maxHpIncrease += 1
+		}
+		/*
+		//One hit wonder
+		if scrIsGamemode(32)
+		{
+			with Player
+			{
+				skillpoints ++;
 				skillsChosen --;
 				ultraNow = true;
 			}
@@ -75,6 +79,7 @@ switch(array_length(UberCont.collectedRewards))
 			}
 			UberCont.maxHpIncrease += 1;
 		}
+		*/
 		snd_play(other.snd_chst);
 	break;
 }

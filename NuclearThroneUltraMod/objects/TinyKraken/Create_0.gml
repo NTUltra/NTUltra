@@ -18,27 +18,17 @@ right = choose(1,-1)
  loops = GetPlayerLoops();
 maxhealth = 8;
 my_health = maxhealth
-rate = 12;
-actTime = 12;
-if loops > 0
+actTime = 10;
+rate = 9;
+raddrop += 1;
+maxhealth = 15;
+my_health = maxhealth
+if instance_number(TinyKraken) > 1
 {
-	actTime = 9;
-	rate = 8;
-	raddrop += 1;
-	maxhealth = 16;
-	if instance_number(TinyKraken) > 1
-	{
-		maxhealth = 12;
-		rate += 1;
-		actTime += 1;
-	}
-	my_health = maxhealth
-}
-else if instance_number(TinyKraken) > 1
-{
-	maxhealth = 6;
+	maxhealth = 12;
 	rate += 1;
-	my_health = maxhealth
+	actTime += 1;
+	my_health = maxhealth;
 }
 if instance_number(TinyKraken) > 3
 {

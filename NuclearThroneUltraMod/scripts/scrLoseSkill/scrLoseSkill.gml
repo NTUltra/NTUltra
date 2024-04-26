@@ -100,25 +100,15 @@ function scrLoseSkill(skillIndex){
 			betterlaserbrain = 0;
 		break;
 		case 18: //LAST WISH
+			lastWishPrevent = false;
+			skeletonlives -= 1;
+			var tookLife = false;
 			var al = array_length(livesRegain);
-			var tookPartialLife = false;
-			//Prioritize taking lifes that are not full/active
 			for (var i = 0; i < al; i++) {
-				if !tookPartialLife && livesRegain[i] > 0 && livesRegain[i] < 3
+				if !tookLife && livesRegain[i] > 0
 				{
-					livesRegain[i] -= 1;
-					tookPartialLife = true;
-				}
-			}
-			//Could not find a partial life now take a full one
-			if !tookPartialLife
-			{
-				for (var i = 0; i < al; i++) {
-					if !tookPartialLife && livesRegain[i] > 0
-					{
-						livesRegain[i] -= 1;
-						tookPartialLife = true;
-					}
+					livesRegain[i] = 0;
+					tookLife = true;
 				}
 			}
 		break;
@@ -171,12 +161,12 @@ function scrLoseSkill(skillIndex){
 			{
 				maxhealth += 2;
 			}
-			if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
-			{
+			//if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
+			//{
 				maxarmour -= 1;
-				armour = 0;
-				gotMinimumArmour = false;
-			}
+				armour = min(maxarmour,armour);
+				//gotMinimumArmour = false;
+			//}
 		break;
 		case 42: //TAIL END
 			betterTail = 1.5;

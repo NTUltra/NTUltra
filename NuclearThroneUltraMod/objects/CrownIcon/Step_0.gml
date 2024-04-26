@@ -184,10 +184,12 @@ if crown == 20
 	with UberCont
 		hasTakenCrownOfProtection = true;
 	with Player {
-		if maxarmour < 1
-			gotMinimumArmour = true;
+		//if maxarmour < 1
+		//	gotMinimumArmour = true;
 		canCrownOfProtection = true;
-		maxarmour = max(maxarmour, 1);
+		maxarmour += 1;//max(maxarmour, 1);
+		maxhealth -= 1;
+		maxhealth = max(1,maxhealth);
 		armour = clamp(armour, 0, maxarmour);
 	}
 }

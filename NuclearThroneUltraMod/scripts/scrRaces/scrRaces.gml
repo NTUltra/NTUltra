@@ -22,7 +22,7 @@ function scrRaces() {
 	race_acti[1] = "<w>DODGE ROLL<w>"
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
 	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
-	race_inpsiration[1] = "ADD A <w>JUMP<w> TO YOUR ROLL";
+	race_inpsiration[1] = "FISH CAN <w>JUMP<w>";
 	race_inpsiration_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> AFTER <w>JUMPING<w>";
 	race_lock[1] = "UNLOCKED FROM THE START"
 	race_have[1] = 1

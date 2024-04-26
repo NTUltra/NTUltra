@@ -262,6 +262,12 @@ if instance_exists(Player)
 		y = Player.y;
 		scrForcePosition60fps();
 	}
+	//Gun Smiths weapon modder ultra
+	if Player.ultra_got[65] && Player.area !=100 && (Player.area != 118 && Player.subarea != 3) && Player.area != 120 && Player.area != 119 && Player.area != 137
+	{
+		with instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,WeaponMod)
+			shouldClose = false;
+	}
 }
 
 snd_play_2d(sndPortalOpen)

@@ -1,4 +1,4 @@
-function scrFire() {
+function scrFire(canDrown = true) {
 	IDKWID=false;
 	can_shoot = 0
 	if !instance_exists(Player) || instance_exists(StartAreaBuffer) || instance_exists(UnPauseDelay)
@@ -14,8 +14,16 @@ function scrFire() {
 	{
 		if ultra_got[21] && Player.altUltra && reload > 0
 		{
-			gunGod += reload * 0.8;
-			reload = reload * 0.2;
+			if gunGodDebt > 0
+			{
+				gunGodDebt -= reload;
+				reload += reload;
+			}
+			else
+			{
+				gunGod += reload * 0.8;
+				reload = reload * 0.2;
+			}
 		}
 		if scrIsGamemode(48) && ammo[1] < 0
 		{
@@ -39,11 +47,11 @@ function scrFire() {
 			{
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.36;
+					reload -= wep_load[wep]*0.3332;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.39;
+					reload -= wep_load[wep]*0.37;
 				}
 			}
 			else if armour == maxarmour
@@ -77,7 +85,7 @@ function scrFire() {
 					image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);	
 				}
 			}
-			if scrIsCrown(13)
+			if canDrown && scrIsCrown(13)
 			{
 				if ammo[wep_type[wep]] <= 0
 				{

@@ -64,6 +64,7 @@ draw_self();
 	{
 		draw_self();	
 	}
+	
 	with Teleport
 	{
 		event_perform(ev_draw,0);	
@@ -77,6 +78,14 @@ draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
 
 with WaterMine
 draw_self();
+with JumpDust
+{
+	draw_self();	
+}
+with JumpFishBoost
+{
+	draw_self();	
+}
 with Feather
 {
 	event_perform(ev_draw,0);
@@ -167,6 +176,10 @@ draw_sprite_ext(sprCrownLight,0,x,y+32,1,1,0,c_white,0.2)
 draw_sprite_ext(sprCrownLight,1,x,y,1,100,5,c_white,0.2)
 }
 
+with AnimDestroyTop
+{
+	draw_self();	
+}
 with Player
 {
 	/*

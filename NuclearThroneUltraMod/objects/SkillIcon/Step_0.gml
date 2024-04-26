@@ -336,9 +336,9 @@ if selected && visible
 			}
 			else
 			{
-				if Player.maxarmour < 1
-					Player.gotMinimumArmour = true;
-				Player.maxarmour = max(1,Player.maxarmour);
+				//if Player.maxarmour < 1
+				//	Player.gotMinimumArmour = true;
+				Player.maxarmour += 1;//max(1,Player.maxarmour);
 				Player.armour = clamp(Player.armour + 1, 1, Player.maxarmour);
 				if Player.race == 25
 				{

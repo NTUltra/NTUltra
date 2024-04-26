@@ -708,11 +708,11 @@ if (selected && visible &&
 			else
 			{
 				disableAltUltra = true;
-				if gotMinimumArmour
+				/*if gotMinimumArmour
 				{
 					armour -= 1;
 					maxarmour -= 1;
-				}
+				}*/
 				maxarmour = max(maxarmour + 2, 2);
 				armour = clamp(armour + 2, 2, maxarmour);
 			}
@@ -736,11 +736,11 @@ if (selected && visible &&
 				disableAltUltra = true;
 				maxarmour = max(maxarmour + 3, 3);
 				armour = clamp(armour + 3, 3, maxarmour);
-				if gotMinimumArmour
+				/*if gotMinimumArmour
 				{
 					maxarmour -= 1;
 					gotMinimumArmour = false;
-				}
+				}*/
 		    }
 		}
 	}
@@ -763,10 +763,10 @@ if (selected && visible &&
 	{
 	    with Player
 	    {
-			if gotMinimumArmour
+			/*if gotMinimumArmour
 			{
 				maxarmour -= 1;
-			}
+			}*/
 			maxarmour = max(maxarmour + 2, 2);
 			armour = max(armour,0);
 	    }

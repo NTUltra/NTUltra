@@ -1,20 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"AnimDestroy",
+  "%Name":"VoidChallenge",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"AnimDestroy",
+  "name":"VoidChallenge",
   "overriddenProperties":[],
   "parent":{
-    "name":"FX",
-    "path":"folders/Objects/FX.yy",
+    "name":"Void",
+    "path":"folders/Objects/Void.yy",
   },
   "parentObjectId":{
-    "name":"FX",
-    "path":"objects/FX/FX.yy",
+    "name":"All",
+    "path":"objects/All/All.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,9 +36,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprGunGunFire",
-    "path":"sprites/sprGunGunFire/sprGunGunFire.yy",
+    "name":"sprVoidChallenge",
+    "path":"sprites/sprVoidChallenge/sprVoidChallenge.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBigWepPickup",
+    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+  },
   "visible":true,
 }

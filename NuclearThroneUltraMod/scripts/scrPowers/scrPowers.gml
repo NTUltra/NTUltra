@@ -47,7 +47,7 @@ function scrPowers(raceOverwrite = -1) {
 		}
 	}
 	/////SHIT PRESSED////////
-	if KeyCont.key_spec[p] = 1
+	if KeyCont.key_spec[p] = 1 || specBuffer > 0
 	{
 		if rewinds > 0
 		{
@@ -609,9 +609,11 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
+			var failedGamble = false;
 		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.35) )  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				consecutiveGoodBloodGambles = 0;
+				failedGamble = true;
 				//Damnation
 				if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
 				{
@@ -762,7 +764,7 @@ function scrPowers(raceOverwrite = -1) {
 			var t = wep_type[wep];
 			var wantRad = rad;
 			var wantAmmo = ammo[t]
-			scrFire();
+			scrFire(failedGamble);
 			reload -= wep_load[wep]*0.75//*0.25;
 			ammo[t] = wantAmmo;
 			//ammo[t] += wep_cost[wep]//return ammo
@@ -1301,34 +1303,50 @@ function scrPowers(raceOverwrite = -1) {
 	if race == 1
 	{
 		if true {
-			if jump > jumpVulnerabilityWindow
+			if (!didJumpRoll)
 			{
-				jump += 5;
-				maxJump += 5;
-				halfJump += 2.5;
-				scrFishRoll();
-				rollIframe = 0;
-			}
-			else
-			{
-				jump = maxJump;
-				scrFishRoll();
-				rollIframe = 0;
-				var dang = direction;
-				with instance_create(x,y,AnimDestroy)
+				if jump > jumpVulnerabilityWindow
 				{
-					image_angle = dang;
-				}
-				with instance_create(x,y,AnimDestroy)
-				{
-				}
-				repeat(3)
-				{
-					with instance_create(x+random(6)-3,y+random(6),Dust)
+					scrFishRoll();
+					didJumpRoll = true;
+					with instance_create_depth(x,y - jumpY,depth + 1,AnimDestroyTop)
 					{
-						motion_add(dang,2);	
+						image_speed = 0.4;
+						sprite_index = sprAirRoll;
+						image_angle = other.direction;
+						direction = image_angle + 180;
+						speed = 2;
 					}
-					dang += 120;
+				}
+				else if jump <= 0
+				{
+					jump = maxJump;
+					scrFishRoll();
+					alarm[3] -= rollIframe;
+					rollIframe = 0;
+					var dang = direction;
+					/*
+					repeat(3)
+					{
+						with instance_create_depth(x+random(6)-3,y+random(6),depth + 2,Dust)
+						{
+							motion_add(dang,2);	
+						}
+						dang += 120;
+					}*/
+					with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+					{
+						image_speed = 0.4;
+						sprite_index = sprJump;
+						image_xscale = choose(1,-1);
+					}
+					with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+					{
+						image_speed = 0.4;
+						sprite_index = sprJumpUp;
+						image_xscale = choose(1,-1);
+						image_angle = other.hspeed * -10;
+					}
 				}
 			}
 		}

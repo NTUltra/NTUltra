@@ -22,10 +22,18 @@ function scrRemoveCrown(oldcrown){
 	if oldcrown == 20
 	{
 		with Player {
-			if gotMinimumArmour && !skill_got[41]//Nerves of steel
-			{
-				maxarmour --;
-			}
+			//if gotMinimumArmour && !skill_got[41]//Nerves of steel
+			//{
+			maxarmour --;
+				/*if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+				{
+					Player.maxarmour += 1
+				}
+				else
+				{*/
+			maxhealth += 1;
+				//}
+			//}
 			armour = min(armour, maxarmour);
 		}
 	}

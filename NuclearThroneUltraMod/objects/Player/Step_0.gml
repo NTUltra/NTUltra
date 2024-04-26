@@ -86,19 +86,27 @@ if !instance_exists(LevCont) and visible = 1
 {
 	if jump > 0
 	{
-		if (jump > halfJump - jumpApex && jump < halfJump + jumpApex)
+		if rollIframe <= 0
 		{
-			if UberCont.normalGameSpeed == 60
-				jump -= 0.25;
+			if (jump > halfJump - jumpApex && jump < halfJump + jumpApex)
+			{
+				if UberCont.normalGameSpeed == 60
+					jump -= 0.25;
+				else
+					jump -= 0.5;
+			}
 			else
-				jump -= 0.5;
-		}
-		else
-		{
-			if UberCont.normalGameSpeed == 60
-				jump -= 0.5;
+			{
+				if UberCont.normalGameSpeed == 60
+					jump -= 0.5;
+				else
+					jump -= 1;
+			}
+			var r = right * -1;
+			if is60fps
+				angle += (25*r*max(1,(skill_got[2]*1.3)))*0.5
 			else
-				jump -= 1;
+				angle += 25*r*max(1,(skill_got[2]*1.3))
 		}
 		if jump <= jumpVulnerabilityWindow
 		{
@@ -127,7 +135,9 @@ if !instance_exists(LevCont) and visible = 1
 							}
 						}
 					}
-					var pt = 1 - (jump/halfJump);
+					var pt = 1;
+					if jump > 0
+						pt = 1 - (jump/halfJump);
 					var tx = t.x + o;
 					var ty = t.y + o;
 					var pdir = point_direction(x,y,tx,ty);
@@ -138,10 +148,19 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			mask_index = msk;
 		}
+		//While jumping buffer second jump
+		if KeyCont.key_spec[p] == 1
+		{
+			specBuffer = 3;
+		}
 		if jump <= 0
 		{
-			maxJump = defaultMaxJump;
-			halfJump = maxJump * 0.5;
+			didJumpRoll = false;
+			if !skill_got[5] || !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+			{
+				roll = 0;
+				angle = 0;
+			}
 			/*
 			if place_meeting(x,y,WallHitMe)
 			{
@@ -152,6 +171,13 @@ if !instance_exists(LevCont) and visible = 1
 				instance_create(x,y,FloorExplo);	
 			}*/
 		}
+	}
+	if specBuffer > 0
+	{
+		if UberCont.normalGameSpeed == 60
+			specBuffer -= 0.5;
+		else
+			specBuffer -= 1;
 	}
 	if roll = 0
 	{
@@ -430,7 +456,11 @@ if !instance_exists(LevCont) and visible = 1
 				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 				vspeed += 3
 			}
-			instance_create(x,y,FishBoost)
+			if jump > jumpVulnerabilityWindow && jump < maxJump - jumpVulnerabilityWindow
+				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, JumpFishBoost)
+			else if jump < jumpVulnerabilityWindow
+				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, FishBoost)
+			//instance_create(x,y,FishBoost)
 			speed += spd;
 			/*if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 			hspeed -= 3
@@ -442,16 +472,20 @@ if !instance_exists(LevCont) and visible = 1
 			vspeed += 3*/
 			if (angle > 360 or -angle > 360) 
 			{
-				if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
-				{
-					angle = 0
-					roll = 0
-					audio_stop_sound(sndFishRollUpgLoop);
-				}
+				reachedRollEnd = true;
+			}
+			if reachedRollEnd && !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
+			{
+				angle = 0
+				roll = 0
+				audio_stop_sound(sndFishRollUpgLoop);
 			}
 		}
 		else{
-			instance_create(x+random(6)-3,y+random(6) - jumpY,Dust)
+			if jump > jumpVulnerabilityWindow && jump < maxJump - jumpVulnerabilityWindow
+				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, JumpDust)
+			else if jump < jumpVulnerabilityWindow
+				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, Dust)
 			if angle > 360 or -angle > 360
 			{
 				angle = 0

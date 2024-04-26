@@ -1,5 +1,4 @@
 /// @description Itterate sequence
-debug("SKIP!?", TextHandler.showCanSkip);
 if TextHandler.showCanSkip
 {
 	alarm[2] = 30;

@@ -31,9 +31,11 @@ var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();
 if ultra_got[21] && altUltra && gunGod > 0
 {
-	gunGod = min(gunGod * 0.75, 600);
-	if area != 100
+	gunGod = min(gunGod, 2000);
+	gunGod = gunGod * 0.5;
+	if area != 100 && area != 137
 	{
+		gunGodDebt = gunGod * 0.5;
 		if cwep != 0
 		{
 			reload = gunGod * 0.34;
@@ -924,7 +926,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		usedHogInvestment = other.usedHogInvestment;
 		ultimategamble = other.ultimategamble;
 		totalSkills = other.totalSkills;
-		gotMinimumArmour = other.gotMinimumArmour;
+		//gotMinimumArmour = other.gotMinimumArmour;
 		scrWeaponHold();
 		//Re-apply some mutations
 		

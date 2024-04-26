@@ -1,5 +1,6 @@
 /// @description Init
 event_inherited();
+talkPopupY += 16;
 image_speed = 0;
 spr_intro = sprVoidMasterIntro;
 spr_idle = sprVoidMasterIdle;

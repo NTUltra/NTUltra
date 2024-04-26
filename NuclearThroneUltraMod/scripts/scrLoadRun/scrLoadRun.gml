@@ -322,10 +322,10 @@ function scrLoadRun(){
 					Player.canCrownOfProtection = encryptedRun.canCrownOfProtection;
 				else
 					Player.canCrownOfProtection = false;
-				if variable_struct_exists(encryptedRun, "gotMinimumArmour")
+				/*if variable_struct_exists(encryptedRun, "gotMinimumArmour")
 					Player.gotMinimumArmour = encryptedRun.gotMinimumArmour;
 				else
-					Player.gotMinimumArmour = true;
+					Player.gotMinimumArmour = true;*/
 				if variable_struct_exists(encryptedRun, "highestReachedLevel")
 					UberCont.highestReachedLevel = encryptedRun.highestReachedLevel;
 				else
