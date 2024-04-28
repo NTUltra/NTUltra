@@ -2451,10 +2451,20 @@ if race==18
 ///moddelay
 if moddelay > -30*modQueue
 {
-	if is60fps
-		moddelay -= 0.3;
+	if skill_got[30]
+	{
+		if is60fps
+			moddelay -= 0.3;
+		else
+			moddelay -= 0.6;
+	}
 	else
-		moddelay -= 0.6;
+	{
+		if is60fps
+			moddelay -= 0.15;
+		else
+			moddelay -= 0.3;
+	}
 }
 /* */
 ///Rogue  heat

@@ -149,7 +149,7 @@ if instance_exists(Player)
 		    invertedportaldelay=45+inc;
 		    //area=107
 		    }
-		    else if ( (area=7&&subarea<2)  )
+		    else if ( (area=7&&subarea<3)  )
 		    {
 		    invertedportalcounter=1;
 		    invertedportaldelay=45+inc;

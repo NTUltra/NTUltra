@@ -2,7 +2,8 @@ if instance_exists(Player)
 {
 	instance_destroy()
 	instance_create(x,y,SpiralCont)
-	if Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0
+	if Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 
+	(Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken)
 	{
 		instance_create(0,0,BackCont)
 		if random(2000) < 1//Culture

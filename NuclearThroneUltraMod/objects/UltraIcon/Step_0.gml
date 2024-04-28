@@ -18,14 +18,16 @@ if (selected && visible &&
 	KeyCont.key_fire[p] = 2;
 	KeyCont.key_pick[p] = 2;
 	if Player.ultra_got[0] == 1 && !Player.altUltra && (skill < 29 || skill > 32)
+	{
 		Player.horrorEtaken = true;
+	}
 	var regularprocedure=true;
 	Player.ultra_got[skill] = 1
 	UberCont.globalMutationsChosen += 1414;
 	Player.previousUltra = skill;
 	Player.skillpoints -= 1
-
-	if skill = 0
+	var giveMeMore = false;
+	if skill == 0
 	{
 		if Player.race == 21 && isAlternative
 		{
@@ -46,8 +48,9 @@ if (selected && visible &&
 		else
 		{
 			Player.patience += 1;
-			Player.skillpoints ++;
+			//Player.skillpoints ++;
 			Player.skillsChosen -= 1;
+			giveMeMore = true;
 		}
 	}
 	else if skill == 1
@@ -1140,10 +1143,10 @@ if (selected && visible &&
 
 	}
 
-	if Player.skillpoints > 0 || Player.charpoints > 0
+	if Player.skillpoints > 0 || Player.charpoints > 0 || giveMeMore
 	{
 		if regularprocedure
-		instance_create(x,y,LevCont)
+			instance_create(x,y,LevCont)
 	}
 	else if !instance_exists(GenCont)
 	{

@@ -1,5 +1,9 @@
 /// @description areas regular
 function scrNextLevel() {
+	with UberCont
+	{
+		portalEssence += 1;	
+	}
 	scrAddArea(area);
 	scrAddToRoute(area);
 	if scrIsCrown(34)
@@ -485,8 +489,7 @@ function scrNextLevel() {
 	}
 	else if area == 119 || area == 120
 	{
-		//WE LOOP HERE!
-		inverted = false;
+		//inverted = false;
 		/*
 		if area == 120
 		{
@@ -497,6 +500,11 @@ function scrNextLevel() {
 		else
 			UberCont.extraVan = 0;
 		*/
+		area = 137;
+	}
+	else if area == 137
+	{
+		//WE LOOP HERE!
 		looping=true;
 	}
 	if ( subarea < 3 and area != 2 and area != 105 and area != 106

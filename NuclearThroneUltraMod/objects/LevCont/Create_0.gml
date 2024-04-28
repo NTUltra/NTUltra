@@ -10,6 +10,7 @@ scroll = 0;
 scrollWidth = 0;
 scrollSpeed = 24;
 selectedIndex = -1;
+debug("LEVCONT: ", Player.skillpoints);
 with KeyCont
 {
 	key_fire[0] = 2;
@@ -209,7 +210,7 @@ if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
 	}
     exit;
 }
-else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 1
+else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 0
 || Player.ultraNow))&&(Player.ultra_got[75]==0)//ULTRA! Player.level>9 not skelly redemption ultra a Player.skillsChosen>7
 {
 	Player.ultraNow = false;
@@ -228,7 +229,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	}
 	//UNLOCK MUTATION DOCTOR/SMITH
 	scrUnlockCharacter(25,"FOR GETTING AN ULTRA MUTATION");
-	if Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 1//&&(Player.skillsChosen>7)
+	if Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken && Player.skillpoints == 0//&&(Player.skillsChosen>7)
 	{
 		scrUltraEHorror();
 	}

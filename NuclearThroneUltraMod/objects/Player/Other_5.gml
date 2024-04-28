@@ -74,12 +74,19 @@ if ultra_got[51] && altUltra
 	sheepFakeouts = 3 + (skill_got[5] * 2);
 }
 ///at the end of a level stuff
-if patience>0||(ultra_got[0]=1 && !altUltra)
+if (ultra_got[0]=1 && !altUltra && !horrorEtaken)
 {
-skillpoints+=patience;
-skillsChosen-=patience;
-patience=0;
+	patience = 1;
+	skillpoints = max(0,skillpoints);
+	instance_create(x,y,LevCont);
 }
+else if patience > 0
+{
+	skillpoints += patience;
+	skillsChosen -= patience;
+	patience = 0;
+}
+
 
 invertedportalcounter=0;
 

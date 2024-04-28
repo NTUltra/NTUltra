@@ -40,7 +40,7 @@ function scrStartingWeapons() {
 	start_wep[38]=651
 	start_wep[39]=653
 	start_wep[40]=731
-	start_wep[41]=767
+	start_wep[41]=765
 	//39 + 11 char specific starting
 	var dir=1;
 
