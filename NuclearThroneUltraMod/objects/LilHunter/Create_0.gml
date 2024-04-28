@@ -36,7 +36,10 @@ intro = 0
 
 //FLY
 alarm[2] = 250+random(100)//30
-
+if instance_exists(SurvivalWave)
+{
+	alarm[2] = 5;
+}
 
 sndtaunt = 0
 tauntdelay = 0

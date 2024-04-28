@@ -2,7 +2,7 @@
 if instance_exists(owner) && owner != noone
 {
 	var len = 28;
-	image_angle = point_direction(owner.x,owner.y,UberCont.mouse__x,UberCont.mouse__y);
+	image_angle = point_direction(owner.x,owner.y,mouse_x,mouse_y);
 	if type == 1
 		image_angle += 180;
 	x = owner.x + lengthdir_x(len,image_angle);

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndHeavyDenseGun",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.085281,
+  "name":"sndHeavyDenseGun",
+  "parent":{
+    "name":"Bullet",
+    "path":"folders/Sounds/Weapons/Bullet.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndHeavyDenseGun.ogg",
+  "type":0,
+  "volume":1.0,
+}

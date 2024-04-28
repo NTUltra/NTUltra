@@ -6,6 +6,7 @@ spr_hurt = sprThroneStatue
 spr_dead = sprThroneStatueDead
 
 event_inherited()
+snd_hurt = sndHitRock
 team = 1;
 breakY = y - 16;
 loops = min(10,GetPlayerLoops());

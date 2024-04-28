@@ -65,12 +65,12 @@ function scrSkills() {
 				skill_name[2] = "EXTRA FINGERS"
 			if Player.race == 1
 			{
-				skill_detail[2] = "FASTER <w>ROLL<w>#MORE WALK <w>SPEED<w>#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"
+				skill_detail[2] = "FASTER <w>ROLL<w>#MORE WALK <w>SPEED<w>#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"
 			}
 			else if Player.race == 13
 			{
 			
-				skill_detail[2] = "FASTER <pi>CHARGE<pi>#MORE <pi>CHARGE<pi> <w>CONTROL<w>#MORE WALK <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACES<w> BY ENEMIES"
+				skill_detail[2] = "FASTER <pi>CHARGE<pi>#MORE <pi>CHARGE<pi> <w>CONTROL<w>#MORE WALK <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"
 			}
 			else
 			{

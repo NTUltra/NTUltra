@@ -40,6 +40,9 @@
     "name":"sprPlayerSquareBullet",
     "path":"sprites/sprPlayerSquareBullet/sprPlayerSquareBullet.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sprPlayerSquareBullet",
+    "path":"sprites/sprPlayerSquareBullet/sprPlayerSquareBullet.yy",
+  },
   "visible":true,
 }

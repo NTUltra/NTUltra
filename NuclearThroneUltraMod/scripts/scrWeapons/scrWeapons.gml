@@ -3053,7 +3053,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 35
+	wep_load[272] = 40
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 15
@@ -3087,7 +3087,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 60
+	wep_load[275] = 70
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 18
@@ -8128,7 +8128,7 @@ function scrWeapons() {
 	wep_auto[726] = 3
 	wep_load[726] = 10
 	wep_cost[726] = 2
-	wep_sprt[726] = sprTelepathor
+	wep_sprt[726] = sprFrostTelepathor
 	wep_area[726] = 7
 	wep_text[726] = "thinking about snow"
 	wep_swap[726] = sndSwapShotgun
@@ -8380,8 +8380,8 @@ function scrWeapons() {
 	wep_name[749] = "SUPER BLOOD ROCKET GUN"
 	wep_type[749] = 4
 	wep_auto[749] = 3
-	wep_load[749] = 10
-	wep_cost[749] = 4
+	wep_load[749] = 9
+	wep_cost[749] = 4.25
 	wep_sprt[749] = sprSuperBloodRocketGun
 	wep_area[749] = 19
 	wep_text[749] = "I see red"
@@ -8470,8 +8470,8 @@ function scrWeapons() {
 	wep_name[757] = "NAIL GUN"
 	wep_type[757] = 3
 	wep_auto[757] = 2
-	wep_load[757] = 12
-	wep_cost[757] = 4
+	wep_load[757] = 13
+	wep_cost[757] = 3.5
 	wep_sprt[757] = sprNailGun
 	wep_area[757] = 1
 	wep_text[757] = "nail them to the wall"
@@ -8554,18 +8554,53 @@ function scrWeapons() {
 	wep_text[764] = "suck it all"
 	wep_swap[764] = sndSwapEnergy
 	wep_rad[764] = 9;
-	wep_popup[746] = "HOLD TO SUCK UP ANY ENEMY PROJECTILE#CAN SUCK SMALLER ENEMIES";
+	wep_popup[764] = "HOLD TO SUCK UP ANY ENEMY PROJECTILE#CAN SUCK SMALLER ENEMIES";
 	
-	wep_name[767] = "GOLDEN MICRO MACHINEGUN"
-	wep_type[767] = 1
-	wep_auto[767] = 1
-	wep_load[767] = 3.5
-	wep_cost[767] = 0.75
-	wep_sprt[767] = sprGoldenMicroMachinegun
-	wep_area[767] = 17
-	wep_text[767] = "goldscan"
-	wep_swap[767] = sndSwapPistol
+	wep_name[765] = "GOLDEN MICRO MACHINEGUN"
+	wep_type[765] = 1
+	wep_auto[765] = 1
+	wep_load[765] = 3.5
+	wep_cost[765] = 0.75
+	wep_sprt[765] = sprGoldenMicroMachinegun
+	wep_area[765] = 17
+	wep_text[765] = "goldscan"
+	wep_swap[765] = sndSwapPistol
+	wep_rad[765] = 0;
+	
+	wep_name[766] = "HEAVY DENSE GUN"
+	wep_type[766] = 1
+	wep_auto[766] = 0
+	wep_load[766] = 29
+	wep_cost[766] = 18
+	wep_sprt[766] = sprHeavyDenseGun
+	wep_area[766] = 5
+	wep_text[766] = "a brick"
+	wep_swap[766] = sndSwapPistol
+	wep_rad[766] = 0;
+
+	wep_name[767] = "DIRECTOR PENETRATOR"
+	wep_type[767] = 3
+	wep_auto[767] = 0
+	wep_load[767] = 26
+	wep_cost[767] = 3
+	wep_sprt[767] = sprDirectorPenetrator
+	wep_area[767] = 5
+	wep_text[767] = "piercing scales damage, can be redirected"
+	wep_swap[767] = sndSwapBow
 	wep_rad[767] = 0;
+	wep_popup[767] = "FIRE AGAIN TO REDIRECT";
+	
+	wep_name[768] = "ULTRA DIRECTOR RIFLE"
+	wep_type[768] = 1
+	wep_auto[768] = 2
+	wep_load[768] = 16
+	wep_cost[768] = 9
+	wep_sprt[768] = sprUltraDirectorRifle
+	wep_area[768] = 23
+	wep_text[768] = "what way am I coming from"
+	wep_swap[768] = sndSwapMachinegun
+	wep_rad[768] = 20;
+	wep_popup[767] = "DEALS HIGHER DAMAGE BEFORE REDIRECTING";
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

@@ -2271,7 +2271,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 10;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2287,7 +2287,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2303,7 +2303,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2315,7 +2315,7 @@ function scrFire2(hasTailNow) {
 	var l = 32;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 12;
+		dmg = 10;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2324,7 +2324,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2333,7 +2333,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -17171,7 +17171,7 @@ function scrFire2(hasTailNow) {
 	break;
 	
 	//GOLDENMICRO MACHINEGUN
-	case 767:
+	case 765:
 
 	//snd_play_fire(sndPistol)
 	snd_play(sndMicroSmg,0.02,true);
@@ -17194,6 +17194,76 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 3
 	wkick = 2
+
+	break;
+	
+	//HEAVY DENSE GUN
+	case 766:
+
+	snd_play_fire(sndHeavyDenseGun);
+
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	var am = 6;
+	var aim = aimDirection+(random(8)-4)*other.accuracy
+	var ang = aim;
+	var angStep = 60;
+	var spd = 18;
+	var len = 4 * accuracy;
+	with instance_create(x,y,HeavyBullet)
+	{motion_add(aim,spd)
+	image_angle = direction
+	team = other.team}
+	repeat(am)
+	{
+		with instance_create(x + lengthdir_x(len,ang),y + lengthdir_y(len,ang),HeavyBullet)
+		{motion_add(aim,spd)
+		image_angle = direction
+		team = other.team}
+		ang += angStep;
+	}
+
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 15
+	wkick = 5
+	
+	if !skill_got[2]
+	scrMoveContactSolid(aimDirection + 180,8);
+
+	break
+	
+	//DIRECTOR PENETRATOR
+	case 767:
+
+	snd_play_fire(sndHeavyCrossbow)
+
+	with instance_create(x,y,DirectorPenetratorBolt)
+	{
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,10)
+		image_angle = direction
+		team = other.team
+	}
+
+	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
+	wkick = 7
+
+	break;
+	
+	//ULTRA DIRECTOR RIFLE
+	case 768:
+
+	with instance_create(x,y,UltraDirectorBurst)
+	{
+	creator = other.id
+	ammo = 2
+	time = 3
+	team = other.team
+	event_perform(ev_alarm,0) 
+	}
 
 	break;
 	

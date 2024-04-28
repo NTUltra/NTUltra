@@ -2,7 +2,7 @@ function scrTips() {
 	tiptype = choose(0,0,0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,5,6,6,7,7,7))
 
 	if !instance_exists(Player)
-	tiptype = 0
+		tiptype = 0
 	tip = "";
 	if tiptype = 0
 	{

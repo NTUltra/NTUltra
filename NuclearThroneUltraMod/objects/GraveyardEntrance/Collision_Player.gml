@@ -3,6 +3,11 @@ if my_health > 0
 {
 	if KeyCont.key_pick[other.p] = 1
 	{
+		with other
+		{
+			if place_meeting(x,y,Portal)
+				exit;
+		}
 		with Portal
 		{
 			instance_destroy();	

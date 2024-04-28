@@ -6,11 +6,12 @@ function getUltraMutation(){
 	{
 		var isFishMode = scrIsGamemode(14);
 		//Horror
+		/*
 		if race == 21
 		{
 			if ultra_got[0]
 				return 0;
-		}
+		}*/
 		var i = 1+((race-1)*4);
 		repeat(4)
 		{

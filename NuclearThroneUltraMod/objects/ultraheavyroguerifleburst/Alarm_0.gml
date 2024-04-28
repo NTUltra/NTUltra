@@ -20,11 +20,20 @@ image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
 }
-
-BackCont.viewx2 += lengthdir_x(10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-BackCont.viewy2 += lengthdir_y(10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180
+BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 BackCont.shake += 5
-creator.wkick = 4}
+creator.wkick = 4
+with creator
+{
+	if !skill_got[2]
+	{
+		motion_add(aimDirection,1)
+		scrMoveContactSolid(aimDirection,1)
+	}	
+}
+}
 
 
 if ammo <= 0
