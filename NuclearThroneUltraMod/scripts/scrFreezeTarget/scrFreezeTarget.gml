@@ -20,7 +20,14 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 	else
 	{
 		with frozen {
-			debrisAmount = min(debrisAmount + 0.25, 4);
+			var perc = 0.25;
+			var mmax = 4;
+			if instance_exists(Player) && Player.race == 25
+			{
+				perc = 0.35;
+				mmax = 5;
+			}
+			debrisAmount = min(debrisAmount + perc, mmax);
 		}
 	}
 	if alarm[1] > stunTime

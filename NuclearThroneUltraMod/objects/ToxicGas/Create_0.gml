@@ -13,6 +13,8 @@ team = 0
 typ = 0//2
 dmg = 3;
 cantHitTeam = -2;
+moodSwingable = false;
+isDoc = false;
 if instance_exists(Player)
 {//frog
 	//FROG POTENCY
@@ -34,6 +36,14 @@ if instance_exists(Player)
 	{
 		image_xscale -= 0.1	
 		image_yscale -= 0.1
+	}
+	if Player.skill_got[43]
+	{
+		moodSwingable = true;
+		if Player.race == 25
+		{
+			isDoc = true;	
+		}
 	}
 }
 alarm[2] = 2;

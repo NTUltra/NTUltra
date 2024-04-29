@@ -16,6 +16,8 @@ depth = 0;
 dmg=3;
 consumeAmount = 1;
 dodgeAble = false;
+moodSwingable = false;
+isDoc = false;
 if instance_exists(Player)
 {
 	if Player.race=23
@@ -25,6 +27,14 @@ if instance_exists(Player)
 		{
 			image_xscale += 0.05;
 			image_yscale += 0.05;
+		}
+	}
+	if Player.skill_got[43]
+	{
+		moodSwingable = true;
+		if Player.race == 25
+		{
+			isDoc = true;	
 		}
 	}
 	//FROG POTENCY

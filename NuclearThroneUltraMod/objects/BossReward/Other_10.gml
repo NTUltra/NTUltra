@@ -12,7 +12,7 @@ switch(array_length(UberCont.collectedRewards))
 		name += "INCREASE THE VALUE OF RADIATION BY 10%";
 	break;
 	case 2:
-		name += "GAIN 10 PORTAL ESSENCE";
+		name += "GAIN 8 PORTAL ESSENCE";
 	break;
 	case 3:
 		name += "UNLOCK THE MUTATION REROLL STATION";

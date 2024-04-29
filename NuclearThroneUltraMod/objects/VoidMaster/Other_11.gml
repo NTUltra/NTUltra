@@ -7,3 +7,11 @@ if introSpiel
 		alarm[2] = 5;
 	}
 }
+else
+{
+	with TextHandler
+	{
+		text = "TAKE ON A CHALLENGE IF YOU DARE";
+		alarm[2] = 5;
+	}
+}

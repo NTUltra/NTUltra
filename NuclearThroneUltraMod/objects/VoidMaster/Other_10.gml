@@ -18,9 +18,15 @@ if introSpiel
 		break;
 		case 2:
 			introSpiel = false;
-		with TextHandler {
+			with TextHandler {
 				text = "";
 			}
 		break;
+	}
+}
+else
+{
+	with TextHandler {
+		text = "";
 	}
 }

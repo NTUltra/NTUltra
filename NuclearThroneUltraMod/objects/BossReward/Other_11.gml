@@ -18,7 +18,7 @@ switch(array_length(UberCont.collectedRewards))
 	break;
 	case 2:
 		with UberCont {
-			portalEssence += 10;	
+			portalEssence += 8;	
 		}
 		snd_play(other.snd_chst);
 	break;

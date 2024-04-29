@@ -10,7 +10,6 @@ scroll = 0;
 scrollWidth = 0;
 scrollSpeed = 24;
 selectedIndex = -1;
-debug("LEVCONT: ", Player.skillpoints);
 with KeyCont
 {
 	key_fire[0] = 2;
