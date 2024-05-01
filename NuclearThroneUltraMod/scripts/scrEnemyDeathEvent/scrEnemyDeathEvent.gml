@@ -347,7 +347,7 @@ function scrEnemyDeathEvent(){
 		}
 		if instance_number(enemy) <= instance_number(IDPDVan)+1 && !instance_exists(becomenemy)
 		{
-			snd_play(sndLastEnemy,0,true)
+			snd_play_2d(sndLastEnemy,0,true)
 		}
 		else if scrIsGamemode(12) && !wasResurrected
 		{

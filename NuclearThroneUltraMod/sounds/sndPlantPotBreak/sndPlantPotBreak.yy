@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndPlantPotBreak",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.725375,
+  "name":"sndPlantPotBreak",
+  "parent":{
+    "name":"Enviroment",
+    "path":"folders/Sounds/Enviroment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndPlantPotBreak.wav",
+  "type":0,
+  "volume":1.0,
+}

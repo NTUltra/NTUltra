@@ -234,11 +234,13 @@ if instance_exists(Player)
 			{
 				name = "Guard Bob";
 				throwSpeed = 0;
+				alarm[7] = 70;
 			}
 			with instance_create(x,y,Ally)
 			{
 				name = "Guard Weave";
 				throwSpeed = 0;
+				alarm[8] = 110;
 			}
 	    }
 	    if race == 13

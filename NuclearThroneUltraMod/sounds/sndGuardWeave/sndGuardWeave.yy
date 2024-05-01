@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndLastEnemy",
+  "%Name":"sndGuardWeave",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
@@ -9,17 +9,17 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":3.045375,
-  "name":"sndLastEnemy",
+  "duration":0.499531,
+  "name":"sndGuardWeave",
   "parent":{
     "name":"Regular",
     "path":"folders/Sounds/Enemies/Regular.yy",
   },
-  "preload":true,
+  "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndLastEnemy.wav",
+  "soundFile":"sndGuardWeave.wav",
   "type":0,
   "volume":1.0,
 }
