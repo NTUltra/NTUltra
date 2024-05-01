@@ -32,7 +32,7 @@
   ],
   "name":"sprVoidFiendIntro",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Void",
     "path":"folders/Sprites/Void.yy",
@@ -109,7 +109,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":16,
-    "yorigin":32,
+    "yorigin":48,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

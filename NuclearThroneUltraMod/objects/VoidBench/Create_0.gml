@@ -8,3 +8,5 @@ spr_dead = sprVoidFiendBenchIntro;
 event_inherited()
 shadowSprite = mskPickupThroughWall;
 image_speed = 0;
+canMoveOver = true;
+snd_hurt = sndSilence

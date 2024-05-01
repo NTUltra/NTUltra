@@ -2,7 +2,15 @@
 if sprite_index == spr_intro
 {
 	sprite_index = spr_idle;
-	alarm[2] = 30;
+	if killerSequence
+	{
+		alarm[2] = 30;
+	}
+	else
+	{
+		audio_stop_sound(sndVoidEyeCreeping);
+		snd_play(sndVoidCreepEnd);	
+	}
 	BackCont.shake += 10;
 }
 if sprite_index == spr_dead

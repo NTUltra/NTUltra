@@ -1,7 +1,8 @@
 /// @description Itterate sequence
 if TextHandler.showCanSkip
 {
-	alarm[2] = 30;
+	if TextHandler.text != ""
+		alarm[2] = 30;
 }
 else
 {

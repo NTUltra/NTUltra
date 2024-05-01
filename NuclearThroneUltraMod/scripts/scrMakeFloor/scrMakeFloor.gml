@@ -799,7 +799,7 @@ function scrMakeFloor(limiter) {
 	//instance_create(x,y,Floor)
 
 	if !instance_exists(WeaponChest) && (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || (area == 9 && subarea != 3)
-	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104{
+	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104 and area != 137{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,WeaponChest)}
 

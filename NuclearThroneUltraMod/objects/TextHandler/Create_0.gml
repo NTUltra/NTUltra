@@ -2,3 +2,4 @@
 text = "";
 useFont = false;
 showCanSkip = true;
+canStartTalking = true;

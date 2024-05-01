@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"VoidShopItemGoldenWeaponChest",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"VoidShopItemGoldenWeaponChest",
   "overriddenProperties":[],
@@ -35,8 +38,8 @@
     "path":"sprites/sprVoidShopItem/sprVoidShopItem.yy",
   },
   "spriteMaskId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskPickupThroughWall",
+    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
   },
   "visible":true,
 }

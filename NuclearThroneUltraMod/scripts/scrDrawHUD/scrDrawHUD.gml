@@ -1728,7 +1728,7 @@ function scrDrawHUD() {
 			{
 				var yy = y-oy-18;
 				var xx = x-ox-2;
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-talkPopupY-7)
 
 				draw_set_color(c_black)
 				draw_text(xx,yy-talkPopupY,string_hash_to_newline(string(name)))
@@ -1736,6 +1736,23 @@ function scrDrawHUD() {
 				draw_text(xx+1,yy-talkPopupY-1,string_hash_to_newline(string(name)))
 				draw_set_color(c_white)
 				draw_text(xx,yy-talkPopupY-1,string_hash_to_newline(string(name)))
+				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			}
+		}
+		with VoidShopItem
+		{
+			if place_meeting(x,y,Player)
+			{
+				var yy = y-oy-18;
+				var xx = x-ox-2;
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy+7)
+				var nm = name + "\nCOSTS: "+string(cost);
+				draw_set_color(c_black)
+				draw_text(xx,yy-30,nm)
+				draw_text(xx+1,yy-30,nm)
+				draw_text(xx+1,yy-31,nm)
+				draw_set_color(c_white)
+				draw_text(xx,yy-31,nm)
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

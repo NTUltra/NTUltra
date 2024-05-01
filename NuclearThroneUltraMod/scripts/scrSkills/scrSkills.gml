@@ -564,7 +564,7 @@ function scrSkills() {
 	
 	skill_name[45] = "ADRENALINE FUEL"
 	skill_text[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>";
-	skill_detail[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>#WHEN USING <g>ULTRA<g> WEAPONS GAIN <g>RADS<g>##PRIORITIZES EQUIPPED AMMO#CAN QUEUE ONE HEAL#WHEN AT FULL HEALTH";
+	skill_detail[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y> (0.6S)#VERY SLOWLY <r>HEAL<r> (6.5S)#WHEN USING <g>ULTRA<g> WEAPONS GAIN <g>RADS<g>##PRIORITIZES EQUIPPED AMMO#CAN QUEUE ONE HEAL#WHEN AT FULL HEALTH";
 	skill_tips[45] = "rush of adrenaline"
 	skill_msnd[45] =  sndMutAdrenalineFuel;
 	skill_bons[45] = "+25% HEAL RATE"

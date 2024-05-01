@@ -46,8 +46,8 @@
     "path":"sprites/sprVoidSeerIntro/sprVoidSeerIntro.yy",
   },
   "spriteMaskId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskVoidSeer",
+    "path":"sprites/mskVoidSeer/mskVoidSeer.yy",
   },
   "visible":true,
 }

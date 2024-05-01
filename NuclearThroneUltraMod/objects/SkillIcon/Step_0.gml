@@ -15,7 +15,7 @@ if selected && visible
 {
 	hover = true;
 	if KeyCont.key_spec[p] == 1 && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra){
-		KeyCont.key_spec[p] = 2;
+		//KeyCont.key_spec[p] = 2;
 		with SkillIcon
 		{
 			showDetail = !showDetail;

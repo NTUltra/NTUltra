@@ -41,8 +41,8 @@
     "path":"sprites/sprVoidShopItem/sprVoidShopItem.yy",
   },
   "spriteMaskId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskPickupThroughWall",
+    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
   },
   "visible":true,
 }

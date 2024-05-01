@@ -33,7 +33,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 			if canAmmo
 			{
 				//scrSwapWeps();
-				scrCollectAmmo(0.25, false, false, false, true);
+				scrCollectAmmo(0.24, false, false, false, true);
 				if wep_rad[wep] > 0 || wep_rad[bwep] > 0 || wep_rad[cwep] > 0
 					scrRaddrop(1);
 				//scrSwapWeps();

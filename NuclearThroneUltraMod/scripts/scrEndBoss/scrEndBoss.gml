@@ -45,9 +45,92 @@ function scrEndBoss() {
 			canRestart = true;
 			instance_create(x,y,SendRace);
 		}
-		if scrIsOnlyNormalGamemode()
+		if array_length(UberCont.opt_gamemode) == 1 && scrIsGamemode(9)
 		{
+			//Normal mode best time
+			//in seconds
+			var besttime = time_seconds+(time_minutes*60)+(time_hours*3600);
+			var bestofall = true
+			var dir= 1;
 
+			repeat(racemax)
+			{
+				if besttime > cbst_time_casual[dir]
+					bestofall=false;
+				dir++;
+			}
+
+			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
+
+		    if bestofall
+		    {
+    
+			    cbst_time_casual[Player.race] = besttime;
+    
+			    with instance_create(x,y,UnlockPopup)
+			    {
+					mytext="BEST CASUAL MODE TIME ALL CHARACTERS!!!#"+other.race_name[Player.race]+"#"+other.txttime
+			    }
+    
+			    scrSave();
+		    }
+		    else if besttime < cbst_time_casual[Player.race]
+		    {
+    
+			    cbst_time_casual[Player.race]= besttime;
+    
+			    with instance_create(x,y,UnlockPopup)
+			    {
+			    mytext="BEST CASUAL MODE TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
+			    }
+    
+			    scrSave();
+		    }
+		}
+		else if array_length(UberCont.opt_gamemode) == 1 && scrIsHardMode()
+		{
+			//Hard mode best time
+			//in seconds
+			var besttime = time_seconds+(time_minutes*60)+(time_hours*3600);
+			var bestofall = true
+			var dir= 1;
+
+			repeat(racemax)
+			{
+				if besttime > cbst_time_hard[dir]
+					bestofall=false;
+				dir++;
+			}
+
+			txttime = string(time_hours)+":"+minutesstring+":"+secondsstring+":"+microseconds;
+
+		    if bestofall
+		    {
+    
+			    cbst_time_hard[Player.race] = besttime;
+    
+			    with instance_create(x,y,UnlockPopup)
+			    {
+					mytext="BEST HARD MODE TIME ALL CHARACTERS!!!#"+other.race_name[Player.race]+"#"+other.txttime
+			    }
+    
+			    scrSave();
+		    }
+		    else if besttime < cbst_time_hard[Player.race]
+		    {
+    
+			    cbst_time_hard[Player.race]= besttime;
+    
+			    with instance_create(x,y,UnlockPopup)
+			    {
+			    mytext="BEST HARD MODE TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
+			    }
+    
+			    scrSave();
+		    }
+		}
+		else if scrIsOnlyNormalGamemode()
+		{
 			//in seconds
 			var besttime = time_seconds+(time_minutes*60)+(time_hours*3600);
 			var bestofall = true
@@ -69,7 +152,7 @@ function scrEndBoss() {
     
 			    with instance_create(x,y,UnlockPopup)
 			    {
-					mytext="BEST TIME YET!!! "+other.race_name[Player.race]+"#"+other.txttime
+					mytext="BEST TIME ALL CHARACTERS!!!#"+other.race_name[Player.race]+"#"+other.txttime
 			    }
     
 			    scrSave();
@@ -88,7 +171,6 @@ function scrEndBoss() {
 		    }
     
 		}
-
 	}
 	}
 

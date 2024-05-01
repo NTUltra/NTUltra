@@ -1,43 +1,40 @@
 /// @description Start a conversation
 var t = "";
-if UberCont.char_void_entered[race] == 1 && false
+if UberCont.char_void_entered[race] == 1
 {
 	t = scrText(race - 1, "strFirstVisit");
-	killerSequence = false;
-	alarm[2] = 90;
 }
 else if loops > 1
 {
 	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomLoop2-" + ranLine);
+	t = scrText(race - 1, "strRandomLoop2-" + string(ranLine));
 }
 else if loops > 0
 {
 	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomLoop1-" + ranLine);
+	t = scrText(race - 1, "strRandomLoop1-" + string(ranLine));
 }
 else
 {
 	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomPreLoop" + ranLine);
+	t = scrText(race - 1, "strRandomLoop0-" + string(ranLine));
 }
-
+debug(t);
 textQueue = string_split(t,"*");
-textQueueTime = [];
+debug(textQueue);
+/*
 var al = array_length(textQueue);
 for (var i = 0; i < al; i ++)
 {
-	textQueueTime[i] = real(string_digits(textQueue[i]));
 	if string_letters(textQueue[i]) == ""
 		textQueue[i] = 0;
 	else
 		textQueue[i] = string_letters(textQueue[i]);
-}
-textQueue[al-1] = "";
-textQueueTime[al-1] = 0;
+}*/
+textQueue[array_length(textQueue)] = "";
 dialogueStep = 0;
 with TextHandler
 {
-	text = scrText(other.race, other.textQueue[other.dialogueStep]);
+	text = other.textQueue[other.dialogueStep];
 }
-alarm[2] = textQueueTime[0];
+alarm[2] = 5;

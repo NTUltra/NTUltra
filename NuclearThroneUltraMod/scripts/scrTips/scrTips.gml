@@ -366,8 +366,10 @@ function scrTips() {
 	tip = choose("golden factory","bling bling guns","gold digging");
 	if Player.area = 134
 	tip = choose("ultra factory","supreme technology","top of the line","ultra robots");
-	if Player.area = 135
+	if Player.area = 135//HQ
 	tip = choose("this should not be here","not yet","end this");
+	if Player.area = 136//Ultra scrapyard
+	tip = choose("get an ultra weapon here","its green","irradiated beyond belief","radiation");
 	}
 
 

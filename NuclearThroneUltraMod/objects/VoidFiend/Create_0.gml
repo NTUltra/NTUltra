@@ -5,4 +5,10 @@ spr_intro = sprVoidFiendIntro;
 spr_idle = sprVoidFiend;
 alarm[0] = 15;
 depth = 3;
-introSpiel = true;
+loops = GetPlayerLoops();
+introSpiel = false;
+if loops < 1
+{
+	introSpiel = true;
+}
+openedShop = false;

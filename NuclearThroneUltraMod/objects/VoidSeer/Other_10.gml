@@ -46,7 +46,18 @@ if killerSequence
 			alarm[2] = 50;
 			alarm[3] = 1;
 			BackCont.shake += 10;
-			if !cantUnderstand
+			if race == 13//Sheep
+			{
+				cantUnderstand = true;
+				alarm[2] = 60;
+				with TextHandler
+				{
+					text = "WAIT ITS JUST A SHEEP...";
+					useFont = other.cantUnderstand;
+					dialogueStep = 6;
+				}
+			}
+			else if race == 6//YV
 			{
 				dialogueStep = 18;
 				alarm[2] = 15;
@@ -181,12 +192,21 @@ if killerSequence
 			{
 				text = "";
 				showCanSkip = true;
+				canStartTalking = true;
 			}
 			with VoidExit
 			{
 				alarm[0] = 4;
 			}
 			killerSequence = false;
+			with VoidFiend
+			{
+				hasShitToSay = true;	
+			}
+			with VoidMaster
+			{
+				hasShitToSay = true;	
+			}
 			hasShitToSay = true;
 		break;
 		//YV KILLER SEQUENCE
@@ -273,10 +293,19 @@ if killerSequence
 			{
 				text = "";
 				showCanSkip = true;
+				canStartTalking = true;
 			}
 			with VoidExit
 			{
 				alarm[0] = 4;
+			}
+			with VoidFiend
+			{
+				hasShitToSay = true;	
+			}
+			with VoidMaster
+			{
+				hasShitToSay = true;	
 			}
 			killerSequence = false;
 			alarm[2] = 5;
@@ -285,14 +314,15 @@ if killerSequence
 }
 else
 {
-	if array_length(textQueue) > 0
+	var al = array_length(textQueue)
+	if al > 0 && dialogueStep < al
 	{
 		with TextHandler
 		{
-			text = scrText(other.race, other.textQueue[other.dialogueStep]);
+			text = other.textQueue[other.dialogueStep];
 		}
 		hasShitToSay = false;
-		alarm[2] = textQueueTime[dialogueStep];
+		alarm[2] = 5;
 	}
 	else
 	{

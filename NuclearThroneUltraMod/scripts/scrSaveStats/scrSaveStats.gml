@@ -11,10 +11,15 @@ function scrSaveStats() {
 		ini_write_real("STATS","ctotplayed"+string(dir),ctot_played[dir]);
 
 		ini_write_real("STATS","ctotloop"+string(dir),ctot_loop[dir]);
+		
+		ini_write_real("STATS","charvoidentered"+string(dir),char_void_entered[dir]);
 
 		ini_write_real("STATS","cbstkill"+string(dir),cbst_kill[dir]);
 
 		ini_write_real("STATS","cbsttime"+string(dir),cbst_time[dir]);
+		ini_write_real("STATS","cbsttimecasual"+string(dir),cbst_time_casual[dir]);
+		ini_write_real("STATS","cbsttimehard"+string(dir),cbst_time_hard[dir]);
+
 
 		ini_write_real("STATS","cbstdiff"+string(dir),cbst_diff[dir]);
 
@@ -79,4 +84,5 @@ function scrSaveStats() {
 	}
 	ini_write_real("STATS","totalRoutesFound",string(al));
 	ini_write_real("STATS","tottime",string(tot_time));
+	ini_write_real("STATS","ctotvoidentered",string(ctot_void_entered));
 }

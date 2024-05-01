@@ -1,5 +1,6 @@
 /// @description Draw item on top
-draw_self();
+if !onTheTable
+	draw_self();
 if image_index >= image_number - 1
 {
 	draw_sprite(spr_item,0,x,y-sin(wave));

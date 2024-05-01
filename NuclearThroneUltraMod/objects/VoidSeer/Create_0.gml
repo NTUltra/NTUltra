@@ -12,14 +12,17 @@ race = Player.race;
 raceName = Player.race_name[Player.race];
 UberCont.char_void_entered[race] += 1;
 textQueue = [];
-textQueueTime = [];
 cantUnderstand = true;
 previousWep = 0;
 previousBwep = 0;
-if (true || (UberCont.ctot_void_entered == 0) || (race == 6 && UberCont.char_void_entered[race] == 1))
+if (UberCont.char_void_entered[race] == 1)
 {
 	killerSequence = true;
 	hasShitToSay = false;
+	with VoidNPC
+	{
+		hasShitToSay = false;	
+	}
 	with VoidMaster
 	{
 		visible = false;
@@ -41,9 +44,10 @@ if (true || (UberCont.ctot_void_entered == 0) || (race == 6 && UberCont.char_voi
 	}
 	with TextHandler
 	{
-		showCanSkip = false;	
+		showCanSkip = false;
+		canStartTalking = false;
 	}
-	if race == 6 {
+	if race == 6 || race == 7 {
 		cantUnderstand = false;
 	}
 }

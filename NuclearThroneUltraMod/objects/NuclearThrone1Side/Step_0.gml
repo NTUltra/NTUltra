@@ -1,5 +1,5 @@
 /// @description Check if I die so disable me
-if my_health <= maxhealth * 0.5 && loops > 0 && !reachedHalfHealth && !disable
+if my_health <= maxhealth * 0.5 && loops > 0 && !reachedHalfHealth && !disable && instance_exists(NuclearThrone1) && NuclearThrone1.active
 {
 	reachedHalfHealth = true;
 	snd_play(sndNothingBeamWarn,0);

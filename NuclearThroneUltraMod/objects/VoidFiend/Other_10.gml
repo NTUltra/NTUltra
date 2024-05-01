@@ -1,7 +1,7 @@
 /// @description Dialogue
 if introSpiel
 {
-	var raceName = Player.race_name[Player.race];
+	var raceName = string_replace_all(string_replace_all(Player.race_name[Player.race],"[",""),"]","")
 	switch (dialogueStep)
 	{
 		case 0:
@@ -18,7 +18,7 @@ if introSpiel
 		break;
 		case 2:
 			with TextHandler {
-				text = "MAYBE SOMETHING USEFULL FOR " + raceName + "?";
+				text = "MAYBE SOMETHING USEFUL FOR " + raceName + "?";
 			}
 			alarm[2] = 5;
 		break;
@@ -27,6 +27,7 @@ if introSpiel
 				text = "TAKE LOOK AND BUY!";
 			}
 			alarm[2] = 5;
+			event_user(2);
 		break;
 		case 4:
 			introSpiel = false;

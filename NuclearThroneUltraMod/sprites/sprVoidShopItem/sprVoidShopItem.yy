@@ -29,7 +29,7 @@
   ],
   "name":"sprVoidShopItem",
   "nineSlice":null,
-  "origin":4,
+  "origin":1,
   "parent":{
     "name":"Void",
     "path":"folders/Sprites/Enviroment/Tiles/Void.yy",
@@ -100,7 +100,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":12,
-    "yorigin":12,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

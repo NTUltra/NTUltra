@@ -6,3 +6,4 @@ name = "LEAVE";
 nav = 0;
 textAngle = 0;
 alarm[6] = 5;
+instance_create(x,y,WallBreak);

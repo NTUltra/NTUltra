@@ -32,6 +32,8 @@ function scrLoadStats() {
 		cbst_kill[dir] = ini_read_real("STATS","cbstkill"+string(dir),0);
 
 		cbst_time[dir] = ini_read_real("STATS","cbsttime"+string(dir),999999999);
+		cbst_time_casual[dir] = ini_read_real("STATS","cbsttimecasual"+string(dir),999999999);
+		cbst_time_hard[dir] = ini_read_real("STATS","cbsttimehard"+string(dir),999999999);
 
 		cbst_diff[dir] = ini_read_real("STATS","cbstdiff"+string(dir),0);
 

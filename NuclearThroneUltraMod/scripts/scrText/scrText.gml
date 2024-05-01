@@ -3,6 +3,8 @@
 ///@param translationKey
 function scrText(translationColumn, translationKey){
 	var text = "N/A";
+	debug(translationColumn);
+	debug(translationKey);
 	with Translations
 	{
 		if (translationKeys[? translationKey] != undefined)
@@ -12,5 +14,6 @@ function scrText(translationColumn, translationKey){
 			text = translationKey;	
 		}
 	}
-	return text;
+	debug(text);
+	return string_upper(text);
 }

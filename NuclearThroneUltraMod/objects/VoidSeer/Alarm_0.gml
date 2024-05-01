@@ -6,7 +6,14 @@ if instance_exists(Player) && alarm[1] < 1
 	{
 		if point_distance(x,y,Player.x,Player.y) < 64
 		{
-			alarm[1] = 60;
+			if !killerSequence
+			{
+				alarm[1] = 20;
+			}
+			else
+			{
+				alarm[1] = 60;
+			}
 		}
 	}
 }

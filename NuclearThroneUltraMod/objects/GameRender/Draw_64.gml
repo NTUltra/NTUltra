@@ -44,7 +44,7 @@ if !instance_exists(MenuGen)
 				draw_set_font(fntM);
 			if showCanSkip
 			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,vw - 10,vy + vh + (6*s))
+				draw_sprite_ext(sprEPickup,UberCont.opt_gamepad,vx + vw - (10*s),vy + vh - (12*s),s,s,0,c_white,1)
 			}
 		}
 	}
