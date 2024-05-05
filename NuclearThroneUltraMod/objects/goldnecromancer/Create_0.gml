@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+range += 100;
 alarm[1] = 30;
 raddrop = 16
 maxhealth = 30

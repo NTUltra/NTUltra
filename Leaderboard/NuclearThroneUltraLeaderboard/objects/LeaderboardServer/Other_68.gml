@@ -18,7 +18,7 @@ if (type == network_type_non_blocking_connect || type == network_type_connect)
 	buffer_write(sendBuffer,buffer_u16,totalWeeklies);
 	network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 	buffer_delete(sendBuffer);
-	hitsCounter += 1;
+	//hitsCounter += 1;
 }
 //Data to act on
 if (type == network_type_data) {

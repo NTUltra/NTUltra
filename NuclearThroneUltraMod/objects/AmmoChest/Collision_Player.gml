@@ -26,8 +26,8 @@ if mediumchest==0{
 	scrChestOpenMindReload(other);
 	with other
 	{
-		ammo[t] += typ_ammo[t]*2
-		var amount = typ_ammo[t]*2;
+		ammo[t] += typ_ammo[t]*other.ammoValue
+		var amount = typ_ammo[t]*other.ammoValue;
 		var excess = ammo[t] - typ_amax[t];
 		if ammo[t] > typ_amax[t]
 			ammo[t] = typ_amax[t];
@@ -100,34 +100,33 @@ if mediumchest==0{
 else{//ROIDS ULTRA B
 var i;
 i=0;
-repeat(5)
-{
-
-i+=1;
-
-type = i;
-
-other.ammo[type] += other.typ_ammo[type]*2
-if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
-	other.ammo[type] = other.typ_amax[type]
-
-	if (UberCont.opt_ammoicon)
+	repeat(5)
 	{
-		dir = instance_create(x,y,PopupText)
-		dir.sprt = sprAmmoIconsPickup
-		dir.ii = type-1;
-		dir.mytext = "+"+string(other.typ_ammo[type]*2);
-		if other.ammo[type] == other.typ_amax[type]
-			dir.mytext = "MAX";
+		i+=1;
+
+		type = i;
+
+		other.ammo[type] += other.typ_ammo[type]*ammoValue
+		if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
+			other.ammo[type] = other.typ_amax[type]
+
+		if (UberCont.opt_ammoicon)
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.sprt = sprAmmoIconsPickup
+			dir.ii = type-1;
+			dir.mytext = "+"+string(other.typ_ammo[type]*2);
+			if other.ammo[type] == other.typ_amax[type]
+				dir.mytext = "MAX";
+		}
+		else
+		{
+			dir = instance_create(x,y,PopupText)
+			dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
+			if other.ammo[type] == other.typ_amax[type]
+				dir.mytext = "MAX "+string(other.typ_name[type])
+		}
 	}
-	else
-	{
-		dir = instance_create(x,y,PopupText)
-		dir.mytext = "+"+string(other.typ_ammo[type]*2)+" "+string(other.typ_name[type])
-		if other.ammo[type] == other.typ_amax[type]
-			dir.mytext = "MAX "+string(other.typ_name[type])
-	}
-}
 }
 snd_play(sndAmmoChest)
 instance_destroy()

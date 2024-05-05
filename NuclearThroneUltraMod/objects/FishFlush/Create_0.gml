@@ -1,0 +1,9 @@
+/// @description FLUSH!
+dmg = 2;
+alarm[1] = 30;
+targetScale = 1;
+image_xscale = 0.15;
+image_yscale = 0.15;
+scaling = 0.075;
+ending = false;
+mySound = snd_play(sndFishFlush);

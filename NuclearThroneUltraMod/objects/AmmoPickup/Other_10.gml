@@ -4,7 +4,7 @@ if !instance_exists(Player)
 	
 rerolls = 0;
 //if max ammo?&&50% of time
-scrCollectAmmo(1, cursed, supercursed);
+scrCollectAmmo(ammoValue, cursed, supercursed);
 if scrIsCrown(32)//Crown of misfortune
 {
 	if scrIsCrown(2)

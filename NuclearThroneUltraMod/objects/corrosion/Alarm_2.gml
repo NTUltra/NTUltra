@@ -2,6 +2,8 @@
 if alpha < 0.5
 {
 	alpha += 0.05;
+	image_xscale += 0.15;
+	image_yscale = image_xscale;
 	alarm[2] = 1;
 }
 else

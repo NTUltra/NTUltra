@@ -612,18 +612,18 @@ function scrPopEnemies() {
 
 	        } else {
 	            var ran = random(100);
-	            if ran > 90 {
-	                repeat(9)//10
+	            if ran > 80 {
+	                repeat(6)//10
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, ExploFreak, ExploFreak, RhinoFreak, Freak, Freak, Freak))
 	            }
-	            else if ran > 80 {
+	            else if ran > 70 {
 	                instance_create(x + 16, y + 16, choose(Necromancer, Necromancer, Necromancer, ExploFreak, RhinoFreak, Necromancer, Necromancer))
 	            }
-	            else if ran > 70 && !place_meeting(x, y, Turret) {
+	            else if ran > 60 && !place_meeting(x, y, Turret) {
 	                instance_create(x + 16, y + 16, Turret);
 	                instance_create(x + 16, y + 16, NOWALLSHEREPLEASE);
 	            }
-				else if ran > 65 {
+				else if ran > 55 {
 					var crystal = LaserCrystal
 					if random(40) < 1//random 30
 						crystal = LightningCrystal;
@@ -631,7 +631,7 @@ function scrPopEnemies() {
 				}
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,Turret);
+					instance_create(x + 16, y + 16,Necromancer);
 				}
 	        }
 		} else {
@@ -641,20 +641,20 @@ function scrPopEnemies() {
 
 	        } else {
 	            var ran = random(100);
-	            if ran > 90 {
-	                repeat(9)//Used to be 10
+	            if ran > 80 {
+	                repeat(5)//Used to be 10
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, ExploFreak, ExploFreak, RhinoFreak, Freak, Freak, Freak))
 	            }
-	            else if ran > 80 {
+	            else if ran > 70 {
 	                instance_create(x + 16, y + 16, choose(Necromancer, Necromancer, Necromancer, ExploFreak, RhinoFreak, Necromancer, Necromancer))
 	            }
-	            else if ran > 70 && !place_meeting(x, y, Turret) {
+	            else if ran > 60 && !place_meeting(x, y, Turret) {
 	                instance_create(x + 16, y + 16, Turret);
 	                instance_create(x + 16, y + 16, NOWALLSHEREPLEASE);
 	            }
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,Turret);
+					instance_create(x + 16, y + 16,Necromancer);
 				}
 	        }
 		}
@@ -670,25 +670,25 @@ function scrPopEnemies() {
 
 	        } else {
 	            var ran = random(100);
-	            if ran > 90 {
-	                repeat(9)//10
+	            if ran > 80 {
+	                repeat(6)//10
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, 
 					InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedExploFreak, InvertedRhinoFreak, InvertedFreak, InvertedFreak, InvertedFreak))
 	            }
-	            else if ran > 80 {
+	            else if ran > 70 {
 	                instance_create(x + 16, y + 16, choose(InvertedNecromancer, InvertedNecromancer, InvertedNecromancer, InvertedExploFreak, 
 					InvertedRhinoFreak, InvertedNecromancer, InvertedNecromancer))
 	            }
-	            else if ran > 70 && !place_meeting(x, y, InvertedTurret) {
+	            else if ran > 60 && !place_meeting(x, y, InvertedTurret) {
 	                instance_create(x + 16, y + 16, InvertedTurret);
 	                instance_create(x + 16, y + 16, NOWALLSHEREPLEASE);
 	            }
-				else if ran > 65 {
+				else if ran > 55 {
 					instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedCubeGuardian));
 				}
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,InvertedTurret);
+					instance_create(x + 16, y + 16,InvertedNecromancer);
 				}
 	        }
 		}
@@ -701,21 +701,21 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            var ran = random(100);
-	            if ran > 90 {
-	                repeat(9)
+	            if ran > 80 {
+	                repeat(5)
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak,
 	                    InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedExploFreak, InvertedRhinoFreak, InvertedFreak, InvertedFreak, InvertedFreak))
 	            }
-	            else if ran > 80 {
+	            else if ran > 70 {
 	                instance_create(x + 16, y + 16, choose(InvertedNecromancer, InvertedNecromancer, InvertedNecromancer, InvertedExploFreak, InvertedRhinoFreak, InvertedNecromancer, InvertedNecromancer))
 	            }
-	            else if ran > 70 && !place_meeting(x, y, InvertedTurret) {
+	            else if ran > 60 && !place_meeting(x, y, InvertedTurret) {
 	                instance_create(x + 16, y + 16, InvertedTurret);
 	                instance_create(x + 16, y + 16, NOWALLSHEREPLEASE);
 	            }
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,InvertedTurret);
+					instance_create(x + 16, y + 16,InvertedNecromancer);
 				}
 	        }
 		}

@@ -2,6 +2,7 @@ event_inherited();
 if scrIsGamemode(48)
 	instance_destroy(id,false);
 isArmour = false;
+ammoValue = 1;
 if sprite_index == sprAmmo {
 	var curselevel = 0;
 

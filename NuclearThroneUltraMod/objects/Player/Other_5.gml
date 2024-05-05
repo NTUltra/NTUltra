@@ -138,7 +138,7 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 	if skill_got[31]//Tough shell
 		targetHealth += 1;
 	if skill_got[33]//Glass arm cannon
-		targetHealth = max(1,targetHealth-1);
+		targetHealth = max(1,targetHealth-2);
 	if skill_got[41]//nerves of steel
 		targetHealth = max(1,targetHealth-2);
 	if scrIsGamemode(9)
@@ -944,7 +944,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		if skill_got[31]//Tough shell
 			maxhealth += 1;
 		if skill_got[33]//Glass arm cannon
-			maxhealth -= 1;
+			maxhealth -= 2;
 		if race == 16
 		{
 			armour = min(armour + 1, maxarmour);

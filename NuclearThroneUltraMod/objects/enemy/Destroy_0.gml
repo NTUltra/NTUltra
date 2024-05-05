@@ -31,6 +31,8 @@ if(morphMe == 0){
 				speed += 6.5;
 				if Player.race=25
 					speed += 2;
+				if mySize > 2
+					dmg += 0.5;
 			}
 			if mySize > 0
 			{

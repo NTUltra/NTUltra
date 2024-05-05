@@ -87,6 +87,10 @@ function scrDrop(itemdrop, weapondrop) {
 				canHealth *= 0.9;//0.98
 			}
 		}
+		/*if Player.sprite_index == spr_hurt && !Player.skill_got[9]
+		{
+			canHealth *= 0.15;
+		}*/
 		if lps > 2
 		{
 			lps -= 2;

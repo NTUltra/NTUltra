@@ -39,5 +39,13 @@ if scrIsCrown(9)//Crown of love
 }
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideWep(2, 4000, curse)
+wep[0] = scrDecideWep(2, 4000, curse);
+heavyHeart = false;
+ammoGet = 50;
+if instance_exists(Player) && Player.skill_got[0]
+{
+	heavyHeart = true
+	ammoGet = 30;
+	wep[1] = scrDecideWep(2, 4000, curse);
+}
 SetSeed();

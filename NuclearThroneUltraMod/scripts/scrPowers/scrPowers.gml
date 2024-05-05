@@ -976,35 +976,30 @@ function scrPowers(raceOverwrite = -1) {
 			repeat(5){
 			with instance_create(x,y,Smoke)
 			motion_add(random(360),1+random(3))}
+			var noWalls = !instance_exists(Wall)
 			if ultra_got[59] && altUltra
 			{
-				var floors = ds_list_create();
-				var al = collision_line_list(x,y,mx,my,Floor,false,false,floors,false)
-				for (var j = 0; j < al; j++) {
-					with floors[| j]
+				var step = 18;
+				var reps = 1 + (point_distance(x,y,mx,my)/step);
+				var pd = point_direction(x,y,mx,my);
+				var xx = x;
+				var yy = y;
+				var lx = lengthdir_x(step,pd);
+				var ly = lengthdir_y(step,pd);
+				repeat(reps)
+				{
+					xx += lx;
+					yy += ly;
+					var rd = random(360);
+					if noWalls || collision_point(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Floor,false,false)
 					{
-						var corrosion = instance_place(x,y,Corrosion);
-						if corrosion == noone
+						with instance_create(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Corrosion)
 						{
-							if object_index == FloorExplo
-							{
-								instance_create(x,y,CorrosionSmall)
-							}
-							else
-							{
-								instance_create(x,y,Corrosion)
-							}
-						}
-						else
-						{
-							with corrosion
-							{
-								alarm[0] = 60;	
-							}
+							direction = random(360);
+							speed = 0.5;
 						}
 					}
 				}
-				ds_list_destroy(floors);
 			}
 			
 			BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
@@ -1491,244 +1486,6 @@ function scrPowers(raceOverwrite = -1) {
 		instance_create(x,y,Dust)
 	}
 
-	//MELTING
-	if race == 4
-	{
-		var didKill = false;
-		var numberOfEnems = 0;
-		if instance_exists(IDPDVan)
-			numberOfEnems = instance_number(IDPDVan);
-		if  (instance_number(enemy) > numberOfEnems)
-		{
-			var gotButt = skill_got[5]
-			with CorpseCollector
-			{
-				var al = ds_list_size(corpses)
-				var markForDelete = [];
-				var j = 0;
-				for (var i = 0; i < al; i++)
-				{
-					var corpse = corpses[| i];
-					var corpseSize = corpse.mySize;
-					var xx = corpse.xx;
-					var yy = corpse.yy;
-					if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-					{
-						didKill = true;
-						with instance_create(x,y,BloodStreak)
-						{
-							motion_add(point_direction(Player.x,Player.y,xx,yy),8)
-							image_angle = direction
-						}
-						if gotButt
-						{
-							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							if corpseSize > 4
-							{
-								var ang = random(360)
-								scrSpawnBloodBullets(xx,yy,4,14,-1);
-								with instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(70,ang+240),yy+lengthdir_y(70,ang+240),MeatExplosion)
-									destroyAll = true;
-							}
-							var ang = random(360)
-							if corpseSize > 2
-							{
-								scrSpawnBloodBullets(xx,yy,6,12,-1);
-								with instance_create(xx,yy,MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(44,ang),yy+lengthdir_y(44,ang),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(44,ang+120),yy+lengthdir_y(44,ang+120),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(44,ang+240),yy+lengthdir_y(44,ang+240),MeatExplosion)
-									destroyAll = true;
-							}
-							else
-							{
-								scrSpawnBloodBullets(xx,yy,5,10,-1);
-								with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
-									destroyAll = true;
-								with instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)
-									destroyAll = true;
-							}
-				
-						}
-						else if corpseSize > 3
-						{
-							scrSpawnBloodBullets(xx,yy,5,10,-1);
-							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							var ang = random(360)
-							with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
-								destroyAll = true;
-							with instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
-								destroyAll = true;
-							with instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)
-								destroyAll = true;
-						}
-						else
-						{
-							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							with instance_create(xx,yy,MeatExplosion)
-								destroyAll = true;
-							scrSpawnBloodBullets(xx,yy,3,8,-1);
-						}
-						markForDelete[j] = i;
-						j ++;
-					}
-				}
-				for (var i = 0; i < j; i++)
-				{
-					ds_list_delete(corpses,markForDelete[i]);
-				}
-			}
-			with Corpse
-			{
-				if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-					&& point_distance(x,y,other.x,other.y) < 250
-				{
-					var ang;
-					didKill = true;
-					instance_destroy()
-					with instance_create(x,y,BloodStreak)
-					{
-					motion_add(point_direction(Player.x,Player.y,x,y),8)
-					image_angle = direction
-					}
-					if gotButt
-					{
-						scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-						if mySize > 4
-						{
-							scrSpawnBloodBullets(x,y,4,12,-1);
-							ang = random(360)
-							with instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(70,ang+240),y+lengthdir_y(70,ang+240),MeatExplosion)
-								destroyAll = true;
-						}
-						ang = random(360)
-						if mySize > 2
-						{
-							scrSpawnBloodBullets(x,y,6,10,-1);
-							with instance_create(x,y,MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(44,ang+240),MeatExplosion)
-								destroyAll = true;
-						}
-						else
-						{
-							scrSpawnBloodBullets(x,y,5,8,-1);
-							with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-								destroyAll = true;
-							with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-								destroyAll = true;
-						}
-				
-					}
-					else if mySize > 3
-					{
-						scrSpawnBloodBullets(x,y,5,8,-1);
-						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-						ang = random(360)
-						with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-							destroyAll = true;
-					}
-					else
-					{
-						scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-						with instance_create(x,y,MeatExplosion)
-							destroyAll = true;
-						scrSpawnBloodBullets(x,y,3,7,-1);
-					}
-				}
-			}
-		}
-		
-		if ultra_got[13] && !altUltra {
-			with enemy {
-			if maxhealth <= 7 and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-				&& point_distance(x,y,other.x,other.y) < 250
-			{//melting ultra a brain capacity
-			morphMe = 6;
-			didKill = true;
-			instance_destroy()
-			with instance_create(x,y,BloodStreak)
-			{
-			motion_add(point_direction(Player.x,Player.y,x,y),8)
-			image_angle = direction
-			}
-			instance_create(x,y,MeltSplat)//Scorchmark
-				if Player.skill_got[5] = 1
-				{
-					ang = random(360)
-					if mySize > 1
-					{
-						with instance_create(x,y,MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-							destroyAll = true;
-					}
-					else
-					{
-						with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-							destroyAll = true;
-						with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-							destroyAll = true;
-					}
-				
-				}
-				else if mySize>1
-				{
-					ang = random(360)
-					with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
-						destroyAll = true;
-					with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
-						destroyAll = true;
-					with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
-						destroyAll = true;
-				}
-				else
-					with instance_create(x,y,MeatExplosion)
-						destroyAll = true;
-				}
-			} 
-		}
-		
-		if didKill && !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
-		{
-			snd_play(sndExplosion);
-			if Player.skill_got[5] = 1
-				snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.05)
-			else
-				snd_play_2d(sndCorpseExplo)	
-		}
-
-	}
-
 	//PLANT
 	if race == 5
 	{
@@ -1919,7 +1676,7 @@ function scrPowers(raceOverwrite = -1) {
 					snd_play_2d(sndFrogGasRelease);
 				}
 			}
-		}	
+		}
 	}
 	////////SHIT HELD////////
 	if KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2
@@ -1976,6 +1733,247 @@ function scrPowers(raceOverwrite = -1) {
 			//instance_create(x,y,CrystalTorpedo)
 			instance_create(x,y,CrystalShield)
 		}
+		
+		//MELTING
+		if race == 4 && (KeyCont.key_spec[p] = 1 || !instance_exists(MeltingDelay))
+		{
+			instance_create(x,y,MeltingDelay);
+			var didKill = false;
+			var numberOfEnems = 0;
+			if instance_exists(IDPDVan)
+				numberOfEnems = instance_number(IDPDVan);
+			if  (instance_number(enemy) > numberOfEnems)
+			{
+				var gotButt = skill_got[5]
+				with CorpseCollector
+				{
+					var al = ds_list_size(corpses)
+					var markForDelete = [];
+					var j = 0;
+					for (var i = 0; i < al; i++)
+					{
+						var corpse = corpses[| i];
+						var corpseSize = corpse.mySize;
+						var xx = corpse.xx;
+						var yy = corpse.yy;
+						if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						{
+							didKill = true;
+							with instance_create(x,y,BloodStreak)
+							{
+								motion_add(point_direction(Player.x,Player.y,xx,yy),8)
+								image_angle = direction
+							}
+							if gotButt
+							{
+								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								if corpseSize > 4
+								{
+									var ang = random(360)
+									scrSpawnBloodBullets(xx,yy,4,14,-1);
+									with instance_create(xx+lengthdir_x(70,ang),yy+lengthdir_y(70,ang),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(70,ang+120),yy+lengthdir_y(70,ang+120),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(70,ang+240),yy+lengthdir_y(70,ang+240),MeatExplosion)
+										destroyAll = true;
+								}
+								var ang = random(360)
+								if corpseSize > 2
+								{
+									scrSpawnBloodBullets(xx,yy,6,12,-1);
+									with instance_create(xx,yy,MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(44,ang),yy+lengthdir_y(44,ang),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(44,ang+120),yy+lengthdir_y(44,ang+120),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(44,ang+240),yy+lengthdir_y(44,ang+240),MeatExplosion)
+										destroyAll = true;
+								}
+								else
+								{
+									scrSpawnBloodBullets(xx,yy,5,10,-1);
+									with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
+										destroyAll = true;
+									with instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)
+										destroyAll = true;
+								}
+				
+							}
+							else if corpseSize > 3
+							{
+								scrSpawnBloodBullets(xx,yy,5,10,-1);
+								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								var ang = random(360)
+								with instance_create(xx+lengthdir_x(24,ang),yy+lengthdir_y(24,ang),MeatExplosion)
+									destroyAll = true;
+								with instance_create(xx+lengthdir_x(24,ang+120),yy+lengthdir_y(24,ang+120),MeatExplosion)
+									destroyAll = true;
+								with instance_create(xx+lengthdir_x(24,ang+240),yy+lengthdir_y(24,ang+240),MeatExplosion)
+									destroyAll = true;
+							}
+							else
+							{
+								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								with instance_create(xx,yy,MeatExplosion)
+									destroyAll = true;
+								scrSpawnBloodBullets(xx,yy,3,8,-1);
+							}
+							markForDelete[j] = i;
+							j ++;
+						}
+					}
+					for (var i = 0; i < j; i++)
+					{
+						ds_list_delete(corpses,markForDelete[i]);
+					}
+				}
+				with Corpse
+				{
+					if (image_speed == 0 || alarm[6] < 1) and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+						&& point_distance(x,y,other.x,other.y) < 250
+					{
+						var ang;
+						didKill = true;
+						instance_destroy()
+						with instance_create(x,y,BloodStreak)
+						{
+						motion_add(point_direction(Player.x,Player.y,x,y),8)
+						image_angle = direction
+						}
+						if gotButt
+						{
+							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							if mySize > 4
+							{
+								scrSpawnBloodBullets(x,y,4,12,-1);
+								ang = random(360)
+								with instance_create(x+lengthdir_x(70,ang),y+lengthdir_y(70,ang),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(70,ang+120),y+lengthdir_y(70,ang+120),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(70,ang+240),y+lengthdir_y(70,ang+240),MeatExplosion)
+									destroyAll = true;
+							}
+							ang = random(360)
+							if mySize > 2
+							{
+								scrSpawnBloodBullets(x,y,6,10,-1);
+								with instance_create(x,y,MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(44,ang),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(44,ang+120),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(44,ang+240),MeatExplosion)
+									destroyAll = true;
+							}
+							else
+							{
+								scrSpawnBloodBullets(x,y,5,8,-1);
+								with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+									destroyAll = true;
+								with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+									destroyAll = true;
+							}
+				
+						}
+						else if mySize > 3
+						{
+							scrSpawnBloodBullets(x,y,5,8,-1);
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							ang = random(360)
+							with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+								destroyAll = true;
+						}
+						else
+						{
+							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							with instance_create(x,y,MeatExplosion)
+								destroyAll = true;
+							scrSpawnBloodBullets(x,y,3,7,-1);
+						}
+					}
+				}
+			}
+		
+			if ultra_got[13] && !altUltra {
+				with enemy {
+				if maxhealth <= 7 and x > __view_get( e__VW.XView, 0 ) //and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					&& point_distance(x,y,other.x,other.y) < 250
+				{//melting ultra a brain capacity
+				morphMe = 6;
+				didKill = true;
+				instance_destroy()
+				with instance_create(x,y,BloodStreak)
+				{
+				motion_add(point_direction(Player.x,Player.y,x,y),8)
+				image_angle = direction
+				}
+				instance_create(x,y,MeltSplat)//Scorchmark
+					if Player.skill_got[5] = 1
+					{
+						ang = random(360)
+						if mySize > 1
+						{
+							with instance_create(x,y,MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(44,ang),y+lengthdir_y(24,ang),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(44,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(44,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+								destroyAll = true;
+						}
+						else
+						{
+							with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+								destroyAll = true;
+							with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+								destroyAll = true;
+						}
+				
+					}
+					else if mySize>1
+					{
+						ang = random(360)
+						with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),MeatExplosion)
+							destroyAll = true;
+						with instance_create(x+lengthdir_x(24,ang+120),y+lengthdir_y(24,ang+120),MeatExplosion)
+							destroyAll = true;
+						with instance_create(x+lengthdir_x(24,ang+240),y+lengthdir_y(24,ang+240),MeatExplosion)
+							destroyAll = true;
+					}
+					else
+						with instance_create(x,y,MeatExplosion)
+							destroyAll = true;
+					}
+				} 
+			}
+		
+			if didKill && !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
+			{
+				snd_play(sndExplosion);
+				if Player.skill_got[5] = 1
+					snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.05)
+				else
+					snd_play_2d(sndCorpseExplo)	
+			}
+
+		}
+
+		
 		//ANGEL
 		if race == 18 && !instance_exists(AngelActive) && !instance_exists(AngelActiveDelay)//ANGEL
 		{
@@ -3600,6 +3598,36 @@ function scrPowers(raceOverwrite = -1) {
 		}
 
 		toxicamount=0;
+	}
+	if race == 1 && flushCharge > 4// && skill_got[5]
+	{
+		//FLUSH!
+		with instance_create(x,y,FishFlush)
+		{
+			snd_play(sndFishFlushStart,0.1);
+			targetScale = max(0.4,0.25 + min(other.flushCharge*0.025,1.75));
+			if targetScale < 1
+			{
+				snd_play(sndFishFlushShort,0.01);
+			}
+			else
+			{
+				snd_play(sndFishFlushLong,0.01);
+			}
+			image_angle = point_direction(x,y,mouse_x,mouse_y);
+			direction = image_angle;
+			with instance_create_depth(x,y,6,FishFlushBurst)
+			{
+				image_angle = other.image_angle;
+				image_xscale = other.targetScale;
+				image_yscale = image_xscale;
+				image_yscale *= choose(1,-1);
+				image_speed = 0.5/image_xscale;
+			}
+			event_perform(ev_alarm,0);
+			alarm[1] += min(30,other.flushCharge*0.5);
+		}
+		flushCharge = 0;
 	}
 	if ultra_got[19] && !altUltra//Plant Sprint
 	{

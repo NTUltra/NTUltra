@@ -13,7 +13,7 @@ function scrRecycleGland(ammoIncrease, radIncrease = 0){
 				if !Player.ultra_got[26]
 					Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
 			}
-			scrSplashDamage(clamp(floor(dmg*0.5),1,6),min(24,15 + dmg));
+			scrSplashDamage(clamp(ceil(dmg*0.5),1,6),min(24,18 + dmg));
 		}
 	}
 }

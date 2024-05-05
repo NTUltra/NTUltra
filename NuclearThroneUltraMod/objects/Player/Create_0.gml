@@ -180,7 +180,7 @@ patience = 0;
 patienceUsed = 0;
 raddrop = 0;
 hurtDuration = 15; //Additional iframes
-hurtDurationLoop = 9;
+hurtDurationLoop = 8;
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;
@@ -640,6 +640,8 @@ if race == 25 // DOCTOR
 {
 	level = 2;
 	skillsChosen += 1;
+	boilingMax += 20;
+	rageHit -= 5;
 }
 
 if scrIsGamemode(9)
@@ -698,6 +700,7 @@ didJumpRoll = false;
 specBuffer = 0;
 visualJumpHeight = 32;
 rollIframe = 0;
+flushCharge = 0;
 reachedRollEnd = false;
 drawempty = 0
 drawlowhp = 0
@@ -717,6 +720,7 @@ fromCribToVault = false;
 meltingd = noone;
 lastEnemyKilled = noone;
 rage = 0;
+rageHit = 30;
 rageIndicator = 0;
 exception = false;
 sharpteeth = 0; //stress embedded

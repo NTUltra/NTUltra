@@ -19,7 +19,7 @@ function scrSplashDamage(dmg, range){
 	var al = collision_circle_list(x,y,range+4,hitme,false,false,hits,false)
 	with instance_create(x,y,SplashDamageFX)
 	{
-		radius = range - 2;
+		radius = range - 3;
 	}
 	for (var i = 0; i < al; i++) {
 		// code here

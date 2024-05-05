@@ -21,7 +21,7 @@ function scrRaces() {
 	race_pass[1] = "GETS MORE <y>AMMO<y>"
 	race_acti[1] = "<w>DODGE ROLL<w>"
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
-	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
+	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>##GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	race_inpsiration[1] = "FISH CAN <w>JUMP<w>";
 	race_inpsiration_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> AFTER <w>JUMPING<w>";
 	race_lock[1] = "UNLOCKED FROM THE START"

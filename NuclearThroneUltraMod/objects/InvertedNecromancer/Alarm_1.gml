@@ -30,7 +30,7 @@ else if random(6) < 2
 	if instance_exists(Corpse)
 	{
 		crp = instance_nearest(x,y,Corpse)
-		if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
+		if point_distance(x,y,crp.x,crp.y) < range && collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
 		{
 			noCorpse = false;
 			wkick = 5
@@ -41,7 +41,7 @@ else if random(6) < 2
 					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
 			}
 			snd_play(sndNecromancerRevive)
-			alarm[1] = 12+random(20)
+			alarm[1] = 15+random(20)
 		}
 	}
 	if noCorpse
@@ -68,7 +68,7 @@ else if random(2)<1
 	if instance_exists(InvertedFreak)
 	{
 	crp = instance_nearest(x,y,InvertedFreak)
-	if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
+	if point_distance(x,y,crp.x,crp.y) < range && collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
 	{
 	wkick = 5
 	gunangle = point_direction(x,y,crp.x,crp.y)
@@ -83,7 +83,7 @@ else if random(2)<1
 		}
 	}
 	snd_play(sndNecromancerRevive)
-	alarm[1] = 5+random(14)
+	alarm[1] = 10+random(14)
 	}
 
 	}

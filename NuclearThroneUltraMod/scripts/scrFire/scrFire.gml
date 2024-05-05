@@ -112,10 +112,10 @@ function scrFire(canDrown = true) {
 		{
 			if reload > 0
 			{
-			    reload-=speed*0.25
+			    reload -= speed*0.3
 			    if Player.roll = 1
 			    {
-					reload -= wep_load[wep]*0.5
+					reload -= wep_load[wep]*0.48
 			    }
 			}
 		}

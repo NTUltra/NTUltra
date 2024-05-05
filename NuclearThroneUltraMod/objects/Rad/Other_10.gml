@@ -26,9 +26,12 @@ if instance_exists(Player)
 			if canHeal
 			{
 				radPickedUp += add;
-				if radPickedUp > maxRadPickedUp
+				var mr = maxRadPickedUp;
+				if loops > 0
+					mr += 10;
+				if radPickedUp > mr
 				{
-					radPickedUp -= maxRadPickedUp;
+					radPickedUp -= mr;
 					instance_create(x,y,HealAbsorbingPores);
 					snd_play(sndHealthPickup);
 					var num = 1;

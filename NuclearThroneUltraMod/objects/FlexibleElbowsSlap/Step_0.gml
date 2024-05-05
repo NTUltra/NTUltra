@@ -19,9 +19,31 @@ if time == 1
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
 		if instance_exists(Player) && Player.race == 25
-			DealDamage(15,false,true,false);
+			DealDamage(20,false,true,false);
 		else
-			DealDamage(10,false,true,false);
+			DealDamage(16,false,true,false);
+		
+		var direct = other.id;
+		var hits = ds_list_create();
+		var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
+		for (var i = 0; i < al; i++) {
+			// code here
+			with hits[| i]
+			{
+				if id != direct && team != 2 && my_health > 0
+				{
+					DealDamage(5)
+					sprite_index = spr_hurt
+					image_index = 0
+					motion_add(hk + 160,5)
+					scrForcePosition60fps();
+					if speed > maxSpeed+1
+						speed = maxSpeed+1;
+					snd_play(snd_hurt, hurt_pitch_variation,true)
+				}
+			}
+		}
+		ds_list_destroy(hits);
 		sprite_index = spr_hurt;
 		snd_play(snd_hurt, hurt_pitch_variation,true);
 		image_index = 0

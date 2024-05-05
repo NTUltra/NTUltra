@@ -177,9 +177,17 @@ if canAlt
 	{
 		isAlternative = true;
 		scrUltras(true, false, randomHand);
+		if !Player.altUltra && scrHasAnUltraThatsCompatibleWithAlt()
+		{
+			instance_destroy();
+		}
 	}
 }
 else if skill == 76 && Player.race == 19 && UberCont.tookUnstoppable
+{
+	instance_destroy();
+}
+else if Player.altUltra && scrThisUltraIsCompatibleWithAlt(skill) && scrHasAnUltraThatsCompatibleWithAlt()
 {
 	instance_destroy();
 }

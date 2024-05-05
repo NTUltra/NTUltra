@@ -121,7 +121,11 @@ if(Player.skill_got[23]){
 with WeaponChest
 {
 	if(sprite_index!=sprWeaponChestBig){
-		draw_sprite_ext(wep_sprt[wep],0,x-7,y-14,1,1,0,c_white,0.75);
+		draw_sprite_ext(wep_sprt[wep[0]],0,x-7,y-14,1,1,0,c_white,0.75);
+		if heavyHeart
+		{
+			draw_sprite_ext(wep_sprt[wep[1]],0,x-7,y-24,1,1,0,c_white,0.75);
+		}
 		/*
 		Also show tier, this is ugly man
 		draw_set_halign(fa_left);
@@ -146,6 +150,8 @@ with WeaponChest
 		draw_sprite_ext(wep_sprt[wep1],0,x-7,y-16,1,1,0,c_white,0.75);
 		draw_sprite_ext(wep_sprt[wep2],0,x-7,y-26,1,1,0,c_white,0.75);
 		draw_sprite_ext(wep_sprt[wep3],0,x-7,y-36,1,1,0,c_white,0.75);
+		if heavyHeart
+			draw_sprite_ext(wep_sprt[wep4],0,x-7,y-46,1,1,0,c_white,0.75);
 	}
 }
 with GoldChest

@@ -99,15 +99,24 @@ if instance_exists(Player)
 			alarm[10] = 10;
 		}
 	}
-	if (((Player.ultra_got[59] && Player.altUltra) || Player.ultra_got[108]) && !instance_exists(CorrosionDrawer))
+	if ((Player.ultra_got[59] && Player.altUltra) && !instance_exists(CorrosionDrawer))
 	{
 		instance_create(x,y,CorrosionDrawer)
 	}
-	if Player.skill_got[45]
+	if (Player.ultra_got[108] && !instance_exists(CorrosionDrawer))
 	{
-		if !instance_exists(PlayerAlarms3)
-			instance_create(x,y,PlayerAlarms3);
-		with PlayerAlarms3 {
+		with instance_create(x,y,CorrosionDrawer) {
+			alarm[1] = 0;
+			alarm[2] = 1;
+			alpha = 0.5;
+		}
+	}
+	
+	if !instance_exists(PlayerAlarms3)
+		instance_create(x,y,PlayerAlarms3);
+	with PlayerAlarms3 {
+		if Player.skill_got[45]
+		{
 			alarm[0] = 15;
 			alarm[1] = 120;
 			enemyHealthWasChanged = true;
@@ -116,6 +125,10 @@ if instance_exists(Player)
 			detectedEnemyHealth = 0;
 			adrenalineAmmoTimer = adrenalineAmmoCooldown;
 			adrenalineHealTimer = adrenalineHealCooldown;
+		}
+		if Player.ultra_got[59] && Player.altUltra
+		{
+			alarm[4] = 1;	
 		}
 	}
 }

@@ -1,12 +1,21 @@
 if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5/*not player or before this frame*/)
 {
-	if other.sprite_index != other.spr_hurt
+	var overwriteDamage = mustDealDamageOnce && other.sprite_index == other.spr_hurt;
+	if other.sprite_index != other.spr_hurt || overwriteDamage
 	{
 		if !audio_is_playing(sndBurn)
 			snd_play(sndBurn,0.01)
 		with other
 		{
-			DealDamage(other.dmg);
+			if overwriteDamage
+			{
+				other.mustDealDamageOnce = false;
+				DealDamage(1);
+			}
+			else
+			{
+				DealDamage(other.dmg);
+			}
 			sprite_index = spr_hurt
 			image_index = 0;
 			motion_add(other.direction,0.4 + (other.speed*0.1))

@@ -3,6 +3,13 @@
 ///@param
 function scrScarierFace(theDamage, isPerFrame){
 	if (instance_exists(Player) && Player.skill_got[11]) {
+		var flatDmg = 0.5;
+		if Player.race == 25
+			flatDmg += 0.15
+		if isPerFrame
+			my_health -= min(theDamage * 0.5,flatDmg*0.5);
+		else
+			my_health -= min(theDamage,flatDmg);
 		my_health -= Player.excessDamageDeal;
 		var pe = Player.excessDamageDeal;
 		BackCont.shake += min(pe*0.5,10);
@@ -31,27 +38,23 @@ function scrScarierFace(theDamage, isPerFrame){
 		Player.excessDamageDeal = 0;
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
-			var part = -0.8;
+			var part = -0.75;
 			if my_health < - 150
-			{
-				part = -0.05;
-			}
-			else if my_health < - 100
 			{
 				part = -0.1;
 			}
+			else if my_health < - 100
+			{
+				part = -0.2;
+			}
 			else if my_health < - 90
 			{
-				part = -0.3;
+				part = -0.4;
 			}
 			else if my_health < - 80
 			{
-				part = -0.5;
+				part = -0.65;
 			} else if my_health < - 50
-			{
-				part = - 0.6;
-			}
-			 else if my_health < - 40
 			{
 				part = - 0.7;
 			}

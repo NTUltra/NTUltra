@@ -13,13 +13,24 @@ if !instance_exists(GenCont) && instance_exists(Player)
 			with instance_create(x,y,WepPickup)
 			{
 				scrWeapons()
-				wep = other.wep;
+				wep = other.wep[0];
 				name = wep_name[wep]
-				ammo = 50
+				ammo = other.ammoGet
 				type = wep_type[wep]
 				curse = other.curse
 				sprite_index = wep_sprt[wep]
 			}
+			if heavyHeart
+				with instance_create(x,y,WepPickup)
+				{
+					scrWeapons()
+					wep = other.wep[1];
+					name = wep_name[wep]
+					ammo = other.ammoGet
+					type = wep_type[wep]
+					curse = other.curse
+					sprite_index = wep_sprt[wep]
+				}
 		}
 	snd_play(sndWeaponChest)
 	}

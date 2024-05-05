@@ -72,9 +72,9 @@ function scrContactDamageToEnemy(hitEnemy){
 				if  alarm[3] < 1
 				{
 					if loops > 0
-						meleeimmunity = hurtDurationLoop;
+						meleeimmunity = hurtDurationLoop - 1;
 					else
-						meleeimmunity = hurtDuration;
+						meleeimmunity = hurtDuration - 1;
 				    if (hitEnemy.my_health<=0 || actuallyDead)
 				    {
 				    }

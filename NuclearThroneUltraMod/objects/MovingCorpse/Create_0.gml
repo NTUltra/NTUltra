@@ -5,6 +5,7 @@ depth = 7;
 dmg = 1;
 impactWristed = false;
 team = 0;
+corpseHome = 0.3;
 if instance_exists(Player){
 	if Player.ultra_got[52] == 1{
 		friction=0.33;
@@ -17,6 +18,10 @@ if instance_exists(Player){
 		impactWristed = true;
 		xprev = x;
 		yprev = y;
+		if Player.race == 25
+		{
+			corpseHome += 0.375;
+		}
 	}
 	if scrIsCrown(28) || scrIsGamemode(39) || (Player.ultra_got[19] && Player.altUltra)//Gore galore
 	{

@@ -15,12 +15,19 @@ event_inherited()
 if curse = 1
 sprite_index = sprCursedWeaponChest
 
+heavyHeart = false;
+ammoGet = 50;
 if instance_exists(Player)
 {
 	if (Player.ultra_got[25]==1)
     {
 		mediumchest = 1;
     }
+	if Player.skill_got[0]
+	{
+		heavyHeart = true;
+		ammoGet = 30;
+	}
 	if scrIsCrown(9)//Crown of love
 	{
 		alarm[1] = 10;
@@ -31,7 +38,9 @@ if instance_exists(Player)
 
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideWep(0, 20, curse)
+wep[0] = scrDecideWep(0, 20, curse);
+if heavyHeart
+	wep[1] = scrDecideWep(0, 20, curse);
 SetSeed();
 
 if (mediumchest==1)

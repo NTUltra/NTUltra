@@ -10,8 +10,8 @@
   "name":"Spiral",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"OtherObjects",
+    "path":"folders/Objects/OtherObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

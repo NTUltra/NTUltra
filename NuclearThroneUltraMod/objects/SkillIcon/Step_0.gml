@@ -101,36 +101,39 @@ if selected && visible
 		}
 		else if skill = 10
 		{
-			if Player.ultra_got[85]//ROGUE SUPER PORTAL STRIKE
+			with Player
 			{
-				Player.rogueammomax=8;
+				if ultra_got[85]//ROGUE SUPER PORTAL STRIKE
+				{
+					rogueammomax=8;
+				}
+				else if ultra_got[87] && altUltra
+				{
+					rogueammomax=3;
+				}
+				else
+				{
+					rogueammomax=4;
+				}
+				if race == 25
+				{
+					typ_amax[1] = 255+skill_got[10]*375
+					typ_amax[2] = 55+skill_got[10]*60
+					typ_amax[3] = 55+skill_got[10]*60
+					typ_amax[4] = 55+skill_got[10]*60
+					typ_amax[5] = 55+skill_got[10]*60
+					scrWeaponAdjustCost(0.9);
+				}
+				else
+				{
+					typ_amax[1] = 255+skill_got[10]*300
+					typ_amax[2] = 55+skill_got[10]*44
+					typ_amax[3] = 55+skill_got[10]*44
+					typ_amax[4] = 55+skill_got[10]*44
+					typ_amax[5] = 55+skill_got[10]*44
+					scrWeaponAdjustCost(0.85);
+				}
 			}
-			else if Player.ultra_got[87] && Player.altUltra
-			{
-				Player.rogueammomax=3;
-			}
-			else
-			{
-				Player.rogueammomax=4;
-			}
-	
-		if Player.race == 25
-		{
-			Player.typ_amax[1] = 255+Player.skill_got[10]*375
-			Player.typ_amax[2] = 55+Player.skill_got[10]*60
-			Player.typ_amax[3] = 55+Player.skill_got[10]*60
-			Player.typ_amax[4] = 55+Player.skill_got[10]*60
-			Player.typ_amax[5] = 55+Player.skill_got[10]*60
-		}
-		else
-		{
-			Player.typ_amax[1] = 255+Player.skill_got[10]*300
-			Player.typ_amax[2] = 55+Player.skill_got[10]*44
-			Player.typ_amax[3] = 55+Player.skill_got[10]*44
-			Player.typ_amax[4] = 55+Player.skill_got[10]*44
-			Player.typ_amax[5] = 55+Player.skill_got[10]*44
-		}
-
 		}
 		else if skill = 13 && Player.race = 25//Long arms
 		{
@@ -202,7 +205,7 @@ if selected && visible
 					if skill_got[31]//Tough shell
 						targetHealth += 1;
 					if skill_got[33]//Glass arm cannon
-						targetHealth = max(1,targetHealth-1);
+						targetHealth = max(1,targetHealth-2);
 					if skill_got[41]//nerves of steel
 						targetHealth = max(1,targetHealth-2);
 					if scrIsGamemode(9)
@@ -312,14 +315,13 @@ if selected && visible
 		{
 			if Player.ultra_got[62] && Player.altUltra //Living armour
 			{
-				Player.maxarmour -= 1;
-				Player.armour -= 1;
+				Player.maxarmour -= 2;
+				Player.armour -= 2;
 			}
 			else
 			{
-				Player.maxhealth -= 1;
-				if Player.my_health > Player.maxhealth
-					Player.my_health -= 1;
+				if Player.race != 25
+					Player.maxhealth -= 2;
 			}
 			Player.exception = true;
 			//Dont die on me friend

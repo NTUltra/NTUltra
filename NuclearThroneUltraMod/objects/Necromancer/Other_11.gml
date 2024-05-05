@@ -4,7 +4,7 @@ var necro = id;
 if instance_exists(Corpse)
 {
 	crp = instance_nearest(x,y,Corpse)
-	if collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
+	if point_distance(x,y,crp.x,crp.y) < range && collision_line(x,y,crp.x,crp.y,Wall,0,0) < 0
 	{
 		revved = true;
 		gunangle = point_direction(x,y,crp.x,crp.y);
@@ -58,7 +58,7 @@ if (!revved)
 			right = 1
 		else
 			right = -1;
-		if !collision_line(x,y,tx,ty,Wall,false,false)
+		if point_distance(x,y,crp.x,crp.y) < range && !collision_line(x,y,tx,ty,Wall,false,false)
 		{
 			revved = true;
 			var nearestFloor = instance_nearest(tx,ty,Floor);

@@ -15,14 +15,14 @@ if shotgunshouldered
 {
 	var direct = other.id;
 	var hits = ds_list_create();
-	var al = collision_circle_list(x,y,28,hitme,false,false,hits,false)
+	var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
 	for (var i = 0; i < al; i++) {
 		// code here
 		with hits[| i]
 		{
 			if id != direct && team != other.team && my_health > 0
 			{
-				DealDamage(5)
+				DealDamage(10)
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,5)

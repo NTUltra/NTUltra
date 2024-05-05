@@ -21,7 +21,7 @@ with Player {
 		if skill_got[31]//Tough shell
 			targetHealth += 1;
 		if skill_got[33]//Glass arm cannon
-			targetHealth = max(1,targetHealth-1);
+			targetHealth = max(1,targetHealth-2);
 		if skill_got[41]//nerves of steel
 			targetHealth = max(1,targetHealth-2);
 		if scrIsGamemode(9)

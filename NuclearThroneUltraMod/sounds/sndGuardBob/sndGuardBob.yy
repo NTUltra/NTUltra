@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.723344,
+  "duration":0.373563,
   "name":"sndGuardBob",
   "parent":{
     "name":"Regular",

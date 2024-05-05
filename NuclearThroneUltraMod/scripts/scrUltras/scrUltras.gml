@@ -27,7 +27,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro","partner actively body blocks projectiles")
 
 	ultra_name[4] = "FISH CAN ROLL"
-	ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 5%#INCREASE PRIMARY <w>RELOAD SPEED<w>#DEPENDING ON YOUR <w>SPEED<w>#MUCH MORE EFFECTIVE WHEN <w>ROLLING<w>"
+	ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 5%#SIGNIFICANTLY INCREASE PRIMARY <w>RELOAD SPEED<w>#DEPENDING ON YOUR <w>SPEED<w>#MUCH MORE EFFECTIVE WHEN <w>ROLLING<w>"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
 	if altOverride || instance_exists(Player) && Player.race == 1 && (Player.altUltra)

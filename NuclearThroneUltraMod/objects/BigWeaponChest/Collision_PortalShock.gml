@@ -12,7 +12,7 @@ curse = 0
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
 }
-with instance_create(x,y,WepPickup)//WE INCLUDE THE SECOND WEAPON TO DUPLICATE
+with instance_create(x,y + 2,WepPickup)//WE INCLUDE THE SECOND WEAPON TO DUPLICATE
 {
 scrWeapons()
 wep=other.wep2;
@@ -32,6 +32,21 @@ ammo = 50
 curse = 0
 type = wep_type[wep]
 sprite_index = wep_sprt[wep]
+}
+if heavyHeart
+{
+	with instance_create(x,y - 4,WepPickup)//THIS ONE IS SADLY NOT DUPLICATED CUS THAT BE OP
+	{
+	scrWeapons()
+	wep=other.wep4;
+	name = wep_name[wep]
+	ammo = 50
+	curse = 0
+	type = wep_type[wep]
+	sprite_index = wep_sprt[wep]
+	direction = ang;
+	speed = 1.5;
+	}
 }
 
 

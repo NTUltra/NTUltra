@@ -1,13 +1,25 @@
 scrWeapons()
 SetSeedWeapon();
-wep = scrDecideWepGold()
+ammoGet = 50;
+wep[0] = scrDecideWepGold();
 aditionalwep = 0;
 mySize = 1;
 team = 0;
-while (wep == 315)
+heavyHeart = false;
+while (wep[0] == 315)
 {
 	aditionalwep = 315;
-	wep = scrDecideWepGold()
+	wep[0] = scrDecideWepGold()
+}
+if instance_exists(Player) && Player.skill_got[0]
+{
+	ammoGet = 30;
+	heavyHeart = true;
+	var tries = 500;
+	do {
+		wep[1] = scrDecideWepGold();
+		tries -= 1;
+	} until(wep[1] != wep[0] || tries < 0)
 }
 SetSeed();
 //If you don't have the pig yet give em a money gun yo fukc da grind!

@@ -60,9 +60,13 @@ if instance_exists(Player) {
 		}
 		scrCrownOfDeath();
 	}
-	if Player.skill_got[43]
+	if Player.skill_got[14]
 	{
-		 alarm[6] = 10;
+		alarm[6] = 10;
+		if Player.ultra_got[97]
+		{
+			moodAmount += 1;
+		}
 	}
 }
 motion_add(random(360),0.1);

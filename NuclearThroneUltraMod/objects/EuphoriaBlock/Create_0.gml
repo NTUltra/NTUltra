@@ -2,6 +2,7 @@
 image_speed = 0.45;
 if instance_exists(Player) && Player.race == 25
 {
+	image_speed = 0.4;
 	image_xscale = 1.25;
 	image_yscale = 1.25;
 }

@@ -23,8 +23,8 @@ weekGamemode = -1;
 weeklyOption = [];
 biDailyGamemode = -1;
 biDailylyOption = [];
-totalHitsCounter = [];
-hitsCounter = 0;
+//totalHitsCounter = [];
+//hitsCounter = 0;
 event_perform(ev_alarm,0);
 event_user(0);
 

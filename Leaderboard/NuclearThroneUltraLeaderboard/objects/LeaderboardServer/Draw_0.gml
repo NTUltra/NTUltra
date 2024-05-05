@@ -22,6 +22,7 @@ repeat(string_count("\n",raceLeaderboardString))
 	yy -= string_height("W");
 	i++;
 }
+/*
 var al = array_length(totalHitsCounter);
 var tx = x - 64;
 var ty = y;
@@ -31,3 +32,4 @@ for (var i = 0; i < al; i++) {
 	draw_text(tx,ty,totalHitsCounter[i]);
 	ty += 16;
 }
+*/

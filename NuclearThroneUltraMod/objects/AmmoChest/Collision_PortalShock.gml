@@ -1,5 +1,9 @@
 repeat(2)
-instance_create(x,y,AmmoPickup)
+{
+	with instance_create(x,y,AmmoPickup) {
+		ammoValue = 0.75;	
+	}
+}
 snd_play(sndAmmoChest)
 instance_destroy()
 

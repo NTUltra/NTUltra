@@ -88,6 +88,10 @@ function scrLoseSkill(skillIndex){
 			ammo[3] = min(ammo[3],typ_amax[3]);
 			ammo[4] = min(ammo[4],typ_amax[4]);
 			ammo[5] = min(ammo[5],typ_amax[5]);
+			if race == 25
+				scrWeaponAdjustCost(1.15);
+			else
+				scrWeaponAdjustCost(1.1);
 			//Cap the ammo
 		break;
 		case 13: //LONG ARMS
@@ -144,7 +148,8 @@ function scrLoseSkill(skillIndex){
 			accuracy=standartAccuracy;
 		break;
 		case 33: //GLASS ARM CANNON
-			maxhealth += 1;
+			if race != 25
+				maxhealth += 2;
 		break;
 		case 38: //ENRICHED METABOLISM
 			metabolism = 0;

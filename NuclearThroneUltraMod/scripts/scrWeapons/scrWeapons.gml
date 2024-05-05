@@ -4869,7 +4869,7 @@ function scrWeapons() {
 	wep_type[432] = 3
 	wep_auto[432] = 1
 	wep_load[432] = 34
-	wep_cost[432] = 2
+	wep_cost[432] = 2.5
 	wep_sprt[432] = sprChunkyBladeGun
 	wep_area[432] = 13
 	wep_text[432] = "grand blade"

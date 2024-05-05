@@ -591,6 +591,7 @@ alarm[3] = max(alarm[3],12);//before your lag lowers again}
 
 //if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsmith use armour and Skeleton and businesshog actually
 //{
+var rageWasHit = false;
 if armour > 0
 {
 	if tookHit && /*my_health != maxhealth && */alarm[3] < 1&& !exception
@@ -603,10 +604,10 @@ if armour > 0
 		hurtTime = 0;
 		snd_play(sndLostArmour);
 		alarm[3] = max(alarm[3],4);//before your armour lowers again}
-		if skill_got[28] == 1
+		if skill_got[28] && !rageWasHit
 		{
-			//rage = 0;
-			rage = max(floor(rage-50),0);
+			rageWasHit = true;
+			rage = max(floor(rage-rageHit),0);
 		}
 		scrBlankArmour();
 		if ultra_got[64]
@@ -717,9 +718,9 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(17,alarm[3]);
+				alarm[3] = max(11,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],14);//duration
+				alarm[3] = max(alarm[3],9);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);
@@ -898,10 +899,10 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 {
 	tookDamageThisArea = true;
 	///rage
-	if skill_got[28] == 1
+	if skill_got[28] && !rageWasHit
 	{
-		//rage = 0;
-		rage = max(floor(rage-50),0);
+		rageWasHit = true;
+		rage = max(floor(rage-rageHit),0);
 	}
 	if (race == 26 || copyPassive == 26) && humphrySkill > 0//Humphry
 	{

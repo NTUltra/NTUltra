@@ -22,8 +22,15 @@ wkick = 0
 
 actTime = 9;
 loops = GetPlayerLoops();
+range = 300;
 if loops > 0
 	actTime = 7;
+if loops > 1
+	range += 50;
+if loops > 2
+	range += 50;
+if loops > 3
+	range += 50;
 acc = 0.8;
 maxSpeed = 3;
 reviveArea = ReviveArea;

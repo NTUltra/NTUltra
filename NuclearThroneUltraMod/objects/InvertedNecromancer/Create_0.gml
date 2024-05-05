@@ -15,6 +15,15 @@ snd_dead = sndNecromancerDead
 
 
 //behavior
+range = 340;
+loops = GetPlayerLoops();
+if loops > 1
+	range += 50;
+if loops > 2
+	range += 50;
+if loops > 3
+	range += 50;
+
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)

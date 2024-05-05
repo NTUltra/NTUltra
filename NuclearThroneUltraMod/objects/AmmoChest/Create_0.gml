@@ -1,5 +1,6 @@
 mediumchest=0;
 shadowSprite = shd24;
+ammoValue = 1.5;
 if object_index != AmmoChestMystery
 {
 	if instance_exists(Player)

@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UnsortedProp",
-    "path":"folders/Sprites/Enviroment/UnsortedProp.yy",
+    "name":"Fish",
+    "path":"folders/Sprites/Player/Fish.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

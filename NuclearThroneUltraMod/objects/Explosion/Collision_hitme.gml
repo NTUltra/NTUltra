@@ -17,11 +17,13 @@ if other.team != team && other.team!=2
 		motion_add(point_direction(other.x,other.y,x,y),6)
 		Sleep(4)
 		BackCont.shake += 2
-		if (instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra)
-		{
-			scrMoodSwingStun(5);
-			scrMoodSwingIcicle(1, id);
-		}
+		/*
+			if (instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra)
+			{
+				scrMoodSwingStun(5);
+				scrMoodSwingIcicle(1, id);
+			}
+		*/
 	}
 }
 

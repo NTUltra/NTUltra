@@ -1000,6 +1000,10 @@ if !instance_exists(LevCont) and visible = 1
 					{
 						scrFire();
 					}
+					else
+					{
+						can_shoot = 0;	
+					}
 					y += jumpY;
 					mask_index = msk;
 				}
@@ -1029,6 +1033,10 @@ if !instance_exists(LevCont) and visible = 1
 					if !place_meeting(x,y,Wall)
 					{
 						scrFire();
+					}
+					else
+					{
+						can_shoot = 0;	
 					}
 					y += jumpY;
 					mask_index = msk;
@@ -1484,7 +1492,7 @@ if (!instance_exists(LevCont))
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{
 			var t = wep_type[wep];
-			var m = 1.2;
+			var m = 1.25;
 			var at = (ammo[t]/typ_amax[t])*m;
 			if t != 0
 				reload -= at;
@@ -1536,8 +1544,8 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.1;
-			creload -= 0.1;
+			breload -= 0.15;
+			creload -= 0.15;
 			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.3;
@@ -1620,6 +1628,10 @@ if (!instance_exists(LevCont))
 					if !place_meeting(x,y,Wall)
 					{
 						scrFire();
+					}
+					else
+					{
+						can_shoot = 0;	
 					}
 					y += jumpY;
 					mask_index = msk;
@@ -1736,7 +1748,11 @@ maxSpeed -= tempMaxSpeed;
 
 if roll = 1
 {
-speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
+	if UberCont.normalGameSpeed == 60
+		flushCharge += 0.5;
+	else
+		flushCharge += 1;
+	speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
 	if jump <= 0 && mask_index == mskPickupThroughWall
 	{
 		var msk = mask_index;
@@ -1749,40 +1765,6 @@ speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
 		mask_index = msk;
 		instance_create(x,y,Dust);
 	}
-}
-if ultra_got[59] && altUltra
-{
-	var msk = mask_index;
-	mask_index = mskBigWepPickup;
-	var floors = ds_list_create();
-	var al = instance_place_list(x,y,Floor,floors,false)
-	for (var j = 0; j < al; j++) {
-		with floors[| j]
-		{
-			var corrosion = instance_place(x,y,Corrosion);
-			if corrosion == noone
-			{
-				if object_index == FloorExplo
-				{
-					instance_create(x,y,CorrosionSmall)
-				}
-				else
-				{
-					instance_create(x,y,Corrosion)
-				}
-			}
-			else
-			{
-				with corrosion
-				{
-					alarm[2] = 1;
-					alarm[0] = 60;
-				}
-			}
-		}
-	}
-	ds_list_destroy(floors);
-	mask_index = msk;
 }
 if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 {
@@ -2029,14 +2011,14 @@ if (instance_exists(enemy))
 		homeBoost += 2.75;
 	if skill_got[19]
 	{
-		homeBoost += 0.8;
+		homeBoost += 1;
 		if race == 25
-			homeBoost += 0.15;
+			homeBoost += 0.25;
 	}
 	///homing projectiles mod
-	var modHomeBoost = 0.25;
+	var modHomeBoost = 0.24;
 	if skill_got[30] == 1
-		modHomeBoost += 0.14;
+		modHomeBoost += 0.15;
 	if ultra_got[65]
 		modHomeBoost += 0.14;
 
@@ -2186,7 +2168,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			extrafeetalarm--;
 	}
 
-	if extrafeetalarm == 15 && extrafeetdodged
+	if extrafeetalarm == 18 && extrafeetdodged
 	{
 		closedodges ++;
 		if race == 26 && closedodges >= 20
@@ -2198,6 +2180,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		{
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
+		instance_create(x,y,EuphoriaBlock);
 		if race == 25 {
 			if scrDrop(70,7) != noone
 				snd_play(sndExtraFeetDodge);
@@ -2241,7 +2224,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 				{
 					if dodgeAble && team != other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm=27;//after some time we check if you've dodged this
+						other.extrafeetalarm = 25;//after some time we check if you've dodged this
 						other.extrafeetdodged=true;
 						j = al;
 						dodgeAble = false;
