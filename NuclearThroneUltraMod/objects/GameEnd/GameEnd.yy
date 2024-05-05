@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"mskSquareBat",
+    "path":"sprites/mskSquareBat/mskSquareBat.yy",
+  },
   "spriteMaskId":null,
   "visible":false,
 }

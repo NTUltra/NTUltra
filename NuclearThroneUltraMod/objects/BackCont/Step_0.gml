@@ -15,6 +15,11 @@ if !instance_exists(GenCont)
 			my = mouse_y;
 		}
 	}
+	if !Player.visible
+	{
+		mx = Player.x;
+		my = Player.y;
+	}
 	viewdist = 9
 
 	if Player.wep_type[Player.wep] = 0 or Player.wep_type[Player.wep] = 2

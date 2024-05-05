@@ -3599,9 +3599,10 @@ function scrPowers(raceOverwrite = -1) {
 
 		toxicamount=0;
 	}
-	if race == 1 && flushCharge > 4// && skill_got[5]
+	if race == 1 && flushCharge > 6 && skill_got[5]
 	{
 		//FLUSH!
+		flushCharge -= 2;
 		with instance_create(x,y,FishFlush)
 		{
 			snd_play(sndFishFlushStart,0.1);

@@ -80,6 +80,7 @@ if !active
 		with ThroneSitter
 		{
 			sprite_index = sprThroneCorpseDead;
+			image_index = 0;
 		}
 		alarm[0] = 30;//Become active time
 	}

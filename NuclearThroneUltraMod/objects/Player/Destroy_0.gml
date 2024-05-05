@@ -34,7 +34,7 @@ if ultra_got[87] && altUltra
 }
 audio_stop_sound(sndHorrorLoop);
 audio_stop_sound(sndHorrorLoopTB);
-if actualLives < 1 && !reincarnate
+if actualLives < 1 && !reincarnate && visible
 {
 	with MusCont
 	{
@@ -203,12 +203,12 @@ with PlayerAlarms2
 	instance_destroy();
 with PlayerAlarms3
 	instance_destroy();
-
-with instance_create(x,y,PlayerDead)
-{
-	snd_dead = other.snd_dead;
-	alarm[0] = 2;
-}
+if visible && my_health < 1
+	with instance_create(x,y,PlayerDead)
+	{
+		snd_dead = other.snd_dead;
+		alarm[0] = 2;
+	}
 if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
@@ -279,7 +279,7 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wepmod4 = other.cwepmod4;
 	}
 }
-if race == 23 //Frog explode!
+if race == 23 && visible && my_health < 1//Frog explode!
 {
 	repeat(40)
 	instance_create(x,y,ToxicThrowerGas)
@@ -306,7 +306,7 @@ if race == 23 //Frog explode!
 
 	BackCont.shake += 20	
 }
-if race=15
+if race=15 && visible && my_health < 1
 {
 Sleep(20)
 with instance_create(x,y,PlasmaImpact)
@@ -324,7 +324,7 @@ if scrIsCrown(3)
 {
 	instance_create(x,y,CrownOfDeathBoom);
 }
-if actualLives>0 && !reincarnate
+if actualLives>0 && !reincarnate && visible && my_health < 1
 {
 instance_create(x,y,WallBreak);
 
@@ -361,7 +361,7 @@ with projectile
 if team!=other.team
 instance_destroy();
 }
-
+if visible && my_health < 1
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
@@ -570,7 +570,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			var actualLoops = other.loops - loadedLoops;
 			ctot_kill[other.race] += actualKills
 			//ctot_time[other.race]+=time;
-			if other.my_health<1
+			if other.my_health<1&& other.visible
 				ctot_dead[other.race] += 1
 
 			ctot_played[other.race] += 1;
@@ -593,8 +593,8 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			{
 				ctot_kill[0]+=actualKills
 				//ctot_time[other.race]+=time;
-				if other.my_health<1
-				ctot_dead[0] += 1
+				if other.my_health<1&& other.visible
+					ctot_dead[0] += 1
 	
 				ctot_played[0] += 1;
 	
@@ -636,10 +636,10 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 		}
 		
 		//Lets unlock some shit
-		if my_health<=0
+		if my_health<=0 && visible
 			scrUnlockCharacter(4,"FOR DYING");//MELTING
 
-		if race = 4 && area = 6//SKELETON
+		if race == 4 && area == 6 && my_health < 1 && visible//SKELETON
 			scrUnlockCharacter(19,"FOR DYING IN THE LABS AS MELTING");
 
 		if UberCont.ctot_kill[race]>=100//UNLOCK PLANT

@@ -132,4 +132,4 @@ tookDamageThisFrame = 0;
 version = 2;
 yReset = y;
 maxSpeed = 3;
-instance_create(x,y,ThroneSitter);
+instance_create_depth(x,y-44,depth - 1,ThroneSitter);

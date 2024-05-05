@@ -120,3 +120,10 @@ if instance_exists(VoidRipperBurst)
 	draw_sprite_ext(sprRadial,0,l,t,(wp/256) * scale,(hp/256) * scale,0,c_white,a);
 	gpu_set_blendmode(bm_normal);
 }
+
+if instance_exists(FadeToBlackToCredits)
+{
+	draw_set_alpha(FadeToBlackToCredits.alpha);
+	draw_rectangle_colour(l,t,r,b,c_black,c_black,c_black,c_black,false);
+	draw_set_alpha(1);
+}

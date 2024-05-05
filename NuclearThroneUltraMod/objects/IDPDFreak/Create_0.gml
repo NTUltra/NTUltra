@@ -1,4 +1,4 @@
-raddrop = 25
+raddrop = 20
 scrCrownOfPopoRad(30);
 maxhealth = 25
 meleedamage = 5

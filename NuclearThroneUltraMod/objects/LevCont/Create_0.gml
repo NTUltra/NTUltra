@@ -624,7 +624,7 @@ if scrIsGamemode(32) {
 			skill_got[41] = 0;
 			skill_got[22] = 0;
 		}
-		if race == 12
+		if race != 12
 		{
 			//YC
 			skill_got[7] = 0;// Bloodlust

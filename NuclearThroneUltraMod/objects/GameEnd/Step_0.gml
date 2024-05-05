@@ -9,8 +9,12 @@ if instance_exists(PlayerInEnding)
 			x = other.x;
 			y = other.y;
 			speed = 0;
-			sprite_index = spr_sit;
-			image_index = 0;
+			if sprite_index != spr_go_sit && sprite_index != spr_sit
+			{
+				sprite_index = spr_go_sit;
+				maxSpeed = 0;
+				image_index = 0;
+			}
 		}
 	}
 }
@@ -23,7 +27,13 @@ else if instance_exists(Player)
 			if visible
 			{
 				visible = false;
-				instance_create(x,y,PlayerInEnding);
+				with Cursor
+				{
+					visible = false;	
+				}
+				instance_create_depth(x,y,depth - 1,PlayerInEnding);
+				x = other.x;
+				y = other.y;
 			}
 		}
 	}
