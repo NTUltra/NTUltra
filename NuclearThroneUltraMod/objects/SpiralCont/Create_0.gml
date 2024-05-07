@@ -19,6 +19,8 @@ if scrIsInInvertedArea()
 type=5;
 if Player.area == 8
 type = 6;
+if Player.area == 135
+type = 3;
 }
 
 depth = -6;

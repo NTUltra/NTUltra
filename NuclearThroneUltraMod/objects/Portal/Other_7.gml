@@ -19,12 +19,24 @@ if sprite_index = sprPinkPortalSpawn
 	sprite_index = sprPinkPortal
 	if type = 3
 	sprite_index = sprProtoPortal
+		image_index = 0;
+
+}
+if sprite_index = sprPopoPortalStart
+{
+	image_speed = 0.4;
+	sprite_index = sprPopoPortal
+	if type = 3
+		sprite_index = sprProtoPortal
+	image_index = 0;
 }
 if sprite_index == sprBigPortalSpawn
 {
 	sprite_index = sprBigPortal;	
 }
-if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear or sprite_index = sprPortalInvertedDisappear || sprite_index = sprBigPortalDisappear || sprite_index == sprPinkPortalDisappear
+if sprite_index = sprPortalDisappear or sprite_index = sprProtoPortalDisappear ||
+sprite_index = sprPortalInvertedDisappear || sprite_index = sprBigPortalDisappear || sprite_index == sprPinkPortalDisappear
+|| sprite_index == sprPopoPortalDisappear
 {
 	var canRestart = false;
 	with Player

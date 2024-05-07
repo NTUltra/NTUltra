@@ -7,8 +7,8 @@ if walk > 0
 {
 	walk -= 1
 	motion_add(direction,1)
-	if target != noone
-	mp_potential_step(target.x,target.y,2,false)
+	if target != noone && point_distance(x,y,target.x,target.y) > 16
+		mp_potential_step(target.x,target.y,2,false)
 }
 
 if dodge > 0

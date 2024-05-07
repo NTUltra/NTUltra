@@ -1417,7 +1417,7 @@ function scrPopEnemies() {
 			}
 		}
     }
-	if spawnarea == 135/* && subarea != 3 */{
+	if spawnarea == 135 && subarea != 3 {
 	    var ran = random(100);
 	    if ran > 25 {
 	        instance_create(x + 16, y + 16, choose(Grunt, Inspector, BuffPopo, SegwayPopo, Shielder))

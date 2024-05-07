@@ -1,6 +1,6 @@
 if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant
 	exit;
-if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn
+if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprite_index != sprPopoPortalStart
 {
 if !instance_exists(PlayerInPortal)
 {

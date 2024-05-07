@@ -395,7 +395,13 @@ goal = 150+s;
 else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;
 else if Player.area == 135//Hq
+{
 goal = 120+s;
+	if Player.subarea == 3
+	{
+		goal = 1;	
+	}
+}
 else if Player.area == 137//Void
 goal = 1;
 

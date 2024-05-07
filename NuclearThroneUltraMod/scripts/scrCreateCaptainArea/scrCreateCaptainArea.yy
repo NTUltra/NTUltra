@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCreateCaptainArea",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateCaptainArea",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

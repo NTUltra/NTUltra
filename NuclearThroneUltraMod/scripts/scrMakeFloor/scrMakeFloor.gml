@@ -604,20 +604,39 @@ function scrMakeFloor(limiter) {
 	}
 	//HQ
 	if area = 135{ 
-		if random(5) < 1
+		if subarea == 3
 		{
-			instance_create(x+32,y,Floor)
-			instance_create(x-32,y,Floor)
-			instance_create(x,y+32,Floor)
-			instance_create(x,y-32,Floor)
-			instance_create(x+32,y+32,Floor)
-			instance_create(x+32,y-32,Floor)
-			instance_create(x-32,y-32,Floor)
-			instance_create(x-32,y+32,Floor)
+			scrCreateCaptainArea();
 		}
-		else 
+		else
 		{
-			instance_create(x,y,Floor)
+			if instance_number(Floor) < 2
+			{
+				instance_create(x,y,Floor)
+				instance_create(x+32,y,Floor)
+				instance_create(x-32,y,Floor)
+				instance_create(x,y+32,Floor)
+				instance_create(x,y-32,Floor)
+				instance_create(x+32,y+32,Floor)
+				instance_create(x+32,y-32,Floor)
+				instance_create(x-32,y-32,Floor)
+				instance_create(x-32,y+32,Floor)
+			}
+			else if random(4) < 1
+			{
+				instance_create(x+32,y,Floor)
+				instance_create(x-32,y,Floor)
+				instance_create(x,y+32,Floor)
+				instance_create(x,y-32,Floor)
+				instance_create(x+32,y+32,Floor)
+				instance_create(x+32,y-32,Floor)
+				instance_create(x-32,y-32,Floor)
+				instance_create(x-32,y+32,Floor)
+			}
+			else
+			{
+				instance_create(x,y,Floor)
+			}
 		}
 	}
 	
@@ -751,7 +770,7 @@ function scrMakeFloor(limiter) {
 		trn = 0;	
 	}
 	else if area == 135
-		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
+		trn = choose(0,0,0,0,0,0,0,0,0,0,0,90,-90)
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
@@ -914,17 +933,35 @@ function scrMakeFloor(limiter) {
 	if random(4) < 1
 	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area = 5 || area = 107 || area == 135
+	if area == 135 && instance_number(Floor) > 5 && Player.subarea != 3
 	{
-	if random(14+instance_number(FloorMaker)) > 15
-	{
-	instance_destroy()
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-	instance_create(x,y,Floor)
-	instance_create(x+16,y+16,AmmoChest)}
+		if random(10-instance_number(FloorMaker)) > 7
+		{
+			//instance_destroy()
+			direction -= trn;
+			if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+			instance_create(x,y,Floor)
+			instance_create(x+16,y+16,AmmoChest)}
+			with instance_create(x,y,FloorMaker) {
+				firstTry = false;
+				direction = other.direction + choose(90,-90);
+				styleb = choose(0,0,0,0,0,0,1);
+				goal = other.goal;
+				limiter = scrGenerateFloorMaker(limiter)
+			};
+		}
 	}
-	if random(22) < 1//25
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+	if area = 5 || area = 107
+	{
+		if random(14+instance_number(FloorMaker)) > 15
+		{
+		instance_destroy()
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+		instance_create(x,y,Floor)
+		instance_create(x+16,y+16,AmmoChest)}
+		}
+		if random(22) < 1//25
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	if area = 6 || area = 112
 	{

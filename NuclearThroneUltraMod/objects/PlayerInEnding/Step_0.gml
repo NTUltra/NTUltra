@@ -10,6 +10,11 @@ if instance_exists(GameEnd) && sprite_index != spr_sit && sprite_index != spr_go
 		sprite_index = spr_walk;
 	else
 		sprite_index = spr_idle;
+	with Player
+	{
+		x = other.x;
+		y = other.y;	
+	}
 }
 if speed > maxSpeed
 	speed = maxSpeed

@@ -32,8 +32,6 @@ else if instance_exists(Player)
 					visible = false;	
 				}
 				instance_create_depth(x,y,depth - 1,PlayerInEnding);
-				x = other.x;
-				y = other.y;
 			}
 		}
 	}

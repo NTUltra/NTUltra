@@ -15,7 +15,7 @@ if instance_exists(Player)
 		image_xscale = 1
 	}
 
-if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal || sprite_index == sprPinkPortal
+if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal || sprite_index == sprPinkPortal || sprite_index == sprPopoPortal
 {
 with WepPickup
 {
@@ -109,7 +109,7 @@ if endgame < 100
 		endgame -= 0.5
 	else
 		endgame -= 1
-if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
+if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal || sprite_index == sprPopoPortal)
 {
 	image_index = 0
 	if type = 1
@@ -122,6 +122,8 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 	sprite_index = sprProtoPortalDisappear
 	else if isPink && !inverted
 		sprite_index = sprPinkPortalDisappear;
+	else if isHQ && !inverted
+		sprite_index = sprPopoPortalDisappear;
 	if type = 4
 	sprite_index = sprBigPortalDisappear;
 	with Player
@@ -162,7 +164,8 @@ if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or
 if !instance_exists(Player) && !instance_exists(PlayerSpawn)
 {
 endgame = -1
-if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted ||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal)
+if endgame < 0 and (sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted 
+||  sprite_index = sprBigPortal || sprite_index == sprPinkPortal || sprite_index == sprPopoPortal)
 {
 image_index = 0
 if type = 1
@@ -173,8 +176,10 @@ if inverted
 }
 if type = 3
 	sprite_index = sprProtoPortalDisappear
-	else if isPink && !inverted
-		sprite_index = sprPinkPortalDisappear;
+else if isPink && !inverted
+	sprite_index = sprPinkPortalDisappear;
+else if isHQ && !inverted
+	sprite_index = sprPopoPortalDisappear;
 if type = 4
 	sprite_index = sprBigPortalDisappear;
 }

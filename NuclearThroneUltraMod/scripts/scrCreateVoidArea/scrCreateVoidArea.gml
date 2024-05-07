@@ -2,24 +2,24 @@
 // /@description
 ///@param
 function scrCreateVoidArea(){
-	var ham = 5;
-	var vam = 7;
-	var bam = 2;
-	for (var fxx = -32 * ham; fxx < 32 * ham; fxx += 32;)
-	{
-		for (var fyy = -32 * vam; fyy < 32 * bam; fyy += 32;)
-		{
-			if (
-				!(fxx == -32 * ham && fyy == -32 * vam)//Left Top
-				&& !(fxx == -32 * ham && fyy == -32 * (bam - 1))//Left Bottom
-				&& !(fxx == 32 * (ham - 1) && fyy == -32 * vam)//Right Top
-				&& !(fxx == 32 * (ham - 1) && fyy == -32 * (bam - 1))//Right Bottom
-			)
-				instance_create(x + fxx,y + fyy,Floor);
-		}
-	}
 	if !instance_exists(VoidFiend)
 	{
+		var ham = 5;
+		var vam = 7;
+		var bam = 2;
+		for (var fxx = -32 * ham; fxx < 32 * ham; fxx += 32;)
+		{
+			for (var fyy = -32 * vam; fyy < 32 * bam; fyy += 32;)
+			{
+				if (
+					!(fxx == -32 * ham && fyy == -32 * vam)//Left Top
+					&& !(fxx == -32 * ham && fyy == -32 * (bam - 1))//Left Bottom
+					&& !(fxx == 32 * (ham - 1) && fyy == -32 * vam)//Right Top
+					&& !(fxx == 32 * (ham - 1) && fyy == -32 * (bam - 1))//Right Bottom
+				)
+					instance_create(x + fxx,y + fyy,Floor);
+			}
+		}
 		instance_create(x,y,Translations);
 		instance_create(x,y+48,VoidExit);
 		var xo = x;

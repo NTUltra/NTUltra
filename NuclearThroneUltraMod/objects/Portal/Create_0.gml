@@ -67,14 +67,19 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 pullstrength=1;
 pullRange = 96
 isPink = false;
+isHQ = false;
 if !inverted && (currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)) || (currentarea == 112 && currentsubarea == 2)
 {
 	isPink = true;
-	sprite_index = sprPinkPortalSpawn;	
+	sprite_index = sprPinkPortalSpawn;
 }
 else if currentarea == 100 || currentarea == 128 || currentarea == 129
 {
 	type = 3;
+}
+else if !inverted && currentarea == 135{
+	isHQ = true;
+	sprite_index = sprPopoPortalStart;
 }
 if (instance_exists(CrownPed) && !inverted)
 {

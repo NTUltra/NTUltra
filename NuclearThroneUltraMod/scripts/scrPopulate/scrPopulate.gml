@@ -253,6 +253,13 @@ function scrPopulate() {
                 sprite_index = sprCrownCourtyardTopDecal;
             }
         }
+		else if spawnarea = 135 //HQ
+        {
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprHQTopDecal;
+            }
+        }
 		if spawnarea = 3 || spawnarea = 106 {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
                 if random(7) < 1

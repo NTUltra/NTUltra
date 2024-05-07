@@ -478,6 +478,7 @@ function scrNextLevel() {
 			inverted = false;
 			exit;
 		}
+		/*
 		if area == 135//HQ I guess its impossible really
 		{
 			if lastarea != 135
@@ -485,7 +486,7 @@ function scrNextLevel() {
 			else
 				area = 1;
 			subarea = 1;
-		}
+		}*/
 	}
 	else if area == 119 || area == 120
 	{
