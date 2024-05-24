@@ -4,7 +4,7 @@ if GetPlayerUltramod() == ultramods.toxicSwarm
 	with instance_create(x,y,UltraSwarmBolt)
 	{
 		scrCopyWeaponMod(other);
-		hits -= 1;
+		hits = 1;
 		mxSpd -= 1;
 		direction = other.direction;
 		image_angle = direction;

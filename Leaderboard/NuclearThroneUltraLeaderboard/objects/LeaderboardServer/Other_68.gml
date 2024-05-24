@@ -38,19 +38,20 @@ if (type == network_type_data) {
 			var socket = buffer_read(buffer, buffer_u16);
 			var userId = buffer_read(buffer, buffer_u64);
 			var canParticipate = scrGetExistingScore(dailyScoreSaveFileString,userId);
-			var sendBuffer = buffer_create(4,buffer_fixed,1);
+			var sendBuffer = buffer_create(4,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
 			buffer_write(sendBuffer,buffer_bool,canParticipate);
 			var dailyDay = scrGetDailyNumber();
 			show_debug_message("participation day:");
 			show_debug_message(dailyDay);
 			buffer_write(sendBuffer,buffer_u8,dailyDay);
-			if dailyDay % 2 == 0
+			if dailyDay % 1 == 0
 			{
 				show_debug_message("This is agm!");
 				//Daily gamemode
 				var canParticipateGm = scrGetExistingScore(biDailyGamemodeSaveFileString,userId,"gamemodelb");
 				buffer_write(sendBuffer,buffer_bool,canParticipateGm);
+				buffer_write(sendBuffer,buffer_string,string(dayGamemode));
 			}
 			else {
 				show_debug_message("This is a race");

@@ -69,9 +69,23 @@ if (type == network_type_data) {
 				var dailyDay = buffer_read(buffer, buffer_u8);
 				debug("daily day:", dailyDay);
 				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
-				if dailyDay % 2 == 0 {
+				if dailyDay % 1 == 0 {
 					debug("ITS NOT A RACE");
 					isRace = false;
+					if buffer_get_size(buffer) > 4
+					{
+						var gms = buffer_read(buffer, buffer_string)
+						gms = string_replace_all(gms,"[","");
+						gms = string_replace_all(gms,"]","");
+						gms = string_replace_all(gms," ","");
+						gms = string_split(gms,",",false);
+						dailyGM = "";
+						dailyGM += "\n"+UberCont.gamemode[real(gms[0])];
+						if gms[1] != "0"
+						dailyGM += "\n"+UberCont.gamemode[real(gms[1])];
+						if gms[2] != "0"
+						dailyGM += "\n"+UberCont.gamemode[real(gms[2])];
+					}
 					with DailyRace {
 						isRace = false;
 						dailyName = "DAILY GAMEMODE"

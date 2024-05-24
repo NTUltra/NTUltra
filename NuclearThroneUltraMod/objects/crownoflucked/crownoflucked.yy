@@ -38,5 +38,5 @@
     "path":"sprites/sprCrownOfLucked/sprCrownOfLucked.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

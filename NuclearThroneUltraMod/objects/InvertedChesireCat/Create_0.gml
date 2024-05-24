@@ -20,7 +20,14 @@ snd_melee = sndRhinoFreakMelee;
 
 walk=0;
 //behavior
-alarm[2] = 60+random(120);
+alarm[2] = 120+random(60);
+if instance_exists(Player)
+{
+	if Player.skill_got[29]	//Insomnia
+	{
+		alarm[2] += 30;
+	}
+}
 alarm[10] = 0;
 visible=false;
 //if instance_exists(Player)
@@ -50,7 +57,7 @@ cang = random(360);
 caspd = min(6,4+((loops-startLoop)*0.5));
 if loops > startLoop
 {
-	alarm[6] = 200;
+	alarm[6] = 180;
 	if instance_exists(Player)
 	{
 		if Player.skill_got[29]	//Insomnia

@@ -942,17 +942,22 @@ if !instance_exists(LevCont) and visible = 1
 	}
 	if( (!(IsShielding)||(ultra_got[7]==1))){
 	if (race == 7 || (altUltra && ultra_got[55]) || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
-		//Roids always auto fire
-		if wep_auto[wep] == 2
-			wep_auto[wep] = 3;
-		else
-			wep_auto[wep] = 1
-		if race == 7 && bwep != 0
+		if !scrIsChargeWeapon(wep)
 		{
-			if wep_auto[bwep] == 2
-				wep_auto[bwep] = 3;
+			//Roids always auto fire
+			if wep_auto[wep] == 2
+				wep_auto[wep] = 3;
 			else
-				wep_auto[bwep] = 1
+				wep_auto[wep] = 1
+		}
+		if scrIsChargeWeapon(bwep) {
+			if race == 7 && bwep != 0
+			{
+				if wep_auto[bwep] == 2
+					wep_auto[bwep] = 3;
+				else
+					wep_auto[bwep] = 1
+			}
 		}
 	}
 

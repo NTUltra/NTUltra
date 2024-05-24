@@ -90,6 +90,8 @@ with Feather
 {
 	event_perform(ev_draw,0);
 }
+with CrownOfLucked
+	event_perform(ev_draw,0);
 with AtomPulse
 {
 	event_perform(ev_draw,0);	

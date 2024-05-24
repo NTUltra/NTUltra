@@ -23,4 +23,5 @@ if instance_exists(Player)
 	wepmod3 = Player.wepmod3;
 	wepmod4 = Player.wepmod4;
 }
-scrFire();
+if canFire
+	scrFire();

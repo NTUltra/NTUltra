@@ -5,7 +5,7 @@ if object_index != AmmoChestMystery
 {
 	if instance_exists(Player)
 	{
-		if !scrIsGamemode(25) && random(4) < 1 && !place_meeting(x,y,Player) && !(Player.area == 9 && Player.subarea == 3) && !instance_exists(SurvivalWave) && !Player.area == 119 && !Player.area == 120
+		if !scrIsGamemode(25) && random(4) < 1 && !place_meeting(x,y,Player) && !(Player.area == 9 && Player.subarea == 3) && !instance_exists(SurvivalWave) && !Player.area == 119 && !Player.area == 120 && !Player.area == 2
 		{
 			instance_destroy(id,false);
 			instance_create(x,y,AmmoChestMystery);

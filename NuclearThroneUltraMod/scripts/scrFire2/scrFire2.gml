@@ -4159,7 +4159,8 @@ function scrFire2(hasTailNow) {
 
 
 	with instance_create(x,y,Tentacle)
-	{image_angle = aimDirection+(random(30)-15)*other.accuracy
+	{
+		image_angle = aimDirection+(random(30)-15)*other.accuracy
 	creator=other.id;
 	team = other.team
 	ammo = 11
@@ -17265,6 +17266,59 @@ function scrFire2(hasTailNow) {
 	event_perform(ev_alarm,0) 
 	}
 
+	break;
+	
+	//BANDIT RIFLE
+	case 769:
+
+	snd_play_fire(sndBanditGun)
+	if altFire
+	with instance_create(x,y,Shell)
+	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	altFire = !altFire;
+	with instance_create(x,y,Bullet1)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,12)
+	image_angle = direction
+	sprite_index = sprEnemyBullet1Deflected;
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 5
+	wkick = 4
+	if !skill_got[2]
+		scrMoveContactSolid(aimDirection + 180,2);
+
+	break;
+	
+	//KRAKEN REVOLVER
+	case 770:
+
+	snd_play_fire(sndHeavyRevolver)
+	snd_play(choose(sndWater1,sndWater2));
+	repeat(2)
+		with instance_create(x,y,Shell)
+			motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+	with instance_create(x,y,Bullet1Kraken)
+	{
+		creator = other.id;
+		motion_add(aimDirection+(random(12)-6)*other.accuracy,13)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x,y,FishBoost)
+	{
+		motion_add(aimDirection+random(60)-30,2+random(4));
+	}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 2
+	if !skill_got[2]
+		scrMoveContactSolid(aimDirection + 180,2);
+		
 	break;
 	
 	}//end of switch part 2!

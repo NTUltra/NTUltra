@@ -32,6 +32,8 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 			mh = Player.maxarmour
 			h = Player.armour;
+			itemdrop *= 0.95;
+			canHealth *= 0.9;
 		}
 		if instance_exists(WantHealth)
 		{
@@ -353,7 +355,7 @@ function scrDrop(itemdrop, weapondrop) {
 		wep = scrDecideWep(0)
 		name = wep_name[wep]
 		type = wep_type[wep]
-		ammo = 50
+		ammo = 40
 		curse = 0
 		sprite_index = wep_sprt[wep];
 		if collision_point(x,y,Wall,false,false)

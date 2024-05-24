@@ -1,5 +1,5 @@
 /// @description Checking wether or not some damage was dealt since last check
-alarm[1] = 60;
+alarm[1] = 30;
 if instance_exists(Player)
 {
 	if Player.my_health != detectedPlayerHealth
@@ -10,30 +10,24 @@ if instance_exists(Player)
 	}
 	else
 	{
-		alarm[3] = 60;
-		alarm[1] = 90;
+		alarm[3] = 15;
 	}
 }
 var totalHp = 0;
-if instance_number(enemy) < 20
+if instance_number(enemy) > 20
 {
-	with enemy
-	{
-		if object_index != IDPDVan ||  object_index != IDPDVanVertical
-			totalHp += my_health;
-	}
-	if totalHp != detectedEnemyHealth
-	{
-		detectedEnemyHealth = totalHp;
-		enemyHealthWasChanged = true;
-	}
-	else
-	{
-		alarm[2] = 60;
-		alarm[1] = 90;
-	}
+	alarm[1] = 90;
+}
+with enemy
+{
+	totalHp += my_health;
+}
+if totalHp != detectedEnemyHealth
+{
+	detectedEnemyHealth = totalHp;
+	enemyHealthWasChanged = true;
 }
 else
 {
-	enemyHealthWasChanged = true;
+	alarm[2] = 15;
 }

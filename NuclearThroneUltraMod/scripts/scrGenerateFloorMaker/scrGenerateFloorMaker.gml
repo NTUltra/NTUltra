@@ -171,7 +171,7 @@ function scrGenerateFloorMaker(limiter) {
 						wep = scrDecideWep(0, 8)
 						SetSeed();
 						name = wep_name[wep]
-						ammo = 50
+						ammo = 40
 						type = wep_type[wep]
 						curse = 0
 						sprite_index = wep_sprt[wep]

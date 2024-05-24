@@ -7,6 +7,7 @@ hitDelay = 8;
 hitEntities = [];
 longarms = 0;
 walled = 0
+canAlwaysDeflect = false;
 friction = 0.1
 
 snd_wallhit=sndMeleeWall;

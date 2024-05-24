@@ -19,7 +19,7 @@ humphrySkill = 0;
 
 aimX = 0;
 aimY = 0;
-
+altFire = false;
 p=0;
 //scrRaces()
 //scrSkills()

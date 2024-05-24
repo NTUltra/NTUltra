@@ -126,7 +126,7 @@ function scrCrowns() {
 	crown_tips[19] = "friendly fire"
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
-	crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#EVERY OTHER <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>#INSTEAD OF GIVING <y>AMMO<y>"
+	crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY THIRD <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"
 	
@@ -140,7 +140,7 @@ function scrCrowns() {
 	crown_tips[21] = "a risk worth taking"
 	
 	crown_name[22] = "[CROWN OF LUCK]"
-	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#25% CHANCE ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>"
+	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#CHANCE ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>##(CHANCE IS LOWER FOR#HIGHER HEALTH ENEMIES)"
 	crown_used[22] = 0
 	crown_tips[22] = "crown of 1hp equality"
 	

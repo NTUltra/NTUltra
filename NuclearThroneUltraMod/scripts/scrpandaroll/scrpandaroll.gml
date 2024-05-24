@@ -42,7 +42,6 @@ function scrPandaRoll(){
 	//dont start empty handed
 	if (type != 0 && Player.ammo[type] < Player.typ_ammo[type]*2 )//if ammo below two times an ammo drop
 	{
-		debug("add ammo");
-		ammo = 50;
+		ammo = 40;
 	}
 }

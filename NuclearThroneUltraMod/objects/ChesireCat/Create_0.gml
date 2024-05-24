@@ -19,7 +19,14 @@ snd_hurt = sndBigDogHit;
 snd_melee = sndRhinoFreakMelee;
 walk=0;
 //behavior
-alarm[2] = 60+random(120);
+alarm[2] = 120+random(60);
+if instance_exists(Player)
+{
+	if Player.skill_got[29]	//Insomnia
+	{
+		alarm[2] += 30;
+	}
+}
 visible=false;
 //if instance_exists(Player)
 //motion_add(point_direction(Player.x,Player.y,x,y),1)
@@ -47,7 +54,7 @@ cang = random(360);
 caspd = min(5,3+((loops-startLoop)*0.5));
 if loops >= startLoop
 {
-	alarm[6] = 200;
+	alarm[6] = 180;
 	if instance_exists(Player)
 	{
 		if Player.skill_got[29]	//Insomnia

@@ -1,5 +1,5 @@
 /// @description Init
-adrenalineAmmoCooldown = 4;
+adrenalineAmmoCooldown = 5;
 adrenalineHealCooldown = 39;
 detectedCombat = false;
 if instance_exists(Player) && Player.race == 25
@@ -14,3 +14,4 @@ detectedEnemyHealth = 0;
 detectedPlayerHealth = 0;
 //13.4
 //20.8
+//0.065 0.054 

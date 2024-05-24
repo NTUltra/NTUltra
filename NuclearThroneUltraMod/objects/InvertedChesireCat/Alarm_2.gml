@@ -40,3 +40,11 @@ if instance_exists(Player)
 
 TopCont.darkness = 1;
 
+if instance_exists(Player)
+{
+	if Player.skill_got[29]	//Insomnia
+	{
+		alarm[1] += 60;
+		scrGiveSnooze();
+	}
+}

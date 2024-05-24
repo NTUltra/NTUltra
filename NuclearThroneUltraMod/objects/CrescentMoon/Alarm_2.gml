@@ -7,7 +7,7 @@ if alarm[1] < 1 && sprite_index != sprCrescentMoonDeflecting && alarm[0] < 1
 		if !outOfCombat
 		{
 			var n = instance_nearest(x,y,enemy)
-			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 300 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
+			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 290 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 			{
 				canCooldown = true;
 			}

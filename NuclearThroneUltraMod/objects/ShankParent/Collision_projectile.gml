@@ -1,4 +1,4 @@
-if team != other.team
+if team != other.team && (image_index == 0 || canAlwaysDeflect)
 {
 	if other.isGrenade
 	{

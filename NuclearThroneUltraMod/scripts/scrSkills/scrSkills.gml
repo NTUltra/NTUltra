@@ -234,7 +234,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(900)<1
 		skill_name[14] = "HOT HEAD"
 	skill_text[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>#EXPLOSIONS <r>BURN<r>#<r>"
-	skill_detail[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>#EXPLOSIONS <r>BURN<r>#<r>#(WEAPON SPECIFIC MUTATION)";
+	skill_detail[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>#EXPLOSIONS <r>BURN<r>##(WEAPON SPECIFIC MUTATION)";
 	if instance_exists(Player) && Player.race == 13
 	{
 			
@@ -530,7 +530,7 @@ function scrSkills() {
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#SIGNIFICANTLY REDUCE <w>RELOAD TIME<w>";
-		skill_detail[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 45% OF BASE RELOAD TIME#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
+		skill_detail[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 37% OF BASE RELOAD TIME#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
 	}
 	skill_tips[41] = "conduit of power"
 	skill_msnd[41] =  sndMutNervesOfSteel;
@@ -538,7 +538,7 @@ function scrSkills() {
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"
-	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER#INCREASE MAX CHARGE##INCLUDES THINGS LIKE:#FLAMETHROWERS, LASER/ION CANNONS,#DOUBLE SHOTGUNS, SPLINTER GUNS ETC.#(WEAPON SPECIFIC MUTATION)"
+	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER#INCREASE MAX CHARGE##INCLUDES THINGS LIKE:#FLAMETHROWERS, LASER/ION CANNONS,#DOUBLE SHOTGUNS, SPLINTER GUNS ETC.#HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
 	skill_tips[42] = "tail is a weapon specific mutation"
 	skill_msnd[42] =  sndMutTailEnd;
 	skill_bons[42] = "+15% CHARGE RATE & BURST AMOUNT"

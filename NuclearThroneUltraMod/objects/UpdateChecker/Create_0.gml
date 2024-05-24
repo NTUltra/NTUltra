@@ -43,3 +43,4 @@ canParticipate = true;
 canParticipateInGamemode = false;
 isRace = true;
 updatepage = 0;
+dailyGM = "";

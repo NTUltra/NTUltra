@@ -116,12 +116,11 @@ function scrRemoveCrown(oldcrown){
 		Player.pSpeedBoost -= 0.12;
 		Player.maxSpeed -= 0.25;
 	}
-	//CROWN OF TIME
+	//CROWN OF Sloth
 	if oldcrown == 24
 	{
-		//Crown of sloth
 		Player.pSpeedBoost += 0.15;
-		Player.maxSpeed += 0.35;
+		Player.maxSpeed += 0.37;
 	}
 	if oldcrown == 29
 	{

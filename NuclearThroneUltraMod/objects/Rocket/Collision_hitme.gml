@@ -14,14 +14,27 @@ if other.team != team
 	}
 	else
 	{
-		with other
+		if other.my_health > dmg * 0.5
 		{
-			if UberCont.normalGameSpeed == 60
-				DealDamage(4);
-			else
-				DealDamage(8);
-			sprite_index = spr_hurt
-			image_index = 0
+			instance_destroy();
+			with other
+			{
+				DealDamage(other.dmg);
+				sprite_index = spr_hurt
+				image_index = 0
+			}
+		}
+		else
+		{
+			with other
+			{
+				if UberCont.normalGameSpeed == 60
+					DealDamage(4);
+				else
+					DealDamage(8);
+				sprite_index = spr_hurt
+				image_index = 0
+			}
 		}
 	}
 }

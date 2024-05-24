@@ -41,10 +41,12 @@ if speed > 1
 {
 	var msk = mask_index;
 	mask_index = sprite_index;
+	image_xscale = 2;
+	image_yscale = 2;
 	var hits = ds_list_create();
 	var al = instance_place_list(x,y,hitme,hits,false)
 	if al > 0 && instance_exists(Player) && Player.ultra_got[55]
-		scrDrop(28,0.02);
+		scrDrop(25,0.02);
 	for (var i = 0; i < al; i++) {
 		with hits[| i]
 		{
@@ -110,6 +112,8 @@ if speed > 1
 		}
 	}
 	mask_index = msk;
+	image_xscale = 1;
+	image_yscale = 1;
 }
 if visible
 {

@@ -3,7 +3,7 @@ BackCont.shake += 5;
 Sleep(20)
 snd_play(sndFlareExplode,0.1,true)
 var ang = direction + 180;
-var am = 24;
+var am = 18;
 var angstep = 360/am;
 repeat(am)
 {

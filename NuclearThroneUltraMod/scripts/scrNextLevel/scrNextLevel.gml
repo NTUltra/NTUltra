@@ -724,6 +724,10 @@ function scrNextLevel() {
 	if scrIsGamemode(34)//HARD
 		hard += 0.1;
 	hard = max(0,hard);
+	if loops < 1
+	{
+		hard = min(12,hard);	
+	}
 	scrAddArea(area);
 	scrAddToRoute(area);
 }

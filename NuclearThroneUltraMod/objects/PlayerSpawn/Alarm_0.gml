@@ -33,7 +33,7 @@ with Player//Data to keep
 	{
 		//if maxarmour < 1
 		//		gotMinimumArmour = true;
-			canCrownOfProtection = true;
+			canCrownOfProtection = 0;
 			maxarmour = max(maxarmour, 1);
 			armour = clamp(armour, 0, maxarmour);
 	}

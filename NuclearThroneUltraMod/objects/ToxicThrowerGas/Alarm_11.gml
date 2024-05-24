@@ -14,12 +14,13 @@ if um == ultramods.toxicFire
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
-} else */if um == ultramods.toxicSwarm
+} else */if um == ultramods.toxicSwarm && choose(true,false)
 {
 	with instance_create(x,y,SwarmBolt)
 	{
 		scrCopyWeaponMod(other);
-		hits -= 1;
+		hits = 1;
+		dmg = 2;
 		mxSpd -=1;
 		direction = other.direction;
 		image_angle = direction;

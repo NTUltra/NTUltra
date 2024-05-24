@@ -50,6 +50,22 @@ if target != noone && instance_exists(target)
 		else if target.x > x
 			right = 1
 	}
+	else if instance_number(enemy) < 10
+	{
+		var t = target;
+		if instance_exists(Player)
+		{
+			target = Player;
+			targetx = Player.x;
+			targety = Player.y;
+			image_index = 0;
+		    nofly = 50;
+			alarm[2] = 0;
+		
+			scrChangeRaven(ravenFly)
+		}
+		target = t;
+	} 
 	else if random(3) < 1
 	{
 		motion_add(random(360),0.4)

@@ -1,4 +1,5 @@
 event_inherited();
+canAlwaysDeflect = true;
 image_speed = 0;
 dmg = 10;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable

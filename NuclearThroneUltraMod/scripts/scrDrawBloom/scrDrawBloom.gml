@@ -66,7 +66,6 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale,image_yscale,image_angle,c_white,ba)
 	
 	
-
 	with MorphSlash//the only melee with bloom cause I can
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with PlantSonicBoom

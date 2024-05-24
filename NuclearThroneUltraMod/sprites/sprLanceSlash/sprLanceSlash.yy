@@ -25,7 +25,7 @@
   ],
   "name":"sprLanceSlash",
   "nineSlice":null,
-  "origin":3,
+  "origin":9,
   "parent":{
     "name":"Melee Atacks",
     "path":"folders/Sprites/Projectiles/Melee Atacks.yy",
@@ -83,7 +83,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":2,
     "yorigin":10,
   },
   "swatchColours":null,

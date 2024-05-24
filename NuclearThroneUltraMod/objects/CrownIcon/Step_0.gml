@@ -186,7 +186,7 @@ if crown == 20
 	with Player {
 		//if maxarmour < 1
 		//	gotMinimumArmour = true;
-		canCrownOfProtection = true;
+		canCrownOfProtection = 3;
 		maxarmour += 1;//max(maxarmour, 1);
 		maxhealth -= 1;
 		maxhealth = max(1,maxhealth);
@@ -270,6 +270,7 @@ if crown == 11
 				hasReachedUltra = true;
 			instance_destroy();
 		}
+		UberCont.canPickFrogCrown = false;
 		scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
 		with WepPickup
 		instance_destroy();
@@ -392,7 +393,7 @@ if crown == 24
 {
 	//Crown of sloth
 	Player.pSpeedBoost -= 0.15;
-	Player.maxSpeed -= 0.35;
+	Player.maxSpeed -= 0.37;
 }
 if crown == 28
 {

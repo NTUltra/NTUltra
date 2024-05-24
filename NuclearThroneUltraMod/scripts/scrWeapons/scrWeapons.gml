@@ -581,10 +581,10 @@ function scrWeapons() {
 	wep_name[52] = "FLARE GUN"
 	wep_type[52] = 4
 	wep_auto[52] = 0
-	wep_load[52] = 25
+	wep_load[52] = 26
 	wep_cost[52] = 1
 	wep_sprt[52] = sprFlareGun
-	wep_area[52] = 6
+	wep_area[52] = 5
 	wep_text[52] = "signal for help"
 	wep_swap[52] = sndSwapFlame
 	wep_rad[52] = 0;
@@ -1259,7 +1259,7 @@ function scrWeapons() {
 	wep_name[112] = "INFINITY REVOLVER"
 	wep_type[112] = 1
 	wep_auto[112] = 0
-	wep_load[112] = 5
+	wep_load[112] = 3
 	wep_cost[112] = 0
 	wep_sprt[112] = sprInfinityPistol
 	wep_area[112] = 10
@@ -1270,7 +1270,7 @@ function scrWeapons() {
 	wep_name[113] = "INFINITY MACHINEGUN"
 	wep_type[113] = 1
 	wep_auto[113] = 1
-	wep_load[113] = 4
+	wep_load[113] = 3
 	wep_cost[113] = 0
 	wep_sprt[113] = sprInfinityMachinegun
 	wep_area[113] = 13
@@ -1372,7 +1372,7 @@ function scrWeapons() {
 	wep_load[122] = 32
 	wep_cost[122] = 4
 	wep_sprt[122] = sprFlareShotgun
-	wep_area[122] = 9
+	wep_area[122] = 8
 	wep_text[122] = ""
 	wep_swap[122] = sndSwapFlame
 	wep_rad[122] = 0;
@@ -1689,7 +1689,7 @@ function scrWeapons() {
 	wep_name[151] = "INFINITY SHOTGUN"
 	wep_type[151] = 2
 	wep_auto[151] = 0
-	wep_load[151] = 19//18
+	wep_load[151] = 12//18
 	wep_cost[151] = 0
 	wep_sprt[151] = sprInfinityShotgun
 	wep_area[151] = 13
@@ -1700,7 +1700,7 @@ function scrWeapons() {
 	wep_name[152] = "INFINITY CROSSBOW"
 	wep_type[152] = 3
 	wep_auto[152] = 0
-	wep_load[152] = 24//25
+	wep_load[152] = 19//25
 	wep_cost[152] = 0
 	wep_sprt[152] = sprInfinityCrossbow
 	wep_area[152] = 13
@@ -2008,7 +2008,7 @@ function scrWeapons() {
 	wep_load[179] = 10
 	wep_cost[179] = 0.5
 	wep_sprt[179] = sprAutoFlareGun
-	wep_area[179] = 11
+	wep_area[179] = 9
 	wep_text[179] = "automatic signalling"
 	wep_swap[179] = sndSwapFlame
 	wep_rad[179] = 0;
@@ -2019,7 +2019,7 @@ function scrWeapons() {
 	wep_load[180] = 14
 	wep_cost[180] = 4
 	wep_sprt[180] = sprAutoFlareShotgun
-	wep_area[180] = 17
+	wep_area[180] = 15
 	wep_text[180] = "signal in your face"
 	wep_swap[180] = sndSwapFlame
 	wep_rad[180] = 0;
@@ -2701,7 +2701,7 @@ function scrWeapons() {
 	wep_name[241] = "INFINITY SLUGGER"
 	wep_type[241] = 2
 	wep_auto[241] = 0
-	wep_load[241] = 21//22
+	wep_load[241] = 15//22
 	wep_cost[241] = 0
 	wep_sprt[241] = sprInfinitySlugger
 	wep_area[241] = 13
@@ -2712,7 +2712,7 @@ function scrWeapons() {
 	wep_name[242] = "INFINITY LASER PISTOL"
 	wep_type[242] = 5
 	wep_auto[242] = 0
-	wep_load[242] = 9//10
+	wep_load[242] = 7//10
 	wep_cost[242] = 0
 	wep_sprt[242] = sprInfinityLaserGun
 	wep_area[242] = 13
@@ -3220,7 +3220,7 @@ function scrWeapons() {
 	wep_name[287] = "GOLDEN FLARE GUN"
 	wep_type[287] = 4
 	wep_auto[287] = 0
-	wep_load[287] = 24
+	wep_load[287] = 26
 	wep_cost[287] = 1
 	wep_sprt[287] = sprGoldenFlareGun
 	wep_area[287] = 18
@@ -3231,7 +3231,7 @@ function scrWeapons() {
 	wep_name[288] = "GOLDEN SMG"
 	wep_type[288] = 1
 	wep_auto[288] = 1
-	wep_load[288] = 2.75
+	wep_load[288] = 2.5
 	wep_cost[288] = 1
 	wep_sprt[288] = sprGoldenSmg
 	wep_area[288] = 18
@@ -3297,7 +3297,7 @@ function scrWeapons() {
 	wep_name[294] = "CHARGE SHOTGUN"
 	wep_type[294] = 2
 	wep_auto[294] = 0
-	wep_load[294] = 24
+	wep_load[294] = 16
 	wep_cost[294] = 1
 	wep_sprt[294] = sprChargeShotgun
 	wep_area[294] = 5
@@ -3308,7 +3308,7 @@ function scrWeapons() {
 	wep_name[295] = "CHARGE LASER"
 	wep_type[295] = 5
 	wep_auto[295] = 0
-	wep_load[295] = 28
+	wep_load[295] = 14
 	wep_cost[295] = 1
 	wep_sprt[295] = sprChargeLaserGun
 	wep_area[295] = 3
@@ -3319,7 +3319,7 @@ function scrWeapons() {
 	wep_name[296] = "CHARGE FLAK CANNON"
 	wep_type[296] = 2
 	wep_auto[296] = 0
-	wep_load[296] = 37
+	wep_load[296] = 25
 	wep_cost[296] = 1
 	wep_sprt[296] = sprChargeFlakCannon
 	wep_area[296] = 7
@@ -3528,7 +3528,7 @@ function scrWeapons() {
 	wep_name[314] = "CHARGE SPLINTERGUN"
 	wep_type[314] = 3
 	wep_auto[314] = 0
-	wep_load[314] = 24
+	wep_load[314] = 15
 	wep_cost[314] = 1
 	wep_sprt[314] = sprChargeSplinterGun
 	wep_area[314] = 9
@@ -4245,7 +4245,7 @@ function scrWeapons() {
 	wep_load[376] = 3
 	wep_cost[376] = 0
 	wep_sprt[376] = sprInfinitySmartGun
-	wep_area[376] = 20
+	wep_area[376] = 19
 	wep_text[376] = "think forever"
 	wep_swap[376] = sndSwapMachinegun
 	wep_rad[376] = 0;
@@ -5643,7 +5643,7 @@ function scrWeapons() {
 	wep_name[502] = "CHARGE BOW"
 	wep_type[502] = 3
 	wep_auto[502] = 0
-	wep_load[502] = 21
+	wep_load[502] = 17
 	wep_cost[502] = 1
 	wep_sprt[502] = sprBow
 	wep_area[502] = 2
@@ -5809,7 +5809,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 27
+	wep_load[517] = 28
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -5908,7 +5908,7 @@ function scrWeapons() {
 	wep_name[526] = "INFINITY JACKHAMMER"
 	wep_type[526] = 4
 	wep_auto[526] = 3
-	wep_load[526] = 12
+	wep_load[526] = 11
 	wep_cost[526] = 0
 	wep_sprt[526] = sprInfinityJackHammer
 	wep_area[526] = 17
@@ -6360,7 +6360,7 @@ function scrWeapons() {
 	wep_name[567] = "GOLDEN CHARGE BOW"
 	wep_type[567] = 3
 	wep_auto[567] = 0
-	wep_load[567] = 19
+	wep_load[567] = 16
 	wep_cost[567] = 1
 	wep_sprt[567] = sprGoldenBow
 	wep_area[567] = 17
@@ -7410,7 +7410,7 @@ function scrWeapons() {
 	wep_type[662] = 4
 	wep_auto[662] = 2
 	wep_load[662] = 18
-	wep_cost[662] = 3
+	wep_cost[662] = 4
 	wep_sprt[662] = sprPhoenixGun
 	wep_area[662] = 13
 	wep_text[662] = "fire bird"
@@ -7776,7 +7776,7 @@ function scrWeapons() {
 	wep_name[695] = "FROST SHOTGUN"
 	wep_type[695] = 2
 	wep_auto[695] = 2
-	wep_load[695] = 24
+	wep_load[695] = 26
 	wep_cost[695] = 2
 	wep_sprt[695] = sprFrostShotgun
 	wep_area[695] = 6
@@ -7787,7 +7787,7 @@ function scrWeapons() {
 	wep_name[696] = "DOUBLE FROST SHOTGUN"
 	wep_type[696] = 2
 	wep_auto[696] = 2
-	wep_load[696] = 32
+	wep_load[696] = 33
 	wep_cost[696] = 4
 	wep_sprt[696] = sprDoubleFrostShotgun
 	wep_area[696] = 8
@@ -8193,7 +8193,7 @@ function scrWeapons() {
 	wep_type[732] = 4
 	wep_auto[732] = 0
 	wep_load[732] = 27
-	wep_cost[732] = 3.5
+	wep_cost[732] = 4.5
 	wep_sprt[732] = sprBlobGun
 	wep_area[732] = 7
 	wep_text[732] = "black ink can be ignited"
@@ -8204,7 +8204,7 @@ function scrWeapons() {
 	wep_type[733] = 4
 	wep_auto[733] = 0
 	wep_load[733] = 42
-	wep_cost[733] = 7.5
+	wep_cost[733] = 8.5
 	wep_sprt[733] = sprBlobCannon
 	wep_area[733] = 10
 	wep_text[733] = "the blob is real and it burns!"
@@ -8347,7 +8347,7 @@ function scrWeapons() {
 	wep_type[746] = 5
 	wep_auto[746] = 0
 	wep_load[746] = 5
-	wep_cost[746] = 1.5
+	wep_cost[746] = 2.5
 	wep_sprt[746] = sprSuckCannon
 	wep_area[746] = 7
 	wep_text[746] = "suck up enemy projectiles!"
@@ -8403,12 +8403,12 @@ function scrWeapons() {
 	wep_type[751] = 1
 	wep_auto[751] = 1
 	wep_load[751] = 2
-	wep_cost[751] = 4
+	wep_cost[751] = 5
 	wep_sprt[751] = sprSuperCoffeeCannon
 	wep_area[751] = 32
 	wep_text[751] = "tttttime forrrrrr sommeeeee morrrrrrrre coffeeeeeeeeee!"
 	wep_swap[751] = sndSwapMachinegun
-	wep_rad[751] = -2;
+	wep_rad[751] = -1;
 	wep_popup[751] = "MAKES YOU MUCH FASTER#FEEDS YOU RADS!";
 	
 	wep_name[752] = "VOID RIPPER"
@@ -8548,7 +8548,7 @@ function scrWeapons() {
 	wep_type[764] = 5
 	wep_auto[764] = 0
 	wep_load[764] = 4
-	wep_cost[764] = 1.5
+	wep_cost[764] = 2.5
 	wep_sprt[764] = sprSuckCannon
 	wep_area[764] = 21
 	wep_text[764] = "suck it all"
@@ -8600,7 +8600,29 @@ function scrWeapons() {
 	wep_text[768] = "what way am I coming from"
 	wep_swap[768] = sndSwapMachinegun
 	wep_rad[768] = 20;
-	wep_popup[767] = "DEALS HIGHER DAMAGE BEFORE REDIRECTING";
+	wep_popup[768] = "DEALS HIGHER DAMAGE BEFORE REDIRECTING";
+	
+	wep_name[769] = "BANDIT RIFLE"
+	wep_type[769] = 1
+	wep_auto[769] = 1
+	wep_load[769] = 6
+	wep_cost[769] = 0.5
+	wep_sprt[769] = sprBanditRifle
+	wep_area[769] = 0
+	wep_text[769] = "lame"
+	wep_swap[769] = sndSwapPistol
+	wep_rad[769] = 0;
+	
+	wep_name[770] = "KRAKEN REVOLVER"
+	wep_type[770] = 1
+	wep_auto[770] = 0
+	wep_load[770] = 6
+	wep_cost[770] = 4
+	wep_sprt[770] = sprRevolver
+	wep_area[770] = 4
+	wep_text[770] = "ocean bullets"
+	wep_swap[770] = sndSwapPistol
+	wep_rad[770] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

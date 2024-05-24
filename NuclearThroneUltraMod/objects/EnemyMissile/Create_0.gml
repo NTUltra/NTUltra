@@ -14,3 +14,5 @@ alarm[4] = 1;
 //mask_index=mskPickupThroughWall;
 
 image_speed = 0.4;
+
+alarm[6] = 1;

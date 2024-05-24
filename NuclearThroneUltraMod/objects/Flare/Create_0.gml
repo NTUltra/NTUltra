@@ -10,4 +10,4 @@ offy = random(2)-1
 
 alarm[2] = 4;
 typ = 2;
-dmg = 10;
+dmg = 5;

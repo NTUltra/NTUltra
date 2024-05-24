@@ -146,7 +146,7 @@ function scrPopChests() {
 		{
 			gol += 1;
 			healthChestGol += choose(0,0,0,0,0,1);
-			wepChestGol += 2;
+			wepChestGol += choose(1,2);
 		}
 		if scrIsCrown(2)//CROWN OF LIFE
 		{

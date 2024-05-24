@@ -321,7 +321,7 @@ function scrLoadRun(){
 				if variable_struct_exists(encryptedRun, "canCrownOfProtection")
 					Player.canCrownOfProtection = encryptedRun.canCrownOfProtection;
 				else
-					Player.canCrownOfProtection = false;
+					Player.canCrownOfProtection = 0;
 				/*if variable_struct_exists(encryptedRun, "gotMinimumArmour")
 					Player.gotMinimumArmour = encryptedRun.gotMinimumArmour;
 				else

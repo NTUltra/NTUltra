@@ -117,10 +117,10 @@ if instance_exists(Player)
 	with PlayerAlarms3 {
 		if Player.skill_got[45]
 		{
-			alarm[0] = 15;
-			alarm[1] = 120;
-			enemyHealthWasChanged = true;
-			playerHealthWasChanged = true;
+			alarm[0] = 45;
+			alarm[1] = 30;
+			enemyHealthWasChanged = false;
+			playerHealthWasChanged = false;
 			detectedPlayerHealth = 0;
 			detectedEnemyHealth = 0;
 			adrenalineAmmoTimer = adrenalineAmmoCooldown;

@@ -16,7 +16,7 @@ if curse = 1
 sprite_index = sprCursedWeaponChest
 
 heavyHeart = false;
-ammoGet = 50;
+ammoGet = 40;
 if instance_exists(Player)
 {
 	if (Player.ultra_got[25]==1)
@@ -27,6 +27,10 @@ if instance_exists(Player)
 	{
 		heavyHeart = true;
 		ammoGet = 30;
+	}
+	if scrIsCrown(15)
+	{
+		ammoGet -= 10;	
 	}
 	if scrIsCrown(9)//Crown of love
 	{

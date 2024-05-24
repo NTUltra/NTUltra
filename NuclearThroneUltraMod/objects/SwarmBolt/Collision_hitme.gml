@@ -13,12 +13,19 @@ if speed > 1 and other.team != team
 			other.hits-=1;
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
-		else
-		{
-			scrIframeSkipper(0.1);
-		}
     }
 	if hits<1
+	{
 		instance_destroy();
+		with instance_create(x,y,Venom)
+		{
+			scrCopyWeaponMod(other);
+			team = other.team;
+			owner = other.hitEntities[array_length(other.hitEntities)-1];
+			amount = 2;
+			dmg = 1;
+			rate = 5;
+		}
+	}
 }
 

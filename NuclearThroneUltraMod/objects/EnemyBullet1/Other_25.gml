@@ -2,4 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
-sprite_index = sprEnemyBullet1Deflected;
+if team == 2
+{
+	sprite_index = sprEnemyBullet1Deflected;
+}
+else
+{
+	sprite_index = sprEnemyBullet1;	
+}

@@ -6,7 +6,7 @@ their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
-accuracy = 8;//10
+accuracy = 10;//10
 ion=false;
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 dmg = 2;
