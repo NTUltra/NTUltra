@@ -1,6 +1,14 @@
 /// @description Line of fire
 snd_play(sndSniperFire)
-wkick = 7
+wkick = 7;
+with instance_create(x,y,EnemyBulletBigDiamond)
+{
+	motion_add(other.gunangle,26);
+	team = other.team
+	image_angle = direction
+	firedbysniper=true;
+}
+/*
 var angStep = 4;
 var len = 26;
 var am = 5;
@@ -71,5 +79,6 @@ for (var i = 0; i < am; i++)
 	yy += lengthdir_y(len,other.gunangle+angStep);
 }
 mask_index = msk;
+*/
 alarm[1] += actTime;
 gonnafire = 0

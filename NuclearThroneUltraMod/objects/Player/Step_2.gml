@@ -478,7 +478,7 @@ if skill_got[2] && tookHit && !exception
 	extrafeetalarm = 35;
 	extrafeetdodged = false;
 }
-if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
+if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 1)
 {
 	metabolism += 1;
 	if metabolism > 3
@@ -495,6 +495,7 @@ if skill_got[38] && tookHit && alarm[3] < 1 && alarm[1] < 1
 			scrCollectAmmo(3);
 		tookHit = false;
 	}
+	triggerMetabolism = false;
 }
 
 //Crown of Greed

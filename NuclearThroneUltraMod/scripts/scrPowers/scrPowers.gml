@@ -221,7 +221,7 @@ function scrPowers(raceOverwrite = -1) {
 				else
 					DealDamage(1,false,false,false);
 				hitBy = sprite_index;
-				exception=true;
+				exception = true;
 			    if my_health<=0 //KILL YOSELF USING ACTIVE
 			    {
 				    if skill_got[25]//strong spirit
@@ -266,9 +266,20 @@ function scrPowers(raceOverwrite = -1) {
 		if freeArmourStrike
 		{
 			freeArmourStrike = false;
+			if skill_got[38] && metabolism < 3
+			{
+				triggerMetabolism = true;
+			}
 		}
 	    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra))
-	        armour--;
+		{
+			if metabolism < 3
+				armour--;
+			if skill_got[38]
+			{
+				triggerMetabolism = true;
+			}
+		}
 	    else if ultra_got[63] && !(ultra_got[62] && altUltra)
 	    {
 	        DealDamage(2,false,false,false);

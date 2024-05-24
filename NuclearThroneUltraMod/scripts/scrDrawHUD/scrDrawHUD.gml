@@ -64,12 +64,17 @@ function scrDrawHUD() {
 		if dataRef.skill_got[36] //Absorbing pores
 			hx = 22;
 		draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,vx+hx,vy+4)
+		var fill = sprHealthFill;
+		if venomized
+		{
+			fill = sprHealthFillVenom;	
+		}
 		if dataRef.maxhealth!=0{
-		draw_sprite_ext(sprHealthFill,2,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
-		draw_sprite_ext(sprHealthFill,1,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+		draw_sprite_ext(fill,2,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+		draw_sprite_ext(fill,1,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 
 		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
-		draw_sprite_ext(sprHealthFill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+		draw_sprite_ext(fill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
 		if dataRef.metabolism == 3
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)

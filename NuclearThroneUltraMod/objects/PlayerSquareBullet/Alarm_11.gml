@@ -65,6 +65,7 @@ else if um == ultramods.bulletPlasma
 		originalDirection = direction;
 		image_angle = direction;
 		speed = other.speed;
+		maxSpeed = max(maxSpeed,speed - 1);
 		team = other.team;
 		alarm[11] = 0;
 	}

@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprHeavySlash",
-    "path":"sprites/sprHeavySlash/sprHeavySlash.yy",
+    "name":"sprBigAssassinSlash",
+    "path":"sprites/sprBigAssassinSlash/sprBigAssassinSlash.yy",
   },
   "spriteMaskId":{
     "name":"mskAssassinBossSlash",

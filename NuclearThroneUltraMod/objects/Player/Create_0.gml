@@ -60,6 +60,7 @@ saveLoaded = false;
 outOfCombat = false;
 guarenteedReroll = 0;
 metabolism = 0;
+triggerMetabolism = false;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -609,7 +610,11 @@ if race == 19 //skeleton
     maxSpeed = 3.6
     accuracy = 1.2
 }
-if race == 16 || race == 26//Good O'l Humphry & Viking
+if race == 16
+{
+	maxhealth = 5;
+}
+if race == 26//Good O'l Humphry & Viking
 {
 	maxhealth = 6;
 }

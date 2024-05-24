@@ -505,7 +505,7 @@ function scrSkills() {
 	
 	skill_name[38] = "ENRICHED METABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
-	skill_detail[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD##ALLOWS SELF INFLICTED DAMAGE"
+	skill_detail[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
 	skill_bons[38] = "+35% AMMO"

@@ -46,6 +46,10 @@ if instance_exists(Player){
 			direction = random(360);
 		}
 	}
+	if Player.ultra_got[59] && Player.altUltra
+	{
+		alarm[0] += 15;
+	}
 }
 
 

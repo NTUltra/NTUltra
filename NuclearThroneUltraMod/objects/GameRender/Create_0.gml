@@ -86,3 +86,4 @@ repeat(40){
 }
 
 routeGlow = 0;
+venomized = false;

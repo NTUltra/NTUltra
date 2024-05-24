@@ -514,7 +514,7 @@ if !instance_exists(LevCont) and visible = 1
 			//instance_create(x+32,y,Raven);
 			
 			instance_create(x+32,y,GoldenSniper);
-			instance_create(x+32,y,AmmoPickup);
+			instance_create(x+32,y,AssassinBoss);
 
 			/*
 			wep = 0;
