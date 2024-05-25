@@ -79,7 +79,7 @@ if um == ultramods.bulletShotgun
 		alarm[11] = 0;
 	}
 }
-else if um == ultramods.shotgunElectro
+else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{

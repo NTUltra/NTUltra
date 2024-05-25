@@ -13,7 +13,6 @@ hadSpeedApplied = false;
 poppop = false;
 canBeMoved = true;
 team = 2
-dmg = 5;
 repeat(3)
 instance_create(x,y,Smoke)
 
@@ -33,4 +32,4 @@ if instance_exists(Player)
 		
 	}
 }
-
+event_user(0);

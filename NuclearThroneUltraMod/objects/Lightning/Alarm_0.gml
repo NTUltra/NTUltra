@@ -141,7 +141,7 @@ for(var i = floor(ammo); i > 0; i -= 1)
 		xxx += lengthdir_x(1,direction);
 		yyy += lengthdir_y(1,direction);
 		var wall = instance_place(xxx,yyy,Wall);
-		if ((wall != noone && wall.object_index != WallHitMe) || (team != 2 && place_meeting(xxx,yyy,ElementorWallPhase)))
+		if ((wall != noone && wall.object_index != WallHitMe))
 		{
 			j = dis;
 			direction += 180+random_range(-20,20);

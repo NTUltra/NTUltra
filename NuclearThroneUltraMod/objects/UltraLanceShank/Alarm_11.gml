@@ -35,7 +35,7 @@ else // if um == ultramods.krakenMelee
 	snd_play_fire(sndBloodLauncher);
 	snd_play_fire(choose(sndWater1,sndWater2));
 	var am = 6 + speed + dmg;
-	var ddd = ceil(other.dmg*0.16);
+	var ddd = ceil(other.dmg*0.3);
 	with instance_create(x,y,Tentacle)
 	{
 		sprite_index=sprUltraTentacle;

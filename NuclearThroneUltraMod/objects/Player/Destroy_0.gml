@@ -330,6 +330,7 @@ if visible && my_health < 1
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	wep = other.wep;
 	canblacksword = other.canblacksword;
 	ammo = other.ammo;
 	ultra_got = array_create(array_length(other.ultra_got),false);

@@ -17,12 +17,6 @@ function scrShadows() {
 		if collision_point(x+8,y+24,Floor,false,false)
 			draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
 	}
-	with ElementorWallPhase
-	{
-		//if !collision_point(x+8,y+24,Top,false,false) and !collision_point(x+8,y+24,TopSmall,false,false)
-		if collision_point(x+8,y+24,Floor,false,false)
-			draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
-	}
 	with Bones
 	draw_sprite_ext(sprite_index,image_index,x-vx,y-vy+8,image_xscale,-1,0,c_black,1)
 	with Crown

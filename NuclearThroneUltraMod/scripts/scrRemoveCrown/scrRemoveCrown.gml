@@ -47,7 +47,7 @@ function scrRemoveCrown(oldcrown){
 		}
 		else
 		{
-			var am = clamp(Player.maxhealth-2,0,2);
+			var am = clamp(Player.maxhealth-1,0,1);
 			Player.maxhealth -= am;
 			UberCont.maxHpIncrease -= am;
 		}

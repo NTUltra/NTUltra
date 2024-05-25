@@ -21,7 +21,7 @@ function scrElementorPlaceWall(mx, my){
 		{
 			with ElementorWall
 			{
-				mask_index = mskWall;	
+				mask_index = mskWall;
 			}
 		}
 		var wl = instance_place(xx,yy,Wall);
@@ -53,7 +53,7 @@ function scrElementorPlaceWall(mx, my){
 					sprite_index = sprElementorWallCreate;	
 				}
 				snd_play(sndStatueHurt);
-				alarm[0]=15;
+				alarm[0] = 15;
 			}
 			placedWall = true;
 		}

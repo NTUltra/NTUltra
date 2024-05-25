@@ -53,7 +53,6 @@ do {
 		team = other.team
 		ammo = 6
 		event_perform(ev_alarm,0);//prop cause infinite loop
-		visible = 0
 		with instance_create(x,y,LightningSpawn)
 			image_angle = other.image_angle
 	}

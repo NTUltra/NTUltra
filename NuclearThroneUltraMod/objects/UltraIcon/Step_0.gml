@@ -422,7 +422,7 @@ if (selected && visible &&
 				spr_hurt=sprMutant9DHurt;
 				spr_dead=sprMutant9DDead;
 			}
-			else if bskin == 1 || bskin == 4
+			else if bskin == 1// || bskin == 4
 			{
 				scrUnlockAltSkin(race, bskin);
 				bskin = 4;

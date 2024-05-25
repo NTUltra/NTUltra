@@ -480,7 +480,7 @@ function scrWeapons() {
 	wep_name[43] = "GOLDEN CROSSBOW"
 	wep_type[43] = 3
 	wep_auto[43] = 0
-	wep_load[43] = 23
+	wep_load[43] = 24
 	wep_cost[43] = 1
 	wep_sprt[43] = sprGoldCrossbow
 	wep_area[43] = 17
@@ -755,7 +755,7 @@ function scrWeapons() {
 	wep_type[67] = 3
 	wep_auto[67] = 1
 	wep_load[67] = 18
-	wep_cost[67] = 2.5
+	wep_cost[67] = 3
 	wep_sprt[67] = sprSwordGun
 	wep_area[67] = 8
 	wep_text[67] = "have you tried sword gun#with bolt marrow?#Or shotgun shoulders?"
@@ -913,7 +913,7 @@ function scrWeapons() {
 	wep_type[81] = 3
 	wep_auto[81] = 1
 	wep_load[81] = 38
-	wep_cost[81] = 8
+	wep_cost[81] = 9
 	wep_sprt[81] = sprSuperSwordGun
 	wep_area[81] = 18
 	wep_text[81] = "SLASH SLASH SLASH SLASH SLASH"
@@ -1426,7 +1426,7 @@ function scrWeapons() {
 	wep_type[127] = 5
 	wep_auto[127] = 1
 	wep_load[127] = 27
-	wep_cost[127] = 3
+	wep_cost[127] = 4
 	wep_sprt[127] = sprEnergySwordGun
 	wep_area[127] = 18
 	wep_text[127] = "bolt marrow, laser brain, shotgun shoulders and long arms!?"
@@ -1437,7 +1437,7 @@ function scrWeapons() {
 	wep_type[128] = 5
 	wep_auto[128] = 1
 	wep_load[128] = 50
-	wep_cost[128] = 13
+	wep_cost[128] = 14
 	wep_sprt[128] = sprSuperEnergySwordGun
 	wep_area[128] = 24
 	wep_text[128] = "this is nuts"
@@ -2836,7 +2836,7 @@ function scrWeapons() {
 	wep_type[253] = 3
 	wep_auto[253] = 1
 	wep_load[253] = 16
-	wep_cost[253] = 2.5
+	wep_cost[253] = 3
 	wep_sprt[253] = sprShankGun
 	wep_area[253] = 8
 	wep_text[253] = "long arms, bolt marrow and shotgun shoulders#all work on this gun"
@@ -2848,7 +2848,7 @@ function scrWeapons() {
 	wep_type[254] = 3
 	wep_auto[254] = 1
 	wep_load[254] = 37
-	wep_cost[254] = 8
+	wep_cost[254] = 9
 	wep_sprt[254] = sprSuperShankGun
 	wep_area[254] = 17
 	wep_text[254] = "shank them to dead"
@@ -2860,7 +2860,7 @@ function scrWeapons() {
 	wep_type[255] = 5
 	wep_auto[255] = 1
 	wep_load[255] = 27
-	wep_cost[255] = 3.5
+	wep_cost[255] = 4
 	wep_sprt[255] = sprEnergyShankGun
 	wep_area[255] = 15
 	wep_text[255] = "works with almost all weapon specific mutations"
@@ -2871,7 +2871,7 @@ function scrWeapons() {
 	wep_type[256] = 5
 	wep_auto[256] = 1
 	wep_load[256] = 50
-	wep_cost[256] = 12
+	wep_cost[256] = 13
 	wep_sprt[256] = sprSuperEnergyShankGun
 	wep_area[256] = 21
 	wep_text[256] = "new meta"
@@ -5391,7 +5391,7 @@ function scrWeapons() {
 	wep_type[479] = 3
 	wep_auto[479] = 1
 	wep_load[479] = 18
-	wep_cost[479] = 3
+	wep_cost[479] = 4
 	wep_sprt[479] = sprFrostSwordGun
 	wep_area[479] = 12
 	wep_text[479] = "frozen cuts"
@@ -5694,7 +5694,7 @@ function scrWeapons() {
 	wep_area[506] = 27
 	wep_text[506] = "we have gone too far!"
 	wep_swap[506] = sndSwapSword
-	wep_rad[506] = 12;
+	wep_rad[506] = 16;
 	
 	wep_name[507] = "ULTRA SWORD"
 	wep_type[507] = 0
@@ -8618,7 +8618,7 @@ function scrWeapons() {
 	wep_auto[770] = 0
 	wep_load[770] = 6
 	wep_cost[770] = 4
-	wep_sprt[770] = sprRevolver
+	wep_sprt[770] = sprKrakenRevolver
 	wep_area[770] = 4
 	wep_text[770] = "ocean bullets"
 	wep_swap[770] = sndSwapPistol

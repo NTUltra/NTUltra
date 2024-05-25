@@ -66,6 +66,10 @@ function scrPopChests() {
 				{
 					instance_create(xx-48,yy-96,RogueAmmoChest);
 				}
+				if  scrIsCrown(15)
+				{
+					instance_create(xx-16,yy-96,RogueAmmoChest);
+				}
 				if Player.skill_got[5]//Rogue butt
 				{
 					instance_create(xx+48,yy-96,RogueAmmoChest);
@@ -144,7 +148,7 @@ function scrPopChests() {
 	
 		if scrIsCrown(15)//CROWN OF CHOICE
 		{
-			gol += 1;
+			gol += choose(1,1,0);
 			healthChestGol += choose(0,0,0,0,0,1);
 			wepChestGol += choose(1,2);
 		}

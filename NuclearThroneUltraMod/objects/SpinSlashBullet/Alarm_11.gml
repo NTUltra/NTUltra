@@ -35,7 +35,7 @@ else if um == ultramods.krakenMelee
 		with instance_create(x,y,Tentacle)
 		{
 			isog = false;
-			dmg = 7;//6 dmg = 1dmg
+			dmg = 4;//6 dmg = 1dmg
 			image_angle = ang;
 			team = other.team
 			ammo = spd;

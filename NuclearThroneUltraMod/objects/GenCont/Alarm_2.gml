@@ -211,6 +211,8 @@ if (Player.race=22 && Player.area!=100 && Player.area!=104 && !( (Player.area ==
 {
 
 	var ammoWant = 1+Player.skill_got[23]+Player.skill_got[5];
+	if scrIsCrown(15)//CROWN OF CHOICE
+		ammoWant += choose(0,0,1);
 	while (instance_number(RogueAmmoChest) < ammoWant)
 	{
 		with instance_furthest(Player.x+random(128)-64,Player.y+random(128)-64,Floor)

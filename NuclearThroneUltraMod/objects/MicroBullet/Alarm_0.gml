@@ -1,3 +1,5 @@
+if !canDamage
+	exit;
 if instance_exists(Player)
 {
 	if (aimed=false && team == 2)

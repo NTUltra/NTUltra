@@ -34,7 +34,7 @@ if um == ultramods.bulletShotgun
 		alarm[11] = 0;
 	}
 	instance_destroy(id,false);
-}else if um == ultramods.shotgunElectro
+}else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{

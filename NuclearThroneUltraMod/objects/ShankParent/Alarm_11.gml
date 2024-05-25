@@ -31,7 +31,7 @@ else // if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 4 + speed + dmg;
-	var ddd = ceil(other.dmg*0.16);
+	var ddd = ceil(other.dmg*0.3);
 	with instance_create(x,y,Tentacle)
 	{
 		isog = false;

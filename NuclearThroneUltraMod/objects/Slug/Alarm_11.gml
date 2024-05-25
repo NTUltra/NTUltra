@@ -49,7 +49,7 @@ if um == ultramods.bulletShotgun
 	}
 	UberCont.ultramodSwap = true;
 }
-else if um == ultramods.shotgunElectro
+else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{

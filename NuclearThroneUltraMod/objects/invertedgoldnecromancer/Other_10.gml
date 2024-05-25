@@ -14,5 +14,4 @@ if random(3) < 1 && point_distance(x,y,target.x,target.y) < 190
 		image_angle = direction
 		team = other.team
 	}
-	alarm[1] += 5;
 }

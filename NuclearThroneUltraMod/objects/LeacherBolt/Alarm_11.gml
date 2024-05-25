@@ -42,7 +42,7 @@ if um == ultramods.boltBullet
 		team = other.team;
 		alarm[11] = 0;
 	}
-} else if um == ultramods.splinterElectro
+} else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{

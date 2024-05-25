@@ -447,7 +447,8 @@ function scrTips() {
 	"miss life","after marking#you can unmark#by right clicking again",
 	"pellets move faster with hunter",
 	"shotguns shoot further as hunter",
-	"paranoid android"
+	"paranoid android",
+	"marking someone significantly increses your accuracy",
 	)
 
 	if Player.race = 12//yung cuz

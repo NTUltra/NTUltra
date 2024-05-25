@@ -11,3 +11,5 @@ radCost = 0;
 radCost = 0;
 borderWidth = 0.5;
 middleColour = c_white;
+canDamage = true;
+event_user(0);

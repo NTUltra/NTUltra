@@ -648,6 +648,7 @@ if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 	if tookHit
 	{
 		my_health = prevhealth;
+		tookHit = false;
 	}
 }
 

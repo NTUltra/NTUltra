@@ -11,7 +11,7 @@ if um == ultramods.boltBullet
 		proj = Bullet1Toxic
 	with instance_create(x,y,proj)
 	{
-		dmg ++;
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -28,7 +28,7 @@ if um == ultramods.boltBullet
 		proj = Bullet2Toxic
 	with instance_create(x,y,proj)
 	{
-		dmg ++;
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -36,7 +36,7 @@ if um == ultramods.boltBullet
 		team = other.team;
 		alarm[11] = 0;
 	}
-} else if um == ultramods.splinterElectro
+} else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{
@@ -53,6 +53,7 @@ if um == ultramods.boltBullet
 		proj = ToxicElectroBall
 	with instance_create(x,y,proj)
 	{
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -77,6 +78,10 @@ else if um == ultramods.plasmaBolt
 		proj = ToxicMiniPlasmaBall
 	with instance_create(x,y,proj)
 	{
+		if other.object_index == Nail
+		{
+			dmg += 1;	
+		}
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;
@@ -98,7 +103,8 @@ else if um == ultramods.laserBolt
 		proj = LaserToxic
 	with instance_create(x,y,proj)
 	{
-		image_yscale -= 0.1;
+		if other.object_index != Nail
+			image_yscale -= 0.1;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

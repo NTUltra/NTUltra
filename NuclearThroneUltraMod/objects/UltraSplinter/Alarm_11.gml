@@ -25,7 +25,7 @@ if um == ultramods.boltBullet
 		team = other.team;
 		alarm[11] = 0;
 	}
-} else if um == ultramods.splinterElectro
+} else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{
@@ -42,6 +42,7 @@ if um == ultramods.boltBullet
 		proj = ToxicElectroBall
 	with instance_create(x,y,proj)
 	{
+		dmg = other.dmg + 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -66,6 +67,7 @@ else if um == ultramods.plasmaBolt
 		proj = ToxicMiniPlasmaBall
 	with instance_create(x,y,proj)
 	{
+		dmg += 3;
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;

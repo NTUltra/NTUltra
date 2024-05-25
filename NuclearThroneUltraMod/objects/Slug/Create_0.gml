@@ -30,7 +30,7 @@ typ = 1
 ShotgunShouldersType();
 dmg = 24;
 var um = GetPlayerUltramod()
-if um == ultramods.bulletShotgun || um == ultramods.shotgunElectro || um == ultramods.lightningPellet
+if um == ultramods.bulletShotgun || um == ultramods.shotgunSplinterElectro || um == ultramods.lightningPellet
 alarm[11] = 1;
 
 imageXscale = 1;

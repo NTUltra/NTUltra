@@ -10,6 +10,10 @@ if instance_exists(Player)
 	}
 }
 
-dmg = 10;
+dmg = 11;
+with myExplosionMask
+{
+	dmg -= 1;	
+}
 moodAmount = 2;
 //Crown of death

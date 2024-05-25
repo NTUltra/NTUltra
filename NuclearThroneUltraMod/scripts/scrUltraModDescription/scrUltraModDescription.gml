@@ -10,6 +10,8 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.bulletShotgun:
 			umn = @"SWAPS
+			ANY BULLET TYPE <WITH> ANY SHOTGUN TYPE"
+			/*
 			BULLETS <WITH> PELLETS
 			DIRECTOR BULLETS <WITH> DIRECTOR PELLETS
 			FLAME PELLETS <WITH> FLAME BULLETS
@@ -19,8 +21,12 @@ function scrUltraModDescription(um){
 			FAT BULLET <WITH> SLUGS
 			HEAVY SLUGS <TO> THREE HEAVY BULLETS
 			ULTRA SLUGS <TO> 4 ULTRA BULLETS"
+			*/
 		break;
 		case ultramods.laserBullet:
+		umn = @"SWAPS
+			ANY BULLET TYPE <WITH> LASERS"
+		/*
 			umn = @"SWAPS
 			BULLETS <TO> SMALL LASERS
 			BOUNCER LASERS <TO> 2 BOUNCER BULLETS
@@ -31,6 +37,7 @@ function scrUltraModDescription(um){
 			ULTRA LASERS <TO> 2 ULTRA BULLETS
 			ULTRA BULLETS <TO> 3 ULTRA LASERS
 			ULTRA MEGA LASERS <TO> 4 ULTRA BULLETS"
+		*/
 		break;
 		case ultramods.lightningKraken:
 			umn = @"SWAPS
@@ -40,19 +47,18 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			KRAKEN <WITH> MELEE"
 		break;
-		case ultramods.shotgunElectro:
+		case ultramods.shotgunSplinterElectro:
 			umn = @"SWAPS
-			SHOTGUN PELLETS <WITH> ELECTRO BALLS
-			FLAME SHOTGUN PELLETS <WITH> FLAME ELECTRO BALLS
-			HEAVY SLUGS <WITH> ELECTRO CANNON BALLS"
+			ANY SHOTGUN TYPE <WITH> ELECTRO
+			SPLINTERS <WITH> ELECTRO"
 		break;
 		case ultramods.plasmaBolt:
 			umn = @"SWAPS
-			PLASMA <WITH> BOLTS"
+			ANY PLASMA TYPE <WITH> ANY BOLT TYPE"
 		break;
 		case ultramods.plasmaRocket:
 			umn = @"SWAPS
-			PLASMA <WITH> ROCKETS"
+			ANY PLASMA TYPE <WITH> ROCKETS/MISSILES"
 		break;
 		case ultramods.bloodMelee:
 			umn = @"SWAPS
@@ -68,19 +74,13 @@ function scrUltraModDescription(um){
 		
 		case ultramods.rocketBolt:
 			umn = @"SWAPS
-			ROCKETS <WITH> BOLTS
-			BOUNCER PLASMA <WITH> BOUNCER ROCKETS
-			NUKES <TO> HEAVY BOLT & 2 SPLINTERS
-			ULTRA ROCKETS <TO> ULTRA BOLTS & 2 SPLINTERS"
+			ANY BOLT TYPE <WITH> ROCKETS/MISSILES"
 		break;
 		case ultramods.laserBolt:
 			umn = @"SWAPS
-			LASERS <WITH> BOLTS
-			BOUNCER LASERS <WITH> BOUNCER BOLTS
-			MEGA LASERS <WITH> HEAVY BOLTS
-			ULTRA BOLTS <TO> 3 ULTRA LASERS"
+			ANY BOLT TYPE <WITH> LASERS"
 		break
-		case ultramods.seekerMissile:
+		case ultramods.seekerMissile://Replace me
 			umn = @"SWAPS
 			SEEKERS <WITH> MISSILES"
 		break;
@@ -90,9 +90,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.boltBullet:
 			umn = @"SWAPS
-			SPLINTERS <WITH> BULLETS
-			ULTRA SPLINTERS <WITH> ULTRA BULLETS
-			FLAME SPLINTERS <WITH> FLAME BULLETS"
+			ANY BOLT TYPE <WITH> ANY BULLET TYPE"
 		break;
 	
 		case ultramods.bulletPlasma:
@@ -102,7 +100,7 @@ function scrUltraModDescription(um){
 			BOUNCER BULLETS <WITH> BOUNCER PLASMA
 			FAT BULLETS <TO> PLASMA CANNON BALLS"
 		break;
-		case ultramods.splinterElectro:
+		case ultramods.splinterElectro://Replace me
 			umn = @"SWAPS
 			SPLINTERS <WITH> ELECTRO"
 		break;
@@ -117,7 +115,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.snowSwarm:
 			umn = @"SWAPS
-			FROST <WITH> SWARM"
+			FROST FLAMES <WITH> SWARM"
 		break;
 		case ultramods.morphFire:
 			umn = @"SWAPS
@@ -126,7 +124,7 @@ function scrUltraModDescription(um){
 		break;
 		case ultramods.lightningPellet:
 			umn = @"SWAPS
-			LIGHTNING <WITH> SHOTGUN PELLET"
+			LIGHTNING <WITH> ANY SHOTGUN TYPE"
 		break;
 		
 		case ultramods.bladeGrenade:

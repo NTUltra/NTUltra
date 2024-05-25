@@ -530,7 +530,31 @@ function scrRaces() {
 	race_gskin[27] = 0
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
 	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONE BUTT)"
+	/*
+	race_name[28] = "[NOTHING]"
+	race_pass[28] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+	race_acti[28] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE PLAYAREA#TO DESTROY EVERYTHING"
+	race_butt[28] = "BIGGER VOID CONSUMPTION"
+	race_butt_detail[28] = "BIGGER VOID CONSUMPTION"
+	race_inpsiration[28] = "PRESS <w>[E]<w> TO:#VOID CONSUME ONE HEALTH";
+	race_inpsiration_detail[28] = "PRESS <w>[E]<w> TO:#VOID CONSUME ONE HEALTH";
+	race_lock[28] = "BUY ME IN THE VOID"
+	race_have[28] = 0
+	race_swep[28] = 443
+	race_bskin[28] = 0
+	race_cskin[28] = 0
+	race_dskin[28] = 0
+	race_eskin[28] = 0
+	race_fskin[28] = 0
+	race_gskin[28] = 0
+	race_bskin_lock[28] = "CONSUME ATLEAST 20 RADS IN ONE ACTIVE USAGE"
+	race_cskin_lock[28] = "COMPLETE A VOID CHALLENGE AS NOTHING"
 
-
+	THIEF
+	ACTIVE: IF NO-ONE SEES YOU BECOME INVISIBLE, IF YOU ARE INVISIBLE AND CLOSE TO AN ENEMY: STEAL SOME HEALTH AND AMMO FROM THEM
+	PASSIVE: START EACH AREA INVISIBLE. THIEFS ARE ALLIES
+	
+	
+	*/
 	racemax = 27;
 }

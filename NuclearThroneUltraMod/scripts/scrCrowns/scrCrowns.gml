@@ -188,9 +188,9 @@ function scrCrowns() {
 	
 	//Daily
 	crown_name[30] = "[CROWN OF MERCENARY]"
-	crown_text[30] = "<w>+2<w> <r>MAX HP<r># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
+	crown_text[30] = "<w>+1<w> <r>MAX HP<r># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[30] = "+2 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
+		crown_text[30] = "+1 <gb>MAX ARMOUR<gb># AT THE END OF EACH AREA#LOSE 20 <w>KILLS<w>"
 	crown_used[30] = 0
 	crown_tips[30] = "there is no crime worse than tax fraud"
 	

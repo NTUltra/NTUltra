@@ -4,7 +4,7 @@ with Player
 if (myCorpse == -1 || !instance_exists(myCorpse))
 	myCorpse = id;
 instance_create(myCorpse.x,myCorpse.y,Player);
-instance_create(x,y,WallBreak);
+instance_create(myCorpse.x,myCorpse.y,WallBreak);
 instance_destroy(myCorpse);
 if race == 9//Delete chicken head
 	with Corpse

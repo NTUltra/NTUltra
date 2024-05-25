@@ -4,6 +4,7 @@ if um == ultramods.bulletShotgun
 {
 	with instance_create(x,y,Bullet5)
 	{
+		dmg = other.dmg;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -24,7 +25,8 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.1;
+		image_yscale += 0.12;
+		defaultPierce += 32
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction-5;
@@ -33,7 +35,8 @@ if um == ultramods.bulletShotgun
 	}
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.1;
+		image_yscale += 0.12;
+		defaultPierce += 32
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction+5;

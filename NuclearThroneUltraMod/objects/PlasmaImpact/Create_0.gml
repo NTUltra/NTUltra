@@ -20,3 +20,4 @@ if instance_exists(Player)
 			dmg += 1;
 	}
 }
+event_user(0);

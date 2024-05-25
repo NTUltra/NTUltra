@@ -9122,7 +9122,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//BOW
+	//CHARGE BOW
 	case 502:
 	with ChargeBow {
 		if scrChargeRelease()
@@ -9153,7 +9153,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//ULTRA BOW
+	//ULTRA CHARGE BOW
 	case 503:
 	with UltraChargeBow {
 		if scrChargeRelease()
@@ -11171,7 +11171,7 @@ function scrFire2(hasTailNow) {
 	}
 	break;
 	
-	//GOLDEN BOW
+	//GOLDEN CHARGE BOW
 	case 567:
 	with ChargeBow {
 		if scrChargeRelease()

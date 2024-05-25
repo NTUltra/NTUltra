@@ -81,13 +81,13 @@ if um == ultramods.bloodMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = round(4 + speed + (dmg*0.75));
-	var ddd = ceil(other.dmg*0.16);
+	var ddd = ceil(other.dmg*0.2);
 	with instance_create(x,y,Tentacle)
 	{
 		image_yscale += 0.1;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
-		image_angle = other.image_angle-( 30*acc);
+		image_angle = other.image_angle-( 60*acc);
 		team = other.team
 		ammo = am
 		event_perform(ev_alarm,0)
@@ -110,7 +110,7 @@ if um == ultramods.bloodMelee
 		image_yscale += 0.1;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
-		image_angle = other.image_angle+( 30*acc);
+		image_angle = other.image_angle+( 60*acc);
 		team = other.team
 		ammo = am
 		event_perform(ev_alarm,0)
@@ -128,4 +128,5 @@ if um == ultramods.bloodMelee
 			}
 		}
 	}
+	event_inherited();
 }

@@ -51,8 +51,7 @@ if um == ultramods.plasmaBolt
 	{
 		dmg ++;
 		defaultPierce += 32;
-		//image_yscale += 0.75;
-		image_yscale = other.dmg*0.0375;
+		image_yscale += 0.45;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -64,8 +63,9 @@ if um == ultramods.plasmaBolt
 {
 	snd_play_fire(sndSlugger);
 	instance_destroy(id,false);
-	with instance_create(x,y,Slug)
+	with instance_create(x,y,Flug)
 	{
+		dmg -= 1;
 		scrCopyWeaponMod(other);
 		friction = 0.2;
 		direction = other.direction;
@@ -85,7 +85,8 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,FatBullet)
 	{
-		dmg ++;
+		dmg += 1;
+		hits += 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

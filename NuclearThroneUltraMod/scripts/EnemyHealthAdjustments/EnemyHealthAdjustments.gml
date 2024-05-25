@@ -46,7 +46,7 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.9;
 		}
-		if scrIsCrown(22) && random(100 + floor(my_health*0.1)) < 52.5//Crown of luck
+		if scrIsCrown(22) && random(100 + floor(my_health*0.1)) < 50//Crown of luck
 		{
 			my_health = floor(my_health*0.1);
 			canBeBuffedHealed = false;

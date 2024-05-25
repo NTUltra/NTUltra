@@ -199,13 +199,13 @@ if crown == 30
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
 		Player.maxarmour += 1;
-		Player.armour += 2;
+		Player.armour += 1;
 	}
 	else
 	{
-		Player.maxhealth += 2
-		Player.my_health += 2;
-		UberCont.maxHpIncrease += 2;
+		Player.maxhealth += 1
+		Player.my_health += 1;
+		UberCont.maxHpIncrease += 1;
 	}
 }
 //CROWN OF BOUNTY

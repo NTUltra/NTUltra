@@ -1,5 +1,5 @@
 /// @description ultramod
-if GetPlayerUltramod() == ultramods.seekerMissile
+if GetPlayerUltramod() == ultramods.rocketBolt
 {
 	instance_destroy(id,false);
 	with instance_create(x,y,SeekerBolt)

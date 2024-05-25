@@ -1,7 +1,8 @@
 /// @description Fire Bow
 if instance_exists(Player)
 {
-
+	x = creator.x;
+	y = creator.y;
 	snd_play_fire(sndCrossbow)
 	var d = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	var maxcharged = false;

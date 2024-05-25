@@ -7,6 +7,10 @@ if !instance_exists(GenCont)
 	if (instance_exists(Player) && Player.area != 104)
 	{
 		with instance_nearest(px,py,Wall)
-			scrSpawnEndLevelPortal()
+		{
+			other.x = x + 8;
+			other.y = y + 8;
+		}
+		scrSpawnEndLevelPortal()
 	}
 }

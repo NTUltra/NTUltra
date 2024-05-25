@@ -2547,35 +2547,36 @@ function scrPowers(raceOverwrite = -1) {
 				else
 					toxicamount += 1.5;
 			}
-    
-		    if ultra_got[91]//FROG MOMMA ULTRA C
-		    {
-    
-				if toxicamount = floor(maxtoxicamount*0.1)
-					with instance_create(x,y,FrogEgg)
-					{
-						team = other.team;	
-					}
-    
-		    }
-			
-			if toxicamount % 3 == 0
+			if toxicamount > 0
 			{
-				if ultra_got[92] && altUltra
+			    if ultra_got[91]//FROG MOMMA ULTRA C
+			    {
+    
+					if toxicamount = floor(maxtoxicamount*0.1)
+						with instance_create(x,y,FrogEgg)
+						{
+							team = other.team;	
+						}
+    
+			    }
+				if toxicamount % 3 == 0
 				{
-					with instance_create(x,y,Splinter)
+					if ultra_got[92] && altUltra
 					{
-						motion_add(random(360),18)
-						image_angle = direction
-						team = other.team
+						with instance_create(x,y,Splinter)
+						{
+							motion_add(random(360),18)
+							image_angle = direction
+							team = other.team
+						}
 					}
-				}
-				else
-				{
-					with instance_create(x,y,ToxicThrowerGas)
+					else
 					{
-						motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
-						//dmg += 1;
+						with instance_create(x,y,ToxicThrowerGas)
+						{
+							motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
+							//dmg += 1;
+						}
 					}
 				}
 			}
@@ -3546,69 +3547,72 @@ function scrPowers(raceOverwrite = -1) {
 
 		if ultra_got[90]//intimacy
 			toxicamount++
-		if ultra_got[92] && altUltra
+		
+		if toxicamount > 0
 		{
-			toxicamount *= 0.7;//0.6
-			toxicamount = ceil(toxicamount);
-			if toxicamount > 6
-				snd_play(sndSplinterGun,0.1,true);
-			var ta = random(360);
-			var taStep = 360 / toxicamount;
-			if toxicamount > 3
-			with instance_create(x,y,ToxicThrowerGas)
+			if ultra_got[92] && altUltra
 			{
-				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
-				image_angle = direction
-				team = other.team
-				//dmg += 1;
-			}
-			repeat(toxicamount)
-			{
-				with instance_create(x,y,Splinter)
+				toxicamount *= 0.7;//0.6
+				toxicamount = ceil(toxicamount);
+				if toxicamount > 6
+					snd_play(sndSplinterGun,0.1,true);
+				var ta = random(360);
+				var taStep = 360 / toxicamount;
+				if toxicamount > 3
+				with instance_create(x,y,ToxicThrowerGas)
 				{
-					motion_add(ta,18)
+					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
 					image_angle = direction
 					team = other.team
+					//dmg += 1;
 				}
-				ta += taStep;
-			}
-		}
-		else 
-		{
-			var spd = 2;
-			if toxicamount >= maxtoxicamount
-				spd = 4;
-			if toxicamount > 3
-			with instance_create(x,y,ToxicThrowerGas)
-			{
-				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),spd+2+(other.skill_got[5]*2));
-				//dmg += 1;
-			}
-			var counter = 0;
-			repeat(toxicamount)
-			{
-				counter ++;
-				if counter % 4 - (skill_got[5]*2) == 0
+				repeat(toxicamount)
 				{
+					with instance_create(x,y,Splinter)
+					{
+						motion_add(ta,18)
+						image_angle = direction
+						team = other.team
+					}
+					ta += taStep;
+				}
+			}
+			else 
+			{
+				var spd = 2;
+				if toxicamount >= maxtoxicamount
+					spd = 4;
+				if toxicamount > 3
 					with instance_create(x,y,ToxicThrowerGas)
 					{
-						speed = 0;
-						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(-16,16),spd+1+random(2)+(other.skill_got[5]*2));
+						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),spd+2+(other.skill_got[5]*2));
 						//dmg += 1;
 					}
-				}
-				else
+				var counter = 0;
+				repeat(toxicamount)
 				{
-					with instance_create(x,y,ToxicThrowerGas)
+					counter ++;
+					if counter % 4 - (skill_got[5]*2) == 0
 					{
-						motion_add(random(360),spd+random(2)+(other.skill_got[5]*2));
-						//dmg += 1;
+						with instance_create(x,y,ToxicThrowerGas)
+						{
+							speed = 0;
+							motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(-16,16),spd+1+random(2)+(other.skill_got[5]*2));
+							//dmg += 1;
+						}
+					}
+					else
+					{
+						with instance_create(x,y,ToxicThrowerGas)
+						{
+							motion_add(random(360),spd+random(2)+(other.skill_got[5]*2));
+							//dmg += 1;
+						}
 					}
 				}
 			}
+			toxicamount = -5;
 		}
-
-		toxicamount=0;
 	}
 	if race == 1 && flushCharge > 6 && skill_got[5]
 	{
