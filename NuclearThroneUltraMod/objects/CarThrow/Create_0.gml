@@ -1,4 +1,5 @@
 maxhealth = 20
+scrWeaponModInit();
 spr_idle = sprCarIdle
 spr_hurt = sprCarHurt
 spr_dead = sprScorchmark

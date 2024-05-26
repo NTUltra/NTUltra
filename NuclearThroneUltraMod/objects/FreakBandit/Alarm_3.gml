@@ -1,8 +1,8 @@
 /// @description Melee Venom
-snd_play(sndAssassinAttack)
+snd_play(sndFreakBanditSmack)
 wepangle = -wepangle
 motion_add(gunangle,6)
-with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle),AssassinSlash)
+with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle),NarrowEnemyVenomShank)
 {
 	bleedAngle = other.gunangle - (30 * sign(other.wepangle));
 	dmg=5;

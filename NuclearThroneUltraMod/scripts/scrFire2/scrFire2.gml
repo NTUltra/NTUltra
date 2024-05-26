@@ -924,6 +924,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndSnowBotThrow);
 	with instance_create(x,y,CarThrow)
 	{
+		scrGiveProjectileStats();
 		maxhealth = 30;//20 original
 		spr_idle = sprGoldenCarIdle
 		spr_hurt = sprGoldenCarHurt
@@ -16442,6 +16443,7 @@ function scrFire2(hasTailNow) {
 	snd_play(sndMaggotLauncherFire);
 	with instance_create(x,y,FriendlyMaggot)
 	{
+		scrGiveProjectileStats();
 		ignoreOverlap = true;
 		raddrop = 0;
 		existTime = 30;

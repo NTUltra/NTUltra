@@ -4850,8 +4850,9 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndSnowBotThrow);
 	with instance_create(x,y,CarThrow)
 	{
-	team = other.team
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+		scrGiveProjectileStats();
+		team = other.team
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
 	}
 
 	BackCont.viewx2 += lengthdir_x(-7,aimDirection+180)*UberCont.opt_shake

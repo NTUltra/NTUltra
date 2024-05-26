@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBanditSquareIdle",
-    "path":"sprites/sprBanditSquareIdle/sprBanditSquareIdle.yy",
+    "name":"sprFreakBanditIdle",
+    "path":"sprites/sprFreakBanditIdle/sprFreakBanditIdle.yy",
   },
   "spriteMaskId":{
     "name":"mskBandit",

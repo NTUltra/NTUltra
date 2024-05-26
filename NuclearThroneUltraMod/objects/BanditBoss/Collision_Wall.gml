@@ -4,8 +4,7 @@ if charge > 0 or intro = 0
 	with other
 	{
 		instance_destroy()
-		with instance_create(x,y,FloorExplo)
-			alarm[3] = 0;
+		instance_create(x,y,FloorExplo)
 	}
 }
 else

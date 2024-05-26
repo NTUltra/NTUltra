@@ -4,10 +4,19 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
+loops = GetPlayerLoops();
 if scrIsHardMode() && random(5) < 1//HARD MODE
 {
 	instance_destroy(id,false);
 	instance_create(x,y,UltraBandit);
+}
+if loops > 2 && choose(false,true,false)
+{
+	instance_destroy(id,false);
+	if object_index == InvertedBanditSquare
+		instance_create(x,y,InvertedFreakBandit);
+	else
+		instance_create(x,y,FreakBandit);		
 }
 spr_idle = sprBanditSquareIdle
 spr_walk = sprBanditSquareWalk
@@ -24,7 +33,6 @@ alarm[1] = 30+random(90)
 wkick = 0
 maxDetectRange = 150;
 maxSpeed = 3;
-loops = GetPlayerLoops();
 actTime = 20;
 pSpeed = 3.6;
 if loops > 0

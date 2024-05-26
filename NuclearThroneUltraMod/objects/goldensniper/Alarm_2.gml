@@ -1,5 +1,5 @@
 /// @description Line of fire
-snd_play(sndSniperFire)
+snd_play(sndGoldSniperFire)
 wkick = 7;
 with instance_create(x,y,EnemyBulletBigDiamond)
 {

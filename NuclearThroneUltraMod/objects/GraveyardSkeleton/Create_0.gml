@@ -1,11 +1,11 @@
-raddrop = 4
+raddrop = 3
 maxhealth = 2;
 meleedamage = 3
 mySize = 1
 loops = GetPlayerLoops();
 if loops > 0
 {
-	maxhealth = 3;
+	maxhealth = 5;
 }
 event_inherited()
 droprate = 4;

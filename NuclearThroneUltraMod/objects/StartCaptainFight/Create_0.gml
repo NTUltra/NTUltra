@@ -9,8 +9,8 @@ spr_idle = sprBushBox
 spr_walk = sprBushBox
 spr_hurt = sprBushBoxHurt
 spr_dead = sprBushBoxDead
-snd_hurt = sndLastHurt;
-event_inherited()
+event_inherited();
+snd_hurt = sndSilence;
 friction = 100;
 image_xscale = 1;
 previousHealth = my_health;

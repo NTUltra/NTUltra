@@ -1,5 +1,14 @@
 /// @description Deal damage
 var theDamage = dmg;
+if !instance_exists(owner) || owner == noone || owner.my_health < 2
+{
+	instance_destroy();	
+	exit;
+}
+else
+{
+	alarm[0] = rate;	
+}
 with owner
 {
 	snd_play(sndVenom,0.1);

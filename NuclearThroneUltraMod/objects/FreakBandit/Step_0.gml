@@ -7,5 +7,5 @@ motion_add(direction,acc)
 }
 
 if speed > maxSpeed
-speed = maxSpeed
+	speed = maxSpeed
 

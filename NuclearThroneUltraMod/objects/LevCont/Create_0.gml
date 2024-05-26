@@ -249,8 +249,12 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 				instance_destroy();
 			}
 		}
-		if scrIsGamemode(28)//ALL MUTATION CHOICES
+		if scrIsGamemode(28) || (instance_exists(Player) && Player.anyMutation > 0)//ALL MUTATION CHOICES
 		{
+			with Player
+			{
+				anyMutation -= 1;	
+			}
 			var xx = __view_get( e__VW.XView, 0 )+16;
 			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 			var step = 31;

@@ -513,8 +513,8 @@ if !instance_exists(LevCont) and visible = 1
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,GoldenSniper);
-			instance_create(x+32,y,AssassinBoss);
+			instance_create(x+32,y,InvertedFreakBandit);
+			instance_create(x+32,y,FreakBandit);
 
 			/*
 			wep = 0;

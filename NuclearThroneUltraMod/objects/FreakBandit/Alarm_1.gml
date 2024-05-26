@@ -10,26 +10,28 @@ if target != noone
 		{
 			if random(2) < 1
 			{
-				if dis < shankRange
+				if dis < smackDetectionRange
 				{
 					gunangle = point_direction(x,y,target.x,target.y)
-					alarm[3] = 6;
-					alarm[1] += 10;
+					alarm[3] = smackTell;
+					alarm[1] += actTime + (smackTell*2);
 					speed = 0;
 					walk = 3;
 					direction = gunangle;
+					instance_create(x-5,y,Notice);
+					instance_create(x,y,Notice);
+					instance_create(x+5,y,Notice);
 				}
 				else
 				{
 					gunangle = point_direction(x,y,target.x,target.y)
-					alarm[2] = 2;
-					alarm[1] += 4;
+					alarm[2] = shootTell;
+					alarm[1] += shootTell*2;
 				}
 			}
 			else
 			{
 				direction = point_direction(x,y,target.x,target.y)+random(60)-30
-				speed = 0.4
 				walk = 10 + random(10)
 				gunangle = point_direction(x,y,target.x,target.y)
 			}
@@ -45,7 +47,6 @@ if target != noone
 	else
 	{
 		direction = point_direction(target.x,target.y,x,y)+random(20)-10
-		speed = 0.4
 		walk = 40+random(10)
 		gunangle = point_direction(x,y,target.x,target.y)
 	}

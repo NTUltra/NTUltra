@@ -6,14 +6,15 @@ if other.team != team and other.my_health > 0
 	{
 		if object_index == Player
 		{
-			if sprite_index != spr_hurt
+			if sprite_index != spr_hurt && !collision_line(x,y,other.x,other.y,Wall,false,false)
 			{
 				hitBy = other.sprite_index;
 				DealDamage(other.dmg)
 				sprite_index = spr_hurt
 				image_index = 0
-				Sleep(20);
+				Sleep(30);
 				motion_add(other.direction,6)
+				snd_play(snd_hurt, hurt_pitch_variation,true)
 			}
 		}
 		else

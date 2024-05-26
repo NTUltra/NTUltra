@@ -14,7 +14,7 @@ function scrLoadData() {
 	crown_start[dir] = ini_read_real("DATA","crown_start"+string(dir),false);
 
 	dir += 1;}
-
+	race_gskin[9] = 0;//Backwards compatability bug chicken G skin
 	dir=0
 	repeat(crownmax + secretcrownmax)
 	{

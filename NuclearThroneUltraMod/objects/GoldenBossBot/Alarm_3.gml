@@ -28,4 +28,5 @@ if alarm[6] < 1
 		aimDir += angStep;
 	}
 	alarm[4] = 5;
+	scrDrop(5,0);
 }

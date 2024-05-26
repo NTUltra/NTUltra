@@ -5,6 +5,8 @@ event_inherited()
 
 raddrop = 5
 maxhealth = 1
+if loops > 0
+	maxhealth = 3;
 EnemyHealthAdjustments();
 meleedamage = 3
 droprate = 3;
@@ -21,7 +23,6 @@ walk = 0
 alarm[1] = 30+random(90)
 maxSpeed = 4.1;
 actTime = 10;
-loops = GetPlayerLoops();
 if loops > 1
 {
 	maxSpeed = 5.4;

@@ -26,7 +26,7 @@ scrTarget();
 if target != noone && instance_exists(target)
 {
 	//FUNNY DEBUG
-	my_health = 1;
+	//my_health = 1;
 	var ran = random(100);
 	badboyBuff = 1;
 	if target.x < x - 128 || target.x > x + 128 && ran > 50

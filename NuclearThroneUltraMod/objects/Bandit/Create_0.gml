@@ -4,6 +4,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
+loops = GetPlayerLoops();
 if scrIsHardMode()//HARD MODE
 {
 	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(5) < 1)
@@ -11,6 +12,11 @@ if scrIsHardMode()//HARD MODE
 		instance_destroy(id,false);
 		instance_create(x,y,UltraBandit);
 	}
+}
+if loops > 2
+{
+	instance_destroy(id,false);
+	instance_create(x,y,FreakBandit);
 }
 if UberCont.encrypted_data.secrets[1] == true
 {

@@ -5,7 +5,7 @@ mySize = 0
 my_health = 2;
 
 event_inherited()
-
+scrWeaponModInit();
 spr_idle = sprFriendlyMaggotIdle
 spr_walk = sprFriendlyMaggotIdle
 spr_hurt = sprFriendlyMaggotHurt

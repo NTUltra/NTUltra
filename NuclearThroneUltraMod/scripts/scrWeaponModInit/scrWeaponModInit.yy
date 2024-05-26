@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrWeaponModInit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrWeaponModInit",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

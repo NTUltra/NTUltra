@@ -13,6 +13,11 @@ if scrIsHardMode() && random(5) < 1//HARD MODE
 	instance_destroy(id,false);
 	instance_create(x,y,UltraBandit);
 }
+if GetPlayerLoops() > 2
+{
+	instance_destroy(id,false);
+	instance_create(x,y,FreakBandit);
+}
 spr_idle = sprBanditInvertIdle
 spr_walk = sprBanditInvertWalk
 spr_hurt = sprBanditInvertHurt

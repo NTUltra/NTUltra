@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprTangleSeed",
-    "path":"sprites/sprTangleSeed/sprTangleSeed.yy",
+    "name":"sprPopoSlowSeed",
+    "path":"sprites/sprPopoSlowSeed/sprPopoSlowSeed.yy",
   },
   "spriteMaskId":null,
   "visible":true,

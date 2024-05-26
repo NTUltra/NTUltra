@@ -59,6 +59,7 @@ maxRadPickedUp = 150;
 saveLoaded = false;
 outOfCombat = false;
 guarenteedReroll = 0;
+anyMutation = 0;
 metabolism = 0;
 triggerMetabolism = false;
 restarted = false;

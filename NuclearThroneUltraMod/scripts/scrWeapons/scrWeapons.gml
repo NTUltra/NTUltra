@@ -40,7 +40,7 @@ function scrWeapons() {
 	wep_cost[3] = 0
 	wep_sprt[3] = sprWrench
 	wep_area[3] = 1
-	wep_text[3] = "ratchet"
+	wep_text[3] = "wrench can also fix it"
 	wep_swap[3] = sndSwapHammer
 	wep_rad[3] = 0;
 	wep_popup[3] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
@@ -3056,7 +3056,7 @@ function scrWeapons() {
 	wep_load[272] = 40
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
-	wep_area[272] = 15
+	wep_area[272] = 16
 	wep_text[272] = "spooky"
 	wep_swap[272] = sndSwapSword
 	wep_rad[272] = 0;
@@ -3065,7 +3065,7 @@ function scrWeapons() {
 	wep_name[273] = "GYRO BURSTER"
 	wep_type[273] = 1
 	wep_auto[273] = 2
-	wep_load[273] = 55
+	wep_load[273] = 60
 	wep_cost[273] = 30
 	wep_sprt[273] = sprGyroBurster
 	wep_area[273] = 18
@@ -3090,7 +3090,7 @@ function scrWeapons() {
 	wep_load[275] = 70
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
-	wep_area[275] = 18
+	wep_area[275] = 19
 	wep_text[275] = "digging up graves"
 	wep_swap[275] = sndSwapHammer
 	wep_rad[275] = 0;
@@ -5188,7 +5188,7 @@ function scrWeapons() {
 	wep_name[461] = "GYRO INCINERATOR"
 	wep_type[461] = 1
 	wep_auto[461] = 0
-	wep_load[461] = 70
+	wep_load[461] = 75
 	wep_cost[461] = 35
 	wep_sprt[461] = sprGyroIncinerator
 	wep_area[461] = 29
@@ -5448,7 +5448,7 @@ function scrWeapons() {
 	wep_load[484] = 20
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
-	wep_area[484] = 14
+	wep_area[484] = 15
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
 	wep_rad[484] = 0;
@@ -5997,7 +5997,7 @@ function scrWeapons() {
 	wep_name[534] = "SUPER GYRO BURSTER"
 	wep_type[534] = 1
 	wep_auto[534] = 0
-	wep_load[534] = 170
+	wep_load[534] = 190
 	wep_cost[534] = 145
 	wep_sprt[534] = sprSuperGyroBurster
 	wep_area[534] = 31
@@ -7412,7 +7412,7 @@ function scrWeapons() {
 	wep_load[662] = 18
 	wep_cost[662] = 4
 	wep_sprt[662] = sprPhoenixGun
-	wep_area[662] = 13
+	wep_area[662] = 15
 	wep_text[662] = "fire bird"
 	wep_swap[662] = sndSwapDragon
 	wep_rad[662] = 0;
@@ -7997,7 +7997,7 @@ function scrWeapons() {
 	wep_load[714] = 34
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
-	wep_area[714] = 15
+	wep_area[714] = 16
 	wep_text[714] = "piercing ghast"
 	wep_swap[714] = sndSwapSword
 	wep_rad[714] = 0;
@@ -8381,7 +8381,7 @@ function scrWeapons() {
 	wep_type[749] = 4
 	wep_auto[749] = 3
 	wep_load[749] = 9
-	wep_cost[749] = 4.25
+	wep_cost[749] = 5
 	wep_sprt[749] = sprSuperBloodRocketGun
 	wep_area[749] = 19
 	wep_text[749] = "I see red"

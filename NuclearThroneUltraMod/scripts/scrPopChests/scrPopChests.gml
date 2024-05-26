@@ -18,7 +18,17 @@ function scrPopChests() {
 		if Player.area == 104//YV mansion
 			return;
 		if Player.area == 135 && Player.subarea == 3//Captain
+		{
+			with RadChest
+				instance_destroy(id,false);
+			with AmmoChest
+				instance_destroy(id,false);
+			with WeaponChest
+				instance_destroy(id,false);
+			with RogueAmmoChest
+				instance_destroy(id,false);
 			return
+		}
 		if Player.area == 137//Void
 			return;
 		if ((Player.area == 6 || Player.area == 112) && Player.subarea == 2)

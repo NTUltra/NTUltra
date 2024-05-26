@@ -1,5 +1,5 @@
 /// @description Line of frost
-snd_play(sndSniperFire)
+snd_play(sndGoldSniperFire)
 wkick = 7
 with instance_create(x,y,EnemyLineFrostFire)
 {

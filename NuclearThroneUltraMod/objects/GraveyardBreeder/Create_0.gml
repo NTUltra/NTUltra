@@ -1,4 +1,4 @@
-raddrop = 20
+raddrop = 16
 maxhealth = 28
 meleedamage = 3
 mySize = 2
@@ -28,7 +28,7 @@ loops = GetPlayerLoops();
 if loops > 0
 {
 	vomitSpeed = 0.6;
-	maxAmmo += 7;
+	maxAmmo += 2;
 	actTime = 16;
 }
 

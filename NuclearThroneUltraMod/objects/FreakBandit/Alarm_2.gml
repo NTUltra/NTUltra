@@ -1,5 +1,5 @@
 /// @description Fire
-snd_play(sndEnemyFire)
+snd_play(sndFreakBanditFire)
 wkick = 4
 with instance_create(x,y,EnemyBulletBigDiamond)
 {
