@@ -10,68 +10,75 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
     ///
     with MusCont
     {
-    //audio_stop_all()
-	audio_stop_sound(song);
-    //optimise 
+	    //audio_stop_all()
+		audio_stop_sound(song);
+	    //optimise 
     
-    //sound_discard(song)
-    //sound_discard(amb)
-    var area = instance_exists(Player) ? Player.area : UberCont.area;
-	var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
-    if area = 1 || area = 105
-	{
-		song = musBoss1;
-	}
-    else if area = 3 || area = 106 || area == 136
-	{
-		if subarea == 1
+	    //sound_discard(song)
+	    //sound_discard(amb)
+		if instance_exists(IDPDCaptain)
 		{
-			song = musAssassinBoss;	
+			song = musBoss8;
 		}
 		else
 		{
-			song = musBoss2;
+		    var area = instance_exists(Player) ? Player.area : UberCont.area;
+			var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
+		    if area = 1 || area = 105
+			{
+				song = musBoss1;
+			}
+		    else if area = 3 || area = 106 || area == 136
+			{
+				if subarea == 1
+				{
+					song = musAssassinBoss;	
+				}
+				else
+				{
+					song = musBoss2;
+				}
+			}
+		    else if area = 5 || area = 107
+		    song = musBoss3;
+		    else if area = 6 || area = 112
+				song = musBoss7;
+		    else if area = 7 || area = 108
+				song = musPurpleDragonBoss;
+		    else if area = 8 || area = 109
+			{
+				if (random(100) <1)
+					song = sndChubbyEmuSong;
+				else
+					song = musBoss6B;
+			}
+			if area = 2 || (area == 10 && subarea == 2)
+				song = musBoss5;
+			else if area == 110 && subarea == 2
+				song = musBoss5B;
+			else if area == 4
+				song = musBoss6;
+			else if area == 115
+				song = musBoss6B;
+			else if area == 111
+				song = choose(musBoss6,musBoss6B);
+		    else if area = 101 || area == 122
+				song = musOasisBoss;
+			else if area == 10 || area == 121
+				song = musBoss10
+			else if area == 114 || area == 123
+				song = musBushBoxBoss;
+			else if area == 119 || area == 120
+				song = musBoss4B;
+			else if area == 126
+				song = musGraveyardFish;
+			else if area == 127
+				song = musInvGraveyardFish;
+			else if area == 128 || area == 129
+				song = musCrownGluttonBoss;
+			else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
+				song = musBossBot;
 		}
-	}
-    else if area = 5 || area = 107
-    song = musBoss3;
-    else if area = 6 || area = 112
-		song = musBoss7;
-    else if area = 7 || area = 108
-		song = musPurpleDragonBoss;
-    else if area = 8 || area = 109
-	{
-		if (random(100) <1)
-			song = sndChubbyEmuSong;
-		else
-			song = musBoss6B;
-	}
-	if area = 2 || (area == 10 && subarea == 2)
-		song = musBoss5;
-	else if area == 110 && subarea == 2
-		song = musBoss5B;
-	else if area == 4
-		song = musBoss6;
-	else if area == 115
-		song = musBoss6B;
-	else if area == 111
-		song = choose(musBoss6,musBoss6B);
-    else if area = 101 || area == 122
-		song = musOasisBoss;
-	else if area == 10 || area == 121
-		song = musBoss10
-	else if area == 114 || area == 123
-		song = musBushBoxBoss;
-	else if area == 119 || area == 120
-		song = musBoss4B;
-	else if area == 126
-		song = musGraveyardFish;
-	else if area == 127
-		song = musInvGraveyardFish;
-	else if area == 128 || area == 129
-		song = musCrownGluttonBoss;
-	else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
-		song = musBossBot;
     snd_loop(song)
     // snd_loop(amb)
     //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
@@ -101,6 +108,7 @@ widescreen = 0
 
 
 name="BOSS"
+
 if instance_exists(InvertedSandWorm)
 {
 	name = "INVERTED SAND WORM";
@@ -116,6 +124,10 @@ else if instance_exists(WallCrawler)
 else if instance_exists(InvertedWallCrawler)
 {
 	name = "INVERTED WALL CRAWLER";
+}
+else if instance_exists(IDPDCaptain)
+{
+	name = "CAPTAIN";
 }
 else if instance_exists(UltraBigDog)
 {

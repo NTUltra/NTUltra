@@ -20,7 +20,7 @@ if canSpawn
 	repeat(amount)
 	{
 		var offset = 0;
-		var pspd = 2;
+		var pspd = 4;
 		repeat(8)
 		{
 			with instance_create(x+lengthdir_x(offset,angle),y+lengthdir_y(offset,angle),projectileToSpawn)
@@ -32,7 +32,7 @@ if canSpawn
 				owner = other.owner;
 			}
 			offset += 0.5;
-			pspd+=0.5;
+			pspd+=0.4;
 		}
 		angle += angleStep;
 	}

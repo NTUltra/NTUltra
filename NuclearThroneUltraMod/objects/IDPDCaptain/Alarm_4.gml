@@ -12,7 +12,7 @@ repeat(9)
 		team = other.team;
 		direction = aim + aimOffset;
 		image_angle = direction;
-		speed = 7.5;
+		speed = 8;
 	}
 	aim += 40;
 }

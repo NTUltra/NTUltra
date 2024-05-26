@@ -5,7 +5,8 @@ if speed < stopSpeed
 }
 else
 {
-	alarm[0] = 6;
+	alarm[0] = alarmer;
+	alarmer += 1;
 }
 if friction == 0
 {

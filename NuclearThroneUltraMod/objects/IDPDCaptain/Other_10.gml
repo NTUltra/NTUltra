@@ -8,6 +8,7 @@ if forceAnimation && forceAnimationSprite == spr_warp_out
 		var len = 96;
 		var mindis = 64;
 		var tries = 900;
+		var msk = mask_index;
 		while dis < mindis && tries > 0 && !place_meeting(x,y,Wall)
 		{
 			var rand = random(360);
@@ -19,9 +20,12 @@ if forceAnimation && forceAnimationSprite == spr_warp_out
 				var o = 16;
 				if object_index == FloorExplo
 					o = 8;
+				other.mask_index = mskPickupThroughWall;
 				other.x = x + o;
 				other.y = y + o;
+				other.mask_index = msk;
 			}
+			len += 16;
 			dis = point_distance(target.x,target.y,x,y);
 			tries -= 1;
 		}

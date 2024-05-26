@@ -40,7 +40,7 @@ forceAnimation = false;
 meleeAttackDamage = 10;
 dashDuration = 8;
 dashSpeed = 12.4;
-dashExtraTell = 2;
+dashExtraTell = 3;
 walk = 0
 gunangle = random(360);
 alarm[1] = 5;
@@ -50,7 +50,7 @@ if instance_exists(Player) && Player.skill_got[29] {
 }
 firstEntry = true;
 wkick = 0
-actTime = 5;
+actTime = 6;
 
 acc = 1;
 maxSpeed = 3.5;

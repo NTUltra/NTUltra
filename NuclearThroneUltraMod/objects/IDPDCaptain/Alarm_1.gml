@@ -10,32 +10,34 @@ if target != noone {
 		alarm[1] += 15;
 		snd_play(snd_intro);
 		firstEntry = false;
+		instance_create(x,y,DramaCamera)
 		exit;
 	}
 	var ran = random(100);
-	if ran < 20
+	if ran < 30
 	{
-		//TP and Ball attack
 		event_user(0);
 		
-	} else if ran < 40
+	} else if ran < 50
 	{
-		//Spin bullet attack toward player
-		event_user(1);
+		if collision_line(x,y,target.x,target.y,Wall,false,false)
+			event_user(3);
+		else
+			event_user(1);
 	}
-	else if ran < 60
+	else if ran < 70
 	{
-		//Spin bullets around
-		event_user(2);
+		if collision_line(x,y,target.x,target.y,Wall,false,false)
+			event_user(0);
+		else
+			event_user(2);
 	}
-	else if ran < 80
+	else if ran < 90
 	{
-		//Melee strike attack
 		event_user(3);
 	}
 	else
 	{
-		//Nothing I guess
 		event_user(4);
 	}
 }

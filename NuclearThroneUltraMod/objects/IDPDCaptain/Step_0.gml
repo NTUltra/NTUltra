@@ -40,7 +40,7 @@ if forceAnimation {
 		{
 			forceAnimation = false;
 			alarm[4] = 0;
-			alarm[5] = 0;
+			alarm[6] = 0;
 			alarm[1] = actTime + random(actTime);
 		}
 	}

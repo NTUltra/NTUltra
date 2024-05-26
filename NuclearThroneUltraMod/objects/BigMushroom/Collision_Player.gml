@@ -9,16 +9,11 @@ if KeyCont.key_pick[other.p] = 1
 			snd_play(snd_good[irandom(array_length(snd_good)-1)]);
 		else
 			snd_play(snd_thrn);
-		if area == 100
-		{
-			lastarea = 113
-			lastsubarea = 1
-		}
-		else
-		{
-			area = 113;
-			subarea = 1;
-		}
+			
+		area = 113;
+		subarea = 1;
+		lastarea = 113
+		lastsubarea = 1
 	}
 
 	//with enemy
