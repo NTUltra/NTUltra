@@ -1,10 +1,9 @@
 /// @description Pause the fucking game
-name = string_replace_all(name," ", "  ");
 with UberCont
 {
 	event_user(0);
-	alarm[1] = 60;
+	alarm[1] = other.introDuration;
 	other.depth = depth - 999;
 }
 alarm[1] = 1;
-alarm[0] = 120;
+alarm[0] = introDuration;

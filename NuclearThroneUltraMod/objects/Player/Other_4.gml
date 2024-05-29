@@ -1,7 +1,7 @@
 /// @description start of the room
 //if area=104
 //visitedCrib=true
-
+lockout = false;
 //}
 swapChar = false;
 restarted = false;

@@ -1992,7 +1992,7 @@ function scrDrawHUD() {
 				draw_set_color(c_white)
 				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
 			
-				if explainTimer > 20
+				if explainTimer > 20 && !notGoodEnough
 				{
 					var mr = 620;
 					with dataRef

@@ -9851,7 +9851,7 @@ function scrFire2(hasTailNow) {
 				branch = 40;
 				iframeskip = max(0,iframeskip-0.04);
 				team = 2
-				ammo = 5;//24
+				ammo = 7;//24
 				alarm[0] = ceil(i);
 				with instance_create(x,y,LightningSpawn)
 				{
@@ -15364,7 +15364,7 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(10)-5)*other.accuracy;
+	direction = aimDirection+(random(8)-4)*other.accuracy;
 	image_angle = direction;
 	team = other.team
 	scrGiveProjectileStats();
@@ -17186,7 +17186,7 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(10)-5)*other.accuracy;
+	direction = aimDirection+(random(6)-3)*other.accuracy;
 	image_angle = direction;
 	team = other.team
 	scrGiveProjectileStats();
@@ -17371,20 +17371,20 @@ function scrFire2(hasTailNow) {
 
 
 	if Player.skill_got[17] = 1
-		snd_play_fire(sndLaserUpg)
+		snd_play(sndWunderStrasseUpg,0.05,true);
 	else
-		snd_play_fire(sndLaser)
+		snd_play(sndWunderStrasse,0.05,true);
 	with instance_create(x,y,WunderStrasse)
 	{
-		image_angle = aimDirection+(random(2)-1)*other.accuracy
+		image_angle = aimDirection+(random(6)-3)*other.accuracy
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
 
-	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 2
-	wkick = 2
+	BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 20
+	wkick = -6
 
 	break;
 	

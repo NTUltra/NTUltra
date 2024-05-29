@@ -3,7 +3,7 @@ alarm[10] = 120;
 if instance_exists(Player)
 {
 	with enemy {
-		if ((!canFly && !collision_point(x,y,Floor,false,false)) || (canFly && point_distance(Player.x,Player.y,x,y) > 450))
+		if ((!canFly && !collision_point(x,y,Floor,false,false)) || (canFly && point_distance(Player.x,Player.y,x,y) > 550))
 		{
 			var n = instance_nearest(x,y,Floor)
 			if n != noone {

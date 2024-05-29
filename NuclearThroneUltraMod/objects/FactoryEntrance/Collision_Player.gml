@@ -99,6 +99,10 @@ if my_health > 0
 		{
 			type = 1
 			pullstrength = 3;
+			with Player
+			{
+				lockout = true;	
+			}
 			alarm[1] = 1;
 		}
 		with instance_create(x,y,PortalEnviromentReplacer)

@@ -8,13 +8,5 @@ spr_dead = sprMushroomStatueDead;
 name = "SACRIFICE FIRST WEAPON MOD"
 
 event_inherited()
-canMoveOver = true;
 snd_hurt = sndHitRock;
-instance_create(x,y,WallBreak);
-instance_create(x,y+16,WallBreak);
-instance_create(x+16,y,WallBreak);
-instance_create(x+16,y+16,WallBreak);
-instance_create(x-16,y,WallBreak);
-instance_create(x-16,y+16,WallBreak);
-
-alarm[6] = 5;
+scrCreateSpace(102);

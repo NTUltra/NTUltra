@@ -7,6 +7,7 @@ if UberCont.loops>1
 maxhealth=9;
 
 event_inherited()
+canFly = true;
 maxAmmo = 5;
 spr_idle = sprInvertedRavenIdle
 spr_walk = sprInvertedRavenWalk

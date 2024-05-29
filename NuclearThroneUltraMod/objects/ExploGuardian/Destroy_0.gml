@@ -9,7 +9,7 @@ if (charge || fire)
 	{
 		with instance_create(x,y,exploBullet)
 		{
-			motion_add(angle,other.projectileSpeed/3);
+			motion_add(angle,other.projectileSpeed*0.5);
 			image_angle = direction
 			team = other.team
 		}

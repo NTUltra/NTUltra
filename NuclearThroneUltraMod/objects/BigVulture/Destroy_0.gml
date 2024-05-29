@@ -6,8 +6,6 @@ with GraveyardEntrance
 	with instance_create(x,y,Portal)
 	{
 		type = 1
-		pullstrength = 3;
-		alarm[1] = 1;
 	}
 	with Player
 	{

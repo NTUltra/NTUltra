@@ -1,4 +1,5 @@
 /// @description Gonna bea  big boy and instahitscan
+image_angle = scrAimAssistLaser(image_angle);
 direction = image_angle;
 endX = x;
 endY = y;

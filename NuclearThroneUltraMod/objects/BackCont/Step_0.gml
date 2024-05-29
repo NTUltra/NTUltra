@@ -64,18 +64,6 @@ if !instance_exists(GenCont)
 
 	//viewy = (((Portal.y+Player.y*3)/4-view_hview/2)*(viewdist-1)+(UberCont.mouse__y-view_hview/2))/viewdist
 	}*/
-
-	if instance_exists(DramaCamera)
-	{
-		cam = instance_nearest(x,y,DramaCamera)
-		if instance_exists(cam) && cam.visible = 1
-		{
-			viewx = (viewx+cam.x*cam.urgent)/(1+cam.urgent)-vw
-			viewy = (viewy+cam.y*cam.urgent)/(1+cam.urgent)-vh
-			prevViewX = viewx;
-			prevViewY = viewy;
-		}
-	}
 }
 
 
@@ -98,7 +86,7 @@ else
 	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
 	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
 	*/
-	if !instance_exists(DramaCamera) && instance_exists(Player)
+	if instance_exists(Player)
 	{
 		//Always keep player on the screen
 		viewx2 = clamp(viewx2,Player.x - (vw*2),Player.x);
@@ -107,7 +95,7 @@ else
 }
 if UberCont.opt_camera_follow==0
 {
-	if !instance_exists(DramaCamera) && instance_exists(Player)
+	if instance_exists(Player)
 	{
 		viewx2 = prevviewx2 + (Player.x - vw - prevviewx2)*smoothing
 		viewy2 = prevviewy2 + (Player.y - vh - prevviewy2)*smoothing

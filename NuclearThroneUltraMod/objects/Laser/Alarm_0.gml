@@ -223,7 +223,7 @@ if(instance_exists(Player)){
 		image_angle = scrAimAssistLaser(image_angle);
 	}
 }
-
+direction = image_angle;
 var dir;
 dir = 0
 //if !place_meeting(x,y,Wall)

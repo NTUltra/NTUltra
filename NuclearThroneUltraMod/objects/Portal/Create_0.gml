@@ -15,7 +15,6 @@ else if scrIsGamemode(9)//CASUAL MODE
 	alarm[1] = 45;
 var chance = 1;
 
-
 if instance_exists(Player)
 {
 	if Player.race=22 && Player.area != 100 && !((Player.area == 9 || Player.area == 118) && Player.subarea == 3)//Rogue

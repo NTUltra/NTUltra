@@ -31,6 +31,10 @@ if KeyCont.key_pick[other.p] = 1
 		{
 			type = 1
 			pullstrength = 3;
+			with Player
+			{
+				lockout = true;	
+			}
 			alarm[1] = 1;
 		}
 		with JungleFrozenPlant

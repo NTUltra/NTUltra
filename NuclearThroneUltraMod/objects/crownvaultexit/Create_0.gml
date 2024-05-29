@@ -9,8 +9,12 @@ y += 16;
 instance_create(x,y,Floor);
 instance_create(x-32,y,Floor);
 instance_create(x+32,y,Floor);
+instance_create(x-64,y,Floor);
+instance_create(x+64,y,Floor);
 instance_create(x,y+32,Floor);
 instance_create(x,y-32,Floor);
+instance_create(x,y+64,Floor);
+instance_create(x,y-64,Floor);
 
 instance_create(x-32,y+32,Floor);
 instance_create(x-32,y-32,Floor);

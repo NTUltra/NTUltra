@@ -36,7 +36,7 @@ if instance_exists(creator)
 		{
 			scrMoveContactSolid(aimDirection + 180,0.5);
 			motion_add(aimDirection+180,0.5)
-		}	
+		}
 	}
 }
 

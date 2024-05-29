@@ -1,7 +1,7 @@
 if other.team != team and other.my_health > 0
 {
 	BackCont.shake += 1
-	dmg = max(dmg-1,5);
+	dmg = max(dmg-1,2);
 	with other
 	{
 		DealDamage(other.dmg)

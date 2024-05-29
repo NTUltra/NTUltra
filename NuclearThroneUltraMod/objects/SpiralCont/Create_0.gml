@@ -9,34 +9,35 @@ time = 0
 
 if instance_exists(Player)
 {
-if Player.area = 100
+if Player.area = 100//CROWN
 type = 2
 
-if Player.area = 103
+if Player.area = 103 || Player.area == 104//MANSION
 type = 4
-if scrIsInInvertedArea()
+if scrIsInInvertedArea()//INV
 type=5;
-if Player.area == 8
+if Player.area == 8//WONDERLAND
 type = 6;
-if Player.area == 135
+if Player.area == 135//HQ
 type = 3;
+if Player.area == 137//VOID
+type = 7;
 }
 
 depth = -6;
 
-repeat(70)//(200)
+repeat(80)//(200)
 {
-with SpiralCont
-event_perform(ev_alarm,0)
+	with SpiralCont
+		event_perform(ev_alarm,0)
 
-with Spiral
-event_perform(ev_alarm,0)
+	with Spiral
+		event_perform(ev_alarm,0)
 
-with SpiralDebris
-event_perform(ev_alarm,0)
+	with SpiralDebris
+		event_perform(ev_alarm,0)
 
-with SpiralStar
-event_perform(ev_alarm,0)
+	with SpiralStar
+		event_perform(ev_alarm,0)
 }
-
 active = true

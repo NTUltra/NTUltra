@@ -57,7 +57,7 @@ with Player
 		with DragonSkull
 		{
 			snd_play(sndDragonEmerge,0,false,true,2,false,false,0.7,false,-1,0.8);
-			event_user(0);	
+			event_user(1);	
 		}
 	}
 	else

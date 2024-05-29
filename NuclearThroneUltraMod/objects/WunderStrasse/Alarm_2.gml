@@ -1,5 +1,6 @@
 /// @description Alpha gone
 alpha -= 0.1;
+image_yscale -= 0.05;
 if alpha <= 0.2
 {
 	if alpha <= 0

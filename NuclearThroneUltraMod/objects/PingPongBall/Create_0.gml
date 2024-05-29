@@ -7,13 +7,13 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 image_speed = 0;
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-dmg = 11;
+dmg = 9;
 image_speed = 0.5
 friction = 0;
 bounces = 8 + choose(0,1);
 if instance_exists(Player) && Player.skill_got[15]
 {
-	bounces += 1;	
+	bounces += 1;
 }
 sprite_index = sprPingPongBall;
 image_index = irandom_range(0,4);

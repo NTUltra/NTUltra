@@ -10,7 +10,7 @@ if alarm[1] < 1
 	else
 		image_angle += (8+sin(image_angle/300)*1) * is60fps;
 
-	time += 1
+	time += 1* is60fps
 
 	if type = 2
 	{
@@ -30,7 +30,7 @@ if alarm[1] < 1
 		y = room_height*0.5
 	}
 
-	if random(4) < 1 and type != 4
+	if type != 4 && type != 7 && random(4) < 1 
 	{
 		if type = 2 or (random(3) < 1)
 		{
@@ -53,13 +53,14 @@ if alarm[1] < 1
 			image_yscale = 0
 			depth = other.image_angle
 			image_angle = other.image_angle
-			if t = 3
+			type = t;
+			if type = 3
 			{
-				sprite_index = sprSpiralIDPD
+				sprite_index = sprSpiralIDPD2
 				if round(other.time/10) = other.time/10 or round((other.time-1)/10) = (other.time-1)/10
-					sprite_index = sprSpiralIDPD2
+					sprite_index = sprSpiralIDPD
 			}
-			else if t = 2
+			else if type = 2
 			{
 				image_xscale = random(0.01)
 				image_yscale = random(0.01)
@@ -67,21 +68,26 @@ if alarm[1] < 1
 				image_angle = other.image_angle
 				//image_angle = random(360)
 			}
-			else if t = 5
+			else if type = 5
 			{
 				sprite_index = sprSpiralInverted
 				//image_angle = random(360)
 			}
-			else if t = 6
+			else if type = 6
 			{
 				sprite_index = sprSpiralPink
+				//image_angle = random(360)
+			}
+			else if type = 7
+			{
+				sprite_index = sprSpiralVoid
 				//image_angle = random(360)
 			}
 		}
 	}
 	if !instance_exists(LevCont) and !instance_exists(GenCont)
 	{
-		alarm[1] = 12;
+		alarm[1] = 11;
 		with Spiral
 		{
 			speedUp = true;	

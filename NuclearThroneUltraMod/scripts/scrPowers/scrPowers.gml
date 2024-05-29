@@ -1052,7 +1052,7 @@ function scrPowers(raceOverwrite = -1) {
 	if race==12
 	{
 		var canSpawn = true;
-		var radCost = 110;
+		var radCost = 115;
 		if ultra_got[47]
 		{
 			if !altUltra

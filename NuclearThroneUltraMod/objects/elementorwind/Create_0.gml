@@ -2,7 +2,7 @@
 event_inherited();
 image_speed = 0.4;
 friction = 0.1;
-typ = 2;
+typ = 3;
 dmg = 4;
 projectilePush = 0.23;
 hitEntities = [];

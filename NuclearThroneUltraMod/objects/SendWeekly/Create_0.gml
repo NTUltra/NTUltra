@@ -5,6 +5,7 @@ serverIp =  UberCont.serverIp;
 serverPort = UberCont.serverPort;
 myClientId = -1;
 viewingWeekly = false;
+debug("UPDATE WEEKLY???");
 var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));
 if (res < 0) {
 	//FAIL

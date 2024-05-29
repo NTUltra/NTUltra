@@ -4,7 +4,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
-
+canFly = true;
 spr_idle = sprRavenIdle
 spr_walk = sprRavenWalk
 spr_hurt = sprRavenHurt

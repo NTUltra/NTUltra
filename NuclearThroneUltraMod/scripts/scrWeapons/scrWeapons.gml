@@ -4463,7 +4463,7 @@ function scrWeapons() {
 	wep_name[396] = "DISCO GUN"//fIRES A DISCO	BALL that emites lightning and THAT EXPLOSED INTO A LASER SHOW
 	wep_type[396] = 5
 	wep_auto[396] = 0
-	wep_load[396] = 175
+	wep_load[396] = 180
 	wep_cost[396] = 25
 	wep_sprt[396] = sprDiscoGun
 	wep_area[396] = 17
@@ -5145,7 +5145,7 @@ function scrWeapons() {
 	wep_type[457] = 1
 	wep_auto[457] = 2
 	wep_load[457] = 11
-	wep_cost[457] = 5
+	wep_cost[457] = 6
 	wep_sprt[457] = sprExplosiveAssaultRifle
 	wep_area[457] = 7
 	wep_text[457] = "boom boom pow"
@@ -6174,9 +6174,9 @@ function scrWeapons() {
 	wep_type[550] = 1
 	wep_auto[550] = 1
 	wep_load[550] = 1
-	wep_cost[550] = 1.5
+	wep_cost[550] = 2
 	wep_sprt[550] = sprExplosiveMinigun
-	wep_area[550] = 23
+	wep_area[550] = 24
 	wep_text[550] = "drilling and grilling"
 	wep_swap[550] = sndSwapMachinegun
 	wep_rad[550] = 0;
@@ -7442,7 +7442,7 @@ function scrWeapons() {
 	
 	wep_name[665] = "ALTERNATOR"
 	wep_type[665] = 1
-	wep_auto[665] = 3
+	wep_auto[665] = 1
 	wep_load[665] = 8
 	wep_cost[665] = 2
 	wep_sprt[665] = sprAlternator
@@ -8258,8 +8258,8 @@ function scrWeapons() {
 	wep_name[738] = "PING PONG GUN"
 	wep_type[738] = 3
 	wep_auto[738] = 1
-	wep_load[738] = 4
-	wep_cost[738] = 0.5
+	wep_load[738] = 5
+	wep_cost[738] = 0.75
 	wep_sprt[738] = sprPingPongBallLauncher
 	wep_area[738] = 22
 	wep_text[738] = "pong"
@@ -8650,8 +8650,8 @@ function scrWeapons() {
 	wep_type[773] = 5
 	wep_auto[773] = 1
 	wep_load[773] = 23
-	wep_cost[773] = 5.5
-	wep_sprt[773] = sprPlasmaCannon
+	wep_cost[773] = 7
+	wep_sprt[773] = sprWunderStrasseGun
 	wep_area[773] = 13
 	wep_text[773] = "very proud very wunderbar"
 	wep_swap[773] = sndSwapEnergy

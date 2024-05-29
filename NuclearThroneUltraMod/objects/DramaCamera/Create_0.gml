@@ -7,9 +7,14 @@ var vw = camera_get_view_width(view_camera[0]);
 var vh = camera_get_view_height(view_camera[0]);
 x = xx + (vw*0.5)
 y = yy + vh;
-xShift = 2;
+introDuration = 90;// 3 seconds
+accelerate = 0;
+xShift = 1;
 yShift = 0;
+nx = x;
+ny = yy + 16;
 x -= 32;
+nx += 32;
 if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {
 	instance_destroy();
@@ -137,7 +142,10 @@ else if instance_exists(InvertedWallCrawler)
 }
 else if instance_exists(IDPDCaptain)
 {
+	image_index = 9;
 	name = "CAPTAIN";
+	if random(150)<1
+		name = choose("LET'S FUCKING GO","COME AT ME BRO","WE'RE HERE");
 }
 else if instance_exists(UltraBigDog)
 {
@@ -162,6 +170,7 @@ if (area = 1 || ((area == 10 || area == 101) && instance_exists(BanditBoss)))
 {
 //with instance_create(x,y,Drama)
 	name = "BIG BANDIT";
+	image_index = 1;
 	if random(1000)< 1
 	{
 		name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
@@ -179,6 +188,7 @@ name = "INVERTED BIG BANDIT"
 else if area = 2
 {
 	name = "MOM";
+	image_index = 6;
 	if random(40)<1
 	{
 		name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
@@ -201,6 +211,7 @@ else if area = 3
 //with instance_create(x,y,Drama)
 	if subarea = 3
 	{
+		image_index = 2;
 	if random(100)<1
 	name = "BIG D."
 	else
@@ -245,6 +256,7 @@ else if area == 4
 //with instance_create(x,y,Drama)
 	if subarea == 1
 	{
+		image_index = 7;
 		name = "HYPER CRYSTAL";
 		if random(90)<1
 			name = choose("CRYSTAL'S MOM","HYPER RIFLE?","HYPER DIAMOND","LUIGI","NOT BIG DOG AGAIN");
@@ -274,6 +286,7 @@ else if area = 111
 else if area = 115
 {
 	name = "CURSED HYPER CRYSTAL";
+	image_index = 10;
 	if random(90)<1
 		name = choose("A MISTAKE","PURPLE MENACE");
 }
@@ -295,6 +308,7 @@ else if area = 5
 {
 	if subarea > 2
 	{
+		image_index = 3;
 		//with instance_create(x,y,Drama)
 		if random(1000)<1
 		name= choose("FUNNY FUCK","GEORGE!")
@@ -335,6 +349,7 @@ else if area = 6
 	}
 	else
 	{
+		image_index = 8;
 		name = "TECHNOMANCER";
 		if random(80) < 1
 			name = choose("TECHROMANCER","LITTLE SHIT");
@@ -359,20 +374,31 @@ else if area = 112
 else if area = 7
 {
 //with instance_create(x,y,Drama)
-
-    if random(100)<1
+	image_index = 11;
+	xShift = 0;
+	yShift = -1;
+	y += 32;
+	x += 32;
+    if random(200)<1
     name="THE DIRTY DRAGON";
     else
     name = "PURPLE DRAGON"
+	
+	snd_play_2d(sndDragonEmerge);
 }
 else if area = 108
 {
 //with instance_create(x,y,Drama)
-
-    if random(100)<1
+	xShift = 0;
+	yShift = -1;
+	y += 32
+	x += 32;
+    if random(200)<1
     name="THE DIRTIER DRAGON";
     else
     name = "INVERTED DRAGON"
+	
+	snd_play_2d(sndDragonEmerge);
 }
 else if area = 8
 {
@@ -411,6 +437,7 @@ if random(200) < 1
 }
 else if area == 9
 {
+	image_index = 4
 	name = "THE NUCLEAR THRONE";
 	if random(200) < 1
 		name = "SON OF A BITCH";
@@ -448,6 +475,7 @@ else if area == 121
 }
 else if area == 119
 {
+	image_index = 5;
 	name = "THRONE II";
 	if random(400) < 1
 		name = choose("IT'S TIME","FIGHT ME","CTHULHU","BULLET HELL");
@@ -503,5 +531,4 @@ else if area = 134
 	name = "ULTRA BOSS BOT";
 }
 }
-
 event_user(0);

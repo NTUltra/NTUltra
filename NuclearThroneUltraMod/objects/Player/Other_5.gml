@@ -1004,7 +1004,10 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 if area > 1 || loops > 0
 	with UberCont
 	{
-		scrUpdateScore(other, true);
-		goToLeaderboard = false;
-		instance_create(x,y,SendPerliminaryScore);
+		if scrIsGamemode(26) || scrIsGamemode(27) || UberCont.isLeaderboardGamemode
+		{
+			scrUpdateScore(other, true);
+			goToLeaderboard = false;
+			instance_create(x,y,SendPerliminaryScore);
+		}
 	}

@@ -1,4 +1,4 @@
-if image_index == 0 || canAlwaysDeflect
+if image_index < 1 || canAlwaysDeflect
 {
 	if other.isGrenade
 	{

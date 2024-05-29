@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 4;
+dmg = 5;
 team = 1;
 image_speed = 0.4;
 image_angle = 90*irandom(3)

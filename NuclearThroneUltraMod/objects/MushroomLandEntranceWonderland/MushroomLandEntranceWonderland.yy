@@ -39,8 +39,8 @@
     "path":"sprites/sprWrongMushroom/sprWrongMushroom.yy",
   },
   "spriteMaskId":{
-    "name":"mskWepPickup",
-    "path":"sprites/mskWepPickup/mskWepPickup.yy",
+    "name":"sprWrongMushroom",
+    "path":"sprites/sprWrongMushroom/sprWrongMushroom.yy",
   },
   "visible":true,
 }

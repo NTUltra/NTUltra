@@ -56,6 +56,10 @@ if goTime
 		alarm[1] = 0;
 	}
 	sprite_index = sprPortalSpawn;
+	if isPink
+		sprite_index = sprPinkPortalSpawn;
+	else if isHQ
+		sprite_index = sprPopoPortalStart;
 	visible = true;
 	alarm[0] = 1;
 	alarm[2] = 2;

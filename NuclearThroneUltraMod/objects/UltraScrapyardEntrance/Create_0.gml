@@ -6,15 +6,14 @@ spr_hurt = sprUltraScrapyardEntranceHurt
 spr_active = sprUltraScrapyardEntranceActivate;
 spr_dead = sprUltraScrapyardEntranceDead
 actionName = "% RADS TO ENTER"
+notGoodEnough = false;
 name = actionName;
 explainTimer = 0;
 event_inherited();
-canMoveOver = true;
 shadowSprite = shd24;
 shadowYoffset = - 8;
 snd_hurt = sndHitRock
 alarm[2] = 30;
-alarm[6] = 5;
 y -= 16;
 x -= 16;
 scrCreateSpace(3);

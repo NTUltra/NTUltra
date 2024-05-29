@@ -10,6 +10,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,yimm,FPSHACK);
 }*/
+lockout = false;
 with GameRender
 {
 	gameovertime = 0;

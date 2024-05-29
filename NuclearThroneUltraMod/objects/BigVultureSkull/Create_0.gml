@@ -17,7 +17,6 @@ spr_dead = sprBigVultureSkullDead
 name = "ENTER?"
 
 event_inherited()
-canMoveOver = true;
 shadowSprite = shd48;
 snd_hurt = sndHitRock
 alarm[1]=470;

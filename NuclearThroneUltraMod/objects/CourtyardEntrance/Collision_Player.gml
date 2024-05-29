@@ -23,6 +23,10 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 	{
 		type = 3;
 		pullstrength = 3;
+		with Player
+		{
+			lockout = true;	
+		}
 		alarm[1] = 1;
 		x = other.x;
 		y = other.y;

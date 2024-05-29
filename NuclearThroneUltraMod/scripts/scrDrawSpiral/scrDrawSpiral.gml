@@ -7,14 +7,22 @@ function scrDrawSpiral() {
 
 	with Spiral
 	{
-		if lanim > 0 and lanim < 6
+		if type == 7
+			var w = lerp(0, 255, clamp(0.8 - image_xscale,0,1));
+		else
 		{
-			var w = lerp(255, 0, clamp(0.4 - image_xscale,0,1));
-			var c = make_colour_rgb(w,w,w);
-			draw_sprite_ext(sprPortalLightning,lanim,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle+langle,c,1)
-			// draw_sprite_ext(sprPortalLightning,lanim,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle+langle,c_black,0.4-image_xscale*0.5)
+			if lanim > 0 and lanim < 6
+			{
+				var w = lerp(255, 0, clamp(0.4 - image_xscale,0,1));
+				var c = make_colour_rgb(w,w,w);
+				draw_sprite_ext(sprPortalLightning,lanim,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle+langle,c,1)
+				// draw_sprite_ext(sprPortalLightning,lanim,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle+langle,c_black,0.4-image_xscale*0.5)
+			}
+			if type == 5
+				var w = lerp(100, 255, clamp(0.8 - image_xscale,0,1));
+			else
+				var w = lerp(255, 100, clamp(0.8 - image_xscale,0,1));
 		}
-		var w = lerp(255, 0, clamp(0.8 - image_xscale,0,1));
 		var c = make_colour_rgb(w,w,w);
 		draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale,image_yscale,image_angle,c,1)
 		//draw_sprite_ext(sprite_index,-1,__view_get( e__VW.XView, 0 )+x,__view_get( e__VW.YView, 0 )+y,image_xscale*2,image_yscale*2,image_angle,c_black,0.8-image_xscale)

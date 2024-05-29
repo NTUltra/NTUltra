@@ -5,6 +5,8 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 	{
 		if instance_exists(Player)
 		{
+			if point_distance(x,y,other.x,other.y) > 480
+				exit;
 			if Player.ultra_got[52] == 1 && random(10) < 3
 			{
 				snd_play(sndMeatExplo,0.1,true);

@@ -390,8 +390,11 @@ if !instance_exists(LevCont) and visible = 1
 	else if UberCont.mouse__y > y
 	back = -1
 
+	if !lockout
+	{
 		scrPowers();
 		scrSecondaryPowers();
+	}
 		if !chickenFocusInUse && chickenFocus < chickenFocusMax
 		{
 			if chickenFocusDelayTime <= 0
@@ -938,7 +941,7 @@ if !instance_exists(LevCont) and visible = 1
 	else{
 		IsShielding=false;
 	}
-	if( (!(IsShielding)||(ultra_got[7]==1))){
+	if(!lockout && (!(IsShielding)||(ultra_got[7]==1))){
 	if (race == 7 || (altUltra && ultra_got[55]) || (altUltra && ultra_got[23] && scrMeleeWeapons(wep))) && wep != 0 {
 		if !scrIsChargeWeapon(wep)
 		{
@@ -1610,7 +1613,7 @@ if (!instance_exists(LevCont))
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
-	if (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0
+	if !lockout && (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0
 	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B

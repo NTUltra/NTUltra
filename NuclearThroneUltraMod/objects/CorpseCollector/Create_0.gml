@@ -1,5 +1,5 @@
 /// @description Init
-depth = 7;
+depth = 6;
 surf = -1;
 corpses = ds_list_create();
 px = x;

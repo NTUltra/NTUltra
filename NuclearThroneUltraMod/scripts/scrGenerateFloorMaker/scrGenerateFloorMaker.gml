@@ -63,7 +63,7 @@ function scrGenerateFloorMaker(limiter) {
 			else if Player.area == 10 || Player.area == 121
 			{
 				styleb = choose(0,0,0,0,0,0,1,1)//Slightly higher chance for B tiles
-				goal = 120+s
+				goal = 110+s
 			}
 			else if Player.area == 9 && Player.subarea == 3
 			{

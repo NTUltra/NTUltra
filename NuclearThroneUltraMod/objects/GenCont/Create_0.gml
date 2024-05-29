@@ -367,7 +367,7 @@ goal = 130+s
 else if Player.area == 118//Inverted Palace
 goal = 130+s
 else if Player.area == 10 || Player.area == 121//savanna
-goal = 110+s
+goal = 105+s
 else if Player.area == 109//inverted Wonderland
 goal=130+s
 else if Player.area == 3
@@ -375,7 +375,7 @@ goal = 100+s
 else if Player.area == 107//inverted FrozenCity
 goal=120+s;
 else if Player.area == 101 || Player.area == 122//Oasis
-goal=95+s;
+goal=105+s;
 else if (Player.area == 6 || Player.area = 112) && Player.subarea == 2//LABS BOSS
 goal=1;
 else if (Player.area == 6 || Player.area = 112)//LABS BOSS
