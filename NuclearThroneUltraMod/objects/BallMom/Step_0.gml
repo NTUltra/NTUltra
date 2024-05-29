@@ -29,7 +29,6 @@ if instance_exists(Player)
 	else if !active && dis < 200
 	{
 		instance_create(x,y,DramaCamera);
-		snd_play_2d(sndBallMamaAppear);
 		active = true;
 		snd_loop(sndBallMamaLoop);
 	}

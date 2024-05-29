@@ -1,13 +1,16 @@
 depth = -99;
 image_speed = 0;
 image_index = 1;
+playedSound = false;
 var xx = camera_get_view_x(view_camera[0]);
 var yy = camera_get_view_y(view_camera[0]);
 var vw = camera_get_view_width(view_camera[0]);
 var vh = camera_get_view_height(view_camera[0]);
 x = xx + (vw*0.5)
 y = yy + vh;
-introDuration = 90;// 3 seconds
+introDuration = 120;// 4 seconds
+shiftInDuration = 20;
+alarm[2] = 15;
 accelerate = 0;
 xShift = 1;
 yShift = 0;
@@ -17,6 +20,7 @@ x -= 32;
 nx += 32;
 if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {
+	event_perform(ev_alarm,2);
 	instance_destroy();
 	exit;
 }
@@ -110,8 +114,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 
 
 if UberCont.opt_bossintro=0 || (instance_exists(SurvivalWave) && !instance_exists(BallBoss)) || UberCont.hadBossIntro {
-instance_destroy();
-exit;}
+	event_perform(ev_alarm,2);
+	instance_destroy();
+	exit;
+}
 UberCont.hadBossIntro = true;
 urgent = 2
 alarm[0] = 2;
@@ -384,7 +390,6 @@ else if area = 7
     else
     name = "PURPLE DRAGON"
 	
-	snd_play_2d(sndDragonEmerge);
 }
 else if area = 108
 {
@@ -398,7 +403,6 @@ else if area = 108
     else
     name = "INVERTED DRAGON"
 	
-	snd_play_2d(sndDragonEmerge);
 }
 else if area = 8
 {

@@ -34,7 +34,7 @@
   ],
   "name":"sprBossIntros",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Boss",
     "path":"folders/Sprites/Enemies/Boss.yy",
@@ -120,7 +120,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":246,
-    "yorigin":240,
+    "yorigin":239,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

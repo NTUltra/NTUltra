@@ -1,42 +1,59 @@
 /// @description Boss intro
-draw_sprite_ext(sprite_index,image_index,x,y,1,1,image_angle,c_white,1);
+if alarm[0] == 0
+	exit;
+var tx = nx;
+var ty = ny;
+var yy = y;
+if alarm[0] > introDuration - shiftInDuration
+{
+	ty = lerp(ny, ny - 64, clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1));
+	yy = lerp(y, y + 240, clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1));
+}
+else if alarm[0] < shiftInDuration
+{
+	ty = lerp(ny - 64, ny, clamp(alarm[0]/shiftInDuration,0,1));
+	yy = lerp(y + 240, y, clamp(alarm[0]/shiftInDuration,0,1));
+}
+draw_sprite_ext(sprite_index,image_index,x,yy,1,1,image_angle,c_white,1);
 draw_set_valign(fa_top);
 draw_set_font(fntB);
 draw_set_colour(c_black);
-draw_text_ext(nx + 2,ny,name,0,320);
-draw_text_ext(nx - 1,ny,name,0,320);
-draw_text_ext(nx,ny + 3,name,0,320);
-draw_text_ext(nx,ny - 1,name,0,320);
-draw_text_ext(nx - 1,ny + 3,name,0,320);
-draw_text_ext(nx - 1,ny - 1,name,0,320);
-draw_text_ext(nx + 2,ny + 3,name,0,320);
-draw_text_ext(nx + 2,ny - 1,name,0,320);
+
+draw_text_ext(tx + 2,ty,name,0,320);
+draw_text_ext(tx - 1,ty,name,0,320);
+draw_text_ext(tx,ty + 3,name,0,320);
+draw_text_ext(tx,ty - 1,name,0,320);
+draw_text_ext(tx - 1,ty + 3,name,0,320);
+draw_text_ext(tx - 1,ty - 1,name,0,320);
+draw_text_ext(tx + 2,ty + 3,name,0,320);
+draw_text_ext(tx + 2,ty - 1,name,0,320);
 draw_set_colour(c_white);
-draw_text_ext(nx,ny,name,0,320);
+draw_text_ext(tx,ty,name,0,320);
 //draw_text(xx + vw*0.5,yy + vh * 0.5,name);
 draw_set_font(fntM);
-if UberCont.normalGameSpeed == 60
-{
-	x += xShift*accelerate * 0.5;
-	y += yShift*accelerate * 0.5;
-	nx -= 1*accelerate * 0.5;
-	//ny -= yShift*accelerate * 0.5;
-	if accelerate < 1
-		accelerate += 0.05;
+//if alarm[0] < introDuration - shiftInDuration
+//{
+	if UberCont.normalGameSpeed == 60
+	{
+		x += xShift*accelerate * 0.5;
+		y += yShift*accelerate * 0.5;
+		nx -= 1*accelerate * 0.5;
+		if accelerate < 1
+			accelerate += 0.01;
+		else
+			accelerate = 1;
+	}
 	else
-		accelerate = 1;
-}
-else
-{
-	x += xShift*accelerate;
-	y += yShift*accelerate;
-	nx -= 1*accelerate;
-	//ny -= yShift*accelerate;
-	if accelerate < 1
-		accelerate += 0.1;
-	else
-		accelerate = 1;
-}
+	{
+		x += xShift*accelerate;
+		y += yShift*accelerate;
+		nx -= 1*accelerate;
+		if accelerate < 1
+			accelerate += 0.02;
+		else
+			accelerate = 1;
+	}
+//}
 /*
 if x > __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.4 and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.6 and y > __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.4 and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.6
 {
