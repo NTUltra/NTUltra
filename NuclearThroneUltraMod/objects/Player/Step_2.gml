@@ -923,7 +923,7 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 
 
 // Audio
-audio_listener_position(x, y, depth*10);
+audio_listener_position(x, y, depth*-10);
 
 exception = false;
 if rollIframe > 0

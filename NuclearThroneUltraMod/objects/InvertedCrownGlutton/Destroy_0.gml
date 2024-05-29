@@ -11,7 +11,7 @@ repeat( 6 + irandom(3))
 		motion_add(random(360),3 + random(4));
 	}
 
-if object_index == InvertedCrownGlutton
+if object_index == InvertedCrownGlutton && !instance_exists(EnemyCrownOfDeath) && !instance_exists(TheMultiCrown)
 {
 	with instance_create_depth(x,y,depth,EnemyCrownOfDeath)
 	{

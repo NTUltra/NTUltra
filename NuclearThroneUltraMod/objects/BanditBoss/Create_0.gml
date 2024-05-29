@@ -49,8 +49,8 @@ with BanditBoss
 if id!=other.id
 other.cam=false;
 }
-if !!scrIsGamemode(25)
-	existTime = 40;
+if !scrIsGamemode(25)
+	existTime = 60;
 
 if cam && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))
 instance_create(x,y,DramaCamera);

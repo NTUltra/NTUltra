@@ -4,7 +4,7 @@ event_inherited()
 
 scrPopoDead();
 
-if !sleeping && alarm[3] < 1{
+if !sleeping && existTime > 30{
 instance_create(x,y,Explosion);
 snd_play(sndExplosion);}
 

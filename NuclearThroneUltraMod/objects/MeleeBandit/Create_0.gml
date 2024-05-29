@@ -29,10 +29,13 @@ acc = 2;
 dodgeAcc = 2;
 dodgeRange = 60;
 dodge=0;
-tellTime = 13;
-actTime = 5;
+tellTime = 16;
+actTime = 6;
 loops = GetPlayerLoops();
 dodgeCooldown = 10;
 dodgeTime = 3;
 if loops > 0
+{
+	tellTime = 12;
 	actTime = 4;
+}

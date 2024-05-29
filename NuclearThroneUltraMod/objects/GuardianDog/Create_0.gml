@@ -4,10 +4,7 @@ meleedamage = 6;
 mySize = 4;
 
 event_inherited()
-actTime = 9;
-maxSpeed = 2;
-maxJumpSpeed = 8.5;
-jumpAcc = 0.6;
+
 spr_normal = sprDogGuardianWalk;
 spr_idle = sprDogGuardianWalk
 spr_walk = sprDogGuardianWalk
@@ -33,3 +30,17 @@ snd_melee = sndDogGuardianMelee;
 justjumped = false;
 instance_create(x,y,BigWallBreak);
 scrAddDrops(1);
+
+actTime = 10;
+maxSpeed = 2;
+maxJumpSpeed = 8;
+jumpAcc = 0.5;
+jumpDuration = 6;
+loops = GetPlayerLoops();
+if loops > 0
+{
+	jumpDuration += 1;
+	actTime = 9;
+	maxJumpSpeed = 8.5;
+	jumpAcc = 0.6;
+}

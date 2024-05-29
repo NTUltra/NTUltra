@@ -31,8 +31,8 @@ actTime = 20;
 eatTime = 20;
 maxSpeed = 3;
 corpseTarget = noone;
-projectileSpeed = 5.1;
-projectileSpeed += clamp(GetPlayerLoops()*0.5,0,2);
+projectileSpeed = 5;
+projectileSpeed += 0.1 + clamp(GetPlayerLoops()*0.5,0,2);
 alarm[2] = 1;
 
 gunSpr = sprVultureGun;

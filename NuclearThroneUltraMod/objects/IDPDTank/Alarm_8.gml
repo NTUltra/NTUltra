@@ -9,6 +9,7 @@ for (var yy = y + crazyStep; yy < y + verticalDistanceBeteenTanks + crazyStep; y
 		with instance_create(xx,yy,EnemyBullet1Square)
 		{
 			sprite_index = sprIDPDSquareBullet;
+			onlyHitPlayerTeam = true;
 			image_index = 0;
 			motion_add(0,ps);
 			image_angle = direction

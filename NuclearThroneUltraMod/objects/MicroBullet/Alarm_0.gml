@@ -5,7 +5,7 @@ if instance_exists(Player)
 	if (aimed=false && team == 2)
 	{
 		aimed=true;
-		direction = scrAimAssistLaser(direction);
+		direction = scrAimAssistLaser(direction,0.75);
 	}
 
 	move_contact_solid(direction,16)

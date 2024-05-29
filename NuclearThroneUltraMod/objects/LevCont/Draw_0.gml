@@ -5,12 +5,21 @@ scrDrawSpiral()
 
 draw_set_halign(fa_center)
 draw_set_valign(fa_bottom)
-//Higher border
+var splatY = 9;
 draw_set_colour(c_black);
+draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+48,0)
+var bottom = 10;
+if Player.crownpoints > 0
+{
+	splatY = 32;
+	bottom = 67;
+//Higher border
+
+}
 draw_rectangle(__view_get( e__VW.XView, 0 ),
 __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),
 __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),
-__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-67,
+__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-bottom,
 false);
 draw_set_colour(c_white);
 if Player.crownpoints = 0
@@ -29,7 +38,7 @@ txt = " UPDATES"
 txt2 = "INSTALL "}
 
 var xx = __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5);
-var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-46;
+var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-splatY;
 draw_sprite(sprMutationSplat,image_index,xx,yy);
 
 draw_set_color(c_black)

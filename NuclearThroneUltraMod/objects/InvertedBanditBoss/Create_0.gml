@@ -56,6 +56,8 @@ other.cam=false;
 if cam
 instance_create(x,y,DramaCamera);
 
+if !scrIsGamemode(25)
+	existTime = 60;
 scrAddDrops(2);
 
 if instance_exists(Player) && Player.skill_got[29]

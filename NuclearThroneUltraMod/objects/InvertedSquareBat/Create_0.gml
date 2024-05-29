@@ -10,7 +10,7 @@ raddrop = 8;
 maxhealth = 18;
 my_health = maxhealth;
 EnemyHealthAdjustments();
-actTime = 14;
+actTime -= 4;
 maxSpeed = 5;
 circleDistance = 70;
 projectileSpeed = 4.1;

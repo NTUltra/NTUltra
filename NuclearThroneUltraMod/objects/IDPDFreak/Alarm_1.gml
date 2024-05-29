@@ -14,6 +14,7 @@ if target != noone {
 				snd_play(sndGruntFire);
 				with instance_create(x, y, EnemyBullet1Square) {
 					sprite_index = sprIDPDSquareBullet;
+					onlyHitPlayerTeam = true;
 				    motion_add(other.gunangle + random(10) - 5, other.projectileSpeed - 0.5)
 				    image_angle = direction
 				    team = other.team

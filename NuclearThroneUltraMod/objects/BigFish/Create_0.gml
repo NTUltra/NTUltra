@@ -41,7 +41,8 @@ maxSpeed=2
 originalMaxspeed = maxSpeed;
 persistent_direction = 0;
 actTime = 9;
-fishFireRate = 4;
+fishFireRate = 6;
+fishTime = 5;
 suckTime = 75;
 chargeSpeed = 5;
 chargeDis = 70;
@@ -50,9 +51,18 @@ snd_play(sndOasisBossIntro);
 inverted = false;
 suckRange = 100;
 cam=true
-
-if GetPlayerLoops() > 1
+loops = GetPlayerLoops();
+if loops > 0
+{
+	fishTime = 10;
+	fishFireRate = 4;
+}
+if loops > 1
 	fishFireRate = 3;
+if loops > 4
+{
+	fishFireRate = 2;	
+}
 with BigFish
 {
 	if id!=other.id

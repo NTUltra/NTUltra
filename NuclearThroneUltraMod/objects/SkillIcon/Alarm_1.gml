@@ -6,6 +6,6 @@ var vy = camera_get_view_y(0);
 y = vy + vh - 28;//24
 var step = 32;
 // var totalWidth = totalSkills * step;
-x = vx + (vw * 0.5)  - (step * totalSkills * 0.5) + (step * skillIndex);
+x = vx + (vw * 0.5) + (step*0.5)  - (step * totalSkills * 0.5) + (step * (skillIndex-1));
 
 alarm[1] = 5;

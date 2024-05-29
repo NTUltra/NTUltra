@@ -3,6 +3,26 @@ alarm[1] = actTime + random(actTime)
 if forceAnimation
 	exit;
 scrTarget();
+if !reachedHalfHealth && my_health <= maxhealth*0.65
+{
+	actTime -= 1;
+	reachedHalfHealth = true;
+	waveSpin += 1;
+	aimSpin += 0.05;
+	projectileSpeed += 0.5;
+	dashSpeed += 0.1;
+	snd_play(sndLastGrowl);
+}
+else if !reachedLowHealth && my_health <= maxhealth*0.35
+{
+	actTime -= 1;
+	reachedLowHealth = true;
+	snd_play(sndLastLowHP);
+	projectileSpeed += 0.5;
+	aimSpin += 0.05;
+	dashSpeed += 0.1;
+	waveSpin += 1;
+}
 if target != noone {
 	if firstEntry
 	{

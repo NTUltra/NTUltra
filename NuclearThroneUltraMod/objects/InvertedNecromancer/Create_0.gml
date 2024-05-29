@@ -17,6 +17,10 @@ snd_dead = sndNecromancerDead
 //behavior
 range = 340;
 loops = GetPlayerLoops();
+
+actTime = 13;
+if loops > 0
+	actTime = 8;
 if loops > 1
 	range += 50;
 if loops > 2

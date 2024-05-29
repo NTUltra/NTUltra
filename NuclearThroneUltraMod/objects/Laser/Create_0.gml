@@ -7,8 +7,7 @@ their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
-image_yscale = 1.42//1.2
+image_yscale = 1.4//1.2
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
@@ -26,4 +25,4 @@ canBeMoved = false;
 isLaser = true;
 canSmoke = true;
 defaultPierce = 32;
-event_perform(ev_alarm,2);
+alarm[2] = 1;

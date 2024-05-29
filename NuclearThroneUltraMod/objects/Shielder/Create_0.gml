@@ -5,6 +5,10 @@ mySize = 1
 scrCrownOfPopoRad(5);
 event_inherited()
 
+loops=GetPlayerLoops();
+projectileSpeed = 7.6;
+if loops > 0 
+	projectileSpeed = 8;
 spr_idle = sprShielderIdle
 spr_walk = sprShielderWalk
 spr_hurt = sprShielderHurt

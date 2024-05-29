@@ -2,8 +2,8 @@ if alarm[0]<1
 motion_add(direction,0.8);
 
 
-if speed > 2
-speed = 2
+if speed > maxSpeed
+speed = maxSpeed
 
 if alarm[1] > 8&& alarm[1]<30
 {

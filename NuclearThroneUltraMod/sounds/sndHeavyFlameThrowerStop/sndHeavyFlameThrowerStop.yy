@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndHeavyFlameThrowerStop",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.94102,
+  "name":"sndHeavyFlameThrowerStop",
+  "parent":{
+    "name":"Dragon",
+    "path":"folders/Sounds/Weapons/Dragon.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndHeavyFlameThrowerStop.ogg",
+  "type":0,
+  "volume":1.0,
+}

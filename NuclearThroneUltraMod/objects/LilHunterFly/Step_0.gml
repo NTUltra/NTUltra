@@ -110,6 +110,7 @@ if bonk
 			with instance_create(x,y,EnemyBullet1Square)
 			{
 				sprite_index = sprIDPDSquareBullet;
+				onlyHitPlayerTeam = true;
 				motion_add(ang,ps);
 				image_angle = direction
 				team = other.team

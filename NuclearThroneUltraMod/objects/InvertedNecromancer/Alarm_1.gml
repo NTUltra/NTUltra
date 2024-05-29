@@ -1,10 +1,4 @@
-alarm[1] = 15+random(10)//10 5
-
-if instance_exists(Player)
-{
-if Player.loops>0
-alarm[1] = 8+random(8);
-}
+alarm[1] = actTime+random(actTime)//10 5
 
 scrTarget()
 if target != noone

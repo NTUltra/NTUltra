@@ -14,7 +14,10 @@ instance_change(SnowBot,false)
 with instance_create(x,y,CarThrow)
 {
 team = other.team
-motion_add(other.gunangle,12)
+if GetPlayerLoops() > 0
+	motion_add(other.gunangle,12)
+else
+	motion_add(other.gunangle,10)
 }
 
 

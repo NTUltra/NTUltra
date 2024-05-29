@@ -6,4 +6,6 @@ totalSkills = 1;
 showDetail = UberCont.opt_show_mutation_details;
 hover = false;
 selected = false;
-alarm[3] = 4;
+time = 0;
+alarm[3] = 60;
+alarm[4] = 2;

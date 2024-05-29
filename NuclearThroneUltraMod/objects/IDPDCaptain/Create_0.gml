@@ -41,6 +41,9 @@ meleeAttackDamage = 10;
 dashDuration = 8;
 dashSpeed = 12.4;
 dashExtraTell = 3;
+projectileSpeed = 8;
+aimSpin = 2.6;
+waveSpin = 10;
 walk = 0
 gunangle = random(360);
 alarm[1] = 5;
@@ -49,8 +52,9 @@ if instance_exists(Player) && Player.skill_got[29] {
 	scrGiveSnooze();
 }
 firstEntry = true;
-wkick = 0
-actTime = 6;
+reachedHalfHealth = false;
+reachedLowHealth = false;
+actTime = 8;
 
 acc = 1;
 maxSpeed = 3.5;

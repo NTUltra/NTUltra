@@ -23,12 +23,12 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 80
 
-actTime = 14;
+actTime = 16;
 hurt_pitch_variation = 0.1
 loops = GetPlayerLoops();
 acc = 1.6 + clamp(loops*0.15,0,0.3);
 maxChargeSpeed = 6.8 + clamp(loops*0.2,0,3);
 if loops > 0
-	actTime = 8;
+	actTime = 10;
 
 

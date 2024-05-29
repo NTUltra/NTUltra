@@ -33,11 +33,13 @@ alarm[1] = 30+random(90)
 wkick = 0
 maxDetectRange = 150;
 maxSpeed = 3;
-actTime = 20;
+actTime = 21;
 pSpeed = 3.6;
+minDistance = 54;
 if loops > 0
 {
 	actTime = 13;
 	maxDetectRange += 90;
 	pSpeed = 4.1;
+	minDistance = 0;
 }

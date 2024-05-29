@@ -32,6 +32,6 @@ if loops > 3
 {
 	getFrosty = true;
 }
-actTime = 18;
+actTime = 19;
 if loops > 0
 	actTime = 10;

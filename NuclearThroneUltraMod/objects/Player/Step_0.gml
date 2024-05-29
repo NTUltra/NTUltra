@@ -88,20 +88,18 @@ if !instance_exists(LevCont) and visible = 1
 	{
 		if rollIframe <= 0
 		{
+			var jumpDecrease = 1;
 			if (jump > halfJump - jumpApex && jump < halfJump + jumpApex)
 			{
-				if UberCont.normalGameSpeed == 60
-					jump -= 0.25;
-				else
-					jump -= 0.5;
+				jumpDecrease *= 0.5;
 			}
-			else
+			if UberCont.normalGameSpeed == 60
+				jumpDecrease *= 0.5;
+			if collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false)
 			{
-				if UberCont.normalGameSpeed == 60
-					jump -= 0.5;
-				else
-					jump -= 1;
+				jumpDecrease *= 0.5;	
 			}
+			jump -= jumpDecrease;
 			var r = right * -1;
 			if is60fps
 				angle += (25*r*max(1,(skill_got[2]*1.3)))*0.5
@@ -2063,7 +2061,7 @@ if (instance_exists(enemy))
 		        {
 		        
 					var t = instance_nearest(x,y,enemy)
-			        if !collision_line(x,y,t.x,t.y,Wall,0,0)// && point_distance(x,y,t.x,t.y) < 128
+			        if instance_exists(t) && t != noone && !collision_line(x,y,t.x,t.y,Wall,0,0)// && point_distance(x,y,t.x,t.y) < 128
 			        {
 						homeBoost = ogHomeBoost;
 						var d = point_direction(x,y,t.x,t.y)

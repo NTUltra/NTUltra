@@ -15,15 +15,15 @@ spr_dead = sprInspectorDead
 
 if male
 {
-snd_hurt = sndInspectorHurtM
-snd_dead = sndInspectorDeadM
-snd_play(sndInspectorStartM,0.01,true);
+	snd_hurt = sndInspectorHurtM
+	snd_dead = sndInspectorDeadM
+	snd_play(sndInspectorStartM,0.01,true);
 }
 else
 {
-snd_hurt = sndInspectorHurtM
-snd_dead = sndInspectorDeadF
-snd_play(sndInspectorStartF,0.01,true);
+	snd_hurt = sndInspectorHurtM
+	snd_dead = sndInspectorDeadF
+	snd_play(sndInspectorStartF,0.01,true);
 }
 
 team = 3
@@ -40,12 +40,19 @@ angle = 0
 freeze = 0
 if instance_exists(Player)
 {
-lastx = Player.x
-lasty = Player.y
+	lastx = Player.x
+	lasty = Player.y
 }
 else
 {
-lastx = x
-lasty = y
+	lastx = x
+	lasty = y
 }
-
+tellTime = 4;
+loops = GetPlayerLoops();
+projectileSpeed = 13;
+if loops > 0
+{
+	tellTime = 2;
+	projectileSpeed = 14.5;
+}

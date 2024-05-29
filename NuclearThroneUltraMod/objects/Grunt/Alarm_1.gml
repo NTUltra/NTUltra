@@ -1,6 +1,7 @@
 ///@description AI
-alarm[1] = 15+random(20)
-
+alarm[1] = 17+random(20)
+if loops > 0
+	alarm[1] -= 2;
 
 if team=2
 scrRogueTarget()
@@ -42,7 +43,7 @@ if instance_exists(Player) && target==Player.id
     snd_play(sndGruntFire)
     wkick = 4
     with instance_create(x,y,IDPDBullet){
-	    motion_add(other.gunangle+random(6)-3,7.9)
+	    motion_add(other.gunangle+random(6)-3,other.projectileSpeed)
 	    image_angle = direction
 	    team = other.team
 		if team == 2

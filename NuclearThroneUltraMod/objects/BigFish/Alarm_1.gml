@@ -86,7 +86,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 				var fish = 0;
 				
 				with BoneFish {
-					if point_distance(other.x, other.y, x, y) < 120 {
+					if point_distance(other.x, other.y, x, y) < 160 {
 						fish++;
 					}
 				}
@@ -94,15 +94,14 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 				var maxfish = 2
 				if (inverted)
 					maxfish += 4;
-				if instance_exists(Player) {
-					maxfish += Player.loops*5
-				}
+					
+				maxfish += loops*5
 				
 		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) {
 		            image_index = 0
 		            sprite_index = spr_startfire
 		            alarm[3] = actTime;
-		            alarm[4] = 10+actTime;
+		            alarm[4] = fishTime+actTime;
 					alarm[1] += actTime;
 					motion_add(1,point_direction(x, y, target.x, target.y));
 		        } else {

@@ -1,5 +1,8 @@
 raddrop = 12
-maxhealth = 65
+maxhealth = 60
+loops = GetPlayerLoops()
+if loops > 0
+	maxhealth += 5;
 meleedamage = 4
 mySize = 2
 
@@ -20,19 +23,18 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 15;
+actTime = 16;
 
 acc = 1;
 maxSpeed = 3.4;
 gunX = -10;
-projectileSpeed = 5.5;
+projectileSpeed = 5.45;
 projectileSpeedDif = 0.2;
-deathProjectile = 6;
-loops = GetPlayerLoops()
+deathProjectile = 5;
 if loops > 0
 {
-	projectileSpeed += 0.45;
-	actTime -= 2;
+	projectileSpeed += 0.5;
+	actTime -= 3;
 	deathProjectile = 9;
 }
 fireDelay = 3;

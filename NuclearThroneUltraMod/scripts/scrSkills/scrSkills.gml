@@ -135,7 +135,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(500)<1
 		skill_name[7] = "BUTTERED BREAD"
 	skill_text[7] = "CHANCE KILLS REGENERATE <r>HP<r>"
-	skill_detail[7] = "7.7% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU <r>HEAL<r> FROM EXPLODE IN <r>BLOOD<r>"
+	skill_detail[7] = "7.6% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU <r>HEAL<r> FROM EXPLODE IN <r>BLOOD<r>"
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 	skill_bons[7] = "+25% CHANCE#(TOTAL: 9.6%)";
@@ -296,9 +296,9 @@ function scrSkills() {
 	skill_name[19] = "EAGLE EYES"
 	skill_text[19] = "BETTER <w>ACCURACY<w>";
 	if !UberCont.useSeed && random(500) < 1
-		skill_detail[19] = "BETTER <w>ACCURACY<w>#SMALL <w>AIM ASSIST<w>/<w>HOMING<w>#SEE CONTENTS OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE <aq>LU<aq><g>CK<g>#MORE DAMAGE#FASTER <w>FIRE RATE<w>#INSTANTLY <w>LOOP<w>#INCREASE MAX <g>LEVEL<g> BY 5#MORE <g>RAD<g> DROPS#EVERY KILL <r>OVERHEALS<r> FOR 6<r>HP<r>#GET TWO <g>ULTRA MUTATIONS<g>#SIT ON THE <p>THRONE<p>#EVERY ENEMY MORPHS INTO A CHICKEN#THE <w>CHICKEN<w> WILL DROP#A HIGH TIER WEAPON#GET <b>QUAD SPC<b>#IT COSTS 2 AMMO#<pi>AIRHORN.WAV<pi> EVERYTIME YOU SHOOT"
+		skill_detail[19] = "BETTER <w>ACCURACY<w>#<w>AIM ASSIST<w>/<w>HOMING<w>#SEE CONTENTS OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE <aq>LU<aq><g>CK<g>#MORE DAMAGE#FASTER <w>FIRE RATE<w>#INSTANTLY <w>LOOP<w>#INCREASE MAX <g>LEVEL<g> BY 5#MORE <g>RAD<g> DROPS#EVERY KILL <r>OVERHEALS<r> FOR 6<r>HP<r>#GET TWO <g>ULTRA MUTATIONS<g>#SIT ON THE <p>THRONE<p>#EVERY ENEMY MORPHS INTO A CHICKEN#THE <w>CHICKEN<w> WILL DROP#A HIGH TIER WEAPON#GET <b>QUAD SPC<b>#IT COSTS 2 AMMO#<pi>AIRHORN.WAV<pi> EVERYTIME YOU SHOOT"
 	else
-		skill_detail[19] = "BETTER <w>ACCURACY<w>#SMALL <w>AIM ASSIST<w>/<w>HOMING<w>#SEE FURTHER";
+		skill_detail[19] = "BETTER <w>ACCURACY<w>#<w>AIM ASSIST<w>/<w>HOMING<w>#SEE FURTHER";
 	skill_tips[19] = "every shot connects"
 	skill_msnd[19] =  sndMutEagleEyes
 	skill_bons[19] = "+20% ACCURACY +15% HOMING";
@@ -361,7 +361,7 @@ function scrSkills() {
 	skill_detail[24] = "EACH KILL#<w>RELOADS<w> YOUR WEAPONS#BY 35% OF REMAINING <w>RELOAD<w>"
 	skill_tips[24] = "keep killing"
 	skill_msnd[24] =  sndMutTriggerfingers
-	skill_bons[24] = "+25% RELOAD";
+	skill_bons[24] = "+25% RELOAD (TOTAL: 44%)";
 
 	if !UberCont.useSeed && random(1000)<1
 		skill_name[25] = "BELIEVE!"

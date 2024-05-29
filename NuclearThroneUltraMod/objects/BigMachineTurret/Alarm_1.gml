@@ -1,5 +1,5 @@
 //PRE LOOP
-alarm[1] = 50;
+alarm[1] = actTime;
 
 scrTarget()
 if target != noone

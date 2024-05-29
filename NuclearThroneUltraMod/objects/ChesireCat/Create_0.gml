@@ -45,6 +45,9 @@ wazerDuration = 102;
 wazerRotation = 0;
 wazerDirection = 0;
 wazerOffset = 120;
+wazerAccelerate = 1;
+wazerSpeed = 0;
+wazerMaxSpeed = 10;
 tellTime = 16;
 
 loops = GetPlayerLoops();

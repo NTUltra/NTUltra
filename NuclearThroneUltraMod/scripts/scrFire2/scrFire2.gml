@@ -7578,7 +7578,7 @@ function scrFire2(hasTailNow) {
 		ammo = 2
 		time = 1
 		team = other.team
-		projectileAmount = 9;
+		projectileAmount = 10;
 		projectileSpeed += 1;
 		event_perform(ev_alarm,0) 
 	}
@@ -14324,7 +14324,7 @@ function scrFire2(hasTailNow) {
 	if altFire
 	{
 		with instance_create(x,y,Shell)
-		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 	}
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
@@ -14352,7 +14352,7 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x,y,MicroBullet)
 		{
-			direction = aimDirection+(random(44)-22)*other.accuracy;
+			direction = aimDirection+(random(46)-23)*other.accuracy;
 			image_angle = direction;
 			team = other.team
 			scrGiveProjectileStats();
@@ -14502,7 +14502,7 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x+lengthdir_x(l,aimDirection),y+lengthdir_y(l,aimDirection),SmallSlash)
 		{
-			dmg += 4;
+			dmg += 3;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3;
 			motion_add(aimDirection,1+longarms);
@@ -17321,6 +17321,71 @@ function scrFire2(hasTailNow) {
 	if !skill_got[2]
 		scrMoveContactSolid(aimDirection + 180,2);
 		
+	break;
+	
+	//GOLDEN MICRO SMG
+	case 771:
+
+	//snd_play_fire(sndPistol)
+	snd_play(sndMicroSmg,0.03,true);
+	if altFire
+	{
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
+	}
+	altFire = !altFire;
+	with instance_create(x,y,MicroBullet)
+	{
+	direction = aimDirection+(random(28)-14)*other.accuracy;
+	image_angle = direction;
+	team = other.team
+	scrGiveProjectileStats();
+	event_perform(ev_alarm,0);
+	}
+
+	BackCont.viewx2 += lengthdir_x(4.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(4.5,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2.5
+	wkick = 2
+
+	break;
+	
+	//HEAVY FLAMETHROWER
+	case 772:
+
+	if !instance_exists(HeavyFlameSound)
+	instance_create(x,y,HeavyFlameSound)
+	with instance_create(x,y,HeavyFlameBurst)
+	{
+		creator = other.id
+		ammo = 6
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//WUNDER STRASSE
+	case 773:
+
+
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndLaserUpg)
+	else
+		snd_play_fire(sndLaser)
+	with instance_create(x,y,WunderStrasse)
+	{
+		image_angle = aimDirection+(random(2)-1)*other.accuracy
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 2
+	wkick = 2
+
 	break;
 	
 	}//end of switch part 2!

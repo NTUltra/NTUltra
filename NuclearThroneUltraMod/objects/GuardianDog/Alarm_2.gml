@@ -16,6 +16,6 @@ if target != noone
 else
 {
 	jumpDir = direction;
-	motion_add(direction,7);
+	motion_add(direction,jumpDuration);
 }
 alarm[3] = 9;

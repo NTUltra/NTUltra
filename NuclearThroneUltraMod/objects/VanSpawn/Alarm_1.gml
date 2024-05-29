@@ -94,12 +94,14 @@ else
 			for (var i = 1; i <= amountOfBullets*0.5; i++)
 			{
 				with instance_create(vxx - bulletStep * i,yyy, EnemyBullet1Square) {
+					onlyHitPlayerTeam = true;
 					sprite_index = sprIDPDSquareBullet;
 				    vspeed = yScale*-14;
 				    image_angle = direction
 				    team = t;
 				}
 				with instance_create(vxx + bulletStep * i,yyy, EnemyBullet1Square) {
+					onlyHitPlayerTeam = true;
 					sprite_index = sprIDPDSquareBullet;
 				    vspeed = yScale*-14;
 				    image_angle = direction
@@ -118,12 +120,14 @@ else
 			for (var i = 1; i <= amountOfBullets*0.5; i++)
 			{
 				with instance_create(xxx,vyy - bulletStep * i, EnemyBullet1Square) {
+					onlyHitPlayerTeam = true;
 					sprite_index = sprIDPDSquareBullet;
 				    hspeed = xScale*-14;
 				    image_angle = direction
 				    team = t;
 				}
 				with instance_create(xxx,vyy + bulletStep * i, EnemyBullet1Square) {
+					onlyHitPlayerTeam = true;
 					sprite_index = sprIDPDSquareBullet;
 				    hspeed = xScale*-14;
 				    image_angle = direction

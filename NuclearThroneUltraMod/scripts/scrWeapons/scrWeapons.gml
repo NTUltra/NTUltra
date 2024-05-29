@@ -1038,7 +1038,7 @@ function scrWeapons() {
 	wep_type[92] = 2
 	wep_auto[92] = 3
 	wep_load[92] = 8
-	wep_cost[92] = 1
+	wep_cost[92] = 1.25
 	wep_sprt[92] = sprBeamShotgun
 	wep_area[92] = 12
 	wep_text[92] = "drawer"
@@ -3814,7 +3814,7 @@ function scrWeapons() {
 	wep_name[340] = "TRIDENT"
 	wep_type[340] = 0
 	wep_auto[340] = 0
-	wep_load[340] = 26
+	wep_load[340] = 28
 	wep_cost[340] = 0
 	wep_sprt[340] = sprTrident
 	wep_area[340] = 11
@@ -6121,7 +6121,7 @@ function scrWeapons() {
 	wep_load[545] = 38
 	wep_cost[545] = 6.5
 	wep_sprt[545] = sprSuperLightningCrossbow
-	wep_area[545] = 12
+	wep_area[545] = 13
 	wep_text[545] = ""
 	wep_swap[545] = sndSwapBow
 	wep_rad[545] = 0;
@@ -6778,10 +6778,10 @@ function scrWeapons() {
 	wep_name[605] = "STABINATOR"
 	wep_type[605] = 3
 	wep_auto[605] = 0
-	wep_load[605] = 50//60 normally
-	wep_cost[605] = 10
+	wep_load[605] = 55//60 normally
+	wep_cost[605] = 11
 	wep_sprt[605] = sprStabinator
-	wep_area[605] = 18
+	wep_area[605] = 19
 	wep_text[605] = "time for a good o'l fashion stabbin'"
 	wep_swap[605] = sndSwapExplosive
 	wep_rad[605] = 0;
@@ -7176,7 +7176,7 @@ function scrWeapons() {
 	wep_type[641] = 2
 	wep_auto[641] = 3
 	wep_load[641] = 4
-	wep_cost[641] = 1.25
+	wep_cost[641] = 1.5
 	wep_sprt[641] = sprSuperBeamShotgun
 	wep_area[641] = 15
 	wep_text[641] = "leaking"
@@ -7187,7 +7187,7 @@ function scrWeapons() {
 	wep_type[642] = 2
 	wep_auto[642] = 3
 	wep_load[642] = 4
-	wep_cost[642] = 1
+	wep_cost[642] = 1.5
 	wep_sprt[642] = sprUltraBeamShotgun
 	wep_area[642] = 22
 	wep_text[642] = "leaking"
@@ -7532,7 +7532,7 @@ function scrWeapons() {
 	wep_name[673] = "DROM"
 	wep_type[673] = 0
 	wep_auto[673] = 0
-	wep_load[673] = 16
+	wep_load[673] = 18
 	wep_cost[673] = 0
 	wep_sprt[673] = sprDrom
 	wep_area[673] = 9
@@ -8195,7 +8195,7 @@ function scrWeapons() {
 	wep_load[732] = 27
 	wep_cost[732] = 4.5
 	wep_sprt[732] = sprBlobGun
-	wep_area[732] = 7
+	wep_area[732] = 8
 	wep_text[732] = "black ink can be ignited"
 	wep_swap[732] = sndSwapExplosive
 	wep_rad[732] = 0;
@@ -8206,7 +8206,7 @@ function scrWeapons() {
 	wep_load[733] = 42
 	wep_cost[733] = 8.5
 	wep_sprt[733] = sprBlobCannon
-	wep_area[733] = 10
+	wep_area[733] = 11
 	wep_text[733] = "the blob is real and it burns!"
 	wep_swap[733] = sndSwapExplosive
 	wep_rad[733] = 0;
@@ -8345,7 +8345,7 @@ function scrWeapons() {
 	
 	wep_name[746] = "SUCK CANNON"
 	wep_type[746] = 5
-	wep_auto[746] = 0
+	wep_auto[746] = 3
 	wep_load[746] = 5
 	wep_cost[746] = 2.5
 	wep_sprt[746] = sprSuckCannon
@@ -8381,7 +8381,7 @@ function scrWeapons() {
 	wep_type[749] = 4
 	wep_auto[749] = 3
 	wep_load[749] = 9
-	wep_cost[749] = 5
+	wep_cost[749] = 5.5
 	wep_sprt[749] = sprSuperBloodRocketGun
 	wep_area[749] = 19
 	wep_text[749] = "I see red"
@@ -8546,7 +8546,7 @@ function scrWeapons() {
 	
 	wep_name[764] = "ULTRA SUCK CANNON"
 	wep_type[764] = 5
-	wep_auto[764] = 0
+	wep_auto[764] = 3
 	wep_load[764] = 4
 	wep_cost[764] = 2.5
 	wep_sprt[764] = sprSuckCannon
@@ -8623,6 +8623,39 @@ function scrWeapons() {
 	wep_text[770] = "ocean bullets"
 	wep_swap[770] = sndSwapPistol
 	wep_rad[770] = 0;
+	
+	wep_name[771] = "GOLDEN MICRO SMG"
+	wep_type[771] = 1
+	wep_auto[771] = 1
+	wep_load[771] = 2
+	wep_cost[771] = 0.5
+	wep_sprt[771] = sprGoldenMicroSMG
+	wep_area[771] = 17
+	wep_text[771] = "rapid fire"
+	wep_swap[771] = sndSwapPistol
+	wep_rad[771] = 0;
+	
+	wep_name[772] = "HEAVY FLAMETHROWER"
+	wep_type[772] = 4
+	wep_auto[772] = 3
+	wep_load[772] = 5
+	wep_cost[772] = 1
+	wep_sprt[772] = sprHeavyFlameThrower
+	wep_area[772] = 10
+	wep_text[772] = "super hot"
+	wep_swap[772] = sndSwapFlame
+	wep_rad[772] = 0;
+	
+	wep_name[773] = "WUNDER STRASSE"
+	wep_type[773] = 5
+	wep_auto[773] = 1
+	wep_load[773] = 23
+	wep_cost[773] = 5.5
+	wep_sprt[773] = sprPlasmaCannon
+	wep_area[773] = 13
+	wep_text[773] = "very proud very wunderbar"
+	wep_swap[773] = sndSwapEnergy
+	wep_rad[773] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

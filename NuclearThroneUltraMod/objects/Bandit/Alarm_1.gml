@@ -63,12 +63,12 @@ if loops > 0 { //LOOP
 
 }
 else { //PRE LOOP
-    alarm[1] = 20 + random(10)
+    alarm[1] = 22 + random(10)
 
     scrTarget()
     if target != noone {
         if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-            if point_distance(target.x, target.y, x, y) > 52 {
+            if point_distance(target.x, target.y, x, y) > 54 {
                 if random(4) < 1 {
                     snd_play(sndEnemyFire)
                     wkick = 4

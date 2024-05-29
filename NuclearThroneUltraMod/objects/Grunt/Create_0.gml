@@ -4,6 +4,10 @@ meleedamage = 0
 mySize = 1
 scrCrownOfPopoRad(3);
 event_inherited()
+loops = GetPlayerLoops();
+projectileSpeed = 7.75;
+if loops > 0
+	projectileSpeed = 8;
 male=choose(true,false);
 
 spr_idle = sprGruntIdle

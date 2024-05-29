@@ -2286,7 +2286,7 @@ function scrDrawHUD() {
 		var vw = camera_get_view_width(view_camera[0]);
 		draw_set_halign(fa_left)
 		draw_set_valign(fa_middle)
-		var ty = vy + 24
+		var ty = vy + 8
 		var m = round(vx + vw * 0.5)
 		draw_sprite(sprPortalEssenceHUD,0,m - 2, ty);
 		var tx = m + 2;

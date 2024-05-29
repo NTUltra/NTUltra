@@ -13,3 +13,5 @@ horizontal=false;
 spr_idle=sprInvertedBigMachineLaser
 spr_fire=sprInvertedBigMachineLaserFire
 
+loops = GetPlayerLoops();
+maxSpeed += min(1,loops*0.1);

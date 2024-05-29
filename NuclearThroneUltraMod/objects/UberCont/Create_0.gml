@@ -150,7 +150,7 @@ enum secretChallengeBosses {
 }
 killedBoss = [];
 collectedRewards = [];
-portalEssence = 0;
+portalEssence = -1;
 enableReroll = false;
 crownHeal = false;
 radUp = false;

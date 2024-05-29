@@ -2,7 +2,7 @@ if other.team != team and other.my_health > 0
 {instance_destroy()
 with other
 {
-	DealDamage(5,false,false)
+	DealDamage(other.dmg,false,false)
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.direction,9)

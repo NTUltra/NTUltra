@@ -1,10 +1,20 @@
 depth = -99;
+image_speed = 0;
+image_index = 1;
+var xx = camera_get_view_x(view_camera[0]);
+var yy = camera_get_view_y(view_camera[0]);
+var vw = camera_get_view_width(view_camera[0]);
+var vh = camera_get_view_height(view_camera[0]);
+x = xx + (vw*0.5)
+y = yy + vh;
+xShift = 2;
+yShift = 0;
+x -= 32;
 if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {
 	instance_destroy();
 	exit;
 }
-scrActivateAllOutOfRange();
 if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exists(WallCrawler)
 {
     ///
@@ -172,8 +182,8 @@ else if area = 2
 	if random(40)<1
 	{
 		name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
-		"PLEASE I'M A MOTHER#OF FIVE CHILDREN#DON'T KILL ME",
-		"MISS. FROG#HAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
+		"PLEASE I'M A MOTHER\nOF FIVE CHILDREN\nDON'T KILL ME",
+		"MISS. FROG\nHAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
 	}
 }
 else if area == 110
@@ -182,8 +192,8 @@ else if area == 110
 	if random(40)<1
 	{
 		name = choose("INVERTED BALL MOM","DAD?","FROG KING","BALL PAPA",
-		"PLEASE I'M A FATHER#OF FIVE CHILDREN#DON'T KILL ME",
-		"MR. FROG#HAPPILY DIVORCED","DADDY BALL");	
+		"PLEASE I'M A FATHER\nOF FIVE CHILDREN\nDON'T KILL ME",
+		"MR. FROG\nHAPPILY DIVORCED","DADDY BALL");	
 	}
 }
 else if area = 3
@@ -390,14 +400,14 @@ else if area = 101
 //with instance_create(x,y,Drama)
 name = "BIG FISH"
 if random(200) < 1
-		name = choose("HEY LOOK#IT'S FISH#FROM NUCLEAR THRONE","O'L BITEY");
+		name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
 }
 else if area = 122
 {
 //with instance_create(x,y,Drama)
 name = "INVERTED BIG FISH"
 if random(200) < 1
-		name = choose("GAS FISH","THAT'S MISTER#FISH FOR YOU!");
+		name = choose("GAS FISH","THAT'S MISTER\nFISH FOR YOU!");
 }
 else if area == 9
 {
@@ -493,15 +503,5 @@ else if area = 134
 	name = "ULTRA BOSS BOT";
 }
 }
-var n = name;
-with instance_create(x,y,Drama)
-	name=n
 
-__view_set( e__VW.XView, 0, x-(__view_get( e__VW.WView, 0 )*0.5) );
-__view_set( e__VW.YView, 0, y-(__view_get( e__VW.HView, 0 )*0.5) );
-
-
-
-
-
-
+event_user(0);

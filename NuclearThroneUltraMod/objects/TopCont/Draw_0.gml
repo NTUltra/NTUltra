@@ -329,23 +329,23 @@ with GhostSpearShank
 
 //Flying enemies
 with ChesireCatTail{
-if visible&&instance_exists(ChesireCat){
-draw_sprite_ext(sprite_index,-1,x,y,ChesireCat.right,1,0,c_white,1);
-}
+	if visible&&instance_exists(ChesireCat){
+	draw_sprite_ext(sprite_index,-1,x,y,ChesireCat.right,1,0,c_white,1);
+	}
 }
 with ChesireCat{
-if visible{
-draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
-}
+	if visible{
+		draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
+	}
 }
 with BigBadBat {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
 
 with InvertedChesireCatTail{
-if visible&&instance_exists(ChesireCat){
-draw_sprite_ext(sprite_index,-1,x,y,ChesireCat.right,1,0,c_white,1);
-}
+	if visible&&instance_exists(InvertedChesireCat){
+		draw_sprite_ext(sprite_index,-1,x,y,InvertedChesireCat.right,1,0,c_white,1);
+	}
 }
 with InvertedChesireCat{
 if visible{

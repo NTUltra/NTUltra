@@ -1,4 +1,4 @@
-if opt_sideart == sprite_get_number(sprSideArt) + 1
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	scrEnableBigScreen();
 else
 	scrDisableBigScreen();

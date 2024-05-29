@@ -95,7 +95,7 @@ right = -1
 else{
 
 //PRE LOOP
-alarm[1] = 10+random(40)
+alarm[1] = 12+random(40)
 
 meleedamage = 0
 
@@ -109,9 +109,9 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,tar
 if random(3) < 2
 {
 snd_play(sndBigBanditStartShoot)
-ammo = 18
+ammo = 16
 alarm[2] = 1
-alarm[6] = 10//aim again
+alarm[6] = 11//aim again
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 70+random(5)
 }

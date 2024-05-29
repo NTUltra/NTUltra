@@ -69,7 +69,8 @@ function scrSpawnEndLevelPortal(){
 						{
 							with Floor
 							{
-								if (point_distance(x,y,other.x,other.y) < 64 && point_distance(x,y,other.x,other.y) > 256)
+								var n = instance_nearest(x,y,Portal);
+								if (n == noone || point_distance(x,y,n.x,n.y) > 64 && point_distance(x,y,other.x,other.y) < 256)
 								{
 									dir = id;
 								}
@@ -81,7 +82,7 @@ function scrSpawnEndLevelPortal(){
 						//UNLOCK GAME MODE CLAUSTROFOBIA
 						with Player
 						{
-							if seconds<11 && ( my_health>0 || bleed>0 )
+							if seconds<11 && area != 100 && area != 135 && area != 104 && ( my_health>0 || bleed>0 )
 								scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
 						}
 						with UltraChest

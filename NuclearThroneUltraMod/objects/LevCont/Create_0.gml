@@ -595,7 +595,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
     }
 }
-image_speed = 0.4;
+image_speed = 0;
+alarm[1] = 15;
 if scrIsGamemode(32) {
 	// One hit wonder
 	with Player

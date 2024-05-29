@@ -500,7 +500,7 @@ function scrRaces() {
 	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
 	race_inpsiration[26] = "PRESS <w>[E]<w> TO: DEAL DAMAGE TO ALL ENEMIES NEAR YOU AND STUN YOURSELF";
-	race_lock[26] = "BEAT BIG FISH"
+	race_lock[26] = "BEAT BIG FISH"//SOMETHING A LITTLE HARDER
 	race_have[26] = 0
 	race_swep[26] = 148
 	race_bskin[26] = 0

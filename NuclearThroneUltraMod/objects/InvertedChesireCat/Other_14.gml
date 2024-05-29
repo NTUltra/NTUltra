@@ -2,7 +2,7 @@
 speed = 0;
 snd_play(sndWazerStart,0,true,false,3,false,false,0.8,false,id);
 sprite_index = spr_fire;
-wazerRotation = 360 / (wazerDuration+tellTime)
+wazerRotation = 360 / (wazerDuration-2+tellTime)
 alarm[5] = wazerDuration+tellTime;
 if target != noone && instance_exists(target)
 	wazerDirection = point_direction(x,y,target.x,target.y) - wazerOffset;

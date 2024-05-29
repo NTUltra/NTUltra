@@ -170,7 +170,7 @@ hogHasBeenEaten[7] = false;
 
 //3D audio
 audio_listener_orientation(0, 0, -1, 0, 1, 0);
-audio_falloff_set_model(audio_falloff_linear_distance);
+audio_falloff_set_model(audio_falloff_linear_distance_clamped);
 yungCuzCskin = 0;
 randomlySelected = false;
 ultraNow = false;
@@ -700,10 +700,10 @@ back = 1
 wave = 0
 roll = 0
 jump = 0;
-maxJump = 10;//12
+maxJump = 8;//12
 halfJump = maxJump * 0.5;
 jumpApex = 2;
-jumpVulnerabilityWindow = 3;
+jumpVulnerabilityWindow = 2;
 jumpY = 0;
 didJumpRoll = false;
 specBuffer = 0;

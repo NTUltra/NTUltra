@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":81,
   "bbox_left":0,
-  "bbox_right":257,
+  "bbox_right":259,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -22,6 +22,7 @@
   "height":82,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"69c82ae4-f86b-4eac-b56c-3c0cddccdabe","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"69c82ae4-f86b-4eac-b56c-3c0cddccdabe","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"5437a1df-d7fa-4ebb-bc74-b67a67c8239b","blendMode":0,"displayName":"default","isLocked":false,"name":"5437a1df-d7fa-4ebb-bc74-b67a67c8239b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprMutationSplat",

@@ -34,7 +34,7 @@ lasty = target.y
 if random(2) < 1 and freeze > 40
 {
 	//FIRE
-	alarm[2] = 2;
+	alarm[2] = tellTime;
 	BackCont.shake += 3
 	wkick = 8
 	alarm[1] = 20+random(10)

@@ -15,3 +15,6 @@ if instance_exists(BigMachine)
 	if BigMachine.x < x
 		image_xscale = -1;
 }
+maxSpeed = 2;
+loops = GetPlayerLoops();
+maxSpeed += min(2,loops*0.25);

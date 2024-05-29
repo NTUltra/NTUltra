@@ -70,6 +70,19 @@ if alarm[5] > 0
 			wazerDirection += wazerRotation;
 		}
 	}
+	else
+	{
+		if UberCont.normalGameSpeed == 60
+		{
+			image_angle += 0.5;
+			wazerDirection += 0.5;
+		}
+		else
+		{
+			image_angle += 1;
+			wazerDirection += 1;
+		}
+	}
 	if instance_exists(Wall)
 	{
 		var closeWall = instance_nearest(x,y,Wall)

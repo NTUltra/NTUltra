@@ -1,7 +1,7 @@
 ///scrAimAssistLaser();
 // /@description for laser and hyperlaunchers
 ///@param
-function scrAimAssistLaser(originalDirection){
+function scrAimAssistLaser(originalDirection, adjustAimAssist = 1){
 	if team != 2
 		return originalDirection;
 	var aimAssist = 0;
@@ -18,7 +18,7 @@ function scrAimAssistLaser(originalDirection){
 	with Player
 	{
 		if skill_got[19] == 1//Eagle eyes
-		aimAssist += 11;
+			aimAssist += 15;
 		if ultra_got[42]==1//Never miss
 		{
 			aimAssist += 60;
@@ -36,6 +36,7 @@ function scrAimAssistLaser(originalDirection){
 		if wepmod4 == 13
 			aimAssist += modBoost;
 	}
+	aimAssist *= adjustAimAssist;
 	if aimAssist > 0 && instance_exists(enemy)
 	{
 		var t = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);

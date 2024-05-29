@@ -38,10 +38,10 @@ function scrLoadOptions() {
 	opt_shake = ini_read_real("OPTIONS","shake",0.5);
 	opt_mousecp = ini_read_real("OPTIONS","mousecp",0);
 	opt_freeze = ini_read_real("OPTIONS","freeze",0.0);
-	opt_loading = ini_read_real("OPTIONS","loading",3.0);
+	opt_loading = ini_read_real("OPTIONS","loading",2.0);
 	opt_bossintro = ini_read_real("OPTIONS","bossintro",0);
 	opt_timer = ini_read_real("OPTIONS","timer",0);
-	normalGameSpeed = ini_read_real("OPTIONS","fps",30);
+	normalGameSpeed = ini_read_real("OPTIONS","fps",60);
 	opt_resolution_scale = ini_read_real("OPTIONS","resolutionscale",1);
 	//Read array!??
 	var al = ini_read_real("OPTIONS","gamemodes",1);

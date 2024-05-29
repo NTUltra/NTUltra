@@ -12,3 +12,5 @@ proj = EnemyBullet1;
 loops = GetPlayerLoops();
 if loops > 10
 	proj = EnemyBouncerBullet;
+actTime = 40;
+actTime -= min(10,loops*4)

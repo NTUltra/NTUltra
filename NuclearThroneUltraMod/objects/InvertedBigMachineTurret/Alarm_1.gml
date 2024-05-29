@@ -1,4 +1,4 @@
-alarm[1] = 40;
+alarm[1] = actTime;
 
 scrTarget()
 if target != noone

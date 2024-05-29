@@ -15,14 +15,12 @@ snd_hurt = sndHitFlesh
 //behavior
 walk = 0
 alarm[1] = 15+random(60)
-maxSpeed = 4
-actTime = 18;
-if instance_exists(Player)
+maxSpeed = 3.9
+actTime = 19;
+loops = GetPlayerLoops();
+if loops > 0
 {
-	if Player.loops>0
-	{
-		maxSpeed = 5
-		actTime = 8;
-	}
+	maxSpeed = 5
+	actTime = 8;
 }
 

@@ -28,6 +28,7 @@ rotationSpeed = choose(1.8,-1.8);
 speedUp = 4;
 minDistanceToTarget = 80;
 maxDistanceToTarget = 130;
+forceDistanceToggle = false;
 distanceToTarget = maxDistanceToTarget;
 maxAmmo = 3;
 ammo = maxAmmo;
@@ -44,11 +45,13 @@ laserOffset = 36;
 myLasers = [];
 ticksBeforeSpiral = 2;
 image_xscale = 1;
-actTime = 14;
+actTime = 15;
 scrTarget();
 angle = random(360);
 myBat = SquareBat;
 reachHalfHealth = false;
+if loops > 0
+	actTime -= 1;
 if loops > 2
 {
 	rotationSpeed *= 1.1;

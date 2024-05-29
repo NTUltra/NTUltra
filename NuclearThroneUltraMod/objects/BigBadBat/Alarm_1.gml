@@ -7,9 +7,10 @@ if !reachHalfHealth && my_health < maxhealth
 	actTime -= 2;
 }
 if instance_exists(Player) {
-	var ran = random(100);
-	if ran > 90
+	var ran = random(105);
+	if ran > 90 || forceDistanceToggle
 	{
+		forceDistanceToggle = false;
 		//Toggle closeness
 		event_user(4);
 	}
@@ -23,6 +24,7 @@ if instance_exists(Player) {
 		ticksBeforeSpiral = 1;
 		//Do fast spinny attack
 		event_user(1);
+		forceDistanceToggle = true;
 	}
 	else if ran > 25
 	{

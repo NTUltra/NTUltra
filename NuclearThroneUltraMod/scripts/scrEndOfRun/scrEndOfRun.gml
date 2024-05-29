@@ -98,6 +98,6 @@ function scrEndOfRun(){
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;
-		portalEssence = 0;
+		portalEssence = -1;
 	}
 }

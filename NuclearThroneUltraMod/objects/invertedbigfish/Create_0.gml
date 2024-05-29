@@ -6,7 +6,7 @@ raddrop = 70;
 maxhealth = 195;//210
 meleedamage = 4
 mySize = 3
-if GetPlayerLoops() > 0{
+if loops > 0{
 	maxhealth = 250//370;
 }
 scrBossHealthBuff();
@@ -17,7 +17,9 @@ actTime = 6;
 suckRange = 160;
 maxSpeed = 3;//2
 suckTime = 50;
-fishFireRate = 2;
+fishFireRate = 4;
+if loops > 0
+	fishFireRate = 2;
 originalMaxspeed = maxSpeed;
 chargeSpeed = 6;//7
 chargeDis = 90;

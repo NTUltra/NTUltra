@@ -1,4 +1,6 @@
-alarm[1] = 15+random(5)
+alarm[1] = 17+random(5)
+if loops > 0
+	alarm[1] -= 2;
 Shielding=false;
 
 if team=2

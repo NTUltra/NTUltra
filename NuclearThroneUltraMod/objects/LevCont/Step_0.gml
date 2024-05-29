@@ -30,6 +30,7 @@ if scrIsGamemode(28)//ALL MUTATION CHOICES
 }
 if KeyCont.key_west[0] == 1
 {
+	snd_play_2d(sndHover);
 	selectedIndex -= 1;
 	if instance_exists(UltraIcon)
 	{
@@ -61,6 +62,7 @@ if KeyCont.key_west[0] == 1
 }
 else if KeyCont.key_east[0] == 1
 {
+	snd_play_2d(sndHover);
 	selectedIndex += 1;
 	if instance_exists(UltraIcon)
 	{

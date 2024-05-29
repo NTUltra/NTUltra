@@ -1,7 +1,7 @@
 /// @description Spin all around
 snd_play(sndGruntFire);
 var aim = gunangle;
-var aimOffset = cos(ammo*0.5) * 10;
+var aimOffset = cos(ammo*0.5) * waveSpin;
 var len = 8;
 repeat(9)
 {
@@ -12,7 +12,7 @@ repeat(9)
 		team = other.team;
 		direction = aim + aimOffset;
 		image_angle = direction;
-		speed = 8;
+		speed = other.projectileSpeed;
 	}
 	aim += 40;
 }

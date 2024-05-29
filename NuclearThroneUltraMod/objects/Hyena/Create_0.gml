@@ -6,8 +6,8 @@ mySize = 2
 event_inherited()
 
 loops = GetPlayerLoops();
-maxSpeed = 4;
-actTime = 14;
+maxSpeed = 3.9;
+actTime = 15;
 healTime = 15;
 if loops > 0
 {

@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-actTime = 7;
+actTime -= 2;
 raddrop = 26;
 maxhealth = 130
 my_health = maxhealth;
@@ -10,6 +10,7 @@ EnemyHealthAdjustments();
 maxSpeed = 3;
 maxJumpSpeed += 0.4;
 jumpAcc += 0.15;
+jumpDuration += 1;
 spr_normal = sprInvertedDogGuardianWalk;
 spr_idle = sprInvertedDogGuardianWalk
 spr_walk = sprInvertedDogGuardianWalk

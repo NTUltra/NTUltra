@@ -1,7 +1,7 @@
 /// @description Spin toward player
 snd_play(sndGruntFire);
-var s = 8;
-var aimOffset = ammo * 2.6
+var s = projectileSpeed;
+var aimOffset = ammo * aimSpin;
 var aim = gunangle - 90 + aimOffset;
 var len = 8;
 var xx = x + lengthdir_x(len,aim);

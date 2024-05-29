@@ -1414,7 +1414,7 @@ function scrFire(canDrown = true) {
 	case 51:
 
 	if !instance_exists(DragonSound)
-	instance_create(x,y,DragonSound)
+		instance_create(x,y,DragonSound)
 	with instance_create(x,y,DragonBurst)
 	{
 	creator = other.id

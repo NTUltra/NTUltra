@@ -11,8 +11,8 @@ spr_dead = sprInvertedVultureDead
 
 
 //behavior
-projectileSpeed = 5.4;
-projectileSpeed += clamp(GetPlayerLoops()*0.5,0,2);
+projectileSpeed = 5.2;
+projectileSpeed += 0.2 + clamp(GetPlayerLoops()*0.5,0,2);
 alarm[2] = 1;
 
 gunSpr = sprInvertedVultureGun;

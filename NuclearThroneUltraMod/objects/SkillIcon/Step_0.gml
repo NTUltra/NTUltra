@@ -1,5 +1,18 @@
+if alarm[3] > 0
+exit;
+if time < 1
+{
+	if UberCont.normalGameSpeed == 60
+		time += 0.2;
+	else
+		time += 0.4;
+	if time > 1
+		time = 1;
+	exit;
+}
 if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20)
 {
+	
 	with SkillIcon
 		selected = false;
 	with UltraIcon
@@ -13,6 +26,8 @@ if (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x 
 }
 if selected && visible
 {
+	if !hover
+		snd_play_2d(sndHover);
 	hover = true;
 	if KeyCont.key_spec[p] == 1 && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra){
 		//KeyCont.key_spec[p] = 2;

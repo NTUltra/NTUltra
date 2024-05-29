@@ -2,7 +2,6 @@ fishx = room_width/2
 fishy = room_height/2
 
 image_angle = random(1000)
-active = 0
 
 type = 1
 //1 = normal 2 = proto 3 = idpd 4= venuz 5 = inv 6 = wonder
@@ -25,7 +24,7 @@ type = 3;
 
 depth = -6;
 
-repeat(60)//(200)
+repeat(70)//(200)
 {
 with SpiralCont
 event_perform(ev_alarm,0)
@@ -40,6 +39,4 @@ with SpiralStar
 event_perform(ev_alarm,0)
 }
 
-active = 1
-
-alarm[0] = 1;
+active = true
