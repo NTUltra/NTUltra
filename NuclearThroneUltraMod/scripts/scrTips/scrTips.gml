@@ -483,11 +483,12 @@ function scrTips() {
 	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
-	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!"
+	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!","weapon smith made viking's armour"
 	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
 
 	if Player.race = 17//WEAPONSMITH
-	tip = choose("anvil","you keep the weapon mods#when upgrading","you upgrade one of your#two weapons at random",
+	tip = choose("anvil","you keep the weapon mods#when upgrading","you upgrade one of your#two weapons at random","weapon smith forges weapons for the other mutants",
+	"weapon smith made viking's axe its one of his best works",
 	"the weapon that gets upgraded#is chosen randomly","weaponsmith used to be a smoker","hide your face","made of stone","no trousers","weaponsmith is a metalhead")
 
 	if Player.race = 18//ANGEL

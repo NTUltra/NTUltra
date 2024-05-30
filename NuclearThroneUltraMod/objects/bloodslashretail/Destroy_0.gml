@@ -17,6 +17,10 @@ if !hitEnemy && owner != -1 && instance_exists(owner)
 			snd_play(snd_hurt);
 			image_index = 0;
 			sprite_index = spr_hurt;
+			if object_index == Player
+			{
+				hitBy = other.sprite_index;	
+			}
 		}
 	}
 }

@@ -27,8 +27,8 @@
   "name":"SandWorm",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Enemies.yy",
+    "name":"Boss",
+    "path":"folders/Objects/Enemies/Boss.yy",
   },
   "parentObjectId":{
     "name":"enemyCollisionWall",

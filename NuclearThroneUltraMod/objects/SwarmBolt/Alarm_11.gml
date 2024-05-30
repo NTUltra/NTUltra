@@ -4,6 +4,7 @@ if um == ultramods.snowSwarm
 {
 	with instance_create(x,y,IceFlame)
 	{
+		dmg -= 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -25,4 +26,16 @@ if um == ultramods.snowSwarm
 		team = other.team;
 		alarm[11] = 0;
 	}
-} 
+} else if um == ultramods.toxicSwarm
+{
+	with instance_create(x,y,ToxicThrowerGas)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed + 2 + irandom(2);
+		team = 2;
+		alarm[11] = 0;
+	}
+	instance_destroy(id,false);
+}

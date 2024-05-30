@@ -8641,7 +8641,7 @@ function scrWeapons() {
 	wep_load[772] = 5
 	wep_cost[772] = 1
 	wep_sprt[772] = sprHeavyFlameThrower
-	wep_area[772] = 10
+	wep_area[772] = 12
 	wep_text[772] = "super hot"
 	wep_swap[772] = sndSwapFlame
 	wep_rad[772] = 0;

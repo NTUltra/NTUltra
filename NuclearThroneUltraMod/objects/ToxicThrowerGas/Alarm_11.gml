@@ -20,7 +20,6 @@ if um == ultramods.toxicFire
 	{
 		scrCopyWeaponMod(other);
 		hits = 1;
-		dmg = 2;
 		mxSpd -=1;
 		direction = other.direction;
 		image_angle = direction;

@@ -1,5 +1,5 @@
 event_inherited();
-image_speed = 054
+image_speed = 0.4;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable
 dmg = 6;//Retail is 8
 if !scrIsGamemode(34)//HARD MODE

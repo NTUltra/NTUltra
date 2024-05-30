@@ -40,6 +40,9 @@
     "name":"sprPopoSlash",
     "path":"sprites/sprPopoSlash/sprPopoSlash.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskEnemySlash",
+    "path":"sprites/mskEnemySlash/mskEnemySlash.yy",
+  },
   "visible":true,
 }

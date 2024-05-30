@@ -50,20 +50,20 @@ function scrAreaName(area,subarea,loops){
 				upsideDown = true;
 			break;
 			case 130://Factory
-				txt = "9B_" + string(subarea);
+				txt = "7B_" + string(subarea);
 			break;
 			case 131://INV Factory
-				txt = "9B_" + string(subarea);
+				txt = "7B_" + string(subarea);
 				upsideDown = true;
 			break;
 			case 132://Cursed Factory
-				txt = "9C_" + string(subarea);
+				txt = "7C_" + string(subarea);
 			break;
 			case 133://Golden Factory
-				txt = "9D_" + string(subarea);
+				txt = "7D_" + string(subarea);
 			break;
 			case 134://Ultra Factory
-				txt = "9E_" + string(subarea);
+				txt = "7E_" + string(subarea);
 			break;
 			case 135://Headquarters
 				txt = "HQ_" + string(subarea);
