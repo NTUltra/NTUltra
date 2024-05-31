@@ -3584,7 +3584,7 @@ function scrWeapons() {
 	wep_type[319] = 4
 	wep_auto[319] = 3
 	wep_load[319] = 16
-	wep_cost[319] = 2
+	wep_cost[319] = 3
 	wep_sprt[319] = sprToxicIonCannon
 	wep_area[319] = 6
 	wep_text[319] = "shit from above"
@@ -3836,7 +3836,7 @@ function scrWeapons() {
 	wep_name[342] = "KRAKEN ION CANNON"
 	wep_type[342] = 4
 	wep_auto[342] = 3
-	wep_load[342] = 26
+	wep_load[342] = 28
 	wep_cost[342] = 4
 	wep_sprt[342] = sprKrakenIonCannon
 	wep_area[342] = 11
@@ -6781,7 +6781,7 @@ function scrWeapons() {
 	wep_load[605] = 55//60 normally
 	wep_cost[605] = 11
 	wep_sprt[605] = sprStabinator
-	wep_area[605] = 19
+	wep_area[605] = 20
 	wep_text[605] = "time for a good o'l fashion stabbin'"
 	wep_swap[605] = sndSwapExplosive
 	wep_rad[605] = 0;
@@ -7543,7 +7543,7 @@ function scrWeapons() {
 	wep_name[674] = "SCYTHER"
 	wep_type[674] = 1
 	wep_auto[674] = 2
-	wep_load[674] = 15
+	wep_load[674] = 17
 	wep_cost[674] = 6
 	wep_sprt[674] = sprScyther
 	wep_area[674] = 11
@@ -8225,7 +8225,7 @@ function scrWeapons() {
 	wep_name[735] = "SCYTHER DISPERSE GUN"
 	wep_type[735] = 1
 	wep_auto[735] = 1
-	wep_load[735] = 12
+	wep_load[735] = 16
 	wep_cost[735] = 10
 	wep_sprt[735] = sprScytherDisperseGun
 	wep_area[735] = 13
@@ -8247,7 +8247,7 @@ function scrWeapons() {
 	wep_name[737] = "SCYTHER WALL DISPERSE GUN"
 	wep_type[737] = 1
 	wep_auto[737] = 1
-	wep_load[737] = 30
+	wep_load[737] = 34
 	wep_cost[737] = 30
 	wep_sprt[737] = sprScytherWallDisperseGun
 	wep_area[737] = 23

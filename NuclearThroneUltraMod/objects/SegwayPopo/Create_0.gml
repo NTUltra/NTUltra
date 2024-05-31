@@ -32,7 +32,7 @@ team = 3
 walk = 0
 grenades = 4
 gunangle = random(360)
-alarm[1] = 7+random(6)
+alarm[1] = 15+random(10)
 
 
 wkick = 0

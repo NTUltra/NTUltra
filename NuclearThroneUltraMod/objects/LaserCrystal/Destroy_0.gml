@@ -1,4 +1,4 @@
-scrDrop(droprate,1)
+scrDrop(droprate,10)
 
 event_inherited()
 

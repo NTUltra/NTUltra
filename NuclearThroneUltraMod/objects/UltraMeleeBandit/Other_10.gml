@@ -10,6 +10,7 @@ if alarm[2] < 1
 	instance_create(x-5,y,Notice);
 	instance_create(x,y,Notice);
 	instance_create(x+5,y,Notice);
+	snd_play(sndWarning);
 	alarm[1] += tellTime + 2;
 	dodge = 1;
 }

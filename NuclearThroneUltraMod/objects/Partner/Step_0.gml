@@ -100,3 +100,21 @@ if instance_exists(projectile)
 		motion_add(point_direction(x,y,t.x,t.y),2);
 	}
 }
+if !collision_point(x,y,Floor,false,false)
+{
+	var n = instance_nearest(x,y,Floor);
+	if n != noone
+	{
+		motion_add(point_direction(x,y,n.x,n.y),0.8);	
+	}
+}
+/*
+if collision_line(x,y,x+hspeed,y,Wall,false,false)
+{
+	x -= hspeed;
+}
+if collision_line(x,y,x,y+vspeed,Wall,false,false)
+{
+	y -= vspeed;
+}
+*/

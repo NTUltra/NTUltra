@@ -1,6 +1,6 @@
 
 event_inherited()
-scrDrop(15,0)
+scrDrop(15,4)
 if (!sleeping && existTime > 20)
 {
 	with instance_create(x,y,LavaBallEnemyExplode)

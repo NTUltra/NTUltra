@@ -1,4 +1,4 @@
-scrDrop(27,5)
+scrDrop(27,10)
 audio_stop_sound(sndSalamanderFireLoop)
 event_inherited()
 

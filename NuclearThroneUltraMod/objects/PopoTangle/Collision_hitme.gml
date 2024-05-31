@@ -7,8 +7,8 @@ with other
 			if other.skill_got[2]
 				exit;
 		}
-	    x = xprevious+hspeed*0.15
-	    y = yprevious+vspeed*0.15
+	    x = xprevious+hspeed*other.slowdown
+	    y = yprevious+vspeed*other.slowdown
 	}
 }
 

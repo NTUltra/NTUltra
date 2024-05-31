@@ -14,6 +14,7 @@ if target != noone
 			instance_create(x-5,y,Notice);
 			instance_create(x,y,Notice);
 			instance_create(x+5,y,Notice);
+			snd_play(sndWarning);
 			alarm[1]=tellTime*1.5;
 			if !notBehindWall
 			{

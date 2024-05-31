@@ -29,9 +29,12 @@ else if (sprite_index == spr_disappear && !place_meeting(x,y,Tangle))
 		var yy = Player.y+lengthdir_y(dis,angle);
 		var targetFloor = instance_nearest(xx,yy,Floor);
 		tries ++;
-		} until (point_distance(Player.x,Player.y,targetFloor.x,targetFloor.y) > 40 || tries > 10);
-		x = targetFloor.x;
-		y = targetFloor.y;
+		} until (point_distance(Player.x,Player.y,targetFloor.x,targetFloor.y) > 48 || tries > 100);
+		if tries < 100
+		{
+			x = targetFloor.x;
+			y = targetFloor.y;
+		}
 		scrForcePosition60fps();
 		sprite_index = spr_appear;
 		spr_idle = spr_appear;

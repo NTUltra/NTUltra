@@ -11,7 +11,7 @@ ravenFly = UltraRavenFly;
 maxAmmo = 6;
 maxRange = 200;
 minRange = 15;
-actTime -= 6;
+actTime -= 4;
 projectileSpeed += 1.5;
 if random(10) < 2
 {

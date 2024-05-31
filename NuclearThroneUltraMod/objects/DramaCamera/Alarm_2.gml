@@ -32,11 +32,11 @@ with InvertedScrapBoss
 }
 with HotDrake
 {
-	snd_play_2d(sndDragonEmerge)
+	snd_play_2d(sndDragonIntro)
 }
 with InvertedHotDrake
 {
-	snd_play_2d(sndDragonEmerge)
+	snd_play_2d(sndDragonIntro)
 }
 
 with AssassinBoss

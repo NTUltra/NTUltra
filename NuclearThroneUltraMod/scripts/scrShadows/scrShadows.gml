@@ -110,6 +110,8 @@ function scrShadows() {
 	with Technomancer
 	draw_sprite(shd96,0,x-vx,y-vy-8)
 	with FrogEgg
+	draw_sprite(shd24,0,x-vx,y-vy + 2)
+	with EliteSegwayPopo
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with InvertedScorpion
 	draw_sprite(shd48,0,x-vx,y-vy)

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprEnemyGoldenShank",
-    "path":"sprites/sprEnemyGoldenShank/sprEnemyGoldenShank.yy",
+    "name":"sprEnemyGoldenLanceSlash",
+    "path":"sprites/sprEnemyGoldenLanceSlash/sprEnemyGoldenLanceSlash.yy",
   },
   "spriteMaskId":{
     "name":"mskEnemyLanceSlash",

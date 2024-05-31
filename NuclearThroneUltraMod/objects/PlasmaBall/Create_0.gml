@@ -10,7 +10,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
 dmg = 6;
 nomscale = 1;
-wallScale = 0.16;
+wallScale = 0.14;
 grow = 0.04;
 hitShrink = 0.4;
 destroyScale = 0.4;

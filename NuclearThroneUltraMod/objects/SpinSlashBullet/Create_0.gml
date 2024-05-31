@@ -2,8 +2,9 @@
 
 // Inherit the parent event
 event_inherited();
+canAlwaysDeflect = true;
 norecycle = false;
-dmg = 5;
+dmg = 4;
 image_speed -= 0.1;
 snd_wallhit = sndHitWall;
 if UberCont.ultramodSwap

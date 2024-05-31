@@ -30,7 +30,10 @@ if target != noone
 		if freeze > 10 and point_distance(x,y,target.x,target.y)<120
 		{
 			//FIRE
+			instance_create(x-5,y,Notice);
 			instance_create(x,y,Notice);
+			instance_create(x+5,y,Notice);
+			snd_play(sndWarning);
 			alarm[2] = tellTime;
 			alarm[1] = alarm[2] + 10;
 		}
@@ -53,10 +56,10 @@ if target != noone
 			with PopoSeed
 				instance_destroy()
 			gunangle = point_direction(x,y,target.x,target.y)
-
-			with instance_create(x,y,PopoSeed)
+			snd_play(sndIDPDSnare);
+			with instance_create(x + lengthdir_x(6,gunangle),y + lengthdir_y(6,gunangle),PopoSeed)
 			{
-				motion_add(point_direction(x,y,other.target.x,other.target.y),12)
+				motion_add(point_direction(x,y,other.target.x,other.target.y),9)
 				image_angle = direction
 				team = other.team
 			}

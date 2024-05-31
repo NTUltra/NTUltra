@@ -514,8 +514,8 @@ if !instance_exists(LevCont) and visible = 1
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,InvertedFreakBandit);
-			instance_create(x+32,y,FreakBandit);
+			instance_create(x+32,y,EliteSegwayPopo);
+			//instance_create(x+32,y,FreakBandit);
 
 			/*
 			wep = 0;
@@ -1742,10 +1742,12 @@ else if race == 23 && ultra_got[92] == 0
 {
 	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 	if toxicamount > 0
-		speed *= 0.3;
+	{
+		speed *= 0.34;
+	}
 	else
 	{
-		speed = clamp(speed,maxSpeed*0.75,maxSpeed);
+		speed = clamp(speed,maxSpeed*0.7,maxSpeed);
 	}
 }
 else if speed > maxSpeed

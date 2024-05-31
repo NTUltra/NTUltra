@@ -1,6 +1,6 @@
 event_inherited()
 
-scrDrop(10,0);
+scrDrop(10,10);
 if !sleeping
 {
 	repeat(40)

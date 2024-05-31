@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sprSlowField",
   "bboxMode":2,
-  "bbox_bottom":22,
+  "bbox_bottom":31,
   "bbox_left":0,
   "bbox_right":43,
   "bbox_top":7,

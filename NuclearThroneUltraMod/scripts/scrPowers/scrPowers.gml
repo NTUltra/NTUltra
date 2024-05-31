@@ -173,23 +173,7 @@ function scrPowers(raceOverwrite = -1) {
 			if my_health == 1 && skill_got[32] && isAlkaline
 			{
 				isAlkaline = false;
-				var h = 2;
-				if (skill_got[9]) //Second stomache
-				{
-					h = 3;
-					with instance_create(x,y,HealFX)
-					{
-						sprite_index = sprHealBigFX;
-						depth = other.depth - 1;
-					}
-				}
-				else
-				{
-					with instance_create(x,y,HealFX)
-					{
-						depth = other.depth - 1;
-					}
-				}
+				var h = 3;
 				my_health = min(h,maxhealth);
 				
 				with instance_create(x,y,SharpTeeth)

@@ -25,7 +25,7 @@ speed /= mySize
 
 }
 
-scrDrop(30,17)
+scrDrop(30,25)
 
 BackCont.shake += 5
 if !sleeping

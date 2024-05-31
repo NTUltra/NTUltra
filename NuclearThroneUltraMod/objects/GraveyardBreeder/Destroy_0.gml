@@ -2,4 +2,4 @@
 
 event_inherited()
 if object_index == GraveyardBreeder
-	scrDrop(40,15)
+	scrDrop(40,20)

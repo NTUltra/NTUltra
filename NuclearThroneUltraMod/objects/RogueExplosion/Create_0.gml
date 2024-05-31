@@ -10,7 +10,7 @@ if instance_exists(Player)
 	}
 }
 
-dmg = 11;
+dmg = 10;
 with myExplosionMask
 {
 	dmg -= 1;	

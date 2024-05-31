@@ -13,9 +13,11 @@ img = 0
 laserDecrease = 0.2;
 sprStart = sprEnemyLaserStart;
 sprEnd = sprEnemyLaserEnd;
+alarm[2] = 3;
 if instance_exists(Player) && Player.skill_got[12]
 {
-	laserDecrease = 0.3;
+	alarm[2] = 1;
+	laserDecrease = 0.25;
 }
 	dmg = 3;
 if scrIsGamemode(9)//Casual mode
@@ -23,4 +25,3 @@ if scrIsGamemode(9)//Casual mode
 if scrIsHardMode()//HARD MODE
 	dmg = 4;
 //dir=0;
-alarm[2] = 1;
