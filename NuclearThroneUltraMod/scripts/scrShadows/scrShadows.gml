@@ -455,6 +455,8 @@ function scrShadows() {
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with EliteShielder
 	draw_sprite(shd24,0,x-vx,y-vy)
+	with EliteBuffPopo
+	draw_sprite(shd24,0,x-vx,y-vy)
 	with Molefish
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with Molesarge

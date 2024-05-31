@@ -3862,7 +3862,7 @@ function scrWeapons() {
 	wep_load[344] = 12
 	wep_cost[344] = 1
 	wep_sprt[344] = sprElectroGun
-	wep_area[344] = 7
+	wep_area[344] = 6
 	wep_text[344] = "considered plasma & lightning"
 	wep_swap[344] = sndSwapEnergy
 	wep_rad[344] = 0;
@@ -3874,7 +3874,7 @@ function scrWeapons() {
 	wep_load[345] = 6
 	wep_cost[345] = 1
 	wep_sprt[345] = sprElectroRifle
-	wep_area[345] = 9
+	wep_area[345] = 8
 	wep_text[345] = "connected"
 	wep_swap[345] = sndSwapEnergy
 	wep_rad[345] = 0;
@@ -8217,7 +8217,7 @@ function scrWeapons() {
 	wep_load[734] = 0.5
 	wep_cost[734] = 0.5
 	wep_sprt[734] = sprMicroMinigun
-	wep_area[734] = 6
+	wep_area[734] = 7
 	wep_text[734] = ""
 	wep_swap[734] = sndSwapPistol
 	wep_rad[734] = 0;
@@ -8261,7 +8261,7 @@ function scrWeapons() {
 	wep_load[738] = 5
 	wep_cost[738] = 0.75
 	wep_sprt[738] = sprPingPongBallLauncher
-	wep_area[738] = 22
+	wep_area[738] = 24
 	wep_text[738] = "pong"
 	wep_swap[738] = sndSwapBow
 	wep_rad[738] = 0;
@@ -8272,7 +8272,7 @@ function scrWeapons() {
 	wep_load[739] = 25
 	wep_cost[739] = 0
 	wep_sprt[739] = sprSlapper
-	wep_area[739] = 11
+	wep_area[739] = 12
 	wep_text[739] = "knock them back!"
 	wep_swap[739] = sndSwapHammer
 	wep_rad[739] = 0;
@@ -8283,7 +8283,7 @@ function scrWeapons() {
 	wep_load[740] = 18
 	wep_cost[740] = 1
 	wep_sprt[740] = sprBayonetteRifle
-	wep_area[740] = 6
+	wep_area[740] = 7
 	wep_text[740] = "Wind up a stabbin'"
 	wep_swap[740] = sndSwapShotgun
 	wep_rad[740] = 0;
@@ -8327,7 +8327,7 @@ function scrWeapons() {
 	wep_load[744] = 27
 	wep_cost[744] = 3
 	wep_sprt[744] = sprLaserFlakCannon
-	wep_area[744] = 11
+	wep_area[744] = 12
 	wep_text[744] = "would smack"
 	wep_swap[744] = sndSwapExplosive
 	wep_rad[744] = 0;
@@ -8338,7 +8338,7 @@ function scrWeapons() {
 	wep_load[745] = 1
 	wep_cost[745] = 0.75
 	wep_sprt[745] = sprDoubleLaserMinigun
-	wep_area[745] = 13
+	wep_area[745] = 14
 	wep_text[745] = "nuclear powered"
 	wep_swap[745] = sndSwapEnergy
 	wep_rad[745] = 0;
@@ -8349,7 +8349,7 @@ function scrWeapons() {
 	wep_load[746] = 5
 	wep_cost[746] = 2.5
 	wep_sprt[746] = sprSuckCannon
-	wep_area[746] = 7
+	wep_area[746] = 8
 	wep_text[746] = "suck up enemy projectiles!"
 	wep_swap[746] = sndSwapEnergy
 	wep_rad[746] = 0;
@@ -8361,7 +8361,7 @@ function scrWeapons() {
 	wep_load[747] = 4
 	wep_cost[747] = 1.5
 	wep_sprt[747] = sprYoyoMinigun
-	wep_area[747] = 11
+	wep_area[747] = 12
 	wep_text[747] = "yo! yo! yo!"
 	wep_swap[747] = sndSwapBow
 	wep_rad[747] = 0;
@@ -8383,7 +8383,7 @@ function scrWeapons() {
 	wep_load[749] = 9
 	wep_cost[749] = 5.5
 	wep_sprt[749] = sprSuperBloodRocketGun
-	wep_area[749] = 19
+	wep_area[749] = 20
 	wep_text[749] = "I see red"
 	wep_swap[749] = sndSwapExplosive
 	wep_rad[749] = 0;
@@ -8394,7 +8394,7 @@ function scrWeapons() {
 	wep_load[750] = 2
 	wep_cost[750] = 2
 	wep_sprt[750] = sprMorphOMinigun
-	wep_area[750] = 7
+	wep_area[750] = 8
 	wep_text[750] = "blaster from space"
 	wep_swap[750] = sndSwapPistol
 	wep_rad[750] = 0;
@@ -8414,10 +8414,10 @@ function scrWeapons() {
 	wep_name[752] = "VOID RIPPER"
 	wep_type[752] = 4
 	wep_auto[752] = 3
-	wep_load[752] = 41
+	wep_load[752] = 44
 	wep_cost[752] = 3
 	wep_sprt[752] = sprVoidSword
-	wep_area[752] = 28
+	wep_area[752] = 29
 	wep_text[752] = "world inbetween worlds"
 	wep_swap[752] = sndSwapSword
 	wep_rad[752] = 0;
@@ -8440,7 +8440,7 @@ function scrWeapons() {
 	wep_load[754] = 20
 	wep_cost[754] = 4
 	wep_sprt[754] = sprOrbitingYoyoGun
-	wep_area[754] = 11
+	wep_area[754] = 13
 	wep_text[754] = "this one sticks around for a long time"
 	wep_swap[754] = sndSwapBow
 	wep_rad[754] = 0;
@@ -8451,7 +8451,7 @@ function scrWeapons() {
 	wep_load[755] = 12
 	wep_cost[755] = 4
 	wep_sprt[755] = sprDoubleMorphOLaser
-	wep_area[755] = 10
+	wep_area[755] = 11
 	wep_text[755] = "invaders"
 	wep_swap[755] = sndSwapEnergy
 	wep_rad[755] = 0;
@@ -8641,7 +8641,7 @@ function scrWeapons() {
 	wep_load[772] = 5
 	wep_cost[772] = 1
 	wep_sprt[772] = sprHeavyFlameThrower
-	wep_area[772] = 12
+	wep_area[772] = 15
 	wep_text[772] = "super hot"
 	wep_swap[772] = sndSwapFlame
 	wep_rad[772] = 0;
@@ -8652,7 +8652,7 @@ function scrWeapons() {
 	wep_load[773] = 23
 	wep_cost[773] = 7
 	wep_sprt[773] = sprWunderStrasseGun
-	wep_area[773] = 13
+	wep_area[773] = 18
 	wep_text[773] = "very proud very wunderbar"
 	wep_swap[773] = sndSwapEnergy
 	wep_rad[773] = 0;

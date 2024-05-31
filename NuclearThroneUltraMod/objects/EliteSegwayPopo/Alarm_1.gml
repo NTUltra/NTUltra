@@ -10,6 +10,8 @@ if target != noone
 {
 	if !collision_line(x,y,target.x,target.y,Wall,0,0)
 	{
+		lastx = target.x;
+		lasty = target.y;
 		gunangle = point_direction(x,y,target.x,target.y)
 		var dis = point_distance(x,y,target.x,target.y);
 		if dis < goForSmackRange || stuck
@@ -86,7 +88,7 @@ if target != noone
 	else 
 	{
 		alarm[1] += actTime;
-		motion_add(random(360),acc);
+		motion_add(random(360),acc*0.75);
 		//DONT SEE PLAYER
 		if random(6) < 1
 		{
@@ -97,7 +99,11 @@ if target != noone
 		}
 		else if random(3) < 1
 		{
-			mp_potential_step(target.x,target.y,2,false);
+			mp_potential_step(lastx,lasty,2,false);
+		}
+		else
+		{
+			motion_add(point_direction(x,y,lastx,lasty),acc);
 		}
 		if hspeed > 0
 			gunangle = 0 + random_range(30,-30);

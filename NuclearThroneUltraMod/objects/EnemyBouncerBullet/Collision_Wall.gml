@@ -6,7 +6,8 @@ move_bounce_solid(false);
 snd_play(sndBouncerHitWall,0.1,true,true,1,false,true,0.75);
 
 hitWall+=1;
-if hitWall>1{
+speed *= 0.8;
+if hitWall>2{
 instance_destroy();
 instance_create(x,y,Dust);}
 

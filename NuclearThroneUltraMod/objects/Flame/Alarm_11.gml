@@ -15,4 +15,18 @@ if um == ultramods.morphFire
 	}
 	UberCont.ultramodSwap = true;
 	instance_destroy(id,false);
+} else if um == ultramods.fireFrost
+{
+	UberCont.ultramodSwap = false;
+	with instance_create(gp_axis_angular_velocity_x,y,IceFlame)
+	{
+		dmg = other.dmg;
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		alarm[11] = 0;
+	}
+	UberCont.ultramodSwap = true;
+	instance_destroy(id,false);
 }

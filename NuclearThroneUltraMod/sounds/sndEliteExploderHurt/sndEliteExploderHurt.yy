@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndEliteExploderHurt",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.762406,
+  "name":"sndEliteExploderHurt",
+  "parent":{
+    "name":"EliteExploder",
+    "path":"folders/Sounds/IDPD sounds/Elite/EliteExploder.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndEliteExploderHurt",
+  "type":0,
+  "volume":1.0,
+}

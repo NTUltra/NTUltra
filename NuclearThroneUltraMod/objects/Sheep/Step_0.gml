@@ -23,7 +23,7 @@ speed = 3
 
 image_xscale=right*-1;
 
-if(my_health<1)
+if(my_health<1 && alarm[0] < 1)
 {
 	instance_destroy();
 }

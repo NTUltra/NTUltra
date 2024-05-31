@@ -315,7 +315,7 @@ function scrEnemyDeathEvent(){
 				}
 			}
 			//Chicken Ultra A harder to kill
-			if ultra_got[33] == 1
+			if ultra_got[33] == 1 && !altUltra
 		    {
 			    if my_health <= 0
 			    {

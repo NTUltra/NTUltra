@@ -80,9 +80,9 @@ function scrUltraModDescription(um){
 			umn = @"SWAPS
 			ANY BOLT TYPE <WITH> LASERS"
 		break
-		case ultramods.seekerMissile://Replace me
+		case ultramods.fireFrost://Replace me
 			umn = @"SWAPS
-			SEEKERS <WITH> MISSILES"
+			FIRE <WITH> FROST"
 		break;
 		case ultramods.shotgunBolt:
 			umn = @"SWAPS
@@ -100,9 +100,9 @@ function scrUltraModDescription(um){
 			BOUNCER BULLETS <WITH> BOUNCER PLASMA
 			FAT BULLETS <TO> PLASMA CANNON BALLS"
 		break;
-		case ultramods.splinterElectro://Replace me
+		case ultramods.toxicMorph://Replace me
 			umn = @"SWAPS
-			SPLINTERS <WITH> ELECTRO"
+			TOXIC <WITH> MORPH"
 		break;
 		
 		case ultramods.toxicSwarm:

@@ -17369,7 +17369,6 @@ function scrFire2(hasTailNow) {
 	//WUNDER STRASSE
 	case 773:
 
-
 	if Player.skill_got[17] = 1
 		snd_play(sndWunderStrasseUpg,0.05,true);
 	else

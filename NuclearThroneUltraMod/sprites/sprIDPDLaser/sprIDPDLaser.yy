@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"IDPD",
-    "path":"folders/Sprites/Enemies/IDPD.yy",
+    "name":"EliteSegway",
+    "path":"folders/Sprites/Enemies/IDPD/Elite IDPD/EliteSegway.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -21,7 +21,7 @@ function scrUltraModName(um){
 			umn[0] = "LIGHTNING";
 			umn[1] = "KRAKEN";
 		break;
-		case ultramods.krakenMelee://toxic fire
+		case ultramods.krakenMelee:
 			umn[0] = "KRAKEN";
 			umn[1] = "MELEE";
 		break;
@@ -61,20 +61,19 @@ function scrUltraModName(um){
 			umn[1] = "BOLT";
 		break
 
-		case ultramods.seekerMissile://seekerMissile REPLACE ME
-			umn[0] = "SEEKER";
-			umn[1] = "MISSILE";
+		case ultramods.fireFrost:
+			umn[0] = "FIRE";
+			umn[1] = "FROST";
 		break;
 
 		case ultramods.boltBullet:
 			umn[0] = "BOLT";
 			umn[1] = "BULLET";
 		break;
-		case ultramods.splinterElectro://splinterElectro REPLACE ME
+		case ultramods.toxicMorph:
 			umn[0] = "TOXIC";
 			umn[1] = "MORPH";
 		break;
-		
 		
 		case ultramods.toxicSwarm:
 			umn[0] = "TOXIC";

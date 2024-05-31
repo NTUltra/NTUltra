@@ -497,14 +497,14 @@ ammo[3] = round(typ_ammo[3]*0.85);
 ammo[4] = round(typ_ammo[4]*0.85);
 ammo[5] = round(typ_ammo[5]*0.85);
 if UberCont.lastwishused {
-    ammo[1] = typ_ammo[1] * 2
-    ammo[2] = typ_ammo[2] * 2
-    ammo[3] = typ_ammo[3] * 2
-    ammo[4] = typ_ammo[4] * 2
-    ammo[5] = typ_ammo[5] * 2
+    ammo[1] = typ_ammo[1] * 1.5
+    ammo[2] = typ_ammo[2] * 1.5
+    ammo[3] = typ_ammo[3] * 1.5
+    ammo[4] = typ_ammo[4] * 1.5
+    ammo[5] = typ_ammo[5] * 1.5
 }
 else {
-    ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2.25)
+    ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2.5)
 }
 
 maxSpeed = 4

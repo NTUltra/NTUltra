@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.27254,
+  "duration":0.625,
   "name":"sndIDPDSnare",
   "parent":{
     "name":"Regular",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndIDPDSnare",
+  "soundFile":"sndIDPDSnare.wav",
   "type":0,
   "volume":1.0,
 }

@@ -68,3 +68,23 @@ else if um == ultramods.bulletPlasma
 		alarm[11] = 0;
 	}
 }
+else if um == ultramods.fireFrost
+{
+	instance_destroy(id,false);
+	with Player
+	{
+		if skill_got[17] = 1
+			snd_play_fire(sndPlasmaMinigunUpg)
+		else
+			snd_play_fire(sndPlasmaMinigun)	
+	}
+	with instance_create(x,y,Bullet6)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = other.speed;
+		team = other.team;
+		alarm[11] = 0;
+	}
+}

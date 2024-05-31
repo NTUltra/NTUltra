@@ -114,10 +114,10 @@ enum ultramods {
 	rocketBolt,
 	laserBolt,
 	shotgunBolt,
-	seekerMissile,
+	fireFrost,
 	
 	boltBullet,
-	splinterElectro,
+	toxicMorph,
 	bloodMelee,
 	lightningPellet,
 	

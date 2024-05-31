@@ -5205,17 +5205,17 @@ function scrFire(canDrown = true) {
 		var pr = Player.phoenixrevives
 		if  pr > 4 && reload > 0
 	    {
-			reload -= wep_load[wep] * min(0.5,(Player.phoenixrevives-3)*0.5)
+			reload -= wep_load[wep] * min(0.3,(Player.phoenixrevives-3)*0.25)
 	    }
 		if pr > 3
 		{
 			pr += max(0,(wep_load[wep]*0.03));
-			pr = clamp(round(pr),1,50);
+			pr = clamp(round(pr),1,25);
 			repeat(pr-3)
 			{
 				with instance_create(x,y,Bullet6)
 				{
-					motion_add(aimDirection+(random(50)-25)*other.accuracy,min(22,2+pr+random(4+pr)))
+					motion_add(aimDirection+(random(50)-25)*other.accuracy,min(18,2+pr+random(4+pr)))
 					image_angle = direction
 					team = other.team
 				}

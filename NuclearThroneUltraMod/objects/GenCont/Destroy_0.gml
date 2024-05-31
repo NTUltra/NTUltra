@@ -253,7 +253,7 @@ if instance_exists(Player)
 	    BackCont.enemiesInStartLevel=instance_number(enemy);
 		var buffs = 0;
 		
-		if loops > 0
+		if loops > 1
 		{
 			buffs = min(ceil(loops * 2), 15);
 			with enemy {

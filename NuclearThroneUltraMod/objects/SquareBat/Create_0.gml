@@ -18,7 +18,7 @@ snd_melee = sndGoldScorpionMelee;
 walk = 0
 alarm[1] = 30+random(90)
 alarm[10] = 0;
-actTime = 22;
+actTime = 23;
 
 circleMode = false;
 circleDistance = 80;

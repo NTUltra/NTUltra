@@ -71,19 +71,10 @@ else if um == ultramods.lightningPellet
 	snd_play(choose(sndSpark1,sndSpark2),0.1,true)
 	with instance_create(x,y,Lightning)
 	{
+		dmg += 1;
 		image_angle = other.direction;
 		team = other.team
 		ammo = 5+round(other.speed*0.8);
-		canUltraMod = false;
-		event_perform(ev_alarm,0)
-		with instance_create(x,y,LightningSpawn)
-		image_angle = other.image_angle
-	}
-	with instance_create(x,y,Lightning)
-	{
-		image_angle = other.direction;
-		team = other.team
-		ammo = 1 + round(other.speed*0.6);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		with instance_create(x,y,LightningSpawn)

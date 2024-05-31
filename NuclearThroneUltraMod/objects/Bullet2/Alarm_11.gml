@@ -37,10 +37,9 @@ if um == ultramods.bulletShotgun
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBall)
+	with instance_create(x,y,ElectroBallBig)
 	{
 		dmgReduction = 2;
-		dmg = 3;
 		electroDelay = 16;
 		damageDelay += 5;
 		scrCopyWeaponMod(other);
@@ -60,7 +59,7 @@ else if um == ultramods.lightningPellet
 		dmg -= 2;
 		image_angle = other.direction;
 		team = other.team
-		ammo = 3+round(other.speed*0.8);
+		ammo = 4+round(other.speed*0.9);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		with instance_create(x,y,LightningSpawn)

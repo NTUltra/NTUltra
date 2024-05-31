@@ -37,11 +37,21 @@ smackSpeed = 6;
 tellTime = 14;
 actTime = 10;
 freeze = 0
+if instance_exists(Player)
+{
+lastx = Player.x
+lasty = Player.y
+}
+else
+{
+lastx = x
+lasty = y
+}
 sniperOffset = 2;
 stuck=false;
 maxSpeed = 4.7;
 shootingMovementSpeed = 0.8;
-minMovementSpeed = 1.2;
+minMovementSpeed = 1.4;
 sleeping = false;
 acc = 2;
 if instance_exists(Player) && Player.skill_got[29]

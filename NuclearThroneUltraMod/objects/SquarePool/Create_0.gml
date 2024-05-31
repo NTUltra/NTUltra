@@ -9,7 +9,7 @@ image_xscale = 0.1;
 image_yscale = 0.1;
 alarm[6] = 1;
 alarm[5] = 10;
-alarm[4] = 30;
+alarm[4] = 25;
 if instance_exists(Player)
 {
 	if team != Player.team

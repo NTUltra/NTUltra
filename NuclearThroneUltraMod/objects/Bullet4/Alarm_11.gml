@@ -8,7 +8,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed+4;
+		speed = min(22,other.speed+4);
 		team = other.team;
 		alarm[11] = 0;
 	}

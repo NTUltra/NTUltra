@@ -1,5 +1,5 @@
 ///@description AI
-alarm[1] = 15+random(20)
+alarm[1] = 14+random(15)
 
 
 if team=2
@@ -21,7 +21,7 @@ if target != noone && instance_exists(target)
 	    lastx = target.x
 	    lasty = target.y
 	    //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-	    if alarm[2] < 1 && random(2) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 156
+	    if alarm[2] < 1 && random(2) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
 	    {
 			alarm[2] = fireRate;
 	    }

@@ -94,7 +94,7 @@ if canAlt
 	{
 		sprite_index = sprGreenTeam;
 	}
-	else if skill == 50 && Player.race == 13 && (scrHasASecretCrown() || Player.unlockAlternativeUltras)
+	else if skill == 50 && Player.race == 13 && (Player.unlockAlternativeUltras || isAlternative || scrHasASecretCrown())
 	{
 		sprite_index = sprSAS;
 	}
