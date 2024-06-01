@@ -5,8 +5,23 @@ if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/ || instance_exists(Wall
 	if (instance_exists(ThroneIISpiral))
 	{
 		sprite_index = sprFloor0Explo;
+		var spr = sprBackFloorSmall;
+		if instance_exists(Player)
+		{
+			if Player.area == 120
+			{
+				sprite_index = sprFloor120Explo;
+				spr = sprInvertedBackFloorSmall;
+			}
+			else if Player.area == 138
+			{
+				sprite_index = sprFloor138Explo;
+				spr = sprBackFloorSmallCloud;
+			}
+		}
 		with instance_create(x,y,BackFloorSmall)
 		{
+			sprite_index = spr;
 			depth = other.depth + 4;
 		}
 	}

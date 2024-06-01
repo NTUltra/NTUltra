@@ -1,5 +1,9 @@
 /// @description Drop some resources
-debug("HAMMERHEAD");
+snd_play(sndHammerHeadProc);
+with instance_create(x + 8,y + 8,AnimDestroyTop)
+{
+	sprite_index = sprHammerHead;
+}
 var n = instance_nearest(x,y,Floor);
 if n != noone
 {
@@ -9,19 +13,17 @@ if n != noone
 		o = 8;
 	x = n.x + o;
 	y = n.y + o;
-	if topindex < 3
+	instance_create(n.x + o, n.y + o, WallBreak);
+	if topindex < 4
 	{
 		scrRaddrop(14);
-		debug("RADDROP");
-	} else if topindex < 6
+	} else if topindex < 7
 	{
 		scrDrop(100,0);
-		debug("ITEM");
 	}
 	else
 	{
 		scrDrop(0,100);
-		debug("WEAPON");
 	}
 	if !instance_exists(SpiralCont) && !instance_exists(GenCont) && fps_real >= fps
 	{

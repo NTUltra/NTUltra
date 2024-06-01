@@ -481,6 +481,10 @@ function scrMakeFloor(limiter) {
 		instance_create(x + 32,y - 32,Floor);
 		instance_create(x - 32,y - 32,Floor);
 	}
+	//Factory
+	if area == 138{
+		instance_create(x,y,Floor)
+	}
 	//savanna
 	if area = 10 || area == 121{ 
 		if random(5) < 2
@@ -771,6 +775,8 @@ function scrMakeFloor(limiter) {
 	}
 	else if area == 135
 		trn = choose(0,0,0,0,0,0,0,0,0,0,0,90,-90)
+	else if area == 138
+		trn = choose(0,0,0,0,0,0,0,90,-90)
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;

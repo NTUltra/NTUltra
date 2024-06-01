@@ -1,5 +1,18 @@
 ///Populate
 SetSeed();
+if !instance_exists(Player)
+	instance_create(10016,10016,Player)
+else
+{
+	with Player
+	{
+		depth = -2
+		visible = 1
+		x = 10016
+		y = 10016
+		angle = 0
+	}
+}
 var myWall = Wall;
 if scrIsCrown(25)
 {
@@ -37,7 +50,10 @@ if Player.area == 125 && Player.loops > 0
 		instance_create(x,y + 128,NOWALLSHEREPLEASE);
 	}
 }
-	
+if Player.area == 138
+{
+	myWall = WallHitMe;
+}
 with Floor
 {
 if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
@@ -53,22 +69,10 @@ if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
 if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
 if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
 }
-
-if !instance_exists(Player)
-instance_create(10016,10016,Player)
-else
+if Player.area == 138
 {
-	with Player
-	{
-		depth = -2
-		visible = 1
-		x = 10016
-		y = 10016
-		angle = 0
-	}
+	scrCreateCloudArea();
 }
-
-
 BackCont.viewx2 = Player.x-__view_get( e__VW.WView, 0 )/2
 BackCont.viewy2 = Player.y-__view_get( e__VW.HView, 0 )/2
 BackCont.viewx = Player.x-__view_get( e__VW.WView, 0 )/2
@@ -98,7 +102,7 @@ if Player.area == 100 && Player.crownvisits > 1
 		}
 	}
 }
-if instance_exists(Player)
+if instance_exists(Player) && Player.skill_got[26]
 {
 	var dis = 99999;
 	var randir = random(360);

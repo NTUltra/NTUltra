@@ -937,8 +937,8 @@ function scrPowers(raceOverwrite = -1) {
 				var triedFloors = [];
 				var i = 0;
 				var n = noone;
-				while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,Wall))
-				|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,Wall))
+				while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,WallHitMe))
+				|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,WallHitMe))
 				|| i > 50)
 				{
 					n = instance_nearest_not_one_of_these(mx,my,Floor,triedFloors);
@@ -971,7 +971,7 @@ function scrPowers(raceOverwrite = -1) {
 			repeat(5){
 			with instance_create(x,y,Smoke)
 			motion_add(random(360),1+random(3))}
-			var noWalls = !instance_exists(Wall)
+			var noWalls = !instance_exists(WallHitMe)
 			if ultra_got[59] && altUltra
 			{
 				var step = 18;

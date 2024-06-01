@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCreateCloudArea",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateCloudArea",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

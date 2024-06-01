@@ -6,8 +6,9 @@ function scrDrop(itemdrop, weapondrop) {
 		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.1));
 		itemdrop *= reductions;
 	}
-	if weapondrop > 0
+	if weapondrop > 0// && weapondrop < 100
 	{
+		debug(instance_number(WepPickup));
 		if instance_number(WepPickup) > 20
 			weapondrop = 0;
 		else if instance_number(WepPickup) > 5
@@ -345,10 +346,17 @@ function scrDrop(itemdrop, weapondrop) {
 	else
 		var ran = weaponDropChance[weaponDropChanceIndex];
 	var wepdropBuff = 1 + ((dropRateBuff - 1) * 0.2);
+	debug("wepdropbuff: ", wepdropBuff);
+	debug("WEAPONDROPRATE: ", weapondrop*wepdropBuff);
 	if ran < min(weapondrop*wepdropBuff, 100)
 	{
 		//drop weps
+		snd_play(sndWeaponDrop,0.05);
 		pickup = instance_create(x,y,WepPickup)
+		with instance_create(x,y,AnimDestroy)
+		{
+			sprite_index = sprWeaponDropFX;
+		}
 		with pickup
 		{
 		scrWeapons()

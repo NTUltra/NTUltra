@@ -199,6 +199,9 @@ if instance_exists(Player)
 			case 136:
 				__background_set_colour( make_color_rgb(26,76,8) )
 			break;
+			case 137:
+			__background_set_colour( make_color_rgb(105, 239, 139) )
+			break;
 		}
 	}
 	else
@@ -314,6 +317,10 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(245, 250, 251) )
 		else if Player.area == 136//Ultra scrapyard
 			__background_set_colour( make_color_rgb(175, 143, 106) )
+		else if Player.area == 137//Void
+			__background_set_colour( make_color_rgb(0, 0, 0) )
+		else if Player.area == 138//Cloudland
+			__background_set_colour( make_color_rgb(105, 239, 139) )
 	}
 }
 else
@@ -404,6 +411,8 @@ goal = 120+s;
 }
 else if Player.area == 137//Void
 goal = 1;
+else if Player.area == 138//Cloudland
+goal = 105 + s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;

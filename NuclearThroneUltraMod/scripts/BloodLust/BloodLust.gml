@@ -3,11 +3,9 @@
 ///@param
 function BloodLust(){
 	//SOME KILLS REGENERATE HEALTH
-	var chance = 7.7
+	var chance = 7.6
 	if Player.race == 25
-		chance = 9.6
-	if Player.loops > 1
-		chance -= 0.2;
+		chance = 9.5
 	//if Player.sprite_index != spr_hurt
 	//	chance -= 4;
     if Player.skill_got[7] = 1 and Player.canHeal && random(100) <  chance//7.69% chance

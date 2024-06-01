@@ -20,6 +20,7 @@ if random(4) < 1
 	//var t = type;
 with instance_create(x,y,Spiral)
 {
+	sprite_index = other.sprite;
 	image_xscale = 0
 	image_yscale = 0
 	depth = other.depth + other.image_angle

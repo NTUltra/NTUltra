@@ -196,7 +196,10 @@ function scrSkills() {
 	if !UberCont.useSeed && random(900)<1
 		skill_name[10] = "GYM BRO"
 	skill_text[10] = "HIGHER <y>AMMO MAX<y>#REDUCE <y>AMMO<y> <w>COST<w>"
-	skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#10% <y>AMMO<y> <w>COST<w> REDUCTION"
+	if instance_exists(Player) && (Player.race == 22)//ROGUE
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#10% <y>AMMO<y> <w>COST<w> REDUCTION#INCREASE <b>PORTAL STRIKE<b> AMMO"
+	else
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#10% <y>AMMO<y> <w>COST<w> REDUCTION"
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
 	skill_bons[10] = "+30% AMMO MAX#+5% COST REDUCTION";
