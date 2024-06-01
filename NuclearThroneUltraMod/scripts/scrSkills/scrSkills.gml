@@ -378,7 +378,7 @@ function scrSkills() {
 	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU ARE <aq>IMMUNE<aq>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
-	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS";
+	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS#LONGER DIG IMMUNITY";
 
 	skill_name[27] = "PATIENCE"
 	skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA"

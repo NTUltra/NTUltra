@@ -98,3 +98,27 @@ if Player.area == 100 && Player.crownvisits > 1
 		}
 	}
 }
+if instance_exists(Player)
+{
+	var dis = 99999;
+	var randir = random(360);
+	var xx = Player.x;
+	var yy = Player.y;
+	repeat(4)
+	{
+		var n = instance_nearest(xx + lengthdir_x(dis,randir),
+		yy + lengthdir_y(dis,randir),Wall);
+		if n != noone
+		{
+			with n {
+				var tx = x + lengthdir_x(64,randir);
+				var ty = y + lengthdir_y(64,randir);
+				tx = round(tx/32)*32;
+				ty = round(ty/32)*32;
+				instance_create(tx,ty,HammerHeadWall);
+				
+			}
+		}
+		randir += 90;
+	}
+}

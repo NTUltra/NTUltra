@@ -2623,7 +2623,10 @@ if hammerheadcounter > 0
 					}
 				}
 				hammerheadDig = 30;
-				alarm[3] = max(alarm[3],31);
+				if race=25
+					alarm[3] = max(alarm[3],37);
+				else
+					alarm[3] = max(alarm[3],31);
 				var debrisAmount = 2;
 				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)

@@ -1403,7 +1403,7 @@ function scrWeapons() {
 	wep_name[125] = "LIGHTNING SHOVEL"
 	wep_type[125] = 0
 	wep_auto[125] = 1
-	wep_load[125] = 48
+	wep_load[125] = 52
 	wep_cost[125] = 0
 	wep_sprt[125] = sprLightningShovel
 	wep_area[125] = 19
@@ -3363,10 +3363,10 @@ function scrWeapons() {
 	wep_name[300] = "LASER WAVE GUN"
 	wep_type[300] = 5
 	wep_auto[300] = 3
-	wep_load[300] = 21
-	wep_cost[300] = 5
+	wep_load[300] = 23
+	wep_cost[300] = 6
 	wep_sprt[300] = sprLaserWaveGun
-	wep_area[300] = 14
+	wep_area[300] = 15
 	wep_text[300] = "hands in de aihr"
 	wep_swap[300] = sndSwapEnergy
 	wep_rad[300] = 0;
@@ -6547,8 +6547,8 @@ function scrWeapons() {
 	wep_name[584] = "SUPER LASER CANNON"
 	wep_type[584] = 5
 	wep_auto[584] = 3
-	wep_load[584] = 24//32 originally
-	wep_cost[584] = 6
+	wep_load[584] = 28//32 originally
+	wep_cost[584] = 7
 	wep_sprt[584] = sprSuperLaserCannon
 	wep_area[584] = 21
 	wep_text[584] = "ohyea super laser cannon!"
@@ -8549,7 +8549,7 @@ function scrWeapons() {
 	wep_auto[764] = 3
 	wep_load[764] = 4
 	wep_cost[764] = 2.5
-	wep_sprt[764] = sprSuckCannon
+	wep_sprt[764] = sprUltraSuckCannon
 	wep_area[764] = 21
 	wep_text[764] = "suck it all"
 	wep_swap[764] = sndSwapEnergy

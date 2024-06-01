@@ -402,12 +402,12 @@ function scrNextLevel() {
 	        inverted = false;
 	        exit;
 	        }
-	        else//Skip one palace
+	        else//GO TO CLOUDLAND
 	        {
-		        area = 9;
-		        subarea = 1;
-				lastarea = 9;
-				lastsubarea = 2;
+		        area = 138;
+		        subarea = 0;
+				lastarea = 138;
+				lastsubarea = 1;
 				inverted = false;
 	        }
         
@@ -544,6 +544,12 @@ function scrNextLevel() {
 				{
 					area = 5;
 					subarea = 1;
+				}
+				else if area == 8 && subarea == 3
+				{
+					//Wonderland 3 to cave 2
+					area = 4;
+					subarea = 2;
 				}
 				else
 				{

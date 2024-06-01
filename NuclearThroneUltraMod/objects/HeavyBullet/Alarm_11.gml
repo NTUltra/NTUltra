@@ -43,6 +43,7 @@ if um == ultramods.laserBullet
 	}
 	with instance_create(x,y,PlasmaBall)
 	{
+		dmg -= 1;
 		acc += 3;
 		maxSpeed += 6;
 		scrCopyWeaponMod(other);

@@ -344,7 +344,8 @@ function scrDrop(itemdrop, weapondrop) {
 		var ran = random(100);
 	else
 		var ran = weaponDropChance[weaponDropChanceIndex];
-	if ran < min(weapondrop*(dropRateBuff * 0.2), 100)
+	var wepdropBuff = 1 + ((dropRateBuff - 1) * 0.2);
+	if ran < min(weapondrop*wepdropBuff, 100)
 	{
 		//drop weps
 		pickup = instance_create(x,y,WepPickup)
@@ -355,7 +356,7 @@ function scrDrop(itemdrop, weapondrop) {
 		wep = scrDecideWep(0)
 		name = wep_name[wep]
 		type = wep_type[wep]
-		ammo = 40
+		ammo = 30
 		curse = 0
 		sprite_index = wep_sprt[wep];
 		if collision_point(x,y,Wall,false,false)

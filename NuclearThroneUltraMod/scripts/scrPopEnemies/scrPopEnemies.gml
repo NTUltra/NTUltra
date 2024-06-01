@@ -741,7 +741,7 @@ function scrPopEnemies() {
 		        } else //a style
 		        {
 		            if random(5) < 1 {
-		                repeat(1+irandom(2))
+		                repeat(1+irandom(1))
 							instance_create(x + 12 + random(8), y + 12 + random(8), choose(FireBat, LavaBallEnemy, LavaBallEnemy, FireBat, LavaBallEnemy, Bandit, BanditSquare,LavaBallEnemy))
 		            }
 		            else if random(2) < 1

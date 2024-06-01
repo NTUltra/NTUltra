@@ -85,6 +85,8 @@ else if patience > 0
 	skillpoints += patience;
 	skillsChosen -= patience;
 	patience = 0;
+	if skill_got[27]
+		skill_got[27] = 0;
 }
 
 
