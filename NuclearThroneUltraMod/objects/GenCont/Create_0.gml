@@ -200,7 +200,10 @@ if instance_exists(Player)
 				__background_set_colour( make_color_rgb(26,76,8) )
 			break;
 			case 137:
-			__background_set_colour( make_color_rgb(105, 239, 139) )
+			__background_set_colour( make_color_rgb(0, 0, 0) )
+			break;
+			case 138:
+			__background_set_colour( make_color_rgb(53, 178, 105) )
 			break;
 		}
 	}
@@ -320,7 +323,7 @@ if instance_exists(Player)
 		else if Player.area == 137//Void
 			__background_set_colour( make_color_rgb(0, 0, 0) )
 		else if Player.area == 138//Cloudland
-			__background_set_colour( make_color_rgb(105, 239, 139) )
+			__background_set_colour( make_color_rgb(53, 178, 105) )
 	}
 }
 else

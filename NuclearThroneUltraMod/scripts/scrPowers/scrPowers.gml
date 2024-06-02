@@ -2896,7 +2896,7 @@ function scrPowers(raceOverwrite = -1) {
 				}
 			}
 		}
-		else if !lockoutElementor//Elementor
+		else if !lockoutElementor && !instance_exists(CloudArea)//Elementor
 		{
 			
 			var takePercentage = 0.045;//0.75%

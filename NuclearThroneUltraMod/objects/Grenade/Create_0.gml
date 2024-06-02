@@ -17,3 +17,5 @@ canExplodeBlade = false;
 gotHit = false;
 knockback = 10;
 stickTarget = noone;
+if instance_exists(ThroneIISpiral)
+	alarm[9] = 5;

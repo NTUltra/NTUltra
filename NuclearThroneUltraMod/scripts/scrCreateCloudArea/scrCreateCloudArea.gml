@@ -38,6 +38,7 @@ function scrCreateCloudArea(){
 			{
 				depth = d + 1;
 				sprite_index = sprs;
+				image_index = irandom(image_number);
 			}
 		}
 		else
@@ -48,6 +49,7 @@ function scrCreateCloudArea(){
 				sprite_index = sprb;
 				sprBack2 = sprb2;
 				depth = d + 1;
+				image_index = irandom(image_number);
 			}
 		}
 	}

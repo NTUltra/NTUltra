@@ -1,5 +1,5 @@
 image_speed = 0
-alarm[0] = 5;
+alarm[0] = 2;
 image_xscale=choose(1,-1);
 
 depth = -abs(y);

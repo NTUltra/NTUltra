@@ -102,7 +102,7 @@ if Player.area == 100 && Player.crownvisits > 1
 		}
 	}
 }
-if instance_exists(Player) && Player.skill_got[26]
+if instance_exists(Player) && Player.skill_got[26] && Player.area != 138
 {
 	var dis = 99999;
 	var randir = random(360);

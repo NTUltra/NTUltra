@@ -91,6 +91,29 @@ function scrPopulate() {
                 sprite_index = sprCoral;
             }
 		}
+		else if spawnarea == 138
+		{
+			var msk = mask_index;
+			mask_index = sprCloud;
+			TopDecals(CloudTopDecal);
+			var randis;
+			var randir;
+			var tries = 4;
+			do {
+				randis = random_range(128,320);
+				randir = random(360);
+				tries -= 1;
+			} until (!place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),Floor)
+					&& !place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),TopDecal)
+					|| tries < 0
+					)
+			if !place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),Floor)
+			&& !place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),TopDecal)
+			{
+				instance_create(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),CloudTopDecal)
+			}
+			mask_index = msk;
+		}
         else if spawnarea = 9 {
             if instance_exists(GenCont) {
                 if !place_free(x - 32, y) and!place_free(x - 64, y) and place_free(x, y) and random(5) < 1 {

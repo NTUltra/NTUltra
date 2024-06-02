@@ -58,10 +58,11 @@ case 134:sprite_index = sprDebris134; break;
 case 135:sprite_index = sprDebris135; break;
 case 136:sprite_index = sprDebris136; break;
 case 137:sprite_index = sprDebris137; break;
+case 138:sprite_index = sprDebris138; break;
 default: sprite_index = sprDebris0; break;
 }
 image_speed = 0
-image_index = random(4)
+image_index = irandom(image_number-1)
 image_angle = random(360)
 mySize = 1
 motion_add(random(360),7+random(2))

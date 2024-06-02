@@ -8,7 +8,6 @@ function scrDrop(itemdrop, weapondrop) {
 	}
 	if weapondrop > 0// && weapondrop < 100
 	{
-		debug(instance_number(WepPickup));
 		if instance_number(WepPickup) > 20
 			weapondrop = 0;
 		else if instance_number(WepPickup) > 5
@@ -346,8 +345,6 @@ function scrDrop(itemdrop, weapondrop) {
 	else
 		var ran = weaponDropChance[weaponDropChanceIndex];
 	var wepdropBuff = 1 + ((dropRateBuff - 1) * 0.2);
-	debug("wepdropbuff: ", wepdropBuff);
-	debug("WEAPONDROPRATE: ", weapondrop*wepdropBuff);
 	if ran < min(weapondrop*wepdropBuff, 100)
 	{
 		//drop weps
