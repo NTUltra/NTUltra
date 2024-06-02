@@ -2016,12 +2016,12 @@ if (instance_exists(enemy))
 	var homeBoost = 0;
 
 	if (ultra_got[42])//HUNTER ULTRA B Homing projectiles
-		homeBoost += 2.75;
+		homeBoost += 3;
 	if skill_got[19]
 	{
-		homeBoost += 1;
+		homeBoost += 1.4;
 		if race == 25
-			homeBoost += 0.25;
+			homeBoost += 0.35;
 	}
 	///homing projectiles mod
 	var modHomeBoost = 0.24;

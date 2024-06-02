@@ -4,7 +4,7 @@ meleedamage = 10
 mySize = 3
 scrBossHealthBuff();
 event_inherited()
-
+venomous = true;
 alarm[10] = 0;//Can be on no floor
 snd_hurt = sndSandWormHurt;
 snd_dead = sndSandWormDead;

@@ -33,7 +33,7 @@ function scrDrop(itemdrop, weapondrop) {
 			mh = Player.maxarmour
 			h = Player.armour;
 			itemdrop *= 0.95;
-			canHealth *= 0.9;
+			canHealth *= 0.5;
 		}
 		if instance_exists(WantHealth)
 		{

@@ -3077,17 +3077,17 @@ function scrWeapons() {
 	wep_type[274] = 3
 	wep_auto[274] = 0
 	wep_load[274] = 15
-	wep_cost[274] = 1
+	wep_cost[274] = 1.5
 	wep_sprt[274] = sprNewInfuser
 	wep_area[274] = 5
-	wep_text[274] = "sucks out the blood"
+	wep_text[274] = "boil over blood"
 	wep_swap[274] = sndSwapBow
 	wep_rad[274] = 0;
 
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 70
+	wep_load[275] = 75
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 19
@@ -3408,7 +3408,7 @@ function scrWeapons() {
 	wep_type[304] = 3
 	wep_auto[304] = 0
 	wep_load[304] = 16
-	wep_cost[304] = 1
+	wep_cost[304] = 2
 	wep_sprt[304] = sprNewUltraInfuser
 	wep_area[304] = 20
 	wep_text[304] = "sucks out the rads"
@@ -3518,7 +3518,7 @@ function scrWeapons() {
 	wep_type[313] = 3
 	wep_auto[313] = 1
 	wep_load[313] = 4
-	wep_cost[313] = 2
+	wep_cost[313] = 3
 	wep_sprt[313] = sprHyperInfuser
 	wep_area[313] = 18
 	wep_text[313] = "shoot through walls"
@@ -4657,10 +4657,10 @@ function scrWeapons() {
 	wep_name[413] = "LEACHER"
 	wep_type[413] = 3
 	wep_auto[413] = 0
-	wep_load[413] = 20
+	wep_load[413] = 19
 	wep_cost[413] = 2
 	wep_sprt[413] = sprLeacherBow
-	wep_area[413] = 11
+	wep_area[413] = 13
 	wep_text[413] = "vampire"
 	wep_swap[413] = sndSwapBow
 	wep_rad[413] = 0;
@@ -4770,10 +4770,10 @@ function scrWeapons() {
 	wep_type[423] = 3
 	wep_auto[423] = 1
 	wep_load[423] = 5
-	wep_cost[423] = 1
+	wep_cost[423] = 2
 	wep_sprt[423] = sprInfester
 	wep_area[423] = 16
-	wep_text[423] = ""
+	wep_text[423] = "termite infested wood"
 	wep_swap[423] = sndSwapBow
 	wep_rad[423] = 0;
 	
@@ -8462,7 +8462,7 @@ function scrWeapons() {
 	wep_load[756] = 5
 	wep_cost[756] = 1
 	wep_sprt[756] = sprHeavyJackHammer
-	wep_area[756] = 10
+	wep_area[756] = 11
 	wep_text[756] = "doing the heavy work"
 	wep_swap[756] = sndSwapMotorized
 	wep_rad[756] = 0;
@@ -8471,7 +8471,7 @@ function scrWeapons() {
 	wep_type[757] = 3
 	wep_auto[757] = 2
 	wep_load[757] = 13
-	wep_cost[757] = 3.5
+	wep_cost[757] = 4
 	wep_sprt[757] = sprNailGun
 	wep_area[757] = 1
 	wep_text[757] = "nail them to the wall"
@@ -8481,7 +8481,7 @@ function scrWeapons() {
 	wep_name[758] = "NAIL MACHINEGUN"
 	wep_type[758] = 3
 	wep_auto[758] = 1
-	wep_load[758] = 2
+	wep_load[758] = 2.5
 	wep_cost[758] = 1
 	wep_sprt[758] = sprNailMachineGun
 	wep_area[758] = 1
@@ -8539,7 +8539,7 @@ function scrWeapons() {
 	wep_load[763] = 0.5
 	wep_cost[763] = 1
 	wep_sprt[763] = sprBloodMinigun
-	wep_area[763] = 5
+	wep_area[763] = 6
 	wep_text[763] = "i'm bleeding out here!"
 	wep_swap[763] = sndSwapMachinegun
 	wep_rad[763] = 0;
@@ -8656,6 +8656,72 @@ function scrWeapons() {
 	wep_text[773] = "very proud very wunderbar"
 	wep_swap[773] = sndSwapEnergy
 	wep_rad[773] = 0;
+	
+	wep_name[774] = "SUPER LEACHER"
+	wep_type[774] = 3
+	wep_auto[774] = 0
+	wep_load[774] = 28
+	wep_cost[774] = 10
+	wep_sprt[774] = sprSuperCrossbow
+	wep_area[774] = 16
+	wep_text[774] = "sucks out the blood"
+	wep_swap[774] = sndSwapBow
+	wep_rad[774] = 0;
+	
+	wep_name[775] = "AUTO LEACHER"
+	wep_type[775] = 3
+	wep_auto[775] = 1
+	wep_load[775] = 5
+	wep_cost[775] = 2
+	wep_sprt[775] = sprAutoCrossbow
+	wep_area[775] = 16
+	wep_text[775] = "how does the blood transfer to you?"
+	wep_swap[775] = sndSwapBow
+	wep_rad[775] = 0;
+	
+	wep_name[776] = "SUPER INFUSER"
+	wep_type[776] = 3
+	wep_auto[776] = 0
+	wep_load[776] = 29
+	wep_cost[776] = 7.5
+	wep_sprt[776] = sprSuperCrossbow
+	wep_area[776] = 12
+	wep_text[776] = "sucks out the blood"
+	wep_swap[776] = sndSwapBow
+	wep_rad[776] = 0;
+	
+	wep_name[777] = "AUTO INFUSER"
+	wep_type[777] = 3
+	wep_auto[777] = 1
+	wep_load[777] = 7
+	wep_cost[777] = 1.5
+	wep_sprt[777] = sprAutoCrossbow
+	wep_area[777] = 12
+	wep_text[777] = "how does the blood transfer to you?"
+	wep_swap[777] = sndSwapBow
+	wep_rad[777] = 0;
+	
+	wep_name[778] = "SUPER INFESTER"
+	wep_type[778] = 3
+	wep_auto[778] = 1
+	wep_load[778] = 10
+	wep_cost[778] = 10
+	wep_sprt[778] = sprInfester
+	wep_area[778] = 26
+	wep_text[778] = "piles of wood infested with termites"
+	wep_swap[778] = sndSwapBow
+	wep_rad[778] = 0;
+	
+	wep_name[779] = "FLAME BAZOOKA"
+	wep_type[779] = 4
+	wep_auto[779] = 1
+	wep_load[779] = 18
+	wep_cost[779] = 2
+	wep_sprt[779] = sprBazooka
+	wep_area[779] = 11
+	wep_text[779] = "eagle eyes significantly increases rocket targeting"
+	wep_swap[779] = sndSwapExplosive
+	wep_rad[779] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

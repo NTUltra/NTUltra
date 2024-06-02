@@ -12,7 +12,10 @@ function scrCrowns() {
 	crown_name[2] = "[CROWN OF LIFE]"
 	//crown_text[2] = "RESET LIFE TO MAX HP# AT THE END OF EACH LEVEL#NO HP DROPS"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#RESET <gb>ARMOUR<gb> TO MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
+	{
+		//crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#RESET <gb>ARMOUR<gb> TO MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
+		crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#REGAIN HALF <gb>ARMOUR<gb> MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
+	}
 	else
 		crown_text[2] = "NO <r>HEALTH<r> DROPS#AT THE END OF EACH AREA#RESET <r>HP<r> TO <r>MAX HP<r>#MORE <r>HEALTH<r> <w>CHESTS<w>"
 		//#IF YOU ALREADY HAVE <r>MAX HP<r>#<w>OVERHEAL<w> 1<r>HP<r>"

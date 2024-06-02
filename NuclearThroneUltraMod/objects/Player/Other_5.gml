@@ -160,7 +160,10 @@ if scrIsCrown(2) && canHeal
 {
 	if ultra_got[62] && altUltra //Living armour
 	{
-		armour = maxarmour;
+		armour += maxarmour*0.5;
+		if armour > maxarmour
+			armour = maxarmour;
+		//armour = maxarmour;
 	}
 	else
 	{
@@ -220,7 +223,9 @@ if scrIsCrown(22)//Crown of luck
 	{
 		if ultra_got[62] && altUltra //Living armour
 		{
-			armour = max(1,round(maxarmour*0.5));
+			armour += maxarmour*0.25;
+			if armour > maxarmour
+				armour = maxarmour;
 		}
 		else
 		{

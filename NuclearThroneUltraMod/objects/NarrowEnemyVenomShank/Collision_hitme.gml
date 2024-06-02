@@ -18,7 +18,7 @@ if other.team != team && !hit && other.sprite_index != other.spr_hurt
 			
 		with instance_create(x,y,EnemyVenom)
 		{
-			team = other.team;
+			team = 2;
 			owner = other.id;
 			if other.object_index == Player
 			{

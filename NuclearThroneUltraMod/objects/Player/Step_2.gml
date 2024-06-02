@@ -778,7 +778,7 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(100);
 		my_health = max(1,round(maxhealth*0.5));
 		if race == 25
-			my_health += 3;
+			my_health = maxhealth;
 		lastWishPrevent = false;
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMutLastWish);

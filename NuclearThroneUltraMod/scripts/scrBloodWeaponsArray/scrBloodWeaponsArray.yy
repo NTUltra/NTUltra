@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"scrLightningWaponsArray",
+  "%Name":"scrBloodWeaponsArray",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrLightningWaponsArray",
+  "name":"scrBloodWeaponsArray",
   "parent":{
     "name":"Player Character",
     "path":"folders/Scripts/Player Character.yy",

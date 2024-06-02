@@ -6599,7 +6599,7 @@ function scrFire2(hasTailNow) {
 	//LEACHER
 	case 413:
 
-	snd_play_fire(sndCrossbow)
+	snd_play_fire(sndLeacher)
 
 	with instance_create(x,y,LeacherBolt)
 	{motion_add(aimDirection,24)
@@ -17384,6 +17384,178 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 20
 	wkick = -6
+
+	break;
+	
+	//SUPER LEACHER
+	case 774:
+
+	snd_play_fire(sndSuperLeacher)
+
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection+5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection-5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection+10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection-10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,11);
+		motion_add(aimDirection+180,2)
+	}
+
+	BackCont.viewx2 += lengthdir_x(55,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(55,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 15
+	wkick = 8
+
+	break;
+	
+	//AUTO LEACHER
+	case 775:
+
+	snd_play_fire(sndLeacher)
+
+	with instance_create(x,y,LeacherBolt)
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 4
+
+	break;
+	
+	//SUPER INFUSER
+	case 776:
+
+	snd_play_fire(sndSuperCrossbow)
+
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection+5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection-5*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection+10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection-10*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,11);
+		motion_add(aimDirection+180,2)
+	}
+
+	BackCont.viewx2 += lengthdir_x(55,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(55,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 15
+	wkick = 8
+
+	break;
+	
+	//AUTO INFUSER
+	case 777:
+
+	snd_play_fire(sndCrossbow)
+
+	with instance_create(x,y,InfuseBolt)
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 4
+
+	break;
+	
+	//SUPER INFESTER
+	case 778:
+
+	snd_play_fire(sndSuperCrossbow)
+
+	with instance_create(x,y,InfestBolt)
+	{motion_add(aimDirection,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfestBolt)
+	{motion_add(aimDirection+4*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfestBolt)
+	{motion_add(aimDirection-4*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfestBolt)
+	{motion_add(aimDirection+8*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,InfestBolt)
+	{motion_add(aimDirection-8*other.accuracy,24)
+	image_angle = direction
+	team = other.team}
+
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,13);
+		motion_add(aimDirection+180,2)
+	}
+
+	BackCont.viewx2 += lengthdir_x(65,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(65,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 15
+	wkick = 8
+
+	break;
+	
+	//FLAME BAZOOKA
+	case 779:
+
+	snd_play_fire(sndRocket)
+
+	with instance_create(x,y,FireRocket)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,4)
+	image_angle = direction
+	team = other.team}
+	if !skill_got[2]
+	{
+		motion_add(aimDirection + 180,1)
+		scrMoveContactSolid(aimDirection + 180,1)
+	}
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 10
 
 	break;
 	

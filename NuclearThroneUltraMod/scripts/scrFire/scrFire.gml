@@ -501,7 +501,7 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndCrossbow)
 
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection+(random(14)-7)*other.accuracy,24)
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,24)
 	image_angle = direction
 	team = other.team}
 

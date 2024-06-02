@@ -37,7 +37,7 @@ function scrSkills() {
 	skill_text[1] = "+4 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[1] = "+2 <gb>MAX ARMOUR<gb>"
+		skill_text[1] = "+4 <gb>MAX ARMOUR<gb>"
 	}
 	skill_detail[1] = skill_text[1];
 	skill_tips[1] = "thick skin"
@@ -294,7 +294,7 @@ function scrSkills() {
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
-	skill_bons[18] = "GET FULL AMMO#+3HP WHEN LETHAL IS PREVENTED";
+	skill_bons[18] = "GET FULL AMMO#HULL HP WHEN LETHAL IS PREVENTED";
 
 	skill_name[19] = "EAGLE EYES"
 	skill_text[19] = "BETTER <w>ACCURACY<w>";
@@ -537,7 +537,7 @@ function scrSkills() {
 	}
 	skill_tips[41] = "conduit of power"
 	skill_msnd[41] =  sndMutNervesOfSteel;
-	skill_bons[41] = "REPLACE ONLY 1 HEALTH#-10% RELOAD BOOST"
+	skill_bons[41] = "REPLACE ONLY 1 HEALTH#SLIGHTLY LESS RELOAD SPEED BOOST#(34%, 14% AND 18% RELOAD SPEED)"
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"

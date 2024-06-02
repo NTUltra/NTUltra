@@ -1,5 +1,5 @@
 function scrLightningWeapons(targetWep) {
-	if array_contains(scrLightningWaponsArray(1, false),targetWep)
+	if array_contains(scrLightningWeaponsArray(1, false),targetWep)
 		return true;
 	else
 		return false

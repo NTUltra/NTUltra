@@ -701,8 +701,8 @@ if (selected && visible &&
 				altUltra = true;
 				//maxhealth = round(maxhealth*0.5);
 				scrUltras(true, false);
-				maxarmour += round(maxhealth*0.5);
-				armour += round(maxhealth*0.5);
+				maxarmour += maxhealth;//round(maxhealth*0.5);
+				armour += maxhealth//round(maxhealth*0.5);
 				maxhealth = 1;
 				my_health = 1;
 				prevhealth = 1;

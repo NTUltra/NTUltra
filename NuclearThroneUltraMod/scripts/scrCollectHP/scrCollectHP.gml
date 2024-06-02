@@ -7,8 +7,8 @@ function scrCollectHP(num = 2){
 	{
 		num = 1;
 	
-		if Player.skill_got[9]
-			num = 2;
+		//if Player.skill_got[9]
+		//	num = 2;
 		if UberCont.opt_ammoicon
 		{
 			dir = instance_create(x,y,PopupText)

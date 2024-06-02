@@ -96,7 +96,23 @@ function scrContactDamageToEnemy(hitEnemy){
 									DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
 							}
 							else
+							{
 								DealDamage(hitEnemy.meleedamage,false,false,false)
+								if hitEnemy.venomous {
+									with instance_create(x,y,EnemyVenom) {
+										team = hitEnemy.team;
+										owner = other.id;
+										if other.object_index == Player
+										{
+											with GameRender
+											{
+												venomized = true;	
+											}
+											venomized = true;
+										}	
+									}
+								}
+							}
 					        motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)
         
 					        with hitEnemy

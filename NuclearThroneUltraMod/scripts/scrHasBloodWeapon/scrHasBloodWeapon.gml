@@ -3,13 +3,15 @@
 ///@param
 function scrHasBloodWeapon(){
 	with Player {
-		return wep == 29 || wep == 60 || wep == 61 || wep == 83
+		return array_contains(scrBloodWeaponsArray(1,false),wep) || array_contains(scrBloodWeaponsArray(1,false),bwep) || array_contains(scrBloodWeaponsArray(1,false),cwep)
+		/*return wep == 29 || wep == 60 || wep == 61 || wep == 83
 		|| wep == 84 || wep == 109 || wep == 132 || wep == 142
 		|| wep == 164 || wep == 327 || wep == 415 || wep == 425 || wep == 426
 		|| wep == 434 || wep == 538 || wep == 539 || wep == 547 || wep == 548
 		|| wep == 549 || wep == 599 || wep == 609 || wep == 548 || wep == 548
 		|| wep == 612 || wep == 499 || wep == 626 || wep == 643 || wep == 644
 		|| wep == 645 || wep = 658 || wep == 717 || wep == 718 || wep == 413 || wep == 274 || wep == 304
+		|| wep == 774 || wep == 749 || wep == 763
 		
 		|| bwep == 29 || bwep == 60 || bwep == 61 || bwep == 83
 		|| bwep == 84 || bwep == 109 || bwep == 132 || bwep == 142
@@ -26,7 +28,7 @@ function scrHasBloodWeapon(){
 		|| cwep == 549 || cwep == 599 || cwep == 609 || cwep == 548 || cwep == 548
 		|| cwep == 612 || cwep == 499 || cwep == 626 || cwep == 643 || cwep == 644
 		|| cwep == 645 || cwep == 658 || cwep == 717 || cwep == 718 || cwep == 413 || cwep == 274 || cwep == 304
-		
+		*/
 	}
 	return false;
 }

@@ -1,7 +1,7 @@
-///scrLightningWaponsArray();
+///scrLightningWeaponsArray();
 // /@description
 ///@param
-function scrLightningWaponsArray(loops, meleesOnly = false){
+function scrLightningWeaponsArray(loops, meleesOnly = false){
 	if loops > 0
 	{
 		if meleesOnly

@@ -1,6 +1,7 @@
 /// @description Invurrrtut
 // Inherit the parent event
 event_inherited();
+meleedamage = 20;
 maxhealth = 500;
 raddrop = 54;
 scrBossHealthBuff();
