@@ -6,4 +6,5 @@ event_perform(ev_alarm,0);
 time = random(100);
 xsin = choose(true,false);
 ysin = choose(true,false);
-moveSpeed = random_range(0.002,0.004);
+moveSpeed = random_range(0.0025,0.0045);
+image_alpha = 0.8;

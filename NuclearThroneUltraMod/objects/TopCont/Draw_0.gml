@@ -52,7 +52,7 @@ if instance_exists(Spiral)
 		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
 
 with TopDecal
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
 
 with WaterMine
 draw_self();
@@ -228,7 +228,6 @@ with Statue
 {
 	draw_self();
 }
-with Notice{draw_self();}
 with EuphoriaShield{draw_self();}
 with EuphoriaShieldEnd{draw_self();}
 with CampChar
@@ -410,7 +409,16 @@ with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
+with CloudKnifer
+{
+	if depth < 0
+		draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,image_alpha)
 
+}
+with CloudShooter
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,1)
+}
 with CourtyardTankShield
 {
 	if visible
@@ -607,3 +615,4 @@ with SpikeTrap
 	if image_index == 1
 		draw_self();
 }
+with Notice{draw_self();}

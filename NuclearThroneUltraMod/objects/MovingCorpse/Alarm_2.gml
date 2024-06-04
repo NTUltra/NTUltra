@@ -2,6 +2,7 @@
 if speed > 2
 {
 	alarm[2] = 2;
+	if collision_point(x,y,Floor,false,false)
 	scrAddToBGFXLayer(
 		sprSkidMarkBlood,
 		irandom(sprite_get_number(sprSkidMarkBlood)),

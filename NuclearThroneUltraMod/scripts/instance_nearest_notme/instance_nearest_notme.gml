@@ -1,10 +1,10 @@
-function instance_nearest_notme() {
+function instance_nearest_notme(xxx, yyy, instance) {
 	//instance_nearest_notme(x, y, obj)
 	{
 	var xx, yy, obj, nearest;
-	xx = argument[0];
-	yy = argument[1];
-	obj = argument[2];
+	xx = xxx;
+	yy = yyy;
+	obj = instance;
 	nearest = noone;
 	dist = -1;
 	for (ii=0; ii<instance_number(obj); ii+=1) {

@@ -8,6 +8,8 @@ if other.team != 0 {
 	{
 		scrForcePosition60fps();	
 	}*/
+	if other.object_index == Player && other.skill_got[2]
+		exit;
 	if object_index == WallBot || object_index == InvertedWallBot
 	|| object_index == CursedWallBot || object_index == GoldenWallBot
 	|| object_index == UltraWallBot

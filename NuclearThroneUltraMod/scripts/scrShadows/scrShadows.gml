@@ -92,6 +92,11 @@ function scrShadows() {
 	draw_sprite(shd16,0,x-vx,y-vy+10)
 	with SquareBat
 	draw_sprite(shd32,0,x-vx,y-vy+6)
+	with CloudShooter
+	{
+		if place_meeting(x,y,Floor)
+			draw_sprite(shd48,0,x-vx,y-vy+12)
+	}
 	with CourtyardGuardian
 	draw_sprite(shd16,0,x-vx,y-vy+10)
 	with InvertedCrownGlutton

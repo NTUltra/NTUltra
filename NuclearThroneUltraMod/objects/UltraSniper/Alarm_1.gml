@@ -32,11 +32,13 @@ if gonnafire = 0
 						alarm[2] = tellTime;
 						with UltraSniper
 						{
-							alarm[1] += actTime*2 + tellTime;
+							if alarm[1]  < actTime * 4
+								alarm[1] += actTime*2 + tellTime;
 						}
 						with UltraCrystal
 						{
-							alarm[1] += actTime*2;
+							if alarm[1]  < actTime * 4
+								alarm[1] += actTime*2;
 						}
 						gonnafire = 1
 					}

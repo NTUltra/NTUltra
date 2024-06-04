@@ -10,7 +10,7 @@ with instance_create(x,y,HeavyFlame)
 	motion_add(random(360),2);
 	motion_add(other.direction+180,1);
 }
-var n = instance_nearest(x,y,enemy)
+var n = instance_nearest(x + (hspeed*2),y + (vspeed * 2),enemy)
 if n != noone && n.team != team && !collision_line(x,y,n.x,n.y,Wall,false,false)
 {
 	motion_add(point_direction(x,y,n.x,n.y),5/accuracy);

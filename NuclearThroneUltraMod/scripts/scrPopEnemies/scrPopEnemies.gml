@@ -465,6 +465,24 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	//CLOUDLAND
+    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 1.8) {
+		if loops > 0 {
+			if random(35) < 1
+				instance_create(x + 16, y + 16, GraveyardSniper)
+	        else if random(4) < 1
+				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,Raven,JungleFly))
+	        else {
+	            instance_create(x + 16, y + 16, choose(Bandit,CloudKnifer,CloudKnifer))
+	        }
+		} else {
+	        if random(4) < 1
+				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter))
+	        else {
+	            instance_create(x + 16, y + 16, choose(Bandit,Raven, CloudShooter,CloudKnifer))
+	        }
+		}
+    }
     //CAVES
     if spawnarea = 4  && (subarea == 1 || random(2) < 1){
 		var crystal = LaserCrystal

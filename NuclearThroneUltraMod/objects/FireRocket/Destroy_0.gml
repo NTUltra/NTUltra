@@ -19,6 +19,8 @@ if (alarm[11] < 1 || GetPlayerUltramod() != ultramods.rocketBolt)
 		{
 			with instance_create(x,y,HeavyFlame)
 			{
+				mask_index = mskPickupThroughWall;
+				alarm[5] = 2;
 				motion_add(ang,random(2)+4)
 				scrCopyWeaponMod(other);
 				team = other.team

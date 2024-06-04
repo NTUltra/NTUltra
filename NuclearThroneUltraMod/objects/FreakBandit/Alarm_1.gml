@@ -18,6 +18,7 @@ if target != noone
 					speed = 0;
 					walk = 3;
 					direction = gunangle;
+					snd_play(sndWarning);
 					instance_create(x-5,y,Notice);
 					instance_create(x,y,Notice);
 					instance_create(x+5,y,Notice);

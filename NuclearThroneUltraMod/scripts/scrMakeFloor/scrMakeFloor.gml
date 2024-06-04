@@ -484,6 +484,9 @@ function scrMakeFloor(limiter) {
 	//Factory
 	if area == 138{
 		instance_create(x,y,Floor);
+		instance_create(x+lengthdir_x(32,direction+90),y+lengthdir_y(32,direction+90),Floor)
+		instance_create(x+lengthdir_x(32,direction-90),y+lengthdir_y(32,direction-90),Floor)
+		/*
 		instance_create(x+32,y,Floor)
 		instance_create(x-32,y,Floor)
 		instance_create(x,y + 32,Floor)
@@ -491,7 +494,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x + 32,y + 32,Floor)
 		instance_create(x - 32,y - 32,Floor)
 		instance_create(x - 32,y + 32,Floor)
-		instance_create(x + 32,y - 32,Floor)
+		instance_create(x + 32,y - 32,Floor)*/
 	}
 	//savanna
 	if area = 10 || area == 121{ 
