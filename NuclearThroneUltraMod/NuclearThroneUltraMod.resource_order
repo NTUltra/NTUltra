@@ -4581,6 +4581,7 @@
     {"name":"sprCigarette","order":12,"path":"sprites/sprCigarette/sprCigarette.yy",},
     {"name":"sprCloud","order":9,"path":"sprites/sprCloud/sprCloud.yy",},
     {"name":"sprCloudBoss","order":20,"path":"sprites/sprCloudBoss/sprCloudBoss.yy",},
+    {"name":"sprCloudBossH","order":21,"path":"sprites/sprCloudBossH/sprCloudBossH.yy",},
     {"name":"sprCloudBossPlateau","order":19,"path":"sprites/sprCloudBossPlateau/sprCloudBossPlateau.yy",},
     {"name":"sprCloudEnemiestryout","order":1,"path":"sprites/sprCloudEnemiestryout/sprCloudEnemiestryout.yy",},
     {"name":"sprCloudFlyer","order":12,"path":"sprites/sprCloudFlyer/sprCloudFlyer.yy",},

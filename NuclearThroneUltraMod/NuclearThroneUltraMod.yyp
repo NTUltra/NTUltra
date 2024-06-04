@@ -4883,6 +4883,7 @@
     {"id":{"name":"sprCigarette","path":"sprites/sprCigarette/sprCigarette.yy",},},
     {"id":{"name":"sprCloud","path":"sprites/sprCloud/sprCloud.yy",},},
     {"id":{"name":"sprCloudBoss","path":"sprites/sprCloudBoss/sprCloudBoss.yy",},},
+    {"id":{"name":"sprCloudBossH","path":"sprites/sprCloudBossH/sprCloudBossH.yy",},},
     {"id":{"name":"sprCloudBossPlateau","path":"sprites/sprCloudBossPlateau/sprCloudBossPlateau.yy",},},
     {"id":{"name":"sprCloudEnemiestryout","path":"sprites/sprCloudEnemiestryout/sprCloudEnemiestryout.yy",},},
     {"id":{"name":"sprCloudFlyer","path":"sprites/sprCloudFlyer/sprCloudFlyer.yy",},},
