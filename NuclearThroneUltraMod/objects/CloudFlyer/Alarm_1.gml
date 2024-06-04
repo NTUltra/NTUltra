@@ -37,6 +37,11 @@ if target != noone {
 			else if ran < 40
 			{
 				event_user(1);
+				if ran < 45
+				{
+					motion_add(random(360), acc)
+					walk = actTime * 2;
+				}
 			}
 			else if ran < 70
 			{

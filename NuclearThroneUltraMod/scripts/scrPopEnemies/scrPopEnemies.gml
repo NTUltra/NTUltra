@@ -1446,7 +1446,7 @@ function scrPopEnemies() {
     if spawnarea == 9 && subarea != 3 {
 		if loops > 0 {
 			if styleb = 1 && random(8) < 2 {
-	            instance_create(x + 16, y + 16, choose(GuardianDog, GhostGuardian,PalaceGuardian))
+	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian,ExploGuardian))
 	        } else {
 	            var ran = random(100);
 	            if ran > 75 {
@@ -1461,7 +1461,7 @@ function scrPopEnemies() {
 	        }
 		} else {
 			if styleb = 1 && random(8) < 2 {
-	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian))
+	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian,ExploGuardian))
 	        } else {
 	            var ran = random(100);
 

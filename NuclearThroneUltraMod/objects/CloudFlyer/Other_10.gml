@@ -1,5 +1,6 @@
 /// @description Fire
-snd_play(sndLaserCannonCharge)
+//snd_play(sndLaserCannonCharge);
+snd_play(sndLaserCrystalCharge)
 walk = 0;
 speed = 0;
 sprite_index = spr_fire;

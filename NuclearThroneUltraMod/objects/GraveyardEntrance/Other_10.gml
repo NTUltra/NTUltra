@@ -64,5 +64,4 @@ if my_health > 0
 			prevArea = 10;
 		}
 	}
-	
 }

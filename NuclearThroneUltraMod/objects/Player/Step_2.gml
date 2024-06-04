@@ -865,6 +865,7 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 	}
 	if (race == 26 || copyPassive == 26) && humphrySkill > 0//Humphry
 	{
+		humphrySkill -= 10;
 		if skill_got[5]
 			humphrySkill *= 0.75;
 		else

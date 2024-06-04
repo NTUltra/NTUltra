@@ -1844,7 +1844,7 @@ function scrWeapons() {
 	wep_type[165] = 3
 	wep_auto[165] = 0
 	wep_load[165] = 29
-	wep_cost[165] = 2
+	wep_cost[165] = 2.5
 	wep_sprt[165] = sprExplosiveBow
 	wep_area[165] = 5
 	wep_text[165] = "the year of the bow"
@@ -2802,7 +2802,7 @@ function scrWeapons() {
 	wep_type[250] = 3
 	wep_auto[250] = 1
 	wep_load[250] = 11
-	wep_cost[250] = 2
+	wep_cost[250] = 2.5
 	wep_sprt[250] = sprAutoExploBow
 	wep_area[250] = 9
 	wep_text[250] = ""
@@ -3133,7 +3133,7 @@ function scrWeapons() {
 	wep_type[279] = 3
 	wep_auto[279] = 0
 	wep_load[279] = 28
-	wep_cost[279] = 2
+	wep_cost[279] = 2.5
 	wep_sprt[279] = sprGoldenExplosiveBow
 	wep_area[279] = 20
 	wep_text[279] = "golden explosives"

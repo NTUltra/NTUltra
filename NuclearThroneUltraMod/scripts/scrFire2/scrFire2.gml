@@ -5020,7 +5020,7 @@ function scrFire2(hasTailNow) {
 			with instance_create(xx,yy,Smoke)
 			motion_add(random(360),1+random(3))
 		}
-		if race == 18 || (place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, Wall)) {
+		if race == 18 || (place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and not place_meeting(UberCont.mouse__x, UberCont.mouse__y, WallHitMe)) {
 			x = xx;
 			y = yy;
 		}
@@ -11746,7 +11746,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,SuperLaserCannon)
 	{
 	creator = other.id
-	ammo = 8+(Player.skill_got[17]+other.betterlaserbrain)*2
+	ammo = 8+(Player.skill_got[17]+other.betterlaserbrain)
 	time = 1
 	team = other.team
 	alarm[0] = 10//15 originally

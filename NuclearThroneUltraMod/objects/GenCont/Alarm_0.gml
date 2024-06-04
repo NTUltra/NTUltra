@@ -53,21 +53,55 @@ if Player.area == 125 && Player.loops > 0
 if Player.area == 138
 {
 	myWall = WallHitMe;
+	with Floor
+	{
+		mask_index = mskFloorCloud;	
+	}
+	with Floor
+	{
+		if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
+		if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
+		if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+		if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
+		if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
+		if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)
+		if !position_meeting(x-16,y,Floor) instance_create(x-16,y,myWall)
+		if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,myWall)
+		//BOTTOM WALL:
+		if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,myWall)
+		//if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
+		//if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
+		if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
+		
+		//Extra low
+		if !position_meeting(x-16,y+48,Floor) instance_create(x-16,y+48,myWall)
+		//if !position_meeting(x,y+48,Floor) instance_create(x,y+48,myWall)
+		//if !position_meeting(x+16,y+48,Floor) instance_create(x+16,y+48,myWall)
+		if !position_meeting(x+32,y+48,Floor) instance_create(x+32,y+48,myWall)
+		//Even lower
+		if !position_meeting(x-16,y+64,Floor) instance_create(x-16,y+64,myWall)
+		if !position_meeting(x,y+64,Floor) instance_create(x,y+64,myWall)
+		if !position_meeting(x+16,y+64,Floor) instance_create(x+16,y+64,myWall)
+		if !position_meeting(x+32,y+64,Floor) instance_create(x+32,y+64,myWall)
+	}
 }
-with Floor
+else
 {
-if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
-if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
-if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
-if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
-if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
-if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)
-if !position_meeting(x-16,y,Floor) instance_create(x-16,y,myWall)
-if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,myWall)
-if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,myWall)
-if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
-if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
-if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
+	with Floor
+	{
+		if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
+		if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
+		if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+		if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
+		if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
+		if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)
+		if !position_meeting(x-16,y,Floor) instance_create(x-16,y,myWall)
+		if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,myWall)
+		if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,myWall)
+		if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
+		if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
+		if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
+	}
 }
 if Player.area == 138
 {

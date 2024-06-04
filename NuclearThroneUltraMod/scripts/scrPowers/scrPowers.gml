@@ -971,7 +971,7 @@ function scrPowers(raceOverwrite = -1) {
 			repeat(5){
 			with instance_create(x,y,Smoke)
 			motion_add(random(360),1+random(3))}
-			var noWalls = !instance_exists(WallHitMe)
+			var noWalls = !instance_exists(Wall)
 			if ultra_got[59] && altUltra
 			{
 				var step = 18;

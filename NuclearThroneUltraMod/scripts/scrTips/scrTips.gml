@@ -367,9 +367,13 @@ function scrTips() {
 	if Player.area = 134
 	tip = choose("ultra factory","supreme technology","top of the line","ultra robots");
 	if Player.area = 135//HQ
-	tip = choose("this should not be here","not yet","end this");
+	tip = choose("become the captain","nono popo","end this","stop the chase","end the popo");
 	if Player.area = 136//Ultra scrapyard
 	tip = choose("get an ultra weapon here","its green","irradiated beyond belief","radiation");
+	if Player.area = 137//VOID
+	tip = choose("void","nothing","empty","the good? the bad and the ugly","...","essence","space in between worlds","nothingness","darkness","the unknown","not of our worlds");
+	if Player.area = 137//CLOUDLAND
+	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!");
 	}
 
 

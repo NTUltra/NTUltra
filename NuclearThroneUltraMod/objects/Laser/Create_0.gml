@@ -8,10 +8,14 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.4//1.2
+alarm[2] = 1;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
-		image_yscale = 1.9+(Player.betterlaserbrain*0.2)
+	{
+		alarm[2] = 2;
+		image_yscale = 1.8+(Player.betterlaserbrain*0.2)
+	}
 }
 aimed=false;
 img = 0
@@ -25,4 +29,3 @@ canBeMoved = false;
 isLaser = true;
 canSmoke = true;
 defaultPierce = 32;
-alarm[2] = 1;
