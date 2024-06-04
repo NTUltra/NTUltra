@@ -1,11 +1,21 @@
 /// @description End piece guaranteed
 if instance_exists(Player) && !endPieceSpawned
 {
-	
-//End piece
 	var area = Player.area;
 	var subarea = Player.subarea;
-	if area = 7||area=104||area == 108
+	//End piece
+	if area == 138 && myFloors > 6
+	{
+		instance_create(x+32,y,Floor)
+		instance_create(x+32,y+32,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x,y-32,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)	
+	}
+	else if area = 7||area=104||area == 108
 	if subarea=3||area=104 {//Volcanic boss battleground
 		var fc = 0;
 		with Floor{

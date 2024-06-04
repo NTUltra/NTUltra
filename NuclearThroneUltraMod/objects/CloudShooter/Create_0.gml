@@ -1,5 +1,5 @@
 raddrop = 14
-maxhealth = 50
+maxhealth = 60
 meleedamage = 3
 mySize = 1
 
@@ -18,10 +18,10 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 25;
+actTime = 26;
 maxRange = 350;
 minRange = 96;
-originRange = 200;
+originRange = 100;
 acc = 1;
 maxSpeed = 2;
 direction = random(360);

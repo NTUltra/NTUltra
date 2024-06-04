@@ -514,7 +514,7 @@ if !instance_exists(LevCont) and visible = 1
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,CloudKnifer);
+			instance_create(x+32,y,CloudFlyer);
 			//instance_create(x+32,y,FreakBandit);
 
 			/*

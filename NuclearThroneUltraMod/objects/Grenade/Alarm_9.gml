@@ -1,6 +1,6 @@
 /// @description Fall off the map
 alarm[9] = 1;
-if !collision_point(x,y,Floor,false,false)
+if !collision_point(x,y,Floor,false,false) && !collision_point(x,y,BackFloor,false,false)
 {
 	image_xscale -= 0.1;
 	image_yscale -= 0.1;

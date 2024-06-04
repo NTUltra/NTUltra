@@ -15,6 +15,7 @@ var n = instance_nearest_notme(x,y,CloudKnifer);
 if n != noone && point_distance(x,y,n.x,n.y) < 64
 {	
 	with n {
-		alarm[1] += actTime;
+		if alarm[1] < actTime
+			alarm[1] += actTime;
 	}
 }

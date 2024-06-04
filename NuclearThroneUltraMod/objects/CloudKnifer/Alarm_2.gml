@@ -16,3 +16,4 @@ image_index = 0;
 image_alpha = targetAlpha;
 depth = -1;
 alarm[3] = (image_number/image_speed) + 1;
+walk = actTime;

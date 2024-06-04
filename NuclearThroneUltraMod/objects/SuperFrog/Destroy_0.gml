@@ -10,18 +10,18 @@ if !sleeping
 	var angStep = 360/20
 	repeat(20)
 	{
-	dir += angStep
-	with instance_create(x,y,EnemyBullet2)
-	{
-	motion_add(dir,4)
-	image_angle = direction
-	team = other.team
-	}
-	}
-	with instance_create(x,y,AcidStreak)
-	{
-	motion_add(dir,8)
-	image_angle = direction
+		dir += angStep
+		with instance_create(x,y,EnemyBullet2)
+		{
+		motion_add(dir,4)
+		image_angle = direction
+		team = other.team
+		}
+		with instance_create(x,y,AcidStreak)
+		{
+		motion_add(dir,8)
+		image_angle = direction
+		}
 	}
 }
 snd_play(sndFrogExplode)

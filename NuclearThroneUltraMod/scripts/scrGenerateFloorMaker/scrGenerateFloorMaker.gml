@@ -2,6 +2,9 @@
 // /@description
 ///@param
 function scrGenerateFloorMaker(limiter) {
+	globalGoal = 100;
+	if instance_exists(GenCont)
+		globalGoal = GenCont.goal;
 	if firstTry
 	{
 		direction = choose(0,90,180,270)
@@ -97,7 +100,7 @@ function scrGenerateFloorMaker(limiter) {
 			else if Player.area == 137//Void
 				goal = 1;
 			else if Player.area == 138//Cloudland
-				goal = 120;
+				goal = 17;
 			if scrIsGamemode(6)//small levels
 			{
 				goal=45+s;
@@ -111,6 +114,8 @@ function scrGenerateFloorMaker(limiter) {
 				goal *= 2;
 			}
 		}
+		if  !instance_exists(GenCont)
+			globalGoal = goal;
 	}
 	//No more random
 	firstTry = false;
@@ -136,13 +141,14 @@ function scrGenerateFloorMaker(limiter) {
 			fc ++;
 	}
 	var maxLimit = 600;
-	while ( fc <= goal && limiter < maxLimit)//1000
+	while (fc <= globalGoal && myFloors < goal && limiter < maxLimit)//1000
 	{
 		fc = 0;
 		with Floor{
 			if canCount
 				fc ++;
 		}
+		myFloors += 1;
 		if UberCont.firstFloorMaker
 		{
 			//SetSeed();

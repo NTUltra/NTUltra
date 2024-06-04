@@ -415,7 +415,7 @@ goal = 120+s;
 else if Player.area == 137//Void
 goal = 1;
 else if Player.area == 138//Cloudland
-goal = 105 + s;
+goal = 150 + s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 goal=70+s;

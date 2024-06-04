@@ -466,20 +466,20 @@ function scrPopEnemies() {
 		}
     }
 	//CLOUDLAND
-    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 1.8) {
+    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 2.1) {
 		if loops > 0 {
 			if random(35) < 1
 				instance_create(x + 16, y + 16, GraveyardSniper)
-	        else if random(4) < 1
-				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,Raven,JungleFly))
+	        else if random(3) < 1
+				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,CloudShooter,Raven,JungleFly))
 	        else {
-	            instance_create(x + 16, y + 16, choose(Bandit,CloudKnifer,CloudKnifer))
+	            instance_create(x + 16, y + 16, choose(Bandit,CloudFlyer,CloudFlyer,CloudFlyer, CloudShooter,CloudKnifer))
 	        }
 		} else {
-	        if random(4) < 1
-				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter))
+	        if random(3) < 1
+				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,CloudShooter))
 	        else {
-	            instance_create(x + 16, y + 16, choose(Bandit,Raven, CloudShooter,CloudKnifer))
+	            instance_create(x + 16, y + 16, choose(Bandit,CloudFlyer, CloudFlyer, CloudFlyer, CloudShooter,CloudKnifer))
 	        }
 		}
     }

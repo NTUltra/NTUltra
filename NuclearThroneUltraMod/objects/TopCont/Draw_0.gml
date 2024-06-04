@@ -238,6 +238,10 @@ with ElementorHeadMenu
 {
 	event_perform(ev_draw,0);	
 }
+with EnemyDamageCircle
+{
+	event_user(0);
+}
 with EnemyBullet1Square
 {
 	if draw
@@ -408,6 +412,10 @@ with BladeSplintershooter {
 with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+}
+with CloudFlyer
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,1)
 }
 with CloudKnifer
 {

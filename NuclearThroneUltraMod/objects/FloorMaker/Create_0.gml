@@ -1,3 +1,4 @@
 /// @description xxx
-firstTry = 0;
 firstTry = true;
+myFloors = 0;
+turnsTaken = 0;

@@ -1,6 +1,6 @@
 if(morphMe == 0){
 
-	myCorpse = instance_create(x,y,MovingCorpse)
+	myCorpse = instance_create(xprevious,yprevious,MovingCorpse)
 
 	with myCorpse
 	{

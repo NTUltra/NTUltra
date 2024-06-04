@@ -32,6 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskFloor",
+    "path":"sprites/mskFloor/mskFloor.yy",
+  },
   "visible":true,
 }
