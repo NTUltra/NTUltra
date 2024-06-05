@@ -884,11 +884,13 @@ function scrMakeFloor(limiter) {
 		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5
 		{
 			if subarea == 2 && !instance_exists(MimicBossPlateau) {
-				instance_create(x+16,y+16,MimicBossPlateau);
+				instance_create(x+16,y+48,MimicBossPlateau);
 				instance_create(x + 32,y + 32,Floor);
 				instance_create(x - 32,y + 32,Floor);
 				instance_create(x + 32,y - 32,Floor);
 				instance_create(x - 32,y - 32,Floor);
+				instance_create(x + 32,y + 64,Floor);
+				instance_create(x - 32,y + 64,Floor);
 			}
 			var d = direction;
 			repeat(3)

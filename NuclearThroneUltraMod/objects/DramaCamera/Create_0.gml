@@ -129,8 +129,22 @@ widescreen = 0
 
 
 name="BOSS"
-
-if instance_exists(InvertedSandWorm)
+if instance_exists(You)
+{
+	UberCont.hadBossIntro = false;
+	name = "THE VISIONARY";
+	if instance_exists(Player) && Player.bskin < 2
+	{
+		sprite_index = sprBigPortrait;
+		image_index = Player.race + Player.bskin;
+	}
+}
+else if instance_exists(CloudBoss)
+{
+	name = "THE VISIONARY";
+	image_index = 18;
+}
+else if instance_exists(InvertedSandWorm)
 {
 	name = "INVERTED SAND WORM";
 }
@@ -328,7 +342,7 @@ else if area = 5
 		name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
 	}
 }
-if area = 107
+else if area = 107
 {
 //with instance_create(x,y,Drama)
 	if subarea > 2

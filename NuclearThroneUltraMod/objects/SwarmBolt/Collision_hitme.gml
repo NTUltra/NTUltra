@@ -1,5 +1,6 @@
 if speed > 1 and other.team != team
 {
+	var hit = other;
 	with other
 	{
 		if sprite_index != spr_hurt
@@ -21,7 +22,7 @@ if speed > 1 and other.team != team
 		{
 			scrCopyWeaponMod(other);
 			team = other.team;
-			owner = other.hitEntities[array_length(other.hitEntities)-1];
+			owner = hit;
 			amount = 2;
 			dmg = 1;
 			rate = 5;

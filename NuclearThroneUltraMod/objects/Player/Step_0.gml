@@ -2791,3 +2791,8 @@ if skill_got[8] {
 	}
 	ds_list_destroy(gutsRange);
 }
+if instance_exists(You)
+{
+	UberCont.mouse__x = You.aimX;
+	UberCont.mouse__y = You.aimY;
+}

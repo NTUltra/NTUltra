@@ -141,6 +141,8 @@ skill_got[14] = 0}//boiling veins
 
 returntoplayer=0;
 returntoplayerfast=0;
+if skill_got[8]
+	meleedamage = 7;
 }
 else
 instance_destroy();
@@ -149,17 +151,7 @@ target=-1;
 walk = 0
 gunangle = random(360)
 alarm[1] = 30;
-
-instance_create(x,y,WallBreak);
-instance_create(x+16,y+16,WallBreak);
-instance_create(x+16,y-16,WallBreak);
-instance_create(x-16,y+16,WallBreak);
-instance_create(x-16,y-16,WallBreak);
-
-with instance_create(x,y,DramaCamera)
-name="YOU?"
-with Drama
-name="YOU?"
+firstEntry = true;
 
 
 //enemy

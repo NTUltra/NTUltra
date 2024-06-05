@@ -60,3 +60,7 @@ with Technomancer
 {
 	snd_play_2d(sndTechnomancerActivate);
 }
+with CloudBoss
+{
+	snd_play_2d(sndVoidCreepEnd);
+}

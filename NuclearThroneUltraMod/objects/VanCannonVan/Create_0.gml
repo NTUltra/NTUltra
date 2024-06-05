@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 friction = 0.1;
-dmg = 45;
+dmg = 20;
 alarm[0] = 30;
 image_speed = 0.4;
 typ = 3;

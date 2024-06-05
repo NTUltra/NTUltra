@@ -10,7 +10,7 @@ bwepright = right
 
 if bwep != 0 and race != 7
 draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right,c_silver,1)
-
+/*
 if wep_type[wep] = 3 and wep != 18
 {
 lasx = x
@@ -21,7 +21,7 @@ until position_meeting(lasx,lasy,Wall) or lasd > 1000
 
 draw_sprite_ext(sprLaserSightPlayer,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,gunangle,c_white,1)
 }
-
+*/
 
 
 //DRAW DA GUNZ

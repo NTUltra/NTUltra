@@ -5,7 +5,10 @@ if team != other.team
 	{
 		if sprite_index != spr_hurt
 		{
-			DealDamage(other.dmg);
+			if UberCont.normalGameSpeed == 60
+				DealDamage(other.dmg * 0.5,true);
+			else
+				DealDamage(other.dmg,true);
 		}
 	}
 	speed *= 0.999;

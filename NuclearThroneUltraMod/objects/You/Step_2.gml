@@ -49,30 +49,8 @@ else{clicked=0}*/
 
 
 
-if Player.area = 5 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
-{
-//SNOW & ICE TEST
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(Player.skill_got[2]==0)) // EXTRA FEET TEST
-friction = 0.1
-else
-friction = 0.45
-}
-else if Player.area = 4 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
-{
-//SPIDERWEBS
-if ((instance_nearest(x-16,y-16,Floor).styleb == 1)&&(Player.skill_got[2]==0))//EXTRA FEET TEST
-friction = 2
-else
-friction = 0.45
-}
-else if friction != 0.45
-friction = 0.45
-
-
-
-
 //Speed
-if speed > Player.maxSpeed
+if speed > Player.maxSpeed || speed > 5
 speed = Player.maxSpeed
 
 

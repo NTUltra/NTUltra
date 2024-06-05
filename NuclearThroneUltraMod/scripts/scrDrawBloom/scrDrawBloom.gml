@@ -538,6 +538,11 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with BigRad
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+	with MimicBossPlateau
+	{
+		draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale,image_yscale,image_angle,c_white,ba);
+		event_user(0);
+	}
 	with CrescentMoon {
 		if sprite_index == sprCrescentMoonDeflecting || sprite_index == sprCrescentMoonGammaGutsing
 		{

@@ -87,7 +87,7 @@ if alarm[1] < 1
 	}
 	if !instance_exists(LevCont) and !instance_exists(GenCont)
 	{
-		alarm[1] = 11;
+		alarm[1] = 10;
 		with Spiral
 		{
 			speedUp = true;	

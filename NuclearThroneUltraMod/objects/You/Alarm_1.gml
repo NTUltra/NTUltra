@@ -1,7 +1,10 @@
 /// @description AI
 
 //to fire clicked = 1
-
+if firstEntry
+{
+	instance_create(x,y,DramaCamera);	
+}
 alarm[1] = 6+random(5)
 
 scrTarget()

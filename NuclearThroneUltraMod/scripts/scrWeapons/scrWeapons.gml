@@ -1469,10 +1469,10 @@ function scrWeapons() {
 	wep_name[131] = "HEAVY HYPER RIFLE"
 	wep_type[131] = 1
 	wep_auto[131] = 2
-	wep_load[131] = 3
-	wep_cost[131] = 6
+	wep_load[131] = 4
+	wep_cost[131] = 10
 	wep_sprt[131] = sprHeavyHyperRifle
-	wep_area[131] = 16
+	wep_area[131] = 18
 	wep_text[131] = "heavy burden"
 	wep_swap[131] = sndSwapMachinegun
 	wep_rad[131] = 0;

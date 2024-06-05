@@ -421,11 +421,19 @@ with CloudKnifer
 {
 	if depth < 0
 		draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,image_alpha)
-
 }
 with CloudShooter
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,1)
+}
+with BecomeCloudBoss
+{
+	if depth < 0
+		draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,image_alpha)
+}
+with CloudBoss
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,image_alpha)
 }
 with CourtyardTankShield
 {

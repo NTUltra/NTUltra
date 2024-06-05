@@ -15835,6 +15835,7 @@ function scrFire2(hasTailNow) {
 		
 		with instance_create(x,y,VanCannon)
 		{
+			dmg -= 5;
 			sprite_index = sprRogueVanPortalClose
 			alarm[0] = 0;
 			alarm[1] = 5;

@@ -4,17 +4,29 @@ if alarm[0] == 0
 var tx = nx;
 var ty = ny;
 var yy = y;
+var t = 1;
+var h = 8;
 if alarm[0] > introDuration - shiftInDuration
 {
-	ty = lerp(ny, ny - 64, clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1));
-	yy = lerp(y, y + 240, clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1));
+	t = clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1);
+	ty = lerp(ny, ny - 64, t);
+	yy = lerp(y, y + 240, t);
 }
 else if alarm[0] < shiftInDuration
 {
-	ty = lerp(ny - 64, ny, clamp(alarm[0]/shiftInDuration,0,1));
-	yy = lerp(y + 240, y, clamp(alarm[0]/shiftInDuration,0,1));
+	t = clamp(alarm[0]/shiftInDuration,0,1)
+	ty = lerp(ny - 64, ny, t);
+	yy = lerp(y + 240, y, t);
 }
+var left = camera_get_view_x(0);
+var top = camera_get_view_y(0);
+var right = left + camera_get_view_width(0);
+var bottom = top + camera_get_view_height(0);
+draw_rectangle_colour(left,top,right,top + h,c_black,c_black,c_black,c_black,false);
+draw_rectangle_colour(left,bottom,right,bottom - h,c_black,c_black,c_black,c_black,false);
+
 draw_sprite_ext(sprite_index,image_index,x,yy,1,1,image_angle,c_white,1);
+
 draw_set_valign(fa_top);
 draw_set_font(fntB);
 draw_set_colour(c_black);
