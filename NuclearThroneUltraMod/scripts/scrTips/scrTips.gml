@@ -272,7 +272,7 @@ function scrTips() {
 	if Player.area = 5
 	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly",choose("cold potatoes","there is a pink sheep nearby","there is no yeti","there is no yeti","there is no yeti","lill hunter is a bitch"))
 	if Player.area = 6
-	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made","explosion freaks can merge")
+	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made","freaks can merge","big machine's core takes more damage","watch out for machinery","where some of them were made")
 	if Player.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",
