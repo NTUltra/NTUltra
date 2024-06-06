@@ -1,6 +1,6 @@
 scrDrop(100,100)
-scrDrop(80,50)
-scrDrop(70,0)
+scrDrop(80,20)
+scrDrop(50,0)
 scrBossKill();
 event_inherited()
 scrEndBossMusic();

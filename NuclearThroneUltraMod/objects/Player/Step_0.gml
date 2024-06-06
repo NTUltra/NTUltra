@@ -514,7 +514,7 @@ if !instance_exists(LevCont) and visible = 1
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,CloudFlyer);
+			instance_create(x+32,y,MimicBoss);
 			//instance_create(x+32,y,FreakBandit);
 
 			/*
@@ -1359,12 +1359,12 @@ if (!instance_exists(LevCont))
 				snd_play(sndCrossReload,0,true)
 			else if wep_type[wep] = 4
 				snd_play(sndNadeReload,0,true,false,2,false,false,0.6)
-			else if string_copy(wep_name[wep],0,6) = "PLASMA"
+			else if string_copy(wep_name[wep],0,6) = "PLASMA" || string_copy(wep_name[wep],0,7) = "ELECTRO"
 			{
 				if skill_got[17] = 1
-				snd_play(sndPlasmaReloadUpg,0,true)
+					snd_play(sndPlasmaReloadUpg,0,true)
 				else
-				snd_play(sndPlasmaReload,0,true)
+					snd_play(sndPlasmaReload,0,true)
 			}
 			scrFlexibleElbowReload(wep);
 		}
@@ -2790,9 +2790,4 @@ if skill_got[8] {
 		}
 	}
 	ds_list_destroy(gutsRange);
-}
-if instance_exists(You)
-{
-	UberCont.mouse__x = You.aimX;
-	UberCont.mouse__y = You.aimY;
 }

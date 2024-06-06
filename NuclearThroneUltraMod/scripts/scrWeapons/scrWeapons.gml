@@ -1988,7 +1988,7 @@ function scrWeapons() {
 	wep_sprt[177] = sprEnergyBackstabber
 	wep_area[177] = 6
 	wep_text[177] = "telepathor energy lance"
-	wep_swap[177] = sndSwapFlame
+	wep_swap[177] = sndSwapEnergy
 	wep_rad[177] = 0;
 
 	wep_name[178] = "HEAVY ASSAULT PISTOL"

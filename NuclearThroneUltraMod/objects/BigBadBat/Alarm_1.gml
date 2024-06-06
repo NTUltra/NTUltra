@@ -38,7 +38,10 @@ if instance_exists(Player) {
 	}
 	else
 	{
-		instance_create(Player.x,Player.y,EnemyIon);	
+		with instance_create(Player.x,Player.y,EnemyIon) {
+			alarm[0] -= 1;
+			team = other.team;
+		}
 	}
 	if ran < 10
 	{

@@ -88,7 +88,7 @@ else if point_distance(x,y,target.x,target.y) > 130 && random(4)<1
 	//LONG SNIPE MISSILE
 	gunangle = point_direction(x,y,target.x,target.y)+random(10)-5
 
-	snd_play(sndEnemyFire)
+	snd_play(sndRocket)
 	wkick = 8
     
     with instance_create(x,y,EnemyMissile)

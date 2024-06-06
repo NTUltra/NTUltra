@@ -6,8 +6,8 @@ motion_add(originalDirection,7)
 resetSpeed=false;
 friction=0;}
 
-if speed>6.4
-speed=6.4;
+if speed>maxSpeed
+speed=maxSpeed;
 
 
 

@@ -41,6 +41,7 @@ if curse=1//ITS CURSED YOU WOT!? LETS FIGHT!
 	snd_play(sndStatueDead);
 
 	//YOU?
+	/*
 	if instance_exists(Player) && Player.loops > 0 && instance_exists(Floor) && random(50)<1
 	{
 		var rd = random(360)
@@ -49,6 +50,7 @@ if curse=1//ITS CURSED YOU WOT!? LETS FIGHT!
 		var f = instance_nearest(xx,yy,Floor);
 		instance_create(f.x+16,f.y+16,You);
 	}
+	*/
 	var ang = random(360);
 	repeat(4)
 	{

@@ -6,3 +6,4 @@ typ = 2 //0 = nothing, 1 = deflectable, 2 = destructable
 
 snd = sndRocketFly
 alarm[0] = 1;
+maxSpeed = 5;

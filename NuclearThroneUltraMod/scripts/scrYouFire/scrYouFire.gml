@@ -3,6 +3,7 @@ function scrYouFire() {
 	{
 		aimX = target.x;
 		aimY = target.y;
-		alarm[6] = 1;
+		if alarm[6] < 1
+		alarm[6] = 5;
 	}
 }

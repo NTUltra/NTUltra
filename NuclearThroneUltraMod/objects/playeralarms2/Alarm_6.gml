@@ -17,7 +17,7 @@ with enemy
 			if instance_exists(nearest) && nearest != noone && nearest.team != 0
 			{
 				target = nearest;
-				team = 5 + irandom(1000);
+				team = 6 + irandom(1000);
 				if team == nearest.team
 					team ++;
 			}

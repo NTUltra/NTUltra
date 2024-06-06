@@ -4,3 +4,9 @@ if venomized
 	{
 		venomized = false;	
 	}
+
+with EnemyVenom
+{
+	if owner == other.owner
+		instance_destroy();
+}

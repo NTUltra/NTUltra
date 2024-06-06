@@ -9,6 +9,7 @@ if my_health > 0
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
 		with Player {
+			/*
 			if wep == 370
 			{
 				wep = 0;
@@ -16,6 +17,7 @@ if my_health > 0
 				instance_create(x,y,You);
 				exit;
 			}
+			*/
 			area = 130;
 			subarea = 0;
 			//If one exists from previous loop

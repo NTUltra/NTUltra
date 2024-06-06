@@ -13,8 +13,8 @@ with MimicBossPlateau
 {
 	image_index = 2;
 }
-with BecomeYou
+with BecomeMimic
 {
 	instance_destroy();	
 }
-instance_create(x,y,You);
+instance_create(x,y,MimicBoss);

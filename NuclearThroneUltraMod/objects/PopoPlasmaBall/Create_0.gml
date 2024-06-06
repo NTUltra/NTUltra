@@ -16,6 +16,6 @@ direction=originalDirection;
 image_speed = 0.5
 Sleep(3)
 resetSpeed=false;
-
+maxSpeed = 6.6;
 /* */
 /*  */

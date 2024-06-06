@@ -121,24 +121,18 @@ wave = 0
 triggerfinger=Player.triggerfinger;//0;
 strongspirit=Player.strongspirit;//false
 strongspiritused=Player.strongspiritused;//false
-
-maxhealth = max(20,floor(6*1.5*Player.level));
+maxhealth = 240;
+maxhealth += (Player.level*20);
 if Player.skill_got[1]//rhino skin
-maxhealth=max(20,floor(7*1.5*Player.level));
+	maxhealth += 50;
 if skill_got[31]//Tough shell
-maxhealth += 2;
+	maxhealth += 20;
 scrBossHealthBuff();
 
 my_health = maxhealth
 lsthealth = maxhealth//lasthealth
 
 EnemyHealthAdjustments();
-
-if Player.skill_got[14]{
-skill_got[14] = 1}
-else{
-skill_got[14] = 0}//boiling veins
-
 returntoplayer=0;
 returntoplayerfast=0;
 if skill_got[8]

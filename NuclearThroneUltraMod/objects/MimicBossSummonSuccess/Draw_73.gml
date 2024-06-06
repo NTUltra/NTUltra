@@ -21,6 +21,6 @@ if lightAngle > 0
 {
 	lightAngle = 0;
 	alarm[1] = 30;
-	instance_create(x,y,BecomeYou);
+	instance_create(x,y,BecomeMimic);
 }
 gpu_set_blendmode(bm_normal);

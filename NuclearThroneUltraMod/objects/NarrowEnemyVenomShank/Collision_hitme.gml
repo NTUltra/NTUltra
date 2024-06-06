@@ -15,20 +15,7 @@ if other.team != team && !hit && other.sprite_index != other.spr_hurt
 			hitBy = other.sprite_index;
 			other.hit = true;
 		}
-			
-		with instance_create(x,y,EnemyVenom)
-		{
-			team = 2;
-			owner = other.id;
-			if other.object_index == Player
-			{
-				with GameRender
-				{
-					venomized = true;	
-				}
-				venomized = true;
-			}
-		}
+		scrApplyEnemyVenom(other.team,id);
 	}
 	with instance_create(other.x,other.y,AcidStreak)
 	{

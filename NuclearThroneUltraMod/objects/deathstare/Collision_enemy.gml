@@ -2,8 +2,8 @@ if other.team != 2 and other.my_health > 0
 {
 	with other
 	{
-		image_index = 0
-		direction = point_direction(other.x,other.y,x,y);
+		if place_meeting(x,y,Floor)
+			direction = point_direction(other.x,other.y,x,y);
 		if UberCont.normalGameSpeed == 60
 		{
 			DealDamage(0.5, true,true,false);

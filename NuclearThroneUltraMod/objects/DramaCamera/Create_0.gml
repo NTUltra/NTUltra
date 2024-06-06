@@ -1,6 +1,5 @@
 depth = -99;
 image_speed = 0;
-image_index = 1;
 playedSound = false;
 var xx = camera_get_view_x(view_camera[0]);
 var yy = camera_get_view_y(view_camera[0]);
@@ -129,18 +128,22 @@ widescreen = 0
 
 
 name="BOSS"
-if instance_exists(You)
+if instance_exists(MimicBoss)
 {
-	UberCont.hadBossIntro = false;
-	name = "THE VISIONARY";
-	if instance_exists(Player) && Player.bskin < 2
+	name = "YOU?";
+	if instance_exists(Player)
 	{
-		sprite_index = sprBigPortrait;
-		image_index = Player.race + Player.bskin;
+		name = string_replace_all(string_replace_all(Player.race_name[Player.race],"[",""),"]","");
+		if Player.bskin < 2
+		{
+			sprite_index = sprBigPortrait;
+			image_index = (Player.race - 1) + Player.bskin;
+		}
 	}
 }
 else if instance_exists(CloudBoss)
 {
+	UberCont.hadBossIntro = false;
 	name = "THE VISIONARY";
 	image_index = 18;
 }
@@ -186,367 +189,367 @@ else
 {
 	var area = instance_exists(Player) ? Player.area : UberCont.area;
 	var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
-if (area = 1 || ((area == 10 || area == 101) && instance_exists(BanditBoss)))
-{
-//with instance_create(x,y,Drama)
-	name = "BIG BANDIT";
-	image_index = 1;
-	if random(1000)< 1
+	if (area = 1 || ((area == 10 || area == 101) && instance_exists(BanditBoss)))
 	{
-		name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
-	}
-}
-else if area = 105
-{
-//with instance_create(x,y,Drama)
-name = "INVERTED BIG BANDIT"
-	if random(1000)< 1
-	{
-		name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");
-	}
-}
-else if area = 2
-{
-	name = "MOM";
-	image_index = 6;
-	if random(40)<1
-	{
-		name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
-		"PLEASE I'M A MOTHER\nOF FIVE CHILDREN\nDON'T KILL ME",
-		"MISS. FROG\nHAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
-	}
-}
-else if area == 110
-{
-	name = "INVERTED MOM";
-	if random(40)<1
-	{
-		name = choose("INVERTED BALL MOM","DAD?","FROG KING","BALL PAPA",
-		"PLEASE I'M A FATHER\nOF FIVE CHILDREN\nDON'T KILL ME",
-		"MR. FROG\nHAPPILY DIVORCED","DADDY BALL");	
-	}
-}
-else if area = 3
-{
-//with instance_create(x,y,Drama)
-	if subarea = 3
-	{
-		image_index = 2;
-	if random(100)<1
-	name = "BIG D."
-	else
-	name = "BIG DOG"
-	}
-	else
-	{
-
-	if random(100)<1
-	name = choose("BIG ASS ASSASSIN","BIG ASS");
-	else
-	name = "BIG ASSASSIN"
-
-	}
-}
-else if area = 136
-{
-//with instance_create(x,y,Drama)
-	if random(100)<1
-		name = choose("CHILD MAULTER","BABY MUNCHER");
-	else
-	name = "ULTRA BIG DOG";
-}
-else if area = 106
-{
-//with instance_create(x,y,Drama)
-	if subarea = 3
-	{
-	name = "INVERTED BIG DOG"
-	if random(200)<1
-		name = choose("I.B.B","INVERTED SCRAP BOSS","IMAGINE MUTATING INTO THIS THING");
-	}
-	else
-	{
-	name = "INVERTED BIG ASSASSIN"
-	if random(120)<1
-		name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
-	}
-}
-else if area == 4
-{
-//with instance_create(x,y,Drama)
-	if subarea == 1
-	{
-		image_index = 7;
-		name = "HYPER CRYSTAL";
-		if random(90)<1
-			name = choose("CRYSTAL'S MOM","HYPER RIFLE?","HYPER DIAMOND","LUIGI","NOT BIG DOG AGAIN");
-	}
-	else
-	{
-		name = "BIG BAD BAT";
-		if random(90)<1
-			name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
-	}
-}
-else if area = 111
-{
-	if subarea == 1
-	{
-		name = "INVERTED HYPER CRYSTAL";
-		if random(90)<1
-			name = choose("BLUE CRYSTAL","LIGHTNING FRIGHTNING");
-	}
-	else
-	{
-		name = "INVERTED BIG BAD BAT";
-		if random(90)<1
-			name = choose("PURPLE BAT","THE BAT OF DEATH");	
-	}
-}
-else if area = 115
-{
-	name = "CURSED HYPER CRYSTAL";
-	image_index = 10;
-	if random(90)<1
-		name = choose("A MISTAKE","PURPLE MENACE");
-}
-else if area = 114
-{
-//with instance_create(x,y,Drama)
-name = "BUSH BOX"
-if random(70)<1
-	name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
-}
-else if area = 123
-{
 	//with instance_create(x,y,Drama)
-	name = "INVERTED BUSH BOX"
-	if random(200)<1
-		name = choose("GAY BUSH","PINK BUSH","BUSH BALL");
-}
-else if area = 5
-{
-	if subarea > 2
+		name = "BIG BANDIT";
+		image_index = 1;
+		if random(1000)< 1
+		{
+			name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
+		}
+	}
+	else if area = 105
 	{
-		image_index = 3;
+	//with instance_create(x,y,Drama)
+	name = "INVERTED BIG BANDIT"
+		if random(1000)< 1
+		{
+			name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");
+		}
+	}
+	else if area = 2
+	{
+		name = "MOM";
+		image_index = 6;
+		if random(40)<1
+		{
+			name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
+			"PLEASE I'M A MOTHER\nOF FIVE CHILDREN\nDON'T KILL ME",
+			"MISS. FROG\nHAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
+		}
+	}
+	else if area == 110
+	{
+		name = "INVERTED MOM";
+		if random(40)<1
+		{
+			name = choose("INVERTED BALL MOM","DAD?","FROG KING","BALL PAPA",
+			"PLEASE I'M A FATHER\nOF FIVE CHILDREN\nDON'T KILL ME",
+			"MR. FROG\nHAPPILY DIVORCED","DADDY BALL");	
+		}
+	}
+	else if area = 3
+	{
+	//with instance_create(x,y,Drama)
+		if subarea = 3
+		{
+			image_index = 2;
+		if random(100)<1
+		name = "BIG D."
+		else
+		name = "BIG DOG"
+		}
+		else
+		{
+
+		if random(100)<1
+		name = choose("BIG ASS ASSASSIN","BIG ASS");
+		else
+		name = "BIG ASSASSIN"
+
+		}
+	}
+	else if area = 136
+	{
+	//with instance_create(x,y,Drama)
+		if random(100)<1
+			name = choose("CHILD MAULTER","BABY MUNCHER");
+		else
+		name = "ULTRA BIG DOG";
+	}
+	else if area = 106
+	{
+	//with instance_create(x,y,Drama)
+		if subarea = 3
+		{
+		name = "INVERTED BIG DOG"
+		if random(200)<1
+			name = choose("I.B.B","INVERTED SCRAP BOSS","IMAGINE MUTATING INTO THIS THING");
+		}
+		else
+		{
+		name = "INVERTED BIG ASSASSIN"
+		if random(120)<1
+			name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
+		}
+	}
+	else if area == 4
+	{
+	//with instance_create(x,y,Drama)
+		if subarea == 1
+		{
+			image_index = 7;
+			name = "HYPER CRYSTAL";
+			if random(90)<1
+				name = choose("CRYSTAL'S MOM","HYPER RIFLE?","HYPER DIAMOND","LUIGI","NOT BIG DOG AGAIN");
+		}
+		else
+		{
+			name = "BIG BAD BAT";
+			if random(90)<1
+				name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
+		}
+	}
+	else if area = 111
+	{
+		if subarea == 1
+		{
+			name = "INVERTED HYPER CRYSTAL";
+			if random(90)<1
+				name = choose("BLUE CRYSTAL","LIGHTNING FRIGHTNING");
+		}
+		else
+		{
+			name = "INVERTED BIG BAD BAT";
+			if random(90)<1
+				name = choose("PURPLE BAT","THE BAT OF DEATH");	
+		}
+	}
+	else if area = 115
+	{
+		name = "CURSED HYPER CRYSTAL";
+		image_index = 10;
+		if random(90)<1
+			name = choose("A MISTAKE","PURPLE MENACE");
+	}
+	else if area = 114
+	{
+	//with instance_create(x,y,Drama)
+	name = "BUSH BOX"
+	if random(70)<1
+		name = choose("BIG BUSH BOX BOSS","BUSH CUBE","BIG BAD BUSH BOX","BIG BUSH","BIG AGRASSIN","BUSHY BOX","PLANT","MISSING FLOWERS","IT'S THE BUSH BOX BOSS","S Q U A R E");
+	}
+	else if area = 123
+	{
 		//with instance_create(x,y,Drama)
-		if random(1000)<1
-		name= choose("FUNNY FUCK","GEORGE!")
+		name = "INVERTED BUSH BOX"
+		if random(200)<1
+			name = choose("GAY BUSH","PINK BUSH","BUSH BALL");
+	}
+	else if area = 5
+	{
+		if subarea > 2
+		{
+			image_index = 3;
+			//with instance_create(x,y,Drama)
+			if random(1000)<1
+			name= choose("FUNNY FUCK","GEORGE!")
+			else
+			name = "LIL HUNTER"
+		}
+		else// if subarea == 2
+		{
+			name = "BIG DISC";
+			if random(600)<1
+			name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
+		}
+	}
+	else if area = 107
+	{
+	//with instance_create(x,y,Drama)
+		if subarea > 2
+		{
+			if random(10000)<1
+			name= "HENKY!"
+			else
+			name = "INVERTED LIL HUNTER";
+		}
+		else// if subarea == 2
+		{
+			name = "INVERTED BIG DISC";
+			if random(600)<1
+			name= choose("BROWN DISC","BIG OOPS");
+		}
+	}
+	else if area = 6 
+	{
+		if subarea == 2
+		{
+			name = "BIG MACHINE";
+			if random(120) < 1
+				name = choose("METAL BLOCK","TINY THRONE");
+		}
 		else
-		name = "LIL HUNTER"
+		{
+			image_index = 8;
+			name = "TECHNOMANCER";
+			if random(80) < 1
+				name = choose("TECHROMANCER","LITTLE SHIT");
+		}
 	}
-	else// if subarea == 2
+	else if area = 112
 	{
-		name = "BIG DISC";
-		if random(600)<1
-		name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
-	}
-}
-else if area = 107
-{
-//with instance_create(x,y,Drama)
-	if subarea > 2
-	{
-		if random(10000)<1
-		name= "HENKY!"
+		if subarea == 2
+		{
+			name = "INVERTED MACHINE"
+			if random(120) < 1
+				name = choose("TINY ROOM OF DOOM","WHITE MACHINE","FUCK THE SYSTEM");
+		}
 		else
-		name = "INVERTED LIL HUNTER";
-	}
-	else// if subarea == 2
-	{
-		name = "INVERTED BIG DISC";
-		if random(600)<1
-		name= choose("BROWN DISC","BIG OOPS");
-	}
-}
-else if area = 6 
-{
-	if subarea == 2
-	{
-		name = "BIG MACHINE";
-		if random(120) < 1
-			name = choose("METAL BLOCK","TINY THRONE");
-	}
-	else
-	{
-		image_index = 8;
-		name = "TECHNOMANCER";
-		if random(80) < 1
-			name = choose("TECHROMANCER","LITTLE SHIT");
-	}
-}
-else if area = 112
-{
-	if subarea == 2
-	{
-		name = "INVERTED MACHINE"
-		if random(120) < 1
-			name = choose("TINY ROOM OF DOOM","WHITE MACHINE","FUCK THE SYSTEM");
-	}
-	else
-	{
-		name = "INVERTED TECHNOMANCER";
-		if random(80) < 1
-			name = choose("NERD");
-	}
+		{
+			name = "INVERTED TECHNOMANCER";
+			if random(80) < 1
+				name = choose("NERD");
+		}
 
-}
-else if area = 7
-{
-//with instance_create(x,y,Drama)
-	image_index = 11;
-	xShift = 0;
-	yShift = -1;
-	y += 32;
-	x += 32;
-    if random(200)<1
-    name="THE DIRTY DRAGON";
-    else
-    name = "PURPLE DRAGON"
+	}
+	else if area = 7
+	{
+	//with instance_create(x,y,Drama)
+		image_index = 11;
+		xShift = 0;
+		yShift = -1;
+		y += 32;
+		x += 32;
+	    if random(200)<1
+	    name="THE DIRTY DRAGON";
+	    else
+	    name = "PURPLE DRAGON"
 	
-}
-else if area = 108
-{
-//with instance_create(x,y,Drama)
-	xShift = 0;
-	yShift = -1;
-	y += 32
-	x += 32;
-    if random(200)<1
-    name="THE DIRTIER DRAGON";
-    else
-    name = "INVERTED DRAGON"
+	}
+	else if area = 108
+	{
+	//with instance_create(x,y,Drama)
+		xShift = 0;
+		yShift = -1;
+		y += 32
+		x += 32;
+	    if random(200)<1
+	    name="THE DIRTIER DRAGON";
+	    else
+	    name = "INVERTED DRAGON"
 	
-}
-else if area = 8
-{
-//with instance_create(x,y,Drama)
-if subarea=2
-    {
-    name = "LIL HUNTER"
-    }
-    else
-    {
+	}
+	else if area = 8
+	{
+	//with instance_create(x,y,Drama)
+	if subarea=2
+	    {
+	    name = "LIL HUNTER"
+	    }
+	    else
+	    {
     
-    if random(100)<1
-    name="AWH KITTY";
-    else
-    name = "CHESHIRE CAT"
+	    if random(100)<1
+	    name="AWH KITTY";
+	    else
+	    name = "CHESHIRE CAT"
 
-    }
-}
-else if area = 109
-{
-name = "INVERTED CHESHIRE CAT"
-}
-else if area = 101
-{
-//with instance_create(x,y,Drama)
-name = "BIG FISH"
-if random(200) < 1
-		name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
-}
-else if area = 122
-{
-//with instance_create(x,y,Drama)
-name = "INVERTED BIG FISH"
-if random(200) < 1
-		name = choose("GAS FISH","THAT'S MISTER\nFISH FOR YOU!");
-}
-else if area == 9
-{
-	image_index = 4
-	name = "THE NUCLEAR THRONE";
+	    }
+	}
+	else if area = 109
+	{
+	name = "INVERTED CHESHIRE CAT"
+	}
+	else if area = 101
+	{
+	//with instance_create(x,y,Drama)
+	name = "BIG FISH"
 	if random(200) < 1
-		name = "SON OF A BITCH";
-}
-else if area == 10
-{
-	 if subarea == 2
-	{
-		name = "MOM ON VACATION";
-		if random(100) < 1
-			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+			name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
 	}
-	else
+	else if area = 122
 	{
-		name = "BIG VULTURE";
-		if random(100) < 1
-			name = choose("CHARGE BIRD","BIG BIRD","ANGRY BIRD");
+	//with instance_create(x,y,Drama)
+	name = "INVERTED BIG FISH"
+	if random(200) < 1
+			name = choose("GAS FISH","THAT'S MISTER\nFISH FOR YOU!");
 	}
-	
-}
-else if area == 121
-{
-	if subarea == 3
+	else if area == 9
 	{
-		name = "INVERTED BIG VULTURE";
+		image_index = 4
+		name = "THE NUCLEAR THRONE";
 		if random(200) < 1
-			name = choose("BIG CROW","LARGE RAVEN","PEACOCK");
+			name = "SON OF A BITCH";
 	}
-	else
+	else if area == 10
 	{
-		name = "MOM ON VACATION";
-		if random(100) < 1
-			name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+		 if subarea == 2
+		{
+			name = "MOM ON VACATION";
+			if random(100) < 1
+				name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+		}
+		else
+		{
+			name = "BIG VULTURE";
+			if random(100) < 1
+				name = choose("CHARGE BIRD","BIG BIRD","ANGRY BIRD");
+		}
+	
 	}
-}
-else if area == 119
-{
-	image_index = 5;
-	name = "THRONE II";
-	if random(400) < 1
-		name = choose("IT'S TIME","FIGHT ME","CTHULHU","BULLET HELL");
-}
-else if area == 120
-{
-	name = "INVERTED THRONE II";
-	if random(400) < 1
-		name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
-}
-else if area = 126
-{
-	name = "CURSED GRAVE FISH";
-	if random(100)<1
-		name = choose("CURSED GRAVE DIGGER");
-}
-else if area = 127
-{
-	name = "INVERTED GRAVE FISH";
-	if random(80)<1
-		name = choose("INVERTED GRAVE DIGGER");
-}
-else if area = 128
-{
-	name = "CROWN GLUTTON";
-	if random(100)<1
-		name = choose("CROWN CROWN CROWN","MULTI CROWN");
-}
-else if area = 129
-{
-	name = "INVERTED CROWN GLUTTON";
-	if random(80)<1
-		name = choose("AGAIN!","CROWN AGAIN");
-}
-else if area = 130
-{
-	name = "BOSS BOT";
-}
-else if area = 131
-{
-	name = "INVERTED BOSS BOT";
-}
-else if area = 132
-{
-	name = "CURSED BOSS BOT";
-}
-else if area = 133
-{
-	name = "GOLDEN BOSS BOT";
-}
-else if area = 134
-{
-	name = "ULTRA BOSS BOT";
-}
+	else if area == 121
+	{
+		if subarea == 3
+		{
+			name = "INVERTED BIG VULTURE";
+			if random(200) < 1
+				name = choose("BIG CROW","LARGE RAVEN","PEACOCK");
+		}
+		else
+		{
+			name = "MOM ON VACATION";
+			if random(100) < 1
+				name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+		}
+	}
+	else if area == 119
+	{
+		image_index = 5;
+		name = "THRONE II";
+		if random(400) < 1
+			name = choose("IT'S TIME","FIGHT ME","CTHULHU","BULLET HELL");
+	}
+	else if area == 120
+	{
+		name = "INVERTED THRONE II";
+		if random(400) < 1
+			name = choose("THRONE III","END OF THE ROAD","TICKET TO 1 LESS VAN");
+	}
+	else if area = 126
+	{
+		name = "CURSED GRAVE FISH";
+		if random(100)<1
+			name = choose("CURSED GRAVE DIGGER");
+	}
+	else if area = 127
+	{
+		name = "INVERTED GRAVE FISH";
+		if random(80)<1
+			name = choose("INVERTED GRAVE DIGGER");
+	}
+	else if area = 128
+	{
+		name = "CROWN GLUTTON";
+		if random(100)<1
+			name = choose("CROWN CROWN CROWN","MULTI CROWN");
+	}
+	else if area = 129
+	{
+		name = "INVERTED CROWN GLUTTON";
+		if random(80)<1
+			name = choose("AGAIN!","CROWN AGAIN");
+	}
+	else if area = 130
+	{
+		name = "BOSS BOT";
+	}
+	else if area = 131
+	{
+		name = "INVERTED BOSS BOT";
+	}
+	else if area = 132
+	{
+		name = "CURSED BOSS BOT";
+	}
+	else if area = 133
+	{
+		name = "GOLDEN BOSS BOT";
+	}
+	else if area = 134
+	{
+		name = "ULTRA BOSS BOT";
+	}
 }
 event_user(0);
