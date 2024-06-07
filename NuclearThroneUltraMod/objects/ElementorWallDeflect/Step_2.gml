@@ -31,7 +31,11 @@ for(var i = 0; i < al; i ++)
 			}
 			else
 			{
-				if typ == 0 && !canBeMoved// Laser
+				if typ == 5
+				{
+					laserRange = max(1,min(laserRange,point_distance(x,y,other.x + 8,other.y + 8)));
+				} 
+				else if typ == 0 && !canBeMoved// Laser
 				{
 					if isLaser
 					{

@@ -81,7 +81,7 @@ if wepmenuopen
 */
 //SKIN-------------------------------------------______________________
 
-if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+12
+if race != 0 && UberCont.mouse__x > sx + 32 -12 and UberCont.mouse__x < + 32 + sx + 12 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+14
 {
 	scale=1.4;
 
@@ -126,7 +126,7 @@ if race != 0 && UberCont.mouse__x > sx-24 and UberCont.mouse__x < sx and UberCon
 else
 scale=1;
 
-if race != 0 && UberCont.mouse__x > sx-24 - 24 and UberCont.mouse__x < sx - 24 and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+12
+if race != 0 && UberCont.mouse__x > sx - 12 + ultraOffset and UberCont.mouse__x < sx + 12 + ultraOffset and UberCont.mouse__y > __view_get( e__VW.YView, 0 )+60-12 and UberCont.mouse__y < __view_get( e__VW.YView, 0 )+60+12
 {
 	ultraScale=1.4;
 

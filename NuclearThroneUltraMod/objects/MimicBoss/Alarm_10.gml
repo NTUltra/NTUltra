@@ -1,3 +1,3 @@
 /// @description Drops
-scrDrop(4,0);
+scrDrop(6,0);
 alarm[10] = 30;

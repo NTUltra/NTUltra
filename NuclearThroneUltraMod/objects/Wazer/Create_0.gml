@@ -2,6 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-typ = 0
+typ = 5//Wazer type
 canBeMoved = false;
-isLaser = false;//Kind of but completly different logic lol
+isLaser = true;//Kind of but completly different logic lol

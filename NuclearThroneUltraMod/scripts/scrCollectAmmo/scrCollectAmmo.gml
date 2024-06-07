@@ -28,20 +28,40 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		speed = spd;
 	}
 	var randomAmmo = true;
-
-	if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
-		|| (sa < sc)))
+	var prioritizeSecondary = choose(true,true,false);
+	if prioritizeSecondary
 	{
-		//Primary is empty & secondary is also empty or uses no ammo
-		type = pt;
-		randomAmmo = false;
+		if (sa < sc && st != 0 && ((pt == 0)
+			|| (pa < pc)))
+		{
+			//Secondary is empty & primary is also empty or uses no ammo
+			type = st;
+			randomAmmo = false
+		}
+		else if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
+			|| (sa < sc)))
+		{
+			//Primary is empty & secondary is also empty or uses no ammo
+			type = pt;
+			randomAmmo = false;
+		}
 	}
-	else if (sa < sc && st != 0 && ((pt == 0)
-		|| (pa < pc)))
+	else
 	{
-		//Secondary is empty & primary is also empty or uses no ammo
-		type = st;
-		randomAmmo = false
+		if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
+			|| (sa < sc)))
+		{
+			//Primary is empty & secondary is also empty or uses no ammo
+			type = pt;
+			randomAmmo = false;
+		}
+		else if (sa < sc && st != 0 && ((pt == 0)
+			|| (pa < pc)))
+		{
+			//Secondary is empty & primary is also empty or uses no ammo
+			type = st;
+			randomAmmo = false
+		}
 	}
 	if randomAmmo 
 	{

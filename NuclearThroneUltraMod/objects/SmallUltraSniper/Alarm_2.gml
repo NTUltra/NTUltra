@@ -10,6 +10,7 @@ with instance_create(x,y,EnemyUltraLine)
 }
 with Sniper
 {
-	alarm[1] += 5;
+	if alarm[1] < 30
+		alarm[1] += 5;
 }
 gonnafire = 0

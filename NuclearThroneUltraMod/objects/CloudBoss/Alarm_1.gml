@@ -3,38 +3,67 @@ alarm[1] = actTime + random(actTime)
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if point_distance(target.x, target.y, x, y) > 52 {
-            if random(4) < 1 {
-                snd_play(sndEnemyFire)
-                wkick = 4
-				if choose(true,false)
-					gunangle = point_direction(x, y, target.x, target.y)
-                with instance_create(x, y, EnemyBullet1) {
-                    motion_add(other.gunangle + random(20) - 10, 4)
-                    image_angle = direction
-                    team = other.team
-                }
-                alarm[1] = 20 + random(5)
-            }
-            else {
-                direction = point_direction(x, y, target.x, target.y) + random(180) - 90
-                speed = 0.4
-                walk = 10 + random(10)
-                gunangle = point_direction(x, y, target.x, target.y)
-            }
-
+		var dis = point_distance(x,y,target.x,target.y);
+		gunangle = point_direction(x,y,target.x,target.y);
+        if (dis < 64) {
+            motion_add(gunangle,maxSpeed);
+			alarm[1] = actTime;
+			walk = alarm[1];
         }
         else {
-            direction = point_direction(target.x, target.y, x, y) + random(20) - 10
-            speed = 0.4
-            walk = 40 + random(10)
-            gunangle = point_direction(x, y, target.x, target.y)
+            var ran = random(100);
+			if ran < 23
+			{
+				event_user(0);
+				if ran < 8
+				{
+					walk = actTime + random(actTime*3);
+					motion_add(random(360),acc);
+				}
+			}
+			else if ran < 46
+			{
+				event_user(1);
+				if ran < 31
+				{
+					walk = actTime + random(actTime*3);
+					motion_add(random(360),acc);
+				}
+			}
+			else if ran < 69
+			{
+				event_user(2);
+				if ran < 54
+				{
+					walk = actTime + random(actTime*3);
+					motion_add(random(360),acc);
+				}
+			}
+			else if ran < 92
+			{
+				event_user(3);
+				if ran < 77
+				{
+					walk = actTime + random(actTime*3);
+					motion_add(random(360),acc);
+				}
+			}
+			else if my_health < maxhealth * 0.5
+			{
+				event_user(0);
+				event_user(1);
+				if ran < 85
+				{
+					walk = actTime + random(actTime*3);
+					motion_add(random(360),acc);
+				}
+			}
         }
 
         if target.x < x
-        right = -1
+			right = -1
         else if target.x > x
-        right = 1
+			right = 1
     }
     else if random(4) < 1 {
         motion_add(random(360), 0.4)

@@ -511,8 +511,7 @@ maxSpeed = 4
 
 
 maxlevel = 10 + UberCont.levelIncrease;
-if scrIsHardMode()
-	maxlevel += 1;
+
 if scrIsGamemode(15) //no mutaitons gamemode
 maxlevel = 1;
 skillsChosen = 0
@@ -547,6 +546,8 @@ if scrIsHardMode()//HARD MODE
 {
 	skillpoints ++;
 	skillsChosen --;
+	maxlevel += 1;
+	anyMutation += 1;
 	if !instance_exists(PlayerSpawn)
 	{
 		hard = 3;

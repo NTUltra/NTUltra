@@ -7,3 +7,6 @@ originX = x;
 originY = y;
 owner = noone;
 time = 0;
+isHorizontal = false;
+isFlipped = false;
+image_angle = 270;

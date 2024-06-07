@@ -7,14 +7,16 @@ if target != noone {
 		var dis = point_distance(target.x, target.y, x, y)
         if dis > 52 {
 			var ran = random(4);
-            if ran < 1  && instance_number(EnemyWazer) < 2 && dis < maxRange{
+            if ran < 1  /*&& instance_number(EnemyWazer) < 2 */&& dis < maxRange{
                 with Salamander
 				{
-					alarm[1] += 5;	
+					if alarm[1] < 30
+						alarm[1] += 5;	
 				}
 				with FireWorm
 				{
-					alarm[1] += 5;	
+					if alarm[1] < 30
+						alarm[1] += 5;	
 				}
 				event_user(0);
             }

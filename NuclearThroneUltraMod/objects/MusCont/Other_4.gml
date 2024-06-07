@@ -312,6 +312,12 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb106;
     }
+	else if area == 138 {
+
+        song = mus106
+
+        amb = amb138;
+    }
 	
 	if (confirmSound) {
         snd_play_2d(confirmSound);

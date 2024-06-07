@@ -17,7 +17,7 @@ snd_dead = sndFrogExplode
 walk = 0
 gunangle = random(360)
 wkick = 0
-actTime = 6;
+actTime = 7;
 
 acc = 0.8;
 maxSpeed = 4;
@@ -44,7 +44,7 @@ if instance_exists(Player)
 	spr_hurt = Player.spr_hurt;
 	spr_dead = Player.spr_dead;
 	race = Player.race;
-	if instance_exists(Player) && Player.skill_got[29] {
+	if Player.skill_got[29] {
 		wakeupTime += 60;
 		scrGiveSnooze();
 	}

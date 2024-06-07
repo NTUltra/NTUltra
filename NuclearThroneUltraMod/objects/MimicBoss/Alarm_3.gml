@@ -1,4 +1,5 @@
 /// @description Explosives
+BackCont.shake += 2;
 wkick = 4
 var hasTarget = false;
 scrTarget();

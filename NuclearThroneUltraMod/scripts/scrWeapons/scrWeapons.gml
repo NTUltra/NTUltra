@@ -2315,8 +2315,8 @@ function scrWeapons() {
 	wep_name[206] = "SMALL MISSILE LAUNCHER"
 	wep_type[206] = 4
 	wep_auto[206] = 0
-	wep_load[206] = 28
-	wep_cost[206] = 2.25
+	wep_load[206] = 32
+	wep_cost[206] = 2
 	wep_sprt[206] = sprSmallMissileLauncher
 	wep_area[206] = 9
 	wep_text[206] = "theres a bigger one"
@@ -2327,7 +2327,7 @@ function scrWeapons() {
 	wep_type[207] = 4
 	wep_auto[207] = 0
 	wep_load[207] = 50
-	wep_cost[207] = 4.5
+	wep_cost[207] = 5
 	wep_sprt[207] = sprMissileLauncher
 	wep_area[207] = 11
 	wep_text[207] = "you should really try eagle eyes#with this gun"
@@ -2360,7 +2360,7 @@ function scrWeapons() {
 	wep_type[210] = 4
 	wep_auto[210] = 2
 	wep_load[210] = 50
-	wep_cost[210] = 12
+	wep_cost[210] = 15
 	wep_sprt[210] = sprBigMissileLauncher
 	wep_area[210] = 14
 	wep_text[210] = "R.Y.N.O."
@@ -2393,7 +2393,7 @@ function scrWeapons() {
 	wep_type[213] = 4
 	wep_auto[213] = 2
 	wep_load[213] = 90
-	wep_cost[213] = 9
+	wep_cost[213] = 12
 	wep_sprt[213] = sprSuperNukeLauncher
 	wep_area[213] = 13
 	wep_text[213] = "true power"
@@ -3363,7 +3363,7 @@ function scrWeapons() {
 	wep_name[300] = "LASER WAVE GUN"
 	wep_type[300] = 5
 	wep_auto[300] = 3
-	wep_load[300] = 23
+	wep_load[300] = 28
 	wep_cost[300] = 6
 	wep_sprt[300] = sprLaserWaveGun
 	wep_area[300] = 15
@@ -5035,7 +5035,7 @@ function scrWeapons() {
 	wep_type[447] = 4
 	wep_auto[447] = 3
 	wep_load[447] = 10
-	wep_cost[447] = 2.5
+	wep_cost[447] = 4
 	wep_sprt[447] = sprAutoMissileLauncher
 	wep_area[447] = 27
 	wep_text[447] = "THIS IS METAL"
@@ -5963,7 +5963,7 @@ function scrWeapons() {
 	wep_name[531] = "COFFEE CANNON"
 	wep_type[531] = 1
 	wep_auto[531] = 1
-	wep_load[531] = 8
+	wep_load[531] = 7
 	wep_cost[531] = 2
 	wep_sprt[531] = sprCoffeeCannon
 	wep_area[531] = 16
@@ -6778,10 +6778,10 @@ function scrWeapons() {
 	wep_name[605] = "STABINATOR"
 	wep_type[605] = 3
 	wep_auto[605] = 0
-	wep_load[605] = 55//60 normally
+	wep_load[605] = 65//60 normally
 	wep_cost[605] = 11
 	wep_sprt[605] = sprStabinator
-	wep_area[605] = 20
+	wep_area[605] = 22
 	wep_text[605] = "time for a good o'l fashion stabbin'"
 	wep_swap[605] = sndSwapExplosive
 	wep_rad[605] = 0;
@@ -8414,8 +8414,8 @@ function scrWeapons() {
 	wep_name[752] = "VOID RIPPER"
 	wep_type[752] = 4
 	wep_auto[752] = 3
-	wep_load[752] = 44
-	wep_cost[752] = 3
+	wep_load[752] = 45
+	wep_cost[752] = 3.5
 	wep_sprt[752] = sprVoidSword
 	wep_area[752] = 29
 	wep_text[752] = "world inbetween worlds"

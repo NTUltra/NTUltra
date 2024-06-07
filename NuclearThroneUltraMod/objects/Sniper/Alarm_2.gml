@@ -1,7 +1,8 @@
 snd_play(sndSniperFire)
 with Sniper
 {
-	alarm[1] += 2;	
+	if alarm[1] < 30
+		alarm[1] += 2;	
 }
 wkick = 7
 var angStep = 4;

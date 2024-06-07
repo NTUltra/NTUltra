@@ -40,6 +40,7 @@ with BigGenerator
 		sprite_index = spr_activate;
 		spr_idle = spr_activate;
 		image_index = 0;
+		alarm[1] = (image_number/image_speed) + 1;
 	}
 }
 my_health = maxhealth;

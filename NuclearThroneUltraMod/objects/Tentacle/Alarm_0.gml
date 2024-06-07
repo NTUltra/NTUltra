@@ -1,4 +1,4 @@
-if UberCont.recursionCheck > 28
+if UberCont.recursionCheck > 27
 {
 	alarm[0] = 1;
 	image_index -= image_speed;

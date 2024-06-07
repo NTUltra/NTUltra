@@ -1,5 +1,7 @@
 /// @description Init
 event_inherited();
+typ = 5;
+team = 1;
 image_yscale = 1;
 laserRange = 3;
 laserRangeIncrease = 5 + min(5,GetPlayerLoops());

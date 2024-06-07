@@ -5,6 +5,7 @@ if instance_exists(target) && target != noone && ammo > 0
 {
 	if point_distance(x,y,target.x,target.y) > 200 || collision_line(x,y,target.x,target.y,Wall,false,false)
 	{
+		BackCont.shake += 3;
 		snd_play(sndIonCharge);
 		with instance_create(target.x,target.y,EnemyIon) {
 			alarm[0] = 20;
@@ -14,6 +15,7 @@ if instance_exists(target) && target != noone && ammo > 0
 	}
 	else if point_distance(x,y,target.x,target.y) > 96
 	{
+		BackCont.shake += 1;
 		ammo -= 1;
 		snd_play_fire(sndPlasma)
 		motion_add(gunangle,acc);
@@ -29,6 +31,7 @@ if instance_exists(target) && target != noone && ammo > 0
 	}
 	else if ammo == maxAmmo
 	{
+		BackCont.shake += 2;
 		snd_play(sndLaser);
 		with instance_create(x,y,EnemyLaser)
 		{

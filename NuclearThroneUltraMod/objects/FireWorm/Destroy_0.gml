@@ -23,6 +23,6 @@ if alarm[2] > 0
 {
 	with myLaser
 	{
-		event_perform(ev_alarm,0);	
+		event_perform(ev_alarm,0);
 	}
 }

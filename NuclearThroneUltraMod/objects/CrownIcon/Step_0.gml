@@ -187,10 +187,14 @@ if crown == 20
 		//if maxarmour < 1
 		//	gotMinimumArmour = true;
 		canCrownOfProtection = 3;
-		maxarmour += 1;//max(maxarmour, 1);
-		maxhealth -= 1;
-		maxhealth = max(1,maxhealth);
-		armour = clamp(armour, 0, maxarmour);
+		//not Living armour
+		if !(instance_exists(Player) && Player.ultra_got[62] && Player.altUltra)
+		{
+			maxarmour += 1;//max(maxarmour, 1);
+			maxhealth -= 1;
+			maxhealth = max(1,maxhealth);
+			armour = clamp(armour, 0, maxarmour);
+		}
 	}
 }
 //CROWN OF MERCENARY

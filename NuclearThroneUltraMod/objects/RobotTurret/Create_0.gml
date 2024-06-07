@@ -68,12 +68,12 @@ clicked = 0
 
 reload = 0//Player.reload
 breload = 0//Player.breload
-
+skill_got = [];
 if instance_exists(Player)
 {
-	accuracy = Player.accuracy
+	accuracy = Player.accuracy;
 
-
+	skill_got = Player.skill_got;
 	friction = 0.45
 	image_speed = 0.4
 
@@ -110,6 +110,6 @@ if instance_exists(Player)
 
 }
 else
-instance_destroy();
+	instance_destroy();
 
 scrInitDrops(1);

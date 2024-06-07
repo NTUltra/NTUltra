@@ -1,12 +1,13 @@
 ///scrDropNearby();
 // /@description
 ///@param
-function scrDropNearby(doprate, wepdroprate){
+function scrDropNearby(doprate, wepdroprate,amountOfDrops = 1){
 	var xx = x;
 	var yy = y;
 	if collision_point(x,y,Floor,false,false)
 	{
-		scrDrop(doprate,wepdroprate);
+		repeat(amountOfDrops)
+			scrDrop(doprate,wepdroprate);
 		event_inherited();
 	}
 	else
@@ -27,7 +28,8 @@ function scrDropNearby(doprate, wepdroprate){
 			{
 				x = n.x+o;
 				y = n.y+o;
-				scrDrop(doprate,wepdroprate);
+				repeat(amountOfDrops)
+					scrDrop(doprate,wepdroprate);
 				if instance_exists(Wall)
 					instance_create(x,y,WallBreak);
 				event_inherited()
@@ -39,7 +41,8 @@ function scrDropNearby(doprate, wepdroprate){
 		{
 			x += lengthdir_x(len*2,dir);
 			y += lengthdir_y(len*2,dir);
-			scrDrop(doprate,wepdroprate)
+			repeat(amountOfDrops)
+				scrDrop(doprate,wepdroprate)
 			if instance_exists(Wall)
 				instance_create(x,y,WallBreak);
 			event_inherited();

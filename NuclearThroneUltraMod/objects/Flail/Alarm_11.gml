@@ -25,7 +25,3 @@ if um == ultramods.bloodMelee
 		alarm[11] = 0;
 	}
 }
-else
-{
-	event_inherited();	
-}

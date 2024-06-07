@@ -2,9 +2,11 @@
 // /@description
 ///@param
 function scrReturnMenu(){
-	snd_play_2d(sndClickBack);
 	if hasNoMenuOpen()
 	{
+		if LoadoutSelect.wepmenuopen
+			exit;
+		snd_play_2d(sndClickBack);
 		//if OptionSelect.selected = 1
 		//room_goto(romInit)
 		//if OptionSelect2.selected = 1
@@ -43,6 +45,7 @@ function scrReturnMenu(){
 	}
 	else
 	{
+		snd_play_2d(sndClickBack);
 		with OptionSelect {
 			alarm[0] = 1;
 			with option

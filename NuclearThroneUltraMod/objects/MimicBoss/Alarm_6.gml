@@ -1,4 +1,5 @@
 /// @description Bolt
+BackCont.shake += 3;
 wkick = 5
 scrTarget();
 if instance_exists(target) && target != noone

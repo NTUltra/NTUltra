@@ -35,3 +35,4 @@ justRegenerated = 10;
 alarm[2] = alarmRate;
 team = 2;
 maxDeflect = sprite_get_number(spr) - 1;
+squares = {};

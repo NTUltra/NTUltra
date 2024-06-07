@@ -3,6 +3,8 @@ function scrLoadData() {
 	var dir; dir = 1
 	repeat(racemax){
 	selected_start_wep[dir] = ini_read_real("DATA","selected_start_wep"+string(dir),0);
+	selected_start_bwep[dir] = ini_read_real("DATA","selected_start_bwep"+string(dir),0);
+	secondary_start_wep[dir] = ini_read_real("DATA","secondary_start_wep"+string(dir),0);
 	race_have[dir] = ini_read_real("DATA","race_have"+string(dir),race_have[dir]);
 	race_bskin[dir] = ini_read_real("DATA","bskin"+string(dir),race_bskin[dir]);
 	race_cskin[dir] = ini_read_real("DATA","cskin"+string(dir),race_cskin[dir]);

@@ -1,4 +1,5 @@
 /// @description MELEE
+BackCont.shake += 2;
 wepangle = -wepangle
 var s = smackSpeed;
 var r = smackRange;
@@ -20,7 +21,8 @@ if instance_exists(target) && target != noone
 		var px = xx;
 		var py = yy;
 		var l = 48 - Player.skill_got[13]*4;
-		while (!collision_line(xx,yy,px,py,Wall,false,false) && collision_point(xx,yy,Floor,false,false))
+		var maxDis = 12;
+		while (!collision_line(xx,yy,px,py,Wall,false,false) && maxDis > 0)
 		{
 			px = xx;
 			py = yy;
@@ -33,6 +35,7 @@ if instance_exists(target) && target != noone
 			}
 			xx += lengthdir_x(l,other.gunangle);
 			yy += lengthdir_y(l,other.gunangle);
+			maxDis -= 1;
 		}
 	}
 	else 

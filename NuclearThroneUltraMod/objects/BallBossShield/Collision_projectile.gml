@@ -24,6 +24,13 @@ if team != other.team && alarm[0] < 1
 		with other
 			instance_destroy()
 	}
+	else if other.typ == 5
+	{
+		with other
+		{
+			laserRange = max(1,min(laserRange,point_distance(x,y,other.x,other.y)));
+		}
+	} 
 	else if other.typ == 0 && !other.canBeMoved && other.isLaser
 	{
 		snd_play(sndProjectileDestroy,0.1,true);

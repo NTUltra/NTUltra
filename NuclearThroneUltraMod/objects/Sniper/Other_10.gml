@@ -6,4 +6,7 @@ alarm[2] = tellTime;
 gonnafire = 1;
 if loops < 3
 with Sniper
-	alarm[1] += 3;
+{
+	if alarm[1] < 30
+		alarm[1] += 3;
+}

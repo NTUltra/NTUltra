@@ -1,7 +1,7 @@
 /// @description xxx
 
 // Inherit the parent event
-raddrop = 10;
+raddrop = 0;
 event_inherited();
 spr_idle = sprMutant13BIdle
 spr_walk = sprMutant13BWalk

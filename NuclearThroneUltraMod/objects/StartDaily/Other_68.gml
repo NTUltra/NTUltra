@@ -305,6 +305,8 @@ if (type == network_type_data) {
 				with Player {
 					skillpoints ++;
 					skillsChosen --;
+					maxlevel += 1;
+					anyMutation += 1;
 					if !instance_exists(PlayerSpawn)
 					{
 						hard = 3;

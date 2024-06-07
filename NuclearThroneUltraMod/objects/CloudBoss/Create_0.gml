@@ -1,5 +1,5 @@
 raddrop = 2
-maxhealth = 5//600
+maxhealth = 600
 meleedamage = 3
 mySize = 1
 
@@ -9,6 +9,7 @@ spr_idle = sprCloudBoss
 spr_walk = sprCloudBoss
 spr_hurt = sprCloudBossHurt;
 spr_dead = sprCloudBossHurt;
+spr_fire = sprCloudBossFire;
 
 snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
@@ -16,10 +17,16 @@ snd_dead = sndFrogExplode
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 30;
+if instance_exists(Player) && Player.skill_got[29] {
+	alarm[1] += 90;
+	scrGiveSnooze();
+}
+alarm[4] = 30;
 wkick = 0
 actTime = 12;
 
 acc = 0.8;
-maxSpeed = 4;
+maxSpeed = 5;
+time = 0;
 instance_create(x,y,DramaCamera);

@@ -707,6 +707,7 @@ if (selected && visible &&
 				my_health = 1;
 				prevhealth = 1;
 				hudArmourSpace = 6;
+				
 			}
 			else
 			{

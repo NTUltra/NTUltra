@@ -1,6 +1,4 @@
-scrDrop(20,0)
-
-event_inherited()
+scrDropNearby(100,0,2);
 
 with MimicBossPlateau
 {

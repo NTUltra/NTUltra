@@ -11,7 +11,24 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 		}
 		else if team != 2
 		{
-			if (angle_difference(other.image_angle,direction + 180) < 90)
+			if typ == 5
+			{
+				laserRange = max(1,min(laserRange,point_distance(x,y,other.x,other.y)));
+				deflected = true;
+			} else if typ == 0 && !canBeMoved && isLaser
+			{
+				if (angle_difference(other.image_angle,direction) < 90) || (angle_difference(other.image_angle,direction + 180) < 90)
+				{
+					var d = point_distance(xstart,ystart,other.x,other.y) - 1;
+					x = xstart + lengthdir_x(d,image_angle);
+					y = ystart + lengthdir_y(d,image_angle);
+					image_xscale = point_distance(x,y,xstart,ystart)*0.5
+					alarm[0] += 2;
+					snd_play(sndProjectileDestroy,0.1,true);
+					deflected = true;
+				}
+			}
+			else if (angle_difference(other.image_angle,direction + 180) < 90)
 			{
 				if typ == 1
 				{
@@ -39,8 +56,38 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 				}
 				else if typ == 3
 				{
-					x = xprevious;
-					y = yprevious;
+					
+					if struct_exists(other.squares,id)
+					{
+						if UberCont.normalGameSpeed == 60
+							other.squares[$ id] += 0.5;
+						else
+							other.squares[$ id] += 1;
+						var n = other.squares[$ id];
+						if n > 6
+						{
+							x = xprevious + irandom_range(-2,2);
+							y = yprevious + irandom_range(-2,2);	
+						}
+						else
+						{
+							x = xprevious;
+							y = yprevious;	
+						}
+						if other.squares[$ id] > 17
+						{
+							instance_destroy();
+							struct_remove(other.squares,id);
+							snd_play(sndProjectileDestroy,0.1,true);
+							deflected = true;
+						}
+					}
+					else
+					{
+						other.squares[$ id] = 0;	
+						x = xprevious;
+						y = yprevious;
+					}
 				}
 			}
 		}
