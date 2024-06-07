@@ -7,6 +7,8 @@ lerp(__view_get( e__VW.YView, 0 ) - 100,__view_get( e__VW.YView, 0 ) + 48,newMen
 var splx = __view_get( e__VW.XView, 0 )+xo+304;
 var sply = lerp(__view_get( e__VW.YView, 0 ) + 300,__view_get( e__VW.YView, 0 )+174,newMenuTime);
 draw_sprite(sprMutationSplatBright,3,splx+24,sply+44);
+
+
 if (hasNoMenuOpen()
  && race != 0)
 {
@@ -391,13 +393,17 @@ if (hasNoMenuOpen()
 			var spriteIndex = wep;
 			var col = c_white;
 			var am = 1;
-			col = c_ltgray;
+			col = c_gray;
+			var wepAngle = 0;
+			var wepPortraitScale = 1;
 			if bwep > -1
 			{
 				spriteIndex = bwep;
 				am = 2;
 				yy -= 22;
 				xx += 24;
+				wepAngle = -10;
+				wepPortraitScale = 0.75;
 			}
 			repeat(am)//IF STARTING WEAPON UNLOCKED
 			{
@@ -433,13 +439,15 @@ if (hasNoMenuOpen()
 					else if race == 26
 						spriteIndex = uniqueStartingWeapons + 13;//Humphry
 				}
-				draw_sprite_ext(sprStartingWeapons,spriteIndex,xx - 48,yy- 2,-1,1,0,col,1);
+				draw_sprite_ext(sprStartingWeapons,spriteIndex,xx - 48,yy- 2,wepPortraitScale*-1,wepPortraitScale,wepAngle,col,1);
 				if bwep > -1
 				{
 					spriteIndex = wep;
 					xx -= 24;
 					yy += 22;
 					col = c_white;
+					wepAngle = 0;
+					wepPortraitScale = 1;
 				}
 			}
 		}

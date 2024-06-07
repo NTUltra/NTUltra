@@ -14,6 +14,7 @@ scrRaces()
 scrCrowns()
 scrGameModes();
 race = 0
+skin = 0;
 crown = [1];
 
 char[0] = instance_create(64,64,Campfire)
@@ -445,6 +446,7 @@ camTargetY = 0;
 camLerp = 0;
 
 firstEntry = true;
+portraitLerp = 0;
 //JOYPAD STUFF
 /*
 pick = 0

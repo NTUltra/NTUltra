@@ -195,6 +195,7 @@ function scrDrawOptions2() {
 								if mouse_check_button_pressed(mb_left) {
 									snd_play_2d(sndClick);
 									Menu.race = ri;
+									Menu.portraitLerp = 0;
 								}
 							}
 							else

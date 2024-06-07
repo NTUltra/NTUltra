@@ -8,7 +8,7 @@ closedTheVault = false;
 
 endgame = 100
 
-alarm[1] = 18;//Delay before opening
+alarm[1] = 24;//Delay before opening
 if scrIsHardMode()//HARD MODE
 	alarm[1] = 1;
 else if scrIsGamemode(9)//CASUAL MODE

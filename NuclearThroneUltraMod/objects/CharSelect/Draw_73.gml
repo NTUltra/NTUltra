@@ -7,7 +7,7 @@ if Menu.mouseover == image_index
 		o = 24;
 	var tx = x + 12;
 	var ty = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 60 + o;
-	if (!instance_exists(LoadoutSelect) || LoadoutSelect.wepmenuopen)
+	if (!instance_exists(LoadoutSelect) /*|| LoadoutSelect.wepmenuopen*/)
 		return;
 	hoverTime += 0.3;
 	if hoverTime > 1

@@ -137,7 +137,7 @@ if instance_exists(MimicBoss)
 		if Player.bskin < 2
 		{
 			sprite_index = sprBigPortrait;
-			image_index = (Player.race - 1) + Player.bskin;
+			image_index = scrRaceToPortraitIndex(Player.race, Player.bskin);
 		}
 	}
 }

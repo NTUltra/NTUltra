@@ -264,6 +264,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
     }
     snd_play_2d(snd_slct)
     Menu.race = num
+	Menu.portraitLerp = 0;
     
     with LoadoutSelect
 	{
@@ -273,6 +274,7 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
 		skin = UberCont.skin[race]
 		wep = UberCont.selected_start_wep[race];
 		UberCont.start_wep[0]=race_swep[race];//Starting weapon 0 is different for each character
+		Menu.skin = skin;
 	}
     
     }

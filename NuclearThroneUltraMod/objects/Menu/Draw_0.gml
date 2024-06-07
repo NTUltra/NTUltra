@@ -41,13 +41,45 @@ else*/
 
 //widescreen bars side art
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+widescreen,0)
+
+if widescreen > 0
+{
+	var skinIndex = racemax * 3;
+	if race != 0
+	{
+		if widescreen < 48
+		{
+			portraitLerp -= 0.3;
+			if portraitLerp < 0
+				portraitLerp = 0;
+		}
+		else
+		{
+			portraitLerp += 0.3;
+			if portraitLerp > 1
+				portraitLerp = 1;
+		}
+		skinIndex = scrRaceToPortraitIndex(race,skin);
+		
+		var bpx;
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 96,portraitLerp);
+		else
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 74,portraitLerp);
+		draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen);
+	}
+}
+else
+{
+	portraitLerp = 0;
+}
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen-5,0)
 
 
 	draw_set_halign(fa_left)//jezus christ this menu systemm is fked up
 	draw_set_valign(fa_top);
 	draw_set_color(c_white)
-	if widescreen > 0 && UberCont.gotAllGold && UberCont.completionpercentage >= 100
+	if widescreen > 0 && UberCont.completionpercentage >= 200
 	{
 		draw_sprite_ext(sprGameComplete,0,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+1,__view_get( e__VW.WView, 0 ),1,0,c_white,1);
 		draw_sprite_ext(sprGameComplete,1,__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+widescreen,__view_get( e__VW.WView, 0 ),1,0,c_white,1);
@@ -93,40 +125,45 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 		draw_surface(gmSurf,__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-32 + widescreen);
 	}
 
+	
 	//draw_set_halign(fa_right)
 	//draw_text_color(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+65,string_hash_to_newline(string(UberCont.completionpercentage)+"% COMPLETE"),c_black,c_black,c_black,c_black,1);
-	draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 ) - 20 + widescreen,string(UberCont.completionpercentage)+"%\nCOMPLETE",c_white,c_white,c_white,c_white,1);
-	draw_set_halign(fa_right)
+	xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-8;
+	/*
+	draw_set_color(c_gray)
+	draw_text(xx, camera_get_view_y(view_camera[0])+8,
+	"["+UberCont.updateVersion + UberCont.subUpdateVersion + "]" + UberCont.notUpdated);
+	*/
+	draw_set_halign(fa_left)
+	draw_text_color(__view_get( e__VW.XView, 0 )+6,__view_get( e__VW.YView, 0 ) - 49 + widescreen,string(UberCont.completionpercentage)+"% COMPLETE",c_white,c_white,c_white,c_white,1);
 	if UberCont.useSeed && UberCont.seedText != ""
 		draw_text_color(__view_get( e__VW.XView, 0 )+camera_get_view_width(view_camera[0])-8,__view_get( e__VW.YView, 0 ) - 9 + widescreen,+"SEED: "+string(UberCont.seedText),c_white,c_white,c_white,c_white,1);
 	draw_set_valign(fa_bottom);
-	draw_set_halign(fa_left)
 	
 if mode = 1
 {
-
-if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
-{
-scrDrawCharSelect()
-}
-else if StatsSelect.selected = 1
-{
-scrDrawStats()
-}
-else if CreditsSelect.selected = 1
-{
-scrDrawCredits()
-}
-else if UpdateChecker.selected = 1
-{
-scrDrawUpdate()
-}
-else if OptionSelect.selected = 1
-{
-scrDrawOptions()
-}
-else if OptionSelect2.selected = 1
-{
-scrDrawOptions2()
-}
+	if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
+	{
+	scrDrawCharSelect()
+	}
+	else if StatsSelect.selected = 1
+	{
+	scrDrawStats()
+	}
+	else if CreditsSelect.selected = 1
+	{
+	scrDrawCredits()
+	}
+	else if UpdateChecker.selected = 1
+	{
+	scrDrawUpdate()
+	}
+	else if OptionSelect.selected = 1
+	{
+	scrDrawOptions()
+	}
+	else if OptionSelect2.selected = 1
+	{
+	scrDrawOptions2()
+	}
 }

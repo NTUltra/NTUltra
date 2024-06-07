@@ -1,6 +1,6 @@
 function scrDrawCharSelect() {
 	if widescreen < 48
-	widescreen += 8
+		widescreen += 8
 
 	mouseover = -1;
 	
