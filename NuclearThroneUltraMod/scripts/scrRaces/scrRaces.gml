@@ -19,7 +19,7 @@ function scrRaces() {
 
 	race_name[1] = "FISH"
 	race_pass[1] = "GETS MORE <y>AMMO<y>"
-	race_acti[1] = "<w>DODGE ROLL<w>"
+	race_acti[1] = "<aq>DODGE<aq> <w>ROLL<w>"
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
 	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>##GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	race_inpsiration[1] = "FISH CAN <w>JUMP<w>";

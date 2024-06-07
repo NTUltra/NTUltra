@@ -26,15 +26,50 @@ function scrDrawCharSelect() {
 	//extra = 96
 	else if mouseover != -1
 		showExplain = false;
+	var bottom = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8;
+	var xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 8;
+	if showExplain and race != 0
+		draw_sprite(sprExplain,race,xx,bottom - 48);
 	//extra = 0
-	draw_set_valign(fa_bottom)
+	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_left);
-	draw_set_color(c_white)
+	draw_set_color(c_white);
 	var n = "";
-	if mouseover != -1
+	if race > 0 && mouseover != -1 && UberCont.race_have[race] = 1
 	{
-		
-		
+		var lg = make_colour_rgb(160,160,160);
+		draw_set_color(lg);
+		var charTxtRaw = race_acti[race];
+		var charTxt = scrReplaceAllColourCodes(string_hash_to_newline(charTxtRaw));
+		var col = make_colour_rgb(59,46,66);
+		xx = camera_get_view_x(view_camera[0]) + 6// + string_width(charTxtRaw);
+		//draw_sprite(sprLoadoutHoverArrow,0,UberCont.mouse__x,yy);
+		var yy = bottom - 14//string_height(charTxtRaw);
+		draw_rectangle_colour_curved(
+		xx - 2,
+		yy - string_height(charTxt) - 2,
+		xx + string_width(charTxt) + 2,
+		yy + 1,
+		col);
+		draw_text_colour(xx + 1,yy,charTxt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(xx + 1,yy + 1,charTxt,c_black,c_black,c_black,c_black,1);
+		scrDrawTextColours(xx,yy,charTxtRaw);
+		draw_set_color(c_white);
+		//draw_sprite_ext(sprRMBIcon, 0, xx + string_width(charTxt) + 5, yy - 5 - (string_height(charTxt) * 0.5),1,1,0,c_black,1);
+		draw_sprite(sprRMBIcon, 0, xx + string_width(charTxt) + 6, yy - 4 - (string_height(charTxt) * 0.5));
+		draw_set_color(lg);
+		yy -= string_height(charTxt) + 6;
+		charTxtRaw = race_pass[race];
+		charTxt = scrReplaceAllColourCodes(string_hash_to_newline(charTxtRaw));
+		draw_rectangle_colour_curved(
+		xx - 2,
+		yy - string_height(charTxt) - 2,
+		xx + string_width(charTxt) + 2,
+		yy + 1,
+		col);
+		draw_text_colour(xx + 1,yy,charTxt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(xx + 1,yy + 1,charTxt,c_black,c_black,c_black,c_black,1);
+		scrDrawTextColours(xx,yy,charTxtRaw);
 	}
 	
 	
@@ -105,8 +140,7 @@ if mouseover != -1
 		else
 			draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[mouseover])),string_hash_to_newline("[LOCKED]"))
 	}
-	if showExplain and race != 0
-		draw_sprite(sprExplain,race,drawx+string_width(string_hash_to_newline(txt2))/2-92,drawy-17-string_height(string_hash_to_newline(txt2)))
+	
 
 	img += 0.1
 /*
