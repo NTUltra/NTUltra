@@ -126,11 +126,11 @@ function scrWeapons() {
 	wep_name[11] = "AUTO CROSSBOW"
 	wep_type[11] = 3
 	wep_auto[11] = 1
-	wep_load[11] = 8
+	wep_load[11] = 9
 	wep_cost[11] = 1
 	wep_sprt[11] = sprAutoCrossbow
 	wep_area[11] = 7
-	wep_text[11] = "225 bolts per minute"
+	wep_text[11] = "200 bolts per minute"
 	wep_swap[11] = sndSwapBow
 	wep_rad[11] = 0;
 
@@ -7477,11 +7477,11 @@ function scrWeapons() {
 	wep_name[668] = "MICRO SHOTGUN"
 	wep_type[668] = 2
 	wep_auto[668] = 1
-	wep_load[668] = 13
+	wep_load[668] = 15
 	wep_cost[668] = 1
 	wep_sprt[668] = sprMicroShotgun
-	wep_area[668] = 3
-	wep_text[668] = "rapid fire shotgun"
+	wep_area[668] = 4
+	wep_text[668] = "hitscan shotgun"
 	wep_swap[668] = sndSwapShotgun
 	wep_rad[668] = 0;
 	
@@ -8722,6 +8722,17 @@ function scrWeapons() {
 	wep_text[779] = "eagle eyes significantly increases rocket targeting"
 	wep_swap[779] = sndSwapExplosive
 	wep_rad[779] = 0;
+	
+	wep_name[780] = "AUTO MICRO SHOTGUN"
+	wep_type[780] = 2
+	wep_auto[780] = 1
+	wep_load[780] = 8
+	wep_cost[780] = 1
+	wep_sprt[780] = sprMicroShotgun
+	wep_area[780] = 10
+	wep_text[780] = "rapid fire shotgun"
+	wep_swap[780] = sndSwapShotgun
+	wep_rad[780] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

@@ -1,5 +1,5 @@
 /// @description Starting a conversation
-var raceName = string_replace_all(string_replace_all(Player.race_name[Player.race],"[",""),"]","")
+var raceName = Player.race_name[Player.race];
 if introSpiel
 {
 	with TextHandler

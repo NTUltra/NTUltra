@@ -1,7 +1,7 @@
 /// @description Dialogue
 if introSpiel
 {
-	var raceName = string_replace_all(string_replace_all(Player.race_name[Player.race],"[",""),"]","")
+	var raceName = Player.race_name[Player.race]
 	switch (dialogueStep)
 	{
 		case 0:

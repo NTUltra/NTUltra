@@ -14348,7 +14348,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndMicroSmg)
 	snd_play_fire(sndShotgun)
-	repeat(10)
+	repeat(9)
 	{
 		with instance_create(x,y,MicroBullet)
 		{
@@ -17557,6 +17557,30 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = 10
+
+	break;
+	
+	//AUTO MICRO SHOTGUN
+	case 780:
+
+	snd_play_fire(sndMicroSmg)
+	snd_play_fire(sndShotgun)
+	repeat(9)
+	{
+		with instance_create(x,y,MicroBullet)
+		{
+			direction = aimDirection+(random(52)-26)*other.accuracy;
+			image_angle = direction;
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+	}
+
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 2
 
 	break;
 	

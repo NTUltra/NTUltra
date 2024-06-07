@@ -4,3 +4,5 @@ scrRaces() scrWeapons()
 
 button = 0
 p = 0
+hoverTime = 0;
+row = 0;

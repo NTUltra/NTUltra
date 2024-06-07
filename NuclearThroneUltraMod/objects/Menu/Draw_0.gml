@@ -32,34 +32,7 @@ wave += 0.05
 }
 }
 
-if mode = 1
-{
 
-if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
-{
-scrDrawCharSelect()
-}
-else if StatsSelect.selected = 1
-{
-scrDrawStats()
-}
-else if CreditsSelect.selected = 1
-{
-scrDrawCredits()
-}
-else if UpdateChecker.selected = 1
-{
-scrDrawUpdate()
-}
-else if OptionSelect.selected = 1
-{
-scrDrawOptions()
-}
-else if OptionSelect2.selected = 1
-{
-scrDrawOptions2()
-}
-}
 /*
 if UberCont.encrypted_data.secrets[0] == true
 	draw_set_color(c_fuchsia)
@@ -128,3 +101,32 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_
 		draw_text_color(__view_get( e__VW.XView, 0 )+camera_get_view_width(view_camera[0])-8,__view_get( e__VW.YView, 0 ) - 9 + widescreen,+"SEED: "+string(UberCont.seedText),c_white,c_white,c_white,c_white,1);
 	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_left)
+	
+if mode = 1
+{
+
+if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
+{
+scrDrawCharSelect()
+}
+else if StatsSelect.selected = 1
+{
+scrDrawStats()
+}
+else if CreditsSelect.selected = 1
+{
+scrDrawCredits()
+}
+else if UpdateChecker.selected = 1
+{
+scrDrawUpdate()
+}
+else if OptionSelect.selected = 1
+{
+scrDrawOptions()
+}
+else if OptionSelect2.selected = 1
+{
+scrDrawOptions2()
+}
+}

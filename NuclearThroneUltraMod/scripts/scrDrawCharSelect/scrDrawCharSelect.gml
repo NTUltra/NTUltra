@@ -8,11 +8,16 @@ function scrDrawCharSelect() {
 	with CampChar{
 	if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self) and y > view_yview+48 and y < view_yview+view_hview-48 and UberCont.mouse__y > view_yview+Menu.widescreen and UberCont.mouse__y < view_yview+view_hview-Menu.widescreen
 	other.mouseover = num}*/
-	
+	var tx = mouse_x;
+	var ty = mouse_y;
 	with CharSelect{
-	if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self)// and y > view_yview+48 and y < view_yview+view_hview-48
-	other.mouseover = num}
-
+		if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self)// and y > view_yview+48 and y < view_yview+view_hview-48
+		{
+			other.mouseover = num
+			tx = x + 12;
+			ty = y;
+		}
+	}
 	if (!instance_exists(LoadoutSelect) || LoadoutSelect.wepmenuopen)
 		return;
 	var showExplain = false;
@@ -22,8 +27,21 @@ function scrDrawCharSelect() {
 	else if mouseover != -1
 		showExplain = false;
 	//extra = 0
+	draw_set_valign(fa_bottom)
+	draw_set_halign(fa_left);
+	draw_set_color(c_white)
+	var n = "";
+	if mouseover != -1
+	{
+		
+		
+	}
 	
-
+	
+	
+	draw_set_halign(fa_left);
+	return
+//Old shit
 	draw_set_valign(fa_bottom)
 
 	draw_set_halign(fa_right)
@@ -61,18 +79,20 @@ function scrDrawCharSelect() {
 
 if mouseover != -1
 {
+	/*
 	draw_set_color(c_black)
 	draw_set_alpha(0.8)
 	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2-32,drawy-17-string_height(string_hash_to_newline(txt2)),drawx+extra+string_width(string_hash_to_newline(txt2))/2+2,drawy-12,0)
 	draw_set_alpha(1)
-
 	draw_sprite_ext(sprMenuPointer,0,__view_get( e__VW.XView, 0 )+14+mouseover*22,drawy-12,1,1,0,c_white,0.8)
-	
+	*/
+/*
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
 	draw_set_color(make_colour_rgb(160,160,160))
 	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,colourDraw)
+	*/
 }
 	draw_set_color(c_white)
 
@@ -80,7 +100,7 @@ if mouseover != -1
 	{
 	/*draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[race])),string_hash_to_newline(string(race_name[race])))
 	else*/
-	if UberCont.race_have[mouseover] = 1
+		if UberCont.race_have[mouseover] = 1
 			draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[mouseover])),string_hash_to_newline(string(race_name[mouseover])))
 		else
 			draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(race_name[mouseover])),string_hash_to_newline("[LOCKED]"))

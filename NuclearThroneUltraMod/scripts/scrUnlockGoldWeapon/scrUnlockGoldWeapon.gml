@@ -17,7 +17,7 @@ function scrUnlockGoldWeapon(target) {
 					//Unlock the gun!
 					start_wep_have[goldIndex,other.race]=1;
 					with instance_create(x,y,UnlockPopup)
-						mytext=Player.wep_name[target]+ "#UNLOCKED FOR#"+string_replace(string_replace(string(Player.race_name[Player.race]),"[",""),"]","");
+						mytext=Player.wep_name[target]+ "#UNLOCKED FOR#"+Player.race_name[Player.race];
 					scrSave();
 
 			    }

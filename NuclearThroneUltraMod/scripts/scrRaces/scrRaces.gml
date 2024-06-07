@@ -1,5 +1,5 @@
 function scrRaces() {
-	race_name[0] = "[RANDOM]"
+	race_name[0] = "RANDOM"
 	race_pass[0] = "???"
 	race_acti[0] = "???"
 	race_butt[0] = ""
@@ -17,7 +17,7 @@ function scrRaces() {
 	race_cskin_lock[0] = ""
 
 
-	race_name[1] = "[FISH]"
+	race_name[1] = "FISH"
 	race_pass[1] = "GETS MORE <y>AMMO<y>"
 	race_acti[1] = "<w>DODGE ROLL<w>"
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
@@ -37,7 +37,7 @@ function scrRaces() {
 	race_cskin_lock[1] = "LOOP WITH#EVERY CHARACTER"
 
 
-	race_name[2] = "[CRYSTAL]"
+	race_name[2] = "CRYSTAL"
 	race_pass[2] = "MORE MAX <r>HP<r>"
 	race_acti[2] = "<p>SHIELD<p>"
 	race_butt[2] = "LONGER <p>SHIELD<p>"
@@ -56,7 +56,7 @@ function scrRaces() {
 	race_cskin_lock[2] = "REACH INVERTED CAVES#AS CRYSTAL"
 
 
-	race_name[3] = "[EYES]"
+	race_name[3] = "EYES"
 	race_pass[3] = "SEES IN THE DARK"
 	race_acti[3] = "<w>TELEKINESIS<w>"
 	race_butt[3] = "STRONGER <w>TELEKINESIS<w>"
@@ -75,7 +75,7 @@ function scrRaces() {
 	race_cskin_lock[3] = "LOOP WITH EAGLE EYES#AS EYES"
 
 
-	race_name[4] = "[MELTING]"
+	race_name[4] = "MELTING"
 	race_pass[4] = "LESS MAX <r>HP<r>, MORE <g>RADS<g>"
 	race_acti[4] = "EXPLODE CORPSES"
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
@@ -94,7 +94,7 @@ function scrRaces() {
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
-	race_name[5] = "[PLANT]"
+	race_name[5] = "PLANT"
 	race_pass[5] = "IS <w>FASTER<w>"
 	race_acti[5] = "<w>SNARE<w> ENEMIES"
 	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#<w>SNARE<w> IS SLIGHTLY BIGGER"
@@ -113,7 +113,7 @@ function scrRaces() {
 	race_cskin_lock[5] = "KILL 2.000#ENEMIES IN ONE RUN#AS PLANT"
 
 
-	race_name[6] = "[Y.V.]"
+	race_name[6] = "Y.V."
 	race_pass[6] = "FASTER <w>RELOAD SPEED<w>"
 	race_acti[6] = "POP POP"
 	race_butt[6] = "BRRRAP"
@@ -132,7 +132,7 @@ function scrRaces() {
 	race_cskin_lock[6] = "UNLOCK#A GOLDEN WEAPON#FOR ALL CHARACTERS"
 
 
-	race_name[7] = "[STEROIDS]"
+	race_name[7] = "STEROIDS"
 	race_pass[7] = "IS LESS <w>ACCURATE<w>#ALL WEAPONS ARE FULLY AUTOMATIC"
 	race_acti[7] = "<w>DUAL WIELDING<w>"
 	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
@@ -151,7 +151,7 @@ function scrRaces() {
 	race_cskin_lock[7] = "DEFEAT#INVERTED BIG MACHINE#AS STEROIDS"
 
 
-	race_name[8] = "[ROBOT]"
+	race_name[8] = "ROBOT"
 	race_pass[8] = "FINDS BETTER TECH"
 	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
@@ -170,7 +170,7 @@ function scrRaces() {
 	race_cskin_lock[8] = "EAT AN ULTRA WEAPON"
 
 
-	race_name[9] = "[CHICKEN]"
+	race_name[9] = "CHICKEN"
 	race_pass[9] = "HARD TO KILL"
 	race_acti[9] = "HOLD FOR <w>SLOW MOTION<w>"
 	race_butt[9] = "NORMAL <w>MOVEMENT SPEED<w>#AND NORMAL <w>RELOAD SPEED<w>#DURING <w>SLOWMOTION<w>"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
@@ -189,7 +189,7 @@ function scrRaces() {
 	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
 
 
-	race_name[10] = "[REBEL]"
+	race_name[10] = "REBEL"
 	race_pass[10] = "<p>PORTALS<p> <r>HEAL<r>"
 	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER <w>ALLY RELOAD SPEED<w>"
@@ -208,13 +208,13 @@ function scrRaces() {
 	race_cskin_lock[10] = "REACH B?N??T L?N?"
 
 
-	race_name[11] = "[HUNTER]"
+	race_name[11] = "HUNTER"
 	race_pass[11] = "HIGHER PROJECTILE <w>VELOCITY<w>#BETTER <w>ACCURACY<w>"
 	race_acti[11] = "MARK ENEMIES"
 	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 30% MORE <w>DAMAGE<w>"
 	race_butt_detail[11] = race_butt[11];
 	race_inpsiration[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS MARKED#TO FIRE A SHOT THROUGH WALLS#EACH WALL PIERCED INCREASES DAMAGE";
-	race_lock[11] = "DEFLECT A SNIPER SHOT#INTO THE SNIPER"
+	race_lock[11] = "DEFLECT A SNIPER SHOT\nBACK AT THE SNIPER\nTO UNLOCK"
 	race_have[11] = 0
 	race_swep[11] = 80//sniper rifle
 	race_bskin[11] = 0
@@ -227,13 +227,13 @@ function scrRaces() {
 	race_cskin_lock[11] = "KILL AN HARD MODE#ULTRA SNIPER BOT#AS HUNTER"
 
 
-	race_name[12] = "[YUNG CUZ]"
+	race_name[12] = "YUNG CUZ"
 	race_pass[12] = "FIND MORE <r>HP<r> CHESTS#MORE DUPES = MORE <y>AMMO<y> FROM PICKUPS"
 	race_acti[12] = "<w>DUPLICATE<w>"
 	race_butt[12] = "GAIN EVEN MORE <y>AMMO<y>#DEPENDING ON NUMBER OF DUPLICATES"
 	race_butt_detail[12] = "EXTRA AMMO GAINED PER DUPLICATE#IS DOUBLED"
 	race_inpsiration[12] = "PRESS <w>[E]<w> TO: ";
-	race_lock[12] = "KILL A MIMIC"
+	race_lock[12] = "KILL A MIMIC TO UNLOCK"
 	race_have[12] = 0
 	race_swep[12] = 39//golden revolver
 	race_bskin[12] = 0
@@ -246,13 +246,13 @@ function scrRaces() {
 	race_cskin_lock[12] = "AS YUNG CUZ#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
 
 
-	race_name[13] = "[SHEEP]"
+	race_name[13] = "SHEEP"
 	race_pass[13] = "ENEMIES WON'T ATTACK UNTIL THEY SPOT YOU"
 	race_acti[13] = "HOLD TO <pi>CHARGE<pi>"
 	race_butt[13] = "BETTER <pi>CHARGE<pi>"
 	race_butt_detail[13] = "BETTER <pi>CHARGE<pi>#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
 	race_inpsiration[13] = "PRESS <w>[E]<w> WHILE CHARGING TO PARRY INCOMING DAMAGE";
-	race_lock[13] = "MORPH AN ENEMY"
+	race_lock[13] = "MORPH AN ENEMY TO UNLOCK"
 	race_have[13] = 0
 	race_swep[13] = 0//nothing
 	race_bskin[13] = 0
@@ -265,13 +265,13 @@ function scrRaces() {
 	race_cskin_lock[13] = "COMPLETE A#MAIN AREA#WITHOUT FIRING#AFTER THE SCRAPYARD#AS SHEEP"
 
 
-	race_name[14] = "[PANDA]"
+	race_name[14] = "PANDA"
 	race_pass[14] = "SMALLER HITBOX#<pi>RANDOMIZE<pi> WEAPONS THROWN IN A <p>PORTAL<p>"//"PRIMARY WEAPON IS RANDOMIZED#TO ONE OF THE SAME TIER#EACH AREA#EXCEPT YOUR STARTING WEAPON"
 	race_acti[14] = "PRESS/HOLD <w>THROW<w> WEAPONS"
 	race_butt[14] = "#SHORTER <w>THROWN<w> WEAPON RETURN DELAY#MORE <w>THROW<w> DAMAGE"
 	race_butt_detail[14] = "#REDUCED <w>THROWN<w> WEAPON RETURN DELAY (0.83 SEC)#+20% MORE <w>THROW<w> DAMAGE"
 	race_inpsiration[14] = "PRESS <w>[E]<w> TO: REDIRECT THROWN WEAPONS";
-	race_lock[14] = "VISIT THE JUNGLE"
+	race_lock[14] = "VISIT THE JUNGLE TO UNLOCK"
 	race_have[14] = 0
 	race_swep[14] = 200//panda stick
 	race_bskin[14] = 0
@@ -284,13 +284,13 @@ function scrRaces() {
 	race_cskin_lock[14] = "LOOP BY#ONLY THROWING WEAPONS#AND NOT USING THEM"
 
 
-	race_name[15] = "[ATOM]"
+	race_name[15] = "ATOM"
 	race_pass[15] = "ITEMS DESPAWN QUICKER#YOU DEAL <g>CONTACT DAMAGE<g>"
 	race_acti[15] = "<w>TELEPORT<w>"
 	race_butt[15] = "EXPLOSIVE <p>TELEPORTATION<p>"
 	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b> AT DESTINATION"
 	race_inpsiration[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT TELEPORTS resources CHESTS AND ENEMIES";
-	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT"
+	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCKS"
 	race_have[15] = 0
 	race_swep[15] = 19//laser pistol
 	race_bskin[15] = 0
@@ -303,13 +303,13 @@ function scrRaces() {
 	race_cskin_lock[15] = "COMPLETE FIVE#AREAS IN A ROW#USING CROWN OF HASTE#AS ATOM"
 
 
-	race_name[16] = "[VIKING]"
+	race_name[16] = "VIKING"
 	race_pass[16] = "REDUCED <r>MAX HP<r>##<p>PORTALS<p> GIVE <gb>ARMOUR<gb>#TWO <gb>ARMOUR<gb> MAXIMUM"
 	race_acti[16] = "SERPENT <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
 	race_inpsiration[16] = "PRESS <w>[E]<w> TO: CONVERT TWO HEALTH TO ONE ARMOUR";
-	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES#IN ONE RUN"//"BREAK X AMOUNT OF WALLS"
+	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
 	race_bskin[16] = 0
@@ -322,13 +322,13 @@ function scrRaces() {
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
 
-	race_name[17] = "[WEAPONSMITH]"//WEAPON SMITH
+	race_name[17] = "WEAPONSMITH"//WEAPON SMITH
 	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER TIER WEAPONS"
 	race_acti[17] = "UPGRADE WEAPONS"
 	race_butt[17] = "GET AN EVEN HIGHER#TIER WEAPON WHEN COMBINING WEAPONS"
 	race_butt_detail[17] = "GET AN EVEN HIGHER (+1)#TIER WEAPON WHEN COMBINING WEAPONS"
 	race_inpsiration[17] = "HOLD <w>[E]<w> TO: DOWNGRADE YOUR WEAPONS AND ADD TWO MODS TO IT";
-	race_lock[17] = "MODIFY A WEAPON"
+	race_lock[17] = "MODIFY A WEAPON TO UNLOCK"
 	race_have[17] = 0
 	race_swep[17] = 1
 	race_bskin[17] = 0
@@ -341,13 +341,13 @@ function scrRaces() {
 	race_cskin_lock[17] = "ADD FOUR MODS#TO ONE WEAPON"
 
 
-	race_name[18] = "[ANGEL]"
+	race_name[18] = "ANGEL"
 	race_pass[18] = "FLY OVER WALLS"
 	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
 	race_inpsiration[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT#HOLD <w>[E]<w> WHILE NOT DEFLECTING TO: BECOME <aq>IMMUNE<aq> AND UNABLE TO DEAL DAMAGE";
-	race_lock[18] = "HAVE A SINGLE RUN WITH#ATLEAST THREE SURVIVAL MUTATIONS#(RHINO SKIN, ALKALINE SALIVA ETC.)"
+	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
 	race_have[18] = 0
 	race_swep[18] = 56
 	race_bskin[18] = 0
@@ -360,13 +360,13 @@ function scrRaces() {
 	race_cskin_lock[18] = "DEFLECT A PROJECTILE#THAT IS DEFLECTED#BY A CROWN GUARDIANS#WITHOUT USING MELEE#AS ANGEL"
 
 
-	race_name[19] = "[SKELETON]"
+	race_name[19] = "SKELETON"
 	race_pass[19] = "REDUCED <r>MAX HP<r>,#MOVES SLOWER,#LESS ACCURATE"
 	race_acti[19] = "<r>BLOOD<r> <w>GAMBLE<w>"
 	race_butt[19] = "BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_butt_detail[19] = "33% BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_inpsiration[19] = "HOLD <w>[E]<w> TO: SIGNIFICANTLY SLOW YOUR MOVEMENT AND INCREASE THE DAMAGE YOU DEAL";
-	race_lock[19] = "DIE IN THE LABS AS MELTING"
+	race_lock[19] = "DIE IN THE LABS AS MELTING TO UNLOCK"
 	race_have[19] = 0
 	race_swep[19] = 56//allright we'll do a character with a rusty revolver
 	race_bskin[19] = 0
@@ -379,13 +379,13 @@ function scrRaces() {
 	race_cskin_lock[19] = "REACH THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON"
 
 
-	race_name[20] = "[BUSINESS HOG]"
+	race_name[20] = "BUSINESS HOG"
 	race_pass[20] = "BOSSES DROP <y>GOLDEN<y> WEAPON CHESTS"
 	race_acti[20] = "HOLD FOR <g>SHOP<g>"
 	race_butt[20] = "20% <w>DISCOUNT<w>"
 	race_butt_detail[20] = "20% <w>DISCOUNT<w>"
 	race_inpsiration[20] = "PRESS <w>[E]<w> TO: STEAL AN ENEMY'S GUN AND RADS";
-	race_lock[20] = "FIND AND STEAL#THE MONEY GUN"
+	race_lock[20] = "FIND AND STEAL THE MONEY GUN TO UNLOCK"
 	race_have[20] = 0
 	race_swep[20] = 444//golden hand cannon
 	race_bskin[20] = 0
@@ -398,13 +398,13 @@ function scrRaces() {
 	race_cskin_lock[20] = "SUCCESSFULLY USE#THE INVESTMENT ULTRA"
 
 
-	race_name[21] = "[HORROR]"
+	race_name[21] = "HORROR"
 	race_pass[21] = "EXTRA <g>MUTATION<g> CHOICE"//"BLAST ARMOUR, HEAT"
 	race_acti[21] = "<g>RADIATION<g> BEAM"//"PORTAL STRIKE"
 	race_butt[21] = "BEAM CHARGES QUICKER AND <r>HEALS<r>#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>"
 	race_butt_detail[21] = "BEAM CHARGES 30% QUICKER#BEAM <r>HEALS<r> EVERY 2 SECONDS#SOMETIMES MISSED BEAM#WILL DROP <g>RADS<g>"
 	race_inpsiration[21] = "PRESS <w>[E]<w> TO: SUCK UP RADS???? IDK YET";
-	race_lock[21] = "REACH WONDERLAND"//"REACH PALACE"
+	race_lock[21] = "REACH WONDERLAND TO UNLOCK"//"REACH PALACE"
 	race_have[21] = 0
 	race_swep[21] = 1
 	race_bskin[21] = 0
@@ -417,13 +417,13 @@ function scrRaces() {
 	race_cskin_lock[21] = "COMPLETE A#MAIN AREA ON LOOP#USING ONLY THE BEAM"
 
 
-	race_name[22] = "[ROGUE]"
+	race_name[22] = "ROGUE"
 	race_pass[22] = "BLAST ARMOUR, <b>HEAT<b>"//"WALK FOREVER"
 	race_acti[22] = "<b>PORTAL STRIKE<b>"//"GASS, TOXIC IMMUNITY"
 	race_butt[22] = "STRONGER <b>PORTAL STRIKE<b>#MORE <b>PORTAL STRIKE AMMO<b> SPAWNS"//"GASS SPREADS FASTER"
 	race_butt_detail[22] = race_butt[22];
 	race_inpsiration[22] = "PRESS <w>[E]<w> TO: ";
-	race_lock[22] = "REACH THE THRONE"
+	race_lock[22] = "REACH THE THRONE TO UNLOCK"
 	race_have[22] = 0
 	race_swep[22] = 312//ROGUE RIFLE
 	race_bskin[22] = 0
@@ -436,7 +436,7 @@ function scrRaces() {
 	race_cskin_lock[22] = "USE 8 PORTAL STRIKES#IN ONE AREA"
 
 
-	race_name[23] = "[FROG]"
+	race_name[23] = "FROG"
 	race_pass[23] = "IMMUNE TO <g>TOXIC<g>";
 	race_acti[23] = "HOLD AND RELEASE <g>TOXIC GAS<g>"
 	if random(1000) < 1
@@ -444,7 +444,7 @@ function scrRaces() {
 	race_butt[23] = "<g>TOXIC<g> SPREADS FASTER"
 	race_butt_detail[23] = "<g>TOXIC<g> SPREADS FASTER#<g>TOXIC<g> LASTS LONGER#HOMING <g>TOXIC<g>#ACTIVE SPAWNS <g>TOXIC<g> TOWARDS YOUR AIM"
 	race_inpsiration[23] = "PRESS <w>[E]<w> TO: BURN GASS";
-	race_lock[23] = "KILL BALL MOM"
+	race_lock[23] = "KILL BALL MOM TO UNLOCK"
 	race_have[23] = 0
 	race_swep[23] = 348//FROG BLASTER
 	race_bskin[23] = 0
@@ -457,13 +457,13 @@ function scrRaces() {
 	race_cskin_lock[23] = "REACH AND BEAT#THE THRONE#AS FROG#ON THE GAMEMODE:#DISC ROOM#WITH SETTINGS:#ATLEAST 6 DISCS#ATLEAST 2 DAMAGE"
 
 
-	race_name[24] = "[ELEMENTOR]"//ELEMENTAL
+	race_name[24] = "ELEMENTOR"//ELEMENTAL
 	race_pass[24] = "STRONGER <b>LIGHTNING<b>,#<aq>FROST<aq>, <r>FIRE<r> AND <p>KRAKEN<p>"
 	race_acti[24] = "<w>TERRAFORM<w> AT THE COST OF <y>AMMO<y>"//TERRAFORM
 	race_butt[24] = "CHEAPER TERRAFORM#YOUR WALLS <w>DEFLECT<w> ENEMY PROJECTILES"
 	race_butt_detail[24] = "33% CHEAPER TERRAFORM#YOUR WALLS <w>DEFLECT<w> ENEMY PROJECTILES"
 	race_inpsiration[24] = "PRESS <w>[E]<w> TO: EXPLODE YOUR WALLS";
-	race_lock[24] = "REACH MUSHROOM LAND"//TAKE HEAVY HEART
+	race_lock[24] = "REACH MUSHROOM LAND TO UNLOCK"//TAKE HEAVY HEART
 	race_have[24] = 0
 	race_swep[24] = 337//MINI LIGHTNING PISTOL//102//FROST PISTOL
 	race_bskin[24] = 0
@@ -476,13 +476,13 @@ function scrRaces() {
 	race_cskin_lock[24] = "SUMMON 4 TINY KRAKENS#IN ONE AREA#USING CROWN OF DROWNING#AS ELEMENTOR"
 
 
-	race_name[25] = "[DOCTOR]"//MUTATION SMITH
+	race_name[25] = "DOCTOR"//MUTATION SMITH
 	race_pass[25] = "ALL <g>MUTATIONS<g> ARE UPGRADED#GETS LESS <g>RADIATION<g> FROM ENEMIES#START AT <g>LEVEL<g> <w>2<w>"//SLIGHTLY BETTER MUTATIONS# LEVELS SLOWER
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
 	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR <g>RADS<g>"
 	race_butt_detail[25] = race_butt[25];
 	race_inpsiration[25] = "PRESS <w>[E]<w> WHILE BEHIND ON AN ENEMY TO STEAL 1HP";
-	race_lock[25] = "REACH LEVEL ULTRA"//REACH LEVEL ULTRA
+	race_lock[25] = "REACH LEVEL ULTRA TO UNLOCK"//REACH LEVEL ULTRA
 	race_have[25] = 0
 	race_swep[25] = 1
 	race_bskin[25] = 0
@@ -494,13 +494,13 @@ function scrRaces() {
 	race_bskin_lock[25] = "REACH LEVEL 8#BEFORE THE LABS#WHILE USING#THE MAIN PATH#AS DOCTOR"
 	race_cskin_lock[25] = "PROFESSIONAL#SELFCARE"
 
-	race_name[26] = "[GOOD OL' HUMPHRY]"//RUSTY GRANDPA SOLDIER
+	race_name[26] = "GOOD OL' HUMPHRY"//RUSTY GRANDPA SOLDIER
 	race_pass[26] = "LESS <r>MAX HP<r>#DEALING DAMAGE BUILDS UP <w>SKILL<w>##SKILL INCREASES ALL <w>DAMAGE DEALT<w>##SKILL DECREASES OVER TIME#AND WHEN YOU <aq>TAKE DAMAGE<aq>#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
 	race_acti[26] = "<w>HALT<w> - COSTS <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
 	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
 	race_inpsiration[26] = "PRESS <w>[E]<w> TO: DEAL DAMAGE TO ALL ENEMIES NEAR YOU AND STUN YOURSELF";
-	race_lock[26] = "BEAT BIG FISH"//SOMETHING A LITTLE HARDER
+	race_lock[26] = "BEAT BIG FISH TO UNLOCK"//SOMETHING A LITTLE HARDER
 	race_have[26] = 0
 	race_swep[26] = 148
 	race_bskin[26] = 0
@@ -512,14 +512,14 @@ function scrRaces() {
 	race_bskin_lock[26] = "PERFORM 20 CLOSE DODGES#USING EXTRA FEET#IN ONE RUN#AS HUMPHRY"//"COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
 	race_cskin_lock[26] = "REACH 500 SKILL!"
 	
-	race_name[27] = "[HANDS]"
+	race_name[27] = "HANDS"
 	race_pass[27] = "HIGHER CHANCE FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> 2<r>HP<r>"
 	race_acti[27] = "PRESS/HOLD TO <w>GRAB<w>#CHESTS/WEAPONS/ENEMIES"
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
 	race_inpsiration[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>";
 	race_inpsiration_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
-	race_lock[27] = "KILL THE INVERTED THRONE"
+	race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
 	race_have[27] = 0
 	race_swep[27] = 443
 	race_bskin[27] = 0
@@ -531,7 +531,7 @@ function scrRaces() {
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
 	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONE BUTT)"
 	/*
-	race_name[28] = "[NOTHING]"
+	race_name[28] = "NOTHING"
 	race_pass[28] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
 	race_acti[28] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE PLAYAREA#TO DESTROY EVERYTHING"
 	race_butt[28] = "BIGGER VOID CONSUMPTION"

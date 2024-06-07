@@ -11,9 +11,11 @@ visible = 1
 
 x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
+row = 0;
 if num>13
 {
 //yy=58;
+	row = 1;
 	if num == 27
 	{
 		x = __view_get( e__VW.XView, 0 ) + 8
@@ -36,7 +38,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 }
 //yy=32;//48
 var yyy = y + 48 - Menu.widescreen;
-if Menu.race = image_index
+if Menu.race == image_index
 {
     draw_sprite(sprSelected,-1,x,yyy)
     draw_sprite(sprite_index,-1,x+2,yyy-2)
@@ -44,16 +46,19 @@ if Menu.race = image_index
 	{
 		draw_sprite_ext(sprCharSelectElementorHead,0,x+2,yyy-2,1,1,0,ElementorHeadMenu.col,1);	
 	}
-    
+    /*
     if Menu.mouseover != image_index
 	{
 		draw_sprite_ext(sprite_index,-1,x+2,yyy-2,1,1,0,c_white,0.05);
-	}
+	}*/
 }
 else
 {
     if UberCont.race_have[num] != 1
+	{
 		draw_sprite(sprCharSelectLocked,num,x,yyy)
+		draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
+	}
 	else
 	{
 		draw_sprite(sprite_index,-1,x,yyy)
@@ -61,6 +66,7 @@ else
 		{
 			draw_sprite_ext(sprCharSelectElementorHead,0,x,yyy,1,1,0,ElementorHeadMenu.col,1);
 		}
+		draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
 	}
     
     if Menu.mouseover == image_index && num != 0
@@ -100,7 +106,7 @@ else
 	}
     
     if UberCont.race_have[num] =1 and UberCont.ctot_played[num] = 0 and num != 0
-	 draw_sprite(sprNew,-1,x,yyy)
+		draw_sprite(sprNew,-1,x,yyy)
 
 }
 

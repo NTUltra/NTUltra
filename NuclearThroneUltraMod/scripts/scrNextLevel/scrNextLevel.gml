@@ -402,11 +402,11 @@ function scrNextLevel() {
 	        inverted = false;
 	        exit;
 	        }
-	        else//GO TO CLOUDLAND
+	        else//go to crystal caves
 	        {
-		        area = 138;
-		        subarea = 0;
-				lastarea = 138;
+		        area = 6;
+		        subarea = 1;
+				lastarea = 6;
 				lastsubarea = 1;
 				inverted = false;
 	        }
