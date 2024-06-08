@@ -9,5 +9,5 @@ dir=image_angle;
 
 exploPos=-64;
 upgraded=false;
-alarm[2] = 50;
+alarm[2] = 40;
 drawCancel = false;

@@ -533,10 +533,10 @@ function scrWeapons() {
 	wep_rad[47] = 0;
 
 	wep_name[48] = "ION CANNON"
-	wep_type[48] = 4
-	wep_auto[48] = 3
+	wep_type[48] = 5
+	wep_auto[48] = 2
 	wep_load[48] = 18
-	wep_cost[48] = 4
+	wep_cost[48] = 5
 	wep_sprt[48] = sprIonCannon
 	wep_area[48] = 7
 	wep_text[48] = "death from above"
@@ -2379,8 +2379,8 @@ function scrWeapons() {
 	wep_rad[211] = 0;
 
 	wep_name[212] = "SUPER ION CANNON"
-	wep_type[212] = 4
-	wep_auto[212] = 0
+	wep_type[212] = 5
+	wep_auto[212] = 2
 	wep_load[212] = 40
 	wep_cost[212] = 15
 	wep_sprt[212] = sprSuperIonCannon
@@ -3582,7 +3582,7 @@ function scrWeapons() {
 
 	wep_name[319] = "TOXIC ION CANNON"
 	wep_type[319] = 4
-	wep_auto[319] = 3
+	wep_auto[319] = 2
 	wep_load[319] = 16
 	wep_cost[319] = 3
 	wep_sprt[319] = sprToxicIonCannon
@@ -3835,7 +3835,7 @@ function scrWeapons() {
 
 	wep_name[342] = "KRAKEN ION CANNON"
 	wep_type[342] = 4
-	wep_auto[342] = 3
+	wep_auto[342] = 2
 	wep_load[342] = 28
 	wep_cost[342] = 4
 	wep_sprt[342] = sprKrakenIonCannon

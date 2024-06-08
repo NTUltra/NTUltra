@@ -15,6 +15,8 @@ scrCrowns()
 scrGameModes();
 race = 0
 skin = 0;
+wave = 0;
+explainLerp = 0;
 crown = [1];
 
 char[0] = instance_create(64,64,Campfire)

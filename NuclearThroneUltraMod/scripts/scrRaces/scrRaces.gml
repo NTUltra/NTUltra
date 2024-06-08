@@ -1,4 +1,5 @@
 function scrRaces() {
+
 	race_name[0] = "RANDOM"
 	race_pass[0] = "???"
 	race_acti[0] = "???"

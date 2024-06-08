@@ -8,7 +8,7 @@ motion_add(random(360),random(1));
 
 
 snd_play(UberCont.snd_wallbreak,0.1)
-BackCont.shake += 2;
+BackCont.shake += 1;
 
 with myWall
 instance_destroy();

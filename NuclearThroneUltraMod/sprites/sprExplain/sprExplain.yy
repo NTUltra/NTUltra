@@ -52,8 +52,8 @@
   "nineSlice":null,
   "origin":8,
   "parent":{
-    "name":"Menu",
-    "path":"folders/Sprites/Menu.yy",
+    "name":"Tutorial",
+    "path":"folders/Sprites/Menu/Tutorial.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

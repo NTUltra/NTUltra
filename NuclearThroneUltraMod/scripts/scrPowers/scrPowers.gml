@@ -1292,7 +1292,7 @@ function scrPowers(raceOverwrite = -1) {
 	//FISH
 	if race == 1
 	{
-		if true {
+		if false {
 			if (!didJumpRoll)
 			{
 				if jump > jumpVulnerabilityWindow
@@ -2092,6 +2092,7 @@ function scrPowers(raceOverwrite = -1) {
 					cost += 2;
 					cost += (humphrySkill * 0.15);
 				}
+				humphrySkill += cost;
 				if humphrySkill >= cost//used to be 50//10%?
 				{
 					insufficientFunds = false;

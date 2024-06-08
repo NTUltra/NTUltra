@@ -41,7 +41,7 @@ else*/
 
 //widescreen bars side art
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+widescreen,0)
-
+draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen-5,0)
 if widescreen > 0
 {
 	var skinIndex = racemax * 3;
@@ -66,15 +66,13 @@ if widescreen > 0
 			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 96,portraitLerp);
 		else
 			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 74,portraitLerp);
-		draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen);
+		draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8);
 	}
 }
 else
 {
 	portraitLerp = 0;
 }
-draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen-5,0)
-
 
 	draw_set_halign(fa_left)//jezus christ this menu systemm is fked up
 	draw_set_valign(fa_top);

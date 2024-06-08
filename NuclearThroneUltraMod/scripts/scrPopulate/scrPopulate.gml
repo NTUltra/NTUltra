@@ -554,7 +554,7 @@ function scrPopulate() {
 		}
     }
 
-    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 64{
+    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
         if Player.area < 5 {
             with WeaponChest
             instance_create(x, y, Bandit)
@@ -563,7 +563,7 @@ function scrPopulate() {
             with AmmoChest
             instance_create(x, y, Bandit)
         }
-        else if Player.area != 101 && Player.area != 128 && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 64{
+        else if Player.area != 101 && Player.area != 128 && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
             with WeaponChest
             instance_create(x, y, Grunt)
             //with RadChest

@@ -29,7 +29,111 @@ function scrDrawCharSelect() {
 	var bottom = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8;
 	var xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 8;
 	if showExplain and race != 0
-		draw_sprite(sprExplain,race,xx,bottom - 48);
+	{
+		explainLerp += 0.3;
+		
+		if explainLerp > 3
+			explainLerp = 3;
+		var sx = lerp(xx + 64,xx - 24,explainLerp-3);
+		var sy = bottom - 79;
+		draw_sprite(sprExplainOutline,0,sx,sy);
+		var spr = sprExplain1;
+		switch (race)
+		{
+			case 1:
+				spr = sprExplain1;
+			break;
+			case 2:
+				spr = sprExplain2;
+			break;
+			case 3:
+				spr = sprExplain3;
+			break;
+			case 4:
+				spr = sprExplain4;
+			break;
+			case 5:
+				spr = sprExplain6;
+			break;
+			case 6:
+				spr = sprExplain6;
+			break;
+			case 7:
+				spr = sprExplain7;
+			break;
+			case 8:
+				spr = sprExplain8;
+			break;
+			case 9:
+				spr = sprExplain9;
+			break;
+			case 10:
+				spr = sprExplain10;
+			break;
+			case 11:
+				spr = sprExplain11;
+			break;
+			case 12:
+				spr = sprExplain12;
+			break;
+			case 13:
+				spr = sprExplain13;
+			break;
+			case 14:
+				spr = sprExplain14;
+			break;
+			case 15:
+				spr = sprExplain15;
+			break;
+			case 16:
+				spr = sprExplain16;
+			break;
+			case 17:
+				spr = sprExplain17;
+			break;
+			case 18:
+				spr = sprExplain18;
+			break;
+			case 19:
+				spr = sprExplain19;
+			break;
+			case 20:
+				spr = sprExplain25;
+			break;
+			case 21:
+				spr = sprExplain20;
+			break;
+			case 22:
+				spr = sprExplain21;
+			break;
+			case 23:
+				spr = sprExplain22;
+			break;
+			case 24:
+				spr = sprExplain23;
+			break;
+			case 25:
+				spr = sprExplain24;
+			break;
+			case 26:
+				spr = sprExplain26;
+			break;
+			case 27:
+				spr = sprExplain27;
+			break;
+			default:
+				spr = sprExplain1
+			break;
+		}
+		draw_sprite(spr,wave,sx,sy);
+		if explainLerp > 2
+			wave += 0.4;
+	}
+	else
+	{
+		wave = 0;
+		explainLerp = 0;
+	}
 	//extra = 0
 	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_left);
@@ -70,6 +174,7 @@ function scrDrawCharSelect() {
 		draw_text_colour(xx + 1,yy,charTxt,c_black,c_black,c_black,c_black,1);
 		draw_text_colour(xx + 1,yy + 1,charTxt,c_black,c_black,c_black,c_black,1);
 		scrDrawTextColours(xx,yy,charTxtRaw);
+		draw_set_color(c_white);
 	}
 	
 	

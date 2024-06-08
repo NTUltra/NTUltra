@@ -1,4 +1,5 @@
 /// @description main
+
 if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
 	exit;
 if ultra_got[21] && altUltra
@@ -501,6 +502,7 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
+			humphrySkill = 100;
 			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
@@ -509,12 +511,23 @@ if !instance_exists(LevCont) and visible = 1
 			isPermanent = true;
 			//scrn++;
 
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "FIRE EVERY GUN";
+			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
+			//thing.mytext = "FIRE EVERY GUN";
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			
-			instance_create(x+32,y,MimicBoss);
+			//instance_create(x+32,y,MimicBoss);
+			if !instance_exists(GifRecorder)
+			{
+				instance_create(x,y,GifRecorder);
+			}
+			else
+			{
+				with GifRecorder
+				{
+					instance_destroy();	
+				}
+			}
 			//instance_create(x+32,y,FreakBandit);
 
 			/*
