@@ -31,5 +31,13 @@ if alarm[5] > 0
 
 	draw_sprite_ext(sprLaserSight,-1,x,y,point_distance(x,y,lasx,lasy)/2+2,1,d,c_white,1)
 }
-
-draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+/*
+if forceAnimationDuration > 0 && (sprite_index != spr_hurt && image_index < 1)
+{
+	draw_sprite_ext(forceAnimation,forceAnimationIndex,x,y,right,1,image_angle,c_white,1)
+}
+else
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+}
+*/

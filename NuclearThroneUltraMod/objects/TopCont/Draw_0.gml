@@ -340,7 +340,14 @@ with ChesireCatTail{
 }
 with ChesireCat{
 	if visible{
-		draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
+		if forceAnimationDuration > 0 && !(sprite_index == spr_hurt && image_index < 1)
+		{
+			draw_sprite_ext(forceAnimation,forceAnimationIndex,x,y,right,1,image_angle,c_white,1)
+		}
+		else
+		{
+			draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+		}
 	}
 }
 with BigBadBat {
@@ -353,9 +360,17 @@ with InvertedChesireCatTail{
 	}
 }
 with InvertedChesireCat{
-if visible{
-draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1);
-}
+	if visible
+	{
+		if forceAnimationDuration > 0 && !(sprite_index == spr_hurt && image_index < 1)
+		{
+			draw_sprite_ext(forceAnimation,forceAnimationIndex,x,y,right,1,image_angle,c_white,1)
+		}
+		else
+		{
+			draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+		}
+	}
 }
 with DiscTrail
 {

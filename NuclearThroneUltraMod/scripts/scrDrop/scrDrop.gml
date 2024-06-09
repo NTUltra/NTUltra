@@ -358,7 +358,7 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 		scrWeapons()
 		SetSeedWeapon();
-		wep = scrDecideWep(0)
+		wep = scrDecideWep(0,5)
 		name = wep_name[wep]
 		type = wep_type[wep]
 		ammo = 30

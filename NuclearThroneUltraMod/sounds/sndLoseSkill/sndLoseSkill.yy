@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":1,
   "conversionMode":0,
-  "duration":1.79102,
+  "duration":10.036938,
   "name":"sndLoseSkill",
   "parent":{
     "name":"Mutations",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndLoseSkill.ogg",
+  "soundFile":"sndLoseSkill.wav",
   "type":0,
   "volume":1.0,
 }

@@ -11,7 +11,8 @@ spr_idle = sprInvertedChesireCatIdle
 spr_walk = sprInvertedChesireCatIdle
 spr_hurt = sprInvertedChesireCatHurt
 spr_dead = sprInvertedChesireCatDead
-spr_fire = sprInvertedChesireCatPrepLaser
+spr_fire = sprInvertedChesireCatLaser;
+spr_fire_tell = sprInvertedChesireCatPrepLaser
 
 
 snd_dead = sndBigBanditMeleeHit;
@@ -68,3 +69,6 @@ gunangle = 0;
 scrAddDrops(2);
 maxSpeed = 8;
 firstTime = true;
+forceAnimation = 0;
+forceAnimationIndex = 0;
+forceAnimationDuration = 0;

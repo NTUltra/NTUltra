@@ -32,6 +32,7 @@ if target != noone && instance_exists(target) {
 			{
 				alarm[1] += actTime*4;
 				walk = max(actTime, walk);
+				if target != noone && instance_exists(target)
 				motion_add(point_direction(x,y,target.x,target.y) + 180,acc*2);
 			}
 			walk = 0;

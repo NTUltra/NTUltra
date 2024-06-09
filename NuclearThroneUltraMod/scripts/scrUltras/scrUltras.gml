@@ -193,7 +193,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
     
 	    ultra_name[24] = "VERIFY VENUZ"
 	    ultra_text[24] = "EVERY OTHER <w>POP POP<w> ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL <w>AUTO<w>#+50% SECONDARY <w>RELOAD SPEED<w>"
-	    ultra_tips[24] = "blood gamble"
+	    ultra_tips[24] = "poppoppoppoppoppoppoppop"
 		
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra))
 		{

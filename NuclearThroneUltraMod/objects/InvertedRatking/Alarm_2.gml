@@ -24,7 +24,8 @@ if spawns > 12 and random(4) < 3
 spr_idle = sprInvertedRatkingRageWait
 spr_walk = sprInvertedRatkingRageAttack
 walk = 0
-alarm[1] = 15
+alarm[1] = 20
+friction = 0.4;
 instance_change(InvertedRatkingRage,false)
 }
 }

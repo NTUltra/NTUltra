@@ -27,7 +27,7 @@ if dis<240
 {
 	if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
 	{
-	    if dis < 70
+	    if dis < 90
 		{
 			direction = point_direction(x,y,target.x,target.y)+180;
 			alarm[1] +=5;
@@ -41,7 +41,9 @@ if dis<240
 			    alarm[3] = 18
 			    snd_play(sndLaserCrystalCharge)
 			    gunangle = point_direction(x,y,target.x,target.y)
-			    sprite_index = spr_fire
+			    forceAnimation = spr_fire;
+				forceAnimationIndex = 0;
+				forceAnimationDuration = sprite_get_number(forceAnimation);
 			    alarm[1] = 38+random(10)
     
 			    if  random(5)<1 && !collision_point(x,y,Wall,false,false)
@@ -66,7 +68,9 @@ if dis<240
 		    {
 			    //snd_play(sndDragonStart)
 			    gunangle = point_direction(x,y,target.x,target.y)
-			    sprite_index = spr_fire
+			    forceAnimation = spr_fire;
+				forceAnimationIndex = 0;
+				forceAnimationDuration = sprite_get_number(forceAnimation);
 			    alarm[1] = 5+random(5)
     
 			    snd_play(sndRocket)
@@ -175,8 +179,18 @@ if random(40)<1 && !collision_point(x,y,Wall,false,false)
 
 if alarm[4] < 1
 {
-	if hspeed > 0
-		right = 1
-	else if hspeed < 0
-		right = -1
+	if target != noone && instance_exists(target)
+	{
+		if target.x < x
+			right = -1
+        else if target.x > x
+			right = 1
+	}
+	else
+	{
+		if hspeed > 0
+			right = 1
+		else if hspeed < 0
+			right = -1
+	}
 }

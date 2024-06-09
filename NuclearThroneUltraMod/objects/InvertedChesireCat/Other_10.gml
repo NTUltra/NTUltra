@@ -3,7 +3,9 @@ snd_play(sndBigBanditMeleeHit);
     snd_play(sndMinigun);
 	if target != noone && instance_exists(target)
 		gunangle = point_direction(x,y,target.x,target.y)
-    sprite_index = spr_fire
+    forceAnimation = spr_fire;
+	forceAnimationIndex = 0;
+	forceAnimationDuration = sprite_get_number(forceAnimation);
     walk = 4+random(4)
     alarm[1] = walk+2
     var pa = 9;

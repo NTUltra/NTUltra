@@ -119,7 +119,14 @@ if crown == 2 && !canReAdd
 		}
 		else
 		{*/
-			my_health = max(my_health,maxhealth);
+			if ultra_got[62] && altUltra
+			{
+				armour = max(armour,floor(maxarmour*0.5));
+			}
+			else
+			{
+				my_health = max(my_health,maxhealth);
+			}
 		//}
 	}
 	/*

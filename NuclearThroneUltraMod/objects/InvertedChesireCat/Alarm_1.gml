@@ -23,7 +23,7 @@ if dis < 240
 {
 if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
 {
-	if dis < 64
+	if dis < 80
 	{
 		direction = point_direction(x,y,target.x,target.y)+choose(160,-160);
 		alarm[1] +=4;
@@ -39,7 +39,9 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     alarm[3] = 15
     snd_play(sndLaserCrystalCharge)
     gunangle = point_direction(x,y,target.x,target.y)
-    sprite_index = spr_fire
+    forceAnimation = spr_fire;
+	forceAnimationIndex = 0;
+	forceAnimationDuration = sprite_get_number(forceAnimation);
     alarm[1] = 25+random(11)
     
     if random(4)<1 && !collision_point(x,y,Wall,false,false)
@@ -61,8 +63,10 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     ammo=5;
     alarm[4] = 16
     snd_play(sndBigBanditMeleeHit)
+	forceAnimation = spr_fire_tell;
+	forceAnimationIndex = 0;
+	forceAnimationDuration = sprite_get_number(forceAnimation);
     gunangle = point_direction(x,y,target.x,target.y)
-    sprite_index = spr_fire
     alarm[1] = 60+random(30)
     
     if random(7)<1 && !collision_point(x,y,Wall,false,false)
@@ -83,7 +87,9 @@ if !place_meeting(x,y,Wall)&&place_meeting(x,y,Floor)
     {
     //snd_play(sndDragonStart)
     gunangle = point_direction(x,y,target.x,target.y)
-    sprite_index = spr_fire
+	forceAnimation = spr_fire;
+	forceAnimationIndex = 0;
+	forceAnimationDuration = sprite_get_number(forceAnimation);
     alarm[1] = 5+random(5)
     
     snd_play(sndNukeFire)
@@ -189,8 +195,18 @@ if random(40)<1 && !collision_point(x,y,Wall,false,false)
 
 if alarm[4] < 1
 {
-	if hspeed > 0
-		right = 1
-	else if hspeed < 0
-		right = -1
+	if target != noone && instance_exists(target)
+	{
+		if target.x < x
+			right = -1
+        else if target.x > x
+			right = 1
+	}
+	else
+	{
+		if hspeed > 0
+			right = 1
+		else if hspeed < 0
+			right = -1
+	}
 }

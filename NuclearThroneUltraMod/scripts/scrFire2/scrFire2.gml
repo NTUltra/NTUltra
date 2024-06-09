@@ -13385,37 +13385,15 @@ function scrFire2(hasTailNow) {
 	
 	//DOUBLE SIDED BLADE
 	case 635:
-
-	snd_play_fire(choose(sndSword1,sndSword2))
-
-	instance_create(x,y,Dust)
-
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	
+	with instance_create(x,y,DoubleSidedBladeBurst)
 	{
-		dmg = 12
-		longarms = 0
-		
-		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection+15*other.accuracy,2+longarms)
-		image_angle = direction
+		creator = other.id
+		ammo = 2
+		time = 5
 		team = other.team
+		event_perform(ev_alarm,0)
 	}
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
-	{
-		dmg = 12
-		longarms = 0
-		
-		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection-15*other.accuracy,2+longarms)
-		image_angle = direction
-		team = other.team
-	}
-
-	wepangle = -wepangle
-	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 2
-	wkick = -6
 
 	break;
 	

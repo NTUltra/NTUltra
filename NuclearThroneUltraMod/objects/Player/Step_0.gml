@@ -1291,7 +1291,7 @@ if (!instance_exists(LevCont))
 		}
 		if race = 6
 		{//YV fire rate boost
-			reload -= 0.25//0.25
+			reload -= 0.20
 		}
 		if ultra_got[21] && !altUltra//YV ULTRA A
 		{
@@ -2245,7 +2245,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 				{
 					if dodgeAble && team != other.team//NOT FROM PLAYA!? O_O
 			        {                     
-						other.extrafeetalarm = 25;//after some time we check if you've dodged this
+						other.extrafeetalarm = 30;//25 after some time we check if you've dodged this
 						other.extrafeetdodged=true;
 						j = al;
 						dodgeAble = false;
@@ -2293,27 +2293,27 @@ microseconds=0;
 		}
 		if targetFloor != noone
 		{
-		var tries = 400;
-		var msk = mask_index;
-		mask_index = mskWallBreak;
-		while (targetFloor != noone && (place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(targetFloor.x+16,targetFloor.y+16,chestprop) || place_meeting(x+16,y+16,Player)) && tries > 0)
-		{
-			tries--;
-			with targetFloor
+			var tries = 400;
+			var msk = mask_index;
+			mask_index = mskWallBreak;
+			while (targetFloor != noone && (place_meeting(targetFloor.x+16,targetFloor.y+16,prop) || place_meeting(targetFloor.x+16,targetFloor.y+16,chestprop) || place_meeting(x+16,y+16,Player)) && tries > 0)
 			{
-				targetFloor = instance_nearest(x+irandom_range(128,-128),y+irandom_range(128,-128),Floor);
+				tries--;
+				with targetFloor
+				{
+					targetFloor = instance_nearest(x+irandom_range(128,-128),y+irandom_range(128,-128),Floor);
+				}
 			}
-		}
-		mask_index = msk;
-	    with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
-	    {
-			inverted=true;
-			isPink = false;
-			sprite_index = sprPortalSpawn;
-			depth=0;
-	    }
+			mask_index = msk;
+		    with instance_create(targetFloor.x+16, targetFloor.y+16,Portal)
+		    {
+				inverted=true;
+				isPink = false;
+				sprite_index = sprPortalSpawn;
+				depth=0;
+		    }
     
-	    invertedportalcounter=0;
+		    invertedportalcounter=0;
 		}
     }
     

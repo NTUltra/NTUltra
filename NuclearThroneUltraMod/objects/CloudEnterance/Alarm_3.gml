@@ -26,7 +26,6 @@ with Player
 		moveSpeed = 1;
 		alarm[1] = 60;
 	}
-	snd_play_2d(sndLoseSkill);//TEMP
 	level = currentLevel;
 	totalSkills = currentTotalSkills;
 	skillsChosen = currentSkillsChosen;

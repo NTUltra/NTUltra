@@ -1,5 +1,4 @@
 /// @description spinattack
-//snd_play(sndDragonStop)
 snd_play(sndStatueHurt);
 mask_index=mskChesireCat;
 alarm[1] += 6;

@@ -428,7 +428,7 @@ if skill_got[22]//Stress Sharp teeth part
 //Extra feet consider failed dodge
 if skill_got[2] && tookHit && !exception
 {
-	extrafeetalarm = 35;
+	extrafeetalarm = 40;
 	extrafeetdodged = false;
 }
 if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 1)
@@ -1149,10 +1149,21 @@ if scrIsCrown(29)
 		wantHealth += 1;
 	if wepmod4 != 0
 		wantHealth += 1;
-	if wantHealth != isPureHealthBoost
+	if ultra_got[62] && altUltra
 	{
-		maxhealth += wantHealth - isPureHealthBoost;
-		isPureHealthBoost += wantHealth - isPureHealthBoost;
+		if wantHealth != isPureHealthBoost
+		{
+			maxarmour += wantHealth - isPureHealthBoost;
+			isPureHealthBoost += wantHealth - isPureHealthBoost;
+		}
+	}
+	else
+	{
+		if wantHealth != isPureHealthBoost
+		{
+			maxhealth += wantHealth - isPureHealthBoost;
+			isPureHealthBoost += wantHealth - isPureHealthBoost;
+		}
 	}
 }
 if lockout

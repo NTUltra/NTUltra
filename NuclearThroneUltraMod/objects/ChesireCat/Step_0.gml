@@ -53,10 +53,6 @@ image_angle=0;
 //Wazer attack
 if alarm[5] > 0
 {
-	
-	if sprite_index == spr_hurt && image_index > 2
-		sprite_index = sprChesireCatLaser;
-		
 	if alarm[5] < wazerDuration - tellTime
 	{
 		if UberCont.normalGameSpeed == 60
@@ -100,3 +96,23 @@ if alarm[5] > 0
 
 if speed > maxSpeed
 	speed = maxSpeed;
+	
+if forceAnimationDuration > 0
+{
+	if UberCont.normalGameSpeed == 60
+		forceAnimationIndex += 0.2;
+	else
+		forceAnimationIndex += 0.4;
+	if forceAnimationIndex >= forceAnimationDuration
+	{
+		forceAnimation = 0;
+		forceAnimationDuration = 0;
+		forceAnimationIndex = 0;
+		if alarm[5] > 0 || alarm[3] > 0 || alarm[4] > 0
+		{
+			forceAnimation = spr_fire;
+			forceAnimationIndex = 0;
+			forceAnimationDuration = sprite_get_number(forceAnimation);	
+		}
+	}
+}

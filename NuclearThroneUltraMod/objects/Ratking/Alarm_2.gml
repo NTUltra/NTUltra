@@ -25,6 +25,7 @@ spr_idle = sprRatkingRageWait
 spr_walk = sprRatkingRageAttack
 walk = 0
 alarm[1] = 30
+friction = 0.4;
 instance_change(RatkingRage,false)
 }
 }

@@ -62,7 +62,7 @@ if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep))
 {
 	Player.banditland=true;
 }
-if instance_exists(CrownPed) && !closedTheVault
+if instance_exists(CrownPed) && !closedTheVault && alarm[1] < 1
 {
 	//Close up the survival arena
 	with Floor

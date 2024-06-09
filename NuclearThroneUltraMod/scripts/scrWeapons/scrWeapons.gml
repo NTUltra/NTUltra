@@ -337,7 +337,7 @@ function scrWeapons() {
 	wep_name[30] = "SPLINTER GUN"
 	wep_type[30] = 3
 	wep_auto[30] = 2
-	wep_load[30] = 18
+	wep_load[30] = 20
 	wep_cost[30] = 1
 	wep_sprt[30] = sprSplinterGun
 	wep_area[30] = 4
@@ -2557,7 +2557,7 @@ function scrWeapons() {
 	wep_name[228] = "GOLDEN SPLINTER GUN"
 	wep_type[228] = 3
 	wep_auto[228] = 2
-	wep_load[228] = 17
+	wep_load[228] = 19
 	wep_cost[228] = 1
 	wep_sprt[228] = sprGoldenSplinterGun
 	wep_area[228] = 19
@@ -3441,7 +3441,7 @@ function scrWeapons() {
 	wep_type[307] = 4
 	wep_auto[307] = 0
 	wep_load[307] = 26
-	wep_cost[307] = 1
+	wep_cost[307] = 2
 	wep_sprt[307] = sprFrostFlareGun
 	wep_area[307] = 8
 	wep_text[307] = "signal for yeti"
@@ -5134,7 +5134,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 1
-	wep_load[456] = 33
+	wep_load[456] = 35
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 21
@@ -7108,9 +7108,9 @@ function scrWeapons() {
 	wep_rad[634] = 0;
 	
 	wep_name[635] = "DOUBLE SIDED BLADE"
-	wep_type[635] = 0
+	wep_type[635] = 2
 	wep_auto[635] = 0
-	wep_load[635] = 14//16 usual
+	wep_load[635] = 17
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
 	wep_area[635] = 13

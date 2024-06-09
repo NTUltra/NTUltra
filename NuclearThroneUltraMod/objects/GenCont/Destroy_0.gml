@@ -73,98 +73,98 @@ if instance_exists(Player)
 		{
 		    if ( (area=1&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=105
 		    }
 			else if ( (area==10&&subarea<3)  )//Inv Savanna
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area==101&&subarea<3)  )//Inv Oasis
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area==103)  )//Inv mansion
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area==114&&subarea<2)  )//Inv Jungle
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area==117&&subarea<2)  )//Inv mushroom
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area==126&&subarea<2)  )//Graveyard
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( ((area == 130 || area == 132 || area == 133 || area == 134) && subarea<3)  )//Factory
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 		    else if ( area=2  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=105
 		    }
 		    else if ( (area=3&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=106
 		    }
 		    else if ( area == 4 &&  subarea < 2)
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=106
 		    }
 		    else if ( (area=5&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 		    else if ( area=6&&subarea<2  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 		    else if ( (area=7&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 		    else if ( (area=8&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 			else if ( (area == 9&&subarea<3)  )
 		    {
-		    invertedportalcounter=1;
-		    invertedportaldelay=45+inc;
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
 		    //area=107
 		    }
 		

@@ -188,7 +188,7 @@ if scrIsCrown(2) && canHeal && !scrIsCrown(22)
 {
 	if ultra_got[62] && altUltra //Living armour
 	{
-		armour += maxarmour*0.5;
+		armour += floor(maxarmour*0.5);
 		if armour > maxarmour
 			armour = maxarmour;
 		//armour = maxarmour;

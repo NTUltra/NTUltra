@@ -1,6 +1,7 @@
 alarm[1] = 30+random(10)
-scrTarget()
-walk = 0;
+scrTarget();
+if walk <= 0
+	instance_destroy();
 friction = 0.4;
 if target != noone
 {
@@ -21,6 +22,11 @@ if target != noone
 	else
 	{
 		walk *= 0.5;
+		alarm[1] = 10;
 	}
 }
-
+else
+{
+	walk *= 0.5;
+	alarm[1] = 10;
+}

@@ -604,8 +604,54 @@ function scrDrawHUD() {
 			}
 		}
 		dir += 1
-		if dir > dataRef.maxskill
+		if dir > dataRef.maxskill + 1
 			dir = 0;
+	}
+	var dal = array_length(UberCont.skillDeposit)
+	if dal > 0
+	{
+		var dir = 0;
+		repeat(dal)
+		{
+			var skillIndex = UberCont.skillDeposit[dir];
+			if dix < extraSpace
+			{
+				var xx = vx+__view_get( e__VW.WView, 0 )-10-16*dix;
+				var xxx = camera_get_view_x(view_camera[0]) + xx;
+				var yy = vy+12;
+				var yyy = camera_get_view_y(view_camera[0]) + yy;
+				var s = 8;
+				draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy+1,1,1,0,c_black,1)
+				draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy,1,1,0,c_dkgray,1)
+				dix += 1
+				if (mouse_x > xxx-s && mouse_x < xxx + s && mouse_y > yyy-s && mouse_y < yyy + s)
+				{
+					var ht;
+					if dir == 28//RAGE
+						ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[skillIndex];//MAX RAGE
+					else
+						ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"]\n"+dataRef.skill_text[skillIndex];
+				
+					holdExplainMutation +=2*dt;
+					if holdExplainMutation >= 10
+					{
+						scrDrawHelp(ht);
+						if dataRef.race == 25 && dataRef.skill_bons[skillIndex] != ""
+						{
+							//DOCTOR BONUS
+							txt = string_replace_all(ht,"#"," ");
+							var w = 206;
+							var s = string_height("A");
+							scrDrawHelp(dataRef.skill_bons[skillIndex], string_height_ext(txt,s,w)+2,c_lime);
+						}
+					}
+				
+					if holdExplainMutation > 10
+						holdExplainMutation = 10;
+				}
+			}
+			dir += 1
+		}
 	}
 	if holdExplainMutation > 0
 		holdExplainMutation -= 1*dt;
