@@ -12,8 +12,8 @@
     "path":"folders/Objects/Projectiles/Bursts.yy",
   },
   "parentObjectId":{
-    "name":"BurstWeapons",
-    "path":"objects/BurstWeapons/BurstWeapons.yy",
+    "name":"FlameBurst",
+    "path":"objects/FlameBurst/FlameBurst.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -935,6 +935,7 @@ if my_health <= 0 && armour < 1
 			with instance_create(x,y,PopupText)
 			{
 				mytext = "LOST "+other.skill_name[chosenSkillToLose];
+				theColour=c_red;
 			}
 		}
 		else if skillpoints > 0

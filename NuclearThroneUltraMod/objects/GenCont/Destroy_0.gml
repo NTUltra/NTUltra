@@ -385,7 +385,39 @@ if instance_exists(Player)
 			}
 		}
 	}
-	
+	if (Player.area == 4 && Player.subarea == 2)
+	{
+		if instance_exists(WeaponChest)
+		{
+			with Floor
+			{
+				if instance_exists(CloudEnterance)
+					continue;
+				var xx = x+16;
+				var yy = y+16;
+				var t = instance_nearest(xx,yy,WeaponChest)
+				var d = point_distance(xx,yy,t.x,t.y)
+				if d < 160 && d > 32
+					instance_create(x+16,y+8,CloudEnterance)
+			}
+		}
+		else
+		{
+			var tar = Player;
+			if instance_exists(WeaponChest)
+			{
+				tar = WeaponChest;
+			}
+			var furthest = instance_furthest(tar.x,tar,Floor);
+			var dir = point_direction(x,y,furthest.x,furthest.y)+random_range(120,-120);
+			var len = 128+random(32);
+			var nearestFloor = instance_nearest(tar.x+lengthdir_x(len,dir),tar.y+lengthdir_y(len,dir),Floor)
+			with nearestFloor
+			{
+				instance_create(x+16,y+8,CloudEnterance)
+			}
+		}
+	}
 	if (Player.area == 10 && Player.subarea == 1)
 	{
 		if instance_exists(WeaponChest)

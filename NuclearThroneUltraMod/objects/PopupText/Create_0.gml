@@ -8,3 +8,4 @@ theColour=c_white;
 blink=true;
 sprt = mskPickupThroughWall;
 ii = 0;
+moveSpeed = 3;

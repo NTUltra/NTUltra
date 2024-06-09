@@ -28,3 +28,4 @@ direction = random(360);
 moveDirection = direction;
 image_yscale = choose(1,-1);
 right = 1;
+scrAddDrops(1);

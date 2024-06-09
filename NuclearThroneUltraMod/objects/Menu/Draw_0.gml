@@ -38,7 +38,7 @@ if UberCont.encrypted_data.secrets[0] == true
 	draw_set_color(c_fuchsia)
 else*/
 	draw_set_color(c_black);
-
+	draw_set_halign(fa_left)//jezus christ this menu systemm is fked up
 //widescreen bars side art
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+widescreen,0)
 draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ),__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen-5,0)
@@ -47,6 +47,7 @@ if widescreen > 0
 	var skinIndex = racemax * 3;
 	if race != 0
 	{
+		var additional = 0;
 		if widescreen < 48
 		{
 			portraitLerp -= 0.3;
@@ -56,17 +57,40 @@ if widescreen > 0
 		else
 		{
 			portraitLerp += 0.3;
-			if portraitLerp > 1
-				portraitLerp = 1;
+			if portraitLerp > 2
+				portraitLerp = 2;
 		}
+		additional = lerp(32,0,portraitLerp-2);
 		skinIndex = scrRaceToPortraitIndex(race,skin);
-		
+		draw_set_font(fntB);
 		var bpx;
+		var tpx;
+		var rn = race_name[race];
+		if race == 20
+			rn = "BUSINESS\nHOG";
+		else if race == 26
+			rn = "GOOD O'L\nHUMPHRY";
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
-			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 96,portraitLerp);
+		{
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 96 + additional,min(1,portraitLerp));
+			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ) + 2,portraitLerp - 1);
+		}
 		else
-			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 74,portraitLerp);
+		{
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 70 + additional,min(1,portraitLerp));
+			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ),portraitLerp - 1);
+		}
+		draw_sprite_ext(sprSplat2,lerp(1,3,portraitLerp*0.5),
+		lerp(__view_get( e__VW.XView, 0 ) - 256,__view_get( e__VW.XView, 0 ),min(1,portraitLerp*0.75)),
+		__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 2,-1,1,0,c_white,1);
 		draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8);
+		draw_set_valign(fa_bottom);
+		draw_text_colour(tpx + 1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 4,rn,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tpx + 1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 6,rn,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(tpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 6,rn,c_white,c_white,c_white,c_white,1);
+		draw_set_font(fntM);
 	}
 }
 else
@@ -74,7 +98,6 @@ else
 	portraitLerp = 0;
 }
 
-	draw_set_halign(fa_left)//jezus christ this menu systemm is fked up
 	draw_set_valign(fa_top);
 	draw_set_color(c_white)
 	if widescreen > 0 && UberCont.completionpercentage >= 200

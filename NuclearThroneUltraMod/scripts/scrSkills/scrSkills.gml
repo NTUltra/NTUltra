@@ -571,16 +571,16 @@ function scrSkills() {
 	skill_msnd[45] =  sndMutAdrenalineFuel;
 	skill_bons[45] = "+25% HEAL RATE"
 	
-	skill_name[46] = "ROYAL VISION"
-	skill_text[46] = "UPGRADES YOUR SPECIAL ABILITY"
-	skill_detail[46] = skill_text[5];
+	skill_name[maxskill + 1] = "REGAL VISION"
+	skill_text[maxskill + 1] = "UPGRADES YOUR SPECIAL ABILITY"
+	skill_detail[maxskill + 1] = skill_text[5];
 	if instance_exists(Player)
-		skill_text[46] = string(Player.race_name[Player.race])+" "+string(Player.race_butt[Player.race])
+		skill_text[maxskill + 1] = string(Player.race_name[Player.race])+" "+string(Player.race_vision[Player.race])
 	if instance_exists(Player)
-		skill_detail[46] = string(Player.race_name[Player.race])+" "+string(Player.race_butt_detail[Player.race])
-	skill_tips[46] = "envision the throne"
-	skill_msnd[46] =  sndMutThronebutt
-	skill_bons[46] = "";
+		skill_detail[maxskill + 1] = string(Player.race_name[Player.race])+" "+string(Player.race_inpsiration_detail[Player.race])
+	skill_tips[maxskill + 1] = "envision the throne"
+	skill_msnd[maxskill + 1] =  sndMutThronebutt
+	skill_bons[maxskill + 1] = "";
 	
 	/*
 	skill_name[42] = "GLUTINOUS SOMETHING"
@@ -654,12 +654,12 @@ function scrSkills() {
 	skill_msnd[33] =  sndMutThronebutt
 	*/
 	
-	skill_name[maxskill + 1] = "NOTHING"
-	skill_text[maxskill + 1] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
-	skill_detail[maxskill + 1] = skill_text[maxskill + 1];
-	skill_tips[maxskill + 1] = "you have all mutations!"
-	skill_msnd[maxskill + 1] =  sndPartyHorn
-	skill_bons[maxskill + 1] = "EVEN MORE NOTHING <3"
+	skill_name[maxskill + 2] = "NOTHING"
+	skill_text[maxskill + 2] = "THERE ARE <w>NO MORE<w> <g>MUTATIONS<g> LEFT!"
+	skill_detail[maxskill + 2] = skill_text[maxskill + 2];
+	skill_tips[maxskill + 2] = "you have all mutations!"
+	skill_msnd[maxskill + 2] =  sndPartyHorn
+	skill_bons[maxskill + 2] = "EVEN MORE NOTHING <3"
 
 
 }

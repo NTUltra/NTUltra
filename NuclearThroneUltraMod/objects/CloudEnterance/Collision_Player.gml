@@ -1,0 +1,43 @@
+/// @description Go to the clouds
+if cAlpha > 0 && KeyCont.key_pick[other.p] = 1 && hasEnoughMuts
+{
+	KeyCont.key_pick[Player.p] = 2;
+	with Player
+	{
+		var gottenSkills = [];
+		var si = 0;
+		repeat(maxskill)
+		{
+			if skill_got[si]
+			{
+				array_push(gottenSkills,si);
+			}
+			si++;
+		}
+	}
+	if array_length(gottenSkills) > 2
+	{
+		image_index = 1;
+		mask_index = mskPickupThroughWall;
+		alarm[3] = 60;
+		alarm[7] = 30;
+		snd_play(sndAboutToLoseSkill);
+		alarm[0] = 5;
+		BackCont.shake += 10;
+	}
+	else
+	{
+		BackCont.shake += 5;
+		with instance_create(x,y,PopupText)
+		{
+			mytext = "NOT ENOUGH MUTATIONS!";
+			theColour=c_red;
+		}
+		if alarm[2] < 1
+		{
+			alarm[1] = 0;
+			alarm[2] = 1;
+		}
+		hasEnoughMuts = false;
+	}
+}

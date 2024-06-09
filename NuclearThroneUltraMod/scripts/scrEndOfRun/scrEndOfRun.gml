@@ -72,6 +72,7 @@ function scrEndOfRun(){
 		collectedInversionShardReward = false;
 		killedInvertedThrone2 = false;
 		extraVan = 0;
+		skillDeposit = [];
 		hasFoughtInvadingThrone = false;
 		tookUnstoppable = false;
 		revivedCharacters = [];

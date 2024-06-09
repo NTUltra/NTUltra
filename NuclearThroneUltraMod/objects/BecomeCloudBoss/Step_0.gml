@@ -8,15 +8,18 @@ if instance_exists(Player)
 }
 if place_meeting(x,y,Floor)
 {
-	var n = instance_nearest(x,y,Floor)
-	if n != noone
+	if alarm[0] > 5
 	{
-		var o = 16;
-		if n.object_index == FloorExplo
-			o = 8;
-		motion_add(point_direction(n.x+o,n.y+o,x,y),0.8);
-		if instance_exists(Player)
-			motion_add(point_direction(x,y,Player.x,Player.y),0.6);
+		var n = instance_nearest(x,y,Floor)
+		if n != noone
+		{
+			var o = 16;
+			if n.object_index == FloorExplo
+				o = 8;
+			motion_add(point_direction(n.x+o,n.y+o,x,y),0.8);
+			if instance_exists(Player)
+				motion_add(point_direction(x,y,Player.x,Player.y),0.6);
+		}	
 	}
 }
 else

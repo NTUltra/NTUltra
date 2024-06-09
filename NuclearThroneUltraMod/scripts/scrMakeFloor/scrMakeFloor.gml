@@ -881,7 +881,7 @@ function scrMakeFloor(limiter) {
 	}
 	if area == 138//CLOUD
 	{
-		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5
+		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5 || (subarea == 2 && !instance_exists(MimicBossPlateau))
 		{
 			if subarea == 2 && !instance_exists(MimicBossPlateau) {
 				instance_create(x+16,y+48,MimicBossPlateau);

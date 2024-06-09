@@ -109,7 +109,7 @@ function scrGameModes() {
 	gamemode_description[14] = "NO WEAPONS! JUST FISH'S PARTNER";
 	gamemode_nocombo[14] = [1,46,7,11,13,14,26,27,31,35,37,8,48];
 
-	gamemode[15] = "NO MUTATIONS";//
+	gamemode[15] = "NO LEVEL UP";//
 	gamemode_unlock[15] = "GET TO THE SCRAPYARD AT LEVEL 1";
 	gamemode_have[15] = 0;
 	gamemode_tip[15] = "WHO NEEDS TO MUTATE?";

@@ -197,6 +197,13 @@ function scrDarkness() {
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40,0)
 	with Statue
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),40,0)
+	with CloudEnterance
+	{
+		draw_set_alpha(cAlpha);
+		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
+		draw_set_alpha(1);
+		event_user(0);	
+	}
 	surface_reset_target()
 	}
 

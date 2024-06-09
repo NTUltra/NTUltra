@@ -6,11 +6,11 @@ with instance_create(x,y,WepPickup)
 {
 	scrWeapons()
 	wep = other.wep[0];
-	name = wep_name[other.wep]
+	name = wep_name[wep]
 	ammo = other.ammoGet
-	type = wep_type[other.wep]
+	type = wep_type[wep]
 	curse = 0
-	sprite_index = wep_sprt[other.wep]
+	sprite_index = wep_sprt[wep]
 }
 if aditionalwep != 0
 {

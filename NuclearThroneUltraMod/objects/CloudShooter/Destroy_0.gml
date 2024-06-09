@@ -1,4 +1,5 @@
 scrDropNearby(40,15);
+scrDropNearby(7,0);
 with instance_create(x,y,EnemyHomingTriangle)
 {
 	motion_add(other.gunangle+random(20)-10,1);

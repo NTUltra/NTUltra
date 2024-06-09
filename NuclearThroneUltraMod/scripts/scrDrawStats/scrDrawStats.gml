@@ -65,7 +65,7 @@ function scrDrawStats() {
 	var skillstats  = "";
 	var skillnames = "";
 	var whiteEnter = "";
-	var maxSkill = UberCont.maxskill + 1;
+	var maxSkill = UberCont.maxskill + 2;
 	var dir = 0;
 	var totSkills = 0;
 	repeat(maxSkill)

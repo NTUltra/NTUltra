@@ -34,7 +34,7 @@ function scrDrawCharSelect() {
 		
 		if explainLerp > 3
 			explainLerp = 3;
-		var sx = lerp(xx + 64,xx - 24,explainLerp-3);
+		var sx = lerp(xx + 64,xx - 24,explainLerp-2);
 		var sy = bottom - 79;
 		draw_sprite(sprExplainOutline,0,sx,sy);
 		var spr = sprExplain1;
@@ -98,22 +98,22 @@ function scrDrawCharSelect() {
 				spr = sprExplain19;
 			break;
 			case 20:
-				spr = sprExplain25;
-			break;
-			case 21:
 				spr = sprExplain20;
 			break;
-			case 22:
+			case 21:
 				spr = sprExplain21;
 			break;
-			case 23:
+			case 22:
 				spr = sprExplain22;
 			break;
-			case 24:
+			case 23:
 				spr = sprExplain23;
 			break;
-			case 25:
+			case 24:
 				spr = sprExplain24;
+			break;
+			case 25:
+				spr = sprExplain25;
 			break;
 			case 26:
 				spr = sprExplain26;
@@ -148,7 +148,12 @@ function scrDrawCharSelect() {
 		var col = make_colour_rgb(59,46,66);
 		xx = camera_get_view_x(view_camera[0]) + 6// + string_width(charTxtRaw);
 		//draw_sprite(sprLoadoutHoverArrow,0,UberCont.mouse__x,yy);
-		var yy = bottom - 14//string_height(charTxtRaw);
+		var yy = bottom - 29//string_height(charTxtRaw); 14
+		
+		if race == 20 || race == 26
+		{
+			yy -= 30;
+		}
 		draw_rectangle_colour_curved(
 		xx - 2,
 		yy - string_height(charTxt) - 2,

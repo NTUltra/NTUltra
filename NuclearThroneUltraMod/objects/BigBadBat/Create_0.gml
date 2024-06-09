@@ -71,10 +71,7 @@ audio_emitter_falloff(emitter, 50, 400, 1);
 
 wkick = 0;
 instance_create(x,y,BigWallBreak);
-if instance_exists(Player) && Player.area != 103
-{
-	instance_create(x,y,DramaCamera);
-}
+
 fireDelay = 0;
 scrAddDrops(3);
 
@@ -83,3 +80,4 @@ if instance_exists(Player) && Player.skill_got[29] {
 	alarm[6] += 90;
 	scrGiveSnooze();
 }
+alarm[7] = 10;

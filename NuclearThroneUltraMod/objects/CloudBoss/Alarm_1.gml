@@ -60,13 +60,17 @@ if target != noone {
 			}
         }
 
-        if target.x < x
+        if walk > 0 && random(2) < 1
+		{
+			motion_add(gunangle,maxSpeed);	
+		}
+		if target.x < x
 			right = -1
         else if target.x > x
 			right = 1
     }
     else if random(4) < 1 {
-        motion_add(random(360), 0.4)
+        motion_add(random(360), acc)
         walk = 20 + random(10)
         alarm[1] = walk + 10 + random(30)
         gunangle = direction
@@ -77,7 +81,7 @@ if target != noone {
     }
 }
 else if random(10) < 1 {
-    motion_add(random(360), 0.4)
+    motion_add(random(360), acc)
     walk = 20 + random(10)
     alarm[1] = walk + 10 + random(30)
     gunangle = direction

@@ -59,9 +59,9 @@ audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 
 }
-with InactivePatienceStation
+with InactiveAnyMutationStation
 {
 	instance_create(x,y,Flicker);
 	instance_destroy();
-	instance_create(x,y,PatienceStation);
+	instance_create(x,y,AnyMutationStation);
 }

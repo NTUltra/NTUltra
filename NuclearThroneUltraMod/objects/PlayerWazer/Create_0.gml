@@ -23,3 +23,4 @@ hit = [];
 owner = -1;
 startSpr = sprWazerStart;
 endSpr = sprWazerEnd;
+laserRange = 0;

@@ -517,6 +517,8 @@ maxlevel = 1;
 skillsChosen = 0
 skillpoints = 0;
 crownpoints = 0
+refundPoints = 0;
+getVision = false;
 
 kills = 0
 

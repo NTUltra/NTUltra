@@ -1,2 +1,2 @@
 /// @description xxx
-alarm[0] = 30;
+alarm[0] = 60;

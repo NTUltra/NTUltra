@@ -2,7 +2,7 @@ if other.team != 2 && alarm[0] > 2
 {
 	with other
 	{
-		if (morphMe != 10) {
+		//if (morphMe != 10) {
 			if (my_health > 0)
 			{
 			    if sprite_index != spr_hurt
@@ -17,7 +17,7 @@ if other.team != 2 && alarm[0] > 2
 				 BackCont.shake += 0.3
 			}
 			morphMe = other.morphType;
-		}
+		//}
 	}
 }
 

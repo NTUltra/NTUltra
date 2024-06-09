@@ -1292,7 +1292,7 @@ function scrPowers(raceOverwrite = -1) {
 	//FISH
 	if race == 1
 	{
-		if false {
+		if skill_got[maxskill + 1] {
 			if (!didJumpRoll)
 			{
 				if jump > jumpVulnerabilityWindow

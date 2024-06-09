@@ -16650,7 +16650,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,BloodRocketBurst)
 	{
 		creator = other.id
-		ammo = 6
+		ammo = 5
 		time = 2
 		accuracyRange = 10;
 		team = other.team
@@ -17110,12 +17110,12 @@ function scrFire2(hasTailNow) {
 	//BLOOD MINIGUN
 	case 763:
 
-	snd_play_fire(sndBloodPistol)
+	snd_play_fire(sndBloodMinigun)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection+(random(30)-15)*other.accuracy,22)
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,22)
 	image_angle = direction
 	team = other.team}
 
@@ -17581,6 +17581,62 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = 2
+
+	break;
+	
+	//CORE SPLITTER
+	case 781:
+
+	if !instance_exists(HeavyFlameSound)
+	{
+		snd_play(sndLightning1);
+		instance_create(x,y,HeavyFlameSound)
+	}
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[748] = 5;
+	}
+	else
+	{
+		wep_type[748] = 4;
+	}
+	with instance_create(x,y,CoreSplitterBurst)
+	{
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
+
+	break;
+	
+	//LIGHTNING FLAMETHROWER
+	case 782:
+
+	if !instance_exists(FlameSound)
+	{
+		snd_play(sndLightning1);
+		instance_create(x,y,FlameSound)
+	}
+	altFire = !altFire;
+	if altFire
+	{
+		wep_type[748] = 5;
+	}
+	else
+	{
+		wep_type[748] = 4;
+	}
+	with instance_create(x,y,LightningDragonBurst)
+	{
+		creator = other.id
+		ammo = 3
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
+	}
 
 	break;
 	

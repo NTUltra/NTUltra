@@ -2,5 +2,5 @@
 alarm[4] = 30;
 with MimicBossPlateau
 {
-	scrDrop(6,0);
+	scrDrop(8,0);
 }

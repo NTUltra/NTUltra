@@ -103,7 +103,7 @@ if target != noone {
 		}
 		alarm += actTime;
 	}
-	else if ran < 4
+	else if ran < 4.5
 	{
 		var xxx = x;
 		var yyy = y;

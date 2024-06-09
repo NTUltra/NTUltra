@@ -22,6 +22,29 @@ with UberCont
 		random_set_seed(seed+(UberCont.globalMutationsChosen * 3));
 	}
 }
+if Player.getVision
+{
+	//ROYAL VISION
+	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
+	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
+	{
+		skill = maxskill + 1;
+		skillIndex = 0;
+	}
+	exit;
+}
+if Player.refundPoints > 0
+{
+	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
+	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
+	{
+		isRefund = true;
+		skill = UberCont.skillDeposit[array_length(UberCont.skillDeposit)-1];
+		array_delete(UberCont.skillDeposit,-1,1);
+		skillIndex = 0;
+	}
+	exit;
+}
 if Player.charpoints > 0
 {
 	scrRaces();
@@ -93,7 +116,10 @@ if Player.crownpoints > 0
 				&& !scrIsCrown(26))//Crown of energy
 					crown = 26;
 				else if (Player.consecutiveCrownVisits > 1 && !scrIsCrown(33))
+				{
 					crown = 33;
+					Player.consecutiveCrownVisits = 0;
+				}
 				else if (scrIsCrown(22) && !scrIsCrown(32))//Luck to misfortune
 					crown = 32
 				else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
@@ -407,6 +433,17 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
     }*/
 	//Get a regular mutation
+	if array_length(UberCont.skillDeposit) > 0
+	{
+		with Player
+		{
+			var al = array_length(UberCont.skillDeposit);
+			for (var i = 0; i < al; i++)
+			{
+				skill_got[UberCont.skillDeposit[i]] = true;
+			}
+		}
+	}
     if scrIsGamemode(32) {
 		//No alkaline boiling veins and no strong spirit
 		// One hit wonder
@@ -598,6 +635,17 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 }
 image_speed = 0;
 alarm[1] = 15;
+if array_length(UberCont.skillDeposit) > 0
+{
+	with Player
+	{
+		var al = array_length(UberCont.skillDeposit);
+		for (var i = 0; i < al; i++)
+		{
+			skill_got[UberCont.skillDeposit[i]] = false;
+		}
+	}
+}
 if scrIsGamemode(32) {
 	// One hit wonder
 	with Player

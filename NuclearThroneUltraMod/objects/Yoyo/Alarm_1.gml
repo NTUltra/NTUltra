@@ -11,9 +11,9 @@ if instance_exists(Player) and instance_exists(enemy)
 	var homePower = 1;
 	if Player.skill_got[21]
 	{
-		homePower += 0.5;
+		homePower += 0.75;
 		stopper += 1;
-		dis += 39 + Player.betterboltmarrow;
+		dis += 42 + Player.betterboltmarrow;
 	}
 	dir = instance_nearest(x,y,enemy)
 	if dir != noone && instance_exists(dir) && dir.team != team && speed > 0 and point_distance(x,y,dir.x,dir.y) < dis

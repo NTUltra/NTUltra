@@ -180,6 +180,7 @@ canSpawnInversionShards = false;
 collectedInversionShards = 0;
 collectedInversionShardReward = false;
 extraVan = 0;
+skillDeposit = [];
 killedInvertedThrone2 = false;
 hasFoughtInvadingThrone = false;
 tookUnstoppable = false;

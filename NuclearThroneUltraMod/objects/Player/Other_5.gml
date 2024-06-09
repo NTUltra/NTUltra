@@ -74,7 +74,7 @@ if ultra_got[51] && altUltra
 	sheepFakeouts = 3 + (skill_got[5] * 2);
 }
 ///at the end of a level stuff
-if (ultra_got[0]=1 && !altUltra && !horrorEtaken)
+if (ultra_got[0] && !altUltra && !horrorEtaken)
 {
 	patience = 1;
 	skillpoints = max(0,skillpoints);
@@ -89,7 +89,6 @@ else if patience > 0
 		skill_got[27] = 0;
 }
 
-
 invertedportalcounter=0;
 
 
@@ -97,6 +96,35 @@ if hard > UberCont.cbst_diff[race]
 UberCont.cbst_diff[race] = hard
 
 //Health manipulation!
+if scrIsCrown(22)//Crown of luck
+{
+	if scrIsCrown(2) && canHeal// + crown of life
+	{
+		if ultra_got[62] && altUltra //Living armour
+		{
+			armour += maxarmour*0.25;
+			if armour > maxarmour
+				armour = maxarmour;
+		}
+		else
+		{
+			my_health = max(1,round(maxhealth*0.5));
+			prevhealth = my_health;
+		}
+	}
+	else
+	{
+		if ultra_got[62] && altUltra //Living armour
+		{
+			armour = 1;
+		}
+		else
+		{
+			my_health = 1;
+			prevhealth = 1;
+		}
+	}
+}
 if race=16
 {
 	if skill_got[5]
@@ -156,7 +184,7 @@ if ((ultra_got[40] = 1) && canHeal)
 }
 
 //CROWN OF LIFE
-if scrIsCrown(2) && canHeal
+if scrIsCrown(2) && canHeal && !scrIsCrown(22)
 {
 	if ultra_got[62] && altUltra //Living armour
 	{
@@ -216,35 +244,6 @@ if scrIsCrown(30)
 if scrIsCrown(31)
 {
 	kills += 40;
-}
-if scrIsCrown(22)//Crown of luck
-{
-	if scrIsCrown(2) && canHeal// + crown of life
-	{
-		if ultra_got[62] && altUltra //Living armour
-		{
-			armour += maxarmour*0.25;
-			if armour > maxarmour
-				armour = maxarmour;
-		}
-		else
-		{
-			my_health = max(1,round(maxhealth*0.5));
-			prevhealth = my_health;
-		}
-	}
-	else
-	{
-		if ultra_got[62] && altUltra //Living armour
-		{
-			armour = 1;
-		}
-		else
-		{
-			my_health = 1;
-			prevhealth = 1;
-		}
-	}
 }
 //NOCHEST SHIT
 if (instance_exists(WeaponChest) or instance_exists(BigWeaponChest) && area != 100 && !restarted)// and !(area = 1 and subarea = 1)

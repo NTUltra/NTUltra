@@ -538,10 +538,10 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with BigRad
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
-	with MimicBossPlateau
+	with MimicBossSummonFail
 	{
 		draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale,image_yscale,image_angle,c_white,ba);
-		event_user(0);
+		//event_user(0);
 	}
 	with CrescentMoon {
 		if sprite_index == sprCrescentMoonDeflecting || sprite_index == sprCrescentMoonGammaGutsing
@@ -564,7 +564,14 @@ function scrDrawBloom() {
 			draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,right*theScale,image_yscale*theScale,image_angle,c_green,ba+0.2);
 		}
 	}
-	
+	with CloudEnterance
+	{
+		//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+		draw_set_alpha(cAlpha);
+		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,0)
+		draw_set_alpha(1);
+		event_user(0);
+	}
 	surface_reset_target();
 	gpu_set_blendmode(bm_add);
 	draw_surface_ext(bloomSurface,vx,vy,1,1,0,c_white,0.3);

@@ -1,6 +1,7 @@
 scrSkills()
 depth = -102;
 p = 0
+isRefund = false;
 skillIndex = 0;
 totalSkills = 1;
 showDetail = UberCont.opt_show_mutation_details;

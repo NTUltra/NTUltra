@@ -48,14 +48,29 @@ if selected && visible
 		KeyCont.key_pick[p] = 2;
 		UberCont.globalMutationsChosen += 1414;
 		Player.skill_got[skill] = 1
-		Player.skillsChosen+=1;
-		Player.skillpoints -= 1
+		if (!isRefund)
+		{
+			Player.skillsChosen+=1;
+			Player.skillpoints -= 1
+		}
+		else
+		{
+			Player.refundPoints -= 1;	
+		}
 		with GameRender {
 			event_user(0);
 		}
-		if skill != maxskill + 1 && skill != 27
+		if skill != maxskill + 2 && skill != 27
 			Player.totalSkills ++;
-		if skill == 1
+		if skill == maxskill + 1
+		{
+			//REGAL VISIONS
+			with Player
+			{
+				getVision = false;	
+			}
+		}
+		else if skill == 1
 		{
 			if Player.ultra_got[62] && Player.altUltra//Living armour
 			{
@@ -315,7 +330,7 @@ if selected && visible
 				if guarenteedReroll > 0
 					guarenteedReroll -= 1;
  
-				if race=25
+				if race=25 && !other.isRefund
 				{
 					skillpoints++;
 					skillsChosen--;
@@ -407,7 +422,7 @@ if selected && visible
 		with UltraIcon
 		instance_destroy()
 
-		if Player.skillpoints > 0
+		if Player.skillpoints > 0 || Player.refundPoints > 0
 		{
 		instance_create(x,y,LevCont);
 		}
@@ -418,7 +433,7 @@ if selected && visible
 		}
 		snd_play_2d(skill_msnd[skill], 0, false, false)//skill_msnd no more array sorry but memory
 
-		if skill != maxskill + 1
+		if skill != maxskill + 2
 		with UberCont
 		{
 			ctot_skill_taken[other.skill] += 1;

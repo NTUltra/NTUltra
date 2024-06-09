@@ -4,7 +4,7 @@ var xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0
 var yy = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*0.5;
 with projectile
 {
-	if point_distance(xx,yy,x,y) > 450 && !collision_point(x,y,Floor,false,false)
+	if point_distance(xx,yy,x,y) > 500 && !collision_point(x,y,Floor,false,false)
 	{
 		instance_destroy();	
 	}

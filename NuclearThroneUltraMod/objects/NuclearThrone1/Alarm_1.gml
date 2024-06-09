@@ -83,7 +83,7 @@ if target != noone && instance_exists(target)
 		walk = alarm[1];
 		if walkDir == 0
 		{
-			walkDir = 0.84;
+			walkDir = 0.8;
 		} else if walkDir > 0
 		{
 			if y > yReset + 600

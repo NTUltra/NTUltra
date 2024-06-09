@@ -7,6 +7,9 @@ else
 		audio_stop_sound(sndAorta)
 		instance_destroy()
 	}
-	timeout += 1;
+	if UberCont.normalGameSpeed == 60
+		timeout += 0.5;
+	else
+		timeout += 1
 }
 

@@ -2,8 +2,10 @@ if instance_exists(Player)
 {
 	instance_destroy()
 	instance_create(x,y,SpiralCont)
-	if Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 
+	if (Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 
 	(Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken)
+	or Player.getVision or Player.refundPoints > 0
+	)
 	{
 		instance_create(0,0,BackCont)
 		if random(2000) < 1//Culture
@@ -12,7 +14,7 @@ if instance_exists(Player)
 			scrEnableBigScreen();
 		
 		room_speed = UberCont.normalGameSpeed;
-		instance_create(x,y,LevCont)
+		instance_create(x,y,LevCont);
 	}
 	else
 	{

@@ -8,3 +8,5 @@ image_alpha = 0.2;
 image_speed = 0.4;
 friction = 0.1;
 right = 1;
+alarm[0] = 30;
+alarm[1] = 300;

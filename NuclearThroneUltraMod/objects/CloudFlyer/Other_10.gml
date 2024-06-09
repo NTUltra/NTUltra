@@ -9,7 +9,7 @@ alarm[2] = (image_number/image_speed) + 1
 with instance_create(x, y, EnemyDamageCircle) {
     team = other.team
 }
-alarm[1] = actTime * 3 + random(actTime * 2);
+alarm[1] += random(actTime * 2);
 
 var ang = random(360);
 repeat(6)
