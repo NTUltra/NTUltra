@@ -11,9 +11,9 @@ bwepright = right
 if bwep != 0 and race != 7
 draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right,c_silver,1)
 
-if wep_type[wep] = 3 and wep != 18
+if scrEnableLaserSight()
 {
-	if wep == 399 //Wrong direction
+	if wep == 399 || wep == 552 //Wrong direction
 	{
 		
 		lasd = 0

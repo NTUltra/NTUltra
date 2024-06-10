@@ -2609,7 +2609,8 @@ function scrFire(canDrown = true) {
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.5+longarms)
 	image_angle = direction
-	team = other.team}
+	team = other.team
+	}
 
 	wepangle = -wepangle
 	if !skill_got[2]
@@ -4851,6 +4852,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,CarThrow)
 	{
 		scrGiveProjectileStats();
+		dmg = 5;
 		team = other.team
 		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
 	}

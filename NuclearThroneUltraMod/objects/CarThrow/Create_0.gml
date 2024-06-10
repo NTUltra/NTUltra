@@ -20,3 +20,4 @@ snd_hurt = sndHitMetal
 
 image_angle = random(360)
 
+dmg = 0;

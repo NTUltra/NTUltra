@@ -5032,7 +5032,7 @@ function scrWeapons() {
 	wep_swap[446] = sndSwapPistol
 	wep_rad[446] = 0;
 	
-	wep_name[447] = "AUTO MISSILE LAUNCHER"
+	wep_name[447] = "GATLING MISSILE LAUNCHER"
 	wep_type[447] = 4
 	wep_auto[447] = 3
 	wep_load[447] = 10
@@ -7108,8 +7108,8 @@ function scrWeapons() {
 	wep_rad[634] = 0;
 	
 	wep_name[635] = "DOUBLE SIDED BLADE"
-	wep_type[635] = 2
-	wep_auto[635] = 0
+	wep_type[635] = 0
+	wep_auto[635] = 2
 	wep_load[635] = 17
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
@@ -8756,6 +8756,40 @@ function scrWeapons() {
 	wep_text[782] = "sparkles!"
 	wep_swap[782] = sndSwapDragon
 	wep_rad[782] = 0;
+	
+	wep_name[783] = "CHARGE OVERDRIVER"
+	wep_type[783] = 1
+	wep_auto[783] = 3
+	wep_load[783] = 5
+	wep_cost[783] = 1
+	wep_sprt[783] = sprTripleMachinegun
+	wep_area[783] = 12
+	wep_text[783] = "a different type of charge weapon"
+	wep_swap[783] = sndSwapMotorized
+	wep_rad[783] = 0;
+	
+	wep_name[784] = "CHOPGUN"
+	wep_type[784] = 1
+	wep_auto[784] = 0
+	wep_load[784] = 26
+	wep_cost[784] = 16
+	wep_sprt[784] = sprHeavyARifle
+	wep_area[784] = 7
+	wep_text[784] = "karate chop!"
+	wep_swap[784] = sndSwapMachinegun
+	wep_rad[784] = 0;
+	
+	
+	wep_name[785] = "CHARGE HAMMER"
+	wep_type[785] = 0
+	wep_auto[785] = 0
+	wep_load[785] = 25
+	wep_cost[785] = 0
+	wep_sprt[785] = sprHammer
+	wep_area[785] = 5
+	wep_text[785] = "hammer time"
+	wep_swap[785] = sndSwapHammer
+	wep_rad[785] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

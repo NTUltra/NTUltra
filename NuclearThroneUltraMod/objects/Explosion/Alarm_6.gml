@@ -2,6 +2,8 @@
 var sw = sprite_width * 0.5;
 var sh = sprite_height * 0.5;
 var maxi = sprite_width + sprite_height;
+if instance_exists(Player) && Player.skill_got[43]
+	maxi *= 1.4;
 repeat(moodAmount)
 {
 	var burning = false;

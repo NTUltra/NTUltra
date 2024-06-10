@@ -930,6 +930,7 @@ function scrFire2(hasTailNow) {
 		spr_hurt = sprGoldenCarHurt
 		//spr_dead = sprScorchmark
 		team = other.team
+		dmg = 5;
 		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
 	}
 
@@ -9528,14 +9529,15 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),EnergyHammerSlash)
 	{
-	dmg = 26
-	sprite_index=sprVeryHeavySlash;
-	longarms = 0
+		dmg = 26
+		sprite_index=sprVeryHeavySlash;
+		longarms = 0
 	
-	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-50*other.accuracy,2+longarms)
-	image_angle = direction
-	team = other.team}
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection-50*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
 
 	wepangle = -wepangle
 	motion_add(aimDirection,6)
@@ -17614,6 +17616,127 @@ function scrFire2(hasTailNow) {
 		time = 2
 		team = other.team
 		event_perform(ev_alarm,0)
+	}
+
+	break;
+	
+	//CHARGE OVERDRIVER
+	case 783:
+
+	with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+	altFire = !altFire;
+	
+	if altFire
+	{
+		
+		snd_play_fire(sndMachinegun)
+		with instance_create(x,y,BulletMarksMan)
+		{
+			dmg = 4;
+			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),10)
+			image_angle = direction
+			team = other.team
+		}
+	}
+	else
+	{
+		snd_play_fire(sndPopgun)
+		with instance_create(x,y,Bullet2MarksMan)
+		{
+			dmg = 4;
+			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),14)
+			image_angle = direction
+			team = other.team
+		}
+	}
+	
+	if instance_exists(Overdriver)
+	{
+		with Overdriver
+		{
+			accuracy = other.accuracy;
+			if rate < maxCharge
+			{
+				rate += chargetime;
+				snd_play(sndNadeAlmost,0,true,false,3,false,false,0.6,false,id,1+(rate/maxcharge));
+			}
+			with instance_create(x+random(48)-24,y+random(48)-24,WeaponCharge)
+			{
+				motion_add(point_direction(x,y,other.x,other.y),2+random(1))
+				alarm[0] = 3 + speed;
+			}
+			BackCont.shake+=1+rate*0.1;
+		}
+	}
+	else
+	{
+		with instance_create(x,y,Overdriver)
+		{
+			creator = other.id;
+			team = other.team;
+			accuracy = other.accuracy;
+			if Player.skill_got[42]
+			{
+				chargetime *= 1.5;
+				rate *= 2;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					rate *= 2;
+					chargetime *= 1.5;
+				}
+				maxcharge *= Player.betterTail;
+				scrActivateTail(hasTailNow);
+			}
+		}
+	}
+	
+	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 6
+	wkick = 5
+
+	break;
+	
+	//CHOPGUN
+	case 784:
+	snd_play_fire(sndMachinegun);
+	with instance_create(x,y,ChopBurst)
+	{
+		fireAim = aimDirection;
+		creator = other.id
+		ammo = 16
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//CHARGE HAMMER
+	case 785:
+
+	with instance_create(x,y,ChargeHammer)
+	{
+		maxcharge = 6;//maxrate
+		type = 0;
+		creator = other.id
+		chargetime = 8;
+		team = other.team
+		if Player.skill_got[42]
+		{
+			chargetime = 6;
+			rate += 1;
+			costtime *= Player.betterTail;
+			if Player.ultra_got[97] && !Player.altUltra
+			{
+				rate += 1;
+				chargetime = 4;
+			}
+			maxcharge *= Player.betterTail;
+			scrActivateTail(hasTailNow);
+		}
+		event_perform(ev_alarm,0);
 	}
 
 	break;
