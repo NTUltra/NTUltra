@@ -502,6 +502,11 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
+			with instance_create_depth(x,y,depth + 1, GainBarrier)
+			{
+				owner = other.id;
+				my_health = other.my_health;
+			}
 			humphrySkill = 100;
 			isPermanent = true;
 			var dangle = random(1)*360;
@@ -517,6 +522,7 @@ if !instance_exists(LevCont) and visible = 1
 			//instance_create(x+32,y,Raven);
 			
 			//instance_create(x+32,y,MimicBoss);
+			/*
 			if !instance_exists(GifRecorder)
 			{
 				instance_create(x,y,GifRecorder);
@@ -527,7 +533,7 @@ if !instance_exists(LevCont) and visible = 1
 				{
 					instance_destroy();	
 				}
-			}
+			}*/
 			//instance_create(x+32,y,FreakBandit);
 
 			/*

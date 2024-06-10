@@ -14,8 +14,10 @@ if instance_exists(Player)
 {
 	if Player.race == 25//Doctor bonus
 	{
-		regenRate = 15;
+		regenRate = 16;
 		regenCooldown = 28;
+		image_xscale = 1.25;
+		image_yscale = 1.25;
 	}
 	if Player.skill_got[8] {
 		bloomSprite = sprCrescentMoonBloomGamma;

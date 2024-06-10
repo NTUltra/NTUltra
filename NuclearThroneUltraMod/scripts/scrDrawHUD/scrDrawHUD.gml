@@ -78,6 +78,25 @@ function scrDrawHUD() {
 		}
 		if dataRef.metabolism == 3
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
+		if dataRef.skill_got[46]//INNER PEACE
+		{
+			if dataRef.peaceBarriers < dataRef.peaceBarriersMax
+			{
+				var peaceSpr = sprHealthBarPeace;
+				var peaceWidth = lerp(1,sprite_get_width(peaceSpr),dataRef.peaceBarrierTime/max(1,(dataRef.peaceBarrierDuration-1)));
+				var peaceHeight = sprite_get_height(peaceSpr);
+				var surf = surface_create(peaceWidth,peaceHeight);
+				surface_set_target(surf);
+				draw_sprite(sprHealthBarPeace,0,0,0);
+				surface_reset_target();
+				draw_surface(surf,vx+hx,vy+4);
+				surface_free(surf);
+			}
+			if dataRef.race == 25
+				draw_sprite(sprHealthBarPeaceFullDoctor,dataRef.peaceBarriers,vx+hx,vy+4);
+			else
+				draw_sprite(sprHealthBarPeaceFull,dataRef.peaceBarriers,vx+hx,vy+4);
+		}
 		
 		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
 		{

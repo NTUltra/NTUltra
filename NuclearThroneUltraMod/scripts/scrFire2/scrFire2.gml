@@ -15542,12 +15542,12 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(2+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
+	with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 	dmg = 9
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 

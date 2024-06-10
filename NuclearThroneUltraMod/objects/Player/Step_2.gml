@@ -443,14 +443,47 @@ if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 
 		scrGiveEuphoriaShield();
 		alarm[3] = max(alarm[3],6);
 		if race == 25//Doctor
-			scrCollectAmmo(3.35);
+		{
+			scrCollectAmmo(3.75);
+			alarm[3] = max(alarm[3],7);
+		}
 		else
 			scrCollectAmmo(3);
 		tookHit = false;
 	}
+	else if metabolism == 3
+	{
+		BackCont.shake += 15;
+		snd_play_2d(sndGainProtection);
+		with instance_create_depth(x,y,depth + 1, GainBarrier)
+		{
+			sprite_index = other.sprite_index;
+			owner = other.id;
+		}
+		with instance_create_depth(x,y,depth + 1, GainBarrier)
+		{
+			sprite_index = other.sprite_index;
+			owner = other.id;
+			scale += 0.75;
+			alpha = 0;
+			alarm[1] = 5;
+		}
+	}
 	triggerMetabolism = false;
 }
-
+if (skill_got[46]) && (tookHit && !exception && alarm[3] < 1 && alarm[1] < 1)
+{
+	if peaceBarriers > 0
+	{
+		my_health = prevhealth;
+		audio_stop_sound(snd_hurt);
+		snd_play_2d(sndPeaceHit,0.1);
+		scrGiveEuphoriaShield();
+		alarm[3] = max(alarm[3],6);
+		peaceBarriers -= 1;
+	}
+	peaceBarrierTime = 0;
+}
 //Crown of Greed
 if scrIsCrown(18) && !exception
 {

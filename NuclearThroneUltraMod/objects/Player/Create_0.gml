@@ -39,6 +39,10 @@ isInInverted = false;
 canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
+peaceBarrierTime = 0;
+peaceBarrierDuration = 50;
+peaceBarriers = 0;
+peaceBarriersMax = 3;
 canKillKillKill = false;
 autoFire = 0;
 excessDamageDeal = 0;
@@ -383,6 +387,8 @@ if race == 25
 {
 	//Better mutations
 	maxRadPickedUp = 125;
+	peaceBarriersMax += 1;
+	peaceBarrierDuration *= 0.8;
 }
 if race == 14//Panda
 {

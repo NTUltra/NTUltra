@@ -58,7 +58,7 @@ if (!revved)
 			right = 1
 		else
 			right = -1;
-		if point_distance(x,y,crp.x,crp.y) < range && !collision_line(x,y,tx,ty,Wall,false,false)
+		if point_distance(x,y,tx,ty) < range && !collision_line(x,y,tx,ty,Wall,false,false)
 		{
 			revved = true;
 			var nearestFloor = instance_nearest(tx,ty,Floor);

@@ -117,7 +117,7 @@ if instance_exists(Player)
 	with PlayerAlarms3 {
 		if Player.skill_got[45]
 		{
-			alarm[0] = 45;
+			alarm[0] = 50;
 			alarm[1] = 30;
 			enemyHealthWasChanged = false;
 			playerHealthWasChanged = false;
@@ -125,6 +125,15 @@ if instance_exists(Player)
 			detectedEnemyHealth = 0;
 			adrenalineAmmoTimer = adrenalineAmmoCooldown;
 			adrenalineHealTimer = adrenalineHealCooldown;
+		}
+		if Player.skill_got[46]
+		{
+			alarm[0] = 50;
+			enemyHealthWasChanged = false;
+			playerHealthWasChanged = false;
+			detectedPlayerHealth = 0;
+			detectedEnemyHealth = 0;
+			alarm[1] = 30;
 		}
 		if Player.ultra_got[59] && Player.altUltra
 		{

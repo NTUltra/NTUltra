@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndGainProtection",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.723719,
+  "name":"sndGainProtection",
+  "parent":{
+    "name":"Fx",
+    "path":"folders/Sounds/Fx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndGainProtection.ogg",
+  "type":0,
+  "volume":1.0,
+}

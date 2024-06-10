@@ -94,6 +94,10 @@ function scrCreateDataRef(){
 		lastWishPrevent = other.lastWishPrevent;
 		chickenFocusMax = other.chickenFocusMax;
 		chickenFocusInUse = false;
+		peaceBarrierTime = other.peaceBarrierTime;
+		peaceBarrierDuration = other.peaceBarrierDuration;
+		peaceBarriers = other.peaceBarriers;
+		peaceBarriersMax = other.peaceBarriersMax;
 		chickenFocus = chickenFocusMax;
 		chickenFocusDelay = other.chickenFocusDelay;
 		chickenFocusDelayTime = 0;

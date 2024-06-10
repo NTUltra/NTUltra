@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 45;
+	maxskill = 46;
 
 
 	dir = 0
@@ -511,7 +511,7 @@ function scrSkills() {
 	skill_detail[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
-	skill_bons[38] = "+35% AMMO"
+	skill_bons[38] = "+25% AMMO +25% IMMUNE DURATION"
 	
 	skill_name[39] = "ALIEN INTESTINES"
 	skill_text[39] = "<g>ACTIVE<g> SPAWNS <p>TENTACLES<p>"
@@ -562,7 +562,7 @@ function scrSkills() {
 	skill_detail[44] = "GET TWO ORBITING#<w>CRESCENT MOONS<w>#THAT <aq>DEFLECT<aq> A LIMITED AMOUNT#OF PROJECTILES#RECHARGES SLOWLY WHILE IN COMBAT#MOONS CAN DEAL DAMAGE WITH <g>GAMMA GUTS<g>";
 	skill_tips[44] = "the night sky protects me"
 	skill_msnd[44] =  sndMutSereneDream;
-	skill_bons[44] = "+25% RECHARGE RATE"
+	skill_bons[44] = "+23% RECHARGE RATE#BIGGER SHIELD"
 	
 	skill_name[45] = "ADRENALINE FUEL"
 	skill_text[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>";
@@ -572,11 +572,11 @@ function scrSkills() {
 	skill_bons[45] = "+25% HEAL RATE"
 	
 	skill_name[46] = "INNER PEACE"
-	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3,w> <aq>BARRIERS<aq>";
-	skill_detail[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3,w> <aq>BARRIERS<aq>#SUBSEQUENT <aq>BARRIERS<aq> CHARGE SLOWER";
+	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w><aq>BARRIERS<aq>";
+	skill_detail[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>#SUBSEQUENT <aq>BARRIERS<aq> CHARGE SLOWER";
 	skill_tips[46] = "rush of adrenaline"
 	skill_msnd[46] =  sndMutAdrenalineFuel;
-	skill_bons[46] = "+25% BARRIER CHARGE RATE"
+	skill_bons[46] = "+23% CHARGE RATE#CAN CHARGE UP TO 4 BARRIERS"
 	
 	skill_name[maxskill + 1] = "REGAL VISION"
 	skill_text[maxskill + 1] = "UPGRADES YOUR SPECIAL ABILITY"
