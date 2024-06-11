@@ -6878,7 +6878,8 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//WAZER RIFLE
+	//WAZER RIFLE/PISTOL
+	case 788:
 	case 424:
 	var um = GetPlayerUltramod()
 	if um == ultramods.laserBullet
@@ -6909,7 +6910,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,SplinterBurst2)
 		{
 			ultramodded = true;
-			accuracy = 8*other.accuracy;
+			accuracy = 6*other.accuracy;
 			creator = other.id
 			ammo = 2
 			maxammo = ammo;
@@ -6920,7 +6921,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,SplinterBurst2)
 		{
 			ultramodded = true;
-			accuracy = 3*other.accuracy;
+			accuracy = -6*other.accuracy;
 			creator = other.id
 			ammo = 2
 			maxammo = ammo;
@@ -6947,7 +6948,10 @@ function scrFire2(hasTailNow) {
 				owner = other.id;
 				team = other.team;
 				mywep = other.wep
-				alarm[0] = 11;
+				if mywep == 788
+					alarm[0] = 9;
+				else
+					alarm[0] = 11;
 				if Player.skill_got[42]
 				{
 					alarm[0] = ceil(alarm[0]*Player.betterTail);
@@ -17698,7 +17702,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//CHOPGUN
+	//CHOP GUN
 	case 784:
 	snd_play_fire(sndMachinegun);
 	with instance_create(x,y,ChopBurst)
@@ -17725,6 +17729,7 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		if Player.skill_got[42]
 		{
+			maxcharge += 1;
 			chargetime = 6;
 			rate += 1;
 			costtime *= Player.betterTail;
@@ -17739,6 +17744,463 @@ function scrFire2(hasTailNow) {
 		event_perform(ev_alarm,0);
 	}
 
+	break;
+	
+	//CHARGE RAPIER
+	case 786:
+
+	with instance_create(x,y,ChargeRapier)
+	{
+		maxcharge = 5;//maxrate
+		type = 0;
+		creator = other.id
+		chargetime = 6;
+		team = other.team
+		if Player.skill_got[42]
+		{
+			maxcharge += 1;
+			chargetime = 4;
+			rate += 1;
+			costtime *= Player.betterTail;
+			if Player.ultra_got[97] && !Player.altUltra
+			{
+				rate += 1;
+				chargetime = 2;
+			}
+			maxcharge *= Player.betterTail;
+			scrActivateTail(hasTailNow);
+		}
+		event_perform(ev_alarm,0);
+	}
+
+	break;
+	
+	//CHOP SPLINTERGUN
+	case 787:
+	snd_play_fire(sndSplinterGun);
+	with instance_create(x,y,ChopSplinterBurst)
+	{
+		fireAim = aimDirection;
+		creator = other.id
+		ammo = 12
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0) 
+	}
+
+	break;
+	
+	//SUPER WAZER WAVE GUN
+	case 789:
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
+	{
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 5 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -5 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 10 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -10 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 15 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -15 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 20 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -20 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else if um == ultramods.laserBolt
+	{
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 6*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 12*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = -6*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = -12*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 27*other.accuracy;
+			creator = other.id
+			ammo = 4
+			maxammo = ammo;
+			time = 1
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = -27*other.accuracy;
+			creator = other.id
+			ammo = 4
+			maxammo = ammo;
+			time = 1
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else
+	{
+		var exists = false;
+		with PlayerWazer
+		{
+			if owner == other.id
+				exists = true;
+		}
+		if Player.skill_got[42]
+			scrActivateTail(hasTailNow);
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				waveSpeed *= 2;
+				accuracy = other.accuracy;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 20;
+				camShake = 9;
+				wkick = 6;
+			}
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				waveSpeed *= 2;
+				accuracy = other.accuracy;
+				isSin = true;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 20;
+				camShake = 9;
+				wkick = 6;
+			}
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				waveSpeed *= 2;
+				accuracy = other.accuracy;
+				isFlip = true;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 20;
+				camShake = 9;
+				wkick = 6;
+			}
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				waveSpeed *= 2;
+				accuracy = other.accuracy;
+				isFlip = true;
+				isSin = true;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 20;
+				camShake = 9;
+				wkick = 6;
+			}
+		}
+		else
+		{
+			with PlayerWazer
+			{
+				if owner == other.id
+				{
+					accuracy = other.accuracy;
+					alarm[6] += alarm[0] - 1;
+					alarm[0] = 2 + other.wep_load[other.wep];
+				}
+			}
+		}
+	}
+	break;
+	
+	//WAZER WAVE GUN
+	case 790:
+	var um = GetPlayerUltramod()
+	if um == ultramods.laserBullet
+	{
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 5 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -5 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = 10 * other.accuracy;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,Burst)
+		{
+			ultramodded = true;
+			creator = other.id
+			ammo = 3
+			time = 2
+			aimOffset = -10 * other.accuracy;
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else if um == ultramods.laserBolt
+	{
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 12*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = 6*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			alarm[0] = 1;
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = -6*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		with instance_create(x,y,SplinterBurst2)
+		{
+			ultramodded = true;
+			accuracy = -12*other.accuracy;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 2
+			team = other.team
+			alarm[0] = 1;
+		}
+	}
+	else
+	{
+		var exists = false;
+		with PlayerWazer
+		{
+			if owner == other.id
+				exists = true;
+		}
+		if Player.skill_got[42]
+			scrActivateTail(hasTailNow);
+		if !exists
+		{
+			snd_play_2d(sndWazerStart,0,true);
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				accuracy = other.accuracy;
+				maxRange = 20;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 10;
+				camShake = 6;
+				wkick = 5;
+			}
+			with instance_create(x,y,PlayerWaveWazer)
+			{
+				maxRange = 20;
+				accuracy = other.accuracy;
+				isFlip = true;
+				owner = other.id;
+				team = other.team;
+				mywep = other.wep
+				alarm[0] = 11;
+				if Player.skill_got[42]
+				{
+					alarm[0] = ceil(alarm[0]*Player.betterTail);
+				}
+				owner = other.id;
+				camKick = 10;
+				camShake = 6;
+				wkick = 5;
+			}
+		}
+		else
+		{
+			with PlayerWazer
+			{
+				if owner == other.id
+				{
+					accuracy = other.accuracy;
+					alarm[6] += alarm[0] - 1;
+					alarm[0] = 2 + other.wep_load[other.wep];
+				}
+			}
+		}
+	}
 	break;
 	
 	}//end of switch part 2!

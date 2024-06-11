@@ -70,5 +70,9 @@ function scrReturnMenu(){
 		{
 			alarm[0] = 1;	
 		}
+		with LoadSelect
+		{
+			alarm[0] = 1;	
+		}
 	}
 }

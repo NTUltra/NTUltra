@@ -6,7 +6,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
-
+team = 3;
 loop=false;
 
 if instance_exists(Player){

@@ -507,17 +507,18 @@ if !instance_exists(LevCont) and visible = 1
 				owner = other.id;
 				my_health = other.my_health;
 			}
-			humphrySkill = 100;
-			isPermanent = true;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//screen_save("explain"+string(scrn)+".png");
-			
+			if spr_walk == sprMutant13Walk
+				spr_walk = sprMutant13WalkWaitAminute;
+			else
+				spr_walk = sprMutant13Walk;
 			isPermanent = true;
 			//scrn++;
 
-			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			//thing.mytext = "FIRE EVERY GUN";
+			thing = instance_create(f.x + 16,f.y + 16,PopupText);
+			thing.mytext = "TOGGLE SHEEP WALK ANIM";
 			//repeat(40)
 			//instance_create(x+32,y,Raven);
 			

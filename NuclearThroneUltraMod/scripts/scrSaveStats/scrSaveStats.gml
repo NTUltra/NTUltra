@@ -53,6 +53,7 @@ function scrSaveStats() {
 	ini_write_real("STATS","boss_bot_cursed",boss_bot_cursed);
 	ini_write_real("STATS","boss_bot_golden",boss_bot_golden);
 	ini_write_real("STATS","boss_bot_ultra",boss_bot_ultra);
+	ini_write_real("STATS","total_run_slots",total_run_slots);
 
 	var al = array_length(tot_areas);
 	for(var i = 0; i < al; i++)

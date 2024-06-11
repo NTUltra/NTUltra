@@ -163,7 +163,11 @@ else
 	
 if mode = 1
 {
-	if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
+	if instance_exists(LoadSelect) && LoadSelect.selected = 1
+	{
+		scrDrawLoadRunMenu();
+	}
+	else if CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and UpdateChecker.selected = 0
 	{
 	scrDrawCharSelect()
 	}

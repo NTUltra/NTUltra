@@ -4,7 +4,7 @@ if owner > -1 && instance_exists(owner) && !ending {
 		event_perform(ev_alarm,0);
 	prevangle = image_angle;
 	
-	image_angle = point_direction(owner.x,owner.y,UberCont.mouse__x,UberCont.mouse__y);
+	image_angle = point_direction(owner.x,owner.y,UberCont.mouse__x,UberCont.mouse__y) + aimOffset;
 	image_angle = scrAimAssistLaser(image_angle);
 	x = owner.x + lengthdir_x(offset,image_angle);
 	y = owner.y + lengthdir_y(offset,image_angle);

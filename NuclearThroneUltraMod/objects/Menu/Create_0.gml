@@ -449,6 +449,10 @@ camLerp = 0;
 
 firstEntry = true;
 portraitLerp = 0;
+loadRunMenuState = 0;
+loadedRunFiles = false;
+currentRun = {};
+savedRuns = [];
 //JOYPAD STUFF
 /*
 pick = 0

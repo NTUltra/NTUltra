@@ -7,5 +7,8 @@ if UberCont.mouse__x > x and UberCont.mouse__x < x+18 and UberCont.mouse__y > y+
 else
 {
 	hover = false;
-	image_index = 0;
+	if !selected
+		image_index = 0;
+	else
+		image_index = 1;
 }

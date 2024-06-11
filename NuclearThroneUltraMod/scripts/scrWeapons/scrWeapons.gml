@@ -5651,7 +5651,7 @@ function scrWeapons() {
 	wep_text[502] = "hold fire to charge#and deal more damage"
 	wep_swap[502] = sndSwapBow
 	wep_rad[502] = 0;
-	wep_popup[502] = "HOLD FIRE TO CHARGE#THEN RELEASE TO FIRE";
+	wep_popup[502] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
 	
 	wep_name[503] = "ULTRA CHARGE BOW"
 	wep_type[503] = 3
@@ -8767,11 +8767,12 @@ function scrWeapons() {
 	wep_text[783] = "a different type of charge weapon"
 	wep_swap[783] = sndSwapMotorized
 	wep_rad[783] = 0;
+	wep_popup[783] = "CHARGES QUICKER AT HIGHER RELOAD SPEED";
 	
-	wep_name[784] = "CHOPGUN"
+	wep_name[784] = "CHOP GUN"
 	wep_type[784] = 1
 	wep_auto[784] = 0
-	wep_load[784] = 26
+	wep_load[784] = 28
 	wep_cost[784] = 16
 	wep_sprt[784] = sprHeavyARifle
 	wep_area[784] = 7
@@ -8779,17 +8780,73 @@ function scrWeapons() {
 	wep_swap[784] = sndSwapMachinegun
 	wep_rad[784] = 0;
 	
-	
 	wep_name[785] = "CHARGE HAMMER"
 	wep_type[785] = 0
 	wep_auto[785] = 0
-	wep_load[785] = 25
+	wep_load[785] = 20
 	wep_cost[785] = 0
 	wep_sprt[785] = sprHammer
-	wep_area[785] = 5
-	wep_text[785] = "hammer time"
+	wep_area[785] = 6
+	wep_text[785] = "motorized hammering"
 	wep_swap[785] = sndSwapHammer
 	wep_rad[785] = 0;
+	wep_popup[785] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
+	
+	wep_name[786] = "CHARGE RAPIER"
+	wep_type[786] = 0
+	wep_auto[786] = 0
+	wep_load[786] = 14
+	wep_cost[786] = 0
+	wep_sprt[786] = sprLance
+	wep_area[786] = 6
+	wep_text[786] = "charge!"
+	wep_swap[786] = sndSwapSword
+	wep_rad[786] = 0;
+	wep_popup[786] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
+	
+	wep_name[787] = "CHOP SPLINTERGUN"
+	wep_type[787] = 1
+	wep_auto[787] = 0
+	wep_load[787] = 26
+	wep_cost[787] = 2
+	wep_sprt[787] = sprHeavyARifle
+	wep_area[787] = 7
+	wep_text[787] = "chop the wood in half"
+	wep_swap[787] = sndSwapMachinegun
+	wep_rad[787] = 0;
+	
+	wep_name[788] = "WAZER PISTOL"
+	wep_type[788] = 5
+	wep_auto[788] = 3
+	wep_load[788] = 21
+	wep_cost[788] = 1.5
+	wep_sprt[788] = sprWazerRifle
+	wep_area[788] = 8
+	wep_text[788] = "wawawawazer"
+	wep_swap[788] = sndSwapEnergy
+	wep_rad[788] = 0;
+	
+	wep_name[789] = "WUPER WAZER WAVE WUN"
+	wep_type[789] = 5
+	wep_auto[789] = 3
+	wep_load[789] = 9
+	wep_cost[789] = 4
+	wep_sprt[789] = sprWazerRifle
+	wep_area[789] = 33
+	wep_text[789] = "wow what wicked weapon!"
+	wep_swap[789] = sndSwapEnergy
+	wep_rad[789] = 0;
+	
+	wep_name[790] = "WAZER WAVE GUN"
+	wep_type[790] = 5
+	wep_auto[790] = 3
+	wep_load[790] = 9
+	wep_cost[790] = 2
+	wep_sprt[790] = sprWazerRifle
+	wep_area[790] = 20
+	wep_text[790] = "wowawowawowawow"
+	wep_swap[790] = sndSwapEnergy
+	wep_rad[790] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

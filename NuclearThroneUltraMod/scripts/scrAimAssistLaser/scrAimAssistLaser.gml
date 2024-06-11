@@ -18,7 +18,7 @@ function scrAimAssistLaser(originalDirection, adjustAimAssist = 1){
 	with Player
 	{
 		if skill_got[19] == 1//Eagle eyes
-			aimAssist += 15;
+			aimAssist += 14;
 		if ultra_got[42]==1//Never miss
 		{
 			aimAssist += 60;

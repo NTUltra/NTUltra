@@ -13,7 +13,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndWrench)
 			with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 			{
-				dmg = 10
+				dmg = 12
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.6+longarms)
@@ -27,7 +27,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
 			{
-				dmg = 10
+				dmg = 12
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -41,7 +41,7 @@ if instance_exists(Player) && instance_exists(creator)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
 			sprite_index=sprHeavySlash;
-			dmg = 14//shovel is 8
+			dmg = 15//shovel is 8
 			longarms = 0
 	
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -95,11 +95,20 @@ if instance_exists(Player) && instance_exists(creator)
 		else
 		{
 			snd_play_fire(sndFlail)
+			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+			{
+				dmg = 5
+				longarms = 0
+				longarms = (Player.skill_got[13]+other.bettermelee)*3
+				motion_add(aimDirection,2.5+longarms)
+				image_angle = direction
+				team = other.team
+			}
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 			{
 				sprite_index = sprBigSlash
 				mask_index = mskBigPandaSlash;
-				dmg = 24 + r;
+				dmg = 20 + r;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -111,12 +120,12 @@ if instance_exists(Player) && instance_exists(creator)
 		wepangle = -wepangle
 		if !skill_got[2]
 		{
-			motion_add(aimDirection,5)
+			motion_add(aimDirection,r)
 			scrMoveContactSolid(aimDirection,2)
 		}
-		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-		BackCont.shake += 1
+		BackCont.viewx2 += lengthdir_x(6 + r,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6 + r,aimDirection)*UberCont.opt_shake
+		BackCont.shake += r
 		wkick = -4
 	}
 }
