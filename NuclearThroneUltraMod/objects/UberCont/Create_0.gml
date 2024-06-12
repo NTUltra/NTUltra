@@ -35,6 +35,7 @@ area=0;
 subarea=1;
 loops=0;
 lastSaveLoop = -1;
+hasBeenSaved = false;
 loadedRun = false;
 
 //window_set_max_height(1440);
@@ -215,3 +216,8 @@ partnerDied = false;
 keepRanChar = 0;
 highestReachedLevel = 0;
 hadUnlockDisablePopup = false;
+//current_run = total_run_slots;//Index
+loadRunMenuState = 0;
+selectedRun = 4;
+loadedRunFiles = false;
+savedRuns = [];

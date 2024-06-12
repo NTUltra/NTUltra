@@ -67,11 +67,3 @@ if image_alpha > 0.9
 }
 if speed > maxSpeed
 	speed = maxSpeed
-
-if alarm[2] > 0
-{
-	vspeed = maxSpeed - 1.4;
-	hspeed = 0;
-	if alarm[2] < 5
-		vspeed = 0;
-}

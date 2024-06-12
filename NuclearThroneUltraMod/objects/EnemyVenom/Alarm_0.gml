@@ -1,6 +1,6 @@
 /// @description Deal damage
 var theDamage = dmg;
-if !instance_exists(owner) || owner == noone || owner.my_health < 2
+if !instance_exists(owner) || owner == noone || owner.my_health < 2 || hits > maxDamage
 {
 	instance_destroy();	
 	exit;
@@ -13,6 +13,7 @@ with owner
 {
 	snd_play(sndVenom,0.1);
 	DealDamage(theDamage);
+	other.hits += 1;
 	BackCont.shake += 20;
 	var d = random(360);
 	BackCont.viewx2 += lengthdir_x(10,d)*UberCont.opt_shake

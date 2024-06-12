@@ -2,7 +2,11 @@
 // /@description
 ///@param
 function scrReturnMenu(){
-	if hasNoMenuOpen()
+	if (UberCont.loadRunMenuState > 0)
+	{
+		exit;
+	}
+	else if hasNoMenuOpen()
 	{
 		if LoadoutSelect.wepmenuopen
 			exit;

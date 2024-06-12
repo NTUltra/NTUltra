@@ -88,6 +88,12 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 if (KeyCont.key_paus[0] = 1) ||
 (mouse_check_button_pressed(mb_right) || gamepad_button_check(0,gp_face2))
 {
+	if loadRunMenuState == 1
+	{
+		loadRunMenuState = 0;
+		snd_play_2d(sndClickBack);
+		exit;
+	}
 	if ultraMenuOpen
 	{
 		ultraMenuOpen = false;
@@ -282,12 +288,11 @@ else
 		}
 		else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 		{
-		kills=Player.kills
-		hard=Player.hard;
-		event_user(0);
-		alarm[7] = 1;
-		isPaused = 1
-
+			kills=Player.kills
+			hard=Player.hard;
+			event_user(0);
+			alarm[7] = 1;
+			isPaused = 1
 		}
 	}
 }

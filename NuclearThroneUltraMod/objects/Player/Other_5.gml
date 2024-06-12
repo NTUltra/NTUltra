@@ -26,6 +26,12 @@ else
 scrNextLevel();//odd
 }
 */
+//SAVE STATION HANDLING
+if UberCont.hasBeenSaved
+{
+	UberCont.lastSaveLoop = Player.loops;
+	UberCont.hasBeenSaved = false;
+}
 isInInverted = false;
 var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();

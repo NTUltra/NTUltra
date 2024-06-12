@@ -1284,7 +1284,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, CursedSpider, CursedCrystal, BigMaggot)))
+				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, CursedSpider, CursedCrystal, CloudShooter)))
 			}
 			if r > 4
 			{
@@ -1292,7 +1292,7 @@ function scrPopEnemies() {
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, CursedSpider, CursedSpider, BigMaggot))
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, CursedSpider, CursedSpider, CloudShooter))
 			}
 		}
 		else
@@ -1321,7 +1321,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, LightningCrystal, BigMaggotInverted)))
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, LightningCrystal, InvertedCloudShooter)))
 			}
 			if r > 4
 			{
@@ -1330,7 +1330,7 @@ function scrPopEnemies() {
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider, BigMaggotInverted))
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider, InvertedCloudShooter))
 			}
 		}
 		else

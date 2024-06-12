@@ -1,8 +1,8 @@
 ///xxx();
 // /@description
 ///@param
-function scrLoadRun(){
-	var fileString ="ntultrarun1.sav";
+function scrLoadRun(selectedRunIndex){
+	var fileString ="ntultrarun" + string(selectedRunIndex) + ".sav";
 	if (file_exists(fileString))
 	{
 		UberCont.race = 1
@@ -28,6 +28,8 @@ function scrLoadRun(){
 		var encryptedRun = scrDecodeSavedRun(fileString);
 		if is_struct(encryptedRun)
 		{
+			//if variable_struct_exists(encryptedRun, "runIndex")
+			//	UberCont.current_run = encryptedRun.runIndex;
 			instance_create(x,y,Player);
 			Player.area = 100//encryptedRun.area;
 			BackCont.area = 100//encryptedRun.area;

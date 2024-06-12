@@ -95,6 +95,7 @@ function scrEndOfRun(){
 		txttime="00:00:00:00";
 		vansSlapped = 0;
 		lastSaveLoop = -1;
+		hasBeenSaved = false;
 		levelIncrease = 0;
 		visitedScrap = false;
 		visitedOasis = false;

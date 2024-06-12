@@ -8161,9 +8161,9 @@ function scrWeapons() {
 	wep_type[729] = 4
 	wep_auto[729] = 3
 	wep_load[729] = 12
-	wep_cost[729] = 2
+	wep_cost[729] = 2.5
 	wep_sprt[729] = sprIcicleGun
-	wep_area[729] = 16
+	wep_area[729] = 18
 	wep_text[729] = "ice shards"
 	wep_swap[729] = sndSwapFrost
 	wep_rad[729] = 0;

@@ -8,9 +8,9 @@ if target != noone {
 		{
 			alarm[1] = ceil(actTime * 0.5);
 			tx = target.x;
-			ty = target.y + 34;
-			motion_add(point_direction(x,y,target.x, target.y),acc);
-			if dis < 32
+			ty = target.y + knifeOffset;
+			motion_add(point_direction(x,y,target.x, ty),acc);
+			if dis < 34
 			{
 				x = tx;
 				y = ty;
@@ -18,7 +18,7 @@ if target != noone {
 				event_user(0);
 			}
 		}
-		else if dis > 32
+		else if dis > 34
 		{
 			var ran = random(100);
 			if image_alpha > 0.9 && ran < 30 {

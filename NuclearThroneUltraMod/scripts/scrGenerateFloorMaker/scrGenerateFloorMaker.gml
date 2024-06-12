@@ -105,9 +105,9 @@ function scrGenerateFloorMaker(limiter) {
 			{
 				goal=45+s;
 				if Player.area == 9 && Player.subarea == 3
-					goal = 290;
+					goal = 270;
 				if Player.area == 118 && Player.subarea == 3
-					goal = 250;
+					goal = 240;
 			}
 			else if scrIsGamemode(20)//big levels
 			{

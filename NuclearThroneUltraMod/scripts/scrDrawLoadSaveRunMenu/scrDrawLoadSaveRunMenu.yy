@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"scrDrawLoadRunMenu",
+  "%Name":"scrDrawLoadSaveRunMenu",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrDrawLoadRunMenu",
+  "name":"scrDrawLoadSaveRunMenu",
   "parent":{
     "name":"Menus",
     "path":"folders/Scripts/Menus.yy",

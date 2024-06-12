@@ -373,9 +373,17 @@ goal=120+s
 else if Player.area == 8//Wonderland
 goal = 130+s
 else if Player.area == 9//Palace
-goal = 130+s
+{
+	goal = 130+s
+	if Player.subarea == 3
+		goal = 350;
+}
 else if Player.area == 118//Inverted Palace
-goal = 130+s
+{
+	goal = 130+s
+	if Player.subarea == 3
+		goal = 300;
+}
 else if Player.area == 10 || Player.area == 121//savanna
 goal = 105+s
 else if Player.area == 109//inverted Wonderland
@@ -418,7 +426,13 @@ else if Player.area == 138//Cloudland
 goal = 150 + s;
 
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
-goal=70+s;
+{
+	goal=70+s;
+	if Player.area == 9 && Player.subarea == 3
+		goal = 270;
+	else if Player.area == 118 && Player.subarea == 3
+		goal = 240;
+}
 
 if scrIsGamemode(20) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//big levels
 goal *= 2;

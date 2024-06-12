@@ -1,6 +1,6 @@
 if other.team!=2
 {
-	if (other.typ == 1 || other.typ == 2 || ultraD)
+	if (other.typ == 1 || other.typ == 2 || (other.typ == 3 && ultraD))
 	{
 		with other
 		{

@@ -953,16 +953,16 @@ function scrMakeFloor(limiter) {
 	{
 	   if random(19+instance_number(FloorMaker)) > 20
 	   {
-	   // instance_destroy()
-	   if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-			if (random(4) <2)
-			instance_create(x+16,y+16,WeaponChest)
-			else
-			instance_create(x+16,y+16,AmmoChest)
-	   instance_create(x,y,Floor)}
-	   }
-	   if instance_exists(Floor) && fc > 100 && random(9) < 1
-		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		   // instance_destroy()
+		   if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+				if (random(4) <2)
+				instance_create(x+16,y+16,WeaponChest)
+				else
+				instance_create(x+16,y+16,AmmoChest)
+		   instance_create(x,y,Floor)}
+		}
+		if instance_exists(Floor) && fc > 100 && random(9) < 1
+			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 
 	if area == 2 or area == 110

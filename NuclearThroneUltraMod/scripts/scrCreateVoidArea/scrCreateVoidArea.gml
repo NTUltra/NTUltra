@@ -13,9 +13,9 @@ function scrCreateVoidArea(){
 			{
 				if (
 					!(fxx == -32 * ham && fyy == -32 * vam)//Left Top
-					&& !(fxx == -32 * ham && fyy == -32 * (bam - 1))//Left Bottom
+					&& !(fxx == -32 * ham && fyy == -32 * (bam - 3))//Left Bottom
 					&& !(fxx == 32 * (ham - 1) && fyy == -32 * vam)//Right Top
-					&& !(fxx == 32 * (ham - 1) && fyy == -32 * (bam - 1))//Right Bottom
+					&& !(fxx == 32 * (ham - 1) && fyy == -32 * (bam - 3))//Right Bottom
 				)
 					instance_create(x + fxx,y + fyy,Floor);
 			}

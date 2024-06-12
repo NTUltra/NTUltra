@@ -1,6 +1,6 @@
 /// @description
 if !surface_exists(surface)
-	surface = surface_create(48,48);
+	surface = surface_create(96,96);
 else
 {
 	surface_set_target(surface);

@@ -7,19 +7,7 @@ if hover
 	with option
 		instance_destroy();
 	//scrLoadRun();
-	with Menu
-	{
-		loadedRunFiles = true;
-		var fileString ="ntultrarun1.sav";
-		if (file_exists(fileString))
-		{
-			var encryptedRun = scrDecodeSavedRun(fileString);
-			if is_struct(encryptedRun)
-			{
-				currentRun = scrAssignRunData(encryptedRun)
-			}
-		}
-	}
+	scrLoadInAllRuns();
 }
 //else if hover
 //	selected = 0

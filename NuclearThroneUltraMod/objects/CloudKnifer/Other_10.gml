@@ -7,7 +7,7 @@ alarm[1] += sneakTell + actTime*3;
 alarm[2] = sneakTell;
 gunangle = 90;
 walk = sneakTell;
-vspeed = acc;
+vspeed = maxSpeed;
 hspeed = 0;
 //image_alpha = targetAlpha + 0.1;
 event_user(2);

@@ -16,13 +16,13 @@ if confirmState == 3
 	draw_set_valign(fa_bottom);
 	draw_set_font(fntB);
 	draw_set_color(c_black)
-	draw_text(xxx+1,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
-	draw_text(xxx+1,yyy+1,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
-	draw_text(xxx,yyy+1,"ARE       YOU       SURE\nYOU       WANT       TO\nQUIT");
+	draw_text(xxx+1,yyy,"ARE YOU SURE\nYOU WANT TO\nQUIT");
+	draw_text(xxx+1,yyy+1,"ARE YOU SURE\nYOU WANT TO\nQUIT");
+	draw_text(xxx,yyy+1,"ARE YOU SURE\nYOU WANT TO\nQUIT");
 	draw_set_color(c_silver)
-	draw_text(xxx,yyy,"ARE       YOU       SURE\nYOU       WANT       TO\n ");
+	draw_text(xxx,yyy,"ARE YOU SURE\nYOU WANT TO\nQUIT");
 	draw_set_color(c_white)
-	draw_text(xxx,yyy,"QUIT       THE       GAME?");
+	draw_text(xxx,yyy,"\n\nQUIT");
 	draw_set_font(fntM);
 	draw_sprite_ext(sprLMBIcon,0,xxx - 36,yyy+12,1,1,0,c_white,1);
 	draw_set_valign(fa_middle);

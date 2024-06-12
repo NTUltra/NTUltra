@@ -32,9 +32,11 @@ tx = x;
 ty = y;
 smackDetectionRange = 120;
 smackRange = 9;
-smackSpeed = 5;
+smackSpeed = 16;
+loops = GetPlayerLoops();
 wepangle = choose(-140,140);
-sneakTell = 20;
+sneakTell = 16;
+knifeOffset = 52;
 targetAlpha = 1;
 stealthAlpha = 0.2;
 deep = 12;
@@ -48,4 +50,9 @@ if stalking
 	targetAlpha = stealthAlpha;
 	image_alpha = targetAlpha;
 	mask_index = mskPickupThroughWall;
+}
+if loops > 0
+{
+	sneakTell -= 3;
+	actTime -= 1;
 }

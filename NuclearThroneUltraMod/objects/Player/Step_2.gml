@@ -466,7 +466,7 @@ if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 
 			owner = other.id;
 			scale += 0.75;
 			alpha = 0;
-			alarm[1] = 5;
+			alarm[1] = 10;
 		}
 	}
 	triggerMetabolism = false;

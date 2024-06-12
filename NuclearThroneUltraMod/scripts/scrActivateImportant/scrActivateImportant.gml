@@ -9,4 +9,5 @@ function scrActivateImportant(){
 		instance_create(x,y,FPSHACKMenu);
 	instance_activate_object(MusCont);
 	instance_activate_object(Cursor);
+	instance_activate_object(SaveRunMenu);
 }

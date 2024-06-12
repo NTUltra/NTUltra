@@ -6,7 +6,6 @@ function scrInit() {
 	opt_gm1wep=1;
 	opt_discs=6;
 	opt_discdamage=2;
-	saveSlot = 1;
 	
 	//INIT DATA
 	scrRaces();
