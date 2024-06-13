@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"list_contains",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"list_contains",
+  "parent":{
+    "name":"BestScripts",
+    "path":"folders/Scripts/BestScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -12,7 +12,7 @@ if gonnashoot > 0 {
 	wkick = 4
 	walk -= 1;
     with instance_create(x, y, EnemyBullet1Square) {
-        motion_add(other.gunangle + (random(16) - 8), 4.6)
+        motion_add(other.gunangle + (random(16) - 8), 4.4)
         image_angle = direction
         team = other.team
     }

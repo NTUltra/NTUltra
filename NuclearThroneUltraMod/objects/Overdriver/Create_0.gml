@@ -1,5 +1,5 @@
 event_inherited();
-rate = 2;
+rate = 0;
 if (instance_exists(Player) && Player.skill_got[42])
 	snd_play(sndChargeShort);
 else

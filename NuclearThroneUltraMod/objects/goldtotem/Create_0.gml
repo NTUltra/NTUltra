@@ -39,5 +39,4 @@ if scrIsHardMode()//HARD MODE
 	alarm[2] = alarm[1];
 alarm[0] = 2;
 
-
 scrInitDrops(3);

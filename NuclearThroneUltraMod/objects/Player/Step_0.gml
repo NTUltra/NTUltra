@@ -503,6 +503,7 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
 			Sleep(100);
+			getVision = true;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
 			{
 				owner = other.id;
@@ -511,6 +512,7 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
+			instance_create(x+32,y,GoldImmuneTotem);
 			//scrn++;
 			
 			//thing = instance_create(f.x + 16,f.y + 16,PopupText);

@@ -7,8 +7,8 @@ with instance_create(x,y,HeavyFlame)
 {
 	depth = other.depth + 1;
 	team = other.team;
-	motion_add(random(360),2);
-	motion_add(other.direction+180,1);
+	motion_add(random(360),5);
+	motion_add(other.direction+180,3);
 }
 var n = instance_nearest(x + (hspeed*2),y + (vspeed * 2),enemy)
 if n != noone && n.team != team && !collision_line(x,y,n.x,n.y,Wall,false,false)

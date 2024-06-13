@@ -6,7 +6,7 @@ if object_index == GoldJungleFly
 {
 	instance_create(x,y,MaggotExplosion);
 	instance_create(x,y,MaggotExplosion);
-	scrDrop(50,10);
+	scrDrop(40,10);
 	instance_create(x,y,BigWallBreak);
 	var ang = random(360);
 	var am = 10;

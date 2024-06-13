@@ -5184,8 +5184,11 @@ function scrFire(canDrown = true) {
 
 
 	default:
-	//we run a secondary script because this one is lagging
-	scrFire2(hasTailNow);
+		//we run a secondary script because this one is lagging
+		if wep > 790
+			scrFire3(hasTailNow)
+		else
+			scrFire2(hasTailNow);
 	break;
 	}//end of huge switch
 

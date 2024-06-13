@@ -52,8 +52,8 @@ other.cam=false;
 if !scrIsGamemode(25)
 	existTime = 60;
 
-if cam && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))
-instance_create(x,y,DramaCamera);
+if cam
+	alarm[7] = 5;
 
 scrAddDrops(2);
 

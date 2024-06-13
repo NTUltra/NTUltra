@@ -1,5 +1,5 @@
 
 event_inherited()
 
-scrDrop(8,15)
+scrDrop(12,20)
 instance_create(x,y,MaggotExplosionInverted);

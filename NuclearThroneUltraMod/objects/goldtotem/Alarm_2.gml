@@ -1,4 +1,4 @@
-/// @description Side waves
+/// @description Horizontal Side waves
 alarm[2] = actTime;
 if instance_exists(Player) && !instance_exists(InvertedThrone2WaveSquareBullet) && !Player.justAsheep
 {

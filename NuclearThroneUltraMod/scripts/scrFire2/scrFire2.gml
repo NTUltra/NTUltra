@@ -17746,10 +17746,10 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//CHARGE RAPIER
+	//CHARGE LANCE
 	case 786:
 
-	with instance_create(x,y,ChargeRapier)
+	with instance_create(x,y,ChargeLance)
 	{
 		maxcharge = 5;//maxrate
 		type = 0;
@@ -17872,7 +17872,7 @@ function scrFire2(hasTailNow) {
 			ammo = 3
 			time = 2
 			aimOffset = -20 * other.accuracy;
-			team = other.team
+			team = other.teamER
 			alarm[0] = 1;
 		}
 	}

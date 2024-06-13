@@ -38,6 +38,9 @@
     "name":"sprVenusCarOasis",
     "path":"sprites/sprVenusCarOasis/sprVenusCarOasis.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskCar",
+    "path":"sprites/mskCar/mskCar.yy",
+  },
   "visible":true,
 }

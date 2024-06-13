@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-scrDrop(40,20);
+scrDrop(30,15);
 instance_create(x,y,BigWallBreak);
 instance_create(x,y,MaggotExplosionInverted);
 instance_create(x,y,MaggotExplosionInverted);

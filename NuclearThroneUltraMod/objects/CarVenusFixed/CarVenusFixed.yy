@@ -42,6 +42,9 @@
     "name":"sprVenusCarFix",
     "path":"sprites/sprVenusCarFix/sprVenusCarFix.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskCar",
+    "path":"sprites/mskCar/mskCar.yy",
+  },
   "visible":true,
 }

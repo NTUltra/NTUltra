@@ -1,6 +1,6 @@
 scrDrop(100,0)
-scrDrop(70,10)
-scrRaddrop(30);
+scrDrop(50,10)
+scrRaddrop(25);
 event_inherited()
 
 with InvertedThrone2WaveSquareBullet

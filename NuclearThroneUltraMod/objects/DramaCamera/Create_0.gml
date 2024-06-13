@@ -6,6 +6,7 @@ sideArt = UberCont.opt_sideart;
 customSideArt = UberCont.customSideArt;
 surf = -1;
 bossIntroSound = sndSilence;
+layerSprite = sprBossIntroBackLayer;
 event_user(1);
 var xx = 0//camera_get_view_x(view_camera[0]);
 var yy = 0//camera_get_view_y(view_camera[0]);
@@ -30,11 +31,14 @@ xShift = 1;
 yShift = 0;
 nx = x;
 ny = yy + 16;
+lx = x;
+lxMoveStart = lx;
 x -= 32;
 xMoveStart = x;
 xIntro = x - 500;
 xOutro = x + 500;
 x = xIntro;
+lx = x;
 nx += 32;
 if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {
@@ -156,6 +160,7 @@ if instance_exists(MimicBoss)
 		if Player.bskin < 2
 		{
 			sprite_index = sprBigPortrait;
+			layerSprite = sprBossIntroBackLayerMimic;
 			image_index = scrRaceToPortraitIndex(Player.race, Player.bskin);
 		}
 	}

@@ -479,6 +479,10 @@ with UltraProtector
 {
 	event_user(0);
 }
+with GoldImmuneTotem
+{
+	event_user(0);
+}
 with HealFX
 {
 	draw_self();

@@ -9,12 +9,42 @@ if instance_exists(creator)
 			creator.wkick = -rate;
 		else
 			creator.wkick = rate;
+			/*
 		with instance_create(x+random(48)-24,y+random(48)-24,WeaponCharge)
 		{
 			motion_add(point_direction(x,y,other.x,other.y),2+random(1))
 			alarm[0] = 3 + speed;
-		}
+		}*/
+		repeat(rate)
+			with instance_create(x + random_range(8,-8),y + random_range(8,-8), Smoke)
+			{
+				speed += min(3,other.rate * 0.3);	
+			}
 		BackCont.shake+=1+rate*0.1;
+		switch (rate)
+		{
+			case 1:
+				creator.wep_sprt[785] = sprChargeHammer1;
+			break;
+			case 2:
+				creator.wep_sprt[785] = sprChargeHammer2;
+			break;
+			case 3:
+				creator.wep_sprt[785] = sprChargeHammer3;
+			break;
+			case 4:
+				creator.wep_sprt[785] = sprChargeHammer4;
+			break;
+			case 5:
+				creator.wep_sprt[785] = sprChargeHammer5;
+			break;
+			case 6:
+				creator.wep_sprt[785] = sprChargeHammer6;
+			break;
+			default:
+				creator.wep_sprt[785] = sprChargeHammer7;
+			break;
+		}
 	}
 }
 
