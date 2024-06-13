@@ -502,6 +502,7 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
+			Sleep(100);
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
 			{
 				owner = other.id;
@@ -2075,29 +2076,27 @@ if (instance_exists(enemy))
 		var ogHomeBoost = homeBoost * dt;
 	    with projectile
 	    {
-	        if ((team == other.team || object_index == Disc) && speed > 0)
+	        if (canBeMoved && (team == other.team || object_index == Disc) && speed > 0)
 	        {
-		        if canBeMoved
-		        {
-		        
-					var t = instance_nearest(x,y,enemy)
-			        if instance_exists(t) && t != noone && !collision_line(x,y,t.x,t.y,Wall,0,0)// && point_distance(x,y,t.x,t.y) < 128
+				var t = instance_nearest(x,y,enemy)
+			    if instance_exists(t) && t != noone && !collision_line(x,y,t.x,t.y,Wall,0,0)// && point_distance(x,y,t.x,t.y) < 128
+			    {
+					homeBoost = ogHomeBoost;
+					var d = point_direction(x,y,t.x,t.y)
+					var ad = angle_difference(d,direction);
+					homeBoost *= (1 + (speed * 0.01));//0.006
+			        if (ad > 2)
 			        {
-						homeBoost = ogHomeBoost;
-						var d = point_direction(x,y,t.x,t.y)
-						var ad = angle_difference(d,direction);
-						homeBoost *= (1 + (speed * 0.01));//0.006
-			            if (ad > 2)
-			            {
-							direction += homeBoost;
-							image_angle += homeBoost;
-			            }
-			            else if (ad < -2)
-			            {
-							direction -= homeBoost;
-							image_angle -= homeBoost;
-			            }
+						direction += homeBoost;
+						image_angle += homeBoost;
 			        }
+			        else if (ad < -2)
+			        {
+						direction -= homeBoost;
+						image_angle -= homeBoost;
+			        }
+					x += lengthdir_x(homeBoost,d);
+					y += lengthdir_y(homeBoost,d);
 			    }
 	        }
 	    }

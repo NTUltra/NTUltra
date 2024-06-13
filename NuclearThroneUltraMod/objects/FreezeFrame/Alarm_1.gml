@@ -1,4 +1,2 @@
-/// @description Dend
+/// @description Before we disable
 
-
-instance_destroy();

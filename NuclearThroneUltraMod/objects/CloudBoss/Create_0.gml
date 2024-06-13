@@ -26,7 +26,7 @@ alarm[4] = 30;
 wkick = 0
 actTime = 12;
 
-acc = 1;
+acc = 1.2;
 maxSpeed = 3.7;
 time = 0;
 instance_create(x,y,DramaCamera);

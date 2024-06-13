@@ -1,15 +1,13 @@
 /// @description Do some shit bro
 event_inherited()
 
-//Circling
-
 if walk > 0
 {
 	walk -= 1
 	motion_add(direction,acc)
 	
 }
-if point_distance(xstart,ystart,x,y) > 400
+if point_distance(xstart,ystart,x,y) > 500
 {
 	direction = point_direction(x,y,xstart,ystart);	
 }
@@ -21,7 +19,7 @@ else
 	{
 		if n.object_index == FloorExplo
 			o = 8;
-		if point_distance(x,y,n.x+o,n.y+o) > 64
+		if point_distance(x,y,n.x+o,n.y+o) > 96
 		{
 			direction = point_direction(x,y,n.x + o,n.y + o);
 			//motion_add(point_direction(n.x+o,n.y+o,x,y),acc * 1.5);

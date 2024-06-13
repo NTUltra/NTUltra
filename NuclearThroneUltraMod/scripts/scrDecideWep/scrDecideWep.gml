@@ -20,7 +20,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			wep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140);
 	}
 	else {
-		var maxAreaGoodEnough = irandom_range(7,12);
+		var maxAreaGoodEnough = irandom_range(6,12);
 		if dataRef.race = 8
 		{
 			wepTier += 1

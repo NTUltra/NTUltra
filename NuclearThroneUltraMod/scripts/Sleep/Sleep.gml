@@ -6,6 +6,8 @@ function Sleep(duration) {
 	//die while loop can crashes veroorzaken op android en ios XD (omdat die leeg is...)
 	if UberCont.opt_freeze == 0
 		return 0;
+	if instance_exists(FreezeFrameDelay)
+		return 0;
 	if UberCont.normalGameSpeed == 60
 		duration *= 2;
 	
@@ -18,11 +20,14 @@ function Sleep(duration) {
 			alarm[0] = max(1,duration);
 		}
 	}
-	else if FreezeFrame.alarm[1] > 0
+	else
 	{
 		with FreezeFrame
 		{
-			alarm[0] += duration;
+			if canDisable
+			{
+				alarm[0] += duration;
+			}
 		}
 	}
 	//We will turn this into a pause screen sprite surface thing so that it does not cause crashes and such

@@ -5,10 +5,6 @@ function scrContactDamageToEnemy(hitEnemy){
 	if hitEnemy.team != team && team != 0
 	{
 		var actuallyDead = false;
-		if hitEnemy.frozen != noone || hitEnemy.alarm[11] > 0
-		{
-			actuallyDead = true;	
-		}
 		if hitEnemy.team != 0//Dealing the damage with gamma guts
 		{
 			var contactDmg = 0;
@@ -65,7 +61,7 @@ function scrContactDamageToEnemy(hitEnemy){
 		}
 
 		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 25 && !justAsheep && !hitEnemy.isSnooze && !instance_exists(HumphryDiscipline)//is it a melee enemy?
-		&& !collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false)
+		&& hitEnemy.frozen == noone && hitEnemy.alarm[11] < 1 && !collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false)
 		{
 			if meleeimmunity < 1
 			{

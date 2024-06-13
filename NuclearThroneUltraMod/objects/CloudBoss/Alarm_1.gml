@@ -11,7 +11,7 @@ if target != noone {
 			walk = alarm[1];
         }
         else {
-            var ran = random(100);
+            var ran = random(110);
 			if ran < 23
 			{
 				event_user(0);
@@ -47,6 +47,11 @@ if target != noone {
 					walk = actTime + random(actTime*3);
 					motion_add(random(360),acc);
 				}
+			}
+			else if ran < 100
+			{
+				walk = alarm[1] + actTime;
+				motion_add(gunangle,acc);
 			}
 			else if my_health < maxhealth * 0.5
 			{

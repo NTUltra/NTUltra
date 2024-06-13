@@ -1,4 +1,6 @@
 /// @description Sideart
+if !canDisable
+	exit;
 if sideArt == sprite_get_number(sprSideArt) + 1
 	exit;
 var ww = window_get_width();

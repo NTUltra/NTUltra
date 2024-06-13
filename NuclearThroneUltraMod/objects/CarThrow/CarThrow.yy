@@ -43,8 +43,8 @@
     "path":"sprites/sprCarIdle/sprCarIdle.yy",
   },
   "spriteMaskId":{
-    "name":"mskSnowBot",
-    "path":"sprites/mskSnowBot/mskSnowBot.yy",
+    "name":"mskCar",
+    "path":"sprites/mskCar/mskCar.yy",
   },
   "visible":true,
 }

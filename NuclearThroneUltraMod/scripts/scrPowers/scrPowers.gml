@@ -244,34 +244,41 @@ function scrPowers(raceOverwrite = -1) {
 		}
 	}
 
-	if race == 16 && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
+	if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 	{
-	    //63
-		if freeArmourStrike
+		if armour < 1 && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
 		{
-			freeArmourStrike = false;
-			if skill_got[38] && metabolism < 3
-			{
-				triggerMetabolism = true;
-			}
+			snd_play(sndNoArmour,0.1);
+			BackCont.shake += 10;
 		}
-	    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra))
+		else
 		{
-			if metabolism < 3
-				armour--;
-			if skill_got[38]
+			if freeArmourStrike
 			{
-				triggerMetabolism = true;
+				freeArmourStrike = false;
+				if skill_got[38] && metabolism < 3
+				{
+					triggerMetabolism = true;
+				}
 			}
+		    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra))
+			{
+				if metabolism < 3
+					armour--;
+				if skill_got[38]
+				{
+					triggerMetabolism = true;
+				}
+			}
+		    else if ultra_got[63] && !(ultra_got[62] && altUltra)
+		    {
+		        DealDamage(2,false,false,false);
+				hitBy = sprite_index;
+		        exception=true
+		    }
+			scrBlankArmour();
+			scrSerpentArmourStrike();
 		}
-	    else if ultra_got[63] && !(ultra_got[62] && altUltra)
-	    {
-	        DealDamage(2,false,false,false);
-			hitBy = sprite_index;
-	        exception=true
-	    }
-	    scrBlankArmour();
-		scrSerpentArmourStrike();
 	}
 
 

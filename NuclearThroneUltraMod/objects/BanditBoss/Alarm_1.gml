@@ -68,7 +68,7 @@ right = -1
 else{
 
 //PRE LOOP
-alarm[1] = 30+random(60)
+alarm[1] = 40+random(40)
 
 meleedamage = 0
 

@@ -40,6 +40,9 @@
     "name":"sprCarIdle",
     "path":"sprites/sprCarIdle/sprCarIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskCar",
+    "path":"sprites/mskCar/mskCar.yy",
+  },
   "visible":true,
 }

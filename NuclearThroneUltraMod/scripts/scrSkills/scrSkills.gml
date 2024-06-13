@@ -572,7 +572,7 @@ function scrSkills() {
 	skill_bons[45] = "+25% HEAL RATE"
 	
 	skill_name[46] = "INNER PEACE"
-	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w><aq>BARRIERS<aq>";
+	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>";
 	skill_detail[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>#SUBSEQUENT <aq>BARRIERS<aq> CHARGE SLOWER";
 	skill_tips[46] = "rush of adrenaline"
 	skill_msnd[46] =  sndMutAdrenalineFuel;

@@ -358,10 +358,10 @@ function scrDrop(itemdrop, weapondrop) {
 		{
 		scrWeapons()
 		SetSeedWeapon();
-		wep = scrDecideWep(0,5)
+		wep = scrDecideWep(max(0,-1),2)
 		name = wep_name[wep]
 		type = wep_type[wep]
-		ammo = 30
+		ammo = 20
 		curse = 0
 		sprite_index = wep_sprt[wep];
 		if collision_point(x,y,Wall,false,false)

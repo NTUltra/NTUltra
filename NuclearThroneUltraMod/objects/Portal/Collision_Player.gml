@@ -12,6 +12,11 @@ if !instance_exists(PlayerInPortal)
 		image_angle = Player.angle;
 		right = Player.right;
 		sprite_index = Player.spr_hurt;
+		with Player
+		{
+			lockout = true;
+			speed = 0;
+		}
 	}
 }
 //in portal don't decrease skill

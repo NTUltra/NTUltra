@@ -1,22 +1,37 @@
 /// @description Boss intro
 if alarm[0] == 0
 	exit;
+if !surface_exists(surf) || surf == -1
+{
+    surf = surface_create(camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]));
+}
+surface_set_target(surf);
+draw_clear_alpha(c_black,0.6);
+
 var tx = nx;
 var ty = ny;
 var yy = y;
 var t = 1;
-var h = 8;
+var h = 16;
 if alarm[0] > introDuration - shiftInDuration
 {
 	t = clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1);
-	ty = lerp(ny, ny - 64, t);
-	yy = lerp(y, y + 240, t);
+	ty = lerp(ny, ny - 64, clamp(t,0,1));
+	yy = lerp(y, y + 240, clamp(t*0.5,0,1));
+	x = lerp(xMoveStart, xIntro, t);
+	tx = lerp(nx, -xIntro, t);
 }
 else if alarm[0] < shiftInDuration
 {
 	t = clamp(alarm[0]/shiftInDuration,0,1)
-	ty = lerp(ny - 64, ny, t);
-	yy = lerp(y + 240, y, t);
+	ty = lerp(ny - 64, ny, clamp(t*2,0,1));
+	yy = lerp(y + 240, y, clamp(t*3,0,1));
+	x = lerp(xOutro,xMoveStart,t);
+	tx = lerp(-xOutro, nx, t);
+}
+else
+{
+	xMoveStart = x;	
 }
 var left = camera_get_view_x(0);
 var top = camera_get_view_y(0);
@@ -45,7 +60,7 @@ draw_text_ext(tx,ty,name,0,320);
 draw_set_font(fntM);
 //if alarm[0] < introDuration - shiftInDuration
 //{
-	if UberCont.normalGameSpeed == 60
+	if room_speed == 60
 	{
 		x += xShift*accelerate * 0.5;
 		y += yShift*accelerate * 0.5;
@@ -65,83 +80,4 @@ draw_set_font(fntM);
 		else
 			accelerate = 1;
 	}
-//}
-/*
-if x > __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.4 and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.6 and y > __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.4 and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.6
-{
-
-
-with BanditBoss
-{
-snd_play(sndBigBanditIntro)
-depth = -99
-}
-with InvertedBanditBoss
-{
-snd_play(sndBigBanditIntro)
-depth = -99
-}
-with BigVulture
-{
-snd_play(sndBigVultureCharge)
-depth = -99
-}
-with LilHunter
-{
-snd_play_2d(sndLilHunterAppear)
-depth = -99
-}
-with InvertedLilHunter
-{
-snd_play_2d(sndLilHunterAppear)
-depth = -99
-}
-with ScrapBoss
-{
-snd_play(sndBigDogIntro)
-depth = -99
-}
-with InvertedScrapBoss
-{
-snd_play(sndBigDogIntro)
-depth = -99
-}
-with HotDrake
-{
-snd_play(sndFlareExplode)
-depth = -99
-}
-with InvertedHotDrake
-{
-snd_play(sndFlareExplode)
-depth = -99
-}
-
-with AssassinBoss
-{
-snd_play(sndAssassinPretend)
-depth = -99
-}
-
-with InvertedAssassinBoss
-{
-snd_play(sndAssassinPretend)
-depth = -99
-}
-
-with BallMom
-{
-	depth = -99;	
-}
-with HyperCrystal
-{
-	depth = -99;	
-}
-with Technomancer
-{
-	depth = -99;	
-}
-}
-urgent += 1
-
-*/
+surface_reset_target();

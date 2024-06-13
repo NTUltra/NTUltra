@@ -1,8 +1,14 @@
 depth = -99;
 image_speed = 0;
 playedSound = false;
-var xx = camera_get_view_x(view_camera[0]);
-var yy = camera_get_view_y(view_camera[0]);
+resolutionScale = UberCont.opt_resolution_scale;
+sideArt = UberCont.opt_sideart;
+customSideArt = UberCont.customSideArt;
+surf = -1;
+bossIntroSound = sndSilence;
+event_user(1);
+var xx = 0//camera_get_view_x(view_camera[0]);
+var yy = 0//camera_get_view_y(view_camera[0]);
 var vw = camera_get_view_width(view_camera[0]);
 var vh = camera_get_view_height(view_camera[0]);
 x = xx + (vw*0.5)
@@ -25,6 +31,10 @@ yShift = 0;
 nx = x;
 ny = yy + 16;
 x -= 32;
+xMoveStart = x;
+xIntro = x - 500;
+xOutro = x + 500;
+x = xIntro;
 nx += 32;
 if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName) || scrIsGamemode(40) || scrIsGamemode(44)
 {

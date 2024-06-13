@@ -77,7 +77,11 @@ if widescreen > 0
 		}
 		else
 		{
-			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 70 + additional,min(1,portraitLerp));
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 58 + additional,min(1,portraitLerp));
+			if instance_exists(LoadoutSelect)// && LoadoutSelect.wepmenuopen
+			{
+				bpx -= lerp(0,64,LoadoutSelect.time);
+			}
 			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ),portraitLerp - 1);
 		}
 		draw_sprite_ext(sprSplat2,lerp(1,3,portraitLerp*0.5),
