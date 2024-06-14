@@ -6,6 +6,7 @@ if instance_exists(Player) && instance_exists(creator)
 	var r = rate;
 	with creator
 	{
+		wep_sprt[786] = sprChargeLance1;
 		var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		instance_create(x,y,Dust)
 		if r < 2

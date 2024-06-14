@@ -8797,7 +8797,7 @@ function scrWeapons() {
 	wep_auto[786] = 0
 	wep_load[786] = 14
 	wep_cost[786] = 0
-	wep_sprt[786] = sprLance
+	wep_sprt[786] = sprChargeLance1
 	wep_area[786] = 6
 	wep_text[786] = "charge!"
 	wep_swap[786] = sndSwapSword
@@ -8809,7 +8809,7 @@ function scrWeapons() {
 	wep_auto[787] = 0
 	wep_load[787] = 26
 	wep_cost[787] = 2
-	wep_sprt[787] = sprHeavyARifle
+	wep_sprt[787] = sprChopSplinterGun
 	wep_area[787] = 7
 	wep_text[787] = "chop the wood in half"
 	wep_swap[787] = sndSwapMachinegun
@@ -8820,7 +8820,7 @@ function scrWeapons() {
 	wep_auto[788] = 3
 	wep_load[788] = 21
 	wep_cost[788] = 1.5
-	wep_sprt[788] = sprWazerRifle
+	wep_sprt[788] = sprWazerPistol
 	wep_area[788] = 8
 	wep_text[788] = "wawawawazer"
 	wep_swap[788] = sndSwapEnergy
@@ -8831,7 +8831,7 @@ function scrWeapons() {
 	wep_auto[789] = 3
 	wep_load[789] = 9
 	wep_cost[789] = 4
-	wep_sprt[789] = sprWazerRifle
+	wep_sprt[789] = sprWuperWazerWaveWun
 	wep_area[789] = 33
 	wep_text[789] = "wow what wicked weapon!"
 	wep_swap[789] = sndSwapEnergy
@@ -8842,11 +8842,22 @@ function scrWeapons() {
 	wep_auto[790] = 3
 	wep_load[790] = 9
 	wep_cost[790] = 2
-	wep_sprt[790] = sprWazerRifle
+	wep_sprt[790] = sprWazerWaveGun
 	wep_area[790] = 20
 	wep_text[790] = "wowawowawowawow"
 	wep_swap[790] = sndSwapEnergy
 	wep_rad[790] = 0;
+	
+	wep_name[791] = "RAPIER"
+	wep_type[791] = 0
+	wep_auto[791] = 0
+	wep_load[791] = 14
+	wep_cost[791] = 0
+	wep_sprt[791] = sprRapier
+	wep_area[791] = 8
+	wep_text[791] = "someone left this here?"
+	wep_swap[791] = sndSwapSword
+	wep_rad[791] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
