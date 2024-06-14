@@ -2,11 +2,12 @@ raddrop = 9
 maxhealth = 255
 if GetPlayerLoops() < 1
 	maxhealth = 200;
-meleedamage = 20
 mySize = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(15);
 event_inherited()
+meleedamage = 20
+
 ignoreOverlap = true;
 scrAddDrops(2);
 depth  = 0;

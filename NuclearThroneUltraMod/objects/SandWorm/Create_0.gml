@@ -1,9 +1,10 @@
 raddrop = 45
 maxhealth = 550
-meleedamage = 10
 mySize = 3
 scrBossHealthBuff();
-event_inherited()
+event_inherited();
+meleedamage = 10
+
 venomous = true;
 alarm[10] = 0;//Can be on no floor
 snd_hurt = sndSandWormHurt;

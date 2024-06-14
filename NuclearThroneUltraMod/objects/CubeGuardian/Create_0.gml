@@ -1,9 +1,9 @@
 raddrop = 14;
 maxhealth = 70;
-meleedamage = 5
 mySize = 3
 
 event_inherited()
+meleedamage = 5
 
 spr_normal = sprCubeGuardianWalk;
 spr_idle = spr_normal;

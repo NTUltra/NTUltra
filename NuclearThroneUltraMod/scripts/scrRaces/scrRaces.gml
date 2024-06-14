@@ -43,8 +43,8 @@ function scrRaces() {
 	race_acti[2] = "<p>SHIELD<p>"
 	race_butt[2] = "LONGER <p>SHIELD<p>"
 	race_butt_detail[2] = "75% LONGER <p>SHIELD<p>"
-	race_vision[2] = "PRESS <w>[E]<w> TO: KNOCK BACK ENEMIES";
-	race_inpsiration_detail[2] = race_vision[2];
+	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>";
+	race_inpsiration_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
 	race_lock[2] = "UNLOCKED FROM THE START"
 	race_have[2] = 1
 	race_swep[2] = 1
@@ -63,8 +63,8 @@ function scrRaces() {
 	race_acti[3] = "<w>TELEKINESIS<w>"
 	race_butt[3] = "STRONGER <w>TELEKINESIS<w>"
 	race_butt_detail[3] = "DOUBLE <w>TELEKINESIS<w> STRENGTH";
-	race_vision[3] = "PRESS <w>[E]<w> TO: CONFUSE AN ENEMY";
-	race_inpsiration_detail[3] = race_vision[3];
+	race_vision[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>";
+	race_inpsiration_detail[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>#IT PULLS EVERYTHING#CAN HAVE ONLY ONE SPIRAL OUT AT A TIME";
 	race_lock[3] = "REACH SEWERS TO UNLOCK"
 	race_have[3] = 0
 	race_swep[3] = 1

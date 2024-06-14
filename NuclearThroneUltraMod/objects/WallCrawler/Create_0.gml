@@ -1,9 +1,10 @@
 raddrop = 60
 maxhealth = 620
-meleedamage = 5
 mySize = 3
 scrBossHealthBuff();
 event_inherited()
+meleedamage = 5
+
 isInverted = false;
 spr_idle = sprWallCrawler
 spr_walk = sprWallCrawler

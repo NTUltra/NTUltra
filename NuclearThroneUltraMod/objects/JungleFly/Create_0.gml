@@ -1,9 +1,9 @@
 raddrop = 10
 maxhealth = 40
-meleedamage = 5
 mySize = 2
 
 event_inherited()
+meleedamage = 5
 
 spr_idle = sprJungleFlyIdle
 spr_walk = sprJungleFlyWalk

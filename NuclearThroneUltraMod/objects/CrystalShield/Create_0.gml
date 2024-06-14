@@ -5,18 +5,21 @@ p = 0
 friction = 0.45
 
 
-
-with projectile
-{
-var homing;
-homing= false;
-}
-
 wave=0;
 sprite_index=sprShield
 spr_disappear=sprShieldDisappear;
+dmg = 0;
+gammaGuts = false;
 if instance_exists(Player)
 {
+	if Player.skill_got[8]
+	{
+		//GAMMA GUTS
+		gammaGuts = true;
+		dmg = 3;
+		if Player.race == 25
+			dmg = 4;
+	}
 	if(Player.ultra_got[8]==1)
 	{
 		time += 120;
@@ -63,5 +66,4 @@ if instance_exists(Player)
 	spr_disappear=sprShieldBDisappear;
 	}
 }
-
 fadeNumber = 2;

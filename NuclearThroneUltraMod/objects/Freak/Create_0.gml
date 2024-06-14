@@ -1,9 +1,10 @@
 raddrop = 1
 maxhealth = 6//7
-meleedamage = 3
 mySize = 1
 droprate = 5.5;
-event_inherited()
+event_inherited();
+meleedamage = 3
+
 spr_idle = sprFreak1Idle
 spr_walk = sprFreak1Walk
 spr_hurt = sprFreak1Hurt

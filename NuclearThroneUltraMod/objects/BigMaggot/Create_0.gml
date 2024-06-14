@@ -1,9 +1,9 @@
 raddrop = 9
 maxhealth = 22
-meleedamage = 1
 mySize = 2
 
 event_inherited()
+meleedamage = 1
 
 spr_idle = sprBigMaggotIdle
 spr_walk = sprBigMaggotIdle

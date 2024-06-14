@@ -1,9 +1,9 @@
 raddrop = 22
 maxhealth = 160
-meleedamage = 6;
 mySize = 4;
 
 event_inherited()
+meleedamage = 6;
 
 spr_normal = sprDogGuardianWalk;
 spr_idle = sprDogGuardianWalk

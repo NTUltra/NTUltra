@@ -1,6 +1,5 @@
 raddrop = 3
 maxhealth = 2;
-meleedamage = 3
 mySize = 1
 loops = GetPlayerLoops();
 if loops > 0
@@ -9,6 +8,7 @@ if loops > 0
 }
 event_inherited()
 droprate = 4;
+meleedamage = 3
 
 spr_idle = sprGraveyardSkeletonIdle
 spr_walk = sprGraveyardSkeletonWalk

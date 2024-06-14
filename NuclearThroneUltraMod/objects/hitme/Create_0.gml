@@ -11,3 +11,4 @@ maxSpeed = 0;
 right = 1;
 walk = 0;
 frozen = noone;
+meleedamage = 0;

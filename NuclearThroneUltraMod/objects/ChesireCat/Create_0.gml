@@ -1,10 +1,11 @@
 raddrop = 60
 maxhealth = 670
-meleedamage = 3
 mySize = 4
 scrBossHealthBuff();
 
 event_inherited()
+meleedamage = 3
+
 alarm[10] = 0;
 
 spr_idle = sprChesireCatIdle

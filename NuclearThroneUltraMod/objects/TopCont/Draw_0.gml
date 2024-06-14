@@ -150,8 +150,7 @@ draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)
 
 with CrystalShield
 {
-draw_sprite(sprite_index,-1,x+max(0,random(time/60)-2),y+max(0,random(time/90)-2))
-
+	draw_sprite_ext(sprite_index,-1,x+max(0,random(time/60)-2),y+max(0,random(time/90)-2),1,1,image_angle,c_white,1)
 }
 
 with CrownPickup
@@ -161,7 +160,10 @@ with CrownPickup
 draw_sprite_ext(sprCrownLight,0,x,y+32,1,1,0,c_white,0.2)
 draw_sprite_ext(sprCrownLight,1,x,y,1,100,5,c_white,0.2)
 }
-
+with MindField
+{
+	event_perform(ev_draw,0);	
+}
 with AnimDestroyTop
 {
 	draw_self();	

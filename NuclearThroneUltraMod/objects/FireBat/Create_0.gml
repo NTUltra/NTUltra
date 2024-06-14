@@ -1,9 +1,10 @@
 raddrop = 8
 maxhealth = 12//18
-meleedamage = 2
 mySize = 1
 
-event_inherited()
+event_inherited();
+meleedamage = 2
+
 fireProof = true;
 spr_idle = sprFireBatIdle
 spr_walk = sprFireBatIdle

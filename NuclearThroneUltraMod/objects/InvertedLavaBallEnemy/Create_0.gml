@@ -1,9 +1,10 @@
 raddrop = 12
 maxhealth = 9//32//38//50
-meleedamage = 6
 mySize = 1
 
-event_inherited()
+event_inherited();
+meleedamage = 6
+
 fireProof = true;
 spr_idle = sprInvertedLavaBallIdle
 spr_walk = sprInvertedLavaBallWalk

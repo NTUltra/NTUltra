@@ -1,9 +1,9 @@
 raddrop = 50
 maxhealth = 350;
-meleedamage = 6
 mySize = 6
 
 event_inherited()
+meleedamage = 6
 
 spr_idle = sprBigDisc
 spr_walk = sprBigDisc

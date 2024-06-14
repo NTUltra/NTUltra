@@ -1,9 +1,9 @@
 raddrop = 35
 maxhealth = 35
-meleedamage = 5
 mySize = 2
 
 event_inherited()
+meleedamage = 5
 
 spr_idle = sprInvertedGoldScorpionIdle
 spr_walk = sprInvertedGoldScorpionWalk

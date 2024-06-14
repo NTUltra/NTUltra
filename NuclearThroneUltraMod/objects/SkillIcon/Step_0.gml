@@ -50,8 +50,11 @@ if selected && visible
 		Player.skill_got[skill] = 1
 		if (!isRefund)
 		{
-			Player.skillsChosen+=1;
-			Player.skillpoints -= 1
+			if !doesntTakeSkillPoint
+			{
+				Player.skillsChosen+=1;
+				Player.skillpoints -= 1
+			}
 		}
 		else
 		{

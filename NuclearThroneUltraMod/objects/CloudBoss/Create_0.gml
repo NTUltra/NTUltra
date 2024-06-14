@@ -1,9 +1,10 @@
 raddrop = 2
 maxhealth = 600
-meleedamage = 3
 mySize = 1
 
 event_inherited()
+meleedamage = 3
+
 venomous = true;
 spr_idle = sprCloudBoss
 spr_walk = sprCloudBoss

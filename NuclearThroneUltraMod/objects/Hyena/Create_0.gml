@@ -1,9 +1,9 @@
 raddrop = 11
 maxhealth = 12
-meleedamage = 3
 mySize = 2
 
 event_inherited()
+meleedamage = 3
 
 loops = GetPlayerLoops();
 maxSpeed = 3.9;

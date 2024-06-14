@@ -30,5 +30,19 @@ function scrFire3(hasTailNow){
 			BackCont.shake += 1
 			wkick = -6
 		break;
+		
+		//LIGHTNING NUNCHUKU
+		case 792:
+		with instance_create(x,y,LightningNunchukuBurst)
+		{
+			accuracy = other.accuracy;
+			creator = other.id
+			ammo = 2
+			time = 5
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		break;
 	}
 }

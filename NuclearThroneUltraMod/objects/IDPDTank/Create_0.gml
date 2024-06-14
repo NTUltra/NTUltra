@@ -1,11 +1,11 @@
 raddrop = 0
 maxhealth = 1400
-meleedamage = 20
 mySize = 4
 if instance_exists(InvertedNuclearThrone1)
 	maxhealth = 1200;
 scrBossHealthBuff();
 event_inherited()
+meleedamage = 20
 
 team = 3;
 firstEntry = false;

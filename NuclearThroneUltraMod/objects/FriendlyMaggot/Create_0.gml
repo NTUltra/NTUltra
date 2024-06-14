@@ -1,10 +1,11 @@
 raddrop = 0
 maxhealth = 2
-meleedamage = 1
 mySize = 0
 my_health = 2;
 
 event_inherited()
+meleedamage = 1
+
 scrWeaponModInit();
 spr_idle = sprFriendlyMaggotIdle
 spr_walk = sprFriendlyMaggotIdle

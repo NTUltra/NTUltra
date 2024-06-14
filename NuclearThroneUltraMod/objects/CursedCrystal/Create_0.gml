@@ -1,10 +1,10 @@
 raddrop = 22
 maxhealth = 65//45
-meleedamage = 20
 mySize = 2
 
 
 event_inherited()
+meleedamage = 20
 
 spr_idle = sprInvLaserCrystalIdle;
 spr_walk = sprInvLaserCrystalIdle;

@@ -18,7 +18,7 @@ if instance_exists(Player)
 	
 		if skill_got[36]
 		{
-			var radd = add*0.4;
+			var radd = add*0.3;
 			reload -= radd;
 			breload -= radd;
 			creload -= radd;

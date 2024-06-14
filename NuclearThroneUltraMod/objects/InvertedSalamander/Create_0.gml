@@ -1,6 +1,5 @@
 raddrop = 12
 maxhealth = 16
-meleedamage = 1
 mySize = 2
 
 if UberCont.loops>1
@@ -9,6 +8,8 @@ maxhealth=24;
 
 
 event_inherited()
+meleedamage = 2
+
 fireProof = true;
 spr_idle = sprInvertedSalamanderIdle
 spr_walk = sprInvertedSalamanderWalk

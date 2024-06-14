@@ -4010,7 +4010,7 @@ function scrWeapons() {
 	wep_load[357] = 12
 	wep_cost[357] = 2
 	wep_sprt[357] = sprAutoHeavyNader
-	wep_area[357] = 12
+	wep_area[357] = 13
 	wep_text[357] = "slimeballs"
 	wep_swap[357] = sndSwapExplosive
 	wep_rad[357] = 0;
@@ -7011,8 +7011,8 @@ function scrWeapons() {
 	wep_name[626] = "BLOOD WALL"
 	wep_type[626] = 1
 	wep_auto[626] = 1
-	wep_load[626] = 8
-	wep_cost[626] = 5
+	wep_load[626] = 10
+	wep_cost[626] = 6
 	wep_sprt[626] = sprBloodWall
 	wep_area[626] = 11
 	wep_text[626] = "a wall of blood"
@@ -8672,7 +8672,7 @@ function scrWeapons() {
 	wep_name[775] = "AUTO LEACHER"
 	wep_type[775] = 3
 	wep_auto[775] = 1
-	wep_load[775] = 5
+	wep_load[775] = 7
 	wep_cost[775] = 2
 	wep_sprt[775] = sprAutoLeacher
 	wep_area[775] = 16
@@ -8771,7 +8771,7 @@ function scrWeapons() {
 	
 	wep_name[784] = "CHOP GUN"
 	wep_type[784] = 1
-	wep_auto[784] = 0
+	wep_auto[784] = 2
 	wep_load[784] = 28
 	wep_cost[784] = 16
 	wep_sprt[784] = sprChopGun
@@ -8806,7 +8806,7 @@ function scrWeapons() {
 	
 	wep_name[787] = "CHOP SPLINTERGUN"
 	wep_type[787] = 1
-	wep_auto[787] = 0
+	wep_auto[787] = 2
 	wep_load[787] = 26
 	wep_cost[787] = 2
 	wep_sprt[787] = sprChopSplinterGun
@@ -8858,6 +8858,17 @@ function scrWeapons() {
 	wep_text[791] = "someone left this here?"
 	wep_swap[791] = sndSwapSword
 	wep_rad[791] = 0;
+	
+	wep_name[792] = "LIGHTNING NUNCHACKU"
+	wep_type[792] = 0
+	wep_auto[792] = 3
+	wep_load[792] = 20
+	wep_cost[792] = 0
+	wep_sprt[792] = sprLightningNunchacku1
+	wep_area[792] = 10
+	wep_text[792] = "martial arts?"
+	wep_swap[792] = sndSwapSword
+	wep_rad[792] = 0;
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

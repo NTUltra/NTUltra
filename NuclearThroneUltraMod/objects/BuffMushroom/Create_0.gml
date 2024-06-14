@@ -1,9 +1,10 @@
 raddrop = 24
 maxhealth = 70
-meleedamage = 3
 mySize = 2
 
 event_inherited()
+meleedamage = 3
+
 detectionRange = 200;
 spr_gun = sprBuffMushroomGun;
 spr_idle = sprBuffMushroomIdle

@@ -1,12 +1,14 @@
 raddrop = 100
 maxhealth = 470
-meleedamage = 10
 mySize = 3
 
 scrBossHealthBuff();
 
 
 event_inherited()
+
+meleedamage = 10
+
 spr_idle = sprFrogQueenIdle
 spr_walk = sprFrogQueenWalk
 spr_hurt = sprFrogQueenHurt

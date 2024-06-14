@@ -19,7 +19,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "<w>INFINITE AMMO<w> THE FIRST 7 SECONDS#OF ENTERING A LEVEL#KILLING A BOSS GIVES#ANOTHER 7 SECONDS OF INFINITE AMMO"
+	ultra_text[2] = "<w>INFINITE AMMO<w> THE FIRST 7 SECONDS#OF ENTERING AN AREA#KILLING A BOSS GIVES#ANOTHER 7 SECONDS OF INFINITE AMMO"
 	ultra_tips[2] = "bringer of order"
 
 	ultra_name[3] = "BUDDY COP"

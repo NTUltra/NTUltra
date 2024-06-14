@@ -1,7 +1,6 @@
 raddrop = 60
 maxhealth = 225;//175
 
-meleedamage = 3
 mySize = 3
 if GetPlayerLoops() > 0{
 	maxhealth = 300;
@@ -10,6 +9,7 @@ sucking = false;
 scrBossHealthBuff();
 
 event_inherited();
+meleedamage = 3
 
 healAmount = 10;
 

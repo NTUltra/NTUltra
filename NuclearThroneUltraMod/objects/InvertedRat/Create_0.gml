@@ -1,12 +1,12 @@
 raddrop = 8
 maxhealth = 5
-meleedamage = 3
 mySize = 1
 
 if UberCont.loops>1
 maxhealth=7;
 
 event_inherited()
+meleedamage = 3
 
 spr_idle = sprInvertedRatIdle
 spr_walk = sprInvertedRatWalk

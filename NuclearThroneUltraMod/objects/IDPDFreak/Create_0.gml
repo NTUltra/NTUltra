@@ -1,11 +1,11 @@
 raddrop = 20
 scrCrownOfPopoRad(30);
 maxhealth = 25
-meleedamage = 5
 mySize = 1
 instance_create(x,y,WallBreak);
 event_inherited()
 team = 4;
+meleedamage = 5
 
 spr_idle = sprPopoFreakIdle;
 spr_walk = sprPopoFreakWalk;

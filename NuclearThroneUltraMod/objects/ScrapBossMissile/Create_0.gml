@@ -1,9 +1,10 @@
 raddrop = 0
 maxhealth = 22
-meleedamage = 5
 mySize = 1
 
 event_inherited()
+meleedamage = 5
+
 wasResurrected = true;
 spr_idle = sprScrapBossMissileIdle
 spr_walk = sprScrapBossMissileIdle

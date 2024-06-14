@@ -1079,8 +1079,6 @@ function scrPowers(raceOverwrite = -1) {
     
 			    //for rage and euphoria
 			    exception=true;
-			    if alarm[7]<1
-			    alarm[7]=12;//reset the exception in two steps
     
 			        if ultra_got[47] {
 						if !altUltra
@@ -1125,8 +1123,6 @@ function scrPowers(raceOverwrite = -1) {
     
 		    //for rage and euphoria
 		    exception=true;
-		    if alarm[7]<1
-		    alarm[7]=12;//reset the exception in two steps
     
 		        if ultra_got[47] {
 					if !altUltra
@@ -1438,8 +1434,6 @@ function scrPowers(raceOverwrite = -1) {
 				hitBy = sprite_index;
 			}
 			exception=true;
-			if alarm[7]<1
-			alarm[7]=12;//reset the exception in two steps
 			
 			sprite_index = spr_hurt
 			image_index = 0
@@ -1730,7 +1724,7 @@ function scrPowers(raceOverwrite = -1) {
 			scrPandaThrow();
 		}
 		//CRYSTAL
-		if race == 2 and !instance_exists(CrystalShield)//Change this ability to longer lasting shield.
+		if race == 2 && !instance_exists(CrystalShield) && !instance_exists(CrystalShieldDelay)//Change this ability to longer lasting shield.
 		{
 			//instance_create(x,y,CrystalTorpedo)
 			instance_create(x,y,CrystalShield)

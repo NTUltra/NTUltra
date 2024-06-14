@@ -1,10 +1,9 @@
 raddrop = 9
 maxhealth = 36//35
-meleedamage = 3;
 mySize = 4
 
 event_inherited()
-
+meleedamage = 3;
 actTime = 12;
 spr_idle = sprNewGuardianIdle;
 spr_walk = sprNewGuardianIdle;

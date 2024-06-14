@@ -1,9 +1,10 @@
 raddrop = 23
 maxhealth = 55//45
-meleedamage = 20
 mySize = 2
 
 event_inherited()
+meleedamage = 20
+
 spr_idle = sprLightningCrystalIdle
 spr_walk = sprLightningCrystalIdle
 spr_hurt = sprLightningCrystalHurt

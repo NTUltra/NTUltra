@@ -1,9 +1,9 @@
 raddrop = 10
 maxhealth = 5
-meleedamage = 2
 mySize = 1
 
 event_inherited()
+meleedamage = 2
 
 spr_idle = sprBoneFishIdle
 spr_walk = sprBoneFishWalk

@@ -1,4 +1,5 @@
 instance_destroy()
+/*
 with UberCont
 {
 	instance_activate_all();

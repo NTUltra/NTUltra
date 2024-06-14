@@ -3,10 +3,10 @@ maxhealth = 250;
 loops = GetPlayerLoops()
 if loops > 0
 	maxhealth = 350;
-meleedamage = 4;
 mySize = 3
 scrBossHealthBuff();
 event_inherited()
+meleedamage = 4;
 
 spr_idle = sprGraveyardFishIdle
 spr_walk = sprGraveyardFishWalk

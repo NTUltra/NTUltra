@@ -3,10 +3,11 @@ maxhealth = 60
 loops = GetPlayerLoops()
 if loops > 0
 	maxhealth += 5;
-meleedamage = 4
 mySize = 2
 
 event_inherited()
+meleedamage = 4
+
 hurt_pitch_variation = 0.03;
 spr_idle = sprJungleGorilla
 spr_walk = sprJungleGorillaWalk

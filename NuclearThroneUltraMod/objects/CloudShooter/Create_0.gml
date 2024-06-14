@@ -1,9 +1,10 @@
 raddrop = 14
 maxhealth = 60
-meleedamage = 3
 mySize = 1
 
-event_inherited()
+event_inherited();
+meleedamage = 3
+
 venomous = true;
 spr_idle = sprCloudShooter
 spr_walk = sprCloudShooter

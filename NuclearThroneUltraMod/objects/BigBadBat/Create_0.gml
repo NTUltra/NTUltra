@@ -5,10 +5,11 @@ loops = GetPlayerLoops();
 if loops > 0
 	maxhealth = 480
 scrBossHealthBuff();
-meleedamage = 5
 mySize = 6;
 
-event_inherited()
+event_inherited();
+meleedamage = 5
+
 alarm[10] = 0;
 spr_idle = sprBigBadBatIdle
 spr_walk = sprBigBadBatIdle

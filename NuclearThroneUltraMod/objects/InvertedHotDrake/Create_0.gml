@@ -23,17 +23,19 @@ with chestprop {
 	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
 	x = f.x+16;
 	y = f.y+16;
+	scrForcePosition60fps();
 }
 with RadChest {
 	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,400), Floor);
 	x = f.x+16;
 	y = f.y+16;
+	scrForcePosition60fps();
 }
-meleedamage = 7
 mySize = 4
 
 
 event_inherited()
+meleedamage = 7
 fireProof = true;
 existTime = 30;
 alarm[10] = 0;

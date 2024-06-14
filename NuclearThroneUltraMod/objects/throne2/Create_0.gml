@@ -5,10 +5,11 @@ if scrIsHardMode()
 	maxhealth += 100;
 maxhealth += max(0,90*min(12,(loops-1)));
 scrBossHealthBuff();
-meleedamage = 10
 mySize = 6;
 
 event_inherited()
+meleedamage = 10
+
 depth -= 1;
 alarm[10] = 0;
 spr_idle = sprNothing2Idle

@@ -1,3 +1,5 @@
+if sprite_index == spr_disappear && image_index > fadeNumber
+	exit;
 with other
 {
 	instance_destroy(id)

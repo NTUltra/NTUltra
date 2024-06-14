@@ -1,9 +1,9 @@
 raddrop = 0
 maxhealth = 16
-meleedamage = 5
 mySize = 1
 
 event_inherited()
+meleedamage = 5
 wasResurrected = true;
 spr_idle = sprTeaPotNuke
 spr_walk = sprTeaPotNuke

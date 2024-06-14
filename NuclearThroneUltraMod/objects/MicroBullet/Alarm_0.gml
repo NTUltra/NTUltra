@@ -24,7 +24,7 @@ if instance_exists(Player)
 	scrForcePosition60fps();
 	with instance_place(x,y,hitme)
 	{
-		if other.team != team
+		if other.team != team && my_health > 0
 		{
 			if sprite_index != spr_hurt
 				snd_play(snd_hurt, hurt_pitch_variation,true)

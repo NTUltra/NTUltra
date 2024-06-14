@@ -106,9 +106,9 @@ function scrSkills() {
 	skill_text[5] = "UPGRADES YOUR SPECIAL ABILITY"
 	skill_detail[5] = skill_text[5];
 	if instance_exists(Player)
-		skill_text[5] = string(Player.race_name[Player.race])+" "+string(Player.race_butt[Player.race])
+		skill_text[5] = "<w>"+string(Player.race_name[Player.race])+"<w>#"+string(Player.race_butt[Player.race])
 	if instance_exists(Player)
-		skill_detail[5] = string(Player.race_name[Player.race])+" "+string(Player.race_butt_detail[Player.race])
+		skill_detail[5] = "<w>"+string(Player.race_name[Player.race])+"<w>#"+string(Player.race_butt_detail[Player.race])
 	skill_tips[5] = "sit on the throne"
 	if instance_exists(Player)
 	{
@@ -582,9 +582,9 @@ function scrSkills() {
 	skill_text[maxskill + 1] = "UPGRADES YOUR SPECIAL ABILITY"
 	skill_detail[maxskill + 1] = skill_text[5];
 	if instance_exists(Player)
-		skill_text[maxskill + 1] = string(Player.race_name[Player.race])+" "+string(Player.race_vision[Player.race])
+		skill_text[maxskill + 1] = "<w>"+string(Player.race_name[Player.race])+"<w>#"+string(Player.race_vision[Player.race])
 	if instance_exists(Player)
-		skill_detail[maxskill + 1] = string(Player.race_name[Player.race])+" "+string(Player.race_inpsiration_detail[Player.race])
+		skill_detail[maxskill + 1] = "<w>"+string(Player.race_name[Player.race])+"<w>#"+string(Player.race_inpsiration_detail[Player.race])
 	skill_tips[maxskill + 1] = "envision the throne"
 	skill_msnd[maxskill + 1] =  sndMutThronebutt
 	skill_bons[maxskill + 1] = "";

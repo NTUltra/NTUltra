@@ -1455,7 +1455,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 18
-	wkick = 12
+	wkick = -12
 
 	break;
 
@@ -16468,7 +16468,7 @@ function scrFire2(hasTailNow) {
 	
 	break;
 	
-	//FLAK LASER CANNON
+	//LASER FLAK CANNON
 	case 744:
 	if Player.skill_got[17] = 1
 	snd_play_fire(sndLaserCannonUpg)

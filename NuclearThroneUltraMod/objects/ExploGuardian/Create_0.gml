@@ -1,9 +1,10 @@
 raddrop = 14
 maxhealth = 50
-meleedamage = 3
 mySize = 3
 
-event_inherited()
+event_inherited();
+meleedamage = 3
+
 actTime = 10;
 spr_normal = sprExploGuardianWalk;
 spr_idle = spr_normal;

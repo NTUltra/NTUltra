@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndCrystalTorpedo",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":13.714286,
+  "name":"sndCrystalTorpedo",
+  "parent":{
+    "name":"Crystal",
+    "path":"folders/Sounds/Player/Crystal.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCrystalTorpedo.ogg",
+  "type":0,
+  "volume":1.0,
+}

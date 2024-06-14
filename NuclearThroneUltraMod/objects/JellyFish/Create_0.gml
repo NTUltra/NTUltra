@@ -1,10 +1,10 @@
 raddrop = 12
 maxhealth = 7//45
-meleedamage = 2
 mySize = 1
 
 
 event_inherited()
+meleedamage = 2
 
 spr_idle = sprJellyFish
 spr_walk = sprJellyFish

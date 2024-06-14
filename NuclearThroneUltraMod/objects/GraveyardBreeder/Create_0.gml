@@ -1,11 +1,13 @@
 raddrop = 16
 maxhealth = 28
-meleedamage = 3
 mySize = 2
 
 
 
 event_inherited()
+meleedamage = 3
+
+
 spr_idle = sprGraveyardBreeder
 spr_walk = sprGraveyardBreeder
 spr_hurt = sprGraveyardBreederHurt

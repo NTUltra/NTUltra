@@ -1,9 +1,9 @@
 raddrop = 15
 maxhealth = 15
-meleedamage = 4
 mySize = 0
 
 event_inherited()
+meleedamage = 4
 friction = 0.4;
 spr_idle = sprSuperMimicIdle
 spr_walk = sprSuperMimicFire

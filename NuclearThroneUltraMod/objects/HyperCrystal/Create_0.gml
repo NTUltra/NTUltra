@@ -1,10 +1,11 @@
 raddrop = 150
 maxhealth = 900//750
-meleedamage = 200
 mySize = 6
 
 
 event_inherited()
+meleedamage = 200
+
 depth --;
 spr_idle = sprHyperCrystalIdle
 spr_walk = sprHyperCrystalIdle

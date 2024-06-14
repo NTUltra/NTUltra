@@ -1,9 +1,9 @@
 raddrop = 0
 maxhealth = 30
-meleedamage = 5
 mySize = 1
 
 event_inherited()
+meleedamage = 5
 
 spr_idle = sprGoldTeaPotNuke
 spr_walk = sprGoldTeaPotNuke
