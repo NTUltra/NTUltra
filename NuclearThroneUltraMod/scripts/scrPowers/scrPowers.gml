@@ -1221,9 +1221,11 @@ function scrPowers(raceOverwrite = -1) {
 			else
 			{
 				if !instance_exists(SheepStorm)
-				with instance_create(x,y,SheepStorm)
 				{
-				team=other.team;
+					with instance_create(x,y,SheepStorm)
+					{
+						team=other.team;
+					}
 				}
 				if skill_got[2]==1//extra feet
 				{
@@ -1488,40 +1490,71 @@ function scrPowers(raceOverwrite = -1) {
 		if !ultra_got[19]
 		{
 			var poppedSeed = false;
-			if skill_got[5]
-				snd_play_2d(sndPlantFireTB);
-			else
-				snd_play_2d(sndPlantFire);
+			var tangles = 0;
 		    if ultra_got[20] && !Player.altUltra
 			{//STEREO SNARES
-			    with Tangle
-			    {
-					if instance_number(Tangle) > 1
-						instance_destroy();
+				if !instance_exists(TangleSeed)
+				{
+					var oldestTangle = 99999;
+					with Tangle
+					{
+						if mask_index != sprTangleVine
+						{
+							tangles += 1;
+							oldestTangle = min(tangleNumber,oldestTangle);
+						}
+					}
+					var killedIt = false;
+					with Tangle
+					{
+						if tangles > 1 
+						{
+							if tangleNumber == oldestTangle
+							{
+								instance_destroy();
+								killedIt = true;
+							}
+							else
+							{
+								tangleNumber -= 1;	
+							}
+						}
+					}
+					if killedIt
+						tangles -= 1;
 				}
 			    with TangleSeed
 			    {
+					snd_play(sndPlantPopOpen);
+					poppedSeed = true;
 					event_user(0);
-					if instance_number(Tangle) > 1
-					{
-						poppedSeed = true;
-					}
 				}
 		    }
-			else{
-				with Tangle
-					instance_destroy();
+			else {
+				if !instance_exists(TangleSeed)
+					with Tangle
+						instance_destroy();
 				with TangleSeed
 				{
+					snd_play(sndPlantPopOpen);
 					poppedSeed = true;
 					event_user(0);
 				}
 			}
 			if !poppedSeed
-			with instance_create(x,y,TangleSeed)
-			{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
-			image_angle = direction
-			team = other.team}
+			{
+				if skill_got[5]
+					snd_play_2d(sndPlantFireTB);
+				else
+					snd_play_2d(sndPlantFire);
+				with instance_create(x,y,TangleSeed)
+				{
+					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
+					image_angle = direction
+					tangleNumber = tangles + 1;
+					team = other.team
+				}
+			}
 		}
 		else if altUltra  && canKillKillKill > 0 && !instance_exists(KillKill) {
 			BackCont.shake += 10;
@@ -1958,13 +1991,22 @@ function scrPowers(raceOverwrite = -1) {
 				} 
 			}
 		
-			if didKill && !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
+			if didKill 
 			{
-				snd_play(sndExplosion);
-				if Player.skill_got[5] = 1
-					snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.05)
-				else
-					snd_play_2d(sndCorpseExplo)	
+				if skill_got[maxskill + 1]
+				{
+					snd_play(sndMeltingImmune,0.1);
+					alarm[3] = max(alarm[3], 5);
+					scrGiveEuphoriaShield();
+				}
+				if !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)
+				{
+					snd_play(sndExplosion);
+					if Player.skill_got[5] = 1
+						snd_play_2d(choose(sndCorpseExploUpg,sndCorpseExploUpg,sndMeatExplo,sndCorpseExplo),0.05)
+					else
+						snd_play_2d(sndCorpseExplo)	
+				}
 			}
 
 		}
@@ -3298,6 +3340,8 @@ function scrPowers(raceOverwrite = -1) {
 		if speed > 5
 		{
 			var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
+			
+			image_speed = 0.5;
 			if sheepPower < powerMax
 			{
 				if is60fps
@@ -3330,6 +3374,10 @@ function scrPowers(raceOverwrite = -1) {
 				else
 					sheepPower += 0.09;
 			}
+			if sheepPower > sheepPowerToHaveEffect
+				image_speed = 0.6;
+			if sheepPower >= powerMax
+				image_speed = 0.7;
 		}
 		else if sheepPower > 0
 		{

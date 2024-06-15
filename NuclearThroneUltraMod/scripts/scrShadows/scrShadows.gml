@@ -571,7 +571,7 @@ function scrShadows() {
 	with ProtoStatue
 	draw_sprite(shd64B,0,x-vx,y-vy)
 	with Sheep
-	draw_sprite(shd24,0,x-vx,y-vy)
+	draw_sprite(shd26,0,x-vx,y-vy)
 
 	with CrystalShield
 	{

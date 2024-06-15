@@ -10,6 +10,7 @@ sprite_index=sprShield
 spr_disappear=sprShieldDisappear;
 dmg = 0;
 gammaGuts = false;
+isFullyImmune = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[8]
@@ -23,6 +24,7 @@ if instance_exists(Player)
 	if(Player.ultra_got[8]==1)
 	{
 		time += 120;
+		isFullyImmune = true;
 	}
 	if(Player.ultra_got[7]==1)
 	{

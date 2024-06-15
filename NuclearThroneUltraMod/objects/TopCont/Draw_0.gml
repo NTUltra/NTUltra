@@ -136,7 +136,11 @@ with WeaponChest
 }
 with GoldChest
 {
-	draw_sprite_ext(wep_sprt[wep],0,x-7,y-14,1,1,0,c_white,0.75);
+	draw_sprite_ext(wep_sprt[wep[0]],0,x-7,y-14,1,1,0,c_white,0.75);
+	if heavyHeart
+	{
+		draw_sprite_ext(wep_sprt[wep[1]],0,x-7,y-24,1,1,0,c_white,0.75);
+	}
 }
 }}
 

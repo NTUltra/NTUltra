@@ -17714,7 +17714,8 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		event_perform(ev_alarm,0) 
 	}
-
+	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
 	break;
 	
 	//CHARGE HAMMER
@@ -17787,7 +17788,8 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		event_perform(ev_alarm,0) 
 	}
-
+	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
 	break;
 	
 	//SUPER WAZER WAVE GUN

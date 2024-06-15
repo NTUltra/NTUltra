@@ -4,6 +4,9 @@ typ = 1 //0 = nothing, 1 = deflectable, 2 = destructable
 friction=0.4;
 drinkblood=0;
 hitEntities = [];
+spr_disappear = sprTangleDisappear;
+dustAmount = 4;
+tangleNumber = 0;
 if instance_exists(Player)
 {
 	if (Player.ultra_got[17] || Player.ultra_got[18])
@@ -18,3 +21,4 @@ if instance_exists(Player)
 		image_yscale += 0.25;
 	}
 }
+depth = 0;

@@ -315,11 +315,11 @@ char[12].spr_slct = sprYungCuzMenu}
 
 if UberCont.race_have[13] = 1{//Sheep
 char[13].x = 198;
-char[13].y = 8;
+char[13].y = 6;
 char[13].sprite_index = sprSheepMenu
-char[13].spr_menu = sprSheepIdleA
-char[13].spr_to = sprSheepMenuSelect
-char[13].spr_from = sprSheepMenuDeselect
+char[13].spr_menu = sprSheepMenuSelected
+char[13].spr_to = sprSheepMenuDeselect
+char[13].spr_from = sprSheepMenuSelect
 char[13].spr_slct = sprSheepMenu}
 
 if UberCont.race_have[14] = 1{//Panda
@@ -398,7 +398,7 @@ char[23].spr_slct = sprMutant23Sit}
 
 if UberCont.race_have[25] = 1{
 char[25].x = 180;
-char[25].y = 32;
+char[25].y = 34;
 char[25].sprite_index = sprMutationDoctorMenu
 char[25].spr_menu = sprMutationDoctorMenuSelected
 char[25].spr_to = sprMutationDoctorMenuSelect

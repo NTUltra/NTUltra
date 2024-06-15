@@ -47,24 +47,33 @@ function scrSecondaryPowers() {
 			case 3:
 				if targetPickup == noone && KeyCont.key_pick[p] == 1
 				{
-					//with MindField
-					//	instance_destroy();
-					/*
-					var md = min(128,point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y));
-					var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-					var mx = x + lengthdir_x(md,a);
-					var my = y + lengthdir_y(md,a);
-					*/
+					var a;
 					if !instance_exists(MindField)
 					{
+						a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 						with instance_create(x,y,EyesMindFieldTransition)
 						{
 							targetX = UberCont.mouse__x;
 							targetY = UberCont.mouse__y;
 							distance = point_distance(x,y,targetX,targetY);
 							dir = point_direction(x,y,targetX,targetY);
-						}	
+						}
+						if !instance_exists(MindFieldSound)
+						{
+							with instance_create(x,y,MindFieldSound)
+							{
+								tx = UberCont.mouse__x;
+								ty = UberCont.mouse__y;
+							}
+						}
 					}
+					else
+					{
+						a = point_direction(MindField.x,MindField.y,UberCont.mouse__x,UberCont.mouse__y);
+					}
+					BackCont.viewx2 += lengthdir_x(10,a)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(10,a)*UberCont.opt_shake
+					BackCont.shake += 5
 					instance_create(UberCont.mouse__x,UberCont.mouse__y,MindField);
 				}
 			break;

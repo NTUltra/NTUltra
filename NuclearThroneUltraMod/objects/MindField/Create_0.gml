@@ -1,4 +1,4 @@
-/// @description FLUSH!
+/// @description FIELD!
 alarm[0] = 1;
 image_speed = 0.4;
 team = 2;
@@ -30,4 +30,13 @@ with MindField
 		}
 		instance_destroy();
 	}
+}
+with MindFieldSound
+{
+	ox = x;
+	oy = y;
+	tx = other.x;
+	ty = other.y;
+	time = 0;
+	audio_play_sound_on(emitter,sndEyesMindField,false,2);
 }

@@ -48,5 +48,5 @@
     "name":"mskShield",
     "path":"sprites/mskShield/mskShield.yy",
   },
-  "visible":false,
+  "visible":true,
 }

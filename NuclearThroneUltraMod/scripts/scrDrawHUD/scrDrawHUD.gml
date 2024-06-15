@@ -1908,7 +1908,7 @@ function scrDrawHUD() {
 		}
 		with PinkSheep
 		{
-			if place_meeting(x,y,Player) && Player.area != 8
+			if place_meeting(x,y,Player) && Player.area != 8 && Player.area != 113
 			{
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 

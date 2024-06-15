@@ -100,16 +100,6 @@ else if ultra_got[10] && !altUltra
 			draw_sprite_ext(sprMonsterStyle,wave,x,yy,right,1,0,c_white,1)
 	}
 }
-
-if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0))
-{
-	shader_set(shdDrawWhite);
-		draw_sprite_ext(sprite_index,image_index,x+1,yy+1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x+1,yy-1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x-1,yy-1,right,image_yscale,angle,c_white,1);
-		draw_sprite_ext(sprite_index,image_index,x-1,yy+1,right,image_yscale,angle,c_white,1);
-	shader_reset();
-}
 if wep_type[wep] = 0
 wepright = wepflip
 else
@@ -278,6 +268,24 @@ else
 	draw_clear_alpha(c_black,0);
 	var xxx = 1 + surface_get_width(digSurface) * 0.5;
 	var yyy = 1 + sprite_height * 0.5;
+	if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0))
+	{
+		shader_set(shdDrawWhite);
+			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy+1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy-1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx-1,yyy-1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx-1,yyy+1,right,image_yscale,angle,c_white,1);
+		shader_reset();
+	}
+	else if alarm[3] > 0
+	{
+		shader_set(shdDrawAqua);
+			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy+1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy-1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx-1,yyy-1,right,image_yscale,angle,c_white,1);
+			draw_sprite_ext(sprite_index,image_index,xxx-1,yyy+1,right,image_yscale,angle,c_white,1);
+		shader_reset();	
+	}
 	draw_sprite_ext(sprite_index,-1,xxx,yyy,right,image_yscale,angle,c_white,playerAlpha)//PLAYER GETS DRAWN HERE
 	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head
 	{

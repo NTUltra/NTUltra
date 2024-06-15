@@ -1,12 +1,13 @@
-/// @description xxx
+/// @description Init
 
 // Inherit the parent event
 raddrop = 0;
 event_inherited();
-spr_idle = sprMutant13BIdle
-spr_walk = sprMutant13BWalk
-spr_hurt = sprMutant13BHurt
-spr_dead = sprMutant13BDead
+spr_idle = sprPinkSheepIdle
+spr_idle_b = sprPinkSheepIdle
+spr_walk = sprPinkSheepWalk
+spr_hurt = sprPinkSheepHurt
+spr_dead = sprPinkSheepDead
 
 snd_hurt = sndSheep;
 sprite_index = spr_hurt;

@@ -55,7 +55,6 @@ if (type == network_type_data) {
 		break;
 		case NETDATA.CANIPARTICIPATE:
 			canParticipate = buffer_read(buffer, buffer_bool);
-			debug("I CAN PARTICIPATE? ",canParticipate);
 			with DailyScore
 			{
 				dailyDone = !other.canParticipate;
@@ -67,10 +66,8 @@ if (type == network_type_data) {
 			if buffer_get_size(buffer) > 1
 			{
 				var dailyDay = buffer_read(buffer, buffer_u8);
-				debug("daily day:", dailyDay);
 				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
 				if dailyDay % 1 == 0 {
-					debug("ITS NOT A RACE");
 					isRace = false;
 					if buffer_get_size(buffer) > 4
 					{

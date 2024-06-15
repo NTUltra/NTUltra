@@ -512,7 +512,8 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
-			instance_create(x+32,y,GoldImmuneTotem);
+			instance_create(x+32,y,PinkSheep);
+			instance_create(x+48,y,ExplosiveSheep);
 			//scrn++;
 			
 			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
@@ -2198,7 +2199,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		if race == 26 && closedodges >= 20
 		{
 			closedodges = -999;//Dont need this anymore
-			scrUnlockBSkin(26,"FOR PERFORMING 20 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	
+			scrUnlockBSkin(26,"FOR PERFORMING 40 CLOSE DODGES#USING EXTRA FEET#AS HUMPHRY",0);	
 		}
 		with instance_create(x+10,y+5,RedirectFX)
 		{

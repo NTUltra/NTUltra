@@ -1,4 +1,5 @@
 /// @description Init
+isFullyImmune = true;
 image_speed = 0.6;
 alarm[1] = 1;
 spr_disappear = sprCrystalTorpedoDisappear;
@@ -12,7 +13,7 @@ fadeNumber = 2;
 team = 2;
 maxSpeed = 13;
 speed = maxSpeed;
-dmg = 7;
+dmg = 6;
 gammaGuts = false;
 if instance_exists(Player)
 {
@@ -20,9 +21,9 @@ if instance_exists(Player)
 	{
 		//GAMMA GUTS
 		gammaGuts = true;
-		dmg = 11;
+		dmg = 10;
 		if Player.race == 25
-			dmg = 13;
+			dmg = 12;
 	}
 	if Player.bskin == 2
 	{

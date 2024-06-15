@@ -83,7 +83,7 @@ function scrRaces() {
 	race_acti[4] = "EXPLODE CORPSES"
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
 	race_butt_detail[4] = "TRIPLE <r>BLOOD<r> <w>CORPSE<w> EXPLOSIONS";
-	race_vision[4] = "PRESS <w>[E]<w> TO: MOVE CORPSES TO YOUR CROSSHAIR";
+	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME";
 	race_inpsiration_detail[2] = race_vision[2];
 	race_lock[4] = "DIE TO UNLOCK"
 	race_have[4] = 0
@@ -103,7 +103,7 @@ function scrRaces() {
 	race_acti[5] = "<w>SNARE<w> ENEMIES"
 	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#<w>SNARE<w> IS SLIGHTLY BIGGER"
 	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#SNARE IS 25% BIGGER";
-	race_vision[5] = "PRESS <w>[E]<w> TO: CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>";
+	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>";
 	race_inpsiration_detail[5] = race_vision[5];
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0
@@ -527,7 +527,7 @@ function scrRaces() {
 	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
 	race_vision[26] = "PRESS <w>[E]<w> TO: DEAL DAMAGE TO ALL ENEMIES NEAR YOU AND STUN YOURSELF";
 	race_inpsiration_detail[26] = race_vision[26];
-	race_lock[26] = "BEAT BIG FISH TO UNLOCK"//SOMETHING A LITTLE HARDER
+	race_lock[26] = "COLLECT FOUR BOSS BOUNTIES"//SOMETHING A LITTLE HARDER
 	race_have[26] = 0
 	race_swep[26] = 148
 	race_bskin[26] = 0

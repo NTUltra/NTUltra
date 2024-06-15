@@ -1,4 +1,4 @@
-if instance_exists(Player){
+if instance_exists(Player){/*
 	if Player.ultra_got[20] && !Player.altUltra//plant STEREO ultra D
     {
 	    with other {
@@ -8,6 +8,16 @@ if instance_exists(Player){
 					instance_destroy(id, false);
 				else
 					instance_destroy();
+			}
+		}
+    }*/
+	if Player.ultra_got[20] && !Player.altUltra//plant STEREO ultra D
+    {
+	    with other {
+		    if team != Player.team && canBeMoved
+			{
+				x -= xprevious*0.25;
+				y -= yprevious*0.25;
 			}
 		}
     }

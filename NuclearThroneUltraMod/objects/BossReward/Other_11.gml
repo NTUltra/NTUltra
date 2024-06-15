@@ -30,6 +30,8 @@ switch(array_length(UberCont.collectedRewards))
 			instance_create(x,y,RerollStation);
 		}
 		snd_play(other.snd_crwn);
+		//UNLOCK GOOD OL' HUMPHRY
+		scrUnlockCharacter(26,"COLLECTING FOUR BOUNTIES");
 	break;
 	case 4:
 		with Player

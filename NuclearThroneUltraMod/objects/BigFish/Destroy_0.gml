@@ -17,8 +17,7 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 		sprite_index = wep_sprt[wep]
 	}
 }
-//UNLOCK GOOD OL' HUMPHRY
-scrUnlockCharacter(26,"FOR KILLING BIG FISH");
+
 
 event_inherited()
 repeat(8)

@@ -4,7 +4,6 @@
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"ExplosiveSheep",
@@ -35,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSheepIdleA",
-    "path":"sprites/sprSheepIdleA/sprSheepIdleA.yy",
+    "name":"sprExplosiveSheepIdle",
+    "path":"sprites/sprExplosiveSheepIdle/sprExplosiveSheepIdle.yy",
   },
   "spriteMaskId":{
     "name":"mskBandit",

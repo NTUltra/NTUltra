@@ -1,12 +1,12 @@
 /// @description CATCH SHEEP BRING IT HOME
 if KeyCont.key_pick[other.p] = 1
 {
-	KeyCont.key_pick[Player.p] = 2;
-	snd_play(sndSheep);
-	if other.race == 13
-		scrUnlockBSkin(13,"SAVE A LOST SHEEP#AS SHEEP",0);
-	if other.area != 8
+	if other.area != 8 && other.area != 113
 	{
+		KeyCont.key_pick[Player.p] = 2;
+		snd_play(sndSheep);
+		if other.race == 13
+			scrUnlockBSkin(13,"SAVE A LOST SHEEP#AS SHEEP",0);
 		persistent = true;
 		snd_play(other.snd_thrn);
 		with other

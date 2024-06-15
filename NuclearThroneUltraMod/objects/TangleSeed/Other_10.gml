@@ -44,7 +44,9 @@ if instance_exists(Player){
 	if (Player.ultra_got[17])
 	{
 
-		instance_create(x,y,Tangle)
+		with instance_create(x,y,Tangle) {
+			tangleNumber = other.tangleNumber;	
+		}
 		var am = 4;
 		var dis = 32;
 		var ang = direction;
@@ -58,6 +60,7 @@ if instance_exists(Player){
 			{
 				with instance_create(xx,yy,Tangle)
 				{
+					tangleNumber = other.tangleNumber;
 					image_speed = 0.4 - i;
 				}
 			}
@@ -74,6 +77,7 @@ if instance_exists(Player){
 			{
 				with instance_create(xx,yy,Tangle)
 				{
+					tangleNumber = other.tangleNumber;
 					image_speed = 0.4 - i;	
 				}
 			}
@@ -82,7 +86,9 @@ if instance_exists(Player){
 		}
 	}
 	else {
-		instance_create(x,y,Tangle)
+		with instance_create(x,y,Tangle) {
+			tangleNumber = other.tangleNumber;	
 		}
+	}
 }
 instance_create(x,y,Dust)

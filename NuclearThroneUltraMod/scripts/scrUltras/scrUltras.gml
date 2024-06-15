@@ -155,7 +155,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	}
 	
 	ultra_name[20] = "STEREO SNARES"
-	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#SNARES DESTROY ALL ENEMY PROJECTILES"
+	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#CAN ENSNARE ENEMY PROJECTILES"
 	ultra_tips[20] = "better then original stereo snares"
 	
 	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra))

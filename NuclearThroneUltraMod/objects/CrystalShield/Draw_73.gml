@@ -1,3 +1,18 @@
+if isFullyImmune
+{
+	shader_set(shdDrawAqua);
+	draw_sprite(sprite_index,-1,x + 1,y + 1);
+	draw_sprite(sprite_index,-1,x,y + 1);
+	draw_sprite(sprite_index,-1,x + 1,y);
+	
+	draw_sprite(sprite_index,-1,x - 1,y + 1);
+	draw_sprite(sprite_index,-1,x - 1,y + 1);
+	
+	draw_sprite(sprite_index,-1,x - 1,y - 1);
+	draw_sprite(sprite_index,-1,x,y - 1);
+	draw_sprite(sprite_index,-1,x - 1,y);
+	shader_reset();
+}
 if instance_exists(Player)
 {
 if Player.ultra_got[6]=1 && !Player.altUltra{

@@ -14,6 +14,8 @@ function scrLoadStats() {
 	boss_bot_golden = ini_read_real("STATS","boss_bot_golden",0);
 	boss_bot_ultra = ini_read_real("STATS","boss_bot_ultra",0);
 	total_run_slots = ini_read_real("STATS","total_run_slots",0);
+	if total_run_slots == 0 && file_exists("ntultrarun1.sav")//Backwards compatability
+		total_run_slots = 1;
 	max_run_slots = 15;
 	
 	ctot_all_crowns_taken = array_create(racemax,0);
