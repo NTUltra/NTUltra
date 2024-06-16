@@ -35,7 +35,7 @@ for (var i = 0; i < al; i ++) {
 }
 ds_list_destroy(hits);
 var projs = ds_list_create();
-al = instance_place_list(x,y,projectile,hits,false);
+al = instance_place_list(x,y,projectile,projs,false);
 for (var i = 0; i < al; i ++) {
 	with projs[| i]
 	{
@@ -52,7 +52,7 @@ for (var i = 0; i < al; i ++) {
 	}
 	
 }
-ds_list_destroy(hits);
+ds_list_destroy(projs);
 image_xscale = actualScale;
 image_yscale = actualScale;
 var xo = x + lengthdir_x(32*image_xscale,direction + 180);

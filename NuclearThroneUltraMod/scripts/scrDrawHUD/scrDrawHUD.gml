@@ -817,12 +817,14 @@ function scrDrawHUD() {
 	col = c_white
 
 	//wepon
-	if dataRef.bcurse==1
-	col=make_colour_rgb(136,36,174);//curse
+	if instance_exists(YVCantQuickReload)
+		col = c_red;
+	else if dataRef.bcurse==1
+		col=make_colour_rgb(136,36,174);//curse
 	else if (scrCheckGold(dataRef.wep_name[dataRef.bwep]))
-	col=make_colour_rgb(223,201,134);//gold
+		col=make_colour_rgb(223,201,134);//gold
 	else if (scrCheckUltra(dataRef.wep_name[dataRef.bwep]))
-	col=make_colour_rgb(72,253,8);//ultra baby
+		col=make_colour_rgb(72,253,8);//ultra baby
 	var wxx = vx+67;
 	var wyy = vy+16;
 	var xxx = camera_get_view_x(view_camera[0]) + wxx;

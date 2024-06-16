@@ -8314,7 +8314,7 @@ function scrWeapons() {
 	wep_name[743] = "WOMBO COMBO SUCKER PUNCHER"
 	wep_type[743] = 2
 	wep_auto[743] = 3
-	wep_load[743] = 25
+	wep_load[743] = 28
 	wep_cost[743] = 5
 	wep_sprt[743] = sprWomboComboSuckerPuncher
 	wep_area[743] = 15

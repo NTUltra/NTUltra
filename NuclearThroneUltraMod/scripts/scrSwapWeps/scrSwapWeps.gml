@@ -1,4 +1,6 @@
 function scrSwapWeps() {
+	with YVCantQuickReload
+		instance_destroy();
 	//SWAP DA WEPS
 	var twep, treload, tcanPuffyCheek, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT, hasBeenEatenT;//temporary wep
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool

@@ -6,6 +6,7 @@ function scrSecondaryPowers() {
 	{
 		switch (race)
 		{
+			//CRYSTAL
 			case 2:
 				if targetPickup == noone && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
 				{
@@ -44,6 +45,7 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//EYES
 			case 3:
 				if targetPickup == noone && KeyCont.key_pick[p] == 1
 				{
@@ -77,8 +79,134 @@ function scrSecondaryPowers() {
 					instance_create(UberCont.mouse__x,UberCont.mouse__y,MindField);
 				}
 			break;
+			//YV
+			case 6:
+				if targetPickup == noone && KeyCont.key_pick[p] == 1 && bwep != 0
+				{
+					var lowa = 0;
+					var lowb = 0;
+					var lowc = 0;
+					if skill_got[35]
+					{
+						lowa = wep_load[wep]*-2;
+						lowb = wep_load[bwep]*-2;
+						lowc = wep_load[cwep]*-2;
+					}
+					if reload > lowa
+					{
+						if breload <= 0
+						{
+							with instance_create_depth(x,y,depth-1,AnimDestroy)
+							{
+								sprite_index = sprYVQuickReload;
+								image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+							}
+							snd_play_2d(sndYVQuickReload);
+						
+							var reduction = reload + lowa;
+							breload += reduction;
+							reload = lowa;
+						}
+						else
+						{
+							snd_play_2d(sndYVCantQuickReload);
+							instance_create(x,y,YVCantQuickReload);
+						}
+					}
+				}
+			break;
+			//STEROIDS
+			case 7:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				{
+					var lowa = 0;
+					var lowb = 0;
+					var lowc = 0;
+					if skill_got[35]
+					{
+						lowa = wep_load[wep]*-2;
+						lowb = wep_load[bwep]*-2;
+						lowc = wep_load[cwep]*-2;
+					}
+					var representingCost = round(wep_cost[wep]);
+					var ignoreAmmo = false;
+					if ultra_got[70]
+						representingCost = min(representingCost,0.5);
+					else if scrIsCrown(13)//Crown of drowning
+					{
+						representingCost = 0;
+					}
+					else if scrIsGamemode(48)
+					{
+						representingCost = 0;
+						ignoreAmmo = true;
+					}
+					if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
+					if reload <= 0 && breload <= 0
+					{
+						speed = 0;
+						var acc = accuracy;
+						accuracy *= 0.5;
+						scrFire();
+						scrSwapWeps();
+						scrFire();
+						scrSwapWeps();
+						reload -= 1;
+						breload -= 1;
+						reload -= ceil(wep_load[wep] * 0.15);
+						breload -= ceil(wep_load[bwep] * 0.15);
+						accuracy = acc;
+						if (instance_exists(SpeedLockout))
+						{
+							with SpeedLockout
+							{
+								alarm[0] = lockoutTime;	
+							}
+						}
+						else
+						{
+							with instance_create(x,y,SpeedLockout)
+							{
+								resetSpeed = other.maxSpeed;
+							}
+							maxSpeed = 0;
+							if skill_got[2]
+								scrApplyExtraFeet();
+						}
+					}
+				}
+			break;
+			//ROBOT
+			case 8:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1)
+				{
+					with HoldToEatEnemy
+					{
+						instance_destroy();
+						snd_play(sndRobotEatFail);
+					}
+					if !instance_exists(HoldToEatEnemy)
+					{
+						var n = instance_nearest(x,y,enemy);
+						if n != noone && n.my_health > 0 && n.team != other.team && point_distance(x,y,n.x,n.y) < 64
+						{
+							with instance_create(x,y,HoldToEatEnemy)
+							{
+								target = n;
+								image_speed = min(1,8 / n.my_health);
+							}
+						}
+						else
+						{
+							BackCont.shake += 5;
+							snd_play(sndRobotEatFail);
+						}
+					}
+				}
+			break;
+			//HANDS
 			case 27:
-				if !instance_exists(HandBlock) && KeyCont.key_pick[p] == 1 or KeyCont.ke4y_pick[p] == 2
+				if !instance_exists(HandBlock) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
 				{
 					with Hand
 					{

@@ -1,8 +1,8 @@
-var d = 64;
+var d = 56;
 var t = type
 if inverted || type == 3
 {
-	d = 44;
+	d = 34;
 	pullRange = 70;
 }	
 if instance_exists(Player)
@@ -99,8 +99,8 @@ with n {
 	}
 }
 
-if alarm[1] < 1 && point_distance(x,y,Player.x,Player.y)<d
-	Player.alarm[3]=10;
+	if alarm[1] < 1 && point_distance(x,y,Player.x,Player.y) < d
+		Player.alarm[3]= max(Player.alarm[3],2);
 }
 
 if endgame < 100

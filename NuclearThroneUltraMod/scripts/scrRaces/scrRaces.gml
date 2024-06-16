@@ -123,8 +123,10 @@ function scrRaces() {
 	race_acti[6] = "POP POP"
 	race_butt[6] = "BRRRAP"
 	race_butt_detail[6] = "ACTIVE FIRES 4 TIMES#INSTEAD OF 2";
-	race_vision[6] = "PRESS <w>[E]<w> TO: INSTANTLY <w>RELOAD<w>#AND SHIFT RELOAD TIME#TO YOUR NEXT SHOT";
-	race_inpsiration_detail[6] = race_vision[6];
+	//race_vision[6] = "PRESS <w>[E]<w> TO: INSTANTLY <w>RELOAD<w>#AND SHIFT RELOAD TIME#TO YOUR NEXT SHOT";
+	//race_vision[6] = "HOLD <w>[E]<w> TO:#GIVE YOUR CURRENT WEAPON SENTIENCE#PRESSING [E] FIRES THAT WEAPON"
+	race_vision[6] = "PRESS <w>[E]<w> TO: INSTANTLY <w>RELOAD<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED";
+	race_inpsiration_detail[6] = "PRESS <w>[E]<w> WHILE RELOADING TO:#INSTANTLY <w>RELOAD<w> YOUR <w>PRIMARY<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED#REQUIRES YOU TO HOLD A SECONDARY";
 	race_lock[6] = "REACH Y.V.'S MANSION TO UNLOCK"
 	race_have[6] = 0
 	race_swep[6] = 39
@@ -143,7 +145,7 @@ function scrRaces() {
 	race_acti[7] = "<w>DUAL WIELDING<w>"
 	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
 	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
-	race_vision[7] = "PRESS <w>[E]<w> TO: FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A LOWER RELOAD SPEED#WITH INCREASED <w>KNOCKBACK<w>";
+	race_vision[7] = "PRESS <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
 	race_inpsiration_detail[7] = race_vision[7];
 	race_lock[7] = "REACH LABS TO UNLOCK"
 	race_have[7] = 0
@@ -162,9 +164,9 @@ function scrRaces() {
 	race_pass[8] = "FINDS BETTER TECH"
 	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
-	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w> A WEAPON"
-	race_vision[8] = "PRESS <w>[E]<w> TO: ";
-	race_inpsiration_detail[8] = race_vision[8];
+	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>"
+	race_vision[8] = "PRESS <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
+	race_inpsiration_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
 	race_swep[8] = 1

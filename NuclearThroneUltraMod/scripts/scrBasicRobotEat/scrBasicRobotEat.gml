@@ -1,79 +1,82 @@
 ///scrBasicRobotEat();
 // /@description
 ///@param
-function scrBasicRobotEat(xx,yy,eatWep){
+function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 	var r = 4;
-	if string_copy(wep_name[eatWep],0,5) = "ULTRA"
+	if eatWep != 0
 	{
-		scrRaddrop(12,xx,yy);
-		scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
-	}
-	else if wep_area[eatWep] > 17 || (string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131)//heavy hyper shit
-	{
-		scrUnlockBSkin(8,"FOR EATING A HYPER#OR TIER 18+ WEAPON",0);
-	}
-	if string_copy(wep_name[eatWep],0,4) = "GOLD"
-	{
-		if object_index == Player && Player.spr_idle == sprMutant8Idle//Robot secret golden skin
+		if string_copy(wep_name[eatWep],0,5) = "ULTRA"
 		{
-			scrUnlockAltSkin(race, 0);
-			spr_idle=sprMutant8DIdle;
-			spr_walk=sprMutant8DWalk;
-			spr_hurt=sprMutant8DHurt;
-			spr_dead=sprMutant8DDead;
+			scrRaddrop(12,xx,yy);
+			scrUnlockCSkin(8,"FOR EATING AN ULTRA WEAPON",0);
 		}
-		repeat(4)
+		else if wep_area[eatWep] > 17 || (string_copy(wep_name[eatWep],0,5) = "HYPER" || eatWep = 131)//heavy hyper shit
 		{
-			if random(maxhealth) > my_health and !scrIsCrown(2)
-				instance_create(xx,yy,HPPickup)
+			scrUnlockBSkin(8,"FOR EATING A HYPER#OR TIER 18+ WEAPON",0);
+		}
+		if string_copy(wep_name[eatWep],0,4) = "GOLD"
+		{
+			if object_index == Player && Player.spr_idle == sprMutant8Idle//Robot secret golden skin
+			{
+				scrUnlockAltSkin(race, 0);
+				spr_idle=sprMutant8DIdle;
+				spr_walk=sprMutant8DWalk;
+				spr_hurt=sprMutant8DHurt;
+				spr_dead=sprMutant8DDead;
+			}
+			repeat(4)
+			{
+				if random(maxhealth) > my_health and !scrIsCrown(2)
+					instance_create(xx,yy,HPPickup)
+				else
+					instance_create(xx,yy,AmmoPickup)
+			}
+		}
+		if object_index == WepPickup
+		{
+			if Player.ultra_got[31]
+			{
+				persistent = true;
+				visible = false;
+				hasBeenEaten = true;
+				snd_play(sndPortalCloseShort,0,false,true,2,false,false,0.8,false,id,2);
+				instance_create(x,y,SurvivalPortal);
+			}
 			else
-				instance_create(xx,yy,AmmoPickup)
-		}
-	}
-	if object_index == WepPickup
-	{
-		if Player.ultra_got[31]
-		{
-			persistent = true;
-			visible = false;
-			hasBeenEaten = true;
-			snd_play(sndPortalCloseShort,0,false,true,2,false,false,0.8,false,id,2);
-			instance_create(x,y,SurvivalPortal);
+			{
+				instance_destroy();	
+			}
 		}
 		else
 		{
-			instance_destroy();	
-		}
-	}
-	else
-	{
-		if Player.ultra_got[31] {
-			with instance_create(x,y,WepPickupForOneWepOnly) {
-				scrWeapons();
-				wep = eatWep;
-				name = wep_name[wep]
-				type = wep_type[wep]
-				curse = false;
-				sprite_index = wep_sprt[wep]
-				persistent = true;
-				visible = false;
-				wepmod1 = other.wepmod1;
-				wepmod2 = other.wepmod2;
-				wepmod3 = other.wepmod3;
-				wepmod4 = other.wepmod4;
-				isPermanent = other.isPermanent;
-				hasBeenEaten = true;
+			if Player.ultra_got[31] {
+				with instance_create(x,y,WepPickupForOneWepOnly) {
+					scrWeapons();
+					wep = eatWep;
+					name = wep_name[wep]
+					type = wep_type[wep]
+					curse = false;
+					sprite_index = wep_sprt[wep]
+					persistent = true;
+					visible = false;
+					wepmod1 = other.wepmod1;
+					wepmod2 = other.wepmod2;
+					wepmod3 = other.wepmod3;
+					wepmod4 = other.wepmod4;
+					isPermanent = other.isPermanent;
+					hasBeenEaten = true;
+				}
+				snd_play(sndPortalCloseShort,0,false,true,2,false,false,0.8,false,id,2);
+				instance_create(x,y,SurvivalPortal);
 			}
-			snd_play(sndPortalCloseShort,0,false,true,2,false,false,0.8,false,id,2);
-			instance_create(x,y,SurvivalPortal);
 		}
 	}
+	
 	with instance_create(x,y,RobotEat)
 	{
 		image_xscale = Player.right
 	}
 
-		
 	var shouldHeal = true;
 	if Player.skill_got[5] = 1
 	{
@@ -103,7 +106,7 @@ function scrBasicRobotEat(xx,yy,eatWep){
 	}
 	else
 		instance_create(xx,yy,AmmoPickup)
-	if shouldHeal {
+	if shouldHeal && canForceHeal{
 		scrHeal(1);
 		snd_play_2d(sndHealthPickup);
 	}

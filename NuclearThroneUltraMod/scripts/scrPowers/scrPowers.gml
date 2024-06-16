@@ -1274,7 +1274,10 @@ function scrPowers(raceOverwrite = -1) {
 			if instance_exists(HoldToEat)
 			{
 				with HoldToEat
+				{
 					instance_destroy();
+					snd_play(sndRobotEatFail);
+				}
 			}
 			if !hasBeenEaten || isPermanent
 			{

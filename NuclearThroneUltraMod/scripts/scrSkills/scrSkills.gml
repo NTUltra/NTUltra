@@ -47,11 +47,11 @@ function scrSkills() {
 	skill_name[2] = "EXTRA FEET"
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
-	skill_text[2] = "WALK <w>FASTER<w>#DODGING GIVES <y>RES<y><g>OUR<g><r>CES<r>"
-	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_text[2] = "WALK <w>FASTER<w>#DODGING GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>"
+	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
-	skill_bons[2] = "+20% MORE SPEED#MORE RESOURCES ON DODGE";
+	skill_bons[2] = "+20% MORE SPEED#MORE RESOURCES ON DODGE#BIGGER DODGE SHIELD";
 	if instance_exists(Player)
 	{
 		if Player.race == 18
@@ -586,7 +586,7 @@ function scrSkills() {
 	if instance_exists(Player)
 		skill_detail[maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_inpsiration_detail[Player.race])
 	skill_tips[maxskill + 1] = "envision the throne"
-	skill_msnd[maxskill + 1] =  sndMutThronebutt
+	skill_msnd[maxskill + 1] =  sndMutRegalVision
 	skill_bons[maxskill + 1] = "";
 	
 	/*
