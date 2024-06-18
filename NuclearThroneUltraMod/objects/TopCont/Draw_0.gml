@@ -172,6 +172,10 @@ with MindField
 {
 	event_perform(ev_draw,0);	
 }
+with TeleportationField
+{
+	event_user(0);
+}
 with AnimDestroyTop
 {
 	draw_self();	

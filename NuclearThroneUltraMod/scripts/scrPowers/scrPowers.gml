@@ -2594,9 +2594,11 @@ function scrPowers(raceOverwrite = -1) {
 			{
 			    if ultra_got[91]//FROG MOMMA ULTRA C
 			    {
-    
+					var e = FrogEgg;
+						if toxicUltra
+							e = UltraFrogEgg;
 					if toxicamount = floor(maxtoxicamount*0.1)
-						with instance_create(x,y,FrogEgg)
+						with instance_create(x,y,e)
 						{
 							team = other.team;	
 						}

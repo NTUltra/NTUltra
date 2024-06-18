@@ -1,29 +1,26 @@
 event_inherited()
+if object_index == AllyExploder
+{
+	var dir = random(360)
+	    repeat(8)
+	    {
+	    dir += 45
+	    with instance_create(x,y,EnemyBullet2)
+	    {
+	    motion_add(dir,4)
+	    image_angle = direction
+	    team = other.team
+	    }
+	    with instance_create(x,y,AcidStreak)
+	    {
+	    motion_add(dir,8)
+	    image_angle = direction
+	    }
+	    }
 
-dir = random(360)
-
-
-
-
-    repeat(8)
-    {
-    dir += 45
-    with instance_create(x,y,EnemyBullet2)
-    {
-    motion_add(other.dir,4)
-    image_angle = direction
-    team = other.team
-    }
-    with instance_create(x,y,AcidStreak)
-    {
-    motion_add(other.dir,8)
-    image_angle = direction
-    }
-    }
-
-    repeat(4)
-instance_create(x,y,ToxicThrowerGas)
-
+	    repeat(4)
+	instance_create(x,y,ToxicThrowerGas)
+}
 snd_play(sndToxicBoltGas);
 
 

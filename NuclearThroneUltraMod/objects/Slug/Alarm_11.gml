@@ -90,3 +90,16 @@ else if um == ultramods.lightningPellet
 		alarm[11] = 0;
 	}
 }
+else if um == ultramods.shotgunBolt
+{
+	instance_destroy(id,false);
+	with instance_create(x,y,Bolt)
+	{
+		scrCopyWeaponMod(other);
+		direction = other.direction;
+		image_angle = direction;
+		speed = min(24,4 + other.speed);
+		team = other.team;
+		alarm[11] = 0;
+	}
+}

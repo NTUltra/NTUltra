@@ -25,7 +25,6 @@ snd_dead = sndFrogExplode
 
 //behavior
 alarm[1] = 2+random(5)
-
 if instance_exists(enemy)
 motion_add(point_direction(instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y,x,y),1)
 

@@ -337,6 +337,68 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//ATOM
+			case 15:
+				if targetPickup == noone && KeyCont.key_pick[p] == 1 && instance_exists(Floor)
+				{
+					var a;
+					a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+					/*
+					with instance_create(UberCont.mouse__x,UberCont.mouse__y,TeleportationField)
+					{
+						targetX = UberCont.mouse__x;
+						targetY = UberCont.mouse__y;
+						distance = point_distance(x,y,targetX,targetY);
+						dir = point_direction(x,y,targetX,targetY);
+					}*/
+					//a = point_direction(TeleportationField.x,TeleportationField.y,UberCont.mouse__x,UberCont.mouse__y);
+					if instance_number(TeleportationField) > 1{
+						var aTime0 = 1;
+						var aTime1 = 1;
+						with TeleportationField
+						{
+							if number == 1
+							{
+								instance_destroy();
+								aTime0 = alarm[0];
+								aTime1 = alarm[1];
+							}
+						}
+						with TeleportationField
+						{
+							if number > 1
+							{
+								number = 1;
+								alarm[0] = aTime0;
+								alarm[1] = aTime1;
+							}
+						}
+						
+					}
+					BackCont.viewx2 += lengthdir_x(10,a)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(10,a)*UberCont.opt_shake
+					BackCont.shake += 5
+					var tx = UberCont.mouse__x;
+					var ty = UberCont.mouse__y;
+					if collision_circle(x,y,32,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false)
+					{
+						var n = instance_position(UberCont.mouse__x,UberCont.mouse__y,Floor)
+						if n == noone
+							n = instance_nearest(UberCont.mouse__x - 14,UberCont.mouse__y - 14,Floor);
+					
+						if n != noone {
+							var o = 16;
+							if n.object_index == FloorExplo
+							{
+								o = 8;
+							}
+							tx = n.x + o;
+							ty = n.y + o;
+						}
+					}
+					instance_create(tx,ty,TeleportationField);
+				}
+			break;
 			//VIKING
 			case 16:
 				if targetPickup == noone && (KeyCont.key_pick[p] == 1)
@@ -380,17 +442,59 @@ function scrSecondaryPowers() {
 			break;
 			//FROG
 			case 23:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && toxicamount > 1
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && toxicamount > 1 && !toxicUltra
 				{
 					if rad > 100
 					{
 						toxicUltra = true;
 						rad -= 100;
 						BackCont.shake += 10;
-						snd_play_2d(sndUltraShovel);
+						snd_play_2d(sndFrogUltraActivate);
+						if ultra_got[91]//FROG MOMMA ULTRA C
+						{
+							with FrogEgg
+							{
+								if team == 2
+								{
+									with instance_create(x,y,UltraFrogEgg)
+									{
+										team = other.team;
+										if other.sprite_index == sprFrogEgg || other.sprite_index == sprFrogEggHurt
+										{
+											sprite_index = sprUltraFrogEgg;
+											mask_index=spr_idle;
+											spr_idle = sprUltraFrogEgg
+										}
+										alarm[0] = other.alarm[0];
+										image_index = other.image_index;
+									}
+									instance_destroy(id,false);
+								}
+							}
+						}
+						if ultra_got[92] && altUltra
+						{
+							repeat(3)
+							with instance_create(x,y,UltraSplinter)
+							{
+								motion_add(random(360),19)
+								image_angle = direction
+								team = other.team
+							}
+						}
+						else
+						{
+							repeat(3)
+							with instance_create(x,y,UltraToxicThrowerGas)
+							{
+								motion_add(random(360),3+random(1)+(other.skill_got[5]));
+								//dmg += 1;
+							}
+						}
 					}
 					else
 					{
+						BackCont.shake += 5;
 						snd_play_2d(sndUltraEmpty);	
 						with instance_create(x,y,PopupText)
 						{mytext = "NOT ENOUGH#RADS"
