@@ -365,6 +365,10 @@ if my_health < prevhealth
 	//Insakill
 	if !exception && alarm[3] < 1
 	{
+		with RogueRefund
+		{
+			instance_destroy();
+		}
 		noHit = 0;
 		if scrIsGamemode(32) || ultra_got[109]
 		{
@@ -438,6 +442,8 @@ if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 
 	{
 		metabolism = 0;
 		my_health = prevhealth;
+		if race == 22
+			event_user(0);
 		audio_stop_sound(snd_hurt);
 		snd_play_2d(sndMetabolism,0.1);
 		scrGiveEuphoriaShield();
@@ -466,7 +472,7 @@ if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 
 			owner = other.id;
 			scale += 0.75;
 			alpha = 0;
-			alarm[1] = 10;
+			alarm[1] = 6;
 		}
 	}
 	triggerMetabolism = false;

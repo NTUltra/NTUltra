@@ -72,12 +72,12 @@ if widescreen > 0
 			rn = "GOOD O'L\nHUMPHRY";
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
 		{
-			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 96 + additional,min(1,portraitLerp));
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 92 + additional,min(1,portraitLerp));
 			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ) + 2,portraitLerp - 1);
 		}
 		else
 		{
-			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 58 + additional,min(1,portraitLerp));
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 54 + additional,min(1,portraitLerp));
 			if instance_exists(LoadoutSelect)// && LoadoutSelect.wepmenuopen
 			{
 				bpx -= lerp(0,64,LoadoutSelect.time);

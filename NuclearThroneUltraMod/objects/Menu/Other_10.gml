@@ -7,6 +7,10 @@ with LoadoutSelect
 	race = other.race;
 	skin = UberCont.skin[race]
 	wep = UberCont.selected_start_wep[race];
+	if (!UberCont.secondary_start_wep[race])
+		bwep = -2;
+	else
+		bwep = UberCont.selected_start_bwep[race];
 	UberCont.start_wep[0]=race_swep[race];//Starting weapon 0 is different for each character
 	other.skin = skin;
 }

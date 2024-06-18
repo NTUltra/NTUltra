@@ -11,6 +11,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 	instance_create(x,yimm,FPSHACK);
 }*/
 lockout = false;
+canDrawMe = true;
 with GameRender
 {
 	gameovertime = 0;
@@ -61,6 +62,8 @@ previousUltra = -1;
 hudArmourSpace = 0;
 radPickedUp = 0;
 maxRadPickedUp = 150;
+piggyBank = 0
+maxPiggyBank = 200;
 saveLoaded = false;
 outOfCombat = false;
 guarenteedReroll = 0;
@@ -435,6 +438,18 @@ else {
     else {
 		wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
 	}
+	if UberCont.secondary_start_wep[race] && UberCont.secondary_start_wep[race] != -2
+	{
+		//SECONDARY STARTING WEAPON
+		if (UberCont.secondary_start_wep[race] == -1)
+		{
+			do {wep = irandom(UberCont.maxstartwep);} until UberCont.start_wep_have[wep,race];
+			wep = UberCont.start_wep[wep];
+		}
+	    else {
+			wep = UberCont.start_wep[UberCont.secondary_start_wep[race]];
+		}
+	}
 }
 
 oneweponlywep = wep;
@@ -495,6 +510,7 @@ rogueammomax = 3;
 toxicamount = 0;
 maxtoxicamount = 120;
 toxicConsume = 0;
+toxicUltra = false;
 
 ammo[0] = 999
 ammo[1] = round(typ_ammo[1]*0.85);
@@ -617,8 +633,8 @@ maxhealth = 2
 
 if race == 19 //skeleton
 {
-    maxhealth = 4;
-    maxSpeed = 3.6
+    maxhealth = 5;
+    maxSpeed = 3.65
     accuracy = 1.2
 }
 if race == 16

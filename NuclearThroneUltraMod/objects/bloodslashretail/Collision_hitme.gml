@@ -1,6 +1,6 @@
-var inArray = array_contains(hitEntities,other.id)
 if other.team != team
 {
+	var inArray = array_contains(hitEntities,other.id);
 	hitEnemy = true;
 	with BloodSlashRetail
 		hitEnemy = true;
@@ -8,6 +8,7 @@ if other.team != team
 	{
 		if !inArray
 			hitEntities[array_length(hitEntities)] = other.id;
+			event_user(0);
 		alarm[1] = hitDelay;
 		with other
 		{

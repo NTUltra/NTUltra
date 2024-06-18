@@ -83,6 +83,8 @@ function scrCreateDataRef(){
 		rad = other.rad;
 		radPickedUp = other.radPickedUp;
 		maxRadPickedUp = other.maxRadPickedUp;
+		piggyBank = other.piggyBank
+		maxPiggyBank = other.maxPiggyBank;
 		level = other.level;
 		boostLevel = other.boostLevel;
 		phoenixrevives = other.phoenixrevives;

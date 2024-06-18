@@ -1,4 +1,5 @@
 event_inherited();
+grabbed = false;
 raddrop = 4
 depth = -2;
 hurt_pitch_variation = 0;
@@ -15,6 +16,7 @@ throwDamage = 6;
 throwDirection = direction;
 isInFight = 0;
 accuracy = 1;
+firstHits = [];
 if instance_exists(Player)
 {
 	accuracy = Player.accuracy;

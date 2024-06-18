@@ -3,7 +3,7 @@ instance_create(x,y,DiscTrail);
 
 dist += 1
 
-if instance_exists(creator)
+if creator != noone && instance_exists(creator)
 {
 	if dist>distrange
 	{

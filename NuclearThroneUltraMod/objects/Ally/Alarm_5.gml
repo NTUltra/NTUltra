@@ -13,38 +13,39 @@ if  alarm[4] > 0
 			var al = instance_place_list(x,y,enemy,enems,false)
 			for(var i = 0;i < al; i++)
 			{
-					if team != enems[| i].team && enems[| i].sprite_index != enems[| i].spr_hurt 
+				if team != enems[| i].team && (enems[| i].sprite_index != enems[| i].spr_hurt || !array_contains(firstHits,enems[| i]))
+				{
+					firstHits[array_length(firstHits)] = enems[| i];
+					if BackCont.shake < 12
+						BackCont.shake += 12;
+					else
+						BackCont.shake += 4;
+					snd_play(sndImpWristHit);
+					with instance_create(x,y,Dust)
 					{
-						if BackCont.shake < 15
-							BackCont.shake += 15;
-						else
-							BackCont.shake += 5;
-						snd_play(sndImpWristHit);
-						with instance_create(x,y,Dust)
-						{
-							motion_add(other.direction + 90, 3);
-						}
-						with instance_create(x,y,Dust)
-						{
-							motion_add(other.direction - 90, 3);
-						}
-						with enems[| i] {
-						{
-							DealDamage(other.throwDamage,true,true,false);
-							sprite_index = spr_hurt
-							image_index = 0
-							motion_add(other.direction,12);
-							snd_play(snd_hurt, hurt_pitch_variation,true)
-						}
-						if speed > 3
-							speed -= 2;
+						motion_add(other.direction + 90, 3);
+					}
+					with instance_create(x,y,Dust)
+					{
+						motion_add(other.direction - 90, 3);
+					}
+					with enems[| i] {
+					{
+						DealDamage(other.throwDamage,true,true,false);
+						sprite_index = spr_hurt
+						image_index = 0
+						motion_add(other.direction,12);
+						snd_play(snd_hurt, hurt_pitch_variation,true)
+					}
+					if speed > 3
+						speed -= 2;
 					}
 				}
 			}
 			ds_list_destroy(enems);
 		}
 		var projs = ds_list_create();
-		al = instance_place_list(x,y,projectile,enems,false)
+		al = instance_place_list(x,y,projectile,projs,false)
 		for(var i = 0;i < al; i++)
 		{
 			with projs[| i] {

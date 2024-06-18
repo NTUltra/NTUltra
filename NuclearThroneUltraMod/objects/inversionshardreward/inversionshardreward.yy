@@ -40,6 +40,9 @@
     "name":"sprInversionShardPlateau",
     "path":"sprites/sprInversionShardPlateau/sprInversionShardPlateau.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBigWepPickup",
+    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+  },
   "visible":true,
 }

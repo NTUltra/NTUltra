@@ -1331,7 +1331,7 @@ function scrWeapons() {
 	wep_area[118] = 19//4 originally?
 	wep_text[118] = "dig you to death"
 	wep_swap[118] = sndSwapHammer
-	wep_rad[118] = 15;
+	wep_rad[118] = 16;
 
 	wep_name[119] = "AUTO FLAK CANNON"
 	wep_type[119] = 2
@@ -7822,10 +7822,10 @@ function scrWeapons() {
 	wep_name[699] = "HAPPY BOOM STICK"
 	wep_type[699] = 3
 	wep_auto[699] = 0
-	wep_load[699] = 34
+	wep_load[699] = 36
 	wep_cost[699] = 3
 	wep_sprt[699] = sprBoomStick
-	wep_area[699] = 15
+	wep_area[699] = 17
 	wep_text[699] = "Happy cannonball"
 	wep_swap[699] = sndSwapBow
 	wep_rad[699] = 0;
@@ -8869,6 +8869,7 @@ function scrWeapons() {
 	wep_text[792] = "martial arts?"
 	wep_swap[792] = sndSwapSword
 	wep_rad[792] = 0;
+	//EXECUTIONER
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

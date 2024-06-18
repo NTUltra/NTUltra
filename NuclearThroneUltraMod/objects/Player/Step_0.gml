@@ -504,6 +504,7 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			getVision = true;
+			piggyBank = 100;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
 			{
 				owner = other.id;

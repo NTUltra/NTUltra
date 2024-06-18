@@ -273,6 +273,11 @@ if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCon
 		race = Menu.race;
 		skin = UberCont.skin[race]
 		wep = UberCont.selected_start_wep[race];
+		if (!UberCont.secondary_start_wep[race])
+			bwep = -2;
+		else
+			bwep = UberCont.selected_start_bwep[race]
+		//UberCont.secondary_start_wep[race]
 		UberCont.start_wep[0]=race_swep[race];//Starting weapon 0 is different for each character
 		Menu.skin = skin;
 	}

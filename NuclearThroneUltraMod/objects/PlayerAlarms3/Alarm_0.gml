@@ -70,7 +70,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 						owner = other.id;
 						scale += 0.75;
 						alpha = 0;
-						alarm[1] = 10;
+						alarm[1] = 6;
 						sprite_index = other.sprite_index;
 					}
 				}

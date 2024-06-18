@@ -62,14 +62,19 @@ function scrDrawHUD() {
 		var hx = 20;
 		vy -= yo;
 		if dataRef.skill_got[36] //Absorbing pores
-			hx = 22;
+			hx += 2;
+		if dataRef.race == 20 && dataRef.skill_got[dataRef.maxskill + 1]//Piggy bank
+		{
+			hx += 13;
+			hx += 4;
+		}
 		draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,vx+hx,vy+4)
 		var fill = sprHealthFill;
 		if venomized
 		{
 			fill = sprHealthFillVenom;	
 		}
-		if dataRef.maxhealth!=0{
+		if dataRef.maxhealth!=0 {
 		draw_sprite_ext(fill,2,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		draw_sprite_ext(fill,1,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 
@@ -100,7 +105,13 @@ function scrDrawHUD() {
 		
 		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
 		{
-			draw_sprite(sprChickenFocusBar,0,vx+hx,vy+16)
+			var cfbi = 0;
+			with ChickenRewindPosition
+			{
+				if active
+					cfbi = 1;
+			}
+			draw_sprite(sprChickenFocusBar,cfbi,vx+hx,vy+16)
 			var focusIndex = 1;
 			if dataRef.chickenFocusInUse
 				focusIndex = 0;
@@ -301,12 +312,13 @@ function scrDrawHUD() {
 	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	if (!((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) or sin(wave) > 0) or instance_exists(GenCont) or instance_exists(LevCont)
 	{
+		//hx is by default 23
 	draw_set_color(c_black)
-	draw_text(vx+23+44,vy+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
-	draw_text(vx+23+45,vy+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
-	draw_text(vx+23+45,vy+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(vx+hx+44,vy+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(vx+hx+45,vy+8,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(vx+hx+45,vy+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
 	draw_set_color(c_white)
-	draw_text(vx+23+44,vy+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
+	draw_text(vx+hx+44,vy+7,string_hash_to_newline(string(dataRef.my_health)+"/"+string(dataRef.maxhealth)))
 	}
 	vy += yo;
 	var wepcolour = c_white;
@@ -1222,9 +1234,18 @@ function scrDrawHUD() {
 	var rto = 11;
 	if dataRef.skill_got[36]//Absorbing pores
 	{
-		ro -= 3;
-		rto -= 3;
+		ro = 1;//-3
+		rto = 9 //-3;
 		draw_sprite(sprAbsorbingRadBar,(dataRef.radPickedUp/dataRef.maxRadPickedUp)*18,vx+ 16,vy+4)	
+	}
+	if dataRef.race == 20 && dataRef.skill_got[dataRef.maxskill + 1]//Piggy bank
+	{
+		ro = 1;//-3
+		rto = 9 //-3;
+		var px = vx + 16;
+		if dataRef.skill_got[36]
+			px += 6;
+		draw_sprite(sprPiggyBankHUD,(dataRef.piggyBank/dataRef.maxPiggyBank)*12,px,vy+4)	
 	}
 	if dataRef.skillpoints > 0
 		draw_sprite(sprExpBarLevel,0,vx+ro,vy+4)
@@ -1530,50 +1551,64 @@ function scrDrawHUD() {
 			}
 		}
 		//SHROOM
-		with BigMushroom
+		with InteractableProp
 		{
-			if place_meeting(x,y,Player)
+			if isInteractableNow
 			{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-			draw_set_color(c_black)
-			draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with BigVultureSkull
-		{
+				if (instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer))
+				{
+					var txt = "DEFEAT BOSS FIRST";
+					draw_set_color(c_black)
+					draw_text(x-ox,y-oy-30,txt)
+					draw_text(x-ox+1,y-oy-30,txt)
+					draw_text(x-ox+1,y-oy-31,txt)
+					draw_set_color(c_white)
+					draw_text(x-ox,y-oy-31,txt)
+				}
+				else
+				{
+					if object_index == UltraScrapyardEntrance
+					{
+						explainTimer += 1*dt;
+						var yy = y - oy - 22;
+						draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
+		
+						draw_set_color(c_black)
+						draw_text(x-ox,yy,string_hash_to_newline(string(name)))
+						draw_text(x-ox,yy,string_hash_to_newline(string(name)))
+						draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
+						draw_set_color(c_white)
+						draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
 			
-			if spr_idle == sprBigVultureSkullOpen && place_meeting(x,y,Player)
+						if explainTimer > 20 && !notGoodEnough
+						{
+							var mr = 620;
+							with dataRef
+								mr = GetPlayerMaxRad();
+							var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
+							yy = y - oy + 14;
+							draw_set_color(c_black)
+							draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
+							draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
+							draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
+							draw_set_color(c_white)
+							draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
+						}
+					}
+					else
+					{
+						draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+						draw_set_color(c_black)
+						draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
+						draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
+						draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
+						draw_set_color(c_white)
+						draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+					}
+				}
+			} else
 			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with GraveyardEntrance
-		{
-			if my_health > 0 && place_meeting(x,y,Player)
-			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+				explainTimer = 0;	
 			}
 		}
 		with CloudEnterance
@@ -1606,7 +1641,7 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
-		with InactiveAnyMutationStation
+		with AnyMutationStation
 		{
 			if place_meeting(x,y,Player)
 			{
@@ -1633,34 +1668,6 @@ function scrDrawHUD() {
 				draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
 				draw_set_color(c_white)
 				draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
-				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with FactoryEntrance
-		{
-			if my_health > 0 && place_meeting(x,y,Player)
-			{
-				if (instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss))
-				{
-					var txt = "DEFEAT BOSS FIRST";
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,txt)
-					draw_text(x-ox+1,y-oy-30,txt)
-					draw_text(x-ox+1,y-oy-31,txt)
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,txt)
-				}
-				else
-				{
-					draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-				}
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
@@ -1709,34 +1716,6 @@ function scrDrawHUD() {
 				draw_set_color(c_white)
 				draw_text(x-ox,y-oy-36,string_hash_to_newline(string(name)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with BigFishSkull
-		{
-			if place_meeting(x,y,Player) && loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(SandWorm) && !instance_exists(WantBoss)
-			{
-				if instance_exists(WantBoss) || instance_exists(SandWorm)
-				{
-					var txt = "KILL BOSS FIRST";
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(txt)))
-					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(txt)))
-					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(txt)))
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(txt)))
-				}
-				else
-				{
-					draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-					//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-				}
 			}
 		}
 		with HintGiver {
@@ -1923,49 +1902,6 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
-		with DragonSkull
-		{
-			if place_meeting(x,y,Player) && spr_idle == sprHotDrakeSkullIdleOpen
-			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,y-oy-7)
-
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with MushroomLandEntrance
-		{
-			if place_meeting(x,y,Player) && Player.wepmod1 != 0
-			{
-				if instance_exists(Technomancer)
-				{
-					var txt = "KILL BOSS FIRST";
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(txt)))
-					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(txt)))
-					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(txt)))
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(txt)))
-				}
-				else
-				{
-					draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-					draw_set_color(c_black)
-					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-					draw_set_color(c_white)
-					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
-					//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-				}
-			}
-		}
 		with SurvivalArenaStarter
 		{
 			if place_meeting(x,y,Player)
@@ -2072,39 +2008,6 @@ function scrDrawHUD() {
 				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
 			
 				if explainTimer > 20
-				{
-					var mr = 620;
-					with dataRef
-						mr = GetPlayerMaxRad();
-					var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
-					yy = y - oy + 14;
-					draw_set_color(c_black)
-					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-					draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
-					draw_set_color(c_white)
-					draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
-				}
-			}
-			else
-				explainTimer = 0;
-		}
-		with UltraScrapyardEntrance
-		{
-			if place_meeting(x,y,Player)
-			{
-				explainTimer += 1*dt;
-				var yy = y - oy - 22;
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
-		
-				draw_set_color(c_black)
-				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
-			
-				if explainTimer > 20 && !notGoodEnough
 				{
 					var mr = 620;
 					with dataRef

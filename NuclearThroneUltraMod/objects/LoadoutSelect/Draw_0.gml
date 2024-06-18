@@ -73,7 +73,7 @@ if (hasNoMenuOpen()
 						snd_play_2d(sndClick);
 						wep = wepiter;
 					}
-					if mouse_check_button_pressed(mb_right)
+					if mouse_check_button_pressed(mb_right) && UberCont.secondary_start_wep[race]
 					{
 						snd_play_2d(sndClick);
 						if bwep == wepiter
@@ -302,7 +302,7 @@ if (hasNoMenuOpen()
 		var dwy = __view_get( e__VW.YView, 0 )+64
 		var ds = 1;
 		var col = make_colour_rgb(150, 150, 150)
-		if true
+		if UberCont.secondary_start_wep[race]
 		{
 			if (UberCont.mouse__x > dwx - 6 && UberCont.mouse__x < dwx + 6 && UberCont.mouse__y > dwy - 12 && UberCont.mouse__y < dwy + 12)
 			{

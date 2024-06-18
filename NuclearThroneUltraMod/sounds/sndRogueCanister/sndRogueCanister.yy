@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.568031,
   "name":"sndRogueCanister",
   "parent":{
     "name":"Rogue",

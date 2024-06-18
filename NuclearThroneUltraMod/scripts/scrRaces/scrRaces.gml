@@ -24,7 +24,7 @@ function scrRaces() {
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
 	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>##GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	race_vision[1] = "FISH CAN <w>JUMP<w>";
-	race_inpsiration_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> AFTER <w>JUMPING<w>";
+	race_inpsiration_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> MID AIR!";
 	race_lock[1] = "UNLOCKED FROM THE START"
 	race_have[1] = 1
 	race_swep[1] = 1
@@ -185,7 +185,9 @@ function scrRaces() {
 	race_acti[9] = "HOLD FOR <w>SLOW MOTION<w>"
 	race_butt[9] = "NORMAL <w>MOVEMENT SPEED<w>#AND NORMAL <w>RELOAD SPEED<w>#DURING <w>SLOWMOTION<w>"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	race_butt_detail[9] = race_butt[9];
-	race_vision[9] = "PRESS <w>[E]<w> TO: TOSS OF YOUR HEAD#WHILE HEADLESS GAIN 25% RELOAD SPEED#IF YOU BLEED OUT LOSE 1 MAX HP";
+	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w> BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
+	//Something that consumes all your focus for a little while and then does something
+	
 	race_inpsiration_detail[9] = race_vision[9];
 	race_lock[9] = "OPEN A BIG HP CHEST"
 	race_have[9] = 0
@@ -205,8 +207,8 @@ function scrRaces() {
 	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER <w>ALLY RELOAD SPEED<w>"
 	race_butt_detail[10] = "+50% <w>ALLY RELOAD SPEED<w>";
-	race_vision[10] = "PRESS <w>[E]<w> TO: GRAB AN ALLY";
-	race_inpsiration_detail[10] = race_vision[10];
+	race_vision[10] = "PRESS <w>[E]<w> TO: GRAB AN ALLY#PRESS AGAIN TO <w>THROW<w> YOUR ALLY";
+	race_inpsiration_detail[10] = "PRESS <w>[E]<w> TO:#GRAB A NEARBY ALLY#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[10] = 0
 	race_swep[10] = 1
@@ -225,8 +227,8 @@ function scrRaces() {
 	race_acti[11] = "MARK ENEMIES"
 	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 30% MORE <w>DAMAGE<w>"
 	race_butt_detail[11] = race_butt[11];
-	race_vision[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS MARKED#TO FIRE A SHOT THROUGH WALLS#EACH WALL PIERCED INCREASES DAMAGE";
-	race_inpsiration_detail[11] = race_vision[11];
+	race_vision[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TEMPORARILY DISABLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY";
+	race_inpsiration_detail[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TOGGLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY, FOR <w>2<w> SECONDS";
 	race_lock[11] = "DEFLECT A SNIPER SHOT\nBACK AT THE SNIPER\nTO UNLOCK"
 	race_have[11] = 0
 	race_swep[11] = 80//sniper rifle
@@ -265,8 +267,10 @@ function scrRaces() {
 	race_acti[13] = "HOLD TO <pi>CHARGE<pi>"
 	race_butt[13] = "BETTER <pi>CHARGE<pi>"
 	race_butt_detail[13] = "BETTER <pi>CHARGE<pi>#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
-	race_vision[13] = "PRESS <w>[E]<w> WHILE CHARGING TO PARRY INCOMING DAMAGE";
-	race_inpsiration_detail[13] = race_vision[13];
+	//race_vision[13] = "PRESS <w>[E]<w> WHILE CHARGING TO PARRY INCOMING DAMAGE";
+	//race_vision[13] = "PRESS <w>[E]<w> WHILE AT <w>FULL<w> <pi>CHARGE<pi> TO:#<pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO BE USE WHEN <w>UNSEEN<w>";
+	race_vision[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>";
+	race_inpsiration_detail[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>#COMPLETLY <aq>IMMUNE<aq> DURING <pi>SUPER CHARGE<pi>#<pi>SUPER CHARGE<pi> GOES TOWARDS YOUR <w>AIM<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>#OR RIGHT AFTER A <pi>HYPERDASH<pi>";
 	race_lock[13] = "MORPH AN ENEMY TO UNLOCK"
 	race_have[13] = 0
 	race_swep[13] = 0//nothing
@@ -325,8 +329,8 @@ function scrRaces() {
 	race_acti[16] = "SERPENT <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
-	race_vision[16] = "PRESS <w>[E]<w> TO: CONVERT TWO HEALTH TO ONE ARMOUR";
-	race_inpsiration_detail[16] = race_vision[16];
+	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>##CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
+	race_inpsiration_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR PRIMARY <y>AMMO<y>#75% OF BASE MAX AMMO#TO ONE <gb>ARMOUR<gb>##WHEN ON MAX ARMOUR:#CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
 	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
@@ -405,8 +409,8 @@ function scrRaces() {
 	race_acti[20] = "HOLD FOR <g>SHOP<g>"
 	race_butt[20] = "20% <w>DISCOUNT<w>"
 	race_butt_detail[20] = "20% <w>DISCOUNT<w>"
-	race_vision[20] = "PRESS <w>[E]<w> TO: STEAL AN ENEMY'S GUN AND RADS";
-	race_inpsiration_detail[20] = race_vision[20];
+	race_vision[20] = "<w>DUPLICATE<w> SOME <g>RADS<g>#INTO A <g>PIGGY BANK<g><w>!<w>";
+	race_inpsiration_detail[20] = "GET A <g>PIGGY BANK<g><w>!<w>#WHENEVER YOU COLLECT <g>RADS<g>#<w>DUPLICATE<w> <w>25%<w> OF THEM INTO THE <g>PIGGY BANK<g>#<g>PIGGY BANK RADS<g> CAN BE USED IN <w>SHOP<w>";
 	race_lock[20] = "FIND AND STEAL THE MONEY GUN TO UNLOCK"
 	race_have[20] = 0
 	race_swep[20] = 444//golden hand cannon
@@ -445,8 +449,8 @@ function scrRaces() {
 	race_acti[22] = "<b>PORTAL STRIKE<b>"//"GASS, TOXIC IMMUNITY"
 	race_butt[22] = "STRONGER <b>PORTAL STRIKE<b>#MORE <b>PORTAL STRIKE AMMO<b> SPAWNS"//"GASS SPREADS FASTER"
 	race_butt_detail[22] = race_butt[22];
-	race_vision[22] = "PRESS <w>[E]<w> TO: ";
-	race_inpsiration_detail[22] = race_vision[22];
+	race_vision[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>";
+	race_inpsiration_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>#ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b> <w>TEMPORARILY<w>";
 	race_lock[22] = "REACH THE THRONE TO UNLOCK"
 	race_have[22] = 0
 	race_swep[22] = 312//ROGUE RIFLE
@@ -467,7 +471,7 @@ function scrRaces() {
 		race_acti[23] = "SHIT & FART"
 	race_butt[23] = "<g>TOXIC<g> SPREADS FASTER"
 	race_butt_detail[23] = "<g>TOXIC<g> SPREADS FASTER#<g>TOXIC<g> LASTS LONGER#HOMING <g>TOXIC<g>#ACTIVE SPAWNS <g>TOXIC<g> TOWARDS YOUR AIM"
-	race_vision[23] = "PRESS <w>[E]<w> TO: BURN GASS";
+	race_vision[23] = "PRESS <w>[E]<w> WHILE CHARGING <g>GASS<g> TO:#<g>ULTRA<g> <w>BOOST<w> YOUR GASS#COSTS <g>RADS<g>";
 	race_inpsiration_detail[23] = race_vision[23];
 	race_lock[23] = "KILL BALL MOM TO UNLOCK"
 	race_have[23] = 0

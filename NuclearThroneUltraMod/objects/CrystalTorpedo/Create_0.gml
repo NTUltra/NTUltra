@@ -13,7 +13,7 @@ fadeNumber = 2;
 team = 2;
 maxSpeed = 13;
 speed = maxSpeed;
-dmg = 6;
+dmg = 5;
 gammaGuts = false;
 if instance_exists(Player)
 {
@@ -21,9 +21,9 @@ if instance_exists(Player)
 	{
 		//GAMMA GUTS
 		gammaGuts = true;
-		dmg = 10;
+		dmg = 9;
 		if Player.race == 25
-			dmg = 12;
+			dmg = 11;
 	}
 	if Player.bskin == 2
 	{

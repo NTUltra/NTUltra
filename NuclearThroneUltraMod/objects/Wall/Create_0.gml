@@ -6,24 +6,32 @@ if instance_exists(Player)
 	area = Player.area
 	if scrIsCrown(25) && !instance_exists(WallRemover)
 	{	
-		instance_destroy(id,false);
-		instance_create(x,y,WallHitMe);
-		/*
-		if !place_meeting(x,y,Floor)
+		var isForceEnable = false;
+		if instance_exists(MarkerWallToggler) && place_meeting(x,y,WallWireFrame)
+		{	
+			isForceEnable = true;
+		}
+		if (!isForceEnable)
 		{
-			instance_create(x,y,FloorExplo);
+			instance_destroy(id,false);
+			instance_create(x,y,WallHitMe);
 			/*
-			if !place_meeting(x-16,y,Floor) && !place_meeting(x-16,y,WallHitMe)
-				instance_create(x-16,y,WallHitMe);
-			if !place_meeting(x+16,y,Floor) && !place_meeting(x+16,y,WallHitMe)
-				instance_create(x+16,y,WallHitMe);
-			if !place_meeting(x,y-16,Floor) && !place_meeting(x,y-16,WallHitMe)
-				instance_create(x,y-16,WallHitMe);
-			if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
-				instance_create(x,y+16,WallHitMe);
-			*/
-		//}
-		exit;
+			if !place_meeting(x,y,Floor)
+			{
+				instance_create(x,y,FloorExplo);
+				/*
+				if !place_meeting(x-16,y,Floor) && !place_meeting(x-16,y,WallHitMe)
+					instance_create(x-16,y,WallHitMe);
+				if !place_meeting(x+16,y,Floor) && !place_meeting(x+16,y,WallHitMe)
+					instance_create(x+16,y,WallHitMe);
+				if !place_meeting(x,y-16,Floor) && !place_meeting(x,y-16,WallHitMe)
+					instance_create(x,y-16,WallHitMe);
+				if !place_meeting(x,y+16,Floor) && !place_meeting(x,y+16,WallHitMe)
+					instance_create(x,y+16,WallHitMe);
+				*/
+			//}
+			exit;
+		}
 	}
 }
 else area = BackCont.area

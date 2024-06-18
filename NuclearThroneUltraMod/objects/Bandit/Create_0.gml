@@ -15,8 +15,11 @@ if scrIsHardMode()//HARD MODE
 }
 if loops > 2
 {
-	instance_destroy(id,false);
-	instance_create(x,y,FreakBandit);
+	if random(3) < 1 || (instance_exists(Player) && Player.area != 1)
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,FreakBandit);
+	}
 }
 if UberCont.encrypted_data.secrets[1] == true
 {

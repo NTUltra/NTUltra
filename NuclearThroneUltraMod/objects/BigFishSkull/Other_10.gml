@@ -1,7 +1,9 @@
 /// @description Loop oasis
-if loops > 0 && spr_idle = sprBigFishSkullOpen && !instance_exists(WantBoss) && !instance_exists(SandWorm)
+isInteractableNow = false;
+if loops > 0 && spr_idle = sprBigFishSkullOpenHurt
 {
-	if KeyCont.key_pick[Player.p] = 1
+	isInteractableNow = true;
+	if KeyCont.key_pick[Player.p] = 1 && !instance_exists(WantBoss) && !instance_exists(SandWorm)
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		snd_play(sndOasisHorn);

@@ -14,6 +14,8 @@ if instance_exists(Player)
 		if ultra_got[83]
 			add += 0.2;
 		rad += add;
+		if race == 20 && skill_got[maxskill + 1]//Piggy bank
+			piggyBank += add*0.25;
 		snd_play_2d(sndRadPickup,0.05,true);
 	
 		if skill_got[36]

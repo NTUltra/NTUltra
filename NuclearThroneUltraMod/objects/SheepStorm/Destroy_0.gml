@@ -16,7 +16,7 @@ if maxReach > 1
 		direction = other.image_angle;
 		image_angle = direction;
 		sheepPower = other.maxReach;
-		dmg = round((sheepPower-1)*other.dmg);
+		dmg = max(3,round((sheepPower-1)*other.dmg));
 		speed = clamp(dmg,2,6);
 		sprite_index = other.sprite_index;
 		mask_index = other.mask_index;

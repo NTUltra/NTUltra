@@ -4,6 +4,7 @@ enemyHitbrake = 5;
 bloomSprite = sprSheepDashBloom;
 imageIndex = 0;
 baseDmg = 1.2;
+gotVision = false;
 dmg = baseDmg;
 if instance_exists(Player)
 {

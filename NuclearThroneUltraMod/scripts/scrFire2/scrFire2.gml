@@ -12165,8 +12165,8 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlashRetail)
 	{
 		owner = other.id;
-		dmg = 22
-		 && Player.ultra_got[16]
+		dmg = 16
+		if Player.ultra_got[16]
 		{
 			dmg +=2;
 		}
@@ -12181,8 +12181,8 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),BloodSlashRetail)
 	{
 		owner = other.id;
-		dmg = 18
-		 && Player.ultra_got[16]
+		dmg = 14
+		if Player.ultra_got[16]
 		{
 			dmg +=2;
 		}
@@ -12196,8 +12196,8 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),BloodSlashRetail)
 	{
 		owner = other.id;
-		dmg = 18
-		 && Player.ultra_got[16]
+		dmg = 14
+		if Player.ultra_got[16]
 		{
 			dmg +=2;
 		}

@@ -1,6 +1,6 @@
 image_speed = 1.2;
 
-BackCont.shake += 2
+BackCont.shake += 1
 Mod1=0;
 Mod2=0;
 Mod3=0;

@@ -11,7 +11,7 @@ if image_index < image_number - 2
 		{
 			if team != 2 && team != other.team
 			{
-				if (typ = 1 or typ = 2)
+				if (typ == 1 or typ == 2 or typ == 3)
 				{
 					if isGrenade
 						instance_destroy(id,false);
@@ -25,11 +25,12 @@ if image_index < image_number - 2
 						sprite_index = sprHumphryDestroyProjectile;	
 					}
 				}
+				/*
 				else if typ == 3
 				{
 					x = xprevious;
 					y = yprevious;
-				}
+				}*/
 			}
 		}
 	}

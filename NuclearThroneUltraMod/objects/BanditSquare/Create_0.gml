@@ -12,11 +12,14 @@ if scrIsHardMode() && random(5) < 1//HARD MODE
 }
 if loops > 2 && choose(false,true,false)
 {
-	instance_destroy(id,false);
-	if object_index == InvertedBanditSquare
-		instance_create(x,y,InvertedFreakBandit);
-	else
-		instance_create(x,y,FreakBandit);		
+	if random(3) < 1 || (instance_exists(Player) && Player.area != 1)
+	{
+		instance_destroy(id,false);
+		if object_index == InvertedBanditSquare
+			instance_create(x,y,InvertedFreakBandit);
+		else
+			instance_create(x,y,FreakBandit);
+	}
 }
 spr_idle = sprBanditSquareIdle
 spr_walk = sprBanditSquareWalk

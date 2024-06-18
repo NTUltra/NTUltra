@@ -20,6 +20,8 @@ if instance_exists(Player)
 			reload -= radd;
 			breload -= radd;
 			creload -= radd;
+			if race == 20 && skill_got[maxskill + 1]//Piggy bank
+				piggyBank += add*0.25;
 			if canHeal
 			{
 				radPickedUp += add;

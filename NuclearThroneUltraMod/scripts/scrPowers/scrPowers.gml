@@ -1158,7 +1158,7 @@ function scrPowers(raceOverwrite = -1) {
 	}
 
 	// SHEEP
-	if race==13
+	if race==13 && !instance_exists(SheepSuperCharge)
 	{
 		if (ultra_got[51] && altUltra)
 		{
@@ -1192,7 +1192,7 @@ function scrPowers(raceOverwrite = -1) {
 				var takePercentage = 0.1;//10%
 				//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 				//var cost = typ_amax[wepType]*takePercentage;
-				var cost = 33;//5% on level 10
+				var cost = 35;//33 5% on level 10
 				if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 				{
 					//ammo[wepType] =  ammo[wepType] - cost;
@@ -1224,6 +1224,8 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					with instance_create(x,y,SheepStorm)
 					{
+						if other.skill_got[other.maxskill+1]
+							gotVision = true;
 						team=other.team;
 					}
 				}
@@ -1471,7 +1473,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 		var tossAngle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		if Player.ultra_got[38]==1//Rebel Ultra B Riot
+		if Player.ultra_got[38]//Rebel Ultra B Riot
 		{
 			with instance_create(x,y,Ally) {
 				throwDirection = tossAngle;
@@ -2443,7 +2445,7 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if (other.skill_got[5])
 					{
-						dmg += 2;
+						dmg += 1;
 					}
 					if other.ultra_got[105] || other.ultra_got[106] || other.ultra_got[107] || other.ultra_got[107]
 						dmg ++;
@@ -2573,10 +2575,20 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		    else
 			{
-				if UberCont.normalGameSpeed == 60
-					toxicamount += 0.75;
+				if toxicamount < 0
+				{
+					if UberCont.normalGameSpeed == 60
+						toxicamount += 0.5;
+					else
+						toxicamount += 1;
+				}
 				else
-					toxicamount += 1.5;
+				{
+					if UberCont.normalGameSpeed == 60
+						toxicamount += 0.75;
+					else
+						toxicamount += 1.5;
+				}
 			}
 			if toxicamount > 0
 			{
@@ -2594,7 +2606,10 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					if ultra_got[92] && altUltra
 					{
-						with instance_create(x,y,Splinter)
+						var g = Splinter;
+						if toxicUltra
+							g = UltraSplinter;
+						with instance_create(x,y,g)
 						{
 							motion_add(random(360),18)
 							image_angle = direction
@@ -2603,7 +2618,10 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
-						with instance_create(x,y,ToxicThrowerGas)
+						var g = ToxicThrowerGas;
+						if toxicUltra
+							g = UltraToxicThrowerGas;
+						with instance_create(x,y,g)
 						{
 							motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
 							//dmg += 1;
@@ -3030,10 +3048,31 @@ function scrPowers(raceOverwrite = -1) {
 				event_user(0);
 			}
 		}
-		if UberCont.normalGameSpeed == 60
-			chickenFocus -= chickenFocusCostRate*0.5;
-		else
-			chickenFocus -= chickenFocusCostRate;
+		if !skill_got[maxskill + 1] || speed > 1
+		{
+			if UberCont.normalGameSpeed == 60
+				chickenFocus -= chickenFocusCostRate*0.5;
+			else
+				chickenFocus -= chickenFocusCostRate;
+			
+			if chickenFocus <= 0
+			{
+				with ChickenRewindPosition
+				{
+					if active
+					{
+						with other
+						{
+							x = other.x;
+							y = other.y;
+							scrForcePosition60fps();
+							alarm[3] = max(alarm[3],2);
+						}
+					}
+					instance_destroy();
+				}	
+			}
+		}
 		chickenFocusDelayTime = chickenFocusDelay;
 		chickenFocusInUse = true;
 		var slow = 0.4;
@@ -3102,6 +3141,8 @@ function scrPowers(raceOverwrite = -1) {
 			x -= hspeed*slowMove;
 			y -= vspeed*slowMove;
 		}
+		if skill_got[maxskill + 1] && !instance_exists(ChickenRewindPosition)
+			instance_create(x,y,ChickenRewindPosition);
 		if instance_exists(Decoy)//CHICKEN VANISH
 		{
 			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
@@ -3379,7 +3420,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			if sheepPower > sheepPowerToHaveEffect
 				image_speed = 0.6;
-			if sheepPower >= powerMax
+			if sheepPower >= 10
 				image_speed = 0.7;
 		}
 		else if sheepPower > 0
@@ -3427,6 +3468,20 @@ function scrPowers(raceOverwrite = -1) {
 	if race == 9//CHICKEN reset time
 	{
 		chickenFocusInUse = false;
+		with ChickenRewindPosition
+		{
+			if active
+			{
+				with other
+				{
+					x = other.x;
+					y = other.y;
+					scrForcePosition60fps();
+					alarm[3] = max(alarm[3],2);
+				}
+			}
+			instance_destroy();
+		}
 		room_speed=UberCont.normalGameSpeed;
 
 		with Decoy//CHICKEN VANISH
@@ -3596,7 +3651,10 @@ function scrPowers(raceOverwrite = -1) {
 				var ta = random(360);
 				var taStep = 360 / toxicamount;
 				if toxicamount > 3
-				with instance_create(x,y,ToxicThrowerGas)
+				var g = Splinter;
+				if toxicUltra
+					g = UltraSplinter;
+				with instance_create(x,y,g)
 				{
 					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
 					image_angle = direction
@@ -3605,7 +3663,7 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				repeat(toxicamount)
 				{
-					with instance_create(x,y,Splinter)
+					with instance_create(x,y,g)
 					{
 						motion_add(ta,18)
 						image_angle = direction
@@ -3617,10 +3675,13 @@ function scrPowers(raceOverwrite = -1) {
 			else 
 			{
 				var spd = 2;
+				g = ToxicThrowerGas;
+				if toxicUltra
+					g = UltraToxicThrowerGas;
 				if toxicamount >= maxtoxicamount
 					spd = 4;
 				if toxicamount > 3
-					with instance_create(x,y,ToxicThrowerGas)
+					with instance_create(x,y,g)
 					{
 						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),spd+2+(other.skill_got[5]*2));
 						//dmg += 1;
@@ -3631,7 +3692,7 @@ function scrPowers(raceOverwrite = -1) {
 					counter ++;
 					if counter % 4 - (skill_got[5]*2) == 0
 					{
-						with instance_create(x,y,ToxicThrowerGas)
+						with instance_create(x,y,g)
 						{
 							speed = 0;
 							motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(-16,16),spd+1+random(2)+(other.skill_got[5]*2));
@@ -3640,7 +3701,7 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
-						with instance_create(x,y,ToxicThrowerGas)
+						with instance_create(x,y,g)
 						{
 							motion_add(random(360),spd+random(2)+(other.skill_got[5]*2));
 							//dmg += 1;
@@ -3650,6 +3711,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			toxicamount = -5;
 		}
+		toxicUltra = false;
 	}
 	if race == 1 && flushCharge > 6 && skill_got[5]
 	{
@@ -3697,7 +3759,7 @@ function scrPowers(raceOverwrite = -1) {
 	image_speed=0.4;
 
 	}
-	if race==13 && !(ultra_got[51] && altUltra)
+	if race==13 && !(ultra_got[51] && altUltra) && !instance_exists(SheepSuperCharge)
 	{
 		if KeyCont.key_spec[p] != 1 && KeyCont.key_spec[p] != 2 || !instance_exists(SheepStorm)//Sheep reset speed
 		{

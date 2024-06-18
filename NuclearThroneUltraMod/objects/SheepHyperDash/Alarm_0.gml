@@ -67,3 +67,4 @@ with Player {
 	alarm[3] = max(alarm[3],5);
 }
 looped += 1;
+instance_create(x,y,HyperDashBuffer);

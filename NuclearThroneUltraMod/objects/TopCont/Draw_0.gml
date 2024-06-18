@@ -42,6 +42,10 @@ draw_self();
 	{
 		draw_self();	
 	}
+	with WallWireFrame
+	{
+		draw_sprite(sprite_index,image_index,x,y);
+	}
 	
 	with Teleport
 	{
@@ -617,7 +621,11 @@ with Player
 }
 with CrescentMoon
 {
-	event_perform(ev_draw,0);	
+	event_perform(ev_draw,0);
+}
+with SheepSuperCharge
+{
+	draw_self();
 }
 if bloom
 	scrDrawBloom()

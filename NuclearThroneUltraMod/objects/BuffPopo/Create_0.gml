@@ -7,7 +7,7 @@ event_inherited()
 male=choose(true,false);
 
 spr_idle = sprBuffPopoIdle
-spr_walk = sprEliteBuffPopoWalk
+spr_walk = sprBuffPopoWalk
 spr_hurt = sprBuffPopoHurt
 spr_dead = sprBuffPopoDead
 

@@ -26,15 +26,29 @@ my_health = maxhealth
 if instance_number(TinyKraken) > 1
 {
 	maxhealth = 12;
-	rate += 1;
-	actTime += 1;
+	rate += 2;
+	actTime += 2;
+	my_health = maxhealth;
+}
+if instance_number(TinyKraken) > 2
+{
+	maxhealth -= 2;
+	rate += 2;
+	actTime += 4;
 	my_health = maxhealth;
 }
 if instance_number(TinyKraken) > 3
 {
-	maxhealth -= 3;
+	maxhealth -= 4;
 	rate += 2;
-	actTime += 2;
+	actTime += 4;
+	my_health = maxhealth;
+}
+if instance_number(TinyKraken) > 4
+{
+	maxhealth -= 2;
+	rate += 4;
+	actTime += 6;
 	my_health = maxhealth;
 }
 if scrIsHardMode()

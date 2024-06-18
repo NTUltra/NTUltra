@@ -10,20 +10,20 @@ with instance_create(x,y,RogueExplosion)
 //blastArmourDelay = 2;
 if ultra_got[86]//SUPER BLAST ARMOUR
 {
-	if blastArmourPower > 12
+	if blastArmourPower > 8
 		snd_play(sndExplosionXL);
-	else if blastArmourPower > 6
+	else if blastArmourPower > 4
 		snd_play(sndExplosionL);
 	with instance_create(x,y,RogueSuperBlastArmour)
 	{
 		randir=random(360);
 		rings = other.blastArmourPower/3;
 		dmg = 0;
-		if rings > 12
+		if rings > 8
 		{
 			//To prevent super laggy games limit the ringsize and instead increase dmg
-			dmg += rings - 12;
-			rings = 12;
+			dmg += (rings - 8) * 0.5;
+			rings = 8;
 
 		}
 		ring = 1;
@@ -47,5 +47,4 @@ if ultra_got[88] == 1
 		angl += anglStep;
 	}	
 }
-
 snd_play(sndIDPDNadeExplo);

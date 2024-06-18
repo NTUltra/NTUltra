@@ -2,7 +2,8 @@
 var rads = 0;
 with DataRef
 {
-	rads = floor((rad/GetPlayerMaxRad())*100);
+	var actualRad = rad + piggyBank
+	rads = floor((actualRad/GetPlayerMaxRad())*100);
 }
 var drawx = x;
 var drawy = y-52;

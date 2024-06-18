@@ -193,7 +193,8 @@ function scrSecondaryPowers() {
 							with instance_create(x,y,HoldToEatEnemy)
 							{
 								target = n;
-								image_speed = min(1,8 / n.my_health);
+								if my_health > 0
+									image_speed = min(1,8 / n.my_health);
 							}
 						}
 						else
@@ -201,6 +202,199 @@ function scrSecondaryPowers() {
 							BackCont.shake += 5;
 							snd_play(sndRobotEatFail);
 						}
+					}
+				}
+			break;
+			//CHICKEN
+			case 9:
+				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				{
+					if instance_exists(ChickenRewindPosition) && chickenFocusInUse
+					{
+						with ChickenRewindPosition
+						{
+							if !active
+							{
+								snd_play(sndChickenStart);
+								BackCont.shake += 5;
+								active = true;
+								alarm[0] = 1;
+							}
+						}
+					}
+				}
+			break;
+			//REBEL
+			case 10:
+				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				{
+					if instance_exists(Ally)
+					{
+						var hasAnAlly = false;
+						with Ally
+						{
+							if grabbed
+							{
+								hasAnAlly = true;
+								grabbed = false;
+								sprite_index = spr_appear;
+								snd_play(sndAllyGrab);
+								image_index = 0;
+								image_speed = 0.7;
+								alarm[0] = (image_number-1)/image_speed//intro animation which is cool af
+								alarm[4] = (7)/image_speed//Throw end
+								alarm[5] = 1;
+								alarm[1] = alarm[0] + 2;
+								alarm[6] = alarm[4] - 2;
+								alarm[1] += alarm[0];
+								throwStart = alarm[0] - 3;
+								walk = 0;
+								x = other.x;
+								y = other.y;
+								throwSpeed = 8;
+								throwDamage = 6;
+								isInFight = 0;
+								throwDirection = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+								if other.skill_got[20]
+								{
+									throwSpeed = 12;
+									throwDamage = 12;
+									BackCont.viewx2 += lengthdir_x(15,throwDirection + 180)*UberCont.opt_shake
+									BackCont.viewy2 += lengthdir_y(15,throwDirection + 180)*UberCont.opt_shake
+									BackCont.shake += 2
+								}
+								else
+								{
+									BackCont.viewx2 += lengthdir_x(10,throwDirection + 180)*UberCont.opt_shake
+									BackCont.viewy2 += lengthdir_y(10,throwDirection + 180)*UberCont.opt_shake
+									BackCont.shake += 1
+								}
+								motion_add(throwDirection,throwSpeed);
+								continue;
+							}
+						}
+						if !hasAnAlly
+						{
+							var n = instance_nearest(x,y,Ally)
+							if n != noone && instance_exists(n) && point_distance(x,y,n.x,n.y) < 64
+							{
+								with Ally
+								{
+									grabbed = true;
+									snd_play(sndAllyGrab,0.1);
+								}
+								BackCont.shake += 5;
+							}
+						}
+					}
+					
+				}
+			break;
+			//HUNTER
+			case 11:
+				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				{
+					if instance_exists(Marker) && !instance_exists(MarkerWallToggler)
+					{
+						
+						with Marker
+						{
+							with instance_create(x,y,MarkerWallToggler)
+							{
+								event_user(0);
+								BackCont.shake += 5;
+								if ds_exists(myWalls,ds_type_list) && ds_list_size(myWalls) > 0
+								{
+									snd_play_2d(sndHunterWallToggle,0.1);
+									var a = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+									BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake
+									BackCont.viewy2 += lengthdir_y(15,a + 180)*UberCont.opt_shake
+								}
+							}
+						}
+					}
+				}
+			break;
+			//SHEEP
+			case 13:
+				if KeyCont.key_pick[p] == 1 && !instance_exists(SheepSuperCharge)
+				{
+					if sheepPower >= 9 || justAsheep || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
+					{
+						KeyCont.key_pick[p] = 2;
+						with SheepStorm
+						{
+							instance_destroy();
+						}
+						snd_play(sndSheepSuperCharge);
+						with instance_create(x,y,SheepSuperCharge)
+						{
+							direction = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+							image_angle = direction;
+						}
+						canDrawMe = false;
+						sheepPower = 0;
+					}
+				}
+			break;
+			//VIKING
+			case 16:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1)
+				{
+					with HoldToArmour
+					{
+						instance_destroy();
+						snd_play(sndNoArmour);
+					}
+					if !instance_exists(HoldToArmour)
+					{
+						if scrCanArmourHeal()
+						{
+							instance_create(x,y,HoldToArmour)
+						}
+						else
+						{
+							BackCont.shake += 5;
+							snd_play(sndNoArmour);
+						}
+					}
+				}
+			break;
+			//ROGUE
+			case 22:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && my_health > 1
+				{
+					DealDamage(1);
+					sprite_index = spr_hurt;
+					image_index = 0;
+					snd_play_2d(sndRogueManualTriggerBlastArmour, hurt_pitch_variation);
+					exception = true;
+					//event_user(0);
+					BackCont.shake += 5;
+					var a = random(360);
+					BackCont.viewx2 += lengthdir_x(10,a)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(10,a)*UberCont.opt_shake
+					instance_create(x,y,RogueRefund);
+					Sleep(10);
+				}
+			break;
+			//FROG
+			case 23:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && toxicamount > 1
+				{
+					if rad > 100
+					{
+						toxicUltra = true;
+						rad -= 100;
+						BackCont.shake += 10;
+						snd_play_2d(sndUltraShovel);
+					}
+					else
+					{
+						snd_play_2d(sndUltraEmpty);	
+						with instance_create(x,y,PopupText)
+						{mytext = "NOT ENOUGH#RADS"
+						theColour=c_red;}	
 					}
 				}
 			break;

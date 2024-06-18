@@ -33,6 +33,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and tDis < 400
 	{
 		isInFight = 20;
+		if !grabbed
 		mp_potential_step(target.x,target.y,0.5,false);
 		if random(10) < 9
 		{
@@ -64,7 +65,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 			direction = point_direction(x,y,target.x,target.y)+random(180)-90
 			speed = 0.5
 
-			if instance_exists(Player) and random(5) < 4
+			if !grabbed && instance_exists(Player) and random(5) < 4
 			{
 				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),0.5)//0.8
 				motion_add(point_direction(x,y,Player.x,Player.y),1)
@@ -75,11 +76,11 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 		}
 
 		if target.x < x
-		right = -1
+			right = -1
 		else if target.x > x
-		right = 1
+			right = 1
 	}
-	else 
+	else if !grabbed 
 	{
 		if tDis < 180 && isInFight > 0
 		{
@@ -116,7 +117,7 @@ if target != noone && instance_exists(target) && target.team != 2 && target.my_h
 		}
 	}
 }
-else
+else if !grabbed 
 {
 	cantFightRightNow = true;
 	isInFight = 0;
@@ -134,7 +135,7 @@ else
 	}
 	target = noone;
 }
-if cantFightRightNow && instance_exists(Player) && /*point_distance(x,y,Player.x,Player.y) > 52 || */collision_line(x,y,Player.x,Player.y,Wall,false,false)
+if !grabbed && cantFightRightNow && instance_exists(Player) && /*point_distance(x,y,Player.x,Player.y) > 52 || */collision_line(x,y,Player.x,Player.y,Wall,false,false)
 {
 	isInFight = 0;
 	//mp_potential_step(Player.x,Player.y,1,false)

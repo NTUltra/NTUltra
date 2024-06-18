@@ -464,7 +464,7 @@ function scrTips() {
 
 	if Player.race = 13//sheep
 	tip = choose("BAAHHH","farmville","don't mess with me"
-	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful"
+	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful","embrace the chaos",
 	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"

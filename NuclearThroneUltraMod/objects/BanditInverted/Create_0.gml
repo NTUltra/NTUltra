@@ -15,8 +15,11 @@ if scrIsHardMode() && random(5) < 1//HARD MODE
 }
 if GetPlayerLoops() > 2
 {
-	instance_destroy(id,false);
-	instance_create(x,y,FreakBandit);
+	if random(3) < 1 || (instance_exists(Player) && Player.area != 1)
+	{
+		instance_destroy(id,false);
+		instance_create(x,y,InvertedFreakBandit);
+	}
 }
 spr_idle = sprBanditInvertIdle
 spr_walk = sprBanditInvertWalk
