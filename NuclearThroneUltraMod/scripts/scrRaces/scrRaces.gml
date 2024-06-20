@@ -309,7 +309,7 @@ function scrRaces() {
 	race_acti[15] = "<w>TELEPORT<w>"
 	race_butt[15] = "EXPLOSIVE <p>TELEPORTATION<p>"
 	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b> AT DESTINATION"
-	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT TELEPORTS resources CHESTS AND ENEMIES";
+	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
 	race_inpsiration_detail[15] = race_vision[15];
 	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCKS"
 	race_have[15] = 0
@@ -369,8 +369,8 @@ function scrRaces() {
 	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
-	race_vision[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT#HOLD <w>[E]<w> WHILE NOT DEFLECTING TO: BECOME <aq>IMMUNE<aq> AND UNABLE TO DEAL DAMAGE";
-	race_inpsiration_detail[18] = race_vision[18];
+	race_vision[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
+	race_inpsiration_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
 	race_have[18] = 0
 	race_swep[18] = 56
@@ -428,9 +428,9 @@ function scrRaces() {
 	race_pass[21] = "EXTRA <g>MUTATION<g> CHOICE"//"BLAST ARMOUR, HEAT"
 	race_acti[21] = "<g>RADIATION<g> BEAM"//"PORTAL STRIKE"
 	race_butt[21] = "BEAM CHARGES QUICKER AND <r>HEALS<r>#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>"
-	race_butt_detail[21] = "BEAM CHARGES 30% QUICKER#BEAM <r>HEALS<r> EVERY 2 SECONDS#SOMETIMES MISSED BEAM#WILL DROP <g>RADS<g>"
-	race_vision[21] = "PRESS <w>[E]<w> TO: SUCK UP RADS???? IDK YET";
-	race_inpsiration_detail[21] = race_vision[21];
+	race_butt_detail[21] = "BEAM CHARGES 30% QUICKER#BEAM <r>HEALS<r> EVERY 2 SECONDS#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>#SOMETIMES MISSED BEAM#WILL DROP <g>RADS<g>"
+	race_vision[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#AND FIRE A BIG BALL OF <g>RADIATION<g>";
+	race_inpsiration_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A BIG BALL OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
 	race_lock[21] = "REACH WONDERLAND TO UNLOCK"//"REACH PALACE"
 	race_have[21] = 0
 	race_swep[21] = 1
@@ -511,7 +511,7 @@ function scrRaces() {
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
 	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR <g>RADS<g>"
 	race_butt_detail[25] = race_butt[25];
-	race_vision[25] = "PRESS <w>[E]<w> WHILE BEHIND ON AN ENEMY TO STEAL 1HP";
+	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#<r>EXPLODE<r> AND <w>COLLECT<w> ALL <g>RADIATION<g>#<r>HEAL<r> BASED ON THE AMOUNT OF <g>RADS<g>";
 	race_inpsiration_detail[25] = race_vision[25];
 	race_lock[25] = "REACH LEVEL ULTRA TO UNLOCK"//REACH LEVEL ULTRA
 	race_have[25] = 0

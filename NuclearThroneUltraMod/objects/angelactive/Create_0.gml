@@ -1,4 +1,4 @@
-var amount = 15;
+var amount = 17;
 if instance_exists(Player)
 {
 	//if GetPlayerLoops() > 0
@@ -25,7 +25,7 @@ if instance_number(AngelActive) > 1
 			with instance_create(x,y,AngelReActive) {
 				image_xscale = other.image_xscale;
 				image_yscale = other.image_yscale;
-				image_speed = other.image_speed;	
+				image_speed = other.image_speed;
 			}
 		}
 	}
@@ -38,5 +38,24 @@ if instance_exists(Player)
 {
 	team=Player.team;
 	Player.alarm[3] += amount;
+	dmg = 0;
+	if instance_exists(Player)
+	{
+		if Player.skill_got[8]//Gamma Gutseru
+		{
+			dmg += 7//dmg dealt by gamma guts
+			snd_play(sndGammaGutsProc);
+			if (my_health <= 0)//gamma guts kill?
+			{
+				snd_play(sndGammaGutsKill,0,true);
+				instance_create(x,y,GammaGutsBlast);
+			}
+		}
+		if Player.skill_got[Player.maxskill + 1]
+		{
+			dmg += 2;	
+		}
+	}
 }
+moving = false;
 image_speed = (image_number-1)/alarm[0];

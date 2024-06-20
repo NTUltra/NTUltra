@@ -1,7 +1,7 @@
 ///scrTeleportField();
 // /@description
 ///@param
-function scrTeleportField(otherTeleport, movedEntities, shouldMove = true)
+function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = false)
 {
 	if !array_contains(movedEntities,id)
 	{
@@ -22,6 +22,22 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove = true)
 		ds_list_destroy(hitWalls);
 		var msk = mask_index;
 		mask_index = mskPickupThroughWall;
+		with instance_create_depth(x,y,depth,TeleportationFx)
+		{
+			targetX = tx;
+			targetY = ty;
+			sprite_index = other.sprite_index;
+			image_index = other.image_index;
+			image_angle = other.image_angle;
+			image_yscale = other.image_yscale;
+			if isHitme
+				image_xscale = other.right;
+			else
+				image_xscale = other.image_xscale;
+			event_user(0);
+		}
+		instance_create(x,y,Smoke);
+		instance_create(tx,ty,Smoke);
 		x = tx;
 		y = ty;
 		scrForcePosition60fps();
@@ -29,9 +45,9 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove = true)
 		if (shouldMove)
 		{
 			//direction = point_direction(otherTeleport.x,otherTeleport.y,x,y)
-			motion_add(direction,2);
+			motion_add(direction,1);
 		}
+		movedEntities[array_length(movedEntities)] = id;
 	}
-	movedEntities[array_length(movedEntities)] = id;
 	return movedEntities;
 }

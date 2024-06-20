@@ -29,6 +29,13 @@ if instance_exists(Player){
 
 	if Player.ultra_got[89]
 	{
+		var am = 1;
+		if object_index == BigRad
+		{
+			am = 8;
+			snd_play(sndToxicBoltGas,0.1,true);
+		}
+		repeat(am)
 		with instance_create(x,y,ToxicThrowerGas)
 		{
 			motion_add(random(360),2+(Player.skill_got[5]));
@@ -37,6 +44,10 @@ if instance_exists(Player){
 	if Player.ultra_got[97] && Player.altUltra //&& random(3) < 2
 	{
 		snd_play(sndSwarmRapid,0.1,true);
+		var am = 1;
+		if object_index == BigRad
+			am = 6;
+		repeat(am)
 		with instance_create(x,y,SwarmBolt)
 		{
 			hits += 1;

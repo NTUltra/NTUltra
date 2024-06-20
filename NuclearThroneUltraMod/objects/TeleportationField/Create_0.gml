@@ -1,4 +1,7 @@
 /// @description FIELD!
+depth = 6;
+refreshTime = 6;
+//refreshTell = 5;
 if instance_number(TeleportationField) < 2
 {
 	alarm[0] = 60;
@@ -7,21 +10,26 @@ if instance_number(TeleportationField) < 2
 number = instance_number(TeleportationField);
 image_speed = 0.4;
 team = 2;
-range = 32;
+range = 20;
 rotation = 5;
 image_angle = random(360);
 middleAngle = random(360);
 outerAngle = random(360);
 myMovedEntities = [];
+newCollisions = [];
 teleportMyEntities = function(range, otherTeleport, movedEntities)
 {
+	var newHits = [];
 	var hits = ds_list_create();
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false);
 	for (var i = 0; i < al; i ++) {
 		with hits[| i]
 		{
 			if object_index != Player
-				movedEntities = scrTeleportField(otherTeleport, movedEntities);
+			{
+				movedEntities = scrTeleportField(otherTeleport, movedEntities,true, true);
+				newHits[array_length(newHits)] = id;
+			}
 		}
 	
 	}
@@ -35,6 +43,7 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 			if canBeMoved
 			{
 				movedEntities = scrTeleportField(otherTeleport, movedEntities, false);
+				newHits[array_length(newHits)] = id;
 			}
 		}
 	}
@@ -45,6 +54,7 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 		with chestProps[| i]
 		{
 			movedEntities = scrTeleportField(otherTeleport, movedEntities);
+			newHits[array_length(newHits)] = id;
 		}
 	}
 	ds_list_destroy(chestProps);
@@ -55,6 +65,7 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 		with pickUps[| i]
 		{
 			movedEntities = scrTeleportField(otherTeleport, movedEntities);
+			newHits[array_length(newHits)] = id;
 		}
 	}
 	ds_list_destroy(pickUps);
@@ -65,6 +76,7 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 		with radChests[| i]
 		{
 			movedEntities = scrTeleportField(otherTeleport, movedEntities);
+			newHits[array_length(newHits)] = id;
 		}
 	}
 	ds_list_destroy(radChests);
@@ -75,8 +87,12 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 		with wepPickups[| i]
 		{
 			movedEntities = scrTeleportField(otherTeleport, movedEntities);
+			newHits[array_length(newHits)] = id;
 		}
 	}
 	ds_list_destroy(wepPickups);
-	return movedEntities;
+	var returnValue = [];
+	returnValue[0] = movedEntities;
+	returnValue[1] = newHits;
+	return returnValue;
 }

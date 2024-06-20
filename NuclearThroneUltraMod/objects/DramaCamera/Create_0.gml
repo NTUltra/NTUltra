@@ -182,6 +182,8 @@ else if instance_exists(SandWorm)
 else if instance_exists(WallCrawler)
 {
 	name = "WALL CRAWLER";
+	if random(150)<1
+		name = choose("BUTT PINCHER","SNEAK ATTACK!","IT'S JUST A WALL!");
 }
 else if instance_exists(InvertedWallCrawler)
 {

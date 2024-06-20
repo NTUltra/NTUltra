@@ -1,7 +1,10 @@
 if instance_exists(Player)
 {
-	x = Player.x;
-	y = Player.y;
+	if !moving
+	{
+		x = Player.x;
+		y = Player.y;
+	}
 }
 else
 	instance_destroy();

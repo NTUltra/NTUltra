@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprAtomTeleportationFieldCore",
-    "path":"sprites/sprAtomTeleportationFieldCore/sprAtomTeleportationFieldCore.yy",
+    "name":"sprAtomTeleportationFieldAppear",
+    "path":"sprites/sprAtomTeleportationFieldAppear/sprAtomTeleportationFieldAppear.yy",
   },
   "spriteMaskId":{
     "name":"mskBigWepPickup",

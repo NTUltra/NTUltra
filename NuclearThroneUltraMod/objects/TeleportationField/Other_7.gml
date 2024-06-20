@@ -1,5 +1,5 @@
 /// @description Stop spawn
-if sprite_index == sprEyesMindFieldSpawn
+if sprite_index == sprAtomTeleportationFieldAppear
 {
-	sprite_index = sprEyesMindFieldCore;	
+	sprite_index = sprAtomTeleportationFieldCore;	
 }

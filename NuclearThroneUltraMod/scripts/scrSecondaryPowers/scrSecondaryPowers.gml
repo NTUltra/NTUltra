@@ -355,6 +355,7 @@ function scrSecondaryPowers() {
 					if instance_number(TeleportationField) > 1{
 						var aTime0 = 1;
 						var aTime1 = 1;
+						var theChunker = [];
 						with TeleportationField
 						{
 							if number == 1
@@ -362,6 +363,10 @@ function scrSecondaryPowers() {
 								instance_destroy();
 								aTime0 = alarm[0];
 								aTime1 = alarm[1];
+								//theChunker = myMovedEntities;
+								myMovedEntities = [];
+								alarm[0] += 1;
+								alarm[1] += 1;
 							}
 						}
 						with TeleportationField
@@ -371,6 +376,7 @@ function scrSecondaryPowers() {
 								number = 1;
 								alarm[0] = aTime0;
 								alarm[1] = aTime1;
+								myMovedEntities = [];//theChunker;
 							}
 						}
 						
@@ -380,11 +386,11 @@ function scrSecondaryPowers() {
 					BackCont.shake += 5
 					var tx = UberCont.mouse__x;
 					var ty = UberCont.mouse__y;
-					if collision_circle(x,y,32,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false)
+					if collision_circle(tx,ty,24,WallHitMe,false,false) || !collision_point(tx,ty,Floor,false,false)
 					{
-						var n = instance_position(UberCont.mouse__x,UberCont.mouse__y,Floor)
+						var n = instance_position(tx,ty,Floor)
 						if n == noone
-							n = instance_nearest(UberCont.mouse__x - 14,UberCont.mouse__y - 14,Floor);
+							n = instance_nearest(tx - 14,ty - 14,Floor);
 					
 						if n != noone {
 							var o = 16;
@@ -395,6 +401,11 @@ function scrSecondaryPowers() {
 							tx = n.x + o;
 							ty = n.y + o;
 						}
+					}
+					with instance_position(tx,ty,WallHitMe)
+					{
+						instance_destroy();
+						instance_create(x,y,FloorExplo);
 					}
 					instance_create(tx,ty,TeleportationField);
 				}
@@ -419,6 +430,96 @@ function scrSecondaryPowers() {
 							BackCont.shake += 5;
 							snd_play(sndNoArmour);
 						}
+					}
+				}
+			break;
+			//ANGEL
+			case 18:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(AngelActive)
+				{
+					var alreadyMoving = false;
+					with AngelActive
+					{
+						if moving
+							alreadyMoving = true;
+					}
+					if !alreadyMoving
+					{
+						var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+						BackCont.viewx2 += lengthdir_x(13,a)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(13,a)*UberCont.opt_shake
+						BackCont.shake += 15;
+						with AngelActive
+						{
+							snd_play(sndAngelCast,0.1,true,true,2,false,false,0.8,false,id);
+							moving = true;
+							alarm[0] += 7;
+							direction = a;
+							speed = 10;
+							image_index = 0;
+							image_speed = (image_number-1)/alarm[0];
+							image_angle = a + 90;
+						}
+						alarm[3] += 4;
+					}
+				}
+			break;
+			//HORROR
+			case 21:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > origincharge*2)
+				{
+					var ballPower = 0;	
+					with Rad
+					{
+						if ballPower < 20 && choose(true,false)
+						{
+							ballPower += 0.75;
+							if object_index == BigRad
+								ballPower += 6;
+						}
+						else
+						{
+							event_user(0);	
+						}
+						instance_destroy();
+						with instance_create(x,y,PlutoFX)
+						{
+							motion_add(point_direction(x,y,Player.x,Player.y),1+random(2));
+						}
+						with instance_create(x,y,HorrorMegaSuck)
+						{
+							targetX = Player.x
+							targetY = Player.y;
+							distance = point_distance(x,y,targetX,targetY);
+							dir = point_direction(x,y,targetX,targetY);
+						}
+					}
+					if ballPower < 10
+					{
+						snd_play(sndHorrorBallRelease);	
+					}
+					else
+					{
+						snd_play(sndHorrorBallReleaseUpg);	
+					}
+					var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+					BackCont.viewx2 += lengthdir_x(ballPower*0.75,aimDirection+180)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(ballPower*0.75,aimDirection+180)*UberCont.opt_shake
+					BackCont.shake += ballPower
+					with instance_create(x,y,BecomeHorrorBigBall)
+					{
+						if other.bskin = 1
+							sprite_index=sprBecomeHorrorBigBalB;
+						else if other.bskin = 2
+							sprite_index=sprBecomeHorrorBigBalC;
+						team = other.team;
+						//Max is about 20
+						myPower = ballPower;
+						image_xscale = (0.1 + clamp(myPower*0.025,0,0.75))*2;
+						image_yscale = image_xscale;
+						direction = aimDirection;
+						speed = 1;
+						image_angle = direction;
 					}
 				}
 			break;
@@ -500,6 +601,85 @@ function scrSecondaryPowers() {
 						{mytext = "NOT ENOUGH#RADS"
 						theColour=c_red;}	
 					}
+				}
+			break;
+			//DOCTOR
+			case 25:
+				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > 2)
+				{
+					var currentRad = rad;
+					with Rad
+					{
+						event_user(0);	
+						instance_destroy();
+						with instance_create(x,y,PlutoFX)
+						{
+							motion_add(point_direction(x,y,Player.x,Player.y),1+random(2));
+						}
+						with instance_create(x,y,HorrorMegaSuck)
+						{
+							targetX = Player.x
+							targetY = Player.y;
+							distance = point_distance(x,y,targetX,targetY);
+							dir = point_direction(x,y,targetX,targetY);
+						}
+						if object_index == BigRad
+						{
+							var dir = random(360);
+							repeat(3)
+							{
+								with instance_create(x,y,BloodStreak)
+								{
+									direction = dir;
+									image_angle = direction;
+									motion_add(image_angle,2);
+									sprite_index = sprInkBlobSplat;
+									image_xscale += random_range(-0.1,0.1);
+									image_yscale += random_range(-0.1,0.1);
+								}
+								with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
+								{
+									scrCopyWeaponMod(other);
+									speed = 0;
+								}
+								dir += 120;
+							}
+						}
+						else
+						{
+							with instance_create(x,y,BloodStreak)
+							{
+								direction = random(360);
+								image_angle = direction;
+								motion_add(image_angle,2);
+								sprite_index = sprInkBlobSplat;
+								image_xscale += random_range(-0.1,0.1);
+								image_yscale += random_range(-0.1,0.1);
+							}
+							instance_create(x,y,InkBlob);
+						}
+					}
+					var totalRadsCollected = rad - currentRad;
+					if totalRadsCollected > 0
+					{
+						snd_play(sndMeatExplo);
+						snd_play(sndExplosionS);
+					}
+					if totalRadsCollected > 10
+					{
+						snd_play(sndExplosion);
+					}
+					if totalRadsCollected > 25
+					{
+						snd_play(sndExplosionL);	
+					}
+					if totalRadsCollected > 40
+					{
+						snd_play(sndExplosionXL);	
+					}
+					BackCont.shake += min(50,totalRadsCollected);
+					var healAmount = 1;
+					healAmount = min(4,round(totalRadsCollected*0.1));
 				}
 			break;
 			//HANDS

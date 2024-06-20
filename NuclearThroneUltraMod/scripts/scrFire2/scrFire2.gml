@@ -13485,10 +13485,12 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,RocketMini)
 	{motion_add(aimDirection+(random(8)-4)-5*other.accuracy,16 + (instance_number(RocketMini) % 2))
 	image_angle = direction
+	alarm[0] = 0;
 	team = other.team}
 	with instance_create(x,y,RocketMini)
 	{motion_add(aimDirection+(random(8)-4)-10*other.accuracy,16 + (instance_number(RocketMini) % 2))
 	image_angle = direction
+	alarm[0] = 0;
 	team = other.team}
 	with instance_create(x,y,RocketMini)
 	{motion_add(aimDirection+(random(8)-4)+5*other.accuracy,16 + (instance_number(RocketMini) % 2))
@@ -13497,10 +13499,12 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,RocketMini)
 	{motion_add(aimDirection+(random(8)-4)+10*other.accuracy,16 + (instance_number(RocketMini) % 2))
 	image_angle = direction
+	alarm[0] = 0;
 	team = other.team}
 	with instance_create(x,y,RocketMini)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16 + (instance_number(RocketMini) % 2))
 	image_angle = direction
+	alarm[0] = 0;
 	team = other.team}
 	
 

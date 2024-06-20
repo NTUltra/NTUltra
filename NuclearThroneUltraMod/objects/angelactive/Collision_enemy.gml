@@ -1,7 +1,8 @@
 /// @description Reflect Contact damage
 with other
 {
-	var contactDmg = meleedamage;
+	var contactDmg = other.dmg + meleedamage;
+	/*
 	if instance_exists(Player)
 	{
 		if Player.skill_got[8]//Gamma Gutseru
@@ -14,7 +15,7 @@ with other
 				instance_create(x,y,GammaGutsBlast);
 			}
 		}
-	}
+	}*/
 	if meleedamage > 0
 	{
 		Sleep(10);
@@ -23,7 +24,7 @@ with other
 			var s = clamp(other.mySize*0.5,1,3);
 			image_xscale = s;
 			image_yscale = s;
-			image_alpha = other.meleedamage*0.05;
+			image_alpha = max(0.1,other.meleedamage*0.05);
 		}
 		if !audio_is_playing(snd_melee)
 			snd_play(snd_melee,0,true);
