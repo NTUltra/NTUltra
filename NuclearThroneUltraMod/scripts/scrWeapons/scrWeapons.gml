@@ -802,7 +802,7 @@ function scrWeapons() {
 	wep_load[71] = 34
 	wep_cost[71] = 5
 	wep_sprt[71] = sprSuperBazooka
-	wep_area[71] = 13
+	wep_area[71] = 14
 	wep_text[71] = "\"JW could not resist\"#- Rami 2015"
 	wep_swap[71] = sndSwapExplosive
 	wep_rad[71] = 0;
@@ -811,7 +811,7 @@ function scrWeapons() {
 	wep_name[72] = "GATLING BAZOOKA"
 	wep_type[72] = 4
 	wep_auto[72] = 1
-	wep_load[72] = 12
+	wep_load[72] = 13
 	wep_cost[72] = 1
 	wep_sprt[72] = sprGatlingBazooka
 	wep_area[72] = 9

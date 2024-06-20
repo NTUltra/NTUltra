@@ -435,7 +435,7 @@ if skill_got[2] && tookHit && !exception
 	extrafeetalarm = 40;
 	extrafeetdodged = false;
 }
-if skill_got[38] && (triggerMetabolism || tookHit && alarm[3] < 1 && alarm[1] < 1)
+if skill_got[38] && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
 {
 	metabolism += 1;
 	if metabolism > 3

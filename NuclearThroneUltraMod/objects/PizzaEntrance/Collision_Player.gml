@@ -1,6 +1,8 @@
 /// @description You want to go for pizza?
 if image_index == 1 && !wentIn
 {
+	with Player
+		isOnInteractable = true;
 	if KeyCont.key_pick[other.p] = 1
 	{
 		wentIn = true;

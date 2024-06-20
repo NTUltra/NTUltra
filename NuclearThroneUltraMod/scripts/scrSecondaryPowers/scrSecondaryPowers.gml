@@ -8,7 +8,7 @@ function scrSecondaryPowers() {
 		{
 			//CRYSTAL
 			case 2:
-				if targetPickup == noone && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				if targetPickup == noone && !isOnInteractable && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
 				{
 					if my_health > 1
 					{
@@ -47,7 +47,7 @@ function scrSecondaryPowers() {
 			break;
 			//EYES
 			case 3:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
 				{
 					var a;
 					if !instance_exists(MindField)
@@ -81,7 +81,7 @@ function scrSecondaryPowers() {
 			break;
 			//YV
 			case 6:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1 && bwep != 0
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && bwep != 0
 				{
 					var lowa = 0;
 					var lowb = 0;
@@ -117,7 +117,7 @@ function scrSecondaryPowers() {
 			break;
 			//STEROIDS
 			case 7:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
 				{
 					var lowa = 0;
 					var lowb = 0;
@@ -178,7 +178,7 @@ function scrSecondaryPowers() {
 			break;
 			//ROBOT
 			case 8:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
 				{
 					with HoldToEatEnemy
 					{
@@ -207,7 +207,7 @@ function scrSecondaryPowers() {
 			break;
 			//CHICKEN
 			case 9:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
 				{
 					if instance_exists(ChickenRewindPosition) && chickenFocusInUse
 					{
@@ -226,7 +226,7 @@ function scrSecondaryPowers() {
 			break;
 			//REBEL
 			case 10:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
 				{
 					if instance_exists(Ally)
 					{
@@ -292,7 +292,7 @@ function scrSecondaryPowers() {
 			break;
 			//HUNTER
 			case 11:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
 				{
 					if instance_exists(Marker) && !instance_exists(MarkerWallToggler)
 					{
@@ -339,7 +339,7 @@ function scrSecondaryPowers() {
 			break;
 			//ATOM
 			case 15:
-				if targetPickup == noone && KeyCont.key_pick[p] == 1 && instance_exists(Floor)
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && instance_exists(Floor)
 				{
 					var a;
 					a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
@@ -412,7 +412,7 @@ function scrSecondaryPowers() {
 			break;
 			//VIKING
 			case 16:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
 				{
 					with HoldToArmour
 					{
@@ -435,7 +435,7 @@ function scrSecondaryPowers() {
 			break;
 			//ANGEL
 			case 18:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(AngelActive)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && instance_exists(AngelActive)
 				{
 					var alreadyMoving = false;
 					with AngelActive
@@ -464,9 +464,23 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//SKELETON
+			case 19:
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				{
+					with HoldToSkull
+					{
+						instance_destroy();
+					}
+					if !instance_exists(HoldToSkull)
+					{
+						instance_create(x,y,HoldToSkull);	
+					}
+				}
+			break;
 			//HORROR
 			case 21:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > origincharge*2)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > origincharge*2)
 				{
 					var ballPower = 0;	
 					with Rad
@@ -525,7 +539,7 @@ function scrSecondaryPowers() {
 			break;
 			//ROGUE
 			case 22:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && my_health > 1
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && my_health > 1
 				{
 					DealDamage(1);
 					sprite_index = spr_hurt;
@@ -543,7 +557,7 @@ function scrSecondaryPowers() {
 			break;
 			//FROG
 			case 23:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && toxicamount > 1 && !toxicUltra
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && toxicamount > 1 && !toxicUltra
 				{
 					if rad > 100
 					{
@@ -603,83 +617,92 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//ELEMENTOR
+			case 24:
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && instance_exists(ElementorWall)
+				{
+					BackCont.shake += 10 + min(40,instance_number(ElementorWall));
+					if instance_number(ElementorWall) > 13
+						snd_play_2d(sndElementorVisionBig,0.1);
+					else
+						snd_play_2d(sndElementorVision,0.1);
+					with ElementorWall
+					{
+						instance_destroy();
+						with instance_create(x + 8,y + 8,ElementorWallProjectile)
+						{
+							direction = point_direction(Player.x,Player.y,x,y);
+							speed = 8;
+						}
+					}
+				}
+			break;
 			//DOCTOR
 			case 25:
-				if targetPickup == noone && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > 2)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && !instance_exists(PlagueBringer)
 				{
-					var currentRad = rad;
-					with Rad
+					var gottenSkills = 0;
+					var si = 0;
+					repeat(maxskill + 1)
 					{
-						event_user(0);	
-						instance_destroy();
-						with instance_create(x,y,PlutoFX)
+						if skill_got[si]
 						{
-							motion_add(point_direction(x,y,Player.x,Player.y),1+random(2));
+							gottenSkills += 1;
 						}
-						with instance_create(x,y,HorrorMegaSuck)
+						si++;
+					}
+					if gottenSkills > 1
+					{
+						with HoldToPlague
 						{
-							targetX = Player.x
-							targetY = Player.y;
-							distance = point_distance(x,y,targetX,targetY);
-							dir = point_direction(x,y,targetX,targetY);
+							instance_destroy();
 						}
-						if object_index == BigRad
+						if !instance_exists(HoldToPlague)
 						{
-							var dir = random(360);
-							repeat(3)
+							instance_create(x,y,HoldToPlague);	
+						}
+					}
+					else
+					{
+						BackCont.shake += 5;
+						with instance_create(x,y,PopupText)
+						{
+							mytext = "NOT ENOUGH MUTATIONS!";
+							theColour=c_red;
+						}	
+					}
+				}
+			break;
+			//HUMPHRY
+			case 26:
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && !instance_exists(SpeedLockout)
+				{
+					var hits = ds_list_create();
+					var al = collision_circle_list(x,y,64,hitme,false,false,hits,false);
+					BackCont.shake += 10;
+					for (var i = 0; i < al; i ++)
+					{
+						with hits[| i]
+						{
+							if team != other.team && !collision_line(x,y,other.x,other.y,Wall,false,false)
 							{
-								with instance_create(x,y,BloodStreak)
-								{
-									direction = dir;
-									image_angle = direction;
-									motion_add(image_angle,2);
-									sprite_index = sprInkBlobSplat;
-									image_xscale += random_range(-0.1,0.1);
-									image_yscale += random_range(-0.1,0.1);
-								}
-								with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
-								{
-									scrCopyWeaponMod(other);
-									speed = 0;
-								}
-								dir += 120;
+								BackCont.shake += 2;
+								DealDamage(20);
+								other.humphrySkill += 5;
 							}
 						}
-						else
-						{
-							with instance_create(x,y,BloodStreak)
-							{
-								direction = random(360);
-								image_angle = direction;
-								motion_add(image_angle,2);
-								sprite_index = sprInkBlobSplat;
-								image_xscale += random_range(-0.1,0.1);
-								image_yscale += random_range(-0.1,0.1);
-							}
-							instance_create(x,y,InkBlob);
-						}
 					}
-					var totalRadsCollected = rad - currentRad;
-					if totalRadsCollected > 0
+					with instance_create(x,y,AnimDestroyTop)
 					{
-						snd_play(sndMeatExplo);
-						snd_play(sndExplosionS);
+						sprite_index = sprHumphrySelfStun;
 					}
-					if totalRadsCollected > 10
+					with instance_create(x,y,StunLockout)
 					{
-						snd_play(sndExplosion);
+						resetSpeed = other.maxSpeed;
 					}
-					if totalRadsCollected > 25
-					{
-						snd_play(sndExplosionL);	
-					}
-					if totalRadsCollected > 40
-					{
-						snd_play(sndExplosionXL);	
-					}
-					BackCont.shake += min(50,totalRadsCollected);
-					var healAmount = 1;
-					healAmount = min(4,round(totalRadsCollected*0.1));
+					maxSpeed = 0;
+					if skill_got[2]
+						scrApplyExtraFeet();
 				}
 			break;
 			//HANDS
@@ -704,4 +727,5 @@ function scrSecondaryPowers() {
 			break;
 		}
 	}
+	isOnInteractable = false;
 }

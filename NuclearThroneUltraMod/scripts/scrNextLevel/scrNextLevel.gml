@@ -732,7 +732,10 @@ function scrNextLevel() {
 	hard = max(0,hard);
 	if loops < 1
 	{
-		hard = min(12,hard);	
+		if scrIsCrown(10)
+			hard = min(14,hard);
+		else
+			hard = min(12,hard);	
 	}
 	scrAddArea(area);
 	scrAddToRoute(area);

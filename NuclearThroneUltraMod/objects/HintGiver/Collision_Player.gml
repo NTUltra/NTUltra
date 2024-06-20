@@ -1,4 +1,6 @@
 /// @description Give me a hint
+with Player
+	isOnInteractable = true;
 if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 {
 	KeyCont.key_pick[Player.p] = 2;

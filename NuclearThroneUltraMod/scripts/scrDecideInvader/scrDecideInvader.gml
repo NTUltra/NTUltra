@@ -17,7 +17,7 @@ function scrDecideInvader(){
 		}
 		if scrIsHardMode()//Hard mode
 			loops += 1;
-		if loops > 1
+		if loops > 2
 		{
 			var am2 = clamp(ceil(loops/4),1,3);//Amount of different spawn locations
 			var am = clamp(floor(loops/am2),1,4);//Amount of enemies per spawn
@@ -266,11 +266,17 @@ function scrDecideInvader(){
 					fb = sprFloor135B;
 					fe = sprFloor135Explo;
 				break;
-				case 135://Ultra Scrapyard
+				case 136://Ultra Scrapyard
 					array_push(spawns,UltraOctaBot, UltraSquareBot, UltraWallBot, UltraWallBot, UltraBigBot , choose(UltraOctaBot, UltraSquareBot));
 					fa = sprFloor134;
 					fb = sprFloor134B;
 					fe = sprFloor134Explo;
+				break;
+				case 135://HQ
+					array_push(spawns,Turtle, Turtle, Turtle, Rat, PizzaBox, BoneFish, choose(Ratking, Crab));
+					fa = sprFloor102;
+					fb = sprFloor102B;
+					fe = sprFloor102Explo;
 				break;
 			}
 			
@@ -279,7 +285,7 @@ function scrDecideInvader(){
 		}
 		if scrIsHardMode()//Hard mode
 			loops += 2;
-		if loops > 3
+		if loops > 4
 		{
 			if (area == 2 || area == 110) && subarea == 1//SEWERS
 			{

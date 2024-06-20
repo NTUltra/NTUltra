@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"sndGainProtection",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
   "bitRate":128,

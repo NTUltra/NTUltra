@@ -1,6 +1,8 @@
 /// @description Go to Factory
 if my_health > 0
 {
+	with Player
+		isOnInteractable = true;
 	if KeyCont.key_pick[other.p] = 1 && !instance_exists(AssassinBoss) && !instance_exists(InvertedAssassinBoss) && !instance_exists(WantBoss)
 	{
 		spr_idle = sprFactoryEntranceActive;

@@ -15,7 +15,7 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	&& !(spawnarea == 119 || spawnarea == 120)
 	&& spawnarea != 100 && spawnarea != 104)
 {
-	var tots = clamp(round(GetPlayerLoops()*0.5) - 2,0,6);
+	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,6);
 	if scrIsHardMode()//HARD MODE
 		tots ++;
 	if tots > 0
@@ -23,7 +23,7 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	if tots > 1
 		scrSpawnMoreBosses(GoldTotem,tots);
 		
-	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,6);
+	var tots = clamp(round(GetPlayerLoops()*0.5) - 4,0,6);
 	if scrIsHardMode()//HARD MODE
 		tots ++;
 	if tots > 0
@@ -163,7 +163,7 @@ if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
 	}
-if Player.loops > 0 && (Player.area == 5 && Player.subarea == 2) && !scrIsGamemode(40)
+if Player.loops > 1 && (Player.area == 5 && Player.subarea == 2) && !scrIsGamemode(40)
 {
 	scrSpawnBoss(BigDisc);
 	if (Player.loops > 5)
@@ -175,13 +175,13 @@ if Player.loops > 0 && (Player.area == 107 && Player.subarea == 2)
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 2 && Player.subarea == 1) ||  Player.area == 10 && Player.subarea == 2))
+if (Player.loops > 1 && ((Player.area == 2 && Player.subarea == 1) ||  Player.area == 10 && Player.subarea == 2))
 {
 	scrSpawnBoss(BallMom);
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(BallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 110 && Player.subarea == 1) || (Player.area == 121 && Player.subarea == 2)) )
+if (Player.loops > 1 && ((Player.area == 110 && Player.subarea == 1) || (Player.area == 121 && Player.subarea == 2)) )
 {
 	scrSpawnBoss(InvertedBallMom);
 	if (Player.loops > 5)
@@ -245,7 +245,7 @@ if Player.area = 100
 	var exitX = 10016;
 	var exitY = 10016;
 	instance_create(exitX,exitY,CrownVaultExit);
-	if Player.crownvisits > 1{
+	if Player.crownvisits > 1 && !Player.justLoadedRun{
 		instance_create(exitX-32,exitY-32,WeaponMod);
 		with instance_create(exitX+32,exitY-32,WeaponMod)
 			image_xscale=-1;
@@ -262,7 +262,7 @@ if Player.area = 100
 		instance_create(exitX+16,exitY-128,CourtyardEntrance)
 	}
 	y -= 16;
-	if Player.skill_got[30]
+	if Player.skill_got[30] && !Player.justLoadedRun
 	{
 		instance_create(exitX-32,exitY+64,Floor);
 		instance_create(exitX,exitY+64,Floor);

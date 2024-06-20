@@ -1023,3 +1023,6 @@ if area > 1 || loops > 0
 			instance_create(x,y,SendPerliminaryScore);
 		}
 	}
+
+if area != 100
+	justLoadedRun = false;

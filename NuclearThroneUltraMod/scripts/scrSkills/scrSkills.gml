@@ -584,7 +584,7 @@ function scrSkills() {
 	if instance_exists(Player)
 		skill_text[maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_vision[Player.race])
 	if instance_exists(Player)
-		skill_detail[maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_inpsiration_detail[Player.race])
+		skill_detail[maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_vision_detail[Player.race])
 	skill_tips[maxskill + 1] = "envision the throne"
 	skill_msnd[maxskill + 1] =  sndMutRegalVision
 	skill_bons[maxskill + 1] = "";

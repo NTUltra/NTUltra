@@ -1,4 +1,4 @@
-raddrop = 9
+raddrop = 0
 maxhealth = 255
 if GetPlayerLoops() < 1
 	maxhealth = 200;

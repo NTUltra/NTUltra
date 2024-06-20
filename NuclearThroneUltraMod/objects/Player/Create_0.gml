@@ -10,6 +10,8 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,yimm,FPSHACK);
 }*/
+justLoadedRun = false;
+isOnInteractable = false;
 lockout = false;
 canDrawMe = true;
 with GameRender

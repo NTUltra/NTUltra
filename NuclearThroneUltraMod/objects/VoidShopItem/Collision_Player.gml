@@ -1,4 +1,6 @@
 /// @description Collect reward click
+with Player
+	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
 	if (UberCont.portalEssence >= cost)

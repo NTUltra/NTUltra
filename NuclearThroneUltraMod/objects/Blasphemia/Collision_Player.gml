@@ -1,6 +1,8 @@
 /// @description Get Weapon
 if !instance_exists(Player)
 	exit;
+with Player
+	isOnInteractable = true;
 if KeyCont.key_pick[other.p] == 1
 {
 	if (scrMeleeWeapons(Player.wep))

@@ -42,7 +42,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 2
 		{
 			enem = Scorpion;
-			if loops > 0
+			if loops > 1
 				enem = SandWorm;
 		}
 		else if subarea == 3
@@ -67,8 +67,8 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		else if subarea == 2
 		{
 			enem = InvertedScorpion;
-			if loops > 0
-				enem = SandWorm;
+			if loops > 1
+				enem = InvertedSandWorm;
 		}
 		else if subarea == 3
 		{
@@ -383,7 +383,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			if loops > 0
+			if loops > 1
 				enem = WallCrawler;
 			else	
 				enem = PalaceGuardian;
@@ -404,7 +404,7 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		if subarea == 1
 		{
-			if loops > 0
+			if loops > 1
 				enem = InvertedWallCrawler;
 			else
 				enem = InvertedPalaceGuardian;

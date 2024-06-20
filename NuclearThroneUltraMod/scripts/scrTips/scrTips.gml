@@ -1,6 +1,5 @@
 function scrTips() {
 	tiptype = choose(0,0,0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,5,6,6,7,7,7))
-
 	if !instance_exists(Player)
 		tiptype = 0
 	tip = "";
@@ -553,16 +552,28 @@ function scrTips() {
 	//MUTATIONS
 	if tiptype = 4
 	{
-	if Player.level = 1
-	tip = ""
-	else
-	{
-	dir = 0
-	    do dir = round(random(Player.maxskill))
-	    until Player.skill_got[dir] = 1
-	    tip = Player.skill_tips[dir]
-    
-	}
+		var hasSomeMutations = false;
+		var i = 0;
+		repeat(Player.maxskill + 2)
+		{
+			if Player.skill_got[i]
+			{
+				hasSomeMutations = true;
+				continue;
+			}
+			i++;
+		}
+		if (hasSomeMutations)
+		{
+			dir = 0
+			do dir = round(random(Player.maxskill + 1))
+			until Player.skill_got[dir] = 1
+			tip = Player.skill_tips[dir]
+		}
+		else
+		{
+			tip = "";	
+		}
 	}
 
 	//CROWNS

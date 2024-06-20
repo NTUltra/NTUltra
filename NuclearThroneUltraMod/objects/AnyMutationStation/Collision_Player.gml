@@ -1,4 +1,6 @@
 /// @description Get patience
+with Player
+		isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
 	instance_create(x,y,InactiveAnyMutationStation);

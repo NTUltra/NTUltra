@@ -1,4 +1,6 @@
 /// @description Exit
+with Player
+	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 {
 	KeyCont.key_pick[Player.p] = 2;

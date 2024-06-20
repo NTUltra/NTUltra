@@ -24,7 +24,7 @@ function scrRaces() {
 	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
 	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>##GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
 	race_vision[1] = "FISH CAN <w>JUMP<w>";
-	race_inpsiration_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> MID AIR!";
+	race_vision_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> MID AIR!";
 	race_lock[1] = "UNLOCKED FROM THE START"
 	race_have[1] = 1
 	race_swep[1] = 1
@@ -44,7 +44,7 @@ function scrRaces() {
 	race_butt[2] = "LONGER <p>SHIELD<p>"
 	race_butt_detail[2] = "75% LONGER <p>SHIELD<p>"
 	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>";
-	race_inpsiration_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
+	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
 	race_lock[2] = "UNLOCKED FROM THE START"
 	race_have[2] = 1
 	race_swep[2] = 1
@@ -64,7 +64,7 @@ function scrRaces() {
 	race_butt[3] = "STRONGER <w>TELEKINESIS<w>"
 	race_butt_detail[3] = "DOUBLE <w>TELEKINESIS<w> STRENGTH";
 	race_vision[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>";
-	race_inpsiration_detail[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>#IT PULLS EVERYTHING#CAN HAVE ONLY ONE SPIRAL OUT AT A TIME";
+	race_vision_detail[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>#IT PULLS EVERYTHING#CAN HAVE ONLY ONE SPIRAL OUT AT A TIME";
 	race_lock[3] = "REACH SEWERS TO UNLOCK"
 	race_have[3] = 0
 	race_swep[3] = 1
@@ -84,7 +84,7 @@ function scrRaces() {
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
 	race_butt_detail[4] = "TRIPLE <r>BLOOD<r> <w>CORPSE<w> EXPLOSIONS";
 	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME";
-	race_inpsiration_detail[2] = race_vision[2];
+	race_vision_detail[2] = race_vision[2];
 	race_lock[4] = "DIE TO UNLOCK"
 	race_have[4] = 0
 	race_swep[4] = 1
@@ -104,7 +104,7 @@ function scrRaces() {
 	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#<w>SNARE<w> IS SLIGHTLY BIGGER"
 	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#SNARE IS 25% BIGGER";
 	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>";
-	race_inpsiration_detail[5] = race_vision[5];
+	race_vision_detail[5] = race_vision[5];
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0
 	race_swep[5] = 1
@@ -126,7 +126,7 @@ function scrRaces() {
 	//race_vision[6] = "PRESS <w>[E]<w> TO: INSTANTLY <w>RELOAD<w>#AND SHIFT RELOAD TIME#TO YOUR NEXT SHOT";
 	//race_vision[6] = "HOLD <w>[E]<w> TO:#GIVE YOUR CURRENT WEAPON SENTIENCE#PRESSING [E] FIRES THAT WEAPON"
 	race_vision[6] = "PRESS <w>[E]<w> TO: INSTANTLY <w>RELOAD<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED";
-	race_inpsiration_detail[6] = "PRESS <w>[E]<w> WHILE RELOADING TO:#INSTANTLY <w>RELOAD<w> YOUR <w>PRIMARY<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED#REQUIRES YOU TO HOLD A SECONDARY";
+	race_vision_detail[6] = "PRESS <w>[E]<w> WHILE RELOADING TO:#INSTANTLY <w>RELOAD<w> YOUR <w>PRIMARY<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED#REQUIRES YOU TO HOLD A SECONDARY";
 	race_lock[6] = "REACH Y.V.'S MANSION TO UNLOCK"
 	race_have[6] = 0
 	race_swep[6] = 39
@@ -146,7 +146,7 @@ function scrRaces() {
 	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
 	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
 	race_vision[7] = "PRESS <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
-	race_inpsiration_detail[7] = race_vision[7];
+	race_vision_detail[7] = race_vision[7];
 	race_lock[7] = "REACH LABS TO UNLOCK"
 	race_have[7] = 0
 	race_swep[7] = 1
@@ -166,7 +166,7 @@ function scrRaces() {
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
 	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>"
 	race_vision[8] = "PRESS <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
-	race_inpsiration_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
+	race_vision_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
 	race_swep[8] = 1
@@ -188,7 +188,7 @@ function scrRaces() {
 	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w> BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
 	//Something that consumes all your focus for a little while and then does something
 	
-	race_inpsiration_detail[9] = race_vision[9];
+	race_vision_detail[9] = race_vision[9];
 	race_lock[9] = "OPEN A BIG HP CHEST"
 	race_have[9] = 0
 	race_swep[9] = 46
@@ -208,7 +208,7 @@ function scrRaces() {
 	race_butt[10] = "HIGHER <w>ALLY RELOAD SPEED<w>"
 	race_butt_detail[10] = "+50% <w>ALLY RELOAD SPEED<w>";
 	race_vision[10] = "PRESS <w>[E]<w> TO: GRAB AN ALLY#PRESS AGAIN TO <w>THROW<w> YOUR ALLY";
-	race_inpsiration_detail[10] = "PRESS <w>[E]<w> TO:#GRAB A NEARBY ALLY#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
+	race_vision_detail[10] = "PRESS <w>[E]<w> TO:#GRAB A NEARBY ALLY#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[10] = 0
 	race_swep[10] = 1
@@ -228,7 +228,7 @@ function scrRaces() {
 	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 30% MORE <w>DAMAGE<w>"
 	race_butt_detail[11] = race_butt[11];
 	race_vision[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TEMPORARILY DISABLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY";
-	race_inpsiration_detail[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TOGGLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY, FOR <w>2<w> SECONDS";
+	race_vision_detail[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TOGGLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY, FOR <w>2<w> SECONDS";
 	race_lock[11] = "DEFLECT A SNIPER SHOT\nBACK AT THE SNIPER\nTO UNLOCK"
 	race_have[11] = 0
 	race_swep[11] = 80//sniper rifle
@@ -248,7 +248,7 @@ function scrRaces() {
 	race_butt[12] = "GAIN EVEN MORE <y>AMMO<y>#DEPENDING ON NUMBER OF DUPLICATES"
 	race_butt_detail[12] = "EXTRA AMMO GAINED PER DUPLICATE#IS DOUBLED"
 	race_vision[12] = "PRESS <w>[E]<w> TO: ";
-	race_inpsiration_detail[12] = race_vision[12];
+	race_vision_detail[12] = race_vision[12];
 	race_lock[12] = "KILL A MIMIC TO UNLOCK"
 	race_have[12] = 0
 	race_swep[12] = 39//golden revolver
@@ -270,7 +270,7 @@ function scrRaces() {
 	//race_vision[13] = "PRESS <w>[E]<w> WHILE CHARGING TO PARRY INCOMING DAMAGE";
 	//race_vision[13] = "PRESS <w>[E]<w> WHILE AT <w>FULL<w> <pi>CHARGE<pi> TO:#<pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO BE USE WHEN <w>UNSEEN<w>";
 	race_vision[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>";
-	race_inpsiration_detail[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>#COMPLETLY <aq>IMMUNE<aq> DURING <pi>SUPER CHARGE<pi>#<pi>SUPER CHARGE<pi> GOES TOWARDS YOUR <w>AIM<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>#OR RIGHT AFTER A <pi>HYPERDASH<pi>";
+	race_vision_detail[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>#COMPLETLY <aq>IMMUNE<aq> DURING <pi>SUPER CHARGE<pi>#<pi>SUPER CHARGE<pi> GOES TOWARDS YOUR <w>AIM<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>#OR RIGHT AFTER A <pi>HYPERDASH<pi>";
 	race_lock[13] = "MORPH AN ENEMY TO UNLOCK"
 	race_have[13] = 0
 	race_swep[13] = 0//nothing
@@ -290,7 +290,7 @@ function scrRaces() {
 	race_butt[14] = "#SHORTER <w>THROWN<w> WEAPON RETURN DELAY#MORE <w>THROW<w> DAMAGE"
 	race_butt_detail[14] = "#REDUCED <w>THROWN<w> WEAPON RETURN DELAY (0.83 SEC)#+20% MORE <w>THROW<w> DAMAGE"
 	race_vision[14] = "PRESS <w>[E]<w> TO: REDIRECT THROWN WEAPONS";
-	race_inpsiration_detail[14] = race_vision[14];
+	race_vision_detail[14] = race_vision[14];
 	race_lock[14] = "VISIT THE JUNGLE TO UNLOCK"
 	race_have[14] = 0
 	race_swep[14] = 200//panda stick
@@ -310,7 +310,7 @@ function scrRaces() {
 	race_butt[15] = "EXPLOSIVE <p>TELEPORTATION<p>"
 	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b> AT DESTINATION"
 	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
-	race_inpsiration_detail[15] = race_vision[15];
+	race_vision_detail[15] = race_vision[15];
 	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCKS"
 	race_have[15] = 0
 	race_swep[15] = 19//laser pistol
@@ -330,7 +330,7 @@ function scrRaces() {
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
 	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>##CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
-	race_inpsiration_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR PRIMARY <y>AMMO<y>#75% OF BASE MAX AMMO#TO ONE <gb>ARMOUR<gb>##WHEN ON MAX ARMOUR:#CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
+	race_vision_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR PRIMARY <y>AMMO<y>#75% OF BASE MAX AMMO#TO ONE <gb>ARMOUR<gb>##WHEN ON MAX ARMOUR:#CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
 	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
@@ -350,7 +350,7 @@ function scrRaces() {
 	race_butt[17] = "GET AN EVEN HIGHER#TIER WEAPON WHEN COMBINING WEAPONS"
 	race_butt_detail[17] = "GET AN EVEN HIGHER (+1)#TIER WEAPON WHEN COMBINING WEAPONS"
 	race_vision[17] = "HOLD <w>[E]<w> TO: DOWNGRADE YOUR WEAPONS AND ADD TWO MODS TO IT";
-	race_inpsiration_detail[17] = race_vision[17];
+	race_vision_detail[17] = race_vision[17];
 	race_lock[17] = "MODIFY A WEAPON TO UNLOCK"
 	race_have[17] = 0
 	race_swep[17] = 1
@@ -370,7 +370,7 @@ function scrRaces() {
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
 	race_vision[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
-	race_inpsiration_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
+	race_vision_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
 	race_have[18] = 0
 	race_swep[18] = 56
@@ -389,8 +389,8 @@ function scrRaces() {
 	race_acti[19] = "<r>BLOOD<r> <w>GAMBLE<w>"
 	race_butt[19] = "BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_butt_detail[19] = "33% BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
-	race_vision[19] = "HOLD <w>[E]<w> TO: SIGNIFICANTLY SLOW YOUR MOVEMENT AND INCREASE THE DAMAGE YOU DEAL";
-	race_inpsiration_detail[19] = race_vision[19];
+	race_vision[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>#UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#CAN BE DONE <w>ONCE<w> PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>"
+	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>#UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#CAN BE DONE <w>ONCE<w> PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
 	race_lock[19] = "DIE IN THE LABS AS MELTING TO UNLOCK"
 	race_have[19] = 0
 	race_swep[19] = 56//allright we'll do a character with a rusty revolver
@@ -410,7 +410,7 @@ function scrRaces() {
 	race_butt[20] = "20% <w>DISCOUNT<w>"
 	race_butt_detail[20] = "20% <w>DISCOUNT<w>"
 	race_vision[20] = "<w>DUPLICATE<w> SOME <g>RADS<g>#INTO A <g>PIGGY BANK<g><w>!<w>";
-	race_inpsiration_detail[20] = "GET A <g>PIGGY BANK<g><w>!<w>#WHENEVER YOU COLLECT <g>RADS<g>#<w>DUPLICATE<w> <w>25%<w> OF THEM INTO THE <g>PIGGY BANK<g>#<g>PIGGY BANK RADS<g> CAN BE USED IN <w>SHOP<w>";
+	race_vision_detail[20] = "GET A <g>PIGGY BANK<g><w>!<w>#WHENEVER YOU COLLECT <g>RADS<g>#<w>DUPLICATE<w> <w>25%<w> OF THEM INTO THE <g>PIGGY BANK<g>#<g>PIGGY BANK RADS<g> CAN BE USED IN <w>SHOP<w>";
 	race_lock[20] = "FIND AND STEAL THE MONEY GUN TO UNLOCK"
 	race_have[20] = 0
 	race_swep[20] = 444//golden hand cannon
@@ -430,7 +430,7 @@ function scrRaces() {
 	race_butt[21] = "BEAM CHARGES QUICKER AND <r>HEALS<r>#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>"
 	race_butt_detail[21] = "BEAM CHARGES 30% QUICKER#BEAM <r>HEALS<r> EVERY 2 SECONDS#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>#SOMETIMES MISSED BEAM#WILL DROP <g>RADS<g>"
 	race_vision[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#AND FIRE A BIG BALL OF <g>RADIATION<g>";
-	race_inpsiration_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A BIG BALL OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
+	race_vision_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A BIG BALL OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
 	race_lock[21] = "REACH WONDERLAND TO UNLOCK"//"REACH PALACE"
 	race_have[21] = 0
 	race_swep[21] = 1
@@ -450,7 +450,7 @@ function scrRaces() {
 	race_butt[22] = "STRONGER <b>PORTAL STRIKE<b>#MORE <b>PORTAL STRIKE AMMO<b> SPAWNS"//"GASS SPREADS FASTER"
 	race_butt_detail[22] = race_butt[22];
 	race_vision[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>";
-	race_inpsiration_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>#ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b> <w>TEMPORARILY<w>";
+	race_vision_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>#ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b> <w>TEMPORARILY<w>";
 	race_lock[22] = "REACH THE THRONE TO UNLOCK"
 	race_have[22] = 0
 	race_swep[22] = 312//ROGUE RIFLE
@@ -472,7 +472,7 @@ function scrRaces() {
 	race_butt[23] = "<g>TOXIC<g> SPREADS FASTER"
 	race_butt_detail[23] = "<g>TOXIC<g> SPREADS FASTER#<g>TOXIC<g> LASTS LONGER#HOMING <g>TOXIC<g>#ACTIVE SPAWNS <g>TOXIC<g> TOWARDS YOUR AIM"
 	race_vision[23] = "PRESS <w>[E]<w> WHILE CHARGING <g>GASS<g> TO:#<g>ULTRA<g> <w>BOOST<w> YOUR GASS#COSTS <g>RADS<g>";
-	race_inpsiration_detail[23] = race_vision[23];
+	race_vision_detail[23] = race_vision[23];
 	race_lock[23] = "KILL BALL MOM TO UNLOCK"
 	race_have[23] = 0
 	race_swep[23] = 348//FROG BLASTER
@@ -491,8 +491,8 @@ function scrRaces() {
 	race_acti[24] = "<w>TERRAFORM<w> AT THE COST OF <y>AMMO<y>"//TERRAFORM
 	race_butt[24] = "CHEAPER TERRAFORM#YOUR WALLS <w>DEFLECT<w> ENEMY PROJECTILES"
 	race_butt_detail[24] = "33% CHEAPER TERRAFORM#YOUR WALLS <w>DEFLECT<w> ENEMY PROJECTILES"
-	race_vision[24] = "PRESS <w>[E]<w> TO: EXPLODE YOUR WALLS";
-	race_inpsiration_detail[24] = race_vision[24];
+	race_vision[24] = "PRESS <w>[E]<w> TO:#LAUNCH YOUR <w>WALLS!<w>";
+	race_vision_detail[24] = "PRESS <w>[E]<w> TO:#SEND OUT YOUR <w>WALLS<w>#LIKE PROJECTILES";
 	race_lock[24] = "REACH MUSHROOM LAND TO UNLOCK"//TAKE HEAVY HEART
 	race_have[24] = 0
 	race_swep[24] = 337//MINI LIGHTNING PISTOL//102//FROST PISTOL
@@ -511,8 +511,8 @@ function scrRaces() {
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
 	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES ON SCREEN#AND STEALS SOME OF THEIR <g>RADS<g>"
 	race_butt_detail[25] = race_butt[25];
-	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#<r>EXPLODE<r> AND <w>COLLECT<w> ALL <g>RADIATION<g>#<r>HEAL<r> BASED ON THE AMOUNT OF <g>RADS<g>";
-	race_inpsiration_detail[25] = race_vision[25];
+	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>";
+	race_vision_detail[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#INSTANTLY <w>COLLECT<w> ALL RADS#ALL <w>PICKUPS<w> AND <g>RADS<g>#SPREAD THE <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>#ENABLE <g>MUTATIONS<g> AT THE END OF THE <w>AREA<w>";
 	race_lock[25] = "REACH LEVEL ULTRA TO UNLOCK"//REACH LEVEL ULTRA
 	race_have[25] = 0
 	race_swep[25] = 1
@@ -531,8 +531,8 @@ function scrRaces() {
 	race_acti[26] = "<w>HALT<w> - COSTS <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
 	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
-	race_vision[26] = "PRESS <w>[E]<w> TO: DEAL DAMAGE TO ALL ENEMIES NEAR YOU AND STUN YOURSELF";
-	race_inpsiration_detail[26] = race_vision[26];
+	race_vision[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#<w>DEAL DAMAGE<w> TO <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN MORE <w>SKILL<w> DURING STUN";
+	race_vision_detail[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#DEAL <w>DAMAGE<w> TO ALL <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN ADDITIONAL <w>SKILL<w> FOR#THE DAMAGE YOU DEAL USING THIS#<w>SKILL<w> DOES NOT DRAIN WHILE <w>STUNNED<w>";
 	race_lock[26] = "COLLECT FOUR BOSS BOUNTIES"//SOMETHING A LITTLE HARDER
 	race_have[26] = 0
 	race_swep[26] = 148
@@ -551,7 +551,7 @@ function scrRaces() {
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
 	race_vision[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>";
-	race_inpsiration_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
+	race_vision_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
 	race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
 	race_have[27] = 0
 	race_swep[27] = 443

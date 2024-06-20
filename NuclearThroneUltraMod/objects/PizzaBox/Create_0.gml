@@ -13,4 +13,3 @@ move_contact_solid(random(90)+45,random(12))
 
 
 snd_hurt = sndHitPlant
-

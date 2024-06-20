@@ -116,8 +116,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with Bullet5
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
-	with Flames
-	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+	//with Flames
+	//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with DiscoBall
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with SheepHyperDashTrail
@@ -502,7 +502,7 @@ function scrDrawBloom() {
 	with Explosion
 	{
 		if visible
-	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba)
+			draw_sprite_ext(sprite_index,-1,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba)
 	}
 	//with Bolt
 	//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)

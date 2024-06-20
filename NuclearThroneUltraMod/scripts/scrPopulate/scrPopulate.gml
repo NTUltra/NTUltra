@@ -468,8 +468,8 @@ function scrPopulate() {
 			if Player.loops > 11
 				instance_create(x, y, WantBoss)
 	    }
-		if Player.loops > 0 && (Player.area == 9 || Player.area == 118) && Player.subarea == 2 {
-	        instance_create(x, y, WantBoss)//Wall Crawler
+		if Player.loops > 1 && (Player.area == 9 || Player.area == 118) && Player.subarea == 2 {
+	        instance_create(x, y, WantBoss)//Wall Crawler WallCrawler
 	    }
 		if (Player.area == 126 || Player.area == 127) {//Graveyard fish
 			instance_create(x,y,WantBoss);
@@ -500,7 +500,7 @@ function scrPopulate() {
 					instance_create(x, y, WantBoss)
 	    }
 		//Sandworm
-		if (Player.loops > 0 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
+		if (Player.loops > 1 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
 	        instance_create(x, y, WantBoss)
 	    }
 		//Big vulture

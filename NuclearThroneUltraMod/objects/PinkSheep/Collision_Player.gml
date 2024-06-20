@@ -1,4 +1,6 @@
 /// @description CATCH SHEEP BRING IT HOME
+with Player
+	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
 	if other.area != 8 && other.area != 113

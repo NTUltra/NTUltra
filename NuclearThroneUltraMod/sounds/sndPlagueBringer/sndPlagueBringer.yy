@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndPlagueBringer",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.920476,
+  "name":"sndPlagueBringer",
+  "parent":{
+    "name":"Doctor",
+    "path":"folders/Sounds/Player/Doctor.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndPlagueBringer.ogg",
+  "type":0,
+  "volume":1.0,
+}

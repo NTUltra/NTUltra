@@ -9,6 +9,10 @@ if mask_index != mskPickupThroughWall
 	mask_index = mskBigWepPickup;
 	if place_meeting(x,y,Player)
 	{
+		with Player
+		{
+			isOnInteractable = true;
+		}
 		isInteractableNow = true;
 		event_user(0);
 	}

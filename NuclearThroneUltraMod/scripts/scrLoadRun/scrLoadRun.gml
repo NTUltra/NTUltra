@@ -52,6 +52,7 @@ function scrLoadRun(selectedRunIndex){
 			for (var i = 0; i < al; i++) {
 				scrSpawnCrown(x,y,Player.crown[i], true);
 			}
+			Player.justLoadedRun = true;
 			Player.ammo[0] = encryptedRun.ammo[0];
 			Player.ammo[1] = encryptedRun.ammo[1];
 			Player.ammo[2] = encryptedRun.ammo[2];

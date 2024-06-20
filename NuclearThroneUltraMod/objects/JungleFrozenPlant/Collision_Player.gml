@@ -1,4 +1,6 @@
 /// @description Go to jungle or back to frozen city
+with Player
+	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1 && !used
 {
 	if blood >= bloodNeeded

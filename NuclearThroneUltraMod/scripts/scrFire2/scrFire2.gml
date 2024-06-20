@@ -676,7 +676,7 @@ function scrFire2(hasTailNow) {
 	break;
 
 
-	//GRENADE SHOTGUN
+	//nN
 	case 216:
 
 	snd_play_fire(sndGrenadeShotgun)

@@ -27,6 +27,10 @@ else
 
 if place_meeting(x,y,Player)
 {
+	with Player
+	{
+		isOnInteractable = true;	
+	}
 	if !active || KeyCont.key_swap[Player.p] = 1
 	{
 		active = true;

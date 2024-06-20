@@ -34,3 +34,7 @@ if w != noone && w.object_index != WallHitMe
 		scrForcePosition60fps();
 	}
 }
+if instance_exists(PlagueBringer)
+{
+	alarm[5] = 1;	
+}

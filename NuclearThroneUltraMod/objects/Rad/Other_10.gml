@@ -17,7 +17,10 @@ if instance_exists(Player)
 		if race == 20 && skill_got[maxskill + 1]//Piggy bank
 			piggyBank += add*0.25;
 		snd_play_2d(sndRadPickup,0.05,true);
-	
+		with PlagueBringer
+		{
+			totalRadsCollected += add;	
+		}
 		if skill_got[36]
 		{
 			var radd = add*0.3;

@@ -14,6 +14,10 @@ if instance_exists(Player)
 		if ultra_got[83]
 			add += 2;
 		rad += add;
+		with PlagueBringer
+		{
+			totalRadsCollected += add;	
+		}
 		if skill_got[36]
 		{
 			var radd = add*0.3;

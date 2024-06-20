@@ -22,8 +22,8 @@
     "path":"folders/Objects/CrownVault.yy",
   },
   "parentObjectId":{
-    "name":"All",
-    "path":"objects/All/All.yy",
+    "name":"Interactable",
+    "path":"objects/Interactable/Interactable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

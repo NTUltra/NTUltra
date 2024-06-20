@@ -1,6 +1,8 @@
 /// @description Open another portal!
 if active
 {
+	with Player
+		isOnInteractable = true;
 	if KeyCont.key_pick[other.p] = 1
 	{
 		active = false;

@@ -25,6 +25,8 @@ if place_meeting(x,y,Player) && !used
 		name = "REROLL#"+skill_name[i];
 	}
 	active = true;
+	with Player
+		isOnInteractable = true;
 	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
 	{
 		used = true;

@@ -2966,10 +2966,10 @@ function scrPowers(raceOverwrite = -1) {
 		else if !lockoutElementor && !instance_exists(CloudArea)//Elementor
 		{
 			
-			var takePercentage = 0.045;//0.75%
+			var takePercentage = 0.05;//0.75%
 			if skill_got[5]
 			{
-				takePercentage = 0.035;//0.05%
+				takePercentage = 0.04;//0.05%
 			}
 			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 			if wepType != wep_type[bwep] && wepType != wep_type[wep]
