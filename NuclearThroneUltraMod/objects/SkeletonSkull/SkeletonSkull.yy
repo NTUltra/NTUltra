@@ -34,9 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBigSkull",
-    "path":"sprites/sprBigSkull/sprBigSkull.yy",
+    "name":"sprSkeletonSkull",
+    "path":"sprites/sprSkeletonSkull/sprSkeletonSkull.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sprSkeletonSkull",
+    "path":"sprites/sprSkeletonSkull/sprSkeletonSkull.yy",
+  },
   "visible":true,
 }

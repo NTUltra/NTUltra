@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":3.813344,
   "name":"sndMutant19Thrn",
   "parent":{
     "name":"Skeleton",

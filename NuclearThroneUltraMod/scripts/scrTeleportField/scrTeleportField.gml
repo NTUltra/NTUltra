@@ -21,7 +21,7 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = fa
 		}
 		ds_list_destroy(hitWalls);
 		var msk = mask_index;
-		mask_index = mskPickupThroughWall;
+		mask_index = mskNoCollision;
 		with instance_create_depth(x,y,depth,TeleportationFx)
 		{
 			targetX = tx;
@@ -41,7 +41,12 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = fa
 		x = tx;
 		y = ty;
 		scrForcePosition60fps();
-		mask_index = msk;
+		with instance_create(x,y,TeleportMaskReset)
+		{
+			target = other.id;
+			targetMask = msk;	
+		}
+		//mask_index = msk;
 		if (shouldMove)
 		{
 			//direction = point_direction(otherTeleport.x,otherTeleport.y,x,y)

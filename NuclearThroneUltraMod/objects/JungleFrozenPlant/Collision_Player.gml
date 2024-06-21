@@ -12,7 +12,7 @@ if KeyCont.key_pick[other.p] = 1 && !used
 		}
 		used = true;
 		KeyCont.key_pick[Player.p] = 2;
-		with other
+		with Player
 		{
 			if array_length(snd_good) > 0
 				snd_play(snd_good[irandom(array_length(snd_good)-1)]);

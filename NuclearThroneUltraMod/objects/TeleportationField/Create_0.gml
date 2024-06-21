@@ -4,8 +4,8 @@ refreshTime = 6;
 //refreshTell = 5;
 if instance_number(TeleportationField) < 2
 {
-	alarm[0] = 60;
-	alarm[1] = 30;
+	alarm[0] = 15;
+	//alarm[1] = 15;
 }
 number = instance_number(TeleportationField);
 image_speed = 0.4;

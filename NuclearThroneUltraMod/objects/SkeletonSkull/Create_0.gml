@@ -1,13 +1,14 @@
-maxhealth = 50
+maxhealth = 100
 mySize = 2
 
-spr_idle = sprBigSkull
-spr_hurt = sprBigSkullHurt
-spr_dead = sprBigSkullDead
+spr_idle = sprSkeletonSkull
+spr_hurt = sprSkeletonSkullHurt
+spr_dead = sprSkeletonSkullDead
 
 
 event_inherited()
-shadowSprite = shd32;
-
+shadowSprite = shd16;
+canMoveOver = true;
 snd_hurt = sndHitRock
 
+revived = false;

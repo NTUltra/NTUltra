@@ -6,7 +6,7 @@ if Player.wepmod1 != 0
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall
 		
-		with other
+		with Player
 		{
 			if array_length(snd_good) > 0
 				snd_play(snd_good[irandom(array_length(snd_good)-1)]);

@@ -466,7 +466,7 @@ function scrSecondaryPowers() {
 			break;
 			//SKELETON
 			case 19:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && !instance_exists(SkeletonSkullDestroyed)
 				{
 					with HoldToSkull
 					{

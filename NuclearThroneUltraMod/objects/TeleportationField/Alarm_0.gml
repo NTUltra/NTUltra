@@ -11,6 +11,7 @@ with TeleportationField
 if otherTeleport == noone
 	exit;
 var movedEntities = myMovedEntities;
+var previousEntities = myMovedEntities;
 var everything;
 var newHits = [];
 with TeleportationField
@@ -18,19 +19,22 @@ with TeleportationField
 	if id != other.id
 	{
 		everything = teleportMyEntities(range, other.id, movedEntities);
-		movedEntities = everything[0];
-		newHits = everything[1];
+		movedEntities = array_concat(movedEntities,everything[0]);
+		newHits = array_concat(newHits,everything[1]);
 	}
 	else
 	{
 		everything = teleportMyEntities(range, otherTeleport, movedEntities);
-		movedEntities = everything[0];
-		newHits = everything[1];
-		
+		movedEntities = array_concat(movedEntities,everything[0]);
+		newHits = array_concat(newHits,everything[1]);
 	}
 }
 myMovedEntities = movedEntities;
 newCollisions = newHits;
+if !array_equals(myMovedEntities,previousEntities) && alarm[1] < 1
+{
+	alarm[1] = 2;
+}
 /*
 var al = array_length(myMovedEntities);
 var newArray = [];

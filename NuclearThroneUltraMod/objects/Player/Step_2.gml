@@ -760,9 +760,26 @@ if(my_health <= 0 && maxhealth > 0)
 			alarm[7] = 10;
 	    my_health = 1;
     }
-	//BOUNCY FAT
-	if my_health <= 0 && curseBotTeleport
+	if my_health <= 0 && instance_exists(SkeletonSkull)
 	{
+		repeat(10)
+			instance_create(x,y,Dust);
+		my_health = maxhealth;
+		x = SkeletonSkull.x;
+		y = SkeletonSkull.y;
+		scrForcePosition60fps();
+		BackCont.shake += 30;
+		snd_play_2d(sndMutant19Cnfm);
+		Sleep(30);
+		with SkeletonSkull
+		{
+			revived = true;
+			instance_destroy();
+		}
+	}
+	else if my_health <= 0 && curseBotTeleport
+	{
+		//CURSED TP
 		curseBotTeleport = false;
 		snd_play_2d(sndCursedPickupDisappear);
 		snd_play_2d(sndHyperCrystalSearch);

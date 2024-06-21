@@ -389,8 +389,8 @@ function scrRaces() {
 	race_acti[19] = "<r>BLOOD<r> <w>GAMBLE<w>"
 	race_butt[19] = "BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_butt_detail[19] = "33% BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
-	race_vision[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>#UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#CAN BE DONE <w>ONCE<w> PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>"
-	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>#UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#CAN BE DONE <w>ONCE<w> PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
+	race_vision[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#DURING THIS <w>AREA<w>"
+	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
 	race_lock[19] = "DIE IN THE LABS AS MELTING TO UNLOCK"
 	race_have[19] = 0
 	race_swep[19] = 56//allright we'll do a character with a rusty revolver

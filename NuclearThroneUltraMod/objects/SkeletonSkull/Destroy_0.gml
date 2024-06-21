@@ -7,3 +7,13 @@ repeat(10)
 motion_add(ang,3)
 ang += 36}
 
+instance_create(x,y,SkeletonSkullDestroyed);
+
+if !revived
+{
+	with Player
+	{
+		maxhealth += 2;	
+	}
+}
+instance_create(x,y,MeltGhost);
