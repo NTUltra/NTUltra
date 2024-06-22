@@ -12,3 +12,4 @@ wave = 0;
 onTheTable = false;
 spawnLocationX = x;
 spawnLocationY = y + 32;
+explain = 0;

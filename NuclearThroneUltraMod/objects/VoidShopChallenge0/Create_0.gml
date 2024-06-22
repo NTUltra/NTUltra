@@ -5,5 +5,5 @@ event_inherited();
 
 spr_item = sprVoidItemIdpdVan;
 challenge = "25% LOWER RELOAD SPEED"
-reward = "DOUBLE THE PORTAL ESSENCE YOU COLLECT THIS LOOP";
+reward = "DOUBLE THE PORTAL ESSENCE YOU COLLECTED";
 cost = 2;

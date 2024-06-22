@@ -1844,7 +1844,25 @@ function scrDrawHUD() {
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy+7)
 				if isChallenge
 				{
-					
+					var yyy = yy - 30;
+					var nm = "COSTS: "+string(cost);
+					scrDrawTextBackgrounded(xx,yyy,nm,c_white);
+					scrDrawTextBackgrounded(xx,yyy + 8,challenge,c_red);
+					scrDrawTextBackgrounded(xx,yyy + string_height(challenge),reward,c_lime);
+					if UberCont.normalGameSpeed == 60
+						explain += 0.5;
+					else
+						explain += 1;
+					if explain > 20
+					{
+						draw_set_halign(fa_right);
+						scrDrawTextBackgrounded(xx - string_width(challenge) * 0.5,yyy + 8,"CHALLENGE: ",c_white);
+						scrDrawTextBackgrounded(xx - string_width(reward) * 0.5,yyy + 8 + string_height(challenge),"REWARD: ",c_white);
+						draw_set_halign(fa_left);
+						scrDrawTextBackgrounded(xx + string_width(challenge) * 0.5,yyy + 8 + string_height(challenge)," UPCOMING LOOP",c_white);
+						scrDrawTextBackgrounded(xx + string_width(reward) * 0.5,yyy + 8 + string_height(challenge)," UPON RETURN",c_white);
+						draw_set_halign(fa_center);
+					}
 				}
 				else
 				{
@@ -1857,6 +1875,10 @@ function scrDrawHUD() {
 					draw_text(xx,yy-31,nm)
 				}
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			}
+			else
+			{
+				explain = 0;	
 			}
 		}
 		with TheMultiCrown

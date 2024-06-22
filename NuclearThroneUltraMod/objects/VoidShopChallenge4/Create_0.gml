@@ -4,6 +4,6 @@
 event_inherited();
 
 spr_item = sprVoidItemIdpdVan;
-challenge = "DISABLE ALL MUTATIONS UNTIL YOU RETURN HERE"
+challenge = "DISABLE ALL MUTATIONS"
 reward = "INCREASE MAX LEVEL";
 cost = 2;

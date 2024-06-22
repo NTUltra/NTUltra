@@ -4,6 +4,6 @@
 event_inherited();
 
 spr_item = sprVoidItemIdpdVan;
-challenge = "TAKE ONE EXTRA DAMAGE FROM EVERYTHING"
-reward = "REWARD: GAIN ONE LIFE";
+challenge = "TAKE ONE EXTRA DAMAGE\nFROM EVERYTHING"
+reward = "GAIN ONE LIFE";
 cost = 2;
