@@ -52,7 +52,7 @@ function scrCrowns() {
 	crown_tips[7] = "bring it"
 
 	crown_name[8] = "[CROWN OF DESTINY]"
-	crown_text[8] = "FREE <g>MUTATION<g>#NARROW <w>FUTURE<w>"
+	crown_text[8] = "QUICK <g>MUTATIONS<g>#NARROW <w>FUTURE<w>"
 	crown_used[8] = 0
 	crown_tips[8] = "no such thing as free will"
 

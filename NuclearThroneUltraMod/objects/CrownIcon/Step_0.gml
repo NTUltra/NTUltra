@@ -168,9 +168,14 @@ if crown == 34
 //CROWN OF DESTINY
 if crown == 8 && !Player.tookDestiny
 {
-	Player.skillpoints += 1
-	Player.skillsChosen -= 1;
-	Player.tookDestiny = true;
+	with Player
+	{
+		var maxAvailable = clamp(maxlevel - level,0,2);
+		skillpoints += maxAvailable
+		level += maxAvailable;
+		//skillsChosen -= 1;
+		tookDestiny = true;
+	}
 }
 //CROWN OF DEATH
 if crown == 3 && Player.maxhealth > 1

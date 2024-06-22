@@ -2,20 +2,6 @@
 // /@description
 ///@param
 function scrSecondaryPowers() {
-	if KeyCont.key_pick[p] == 1 && !skill_got[maxskill + 1]
-	{
-		with enemy
-		{
-			with instance_create(other.x,other.y,SnakeBiteFx)
-			{
-				target = other.id;
-				if target.x > x
-					flipped = 1;
-				else
-					flipped = -1;
-			}
-		}
-	}
 	if (skill_got[maxskill + 1])
 	{
 		switch (race)

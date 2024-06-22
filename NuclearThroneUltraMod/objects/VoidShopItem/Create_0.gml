@@ -4,6 +4,7 @@ image_speed = 0;
 name = "SHOP ITEM";
 challenge = "CHALLENGE";
 reward = "REWARD";
+isChallenge = false;
 cost = 7;
 image_speed = 0.4;
 spr_item = sprVoidItemGoldChest;
