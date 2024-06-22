@@ -598,6 +598,10 @@ with SerpentStrike
 {
 	event_perform(ev_draw,0);
 }
+with SnakeBiteFx
+{
+	event_perform(ev_draw,0);
+}
 with HorrorBeam
 {
 	image_yscale = 1+random(1.5)

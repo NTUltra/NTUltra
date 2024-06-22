@@ -1,5 +1,5 @@
 /// @description Time increase
-time += 0.1;
+time += timeAcc;
 if time >= 1
 {
 	alarm[1] = 5;
@@ -8,3 +8,4 @@ else
 {
 	alarm[0] = 1;
 }
+BackCont.shake += 2;

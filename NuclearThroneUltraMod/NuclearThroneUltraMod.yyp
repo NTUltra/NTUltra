@@ -4052,6 +4052,8 @@
     {"id":{"name":"sndVikingAxe","path":"sounds/sndVikingAxe/sndVikingAxe.yy",},},
     {"id":{"name":"sndVikingGreatAxe","path":"sounds/sndVikingGreatAxe/sndVikingGreatAxe.yy",},},
     {"id":{"name":"sndVikingHit","path":"sounds/sndVikingHit/sndVikingHit.yy",},},
+    {"id":{"name":"sndVikingSerpentBite","path":"sounds/sndVikingSerpentBite/sndVikingSerpentBite.yy",},},
+    {"id":{"name":"sndVikingSerpentBiteUpg","path":"sounds/sndVikingSerpentBiteUpg/sndVikingSerpentBiteUpg.yy",},},
     {"id":{"name":"sndVlambeer","path":"sounds/sndVlambeer/sndVlambeer.yy",},},
     {"id":{"name":"sndVoidCreepEnd","path":"sounds/sndVoidCreepEnd/sndVoidCreepEnd.yy",},},
     {"id":{"name":"sndVoidEyeCreeping","path":"sounds/sndVoidEyeCreeping/sndVoidEyeCreeping.yy",},},

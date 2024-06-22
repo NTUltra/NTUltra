@@ -41,5 +41,5 @@
     "path":"sprites/sprSerpentStrike/sprSerpentStrike.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

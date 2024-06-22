@@ -3773,6 +3773,8 @@
     {"name":"sndVikingArmourStrikeUpg","order":2,"path":"sounds/sndVikingArmourStrikeUpg/sndVikingArmourStrikeUpg.yy",},
     {"name":"sndVikingAxe","order":98,"path":"sounds/sndVikingAxe/sndVikingAxe.yy",},
     {"name":"sndVikingGreatAxe","order":99,"path":"sounds/sndVikingGreatAxe/sndVikingGreatAxe.yy",},
+    {"name":"sndVikingSerpentBite","order":14,"path":"sounds/sndVikingSerpentBite/sndVikingSerpentBite.yy",},
+    {"name":"sndVikingSerpentBiteUpg","order":15,"path":"sounds/sndVikingSerpentBiteUpg/sndVikingSerpentBiteUpg.yy",},
     {"name":"sndVlambeer","order":6,"path":"sounds/sndVlambeer/sndVlambeer.yy",},
     {"name":"sndVoidCreepEnd","order":134,"path":"sounds/sndVoidCreepEnd/sndVoidCreepEnd.yy",},
     {"name":"sndVoidEyeCreeping","order":135,"path":"sounds/sndVoidEyeCreeping/sndVoidEyeCreeping.yy",},

@@ -1,4 +1,5 @@
 time = 0;
+timeAcc = random_range(0.05,0.15);
 disappearTime = 0;
 imageIndex = 0;
 target = noone;

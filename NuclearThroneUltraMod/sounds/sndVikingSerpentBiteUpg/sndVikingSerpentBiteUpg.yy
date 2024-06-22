@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndVikingSerpentBiteUpg",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.180385,
+  "name":"sndVikingSerpentBiteUpg",
+  "parent":{
+    "name":"Viking",
+    "path":"folders/Sounds/Player/Viking.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndVikingSerpentBiteUpg.ogg",
+  "type":0,
+  "volume":1.0,
+}
