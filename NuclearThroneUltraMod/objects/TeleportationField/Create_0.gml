@@ -96,3 +96,11 @@ teleportMyEntities = function(range, otherTeleport, movedEntities)
 	returnValue[1] = newHits;
 	return returnValue;
 }
+
+emitter = audio_emitter_create();
+audio_emitter_position(emitter,x,y,depth);
+audio_emitter_gain(emitter, 0.8);
+audio_emitter_falloff(emitter, 50, 400, 1);
+audio_play_sound_on(emitter,sndAtomTeleportationFieldLoop,true,2);
+
+snd_play(sndAtomTeleporationFieldSpawn,0.1);

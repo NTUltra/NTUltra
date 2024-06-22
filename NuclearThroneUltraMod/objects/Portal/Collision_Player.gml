@@ -16,6 +16,10 @@ if !instance_exists(PlayerInPortal)
 		{
 			lockout = true;
 			speed = 0;
+			with PandaSleep
+			{
+				event_perform(ev_alarm,0);	
+			}
 		}
 	}
 }

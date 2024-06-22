@@ -3030,7 +3030,7 @@ function scrPowers(raceOverwrite = -1) {
 				lockoutElementor = true;
 				snd_play_2d(snd_lowa,0,true,false,10);
 				snd_play(sndEmpty)
-				dir = instance_create(x,y,PopupText)
+				var dir = instance_create(x,y,PopupText)
 				dir.mytext = "NOT ENOUGH AMMO";
 				dir.theColour=c_red;
 				drawempty = 30

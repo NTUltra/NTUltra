@@ -2,6 +2,7 @@
 // /@description
 ///@param
 function scrPandaThrow(){
+	var thrownWep = noone;
 	if curse=0 && wep!=0
 	{
 		with PlayerAlarms2
@@ -11,7 +12,8 @@ function scrPandaThrow(){
 		//snd_play_2d(sndEnemySlash);
 		snd_play_2d(sndChickenThrow);
 
-		with instance_create(x,y,ThrowWep)
+		thrownWep = instance_create(x,y,ThrowWep);
+		with thrownWep
 		{
 			alarm[0] = 70;
 			if other.skill_got[5] =1//thronebutt
@@ -72,4 +74,5 @@ function scrPandaThrow(){
 		scrSwapWeps()
 		bwep = 0
 	}
+	return thrownWep;
 }

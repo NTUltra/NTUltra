@@ -2,6 +2,16 @@
 // /@description
 ///@param
 function scrSecondaryPowers() {
+	if KeyCont.key_pick[p] == 1
+	{
+		with enemy
+		{
+			with instance_create(other.x,other.y,SnakeBiteFx)
+			{
+				target = other.id;
+			}
+		}
+	}
 	if (skill_got[maxskill + 1])
 	{
 		switch (race)
@@ -337,6 +347,52 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//PANDA
+			case 14:
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				{
+					
+					if !instance_exists(PandaSleep) 
+					{
+						BackCont.shake += 10;
+						var ang = random(360);
+						repeat(8)
+						{
+							with instance_create(x,y,Dust)
+							{
+								motion_add(ang,2);
+							}
+							ang += 45;
+						}
+						with instance_create(x,y,PandaSleep)
+						{
+							resetSpeed = other.maxSpeed;
+						}
+						snd_play_2d(sndPandaFlopSleep,0.1);
+						maxSpeed = 0;
+						if skill_got[2]
+							scrApplyExtraFeet();
+					}
+					else
+					{
+						BackCont.shake += 10;
+						var ang = random(360);
+						repeat(8)
+						{
+							with instance_create(x,y,Dust)
+							{
+								motion_add(ang,2);
+							}
+							ang += 45;
+						}
+						with PandaSleep
+						{
+							alarm[0] = max(alarm[3],lockoutTime);
+							alarm[4] = alarm[0] - 3;
+						}
+					}
+				}
+			break;
 			//ATOM
 			case 15:
 				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && instance_exists(Floor)
@@ -421,14 +477,13 @@ function scrSecondaryPowers() {
 					}
 					if !instance_exists(HoldToArmour)
 					{
-						if scrCanArmourHeal()
+						if scrCanArmourHeal(false)
 						{
 							instance_create(x,y,HoldToArmour)
 						}
 						else
 						{
 							BackCont.shake += 5;
-							snd_play(sndNoArmour);
 						}
 					}
 				}
@@ -679,7 +734,9 @@ function scrSecondaryPowers() {
 				{
 					var hits = ds_list_create();
 					var al = collision_circle_list(x,y,64,hitme,false,false,hits,false);
-					BackCont.shake += 10;
+					snd_play(sndExplosionS,0.2,false,false,3,false,false,0.6);
+					snd_play_2d(choose(sndHumphryStun1,sndHumphryStun2,sndHumphryStun3,sndHumphryStun4,sndHumphryStun5),0.1);
+					BackCont.shake += 15;
 					for (var i = 0; i < al; i ++)
 					{
 						with hits[| i]

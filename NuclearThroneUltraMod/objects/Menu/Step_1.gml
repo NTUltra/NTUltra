@@ -7,7 +7,6 @@ if mode = 0
 	{
 
 	mode = 1
-	debug("scores: ", instance_number(DailyScore));
 	instance_create(x,y,LoadoutSelect);
 	instance_create(x,y,CreditsSelect)
 	instance_create(x,y,StatsSelect)

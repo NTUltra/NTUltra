@@ -1,5 +1,5 @@
 /// @description WepPickup
-if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont){
+if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont) && !instance_exists(PandaSleep){
 
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
@@ -764,11 +764,18 @@ if(my_health <= 0 && maxhealth > 0)
 	{
 		repeat(10)
 			instance_create(x,y,Dust);
-		my_health = maxhealth;
+		snd_play(sndExplosionS);
+		my_health = 4;
 		x = SkeletonSkull.x;
 		y = SkeletonSkull.y;
+		with instance_create(x,y,HealFX)
+		{
+			sprite_index = sprHealBigFX;
+			depth = other.depth - 1;	
+		}
 		scrForcePosition60fps();
 		BackCont.shake += 30;
+		snd_play_2d(sndSkeletonSkullRevive);
 		snd_play_2d(sndMutant19Cnfm);
 		Sleep(30);
 		with SkeletonSkull

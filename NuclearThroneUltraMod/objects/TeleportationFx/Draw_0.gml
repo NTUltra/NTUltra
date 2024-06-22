@@ -1,7 +1,7 @@
 /// @description TeleportFX
 var xx = targetX;
 var yy = targetY;
-var t = alarm[0] / 6;
+var t = (alarm[0] / 6) + 1;
 /*
 draw_set_alpha(0.5);
 var t = alarm[0] / 6;

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndSkeletonHealSkull",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.738531,
+  "name":"sndSkeletonHealSkull",
+  "parent":{
+    "name":"Skeleton",
+    "path":"folders/Sounds/Player/Skeleton.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndSkeletonHealSkull.ogg",
+  "type":0,
+  "volume":1.0,
+}

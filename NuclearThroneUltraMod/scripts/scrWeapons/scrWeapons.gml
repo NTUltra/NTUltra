@@ -2362,7 +2362,7 @@ function scrWeapons() {
 	wep_load[210] = 50
 	wep_cost[210] = 15
 	wep_sprt[210] = sprBigMissileLauncher
-	wep_area[210] = 14
+	wep_area[210] = 16
 	wep_text[210] = "R.Y.N.O."
 	wep_swap[210] = sndSwapExplosive
 	wep_rad[210] = 0;
@@ -8890,11 +8890,11 @@ function scrWeapons() {
 		}
 	}
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
-	typ_ammo[0] = 333 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 10
+	typ_ammo[0] = 333 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
 
 	if instance_exists(Player){
 		if Player.race = 1 {
-			typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 13
+			typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 12
 			if Player.skill_got[5] {//fish's new thronebutt
 				typ_ammo[1] = 49 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
 			}

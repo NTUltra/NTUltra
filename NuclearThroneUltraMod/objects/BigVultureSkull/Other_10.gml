@@ -28,6 +28,10 @@ if spr_idle == sprBigVultureSkullOpen
 			x = other.x;
 			y = other.y;
 		}
+		with enemy
+		{
+			my_health = 0;	
+		}
 		with BigFishSkull {
 			spr_idle = sprBigFishSkull;
 			sprite_index = sprBigFishSkull;

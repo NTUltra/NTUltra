@@ -381,11 +381,13 @@ if !instance_exists(LevCont) and visible = 1
 		else
 			meleeimmunity--;
 	}
-	if UberCont.mouse__x < x
-		right = -1
-	else if UberCont.mouse__x > x
-		right = 1
-
+	if !instance_exists(StunLockout)
+	{
+		if UberCont.mouse__x < x
+			right = -1
+		else if UberCont.mouse__x > x
+			right = 1
+	}
 	if UberCont.mouse__y < y
 	back = 1
 	else if UberCont.mouse__y > y

@@ -289,8 +289,8 @@ function scrRaces() {
 	race_acti[14] = "PRESS/HOLD <w>THROW<w> WEAPONS"
 	race_butt[14] = "#SHORTER <w>THROWN<w> WEAPON RETURN DELAY#MORE <w>THROW<w> DAMAGE"
 	race_butt_detail[14] = "#REDUCED <w>THROWN<w> WEAPON RETURN DELAY (0.83 SEC)#+20% MORE <w>THROW<w> DAMAGE"
-	race_vision[14] = "PRESS <w>[E]<w> TO: REDIRECT THROWN WEAPONS";
-	race_vision_detail[14] = race_vision[14];
+	race_vision[14] = "PRESS <w>[E]<w> TO <w>TOGGLE<w> <b>SLEEP<b><w>!<w>#WHILE <b>SLEEPING<b> SPIN NEARBY <w>WEAPONS<w> AROUND YOU#<w>CONSECUTIVE HITS<w> WHILE <b>SLEEPING<b> <r>HEAL<r>";
+	race_vision_detail[14] = "PRESS <w>[E]<w> TO <w>TOGGLE<w> <b>SLEEP<b><w>!<w>#WHILE <b>SLEEPING<b> SPIN NEARBY <w>WEAPONS<w> AROUND YOU#EVERY <w>5<w> HITS YOUR <w>SPINNING WEAPONS<w> DEAL#<r>HEAL<r> <w>1<w>";
 	race_lock[14] = "VISIT THE JUNGLE TO UNLOCK"
 	race_have[14] = 0
 	race_swep[14] = 200//panda stick
@@ -329,8 +329,8 @@ function scrRaces() {
 	race_acti[16] = "SERPENT <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
-	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>##CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
-	race_vision_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <w>75%<w> OF YOUR PRIMARY <y>AMMO<y>#75% OF BASE MAX AMMO#TO ONE <gb>ARMOUR<gb>##WHEN ON MAX ARMOUR:#CAN ALSO CONVERT TO THRONEBUTT ARMOUR STRIKE";
+	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y> TO <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>##CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
+	race_vision_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>#COSTS ABOUT 5 AMMO DROPS#8 WHEN USING UNEQUIPPED AMMO#PRIORITIZES SECONDARY AMMO#WHEN ON <gb>MAX ARMOUR<gb>:#CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
 	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES

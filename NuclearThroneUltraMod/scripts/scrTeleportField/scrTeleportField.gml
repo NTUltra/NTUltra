@@ -5,12 +5,16 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = fa
 {
 	if !array_contains(movedEntities,id)
 	{
+		snd_play(sndAtomTeleporationFieldTeleport,0.2);
 		var xOffset = other.x - x;
 		var yOffset = other.y - y;
 		var tx = otherTeleport.x - xOffset;
 		var ty = otherTeleport.y - yOffset;
-		
 		var hitWalls = ds_list_create();
+		var xs = image_xscale;
+		var ys = image_yscale;
+		image_xscale *= 1.5;
+		image_yscale *= 1.5;
 		var al = instance_place_list(tx,ty,WallHitMe,hitWalls,false);
 		for (var i = 0; i < al; i++)
 		{
@@ -19,6 +23,8 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = fa
 				instance_create(x,y,FloorExplo);
 			}
 		}
+		image_xscale = xs;
+		image_yscale = ys;
 		ds_list_destroy(hitWalls);
 		var msk = mask_index;
 		mask_index = mskNoCollision;
@@ -40,6 +46,7 @@ function scrTeleportField(otherTeleport, movedEntities, shouldMove, isHitme = fa
 		instance_create(tx,ty,Smoke);
 		x = tx;
 		y = ty;
+		snd_play(sndAtomTeleporationFieldTeleport,0.2);
 		scrForcePosition60fps();
 		with instance_create(x,y,TeleportMaskReset)
 		{

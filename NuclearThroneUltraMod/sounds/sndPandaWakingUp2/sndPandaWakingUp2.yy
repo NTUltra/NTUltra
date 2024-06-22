@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndPandaWakingUp2",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.371519,
+  "name":"sndPandaWakingUp2",
+  "parent":{
+    "name":"Panda",
+    "path":"folders/Sounds/Player/Panda.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndPandaWakingUp2.ogg",
+  "type":0,
+  "volume":1.0,
+}

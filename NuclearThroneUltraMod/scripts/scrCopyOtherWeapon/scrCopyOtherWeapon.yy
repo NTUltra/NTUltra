@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCopyOtherWeapon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCopyOtherWeapon",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

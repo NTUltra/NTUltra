@@ -1,0 +1,11 @@
+time = 0;
+disappearTime = 0;
+imageIndex = 0;
+target = noone;
+alarm[0] = 1;
+repeats = 3;
+sprOutline = sprSerpentStrikeOutline;
+flipped = 1;
+baseWave = random(10);
+baseWaveStrength = 0.125;
+baseWaveStrength60 = baseWaveStrength * 0.5;

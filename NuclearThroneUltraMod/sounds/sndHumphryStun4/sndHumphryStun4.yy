@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndHumphryStun4",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.137778,
+  "name":"sndHumphryStun4",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndHumphryStun4.ogg",
+  "type":0,
+  "volume":1.0,
+}

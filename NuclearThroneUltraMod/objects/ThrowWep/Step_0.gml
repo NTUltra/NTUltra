@@ -1,42 +1,3 @@
-if image_index < 1
-image_index += random(0.04)
-else
-image_index += 0.4
-
-if !place_meeting(x,y,Wall)
-image_angle += rotspeed*speed
-
-//if curse = 1 and random(6) < 1
-//instance_create(x+random(8)-4,y+random(8)-4,Curse)
-if instance_exists(Player)
-{
-	if returnFX && speed < 3 && alarm[0] < 4 && Player.bwep == 0
-	{
-		returnFX = false;
-		if instance_exists(Player) && !dontteleport
-		{
-			snd_play_2d(sndWepReturn,0.1);
-			with instance_create(x,y,ThrowWepReturnFX)
-			{
-				owner = Player.id;
-				depth = other.depth - 1;
-			}
-		}	
-	}
-    if speed<stopSpeed
-    {
-		if alarm[0] < 1
-			instance_destroy();
-		if canHeavyHeart
-		{
-			canHeavyHeart = false;
-			with scrDropHeavyHeart()
-			{
-				alarm[0] = min(alarm[0],other.alarm[0]);
-			}
-		}
-    }
-}
 if speed > 1
 {
 	var msk = mask_index;
@@ -59,6 +20,11 @@ if speed > 1
 				}
 				if sprite_index != spr_hurt
 				{
+					if team != 0
+						with PandaSleep
+						{
+							event_user(0);
+						}
 					DealDamage(other.dmg);
 					sprite_index = spr_hurt
 					image_index = 0
@@ -115,6 +81,84 @@ if speed > 1
 	image_xscale = 1;
 	image_yscale = 1;
 }
+
+if instance_exists(PandaSleep)
+{
+	image_index = 0;
+	image_angle += rotspeed*speed
+	exit;
+}
+if image_index < 1
+image_index += random(0.04)
+else
+image_index += 0.4
+
+if !place_meeting(x,y,Wall)
+{
+	image_angle += rotspeed*speed
+	if collision_line(xprevious,yprevious,x,y,Wall,false,false)
+	{
+		x = xprevious;
+		y = yprevious;
+		speed *= 0.8;
+	}
+}
+else
+{
+	move_bounce_solid(false)
+	move_outside_solid(direction,2)
+	speed*=0.84;
+	if instance_exists(Player)
+	{
+		if Player.ultra_got[53] == 1 || Player.ultra_got[54] == 1 || Player.ultra_got[55] == 1 || Player.ultra_got[56] == 1
+		{
+			//BOUNCE
+			if instance_exists(enemy)
+			{
+				var nearest = instance_nearest(x,y,enemy);
+				direction = point_direction(x,y,nearest.x,nearest.y);
+			}
+		} 
+		if Player.ultra_got[54] == 1
+		{
+			snd_play(sndExplosion);
+			instance_create(x,y,Explosion);
+		}
+	}	
+}
+
+//if curse = 1 and random(6) < 1
+//instance_create(x+random(8)-4,y+random(8)-4,Curse)
+if instance_exists(Player)
+{
+	if returnFX && speed < 3 && alarm[0] < 4 && Player.bwep == 0
+	{
+		returnFX = false;
+		if instance_exists(Player) && !dontteleport
+		{
+			snd_play_2d(sndWepReturn,0.1);
+			with instance_create(x,y,ThrowWepReturnFX)
+			{
+				owner = Player.id;
+				depth = other.depth - 1;
+			}
+		}	
+	}
+    if speed<stopSpeed
+    {
+		if alarm[0] < 1
+			instance_destroy();
+		if canHeavyHeart
+		{
+			canHeavyHeart = false;
+			with scrDropHeavyHeart()
+			{
+				alarm[0] = min(alarm[0],other.alarm[0]);
+			}
+		}
+    }
+}
+
 if visible
 {
 	var n = instance_nearest(x,y,Portal);
