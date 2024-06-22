@@ -8,18 +8,24 @@ if !openedShop
 		image_speed = 0.5;
 		onTheTable = true;
 	}
-	with instance_create(x - 32,y + 64,VoidShopItem)
+	with instance_create(x -32,y + 64,VoidShopItemAmmoChest)
 	{
 		image_index = 2;
-		image_speed = 0.5;
+		image_speed = 0.4;
 	}
-	with instance_create(x,y + 64,VoidShopItem)
+	with instance_create(x,y + 64,VoidShopItemBigHealthChest)
 	{
 		image_index = 1;
 		image_speed = 0.4;
 	}
+	if UberCont.extraVan > -2
+		with instance_create(x - 32,y + 96,VoidShopItemReduceIdpdVans)
+		{
+			image_index = 2;
+			image_speed = 0.5;
+		}
 	if instance_exists(Player) && !UberCont.secondary_start_wep[Player.race]
-		with instance_create(x,y + 96,VoidShopItem)
+		with instance_create(x,y + 96,VoidShopItemSecondaryStartingWeapon)
 		{
 			image_index = 0;
 			image_speed = 0.4;
@@ -30,5 +36,5 @@ if !openedShop
 			image_index = 0;
 			image_speed = 0.3;
 		}
-	
+	//Weapon type specific chests
 }

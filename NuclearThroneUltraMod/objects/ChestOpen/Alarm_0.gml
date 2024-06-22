@@ -1,4 +1,9 @@
 /// @description lets go
+if instance_exists(VoidSeer)
+{
+	instance_destroy();
+	exit;
+}
 if sprite_index != sprAmmoChestOpen
 	exit;
 

@@ -170,6 +170,8 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.crownHeal = true;
 			UberCont.maxHpIncrease = encryptedRun.maxHpIncrease;
 			UberCont.levelIncrease = encryptedRun.levelIncrease;
+			if variable_struct_exists(encryptedRun, "hadVoidLevelUp")
+				UberCont.hadVoidLevelUp = encryptedRun.hadVoidLevelUp;
 			UberCont.savedSeed = encryptedRun.seed;
 			UberCont.useSeed = true;
 			UberCont.seed = encryptedRun.seed;

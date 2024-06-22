@@ -97,6 +97,7 @@ function scrEndOfRun(){
 		lastSaveLoop = -1;
 		hasBeenSaved = false;
 		levelIncrease = 0;
+		hadVoidLevelUp = false;
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;

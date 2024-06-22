@@ -2,17 +2,18 @@
 if !openedShop
 {
 	openedShop = true;
-	with instance_create(x - 32,y + 64,VoidShopItem)
-	{
-		image_index = 2;
-		image_speed = 0.5;
-	}
-	with instance_create(x,y + 64,VoidShopItem)
+	if !scrIsGamemode(15) && !UberCont.hadVoidLevelUp
+		with instance_create(x - 32,y + 64,VoidShopChallenge4)
+		{
+			image_index = 2;
+			image_speed = 0.5;
+		}
+	with instance_create(x,y + 64,VoidChallengeItem)
 	{
 		image_index = 1;
 		image_speed = 0.4;
 	}
-	with instance_create(x + 32,y + 64,VoidShopItem)
+	with instance_create(x + 32,y + 64,VoidChallengeItem)
 	{
 		image_index = 0;
 		image_speed = 0.3;

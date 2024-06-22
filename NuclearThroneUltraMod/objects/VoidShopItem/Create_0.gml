@@ -1,7 +1,9 @@
 /// @description Init
 depth = 0;
 image_speed = 0;
-name = "CHALLENGE";
+name = "SHOP ITEM";
+challenge = "CHALLENGE";
+reward = "REWARD";
 cost = 7;
 image_speed = 0.4;
 spr_item = sprVoidItemGoldChest;

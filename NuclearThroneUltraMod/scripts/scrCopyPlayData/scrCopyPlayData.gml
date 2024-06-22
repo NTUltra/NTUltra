@@ -68,6 +68,7 @@ function scrCopyPlayData(){
 		crownHeal: UberCont.crownHeal,
 		maxHpIncrease: UberCont.maxHpIncrease,
 		levelIncrease: UberCont.levelIncrease,
+		hadVoidLevelUp: UberCont.hadVoidLevelUp,
 		seed: UberCont.savedSeed,
 		horrorEtaken: Player.horrorEtaken,
 		hogpoints: Player.hogpoints,

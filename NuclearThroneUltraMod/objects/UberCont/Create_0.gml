@@ -157,6 +157,7 @@ crownHeal = false;
 radUp = false;
 maxHpIncrease = 0;
 levelIncrease = 0;
+hadVoidLevelUp = false;
 savedSeed = 0;
 canSave = false;
 canMultiCrown = false;
