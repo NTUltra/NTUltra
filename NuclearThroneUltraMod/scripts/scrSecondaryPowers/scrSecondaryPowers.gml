@@ -478,6 +478,31 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//WEAPON SMITH
+			case 17:
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				{
+					with HoldToShiftAmmo
+					{
+						instance_destroy();
+					}
+					if !instance_exists(HoldToShiftAmmo)
+					{
+						if wep_type[wep] == 0
+						{
+							with instance_create(x,y,PopupText)
+							{
+								mytext = "DOESN'T USE AMMO"
+								theColour=c_red;
+							}
+						}
+						else
+						{
+							instance_create(x,y,HoldToShiftAmmo);
+						}
+					}
+				}
+			break;
 			//ANGEL
 			case 18:
 				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && instance_exists(AngelActive)

@@ -778,6 +778,31 @@ function scrPowers(raceOverwrite = -1) {
 
 	if race == 17
 	{
+		var isRerollingInstead = false;
+		if skill_got[5] && place_meeting(x,y,WeaponMod) && !instance_exists(HoldToRerollWeaponMod)
+		{
+			var wm = instance_place(x,y,WeaponMod);
+			if wm != noone 
+			{
+				if !wm.hasBeenRerolled
+				{
+					isRerollingInstead = true;
+					with instance_create(x,y,HoldToRerollWeaponMod)
+					{
+						target = wm;
+					}
+				}
+				else
+				{
+					with instance_create(x,y,PopupText)
+					{
+						mytext = "ALREADY RE-ROLLED"
+						theColour=c_red;
+					}
+					BackCont.shake += 5;
+				}
+			}
+		}
 		if (ultra_got[68] && altUltra)
 		{
 			//Weapon smith enginuity ultra
@@ -800,22 +825,25 @@ function scrPowers(raceOverwrite = -1) {
 					dirr += 120;
 				}
 			}
-			var wantTier = wep_area[wep];
-			wep ++;
-			if wep > maxwep
-				wep = 1;
-			while (wep_area[wep] != wantTier)
+			if !isRerollingInstead
 			{
+				var wantTier = wep_area[wep];
 				wep ++;
 				if wep > maxwep
 					wep = 1;
+				while (wep_area[wep] != wantTier)
+				{
+					wep ++;
+					if wep > maxwep
+						wep = 1;
+				}
+				with instance_create(x,y,PopupText) {
+					mytext = other.wep_name[other.wep];
+				}
+				scrWeaponHold();
 			}
-			with instance_create(x,y,PopupText) {
-				mytext = other.wep_name[other.wep];
-			}
-			scrWeaponHold();
 		}
-	    else if bwep!=0
+	    else if !isRerollingInstead && bwep != 0
 		{
 			instance_create(x,y,HoldToSmith);
 		}

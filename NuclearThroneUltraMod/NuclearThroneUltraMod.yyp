@@ -1158,6 +1158,8 @@
     {"id":{"name":"HoldToEatEnemy","path":"objects/HoldToEatEnemy/HoldToEatEnemy.yy",},},
     {"id":{"name":"HoldToPlague","path":"objects/HoldToPlague/HoldToPlague.yy",},},
     {"id":{"name":"HoldToReplaceGamemode","path":"objects/HoldToReplaceGamemode/HoldToReplaceGamemode.yy",},},
+    {"id":{"name":"HoldToRerollWeaponMod","path":"objects/HoldToRerollWeaponMod/HoldToRerollWeaponMod.yy",},},
+    {"id":{"name":"HoldToShiftAmmo","path":"objects/HoldToShiftAmmo/HoldToShiftAmmo.yy",},},
     {"id":{"name":"HoldToSkull","path":"objects/HoldToSkull/HoldToSkull.yy",},},
     {"id":{"name":"HoldToSmith","path":"objects/HoldToSmith/HoldToSmith.yy",},},
     {"id":{"name":"HoltToGamemodeDissapear","path":"objects/HoltToGamemodeDissapear/HoltToGamemodeDissapear.yy",},},

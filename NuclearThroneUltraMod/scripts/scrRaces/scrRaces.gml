@@ -345,12 +345,12 @@ function scrRaces() {
 
 
 	race_name[17] = "WEAPONSMITH"//WEAPON SMITH
-	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER <w>TIER<w> WEAPONS"
+	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER <y>TIER<y> WEAPONS"
 	race_acti[17] = "UPGRADE WEAPONS"
-	race_butt[17] = "GET AN EVEN HIGHER#TIER WEAPON WHEN COMBINING WEAPONS"
-	race_butt_detail[17] = "GET AN EVEN HIGHER (+1)#TIER WEAPON WHEN COMBINING WEAPONS"
-	race_vision[17] = "HOLD <w>[E]<w> TO: DOWNGRADE YOUR WEAPONS AND ADD TWO MODS TO IT";
-	race_vision_detail[17] = race_vision[17];
+	race_butt[17] = "HIGHER <y>TIER<y> WHEN <w>UPGRADING<w>#HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM <w>ONCE<w>"
+	race_butt_detail[17] = "ALWAYS <w>+1<w> <g><g>TIER WHEN <w>UPGRADING<w>#INCREASE UPGRADE <y>TIER<y> MAXIMUM#HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM#CAN BE DONE <w>ONCE<w> PER WEAPON MOD"
+	race_vision[17] = "HOLD <w>[E]<w> TO:#<w>SHIFT<w> <y>AMMO TYPE<y>";
+	race_vision_detail[17] = "HOLD <w>[E]<w> TO:#<w>SHIFT<w> <y>AMMO TYPE<y>#OF YOUR <w>PRIMARY<w> TO THE RIGHT##SHIFTING <y>BULLETS<y> CHANGES <y>AMMO<y> COST";
 	race_lock[17] = "MODIFY A WEAPON TO UNLOCK"
 	race_have[17] = 0
 	race_swep[17] = 1

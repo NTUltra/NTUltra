@@ -1,5 +1,6 @@
 image_speed=0;
 shouldClose = true;
+hasBeenRerolled = false;
 wepmod=scrMods();
 if instance_exists(Player) && Player.area == 122 && Player.subarea == 2
 {
@@ -9,7 +10,7 @@ depth = 3;
 if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 {
 	var nearest = instance_nearest_notme(x,y,WeaponMod);
-	var tries = 100;
+	var tries = 200;
 	if nearest != noone
 	{
 		with nearest
@@ -25,7 +26,6 @@ if instance_exists(WeaponMod) && instance_number(WeaponMod) > 1
 		}
 	}
 }
-
 wepmod1=0;
 wepmod2=0;
 wepmod3=0;

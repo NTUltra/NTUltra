@@ -62,7 +62,7 @@ function scrCrowns() {
 	crown_tips[9] = "you really like these weapons"
 
 	crown_name[10] = "[CROWN OF DIFFICULTY]"
-	crown_text[10] = "<w>WEAPON<w> DROP <w>TIER<w> INCREASES#MORE EACH AREA#ENEMIES HAVE MORE <r>HEALTH<r>#AND ARE MORE <r>AGGRESSIVE<r>"
+	crown_text[10] = "<w>WEAPON<w> DROP <y>TIER<y> INCREASES#MORE EACH AREA#ENEMIES HAVE MORE <r>HEALTH<r>#AND ARE MORE <r>AGGRESSIVE<r>"
 	crown_used[10] = 0
 	crown_tips[10] = "acceleration"
 
@@ -158,7 +158,7 @@ function scrCrowns() {
 	//Secret crown of destiny
 	crown_name[24] = "[CROWN OF SLOTH]"
 	crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>";
-	//crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>#EACH AREA THE <w>DIFFICULTY<w>#AND WEAPON <w>TIER<w> DECREASES#INSTEAD OF INCREASES"
+	//crown_text[24] = "ALL PROJECTILES ARE <w>SLOWER<w>#EVERYONE MOVES SLIGHTLY <w>SLOWER<w>#EACH AREA THE <w>DIFFICULTY<w>#AND WEAPON <y>TIER<y> DECREASES#INSTEAD OF INCREASES"
 	crown_used[24] = 0
 	crown_tips[24] = "slow it down there buddy"
 	

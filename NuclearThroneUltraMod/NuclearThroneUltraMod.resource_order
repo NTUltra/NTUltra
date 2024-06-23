@@ -953,6 +953,8 @@
     {"name":"HoldToEatEnemy","order":98,"path":"objects/HoldToEatEnemy/HoldToEatEnemy.yy",},
     {"name":"HoldToPlague","order":111,"path":"objects/HoldToPlague/HoldToPlague.yy",},
     {"name":"HoldToReplaceGamemode","order":69,"path":"objects/HoldToReplaceGamemode/HoldToReplaceGamemode.yy",},
+    {"name":"HoldToRerollWeaponMod","order":118,"path":"objects/HoldToRerollWeaponMod/HoldToRerollWeaponMod.yy",},
+    {"name":"HoldToShiftAmmo","order":119,"path":"objects/HoldToShiftAmmo/HoldToShiftAmmo.yy",},
     {"name":"HoldToSkull","order":113,"path":"objects/HoldToSkull/HoldToSkull.yy",},
     {"name":"HoldToSmith","order":50,"path":"objects/HoldToSmith/HoldToSmith.yy",},
     {"name":"HoltToGamemodeDissapear","order":72,"path":"objects/HoltToGamemodeDissapear/HoltToGamemodeDissapear.yy",},
