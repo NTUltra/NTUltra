@@ -22,12 +22,26 @@ with Player
 	    //GO through array and check if there is a weapon of a higher tier first
 	    highesttier = max(wep_area[wep],wep_area[bwep]);
     
-	    if highesttier=-1
-			highesttier=irandom(4);
-			
+	    if highesttier = -1
+			highesttier = irandom(4);
+			var dir=0;
+			var highestPossible = 12;
 			highesttier = min(highesttier,highest_wep_tier-2);//Cap it
-	        var dir=0;
-			var targetTier = highesttier+choose(1,0)+skill_got[5];
+			var targetTier = highesttier;
+			if (skill_got[5])
+			{
+				if targetTier < irandom_range(19,24)
+				{
+					targetTier = targetTier + 1;
+				}
+			}
+			else
+			{
+				if targetTier < 13
+				{
+					targetTier = targetTier + choose(1,0)
+				}
+			}
 	        var newwep = wep;
 	            do
 	            {

@@ -733,7 +733,7 @@ function scrNextLevel() {
 	if loops < 1
 	{
 		if scrIsCrown(10)
-			hard = min(14,hard);
+			hard = min(18,hard);
 		else
 			hard = min(12,hard);	
 	}
