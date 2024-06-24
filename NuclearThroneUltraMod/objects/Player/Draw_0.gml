@@ -250,7 +250,7 @@ draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(w
 }}
 }
 var playerAlpha = 1;
-if instance_exists(Decoy) || rollIframe > 0
+if instance_exists(Decoy) || rollIframe > 0 || instance_exists(Ghosting)
 	playerAlpha = 0.4;
 if hammerheadDig <= 0
 {
