@@ -1,7 +1,7 @@
 event_inherited();
 friction = 0.45
 image_speed = 0.4
-
+IsShielding = 0;
 hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
 alienIntestines = 0;
@@ -11,6 +11,10 @@ metabolism = 0;
 hammerheadtimer=0;
 hammerheadcounter=0;
 skill_got = Player.skill_got;
+peaceBarrierTime = 0;
+peaceBarrierDuration = 70;
+peaceBarriers = 0;
+peaceBarriersMax = 2;
 if skill_got[26]//HAMMER HEAD
 {
 	hammerheadcounter = 20;

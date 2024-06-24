@@ -261,6 +261,16 @@ function scrFire(canDrown = true) {
 	    do{wep=round(random(maxwep))
 	    }until (wep!=69&&wep!=298)//not Oops gun pls and golden oops gun
 	}
+	if instance_exists(AutoAim)
+	{
+		var n = instance_nearest(x,y,enemy);
+		if n != noone && n.team != 2
+		{
+			UberCont.mouse__x = n.x;
+			UberCont.mouse__y = n.y;
+		}
+	}
+
 	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	if wep_type[wep] == 5 && !instance_exists(LaserBrainFX)
 	{

@@ -1094,6 +1094,8 @@ if my_health <= 0 && armour < 1
 			{
 			mySize = 2
 			mask_index = other.mask_index
+			if mask_index == mskPickupThroughWall
+				mask_index = mskPlayer;
 			motion_add(other.direction,other.speed)
 			speed += max(0,-other.my_health/5)
 			if other.bskin=2

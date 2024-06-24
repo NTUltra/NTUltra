@@ -247,8 +247,8 @@ function scrRaces() {
 	race_acti[12] = "<w>DUPLICATE<w>"
 	race_butt[12] = "GAIN EVEN MORE <y>AMMO<y>#DEPENDING ON NUMBER OF DUPLICATES"
 	race_butt_detail[12] = "EXTRA AMMO GAINED PER DUPLICATE#IS DOUBLED"
-	race_vision[12] = "PRESS <w>[E]<w> TO: ";
-	race_vision_detail[12] = race_vision[12];
+	race_vision[12] = "HOLD <w>[E]<w> TO:#TURN YOUR <w>DUPLICATES<w> INTO <p>HACKS<p>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>";
+	race_vision_detail[12] = "HOLD <w>[E]<w> TO:#TURN YOUR DUPLICATES INTO <p>HACKS<p>#TEMPORARILY ENABLED <w>IN ORDER<w>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>##AFTER ALL HACKS ARE ENABLED (3+ DUPES)#NEXT DUPLICATES INCREASES <w>DURATION<w>";
 	race_lock[12] = "KILL A MIMIC TO UNLOCK"
 	race_have[12] = 0
 	race_swep[12] = 39//golden revolver

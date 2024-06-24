@@ -1,4 +1,4 @@
-/// @description Fish Gun Warrant Ultra B
+/// @description INFINITE AMMO
 with GunWarrant
 instance_destroy();
 

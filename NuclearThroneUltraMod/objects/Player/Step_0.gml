@@ -2402,7 +2402,7 @@ if race==18
 		        }
         
 			    //GET HURT when flying too long unless acent ultra D
-			    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index=mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
+			    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index == mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 			    {
 				    //var wall = instance_nearest(x,y,Wall);
 					if is60fps
@@ -2686,75 +2686,78 @@ if hspeed != 0
 var vs = sign(vSlide);
 var hs = sign(hSlide);
 var slideDis = 2;
-if(race != 18)
+if !instance_exists(Ghosting)
 {
-	var dt = 1;
-	if is60fps
-		dt = 0.5;
-	var h = sign(hspeed);
-	if place_meeting(x+hspeed+h,y,WallHitMe)
+	if(race != 18)
 	{
-		var hi = 0;
-		var maxh = hspeed + 2;
-		while(!place_meeting(x+h,y,WallHitMe) && hi < maxh)
+		var dt = 1;
+		if is60fps
+			dt = 0.5;
+		var h = sign(hspeed);
+		if place_meeting(x+hspeed+h,y,WallHitMe)
 		{
-			x += h;
-			hi ++;
+			var hi = 0;
+			var maxh = hspeed + 2;
+			while(!place_meeting(x+h,y,WallHitMe) && hi < maxh)
+			{
+				x += h;
+				hi ++;
+			}
+			hspeed = 0;
+			var abV = abs(vSlide);
+			if (abV < 0.5)
+			{
+				var sv = sign(vSlide);
+				var vstep = wallSlideSpeed * sign(vSlide);
+				if !place_meeting(x,y + vstep,WallHitMe)
+					y += vstep;
+				if abV > slideEnd
+				{
+					vSlide -= wallSlideTime * sv * dt;
+				}
+				else
+				{
+					vSlide = 0;	
+				}
+			}
+			hitWall = true;
 		}
-		hspeed = 0;
-		var abV = abs(vSlide);
-		if (abV < 0.5)
+		var v = sign(vspeed);
+		if place_meeting(x,y+vspeed+v,WallHitMe)
 		{
-			var sv = sign(vSlide);
-			var vstep = wallSlideSpeed * sign(vSlide);
-			if !place_meeting(x,y + vstep,WallHitMe)
-				y += vstep;
-			if abV > slideEnd
+			var vi = 0;
+			var maxv = hspeed + 2;
+			while(!place_meeting(x,y+v,WallHitMe) && vi < maxv)
 			{
-				vSlide -= wallSlideTime * sv * dt;
+				y += v;
+				vi ++;
 			}
-			else
+			vspeed = 0;
+			hitWall = true;
+			var abH = abs(hSlide);
+			if (abH < 0.5)
 			{
-				vSlide = 0;	
+				var sh = sign(hSlide);
+				var hstep = wallSlideSpeed * sh;
+				if !place_meeting(x + hstep,y,WallHitMe)
+					x += hstep;
+				if abH > slideEnd
+				{
+					hSlide -= wallSlideTime * sh * dt;
+				}
+				else
+				{
+					hSlide = 0;	
+				}
 			}
 		}
-		hitWall = true;
 	}
-	var v = sign(vspeed);
-	if place_meeting(x,y+vspeed+v,WallHitMe)
-	{
-		var vi = 0;
-		var maxv = hspeed + 2;
-		while(!place_meeting(x,y+v,WallHitMe) && vi < maxv)
-		{
-			y += v;
-			vi ++;
-		}
-		vspeed = 0;
+	else if place_meeting(x,y,WallHitMe)
+	{	
 		hitWall = true;
-		var abH = abs(hSlide);
-		if (abH < 0.5)
-		{
-			var sh = sign(hSlide);
-			var hstep = wallSlideSpeed * sh;
-			if !place_meeting(x + hstep,y,WallHitMe)
-				x += hstep;
-			if abH > slideEnd
-			{
-				hSlide -= wallSlideTime * sh * dt;
-			}
-			else
-			{
-				hSlide = 0;	
-			}
-		}
+		flying = 2;
+		mask_index = mskPickupThroughWall;
 	}
-}
-else if place_meeting(x,y,WallHitMe)
-{	
-	hitWall = true;
-	flying = 2;
-	mask_index = mskPickupThroughWall;
 }
 if !hitWall
 {

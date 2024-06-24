@@ -315,6 +315,20 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
+			//YUNG CUZ
+			case 12:
+				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				{
+					with HoldToHack
+					{
+						instance_destroy();
+					}
+					if !instance_exists(HoldToHack)
+					{
+						instance_create(x,y,HoldToHack)
+					}
+				}
+			break;
 			//SHEEP
 			case 13:
 				if KeyCont.key_pick[p] == 1 && !instance_exists(SheepSuperCharge)

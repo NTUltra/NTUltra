@@ -129,6 +129,20 @@ if (my_health<prevhealth)
 			scrCollectAmmo(1);
 		}
 	}
+	//INNER PEACE
+	if (skill_got[46]) && (my_health<prevhealth && alarm[3] < 1 && alarm[1] < 1)
+	{
+		if peaceBarriers > 0
+		{
+			my_health = prevhealth;
+			audio_stop_sound(snd_hurt);
+			snd_play_2d(sndPeaceHit,0.1);
+			scrGiveEuphoriaShield();
+			alarm[3] = max(alarm[3],6);
+			peaceBarriers -= 1;
+		}
+		peaceBarrierTime = 0;
+	}
 	//Took a hit?
 	if skill_got[12]//euphoria resistance?
 	{

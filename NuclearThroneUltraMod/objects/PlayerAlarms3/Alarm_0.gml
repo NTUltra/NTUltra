@@ -51,27 +51,57 @@ if enemyHealthWasChanged || playerHealthWasChanged
 					instance_create(x,y,AdrenalineHeal);
 				}
 			}
-			if skill_got[46] && peaceBarriers < peaceBarriersMax
+			if skill_got[46]
 			{
-				peaceBarrierTime += 1/max(1,(peaceBarriers + 0.85));
-				if peaceBarrierTime > peaceBarrierDuration
+				with YungCuzDupe
 				{
-					peaceBarrierTime = 0;
-					peaceBarriers += 1;
-					snd_play_2d(sndGainProtection);
-					BackCont.shake += 15;
-					with instance_create_depth(x,y,depth + 1, GainBarrier)
+					if peaceBarriers < peaceBarriersMax
 					{
-						owner = other.id;
-						sprite_index = other.sprite_index;
+						peaceBarrierTime += 1/max(1,(peaceBarriers + 0.85));
+						if peaceBarrierTime > peaceBarrierDuration
+						{
+							peaceBarrierTime = 0;
+							peaceBarriers += 1;
+							snd_play_2d(sndYungCuzDupeGainProtection);
+							BackCont.shake += 10;
+							with instance_create_depth(x,y,depth + 1, GainBarrier)
+							{
+								owner = other.id;
+								sprite_index = other.sprite_index;
+							}
+							with instance_create_depth(x,y,depth + 1, GainBarrier)
+							{
+								owner = other.id;
+								scale += 0.5;
+								alpha = 0;
+								alarm[1] = 5;
+								sprite_index = other.sprite_index;
+							}
+						}
 					}
-					with instance_create_depth(x,y,depth + 1, GainBarrier)
+				}
+				if peaceBarriers < peaceBarriersMax
+				{
+					peaceBarrierTime += 1/max(1,(peaceBarriers + 0.85));
+					if peaceBarrierTime > peaceBarrierDuration
 					{
-						owner = other.id;
-						scale += 0.75;
-						alpha = 0;
-						alarm[1] = 6;
-						sprite_index = other.sprite_index;
+						peaceBarrierTime = 0;
+						peaceBarriers += 1;
+						snd_play_2d(sndGainProtection);
+						BackCont.shake += 15;
+						with instance_create_depth(x,y,depth + 1, GainBarrier)
+						{
+							owner = other.id;
+							sprite_index = other.sprite_index;
+						}
+						with instance_create_depth(x,y,depth + 1, GainBarrier)
+						{
+							owner = other.id;
+							scale += 0.75;
+							alpha = 0;
+							alarm[1] = 6;
+							sprite_index = other.sprite_index;
+						}
 					}
 				}
 			}
