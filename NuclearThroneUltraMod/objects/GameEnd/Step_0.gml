@@ -9,7 +9,7 @@ if instance_exists(PlayerInEnding)
 			x = other.x;
 			y = other.y;
 			speed = 0;
-			if alarm[0] < 1
+			if alarm[0] < 1 && !isFading
 			{
 				if spr_go_sit == spr_idle
 				{

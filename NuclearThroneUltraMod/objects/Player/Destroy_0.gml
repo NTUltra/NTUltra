@@ -1,5 +1,5 @@
 //UNLOCK EASY MODE
-if area=1 && subarea=1 && loops=0 && my_health <= 0
+if area=1 && subarea=1 && loops=0 && visible && my_health < 1
 scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
 audio_stop_sound(sndFishRollUpgLoop);
 if scrCheckLoopAll()
@@ -19,7 +19,7 @@ if scrIsGamemode(8)
 			scrUnlockBSkin(22,"FOR SURVIVING THE VANS!#FOR ATLEAST 30 SECONDS",8);
 	}
 }
-if skill_got[18]//Last wish
+if skill_got[18] && visible && my_health < 1//Last wish
 {
 with UberCont
 lastwishused=true;
@@ -34,7 +34,7 @@ if ultra_got[87] && altUltra
 }
 audio_stop_sound(sndHorrorLoop);
 audio_stop_sound(sndHorrorLoopTB);
-if actualLives < 1 && !reincarnate && visible
+if actualLives < 1 && !reincarnate && visible && my_health < 1
 {
 	with MusCont
 	{
@@ -60,7 +60,7 @@ if actualLives < 1 && !reincarnate && visible
 	}
 }
 
-if ultra_got[40]==1
+if ultra_got[40]==1 && visible && my_health < 1
 {
 //REBEL DEFENCE PASSIVE
 var ang = random(360)
@@ -78,7 +78,7 @@ ang += 360/28
 }
 }
 
-if bskin=2 && race = 12
+if bskin=2 && race = 12 && visible && my_health < 1
 {
 with instance_create(x,y,YungCuzCap)
 {
@@ -86,7 +86,7 @@ motion_add(random(360),2+random(8) );
 }
 
 }
-if race == 17 && bskin == 0
+if race == 17 && bskin == 0 && visible && my_health < 1
 {
 	snd_play(sndPillarBreak);
 	repeat(3)
@@ -96,7 +96,7 @@ if race == 17 && bskin == 0
 		}
 	}
 }
-if race = 18
+if race = 18 && visible && my_health < 1
 {
 
 repeat(13 )
@@ -104,7 +104,7 @@ repeat(13 )
     motion_add(random(360),5+random(10) );}
 
 }
-if race == 25
+if race == 25 && visible && my_health < 1
 {
 	repeat(13)
 	{
@@ -115,11 +115,11 @@ if race == 25
 	}
 }
 
-if race=11
+if race = 11 && visible && my_health < 1
 {
-instance_create(x,y,Explosion);
+	instance_create(x,y,Explosion);
 }
-if race == 24
+if race == 24 && visible && my_health < 1
 {
 	snd_play(sndSpark1,0);
 	snd_play(sndRoll,0);
@@ -164,25 +164,28 @@ if race == 24
 		ang += 120;
 	}
 }
-myCorpse = instance_create(x,y,MovingCorpseDynamic)
-with myCorpse
+if visible && my_health < 1
 {
-	mySize = 1
-	mask_index = other.mask_index
-	motion_add(other.direction,other.speed)
-	speed += max(0,-other.my_health/5)
-	sprite_index = other.spr_dead
-	image_xscale = other.right
-	if speed > 16
-	speed = 16
-	if other.race = 4
+	myCorpse = instance_create(x,y,MovingCorpseDynamic)
+	with myCorpse
 	{
-	p = other.p
-	with instance_create(x,y,MeltDead)
-	{
-	p= other.p
-	creator = other.id
-	}
+		mySize = 1
+		mask_index = other.mask_index
+		motion_add(other.direction,other.speed)
+		speed += max(0,-other.my_health/5)
+		sprite_index = other.spr_dead
+		image_xscale = other.right
+		if speed > 16
+		speed = 16
+		if other.race = 4
+		{
+		p = other.p
+		with instance_create(x,y,MeltDead)
+		{
+		p= other.p
+		creator = other.id
+		}
+		}
 	}
 }
 
@@ -203,7 +206,7 @@ if visible && my_health < 1
 		snd_dead = other.snd_dead;
 		alarm[0] = 2;
 	}
-if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
+if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && visible && my_health < 1
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
 		scrWeapons()
@@ -226,7 +229,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wepmod4 = other.wepmod4;
 	}
 
-if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
+if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && visible && my_health < 1
 {
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
@@ -250,7 +253,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
 		wepmod4 = other.bwepmod4;
 	}
 }
-if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0)
+if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && visible && my_health < 1
 {
 	with instance_create(x,y,WepPickupForOneWepOnly)
 	{
@@ -314,7 +317,7 @@ snd_play_2d(sndExplosionXL);
 
 
 //Crown of death
-if scrIsCrown(3)
+if scrIsCrown(3) && visible && my_health < 1
 {
 	instance_create(x,y,CrownOfDeathBoom);
 }
@@ -536,7 +539,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			var actualLoops = other.loops - loadedLoops;
 			ctot_kill[other.race] += actualKills
 			//ctot_time[other.race]+=time;
-			if other.my_health<1&& other.visible
+			if other.my_health<1 && armour < 1 && other.visible
 				ctot_dead[other.race] += 1
 
 			ctot_played[other.race] += 1;
@@ -559,7 +562,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			{
 				ctot_kill[0]+=actualKills
 				//ctot_time[other.race]+=time;
-				if other.my_health<1&& other.visible
+				if other.my_health<1 && armour < 1 && other.visible
 					ctot_dead[0] += 1
 	
 				ctot_played[0] += 1;

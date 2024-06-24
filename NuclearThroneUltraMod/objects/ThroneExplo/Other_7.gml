@@ -5,7 +5,9 @@ if sprite_index == spr_death
 	image_index = image_number - 1;
 	if instance_exists(BigGenerator)
 	{
-		instance_create_depth(x,y - 8,depth - 1,GameEnd);
+		with ThronePipes
+			depth = other.depth + 1;
+		instance_create_depth(x,y - 8,depth - 2,GameEnd);
 		speed = 0;
 	}
 	else if !instance_exists(SurvivalWave)

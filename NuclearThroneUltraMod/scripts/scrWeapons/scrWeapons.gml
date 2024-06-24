@@ -2315,10 +2315,10 @@ function scrWeapons() {
 	wep_name[206] = "SMALL MISSILE LAUNCHER"
 	wep_type[206] = 4
 	wep_auto[206] = 0
-	wep_load[206] = 32
+	wep_load[206] = 35
 	wep_cost[206] = 2
 	wep_sprt[206] = sprSmallMissileLauncher
-	wep_area[206] = 9
+	wep_area[206] = 10
 	wep_text[206] = "theres a bigger one"
 	wep_swap[206] = sndSwapExplosive
 	wep_rad[206] = 0;
@@ -2326,10 +2326,10 @@ function scrWeapons() {
 	wep_name[207] = "MISSILE LAUNCHER"
 	wep_type[207] = 4
 	wep_auto[207] = 0
-	wep_load[207] = 50
+	wep_load[207] = 55
 	wep_cost[207] = 5
 	wep_sprt[207] = sprMissileLauncher
-	wep_area[207] = 11
+	wep_area[207] = 13
 	wep_text[207] = "you should really try eagle eyes#with this gun"
 	wep_swap[207] = sndSwapExplosive
 	wep_rad[207] = 0;
@@ -3749,9 +3749,9 @@ function scrWeapons() {
 	wep_type[334] = 4
 	wep_auto[334] = 0
 	wep_load[334] = 12
-	wep_cost[334] = 1.5
+	wep_cost[334] = 3
 	wep_sprt[334] = sprIonBomb
-	wep_area[334] = 5
+	wep_area[334] = 6
 	wep_text[334] = "explosions out of nowhere"
 	wep_swap[334] = sndSwapExplosive
 	wep_rad[334] = 0;
@@ -5218,6 +5218,7 @@ function scrWeapons() {
 	wep_text[463] = "shotgun shoulders spawns more#pellets upon pierce"
 	wep_swap[463] = sndSwapShotgun
 	wep_rad[463] = 0;
+	wep_popup[463] = "PIERCING SLUGGER";
 	
 	wep_name[464] = "GATLING FLUGGER"
 	wep_type[464] = 2

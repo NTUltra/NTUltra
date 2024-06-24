@@ -133,3 +133,7 @@ version = 2;
 yReset = y;
 maxSpeed = 3;
 instance_create_depth(x,y-44,depth - 1,ThroneSitter);
+
+skippable = false;
+if GetPlayerLoops() > 0
+	skippable = true;

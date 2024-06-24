@@ -517,6 +517,10 @@ if !instance_exists(LevCont) and visible = 1
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			instance_create(x+32,y,PinkSheep);
 			instance_create(x+48,y,ExplosiveSheep);
+			with enemy
+			{
+				my_health = 0;	
+			}
 			//scrn++;
 			
 			//thing = instance_create(f.x + 16,f.y + 16,PopupText);

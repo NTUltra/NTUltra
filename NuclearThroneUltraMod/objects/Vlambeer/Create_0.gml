@@ -1,3 +1,5 @@
+if instance_exists(Credits)
+	exit;
 if instance_exists(Player)
 {
 	instance_destroy()

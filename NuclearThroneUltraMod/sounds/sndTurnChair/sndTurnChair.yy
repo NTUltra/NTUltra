@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndTurnChair",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.767563,
+  "name":"sndTurnChair",
+  "parent":{
+    "name":"Captain",
+    "path":"folders/Sounds/Enemies/Boss/Captain.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndTurnChair.wav",
+  "type":0,
+  "volume":1.0,
+}

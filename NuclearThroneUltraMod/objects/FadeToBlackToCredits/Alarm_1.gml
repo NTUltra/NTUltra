@@ -1,8 +1,17 @@
 /// @description Roll credits!
 with UberCont
 {
-	debug("ROLL CREDITS");
-	scrRestart();
 	if other.endingType == 0
-		room_goto(romCredits);
+	{
+		with instance_create(x,y,Credits)
+		{
+			type = 0;
+			wepA = PlayerInEnding.awep
+			wepB = PlayerInEnding.bwep
+			wepC = PlayerInEnding.cwep
+			sit = sprMutant1Sit;
+			persistent = true;
+		}
+	}
+	room_goto(romCredits);
 }

@@ -1,9 +1,12 @@
 /// @description Itterate credit sequence and decide ending
 text = credits[creditIndex][0];
 dullText = scrReplaceAllColourCodes(text);
-alarm[0] = credits[creditIndex][0];
-creditIndex += 1;
-if creditIndex > array_length(credits)
+if creditIndex >= array_length(credits) - 1
 {
 	event_user(0);
+}
+else
+{
+	alarm[0] = credits[creditIndex][1];
+	creditIndex += 1;
 }

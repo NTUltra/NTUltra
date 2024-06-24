@@ -1,4 +1,6 @@
 /// @description Black sword? and UNLOCKABLES
+if instance_exists(Credits)
+	exit;
 if swapChar
 	exit;
 consecutiveGoodBloodGambles = 0;

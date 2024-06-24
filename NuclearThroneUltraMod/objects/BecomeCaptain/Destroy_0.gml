@@ -1,5 +1,7 @@
 instance_create(x,y,IDPDCaptain)
 instance_create(x,y,CaptainBrokenDesk);
+with BigTV
+	my_health = 0;
 with instance_create(x,y,ScrapBossCorpse)
 {
 	mySize = 2;

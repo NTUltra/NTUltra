@@ -3,7 +3,7 @@ mySize = 2;
 
 spr_inactive = sprBigGeneratorInactive;
 spr_idle = spr_inactive
-spr_hurt = sprBigGeneratorInactive
+spr_hurt = spr_inactive
 spr_dead = sprBigGeneratorDead
 loops = GetPlayerLoops();
 if loops > 0

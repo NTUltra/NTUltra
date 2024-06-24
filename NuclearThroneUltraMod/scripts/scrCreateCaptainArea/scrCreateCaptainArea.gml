@@ -14,6 +14,8 @@ function scrCreateCaptainArea() {
 				instance_create(x + fxx,y - fyy,Floor);
 			}
 		}
+		//TV
+		instance_create(x + 32, y - 256 - 96,BigTV)
 		//Captain:
 		instance_create(x + 32, y - 256,BecomeCaptain);
 		//Middle floor

@@ -1,2 +1,3 @@
 /// @description Temp idle animation transition
-alarm[0] = 60;
+if !isFading
+	alarm[0] = 60;

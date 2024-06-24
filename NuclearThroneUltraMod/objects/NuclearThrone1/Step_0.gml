@@ -10,6 +10,23 @@ if intro
 		BackCont.shake = max(BackCont.shake, 8);
 if immune
 {
+	if skippable && my_health < maxhealth && intro
+	{
+		if alarm[0] > 1
+			event_perform(ev_alarm,0);
+		if alarm[7] > 15
+		{
+			alarm[7] = 15;
+		}
+		if alarm[2] > 15
+		{
+			alarm[2] = 15;	
+		}
+		if alarm[3] > 15
+		{
+			alarm[3] = 15;	
+		}
+	}
 	my_health = maxhealth;
 	sprite_index = spr_idle;
 	speed = 0;
