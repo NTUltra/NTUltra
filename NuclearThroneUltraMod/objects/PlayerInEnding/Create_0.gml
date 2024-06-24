@@ -12,3 +12,11 @@ image_speed = 0.4;
 right = Player.right;
 sprite_index = Player.sprite_index;
 image_index = Player.image_index;
+awep = Player.wep_sprt[Player.wep];
+bwep = Player.wep_sprt[Player.bwep];
+cwep = 0;
+if Player.cwep != 0
+	cwep = Player.wep_sprt[Player.cwep];
+Player.lockout = true;
+
+endingType = 0;

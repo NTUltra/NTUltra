@@ -1,2 +1,4 @@
 /// @description Fade to black
-instance_create(x,y,FadeToBlackToCredits);
+with instance_create(x,y,FadeToBlackToCredits) {
+	endingType = other.endingType;	
+}

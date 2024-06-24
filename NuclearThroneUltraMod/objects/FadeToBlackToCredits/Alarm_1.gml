@@ -3,5 +3,6 @@ with UberCont
 {
 	debug("ROLL CREDITS");
 	scrRestart();
-	room_goto(romCredits);
+	if other.endingType == 0
+		room_goto(romCredits);
 }

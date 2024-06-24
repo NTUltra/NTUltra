@@ -9,11 +9,18 @@ if instance_exists(PlayerInEnding)
 			x = other.x;
 			y = other.y;
 			speed = 0;
-			if sprite_index != spr_go_sit && sprite_index != spr_sit
+			if alarm[0] < 1
 			{
-				sprite_index = spr_go_sit;
-				maxSpeed = 0;
-				image_index = 0;
+				if spr_go_sit == spr_idle
+				{
+					event_user(0);
+				}
+				if sprite_index != spr_go_sit && sprite_index != spr_sit
+				{
+					sprite_index = spr_go_sit;
+					maxSpeed = 0;
+					image_index = 0;
+				}
 			}
 		}
 	}

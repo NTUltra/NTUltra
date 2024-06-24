@@ -27,200 +27,200 @@ function scrLoadRace() {
 	spr_walk=sprMutant3BWalk;
 	spr_hurt=sprMutant3BHurt;
 	spr_dead=sprMutant3BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant3BGoSit;
+	spr_sit = sprMutant3BSit;
 	break;
 	case 4:
 	spr_idle=sprMutant4BIdle;
 	spr_walk=sprMutant4BWalk;
 	spr_hurt=sprMutant4BHurt;
 	spr_dead=sprMutant4BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant4BGoSit;
+	spr_sit = sprMutant4BSit;
 	break;
 	case 5:
 	spr_idle=sprMutant5BIdle;
 	spr_walk=sprMutant5BWalk;
 	spr_hurt=sprMutant5BHurt;
 	spr_dead=sprMutant5BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant5BGoSit;
+	spr_sit = sprMutant5BSit;
 	break;
 	case 6:
 	spr_idle=sprMutant6BIdle;
 	spr_walk=sprMutant6BWalk;
 	spr_hurt=sprMutant6BHurt;
 	spr_dead=sprMutant6BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant6BGoSit;
+	spr_sit = sprMutant6BSit;
 	break;
 	case 7:
 	spr_idle=sprMutant7BIdle;
 	spr_walk=sprMutant7BWalk;
 	spr_hurt=sprMutant7BHurt;
 	spr_dead=sprMutant7BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant7BGoSit;
+	spr_sit = sprMutant7BSit;
 	break;
 	case 8:
 	spr_idle=sprMutant8BIdle;
 	spr_walk=sprMutant8BWalk;
 	spr_hurt=sprMutant8BHurt;
 	spr_dead=sprMutant8BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant8BGoSit;
+	spr_sit = sprMutant8BSit;
 	break;
 	case 9:
 	spr_idle=sprMutant9BIdle;
 	spr_walk=sprMutant9BWalk;
 	spr_hurt=sprMutant9BHurt;
 	spr_dead=sprMutant9Dead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant9BGoSit;
+	spr_sit = sprMutant9BSit;
 	break;
 	case 10:
 	spr_idle=sprMutant10BIdle;
 	spr_walk=sprMutant10BWalk;
 	spr_hurt=sprMutant10BHurt;
 	spr_dead=sprMutant10BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant10BGoSit;
+	spr_sit = sprMutant10BSit;
 	break;
 	case 11:
 	spr_idle=sprMutant11BIdle;
 	spr_walk=sprMutant11BWalk;
 	spr_hurt=sprMutant11BHurt;
 	spr_dead=sprMutant11BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant11BIdle;//TODO
+	spr_sit = sprMutant11BIdle;//TODO
 	break;
 	case 12:
 	spr_idle=sprMutant12BIdle;
 	spr_walk=sprMutant12BWalk;
 	spr_hurt=sprMutant12BHurt;
 	spr_dead=sprMutant12BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant12BIdle;//TODO
+	spr_sit = sprMutant12BIdle;//TODO
 	break;
 	case 13:
 	spr_idle=sprMutant13BIdle;
 	spr_walk=sprMutant13BWalk;
 	spr_hurt=sprMutant13BHurt;
 	spr_dead=sprMutant13BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant13BIdle;//TODO
+	spr_sit = sprMutant13BIdle;//TODO
 	break;
 	case 14:
 	spr_idle=sprMutant14BIdle;
 	spr_walk=sprMutant14BWalk;
 	spr_hurt=sprMutant14BHurt;
 	spr_dead=sprMutant14BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant14BIdle;//TODO
+	spr_sit = sprMutant14BIdle;//TODO
 	break;
 	case 15:
 	spr_idle=sprMutant15BIdle;
 	spr_walk=sprMutant15BWalk;
 	spr_hurt=sprMutant15BHurt;
 	spr_dead=sprMutant15BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant15BIdle;//TODO
+	spr_sit = sprMutant15BIdle;//TODO
 	break;
 	case 16:
 	spr_idle=sprMutant16BIdle;
 	spr_walk=sprMutant16BWalk;
 	spr_hurt=sprMutant16BHurt;
 	spr_dead=sprMutant16BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant16BIdle;//TODO
+	spr_sit = sprMutant16BIdle;//TODO
 	break;
 	case 17:
 	spr_idle=sprMutant17BIdle;
 	spr_walk=sprMutant17BWalk;
 	spr_hurt=sprMutant17BHurt;
 	spr_dead=sprMutant17BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant17BIdle;//TODO
+	spr_sit = sprMutant17BIdle;//TODO
 	break;
 	case 18:
 	spr_idle=sprMutant18BIdle;
 	spr_walk=sprMutant18BIdle;
 	spr_hurt=sprMutant18BHurt;
 	spr_dead=sprMutant18BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant18BIdle;//TODO
+	spr_sit = sprMutant18BIdle;//TODO
 	break;
 	case 19:
 	spr_idle=sprMutant19BIdle;
 	spr_walk=sprMutant19BWalk;
 	spr_hurt=sprMutant19BHurt;
 	spr_dead=sprMutant19BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant19BIdle;//TODO
+	spr_sit = sprMutant19BIdle;//TODO
 	break;
 	case 20:
 	spr_idle=sprMutant20BIdle;
 	spr_walk=sprMutant20BWalk;
 	spr_hurt=sprMutant20BHurt;
 	spr_dead=sprMutant20BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant20BIdle;//TODO
+	spr_sit = sprMutant20BIdle;//TODO
 	break;
 	case 21:
 	spr_idle=sprMutant21BIdle;
 	spr_walk=sprMutant21BWalk;
 	spr_hurt=sprMutant21BHurt;
 	spr_dead=sprMutant21BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant21BGoSit;
+	spr_sit = sprMutant21BSit;
 	break;
 	case 22:
 	spr_idle=sprMutant22BIdle;
 	spr_walk=sprMutant22BWalk;
 	spr_hurt=sprMutant22BHurt;
 	spr_dead=sprMutant22BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant22BGoSit;
+	spr_sit = sprMutant22BSit;
 	break;
 	case 23:
 	spr_idle=sprMutant23BIdle;
 	spr_walk=sprMutant23BWalk;
 	spr_hurt=sprMutant23BHurt;
 	spr_dead=sprMutant23BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant23BGoSit;
+	spr_sit = sprMutant23BSit;
 	break;
 	case 24:
 	spr_idle=sprMutant24BIdle;
 	spr_walk=sprMutant24BWalk;
 	spr_hurt=sprMutant24BHurt;
 	spr_dead=sprMutant24BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant24BIdle;//TODO
+	spr_sit = sprMutant24BIdle;//TODO
 	break;
 	case 25:
 	spr_idle=sprMutant25BIdle;
 	spr_walk=sprMutant25BWalk;
 	spr_hurt=sprMutant25BHurt;
 	spr_dead=sprMutant25BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant25BIdle;//TODO
+	spr_sit = sprMutant25BIdle;//TODO
 	break;
 	case 26:
 	spr_idle=sprMutant26BIdle;
 	spr_walk=sprMutant26BWalk;
 	spr_hurt=sprMutant26BHurt;
 	spr_dead=sprMutant26BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant26BIdle;//TODO
+	spr_sit = sprMutant26BIdle;//TODO
 	break;
 	case 27:
 	spr_idle=sprMutant27BIdle;
 	spr_walk=sprMutant27BWalk;
 	spr_hurt=sprMutant27BHurt;
 	spr_dead=sprMutant27BDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant27BIdle;//TODO
+	spr_sit = sprMutant27BIdle;//TODO
 	break;
 
 	}
@@ -242,208 +242,208 @@ function scrLoadRace() {
 	spr_walk=sprMutant2CWalk;
 	spr_hurt=sprMutant2CHurt;
 	spr_dead=sprMutant2CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant2CIdle;//TODO
+	spr_sit = sprMutant2CIdle;//TODO
 	break;
 	case 3:
 	spr_idle=sprMutant3CIdle;
 	spr_walk=sprMutant3CWalk;
 	spr_hurt=sprMutant3CHurt;
 	spr_dead=sprMutant3CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant3CIdle;//TODO
+	spr_sit = sprMutant3CIdle;//TODO
 	break;
 	case 4:
 	spr_idle=sprMutant4CIdle;
 	spr_walk=sprMutant4CWalk;
 	spr_hurt=sprMutant4CHurt;
 	spr_dead=sprMutant4CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant4CIdle;//TODO
+	spr_sit = sprMutant4CIdle;//TODO
 	break;
 	case 5:
 	spr_idle=sprMutant5CIdle;
 	spr_walk=sprMutant5CWalk;
 	spr_hurt=sprMutant5CHurt;
 	spr_dead=sprMutant5CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant5CIdle;//TODO
+	spr_sit = sprMutant5CIdle;//TODO
 	break;
 	case 6:
 	spr_idle=sprMutant6CIdle;
 	spr_walk=sprMutant6CWalk;
 	spr_hurt=sprMutant6CHurt;
 	spr_dead=sprMutant6CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant6CIdle;//TODO
+	spr_sit = sprMutant6CIdle;//TODO
 	break;
 	case 7:
 	spr_idle=sprMutant7CIdle;
 	spr_walk=sprMutant7CWalk;
 	spr_hurt=sprMutant7CHurt;
 	spr_dead=sprMutant7CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant7CIdle;//TODO
+	spr_sit = sprMutant7CIdle;//TODO
 	break;
 	case 8:
 	spr_idle=sprMutant8CIdle;
 	spr_walk=sprMutant8CWalk;
 	spr_hurt=sprMutant8CHurt;
 	spr_dead=sprMutant8CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant8CIdle;//TODO
+	spr_sit = sprMutant8CIdle;//TODO
 	break;
 	case 9:
 	spr_idle=sprMutant9CIdle;
 	spr_walk=sprMutant9CWalk;
 	spr_hurt=sprMutant9CHurt;
 	spr_dead=sprMutant9CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant9CIdle;//TODO
+	spr_sit = sprMutant9CIdle;//TODO
 	break;
 	case 10:
 	spr_idle=sprMutant10CIdle;
 	spr_walk=sprMutant10CWalk;
 	spr_hurt=sprMutant10CHurt;
 	spr_dead=sprMutant10CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant10CIdle;//TODO
+	spr_sit = sprMutant10CIdle;//TODO
 	break;
 	case 11:
 	spr_idle=sprMutant11CIdle;
 	spr_walk=sprMutant11CWalk;
 	spr_hurt=sprMutant11CHurt;
 	spr_dead=sprMutant11CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant11CIdle;//TODO
+	spr_sit = sprMutant11CIdle;//TODO
 	break;
 	case 12:
 	spr_idle=sprMutant12CIdle;
 	spr_walk=sprMutant12CWalk;
 	spr_hurt=sprMutant12CHurt;
 	spr_dead=sprMutant12CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant12CIdle;//TODO
+	spr_sit = sprMutant12CIdle;//TODO
 	break;
 	case 13:
 	spr_idle=sprMutant13CIdle;
 	spr_walk=sprMutant13CWalk;
 	spr_hurt=sprMutant13CHurt;
 	spr_dead=sprMutant13CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant13CIdle;//TODO
+	spr_sit = sprMutant13CIdle;//TODO
 	break;
 	case 14:
 	spr_idle=sprMutant14CIdle;
 	spr_walk=sprMutant14CWalk;
 	spr_hurt=sprMutant14CHurt;
 	spr_dead=sprMutant14CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant14CIdle;//TODO
+	spr_sit = sprMutant14CIdle;//TODO
 	break;
 	case 15:
 	spr_idle=sprMutant15CIdleOld;
 	spr_walk=sprMutant15CWalk;
 	spr_hurt=sprMutant15CHurt;
 	spr_dead=sprMutant15CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant15CIdleOld;//TODO
+	spr_sit = sprMutant15CIdleOld;//TODO
 	break;
 	case 16:
 	spr_idle=sprMutant16CIdle;
 	spr_walk=sprMutant16CWalk;
 	spr_hurt=sprMutant16CHurt;
 	spr_dead=sprMutant16CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant16CIdle;//TODO
+	spr_sit = sprMutant16CIdle;//TODO
 	break;
 	case 17:
 	spr_idle=sprMutant17CIdle;
 	spr_walk=sprMutant17CWalk;
 	spr_hurt=sprMutant17CHurt;
 	spr_dead=sprMutant17CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant17CIdle;//TODO
+	spr_sit = sprMutant17CIdle;//TODO
 	break;
 	case 18:
 	spr_idle=sprMutant18CIdle;
 	spr_walk=sprMutant18CIdle;
 	spr_hurt=sprMutant18CHurt;
 	spr_dead=sprMutant18CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant18CIdle;//TODO
+	spr_sit = sprMutant18CIdle;//TODO
 	break;
 	case 19:
 	spr_idle=sprMutant19CIdle;
 	spr_walk=sprMutant19CWalk;
 	spr_hurt=sprMutant19CHurt;
 	spr_dead=sprMutant19CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant19CIdle;//TODO
+	spr_sit = sprMutant19CIdle;//TODO
 	break;
 	case 20:
 	spr_idle=sprMutant20CIdle;
 	spr_walk=sprMutant20CWalk;
 	spr_hurt=sprMutant20CHurt;
 	spr_dead=sprMutant20CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant20CIdle;//TODO
+	spr_sit = sprMutant20CIdle;//TODO
 	break;
 	case 21:
 	spr_idle=sprMutant21CIdle;
 	spr_walk=sprMutant21CWalk;
 	spr_hurt=sprMutant21CHurt;
 	spr_dead=sprMutant21CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant21CIdle;//TODO
+	spr_sit = sprMutant21CIdle;//TODO
 	break;
 	case 22:
 	spr_idle=sprMutant22CIdle;
 	spr_walk=sprMutant22CWalk;
 	spr_hurt=sprMutant22CHurt;
 	spr_dead=sprMutant22CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant22CIdle;//TODO
+	spr_sit = sprMutant22CIdle;//TODO
 	break;
 	case 23:
 	spr_idle=sprMutant23CIdle;
 	spr_walk=sprMutant23CWalk;
 	spr_hurt=sprMutant23CHurt;
 	spr_dead=sprMutant23CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant23CIdle;//TODO
+	spr_sit = sprMutant23CIdle;//TODO
 	break;
 	case 24:
 	spr_idle=sprMutant24CIdle;
 	spr_walk=sprMutant24CWalk;
 	spr_hurt=sprMutant24CHurt;
 	spr_dead=sprMutant24CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant24CIdle;//TODO
+	spr_sit = sprMutant24CIdle;//TODO
 	break;
 	case 25:
 	spr_idle=sprMutant25CIdle;
 	spr_walk=sprMutant25CWalk;
 	spr_hurt=sprMutant25CHurt;
 	spr_dead=sprMutant25CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant25CIdle;//TODO
+	spr_sit = sprMutant25CIdle;//TODO
 	break;
 	case 26:
 	spr_idle=sprMutant26CIdle;
 	spr_walk=sprMutant26CWalk;
 	spr_hurt=sprMutant26CHurt;
 	spr_dead=sprMutant26CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant26CIdle;//TODO
+	spr_sit = sprMutant26CIdle;//TODO
 	break;
 	case 27:
 	spr_idle=sprMutant27CIdle;
 	spr_walk=sprMutant27CWalk;
 	spr_hurt=sprMutant27CHurt;
 	spr_dead=sprMutant27CDead;
-	spr_go_sit = sprMutant2BGoSit;
-	spr_sit = sprMutant2BSit;
+	spr_go_sit = sprMutant27CIdle;//TODO
+	spr_sit = sprMutant27CIdle;//TODO
 	break;
 	}
 
@@ -457,72 +457,72 @@ function scrLoadRace() {
 		spr_walk=sprMutant3DWalk;
 		spr_hurt=sprMutant3DHurt;
 		spr_dead=sprMutant3DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant3DIdle;//TODO
+		spr_sit = sprMutant3DIdle;//TODO
 		break;
 		case 6:
 		spr_idle=sprMutant6DIdle;
 		spr_walk=sprMutant6DWalk;
 		spr_hurt=sprMutant6DHurt;
 		spr_dead=sprMutant6DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant6DIdle;//TODO
+		spr_sit = sprMutant6DIdle;//TODO
 		break;
 		case 8:
 		spr_idle=sprMutant8DIdle;
 		spr_walk=sprMutant8DWalk;
 		spr_hurt=sprMutant8DHurt;
 		spr_dead=sprMutant8DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant8DIdle;//TODO
+		spr_sit = sprMutant8DIdle;//TODO
 		break;
 		case 9:
 		spr_idle=sprMutant9DIdle;
 		spr_walk=sprMutant9DWalk;
 		spr_hurt=sprMutant9DHurt;
 		spr_dead=sprMutant9DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant9DIdle;//TODO
+		spr_sit = sprMutant9DIdle;//TODO
 		break;
 		case 10:
 		spr_idle=sprMutant10EIdle;
 		spr_walk=sprMutant10EWalk;
 		spr_hurt=sprMutant10EHurt;
 		spr_dead=sprMutant10EDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant10EIdle;//TODO
+		spr_sit = sprMutant10EIdle;//TODO
 		break;
 		case 16:
 		spr_idle=sprMutant16DIdle;
 		spr_walk=sprMutant16DWalk;
 		spr_hurt=sprMutant16DHurt;
 		spr_dead=sprMutant16DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant16DIdle;//TODO
+		spr_sit = sprMutant16DIdle;//TODO
 		break;
 		case 21:
 		spr_idle=sprMutant21DIdle;
 		spr_walk=sprMutant21DWalk;
 		spr_hurt=sprMutant21DHurt;
 		spr_dead=sprMutant21DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant21DIdle;//TODO
+		spr_sit = sprMutant21DIdle;//TODO
 		break;
 		case 22:
 		spr_idle=sprMutant22DIdle;
 		spr_walk=sprMutant22DWalk;
 		spr_hurt=sprMutant22DHurt;
 		spr_dead=sprMutant22DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant22DIdle;//TODO
+		spr_sit = sprMutant22DIdle;//TODO
 		break;
 		case 25:
 		spr_idle=sprMutant25DIdle;
 		spr_walk=sprMutant25DWalk;
 		spr_hurt=sprMutant25DHurt;
 		spr_dead=sprMutant25DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant25DIdle;//TODO
+		spr_sit = sprMutant25DIdle;//TODO
 		break;
 	}
 	}
@@ -535,64 +535,64 @@ function scrLoadRace() {
 		spr_walk=sprMutant3EWalk;
 		spr_hurt=sprMutant3EHurt;
 		spr_dead=sprMutant3EDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant3EIdle;//TODO
+		spr_sit = sprMutant3EIdle;//TODO
 		break;
 		case 6:
 		spr_idle=sprMutant6EIdle;
 		spr_walk=sprMutant6EWalk;
 		spr_hurt=sprMutant6EHurt;
 		spr_dead=sprMutant6EDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant6EIdle;//TODO
+		spr_sit = sprMutant6EIdle;//TODO
 		break;
 		case 8:
 		spr_idle=sprMutant8EIdle;
 		spr_walk=sprMutant8EWalk;
 		spr_hurt=sprMutant8EHurt;
 		spr_dead=sprMutant8EDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant8EIdle;//TODO
+		spr_sit = sprMutant8EIdle;//TODO
 		break;
 		case 9:
 		spr_idle=sprMutant9EIdle;
 		spr_walk=sprMutant9EWalk;
 		spr_hurt=sprMutant9EHurt;
 		spr_dead=sprMutant9DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant9EIdle;//TODO
+		spr_sit = sprMutant9EIdle;//TODO
 		break;
 		case 10:
 		spr_idle=sprMutant10FIdle;
 		spr_walk=sprMutant10FWalk;
 		spr_hurt=sprMutant10FHurt;
 		spr_dead=sprMutant10FDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant10FIdle;//TODO
+		spr_sit = sprMutant10FIdle;//TODO
 		break;
 		case 16:
 		spr_idle=sprMutant16DIdle;
 		spr_walk=sprMutant16DWalk;
 		spr_hurt=sprMutant16DHurt;
 		spr_dead=sprMutant16DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant16DIdle;//TODO
+		spr_sit = sprMutant16DIdle;//TODO
 		break;
 		case 21:
 		spr_idle=sprMutant21DIdle;
 		spr_walk=sprMutant21DWalk;
 		spr_hurt=sprMutant21DHurt;
 		spr_dead=sprMutant21DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant21DIdle;//TODO
+		spr_sit = sprMutant21DIdle;//TODO
 		break;
 		case 22:
 		spr_idle=sprMutant22DIdle;
 		spr_walk=sprMutant22DWalk;
 		spr_hurt=sprMutant22DHurt;
 		spr_dead=sprMutant22DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant22DIdle;//TODO
+		spr_sit = sprMutant22DIdle;//TODO
 		break;
 	}
 	}
@@ -605,40 +605,40 @@ function scrLoadRace() {
 		spr_walk=sprMutant3FWalk;
 		spr_hurt=sprMutant3FHurt;
 		spr_dead=sprMutant3FDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant3FIdle;//TODO
+		spr_sit = sprMutant3FIdle;//TODO
 		break;
 		case 10:
 		spr_idle=sprMutant10GIdle;
 		spr_walk=sprMutant10GWalk;
 		spr_hurt=sprMutant10GHurt;
 		spr_dead=sprMutant10GDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant10GIdle;//TODO
+		spr_sit = sprMutant10GIdle;//TODO
 		break;
 		case 16:
 		spr_idle=sprMutant16DIdle;
 		spr_walk=sprMutant16DWalk;
 		spr_hurt=sprMutant16DHurt;
 		spr_dead=sprMutant16DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant16DIdle;//TODO
+		spr_sit = sprMutant16DIdle;//TODO
 		break;
 		case 21:
 		spr_idle=sprMutant21DIdle;
 		spr_walk=sprMutant21DWalk;
 		spr_hurt=sprMutant21DHurt;
 		spr_dead=sprMutant21DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant21DIdle;//TODO
+		spr_sit = sprMutant21DIdle;//TODO
 		break;
 		case 22:
 		spr_idle=sprMutant22DIdle;
 		spr_walk=sprMutant22DWalk;
 		spr_hurt=sprMutant22DHurt;
 		spr_dead=sprMutant22DDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant22DIdle;//TODO
+		spr_sit = sprMutant22DIdle;//TODO
 		break;
 	}
 	}
@@ -651,8 +651,8 @@ function scrLoadRace() {
 		spr_walk=sprMutant3GWalk;
 		spr_hurt=sprMutant3GHurt;
 		spr_dead=sprMutant3GDead;
-		spr_go_sit = sprMutant2BGoSit;
-		spr_sit = sprMutant2BSit;
+		spr_go_sit = sprMutant3GIdle;//TODO
+		spr_sit = sprMutant3GIdle;//TODO
 		break;
 	}
 	}
@@ -673,208 +673,208 @@ function scrLoadRace() {
 	spr_walk=sprMutant2Walk;
 	spr_hurt=sprMutant2Hurt;
 	spr_dead=sprMutant2Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant2GoSit;
+	spr_sit = sprMutant2Sit;
 	break;
 	case 3:
 	spr_idle=sprMutant3Idle;
 	spr_walk=sprMutant3Walk;
 	spr_hurt=sprMutant3Hurt;
 	spr_dead=sprMutant3Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant3GoSit;
+	spr_sit = sprMutant3Sit;
 	break;
 	case 4:
 	spr_idle=sprMutant4Idle;
 	spr_walk=sprMutant4Walk;
 	spr_hurt=sprMutant4Hurt;
 	spr_dead=sprMutant4Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant4GoSit;
+	spr_sit = sprMutant4Sit;
 	break;
 	case 5:
 	spr_idle=sprMutant5Idle;
 	spr_walk=sprMutant5Walk;
 	spr_hurt=sprMutant5Hurt;
 	spr_dead=sprMutant5Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant5GoSit;
+	spr_sit = sprMutant5Sit;
 	break;
 	case 6:
 	spr_idle=sprMutant6Idle;
 	spr_walk=sprMutant6Walk;
 	spr_hurt=sprMutant6Hurt;
 	spr_dead=sprMutant6Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant6GoSit;
+	spr_sit = sprMutant6Sit;
 	break;
 	case 7:
 	spr_idle=sprMutant7Idle;
 	spr_walk=sprMutant7Walk;
 	spr_hurt=sprMutant7Hurt;
 	spr_dead=sprMutant7Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant7GoSit;
+	spr_sit = sprMutant7Sit;
 	break;
 	case 8:
 	spr_idle=sprMutant8Idle;
 	spr_walk=sprMutant8Walk;
 	spr_hurt=sprMutant8Hurt;
 	spr_dead=sprMutant8Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant8GoSit;
+	spr_sit = sprMutant8Sit;
 	break;
 	case 9:
 	spr_idle=sprMutant9Idle;
 	spr_walk=sprMutant9Walk;
 	spr_hurt=sprMutant9Hurt;
 	spr_dead=sprMutant9Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant9GoSit;
+	spr_sit = sprMutant9Sit;
 	break;
 	case 10:
 	spr_idle=sprMutant10Idle;
 	spr_walk=sprMutant10Walk;
 	spr_hurt=sprMutant10Hurt;
 	spr_dead=sprMutant10Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant9GoSit;
+	spr_sit = sprMutant9Sit;
 	break;
 	case 11:
 	spr_idle=sprMutant11Idle;
 	spr_walk=sprMutant11Walk;
 	spr_hurt=sprMutant11Hurt;
 	spr_dead=sprMutant11Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant11Idle;//TODO
+	spr_sit = sprMutant11Idle;//TODO
 	break;
 	case 12:
 	spr_idle=sprMutant12Idle;
 	spr_walk=sprMutant12Walk;
 	spr_hurt=sprMutant12Hurt;
 	spr_dead=sprMutant12Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant12Idle;//TODO
+	spr_sit = sprMutant12Idle;//TODO
 	break;
 	case 13:
 	spr_idle=sprMutant13Idle;
 	spr_walk=sprMutant13Walk;
 	spr_hurt=sprMutant13Hurt;
 	spr_dead=sprMutant13Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant13Idle;//TODO
+	spr_sit = sprMutant13Idle;//TODO
 	break;
 	case 14:
 	spr_idle=sprMutant14Idle;
 	spr_walk=sprMutant14Walk;
 	spr_hurt=sprMutant14Hurt;
 	spr_dead=sprMutant14Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant14Idle;//TODO
+	spr_sit = sprMutant14Idle;//TODO
 	break;
 	case 15:
 	spr_idle=sprMutant15Idle;
 	spr_walk=sprMutant15Walk;
 	spr_hurt=sprMutant15Hurt;
 	spr_dead=sprMutant15Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant15Idle;//TODO
+	spr_sit = sprMutant15Idle;//TODO
 	break;
 	case 16:
 	spr_idle=sprMutant16Idle;
 	spr_walk=sprMutant16Walk;
 	spr_hurt=sprMutant16Hurt;
 	spr_dead=sprMutant16Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant16Idle;//TODO
+	spr_sit = sprMutant16Idle;//TODO
 	break;
 	case 17:
 	spr_idle=sprMutant17Idle;
 	spr_walk=sprMutant17Walk;
 	spr_hurt=sprMutant17Hurt;
 	spr_dead=sprMutant17Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant17Idle;//TODO
+	spr_sit = sprMutant17Idle;//TODO
 	break;
 	case 18:
 	spr_idle=sprMutant18Idle;
 	spr_walk=sprMutant18Idle;
 	spr_hurt=sprMutant18Hurt;
 	spr_dead=sprMutant18Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant18Idle;//TODO
+	spr_sit = sprMutant18Idle;//TODO
 	break;
 	case 19:
 	spr_idle=sprMutant19Idle;
 	spr_walk=sprMutant19Walk;
 	spr_hurt=sprMutant19Hurt;
 	spr_dead=sprMutant19Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant19GoSit;
+	spr_sit = sprMutant19Sit;
 	break;
 	case 20:
 	spr_idle=sprMutant20Idle;
 	spr_walk=sprMutant20Walk;
 	spr_hurt=sprMutant20Hurt;
 	spr_dead=sprMutant20Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant20Idle;//TODO
+	spr_sit = sprMutant20Idle;//TODO
 	break;
 	case 21:
 	spr_idle=sprMutant21Idle;
 	spr_walk=sprMutant21Walk;
 	spr_hurt=sprMutant21Hurt;
 	spr_dead=sprMutant21Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant21GoSit;
+	spr_sit = sprMutant21Sit;
 	break;
 	case 22:
 	spr_idle=sprMutant22Idle;
 	spr_walk=sprMutant22Walk;
 	spr_hurt=sprMutant22Hurt;
 	spr_dead=sprMutant22Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant22GoSit;
+	spr_sit = sprMutant22Sit;
 	break;
 	case 23:
 	spr_idle=sprMutant23Idle;
 	spr_walk=sprMutant23Walk;
 	spr_hurt=sprMutant23Hurt;
 	spr_dead=sprMutant23Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant23GoSit;
+	spr_sit = sprMutant23Sit;
 	break;
 	case 24:
 	spr_idle=sprMutant24Idle;
 	spr_walk=sprMutant24Walk;
 	spr_hurt=sprMutant24Hurt;
 	spr_dead=sprMutant24Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant24Idle;//TODO
+	spr_sit = sprMutant24Idle;//TODO
 	break;
 	case 25:
 	spr_idle=sprMutant25Idle;
 	spr_walk=sprMutant25Walk;
 	spr_hurt=sprMutant25Hurt;
 	spr_dead=sprMutant25Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant25Idle;//TODO
+	spr_sit = sprMutant25Idle;//TODO
 	break;
 	case 26:
 	spr_idle=sprMutant26Idle;
 	spr_walk=sprMutant26Walk;
 	spr_hurt=sprMutant26Hurt;
 	spr_dead=sprMutant26Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant26Idle;//TODO
+	spr_sit = sprMutant26Idle;//TODO
 	break;
 	case 27:
 	spr_idle=sprMutant27Idle;
 	spr_walk=sprMutant27Walk;
 	spr_hurt=sprMutant27Hurt;
 	spr_dead=sprMutant27Dead;
-	spr_go_sit = sprMutant1GoSit;
-	spr_sit = sprMutant1Sit;
+	spr_go_sit = sprMutant27Idle;//TODO
+	spr_sit = sprMutant27Idle;//TODO
 	break;
 	}
 
