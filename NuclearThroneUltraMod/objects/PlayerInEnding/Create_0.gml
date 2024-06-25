@@ -1,6 +1,7 @@
 /// @description Get player's shit
 acceleration = max(0.8,Player.acceleration);
-maxSpeed = clamp(Player.maxSpeed - 1,1,5)
+maxSpeed = clamp(Player.maxSpeed - 1,1,5);
+reachedIt = false;
 direction = Player.direction;
 speed = Player.speed;
 spr_walk = Player.spr_walk;

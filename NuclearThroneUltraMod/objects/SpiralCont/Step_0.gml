@@ -90,7 +90,7 @@ if alarm[1] < 1
 		alarm[1] = 10;
 		with Spiral
 		{
-			speedUp = true;	
+			speedUp = true;
 		}
 		with newSpiral
 		{

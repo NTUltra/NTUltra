@@ -3,6 +3,8 @@
 ///@param
 function scrCreateCaptainCreditArea() {
 	//Main area
+	var actualArea = Player.area;
+	Player.area = 135;
 	var ham = 6;
 	var vam = 10;
 	for (var fxx = -32 * (ham-1); fxx < 32 * ham; fxx += 32;)
@@ -194,4 +196,5 @@ function scrCreateCaptainCreditArea() {
 		styleb = true;
 		sprite_index = sprFloor135B;
 	}
+	Player.area = actualArea;
 }

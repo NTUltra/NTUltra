@@ -3,9 +3,12 @@ with Player
 {
 	instance_destroy();	
 }
-instance_activate_object(Cursor);
+with Cursor
+{
+	visible = true;
+	inGameVisibleState = true;
+}
 audio_stop_all();
-debug("FINAL");
 /*
 with UberCont
 {

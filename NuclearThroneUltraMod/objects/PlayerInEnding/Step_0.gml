@@ -1,5 +1,5 @@
 /// @description Go to ending brother
-if instance_exists(GameEnd) && sprite_index != spr_sit && sprite_index != spr_go_sit
+if instance_exists(GameEnd) && !reachedIt//sprite_index != spr_sit && sprite_index != spr_go_sit
 {
 	var dir = point_direction(x,y,GameEnd.x,GameEnd.y)
 	if UberCont.normalGameSpeed == 60

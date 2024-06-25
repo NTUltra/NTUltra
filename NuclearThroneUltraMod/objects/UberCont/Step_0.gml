@@ -52,6 +52,10 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		alarm[4] = 0;
 		alarm[5] = 0;
 		isPaused = 0
+		with Cursor
+		{
+			visible = inGameVisibleState;
+		}
 		instance_create(x,y,UnPauseDelay);
 		isPausedInTheDark = false;
 		alarm[3] = 1;
@@ -293,6 +297,9 @@ else
 			event_user(0);
 			alarm[7] = 1;
 			isPaused = 1
+			with Cursor {
+				visible = true;
+			}
 		}
 	}
 }

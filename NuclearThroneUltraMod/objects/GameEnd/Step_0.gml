@@ -1,5 +1,4 @@
 /// @description Is player close?
-
 if instance_exists(PlayerInEnding)
 {
 	if point_distance(x,y,PlayerInEnding.x,PlayerInEnding.y) < 12
@@ -8,6 +7,7 @@ if instance_exists(PlayerInEnding)
 		{
 			x = other.x;
 			y = other.y;
+			reachedIt = true;
 			speed = 0;
 			if alarm[0] < 1 && !isFading
 			{
@@ -25,7 +25,7 @@ if instance_exists(PlayerInEnding)
 		}
 	}
 }
-else if instance_exists(Player)
+else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 {
 	if point_distance(x,y,Player.x,Player.y) < 64
 	{
@@ -36,7 +36,8 @@ else if instance_exists(Player)
 				visible = false;
 				with Cursor
 				{
-					visible = false;	
+					visible = false;
+					inGameVisibleState = false;
 				}
 				instance_create_depth(x,y,depth - 1,PlayerInEnding);
 			}

@@ -12,3 +12,4 @@ var sh = sprite_get_height(sprite_index);
 scale = s/max(sw,sh);
 colour = UberCont.opt_crosshair_colour;
 display_set_gui_maximise(1,1);
+inGameVisibleState = true;
