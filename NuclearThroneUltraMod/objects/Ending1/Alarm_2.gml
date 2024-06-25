@@ -1,6 +1,6 @@
 /// @description Move camera down
-cameraTime -= 0.02;
-if cameraTime > 1
-	cameraTime = 1;
+cameraTime -= 0.01;
+if cameraTime < 0
+	cameraTime = 0;
 else
-	alarm[1] = 1;
+	alarm[2] = 1;

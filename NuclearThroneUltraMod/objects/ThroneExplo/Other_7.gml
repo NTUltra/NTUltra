@@ -7,7 +7,7 @@ if sprite_index == spr_death
 	{
 		with ThronePipes
 			depth = other.depth + 1;
-		instance_create_depth(x,y - 8,depth - 2,GameEnd);
+		instance_create_depth(x,y - 10,depth - 2,GameEnd);
 		speed = 0;
 	}
 	else if !instance_exists(SurvivalWave)

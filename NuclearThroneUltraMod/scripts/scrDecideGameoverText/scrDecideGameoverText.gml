@@ -3,6 +3,14 @@
 ///@param
 function scrDecideGameoverText(){
 	var gmt = "YOU DID NOT REACH THE NUCLEAR THRONE";
+	with Credits
+	{
+		if type == 0
+			gmt = "YOU REACHED THE NUCLEAR THRONE!";
+		else 
+			gmt = "THE STRUGGLE IS OVER";
+		return gmt;
+	}
 	if BackCont.loops > 9
 	{
 		gmt = choose(

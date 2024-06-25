@@ -347,6 +347,10 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	}
 	}
+	with Messenger
+	{
+		draw_sprite(shd24,0,x-vx,y-vy)
+	}
 	with You
 	{
 	if visible = 1

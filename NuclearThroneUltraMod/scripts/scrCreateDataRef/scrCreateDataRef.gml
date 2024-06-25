@@ -24,7 +24,9 @@ function scrCreateDataRef(){
 		maxhealth = other.maxhealth;
 		my_health = other.my_health;
 		spr_hurt = other.spr_hurt;
-		lsthealth = 0;
+		lsthealth = other.lsthealth;
+		if my_health <= 0
+			lsthealth = 0;
 		armour = other.armour;
 		maxarmour = other.maxarmour;
 		hudArmourSpace = other.hudArmourSpace;

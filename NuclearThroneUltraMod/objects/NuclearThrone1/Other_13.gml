@@ -51,6 +51,8 @@ with NuclearThrone1Side
 	EnemyHealthAdjustments();	
 }
 alarm[1] = 30;
+if loops > 0
+	alarm[1] = 15;
 //insomnia start slower
 if instance_exists(Player)
 {

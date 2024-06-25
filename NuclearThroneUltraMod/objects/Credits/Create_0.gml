@@ -8,6 +8,7 @@ alarm[2] = inputDelay;
 canSkip = true;
 with MusCont
 {
+	audio_stop_sound(song);
 	song = musCredits;
 	snd_loop(song);
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
@@ -20,8 +21,9 @@ with MusCont
 type = 0;
 creditIndex = 0;
 credits = [
-["A <w>GAME<w> CREATED BY <y>VLAMBEER<y>",60],
-["A <g>MOD<g> CREATED BY <p>ERDEPPOL<p>",60],
+["A <w>GAME<w> CREATED BY <y>VLAMBEER<y>",90],
+["A <g>MOD<g> CREATED BY <y>ERDEPPOL<y>",90],
+["",90],
 ];
 wepA = 0;
 wepB = 0;

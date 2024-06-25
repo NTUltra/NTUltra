@@ -22,7 +22,8 @@ function scrCreateCaptainCreditArea() {
 		sit = other.sit;
 	}
 	//Captain:
-	instance_create(x + 32, y - 256,Ending1)
+	instance_create_depth(x + 32, y - 256,6,Ending1)
+	instance_create_depth(x - 16, y - 256 + 48,6,Messenger)
 	//Middle floor
 	instance_create(x + 32, y - 128,CaptainFloor);
 	// Walls
@@ -196,5 +197,22 @@ function scrCreateCaptainCreditArea() {
 		styleb = true;
 		sprite_index = sprFloor135B;
 	}
+	var myWall = Wall;
+	with Floor
+	{
+		if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
+		if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
+		if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+		if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
+		if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
+		if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)
+		if !position_meeting(x-16,y,Floor) instance_create(x-16,y,myWall)
+		if !position_meeting(x-16,y+16,Floor) instance_create(x-16,y+16,myWall)
+		if !position_meeting(x-16,y+32,Floor) instance_create(x-16,y+32,myWall)
+		if !position_meeting(x,y+32,Floor) instance_create(x,y+32,myWall)
+		if !position_meeting(x+16,y+32,Floor) instance_create(x+16,y+32,myWall)
+		if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
+	}
+	
 	Player.area = actualArea;
 }

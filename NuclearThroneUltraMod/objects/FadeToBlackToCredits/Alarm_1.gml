@@ -9,7 +9,7 @@ with UberCont
 			wepA = PlayerInEnding.awep
 			wepB = PlayerInEnding.bwep
 			wepC = PlayerInEnding.cwep
-			sit = sprMutant1Sit;
+			sit = PlayerInEnding.spr_sit;
 			persistent = true;
 		}
 	}

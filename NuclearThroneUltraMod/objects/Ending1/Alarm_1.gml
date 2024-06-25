@@ -1,5 +1,5 @@
 /// @description Move camera up
-cameraTime += 0.02;
+cameraTime += 0.01;
 if cameraTime > 1
 	cameraTime = 1;
 else

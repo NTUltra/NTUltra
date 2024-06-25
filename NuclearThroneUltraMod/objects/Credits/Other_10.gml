@@ -2,7 +2,7 @@
 if type == 0
 {
 	canSkip = false;
-	audio_stop_sound(musCredits);
+	//audio_stop_sound(musCredits);
 	audio_stop_sound(amb0c);
 	snd_play_2d(sndPortalOpen);
 	snd_play_2d(sndPortalClose);
@@ -10,7 +10,7 @@ if type == 0
 	{
 		with latestSpiral
 		{
-			image_index = 1;	
+			image_index = 1;
 		}
 		with Spiral
 		{
@@ -21,5 +21,13 @@ if type == 0
 	with Ending1
 	{
 		event_user(0);	
+	}
+	with Top
+	{
+		sprite_index = sprWall135Top;	
+	}
+	with TopSmall
+	{
+		sprite_index = sprWall135Trans;	
 	}
 }

@@ -98,7 +98,7 @@ function scrLoadRace() {
 	spr_idle=sprMutant12BIdle;
 	spr_walk=sprMutant12BWalk;
 	spr_hurt=sprMutant12BHurt;
-	spr_dead=sprMutant12BDead;
+	spr_dead=sprMutant12BDeadOld;
 	spr_go_sit = sprMutant12BIdle;//TODO
 	spr_sit = sprMutant12BIdle;//TODO
 	break;

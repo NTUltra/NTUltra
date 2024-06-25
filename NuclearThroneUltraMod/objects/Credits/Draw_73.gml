@@ -12,13 +12,10 @@ if text != ""
 	draw_text_colour(xx + 1,yy,dullText,c_black,c_black,c_black,c_black,1);
 	draw_text_colour(xx + 1,yy + 1,dullText,c_black,c_black,c_black,c_black,1);
 	draw_text_colour(xx,yy + 1,dullText,c_black,c_black,c_black,c_black,1);
-	draw_set_colour(c_silver);
+	draw_set_colour(c_gray);
 	scrDrawTextColours(xx,yy, text);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
-	if instance_exists(Ending1)
-	{
-		draw_line(xx,yy,Ending1.x,Ending1.y);	
-	}
+
 }
