@@ -22,10 +22,10 @@ function scrCreateDataRef(){
 		gunGameKill = other.gunGameKill;
 		rage = other.rage;
 		maxhealth = other.maxhealth;
-		my_health = 0;
+		my_health = other.my_health;
 		spr_hurt = other.spr_hurt;
 		lsthealth = 0;
-		armour = 0;
+		armour = other.armour;
 		maxarmour = other.maxarmour;
 		hudArmourSpace = other.hudArmourSpace;
 		freeArmourStrike = other.freeArmourStrike;

@@ -18,7 +18,8 @@ if random(4) < 1
 
 
 	//var t = type;
-with instance_create(x,y,Spiral)
+latestSpiral = instance_create(x,y,Spiral);
+with latestSpiral
 {
 	sprite_index = other.sprite;
 	image_xscale = 0

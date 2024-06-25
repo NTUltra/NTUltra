@@ -16,7 +16,7 @@ with instance_create(x,y,ThronePipes)
 {
 	if other.isInverted
 		sprite_index = sprInvertedNothingPipes;
-	depth = other.depth + 3;
+	// depth = other.depth + 3;
 }
 alarm[2] = 90;
 beamY = y;

@@ -6,7 +6,7 @@ function scrDrawHUD() {
 	else if instance_exists(Player)
 	{
 		var dataRef = Player;
-		if scrIsGamemode(3)
+		if instance_exists(Credits) || scrIsGamemode(3)
 			exit;
 	}
 	else

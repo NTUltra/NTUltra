@@ -18,13 +18,9 @@ if immune
 		{
 			alarm[7] = 15;
 		}
-		if alarm[2] > 15
+		if alarm[2] > 15 && !riseStep
 		{
 			alarm[2] = 15;	
-		}
-		if alarm[3] > 15
-		{
-			alarm[3] = 15;	
 		}
 	}
 	my_health = maxhealth;

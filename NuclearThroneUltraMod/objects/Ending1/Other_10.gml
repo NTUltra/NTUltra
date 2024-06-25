@@ -1,4 +1,5 @@
 /// @description Start the scene
+debug("START SCENE");
 with MusCont
 {
 	amb = amb106;

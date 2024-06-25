@@ -1,8 +1,8 @@
 /// @description Draw Text
-var vx = camera_get_view_x(0);
-var vy = camera_get_view_y(0);
-var vh = camera_get_view_height(0);
-var vw = camera_get_view_width(0);
+var vx = camera_get_view_x(view_camera[0]);
+var vy = camera_get_view_y(view_camera[0]);
+var vh = camera_get_view_height(view_camera[0]);
+var vw = camera_get_view_width(view_camera[0]);
 if text != ""
 {
 	draw_set_halign(fa_center);
@@ -17,4 +17,8 @@ if text != ""
 	draw_set_colour(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
+	if instance_exists(Ending1)
+	{
+		draw_line(xx,yy,Ending1.x,Ending1.y);	
+	}
 }

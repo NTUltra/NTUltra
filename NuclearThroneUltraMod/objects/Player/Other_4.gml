@@ -1,6 +1,8 @@
 /// @description start of the room
 //if area=104
 //visitedCrib=true
+if instance_exists(Credits)
+	exit;
 lockout = false;
 //}
 swapChar = false;

@@ -1,6 +1,6 @@
 /// @description Get player's shit
-acceleration = Player.acceleration;
-maxSpeed = min(5,Player.maxSpeed - 1)
+acceleration = max(0.8,Player.acceleration);
+maxSpeed = clamp(Player.maxSpeed - 1,1,5)
 direction = Player.direction;
 speed = Player.speed;
 spr_walk = Player.spr_walk;

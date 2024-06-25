@@ -2,7 +2,10 @@
 text = "";
 dullText = "";
 audio_stop_all();
-alarm[0] = 5;
+alarm[0] = 30;
+inputDelay = 5;
+alarm[2] = inputDelay;
+canSkip = true;
 with MusCont
 {
 	song = musCredits;

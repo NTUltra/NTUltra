@@ -11,7 +11,7 @@ sprite = sprSpiral;
 if instance_exists(Player) && Player.area == 120
 	sprite = sprSpiralInverted;
 
-repeat(60)//(200)
+repeat(80)//(200)
 {
 with ThroneIISpiral
 event_perform(ev_alarm,0)
@@ -24,4 +24,5 @@ event_perform(ev_alarm,0)
 }
 alarm[0] = 1;
 active = 1
+latestSpiral = noone;
 
