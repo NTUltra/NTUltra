@@ -5,4 +5,3 @@ scrForcePosition60fps();
 var toppers = TopCont.depth - 9;
 depth = toppers - 1;
 instance_create_depth(x,y,toppers,ThroneIISpiral);
-alarm[1] = 2;

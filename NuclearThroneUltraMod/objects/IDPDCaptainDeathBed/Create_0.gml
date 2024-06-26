@@ -11,8 +11,10 @@ my_health = 1;
 team = 3;
 
 depth -= 1;
+imageIndex = 0;
 killable = false;
 snd_dead = sndLastDeath;
+spr_force = sprLastHurt;
 snd_hurt = sndSilence;
 spr_idle = sprLastDeathWait
 spr_walk = sprLastDeathWait

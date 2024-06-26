@@ -1,4 +1,5 @@
 /// @description Now killable
 killable = true;
-mask_index = mskLastDeathWait;
 spr_hurt = spr_dead;
+sprite_index = spr_idle;
+my_health = maxhealth;

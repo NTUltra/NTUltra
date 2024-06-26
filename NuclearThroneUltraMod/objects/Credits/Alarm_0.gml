@@ -8,6 +8,6 @@ if creditIndex >= array_length(credits) - 1
 }
 else
 {
-	// alarm[0] = credits[creditIndex][1];
+	alarm[0] = credits[creditIndex][1];
 	creditIndex += 1;
 }

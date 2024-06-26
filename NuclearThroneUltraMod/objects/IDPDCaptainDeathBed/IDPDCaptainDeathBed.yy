@@ -42,8 +42,8 @@
     "path":"sprites/sprLastHurt/sprLastHurt.yy",
   },
   "spriteMaskId":{
-    "name":"mskPickupThroughWall",
-    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
+    "name":"mskLastDeathWait",
+    "path":"sprites/mskLastDeathWait/mskLastDeathWait.yy",
   },
   "visible":true,
 }
