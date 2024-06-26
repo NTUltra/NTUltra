@@ -56,6 +56,17 @@ startLoop = 3;
 ca = 6 + min(7+(loops-startLoop)*2,12);
 cang = random(360);
 caspd = min(6,4+((loops-startLoop)*0.5));
+actTime = 11;
+if loops > 0
+{
+	actTime -= 2;
+	wazerDuration -= 0.8;
+}
+if loops > 1
+{
+	wazerDuration -= 8;
+	actTime = 7;	
+}
 if loops > startLoop
 {
 	alarm[6] = 180;

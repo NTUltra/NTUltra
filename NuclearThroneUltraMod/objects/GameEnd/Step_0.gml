@@ -29,6 +29,7 @@ else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 {
 	if point_distance(x,y,Player.x,Player.y) < 64
 	{
+		var et = endingType;
 		with Player
 		{
 			if visible
@@ -39,7 +40,10 @@ else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 					visible = false;
 					inGameVisibleState = false;
 				}
-				instance_create_depth(x,y,depth - 1,PlayerInEnding);
+				with instance_create_depth(x,y,depth - 2,PlayerInEnding)
+				{
+					endingType = et;	
+				}
 			}
 		}
 	}

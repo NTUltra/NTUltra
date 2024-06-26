@@ -1,17 +1,18 @@
 /// @description Roll credits!
+var et = endingType;
 with UberCont
 {
-	if other.endingType == 0
+	with instance_create(x,y,Credits)
 	{
-		with instance_create(x,y,Credits)
-		{
-			type = 0;
-			wepA = PlayerInEnding.awep
-			wepB = PlayerInEnding.bwep
-			wepC = PlayerInEnding.cwep
-			sit = PlayerInEnding.spr_sit;
-			persistent = true;
-		}
+		type = et;
+		wepA = PlayerInEnding.awep
+		wepB = PlayerInEnding.bwep
+		wepC = PlayerInEnding.cwep
+		sit = PlayerInEnding.spr_sit;
+		persistent = true;
+		if et == 1
+			event_user(1);
 	}
-	room_goto(romCredits);
+	if et == 0
+		room_goto(romCredits);
 }

@@ -1,3 +1,6 @@
 /// @description Depth
 depth = 8
-image_speed = 0.4;
+if UberCont.normalGameSpeed == 60
+	image_speed = 0.2;
+else
+	image_speed = 0.4;

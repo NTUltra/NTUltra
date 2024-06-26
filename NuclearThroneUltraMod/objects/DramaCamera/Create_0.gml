@@ -16,13 +16,13 @@ x = xx + (vw*0.5)
 y = yy + vh;
 if UberCont.normalGameSpeed == 60
 {
-	introDuration = 120;// 4 seconds
+	introDuration = 100;// 4 seconds
 	shiftInDuration = 20;
 	alarm[2] = 15;
 }
 else
 {
-	introDuration = 60;// 4 seconds
+	introDuration = 50;// 4 seconds
 	shiftInDuration = 10;
 	alarm[2] = 7;
 }

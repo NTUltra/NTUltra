@@ -187,7 +187,7 @@ function scrDrawGameOver() {
 			draw_set_color(c_white)
 			draw_text(vx+wh,yy,string_hash_to_newline(txt))
 		}
-		if instance_exists(DataRef) && DataRef.hitBy != noone
+		if instance_exists(DataRef) && DataRef.hitBy != noone && DataRef.my_health <= 0
 		{
 			var xxx = vx + wh;
 			var yyy = vy + hh + 44;

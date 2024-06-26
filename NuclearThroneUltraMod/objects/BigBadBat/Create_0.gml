@@ -37,22 +37,27 @@ fireRate = 8;
 lp = 0.15;
 spinAttackDuration = 40;
 spinAttackDistance = 72;
-pSpeedAccurate = 3.2;
-pSpeedSpinny = 3;
-pSpeedJawbreaker = 4.5;
+pSpeedAccurate = 2.9;
+pSpeedSpinny = 2.8;
+pSpeedJawbreaker = 4;
 fireOffset = 40;
 laserDuration = 60;
 laserOffset = 36;
 myLasers = [];
 ticksBeforeSpiral = 2;
 image_xscale = 1;
-actTime = 15;
+actTime = 20;
 scrTarget();
 angle = random(360);
 myBat = SquareBat;
 reachHalfHealth = false;
 if loops > 0
-	actTime -= 1;
+{
+	actTime -= 5;
+	pSpeedAccurate += 0.3;
+	pSpeedJawbreaker += 0.5;
+	pSpeedSpinny += 0.2;
+}
 if loops > 2
 {
 	rotationSpeed *= 1.1;
@@ -60,6 +65,7 @@ if loops > 2
 if loops > 4
 {
 	rotationSpeed *= 1.1;
+	pSpeedSpinny += 0.2;
 }
 if target != noone
 	angle = point_direction(target.x,target.y,x,y);

@@ -1,4 +1,4 @@
-raddrop = 2
+raddrop = 0
 maxhealth = 1600;
 scrBossHealthBuff();
 meleedamage = 0
@@ -60,3 +60,4 @@ acc = 1;
 maxSpeed = 3.5;
 
 ammo = 0;
+scrInitDrops(10);

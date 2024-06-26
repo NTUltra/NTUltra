@@ -230,6 +230,10 @@ function scrShadows() {
 	draw_sprite(shd32,0,x-vx,y-vy)
 	with InvertedSuperFireBaller
 	draw_sprite(shd32,0,x-vx,y-vy)
+	with IDPDCaptain
+		draw_sprite(shd32,0,x-vx,y-vy + 12)
+	with IDPDCaptainDeathBed
+		draw_sprite(shd32,0,x-vx,y-vy + 10)
 	with Car
 	{
 		if drawShadow

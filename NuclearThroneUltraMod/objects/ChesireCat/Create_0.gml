@@ -7,7 +7,6 @@ event_inherited()
 meleedamage = 3
 
 alarm[10] = 0;
-
 spr_idle = sprChesireCatIdle
 spr_walk = sprChesireCatIdle
 spr_hurt = sprChesireCatHurt
@@ -51,12 +50,23 @@ wazerAccelerate = 1;
 wazerSpeed = 0;
 wazerMaxSpeed = 10;
 tellTime = 16;
+actTime = 13;
+
 
 loops = GetPlayerLoops();
 startLoop = 3;
 ca = 6 + min(6+(loops-startLoop)*2,12);
 cang = random(360);
 caspd = min(5,3+((loops-startLoop)*0.5));
+if loops > 0
+{
+	actTime -= 2;
+	wazerDuration -= 4;
+}
+if loops > 1
+{
+	actTime = 6;	
+}
 if loops >= startLoop
 {
 	alarm[6] = 180;

@@ -31,3 +31,30 @@ if type == 0
 		sprite_index = sprWall135Trans;	
 	}
 }
+else if type == 1
+{
+	canSkip = false;
+	audio_stop_sound(amb0c);
+	with ThroneIISpiral
+	{
+		with latestSpiral
+		{
+			image_index = 1;
+		}
+		with Spiral
+		{
+			speedUp = true;	
+		}
+		instance_destroy();	
+	}
+	with Player
+	{
+		instance_destroy();	
+	}
+	with Cursor
+	{
+		visible = true;
+		inGameVisibleState = true;
+	}
+	audio_stop_all();
+}

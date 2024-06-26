@@ -11,7 +11,7 @@ if speedUp
 	//grow *= (1.5)*fps60
 	grow += grow * 0.5 *fps60
 }
-if image_xscale > 3 and (lanim < 0 or lanim > 6)
+if image_xscale > 3.5 and (lanim < 0 or lanim > 6)
 	instance_destroy()
 
 lanim += (0.2+random(0.3))*fps60

@@ -6,4 +6,4 @@ spr_hurt = sprBigTVHurt
 spr_dead = sprBigTVDead
 
 event_inherited()
-snd_hurt = sndHitMetalsnd_hurt = sndHitMetal
+snd_hurt = sndHitMetal

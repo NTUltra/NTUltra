@@ -25,3 +25,4 @@ if Player.cwep != 0
 Player.lockout = true;
 isFading = false;
 endingType = 0;
+depth = -4;

@@ -3,12 +3,12 @@ if instance_exists(HorrorSuckDelay)
 	image_index = 0;
 	exit;
 }
-var extraRange = 38;
+var extraRange = defaultRange;
 if instance_exists(Player) && (!cursed) {
 	var sped = 1;
 	if Player.skill_got[3]
 	{
-		extraRange += 26;
+		extraRange += 24;
 		sped = 2;
 	}
 	var levelEnded = false;
@@ -35,9 +35,9 @@ if instance_exists(Player) && (!cursed) {
 	            if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
 					suckDirection = point_direction(x, y, Player.x, Player.y);
 	                if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-	                x += lengthdir_x(stepDis, suckDirection)
+						x += lengthdir_x(stepDis, suckDirection)
 	                if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-	                y += lengthdir_y(stepDis, suckDirection)
+						y += lengthdir_y(stepDis, suckDirection)
 				
 	                isGettingSucked = true;
 					if place_meeting(x,y,Player)

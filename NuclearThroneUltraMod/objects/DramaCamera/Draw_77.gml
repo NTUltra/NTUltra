@@ -16,7 +16,7 @@ var h = 16;
 if alarm[0] > introDuration - shiftInDuration
 {
 	t = clamp((alarm[0] - introDuration + shiftInDuration)/shiftInDuration,0,1);
-	ty = lerp(ny, ny - 64, clamp(t,0,1));
+	ty = lerp(ny, ny - 64, clamp(t*3,0,1));
 	yy = lerp(y, y + 240, clamp(t*0.5,0,1));
 	x = lerp(xMoveStart, xIntro, t);
 	lx = lerp(lxMoveStart, xIntro, t);

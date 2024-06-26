@@ -15,7 +15,7 @@ spr_hurt = sprInvertedBigBadBatHurt
 spr_dead = sprInvertedBigBadBatDead
 spr_fire = sprInvertedBigBadBatFire
 spr_chrg = spr_fire
-actTime = 12;
+actTime = 17;
 spinAttackDuration = 60;
 spinAttackDistance = 64;
 laserOffset = 26;
@@ -27,7 +27,18 @@ speedUp = 6;
 minDistanceToTarget = 70;
 maxDistanceToTarget = 136;
 distanceToTarget = maxDistanceToTarget;
-pSpeedAccurate = 3.5;
-pSpeedSpinny = 3.1;
-pSpeedJawbreaker = 4.6;
+pSpeedAccurate = 3.2;
+pSpeedSpinny = 2.9;
+pSpeedJawbreaker = 4.1;
 myBat = InvertedSquareBat;
+if loops > 0
+{
+	actTime -= 5;
+	pSpeedAccurate += 0.3;
+	pSpeedJawbreaker += 0.5;
+	pSpeedSpinny += 0.2;
+}
+if loops > 4
+{
+	pSpeedSpinny += 0.2;
+}

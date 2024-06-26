@@ -4,12 +4,19 @@ hasPluto = false;
 suckDirection = 0;
 suckOffset = 0;
 col = make_colour_rgb(190,255,8);
+defaultRange = 42;//38
 if instance_exists(Player)
-if Player.skill_got[3]
+{
+	if Player.skill_got[3]
 	{
 		hasPluto = true;
 		alarm[6] = 1;	
 	}
+	if Player.loops > 1
+	{
+		defaultRange -= 4;	
+	}
+}
 	isGettingSucked = false;
 xOrigin = x;
 yOrigin = y;

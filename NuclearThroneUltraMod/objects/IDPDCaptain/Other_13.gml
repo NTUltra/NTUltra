@@ -6,7 +6,7 @@ if forceAnimation && forceAnimationSprite == spr_chrg_start
 	forceAnimationIndex = 0;
 	forceAnimationEnd = sprite_get_number(forceAnimationSprite);
 	snd_play(snd_melee_strike);
-	
+	scrDrop(25,0,true);
 	with instance_create(x,y,PopoExplosion)
 	{
 		team = other.team;

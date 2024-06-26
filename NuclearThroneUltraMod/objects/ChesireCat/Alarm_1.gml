@@ -1,5 +1,5 @@
 ///@description AI
-alarm[1] = 11+random(10)
+alarm[1] = actTime+random(actTime)
 if firstTime 
 {
 	firstTime = false;
@@ -8,13 +8,6 @@ if firstTime
 		scrGiveSnooze();
 	}
 }
-if instance_exists(Player)
-{
-if Player.loops>1
-alarm[1]=6+random(6)
-
-}
-
 drama=true;
 //if sprite_index != spr_hurt
 sprite_index = spr_idle
@@ -95,7 +88,7 @@ if dis<240
 		    if random(5)<1 && !collision_point(x,y,Wall,false,false)
 			{
 				scrAddDrops(1);
-				scrDrop(80,0);
+				scrDrop(80,0,true);
 			}
     
 			    walk=14+random(12);

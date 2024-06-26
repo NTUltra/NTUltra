@@ -1,5 +1,4 @@
 event_inherited()
-
 if walk > 0
 {
 	walk -= 1

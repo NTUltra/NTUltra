@@ -1,4 +1,4 @@
-function scrDrop(itemdrop, weapondrop) {
+function scrDrop(itemdrop, weapondrop, onlyAmmo = false) {
 	var pickup = noone;
 	var isHard = scrIsHardMode();
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
@@ -22,6 +22,8 @@ function scrDrop(itemdrop, weapondrop) {
 		}
 	}
 	var canHealth = 1;
+	if onlyAmmo
+		canHealth = 0;
 	var dropRateBuff = 0;
 	var rabbit = 0;
 	if instance_exists(Player)

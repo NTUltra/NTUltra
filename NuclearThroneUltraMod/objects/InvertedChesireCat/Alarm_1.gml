@@ -1,4 +1,4 @@
-alarm[1] = 13+random(6)
+alarm[1] = actTime+random(actTime)
 if firstTime 
 {
 	firstTime = false;
@@ -7,10 +7,6 @@ if firstTime
 		scrGiveSnooze();
 	}
 }
-if loops > 1
-	alarm[1]=10+random(6)
-
-
 drama=true;
 if sprite_index != spr_hurt
 sprite_index = spr_idle
@@ -190,7 +186,7 @@ alarm[1]=walk;}
 if random(40)<1 && !collision_point(x,y,Wall,false,false)
 {
 	scrAddDrops(1);
-    scrDrop(90,1);
+    scrDrop(90,0,true);
 }
 
 if alarm[4] < 1

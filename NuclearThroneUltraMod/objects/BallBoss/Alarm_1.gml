@@ -39,7 +39,7 @@ if target != noone {
 	}
 	else if ran > 50
 	{
-		scrDrop(16,0);
+		scrDrop(16,0,true);
 	}
 	else if ran > 40
 	{
