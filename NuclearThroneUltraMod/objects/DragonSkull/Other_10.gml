@@ -1,4 +1,3 @@
-/// @description xxx
 /// @description Go to Vulcano
 isInteractableNow = false;
 if spr_idle == sprHotDrakeSkullIdleOpen

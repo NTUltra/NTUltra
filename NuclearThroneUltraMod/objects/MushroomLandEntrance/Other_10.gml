@@ -31,4 +31,20 @@ if Player.wepmod1 != 0
 			alarm[1] = 1;
 		}
 	}
+	else
+	{
+		with instance_create(x,y,PopupText)
+		{
+			mytext = "DEFEAT BOSS FIRST!"
+			theColour=c_red;
+		}
+	}
+}
+else if KeyCont.key_pick[Player.p] = 1
+{
+	with instance_create(x,y,PopupText)
+	{
+		mytext = "YOU HAVE NO WEAPON MOD!"
+		theColour=c_red;
+	}
 }

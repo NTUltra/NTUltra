@@ -39,6 +39,7 @@ function scrEndOfRun(){
 		}
 		lastwishused=false;
 		hasLeveledUp = false;
+		usedUltraMutationStart = false;
 		loadedRun = false;
 		crownVaultChallenge = 0;
 		killedBoss = [];

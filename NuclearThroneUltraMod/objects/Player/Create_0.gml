@@ -546,10 +546,11 @@ getVision = false;
 
 kills = 0
 
-if scrIsGamemode(30)//Ultra mutation start
+if scrIsGamemode(30) && !UberCont.usedUltraMutationStart//Ultra mutation start
 {
 	skillsChosen = 10;
 	skillpoints = 1;
+	UberCont.usedUltraMutationStart = true;
 }
 else if scrIsGamemode(31)//Melee only
 {

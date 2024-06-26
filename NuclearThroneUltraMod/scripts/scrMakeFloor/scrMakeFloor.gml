@@ -308,52 +308,52 @@ function scrMakeFloor(limiter) {
 
 
 	if area = 7||area=104||area=108 { //VULCANO
-	if(random(11)<1)
-	{
-	instance_create(x,y,Floor)
-	instance_create(x,y-lengthdir_y(32,direction),Floor)
-	instance_create(x+lengthdir_x(32,direction),y-lengthdir_y(32,direction),Floor)
-	instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(32,direction),Floor)
-	instance_create(x-lengthdir_x(32,direction),y-lengthdir_y(32,direction),Floor)
-	instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(32,direction),Floor)
-	instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(64,direction),Floor)
-	instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(64,direction),Floor)
-	instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(96,direction),Floor)
-	instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(96,direction),Floor)
-	instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(128,direction),Floor)
-	instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(128,direction),Floor)
-	}
-	else if(random(12)<1){
-	instance_create(x,y,Floor)
-	instance_create(x,y+32,Floor)
-	instance_create(x+32,y,Floor)
-	instance_create(x-32,y,Floor)
-	instance_create(x,y-32,Floor)
-	instance_create(x+32,y+32,Floor)
-	instance_create(x-32,y-32,Floor)
-	instance_create(x+32,y-32,Floor)
-	instance_create(x-32,y+32,Floor)
-	}
-	else if(random(11))<1{
-	if random(2)<1{
-	instance_create(x,y,Floor)
-	instance_create(x,y+32,Floor)
-	instance_create(x,y-32,Floor)}
-	else{
-	instance_create(x,y,Floor)
-	instance_create(x+32,y,Floor)
-	instance_create(x-32,y,Floor)
-	}
-	}
-	else if random(2)<1{
-	instance_create(x,y,Floor)
-	}
-	else
-	{
-	instance_create(x,y+32,Floor);
-	instance_create(x,y,Floor)
-	instance_create(x,y-32,Floor);
-	}
+		if(random(11)<1)
+		{
+		instance_create(x,y,Floor)
+		instance_create(x,y-lengthdir_y(32,direction),Floor)
+		instance_create(x+lengthdir_x(32,direction),y-lengthdir_y(32,direction),Floor)
+		instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(32,direction),Floor)
+		instance_create(x-lengthdir_x(32,direction),y-lengthdir_y(32,direction),Floor)
+		instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(32,direction),Floor)
+		instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(64,direction),Floor)
+		instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(64,direction),Floor)
+		instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(96,direction),Floor)
+		instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(96,direction),Floor)
+		instance_create(x-lengthdir_x(64,direction),y-lengthdir_y(128,direction),Floor)
+		instance_create(x+lengthdir_x(64,direction),y-lengthdir_y(128,direction),Floor)
+		}
+		else if(random(12)<1){
+		instance_create(x,y,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x,y-32,Floor)
+		instance_create(x+32,y+32,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)
+		}
+		else if(random(11))<1{
+		if random(2)<1{
+		instance_create(x,y,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x,y-32,Floor)}
+		else{
+		instance_create(x,y,Floor)
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y,Floor)
+		}
+		}
+		else if random(2)<1{
+		instance_create(x,y,Floor)
+		}
+		else
+		{
+		instance_create(x,y+32,Floor);
+		instance_create(x,y,Floor)
+		instance_create(x,y-32,Floor);
+		}
 	
 
 	}
@@ -1056,8 +1056,8 @@ function scrMakeFloor(limiter) {
 	instance_create(x,y,Floor)}
 	instance_destroy()
 	}
-	if random(30) < 5
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if subarea != 3 && random(30) < 5
+			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 
 	if area = 8 || area = 109//WONDERLAND

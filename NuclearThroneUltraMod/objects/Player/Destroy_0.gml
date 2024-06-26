@@ -539,7 +539,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			var actualLoops = other.loops - loadedLoops;
 			ctot_kill[other.race] += actualKills
 			//ctot_time[other.race]+=time;
-			if other.my_health<1 && armour < 1 && other.visible
+			if other.my_health<1 && other.armour < 1 && other.visible
 				ctot_dead[other.race] += 1
 
 			ctot_played[other.race] += 1;
@@ -562,7 +562,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			{
 				ctot_kill[0]+=actualKills
 				//ctot_time[other.race]+=time;
-				if other.my_health<1 && armour < 1 && other.visible
+				if other.my_health<1 && other.armour < 1 && other.visible
 					ctot_dead[0] += 1
 	
 				ctot_played[0] += 1;

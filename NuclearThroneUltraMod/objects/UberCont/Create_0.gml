@@ -197,6 +197,7 @@ pandaRan = 20;
 isLeaderboardGamemode = false;
 viewDailyGamemode = false;
 hasLeveledUp = false;
+usedUltraMutationStart = false;
 
 gmScroll = 0;
 gmwidth = 1;

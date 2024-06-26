@@ -129,7 +129,6 @@ function scrGenerateFloorMaker(limiter) {
 		goal = 0
 	endPieceSpawned = false;
 
-
 	if (scrIsGamemode(25) && !instance_exists(Vlambeer))
 	{
 		limiter = scrMakeFloor(limiter);

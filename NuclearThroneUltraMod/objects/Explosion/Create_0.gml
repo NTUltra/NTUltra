@@ -1,5 +1,5 @@
 image_speed = 0.4
-depth = 0;
+depth = 1;
 scrWeaponModInit();
 dmg = 5;
 myExplosionMask = -1;

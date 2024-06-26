@@ -17,47 +17,42 @@ if instance_exists(Player) && !endPieceSpawned
 	}
 	else if area = 7||area=104||area == 108
 	if subarea=3||area=104 {//Volcanic boss battleground
-		var fc = 0;
-		with Floor{
-			if canCount
-				fc ++;
-		}
-		if fc > goal
+		
+		with FloorMaker
 		{
-			with FloorMaker
-			{
-				endPieceSpawned = true;	
-			}
-			x += lengthdir_x(32,direction)
-			y += lengthdir_y(32,direction)
-			var xx;
-			var yy;
-			for(xx=0;xx<10;xx+=1){
+			endPieceSpawned = true;	
+		}
+		x += lengthdir_x(32,direction)
+		y += lengthdir_y(32,direction)
+		var xx;
+		var yy;
+		for(xx=0;xx<10;xx+=1){
 			instance_create(x+32*xx,y,Floor);//BOSS VULCANO/////////////////////////////<------------
-			/*
-			if (area==7||area=108)
+		/*
+		if (area==7||area=108)
+		{
+			//Second entrance to the dragon fight
+			if xx == 9
 			{
-				//Second entrance to the dragon fight
-				if xx == 9
-				{
-					for(yy=0;yy<10;yy+=1){
-						instance_create(x+32*-xx,y+32*yy,Floor);
-					}
-					//Make sure it is connected
-					var cx = 0;
-					var msk = mask_index;
-					mask_index = mskFloor;
-					repeat(9)
-					{
-						if !place_meeting(x+32*-cx,y+32,Floor)
-							instance_create(x+32*-cx,y+32,Floor);
-						cx++;
-					}
-					mask_index = msk;
+				for(yy=0;yy<10;yy+=1){
+					instance_create(x+32*-xx,y+32*yy,Floor);
 				}
-				instance_create(x+32*-xx,y+320,Floor);
-			}*/
-				if !instance_exists(HotDrake) && !instance_exists(InvertedHotDrake)
+				//Make sure it is connected
+				var cx = 0;
+				var msk = mask_index;
+				mask_index = mskFloor;
+				repeat(9)
+				{
+					if !place_meeting(x+32*-cx,y+32,Floor)
+						instance_create(x+32*-cx,y+32,Floor);
+					cx++;
+				}
+				mask_index = msk;
+			}
+			instance_create(x+32*-xx,y+320,Floor);
+		}*/
+			if !instance_exists(HotDrake) && !instance_exists(InvertedHotDrake)
+			{
 				for(yy=0;yy<10;yy+=1)
 				{
 					if (area==7||area=108) && xx>4

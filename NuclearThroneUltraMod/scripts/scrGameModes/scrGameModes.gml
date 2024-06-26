@@ -45,7 +45,7 @@ function scrGameModes() {
 	gamemode_unlock[6] = "FINISH AN AREA IN UNDER 10 SECONDS";
 	gamemode_have[6] = 0;
 	gamemode_tip[6] = "IT'S A SMALL WORLD";
-	gamemode_description[6] = "SMALLER AREAS";
+	gamemode_description[6] = "SMALLER AREAS\nHIGHER ENEMY DENSITY\nLESS RADIATION";
 	gamemode_nocombo[6] = [20,26,27,37,25,42,8];
 
 	gamemode[7] = "ATOM TELEPORT#NO WALKING";//
@@ -148,7 +148,7 @@ function scrGameModes() {
 	gamemode_unlock[20] = "BREAK MORE THAN 300 WALLS#IN A SINGLE AREA"//"TAKE MORE THAN TEN MINUTES#TO FINISH AN AREA";
 	gamemode_have[20] = 0;
 	gamemode_tip[20] = "IT'S A BIG WORLD OUT THERE";
-	gamemode_description[20] = "BIGGER AREAS";
+	gamemode_description[20] = "BIGGER AREAS\nMORE ENEMIES\nLESS RADIATION";
 	gamemode_nocombo[20] = [6,26,27,37,25,42,8];
 
 	gamemode[21] = "LOOP START";

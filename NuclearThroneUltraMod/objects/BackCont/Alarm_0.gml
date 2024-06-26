@@ -39,8 +39,7 @@ if area == 3 || heavyrain || area == 129
 	repeat(3)
 		instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,RainDrop)
 }
-
-if area = 4 or area = 103 || area == 115 || cave
+else if area = 4 or area = 103 || area == 115 || cave
 {
 with instance_nearest(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )),__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )),Floor)
 instance_create(x+random(24)+8,y+random(24)+8,CaveSparkle)
@@ -52,21 +51,28 @@ with instance_nearest(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WVie
 {with instance_create(x+random(24)+8,y+random(24)+8,Drip)
 sprite_index = sprCheeseDrip}
 }
-
-if area = 5 || area = 107 || area == 108 || snow
+else if area = 5 || area = 107 || area == 108 || snow
 {
 
-alarm[0] = 2
-instance_create(__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )/2,SnowFlake)
+	alarm[0] = 2
+	instance_create(
+	__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )*0.5,
+	__view_get( e__VW.YView, 0 )+random(__view_get( e__VW.HView, 0 )*2)-__view_get( e__VW.HView, 0 )*0.5,SnowFlake)
 
-if random(50) < 1
+	if random(50) < 1
+	{
+	if instance_exists(Player){
+	with Player{ if race != 8 and race != 5 and race != 11{
+	with instance_create_depth(x,y,depth-1,Breath)
+	image_xscale = other.right}}
+	}
+	}
+}
+if area = 7
 {
-if instance_exists(Player){
-with Player{ if race != 8 and race != 5{
-with instance_create(x,y,Breath)
-image_xscale = other.right}}
+	alarm[0] = 2
+	instance_create(
+	__view_get( e__VW.XView, 0 )+random(__view_get( e__VW.WView, 0 )*2)-__view_get( e__VW.WView, 0 )*0.5,
+	__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5+random(__view_get( e__VW.HView, 0 )*2),VolcanoAsh)
 }
-}
-}
-
 

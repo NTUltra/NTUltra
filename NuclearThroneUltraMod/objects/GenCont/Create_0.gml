@@ -362,7 +362,7 @@ else if Player.area = 108 && Player.subarea<3//inverted vulcano
 	goal = 140+s
 else if Player.area = 108 && Player.subarea==3
 {
-	goal = 10;
+	goal = 30;
 }
 else if Player.area = 104
 goal=150+s

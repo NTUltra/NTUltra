@@ -8131,7 +8131,7 @@ function scrWeapons() {
 	wep_load[726] = 10
 	wep_cost[726] = 2
 	wep_sprt[726] = sprFrostTelepathor
-	wep_area[726] = 7
+	wep_area[726] = 8
 	wep_text[726] = "thinking about snow"
 	wep_swap[726] = sndSwapShotgun
 	wep_rad[726] = 0;
