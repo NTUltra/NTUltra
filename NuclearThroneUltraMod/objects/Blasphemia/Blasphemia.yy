@@ -11,8 +11,8 @@
   "name":"Blasphemia",
   "overriddenProperties":[],
   "parent":{
-    "name":"CrownVault",
-    "path":"folders/Objects/CrownVault.yy",
+    "name":"Interactables",
+    "path":"folders/Objects/Interactables.yy",
   },
   "parentObjectId":{
     "name":"Interactable",

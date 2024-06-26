@@ -198,6 +198,7 @@ isLeaderboardGamemode = false;
 viewDailyGamemode = false;
 hasLeveledUp = false;
 usedUltraMutationStart = false;
+triedToGoHQThisLoop = false;
 
 gmScroll = 0;
 gmwidth = 1;

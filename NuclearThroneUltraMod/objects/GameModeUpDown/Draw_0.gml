@@ -117,6 +117,16 @@ else
 	with GamemodeCharacterUpDown
 		instance_destroy();
 }*/
+if (gamemodeOrder[gamemodenr] == 49 && !UberCont.gamemode_have[49])
+{
+	if !instance_exists(RegalVisionGamemodeTracker)
+		instance_create(x-10,y+54,RegalVisionGamemodeTracker);
+}
+else
+{
+	with RegalVisionGamemodeTracker
+		instance_destroy();
+}
 if (gamemodeOrder[gamemodenr] == 47 && UberCont.gamemode_have[48])
 {
 	if !instance_exists(GamemodeCharacterActiveUpDown)
@@ -181,6 +191,7 @@ else
 {
 	draw_sprite(sprLocked,0,x,y+40);
 	var str;
+	var o = 16//26;//32
 	if dailyDone && UberCont.gamemode_have[gamemodeOrder[gamemodenr]]
 	{
 		if !instance_exists(GoToLeaderboard)
@@ -201,7 +212,6 @@ else
 	{
 		str = string_hash_to_newline(gamemode_unlock[gamemodeOrder[gamemodenr]]);
 	}
-	var o = 26;//32
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_gray)

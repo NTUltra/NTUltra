@@ -70,7 +70,25 @@ if selected && visible
 			//REGAL VISIONS
 			with Player
 			{
-				getVision = false;	
+				getVision = false;
+				with UberCont
+				{
+					if isValidGamemodeToUnlock()
+					{
+						got_regal[other.race] += 1;
+						var ri = 1;
+						repeat(racemax) {
+							if got_regal[ri] > 0
+							{
+								ri += 1;	
+							}
+						}
+						if ri >= racemax
+						{
+							scrUnlockGameMode(49,"FOR AQUIRING REGAL VISION#ON ALL CHARACTERS!")	
+						}
+					}
+				}
 			}
 		}
 		else if skill == 1
@@ -456,7 +474,7 @@ if selected && visible
 			{
 				scrUnlockGameMode(28,"FOR TAKING EVERY REGULAR MUTATION");
 			}
-			scrSave();//Don't necesserily have to save here
+			scrSave();
 		}
 	}
 }

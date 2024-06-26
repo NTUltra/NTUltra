@@ -8,7 +8,7 @@ exit;
 /*
 if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exists(GenCont)
 {
-	instance_create(x,yimm,FPSHACK);
+	instance_create(x,yimm,FPSHACK);p
 }*/
 justLoadedRun = false;
 isOnInteractable = false;
@@ -543,6 +543,8 @@ skillpoints = 0;
 crownpoints = 0
 refundPoints = 0;
 getVision = false;
+if scrIsGamemode(49)
+	getVision = true;
 
 kills = 0
 

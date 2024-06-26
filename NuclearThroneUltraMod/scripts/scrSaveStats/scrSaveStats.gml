@@ -24,6 +24,8 @@ function scrSaveStats() {
 		ini_write_real("STATS","cbstdiff"+string(dir),cbst_diff[dir]);
 
 		ini_write_real("STATS","cbstloop"+string(dir),cbst_loop[dir]);
+		
+		ini_write_real("STATS","got_regal"+string(dir),got_regal[dir]);
 	
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;

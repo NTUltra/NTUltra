@@ -19,6 +19,7 @@ if !openedShop
 	}
 	
 	//EXTRA HARD CHALLENGES
+	/* GOTTA BEAT THIS GUY FIRST
 	with instance_create(x - 32,y + 96,VoidShopChallenge3)
 	{
 		image_index = 0;
@@ -34,4 +35,5 @@ if !openedShop
 		image_index = 0;
 		image_speed = 0.4;
 	}
+	*/
 }

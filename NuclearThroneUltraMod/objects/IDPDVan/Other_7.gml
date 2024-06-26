@@ -1,18 +1,20 @@
 if sprite_index=sprVanOpen
 {
-spr_idle=sprVanOpenIdle;
-spr_walk=sprVanOpenIdle;
-spr_hurt=sprVanDeactivatedHurt;
-sprite_index=sprVanOpenIdle;
-image_index=0;
+	spr_idle=sprVanOpenIdle;
+	spr_walk=sprVanOpenIdle;
+	spr_hurt=sprVanDeactivatedHurt;
+	sprite_index=sprVanOpenIdle;
+	image_index=0;
+	if instance_exists(Player) && Player.area != 100 && !scrIsGamemode(25) && !UberCont.triedToGoHQThisLoop
+		instance_create(x - (32*right),y,HQEnterance);
 }
 if sprite_index=sprFreakVanOpen
 {
-spr_idle=sprFreakVanOpenIdle;
-spr_walk=sprFreakVanOpenIdle;
-spr_hurt=sprFreakVanDeactivatedHurt;
-sprite_index=sprFreakVanOpenIdle;
-image_index=0;
+	spr_idle=sprFreakVanOpenIdle;
+	spr_walk=sprFreakVanOpenIdle;
+	spr_hurt=sprFreakVanDeactivatedHurt;
+	sprite_index=sprFreakVanOpenIdle;
+	image_index=0;
 }
 if sprite_index=sprRogueVanOpen
 {
@@ -25,11 +27,11 @@ image_index=0;
 
 if sprite_index=sprVanOpenIdle 
 {
-spr_idle=sprVanDeactivate;
-spr_walk=sprVanDeactivate;
-spr_hurt=sprVanDeactivatedHurt;
-sprite_index=sprVanDeactivate;
-image_index=0;
+	spr_idle=sprVanDeactivate;
+	spr_walk=sprVanDeactivate;
+	spr_hurt=sprVanDeactivatedHurt;
+	sprite_index=sprVanDeactivate;
+	image_index=0;
 }
 if sprite_index=sprFreakVanOpenIdle 
 {

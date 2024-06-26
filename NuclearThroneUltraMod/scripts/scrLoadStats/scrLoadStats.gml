@@ -43,6 +43,8 @@ function scrLoadStats() {
 
 		cbst_loop[dir] = ini_read_real("STATS","cbstloop"+string(dir),0);
 		
+		got_regal[dir] = ini_read_real("STATS","got_regal"+string(dir),0);
+		
 		cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
 		repeat(crownmax + secretcrownmax)

@@ -1,2 +1,3 @@
 /// @description Up Char
-event_user(1);
+if hasNoMenuOpen()
+	event_user(1);

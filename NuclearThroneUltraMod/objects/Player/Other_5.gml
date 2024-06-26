@@ -374,6 +374,7 @@ if looping && area != 104
 		snd_play_2d(sndStrongSpiritGain);
 		lastWishPrevent = true;
 	}
+	UberCont.triedToGoHQThisLoop = false;
 	debug("Looping now");
 	if loops > 0 && scrIsHardMode()
 	{

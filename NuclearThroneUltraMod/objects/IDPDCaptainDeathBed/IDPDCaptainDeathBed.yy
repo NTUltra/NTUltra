@@ -42,8 +42,8 @@
     "path":"sprites/sprLastHurt/sprLastHurt.yy",
   },
   "spriteMaskId":{
-    "name":"mskLastDeathWait",
-    "path":"sprites/mskLastDeathWait/mskLastDeathWait.yy",
+    "name":"mskNoCollision",
+    "path":"sprites/mskNoCollision/mskNoCollision.yy",
   },
   "visible":true,
 }

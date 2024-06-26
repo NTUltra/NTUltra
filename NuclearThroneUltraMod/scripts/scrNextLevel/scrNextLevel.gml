@@ -1,86 +1,89 @@
 /// @description areas regular
-function scrNextLevel() {
-	with UberCont
+function scrNextLevel(skipping = false) {
+	if !skipping
 	{
-		portalEssence += 1;	
-	}
-	scrAddArea(area);
-	scrAddToRoute(area);
-	if scrIsCrown(34)
-	{
-		if skill_got[5]
-			rewinds = 2;
-		else
-			rewinds = 1;
-		with TimeRewinder
+		with UberCont
 		{
-			other.rewinds = rewinds;
-			instance_destroy();
+			portalEssence += 1;	
 		}
-		if rewinds > 0
+		scrAddArea(area);
+		scrAddToRoute(area);
+		if scrIsCrown(34)
 		{
-			with instance_create(x,y,TimeRewinder) {
-				rewinds = other.rewinds;
-				my_health = other.my_health;
-				maxhealth = other.maxhealth;
-				ammo = other.ammo;
-				area = other.area;
-				lastarea = other.lastarea;
-				lastsubarea = other.lastsubarea;
-				subarea = other.subarea;
-				hard = other.hard;
-				oasis = other.oasis;
-				inverted = other.inverted;
-				freeAmmoRound = other.freeAmmoRound;
-				fromCribToVault = other.fromCribToVault;
+			if skill_got[5]
+				rewinds = 2;
+			else
+				rewinds = 1;
+			with TimeRewinder
+			{
+				other.rewinds = rewinds;
+				instance_destroy();
+			}
+			if rewinds > 0
+			{
+				with instance_create(x,y,TimeRewinder) {
+					rewinds = other.rewinds;
+					my_health = other.my_health;
+					maxhealth = other.maxhealth;
+					ammo = other.ammo;
+					area = other.area;
+					lastarea = other.lastarea;
+					lastsubarea = other.lastsubarea;
+					subarea = other.subarea;
+					hard = other.hard;
+					oasis = other.oasis;
+					inverted = other.inverted;
+					freeAmmoRound = other.freeAmmoRound;
+					fromCribToVault = other.fromCribToVault;
+				}
+			}
+		}
+		freeAmmoRound = max(0,freeAmmoRound-1);
+		if  area = 104//YV CRIB
+		{
+			if fromCribToVault
+			{
+				area = 100;
+				fromCribToVault = false;
+				exit;
+			}
+			else
+			{
+				area = lastarea;
+				subarea = lastsubarea;
+			}
+		}
+		if (race == 6 || race == 12) {//Yv's Crib? Yun cuz aswell
+			if level >= 10
+			{
+			    if (visitedCrib==false)
+				{
+					if area == 100 || area == 128 || area == 129
+					{
+						if !instance_exists(CrownPed)
+						{
+							//Next level should be crown
+							fromCribToVault = true;
+						}
+					}
+					else
+					{
+						lastarea = area;
+						lastsubarea = subarea;
+					}
+				    area = 104;
+				    visitedCrib = true;
+					/*
+					if scrIsCrown(24)
+						hard += 1;
+					else*/
+						hard -= 1;
+			    }
 			}
 		}
 	}
-	freeAmmoRound = max(0,freeAmmoRound-1);
-	if area = 104//YV CRIB
-	{
-		if fromCribToVault
-		{
-			area = 100;
-			fromCribToVault = false;
-			exit;
-		}
-		else
-		{
-			area = lastarea;
-			subarea = lastsubarea;
-		}
-	}
-	if race == 6 || race == 12 {//Yv's Crib? Yun cuz aswell
-		if level >= 10
-		{
-		    if (visitedCrib==false)
-			{
-				if area == 100 || area == 128 || area == 129
-				{
-					if !instance_exists(CrownPed)
-					{
-						//Next level should be crown
-						fromCribToVault = true;
-					}
-				}
-				else
-				{
-					lastarea = area;
-					lastsubarea = subarea;
-				}
-			    area = 104;
-			    visitedCrib = true;
-				/*
-				if scrIsCrown(24)
-					hard += 1;
-				else*/
-					hard -= 1;
-		    }
-		}
-	}
 	var prevHard = hard;
-	if scrIsGamemode(25)//Survival
+	if !skipping && scrIsGamemode(25)//Survival
 	{
 		area = 116;
 		subarea ++;
@@ -125,6 +128,7 @@ function scrNextLevel() {
 				hard -= 1;
 			else
 			*/
+			if !skipping
 				hard += 1;
 	        exit;
 	        }
@@ -567,6 +571,7 @@ function scrNextLevel() {
 				hard -= 1;
 			else
 			*/
+			if !skipping
 				hard += 1;
 		}
 		else if area == 9
@@ -661,75 +666,77 @@ function scrNextLevel() {
 	{area=122;
 	lastarea=122;
 	}
-
-	if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
+	if !skipping
 	{
-		if area == 112//Inv labs normal labs skips one
+		if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
+		{
+			if area == 112//Inv labs normal labs skips one
+			{
+				/*
+				if scrIsCrown(24)
+					hard -= 1;
+				else
+				*/
+					hard += 1;
+			}
+			else
+			{
+				/*
+				if scrIsCrown(24)
+					hard -= 1.5;
+				else
+				*/
+					hard += 1.25;
+			}
+		}
+		else if area == 10 && subarea < 2
 		{
 			/*
 			if scrIsCrown(24)
-				hard -= 1;
+				hard -= 2;
 			else
 			*/
-				hard += 1;
+				hard += 2;
 		}
-		else
+		else if (
+		//!(area = 7 && subarea == 1) //Vulcano 1
+		!(area = 6 && subarea == 2) //Labs 2
+		&& !(area == 4 && subarea == 1)//Caves 1
+		&& !(area == 9 && subarea == 2)//Palace 2
+		&& !(area == 9 && subarea == 3)//Throne 1
+		&& !(area == 119)//Throne 2
+		&& !(area == 5 && subarea == 1)//Frozen city 1
+		)
 		{
-			/*
-			if scrIsCrown(24)
-				hard -= 1.5;
+			if area == 100 || area == 128 || area == 129
+			{
+				/*
+				if scrIsCrown(24)
+					hard -= 0.5;
+				else
+				*/
+					hard += 0.25;
+			}
 			else
-			*/
-				hard += 1.25;
+			{
+				/*
+				if scrIsCrown(24)
+					hard -= 1;
+				else
+				*/
+					hard += 1;
+			}
 		}
-	}
-	else if area == 10 && subarea < 2
-	{
-		/*
-		if scrIsCrown(24)
-			hard -= 2;
-		else
-		*/
-			hard += 2;
-	}
-	else if (
-	//!(area = 7 && subarea == 1) //Vulcano 1
-	!(area = 6 && subarea == 2) //Labs 2
-	&& !(area == 4 && subarea == 1)//Caves 1
-	&& !(area == 9 && subarea == 2)//Palace 2
-	&& !(area == 9 && subarea == 3)//Throne 1
-	&& !(area == 119)//Throne 2
-	&& !(area == 5 && subarea == 1)//Frozen city 1
-	)
-	{
-		if area == 100 || area == 128 || area == 129
+		if loops > 0 && hard - prevHard > 0
 		{
-			/*
-			if scrIsCrown(24)
-				hard -= 0.5;
-			else
-			*/
-				hard += 0.25;
+			hard -= 0.5;
 		}
-		else
-		{
-			/*
-			if scrIsCrown(24)
-				hard -= 1;
-			else
-			*/
-				hard += 1;
-		}
+		if scrIsCrown(10)
+			hard += 0.5;
+		if scrIsGamemode(34)//HARD
+			hard += 0.1;
+		hard = max(0,hard);
 	}
-	if loops > 0 && hard - prevHard > 0
-	{
-		hard -= 0.5;
-	}
-	if scrIsCrown(10)
-		hard += 0.5;
-	if scrIsGamemode(34)//HARD
-		hard += 0.1;
-	hard = max(0,hard);
 	if loops < 1
 	{
 		if scrIsCrown(10)
@@ -737,6 +744,9 @@ function scrNextLevel() {
 		else
 			hard = min(12,hard);	
 	}
-	scrAddArea(area);
-	scrAddToRoute(area);
+	if !skipping
+	{
+		scrAddArea(area);
+		scrAddToRoute(area);
+	}
 }

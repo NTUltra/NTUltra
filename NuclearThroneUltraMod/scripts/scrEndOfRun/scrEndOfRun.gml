@@ -40,6 +40,7 @@ function scrEndOfRun(){
 		lastwishused=false;
 		hasLeveledUp = false;
 		usedUltraMutationStart = false;
+		triedToGoHQThisLoop = false;
 		loadedRun = false;
 		crownVaultChallenge = 0;
 		killedBoss = [];

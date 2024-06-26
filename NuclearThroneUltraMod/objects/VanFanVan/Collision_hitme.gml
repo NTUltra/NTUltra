@@ -6,6 +6,10 @@ if team != other.team
 		if sprite_index != spr_hurt
 		{
 			DealDamage(other.dmg);
+			with Player
+			{
+				hitBy = sprVanDrive;
+			}
 		}
 	}
 	instance_destroy();

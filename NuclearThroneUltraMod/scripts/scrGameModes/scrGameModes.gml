@@ -197,14 +197,14 @@ function scrGameModes() {
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "ON ODD DAYS RACE COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II##ON EVEN DAYS PLAY ANOTHER GAMEMODE";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -275,7 +275,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48,49];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -364,6 +364,13 @@ function scrGameModes() {
 	gamemode_description[48] = "YOU GET TWO GUNS WITH VERY FEW BULLETS\nAMMO ONLY REGENERATES EACH AREA OR WHEN AN ENEMY SPAWNS\nYOU CAN FIRE WHEN YOU HAVE NO AMMO BUT IT WILL HURT\nMOST AMMO AND WEAPON SPECIFIC MUTATIONS ARE REMOVED";
 	gamemode_nocombo[48] = [26,27,37,8,1,2,11,13,14,31,46];
 	
+	gamemode[49] = "REGAL VISION";
+	gamemode_unlock[49] = "ACQUIRE REGAL VISION ON ALL CHARACTERS";
+	gamemode_have[49] = 0;
+	gamemode_tip[49] = "CROWN CROWN CROWN CROWN";
+	gamemode_description[49] = "START WITH REGAL VISION";
+	gamemode_nocombo[49] = [25,42,26,27,37,8];
+	
 	var i = 0;
 	gamemodeOrder[i] = 0;
 	i++; gamemodeOrder[i] = 9;//Casual
@@ -407,6 +414,7 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 30;//Ultra mutation start
 	i++; gamemodeOrder[i] = 36;//Ultra mod start
 	i++; gamemodeOrder[i] = 43;//multi crown
+	i++; gamemodeOrder[i] = 49;//regal vision
 	i++; gamemodeOrder[i] = 29;//infinite ammo
 	i++; gamemodeOrder[i] = 35;//God frog
 	i++; gamemodeOrder[i] = 17;//Cheats

@@ -399,7 +399,7 @@ function scrSecondaryPowers() {
 			break;
 			//ATOM
 			case 15:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && instance_exists(Floor)
+				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
 				{
 					var a;
 					a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);

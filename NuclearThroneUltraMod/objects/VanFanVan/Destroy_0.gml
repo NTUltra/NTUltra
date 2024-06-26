@@ -7,6 +7,10 @@ snd_play(sndExplosionL)
 var ang = random(360);
 repeat(3)
 {
-	instance_create(x+lengthdir_x(8,ang),y+lengthdir_y(8,ang),PopoExplosion)
+	with instance_create(x+lengthdir_x(8,ang),y+lengthdir_y(8,ang),PopoExplosion)
+	{
+		dmg = 900;
+		team = 3;	
+	}
 	ang+=360/3;
 }
