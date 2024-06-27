@@ -18,3 +18,4 @@ if loops < 1
 	introSpiel = true;
 }
 openedShop = false;
+keepTalking = 0;

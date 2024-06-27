@@ -12,7 +12,7 @@ with instance_create(x,y,PopupText)
 	alarm[1] = 60;
 }
 cost = 16;
-if UberCont.extraVan < -2
+if UberCont.extraVan < -1
 {
 	event_user(1);
 }

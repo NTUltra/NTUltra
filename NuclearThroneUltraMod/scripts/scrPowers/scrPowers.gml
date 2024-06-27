@@ -612,7 +612,7 @@ function scrPowers(raceOverwrite = -1) {
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
 			var failedGamble = false;
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)*(1+(skill_got[5]*0.35) )  )//If this is true take damage
+		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				consecutiveGoodBloodGambles = 0;
 				failedGamble = true;
@@ -625,12 +625,26 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				else
 				{
-					if armour > 0
-						armour -= 1;
+					if skeletonGambleBongas == 4
+					{
+						scrHeal(1);
+						snd_play(sndBloodlustProc,0.1);
+						instance_create(x,y - 8,HealFX);
+					}
 					else
-						DealDamage(1,false,false,false);
-					hitBy = sprite_index;
-					exception=true;
+					{
+						if skill_got[5]
+							skeletonGambleBongas += 1;
+						if armour > 0
+							armour -= 1;
+						else
+							DealDamage(1,false,false,false);
+						hitBy = sprite_index;
+						exception = true;
+						image_index = 0;
+						sprite_index = spr_hurt;
+						snd_play_2d(snd_hurt, hurt_pitch_variation);
+					}
 					var splatDir = random(360);
 					var rpt = 3;
 					var angStep = 360 / rpt;
@@ -709,11 +723,6 @@ function scrPowers(raceOverwrite = -1) {
 						    strongspirit=false;
 						}
 					}
-    
-					//if my_health<1&&strongspirit
-					image_index=0;
-					sprite_index=spr_hurt;
-					snd_play_2d(snd_hurt, hurt_pitch_variation);
 				}
     
 				repeat(3)

@@ -3,7 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
-spr_item = sprVoidItemIdpdVan;
+spr_item = sprVoidChallengeIcon;
+item_index = 2;
 challenge = "DOUBLE BOSS HP"
-reward = "REWARD: +1 MAX HP";
+reward = "+1 MAX HP";
 cost = 2;

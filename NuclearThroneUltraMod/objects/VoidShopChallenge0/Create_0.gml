@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-spr_item = sprVoidItemIdpdVan;
+spr_item = sprVoidChallengeIcon;
 challenge = "25% LOWER RELOAD SPEED"
-reward = "DOUBLE THE PORTAL ESSENCE YOU COLLECTED";
+reward = "DOUBLE YOUR PORTAL ESSENCE";
 cost = 2;

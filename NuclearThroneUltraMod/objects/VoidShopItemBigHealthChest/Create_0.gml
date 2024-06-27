@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
-spr_item = sprVoidItemGoldChest;
+spawnLocationY = y - 32;
+spr_item = sprVoidItemBigHealthChest;
 name = "BIG HEALTH CHEST";
-cost = 6;
+cost = 5;

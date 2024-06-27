@@ -27,7 +27,41 @@ if introSpiel
 }
 else
 {
-	with TextHandler {
-		text = "";
+	if keepTalking > 2
+	{
+		switch (dialogueStep)
+		{
+			case 1:
+				with TextHandler {
+					text = "WELL UNFORTUNATELY";
+				}
+				alarm[2] = 5;
+			break;
+			case 2:
+				with TextHandler {
+					text = "THATS NOT IN THIS BETA YET";
+				}
+				alarm[2] = 5;
+			break;
+			case 3:
+				with TextHandler {
+					text = "SORRY! COME AGAIN LATER.";
+				}
+				alarm[2] = 5;
+			break;
+			case 4:
+				keepTalking = 0;
+				with TextHandler {
+					text = "";
+				}
+				alarm[2] = 5;
+			break;
+		}
+	}
+	else
+	{
+		with TextHandler {
+			text = "";
+		}
 	}
 }

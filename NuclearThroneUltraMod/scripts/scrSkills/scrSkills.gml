@@ -507,11 +507,11 @@ function scrSkills() {
 	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 44%)"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
-	skill_text[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
-	skill_detail[38] = "<aq>NEGATE<aq> EVERY FOURTH HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
+	skill_text[38] = "<aq>NEGATE<aq> EVERY <w>FOURTH<w> HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
+	skill_detail[38] = "<aq>NEGATE<aq> EVERY <w>FOURTH<w> HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
 	skill_tips[38] = "delicious"
 	skill_msnd[38] =  sndMutEnrichedMetabolism
-	skill_bons[38] = "+25% AMMO +25% IMMUNE DURATION"
+	skill_bons[38] = "EVERY THIRD HIT#BUT MUCH LESS AMMO"
 	
 	skill_name[39] = "ALIEN INTESTINES"
 	skill_text[39] = "<g>ACTIVE<g> SPAWNS <p>TENTACLES<p>"

@@ -2,17 +2,17 @@
 if !openedShop
 {
 	openedShop = true;
-	with instance_create(x - 32,y + 64,VoidShopChallenge0)
+	with instance_create(x - 40,y + 52,VoidShopChallenge0)
 	{
 		image_index = 2;
 		image_speed = 0.5;
 	}
-	with instance_create(x,y + 64,VoidShopChallenge1)
+	with instance_create(x,y + 52,VoidShopChallenge1)
 	{
 		image_index = 1;
 		image_speed = 0.4;
 	}
-	with instance_create(x + 32,y + 64,VoidShopChallenge2)
+	with instance_create(x + 40,y + 52,VoidShopChallenge2)
 	{
 		image_index = 0;
 		image_speed = 0.3;

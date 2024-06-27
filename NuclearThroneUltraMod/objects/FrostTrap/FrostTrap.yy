@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprTrap",
-    "path":"sprites/sprTrap/sprTrap.yy",
+    "name":"sprVulcanoTrap",
+    "path":"sprites/sprVulcanoTrap/sprVulcanoTrap.yy",
   },
   "spriteMaskId":null,
   "visible":true,

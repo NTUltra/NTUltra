@@ -322,6 +322,7 @@ hard = 0
 skillsChosen = 0; //To check for ultra mutation (always last)
 totalSkills = 0;
 skeletonlives = 0;
+skeletonGambleBongas = 0;
 consecutiveGoodBloodGambles = 0;
 livesRegain = [];
 

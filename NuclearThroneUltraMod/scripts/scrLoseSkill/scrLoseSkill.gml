@@ -70,6 +70,7 @@ function scrLoseSkill(skillIndex){
 				if armour > maxarmour
 					armour = maxarmour;
 			}
+			skeletonGambleBongas = 0;
 		break;
 		case 10: //BACK MUSCLE
 			if ultra_got[85]

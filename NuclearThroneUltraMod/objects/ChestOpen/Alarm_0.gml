@@ -1,6 +1,9 @@
 /// @description lets go
 if instance_exists(VoidSeer)
 {
+	instance_create(x,y,Dust);
+	repeat(3)
+		instance_create(x,y,Debris);
 	instance_destroy();
 	exit;
 }

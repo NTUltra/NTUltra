@@ -505,7 +505,7 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
 			Sleep(100);
-			//getVision = true;
+			getVision = true;
 			//piggyBank = 100;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
 			{
@@ -1189,9 +1189,9 @@ if (rad > mr)
 		UberCont.highestReachedLevel = max(UberCont.highestReachedLevel, level);
 		if level==8 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
 			scrUnlockBSkin(25,"FOR REACHING LEVEL 8#BEFORE THE LABS#AS MUTATION DOCTOR",0);
-
-		repeat(level-6)
-			instance_create(x,y,IDPDSpawn)
+		if area != 100 && area != 135
+			repeat(min(15,level-6))
+				instance_create(x,y,IDPDSpawn)
 		/*
 		if level == 20
 		{

@@ -438,7 +438,10 @@ if skill_got[2] && tookHit && !exception
 if skill_got[38] && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
 {
 	metabolism += 1;
-	if metabolism > 3
+	var metabolismBreak = 3;
+	if race == 25
+		metabolismBreak = 2;
+	if metabolism > metabolismBreak
 	{
 		metabolism = 0;
 		my_health = prevhealth;
@@ -450,14 +453,16 @@ if skill_got[38] && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1
 		alarm[3] = max(alarm[3],6);
 		if race == 25//Doctor
 		{
-			scrCollectAmmo(3.75);
-			alarm[3] = max(alarm[3],7);
+			scrCollectAmmo(0.5);
 		}
 		else
-			scrCollectAmmo(3);
+		{
+			repeat(3)
+				scrCollectAmmo(1);
+		}
 		tookHit = false;
 	}
-	else if metabolism == 3
+	else if metabolism == metabolismBreak
 	{
 		BackCont.shake += 15;
 		snd_play_2d(sndGainProtection);

@@ -8,6 +8,7 @@ isChallenge = false;
 cost = 7;
 image_speed = 0.4;
 spr_item = sprVoidItemGoldChest;
+item_index = 0;
 wave = 0;
 onTheTable = false;
 spawnLocationX = x;

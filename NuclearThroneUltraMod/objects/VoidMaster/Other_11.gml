@@ -9,9 +9,22 @@ if introSpiel
 }
 else
 {
-	with TextHandler
+	if keepTalking > 2
 	{
-		text = "TAKE ON A CHALLENGE IF YOU DARE";
+		dialogueStep = 0;
+		with TextHandler
+		{
+			text = "OH YOU WANT TO CHALLENGE ME?";
+		}
+		alarm[2] = 5;
 	}
-	alarm[2] = 5;
+	else
+	{
+		keepTalking += 1;
+		with TextHandler
+		{
+			text = "TAKE ON A CHALLENGE IF YOU DARE";
+		}
+		alarm[2] = 5;
+	}
 }

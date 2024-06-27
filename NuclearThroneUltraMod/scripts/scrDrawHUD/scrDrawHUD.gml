@@ -68,7 +68,15 @@ function scrDrawHUD() {
 			hx += 13;
 			hx += 4;
 		}
-		draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,vx+hx,vy+4)
+		var isDoc = dataRef.race == 25
+		var metaBreak = 3;
+		if isDoc
+		{
+			metaBreak = 2;
+			draw_sprite(sprHealtBarMetabolismDoctor,dataRef.metabolism,vx+hx,vy+4)
+		}
+		else
+			draw_sprite(sprHealtBarMetabolism,dataRef.metabolism,vx+hx,vy+4)
 		var fill = sprHealthFill;
 		if venomized
 		{
@@ -81,7 +89,7 @@ function scrDrawHUD() {
 		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
 		draw_sprite_ext(fill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 		}
-		if dataRef.metabolism == 3
+		if dataRef.metabolism == metaBreak
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)
 		if dataRef.skill_got[46]//INNER PEACE
 		{
@@ -1860,8 +1868,9 @@ function scrDrawHUD() {
 				{
 					var yyy = yy - 30;
 					var nm = "COSTS: "+string(cost);
-					scrDrawTextBackgrounded(xx,yyy,nm,c_white);
-					scrDrawTextBackgrounded(xx,yyy + 8,challenge,c_red);
+					yyy -= 8;
+					scrDrawTextBackgrounded(xx,yyy - 8,nm,c_white);
+					scrDrawTextBackgrounded(xx,yyy,challenge,c_red);
 					scrDrawTextBackgrounded(xx,yyy + string_height(challenge),reward,c_lime);
 					if UberCont.normalGameSpeed == 60
 						explain += 0.5;
@@ -1870,11 +1879,11 @@ function scrDrawHUD() {
 					if explain > 20
 					{
 						draw_set_halign(fa_right);
-						scrDrawTextBackgrounded(xx - string_width(challenge) * 0.5,yyy + 8,"CHALLENGE: ",c_white);
-						scrDrawTextBackgrounded(xx - string_width(reward) * 0.5,yyy + 8 + string_height(challenge),"REWARD: ",c_white);
+						scrDrawTextBackgrounded(xx - string_width(challenge) * 0.5,yyy,"CHALLENGE [",c_white);
+						scrDrawTextBackgrounded(xx - string_width(reward) * 0.5,yyy + string_height(challenge),"REWARD [",c_white);
 						draw_set_halign(fa_left);
-						scrDrawTextBackgrounded(xx + string_width(challenge) * 0.5,yyy + 8 + string_height(challenge)," UPCOMING LOOP",c_white);
-						scrDrawTextBackgrounded(xx + string_width(reward) * 0.5,yyy + 8 + string_height(challenge)," UPON RETURN",c_white);
+						scrDrawTextBackgrounded(xx + string_width(challenge) * 0.5,yyy,"] UPCOMING LOOP",c_white);
+						scrDrawTextBackgrounded(xx + string_width(reward) * 0.5,yyy + string_height(challenge),"] UPON RETURN",c_white);
 						draw_set_halign(fa_center);
 					}
 				}
