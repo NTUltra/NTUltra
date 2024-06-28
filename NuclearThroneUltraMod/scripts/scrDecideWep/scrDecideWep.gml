@@ -1,4 +1,4 @@
-function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/) {
+function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/, specificType = false) {
 	var wepTier = wepTierParam - 1;
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
@@ -57,7 +57,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		}
 		var triesForSpecificTier = 0;
 		var maxValidTierWep = 0;
-		if scrIsGamemode(31)//Only melee
+		if specificType || scrIsGamemode(31)//Only melee
 		{
 			var tooBad = 0;
 			do {
@@ -77,7 +77,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				}
 			}
 			until (
-				(wep_area[wep] == max(1,wepTier-tooBad) || triesForSpecificTier > maxTries || (wep_area[wep] >= maxAreaGoodEnough && triesForSpecificTier > maxTries))
+				(wep_area[wep] == max(0,wepTier-tooBad) || triesForSpecificTier > maxTries || (wep_area[wep] >= maxAreaGoodEnough && triesForSpecificTier > maxTries))
 				&& wep_area[wep] >= minWepArea && wep_area[wep] <= wepTier
 			)
 		}

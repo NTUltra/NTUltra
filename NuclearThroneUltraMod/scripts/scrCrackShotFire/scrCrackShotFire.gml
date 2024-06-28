@@ -9,6 +9,7 @@ function scrCrackShotFire(){
 		with other
 		{
 			scrFire();
+			reload += wep_load[wep] * 0.35;
 		}
 	}
 	ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);

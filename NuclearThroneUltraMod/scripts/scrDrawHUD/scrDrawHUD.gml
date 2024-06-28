@@ -1825,7 +1825,7 @@ function scrDrawHUD() {
 		}
 		with VoidExit
 		{
-			if place_meeting(x,y,Player)
+			if isOpen && place_meeting(x,y,Player)
 			{
 				var yy = y-oy-18;
 				var xx = x-ox-2;

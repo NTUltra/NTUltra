@@ -826,9 +826,11 @@ if (selected && visible &&
 					ammo[5] = typ_amax[5];
 					//event_perform(ev_other,ev_room_end);
 			
-					maxSpeed += 0.4;//Normal speed
+					maxSpeed += 0.35;//Normal speed
 					accuracy = 1;//Normal accuracy
 					standartAccuracy = accuracy;
+					if skill_got[19]
+						scrApplyEagleEyes();
 				}
 			}
 		}
@@ -875,7 +877,7 @@ if (selected && visible &&
 				if array_length(livesRegain) > 2
 					scrUnlockBSkin(19,"FOR HAVING THREE LIVES",0);
 			    ultimategamble=false;
-				maxSpeed += 0.4;//Normal speed
+				maxSpeed += 0.35;//Normal speed
 				accuracy = 1;//Normal accuracy
 				standartAccuracy = accuracy;
 				if skill_got[19] //eagle eyes

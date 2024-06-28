@@ -977,7 +977,7 @@ if !instance_exists(LevCont) and visible = 1
 			else
 				wep_auto[wep] = 1
 		}
-		if scrIsChargeWeapon(bwep) {
+		if !scrIsChargeWeapon(bwep) {
 			if race == 7 && bwep != 0
 			{
 				if wep_auto[bwep] == 2
@@ -1509,6 +1509,10 @@ if (!instance_exists(LevCont))
 			reload -= reduction
 			breload -= reduction*0.5;
 			creload -= reduction*0.5;
+		}
+		if UberCont.voidChallengeGoing[0]
+		{
+			reload += 0.25;
 		}
 		if skill_got[34] {
 			reload -= 0.1;

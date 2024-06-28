@@ -99,7 +99,8 @@ function scrEndOfRun(){
 		lastSaveLoop = -1;
 		hasBeenSaved = false;
 		levelIncrease = 0;
-		hadVoidLevelUp = false;
+		voidChallengeGoing = [false,false,false,false,false,false];
+		voidChallengeCompleted= [false,false,false,false,false,false];
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;

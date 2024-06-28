@@ -11,14 +11,49 @@ switch(array_length(UberCont.collectedRewards))
 		*/
 		UberCont.crownHeal = true;
 		snd_play(other.snd_chst);
+		with instance_create(x,y,PopupText)
+		{
+			mytext = "CROWNVAULTS NOW HEAL!"
+			theColour = c_lime;
+			moveSpeed = 1;
+			alarm[1] = 60;
+		}
 	break;
 	case 1:
 		UberCont.radUp = true;
 		snd_play(other.snd_chst);
+		with instance_create(x,y,PopupText)
+		{
+			mytext = "+1 RADIATION VALUE!"
+			theColour = c_lime;
+			moveSpeed = 1;
+			alarm[1] = 60;
+		}
 	break;
 	case 2:
 		with UberCont {
-			portalEssence += 8;	
+			portalEssence += 10;
+			if (voidChallengeGoing[0])
+			{
+				portalEssence += 10;
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "+20 PORTAL ESSENCE!"
+					theColour = c_lime;
+					moveSpeed = 1;
+					alarm[1] = 60;
+				}
+			}
+			else
+			{
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "+10 PORTAL ESSENCE!"
+					theColour = c_lime;
+					moveSpeed = 1;
+					alarm[1] = 60;
+				}
+			}
 		}
 		snd_play(other.snd_chst);
 	break;
@@ -30,6 +65,13 @@ switch(array_length(UberCont.collectedRewards))
 			instance_create(x,y,RerollStation);
 		}
 		snd_play(other.snd_crwn);
+		with instance_create(other.x,other.y,PopupText)
+		{
+			mytext = "UNLOCKED RE-ROLL STATION!"
+			theColour = c_lime;
+			moveSpeed = 1;
+			alarm[1] = 60;
+		}
 		//UNLOCK GOOD OL' HUMPHRY
 		scrUnlockCharacter(26,"COLLECTING FOUR BOUNTIES");
 	break;
@@ -50,6 +92,13 @@ switch(array_length(UberCont.collectedRewards))
 			{
 				skillpoints ++;
 				skillsChosen--;
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "+1 MUTATION!"
+					theColour = c_lime;
+					moveSpeed = 1;
+					alarm[1] = 60;
+				}
 			}
 		}
 		else
@@ -58,6 +107,13 @@ switch(array_length(UberCont.collectedRewards))
 			{
 				maxhealth += 1;
 				my_health += 1;
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "+1 MAX HP!"
+					theColour = c_lime;
+					moveSpeed = 1;
+					alarm[1] = 60;
+				}
 			}
 			UberCont.maxHpIncrease += 1
 		}

@@ -15215,7 +15215,7 @@ function scrFire2(hasTailNow) {
 	case 698:
 	with instance_create(x,y,SplinterBurst)
 	{
-		totalAccuracy = 8;
+		totalAccuracy = 12;
 		creator = other.id
 		ammo = 2
 		time = 4

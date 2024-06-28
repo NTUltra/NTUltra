@@ -3272,13 +3272,17 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
 		{
+			/*
+			debug("kaas");
 			if wep_auto[wep] = 0 and KeyCont.key_spec[p] = 1
 			{
+				debug("WTTFFF?");
 				speed /= 4
 				scrFire()
 				scrFire()
 				clicked = 0
 			}
+			*/
 			if wep_auto[wep] == 1 || wep_auto[wep] == 3
 				scrFire()
 		}

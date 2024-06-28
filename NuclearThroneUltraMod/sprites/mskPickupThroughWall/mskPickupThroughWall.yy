@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"mskPickupThroughWall",
-  "bboxMode":2,
+  "bboxMode":0,
   "bbox_bottom":0,
   "bbox_left":0,
   "bbox_right":0,

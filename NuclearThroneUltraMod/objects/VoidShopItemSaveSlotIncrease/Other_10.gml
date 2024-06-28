@@ -7,7 +7,6 @@ with UberCont
 	scrSave();
 	if total_run_slots >= max_run_slots
 	{
-		
 		with other
 		{
 			event_user(1);

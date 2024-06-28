@@ -1,6 +1,31 @@
 /// @description Dialogue
-debug("master dialogue: ", dialogueStep);
-if introSpiel
+if completedChallenge
+{
+	switch (dialogueStep)
+	{
+		case 1:
+			with TextHandler {
+				text = "HERE IS YOUR REWARD";
+			}
+			event_user(3);
+			alarm[2] = 5;
+		break;
+		case 2:
+			with TextHandler {
+				text = "YOUR DEBUFF IS ALSO REMOVED";
+			}
+			alarm[2] = 5;
+		break;
+		case 3:
+			completedChallenge = false;
+			event_user(2);
+			with TextHandler {
+				text = "";
+			}
+		break;
+	}
+}
+else if introSpiel
 {
 	switch (dialogueStep)
 	{
@@ -55,6 +80,11 @@ else
 					text = "";
 				}
 				alarm[2] = 5;
+			break;
+			default:
+				with TextHandler {
+					text = "";
+				}
 			break;
 		}
 	}

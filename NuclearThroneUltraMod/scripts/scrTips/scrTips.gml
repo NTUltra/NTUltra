@@ -273,7 +273,7 @@ function scrTips() {
 	if Player.area = 6
 	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made","freaks can merge","big machine's core takes more damage","watch out for machinery","where some of them were made")
 	if Player.area = 100
-	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again",
+	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again","precursors",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",
 	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3","when you mod a weapon it will always come through the portal with you even if you leave it")
 	if Player.area = 102
@@ -326,7 +326,7 @@ function scrTips() {
 	if Player.area = 119
 	tip = choose("friends","I will save you all!","never stop","return","loop","throne II","we're here");
 	if Player.area = 120
-	tip = choose("empty","nothingness","void","  "," ... ","it is time","no one here");
+	tip = choose("empty","nothingness","void","  "," ... ","no one here","inbetween","can they be trusted?");
 	if Player.area = 121
 	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
 	if Player.area = 122
@@ -371,7 +371,7 @@ function scrTips() {
 	tip = choose("get an ultra weapon here","its green","irradiated beyond belief","radiation");
 	if Player.area = 137//VOID
 	tip = choose("void","nothing","empty","the good? the bad and the ugly","...","essence","space in between worlds","nothingness","darkness","the unknown","not of our worlds");
-	if Player.area = 137//CLOUDLAND
+	if Player.area = 138//CLOUDLAND
 	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!");
 	}
 

@@ -9,9 +9,18 @@ if introSpiel
 }
 else
 {
-	if keepTalking > 2
+	if completedChallenge
+	{
+		with TextHandler
+		{
+			text = "LOOKS LIKE YOU HAVE COMPLETED YOUR CHALLENGE";
+		}
+		alarm[2] = 5;
+	}
+	else if keepTalking > 2
 	{
 		dialogueStep = 0;
+		debug("WOW");
 		with TextHandler
 		{
 			text = "OH YOU WANT TO CHALLENGE ME?";
@@ -21,6 +30,7 @@ else
 	else
 	{
 		keepTalking += 1;
+		debug(keepTalking);
 		with TextHandler
 		{
 			text = "TAKE ON A CHALLENGE IF YOU DARE";

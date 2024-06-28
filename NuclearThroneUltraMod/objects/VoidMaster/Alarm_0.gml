@@ -7,6 +7,8 @@ if instance_exists(Player) && visible
 		if point_distance(x,y,Player.x,Player.y) < 96
 		{
 			image_speed = 0.4;
+			if !completedChallenge && !introSpiel && !instance_exists(VoidChallengeItem)
+				event_user(2);
 		}
 	}
 }

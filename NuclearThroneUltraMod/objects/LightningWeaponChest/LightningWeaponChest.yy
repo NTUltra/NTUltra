@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprMorphWeaponChest",
-    "path":"sprites/sprMorphWeaponChest/sprMorphWeaponChest.yy",
+    "name":"sprLightningWeaponChest",
+    "path":"sprites/sprLightningWeaponChest/sprLightningWeaponChest.yy",
   },
   "spriteMaskId":null,
   "visible":true,

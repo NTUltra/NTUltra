@@ -3,10 +3,12 @@ SetSeedWeapon();
 mySize = 1;
 team = 0;
 SetSeed();
-event_inherited()
+event_inherited();
+wep = [];
 ammoGet = 40;
 curse = 0
 heavyHeart = false;
+mediumchest = 0;
 if isOneWeaponOnlyModes()
 {
 	instance_destroy(id,false);

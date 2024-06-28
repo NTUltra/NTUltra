@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrIsAlsoExplosiveType",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrIsAlsoExplosiveType",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

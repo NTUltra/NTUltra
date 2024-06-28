@@ -195,46 +195,6 @@ function scrFire(canDrown = true) {
 						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
 				}
 			}
-/*
-	    }
-	    else
-	    {
-		    if random(100)<((wep_cost[bwep]/typ_ammo[wep_type[bwep]])*0.51)*100
-			{
-    
-			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5)
-			    if (ammo[wep_type[bwep]] + wantAmmo >= typ_amax[wep_type[bwep]] && !ultra_got[26])
-			    {
-					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
-			    }
-			    else
-					ammo[wep_type[bwep]] += wantAmmo;
-					
-				with instance_create(x,y-16,FxOnOwner)
-				{
-					owner = other.id;
-					sprite_index=sprSteroidsTB;
-					yOffset = -16;
-				}
-				if (UberCont.opt_ammoicon)
-				{
-					dir = instance_create(x,y,PopupText);
-					dir.sprt = sprAmmoIconsPickup;
-					dir.ii = wep_type[bwep]-1;
-					dir.mytext = "+"+string(wantAmmo)
-					if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
-						dir.mytext = "MAX ";
-				}
-				else
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
-					if ammo[wep_type[bwep]] == other.typ_amax[wep_type[bwep]]
-						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
-				}
-		    }
-	    }
-*/
 	}
 	if object_index == Player && (ultra_got[43] && !altUltra) {
 		with instance_create(x,y,CloneShooter) {

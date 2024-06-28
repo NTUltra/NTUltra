@@ -2891,11 +2891,11 @@ function scrWeapons() {
 	wep_popup[257] = "USES ENERGY#AND BOLT AMMO";
 
 	wep_name[258] = "SHOTGUN RIFLE"
-	wep_type[258] = 2
+	wep_type[258] = 1
 	wep_auto[258] = 2
 	wep_load[258] = 17
 	wep_cost[258] = 2
-	wep_sprt[258] = sprShotgunRifle1
+	wep_sprt[258] = sprShotgunRifle2
 	wep_area[258] = 3
 	wep_text[258] = "true hybrid gun"
 	wep_swap[258] = sndSwapShotgun

@@ -504,6 +504,13 @@ if scrIsCrown(18) && !exception
 		my_health -= dmgTaken;
 	}
 }
+if UberCont.voidChallengeGoing[1] && !exception
+{
+	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
+	{
+		my_health -= 1;
+	}	
+}
 ///tough shell
 var damageReduced = 0;
 if (skill_got[31])

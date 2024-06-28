@@ -1003,7 +1003,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		}
 		if (race == 19 && (ultra_got[73] || (ultra_got[76] && !ultimategamble)))
 		{
-			maxSpeed += 0.4;
+			maxSpeed += 0.35;
 			accuracy = 1;
 			standartAccuracy = accuracy;
 		}

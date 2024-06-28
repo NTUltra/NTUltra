@@ -1,4 +1,7 @@
-event_inherited();
+with instance_create(x,y,ChestOpen)
+	sprite_index = sprLightningWeaponChestOpen
+
+instance_create(x,y,FXChestOpen)
 snd_play(sndLightning3);
 repeat(4){
 	with instance_create(x+random(8)-4,y+random(8)-4,Smoke)

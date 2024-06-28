@@ -4,7 +4,9 @@ function scrNextLevel(skipping = false) {
 	{
 		with UberCont
 		{
-			portalEssence += 1;	
+			portalEssence += 1;
+			if voidChallengeGoing[0]
+				portalEssence += 1;
 		}
 		scrAddArea(area);
 		scrAddToRoute(area);
