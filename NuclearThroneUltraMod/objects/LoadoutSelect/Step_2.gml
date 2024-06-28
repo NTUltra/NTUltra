@@ -3,7 +3,7 @@ if (hasNoMenuOpen())
 
 
 //standard weapon
-if wep = 0
+if wep == 0 || bwep == 0
 	UberCont.start_wep[0] = race_swep[Menu.race];
 
 //Set the starting weapon
@@ -13,8 +13,26 @@ if wep == -1
 }
 else if UberCont.start_wep_have[wep,race] == 1
 {
-	UberCont.cwep[race]=UberCont.start_wep[wep];
+	//UberCont.cwep[race]=UberCont.start_wep[wep];
 	UberCont.selected_start_wep[race] = wep;
+}
+
+//Set the secondary starting weapon
+if (UberCont.secondary_start_wep[race])
+{
+	if bwep == -2
+	{
+		UberCont.selected_start_bwep[race] = -2;
+	}
+	if bwep == -1
+	{
+		UberCont.selected_start_bwep[race] = -1;
+	}
+	else if UberCont.start_wep_have[bwep,race] == 1
+	{
+		//UberCont.cwep[race]=UberCont.start_wep[bwep];
+		UberCont.selected_start_bwep[race] = bwep;
+	}
 }
 var xo = 0;
 if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1

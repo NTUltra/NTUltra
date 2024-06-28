@@ -51,7 +51,17 @@ image_speed = 0.4
 depth = 1;
 //if Player.loops>=1
 alarm[0] = 40
+popoSpawnType = 0;
+loops = UberCont.loops
+	if scrIsHardMode()  && Player.area > 1 && Player.loops != 1// HARD MODE
+		loops += 2;
 
-
-snd_play(sndIDPDPortalSpawn,0,true)
+if loops > 3 && random(3) < 1
+	popoSpawnType = 2;
+else if loops > 0 && random(4)<1+min(loops-1,2)
+	popoSpawnType = 1;
+if GetPlayerLoops() > 0
+	snd_play(sndEliteIDPDPortalSpawn,0,true)
+else
+	snd_play(sndIDPDPortalSpawn,0,true)
 instance_create(x,y,WallBreak);

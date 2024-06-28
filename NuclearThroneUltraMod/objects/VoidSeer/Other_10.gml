@@ -46,15 +46,26 @@ if killerSequence
 			alarm[2] = 50;
 			alarm[3] = 1;
 			BackCont.shake += 10;
-			if race == 13//Sheep
+			if race == 12//YUNG CUZ
 			{
-				cantUnderstand = true;
+				cantUnderstand = false;
+				dialogueStep = 6;
+				alarm[2] = 60;
+				with TextHandler
+				{
+					text = "OH YOU ARE A VENUZIAN?";
+					useFont = other.cantUnderstand;
+				}
+			}
+			else if race == 13//Sheep
+			{
+				cantUnderstand = false;
+				dialogueStep = 6;
 				alarm[2] = 60;
 				with TextHandler
 				{
 					text = "WAIT ITS JUST A SHEEP...";
 					useFont = other.cantUnderstand;
-					dialogueStep = 6;
 				}
 			}
 			else if race == 6//YV
@@ -104,7 +115,10 @@ if killerSequence
 			with TextHandler
 			{
 				useFont = other.cantUnderstand;
-				text = "PORTAL ESSENCE DETECTED\nREVERTING DEATH";
+				if other.race != 13 && other.race != 12
+					text = "PORTAL ESSENCE DETECTED\nREVERTING DEATH";
+				else
+					text = "PORTAL ESSENCE DETECTED";
 			}
 			alarm[2] = 40;
 		break;

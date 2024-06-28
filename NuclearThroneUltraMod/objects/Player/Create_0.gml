@@ -420,6 +420,9 @@ if scrIsGamemode(14) //fish companion only
 		instance_create(x,y,Partner);
 }
 oneweponlywep = 0;
+oneweponlywep = wep;
+bwep = 0
+cwep = 0 //roids specific
 //WEAPON STUFF!
 if (scrIsGamemode(1) || scrIsGamemode(46)) && (UberCont.opt_gm1wep == 0 || UberCont.wep_found[race,UberCont.opt_gm1wep]){ //one weapon only game mode yo
     if UberCont.opt_gm1wep == 0 {
@@ -441,27 +444,31 @@ else {
     else {
 		wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
 	}
-	if UberCont.secondary_start_wep[race] && UberCont.secondary_start_wep[race] != -2
+	debug(UberCont.selected_start_bwep[race]);
+	if UberCont.secondary_start_wep[race] && UberCont.selected_start_bwep[race] != -2
 	{
 		//SECONDARY STARTING WEAPON
-		if (UberCont.secondary_start_wep[race] == -1)
+		if (UberCont.selected_start_bwep[race] == -1)
 		{
-			do {wep = irandom(UberCont.maxstartwep);} until UberCont.start_wep_have[wep,race];
-			wep = UberCont.start_wep[wep];
+			do {bwep = irandom(UberCont.maxstartwep);} until UberCont.start_wep_have[bwep,race];
+			bwep = UberCont.start_wep[bwep];
 		}
 	    else {
-			wep = UberCont.start_wep[UberCont.secondary_start_wep[race]];
+			bwep = UberCont.start_wep[UberCont.selected_start_bwep[race]];
 		}
 	}
 }
-
-oneweponlywep = wep;
-
 if scrIsGamemode(13)
+{
 	wep = 239; //rocketglove
+	bwep = 0;
+}
 
 if scrIsGamemode(14) //fish companion only no wep
+{
 	wep = 0;
+	bwep = 0;
+}
 if scrIsGamemode(31)
 {
 	if wep != 0 && !scrMeleeWeapons(wep)
@@ -473,8 +480,6 @@ if scrIsGamemode(31)
 		bwep = 27//Default to screwdriver
 	}
 }
-bwep = 0
-cwep = 0 //roids specific
 reload = 0
 creload = 0
 breload = 0
@@ -516,20 +521,29 @@ toxicConsume = 0;
 toxicUltra = false;
 
 ammo[0] = 999
-ammo[1] = round(typ_ammo[1]*0.85);
-ammo[2] = round(typ_ammo[2]*0.85);
-ammo[3] = round(typ_ammo[3]*0.85);
-ammo[4] = round(typ_ammo[4]*0.85);
-ammo[5] = round(typ_ammo[5]*0.85);
-if UberCont.lastwishused {
-    ammo[1] = typ_ammo[1] * 1.5
-    ammo[2] = typ_ammo[2] * 1.5
-    ammo[3] = typ_ammo[3] * 1.5
-    ammo[4] = typ_ammo[4] * 1.5
-    ammo[5] = typ_ammo[5] * 1.5
+var am = 0.85;
+if race == 7
+	am = 1;
+else if UberCont.lastwishused
+{
+	am = 1.25;
 }
-else {
-    ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2.5)
+ammo[1] = round(typ_ammo[1]*am);
+ammo[2] = round(typ_ammo[2]*am);
+ammo[3] = round(typ_ammo[3]*am);
+ammo[4] = round(typ_ammo[4]*am);
+ammo[5] = round(typ_ammo[5]*am);
+if bwep != 0
+{
+	var taka = 1.25;
+	if race == 7
+		taka = 1.5;
+	ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * taka);
+	ammo[wep_type[bwep]] = round(typ_ammo[wep_type[bwep]] * taka);
+}
+else
+{
+	ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2.5);
 }
 
 maxSpeed = 4
@@ -655,7 +669,7 @@ if race == 26//Good O'l Humphry & Viking
 if race = 5 //Plant
 	maxSpeed = 4.5
 
-if race = 7 //roids secondary weapon
+if race == 7 //roids secondary weapon
 {
     if scrIsGamemode(1) { //one weapon only game mode yo
         if UberCont.opt_gm1wep == 0
@@ -663,7 +677,7 @@ if race = 7 //roids secondary weapon
         else
             bwep = UberCont.opt_gm1wep
     }
-    else {
+    else if !UberCont.secondary_start_wep[race] || UberCont.selected_start_bwep[race] == -2 {
         bwep = wep
     } //start with another golden weapon instead of a revolver
 

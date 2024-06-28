@@ -14,3 +14,4 @@ onTheTable = false;
 spawnLocationX = x;
 spawnLocationY = y + 32;
 explain = 0;
+alarm[6] = 2;

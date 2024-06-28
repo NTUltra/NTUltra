@@ -3,7 +3,7 @@ maxhealth = 37
 mySize = 2
 
 event_inherited()
-meleedamage = 5
+meleedamage = 5;
 
 spr_idle = sprGoldScorpionIdle
 spr_walk = sprGoldScorpionWalk

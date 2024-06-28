@@ -7,7 +7,7 @@ function scrScarierFace(theDamage, isPerFrame){
 		if Player.race == 25
 			flatDmg += 0.15
 		if isPerFrame
-			my_health -= min(theDamage * 0.5,flatDmg*0.5);
+			my_health -= min(theDamage * 0.5,((flatDmg - 0.1)*0.5));
 		else
 			my_health -= min(theDamage,flatDmg);
 		my_health -= Player.excessDamageDeal;
@@ -38,7 +38,7 @@ function scrScarierFace(theDamage, isPerFrame){
 		Player.excessDamageDeal = 0;
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
-			var part = -0.75;
+			var part = -0.7;
 			if my_health < - 150
 			{
 				part = -0.1;

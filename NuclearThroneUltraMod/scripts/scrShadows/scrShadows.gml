@@ -464,6 +464,8 @@ function scrShadows() {
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with ExploderPopo
 	draw_sprite(shd24,0,x-vx,y-vy)
+	with EliteExploderPopo
+	draw_sprite(shd24,0,x-vx,y-vy)
 	with IDPDFreak
 	draw_sprite(shd24,0,x-vx,y-vy+2)
 	with BuffPopo

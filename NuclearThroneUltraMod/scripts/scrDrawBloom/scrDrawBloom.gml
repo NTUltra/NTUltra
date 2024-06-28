@@ -378,7 +378,7 @@ function scrDrawBloom() {
 						draw_sprite_ext(sprHunterUltraBMark,-1,x - vx,y - vy,minSize,minSize,image_angle,c_green,ba + 0.2);
 						if alarm[1] > 2
 						{
-							alarm[1] += 5;
+							alarm[1] +=0.5;
 							speed -= speed * 0.2;
 						}
 			        }

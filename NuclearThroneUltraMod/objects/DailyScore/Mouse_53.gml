@@ -1,4 +1,4 @@
-if hover
+if hover && Menu.widescreen > 0
 {
 	snd_play_2d(sndClick);
 	with DailyRace

@@ -99,6 +99,19 @@ function scrNextLevel(skipping = false) {
 	}
 	//show_message("inverted: "+ string(inverted)+"#area :"+string(area));
 	lastsubarea = subarea;
+	if area == 137
+	{
+		//WE LOOP HERE!
+		looping = true;
+		area=1;
+		subarea=1;
+		lastarea = 1;
+		lastsubarea = 1;
+		inverted = false;
+		hard -= 1;
+		hard = max(hard,0);
+		exit;
+	}
 	if area < 100
 	{
 		lastarea = area
@@ -508,11 +521,6 @@ function scrNextLevel(skipping = false) {
 			UberCont.extraVan = 0;
 		*/
 		area = 137;
-	}
-	else if area == 137
-	{
-		//WE LOOP HERE!
-		looping=true;
 	}
 	if ( subarea < 3 and area != 2 and area != 105 and area != 106
 	&& !(area = 6 && subarea > 1)//Labs has 2 areas

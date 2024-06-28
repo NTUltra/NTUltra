@@ -101,7 +101,7 @@ function scrNextLevelInverted() {
 	subarea++;
 	else
 	{
-	looping=true;
+	looping = true;
 	}
 
 	exit;

@@ -15,6 +15,10 @@ if other.team != team
 			{
 				hitBy = other.sprite_index;	
 			}
+			with other
+			{
+				mask_index = mskPickupThroughWall;	
+			}
 		}
 	}
 }

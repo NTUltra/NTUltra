@@ -1634,50 +1634,53 @@ function scrPowers(raceOverwrite = -1) {
 	{
 		if ultra_got[43] && altUltra
 		{
-			if hunterEye > hunterEyeMax*0.7
-				snd_play_fire(sndSniperEyeUpg);
-			else
-				snd_play_fire(sndSniperEye);
-			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-			with instance_create(x+(right*2),y+0.5,RedirectFX)
+			if !instance_exists(HunterSniperEye)
 			{
-				if other.bskin == 1
-					sprite_index = sprHunterEyeSniperB;
-				else if other.bskin == 2
-					sprite_index = sprHunterEyeSniperC;
+				if hunterEye > hunterEyeMax*0.7
+					snd_play_fire(sndSniperEyeUpg);
 				else
-					sprite_index = sprHunterEyeSniperA;
-				image_angle = aimDirection;
-			}
-			var he = round(hunterEye)
-			with instance_create(x+(right*2),y+0.5,HunterSniperEye)
-			{
-				image_angle = aimDirection;
-				dmg = clamp(round(he*0.3),4,60);
-				image_yscale = clamp(he*0.015,0.5,2.5);
-				confuseTime = clamp(he*0.2,4,40);
-				var addTime = clamp(floor(he*0.025),0,5);
-				alarm[1] += addTime;
-				alarm[2] += addTime;
-				team = other.team;
-				if other.bskin == 1
-					sprite_index = sprHunterSniperB;
-				else if other.bskin == 2
-					sprite_index = sprHunterSniperC;
-				else
-					sprite_index = sprHunterSniperA;
-				if other.hunterEye >= other.hunterEyeMax
+					snd_play_fire(sndSniperEye);
+				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+				with instance_create(x+(right*2),y+0.5,RedirectFX)
 				{
-					alarm[0] = 1;	
+					if other.bskin == 1
+						sprite_index = sprHunterEyeSniperB;
+					else if other.bskin == 2
+						sprite_index = sprHunterEyeSniperC;
+					else
+						sprite_index = sprHunterEyeSniperA;
+					image_angle = aimDirection;
 				}
-				event_user(0);
-			}
+				var he = round(hunterEye)
+				with instance_create(x+(right*2),y+0.5,HunterSniperEye)
+				{
+					image_angle = aimDirection;
+					dmg = clamp(round(he*0.3),4,60);
+					image_yscale = clamp(he*0.015,0.5,2.5);
+					confuseTime = clamp(he*0.2,4,40);
+					var addTime = clamp(floor(he*0.025),0,5);
+					alarm[1] += addTime;
+					alarm[2] += addTime;
+					team = other.team;
+					if other.bskin == 1
+						sprite_index = sprHunterSniperB;
+					else if other.bskin == 2
+						sprite_index = sprHunterSniperC;
+					else
+						sprite_index = sprHunterSniperA;
+					if other.hunterEye >= other.hunterEyeMax
+					{
+						alarm[0] = 1;	
+					}
+					event_user(0);
+				}
 
-			BackCont.viewx2 += lengthdir_x(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
-			BackCont.shake += clamp(hunterEye*0.05,3,10);
-			//Max = 200;
-			hunterEye = 0;
+				BackCont.viewx2 += lengthdir_x(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+				BackCont.shake += clamp(hunterEye*0.05,3,10);
+				//Max = 200;
+				hunterEye = 0;
+			}
 		}
 		else if ultra_got[44]{//Hunter Ultra D CRACKSHOT
 			if(instance_exists(enemy)){

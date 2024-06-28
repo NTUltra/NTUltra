@@ -27,5 +27,8 @@ depth = 1;
 alarm[0] = 40
 
 
-snd_play(sndIDPDPortalSpawn,0,true)
+if GetPlayerLoops() > 0
+	snd_play(sndEliteIDPDPortalSpawn,0,true)
+else
+	snd_play(sndIDPDPortalSpawn,0,true)
 

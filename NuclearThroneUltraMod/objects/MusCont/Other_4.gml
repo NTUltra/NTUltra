@@ -314,6 +314,12 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb106;
     }
+	else if area == 137 {
+		//VOID is completely silent
+		audio_stop_sound(song);
+		audio_stop_sound(amb);
+		exit;
+    }
 	else if area == 138 {
 
         song = mus106

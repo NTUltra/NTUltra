@@ -31,12 +31,12 @@ function scrContactDamageToEnemy(hitEnemy){
 				snd_play(sndGammaGutsProc);
 				with hitEnemy
 				{
-					DealDamage(contactDmg,true,true,false)//dmg dealt by gamma guts
 					var dmgTaken = scrCallculateFinalDamage(contactDmg);
 					if my_health - dmgTaken <= 0
 					{
-						actuallyDead = true;	
+						actuallyDead = true;
 					}
+					DealDamage(contactDmg,true,true,false)//dmg dealt by gamma guts
 					sprite_index = spr_hurt
 					image_index = 0
 					if meleedamage > 0
@@ -60,74 +60,71 @@ function scrContactDamageToEnemy(hitEnemy){
 			}
 		}
 
-		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 25 && !justAsheep && !hitEnemy.isSnooze && !instance_exists(HumphryDiscipline)//is it a melee enemy?
+		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 18 && !justAsheep && !hitEnemy.isSnooze && !instance_exists(HumphryDiscipline)//is it a melee enemy?
 		&& hitEnemy.frozen == noone && hitEnemy.alarm[11] < 1 && !collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false)
 		{
-			if meleeimmunity < 1
+			if meleeimmunity < 1 || alarm[3] < 1
 			{
-				if  alarm[3] < 1
-				{
-					if loops > 0
-						meleeimmunity = hurtDurationLoop - 1;
-					else
-						meleeimmunity = hurtDuration - 1;
-				    if (hitEnemy.my_health<=0 || actuallyDead)
-				    {
-				    }
-				    else {//if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2){//Ultra D Humphry no contact damage
-				    //enemy deals damage to the player
-    
-				        if sprite_index != spr_hurt
-				        {
-					        snd_play(hitEnemy.snd_melee)
-							hitBy = hitEnemy.spr_idle;
-					        sprite_index = spr_hurt
-					        image_index = 0
-					        snd_play(snd_hurt, hurt_pitch_variation)
-							if skill_got[8]
-							{
-								if race == 25
-									DealDamage(ceil(hitEnemy.meleedamage*0.25),false,false,false);
-								else
-									DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
-							}
-							else
-							{
-								DealDamage(hitEnemy.meleedamage,false,false,false)
-								if hitEnemy.venomous {
-									scrApplyEnemyVenom(hitEnemy.team,id);
-								}
-							}
-					        motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)
-        
-					        with hitEnemy
-							{
-								var away = point_direction(x,y,other.x,other.y)
-								move_contact_solid(away,4);
-								motion_add(away,8)
-								speed = 0;
-								walk = min(walk,5);
-								alarm[1] += 15;
-							}
-				
-							if hitEnemy.object_index == IDPDVan
-							{
-								if my_health <= 0
-									scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN#I AM SO SORRY");
-								else
-									scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN");
-							}
-							
-					        Sleep(100)
-				        }
-				    }
-				}
+				if loops > 0
+					meleeimmunity = hurtDurationLoop - 1;
 				else
+					meleeimmunity = hurtDuration - 1;
+				if (hitEnemy.my_health<=0 || actuallyDead)
 				{
-					snd_play(sndDamageNegate,0.1,true);
-					hitEnemy.existTime = 5;
-					//Acts as sound delay I guess
 				}
+				else {//if !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2){//Ultra D Humphry no contact damage
+				//enemy deals damage to the player
+    
+				    if sprite_index != spr_hurt
+				    {
+					    snd_play(hitEnemy.snd_melee)
+						hitBy = hitEnemy.spr_idle;
+					    sprite_index = spr_hurt
+					    image_index = 0
+					    snd_play(snd_hurt, hurt_pitch_variation)
+						if skill_got[8]
+						{
+							if race == 25
+								DealDamage(ceil(hitEnemy.meleedamage*0.25),false,false,false);
+							else
+								DealDamage(ceil(hitEnemy.meleedamage*0.5),false,false,false);
+						}
+						else
+						{
+							DealDamage(hitEnemy.meleedamage,false,false,false)
+							if hitEnemy.venomous {
+								scrApplyEnemyVenom(hitEnemy.team,id);
+							}
+						}
+					    motion_add(point_direction(hitEnemy.x,hitEnemy.y,x,y)+180,8)
+        
+					    with hitEnemy
+						{
+							var away = point_direction(x,y,other.x,other.y)
+							move_contact_solid(away,4);
+							motion_add(away,8)
+							speed = 0;
+							walk = min(walk,5);
+							alarm[1] += 15;
+						}
+				
+						if hitEnemy.object_index == IDPDVan
+						{
+							if my_health <= 0
+								scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN#I AM SO SORRY");
+							else
+								scrUnlockGameMode(8,"FOR GETTING HIT BY A VAN");
+						}
+							
+					    Sleep(100)
+				    }
+				}
+			}
+			else
+			{
+				snd_play(sndDamageNegate,0.1,true);
+				hitEnemy.existTime = 5;
+				//Acts as sound delay I guess
 			}
 		}
 	}

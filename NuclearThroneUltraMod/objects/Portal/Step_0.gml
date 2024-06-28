@@ -195,8 +195,8 @@ if inverted
 }
 else
 {
-	if pullstrength>4.5 && type != 4
-		pullstrength=4.5;
+	if pullstrength>4.25 && type != 4
+		pullstrength=4.25;
 }
 if pullstrength > 10
 	pullstrength = 10;

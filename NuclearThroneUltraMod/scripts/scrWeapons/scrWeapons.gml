@@ -36,7 +36,7 @@ function scrWeapons() {
 	wep_name[3] = "WRENCH"
 	wep_type[3] = 0
 	wep_auto[3] = 0
-	wep_load[3] = 20
+	wep_load[3] = 18
 	wep_cost[3] = 0
 	wep_sprt[3] = sprWrench
 	wep_area[3] = 1
@@ -447,7 +447,7 @@ function scrWeapons() {
 	wep_name[40] = "GOLDEN WRENCH"
 	wep_type[40] = 0
 	wep_auto[40] = 0
-	wep_load[40] = 18
+	wep_load[40] = 17
 	wep_cost[40] = 0
 	wep_sprt[40] = sprGoldWrench
 	wep_area[40] = 17

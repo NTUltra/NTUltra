@@ -19,9 +19,7 @@ else
 	var ranLine = irandom(3);
 	t = scrText(race - 1, "strRandomLoop0-" + string(ranLine));
 }
-debug(t);
 textQueue = string_split(t,"*");
-debug(textQueue);
 /*
 var al = array_length(textQueue);
 for (var i = 0; i < al; i ++)

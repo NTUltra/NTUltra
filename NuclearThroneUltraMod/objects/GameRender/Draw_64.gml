@@ -37,7 +37,8 @@ if !instance_exists(MenuGen)
 				vy += random_range(8,-8) * s;
 			}
 			draw_rectangle_colour(0,vh,vw, vy + vh - (32 * s),c_black,c_black,c_black,c_black,false);
-			draw_text_transformed(vx + vw*0.5, vy + vh - (16 * s), text,s,s,0);
+			draw_text_ext_transformed(vx + vw*0.5, vy + vh - (16 * s),
+			text,3*s,300,s,s,0);
 			draw_set_valign(fa_top);
 			draw_set_halign(fa_left);
 			if useFont

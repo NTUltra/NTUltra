@@ -2,6 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-spr_item = sprVoidItemAmmoChests;
+spr_item = sprVoidItemExplosiveChest;
 name = "EXPLOSIVE WEAPON CHEST";
 cost = 5;

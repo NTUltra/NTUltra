@@ -33,7 +33,7 @@ if autoFire > 0
 	else
 		autoFire -= 1;
 }
-if ultra_got[43] && altUltra && hunterEye < hunterEyeMax
+if ultra_got[43] && altUltra && hunterEye < hunterEyeMax && !instance_exists(HunterSniperEye)
 {
 	hunterEye += 1.6+(1.6*skill_got[5]);
 	if hunterEye >= hunterEyeMax
