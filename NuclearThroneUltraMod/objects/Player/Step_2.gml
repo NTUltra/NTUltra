@@ -1244,4 +1244,6 @@ if scrIsCrown(29)
 	}
 }
 if lockout
+{
 	speed = 0;
+}

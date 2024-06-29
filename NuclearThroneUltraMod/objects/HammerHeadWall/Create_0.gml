@@ -7,6 +7,6 @@ r = 0
 w = 24
 h = 24
 outindex = 0;
-topindex = irandom(sprite_get_number(topspr));
+topindex = irandom(sprite_get_number(topspr) - 1);
 image_xscale = choose(1,-1);
 scrInitDrops(1);

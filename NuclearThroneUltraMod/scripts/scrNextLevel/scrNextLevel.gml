@@ -423,9 +423,9 @@ function scrNextLevel(skipping = false) {
 	        }
 	        else//go to crystal caves
 	        {
-		        area = 6;
+		        area = 4;
 		        subarea = 1;
-				lastarea = 6;
+				lastarea = 4;
 				lastsubarea = 1;
 				inverted = false;
 	        }

@@ -87,7 +87,8 @@ if widescreen > 0
 		draw_sprite_ext(sprSplat2,lerp(1,3,portraitLerp*0.5),
 		lerp(__view_get( e__VW.XView, 0 ) - 256,__view_get( e__VW.XView, 0 ),min(1,portraitLerp*0.75)),
 		__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 2,-1,1,0,c_white,1);
-		draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8);
+		if !instance_exists(LoadoutSelect) || !LoadoutSelect.ultraOpen
+			draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8);
 		draw_set_valign(fa_bottom);
 		draw_text_colour(tpx + 1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);
 		draw_text_colour(tpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);

@@ -14,4 +14,5 @@ spr_idle=sprInvertedBigMachineLaser
 spr_fire=sprInvertedBigMachineLaserFire
 
 loops = GetPlayerLoops();
+maxSpeed = 2;
 maxSpeed += min(1,loops*0.1);

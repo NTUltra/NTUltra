@@ -17,6 +17,10 @@ with GraveyardEntrance
 		area = 126;
 		subarea = 0;
 	}
+	with enemy
+	{
+		my_health = 0;	
+	}
 }
 if UberCont.area == 10 || (instance_exists(Player) && Player.area == 121)
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);

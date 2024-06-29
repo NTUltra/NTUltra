@@ -47,17 +47,19 @@ txt2 = scrReplaceAllColourCodes(txt2);
 if selected
 {
 
-drawx = x
 drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-34//48
 if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
 	drawy -= string_height(string_hash_to_newline(skill_bons[skill]));
 
+/*
 if drawx-string_width(string_hash_to_newline(txt2))/2-2 < __view_get( e__VW.XView, 0 )+2
 drawx = __view_get( e__VW.XView, 0 )+4+string_width(string_hash_to_newline(txt2))/2
 
 if drawx+string_width(string_hash_to_newline(txt2))/2+2> __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-2
 drawx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4-string_width(string_hash_to_newline(txt2))/2
-
+*/
+drawx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) * 0.5);
+draw_set_halign(fa_center);
 draw_set_color(c_black)
 //draw_set_alpha(0.7)
 //draw_rectangle(
@@ -69,7 +71,7 @@ var splitted = string_split(txt2,"#");
 var al = array_length(splitted);
 var lineHeight = string_height("kaas");
 var tyy = drawy - string_height(string_hash_to_newline(txt2)) - (lineHeight * 2);
-var txx = drawx+string_width(string_hash_to_newline(txt2))/2
+var txx = drawx
 for (var i = 0; i < al; i++)
 {
 	if splitted[i] != ""
@@ -79,37 +81,30 @@ for (var i = 0; i < al; i++)
 			t = 0;
 		var tyyy = tyy + lineHeight*i;
 		draw_rectangle(
-		txx,
+		txx - (string_width(splitted[i])*0.5) - 2,
 		tyyy + t,
-		txx - string_width(splitted[i]) - 2,
+		txx + (string_width(splitted[i])*0.5),
 		tyyy + lineHeight + 2, false)
 	}
 }
 draw_set_alpha(1)
 
 
-// draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
-
-//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(string(txt2)))
-//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(string(txt2)))
-//draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,string_hash_to_newline(string(txt2)))
 draw_set_color(make_colour_rgb(160,160,160));
-scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,string(fulltxt))
+scrDrawTextColours(drawx,drawy-14,string(fulltxt))
 draw_set_color(c_white)
-draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(skill_name[skill])),string_hash_to_newline(string(skill_name[skill])))
+draw_text(drawx,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(skill_name[skill])),string_hash_to_newline(string(skill_name[skill])))
 
 if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
 {
 	var bonusTxt = string_hash_to_newline(skill_bons[skill]);
 	drawy += string_height(bonusTxt);
 	draw_set_color(c_black)
-	//draw_set_alpha(0.8)
-	//draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2,drawy-14-string_height(bonusTxt),drawx+string_width(string_hash_to_newline(txt2))/2+2,drawy-10,0)
 	var splitted = string_split(skill_bons[skill],"#");
 	var al = array_length(splitted);
 	var lineHeight = string_height("kaas");
 	var tyy = drawy - 16 - (lineHeight * al)
-	var txx = drawx+string_width(string_hash_to_newline(txt2))/2
+	var txx = drawx
 	for (var i = 0; i < al; i++)
 	{
 		if splitted[i] != ""
@@ -121,20 +116,21 @@ if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
 			}
 			var tyyy = tyy + lineHeight*i;
 			draw_rectangle(
-			txx,
+			txx - (string_width(splitted[i])*0.5) - ht*0.5,
 			tyyy + 1,
-			txx - string_width(splitted[i]) - ht,
+			txx + (string_width(splitted[i])*0.5) + ht*0.5,
 			tyyy + lineHeight + 2, false)
 		}
 	}
 	draw_set_alpha(1)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,"["+bonusTxt+"]")
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,"["+bonusTxt+"]")
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-14,"["+bonusTxt+"]")
+	draw_text(drawx,drawy-13,"["+bonusTxt+"]")
+	draw_text(drawx+1,drawy-13,"["+bonusTxt+"]")
+	draw_text(drawx+1,drawy-14,"["+bonusTxt+"]")
 	draw_set_color(c_lime)
-	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14,"["+bonusTxt+"]")
+	draw_text(drawx,drawy-14,"["+bonusTxt+"]")
 }
 }
+draw_set_halign(fa_left);
 //draw_text(x,y-32,string(skill)); // just to show the skillnumber
 if hover && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra)
 {

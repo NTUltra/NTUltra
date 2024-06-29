@@ -180,7 +180,7 @@ if !instance_exists(LevCont) and visible = 1
 	}
 	if roll = 0
 	{
-		if canMove
+		if canMove && !lockout
 		{
 			var previousSpeed = max(1,speed);
 			var acc = acceleration;
@@ -261,40 +261,40 @@ if !instance_exists(LevCont) and visible = 1
 			if speed > 5.1
 				speed -= 3.5 * delta;
 			var multi = 0;//Diagonal movement is faster acceleration otherwise
-			if (canMove)
+			if (canMove && !!lockout)
 			{
 				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			{
-				if hspeed > 0
-					hspeed *= braking;
-				hspeed -= extraacc
-				multi += extraacc;
-				moving = true;
-			}
+				{
+					if hspeed > 0
+						hspeed *= braking;
+					hspeed -= extraacc
+					multi += extraacc;
+					moving = true;
+				}
 				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			{
-				if hspeed < 0
-					hspeed *= braking;
-				hspeed += extraacc
-				multi += extraacc;
-				moving = true;
-			}
+				{
+					if hspeed < 0
+						hspeed *= braking;
+					hspeed += extraacc
+					multi += extraacc;
+					moving = true;
+				}
 				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			{
-				if vspeed > 0
-					vspeed *= braking;
-				vspeed -= extraacc
-				multi += extraacc;
-				moving = true;
-			}
+				{
+					if vspeed > 0
+						vspeed *= braking;
+					vspeed -= extraacc
+					multi += extraacc;
+					moving = true;
+				}
 				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			{
-				if vspeed < 0
-					vspeed *= braking;
-				vspeed += extraacc
-				multi += extraacc;
-				moving = true;
-			}
+				{
+					if vspeed < 0
+						vspeed *= braking;
+					vspeed += extraacc
+					multi += extraacc;
+					moving = true;
+				}
 			}
 			speed -= max(0,multi-extraacc);
 			if !moving
@@ -2698,6 +2698,9 @@ if !instance_exists(Ghosting)
 {
 	if(race != 18)
 	{
+		var msk = mask_index;
+		if msk == mskPickupThroughWall
+			mask_index = mskPlayer;
 		var dt = 1;
 		if is60fps
 			dt = 0.5;
@@ -2759,6 +2762,7 @@ if !instance_exists(Ghosting)
 				}
 			}
 		}
+		mask_index = msk;
 	}
 	else if place_meeting(x,y,WallHitMe)
 	{	

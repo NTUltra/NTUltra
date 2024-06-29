@@ -1583,8 +1583,8 @@ function scrDrawHUD() {
 		
 						draw_set_color(c_black)
 						draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-						draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-						draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
+						draw_text(x-ox + 1,yy,string_hash_to_newline(string(name)))
+						draw_text(x-ox + 1,yy-1,string_hash_to_newline(string(name)))
 						draw_set_color(c_white)
 						draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
 			
@@ -1597,8 +1597,8 @@ function scrDrawHUD() {
 							yy = y - oy + 14;
 							draw_set_color(c_black)
 							draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-							draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-							draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
+							draw_text(x-ox+1,yy,string_hash_to_newline(string(helpText)))
+							draw_text(x-ox+1,yy-1,string_hash_to_newline(string(helpText)))
 							draw_set_color(c_white)
 							draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
 						}

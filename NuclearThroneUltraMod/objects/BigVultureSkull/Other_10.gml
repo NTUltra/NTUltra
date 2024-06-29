@@ -15,6 +15,7 @@ if spr_idle == sprBigVultureSkullOpen
 		//with enemy
 		//	my_health = 0
 		spr_idle = sprBigVultureSkull;
+		sprite_index = sprBigVultureSkull;
 		spr_hurt = sprBigVultureSkullHurt;
 		with instance_create(x,y,Portal)
 		{
@@ -22,7 +23,10 @@ if spr_idle == sprBigVultureSkullOpen
 			pullstrength = 3;
 			with Player
 			{
-				lockout = true;	
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
 			}
 			alarm[1] = 1;
 			x = other.x;

@@ -14,6 +14,13 @@ if KeyCont.key_pick[other.p] = 1
 		anyMutation += 1;
 	}
 	instance_create(x,y,PortalChecker);
+	with instance_create(x,y,PopupText)
+	{
+		mytext = "CHOOSE ANY MUTATION!"
+		theColour = c_lime;
+		moveSpeed = 1;
+		alarm[1] = 60;
+	}
 	with CorpseCollector
 	{
 		px = other.x;

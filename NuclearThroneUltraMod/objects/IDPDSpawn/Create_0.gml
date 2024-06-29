@@ -8,6 +8,7 @@ Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea ==
 	instance_destroy()
 	exit;
 }
+SetSeedPopoSpawn();
 var tries = 200;
 do {
 	x = Player.x
@@ -60,7 +61,7 @@ if loops > 3 && random(3) < 1
 	popoSpawnType = 2;
 else if loops > 0 && random(4)<1+min(loops-1,2)
 	popoSpawnType = 1;
-if GetPlayerLoops() > 0
+if popoSpawnType > 0
 	snd_play(sndEliteIDPDPortalSpawn,0,true)
 else
 	snd_play(sndIDPDPortalSpawn,0,true)

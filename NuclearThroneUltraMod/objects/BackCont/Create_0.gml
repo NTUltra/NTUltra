@@ -98,7 +98,7 @@ if instance_exists(Player)
 	}
 	
 	if (
-		((Player.area == 9 || Player.area == 118)
+		((Player.area == 9 || Player.area == 118 || Player.area == 135)
 		&& Player.subarea == 3)
 		|| Player.area == 104 
 		|| Player.area == 128

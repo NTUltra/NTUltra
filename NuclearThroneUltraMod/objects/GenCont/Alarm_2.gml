@@ -694,7 +694,7 @@ if (Player.area == 126 || Player.area == 127)
 	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)
 	{
 		instance_create(x+16,y+16,WallBreak);
-		instance_create(x+16,y+16,InactivePatienceStation);
+		instance_create(x+16,y+16,InactiveAnyMutationStation);
 		
 		instance_create(x,y-32,Floor)
 		instance_create(x,y+32,Floor)

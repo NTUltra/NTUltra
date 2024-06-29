@@ -24,7 +24,10 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 			pullstrength = 3;
 			with Player
 			{
-				lockout = true;	
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
 			}
 			alarm[1] = 1;
 		}

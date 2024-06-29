@@ -36,12 +36,15 @@ switch(array_length(UberCont.collectedRewards))
 			if (voidChallengeGoing[0])
 			{
 				portalEssence += 10;
-				with instance_create(x,y,PopupText)
+				with Player
 				{
-					mytext = "+20 PORTAL ESSENCE!"
-					theColour = c_lime;
-					moveSpeed = 1;
-					alarm[1] = 60;
+					with instance_create(x,y,PopupText)
+					{
+						mytext = "+20 PORTAL ESSENCE!"
+						theColour = c_lime;
+						moveSpeed = 1;
+						alarm[1] = 60;
+					}
 				}
 			}
 			else

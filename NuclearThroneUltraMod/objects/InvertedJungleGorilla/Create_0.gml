@@ -4,7 +4,7 @@
 event_inherited();
 raddrop = 18
 maxhealth = 55;
-if loop > 0
+if loops > 0
 	maxhealth = 61;
 EnemyHealthAdjustments();
 

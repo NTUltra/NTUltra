@@ -513,7 +513,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 23
+	wep_load[46] = 22
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1

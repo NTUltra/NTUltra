@@ -8,9 +8,9 @@ if(instance_exists(creator)){
 	var xx = x + lengthdir_x(range,direction);
 	var yy = y + lengthdir_y(range,direction);
 	//Lock on
-	if instance_exists(enemy)
+	if instance_exists(hitme)
 	{
-		var n = instance_nearest(mx,my,enemy);
+		var n = instance_nearest(mx,my,hitme);
 		if (n.team != team && point_distance(x,y,n.x,n.y) < range)
 		{
 			if point_distance(mx,my,n.x,n.y) < detectRange && (morphType == 3 || collision_line(x,y,n.x,n.y,Wall,0,0) < 0)
@@ -28,7 +28,7 @@ if(instance_exists(creator)){
 			var  dir = point_direction(creator.x,creator.y,mx,my);
 			var step = 24;
 			do {
-				var n = instance_nearest(xxx,yyy,enemy);
+				var n = instance_nearest(xxx,yyy,hitme);
 				if (n.team != team && point_distance(x,y,n.x,n.y) < range)
 				{
 					if point_distance(xxx,yyy,n.x,n.y) < detectRange && (morphType == 3 || collision_line(x,y,n.x,n.y,Wall,0,0) < 0)

@@ -1,4 +1,4 @@
-scrDrop(22,5)
+scrDrop(22,10)
 
 event_inherited()
 if object_index == Vulture

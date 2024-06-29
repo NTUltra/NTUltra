@@ -12,9 +12,8 @@ else if skin == 5 && UberCont.race_fskin[race]=1
 	UberCont.skin[race]=skin;
 else if skin == 6 && UberCont.race_gskin[race]=1
 	UberCont.skin[race]=skin;
-else
-	UberCont.skin[race] = 0;
-skin = UberCont.skin[race];
+//else
+//	UberCont.skin[race] = 0;
 with Menu
 {
 	portraitLerp = 0;
