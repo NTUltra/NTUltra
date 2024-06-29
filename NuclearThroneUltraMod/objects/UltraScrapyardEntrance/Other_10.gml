@@ -52,6 +52,11 @@ if my_health > 0
 				}
 				alarm[1] = 1;
 			}
+			with enemy
+			{
+				my_health = 0;
+				prevhealth = 0;
+			}
 			BackCont.shake += 10;
 			snd_play(sndUltraGrenadeSuck);
 			KeyCont.key_pick[Player.p] = 2;

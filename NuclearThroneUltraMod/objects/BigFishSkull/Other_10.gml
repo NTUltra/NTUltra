@@ -1,6 +1,6 @@
 /// @description Loop oasis
 isInteractableNow = false;
-if loops > 0 && spr_idle = sprBigFishSkullOpenHurt
+if spr_idle == sprBigFishSkullOpen
 {
 	isInteractableNow = true;
 	if KeyCont.key_pick[Player.p] = 1 && !instance_exists(WantBoss) && !instance_exists(SandWorm)

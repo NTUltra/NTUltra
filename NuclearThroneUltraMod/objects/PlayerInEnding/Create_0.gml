@@ -26,3 +26,8 @@ Player.lockout = true;
 isFading = false;
 endingType = 0;
 depth = -4;
+with enemy
+{
+	my_health = 0;
+	prevhealth = 0;
+}

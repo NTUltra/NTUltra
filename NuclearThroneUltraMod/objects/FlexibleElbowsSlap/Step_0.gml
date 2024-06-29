@@ -12,6 +12,8 @@ if time == 1
 		x = other.tx;
 		y = other.ty;
 		motion_add(hk+180,6);
+		scrForcePosition60fps();
+		instance_create(x,y,SmallWallBreak);
 	}
 	with target
 	{

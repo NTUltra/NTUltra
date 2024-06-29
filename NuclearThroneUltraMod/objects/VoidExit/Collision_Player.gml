@@ -18,10 +18,11 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 		pullstrength = 3;
 		with Player
 		{
-			lockout = true;	
+			lockout = true;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
 		}
 		alarm[1] = 1;
-		x = other.x;
-		y = other.y;
 	}
 }

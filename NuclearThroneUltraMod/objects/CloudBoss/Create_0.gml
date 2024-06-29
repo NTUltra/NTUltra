@@ -9,7 +9,7 @@ venomous = true;
 spr_idle = sprCloudBoss
 spr_walk = sprCloudBoss
 spr_hurt = sprCloudBossHurt;
-spr_dead = sprCloudBossHurt;
+spr_dead = sprCloudBossDead;
 spr_fire = sprCloudBossFire;
 
 snd_hurt = sndHitPlant

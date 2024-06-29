@@ -125,14 +125,33 @@ function scrDrawCharSelect() {
 				spr = sprExplain1
 			break;
 		}
+		explainSprite = spr;
 		draw_sprite(spr,wave,sx,sy);
 		if explainLerp > 2
+		{
 			wave += 0.4;
+		}
 	}
 	else
 	{
-		wave = 0;
-		explainLerp = 0;
+		
+		if explainLerp > 0
+		{
+			var sx = lerp(xx + 64,xx - 24,explainLerp-2);
+			var sy = bottom - 79;
+			draw_sprite(sprExplainOutline,0,sx,sy);
+			draw_sprite(explainSprite,wave,sx,sy);
+			explainLerp -= 0.4;
+			if explainLerp > 2
+			{
+				wave += 0.4;
+			}
+		}
+		else
+		{
+			explainLerp = 0;
+			wave = 0;
+		}
 	}
 	//extra = 0
 	draw_set_valign(fa_bottom);

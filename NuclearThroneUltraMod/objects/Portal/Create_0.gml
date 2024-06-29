@@ -1,19 +1,4 @@
-var n = instance_nearest(x,y,Interactable);
-if n != noone && point_distance(x,y,n.x,n.y) < 96
-{
-	var w = instance_nearest(x,y,WallHitMe);
-	x = w.x + 8;
-	y = w.y + 8;
-	scrForcePosition60fps();
-}
-var n = instance_nearest(x,y,InteractableProp);
-if n != noone && point_distance(x,y,n.x,n.y) < 96
-{
-	var w = instance_nearest(x,y,WallHitMe);
-	x = w.x + 8;
-	y = w.y + 8;
-	scrForcePosition60fps();
-}
+
 image_speed = 0;
 visible  = false;
 depth = 1;
@@ -100,6 +85,7 @@ if (instance_exists(CrownPed) && !inverted)
 {
 	x = CrownPed.x;
 	y = CrownPed.y;
+	scrForcePosition60fps();
 }
 else if instance_exists(RerollStation)
 {
@@ -118,6 +104,7 @@ else if instance_exists(RerollStation)
 			y = m.y+o;
 		}
 	}
+	scrForcePosition60fps();
 }
 else if instance_exists(WeaponMod)
 {

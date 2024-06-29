@@ -28,7 +28,9 @@ if canSpawn
 				motion_add(angle,pspd);
 				image_angle = direction
 				image_speed *= 2;
-				team = other.team
+				team = other.team;
+				if team == 2
+					event_user(15);
 				owner = other.owner;
 			}
 			offset += 0.5;

@@ -29,8 +29,8 @@
     {"$GMSpriteFrame":"","%Name":"bee026f8-5b8b-4298-9910-27ae26f8ebf1","name":"bee026f8-5b8b-4298-9910-27ae26f8ebf1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"6974cf3c-1db6-4525-834b-6fb8fb7067ce","name":"6974cf3c-1db6-4525-834b-6fb8fb7067ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"00a6e02e-6006-4f54-afc0-d9f2b9ee3f7b","name":"00a6e02e-6006-4f54-afc0-d9f2b9ee3f7b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"18ea79aa-0c22-46c7-9744-033dd7b0d960","name":"18ea79aa-0c22-46c7-9744-033dd7b0d960","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3a7b3323-432c-48ec-a639-c98f6be802e5","name":"3a7b3323-432c-48ec-a639-c98f6be802e5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3fb8fa42-3b2e-4104-aab8-342fa0dc79db","name":"3fb8fa42-3b2e-4104-aab8-342fa0dc79db","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"71f8294c-a475-4b13-94e7-c0a604907b63","name":"71f8294c-a475-4b13-94e7-c0a604907b63","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"14855b29-4608-4f57-adba-0eeaad2e97b9","name":"14855b29-4608-4f57-adba-0eeaad2e97b9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"02ce831c-da3c-455f-8af5-b7ddbef78835","name":"02ce831c-da3c-455f-8af5-b7ddbef78835","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"f314a04a-0d9e-4907-9356-b3b43930a73f","name":"f314a04a-0d9e-4907-9356-b3b43930a73f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -310,11 +310,11 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"00a6e02e-6006-4f54-afc0-d9f2b9ee3f7b","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"24e70f97-9824-4607-a7d9-0a575aa775e1","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"18ea79aa-0c22-46c7-9744-033dd7b0d960","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a465ac9-829f-45a0-8ba6-990a948083c5","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3fb8fa42-3b2e-4104-aab8-342fa0dc79db","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"df4f848b-be46-4b71-8ba9-116508d9e516","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a7b3323-432c-48ec-a639-c98f6be802e5","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b9a606b9-9373-47fa-b115-84065201ca6e","IsCreationKey":false,"Key":18.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"71f8294c-a475-4b13-94e7-c0a604907b63","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a7aacb00-7074-48df-b246-a91080f65e09","IsCreationKey":false,"Key":18.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14855b29-4608-4f57-adba-0eeaad2e97b9","path":"sprites/sprBigPortrait/sprBigPortrait.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0e2e31c3-17fc-49c4-96e8-14a95e72de20","IsCreationKey":false,"Key":19.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

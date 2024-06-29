@@ -34,7 +34,8 @@ if spr_idle == sprBigVultureSkullOpen
 		}
 		with enemy
 		{
-			my_health = 0;	
+			my_health = 0;
+			prevhealth = 0;
 		}
 		with BigFishSkull {
 			spr_idle = sprBigFishSkull;

@@ -18,6 +18,11 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 		}
 		spr_idle = sprHotDrakeSkullIdleClosed;
 		spr_hurt = sprHotDrakeSkullHurtClosed;
+		with enemy
+		{
+			my_health = 0;
+			prevhealth = 0;
+		}
 		with instance_create(x,y,Portal)
 		{
 			type = 1;

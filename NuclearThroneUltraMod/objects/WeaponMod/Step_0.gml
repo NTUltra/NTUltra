@@ -130,9 +130,6 @@ if place_meeting(x,y,Player)
 					instance_destroy();	
 				}
 		}
-		//show_message("RECEIVED: "+string(wepmod1)+string(wepmod2)+string(wepmod3) );
-
-
 		alarm[0] = 60;
 		if Player.race == 17
 			alarm[0] -= 30;

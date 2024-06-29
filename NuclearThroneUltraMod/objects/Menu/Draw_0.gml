@@ -88,7 +88,12 @@ if widescreen > 0
 		lerp(__view_get( e__VW.XView, 0 ) - 256,__view_get( e__VW.XView, 0 ),min(1,portraitLerp*0.75)),
 		__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 2,-1,1,0,c_white,1);
 		if !instance_exists(LoadoutSelect) || !LoadoutSelect.ultraOpen
-			draw_sprite(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8);
+		{
+			var col = c_white
+			if instance_exists(LoadoutSelect) && LoadoutSelect.skinLocked
+				col = c_black;
+			draw_sprite_ext(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8,1,1,0,col,1);
+		}
 		draw_set_valign(fa_bottom);
 		draw_text_colour(tpx + 1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);
 		draw_text_colour(tpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 5,rn,c_black,c_black,c_black,c_black,1);
@@ -100,7 +105,7 @@ if widescreen > 0
 }
 else
 {
-	portraitLerp = 0;
+	portraitLerp = 0;//TODO SEPERATE NAME LERP
 }
 
 	draw_set_valign(fa_top);

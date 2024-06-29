@@ -25,5 +25,5 @@ walk = 5
 alarm[1] = 2+random(10)
 
 alarm[0]=120+random(120);
-
+alarm[3] = alarm[0] - 12;
 dmg = 7;

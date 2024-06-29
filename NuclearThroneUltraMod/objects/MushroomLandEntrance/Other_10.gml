@@ -32,6 +32,11 @@ if Player.wepmod1 != 0
 					x = other.x;
 					y = other.y;
 					scrForcePosition60fps();
+					with enemy
+					{
+						my_health = 0;
+						prevhealth = 0;
+					}
 				}
 				alarm[1] = 1;
 			}

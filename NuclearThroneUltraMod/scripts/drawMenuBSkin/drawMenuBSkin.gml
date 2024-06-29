@@ -2,8 +2,8 @@
 // /@description
 ///@param
 function drawMenuBSkin(skin,race,theColour){
-	var xx = sx + 58 //__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-48
-	var yy = __view_get( e__VW.YView, 0 )+66
+	var xx = sx + 57 //__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-48
+	var yy = __view_get( e__VW.YView, 0 )+67
 	if (skin == 1)
 	{
 		var spr = asset_get_index("sprMutant" + string(race)+"BIdle");

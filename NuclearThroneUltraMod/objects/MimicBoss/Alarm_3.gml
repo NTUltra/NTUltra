@@ -24,8 +24,8 @@ if target != noone && instance_exists(target)
 		snd_play(sndRocket);
 		with instance_create(x,y,JockRocket)
 		{
-			maxSpeed = 8;
-			motion_add(other.gunangle+random(20)-10,5)
+			maxSpeed = 9;
+			motion_add(other.gunangle+random(20)-10,5.5)
 			image_angle = direction
 			team = other.team
 		}

@@ -64,8 +64,8 @@ if scrIsGamemode(8) && area != 0
     }
     if area = 1 {
 
-        if deaths > 50 and random(20) < 1
-        song = mus1b;
+        if song == mus1b || (deaths > 50 and random(20) < 1)
+			song = mus1b;
         else
             song = mus1;
 

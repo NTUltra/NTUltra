@@ -3,6 +3,8 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with PinkSheep
+		instance_destroy(id,false);
 	with ElementorHead
 		instance_destroy();
 	with WepPickup

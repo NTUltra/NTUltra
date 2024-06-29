@@ -2326,6 +2326,7 @@ microseconds=0;
 				isPink = false;
 				sprite_index = sprPortalSpawn;
 				depth=0;
+				event_user(0);
 		    }
     
 		    invertedportalcounter=0;

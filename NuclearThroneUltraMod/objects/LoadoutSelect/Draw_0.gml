@@ -274,7 +274,30 @@ if (hasNoMenuOpen()
 
 		draw_sprite_ext(sprSkinSelect,0,sx + 32,__view_get( e__VW.YView, 0 )+66,scale,scale,0,c_white,scale-0.1);
 		draw_set_valign(fa_bottom)
-
+		
+		//SKIN
+		if skin=1 && UberCont.race_bskin[race]=1
+		{//you have this one
+			drawMenuBSkin(skin,race,c_white);
+		}
+		else if skin = 1
+		{//you DONT have this one
+			drawMenuBSkin(skin,race,c_black);
+		}
+		else if skin=2 && UberCont.race_cskin[race]=1
+		{//you have this one
+			drawMenuBSkin(skin,race,c_white);
+		}
+		else if skin = 2
+		{//you DONT have this one
+			drawMenuBSkin(skin,race,c_black);
+		}
+		else
+		{
+			drawMenuBSkin(skin,race,c_white);
+		}
+		
+		
 		//VIEW ULTRAS
 		draw_sprite_ext(sprUltraInfo,0,sx + ultraOffset,__view_get( e__VW.YView, 0 )+64,ultraScale,ultraScale,0,c_white,ultraScale-0.1);
 	}

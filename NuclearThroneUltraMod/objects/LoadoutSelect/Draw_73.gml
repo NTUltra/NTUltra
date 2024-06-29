@@ -19,12 +19,12 @@ if (hasNoMenuOpen() && race != 0)
 		if skin=1 && UberCont.race_bskin[race]=1
 		{//you have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("B"),c_white,c_white,c_white,c_white,1);
-			drawMenuBSkin(skin,race,c_white);
+			//drawMenuBSkin(skin,race,c_white);
 		}
 		else if skin = 1
 		{//you DONT have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("B"),c_white,c_white,c_white,c_white,1);
-			drawMenuBSkin(skin,race,c_black);
+			//drawMenuBSkin(skin,race,c_black);
 			if (scale > 1)
 			{
 				draw_sprite(sprLocked,0,lx - 32,ly);
@@ -47,12 +47,12 @@ if (hasNoMenuOpen() && race != 0)
 		else if skin=2 && UberCont.race_cskin[race]=1
 		{//you have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("C"),c_white,c_white,c_white,c_white,1);
-			drawMenuBSkin(skin,race,c_white);
+			//drawMenuBSkin(skin,race,c_white);
 		}
 		else if skin = 2
 		{//you DONT have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("C"),c_white,c_white,c_white,c_white,1);
-			drawMenuBSkin(skin,race,c_black);
+			//drawMenuBSkin(skin,race,c_black);
 			if (scale > 1)
 			{
 				draw_sprite(sprLocked,0,lx - 32,ly);
@@ -74,8 +74,7 @@ if (hasNoMenuOpen() && race != 0)
 		}
 		else
 		{
-			draw_set_halign(fa_left)
-			drawMenuBSkin(skin,race,c_white);
+			//drawMenuBSkin(skin,race,c_white);
 		}	
 	}
 }

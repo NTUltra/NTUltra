@@ -35,9 +35,17 @@ if KeyCont.key_pick[other.p] = 1
 			pullstrength = 3;
 			with Player
 			{
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
 				lockout = true;	
 			}
 			alarm[1] = 1;
+		}
+		with enemy
+		{
+			my_health = 0;
+			prevhealth = 0;
 		}
 		with JungleFrozenPlant
 		{

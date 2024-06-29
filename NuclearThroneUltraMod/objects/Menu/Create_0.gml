@@ -3,6 +3,7 @@
 depth = -11;
 creditpage = 0;
 mode = 0
+explainSprite = sprExplain1;
 mouseover = -1;
 image_speed = 0
 gmScroll = 0;

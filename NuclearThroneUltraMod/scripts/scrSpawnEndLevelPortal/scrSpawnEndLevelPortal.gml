@@ -77,7 +77,10 @@ function scrSpawnEndLevelPortal(){
 							}
 						}
 					    with instance_create(dir.x+16,dir.y+16,Portal)
+						{
 							type = 1
+							event_user(0);
+						}
 						
 						//UNLOCK GAME MODE CLAUSTROFOBIA
 						with Player
@@ -127,7 +130,10 @@ function scrSpawnEndLevelPortal(){
 						dir = instance_nearest(x-16,y-16,Floor);
 					}
 				    with instance_create(dir.x+16,dir.y+16,Portal)
+					{
 						type = 1
+						event_user(0);
+					}
 					with UltraChest
 					{
 						instance_destroy();

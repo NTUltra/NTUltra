@@ -4,6 +4,7 @@ scrStartingWeapons();
 scrCrowns();
 scrUltras();
 scrSecretUltraStat();
+skinLocked = false;
 race=0;
 scale=1;
 ultraScale = 1;

@@ -112,6 +112,11 @@ if my_health > 0
 			}
 			alarm[1] = 1;
 		}
+		with enemy
+		{
+			my_health = 0;
+			prevhealth = 0;
+		}
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = Player.area;
