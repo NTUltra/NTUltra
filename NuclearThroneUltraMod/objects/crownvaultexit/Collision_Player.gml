@@ -9,6 +9,9 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 	{
 		type = 1
 		pullstrength = 3;
+		x = other.x;
+		y = other.y;
+		scrForcePosition60fps();
 		with Player
 		{
 			lockout = true;

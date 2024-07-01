@@ -3,7 +3,7 @@ __view_set( e__VW.YView, 0, 0 )
 if scrIsGamemode(28)//ALL MUTATION CHOICES
 {
 	var spd = scrollSpeed;
-	if mouse_wheel_down() || keyboard_check_pressed(vk_right){
+	if mouse_wheel_down() {
 		if scroll <= scrollWidth
 		{
 			with SkillIcon {
@@ -15,7 +15,7 @@ if scrIsGamemode(28)//ALL MUTATION CHOICES
 			scroll += spd;
 		}
 	}
-	else if mouse_wheel_up() || keyboard_check_pressed(vk_left){
+	else if mouse_wheel_up(){
 		if scroll > 0 
 		{
 			with SkillIcon {
@@ -54,7 +54,24 @@ if KeyCont.key_west[0] == 1
 	with SkillIcon
 	{
 		if skillIndex == other.selectedIndex
+		{
 			selected = true;
+			if x < camera_get_view_x(view_camera[0]) + 32 ||
+			x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
+			{
+				with other
+				{
+					var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
+					scroll += disto;
+					with SkillIcon {
+						x -= disto;
+					}
+					with UltraIcon {
+						x -= disto;
+					}
+				}
+			}
+		}
 		else
 			selected = false;
 	}
@@ -84,7 +101,24 @@ else if KeyCont.key_east[0] == 1
 	with SkillIcon
 	{
 		if skillIndex == other.selectedIndex
+		{
 			selected = true;
+			if x < camera_get_view_x(view_camera[0]) + 32 ||
+			x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
+			{
+				with other
+				{
+					var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
+					scroll += disto;
+					with SkillIcon {
+						x -= disto;
+					}
+					with UltraIcon {
+						x -= disto;
+					}
+				}
+			}
+		}
 		else
 			selected = false;
 	}

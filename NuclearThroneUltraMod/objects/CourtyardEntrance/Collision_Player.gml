@@ -23,6 +23,9 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 	}
 	with instance_create(x,y,Portal)
 	{
+		x = other.x;
+		y = other.y;
+		scrForcePosition60fps();
 		type = 3;
 		pullstrength = 3;
 		with Player

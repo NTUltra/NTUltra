@@ -1429,10 +1429,13 @@ function scrPopEnemies() {
     }
 	if spawnarea == 135 && subarea != 3 {
 	    var ran = random(100);
-	    if ran > 25 {
-	        instance_create(x + 16, y + 16, choose(Grunt, Inspector, BuffPopo, SegwayPopo, Shielder))
-	    } else {
-			instance_create(x + 16, y + 16, choose(IDPDSpawn, EliteGrunt, EliteInspector, EliteShielder, Grunt))
+		if ran < 75 || !instance_exists(enemy)
+		{
+		    if ran > 25 && ran < 75{
+		        instance_create(x + 16, y + 16, choose(Grunt, Grunt, Inspector, Shielder, SegwayPopo, BuffPopo, ExploderPopo))
+		    } else {
+				instance_create(x + 16, y + 16, choose(IDPDSpawn, Grunt, EliteGrunt, EliteInspector, EliteShielder, EliteSegwayPopo, EliteBuffPopo, EliteExploderPopo))
+			}
 		}
     }
 

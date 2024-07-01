@@ -16,5 +16,12 @@ do {
 	wep3 = scrDecideWep(1,18,true);
 	tries --;
 } until ((wep3 != wep1 && wep3 != wep2) || tries < 1)
+heavyHeart = false;
+wep4 = 0;
+if instance_exists(Player) && Player.skill_got[0]
+{
+	heavyHeart = true;
+	wep4 = scrDecideWep(0);
+}
 SetSeed();
 sprite_index = sprCursedChestBig

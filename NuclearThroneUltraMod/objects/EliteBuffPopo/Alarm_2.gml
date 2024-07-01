@@ -5,7 +5,7 @@ scrRogueTarget()
 else
 scrTarget();
 walk += 1;
-motion_add(gunangle,0.8);
+motion_add(gunangle + 180,0.4);
 if target != noone && instance_exists(target)
 {
 	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));

@@ -276,6 +276,8 @@
     {"name":"AcidStreak","order":35,"path":"objects/AcidStreak/AcidStreak.yy",},
     {"name":"AdrenalineHeal","order":56,"path":"objects/AdrenalineHeal/AdrenalineHeal.yy",},
     {"name":"All","order":11,"path":"objects/All/All.yy",},
+    {"name":"AllMutationsLeft","order":86,"path":"objects/AllMutationsLeft/AllMutationsLeft.yy",},
+    {"name":"AllMutationsRight","order":87,"path":"objects/AllMutationsRight/AllMutationsRight.yy",},
     {"name":"Ally","order":16,"path":"objects/Ally/Ally.yy",},
     {"name":"AllyBullet","order":73,"path":"objects/AllyBullet/AllyBullet.yy",},
     {"name":"AllyExploder","order":2,"path":"objects/AllyExploder/AllyExploder.yy",},

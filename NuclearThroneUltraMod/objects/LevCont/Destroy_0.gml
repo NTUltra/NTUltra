@@ -1,4 +1,8 @@
 /// @description Some unlock
+with AllMutationsLeft
+	instance_destroy();
+with AllMutationsRight
+	instance_destroy();
 with Player
 {
 	//Unlock Angel

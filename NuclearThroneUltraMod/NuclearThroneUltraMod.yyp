@@ -464,6 +464,8 @@
     {"id":{"name":"AcidStreak","path":"objects/AcidStreak/AcidStreak.yy",},},
     {"id":{"name":"AdrenalineHeal","path":"objects/AdrenalineHeal/AdrenalineHeal.yy",},},
     {"id":{"name":"All","path":"objects/All/All.yy",},},
+    {"id":{"name":"AllMutationsLeft","path":"objects/AllMutationsLeft/AllMutationsLeft.yy",},},
+    {"id":{"name":"AllMutationsRight","path":"objects/AllMutationsRight/AllMutationsRight.yy",},},
     {"id":{"name":"Ally","path":"objects/Ally/Ally.yy",},},
     {"id":{"name":"AllyBullet","path":"objects/AllyBullet/AllyBullet.yy",},},
     {"id":{"name":"AllyExploder","path":"objects/AllyExploder/AllyExploder.yy",},},

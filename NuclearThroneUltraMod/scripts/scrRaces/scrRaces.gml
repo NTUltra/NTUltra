@@ -84,7 +84,7 @@ function scrRaces() {
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
 	race_butt_detail[4] = "TRIPLE <r>BLOOD<r> <w>CORPSE<w> EXPLOSIONS";
 	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME";
-	race_vision_detail[2] = race_vision[2];
+	race_vision_detail[4] = race_vision[4];
 	race_lock[4] = "DIE TO UNLOCK"
 	race_have[4] = 0
 	race_swep[4] = 1
@@ -242,7 +242,7 @@ function scrRaces() {
 	race_cskin_lock[11] = "KILL AN HARD MODE#ULTRA SNIPER BOT#AS HUNTER"
 
 
-	race_name[12] = "YUNG CUZ"
+	race_name[12] = "Y.C."
 	race_pass[12] = "FIND MORE <r>HP<r> CHESTS#MORE DUPES = MORE <y>AMMO<y> FROM PICKUPS"
 	race_acti[12] = "<w>DUPLICATE<w>"
 	race_butt[12] = "GAIN EVEN MORE <y>AMMO<y>#DEPENDING ON NUMBER OF DUPLICATES"
@@ -311,7 +311,7 @@ function scrRaces() {
 	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b> AT DESTINATION"
 	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
 	race_vision_detail[15] = race_vision[15];
-	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCKS"
+	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCK"
 	race_have[15] = 0
 	race_swep[15] = 19//laser pistol
 	race_bskin[15] = 0

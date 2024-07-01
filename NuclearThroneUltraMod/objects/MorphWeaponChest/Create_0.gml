@@ -1,13 +1,9 @@
-scrWeapons()
-SetSeedWeapon();
-wep = scrDecideMorphWep()
-mySize = 1;
-team = 0;
-SetSeed();
-event_inherited()
-curse = 0
 
-if isOneWeaponOnlyModes()
+event_inherited()
+wep[0] = scrDecideMorphWep();
+if heavyHeart
 {
-	instance_destroy(id,false);
+	do {
+		wep[1] = scrDecideMorphWep();
+	} until (wep[0] != wep[1]);
 }

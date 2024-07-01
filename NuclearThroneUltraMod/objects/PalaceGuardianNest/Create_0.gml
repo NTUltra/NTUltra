@@ -10,3 +10,4 @@ snd_hurt = sndStatueHurt
 team = 1;
 breakY = y - 16;
 loops = min(10,GetPlayerLoops());
+alarm[1] = 30 + irandom(30);

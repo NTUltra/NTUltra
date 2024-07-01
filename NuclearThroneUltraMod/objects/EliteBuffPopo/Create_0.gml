@@ -25,7 +25,7 @@ wkick = 0
 bwkick = 0;
 roll = 1
 angle = 0
-actTime = 10;
+actTime = 12;
 freeze = 0
 if instance_exists(Player)
 {

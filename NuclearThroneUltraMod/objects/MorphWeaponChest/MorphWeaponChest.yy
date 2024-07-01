@@ -4,8 +4,6 @@
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"PortalShock","path":"objects/PortalShock/PortalShock.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"MorphWeaponChest",
@@ -15,8 +13,8 @@
     "path":"folders/Objects/Pickups.yy",
   },
   "parentObjectId":{
-    "name":"chestprop",
-    "path":"objects/chestprop/chestprop.yy",
+    "name":"WeaponSpecificChest",
+    "path":"objects/WeaponSpecificChest/WeaponSpecificChest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

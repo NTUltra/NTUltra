@@ -278,6 +278,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		}
 		if scrIsGamemode(28)//ALL MUTATION CHOICES
 		{
+			instance_create(x,y,AllMutationsLeft);
+			instance_create(x,y,AllMutationsRight);
 			var xx = __view_get( e__VW.XView, 0 )+16;
 			var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 			var step = 31;
@@ -538,6 +540,8 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 		var step = 31;
 		scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
 		scroll = 0;
+		instance_create(x,y,AllMutationsLeft);
+		instance_create(x,y,AllMutationsRight);
 		var gotNoSkills = true;
 		for (var i = 0; i <= maxskill; i++) {
 			if (!Player.skill_got[i])

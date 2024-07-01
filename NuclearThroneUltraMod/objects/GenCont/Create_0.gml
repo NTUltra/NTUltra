@@ -414,7 +414,7 @@ else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player
 goal = 130+s;
 else if Player.area == 135//Hq
 {
-goal = 120+s;
+goal = 130+s;
 	if Player.subarea == 3
 	{
 		goal = 1;	

@@ -10,9 +10,17 @@ repeat(10)
 motion_add(ang,3)
 ang += 36}
 snd_play(sndExplosionXL);
-with instance_create(x,y,GeneratorExplode)
+if loops > 0
 {
-	hspeed = other.image_xscale * -1;
+	var scale = -1;
+	if loops < 2
+		scale = -0.5;
+	if loops < 3
+		scale = -0.75;
+	with instance_create(x,y,GeneratorExplode)
+	{
+		hspeed = other.image_xscale * scale;
+	}
 }
 scrRaddrop(10);
 

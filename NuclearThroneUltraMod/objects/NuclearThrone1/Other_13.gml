@@ -65,7 +65,7 @@ if instance_exists(Player)
 if scrIsHardMode()
 {
 	alarm[8] = alarm[1] + 60;	
-} else if loops > 0
+} else if loops > 4
 {
 	alarm[8] = alarm[1] + 120;
 }

@@ -36,6 +36,7 @@ if forceAnimation && forceAnimationSprite == spr_warp_out
 		}
 		scrForcePosition60fps();
 		gunangle = point_direction(x,y,target.x,target.y);
+		alarm[7] = 2;//retarget
 		if target.x > x
 			right = 1
 	    else

@@ -1,6 +1,6 @@
 event_inherited();
 image_speed = 0.4
-shk = 6;
+shk = 4;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

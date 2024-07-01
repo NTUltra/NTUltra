@@ -9,14 +9,14 @@ function scrIsWeaponOnGround(wantWep){
 	}
 	with WeaponChest
 	{
-		if id != other.id && wep == wantWep
+		if id != other.id && array_contains(wep,wantWep)
 			return true;
 	}
 	with BigWeaponChest
 	{
 		if id != other.id 
 		{
-			if wep1 == wantWep || wep2 == wantWep || wep3 == wantWep
+			if wep1 == wantWep || wep2 == wantWep || wep3 == wantWep || wep4 == wantWep
 				return true;
 		}
 	}
@@ -24,7 +24,7 @@ function scrIsWeaponOnGround(wantWep){
 	{
 		if id != other.id 
 		{
-			if wep1 == wantWep || wep2 == wantWep || wep3 == wantWep
+			if wep1 == wantWep || wep2 == wantWep || wep3 == wantWep || wep4 == wantWep
 				return true;
 		}
 	}
@@ -33,19 +33,14 @@ function scrIsWeaponOnGround(wantWep){
 		if id != other.id && wep == wantWep
 			return true;
 	}
-	with MorphWeaponChest
+	with WeaponSpecificChest
 	{
-		if id != other.id && wep == wantWep
+		if id != other.id && array_contains(wep,wantWep)
 			return true;
 	}
 	with UltraChest
 	{
 		if id != other.id && array_contains(weps,wantWep)
-			return true;
-	}
-	with ToxicWeaponChest
-	{
-		if id != other.id && wep == wantWep
 			return true;
 	}
 	with ThrowWep
