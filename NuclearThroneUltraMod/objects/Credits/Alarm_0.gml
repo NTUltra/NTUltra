@@ -1,7 +1,7 @@
 /// @description Itterate credit sequence and decide ending
 alarm[2] = inputDelay;
 text = credits[creditIndex][0];
-dullText = scrReplaceAllColourCodes(text);
+dullText = string_hash_to_newline*scrReplaceAllColourCodes(text));
 if creditIndex >= array_length(credits) - 1
 {
 	event_user(0);

@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Remade",
-    "path":"folders/Sprites/Weapons/Existing/Remade.yy",
+    "name":"Custom",
+    "path":"folders/Sprites/Weapons/Custom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

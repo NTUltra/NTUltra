@@ -8763,7 +8763,7 @@ function scrWeapons() {
 	wep_auto[783] = 3
 	wep_load[783] = 5
 	wep_cost[783] = 1
-	wep_sprt[783] = sprTripleMachinegun
+	wep_sprt[783] = sprOverdriver
 	wep_area[783] = 12
 	wep_text[783] = "a different type of charge weapon"
 	wep_swap[783] = sndSwapMotorized
