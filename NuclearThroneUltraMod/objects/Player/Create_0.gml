@@ -2,7 +2,7 @@
 /*if instance_number(Player) > 1
 {
 instance_destroy()
-exit;
+exit;r
 }*/
 //scrn=0; //for screenshot takhuring character explain pic
 /*

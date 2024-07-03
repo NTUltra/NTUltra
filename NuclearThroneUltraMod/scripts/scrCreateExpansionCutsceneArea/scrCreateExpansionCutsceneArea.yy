@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrCreateExpansionCutsceneArea",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateExpansionCutsceneArea",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

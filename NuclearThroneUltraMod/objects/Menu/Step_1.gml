@@ -36,10 +36,10 @@ if mode = 0
 	diy = 0
 	var totals = racemax + 1;
 	var halfWay = 14;
+	var justUnlockedSecondRow = false;
 	if !UberCont.unlocked_more_characters
 	{
 		totals = halfWay;
-		var justUnlockedSecondRow = false;
 		with UberCont
 		{
 			var r = 0;
@@ -55,6 +55,11 @@ if mode = 0
 		if (justUnlockedSecondRow)
 		{
 			totals = racemax + 1;
+			with UberCont
+			{
+				unlocked_more_characters = true;
+				scrSave();
+			}
 		}
 	}
 	repeat(totals)
@@ -70,7 +75,7 @@ if mode = 0
 	}
 	with UberCont
 	{
-		justUnlocked = [3,6,8];
+		//justUnlocked = [3,6,8];
 		if (array_length(justUnlocked) > 0)
 		{
 			with instance_create(x,y,UnlockingCharacter)

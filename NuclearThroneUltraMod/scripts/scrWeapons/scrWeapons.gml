@@ -8329,7 +8329,7 @@ function scrWeapons() {
 	wep_load[744] = 27
 	wep_cost[744] = 3
 	wep_sprt[744] = sprLaserFlakCannon
-	wep_area[744] = 12
+	wep_area[744] = 11
 	wep_text[744] = "would smack"
 	wep_swap[744] = sndSwapExplosive
 	wep_rad[744] = 0;

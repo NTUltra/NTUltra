@@ -1,5 +1,6 @@
 pick = 0
 depth = -100;
+
 canmove = 1
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
@@ -15,6 +16,7 @@ with KeyCont
 	key_fire[0] = 2;
 	key_pick[0] = 2;	
 }
+
 with UberCont
 {
 	if (useSeed)
@@ -102,9 +104,13 @@ if Player.crownpoints > 0
 	var unlockingSecondRow = false;
 	if !UberCont.unlocked_more_crowns
 	{
-		if true || Player.inverted || scrIsInInvertedArea()
+		with UberCont
 		{
-			debug("INVERTED CROWNVAULT");
+			unlocked_more_crowns = true;
+			scrSave();
+		}
+		if Player.inverted || scrIsInInvertedArea()
+		{
 			with instance_create(x,y,UnlockingSecondRow) {
 				lerpTimeIncrease *= 0.75;
 				soundGoTime *= 0.75;

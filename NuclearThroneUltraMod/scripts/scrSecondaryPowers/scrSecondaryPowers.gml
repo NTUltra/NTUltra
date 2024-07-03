@@ -194,7 +194,9 @@ function scrSecondaryPowers() {
 							{
 								target = n;
 								if my_health > 0
-									image_speed = min(1,8 / n.my_health);
+								{
+									image_speed = min(1,9 / n.my_health);//Increase number to go faster
+								}
 							}
 						}
 						else

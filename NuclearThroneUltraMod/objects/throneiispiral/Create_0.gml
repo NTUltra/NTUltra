@@ -8,7 +8,7 @@ type = 1
 //1 = normal 2 = proto 3 = idpd 4= venuz 5 = inv 6 = wonder
 time = 0
 sprite = sprSpiral;
-if instance_exists(Player) && Player.area == 120
+if instance_exists(Player) && Player.area == 120 || instance_exists(InversionActivator)
 	sprite = sprSpiralInverted;
 
 repeat(80)//(200)
