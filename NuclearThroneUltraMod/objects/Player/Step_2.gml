@@ -741,7 +741,7 @@ if (tookHit)
 
 /* */
 ///strong spirit justasheep
-if(my_health <= 0 && maxhealth > 0)
+if(my_health <= 0 && maxhealth > 0 && alarm[3] < 1)
 {
 
     if skill_got[25]//strong spirit

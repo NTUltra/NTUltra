@@ -3,7 +3,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	x = xstart+54;	
 } else
 	x = xstart;
-if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
+if  KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16)
 {
 	KeyCont.key_fire[p] = 2;
     with UberCont///UNLOCK CROWN

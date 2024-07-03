@@ -72,9 +72,9 @@ else if !instance_exists(CrownGuardian)
 		with Player
 		{
 			lockout = true;
-			//x = other.x;
-			//y = other.y;
-			//scrForcePosition60fps();
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
 		}
 		alarm[1] = 1;
 	}

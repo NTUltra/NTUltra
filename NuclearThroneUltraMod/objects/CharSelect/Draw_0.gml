@@ -44,12 +44,12 @@ if instance_exists(UnlockingSecondRow)
 	draw_set_alpha(clamp(t,0,1));
 	if num == 0 || num == 27
 	{
-		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;
 		draw_rectangle(camera_get_view_x(view_camera[0]),min(center,yyy),x,max(center,yyy+24),false);	
 	}
 	if num == 13 || num == 26
 	{
-		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;
 		draw_rectangle(x + 16,min(center,yyy),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),max(center,yyy+24),false);	
 	}
 	draw_set_alpha(1);
@@ -62,8 +62,10 @@ if unlockTime > 0
 	draw_set_alpha(clamp(unlockTime,0.25,0.8));
 	gpu_set_blendmode(bm_add);
 	var ut = min(1,unlockTime);
+	draw_set_colour(c_lime);
 	draw_rectangle(x + 8 - 8*ut,yyy,x+7 + 8*ut,camera_get_view_y(view_camera[0]),false);
 	gpu_set_blendmode(bm_normal);
+	draw_set_colour(c_white);
 	draw_set_alpha(1);
 	draw_sprite_ext(sprite_index,image_number - 1,x,yyy,1,1,0,c_white,ut + 0.1);
 }

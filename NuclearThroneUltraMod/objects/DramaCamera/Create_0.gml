@@ -240,13 +240,21 @@ else
 	}
 	else if area = 2
 	{
-		name = "MOM";
-		image_index = 6;
-		if random(40)<1
+		if instance_exists(Bandit)
 		{
-			name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
-			"PLEASE I'M A MOTHER\nOF FIVE CHILDREN\nDON'T KILL ME",
-			"MISS. FROG\nHAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
+			name = "STINKY BIG BANDIT";
+			image_index = 1;
+		}
+		else
+		{
+			name = "MOM";
+			image_index = 6;
+			if random(40)<1
+			{
+				name = choose("BALL MOM","MUMMY","FROG QUEEN","BALL MAMA",
+				"PLEASE I'M A MOTHER\nOF FIVE CHILDREN\nDON'T KILL ME",
+				"MISS. FROG\nHAPPILY MARRIED","MOMMY BALL","YOUR MOM! HAHA");	
+			}
 		}
 	}
 	else if area == 110

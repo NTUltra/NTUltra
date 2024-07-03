@@ -16,6 +16,11 @@ if other.team != team and other.my_health > 0
 			if speed > maxSpeed + 3
 				speed = maxSpeed + 3;
 			snd_play(snd_hurt, hurt_pitch_variation)
+			if object_index == ProtoStatue
+			{
+				rad += 1;
+				snd_play(sndStatueXP);
+			}
 		}
 
 		if bskin=1

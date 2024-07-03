@@ -28,7 +28,9 @@ shot = 0
 chargewait = 2
 charge = 0
 gunangle = random(360)
-alarm[1] = 1
+alarm[1] = 20;
+if loops > 0
+	alarm[1] = 5;
 intro = 0
 wkick = 0
 

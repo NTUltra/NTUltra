@@ -3,3 +3,4 @@ event_inherited();
 lerpTimeIncrease = 0.02;
 depth = -14;
 playedSound = false;
+soundGoTime = 0.125;

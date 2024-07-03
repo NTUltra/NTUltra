@@ -97,103 +97,140 @@ if Player.crownpoints > 0
 			sprite_index = sprCrownSelectKeep;
 		}
 	}
+	var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49;//Top row
+	var yyyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16;//Lower row
+	var unlockingSecondRow = false;
+	if !UberCont.unlocked_more_crowns
+	{
+		if true || Player.inverted || scrIsInInvertedArea()
+		{
+			debug("INVERTED CROWNVAULT");
+			with instance_create(x,y,UnlockingSecondRow) {
+				lerpTimeIncrease *= 0.75;
+				soundGoTime *= 0.75;
+			}
+			unlockingSecondRow = true;
+		}
+		else
+		{
+			yyy += 11;
+		}
+	}
+	var rowCutoff = 12;
 	repeat(crownmax+1)
 	{
-	if dir<12
-	{
-		with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49,CrownIcon)//24
+		if dir<rowCutoff
 		{
-			crown = other.dir
-			if crown == 0 
+			with instance_create(__view_get( e__VW.XView, 0 )+14+dir*26.5,yyy,CrownIcon)//24
 			{
-				if (scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24)))//Sloth
-					crown = 8;
-				else if (Player.wep_type[Player.wep] == 4 && 
-				((Player.bwep == 0 || Player.wep_type[Player.bwep] == 4) || (Player.wep_type[Player.cwep] == 4))
-				&& !scrIsGamemode(4) && !scrIsCrown(25))//Crown of freedom secret 2 explosive weps
-					crown = 25;
-				else if (Player.wep_type[Player.wep] == 5 && 
-				((Player.bwep == 0 || Player.wep_type[Player.bwep] == 5) || (Player.wep_type[Player.cwep] == 5))
-				&& !scrIsCrown(26))//Crown of energy
-					crown = 26;
-				else if (Player.consecutiveCrownVisits > 1 && !scrIsCrown(33))
+				crown = other.dir
+				rowPosition = other.dir;
+				if crown == 0 
 				{
-					crown = 33;
-					Player.consecutiveCrownVisits = 0;
-				}
-				else if (scrIsCrown(22) && !scrIsCrown(32))//Luck to misfortune
-					crown = 32
-				else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
-					crown = 34;
-				else if (scrIsCrown(7) && !scrIsCrown(28) && !(scrIsGamemode(26) && UberCont.isLeaderboardGamemode))//Blood to Apocalypse
-					crown = 28;
-				else if ((Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29))//Purity
-					crown = 29;
-				else if (scrIsCrown(27))//Disco
-					crown = 27;
-				else if (scrIsCrown(28))//Apocalypse
-					crown = 28;
-				else if (scrIsCrown(29))//Purity
-					crown = 29;
-				else if (scrIsCrown(32))//Misfortune
-					crown = 32;
-				else if (scrIsCrown(34))//Time
-					crown = 34;
-				else if (scrIsCrown(33))//Echo
-					crown = 33;
-				else if (scrIsCrown(25))//Freedom
-					crown = 25;
-				else if (scrIsCrown(26))//Energy
-					crown = 26;
-				else if (scrCanWeDisco() && !scrIsCrown(27))
-					crown = 27;
-			}
-			else if crown == 8 && Player.tookDestiny && !(UberCont.canMultiCrown && scrIsCrown(8))//Crown of sloth secret
-				crown = 24;
-			else if crown == 11
-			{
-				if Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
-				{
-					//Crown of start
-					crown_name[11] = "[CROWN OF FROG]"
-					crown_text[11] = "START IN THE <g>SEWERS<g>"
-					crown_used[11] = 0
-					crown_tips[11] = "quick start"
-					sprite_index = sprCrownSelectStart;
-				}
-				else
-				{
-					//Upgrade crown of reincarnation
-					if Player.level > 9
-						sprite_index = sprCrownOfReincarnationUpgraded;
-				}
-			}
-			else if crown == 1 && UberCont.canMultiCrown
-			{
-				crown_name[1] = "[NONE]"
-				crown_text[1] = "REMOVE ALL CROWNS"
-			}
-			if scrIsGamemode(27) || scrIsGamemode(37)
-			{
-				if crown == 7
-				{
-					crown = 30;
-					if (scrIsCrown(30) || (scrIsCrown(31) && !UberCont.canMultiCrown))
+					if (scrIsCrown(8) && Player.tookDestiny && (!UberCont.canMultiCrown || scrIsCrown(24)))//Sloth
+						crown = 8;
+					else if (Player.wep_type[Player.wep] == 4 && 
+					((Player.bwep == 0 || Player.wep_type[Player.bwep] == 4) || (Player.wep_type[Player.cwep] == 4))
+					&& !scrIsGamemode(4) && !scrIsCrown(25))//Crown of freedom secret 2 explosive weps
+						crown = 25;
+					else if (Player.wep_type[Player.wep] == 5 && 
+					((Player.bwep == 0 || Player.wep_type[Player.bwep] == 5) || (Player.wep_type[Player.cwep] == 5))
+					&& !scrIsCrown(26))//Crown of energy
+						crown = 26;
+					else if (Player.consecutiveCrownVisits > 1 && !scrIsCrown(33))
 					{
-						crown = 31;
+						crown = 33;
+						Player.consecutiveCrownVisits = 0;
+					}
+					else if (scrIsCrown(22) && !scrIsCrown(32))//Luck to misfortune
+						crown = 32
+					else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
+						crown = 34;
+					else if (scrIsCrown(7) && !scrIsCrown(28) && !(scrIsGamemode(26) && UberCont.isLeaderboardGamemode))//Blood to Apocalypse
+						crown = 28;
+					else if ((Player.wepmod1 != 0 || Player.bwepmod1 != 0 || Player.cwepmod1 != 0) && !scrIsCrown(29))//Purity
+						crown = 29;
+					else if (scrIsCrown(27))//Disco
+						crown = 27;
+					else if (scrIsCrown(28))//Apocalypse
+						crown = 28;
+					else if (scrIsCrown(29))//Purity
+						crown = 29;
+					else if (scrIsCrown(32))//Misfortune
+						crown = 32;
+					else if (scrIsCrown(34))//Time
+						crown = 34;
+					else if (scrIsCrown(33))//Echo
+						crown = 33;
+					else if (scrIsCrown(25))//Freedom
+						crown = 25;
+					else if (scrIsCrown(26))//Energy
+						crown = 26;
+					else if (scrCanWeDisco() && !scrIsCrown(27))
+						crown = 27;
+				}
+				else if crown == 8 && Player.tookDestiny && !(UberCont.canMultiCrown && scrIsCrown(8))//Crown of sloth secret
+					crown = 24;
+				else if crown == 11
+				{
+					if Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+					{
+						//Crown of start
+						crown_name[11] = "[CROWN OF FROG]"
+						crown_text[11] = "START IN THE <g>SEWERS<g>"
+						crown_used[11] = 0
+						crown_tips[11] = "quick start"
+						sprite_index = sprCrownSelectStart;
+					}
+					else
+					{
+						//Upgrade crown of reincarnation
+						if Player.level > 9
+							sprite_index = sprCrownOfReincarnationUpgraded;
+					}
+				}
+				else if crown == 1 && UberCont.canMultiCrown
+				{
+					crown_name[1] = "[NONE]"
+					crown_text[1] = "REMOVE ALL CROWNS"
+				}
+				if scrIsGamemode(27) || scrIsGamemode(37)
+				{
+					if crown == 7
+					{
+						crown = 30;
+						if (scrIsCrown(30) || (scrIsCrown(31) && !UberCont.canMultiCrown))
+						{
+							crown = 31;
+						}
 					}
 				}
 			}
 		}
-	}
-	else
-	{
-		with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16,CrownIcon)//24
+		else if UberCont.unlocked_more_crowns || unlockingSecondRow
 		{
-			crown = other.dir
+			with instance_create(__view_get( e__VW.XView, 0 )+14+(dir-12)*26.5,yyyy,CrownIcon)//24
+			{
+				crown = other.dir;
+				rowPosition = other.dir;
+			}
+		}
+		dir += 1
+	}
+	if unlockingSecondRow
+	{
+		with CrownIcon
+		{
+			if rowPosition < rowCutoff
+			{
+				yOffset = 11;
+			}
+			else
+			{
+				yOffset = -22;
+			}
 		}
 	}
-	dir += 1}
 	if (UberCont.canMultiCrown)
 		with CrownIcon
 		{

@@ -1,22 +1,43 @@
 draw_set_color(c_dkgray)
-//draw_rectangle(x-12,y-16,x+12,y+16,0)
-var hover = (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > y-16 and UberCont.mouse__y < y+16)
-if hover
+//draw_rectangle(x-12,yy-16,x+12,yy+16,0)
+var yy = y + yOffset;
+var hover = (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > yy-16 and UberCont.mouse__y < yy+16)
+if (instance_exists(UnlockingSecondRow))
 {
-draw_sprite(sprSkillSelected,-1,x,y)
-draw_sprite(sprite_index,crown,x+2,y-2)
+	draw_sprite(sprite_index,crown,x,yy)
+	var t = UnlockingSecondRow.lerpTime * 0.5;
+	draw_set_alpha(clamp(t,0,1));
+	if rowPosition == 0 || rowPosition == 12
+	{
+		//TO LEFT
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-32;
+		draw_rectangle(camera_get_view_x(view_camera[0]),min(center,yy - 17),x - 13,max(center,yy+17),false);	
+	}
+	if rowPosition == 11 || rowPosition == 23
+	{
+		//TO RIGHT
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-32;
+		draw_rectangle(x + 13,min(center,yy - 17),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),max(center,yy+17),false);	
+	}
+	draw_sprite(sprCrownSelect,sprite_get_number(sprCrownSelect) - 1,x,yy)
+	draw_set_alpha(1);
+}
+else if hover
+{
+	draw_sprite(sprSkillSelected,-1,x,yy)
+	draw_sprite(sprite_index,crown,x+2,yy-2)
 }
 else
 {
-	draw_sprite(sprite_index,crown,x,y)
-	draw_sprite_ext(sprite_index,crown,x,y,1,1,0,c_black,0.05)
+	draw_sprite(sprite_index,crown,x,yy)
+	draw_sprite_ext(sprite_index,crown,x,yy,1,1,0,c_black,0.05)
 }
 var isCurrentCrown = false;
 if (crown != 1 && scrIsCrown(crown))
 {
 	isCurrentCrown = true;
 	var col = make_color_rgb(72,156,8);
-	draw_rectangle_color(x-12,y-16 - (hover*2),x+12+hover,y+15,col,col,col,col,true);	
+	draw_rectangle_color(x-12,yy-16 - (hover*2),x+12+hover,yy+15,col,col,col,col,true);	
 }
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
