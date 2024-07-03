@@ -7,7 +7,7 @@ RogueIDPD=false;
 scrCrownOfPopoRad(15);
 event_inherited()
 meleedamage = 20
-
+myGateway = noone;
 ignoreOverlap = true;
 scrAddDrops(2);
 depth  = 0;

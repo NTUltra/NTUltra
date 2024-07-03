@@ -358,28 +358,28 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false) {
 		}
 		with pickup
 		{
-		scrWeapons()
-		SetSeedWeapon();
-		wep = scrDecideWep(max(0,-1),2)
-		name = wep_name[wep]
-		type = wep_type[wep]
-		ammo = 20
-		curse = 0
-		sprite_index = wep_sprt[wep];
-		if collision_point(x,y,Wall,false,false)
-		{
-			var n = instance_nearest(x,y,Floor)
-			if n != noone {
-				var o = 16;
-				if n.object_index == FloorExplo
-				{
-					o = 8;	
+			scrWeapons()
+			SetSeedWeapon();
+			wep = scrDecideWep(max(0,-1),2)
+			name = wep_name[wep]
+			type = wep_type[wep]
+			ammo = 20
+			curse = 0
+			sprite_index = wep_sprt[wep];
+			if collision_point(x,y,Wall,false,false)
+			{
+				var n = instance_nearest(x,y,Floor)
+				if n != noone {
+					var o = 16;
+					if n.object_index == FloorExplo
+					{
+						o = 8;	
+					}
+					x = n.x + o;
+					y = n.y + o;
+					scrForcePosition60fps();
 				}
-				x = n.x + o;
-				y = n.y + o;
-				scrForcePosition60fps();
 			}
-		}
 		}
 		return pickup;
 	}

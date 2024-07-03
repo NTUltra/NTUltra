@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndUnlockingSecondRow",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":7.91907,
+  "name":"sndUnlockingSecondRow",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Sounds/Menu.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndUnlockingSecondRow.ogg",
+  "type":0,
+  "volume":1.0,
+}

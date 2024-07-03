@@ -10,7 +10,7 @@ if instance_exists(Player)
 	)
 	{
 		instance_create(0,0,BackCont)
-		if random(2000) < 1//Culture
+		if random(3000) < 1//Culture
 			snd_play_2d(sndYEAH,0,true,false,2,1);
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 			scrEnableBigScreen();

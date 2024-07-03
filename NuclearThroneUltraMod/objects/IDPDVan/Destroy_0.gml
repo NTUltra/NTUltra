@@ -3,7 +3,11 @@ scrDrop(12,0)
 scrDrop(8,0)
 speed = 0;
 my_health = 0;
-event_inherited()
+event_inherited();
+with myGateway
+{
+	instance_destroy();	
+}
 with BackCont
 {
 	if alarm[2] > 60

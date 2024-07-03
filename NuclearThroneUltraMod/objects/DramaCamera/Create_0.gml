@@ -61,6 +61,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		{
 			song = musBoss8;
 		}
+		else if instance_exists(CloudBoss)
+		{
+			//song = musVisionary;
+		}
 		else
 		{
 		    var area = instance_exists(Player) ? Player.area : UberCont.area;

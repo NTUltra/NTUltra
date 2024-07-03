@@ -1,4 +1,6 @@
 /// @description Draw on top if hovering
+if unlocking
+	exit;
 if Menu.mouseover == image_index
 {
 	event_perform(ev_draw,0);

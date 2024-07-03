@@ -1,4 +1,4 @@
-if !instance_exists(Menu) || Menu.widescreen < 50 || !instance_exists(BackCont)
+if !instance_exists(Menu) || Menu.widescreen < 50 || !instance_exists(BackCont) || instance_exists(UnlockingCharacter)
 	exit;
 if visible && KeyCont.key_fire[p] = 1 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and StatsSelect.selected = 0 and CreditsSelect.selected = 0 and UpdateChecker.selected = 0
 {

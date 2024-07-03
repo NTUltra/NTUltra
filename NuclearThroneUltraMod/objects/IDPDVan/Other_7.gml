@@ -6,7 +6,7 @@ if sprite_index=sprVanOpen
 	sprite_index=sprVanOpenIdle;
 	image_index=0;
 	if instance_exists(Player) && Player.area != 100 && !scrIsGamemode(25) && !UberCont.triedToGoHQThisLoop && Player.loops > 0
-		instance_create(x - (32*right),y,HQEnterance);
+		myGateway = instance_create(x - (32*right),y,HQEnterance);
 }
 if sprite_index=sprFreakVanOpen
 {

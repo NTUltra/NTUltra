@@ -54,7 +54,7 @@ function scrPandaThrow(){
     
 			}
 			else{
-			wep=other.wep;
+				wep=other.wep;
 			}
 			name = wep_name[wep]
 			//ammo = 50

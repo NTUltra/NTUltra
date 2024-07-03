@@ -1,4 +1,4 @@
-scrRaces()
+
 image_index = num
 
 if num > racemax //or UberCont.race_have[num] = 0
@@ -6,11 +6,11 @@ image_index = racemax+1
 
 image_speed = 0
 
-visible = 1
+//visible = 1
 
 
 x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
-y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
+y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 row = 0;
 if num>13
 {
@@ -24,12 +24,12 @@ if num>13
 	{
 		x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
 	}
-	y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
 
 }
 else
 {
-y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
+y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
 //x = view_xview+8+22;
 }
 if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
@@ -38,75 +38,109 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 }
 //yy=32;//48
 var yyy = y + 48 - Menu.widescreen;
-if Menu.race == image_index
+if instance_exists(UnlockingSecondRow)
 {
-    draw_sprite(sprSelected,-1,x,yyy)
-    draw_sprite(sprite_index,-1,x+2,yyy-2)
-	if num == 24 && instance_exists(ElementorHeadMenu)
+	var t = UnlockingSecondRow.lerpTime * 0.5;
+	draw_set_alpha(clamp(t,0,1));
+	if num == 0 || num == 27
 	{
-		draw_sprite_ext(sprCharSelectElementorHead,0,x+2,yyy-2,1,1,0,ElementorHeadMenu.col,1);	
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+		draw_rectangle(camera_get_view_x(view_camera[0]),min(center,yyy),x,max(center,yyy+24),false);	
 	}
-    /*
-    if Menu.mouseover != image_index
+	if num == 13 || num == 26
 	{
-		draw_sprite_ext(sprite_index,-1,x+2,yyy-2,1,1,0,c_white,0.05);
-	}*/
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24;
+		draw_rectangle(x + 16,min(center,yyy),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),max(center,yyy+24),false);	
+	}
+	draw_set_alpha(1);
 }
-else
+if unlockTime > 0
 {
-    if UberCont.race_have[num] != 1
+	draw_sprite(sprite_index,-1,x,yyy)
+	if !unlocking
+		unlockTime -= 0.025;
+	draw_set_alpha(clamp(unlockTime,0.25,0.8));
+	gpu_set_blendmode(bm_add);
+	var ut = min(1,unlockTime);
+	draw_rectangle(x + 8 - 8*ut,yyy,x+7 + 8*ut,camera_get_view_y(view_camera[0]),false);
+	gpu_set_blendmode(bm_normal);
+	draw_set_alpha(1);
+	draw_sprite_ext(sprite_index,image_number - 1,x,yyy,1,1,0,c_white,ut + 0.1);
+}
+else if !unlocking
+{
+	if Menu.race == image_index && !instance_exists(UnlockingCharacter)
 	{
-		draw_sprite(sprCharSelectLocked,num,x,yyy)
-		draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
+	    draw_sprite(sprSelected,-1,x,yyy)
+	    draw_sprite(sprite_index,-1,x+2,yyy-2)
+		if num == 24 && instance_exists(ElementorHeadMenu)
+		{
+			draw_sprite_ext(sprCharSelectElementorHead,0,x+2,yyy-2,1,1,0,ElementorHeadMenu.col,1);	
+		}
+	    /*
+	    if Menu.mouseover != image_index
+		{
+			draw_sprite_ext(sprite_index,-1,x+2,yyy-2,1,1,0,c_white,0.05);
+		}*/
 	}
 	else
 	{
-		draw_sprite(sprite_index,-1,x,yyy)
-		if num == 24 && instance_exists(ElementorHeadMenu)
+	    if UberCont.race_have[num] != 1
 		{
-			draw_sprite_ext(sprCharSelectElementorHead,0,x,yyy,1,1,0,ElementorHeadMenu.col,1);
+			draw_sprite(sprCharSelectLocked,num,x,yyy)
+			draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
 		}
-		draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
-	}
+		else
+		{
+			draw_sprite(sprite_index,-1,x,yyy)
+			if num == 24 && instance_exists(ElementorHeadMenu)
+			{
+				draw_sprite_ext(sprCharSelectElementorHead,0,x,yyy,1,1,0,ElementorHeadMenu.col,1);
+			}
+			draw_sprite_ext(sprCharSelectDarkOverlay,0,x,yyy,1,1,0,c_white,lerp(0.5,0,hoverTime));
+		}
     
-    if Menu.mouseover == image_index && num != 0
-	{
-		var col = make_color_rgb(72,253,8);// normal dark
-		var didLoop = false;
-		var gotSkins = false;
-		var gotGuns = false;
-		var gotCrowns = false;
-		var gotAllUltras = false;
-		if UberCont.ctot_loop[num]>0
-			didLoop = true;
-		if UberCont.race_bskin[num] && UberCont.race_cskin[num]
-			gotSkins = true;
-		if scrHasAllStartingWeapons(num)
+	    if Menu.mouseover == image_index && num != 0
 		{
-			gotGuns = true
+			var col = make_color_rgb(72,253,8);// normal dark
+			var didLoop = false;
+			var gotSkins = false;
+			var gotGuns = false;
+			var gotCrowns = false;
+			var gotAllUltras = false;
+			if UberCont.ctot_loop[num]>0
+				didLoop = true;
+			if UberCont.race_bskin[num] && UberCont.race_cskin[num]
+				gotSkins = true;
+			if scrHasAllStartingWeapons(num)
+			{
+				gotGuns = true
+			}
+			if UberCont.ctot_all_crowns_taken[num] > 0
+				gotCrowns = true;
+			var i = ((num-1)*4) + 1;
+			gotAllUltras = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
+			if num == 21 && !gotAllUltras// Horror
+				gotAllUltras = UberCont.ctot_ultra_taken[0];
+			if gotAllUltras
+			{
+				gotAllUltras = scrHasFoundAllSecretUltrasFor(num);
+			}
+			if didLoop && gotSkins && gotGuns && gotCrowns && gotAllUltras
+			{
+				draw_sprite(sprCharSelectCompleted,0,x,yyy + 3);
+			} else
+			{
+				if didLoop
+					draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
+			}
 		}
-		if UberCont.ctot_all_crowns_taken[num] > 0
-			gotCrowns = true;
-		var i = ((num-1)*4) + 1;
-		gotAllUltras = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
-		if num == 21 && !gotAllUltras// Horror
-			gotAllUltras = UberCont.ctot_ultra_taken[0];
-		if gotAllUltras
-		{
-			gotAllUltras = scrHasFoundAllSecretUltrasFor(num);
-		}
-		if didLoop && gotSkins && gotGuns && gotCrowns && gotAllUltras
-		{
-			draw_sprite(sprCharSelectCompleted,0,x,yyy + 3);
-		} else
-		{
-			if didLoop
-				draw_rectangle_color(x,yyy,x+15,yyy+23,col,col,col,col,true);
-		}
-	}
     
-    if UberCont.race_have[num] =1 and UberCont.ctot_played[num] = 0 and num != 0
-		draw_sprite(sprNew,-1,x,yyy)
-
+	    if UberCont.race_have[num] =1 and UberCont.ctot_played[num] = 0 and num != 0
+			draw_sprite(sprNew,-1,x,yyy)
+	}
 }
-
+else
+{
+	draw_sprite(sprCharSelectLocked,num,x,yyy);	
+}

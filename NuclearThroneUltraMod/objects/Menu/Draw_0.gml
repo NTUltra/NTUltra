@@ -6,33 +6,33 @@ draw_rectangle(__view_get( e__VW.XView, 0 ),__view_get( e__VW.YView, 0 ),__view_
 draw_set_alpha(1)
 
 //DRAW SOME SCREENS
-if audio_is_playing(sndLogoLoop)
-	audio_stop_sound(sndLogoLoop);
+
 if mode = 0
 {
-if widescreen > 0
-widescreen -= 8
+	if widescreen > 0
+	widescreen -= 8
 
-if !audio_is_playing(sndLogoLoop)
-	snd_loop(sndLogoLoop);
-draw_sprite(sprLogo,-1,round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5),round(__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5))
+	if !audio_is_playing(sndLogoLoop)
+		snd_loop(sndLogoLoop);
+	draw_sprite(sprLogo,-1,round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5),round(__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5))
 
-if image_index >= 14
-{
-	draw_set_blend_mode(bm_add)
-	ang = 0
-
-	repeat(8)
+	if image_index >= 14
 	{
+		draw_set_blend_mode(bm_add)
+		ang = 0
 
-		draw_sprite_ext(sprLogoGlow,-1,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+lengthdir_x(4+sin(wave)*(2+random(1)),ang),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+lengthdir_y(4+sin(wave)*(2+random(1)),ang),1,1,0,c_white,0.05)
-		ang += 360/8
-		wave += random(0.02)
+		repeat(8)
+		{
+
+			draw_sprite_ext(sprLogoGlow,-1,__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+lengthdir_x(4+sin(wave)*(2+random(1)),ang),__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+lengthdir_y(4+sin(wave)*(2+random(1)),ang),1,1,0,c_white,0.05)
+			ang += 360/8
+			wave += random(0.02)
+		}
+			draw_set_blend_mode(bm_normal)
+		wave += 0.05
 	}
-		draw_set_blend_mode(bm_normal)
-	wave += 0.05
-}
-}
+} else if audio_is_playing(sndLogoLoop)
+	audio_stop_sound(sndLogoLoop);
 
 
 /*
@@ -94,6 +94,12 @@ if widescreen > 0
 			var col = c_white
 			if instance_exists(LoadoutSelect) && LoadoutSelect.skinLocked
 				col = c_black;
+			if skinIndex == 20
+			{
+				//Simple black top for Eye's void skin
+				draw_rectangle(bpx - 100,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8 - 192,
+				bpx + 100, __view_get( e__VW.YView, 0 ),false);
+			}
 			draw_sprite_ext(sprBigPortrait,skinIndex,bpx,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-widescreen - 8,1,1,0,col,1);
 		}
 		draw_set_valign(fa_bottom);

@@ -4,7 +4,7 @@
 function scrIsWeaponOnGround(wantWep){
 	with WepPickup
 	{
-		if wep == wantWep
+		if id != other.id && wep == wantWep
 			return true;
 	}
 	with WeaponChest

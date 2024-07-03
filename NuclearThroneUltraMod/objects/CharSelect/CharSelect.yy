@@ -44,5 +44,5 @@
     "name":"sprSelectMask",
     "path":"sprites/sprSelectMask/sprSelectMask.yy",
   },
-  "visible":false,
+  "visible":true,
 }

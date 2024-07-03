@@ -1,5 +1,5 @@
 //with (other) {
-//wep = 0;
+wep = 0;
 depth = 2;
 wasThrown = false;
 canBeMoved = true;
@@ -62,3 +62,4 @@ isPermanent = false;
 hasBeenEaten = false;
 //name="IF YOU SEE THIS REPORT BUG TO @ERDEPPOL"
 alarm[5] = 10;
+alarm[6] = 60 + irandom(90);

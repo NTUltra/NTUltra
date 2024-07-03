@@ -3,6 +3,7 @@ function scrUnlockCharacter(raceIndex, unlockText) {
 	if UberCont.race_have[raceIndex]=0 && isValidGamemodeToUnlock()
 	{
 		UberCont.race_have[raceIndex]=1
+		UberCont.justUnlocked[array_length(UberCont.justUnlocked)] = raceIndex;
 		with instance_create(x,y,UnlockPopup)
 		{
 			mytext=UberCont.race_name[raceIndex]+"#UNLOCKED#"+unlockText;

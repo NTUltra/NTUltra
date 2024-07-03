@@ -3,8 +3,6 @@ var vx = camera_get_view_x(view_camera[0]);
 var vy = camera_get_view_y(view_camera[0]);
 var vh = camera_get_view_height(view_camera[0]);
 var vw = camera_get_view_width(view_camera[0]);
-if audio_is_playing(sndLogoLoop)
-	audio_stop_sound(sndLogoLoop);
 if text == "SHOWLOGO"
 {
 	if !audio_is_playing(sndLogoLoop)
@@ -28,6 +26,8 @@ if text == "SHOWLOGO"
 }
 else if text != ""
 {
+	if audio_is_playing(sndLogoLoop)
+		audio_stop_sound(sndLogoLoop);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	var xx = vx + vw*0.5
@@ -41,4 +41,5 @@ else if text != ""
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 
-}
+} else if audio_is_playing(sndLogoLoop)
+	audio_stop_sound(sndLogoLoop);

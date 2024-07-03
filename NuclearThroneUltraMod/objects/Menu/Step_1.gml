@@ -31,10 +31,33 @@ if mode = 0
 			alarm[0] = 1
 	}
 
-	num = 14
+	num = 0
 	dix = 0
 	diy = 0
-	repeat(racemax+1)
+	var totals = racemax + 1;
+	var halfWay = 14;
+	if !UberCont.unlocked_more_characters
+	{
+		totals = halfWay;
+		var justUnlockedSecondRow = false;
+		with UberCont
+		{
+			var r = 0;
+			repeat(racemax + 1)
+			{
+				if (race_have[r] && r >= totals)
+				{
+					justUnlockedSecondRow = true;
+				}
+				r += 1;
+			}
+		}
+		if (justUnlockedSecondRow)
+		{
+			totals = racemax + 1;
+		}
+	}
+	repeat(totals)
 	{
 		with instance_create(0,0,CharSelect)
 		{
@@ -45,7 +68,38 @@ if mode = 0
 		}
 		num += 1;
 	}
-
+	with UberCont
+	{
+		justUnlocked = [3,6,8];
+		if (array_length(justUnlocked) > 0)
+		{
+			with instance_create(x,y,UnlockingCharacter)
+			{
+				justUnlocked = UberCont.justUnlocked;
+			}
+		}
+		with CharSelect
+		{
+			if array_contains(UberCont.justUnlocked,num)
+			{
+				unlocking = true;		
+			}
+		}
+		justUnlocked = [];
+	}
+	if justUnlockedSecondRow
+	{
+		with CharSelect {
+			if num >= halfWay
+			{
+				// visible = false;
+				yOffset = -15;
+			}
+			else
+				yOffset = simpleOffset;
+		}
+		instance_create(x,y,UnlockingSecondRow);
+	}
 	//instance_create(x,y,UpdateSelect)
 	instance_create(x,y,Cheatcode);
 	//If savefile found

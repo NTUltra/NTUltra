@@ -1598,11 +1598,11 @@ function scrWeapons() {
 	wep_swap[142] = sndSwapShotgun
 	wep_rad[142] = 0;
 
-	wep_name[143] = "LINE GRENADE"
+	wep_name[143] = "EXPLOSION LINE"
 	wep_type[143] = 4
 	wep_auto[143] = 0
-	wep_load[143] = 17
-	wep_cost[143] = 2
+	wep_load[143] = 20
+	wep_cost[143] = 3
 	wep_sprt[143] = sprLineNader
 	wep_area[143] = 13
 	wep_text[143] = "dangerous bliss"
@@ -1623,8 +1623,8 @@ function scrWeapons() {
 	wep_name[145] = "FIRE LINE"
 	wep_type[145] = 4
 	wep_auto[145] = 0
-	wep_load[145] = 15
-	wep_cost[145] = 2
+	wep_load[145] = 20
+	wep_cost[145] = 2.5
 	wep_sprt[145] = sprLineFire
 	wep_area[145] = 8
 	wep_text[145] = "don't get in the line of fire"
@@ -1634,7 +1634,7 @@ function scrWeapons() {
 	wep_name[146] = "TOXIC LINE"
 	wep_type[146] = 4
 	wep_auto[146] = 0
-	wep_load[146] = 15
+	wep_load[146] = 20
 	wep_cost[146] = 2
 	wep_sprt[146] = sprLineToxic
 	wep_area[146] = 4
@@ -1832,8 +1832,8 @@ function scrWeapons() {
 	wep_name[164] = "BLOOD LINE"
 	wep_type[164] = 4
 	wep_auto[164] = 0
-	wep_load[164] = 15
-	wep_cost[164] = 2
+	wep_load[164] = 20
+	wep_cost[164] = 2.5
 	wep_sprt[164] = sprLineBloodNader
 	wep_area[164] = 9
 	wep_text[164] = "it's a bloody blood bath"
@@ -5292,8 +5292,8 @@ function scrWeapons() {
 	wep_name[470] = "FROST LINE"
 	wep_type[470] = 4
 	wep_auto[470] = 0
-	wep_load[470] = 17
-	wep_cost[470] = 2.5
+	wep_load[470] = 20
+	wep_cost[470] = 3
 	wep_sprt[470] = sprLineFrost
 	wep_area[470] = 15
 	wep_text[470] = "don't get in the line of fire"
@@ -5877,7 +5877,7 @@ function scrWeapons() {
 	wep_name[523] = "LIGHTNING STRIKER"
 	wep_type[523] = 5
 	wep_auto[523] = 3
-	wep_load[523] = 37
+	wep_load[523] = 34
 	wep_cost[523] = 4
 	wep_sprt[523] = sprLightningStriker
 	wep_area[523] = 11
@@ -5888,7 +5888,7 @@ function scrWeapons() {
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
 	wep_auto[524] = 3
-	wep_load[524] = 37
+	wep_load[524] = 35
 	wep_cost[524] = 8
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 24
@@ -6385,7 +6385,7 @@ function scrWeapons() {
 	wep_type[569] = 5
 	wep_auto[569] = 0
 	wep_load[569] = 50
-	wep_cost[569] = 14
+	wep_cost[569] = 12
 	wep_sprt[569] = sprSplasmaCannon
 	wep_area[569] = 17
 	wep_text[569] = "disperse plasma gun"
@@ -6667,7 +6667,7 @@ function scrWeapons() {
 	wep_swap[594] = sndSwapHammer
 	wep_rad[594] = 0;
 	
-	wep_name[595] = "AUTO LIGHTNING CROSSBOW"
+	wep_name[595] = "GATLING LIGHTNING CROSSBOW"
 	wep_type[595] = 3
 	wep_auto[595] = 1
 	wep_load[595] = 9
@@ -7896,7 +7896,7 @@ function scrWeapons() {
 	wep_cost[705] = 1
 	wep_sprt[705] = sprGrenadeStrikeLauncher
 	wep_area[705] = 0
-	wep_text[705] = "be carefull with that explosion line"
+	wep_text[705] = "be carefull with that explosion LINE"
 	wep_swap[705] = sndSwapExplosive
 	wep_rad[705] = 0;
 	wep_popup[705] = "DON'T BLOW YOURSELF UP!";

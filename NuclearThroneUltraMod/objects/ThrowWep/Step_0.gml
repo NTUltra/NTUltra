@@ -7,7 +7,7 @@ if speed > 1
 	var hits = ds_list_create();
 	var al = instance_place_list(x,y,hitme,hits,false)
 	if al > 0 && instance_exists(Player) && Player.ultra_got[55]
-		scrDrop(25,0.02);
+		scrDrop(20,0.02);
 	for (var i = 0; i < al; i++) {
 		with hits[| i]
 		{
@@ -57,8 +57,9 @@ if speed > 1
 					{
 				        if !pierce
 				        {
-							direction+=180+random(60)-30
+							direction+=180+random(60)-30;
 							speed*=0.7;
+							snd_play(choose(sndWepBounce1,sndWepBounce2,sndWepBounce3,sndWepBounce4),0.08);
 				        }
 						else if Player.ultra_got[53] == 1 || Player.ultra_got[54] || Player.ultra_got[55] || Player.ultra_got[56] == 1
 						{
@@ -88,26 +89,35 @@ if instance_exists(PandaSleep)
 	image_angle += rotspeed*speed
 	exit;
 }
+/*
 if image_index < 1
 image_index += random(0.04)
 else
 image_index += 0.4
-
+*/
 if !place_meeting(x,y,Wall)
 {
 	image_angle += rotspeed*speed
-	if collision_line(xprevious,yprevious,x,y,Wall,false,false)
+	if collision_line(xprevious,yprevious,x,y,Wall,false,false) && !place_meeting(xprevious,yprevious,Wall)
 	{
 		x = xprevious;
 		y = yprevious;
+		scrForcePosition60fps();
 		speed *= 0.8;
 	}
 }
 else
 {
-	move_bounce_solid(false)
-	move_outside_solid(direction,2)
+	move_bounce_solid(true)
+	move_outside_solid(direction,16)
+	while (place_meeting(x,y,Wall))
+	{
+		x += lengthdir_x(1,direction);
+		y += lengthdir_y(1,direction);	
+	}
+	scrForcePosition60fps();
 	speed*=0.84;
+	snd_play(choose(sndWepBounce1,sndWepBounce2,sndWepBounce3,sndWepBounce4),0.08);
 	if instance_exists(Player)
 	{
 		if Player.ultra_got[53] == 1 || Player.ultra_got[54] == 1 || Player.ultra_got[55] == 1 || Player.ultra_got[56] == 1
