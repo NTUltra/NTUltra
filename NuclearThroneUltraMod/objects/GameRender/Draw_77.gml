@@ -25,17 +25,84 @@ if !instance_exists(BackCont)
 	viewX = camera_get_view_x(view_camera[0]);
 	viewY = camera_get_view_y(view_camera[0]);
 }
-draw_surface_ext
-(
-	application_surface,
-	screenX - (frac(viewX)*scale),
-	screenY - (frac(viewY)*scale),
-	scale,
-	scale,
-	0,
-	c_white,
-	1.0
-)
+if instance_exists(CrackScreen)
+{
+	var t = CrackScreen.crackTime;
+	var sy = screenY + (t*scale);
+	draw_surface_part_ext
+	(
+		application_surface,
+		0,
+		0,
+		surface_get_width(application_surface)*0.5,
+		surface_get_height(application_surface),
+		screenX - (frac(viewX)*scale),
+		sy - (frac(viewY)*scale),
+		scale,
+		scale,
+		c_white,
+		1.0
+	)
+	sy -= surface_get_height(application_surface)*scale;
+	draw_surface_part_ext
+	(
+		application_surface,
+		0,
+		0,
+		surface_get_width(application_surface)*0.5,
+		surface_get_height(application_surface),
+		screenX - (frac(viewX)*scale),
+		sy - (frac(viewY)*scale),
+		scale,
+		scale,
+		c_white,
+		1.0
+	)
+	sy = screenY - (t*scale);
+	draw_surface_part_ext
+	(
+		application_surface,
+		surface_get_width(application_surface)*0.5,
+		0,
+		surface_get_width(application_surface)*0.5,
+		surface_get_height(application_surface),
+		screenX - (frac(viewX)*scale) + (surface_get_width(application_surface)*0.5*scale),
+		sy - (frac(viewY)*scale),
+		scale,
+		scale,
+		c_white,
+		1.0
+	)
+	sy += surface_get_height(application_surface)*scale;
+	draw_surface_part_ext
+	(
+		application_surface,
+		surface_get_width(application_surface)*0.5,
+		0,
+		surface_get_width(application_surface)*0.5,
+		surface_get_height(application_surface),
+		screenX - (frac(viewX)*scale) + (surface_get_width(application_surface)*0.5*scale),
+		sy - (frac(viewY)*scale),
+		scale,
+		scale,
+		c_white,
+		1.0
+	)
+}
+else
+{
+	draw_surface_ext
+	(
+		application_surface,
+		screenX - (frac(viewX)*scale),
+		screenY - (frac(viewY)*scale),
+		scale,
+		scale,
+		0,
+		c_white,
+		1.0
+	);
+}
 var t = screenY
 var b = screenY + (surface_get_height(application_surface) * scale);
 var l = screenX
@@ -85,7 +152,7 @@ if instance_exists(VoidStyle) && VoidStyle.image_index < 8
 	gpu_set_blendmode(bm_subtract);
 	var a = 1;
 	var voidTime = 0;
-	if VoidStyle.existTime > 0
+	if (VoidStyle.existTime > 0)
 		voidTime = sin((VoidStyle.existTime/(VoidStyle.totalTime*0.5))*1.57);
 	a = lerp(0,1,clamp(voidTime,0,1));
 	if a > 0

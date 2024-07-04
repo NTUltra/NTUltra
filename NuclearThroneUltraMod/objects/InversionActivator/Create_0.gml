@@ -1,16 +1,10 @@
 /// @description Init
 depth = 6;
 image_speed = 0.4;
-name = "CHOOSE ANY MUTATION#NEXT LEVEL UP"
-alarm[6] = 5;
-text = "";
-dullText = "";
-cutsceneIndex = 0;
-cutsceneText = [
-["MEANWHILE#SOMEWHERE ELSE...",120],
-["",120],
-];
-alarm[0] = 90;
+name = "TOUCH?"
+text = "MEANWHILE\nSOMEWHERE ELSE...";
+alarm[0] = 30;
+active = false;
 with MusCont
 {
 	audio_stop_sound(song);
@@ -21,4 +15,6 @@ with MusCont
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 }
+rememberArea = 108;
 depth = -99999;
+instance_create(x,y - 8,FakePortal);

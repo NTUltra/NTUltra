@@ -20,6 +20,11 @@ if !instance_exists(PlayerInPortal)
 			{
 				event_perform(ev_alarm,0);	
 			}
+			with enemy
+			{
+				my_health = 0;
+				prevhealth = 0;
+			}
 		}
 	}
 }

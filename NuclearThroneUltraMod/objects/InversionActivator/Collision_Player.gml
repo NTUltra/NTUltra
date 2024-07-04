@@ -1,29 +1,26 @@
 /// @description Get patience
 with Player
 		isOnInteractable = true;
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && active
 {
-	instance_create(x,y,InactiveAnyMutationStation);
+	with instance_create(x,y,PortalEnviromentReplacer)
+	{
+		area = 137;
+		prevArea = 105;
+	}
+	instance_create(x,y,Flash);
 	snd_play(sndCursedReminder,0,0,true,1,false,false,1);
-	KeyCont.key_pick[Player.p] = 2;
 	mask_index = mskPickupThroughWall;
-	instance_destroy();
+	KeyCont.key_pick[Player.p] = 2;
 	BackCont.shake += 50;
-	snd_play(sndUltraGrenadeSuck);
-	with Player {
-		anyMutation += 1;
-	}
-	instance_create(x,y,PortalChecker);
-	with instance_create(x,y,PopupText)
+	alarm[7]= 15;
+	alarm[8] = 30;
+	snd_play_2d(sndVoidCreepEnd);
+	snd_play_2d(sndAlternateAreaMilestone);
+	__background_set_colour( make_color_rgb(0,0,0) )
+	visible = false;
+	with FakePortal
 	{
-		mytext = "CHOOSE ANY MUTATION!"
-		theColour = c_lime;
-		moveSpeed = 1;
-		alarm[1] = 60;
-	}
-	with CorpseCollector
-	{
-		px = other.x;
-		py = other.y;
+		sprite_index = sprPortalInverted;	
 	}
 }

@@ -2,9 +2,10 @@
 // /@description
 ///@param
 function scrCreateExpansionCutsceneArea() {
+	__background_set_colour( make_color_rgb(67,53,35) )
 	//Main area
-	var ham = 6;
-	var vam = 10;
+	var ham = 4;
+	var vam = 4;
 	for (var fxx = -32 * (ham-1); fxx < 32 * ham; fxx += 32;)
 	{
 		for (var fyy = 0; fyy < 32 * vam; fyy += 32;)
@@ -13,172 +14,21 @@ function scrCreateExpansionCutsceneArea() {
 		}
 	}
 	// Walls
-	instance_create(x,y + 32,InversionActivator);
-	instance_create(x-64+16,y-64,Wall);
-	instance_create(x+96,y-64,Wall);
-	instance_create(x-64+16,y-192-16,Wall);
-	instance_create(x+96,y-192-16,Wall);
-	//Bottom cubbyhole
-	instance_create(x,y + 32,Floor);
-	instance_create(x,y + 64,Floor);
-	instance_create(x + 32,y + 32,Floor);
-	instance_create(x + 32,y + 64,Floor);
+	for (var i = 0; i < 16; i ++)
+	{
+		for (var j = 0; j < 3; j++)
+		{
+			instance_create(x + 32*i,y - 32 + (32*j),Floor);
+		}
+	}
+	instance_create(x + 512,y,Floor);
+	instance_create(x + 448,y - 64,Floor);
+	instance_create(x + 448,y + 64,Floor);
+	instance_create(x + 464,y + 16,InversionActivator);
 	with Floor
 	{
 		styleb = 0
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(x - 32,y + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(x - 32,y + 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(x + 64,y + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(x + 64,y + 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	//TOP cubbyhole
-	var xx = x;
-	var yy = y - 384;
-	with instance_create(xx,yy + 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx,yy + 64,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy + 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy + 64,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	//B
-	with instance_create(xx - 32,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx - 32,yy + 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 64,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 64,yy + 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	//LEFT cubbyhole
-	var xx = x - 224;
-	var yy = y - 128;
-	with instance_create(xx,yy,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx,yy - 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy - 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	//B
-	with instance_create(xx,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx,yy - 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 32,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 32,yy - 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	//RIGHT cubbyhole
-	var xx = x + 192;
-	var yy = y - 128;
-	with instance_create(xx,yy,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx,yy - 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	with instance_create(xx + 32,yy - 32,Floor)
-	{
-		styleb = 0
-		sprite_index = sprFloor116;
-	}
-	//B
-	with instance_create(xx,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx,yy - 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 32,yy + 32,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
-	}
-	with instance_create(xx + 32,yy - 64,Floor)
-	{
-		styleb = true;
-		sprite_index = sprFloor116B;
+		sprite_index = sprFloor100;
 	}
 	var myWall = Wall;
 	with Floor

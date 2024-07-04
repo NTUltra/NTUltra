@@ -2306,6 +2306,11 @@ microseconds=0;
 		{
 			targetFloor = instance_furthest(Portal.x,Portal.y,Floor);
 		}
+		with Portal
+		{
+			if inverted
+				targetFloor = noone
+		}
 		if targetFloor != noone
 		{
 			var tries = 400;
@@ -2329,7 +2334,7 @@ microseconds=0;
 				event_user(0);
 		    }
     
-		    invertedportalcounter=0;
+		    invertedportalcounter=-1;
 		}
     }
     

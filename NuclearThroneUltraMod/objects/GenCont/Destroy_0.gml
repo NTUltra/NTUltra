@@ -69,105 +69,114 @@ if instance_exists(Player)
 				ic += 100;
 			}
 		}
+		if instance_exists(ForceInversion)
+			ic += 100;
+		var didSpawnInv = false;
 		if (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
 		{
 		    if ( (area=1&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=105
+				didSpawnInv = true;
 		    }
 			else if ( (area==10&&subarea<3)  )//Inv Savanna
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area==101&&subarea<3)  )//Inv Oasis
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area==103)  )//Inv mansion
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area==114&&subarea<2)  )//Inv Jungle
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area==117&&subarea<2)  )//Inv mushroom
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area==126&&subarea<2)  )//Graveyard
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( ((area == 130 || area == 132 || area == 133 || area == 134) && subarea<3)  )//Factory
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 		    else if ( area=2  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=105
+				didSpawnInv = true;
 		    }
 		    else if ( (area=3&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=106
+				didSpawnInv = true;
 		    }
 		    else if ( area == 4 &&  subarea < 2)
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=106
+				didSpawnInv = true;
 		    }
 		    else if ( (area=5&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 		    else if ( area=6&&subarea<2  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 		    else if ( (area=7&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 		    else if ( (area=8&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
 			else if ( (area == 9&&subarea<3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
-		    //area=107
+				didSpawnInv = true;
 		    }
-		
+			if didSpawnInv
+			{
+				with ForceInversion
+				{
+					instance_destroy();	
+				}
+			}
 		}
 
     

@@ -1,8 +1,8 @@
 /// @description Draw Text
-var vx = camera_get_view_x(view_camera[0]);
-var vy = camera_get_view_y(view_camera[0]);
-var vh = camera_get_view_height(view_camera[0]);
-var vw = camera_get_view_width(view_camera[0]);
+var vx = round(camera_get_view_x(view_camera[0]));
+var vy = round(camera_get_view_y(view_camera[0]));
+var vh = round(camera_get_view_height(view_camera[0]));
+var vw = round(camera_get_view_width(view_camera[0]));
 if text == "SHOWLOGO"
 {
 	if !audio_is_playing(sndLogoLoop)

@@ -2,14 +2,34 @@ if instance_exists(Credits)
 	exit;
 if instance_exists(Player)
 {
-	if Player.area == 2
+	if Player.area == 2 && !instance_exists(UnlockingAlternativeRoutesMilestone)
 	{
+		rememberArea = Player.area;
+		with all
+		{
+			if (object_index != BackCont && 
+			object_index != TopCont &&
+			object_index != Cursor &&
+			object_index != UberCont &&
+			object_index != FPSHACK &&
+			object_index != KeyCont &&
+			object_index != GameRender &&
+			object_index != MusCont &&
+			object_index != UberCont)
+			{
+				with UberCont
+				{
+					ds_list_add(keepDeactive,other.id);
+				}
+			}
+		}
 		instance_deactivate_all(true);
 		alarm[2] = 1;
 		exit;
 	}
 	else
 	{
+		debug("NORMAL VLAMBEER");
 		instance_destroy()
 		instance_create(x,y,SpiralCont)
 		if (Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 

@@ -1,6 +1,5 @@
 /// @description Ending spiral
-depth = 8;
-visible = true;
+depth = 7;
 audio_stop_sound(amb0c);
 snd_play_2d(sndPortalOpen);
 snd_play_2d(sndPortalClose);

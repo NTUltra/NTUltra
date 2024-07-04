@@ -43,6 +43,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK)
 }
 with InversionActivator
 {
+	rememberArea = other.rememberArea;
 	depth = toppers;	
 }
 room_speed = UberCont.normalGameSpeed;

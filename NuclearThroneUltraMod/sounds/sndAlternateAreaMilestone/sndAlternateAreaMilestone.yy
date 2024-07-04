@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndAlternateAreaMilestone",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":8.089229,
+  "name":"sndAlternateAreaMilestone",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Sounds/Menu.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndAlternateAreaMilestone.ogg",
+  "type":0,
+  "volume":1.0,
+}

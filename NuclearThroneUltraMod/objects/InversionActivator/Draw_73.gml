@@ -1,8 +1,10 @@
 /// @description Draw text
-var vx = camera_get_view_x(view_camera[0]);
-var vy = camera_get_view_y(view_camera[0]);
-var vh = camera_get_view_height(view_camera[0]);
-var vw = camera_get_view_width(view_camera[0]);
+var vx = round(camera_get_view_x(view_camera[0]));
+var vy = round(camera_get_view_y(view_camera[0]));
+var vh = round(camera_get_view_height(view_camera[0]));
+var vw = round(camera_get_view_width(view_camera[0]));
+var xx = vx + vw*0.5
+var yy = vy + vh*0.5;
 if alarm[1] > 0
 {
 	draw_set_halign(fa_center);
@@ -17,4 +19,5 @@ if alarm[1] > 0
 	draw_set_colour(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
+	draw_line(xx,yy,Player.x,Player.y);
 }
