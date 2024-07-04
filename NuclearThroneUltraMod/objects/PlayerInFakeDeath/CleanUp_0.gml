@@ -10,7 +10,9 @@ with GameRender
 }
 with Player
 {
-	visible = true;	
+	visible = true;
+		lockout = false;
+
 }
 with DataRef
 {

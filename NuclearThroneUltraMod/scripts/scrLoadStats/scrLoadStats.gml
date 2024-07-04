@@ -103,6 +103,7 @@ function scrLoadStats() {
 	foundRoutes = array_unique(foundRoutes);
 	tot_time = real(string_digits(ini_read_real("STATS","tottime",0)));
 	ctot_void_entered = ini_read_real("STATS","ctotvoidentered",0);
+	about_to_unlock_alt_routes = ini_read_real("STATS","about_to_unlock_alt_routes",0);
 	unlocked_alt_routes = ini_read_real("STATS","unlocked_alt_routes",0);
 	unlocked_inverted_areas = ini_read_real("STATS","unlocked_inverted_areas",0);
 	unlocked_more_crowns = ini_read_real("STATS","unlocked_more_crowns",0);

@@ -13,12 +13,18 @@ function scrCreateExpansionCutsceneArea() {
 			instance_create(x + fxx,y - fyy,Floor);
 		}
 	}
-	// Walls
+	// Wall
 	for (var i = 0; i < 16; i ++)
 	{
-		for (var j = 0; j < 3; j++)
+		var t = (i % 2 == 0 && i < 12 ? -1 : 0);
+		var b = (i % 2 == 0 && i < 12 ? 5 : 3);
+		for (var j = t; j < b; j++)
 		{
 			instance_create(x + 32*i,y - 32 + (32*j),Floor);
+			if i > 3 && i < 12 && (j < 0 || j > 3)
+			{
+				instance_create(x + 16 + 32*i,y + 16 - 32 + (32*j),Torch);
+			}
 		}
 	}
 	instance_create(x + 512,y,Floor);

@@ -8,7 +8,11 @@ spr_dead = sprScorchmark
 mySize = 1
 
 event_inherited()
-
+if instance_exists(UberCont) && !UberCont.unlocked_alt_routes
+{
+	instance_destroy(id,false);
+	exit;
+}
 snd_hurt = sndHitMetal
 drawShadow = false;
 image_xscale = 1

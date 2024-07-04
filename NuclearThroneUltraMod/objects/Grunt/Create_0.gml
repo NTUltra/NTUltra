@@ -5,7 +5,7 @@ mySize = 1
 scrCrownOfPopoRad(3);
 event_inherited()
 loops = GetPlayerLoops();
-projectileSpeed = 7.75;
+projectileSpeed = 7.7;
 if loops > 0
 	projectileSpeed = 8;
 male=choose(true,false);

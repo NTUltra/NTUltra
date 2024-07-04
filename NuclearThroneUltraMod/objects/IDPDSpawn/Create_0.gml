@@ -1,4 +1,9 @@
 friction = 1;
+if instance_exists(UberCont) && !UberCont.unlocked_alt_routes && !instance_exists(LilHunter) && !instance_exists(LilHunterFly) && !instance_exists(LilHunterDie)
+{
+	instance_destroy();
+	exit;
+}
 if instance_exists(Player) && instance_exists(Floor)
 {
 

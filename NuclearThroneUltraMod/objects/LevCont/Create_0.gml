@@ -490,6 +490,10 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			}
 		}
 	}
+	//Power craving locked out when you dont have inverted areas
+	if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
+		skill_got[30] = 1;
+	}
     if scrIsGamemode(32) {
 		//No alkaline boiling veins and no strong spirit
 		// One hit wonder
@@ -693,6 +697,10 @@ if array_length(UberCont.skillDeposit) > 0
 			skill_got[UberCont.skillDeposit[i]] = false;
 		}
 	}
+}
+//Power craving locked out when you dont have inverted areas
+if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
+	skill_got[30] = 0;
 }
 if scrIsGamemode(32) {
 	// One hit wonder

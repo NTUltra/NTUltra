@@ -3,6 +3,7 @@ depth = 0;
 image_speed = 0.4;
 with Player
 {
+	lockout = true;
 	scrCreateDataRef();
 	DataRef.my_health = 0;
 	BackCont.loops = loops;

@@ -32,5 +32,12 @@ snd_play(snd_dead)
 
 Sleep(20+mySize*15)
 
-
+with UberCont
+{
+	if !unlocked_alt_routes && !about_to_unlock_alt_routes
+	{
+		about_to_unlock_alt_routes = true;
+		scrSave();
+	}
+}
 scrEnemyDeathEvent();

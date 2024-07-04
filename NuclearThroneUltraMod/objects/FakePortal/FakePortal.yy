@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprInvertedPortalDormant",
-    "path":"sprites/sprInvertedPortalDormant/sprInvertedPortalDormant.yy",
+    "name":"sprPortalInverted",
+    "path":"sprites/sprPortalInverted/sprPortalInverted.yy",
   },
   "spriteMaskId":{
     "name":"mskBigWepPickup",

@@ -7,3 +7,4 @@ with instance_create(x,y,PortalEnviromentReplacer)
 	prevArea = 100;
 }
 BackCont.shake += 50;
+visible = false;

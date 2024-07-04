@@ -119,59 +119,84 @@ function scrSecondaryPowers() {
 			case 7:
 				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
 				{
-					var lowa = 0;
-					var lowb = 0;
-					var lowc = 0;
-					if skill_got[35]
+					var canDoTheThing = false;
+					if !instance_exists(HoldToSteroidsShoot)
 					{
-						lowa = wep_load[wep]*-2;
-						lowb = wep_load[bwep]*-2;
-						lowc = wep_load[cwep]*-2;
+						instance_create(x,y,HoldToSteroidsShoot);	
 					}
-					var representingCost = round(wep_cost[wep]);
-					var ignoreAmmo = false;
-					if ultra_got[70]
-						representingCost = min(representingCost,0.5);
-					else if scrIsCrown(13)//Crown of drowning
+					with HoldToSteroidsShoot
 					{
-						representingCost = 0;
+						if !visible
+							canDoTheThing = true;
 					}
-					else if scrIsGamemode(48)
+					if canDoTheThing
 					{
-						representingCost = 0;
-						ignoreAmmo = true;
-					}
-					if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
-					if reload <= 0 && breload <= 0
-					{
-						speed = 0;
-						var acc = accuracy;
-						accuracy *= 0.5;
-						scrFire();
-						scrSwapWeps();
-						scrFire();
-						scrSwapWeps();
-						reload -= 1;
-						breload -= 1;
-						reload -= ceil(wep_load[wep] * 0.15);
-						breload -= ceil(wep_load[bwep] * 0.15);
-						accuracy = acc;
-						if (instance_exists(SpeedLockout))
+						var lowa = 0;
+						var lowb = 0;
+						var lowc = 0;
+						if skill_got[35]
 						{
-							with SpeedLockout
-							{
-								alarm[0] = lockoutTime;	
-							}
+							lowa = wep_load[wep]*-2;
+							lowb = wep_load[bwep]*-2;
+							lowc = wep_load[cwep]*-2;
 						}
-						else
+						var representingCost = round(wep_cost[wep]);
+						var ignoreAmmo = false;
+						if ultra_got[70]
+							representingCost = min(representingCost,0.5);
+						else if scrIsCrown(13)//Crown of drowning
 						{
-							with instance_create(x,y,SpeedLockout)
+							representingCost = 0;
+						}
+						else if scrIsGamemode(48)
+						{
+							representingCost = 0;
+							ignoreAmmo = true;
+						}
+						var didShoot = false;
+						if (can_shoot = 1 && ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0) && reload <= 0)
+						{
+							didShoot = true;
+							speed = 0;
+							var acc = accuracy;
+							accuracy *= 0.45;
+							scrFire();
+							reload -= 1;
+							reload -= ceil(wep_load[wep] * 0.17);
+							accuracy = acc;
+						}
+						scrSwapWeps();
+						if (can_shoot = 1 && ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0) && reload <= 0)
+						{
+							didShoot = true;
+							speed = 0;
+							var acc = accuracy;
+							accuracy *= 0.45;
+							scrFire();
+							reload -= 1;
+							reload -= ceil(wep_load[wep] * 0.17);
+							accuracy = acc;
+						}
+						scrSwapWeps();
+						if didShoot
+						{
+							if (instance_exists(SpeedLockout))
 							{
-								resetSpeed = other.maxSpeed;
+								with SpeedLockout
+								{
+									alarm[0] = lockoutTime;	
+								}
 							}
-							maxSpeed = 0;
-							if skill_got[2]
-								scrApplyExtraFeet();
+							else
+							{
+								with instance_create(x,y,SpeedLockout)
+								{
+									resetSpeed = other.maxSpeed;
+								}
+								maxSpeed = 0;
+								if skill_got[2]
+									scrApplyExtraFeet();
+							}	
 						}
 					}
 				}

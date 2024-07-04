@@ -604,7 +604,7 @@ function scrDrawHUD() {
 			cdir ++;
 		}
 	}
-	repeat(dataRef.maxskill+1)
+	repeat(dataRef.maxskill+2)
 	{
 		if dataRef.skill_got[dir] = 1 && dix < extraSpace
 		{
@@ -1682,14 +1682,14 @@ function scrDrawHUD() {
 		{
 			if active && place_meeting(x,y,Player)
 			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-12)
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-32)
 
 				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
+				draw_text(x-ox,y-oy-64,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-64,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-65,string_hash_to_newline(string(name)))
 				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
+				draw_text(x-ox,y-oy-65,string_hash_to_newline(string(name)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

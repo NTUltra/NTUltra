@@ -45,7 +45,7 @@ if mode = 0
 			var r = 0;
 			repeat(racemax + 1)
 			{
-				if (race_have[r] && r >= totals)
+				if (race_have[r] && r >= totals && r != 15)
 				{
 					justUnlockedSecondRow = true;
 				}
@@ -75,7 +75,6 @@ if mode = 0
 	}
 	with UberCont
 	{
-		//justUnlocked = [3,6,8];
 		if (array_length(justUnlocked) > 0)
 		{
 			with instance_create(x,y,UnlockingCharacter)
@@ -87,7 +86,8 @@ if mode = 0
 		{
 			if array_contains(UberCont.justUnlocked,num)
 			{
-				unlocking = true;		
+				unlocking = true;	
+				depth -= 100;
 			}
 		}
 		justUnlocked = [];
@@ -95,7 +95,7 @@ if mode = 0
 	if justUnlockedSecondRow
 	{
 		with CharSelect {
-			if num >= halfWay
+			if (num >= halfWay && num != 15) || num == 13 
 			{
 				// visible = false;
 				yOffset = -15;

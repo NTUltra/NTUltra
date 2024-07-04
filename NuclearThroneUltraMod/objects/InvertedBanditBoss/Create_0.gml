@@ -3,7 +3,7 @@ maxhealth = 86
 meleedamage = 0
 mySize = 3
 
-var loops = GetPlayerLoops();
+loops = GetPlayerLoops();
 maxhealth += clamp(18*loops,0,200);
 scrBossHealthBuff();
 
@@ -31,7 +31,9 @@ shot = 0
 chargewait = 2
 charge = 0
 gunangle = random(360)
-alarm[1] = 1
+alarm[1] = 14;
+if loops > 0
+	alarm[1] = 3;
 intro = 0
 wkick = 0
 

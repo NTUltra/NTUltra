@@ -17,4 +17,3 @@ with MusCont
 }
 rememberArea = 108;
 depth = -99999;
-instance_create(x,y - 8,FakePortal);

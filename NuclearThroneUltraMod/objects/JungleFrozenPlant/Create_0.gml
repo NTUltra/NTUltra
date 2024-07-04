@@ -7,7 +7,11 @@ spr_hurt = sprIceFlowerHurt
 spr_dead = sprIceFlowerDead
 
 event_inherited()
-
+if instance_exists(UberCont) && !UberCont.unlocked_alt_routes
+{
+	instance_destroy(id,false);
+	exit;
+}
 move_contact_solid(random(360),random(12))
 if !place_free(x,y+12)
 move_contact_solid(random(90)+45,random(12))

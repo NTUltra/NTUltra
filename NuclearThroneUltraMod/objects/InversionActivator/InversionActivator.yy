@@ -44,8 +44,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprInversionCrystal",
-    "path":"sprites/sprInversionCrystal/sprInversionCrystal.yy",
+    "name":"sprInversionPortalActivator",
+    "path":"sprites/sprInversionPortalActivator/sprInversionPortalActivator.yy",
   },
   "spriteMaskId":{
     "name":"mskBigWepPickup",

@@ -3,6 +3,7 @@ with Player
 		isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1 && active
 {
+	active = false;
 	with instance_create(x,y,PortalEnviromentReplacer)
 	{
 		area = 137;
@@ -13,12 +14,12 @@ if KeyCont.key_pick[other.p] = 1 && active
 	mask_index = mskPickupThroughWall;
 	KeyCont.key_pick[Player.p] = 2;
 	BackCont.shake += 50;
-	alarm[7]= 15;
+	alarm[7] = 15;
 	alarm[8] = 30;
 	snd_play_2d(sndVoidCreepEnd);
 	snd_play_2d(sndAlternateAreaMilestone);
 	__background_set_colour( make_color_rgb(0,0,0) )
-	visible = false;
+	sprite_index = mskPickupThroughWall;
 	with FakePortal
 	{
 		sprite_index = sprPortalInverted;	

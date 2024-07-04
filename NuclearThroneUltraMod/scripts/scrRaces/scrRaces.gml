@@ -145,7 +145,7 @@ function scrRaces() {
 	race_acti[7] = "<w>DUAL WIELDING<w>"
 	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
 	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
-	race_vision[7] = "PRESS <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
+	race_vision[7] = "HOLD <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
 	race_vision_detail[7] = race_vision[7];
 	race_lock[7] = "REACH LABS TO UNLOCK"
 	race_have[7] = 0

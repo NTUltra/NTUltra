@@ -12,11 +12,21 @@ image_speed = 0
 x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
 y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 row = 0;
-if num>13
+if num == 13//SWAPP ATOM AND SHEEP
+{
+	x = __view_get( e__VW.XView, 0 )+8+(22*2);
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
+}
+else if num == 15
+{
+	x = __view_get( e__VW.XView, 0 )+8+(22*13);
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
+}
+else if num>13
 {
 //yy=58;
 	row = 1;
-	if num == 27
+	if num == 27//PUT HANDS AT BOTTOM LEFT
 	{
 		x = __view_get( e__VW.XView, 0 ) + 8
 	}
@@ -37,6 +47,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	x += 54;	
 }
 //yy=32;//48
+/*
 var yyy = y + 48 - Menu.widescreen;
 if instance_exists(UnlockingSecondRow)
 {
@@ -54,11 +65,17 @@ if instance_exists(UnlockingSecondRow)
 	}
 	draw_set_alpha(1);
 }
+*/
+var yyy = y + 48 - Menu.widescreen;
 if unlockTime > 0
 {
 	draw_sprite(sprite_index,-1,x,yyy)
 	if !unlocking
 		unlockTime -= 0.025;
+	if unlockTime <= 0
+	{
+		depth += 100;	
+	}
 	draw_set_alpha(clamp(unlockTime,0.25,0.8));
 	gpu_set_blendmode(bm_add);
 	var ut = min(1,unlockTime);

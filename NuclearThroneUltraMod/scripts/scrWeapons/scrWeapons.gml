@@ -3139,6 +3139,7 @@ function scrWeapons() {
 	wep_text[279] = "golden explosives"
 	wep_swap[279] = sndSwapBow
 	wep_rad[279] = 0;
+	wep_popup[279] = "USES EXPLOSIVE#AND BOLT AMMO";
 
 	wep_name[280] = "GOLDEN ASSAULT PISTOL"
 	wep_type[280] = 1

@@ -5,6 +5,15 @@ var vh = round(camera_get_view_height(view_camera[0]));
 var vw = round(camera_get_view_width(view_camera[0]));
 var xx = vx + vw*0.5
 var yy = vy + vh*0.5;
+if alarm[7] > 0
+{
+	draw_set_alpha(0.75);
+	draw_rectangle(x-4,vy,x+4,vy+vh,false);
+	gpu_set_blendmode(bm_add);
+	draw_rectangle(x-6,vy,x+6,vy+vh,false);
+	gpu_set_blendmode(bm_normal);
+	draw_set_alpha(1);
+}
 if alarm[1] > 0
 {
 	draw_set_halign(fa_center);

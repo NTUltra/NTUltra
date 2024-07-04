@@ -2,7 +2,7 @@ if instance_exists(Credits)
 	exit;
 if instance_exists(Player)
 {
-	if Player.area == 2 && !instance_exists(UnlockingAlternativeRoutesMilestone)
+	if Player.area == 1 && instance_exists(UberCont) && UberCont.about_to_unlock_alt_routes && !instance_exists(UnlockingAlternativeRoutesMilestone) && !scrIsGamemode(26) && !scrIsGamemode(27)
 	{
 		rememberArea = Player.area;
 		with all

@@ -1,4 +1,4 @@
 /// @description Init
-lockoutTime = 11;
+lockoutTime = 9;
 alarm[0] = lockoutTime;
 resetSpeed = 4;

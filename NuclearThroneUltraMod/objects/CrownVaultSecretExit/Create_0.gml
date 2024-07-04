@@ -13,3 +13,8 @@ textScaleX = 1;
 textScaleY = 1;
 textAngle = 0;
 alarm[6] = 5;
+if instance_exists(UberCont) && !UberCont.unlocked_alt_routes
+{
+	instance_destroy(id,false);
+	exit;
+}

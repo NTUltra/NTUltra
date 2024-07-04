@@ -14,4 +14,3 @@ tutorial = [
 	["MOST <w>AREAS<w> WILL HAVE A CHANCE#TO SPAWN <aq>INVERTED PORTALS<aq>",170],
 	["",15],
 ]
-instance_create(x,y,ForceInversion);

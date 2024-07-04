@@ -88,6 +88,7 @@ function scrSaveStats() {
 	ini_write_real("STATS","totalRoutesFound",string(al));
 	ini_write_real("STATS","tottime",string(tot_time));
 	ini_write_real("STATS","ctotvoidentered",string(ctot_void_entered));
+	ini_write_real("STATS","about_to_unlock_alt_routes",string(about_to_unlock_alt_routes));
 	ini_write_real("STATS","unlocked_alt_routes",string(unlocked_alt_routes));
 	ini_write_real("STATS","unlocked_inverted_areas",string(unlocked_inverted_areas));
 	ini_write_real("STATS","unlocked_more_crowns",string(unlocked_more_crowns));

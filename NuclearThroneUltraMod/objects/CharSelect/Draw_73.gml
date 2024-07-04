@@ -1,4 +1,21 @@
 /// @description Draw on top if hovering
+var yyy = y + 48 - Menu.widescreen;
+if instance_exists(UnlockingSecondRow)
+{
+	var t = UnlockingSecondRow.lerpTime * 0.5;
+	draw_set_alpha(clamp(t,0,1));
+	if num == 0 || num == 27
+	{
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;
+		draw_rectangle(camera_get_view_x(view_camera[0]),min(center,yyy),x,max(center,yyy+24),false);	
+	}
+	if num == 15 || num == 26
+	{
+		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;
+		draw_rectangle(x + 16,min(center,yyy),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),max(center,yyy+24),false);	
+	}
+	draw_set_alpha(1);
+}
 if unlocking
 	exit;
 if Menu.mouseover == image_index
