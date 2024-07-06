@@ -29,18 +29,21 @@ if !openedShop
 			image_index = 2;
 			image_speed = 0.5;
 		}
-	if instance_exists(Player) && !UberCont.secondary_start_wep[Player.race]
-		with instance_create(x - 6,y + 96,VoidShopItemSecondaryStartingWeapon)
-		{
-			image_index = 0;
-			image_speed = 0.4;
-		}	
-	if UberCont.total_run_slots > 0 && UberCont.total_run_slots < UberCont.max_run_slots
-		with instance_create(x + 32,y + 96,VoidShopItemSaveSlotIncrease)
-		{
-			image_index = 0;
-			image_speed = 0.3;
-		}
+	if (isValidGamemodeToUnlock())
+	{
+		if instance_exists(Player) && !UberCont.secondary_start_wep[Player.race]
+			with instance_create(x - 6,y + 96,VoidShopItemSecondaryStartingWeapon)
+			{
+				image_index = 0;
+				image_speed = 0.4;
+			}	
+		if UberCont.total_run_slots > 0 && UberCont.total_run_slots < UberCont.max_run_slots
+			with instance_create(x + 32,y + 96,VoidShopItemSaveSlotIncrease)
+			{
+				image_index = 0;
+				image_speed = 0.3;
+			}
+	}
 	//Weapon type specific chests
 	with instance_create(x - 128,y + 128,VoidShopItemMeleeChest)
 	{

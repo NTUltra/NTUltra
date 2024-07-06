@@ -12,7 +12,7 @@ function scrCompletionPercentage() {
 	everything -= 18;//Final 100% unlock does not count Weekly daily daily
 
 	//characters
-	everything+=racemax*33;//characters are priority (also includes crownstart (2))
+	everything+=racemax*36;//characters are priority (also includes crownstart (3) & secondary weapon start (3))
 	everything -= 66;//Don't count the first two characters
 	
 	//bskins
@@ -21,9 +21,8 @@ function scrCompletionPercentage() {
 	//cskins
 	everything+=racemax*12;
 
+	everything += 10;//
 	//golden weapons
-	//everything+=((maxstartwep-1)*(racemax-1));//Starting weapons only count as 1/4th unlock
-
 
 	unlocked = 0;
 
@@ -48,6 +47,9 @@ function scrCompletionPercentage() {
 		unlocked+=30//10 instead of 1 because these should count more into the completion shit
 
 		if ctot_all_crowns_taken[countrace] > 0//Unlocked crownstart
+			unlocked += 3;
+			
+		if secondary_start_wep[countrace] == 1//Secondary starting weapon
 			unlocked += 3;
 
 		countrace++;

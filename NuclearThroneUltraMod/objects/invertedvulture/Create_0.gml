@@ -1,6 +1,6 @@
 event_inherited()
 maxhealth = 10;
-raddrop = 15;
+raddrop = 13;
 EnemyHealthAdjustments();
 
 spr_idle = sprInvertedVultureIdle

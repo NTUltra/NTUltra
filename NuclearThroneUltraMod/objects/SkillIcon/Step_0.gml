@@ -173,7 +173,7 @@ if selected && visible
 					typ_amax[3] = 55+skill_got[10]*60
 					typ_amax[4] = 55+skill_got[10]*60
 					typ_amax[5] = 55+skill_got[10]*60
-					scrWeaponAdjustCost(0.9);
+					scrWeaponAdjustCost(0.94);
 				}
 				else
 				{
@@ -182,7 +182,7 @@ if selected && visible
 					typ_amax[3] = 55+skill_got[10]*44
 					typ_amax[4] = 55+skill_got[10]*44
 					typ_amax[5] = 55+skill_got[10]*44
-					scrWeaponAdjustCost(0.85);
+					scrWeaponAdjustCost(0.91);
 				}
 			}
 		}

@@ -466,7 +466,7 @@ function scrPopEnemies() {
 		}
     }
 	//CLOUDLAND
-    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 2.1) {
+    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 2) {
 		if loops > 0 {
 			if random(35) < 1
 				instance_create(x + 16, y + 16, GraveyardSniper)

@@ -38,7 +38,7 @@ function scrScarierFace(theDamage, isPerFrame){
 		Player.excessDamageDeal = 0;
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
-			var part = -0.7;
+			var part = -0.65;
 			if my_health < - 150
 			{
 				part = -0.1;
@@ -59,7 +59,7 @@ function scrScarierFace(theDamage, isPerFrame){
 				part = - 0.7;
 			}
 			if Player.race == 25 //Doctor
-				part -= 0.1;
+				part -= 0.15;
 			if (isPerFrame && UberCont.normalGameSpeed == 60)
 			{
 				var halfPart = (1 - abs(part)) * 0.5;

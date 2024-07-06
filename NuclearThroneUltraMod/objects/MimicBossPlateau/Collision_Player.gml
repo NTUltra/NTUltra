@@ -5,7 +5,7 @@ if KeyCont.key_pick[Player.p] = 1
 {
 	KeyCont.key_pick[Player.p] = 2;
 	mask_index = mskPickupThroughWall;
-	snd_play(sndVoidCreepEnd);
+	snd_play_2d(sndVoidCreepEnd);
 	with instance_create(x,y,DarkOverlay)
 	{
 		alarm[0] = 90;

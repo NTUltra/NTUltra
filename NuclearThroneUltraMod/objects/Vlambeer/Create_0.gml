@@ -29,7 +29,6 @@ if instance_exists(Player)
 	}
 	else
 	{
-		debug("NORMAL VLAMBEER");
 		instance_destroy()
 		instance_create(x,y,SpiralCont)
 		if (Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 

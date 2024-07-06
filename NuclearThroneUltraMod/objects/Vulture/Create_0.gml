@@ -1,4 +1,4 @@
-raddrop = 8
+raddrop = 7
 maxhealth = 14
 meleedamage = 0
 mySize = 1
@@ -42,3 +42,4 @@ if GetPlayerLoops() > 9
 	gunSpr = sprVultureBazooka;
 	fuckyou = true;
 }
+wasBehindWall = false;

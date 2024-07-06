@@ -7,7 +7,7 @@ mySize = 3
 scrBossHealthBuff();
 event_inherited()
 meleedamage = 4;
-
+existTime = 25;
 spr_idle = sprGraveyardFishIdle
 spr_walk = sprGraveyardFishWalk
 spr_chrg = spr_walk;

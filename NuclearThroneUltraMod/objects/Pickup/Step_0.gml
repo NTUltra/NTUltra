@@ -17,115 +17,56 @@ if instance_exists(Player) && (!cursed) {
 		if !inverted && alarm[1] < 1
 			levelEnded = true;
 	}
-	repeat(sped)
+	if levelEnded
+		sped += 2;
+	if speed <= 0.5
 	{
-	    if instance_exists(ProtoStatue) and speed <= 0.5 {
-	        if point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 180 and(Player.ultra_got[12] == 1 || (collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0)) {
+		repeat(sped)
+		{
+		    if instance_exists(ProtoStatue) && point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 185 && (Player.ultra_got[12] == 1 || (collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0)) {
 				suckDirection = point_direction(x, y, ProtoStatue.x, ProtoStatue.y);
-	            if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+		        if levelEnded || !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
 					x += lengthdir_x(stepDis, suckDirection)
-	            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		        if levelEnded || !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
 					y += lengthdir_y(stepDis, suckDirection)
 			
 				if place_meeting(x,y,ProtoStatue)
 				{
 					event_user(1);	
 				}
-	        } else if speed <= 0.5 {
-	            if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
-					suckDirection = point_direction(x, y, Player.x, Player.y);
-	                if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-						x += lengthdir_x(stepDis, suckDirection)
-	                if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-						y += lengthdir_y(stepDis, suckDirection)
-				
-	                isGettingSucked = true;
-					if place_meeting(x,y,Player)
-					{
-						event_user(0);	
-					}
-	            }
-				else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < extraRange + Player.betterpluto)
-				{
-					suckDirection = point_direction(x, y, Hand.x, Hand.y)
-					if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-						x += lengthdir_x(stepDis, suckDirection)
-		            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-						y += lengthdir_y(stepDis, suckDirection)
-					if place_meeting(x,y,Hand)
-					{
-						event_user(0);
-					}
-				}
-				else if instance_exists(YungCuzDupe)
-				{
-					var n = instance_nearest(x,y,YungCuzDupe);
-					if point_distance(x, y, n.x, n.y) < extraRange + Player.betterpluto
-					{
-						suckDirection = point_direction(x, y, n.x, n.y);
-						if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-							x += lengthdir_x(stepDis, suckDirection)
-			            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-							y += lengthdir_y(stepDis, suckDirection)
-						if place_meeting(x,y,YungCuzDupe)
-						{
-							event_user(0);
-						}
-					}
-					else
-					{
-						isGettingSucked = false;
-						if place_meeting(x,y,Player)
-						{
-							event_user(0);	
-						}
-					}
-				}
-	            else
-				{
-	                isGettingSucked = false;
-					if place_meeting(x,y,Player)
-					{
-						event_user(0);	
-					}
-				}
-	        }
-
-	    }
-	    else if speed <= 0.5 {
-		
-	        if point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto or levelEnded {
+		    }
+		    else if levelEnded || point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto {
 				suckDirection = point_direction(x, y, Player.x, Player.y);
-	            if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-	            x += lengthdir_x(stepDis, suckDirection)
-	            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-	            y += lengthdir_y(stepDis, suckDirection)
+		        if levelEnded || !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+					x += lengthdir_x(stepDis, suckDirection)
+		        if levelEnded || !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+					y += lengthdir_y(stepDis, suckDirection)
 
-	            isGettingSucked = true;
+		        isGettingSucked = true;
 				if place_meeting(x,y,Player)
 				{
 					event_user(0);	
 				}
-	        }
-	        else if instance_exists(Implosion) {
-	            if point_distance(x, y, Implosion.x, Implosion.y) < 80 or instance_exists(Portal) {
+		    }
+		    else if instance_exists(Implosion) {
+		        if point_distance(x, y, Implosion.x, Implosion.y) < 80 or instance_exists(Portal) {
 					suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
-	                if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
-	                x += lengthdir_x(stepDis, suckDirection)
-	                if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
-	                y += lengthdir_y(stepDis, suckDirection)
+		            if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+						x += lengthdir_x(stepDis, suckDirection)
+		            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+						y += lengthdir_y(stepDis, suckDirection)
 					if place_meeting(x,y,Implosion)
 					{
 						event_user(0);
 					}
-	            }
-	        }
+		        }
+		    }
 			else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < extraRange + Player.betterpluto)
 			{
 				suckDirection = point_direction(x, y, Hand.x, Hand.y);
-				if place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+				if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
 					x += lengthdir_x(stepDis, suckDirection)
-	            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		        if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
 					y += lengthdir_y(stepDis, suckDirection)
 				if place_meeting(x,y,Hand)
 				{
@@ -140,7 +81,7 @@ if instance_exists(Player) && (!cursed) {
 					suckDirection = point_direction(x, y, n.x, n.y);
 					if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
 						x += lengthdir_x(stepDis, suckDirection)
-			        if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+				    if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
 						y += lengthdir_y(stepDis, suckDirection)
 					if place_meeting(x,y,YungCuzDupe)
 					{
@@ -156,15 +97,20 @@ if instance_exists(Player) && (!cursed) {
 					}
 				}
 			}
-	        else
+		    else
 			{
-	            isGettingSucked = false;
+		        isGettingSucked = false;
 				if place_meeting(x,y,Player)
 				{
 					event_user(0);	
 				}
 			}
-	    }
+		}
+	}
+	else if place_meeting(x,y,Wall)
+	{
+		move_bounce_solid(false);
+		move_outside_solid(direction,8);
 	}
 }
 

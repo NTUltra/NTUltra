@@ -197,12 +197,17 @@ function scrSkills() {
 		skill_name[10] = "GYM BRO"
 	skill_text[10] = "HIGHER <y>AMMO MAX<y>#REDUCE <y>AMMO<y> <w>COST<w>"
 	if instance_exists(Player) && (Player.race == 22)//ROGUE
-		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#10% <y>AMMO<y> <w>COST<w> REDUCTION#INCREASE <b>PORTAL STRIKE<b> AMMO"
+	{
+		skill_text[10] = "HIGHER <y>AMMO MAX<y>#REDUCE <y>AMMO<y> <w>COST<w>#INCREASE <b>PORTAL STRIKE<b> AMMO"
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#6% <y>AMMO<y> <w>COST<w> REDUCTION#INCREASE <b>PORTAL STRIKE<b> AMMO"
+	}
 	else
-		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#10% <y>AMMO<y> <w>COST<w> REDUCTION"
+	{
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#6% <y>AMMO<y> <w>COST<w> REDUCTION"
+	}
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
-	skill_bons[10] = "+30% AMMO MAX#+5% COST REDUCTION";
+	skill_bons[10] = "+30% AMMO MAX#+3% COST REDUCTION";
 
 	skill_name[11] = "SCARIER FACE"
 	if isHand
@@ -210,11 +215,11 @@ function scrSkills() {
 	//skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
-	skill_text[11] = "DEAL FIXED EXTRA DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
-	skill_detail[11] = "DEAL A FIXED 0.5 EXTRA DAMAG#WITH ANYTHING#70% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
+	skill_text[11] = "DEAL <w>FIXED<w> EXTRA DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
+	skill_detail[11] = "ADD A <w>FIXED<w> 0.5 EXTRA DAMAG#TO ALL INSTANCES OF DAMAGE#DEALT TO ENEMIES##65% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
-	skill_bons[11] = "85% INSTEAD#+0.15 FIXED DAMAGE";
+	skill_bons[11] = "80% INSTEAD#+0.15 FIXED DAMAGE";
 
 	skill_name[12] = "EUPHORIA"
 	skill_text[12] = "SLOWER ENEMY BULLETS#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";

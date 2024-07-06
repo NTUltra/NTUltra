@@ -1085,7 +1085,7 @@ if !instance_exists(LevCont) and visible = 1
 }//End of gencont
 
 //SWAP WEPS
-if KeyCont.key_swap[p] = 1 and bwep != 0
+if KeyCont.key_swap[p] = 1 and bwep != 0 && !lockout
 {
 	instance_create(x,y,WepSwap)
 	scrSwapWeps()

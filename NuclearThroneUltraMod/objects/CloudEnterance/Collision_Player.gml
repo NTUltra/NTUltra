@@ -3,8 +3,9 @@ if cAlpha > 0 && hasEnoughMuts
 {
 	with Player
 		isOnInteractable = true;
-	if KeyCont.key_pick[other.p] = 1 
+	if KeyCont.key_pick[Player.p] = 1 
 	{
+		isInteractableNow = false;
 		KeyCont.key_pick[Player.p] = 2;
 		with Player
 		{

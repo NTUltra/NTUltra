@@ -60,11 +60,16 @@ if goTime
 		sprite_index = sprPinkPortalSpawn;
 	else if isHQ
 		sprite_index = sprPopoPortalStart;
+	
 	visible = true;
 	alarm[0] = 1;
 	alarm[2] = 2;
 	image_index = 0;
 	image_speed = 0.8;
+	if pullstrength > 2.5
+	{
+		image_index = image_number - 1;	
+	}
 	instance_create(x,y,PortalOpenWallBreak)
 	if !inverted
 	{
@@ -72,6 +77,10 @@ if goTime
 		{
 			if team != 2
 				instance_destroy(id,false);
+		}
+		with EnemyVenom
+		{
+			instance_destroy();	
 		}
 		with BackCont
 		{

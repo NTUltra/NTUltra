@@ -36,7 +36,10 @@ if !supercursed || gotPluto {
 		range = max(range,16);
 		levelEnded = false;
 	}
-	
+	if (levelEnded)
+	{
+		sped += 2;
+	}
 	repeat(sped)
 	{
 		if point_distance(x, y, Player.x, Player.y) < range or levelEnded {
@@ -111,24 +114,9 @@ if !supercursed || gotPluto {
 			event_user(0);	
 		}
 	}
-}/*
-else//Cursed
+}
+if place_meeting(x,y,Wall)
 {
-	if place_meeting(x,y,Player)
-	{
-		event_user(0);	
-	} else if (instance_exists(Player) && Player.ultra_got[108] && instance_exists(Hand))
-	{
-		if place_meeting(x,y,Hand)
-		{
-			event_user(0);
-		}
-	}
-	else if instance_exists(YungCuzDupe)
-	{
-		if place_meeting(x,y,YungCuzDupe)
-		{
-			event_user(0);
-		}
-	}
-}*/
+	move_bounce_solid(false);
+	move_outside_solid(direction,8);
+}

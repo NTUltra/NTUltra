@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 18
-maxhealth = 55;
+maxhealth = 51;
 if loops > 0
 	maxhealth = 61;
 EnemyHealthAdjustments();

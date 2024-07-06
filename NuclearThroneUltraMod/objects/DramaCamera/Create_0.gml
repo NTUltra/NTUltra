@@ -173,7 +173,7 @@ else if instance_exists(CloudBoss)
 {
 	UberCont.hadBossIntro = false;
 	name = "THE VISIONARY";
-	image_index = 18;
+	//image_index = 18;
 }
 else if instance_exists(InvertedSandWorm)
 {

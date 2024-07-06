@@ -163,6 +163,7 @@ if (KeyCont.key_paus[0] = 1) ||
 			instance_activate_all();
 			var al = ds_list_size(keepDeactive);
 			for (var i = 0; i < al; i++) {
+				debug(object_get_name(keepDeactive[|i].object_index));
 				instance_deactivate_object(keepDeactive[| i]);	
 			}
 			if normalGameSpeed = 30

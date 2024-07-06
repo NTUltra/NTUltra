@@ -1,5 +1,5 @@
 event_inherited()
-raddrop = 32;
+raddrop = 28;
 maxhealth = 35;
 EnemyHealthAdjustments();
 meleedamage = 5

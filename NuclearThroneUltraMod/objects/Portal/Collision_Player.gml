@@ -25,6 +25,14 @@ if !instance_exists(PlayerInPortal)
 				my_health = 0;
 				prevhealth = 0;
 			}
+			with RadChest
+			{
+				my_health = 0;	
+			}
+			with AmmoChest
+			{
+				event_user(0);
+			}
 		}
 	}
 }

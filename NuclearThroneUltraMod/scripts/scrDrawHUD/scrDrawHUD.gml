@@ -2346,10 +2346,6 @@ function scrDrawHUD() {
         {
             scrDrawSecretFinder(ox,oy);
         }
-        with GraveyardEntrance
-		{
-            scrDrawSecretFinder(ox,oy);
-        }
         with FactoryEntrance
         {
             scrDrawSecretFinder(ox,oy);

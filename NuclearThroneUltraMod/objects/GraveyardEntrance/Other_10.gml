@@ -1,8 +1,11 @@
 /// @description Go to Graveyard
-if my_health > 0
+if isActivated
+	isInteractableNow = false;
+if my_health > 0 && isInteractableNow
 {
 	if KeyCont.key_pick[Player.p] = 1
 	{
+		isActivated = true;
 		with Player
 		{
 			if place_meeting(x,y,Portal)
@@ -15,8 +18,9 @@ if my_health > 0
 		snd_play(sndCursedReminder,0,0,true,1,false,false,1);
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
+		isInteractableNow = false;
 		maxhealth = 200 * clamp(loops*5,1,10)
-		alarm[1] += 700;
+		alarm[1] += 760;
 		with instance_create(x,y,WantBoss)
 		{
 			event_perform(ev_alarm,0);

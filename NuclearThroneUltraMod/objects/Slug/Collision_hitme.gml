@@ -1,40 +1,51 @@
 if alarm[11] < 1 && other.team != team and other.my_health > 0
-{instance_destroy()
-with other
 {
-DealDamage(other.dmg)
-sprite_index = spr_hurt
-image_index = 0
-motion_add(other.direction,7)
-snd_play(snd_hurt, hurt_pitch_variation,true)
-scrForcePosition60fps();
-if speed > maxSpeed+1
-	speed = maxSpeed+1;
-}
-if shotgunshouldered
-{
-	var direct = other.id;
-	var hits = ds_list_create();
-	var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
-	for (var i = 0; i < al; i++) {
-		// code here
-		with hits[| i]
+	instance_destroy()
+	with other
+	{
+		if object_index == Player
 		{
-			if id != direct && team != other.team && my_health > 0
+			if sprite_index == spr_hurt
+				exit;
+			else
 			{
-				DealDamage(10)
-				sprite_index = spr_hurt
-				image_index = 0
-				motion_add(other.direction,5)
-				scrForcePosition60fps();
-				if speed > maxSpeed+1
-					speed = maxSpeed+1;
-				snd_play(snd_hurt, hurt_pitch_variation,true)
+				hitBy = other.sprite_index;	
 			}
 		}
+		DealDamage(other.dmg)
+		sprite_index = spr_hurt
+		image_index = 0
+		motion_add(other.direction,7)
+		snd_play(snd_hurt, hurt_pitch_variation,true)
+		scrForcePosition60fps();
+		if speed > maxSpeed+1
+			speed = maxSpeed+1;
 	}
-	ds_list_destroy(hits);
+	if shotgunshouldered
+	{
+		var direct = other.id;
+		var hits = ds_list_create();
+		var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
+		for (var i = 0; i < al; i++) {
+			// code here
+			with hits[| i]
+			{
+				if id != direct && team != other.team && my_health > 0
+				{
+					DealDamage(10)
+					sprite_index = spr_hurt
+					image_index = 0
+					motion_add(other.direction,5)
+					scrForcePosition60fps();
+					if speed > maxSpeed+1
+						speed = maxSpeed+1;
+					snd_play(snd_hurt, hurt_pitch_variation,true)
+				}
+			}
+		}
+		ds_list_destroy(hits);
+	}
+	with instance_create(x,y,BulletHit)
+		sprite_index = sprSlugHit
 }
-with instance_create(x,y,BulletHit)
-sprite_index = sprSlugHit}
 

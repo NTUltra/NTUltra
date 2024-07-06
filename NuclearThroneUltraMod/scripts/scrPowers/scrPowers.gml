@@ -1591,6 +1591,8 @@ function scrPowers(raceOverwrite = -1) {
 					snd_play_2d(sndPlantFire);
 				with instance_create(x,y,TangleSeed)
 				{
+					if other.skill_got[other.maxskill = 1]
+						alarm[1] = 1;
 					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
 					image_angle = direction
 					tangleNumber = tangles + 1;
@@ -3696,16 +3698,18 @@ function scrPowers(raceOverwrite = -1) {
 					snd_play(sndSplinterGun,0.1,true);
 				var ta = random(360);
 				var taStep = 360 / toxicamount;
-				if toxicamount > 3
 				var g = Splinter;
-				if toxicUltra
-					g = UltraSplinter;
-				with instance_create(x,y,g)
+					if toxicUltra
+						g = UltraSplinter;
+				if toxicamount > 3
 				{
-					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
-					image_angle = direction
-					team = other.team
-					//dmg += 1;
+					with instance_create(x,y,g)
+					{
+						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
+						image_angle = direction
+						team = other.team
+						//dmg += 1;
+					}
 				}
 				repeat(toxicamount)
 				{

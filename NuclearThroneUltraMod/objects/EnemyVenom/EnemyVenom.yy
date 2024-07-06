@@ -14,8 +14,8 @@
     "path":"folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId":{
-    "name":"projectile",
-    "path":"objects/projectile/projectile.yy",
+    "name":"All",
+    "path":"objects/All/All.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

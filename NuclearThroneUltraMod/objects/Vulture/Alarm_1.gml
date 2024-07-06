@@ -6,9 +6,17 @@ scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dis = point_distance(target.x, target.y, x, y);
-        if dis > 48  && dis < 170{
-			alarm[4] = 5;
-			alarm[1] += 11;
+        if dis > 48  && dis < 170 {
+			if wasBehindWall
+			{
+				wasBehindWall = false;
+				return;	
+			}
+			else
+			{
+				alarm[4] = 5;
+				alarm[1] += 11;
+			}
         }
         else {
 			gunangle = point_direction(x, y, target.x, target.y);
@@ -49,13 +57,15 @@ if target != noone {
 			}
         }
 
-        if target.x < x
+        wasBehindWall = false;
+		if target.x < x
 			right = -1
         else if target.x > x
 			right = 1
     }
     else
 	{
+		wasBehindWall = true;
 		var noCorpse = true
 		if my_health < maxhealth
 		{
