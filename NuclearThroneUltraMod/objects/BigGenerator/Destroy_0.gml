@@ -22,6 +22,11 @@ if loops > 0
 		hspeed = other.image_xscale * scale;
 	}
 }
+else
+{
+	snd_play(sndExplosionXL);
+	instance_create(x,y,GreenExplosion)
+}
 scrRaddrop(10);
 
 if instance_number(BigGenerator) == 1
@@ -47,3 +52,4 @@ if instance_number(BigGenerator) == 1
 		}
 	}
 }
+scrDrop(25,0);

@@ -4,7 +4,7 @@ mySize = 1
 
 event_inherited()
 meleedamage = 1
-
+canFly = true;
 venomous = true;
 spr_idle = sprCloudFlyer
 spr_walk = sprCloudFlyer

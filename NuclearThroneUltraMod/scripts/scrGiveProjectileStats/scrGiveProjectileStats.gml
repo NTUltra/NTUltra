@@ -6,10 +6,10 @@ function scrGiveProjectileStats(){
 		return;
 	if !scrIsCrown(29)//Crown of purity
 	{
-		Mod1=Player.wepmod1;
-		Mod2=Player.wepmod2;
-		Mod3=Player.wepmod3;
-		Mod4=Player.wepmod4;
+		Mod1 = Player.wepmod1;
+		Mod2 = Player.wepmod2;
+		Mod3 = Player.wepmod3;
+		Mod4 = Player.wepmod4;
 	}
 	poppop = Player.poppop;
 	if wepFire == 0

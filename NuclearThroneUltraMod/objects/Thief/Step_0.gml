@@ -41,7 +41,7 @@ if dodge > -6
 		}
 	}
 }
-else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
+else if !instance_exists(Marker) && canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
 if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {
 if point_distance(x,y,target.x,target.y) < 70

@@ -21,6 +21,13 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		confirmState = 0;
 		debug("QUICK RESTART");
 		//scrEndOfRun(); already run in player destroy
+		with MusCont
+		{
+			audio_stop_sound(song);
+			audio_stop_sound(amb);
+			song = musThemeA;
+			amb = amb0;
+		}
 		with FPSHACKMenu
 			instance_destroy();
 		with WepPickup
@@ -163,7 +170,6 @@ if (KeyCont.key_paus[0] = 1) ||
 			instance_activate_all();
 			var al = ds_list_size(keepDeactive);
 			for (var i = 0; i < al; i++) {
-				debug(object_get_name(keepDeactive[|i].object_index));
 				instance_deactivate_object(keepDeactive[| i]);	
 			}
 			if normalGameSpeed = 30
@@ -263,8 +269,7 @@ else
 			{
 				if instance_exists(Menu)
 				{
-					scrReturnMenu();
-					if Menu.mode == 1
+					if Menu.mode == 1 && scrReturnMenu()
 					{
 						endMe = true;
 					}
@@ -299,7 +304,7 @@ else
 			alarm[7] = 1;
 			isPaused = 1
 			with Cursor {
-				visible = true;
+				visible = inGameVisibleState;
 			}
 		}
 	}

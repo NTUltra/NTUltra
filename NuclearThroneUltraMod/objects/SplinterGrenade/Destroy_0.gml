@@ -5,7 +5,7 @@ if instance_exists(Player)
 {
 	accuracy = Player.accuracy;	
 }
-var amount = 14;
+var amount = 18;
 var angle = image_angle;
 var angleStep = 360/14;
 snd_play(sndSplinterGun,0.05,true);

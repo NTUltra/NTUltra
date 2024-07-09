@@ -218,10 +218,7 @@ function scrSecondaryPowers() {
 							with instance_create(x,y,HoldToEatEnemy)
 							{
 								target = n;
-								if my_health > 0
-								{
-									image_speed = min(1,9 / n.my_health);//Increase number to go faster
-								}
+								image_speed = min(1,9 / n.my_health);//Increase number to go faster
 							}
 						}
 						else
@@ -376,9 +373,9 @@ function scrSecondaryPowers() {
 			break;
 			//SHEEP
 			case 13:
-				if KeyCont.key_pick[p] == 1 && !instance_exists(SheepSuperCharge)
+				if KeyCont.key_pick[p] == 1 && !instance_exists(SheepSuperCharge) && !outOfCombat
 				{
-					if sheepPower >= 9 || justAsheep || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
+					if sheepPower >= 9 || (justAsheep && targetPickup == noone && !isOnInteractable) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
 					{
 						KeyCont.key_pick[p] = 2;
 						with SheepStorm
@@ -806,34 +803,15 @@ function scrSecondaryPowers() {
 			case 26:
 				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && !instance_exists(SpeedLockout)
 				{
-					var hits = ds_list_create();
-					var al = collision_circle_list(x,y,64,hitme,false,false,hits,false);
-					snd_play(sndExplosionS,0.2,false,false,3,false,false,0.6);
-					snd_play_2d(choose(sndHumphryStun1,sndHumphryStun2,sndHumphryStun3,sndHumphryStun4,sndHumphryStun5),0.1);
-					BackCont.shake += 15;
-					for (var i = 0; i < al; i ++)
+					with HoldToSelfStun
 					{
-						with hits[| i]
-						{
-							if team != other.team && !collision_line(x,y,other.x,other.y,Wall,false,false)
-							{
-								BackCont.shake += 2;
-								DealDamage(20);
-								other.humphrySkill += 5;
-							}
-						}
+						instance_destroy();
 					}
-					with instance_create(x,y,AnimDestroyTop)
+					if !instance_exists(HoldToSelfStun)
 					{
-						sprite_index = sprHumphrySelfStun;
+						instance_create(x,y,HoldToSelfStun);
 					}
-					with instance_create(x,y,StunLockout)
-					{
-						resetSpeed = other.maxSpeed;
-					}
-					maxSpeed = 0;
-					if skill_got[2]
-						scrApplyExtraFeet();
+					
 				}
 			break;
 			//HANDS

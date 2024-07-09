@@ -67,6 +67,10 @@ if mode = 0
 		with instance_create(0,0,CharSelect)
 		{
 			num = other.num
+			if num == 13//Swap atom and sheep
+				num = 15;
+			else if num == 15
+				num = 13;
 		}
 		if (num == racemax) {
 			num = -1;
@@ -119,10 +123,9 @@ if mode = 0
 
 if mode = 1
 {
-if KeyCont.key_spec[p] = 1
-{
-	scrReturnMenu();
-}
-
+	if (KeyCont.key_spec[p] = 1 && (!instance_exists(LoadoutSelect) || !LoadoutSelect.wepmenuopen))
+	{
+		scrReturnMenu();
+	}
 }
 

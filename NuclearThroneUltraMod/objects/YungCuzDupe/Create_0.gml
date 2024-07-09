@@ -12,7 +12,7 @@ hammerheadtimer=0;
 hammerheadcounter=0;
 skill_got = Player.skill_got;
 peaceBarrierTime = 0;
-peaceBarrierDuration = 70;
+peaceBarrierDuration = 90;
 peaceBarriers = 0;
 peaceBarriersMax = 2;
 if skill_got[26]//HAMMER HEAD

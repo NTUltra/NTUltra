@@ -2,4 +2,4 @@
 
 // Inherit the parent event
 event_inherited();
-speed = max(speed - 1,1);
+speed = max(speed - 1,2);

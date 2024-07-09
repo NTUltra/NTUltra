@@ -29,10 +29,6 @@ if other.team != team and other.my_health > 0
 				speed = maxSpeed+1;
 		}
 	}
-	with instance_create(x,y,BulletHit)
-	{
-		sprite_index = other.hitSprite;	
-	}
 }
 
 

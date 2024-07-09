@@ -40,5 +40,6 @@ lasty = y
 bfire = false;
 maxammo = 7;
 ammo = maxammo;
-minFireRate = 5;
+minFireRate = 6;
 fireRate = minFireRate;
+wasBehindWall = false;

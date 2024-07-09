@@ -12,7 +12,7 @@ image_xscale = destroyStep;
 x = px;
 y = py;
 var hitWalls = ds_list_create();
-var amountOfWalls = instance_place_list(x,y,Wall,hitWalls,false);
+var amountOfWalls = instance_place_list(x,y,WallHitMe,hitWalls,false);
 while(amountOfWalls > 0)
 {
 	for (var i = 0; i < amountOfWalls; i++) {
@@ -22,7 +22,7 @@ while(amountOfWalls > 0)
 		}
 	}
 	ds_list_clear(hitWalls);
-	amountOfWalls = instance_place_list(x,y,Wall,hitWalls,false);
+	amountOfWalls = instance_place_list(x,y,WallHitMe,hitWalls,false);
 }
 ds_list_destroy(hitWalls);
 with Player

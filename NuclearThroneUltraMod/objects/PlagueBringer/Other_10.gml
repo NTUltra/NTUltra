@@ -17,7 +17,7 @@ with Player
 	}
 	var chosenSkillToLose = gottenSkills[irandom(array_length(gottenSkills)-1)];
 	array_push(UberCont.skillDeposit,chosenSkillToLose);
-	scrLoseSkill(chosenSkillToLose);
+	scrLoseSkill(chosenSkillToLose, true);
 	with instance_create(x,y,PopupText)
 	{
 		mytext = "LOST "+other.skill_name[chosenSkillToLose];

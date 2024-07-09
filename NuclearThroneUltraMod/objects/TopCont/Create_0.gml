@@ -33,7 +33,6 @@ surface_reset_target()}
 wave = 0
 fogscroll = 0
 depth = -10;
-gameoverText = "YOU DID NOT REACH THE NUCLEAR THRONE";
 gmwidth = 1;
 gmScroll = 0;
 

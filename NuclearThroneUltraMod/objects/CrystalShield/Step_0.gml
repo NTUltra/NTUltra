@@ -1,4 +1,14 @@
 if instance_exists(Player){
+	if Player.lockout
+	{
+		if !sprite_index == spr_disappear
+		{
+			sprite_index = spr_disappear
+			image_speed = 0.6
+			image_index = 0
+		}
+		exit;
+	}
 	if Player.ultra_got[6]=1 && !Player.altUltra{
 	if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 	hspeed -= 3

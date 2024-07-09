@@ -69,7 +69,7 @@ if target != noone && instance_exists(target)
 				{
 					snd_play(snd_hurt, hurt_pitch_variation,true);
 					DealDamage(other.dmg*2);
-					if alarm[1] > 1
+					if alarm[1] > 1 && alarm[1] < 20
 						alarm[1] += 10;
 					sprite_index = spr_hurt;
 					image_index = 0;

@@ -103,7 +103,8 @@ if instance_exists(Player)
 		|| Player.area == 104 
 		|| Player.area == 128
 		|| Player.area == 137
-		|| Player.area == 100 || 
+		|| Player.area == 100
+		|| (Player.area == 135 && Player.subarea == 3) || 
 		(Player.loops < 1 && (scrIsCrown(16) || !((Player.area == 9 || Player.area == 118) && Player.subarea == 2)))
 	)
 	{

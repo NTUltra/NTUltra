@@ -25,9 +25,5 @@ if( (collision_point(x+lengthdir_x(4,originalDirection+20),y+lengthdir_y(4,origi
 instance_destroy();
 }
 
-with instance_create(x+random(8)-4,y+random(16)-8,PlasmaFX)
-{
-sprite_index=sprPopoPlasmaTrail;
-motion_add(other.direction+random(30)-15,random(2))
-}
+
 

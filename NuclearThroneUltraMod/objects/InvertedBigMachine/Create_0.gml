@@ -1,12 +1,10 @@
-raddrop = 50
+event_inherited()
+raddrop = 40
 maxhealth = 440
 if GetPlayerLoops() > 0
 	maxhealth += 170;
 mySize = 5
 scrBossHealthBuff();
-
-event_inherited()
-meleedamage = 20;
 
 with myCore {
 	spr_hurt = sprInvertedBigMachineCoreHurt;	

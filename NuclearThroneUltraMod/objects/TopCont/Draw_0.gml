@@ -197,7 +197,7 @@ with Player
 		event_perform(ev_draw,0)}
 	}
 	*/
-	if (race == 18 || jump > 0) && !instance_exists(PlayerInPortal)
+	if (race == 18 || jump > 0) && !instance_exists(PlayerInPortal)&& !instance_exists(PlayerInEnding)&& !instance_exists(PlayerInFakeDeath)
 		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
 
@@ -634,6 +634,11 @@ with CrescentMoon
 with SheepSuperCharge
 {
 	draw_self();
+}
+with UltraRaven
+{
+	if onTopOfWall
+		event_perform(ev_draw,0);
 }
 if bloom
 	scrDrawBloom()

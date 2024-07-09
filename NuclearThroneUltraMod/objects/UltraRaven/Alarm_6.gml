@@ -7,7 +7,7 @@ if target != noone && instance_exists(target)
 	{
 		alarm[1] = 60;
 		alarm[6] = 0;
-		depth = -2;
+		onTopOfWall = false;
 		scrRavenLift();
 	}
 }

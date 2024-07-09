@@ -48,3 +48,4 @@ active = false;
 alarm[2] = 30;
 alarm[5] = 5;
 alarm[6] = 5;
+alarm[7] = 10;

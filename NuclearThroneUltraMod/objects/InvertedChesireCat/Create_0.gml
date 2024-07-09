@@ -6,7 +6,7 @@ scrBossHealthBuff();
 
 event_inherited()
 meleedamage = 3
-
+canFly = true;
 spr_idle = sprInvertedChesireCatIdle
 spr_walk = sprInvertedChesireCatIdle
 spr_hurt = sprInvertedChesireCatHurt

@@ -4,12 +4,20 @@
 function scrReturnMenu(){
 	if (UberCont.loadRunMenuState > 0)
 	{
-		exit;
+		return false;
 	}
 	else if hasNoMenuOpen()
 	{
-		if LoadoutSelect.wepmenuopen
-			exit;
+		if LoadoutSelect.ultraOpen
+		{
+			LoadoutSelect.ultraOpen = false;
+			return false;
+		}
+		else if LoadoutSelect.wepmenuopen
+		{
+			LoadoutSelect.wepmenuopen = false;
+			return false;
+		}
 		snd_play_2d(sndClickBack);
 		//if OptionSelect.selected = 1
 		//room_goto(romInit)
@@ -79,4 +87,5 @@ function scrReturnMenu(){
 			alarm[0] = 1;	
 		}
 	}
+	return true;
 }

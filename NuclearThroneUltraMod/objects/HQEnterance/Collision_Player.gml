@@ -6,6 +6,7 @@ if KeyCont.key_pick[Player.p] = 1
 	KeyCont.key_pick[Player.p] = 2;
 	with Player
 	{
+		alarm[3] = max(2,alarm[3]);
 		if area == 135
 		{
 			area = lastarea;

@@ -527,10 +527,11 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			BackCont.subarea = subarea
 			BackCont.hard = hard
 			BackCont.loops = loops
-			with TopCont
-			{
-				gameoverText = scrDecideGameoverText();	
-			}
+			if my_health <= 0 && visible
+				with GameRender
+				{
+					gameoverText = scrDecideGameoverText();
+				}
 		}
 
 		with UberCont

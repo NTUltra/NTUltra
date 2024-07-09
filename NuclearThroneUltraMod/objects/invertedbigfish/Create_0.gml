@@ -22,7 +22,7 @@ if loops > 0
 	fishFireRate = 2;
 originalMaxspeed = maxSpeed;
 chargeSpeed = 6;//7
-chargeDis = 90;
+chargeDis = 80;
 suckAcc = 0.098;
 chargeTell = 20;
 spr_idle = sprInvertedOasisBossIdle

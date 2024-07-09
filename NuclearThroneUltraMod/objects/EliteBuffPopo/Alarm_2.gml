@@ -5,7 +5,10 @@ scrRogueTarget()
 else
 scrTarget();
 walk += 1;
-motion_add(gunangle + 180,0.4);
+if fireRate < 2
+	motion_add(gunangle + 180,0.4);
+else if fireRate > 3
+	motion_add(gunangle,0.4);
 if target != noone && instance_exists(target)
 {
 	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
@@ -35,7 +38,7 @@ if team == 2
 else
 {
 	var range = 23 - fireRate;
-	var ps = 7.3 - (fireRate*0.5)//4.9 start
+	var ps = 7.2 - (fireRate*0.5)//4.9 start
 	with instance_create(x,y,PopoBouncerBullet){
 		motion_add(other.gunangle+random_range(range,-range),ps)
 		image_angle = direction

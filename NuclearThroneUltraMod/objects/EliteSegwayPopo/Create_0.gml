@@ -29,13 +29,13 @@ wkick = 0
 angle = 0
 wepangle = choose(-140,140)
 wepflip = 1
-smackTell = 13;
-smackDetectionRange = 70;
-goForSmackRange = 145;
+smackTell = 12;
+smackDetectionRange = 72;
+goForSmackRange = 150;
 smackRange = 8;
 smackSpeed = 6;
 tellTime = 14;
-actTime = 10;
+actTime = 8;
 freeze = 0
 if instance_exists(Player)
 {
@@ -49,7 +49,7 @@ lasty = y
 }
 sniperOffset = 2;
 stuck=false;
-maxSpeed = 4.7;
+maxSpeed = 4.8;
 shootingMovementSpeed = 0.8;
 minMovementSpeed = 1.4;
 sleeping = false;

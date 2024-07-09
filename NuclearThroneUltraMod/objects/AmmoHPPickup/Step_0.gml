@@ -14,8 +14,8 @@ if instance_exists(Player) {
 }
 else
 	exit;
+var levelEnded = false;
 if !supercursed || gotPluto {
-	var levelEnded = false;
 	with Portal
 	{
 		if !inverted && alarm[1] < 1
@@ -115,7 +115,7 @@ if !supercursed || gotPluto {
 		}
 	}
 }
-if place_meeting(x,y,Wall)
+if !levelEnded && place_meeting(x,y,Wall)
 {
 	move_bounce_solid(false);
 	move_outside_solid(direction,8);

@@ -14,11 +14,13 @@ y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 row = 0;
 if num == 13//SWAPP ATOM AND SHEEP
 {
+	row = 1;
 	x = __view_get( e__VW.XView, 0 )+8+(22*2);
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
 }
 else if num == 15
 {
+	row = 0;
 	x = __view_get( e__VW.XView, 0 )+8+(22*13);
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
 }
@@ -155,8 +157,8 @@ else if !unlocking
 			}
 		}
     
-	    if UberCont.race_have[num] =1 and UberCont.ctot_played[num] = 0 and num != 0
-			draw_sprite(sprNew,-1,x,yyy)
+	    if UberCont.race_have[num] =1 and UberCont.ctot_played[num] = 0 and num != 0 and num != 1 && num != 2
+			draw_sprite(sprNew,-1,x,yyy + 22)
 	}
 }
 else

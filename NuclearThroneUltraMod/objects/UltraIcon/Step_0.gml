@@ -33,7 +33,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 				cash = maxCash;
@@ -65,7 +65,7 @@ if (selected && visible &&
 		if isAlternative
 		{
 			with Player {
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 				scrUnlockAltSkin(race, bskin);
@@ -97,7 +97,7 @@ if (selected && visible &&
 	else if skill == 10 && Player.race == 3 && isAlternative// Void style
 	{
 		with Player {
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			spr_idle = sprMutant3GIdle;
@@ -111,7 +111,7 @@ if (selected && visible &&
 	else if skill == 13 && isAlternative
 	{
 		with Player {
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			instance_create(x,y,DeathStare);
@@ -121,7 +121,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			canKillKillKill = 3;
@@ -131,7 +131,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			maxSpeed += 5.5;
@@ -141,7 +141,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -150,7 +150,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -159,7 +159,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -179,7 +179,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			charpoints = 1;
@@ -189,7 +189,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			sheepFakeouts = 3 + (skill_got[5] * 2);
 			scrUltras(true, false);
@@ -207,7 +207,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -218,7 +218,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 			}
@@ -251,7 +251,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -260,7 +260,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -271,7 +271,7 @@ if (selected && visible &&
 		{
 			if bskin == 1 || (other.isAlternative && other.randomHand == 1 && !bskin == 1)
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				//Secret B skin ultra
 				with Player {
 					altUltra = true;
@@ -285,7 +285,7 @@ if (selected && visible &&
 			}
 			else if bskin == 2 || (other.isAlternative && other.randomHand == 2 && !bskin == 2)
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				with Player {
 					altUltra = true;
 					scrUltras(true,false,2);
@@ -308,7 +308,7 @@ if (selected && visible &&
 		{
 			if race == 1 && other.isAlternative
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				scrWeaponAdjustCost(0.85);
 				bskin = 2;
 				spr_idle=sprMutant1CIdle;
@@ -325,7 +325,7 @@ if (selected && visible &&
 	else if (skill == 6 && Player.race == 2 && isAlternative)
 	{
 		with Player {
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -335,7 +335,7 @@ if (selected && visible &&
 		debug("TAKING ALTGODS DONT DIE");
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -344,7 +344,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			if bskin == 0//YV secret skin
@@ -369,7 +369,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;scrUltras(true, false);
 		}
 	}
@@ -377,7 +377,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -386,7 +386,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			if bwep == 0//ROBOT EXCLUSIVE TASTE
@@ -399,7 +399,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			curseBotTeleport = true;
 			alarm[11] = 30;
@@ -410,7 +410,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 			if bskin == 0 || bskin == 3
@@ -436,7 +436,7 @@ if (selected && visible &&
 	else if skill == 39 && Player.race == 10 && isAlternative
 	{
 		with Player {
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			maxhealth += 50;
 			my_health += 50;
@@ -484,7 +484,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 				scrUnlockAltSkin(race, 0);
@@ -506,7 +506,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
 		}
@@ -526,7 +526,7 @@ if (selected && visible &&
 			}
 			visitedCrib = true;
 			altUltra = true;
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			scrUltras(true, false);
 		}
 	}
@@ -546,7 +546,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 				rogueammomax --;
@@ -594,7 +594,7 @@ if (selected && visible &&
 		{
 			if (race == 25 && other.isAlternative)
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				//Secret Beekeeper ultra
 				altUltra = true;
 				scrUltras(true, false);
@@ -645,7 +645,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 			}
@@ -697,7 +697,7 @@ if (selected && visible &&
 			//No health mutations
 			if race == 16 && other.isAlternative
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				//maxhealth = round(maxhealth*0.5);
 				scrUltras(true, false);
@@ -728,7 +728,7 @@ if (selected && visible &&
 		{
 			with Player
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 			}
@@ -753,7 +753,7 @@ if (selected && visible &&
 		with Player {
 			if other.isAlternative
 			{
-				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				altUltra = true;
 				scrUltras(true, false);
 			}
@@ -847,7 +847,7 @@ if (selected && visible &&
 			{
 				with Player
 				{
-					scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+					scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 					altUltra = true;
 					scrUltras(true, false);
 				}
@@ -954,7 +954,7 @@ if (selected && visible &&
 	    ultimategamble=2;
 		with Player
 		{
-			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION",28);
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			scrUltras(true, false);
 		}
 	    //with instance_create(view_xview+view_wview/2,view_yview+view_hview-24,SkillIcon)

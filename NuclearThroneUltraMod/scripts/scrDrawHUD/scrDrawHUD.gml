@@ -1621,7 +1621,7 @@ function scrDrawHUD() {
 		}
 		with CloudEnterance
 		{
-			if cAlpha > 0 && place_meeting(x,y,Player) && hasEnoughMuts
+			if !used && cAlpha > 0 && place_meeting(x,y,Player) && hasEnoughMuts
 			{
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 
@@ -1650,7 +1650,7 @@ function scrDrawHUD() {
 		}
 		with MimicBossPlateau
 		{
-			if place_meeting(x,y,Player)
+			if !used && place_meeting(x,y,Player)
 			{
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 

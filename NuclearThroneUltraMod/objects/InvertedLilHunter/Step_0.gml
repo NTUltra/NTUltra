@@ -31,7 +31,7 @@ if dodge > -2
 		}
 	}
 }
-else if canDodge && target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
+else if  !instance_exists(Marker) && canDodge && target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {
 if point_distance(x,y,target.x,target.y) < 32
 direction = point_direction(x,y,target.x,target.y)+180

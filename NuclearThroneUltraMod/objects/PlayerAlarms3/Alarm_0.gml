@@ -1,12 +1,12 @@
 /// @description Adrenaline & Peace Ammo & Healing
-alarm[0] = 5;
+alarm[0] = 10;
 var isInCombat = false;
 if enemyHealthWasChanged || playerHealthWasChanged
 	with Player {
 		if !outOfCombat
 		{
 			var n = instance_nearest(x,y,enemy)
-			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 270 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
+			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical /*&& point_distance(x,y,n.x,n.y) < 270 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))*/
 			{
 				isInCombat = true;
 			}
@@ -35,7 +35,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 				if canAmmo
 				{
 					//scrSwapWeps();
-					scrCollectAmmo(0.26, false, false, false, true);
+					scrCollectAmmo(0.25, false, false, false, true);
 					if wep_rad[wep] > 0 || wep_rad[bwep] > 0 || wep_rad[cwep] > 0
 						scrRaddrop(1);
 					//scrSwapWeps();
@@ -57,7 +57,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 				{
 					if peaceBarriers < peaceBarriersMax
 					{
-						peaceBarrierTime += 1/max(1,(peaceBarriers + 0.85));
+						peaceBarrierTime += 1/max(1,(peaceBarriers * 0.96));
 						if peaceBarrierTime > peaceBarrierDuration
 						{
 							peaceBarrierTime = 0;
@@ -82,7 +82,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 				}
 				if peaceBarriers < peaceBarriersMax
 				{
-					peaceBarrierTime += 1/max(1,(peaceBarriers + 0.85));
+					peaceBarrierTime += 1/max(1,(peaceBarriers*0.95 + 1));
 					if peaceBarrierTime > peaceBarrierDuration
 					{
 						peaceBarrierTime = 0;

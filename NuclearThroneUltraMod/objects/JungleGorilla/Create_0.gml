@@ -24,21 +24,22 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 16;
+actTime = 18;
 
 acc = 1;
 maxSpeed = 3.4;
 gunX = -10;
-projectileSpeed = 5.45;
+projectileSpeed = 5.1;
 projectileSpeedDif = 0.2;
 deathProjectile = 5;
 if loops > 0
 {
 	projectileSpeed += 0.5;
-	actTime -= 3;
+	actTime -= 5;
 	deathProjectile = 9;
 }
 fireDelay = 3;
 sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;
+wasBehindWall = false;

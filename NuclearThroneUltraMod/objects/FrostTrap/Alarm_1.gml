@@ -37,7 +37,7 @@ if fire > 0
 		if !position_meeting(x-4,y+8,Wall)
 			with instance_create(x-4,y+8,Lightning)
 			{
-				team = 0;
+				team = 1;
 				image_angle = 180;
 				ammo = 7
 				dodgeAble = false;
@@ -48,7 +48,7 @@ if fire > 0
 		if !position_meeting(x+20,y+8,Wall)
 			with instance_create(x+20,y+8,Lightning)
 			{
-				team = 0;
+				team = 1;
 				image_angle = 0;
 				ammo = 7
 				dodgeAble = false;
@@ -60,7 +60,7 @@ if fire > 0
 		if !position_meeting(x+8,y-4,Wall)
 			with instance_create(x+8,y-4,Lightning)
 			{
-				team = 0;
+				team = 1;
 				image_angle = 90;
 				ammo = 7
 				dodgeAble = false;
@@ -71,7 +71,7 @@ if fire > 0
 		if !position_meeting(x+8,y+20,Wall)
 			with instance_create(x+8,y+20,Lightning)
 			{
-				team = 0;
+				team = 1;
 				image_angle = 270;
 				ammo = 7
 				dodgeAble = false;

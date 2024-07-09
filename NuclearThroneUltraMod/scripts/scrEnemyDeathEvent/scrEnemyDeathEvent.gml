@@ -242,10 +242,10 @@ function scrEnemyDeathEvent(){
 			//TRIGGER FINGERS
 			if skill_got[24]
 			{
-				var m = 0.65;
+				var m = 0.7;//0.65;
 				if isdoc
 				{
-					m = 0.5625;
+					m = 0.62;//0.5625;
 				}
 				if reload < 0
 				{

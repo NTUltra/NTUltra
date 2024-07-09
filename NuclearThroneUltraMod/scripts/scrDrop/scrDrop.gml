@@ -1,4 +1,4 @@
-function scrDrop(itemdrop, weapondrop, onlyAmmo = false) {
+function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	var pickup = noone;
 	var isHard = scrIsHardMode();
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
@@ -360,7 +360,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false) {
 		{
 			scrWeapons()
 			SetSeedWeapon();
-			wep = scrDecideWep(max(0,-1),2)
+			wep = scrDecideWep(weaponTier + max(0,-1),2)
 			name = wep_name[wep]
 			type = wep_type[wep]
 			ammo = 20

@@ -540,8 +540,9 @@ if !instance_exists(LevCont) and visible = 1
 				{
 					instance_destroy();	
 				}
-			}*/
-			//instance_create(x+32,y,FreakBandit);
+			}
+			*/
+			instance_create(x+32,y,FreakBandit);
 
 			/*
 			wep = 0;
@@ -1032,10 +1033,11 @@ if !instance_exists(LevCont) and visible = 1
 					{
 						scrFire();
 					}
+					/*
 					else
 					{
 						can_shoot = 0;	
-					}
+					}*/
 					y += jumpY;
 					mask_index = msk;
 				}
@@ -1066,10 +1068,11 @@ if !instance_exists(LevCont) and visible = 1
 					{
 						scrFire();
 					}
+					/*
 					else
 					{
 						can_shoot = 0;	
-					}
+					}*/
 					y += jumpY;
 					mask_index = msk;
 				}
@@ -1379,7 +1382,7 @@ if (!instance_exists(LevCont))
 				wkick = -1
 				if wep = 8
 				wkick = -2
-				snd_play(sndShotReload,0,true)
+					snd_play(sndShotReload,0,true)
 			}
 			else if wep_type[wep] = 3
 				snd_play(sndCrossReload,0,true)
@@ -1664,11 +1667,11 @@ if (!instance_exists(LevCont))
 					if !place_meeting(x,y,Wall)
 					{
 						scrFire();
-					}
+					}/*
 					else
 					{
 						can_shoot = 0;	
-					}
+					}*/
 					y += jumpY;
 					mask_index = msk;
 				}
@@ -2529,7 +2532,7 @@ if instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[1] < 1
 			if super {
 				if alarm[1] > 3
 					alarm[1] -= aggro;
-				my_health = min(maxhealth,my_health + healingAmount);
+				my_health = min(maxhealth, my_health + healingAmount);
 				speed *= 1.15;
 			}
 		}
@@ -2700,7 +2703,7 @@ if hspeed != 0
 var vs = sign(vSlide);
 var hs = sign(hSlide);
 var slideDis = 2;
-if !instance_exists(Ghosting)
+if !instance_exists(Ghosting) && jump <= 0
 {
 	if(race != 18)
 	{

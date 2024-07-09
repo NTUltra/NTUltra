@@ -12,7 +12,8 @@ function scrChangeRaven(ravenType){
 		super = other.super;
 		maxhealth = other.maxhealth;
 		totemBuffed = other.totemBuffed;
-		my_health = other.my_health;
+		my_health = min(maxhealth,other.my_health);
+		prevhealth = my_health;
 		gunangle = other.gunangle;
 		right = other.right;
 		wkick = other.wkick;

@@ -17,6 +17,26 @@ if instance_exists(Player)
 		{
 			instance_destroy(id,false);
 		}
+		with IDPDSpawn
+		{
+			instance_destroy(id,false);
+		}
+		with VanSpawn
+		{
+			instance_destroy(id,false);	
+		}
+		with RavenFly
+		{
+			instance_destroy(id,false);	
+		}
+		with InvertedRavenFly
+		{
+			instance_destroy(id,false);	
+		}
+		with UltraRavenFly
+		{
+			instance_destroy(id,false);	
+		}
 		with projectile
 		{
 			if team != 2

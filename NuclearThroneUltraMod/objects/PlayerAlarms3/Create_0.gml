@@ -1,6 +1,6 @@
 /// @description Init
 adrenalineAmmoCooldown = 5;
-adrenalineHealCooldown = 39;
+adrenalineHealCooldown = 40;
 detectedCombat = false;
 if instance_exists(Player) && Player.race == 25
 {

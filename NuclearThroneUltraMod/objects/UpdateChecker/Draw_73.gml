@@ -1,5 +1,6 @@
 draw_set_halign(fa_right);
-x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4;
+var oofsetto = 16;
+x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4 - oofsetto;
 y = __view_get( e__VW.YView, 0 )-39+Menu.widescreen;
 if (notUpdated == "*")
 {
@@ -36,7 +37,7 @@ else
 	draw_sprite(sprite_index,hover,x - wx,y);	
 }
 var utxt = "["+UberCont.updateVersion+UberCont.subUpdateVersion+"]"
-draw_text_colour(x,y,
+draw_text_colour(x + oofsetto,y,
 utxt + string_replace(notUpdated,"*"," ") ,c_gray,c_gray,c_gray,c_gray,1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

@@ -1,5 +1,5 @@
 /// @description Humphry skill drain
-if !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(StunLockout)
+if !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(StunLockout) && instance_exists(enemy)
 	with Player
 	{
 		if !outOfCombat

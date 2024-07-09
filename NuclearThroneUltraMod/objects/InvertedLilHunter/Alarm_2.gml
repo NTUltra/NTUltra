@@ -7,8 +7,8 @@ sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
 	instance_destroy();
+my_health = min(maxhealth, my_health);
 instance_change(InvertedLilHunterFly,false)
-
 snd_play_2d(sndLilHunterLaunch)
 }
 }else
@@ -17,6 +17,7 @@ sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
 	instance_destroy();
+my_health = min(maxhealth, my_health);
 instance_change(InvertedLilHunterFly,false)
 
 snd_play_2d(sndLilHunterLaunch)

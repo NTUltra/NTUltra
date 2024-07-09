@@ -1,13 +1,10 @@
 /// @description Actual re-brainwash
-if instance_exists(enemy) && instance_number(enemy) > 3
+if instance_exists(enemy) && instance_number(enemy) > 3 && instance_exists(Player)
 with enemy
 {
 	if
 	(
-		x > __view_get( e__VW.XView, 0 ) &&
-		x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) &&
-		y > __view_get( e__VW.YView, 0 ) &&
-		y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+		point_distance(x,y,Player.x,Player.y) < 400
 	)
 	{//eyes ultra c brainwash
 		target = -1;

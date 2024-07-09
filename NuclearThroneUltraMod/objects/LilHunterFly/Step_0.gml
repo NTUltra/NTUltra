@@ -125,7 +125,6 @@ image_index = 0
 alarm[3] = 5/0.4
 instance_change(LilHunter,false)
 
-
 }
 }
 else

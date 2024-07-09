@@ -1,21 +1,7 @@
 /// @description Reflect Contact damage
 with other
 {
-	var contactDmg = other.dmg + meleedamage;
-	/*
-	if instance_exists(Player)
-	{
-		if Player.skill_got[8]//Gamma Gutseru
-		{
-			contactDmg += 7//dmg dealt by gamma guts
-			snd_play(sndGammaGutsProc);
-			if (my_health <= 0)//gamma guts kill?
-			{
-				snd_play(sndGammaGutsKill,0,true);
-				instance_create(x,y,GammaGutsBlast);
-			}
-		}
-	}*/
+	var contactDmg = (other.dmg + meleedamage) * 0.5;
 	if meleedamage > 0
 	{
 		Sleep(10);
@@ -24,7 +10,7 @@ with other
 			var s = clamp(other.mySize*0.5,1,3);
 			image_xscale = s;
 			image_yscale = s;
-			image_alpha = max(0.1,other.meleedamage*0.05);
+			image_alpha = max(0.2,other.meleedamage*0.05);
 		}
 		if !audio_is_playing(snd_melee)
 			snd_play(snd_melee,0,true);
@@ -33,11 +19,19 @@ with other
 	{
 		if !audio_is_playing(snd_hurt)
 			snd_play(snd_hurt,0,false);
-		if UberCont.normalGameSpeed == 60
-			contactDmg *= 0.25;
+		if my_health - contactDmg <= 0 
+		{
+			DealDamage(contactDmg, true);
+			snd_play(sndGammaGutsKill,0,true);
+			instance_create(x,y,GammaGutsBlast);
+		}
 		else
-			contactDmg *= 0.5;
-		DealDamage(contactDmg, true);
+		{
+			snd_play(sndGammaGutsProc);
+			if UberCont.normalGameSpeed == 60
+				contactDmg *= 0.5;
+			DealDamage(contactDmg, true);
+		}
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),3)

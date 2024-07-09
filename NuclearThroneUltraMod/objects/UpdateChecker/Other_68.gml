@@ -19,9 +19,9 @@ if (type == network_type_data) {
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
 			{
-				notUpdated = "*"
-				if canShow
-					alarm[1] = 15;
+				//notUpdated = "*"
+				//if canShow BETATEMP
+				//	alarm[1] = 15;
 			}
 			else
 			{

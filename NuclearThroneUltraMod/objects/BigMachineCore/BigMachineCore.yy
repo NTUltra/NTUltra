@@ -40,8 +40,8 @@
     "path":"sprites/mskBigMachineExposed/mskBigMachineExposed.yy",
   },
   "spriteMaskId":{
-    "name":"mskPickupThroughWall",
-    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
+    "name":"mskBigMachineExposed",
+    "path":"sprites/mskBigMachineExposed/mskBigMachineExposed.yy",
   },
   "visible":true,
 }

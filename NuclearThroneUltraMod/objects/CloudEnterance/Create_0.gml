@@ -15,3 +15,4 @@ x -= 16;
 scrCreateSpace(1);
 y += 16;
 x += 16;
+used = false;

@@ -1,6 +1,6 @@
 event_inherited();
 image_angle = random(360)
-motion_add(random(360),random(1.5)+0.5)
+motion_add(random(360),random(1.25)+0.25)
 friction = 0.01
 image_speed = 0
 image_index = random(5)
@@ -15,6 +15,7 @@ dmg = 3;
 cantHitTeam = -2;
 moodSwingable = false;
 isDoc = false;
+alarm[4] = 1;
 if instance_exists(Player)
 {//frog
 	//FROG POTENCY
@@ -44,6 +45,8 @@ if instance_exists(Player)
 		{
 			isDoc = true;	
 		}
+		alarm[3] = 1;
+		alarm[4] = 0;
 	}
 }
 alarm[2] = 2;

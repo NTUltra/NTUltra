@@ -27,6 +27,7 @@ function scrDrawUpdate() {
 		}
 	var txt0 = @"#UPDATE [31.00.00]
 	
+	* NEW PLAYER PROGRESSION SYSTEMS!
 	* ADDED IDPD HQ!
 	* NEW ELITE IDPD!
 	* NEW MUTATION INNER PEACE

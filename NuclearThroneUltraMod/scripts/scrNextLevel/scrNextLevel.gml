@@ -739,7 +739,7 @@ function scrNextLevel(skipping = false) {
 		}
 		if loops > 0 && hard - prevHard > 0
 		{
-			hard -= 0.5;
+			hard -= 0.25;
 		}
 		if scrIsCrown(10)
 			hard += 0.5;

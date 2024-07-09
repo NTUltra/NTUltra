@@ -3,6 +3,10 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with Credits
+		instance_destroy();
+	with PauseTimer
+		instance_destroy();
 	with PinkSheep
 		instance_destroy(id,false);
 	with ElementorHead
@@ -107,5 +111,9 @@ function scrEndOfRun(){
 		visitedOasis = false;
 		visitedSavanna = false;
 		portalEssence = -1;
+		refundLivesRegain = [];
+		refundLastWishPrevent = false
+		refundSkeletonLives = 0
+		refundLastWish = false;
 	}
 }

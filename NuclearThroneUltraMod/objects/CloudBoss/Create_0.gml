@@ -4,7 +4,7 @@ mySize = 1
 
 event_inherited()
 meleedamage = 3
-
+canFly = true;
 venomous = true;
 spr_idle = sprCloudBoss
 spr_walk = sprCloudBoss
@@ -23,7 +23,7 @@ if instance_exists(Player) && Player.skill_got[29] {
 	alarm[1] += 90;
 	scrGiveSnooze();
 }
-alarm[4] = 30;
+alarm[4] = 90;
 wkick = 0
 actTime = 12;
 

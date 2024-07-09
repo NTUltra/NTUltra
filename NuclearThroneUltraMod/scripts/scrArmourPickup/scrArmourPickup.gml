@@ -2,8 +2,6 @@
 // /@description
 ///@param
 function scrArmourPickup(num){
-	if Player.skill_got[9]
-		num *= 2;
 	if UberCont.opt_ammoicon
 	{
 		dir = instance_create(x,y,PopupText)

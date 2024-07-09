@@ -18,9 +18,9 @@ if um == ultramods.morphFire
 } else if um == ultramods.fireFrost
 {
 	UberCont.ultramodSwap = false;
-	with instance_create(gp_axis_angular_velocity_x,y,IceFlame)
+	with instance_create(x,y,IceFlame)
 	{
-		dmg = other.dmg;
+		dmg = other.dmg - 0.25;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

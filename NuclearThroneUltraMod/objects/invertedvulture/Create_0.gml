@@ -11,7 +11,7 @@ spr_dead = sprInvertedVultureDead
 
 
 //behavior
-projectileSpeed = 5.2;
+projectileSpeed = 5;
 projectileSpeed += 0.2 + clamp(GetPlayerLoops()*0.5,0,2);
 alarm[2] = 1;
 
@@ -22,6 +22,6 @@ if GetPlayerLoops() > 9
 	gunSpr = sprInvertedVultureBazooka;
 	fuckyou = true;
 }
-actTime = 16;
+actTime = 17;
 eatTime = 10;
 maxSpeed = 4;

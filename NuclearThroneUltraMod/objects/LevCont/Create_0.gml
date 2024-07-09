@@ -102,15 +102,15 @@ if Player.crownpoints > 0
 	var yyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49;//Top row
 	var yyyy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-16;//Lower row
 	var unlockingSecondRow = false;
-	if !UberCont.unlocked_more_crowns
+	if !UberCont.unlocked_more_crowns && isValidGamemodeToUnlock()
 	{
-		with UberCont
+		if scrIsInInvertedArea()
 		{
-			unlocked_more_crowns = true;
-			scrSave();
-		}
-		if Player.inverted || scrIsInInvertedArea()
-		{
+			with UberCont
+			{
+				unlocked_more_crowns = true;
+				scrSave();
+			}
 			with instance_create(x,y,UnlockingSecondRow) {
 				lerpTimeIncrease *= 0.75;
 				soundGoTime *= 0.75;

@@ -33,7 +33,7 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 		wep = scrDecideWep(choose(1,2), 1000, 0)
 		SetSeed();
 		name = wep_name[wep]
-		ammo = 50
+		ammo = 30
 		curse = 0;
 		if instance_exists(GraveyardEntrance)
 		{

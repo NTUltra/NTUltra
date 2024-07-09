@@ -53,7 +53,7 @@ function scrDrawCharSelect() {
 				spr = sprExplain4;
 			break;
 			case 5:
-				spr = sprExplain6;
+				spr = sprExplain5;
 			break;
 			case 6:
 				spr = sprExplain6;

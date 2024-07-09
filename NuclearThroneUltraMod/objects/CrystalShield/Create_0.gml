@@ -4,7 +4,7 @@ team =2
 p = 0
 friction = 0.45
 
-
+alarm[6] = 1;
 wave=0;
 sprite_index=sprShield
 spr_disappear=sprShieldDisappear;

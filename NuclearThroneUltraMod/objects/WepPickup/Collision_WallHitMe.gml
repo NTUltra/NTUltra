@@ -1,5 +1,5 @@
 move_bounce_solid(false)
-speed += 0.8;
+speed *= 0.5;
 if instance_exists(Player){
 	if Player.ultra_got[12]==0
     {

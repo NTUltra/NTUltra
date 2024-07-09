@@ -94,7 +94,7 @@ function scrRaces() {
 	race_eskin[4] = 0
 	race_fskin[4] = 0
 	race_gskin[4] = 0
-	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH#CROWN OF PROTECTION#AND CROWN OF LIFE#AS MELTING"
+	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH, INNER PEACE#CROWN OF PROTECTION#AND CROWN OF LIFE#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
@@ -165,7 +165,7 @@ function scrRaces() {
 	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
 	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>"
-	race_vision[8] = "PRESS <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
+	race_vision[8] = "HOLD <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
 	race_vision_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
@@ -308,7 +308,7 @@ function scrRaces() {
 	race_pass[15] = "ITEMS DESPAWN QUICKER#YOU DEAL <g>CONTACT DAMAGE<g>"
 	race_acti[15] = "<w>TELEPORT<w>"
 	race_butt[15] = "EXPLOSIVE <p>TELEPORTATION<p>"
-	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b> AT DESTINATION"
+	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b>#AT DESTINATION"
 	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
 	race_vision_detail[15] = race_vision[15];
 	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCK"
@@ -367,7 +367,7 @@ function scrRaces() {
 	race_name[18] = "ANGEL"
 	race_pass[18] = "FLY OVER WALLS"
 	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
-	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#1<r>HP<r> EVERY OTHER USE"
+	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#<w>1<w><r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
 	race_vision[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
 	race_vision_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
@@ -449,8 +449,8 @@ function scrRaces() {
 	race_acti[22] = "<b>PORTAL STRIKE<b>"//"GASS, TOXIC IMMUNITY"
 	race_butt[22] = "STRONGER <b>PORTAL STRIKE<b>#MORE <b>PORTAL STRIKE AMMO<b> SPAWNS"//"GASS SPREADS FASTER"
 	race_butt_detail[22] = race_butt[22];
-	race_vision[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>";
-	race_vision_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w>1 <r>HP<r>#ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b> <w>TEMPORARILY<w>";
+	race_vision[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w> <r>HP<r>";
+	race_vision_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w> <r>HP<r>##ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b>#<w>TEMPORARILY<w>";
 	race_lock[22] = "REACH THE THRONE TO UNLOCK"
 	race_have[22] = 0
 	race_swep[22] = 312//ROGUE RIFLE
@@ -550,8 +550,8 @@ function scrRaces() {
 	race_acti[27] = "PRESS/HOLD TO <w>GRAB<w>#CHESTS/WEAPONS/ENEMIES"
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
-	race_vision[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>";
-	race_vision_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq> AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
+	race_vision[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>";
+	race_vision_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
 	race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
 	race_have[27] = 0
 	race_swep[27] = 443
@@ -562,7 +562,7 @@ function scrRaces() {
 	race_fskin[27] = 0
 	race_gskin[27] = 0
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
-	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH ACTIVE&THRONE BUTT)"
+	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH THRONE BUTT)"
 	/*
 	race_name[28] = "NOTHING"
 	race_pass[28] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"

@@ -6,6 +6,17 @@ if !ignoreOverlap
 	var overlap = instance_place(x,y,enemy);
 	if overlap != noone
 	{
+		if meleedamage > 0 && team != overlap.team && overlap.sprite_index != overlap.spr_hurt
+		{
+			with overlap
+			{
+				sprite_index = spr_hurt;
+				image_index = 0;
+				DealDamage(other.meleedamage);
+				snd_play(snd_hurt, hurt_pitch_variation);	
+			}
+			snd_play(snd_melee);
+		}
 		if mySize <= overlap.mySize && !overlap.ignoreOverlap
 		{
 			var getmeout = point_direction(overlap.x,overlap.y,x,y);

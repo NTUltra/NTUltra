@@ -5,6 +5,6 @@ event_inherited();
 
 spr_item = sprVoidItemGoldChest;
 name = "GOLDEN WEAPON CHEST";
-cost = 5;
+cost = 4;
 spawnLocationX -= 16;
 spawnLocationY += 8;

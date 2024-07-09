@@ -331,14 +331,6 @@ if scrIsGamemode(8) && area != 0
         snd_play_2d(confirmSound);
         confirmSound = false;
     }
-    //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-
-    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
-
-    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
-
-    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
 	
 	if song != prevSong || amb != prevAmb
 	{
@@ -347,9 +339,13 @@ if scrIsGamemode(8) && area != 0
 	    snd_loop(amb);
 	}
 	if !audio_is_playing(song)
+	{
 		snd_loop(song);
+	}
 	if !audio_is_playing(amb)
+	{
 		snd_loop(amb);
+	}
 	
 	if area == 119 || area == 120//Throne 2
 	{
@@ -359,5 +355,14 @@ if scrIsGamemode(8) && area != 0
 		audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 		snd_loop(amb);
 	}
+	
+	//audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
+
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
+
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 //}

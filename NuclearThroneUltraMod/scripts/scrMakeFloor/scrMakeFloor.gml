@@ -788,7 +788,7 @@ function scrMakeFloor(limiter) {
 		trn = 0;	
 	}
 	else if area == 135
-		trn = choose(0,0,0,0,0,0,0,0,0,0,0,90,-90)
+		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
 	else if area == 138
 	{
 		trn = 0;

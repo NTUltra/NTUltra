@@ -43,7 +43,7 @@ canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
 peaceBarrierTime = 0;
-peaceBarrierDuration = 50;
+peaceBarrierDuration = 60;
 peaceBarriers = 0;
 peaceBarriersMax = 3;
 canKillKillKill = false;
@@ -231,7 +231,7 @@ blastArmourPower = 3;
 
 microseconds = 0;
 seconds = 0;
-movethislevel = false;
+movethislevel = true;
 secretlevelcount = 0;
 newMovement = true;
 acceleration = 3;//3

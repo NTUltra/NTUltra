@@ -5,10 +5,17 @@ if loop
 scrTarget()
 if target != noone
 {
+	var canFly = true;
+	with GoldImmuneTotem
+	{
+		if list_contains(myGuys,other.id) {
+			canFly = false;	
+		}
+	}
 motion_add(point_direction(x,y,target.x,target.y),3);
 //HAS A TARGET
 var dis = point_distance(x,y,target.x,target.y)
-if random(35) < 1 or (dis < 64 and random(6) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(18) < 1)
+if canFly && (random(35) < 1 or (dis < 64 and random(6) < 1) or (point_distance(x,y,target.x,target.y) > 160 and random(18) < 1))
 {
 //FLY
 sprite_index = sprLilHunterLiftStart
@@ -138,7 +145,7 @@ else if ((random(10) < 2 && !instance_exists(IDPDSpawn)) || (random(25) < 1))
 		instance_create(x,y,IDPDSpawn);
 	}
 }
-else if random(30)<1
+else if canFly && random(30)<1
 {
 //CAN'T SEE FLY AWAY FLY
 sprite_index = sprLilHunterLiftStart

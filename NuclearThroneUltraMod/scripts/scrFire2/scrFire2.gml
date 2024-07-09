@@ -5094,7 +5094,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//SPLINTER GRENADE LAUNCHER
+	//SPLINTER BOMB
 	case 362:
 
 	snd_play_fire(sndGrenade)
@@ -16960,7 +16960,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//NAIL MINIGUN
+	//NAIL MACHINEGUN
 	case 758:
 	snd_play_fire(choose(sndNailGun1,sndNailGun2,sndNailGun3));
 	with instance_create(x,y,Nail)

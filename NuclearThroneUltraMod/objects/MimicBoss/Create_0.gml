@@ -54,4 +54,4 @@ else
 	alarm[8] = 2;
 }
 alarm[1] = wakeupTime;
-alarm[10] = 30;
+alarm[10] = 90;

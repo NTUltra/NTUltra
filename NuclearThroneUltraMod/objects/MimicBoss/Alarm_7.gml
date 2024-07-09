@@ -27,6 +27,8 @@ if instance_exists(target) && target != noone && ammo > 0
 			maxSpeed = 7.5;
 			image_angle = direction
 			team = other.team
+			alarm[0] = 0;
+			alarm[1] = 1;
 		}
 	}
 	else if ammo == maxAmmo

@@ -42,7 +42,7 @@ gunangle = direction
 }
 
 }
-else if canDodge
+else if  !instance_exists(Marker) && canDodge
 {
 if point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<60{
 if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired

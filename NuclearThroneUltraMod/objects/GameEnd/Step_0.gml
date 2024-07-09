@@ -23,6 +23,11 @@ if instance_exists(PlayerInEnding)
 				}
 			}
 		}
+		//TODO!???
+		with enemy
+		{
+			instance_destroy(id,false);//SAFETY???	
+		}
 	}
 }
 else if instance_exists(Player) && !instance_exists(PlayerInEnding)

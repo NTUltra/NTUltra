@@ -2,6 +2,7 @@ if other.team != team
 {
 	if sticky == 1
 	{
+		alarm[9] = 0;
 		if speed > 0
 			snd_play(sndGrenadeStickWall)
 		speed = 0

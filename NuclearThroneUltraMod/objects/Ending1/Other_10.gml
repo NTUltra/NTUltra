@@ -1,5 +1,4 @@
 /// @description Start the scene
-debug("START SCENE");
 with MusCont
 {
 	audio_stop_sound(amb);

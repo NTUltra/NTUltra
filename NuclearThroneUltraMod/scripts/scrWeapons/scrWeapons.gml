@@ -2072,8 +2072,8 @@ function scrWeapons() {
 	wep_name[185] = "SEEKER SHOTGUN"
 	wep_type[185] = 3
 	wep_auto[185] = 0
-	wep_load[185] = 42
-	wep_cost[185] = 3
+	wep_load[185] = 40
+	wep_cost[185] = 4
 	wep_sprt[185] = sprSeekerShotgun
 	wep_area[185] = 8
 	wep_text[185] = "bolt marrow makes seekers faster"
@@ -2095,7 +2095,7 @@ function scrWeapons() {
 	wep_type[187] = 3
 	wep_auto[187] = 2
 	wep_load[187] = 65
-	wep_cost[187] = 9
+	wep_cost[187] = 11
 	wep_sprt[187] = sprAssaultSeekerShotgun
 	wep_area[187] = 13
 	wep_text[187] = "bursting seekers"
@@ -2481,7 +2481,7 @@ function scrWeapons() {
 	wep_type[221] = 4
 	wep_auto[221] = 0
 	wep_load[221] = 20
-	wep_cost[221] = 3
+	wep_cost[221] = 4
 	wep_sprt[221] = sprDoomLauncher
 	wep_area[221] = 12
 	wep_text[221] = "let's launch some doom!"
@@ -3706,7 +3706,7 @@ function scrWeapons() {
 	wep_type[330] = 4
 	wep_auto[330] = 0
 	wep_load[330] = 14
-	wep_cost[330] = 2
+	wep_cost[330] = 3
 	wep_sprt[330] = sprDoomPistol
 	wep_area[330] = 8
 	wep_text[330] = "cute bots of doom"
@@ -3717,7 +3717,7 @@ function scrWeapons() {
 	wep_type[331] = 4
 	wep_auto[331] = 2
 	wep_load[331] = 20
-	wep_cost[331] = 2.5
+	wep_cost[331] = 4
 	wep_sprt[331] = sprDoomRifle
 	wep_area[331] = 11
 	wep_text[331] = "doombots are cool"
@@ -4064,7 +4064,7 @@ function scrWeapons() {
 	wep_name[362] = "SPLINTER BOMB"
 	wep_type[362] = 3
 	wep_auto[362] = 0
-	wep_load[362] = 24
+	wep_load[362] = 22
 	wep_cost[362] = 1
 	wep_sprt[362] = sprSplinterBomb
 	wep_area[362] = 6
@@ -4268,7 +4268,7 @@ function scrWeapons() {
 	wep_load[378] = 23
 	wep_cost[378] = 2
 	wep_sprt[378] = sprLoveBomber
-	wep_area[378] = 8
+	wep_area[378] = 10
 	wep_text[378] = "<3"
 	wep_swap[378] = sndSwapExplosive
 	wep_rad[378] = 0;
@@ -8009,7 +8009,7 @@ function scrWeapons() {
 	wep_type[715] = 4
 	wep_auto[715] = 0
 	wep_load[715] = 25
-	wep_cost[715] = 4
+	wep_cost[715] = 5
 	wep_sprt[715] = sprDoomLobber
 	wep_area[715] = 13
 	wep_text[715] = "doom party"
@@ -8485,7 +8485,7 @@ function scrWeapons() {
 	wep_type[758] = 3
 	wep_auto[758] = 1
 	wep_load[758] = 2.5
-	wep_cost[758] = 1
+	wep_cost[758] = 1.5
 	wep_sprt[758] = sprNailMachineGun
 	wep_area[758] = 1
 	wep_text[758] = "nailed it!"
@@ -8719,7 +8719,7 @@ function scrWeapons() {
 	wep_type[779] = 4
 	wep_auto[779] = 1
 	wep_load[779] = 18
-	wep_cost[779] = 2
+	wep_cost[779] = 3
 	wep_sprt[779] = sprFlameBazooka
 	wep_area[779] = 11
 	wep_text[779] = "eagle eyes significantly increases rocket targeting"

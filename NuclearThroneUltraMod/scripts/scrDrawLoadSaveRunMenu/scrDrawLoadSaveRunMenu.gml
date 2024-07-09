@@ -40,7 +40,9 @@ function scrDrawLoadSaveRunMenu() {
 	function drawExplain(txt)
 	{
 		if UberCont.loadRunMenuState < 1
-			draw_text(mouse_x,mouse_y,txt);	
+		{
+			scrDrawTextBackgrounded(min(mouse_x,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - string_width(txt)),mouse_y + 16,txt);
+		}
 	}
 	function nothing()
 	{
@@ -84,7 +86,7 @@ function scrDrawLoadSaveRunMenu() {
 	yy  += 41;
 	var xo = xx - (64*2.5);
 	var sRuns = UberCont.savedRuns;
-	var al = array_length(sRuns) - 1;
+	var al = array_length(sRuns);
 	var sequence = 0;
 	
 	for (var j = 0; j < 3; j++)
@@ -92,7 +94,7 @@ function scrDrawLoadSaveRunMenu() {
 		xx = xo;
 		for (var i = 0; i < 5; i++)
 		{
-			if (sequence > UberCont.total_run_slots)
+			if (sequence >= UberCont.total_run_slots)
 			{
 				if UberCont.loadRunMenuState > 0
 					draw_sprite_ext(sprRunSlot,0,xx, yy,1,1,0,make_colour_rgb(20,20,20),1);

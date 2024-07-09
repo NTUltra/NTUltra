@@ -1,5 +1,5 @@
 /// @description Damage enemies
-if sprite_index == sprTangleUpg
+if sprite_index == sprTangleUpg || sprite_index == sprTangleVineUpg
 {
 	var hitNews = ds_list_create();
 	var al = instance_place_list(x,y,enemy,hitNews,false);

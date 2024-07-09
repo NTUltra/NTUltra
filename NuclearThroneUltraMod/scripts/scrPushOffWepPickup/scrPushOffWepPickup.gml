@@ -11,7 +11,7 @@ function scrPushOffWepPickup(){
 			{
 				if speed < 4
 				{
-					motion_add(direction+1,1.5);
+					motion_add(direction+1,1.8);
 					vspeed += 0.05;
 				}
 			}

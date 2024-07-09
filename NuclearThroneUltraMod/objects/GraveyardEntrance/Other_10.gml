@@ -20,7 +20,7 @@ if my_health > 0 && isInteractableNow
 		mask_index = mskPickupThroughWall;
 		isInteractableNow = false;
 		maxhealth = 200 * clamp(loops*5,1,10)
-		alarm[1] += 760;
+		alarm[1] += 900;
 		with instance_create(x,y,WantBoss)
 		{
 			event_perform(ev_alarm,0);

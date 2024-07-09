@@ -132,7 +132,7 @@ if alarm[3] > 0
 
 
 		//Dodge bullet or hit it back
-		if canDodge && instance_exists(projectile) && target != noone && instance_exists(target)
+		if  !instance_exists(Marker) && canDodge && instance_exists(projectile) && target != noone && instance_exists(target)
 		{
 		    dodgethis = noone
 			var dis = 90;

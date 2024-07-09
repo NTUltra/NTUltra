@@ -1,5 +1,5 @@
 /// @description Deflect
-alarm[0] = 3;
+alarm[0] = 5;
 var projs = ds_list_create();
 var al = instance_place_list(x,y,projectile,projs,false);
 for (var i = 0; i < al; i++)

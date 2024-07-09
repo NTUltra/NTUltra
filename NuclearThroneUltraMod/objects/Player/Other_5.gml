@@ -39,8 +39,8 @@ var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 scrNextLevel();
 if ultra_got[21] && altUltra && gunGod > 0
 {
-	gunGod = min(gunGod, 2000);
-	gunGod = gunGod * 0.5;
+	gunGod = min(gunGod, 2500);
+	gunGod = gunGod * 0.75;
 	if area != 100 && area != 137
 	{
 		gunGodDebt = gunGod * 0.5;
@@ -110,13 +110,13 @@ if scrIsCrown(22)//Crown of luck
 	{
 		if ultra_got[62] && altUltra //Living armour
 		{
-			armour += maxarmour*0.25;
+			armour = max(1,floor(maxarmour*0.25));
 			if armour > maxarmour
 				armour = maxarmour;
 		}
 		else
 		{
-			my_health = max(1,round(maxhealth*0.5));
+			my_health = max(1,floor(maxhealth*0.5));
 			prevhealth = my_health;
 		}
 	}
@@ -125,6 +125,8 @@ if scrIsCrown(22)//Crown of luck
 		if ultra_got[62] && altUltra //Living armour
 		{
 			armour = 1;
+			if armour > maxarmour
+				armour = maxarmour;
 		}
 		else
 		{
@@ -388,8 +390,8 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
-	scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
+	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
+		scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
 	if loops>2 && race = 4
 	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);

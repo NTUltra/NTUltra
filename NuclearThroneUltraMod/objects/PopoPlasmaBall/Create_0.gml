@@ -19,3 +19,4 @@ resetSpeed=false;
 maxSpeed = 6.6;
 /* */
 /*  */
+alarm[0] = 1;

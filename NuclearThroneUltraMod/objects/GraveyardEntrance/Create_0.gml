@@ -1,7 +1,7 @@
 loops = GetPlayerLoops();
-maxhealth = 60;
+maxhealth = 70;
 if loops > 0 || scrIsHardMode()
-	maxhealth = 80 * clamp(loops*6,1,14)
+	maxhealth = 90 * clamp(loops*6,1,14)
 mySize = 1
 spr_idle = sprGraveyardEntrance;
 spr_hurt = sprGraveyardEntranceHurt

@@ -25,7 +25,11 @@ else if skin == 6 && UberCont.race_gskin[race]=1
 {
 	UberCont.skin[race]=skin;
 }
-else if skin != 0
+else if skin == 0
+{
+	UberCont.skin[race]=skin;
+}
+else
 {
 	skinLocked = true;	
 }

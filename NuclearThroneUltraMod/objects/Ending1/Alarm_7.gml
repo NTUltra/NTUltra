@@ -8,6 +8,10 @@ with Cursor
 	visible = true;
 	inGameVisibleState = true;
 }
+with GameRender
+{
+	gameoverText = "YOU REACHED THE NUCLEAR THRONE!"
+}
 audio_stop_all();
 /*
 with UberCont

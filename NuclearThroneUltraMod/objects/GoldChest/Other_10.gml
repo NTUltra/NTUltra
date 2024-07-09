@@ -16,7 +16,7 @@ if aditionalwep != 0
 		scrWeapons()
 		wep = other.aditionalwep;
 		name = wep_name[other.aditionalwep]
-		ammo = 50
+		ammo = other.ammoGet
 		type = wep_type[other.aditionalwep]
 		curse = 0
 		sprite_index = wep_sprt[other.aditionalwep]

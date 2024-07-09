@@ -39,8 +39,8 @@
     "path":"sprites/sprInvertedBigMachineIntro/sprInvertedBigMachineIntro.yy",
   },
   "spriteMaskId":{
-    "name":"mskPickupThroughWall",
-    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
+    "name":"mskBigMachineProtectedExposed",
+    "path":"sprites/mskBigMachineProtectedExposed/mskBigMachineProtectedExposed.yy",
   },
   "visible":true,
 }

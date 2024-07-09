@@ -4,6 +4,7 @@ image_index=0;
 spr_idle=spr_hurt_normal;
 spr_idle=spr_expose;
 spr_walk=spr_expose;
+meleedamage = 20;
 with myCore
 {
 	mask_index = mskBigMachineExposed;

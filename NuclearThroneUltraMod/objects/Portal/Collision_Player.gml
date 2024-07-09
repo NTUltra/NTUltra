@@ -5,6 +5,7 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 if !instance_exists(PlayerInPortal)
 {
 	other.visible = false;
+	instance_create(x,y,PortalShock);
 	with instance_create(x,y,PlayerInPortal)
 	{
 		depth = min(other.depth - 1,Player.depth);

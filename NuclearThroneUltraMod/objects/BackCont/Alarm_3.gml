@@ -11,7 +11,8 @@ with enemy
 //maxEnemyHealthInLevel=totalEnemyHealth;
 //retail is 140
 alarm[3] = 30;
-
+if !instance_exists(Player) || Player.ultra_got[82]
+	exit;
 var horrorBreak = 130 * min(2,1 + (loops*0.1));
 if scrIsHardMode()
 {

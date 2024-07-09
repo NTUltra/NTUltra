@@ -173,7 +173,7 @@ if selected && visible
 					typ_amax[3] = 55+skill_got[10]*60
 					typ_amax[4] = 55+skill_got[10]*60
 					typ_amax[5] = 55+skill_got[10]*60
-					scrWeaponAdjustCost(0.94);
+					scrWeaponAdjustCost(0.93);
 				}
 				else
 				{
@@ -182,7 +182,7 @@ if selected && visible
 					typ_amax[3] = 55+skill_got[10]*44
 					typ_amax[4] = 55+skill_got[10]*44
 					typ_amax[5] = 55+skill_got[10]*44
-					scrWeaponAdjustCost(0.91);
+					scrWeaponAdjustCost(0.89);
 				}
 			}
 		}
@@ -311,6 +311,16 @@ if selected && visible
 					livesRegain[array_length(livesRegain)] = 3;
 					if array_length(livesRegain) > 3
 						scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);
+				}
+			}
+			else if UberCont.refundLastWish
+			{
+				with Player
+				{
+					livesRegain = UberCont.refundLivesRegain;
+					lastWishPrevent = UberCont.refundLastWishPrevent;
+					skeletonlives = UberCont.refundSkeletonLives;
+					UberCont.refundLastWish = false;
 				}
 			}
 			else

@@ -44,12 +44,14 @@ if instance_exists(Player)
     
 	    if ultra_got[69]//Angel protector
 	    instance_create(x,y,AngelDeflect);
-    
-	    if area=1&&subarea<3
-	    {oasisskip=instance_number(chestprop);
-	    if instance_exists(RadChest)
-	    oasisskip+=1;}
-	    else oasisskip=-1;
+		if UberCont.unlocked_alt_routes
+		{
+		    if area=1&&subarea<3
+		    {oasisskip=instance_number(chestprop);
+		    if instance_exists(RadChest)
+		    oasisskip+=1;}
+		    else oasisskip=-1;
+		}
 		SetSeed();
 		var inc = random(120);
 		var ic = invertedchance;
@@ -72,7 +74,7 @@ if instance_exists(Player)
 		if instance_exists(ForceInversion)
 			ic += 100;
 		var didSpawnInv = false;
-		if (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375)//Inversion magnet
+		if (UberCont.unlocked_alt_routes && (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375))//Inversion magnet
 		{
 		    if ( (area=1&&subarea<3)  )
 		    {

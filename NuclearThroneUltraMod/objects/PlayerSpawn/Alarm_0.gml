@@ -26,6 +26,7 @@ with Player//Data to keep
 				o = 8;
 			x = n.x + o;
 			y = n.y + o;
+			scrForcePosition60fps();
 		}
 	}
 	canCrownOfProtection = other.canCrownOfProtection;

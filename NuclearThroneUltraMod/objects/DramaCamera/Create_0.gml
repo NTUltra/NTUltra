@@ -240,7 +240,7 @@ else
 	}
 	else if area = 2
 	{
-		if instance_exists(Bandit)
+		if instance_exists(BanditBoss) && !instance_exists(BallMom)
 		{
 			name = "STINKY BIG BANDIT";
 			image_index = 1;

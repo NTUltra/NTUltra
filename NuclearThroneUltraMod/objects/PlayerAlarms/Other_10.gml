@@ -81,7 +81,6 @@ if instance_exists(Player)
 		if Player.ultra_got[11]
 		{
 			alarm[4] = 90;
-			alarm[5] = 2;
 		}
 		if Player.ultra_got[71]
 		{
@@ -117,8 +116,8 @@ if instance_exists(Player)
 	with PlayerAlarms3 {
 		if Player.skill_got[45]
 		{
-			alarm[0] = 50;
-			alarm[1] = 30;
+			alarm[0] = 60;
+			alarm[1] = 20;
 			enemyHealthWasChanged = false;
 			playerHealthWasChanged = false;
 			detectedPlayerHealth = 0;
@@ -128,12 +127,12 @@ if instance_exists(Player)
 		}
 		if Player.skill_got[46]
 		{
-			alarm[0] = 50;
+			alarm[0] = 60;
 			enemyHealthWasChanged = false;
 			playerHealthWasChanged = false;
 			detectedPlayerHealth = 0;
 			detectedEnemyHealth = 0;
-			alarm[1] = 30;
+			alarm[1] = 20;
 		}
 		if Player.ultra_got[59] && Player.altUltra
 		{

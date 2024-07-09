@@ -51,10 +51,19 @@ else if type == 1
 	{
 		instance_destroy();	
 	}
+	with GameRender
+	{
+		gameoverText = "THE STRUGGLE IS OVER..."
+	}
 	with Cursor
 	{
 		visible = true;
 		inGameVisibleState = true;
 	}
 	audio_stop_all();
+}
+else if type == 3
+{
+	instance_destroy();
+	room_goto(romGame);
 }

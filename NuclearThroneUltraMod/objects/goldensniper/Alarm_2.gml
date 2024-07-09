@@ -3,6 +3,13 @@ snd_play(sndGoldSniperFire)
 wkick = 7;
 with instance_create(x,y,EnemyBulletBigDiamond)
 {
+	motion_add(other.gunangle,24);
+	team = other.team
+	image_angle = direction
+	firedbysniper=true;
+}
+with instance_create(x,y,EnemyBulletBigDiamond)
+{
 	motion_add(other.gunangle,26);
 	team = other.team
 	image_angle = direction

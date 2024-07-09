@@ -1,5 +1,10 @@
 if instance_exists(Player)
 {
+	if Player.lockout
+	{
+		instance_destroy();
+		exit;
+	}
 var sp = Player.sheepPower;
 alpha = clamp((sp-2)/Player.sheepPowerToHaveEffect,0.1,1);
 

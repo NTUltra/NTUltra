@@ -1,4 +1,4 @@
-var amount = 17;
+var amount = 19;//17
 if instance_exists(Player)
 {
 	//if GetPlayerLoops() > 0
@@ -44,12 +44,6 @@ if instance_exists(Player)
 		if Player.skill_got[8]//Gamma Gutseru
 		{
 			dmg += 7//dmg dealt by gamma guts
-			snd_play(sndGammaGutsProc);
-			if (my_health <= 0)//gamma guts kill?
-			{
-				snd_play(sndGammaGutsKill,0,true);
-				instance_create(x,y,GammaGutsBlast);
-			}
 		}
 		if Player.skill_got[Player.maxskill + 1]
 		{

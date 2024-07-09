@@ -212,6 +212,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
 				{
 					maxhealth -= 4;
+					maxhealth = max(maxhealth,1);
 				}
 				bwep = wep
 				bwepmod1 = wepmod1;
@@ -1233,6 +1234,7 @@ if scrIsCrown(29)
 		{
 			maxarmour += wantHealth - isPureHealthBoost;
 			isPureHealthBoost += wantHealth - isPureHealthBoost;
+			maxhealth = max(maxarmour,1);
 		}
 	}
 	else
@@ -1241,6 +1243,7 @@ if scrIsCrown(29)
 		{
 			maxhealth += wantHealth - isPureHealthBoost;
 			isPureHealthBoost += wantHealth - isPureHealthBoost;
+			maxhealth = max(maxhealth,1);
 		}
 	}
 }

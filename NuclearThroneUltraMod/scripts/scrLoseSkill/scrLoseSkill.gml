@@ -1,7 +1,7 @@
 ///scrLoseSkill();
 // /@description need to run in player
 ///@param
-function scrLoseSkill(skillIndex){
+function scrLoseSkill(skillIndex, disableInstead = false){
 	skill_got[skillIndex] = 0;
 	snd_play_2d(sndLoseSkill);
 	if skillIndex==13||skillIndex==14||skillIndex==15
@@ -26,10 +26,8 @@ function scrLoseSkill(skillIndex){
 					maxhealth = 1;
 				if my_health > maxhealth
 				{
-					if scrIsCrown(18)
-						my_health = max(maxhealth,my_health - 2.5);
-					else
-						my_health = max(maxhealth,my_health - 5);
+					my_health = max(maxhealth,my_health - 5);
+					prevhealth = my_health;
 				}
 			}
 			else
@@ -39,10 +37,8 @@ function scrLoseSkill(skillIndex){
 					maxhealth = 1;
 				if my_health > maxhealth
 				{
-					if scrIsCrown(18)
-						my_health = max(maxhealth,my_health - 2);
-					else
-						my_health = max(maxhealth,my_health - 4);
+					my_health = max(maxhealth,my_health - 4);
+					prevhealth = my_health;
 				}
 			}
 		break;
@@ -91,9 +87,9 @@ function scrLoseSkill(skillIndex){
 			ammo[4] = min(ammo[4],typ_amax[4]);
 			ammo[5] = min(ammo[5],typ_amax[5]);
 			if race == 25
-				scrWeaponAdjustCost(1.15);
+				scrWeaponAdjustCost(1.11);
 			else
-				scrWeaponAdjustCost(1.1);
+				scrWeaponAdjustCost(1.07);
 			//Cap the ammo
 		break;
 		case 13: //LONG ARMS
@@ -106,6 +102,13 @@ function scrLoseSkill(skillIndex){
 			betterlaserbrain = 0;
 		break;
 		case 18: //LAST WISH
+			if disableInstead
+			{
+				UberCont.refundLivesRegain = livesRegain;
+				UberCont.refundLastWishPrevent = lastWishPrevent;
+				UberCont.refundSkeletonLives = skeletonlives;
+				UberCont.refundLastWish = true;
+			}
 			lastWishPrevent = false;
 			skeletonlives -= 1;
 			var tookLife = false;
@@ -146,7 +149,8 @@ function scrLoseSkill(skillIndex){
 			patience--;
 		break;
 		case 28: //RAGE
-			rage = 0;
+			if !disableInstead
+				rage = 0;
 			accuracy=standartAccuracy;
 		break;
 		case 33: //GLASS ARM CANNON
@@ -154,6 +158,8 @@ function scrLoseSkill(skillIndex){
 				maxhealth += 2;
 		break;
 		case 38: //ENRICHED METABOLISM
+			if !disableInstead
+				rage = 0;
 			metabolism = 0;
 		break;
 		case 39: //ALIENT INTESTINES

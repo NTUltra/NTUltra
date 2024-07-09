@@ -199,15 +199,15 @@ function scrSkills() {
 	if instance_exists(Player) && (Player.race == 22)//ROGUE
 	{
 		skill_text[10] = "HIGHER <y>AMMO MAX<y>#REDUCE <y>AMMO<y> <w>COST<w>#INCREASE <b>PORTAL STRIKE<b> AMMO"
-		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#6% <y>AMMO<y> <w>COST<w> REDUCTION#INCREASE <b>PORTAL STRIKE<b> AMMO"
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#7% <y>AMMO<y> <w>COST<w> REDUCTION#INCREASE <b>PORTAL STRIKE<b> AMMO"
 	}
 	else
 	{
-		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#6% <y>AMMO<y> <w>COST<w> REDUCTION"
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#7% <y>AMMO<y> <w>COST<w> REDUCTION"
 	}
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
-	skill_bons[10] = "+30% AMMO MAX#+3% COST REDUCTION";
+	skill_bons[10] = "+30% AMMO MAX#+4% COST REDUCTION";
 
 	skill_name[11] = "SCARIER FACE"
 	if isHand
@@ -271,9 +271,9 @@ function scrSkills() {
 	skill_detail[16] = "65% OF HIT <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>#<w>BULLETS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
-	skill_bons[16] = "+25% CHANCE#+10% SPLASH DAMAGE RANGE";
+	skill_bons[16] = "+9% CHANCE#+10% SPLASH DAMAGE RANGE";
 	if betterWepSpecific
-		skill_bons[16] = "+50% CHANCE#+10% SPLASH DAMAGE RANGE#+10% SPLASH DAMAGE";
+		skill_bons[16] = "+7% CHANCE#+40% SPLASH DAMAGE RANGE#+15% SPLASH DAMAGE";
 
 	skill_name[17] = "ENERGY BRAIN"
 	skill_text[17] = "<g>ENERGY<g> WEAPONS DEAL MORE DAMAGE"
@@ -299,7 +299,7 @@ function scrSkills() {
 		skill_tips[18] = "listen"
 		skill_msnd[18] =  sndMutLastWish
 	}
-	skill_bons[18] = "GET FULL AMMO#HULL HP WHEN LETHAL IS PREVENTED";
+	skill_bons[18] = "GET FULL AMMO#FULL HP WHEN LETHAL IS PREVENTED";
 
 	skill_name[19] = "EAGLE EYES"
 	skill_text[19] = "BETTER <w>ACCURACY<w>";
@@ -359,17 +359,17 @@ function scrSkills() {
 		skill_detail[23] = "EXTRA <w>CHESTS<w> SPAWN#SEE CONTENTS OF WEAPON <w>CHESTS<w>#INCREASE <g>CONFISCATE<g> CHANCE#BY 25%##OPENING <w>CHESTS<w>#FULLY <w>RELOADS<w> YOUR WEAPONS#REDUCE COST OF <g>ULTRA CHESTS<g>"
 	skill_tips[23] = "open mind also increases rad canisters"
 	skill_msnd[23] =  sndMutOpenMind
-	skill_bons[23] = "+25% CHANCE FOR AN#EXTRA WEAPON CHEST#RAD CHESTS RETURN";
+	skill_bons[23] = "+25% CHANCE FOR AN#EXTRA WEAPON CHEST#RAD CANISTERS RETURN";
 
 	if !UberCont.useSeed && random(800)<1
 	skill_name[24] = "TRIGGER PRINGELS"
 	else
 	skill_name[24] = "TRIGGER FINGERS"
 	skill_text[24] = "KILLS <w>RELOAD<w>";
-	skill_detail[24] = "EACH KILL#<w>RELOADS<w> YOUR WEAPONS#BY 35% OF REMAINING <w>RELOAD<w>"
+	skill_detail[24] = "EACH KILL#<w>RELOADS<w> YOUR WEAPONS#BY 30% OF REMAINING <w>RELOAD<w>"
 	skill_tips[24] = "keep killing"
 	skill_msnd[24] =  sndMutTriggerfingers
-	skill_bons[24] = "+25% RELOAD (TOTAL: 44%)";
+	skill_bons[24] = "+27% RELOAD (TOTAL: 38%)";
 
 	if !UberCont.useSeed && random(1000)<1
 		skill_name[25] = "BELIEVE!"
@@ -402,7 +402,7 @@ function scrSkills() {
 
 	skill_name[28] = "RAGE"
 	skill_text[28] = "<r>KILLS<r> SLOWLY INCREASE:#<w>RELOAD SPEED<w> AND <w>DROP RATE<w>#AND DECREASES <w>ACCURACY<w>";
-	skill_detail[28] = "EACH <r>KILL<r> INCREASES:#<r>HP<r>/<y>AMMO<y> <w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE 30 <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE"
+	skill_detail[28] = "EACH <r>KILL<r> INCREASES:#<w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE 30 <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE"
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 	skill_bons[28] = "GAIN +25% MORE RAGE#LOSE 5 LESS RAGE ON HIT";

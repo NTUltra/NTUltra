@@ -1,3 +1,4 @@
+
 if instance_exists(Player)
 {
 	if Player.speed == 0
@@ -8,8 +9,8 @@ if instance_exists(Player)
 		image_index = 0
 		with BoltStick
 			instance_destroy();
+		my_health = min(maxhealth, my_health);
 		instance_change(LilHunterFly,false)
-
 		snd_play_2d(sndLilHunterLaunch)
 	}
 }else
@@ -18,8 +19,8 @@ if instance_exists(Player)
 	image_index = 0
 	with BoltStick
 		instance_destroy();
+	my_health = min(maxhealth, my_health);
 	instance_change(LilHunterFly,false)
-
 	snd_play_2d(sndLilHunterLaunch)
 }
 

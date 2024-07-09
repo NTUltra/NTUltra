@@ -1,11 +1,11 @@
 raddrop = 0
-maxhealth = 1600;
+maxhealth = 1900//1600;
 scrBossHealthBuff();
 meleedamage = 0
 mySize = 1
 
 event_inherited()
-
+canFly = true;
 team = 3;
 
 spr_idle = sprLastIdle

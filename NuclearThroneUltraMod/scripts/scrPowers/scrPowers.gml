@@ -1589,10 +1589,13 @@ function scrPowers(raceOverwrite = -1) {
 					snd_play_2d(sndPlantFireTB);
 				else
 					snd_play_2d(sndPlantFire);
+
 				with instance_create(x,y,TangleSeed)
 				{
-					if other.skill_got[other.maxskill = 1]
+					if other.skill_got[other.maxskill + 1]
+					{
 						alarm[1] = 1;
+					}
 					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
 					image_angle = direction
 					tangleNumber = tangles + 1;
@@ -2182,7 +2185,6 @@ function scrPowers(raceOverwrite = -1) {
 					cost += 2;
 					cost += (humphrySkill * 0.15);
 				}
-				humphrySkill += cost;
 				if humphrySkill >= cost//used to be 50//10%?
 				{
 					insufficientFunds = false;
@@ -2191,6 +2193,7 @@ function scrPowers(raceOverwrite = -1) {
 		
 			if (insufficientFunds)
 			{
+				effective = false;
 				if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
 				{
 					snd_play_2d(snd_lowa,0,true,false,10);
@@ -2294,7 +2297,6 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					effective = true;
 					speed = 0;
-				
 					if instance_exists(myConfusion)
 					{
 						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
@@ -2428,12 +2430,15 @@ function scrPowers(raceOverwrite = -1) {
 				if instance_exists(WepPickup)
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
-					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-					if (d4 < grabRange)
+					if tar != noone && tar.visible
 					{
-						resulttar = tar;
-						slappedProjectile = false;
-						itemGrab = true;
+						var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+						if (d4 < grabRange)
+						{
+							resulttar = tar;
+							slappedProjectile = false;
+							itemGrab = true;
+						}
 					}
 				}
 			}

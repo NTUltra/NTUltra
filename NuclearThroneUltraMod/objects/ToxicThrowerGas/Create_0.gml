@@ -36,6 +36,7 @@ if instance_exists(Player)
 		{
 			isDoc = true;	
 		}
+		alarm[3] = 1;
 	}
 	//FROG POTENCY
 	/*

@@ -4,8 +4,8 @@
 function scrBossHealthBuff(){
 	var ls = GetPlayerLoops();
 	var baseHealth = maxhealth;
-	maxhealth += min(10,ls) * 20;
-	maxhealth *= 1 + clamp((ls - 1)*0.2,0,1);
+	maxhealth += max(ls * 30,0);
+	maxhealth *= 1 + max(0,(ls - 1)*0.25);
 	if scrIsHardMode()//HARD MODE
 	{
 		maxhealth *= 1.5;
@@ -14,4 +14,5 @@ function scrBossHealthBuff(){
 	}
 	if UberCont.voidChallengeGoing[2]//Just add base health once again
 		maxhealth += baseHealth;
+	my_health = maxhealth;
 }

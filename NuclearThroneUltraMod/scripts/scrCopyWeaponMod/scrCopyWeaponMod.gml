@@ -4,10 +4,13 @@
 function scrCopyWeaponMod(othr){
 	if instance_exists(Player) && othr.team == Player.team
 	{
-		Mod1 = othr.Mod1;
-		Mod2 = othr.Mod2;
-		Mod3 = othr.Mod3;
-		Mod4 = othr.Mod4;
+		if !scrIsCrown(29)
+		{
+			Mod1 = othr.Mod1;
+			Mod2 = othr.Mod2;
+			Mod3 = othr.Mod3;
+			Mod4 = othr.Mod4;
+		}
 		poppop = othr.poppop;
 		wepFire = othr.wepFire;
 		//speed *= Player.pSpeedBoost;

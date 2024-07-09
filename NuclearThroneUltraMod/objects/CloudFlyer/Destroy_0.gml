@@ -1,5 +1,5 @@
 
-scrDropNearby(15,0);
+scrDropNearby(25,0);
 var dir = random(360);
 repeat(3)
 {

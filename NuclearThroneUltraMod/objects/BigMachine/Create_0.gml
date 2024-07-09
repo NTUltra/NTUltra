@@ -6,7 +6,7 @@ scrBossHealthBuff();
 mySize = 5
 
 event_inherited()
-meleedamage = 20;
+meleedamage = 0;
 
 spr_idle = sprBigMachineIntro
 spr_walk = sprBigMachineIdle

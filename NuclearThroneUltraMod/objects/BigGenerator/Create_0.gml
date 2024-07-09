@@ -15,3 +15,4 @@ spr_activate = sprBigGeneratorActivate;
 spr_active = sprBigGenerator;
 image_xscale = 1;
 snd_hurt = sndGeneratorBreak
+scrInitDrops(1);

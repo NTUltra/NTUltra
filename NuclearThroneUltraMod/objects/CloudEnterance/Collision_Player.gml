@@ -1,11 +1,12 @@
 /// @description Go to the clouds
-if cAlpha > 0 && hasEnoughMuts
+if used
+	isInteractableNow = false;	
+else if cAlpha > 0 && hasEnoughMuts
 {
 	with Player
 		isOnInteractable = true;
 	if KeyCont.key_pick[Player.p] = 1 
 	{
-		isInteractableNow = false;
 		KeyCont.key_pick[Player.p] = 2;
 		with Player
 		{
@@ -22,6 +23,8 @@ if cAlpha > 0 && hasEnoughMuts
 		}
 		if array_length(gottenSkills) > 2
 		{
+			used = true;
+			isInteractableNow = false;
 			image_index = 1;
 			mask_index = mskPickupThroughWall;
 			alarm[3] = 60;

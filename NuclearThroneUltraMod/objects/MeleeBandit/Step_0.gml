@@ -30,7 +30,7 @@ if dodge > -dodgeCooldown
 		}
 	}
 }
-else if canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < dodgeRange and not alarm[2] > 0 {
+else if  !instance_exists(Marker) && canDodge && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < dodgeRange and not alarm[2] > 0 {
 	//if mouse_check_button_pressed(mb_left) and target != noone
 	if target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 	{
