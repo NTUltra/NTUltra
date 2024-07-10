@@ -6,13 +6,14 @@ if speed > 1
 	image_yscale = 2;
 	var hits = ds_list_create();
 	var al = instance_place_list(x,y,hitme,hits,false)
-	if al > 0 && instance_exists(Player) && Player.ultra_got[55]
-		scrDrop(20,0.02);
+	var hitAnEnemy = false;
 	for (var i = 0; i < al; i++) {
 		with hits[| i]
 		{
 			if other.team != team and my_health > 0
 			{
+				if team != 0
+					hitAnEnemy = true;
 				if instance_exists(Player) && Player.ultra_got[54] == 1
 				{
 					snd_play(sndExplosion);
@@ -32,7 +33,7 @@ if speed > 1
 
 					if instance_exists(Player)
 					{
-					    if Player.ultra_got[55] = 1//ULTRA C PANDA
+					    if Player.ultra_got[55] = 1 && !Player.altUltra//ULTRA C PANDA
 					    {
 							repeat(4)//16 is one ultra lazerpistol ammo
 					        {
@@ -77,6 +78,10 @@ if speed > 1
 			    }
 			}
 		}
+	}
+	if hitAnEnemy && instance_exists(Player) && Player.ultra_got[55] && !Player.altUltra
+	{
+		scrDrop(15,0.02);
 	}
 	mask_index = msk;
 	image_xscale = 1;

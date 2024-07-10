@@ -215,9 +215,9 @@ if selected && visible
 		else if skill == 42//Tail end
 		{
 			if Player.race == 25
-				Player.betterTail = 1.65;
+				Player.betterTail = 1.7;
 			if Player.ultra_got[97] && !Player.altUltra
-				Player.betterTail = 2;
+				Player.betterTail = 2.1;
 		}
 		else if skill = 18//last wish
 		{

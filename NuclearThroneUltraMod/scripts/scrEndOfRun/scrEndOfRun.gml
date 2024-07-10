@@ -3,6 +3,11 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with Cursor
+	{
+		inGameVisibleState = true;
+		visible = inGameVisibleState;
+	}
 	with Credits
 		instance_destroy();
 	with PauseTimer

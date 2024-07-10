@@ -6,7 +6,7 @@ if ultra_got[21] && altUltra
 {
 	if canInfiniteFire
 	{
-		can_shoot = true;
+		can_shoot = 1;
 		if gunGodFirst
 		{
 			gunGodFirst = false;
@@ -1088,7 +1088,7 @@ if !instance_exists(LevCont) and visible = 1
 }//End of gencont
 
 //SWAP WEPS
-if KeyCont.key_swap[p] = 1 and bwep != 0 && !lockout
+if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 {
 	instance_create(x,y,WepSwap)
 	scrSwapWeps()

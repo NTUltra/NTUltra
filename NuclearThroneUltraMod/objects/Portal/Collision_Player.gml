@@ -26,6 +26,7 @@ if !instance_exists(PlayerInPortal)
 				my_health = 0;
 				prevhealth = 0;
 			}
+			instance_create(x,y,DelayEnemyKill)
 			with RadChest
 			{
 				my_health = 0;	

@@ -32,9 +32,17 @@ image_angle = direction
 speed = 0
 if ultraD
 mask_index=mskPickupThroughWall;
-move_contact_solid(direction,10+random(4))//8 r 4
+//move_contact_solid(direction,10+random(4))//8 r 4
+var dis = 10 + random(4);
+var i = 0;
+while (i < dis && !place_meeting(x,y,Wall))
+{
+	x += lengthdir_x(1,direction);
+	y += lengthdir_y(1,direction);
+	i += 1;
+}
 if ultraD
-mask_index=mskLaser;
+	mask_index=mskLaser;
 speed = 0
 image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 

@@ -799,6 +799,7 @@
     {"id":{"name":"Deflect","path":"objects/Deflect/Deflect.yy",},},
     {"id":{"name":"DeflectMelee","path":"objects/DeflectMelee/DeflectMelee.yy",},},
     {"id":{"name":"DelayedIntestines","path":"objects/DelayedIntestines/DelayedIntestines.yy",},},
+    {"id":{"name":"DelayEnemyKill","path":"objects/DelayEnemyKill/DelayEnemyKill.yy",},},
     {"id":{"name":"DeleteSave","path":"objects/DeleteSave/DeleteSave.yy",},},
     {"id":{"name":"Devastator","path":"objects/Devastator/Devastator.yy",},},
     {"id":{"name":"DirectorBurst","path":"objects/DirectorBurst/DirectorBurst.yy",},},

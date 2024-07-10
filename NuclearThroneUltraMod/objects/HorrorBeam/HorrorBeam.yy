@@ -42,8 +42,8 @@
     "path":"sprites/sprHorrorBeam/sprHorrorBeam.yy",
   },
   "spriteMaskId":{
-    "name":"mskEnemyLaser",
-    "path":"sprites/mskEnemyLaser/mskEnemyLaser.yy",
+    "name":"mskLaser",
+    "path":"sprites/mskLaser/mskLaser.yy",
   },
   "visible":false,
 }

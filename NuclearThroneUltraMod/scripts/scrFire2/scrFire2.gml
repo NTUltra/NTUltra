@@ -5321,7 +5321,7 @@ function scrFire2(hasTailNow) {
 	{
 		//wep = 0;
 		clicked = 0;
-		can_shoot = 0;
+		// can_shoot = 0;
 		if object_index == Player && ultra_got[27] && !altUltra
 		{
 			if bwep == wep
@@ -5340,7 +5340,7 @@ function scrFire2(hasTailNow) {
 			if !yc
 				scrSwapWeps();
 			clicked = 0;
-			can_shoot = 0;
+			// can_shoot = 0;
 			bwep = 0
 		}
 		else
@@ -5348,7 +5348,7 @@ function scrFire2(hasTailNow) {
 			if !yc
 				scrSwapWeps();
 			clicked = 0;
-			can_shoot = 0;
+			// can_shoot = 0;
 			bwep = 0
 		}
 	}
@@ -17878,7 +17878,7 @@ function scrFire2(hasTailNow) {
 			ammo = 3
 			time = 2
 			aimOffset = -20 * other.accuracy;
-			team = other.teamER
+			team = other.team
 			alarm[0] = 1;
 		}
 	}

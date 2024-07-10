@@ -1,6 +1,6 @@
 function scrFire(canDrown = true) {
 	IDKWID=false;
-	can_shoot = 0
+	// can_shoot = 0
 	if !instance_exists(Player) || instance_exists(StartAreaBuffer) || instance_exists(UnPauseDelay)
 	{
 		clicked = 0;
@@ -2498,11 +2498,11 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,BouncerBurst)
 	{
 		pspeed += 3;
-	creator = other.id
-	ammo = 5
-	time = 2
-	team = other.team
-	event_perform(ev_alarm,0) 
+		creator = other.id
+		ammo = 5
+		time = 2
+		team = other.team
+		event_perform(ev_alarm,0)
 	}
 
 	break;

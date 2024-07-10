@@ -15,6 +15,7 @@ textQueue = [];
 cantUnderstand = true;
 previousWep = 0;
 previousBwep = 0;
+//Only do unique character onces
 if (UberCont.char_void_entered[race] == 1)
 {
 	killerSequence = true;

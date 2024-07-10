@@ -1,6 +1,6 @@
 if !ultraD
 {
-ammo=0;
-instance_destroy();
+	ammo=0;
+	instance_destroy();
 }
 

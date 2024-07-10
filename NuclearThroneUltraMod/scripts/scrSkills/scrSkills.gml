@@ -390,7 +390,7 @@ function scrSkills() {
 
 	skill_name[27] = "PATIENCE"
 	skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA"
-	skill_detail[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA#REROLLS LEFT: 1";
+	skill_detail[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA";
 	if instance_exists(Player) && Player.guarenteedReroll > 0
 	{
 		skill_detail[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA#REROLLS LEFT: "+ string(Player.guarenteedReroll + 1);
@@ -534,11 +534,11 @@ function scrSkills() {
 	
 	skill_name[41] = "NERVES OF STEEL"
 	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#SLIGHTLY INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
-	skill_detail[41] = "REPLACE 2 <r>MAX HEALTH<r> WITH 1 <gb>MAX ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#+15% PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>:#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 37% OF BASE RELOAD TIME#AND +20% CONSTANT RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
+	skill_detail[41] = "REPLACE 2 <r>MAX HEALTH<r> WITH 1 <gb>MAX ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#<w>+15%<w> PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>:#REDUCE PRIMARY <w>RELOAD TIME<w>#BY <w>37%<w> OF <w>BASE<w> RELOAD TIME#AND <w>+20%<w> <w>CONSTANT<w> RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#SIGNIFICANTLY REDUCE <w>RELOAD TIME<w>";
-		skill_detail[41] = "LOSE 1 <gb>ARMOUR<gb>#WHENEVER YOU ARE MISSING <gb>ARMOUR<gb>#REDUCE PRIMARY <w>RELOAD TIME<w>#BY 37% OF BASE RELOAD TIME#<w>ENEMIES<w> HAVE A SMALL CHANCE TO DROP <gb>ARMOUR<gb>"
+		skill_detail[41] = "LOSE 1 <gb>ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#<w>+15%<w> PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>:#REDUCE PRIMARY <w>RELOAD TIME<w>#BY <w>37%<w> OF <w>BASE<w> RELOAD TIME#AND <w>+20%<w> <w>CONSTANT<w> RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
 	}
 	skill_tips[41] = "conduit of power"
 	skill_msnd[41] =  sndMutNervesOfSteel;
@@ -549,7 +549,7 @@ function scrSkills() {
 	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER#INCREASE MAX CHARGE##INCLUDES THINGS LIKE:#FLAMETHROWERS, LASER/ION CANNONS,#DOUBLE SHOTGUNS, SPLINTER GUNS ETC.#HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
 	skill_tips[42] = "tail is a weapon specific mutation"
 	skill_msnd[42] =  sndMutTailEnd;
-	skill_bons[42] = "+15% CHARGE RATE & BURST AMOUNT"
+	skill_bons[42] = "+20% CHARGE RATE & BURST AMOUNT"
 	if betterWepSpecific
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
 	
@@ -570,8 +570,8 @@ function scrSkills() {
 	skill_bons[44] = "+23% RECHARGE RATE#BIGGER SHIELD"
 	
 	skill_name[45] = "ADRENALINE FUEL"
-	skill_text[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>";
-	skill_detail[45] = "WHILE <w>IN COMBAT<w>:#SLOWLY GAIN <y>AMMO<y> (0.6S)#VERY SLOWLY <r>HEAL<r> (6.5S)#WHEN USING <g>ULTRA<g> WEAPONS GAIN <g>RADS<g>##PRIORITIZES EQUIPPED AMMO#CAN QUEUE ONE HEAL#WHEN AT FULL HEALTH";
+	skill_text[45] = "WHILE <w>IN<w> <r>CLOSE<r> <w>COMBAT<w>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>";
+	skill_detail[45] = "WHILE <w>IN CLOSE COMBAT<w> <r>NEAR ENEMIES<r>:#SLOWLY GAIN <y>AMMO<y>#VERY SLOWLY <r>HEAL<r>#WHEN USING <g>ULTRA<g> WEAPONS GAIN <g>RADS<g>##PRIORITIZES EQUIPPED AMMO#CAN QUEUE ONE HEAL#WHEN AT FULL HEALTH";
 	skill_tips[45] = "rush of adrenaline"
 	skill_msnd[45] =  sndMutAdrenalineFuel;
 	skill_bons[45] = "+25% HEAL RATE"

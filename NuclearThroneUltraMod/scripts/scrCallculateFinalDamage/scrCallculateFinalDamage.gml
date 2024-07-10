@@ -3,6 +3,7 @@
 ///@param
 function scrCallculateFinalDamage(inputDamage){
 	var dmgDeal = inputDamage;
+	var hitTarget = id;
 	with Player
 	{
 		if race == 26//HUMPHRY mr damage
@@ -26,7 +27,7 @@ function scrCallculateFinalDamage(inputDamage){
 				{
 					if instance_exists(target)
 					{
-						if other.id == target.id
+						if hitTarget == target.id
 						{
 							// other.my_health -= dmgDeal*0.3;
 							resultdmgDeal += (dmgDeal*0.3);

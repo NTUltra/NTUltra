@@ -108,8 +108,8 @@ scrUnlockCSkin(10,"FOR DISCOVERING BANDITLAND",0);
 if area == 126 || area == 127
 scrUnlockGameMode(12,"FOR DISCOVERING#THE GRAVEYARD",0)
 
-if armour >= 4 && race == 16
-scrUnlockBSkin(16,"FOR GETTING 4 OR MORE#ARMOUR AS VIKING",0);
+if armour >= 4 && maxarmour >= 4 && race == 16
+	scrUnlockBSkin(16,"FOR GETTING 4 OR MORE#ARMOUR AS VIKING",0);
 
 if array_length(livesRegain) > 3
 	scrUnlockBSkin(19,"FOR HAVING FOUR LIVES",0);

@@ -1,6 +1,5 @@
 /// @description Checky updateru
 //BETATEMP
-/*
 canShow = true;
 if notUpdated == "*"
 {

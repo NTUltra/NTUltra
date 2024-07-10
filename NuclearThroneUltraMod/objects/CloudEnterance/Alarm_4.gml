@@ -12,7 +12,7 @@ else
 		var si = 0;
 		repeat(maxskill)
 		{
-			if skill_got[si]
+			if skill_got[si] && si != 27//NOT PATIENCE
 			{
 				i += 1;
 			}

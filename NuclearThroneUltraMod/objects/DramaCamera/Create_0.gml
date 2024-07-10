@@ -77,7 +77,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			{
 				if subarea == 1
 				{
-					song = musAssassinBoss;	
+					song = musAssassinBoss;
 				}
 				else
 				{

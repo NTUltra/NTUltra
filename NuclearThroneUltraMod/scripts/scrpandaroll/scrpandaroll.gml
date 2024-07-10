@@ -25,13 +25,13 @@ function scrPandaRoll(){
 	}
 	if Player.ultra_got[55]
 	{
-		do {wep = round(random(maxwep-1)+1);dir+=1;
+		do {wep = irandom(maxwep-1)+1;dir+=1;
 		if dir >999
 		wep=prevwep;}
 		until ( ( (wep_area[wep] = wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep+1]) || (wep_area[wep] = wep_area[prevwep+2]) )||(dir>1000) )
 	}
 	else{
-		do {wep = round(random(maxwep-1)+1);dir++;
+		do {wep = irandom(maxwep-1)+1;dir++;
 		if dir >999
 		wep=prevwep;}
 		until ( (wep_area[wep] = wep_area[prevwep])||(dir>1000) )

@@ -21,7 +21,7 @@ if instance_exists(Player)
 		dt = 0.5;
 	if Player.speed > 0 or my_health < maxhealth
 		freeze += 1 * dt
-	if Player.can_shoot = 0
+	if Player.can_shoot == 0
 		freeze += 2 * dt;
 }
 

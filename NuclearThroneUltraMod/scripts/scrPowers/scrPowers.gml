@@ -246,7 +246,7 @@ function scrPowers(raceOverwrite = -1) {
 
 	if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 	{
-		if armour < 1 && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
+		if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
 		{
 			snd_play(sndNoArmour,0.1);
 			BackCont.shake += 10;

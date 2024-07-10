@@ -598,6 +598,7 @@
     {"name":"Deflect","order":150,"path":"objects/Deflect/Deflect.yy",},
     {"name":"DeflectMelee","order":15,"path":"objects/DeflectMelee/DeflectMelee.yy",},
     {"name":"DelayedIntestines","order":74,"path":"objects/DelayedIntestines/DelayedIntestines.yy",},
+    {"name":"DelayEnemyKill","order":47,"path":"objects/DelayEnemyKill/DelayEnemyKill.yy",},
     {"name":"DeleteSave","order":44,"path":"objects/DeleteSave/DeleteSave.yy",},
     {"name":"Devastator","order":248,"path":"objects/Devastator/Devastator.yy",},
     {"name":"DirectorBurst","order":37,"path":"objects/DirectorBurst/DirectorBurst.yy",},

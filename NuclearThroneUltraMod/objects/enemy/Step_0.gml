@@ -6,7 +6,7 @@ if !ignoreOverlap
 	var overlap = instance_place(x,y,enemy);
 	if overlap != noone
 	{
-		if meleedamage > 0 && team != overlap.team && overlap.sprite_index != overlap.spr_hurt
+		if meleedamage > 0 && team != overlap.team && overlap.sprite_index != overlap.spr_hurt && object_index != Player
 		{
 			with overlap
 			{
