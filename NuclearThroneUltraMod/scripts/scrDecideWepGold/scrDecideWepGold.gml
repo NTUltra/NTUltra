@@ -29,7 +29,7 @@ function scrDecideWepGold() {
 				maxTries --;
 			}
 			until ((!array_contains(otherChestWeps,myWep) &&
-			((myWep != Player.myWep and myWep != Player.bwep) or Player.race = 7))
+			((myWep != Player.wep and myWep != Player.bwep) or Player.race = 7))
 			&& UberCont.start_wep_have_all[Player.race] ||
 			scrCheckStartingWepUnlocked(myWep,Player.race) > -1 ||
 			maxTries <= 0
@@ -44,7 +44,7 @@ function scrDecideWepGold() {
 				645,646,647,649,651,653,731,765,771)
 				maxTries --;
 			}
-			until (((myWep != Player.myWep and myWep != Player.bwep) or Player.race = 7)
+			until (((myWep != Player.wep and myWep != Player.bwep) or Player.race = 7)
 			&& UberCont.start_wep_have_all[Player.race] ||
 			scrCheckStartingWepUnlocked(myWep,Player.race) > -1 ||
 			maxTries <= 0
