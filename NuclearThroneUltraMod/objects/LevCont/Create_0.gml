@@ -505,6 +505,7 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			skill_got[18] = 1;
 			skill_got[38] = 1;
 			skill_got[40] = 1;
+			skill_got[46] = 1;
 			if race != 10 && race != 12 && race != 19
 			{
 				//not Rebel yung cuz, angel and skeleton
@@ -716,6 +717,7 @@ if scrIsGamemode(32) {
 		skill_got[18] = 0;
 		skill_got[38] = 0;
 		skill_got[40] = 0;
+		skill_got[46] = 0;
 		ultra_got[19] = 0;
 		ultra_got[48] = 0;
 		ultra_got[33] = 0;

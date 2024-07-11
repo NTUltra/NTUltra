@@ -1,8 +1,8 @@
 /// @description Draw
 if UberCont.normalGameSpeed == 60
-	t += 0.15;
+	t += timeIncrease*0.5;
 else
-	t += 0.3;
+	t += timeIncrease;
 lp = clamp(t-0.5,0,1);
 draw_set_alpha(lerp(1,0.5,lp));
 draw_line_width_colour(

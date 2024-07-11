@@ -29,15 +29,12 @@ if instance_exists(Player)
 			if sprite_index != spr_hurt
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 			DealDamage(other.dmg)
-			if instance_exists(Player){
-			if Player.ultra_got[28]//roids ultra d
-			{DealDamage(1);}}
 			sprite_index = spr_hurt
 			image_index = 0
 			if team != 0
 			{
 				scrForcePosition60fps();
-				motion_add(other.direction,2)
+				motion_add(other.direction,other.knockback)
 				if speed > maxSpeed 
 					speed = maxSpeed;
 			}
@@ -45,9 +42,10 @@ if instance_exists(Player)
 			with other
 			{
 				mask_index = mskPickupThroughWall;
-				t += 0.3;
+				t += timeIncrease;
 				if cost != 0
 					scrRecycleGland(cost,radCost);
+				event_user(1);
 			}
 		}
 	}

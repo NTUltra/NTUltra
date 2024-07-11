@@ -1,5 +1,6 @@
 /// @description Knife Sneak
 wepangle = -wepangle
+existTime = 20;
 motion_add(gunangle,6)
 with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle),NarrowEnemyVenomShank)
 {

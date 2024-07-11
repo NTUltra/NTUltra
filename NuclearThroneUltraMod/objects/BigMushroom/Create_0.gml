@@ -1,9 +1,9 @@
 maxhealth = 500
 mySize = 1
 
-spr_idle = sprBigMushroom
-spr_hurt = sprBigMushroomHurt
-spr_dead = sprBigMushroomDead
+spr_idle = sprBanditMushroom
+spr_hurt = sprBanditMushroomHurt
+spr_dead = sprBanditMushroomDead
 
 event_inherited()
 move_contact_solid(random(360),random(12))

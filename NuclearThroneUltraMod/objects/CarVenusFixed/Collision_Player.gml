@@ -20,8 +20,17 @@ if KeyCont.key_pick[other.p] = 1
 	{
 		x = other.x;
 		y = other.y;
+		scrForcePosition60fps();
 		type = 1
 		alarm[1] = 1;
+		pullstrength = 3;
+		with Player
+		{
+			lockout = true;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
+		}
 	}
 	
 	with WantBoss {

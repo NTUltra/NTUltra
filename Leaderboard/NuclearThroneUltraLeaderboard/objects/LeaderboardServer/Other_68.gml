@@ -185,6 +185,7 @@ if (type == network_type_data) {
 			else if isScore
 			{
 				newScore[3] = buffer_read(buffer,buffer_u8)//area
+				show_debug_message("AREA: ", string(newScore[3]));
 				newScore[4] = buffer_read(buffer,buffer_u8)//subarea
 				newScore[5] = buffer_read(buffer,buffer_u8)//loops technically limited to loop 255
 				newScore[6] = buffer_read(buffer,buffer_u8)//race

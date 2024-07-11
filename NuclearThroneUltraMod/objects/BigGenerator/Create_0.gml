@@ -1,4 +1,4 @@
-maxhealth = 200;//230
+maxhealth = 150;//230
 mySize = 2;
 
 spr_inactive = sprBigGeneratorInactive;

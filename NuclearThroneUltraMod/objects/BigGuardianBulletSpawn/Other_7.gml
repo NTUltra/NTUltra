@@ -21,8 +21,8 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,max(5,2.4+random(1.6)+addspeed));
-				alarm[0] += 2;
+				motion_add(dir,max(5,2.4+random(1.5)+addspeed));
+				alarm[0] += 1;
 			}
 		}
 		else
@@ -43,7 +43,7 @@ if target != noone && instance_exists(target)
 		{
 			with instance_create(x,y,InvertedBigGuardianSquareBullet)
 			{	
-				alarm[0] += 2;
+				alarm[0] += 1;
 				owner = other.owner;
 				team = other.team;
 				x += lengthdir_x(8, dir);
@@ -59,7 +59,7 @@ if target != noone && instance_exists(target)
 				team = other.team;
 				x += lengthdir_x(8, dir);
 				y += lengthdir_y(8, dir);
-				motion_add(dir,max(5,2.2+random(1.6)+addspeed));
+				motion_add(dir,max(5,2.2+random(1.5)+addspeed));
 			}
 		}
 	}

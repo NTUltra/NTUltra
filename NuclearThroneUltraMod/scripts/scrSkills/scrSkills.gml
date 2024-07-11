@@ -241,8 +241,8 @@ function scrSkills() {
 	skill_name[14] = "BOILING VEINS"
 	if !UberCont.useSeed && random(900)<1
 		skill_name[14] = "HOT HEAD"
-	skill_text[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>#EXPLOSIONS <r>BURN<r>#<r>"
-	skill_detail[14] = "NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>#EXPLOSIONS <r>BURN<r>##(WEAPON SPECIFIC MUTATION)";
+	skill_text[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#<r>#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>"
+	skill_detail[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>##(WEAPON SPECIFIC MUTATION)";
 	if instance_exists(Player) && Player.race == 13
 	{
 			

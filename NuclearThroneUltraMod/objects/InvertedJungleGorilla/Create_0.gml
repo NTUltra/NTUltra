@@ -20,4 +20,4 @@ projectileSpeed -= 2.5;
 actTime -= 3;
 maxSpeed += 0.4;
 acc += 2;
-deathProjectile += 3;
+deathProjectile += 2;

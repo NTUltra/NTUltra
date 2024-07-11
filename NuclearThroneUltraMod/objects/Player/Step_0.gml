@@ -16,7 +16,7 @@ if ultra_got[21] && altUltra
 	}
 	if canInfiniteFireB
 	{
-		bcan_shoot = true;
+		bcan_shoot = 1;
 		if gunGodFirstB
 		{
 			gunGodFirstB = false;
@@ -1033,11 +1033,10 @@ if !instance_exists(LevCont) and visible = 1
 					{
 						scrFire();
 					}
-					/*
 					else
 					{
 						can_shoot = 0;	
-					}*/
+					}
 					y += jumpY;
 					mask_index = msk;
 				}
@@ -1046,6 +1045,8 @@ if !instance_exists(LevCont) and visible = 1
 					scrFire();
 				}
 			}
+			if reload > 0
+				can_shoot = 0;
     		autoFire = 6;
 			clicked = 0;
 		}
@@ -1291,6 +1292,11 @@ if (!instance_exists(LevCont))
 	if reload > lowa
 	{
 		reload -= 1
+		if UberCont.voidChallengeGoing[0]// && reload + 0.25 >= lowa
+		{
+			reload += 0.25;
+			//scr60fpsReload();
+		}
 		if race == 7
 			reload += 0.1;
 		if curse {
@@ -1354,7 +1360,7 @@ if (!instance_exists(LevCont))
 		}
 	
 		scr60fpsReload();
-		if reload <= 0 && !can_shoot
+		if reload <= 0 && can_shoot == 0
 		{
 			autoFire = 6;
 			can_shoot = 1
@@ -1437,7 +1443,7 @@ if (!instance_exists(LevCont))
 			breload -= 0.9
 		}
 		scr60fpsReload();
-		if breload <= 0 && !bcan_shoot
+		if breload <= 0 && bcan_shoot == 0
 		{
 			bcan_shoot = 1
 			if ultra_got[21] && altUltra	
@@ -1512,10 +1518,6 @@ if (!instance_exists(LevCont))
 			reload -= reduction
 			breload -= reduction*0.5;
 			creload -= reduction*0.5;
-		}
-		if UberCont.voidChallengeGoing[0]
-		{
-			reload += 0.25;
 		}
 		if skill_got[34] {
 			reload -= 0.1;
@@ -1667,11 +1669,11 @@ if (!instance_exists(LevCont))
 					if !place_meeting(x,y,Wall)
 					{
 						scrFire();
-					}/*
+					}
 					else
 					{
 						can_shoot = 0;	
-					}*/
+					}
 					y += jumpY;
 					mask_index = msk;
 				}

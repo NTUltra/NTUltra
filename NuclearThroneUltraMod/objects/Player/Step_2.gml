@@ -694,7 +694,7 @@ if (tookHit)
 				my_health = min(maxhealth,prevhealth+healTaken);
 			}
 			else
-				my_health += damageTaken;
+				my_health += max(0,damageTaken);
 			
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
@@ -743,9 +743,8 @@ if (tookHit)
 
 /* */
 ///strong spirit justasheep
-if(my_health <= 0 && maxhealth > 0 && alarm[3] < 1)
+if(my_health <= 0 && maxhealth > 0)
 {
-
     if skill_got[25]//strong spirit
     {
 	    if strongspirit==true&&strongspiritused==false
@@ -780,8 +779,10 @@ if(my_health <= 0 && maxhealth > 0 && alarm[3] < 1)
 			instance_create(x,y,Dust);
 		snd_play(sndExplosionS);
 		my_health = 4;
+		prevhealth = 4;
 		x = SkeletonSkull.x;
 		y = SkeletonSkull.y;
+		scrForcePosition60fps();
 		with instance_create(x,y,HealFX)
 		{
 			sprite_index = sprHealBigFX;
@@ -1064,12 +1065,12 @@ if my_health <= 0 && armour < 1
 		Sleep(min(40,20 + (phoenixrevives*2)));
 		BackCont.shake += min(50,20 + (phoenixrevives*2));
 	}
-	else if race = 9 and bleed < 150 and !(altUltra && ultra_got[33]) and !outOfCombat
+	else if race = 9 and bleed < 150 and !(altUltra && ultra_got[33])
 	{
 		if bleed == 0
 		{
 			bleed = 1;
-			maxhealth-=2;
+			maxhealth -= 2;
 			if maxhealth<0
 			{maxhealth=0}
 
@@ -1153,7 +1154,7 @@ if my_health <= 0 && armour < 1
 			motion_add(random(360),2+random(3))
 			image_angle = direction}
 		}
-		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont)
+		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont) && !outOfCombat
 		{
 			if UberCont.normalGameSpeed == 60
 				bleed += 0.5;

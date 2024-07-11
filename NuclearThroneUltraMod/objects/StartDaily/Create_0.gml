@@ -2,6 +2,7 @@
 serverSocket = -1;
 latestVersion = UberCont.updateVersion;
 UberCont.useSeed = true;
+UberCont.runScore = [];
 myClientId = -1;
 gotSteam = false;
 debug("START DAILY");

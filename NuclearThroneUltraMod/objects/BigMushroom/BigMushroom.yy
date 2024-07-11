@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBigMushroom",
-    "path":"sprites/sprBigMushroom/sprBigMushroom.yy",
+    "name":"sprBanditMushroom",
+    "path":"sprites/sprBanditMushroom/sprBanditMushroom.yy",
   },
   "spriteMaskId":null,
   "visible":true,

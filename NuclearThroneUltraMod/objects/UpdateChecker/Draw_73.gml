@@ -1,5 +1,5 @@
 draw_set_halign(fa_right);
-var oofsetto = 16;
+var oofsetto = 0;//16;
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4 - oofsetto;
 y = __view_get( e__VW.YView, 0 )-39+Menu.widescreen;
 if (notUpdated == "*")

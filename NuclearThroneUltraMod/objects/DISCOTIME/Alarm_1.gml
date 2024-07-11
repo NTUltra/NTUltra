@@ -10,7 +10,7 @@ if (ds_list_size(sheep) < 8)
 		ds_list_add(sheep,{
 			spr: choose(sprSheepIdleA,sprSheepIdleA,sprSheepIdleB,sprSharpStress,sprSheepWalk,sprDiscoCrown,sprLoveBomb,
 			choose(sprPotatoCannon,sprSheepIdleA,sprDiscoCrown,sprSheepWalk,sprSheepIdleB,sprMutant5CIdle,sprLoveBomb,sprSharpStress,sprMutant9HeadlessWalk,sprPotato,sprDisc,sprLollipop
-			,sprBigMushroom,sprBone,sprMutant6Idle,sprPandaMenu)),
+			,sprBanditMushroom,sprBone,sprMutant6Idle,sprPandaMenu)),
 			xscl: choose(2,-2),
 			yscl: choose(2,-2),
 			xx: random_range(-8,camera_get_view_width(view_camera[0]))+8,

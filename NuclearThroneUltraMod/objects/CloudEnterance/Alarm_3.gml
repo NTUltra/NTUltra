@@ -47,12 +47,8 @@ if loseSkills < 1
 	with Player
 	{
 		area = 138;
-		subarea = 0;	
-	}
-	with Portal {
-		instance_destroy();
-		with Player
-			image_angle = 0;
+		subarea = 0;
+		inverted = false;
 	}
 	with instance_create(x,y,Portal)
 	{

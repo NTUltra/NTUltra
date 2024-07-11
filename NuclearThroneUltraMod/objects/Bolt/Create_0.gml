@@ -12,3 +12,5 @@ xprev = xstart;
 yprev = ystart;
 hitEntities = [];
 knockback = 6;
+stickToWallTime = 10;
+stickToWallTimeRandom = 20;

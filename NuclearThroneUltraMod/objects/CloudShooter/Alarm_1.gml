@@ -42,10 +42,18 @@ if target != noone && instance_exists(target) {
 		moveDirection += angle_difference(point_direction(x,y,xstart,ystart), moveDirection) * 0.25;	
 	}
 } else {
+	if point_distance(x,y,xstart,ystart) > originRange
+	{
+		moveDirection += angle_difference(point_direction(x,y,xstart,ystart), moveDirection) * 0.25;
+		alarm[1] = actTime * 0.5;
+	}
+	else
+	{
 	var n = instance_nearest(x,y,Floor)
 	var dir = random(360);
 	if n != noone
 		dir = point_direction(x,y,Floor.x+16,Floor.y+16);
     moveDirection += angle_difference(dir,moveDirection) * 0.25;
 	alarm[1] += actTime;
+	}
 }

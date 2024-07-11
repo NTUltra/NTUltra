@@ -26,6 +26,9 @@ if KeyCont.key_pick[Player.p] = 1
 		with instance_create_depth(x,y,-1,Portal)
 		{
 			pullstrength = 3;
+			x = other.x
+			y = other.y;
+			scrForcePosition60fps();
 			alarm[1] = 1;
 		}
 	}

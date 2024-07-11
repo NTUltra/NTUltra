@@ -21,9 +21,9 @@ if time == 1
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
 		if instance_exists(Player) && Player.race == 25
-			DealDamage(20,false,true,false);
+			DealDamage(25,false,true,false);
 		else
-			DealDamage(16,false,true,false);
+			DealDamage(20,false,true,false);
 		
 		var direct = other.id;
 		var hits = ds_list_create();
@@ -34,7 +34,7 @@ if time == 1
 			{
 				if id != direct && team != 2 && my_health > 0
 				{
-					DealDamage(5)
+					DealDamage(8)
 					sprite_index = spr_hurt
 					image_index = 0
 					motion_add(hk + 160,5)

@@ -7,7 +7,7 @@ var sprE = sprPopoLaserEnd;
 if team == 2
 	sprt = sprLaser;
 with instance_create(x,y,IDPDLaser)
-{image_angle = other.gunangle+random(6)-3+8
+{image_angle = other.gunangle+random(6)-3+6
 team = other.team
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
@@ -19,19 +19,19 @@ event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 
 with instance_create(x,y,IDPDLaser)
-{image_angle = other.gunangle+random(6)-3-8
+{image_angle = other.gunangle+random(6)-3-6
 team = other.team
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 
 with instance_create(x,y,IDPDLaser)
-{image_angle = other.gunangle+random(6)-3+16
+{image_angle = other.gunangle+random(6)-3+12
 team = other.team
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 
 with instance_create(x,y,IDPDLaser)
-{image_angle = other.gunangle+random(6)-3-16
+{image_angle = other.gunangle+random(6)-3-12
 team = other.team
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}

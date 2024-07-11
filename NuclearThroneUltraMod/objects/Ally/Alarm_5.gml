@@ -49,7 +49,7 @@ if  alarm[4] > 0
 		for(var i = 0;i < al; i++)
 		{
 			with projs[| i] {
-				if !isGrenade && (typ == 1 || typ == 2 || typ == 3)
+				if team != 2 && (!isGrenade && (typ == 1 || typ == 2 || typ == 3))
 				{
 					BackCont.shake += 2
 					instance_destroy(id);

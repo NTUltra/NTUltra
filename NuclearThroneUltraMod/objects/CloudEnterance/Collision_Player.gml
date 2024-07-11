@@ -3,6 +3,7 @@ if used
 	isInteractableNow = false;	
 else if cAlpha > 0 && hasEnoughMuts
 {
+	instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 	with Player
 		isOnInteractable = true;
 	if KeyCont.key_pick[Player.p] = 1 

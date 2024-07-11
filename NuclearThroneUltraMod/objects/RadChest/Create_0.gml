@@ -6,7 +6,7 @@ maxhealth = 4
 event_inherited();
 image_speed = 0
 canOpenMind = true;
-raddrop = 23;
+raddrop = 22;
 spr_idle = sprRadChest
 spr_hurt = sprRadChestHurt
 spr_dead = sprRadChestCorpse

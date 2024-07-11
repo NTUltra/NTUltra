@@ -18,7 +18,10 @@ if mode = 0
 	if image_index >= 14
 	{
 		if !audio_is_playing(sndLogoLoop)
+		{
 			snd_loop(sndLogoLoop);
+			audio_sound_gain(sndLogoLoop, max(0, UberCont.opt_ambvol), 0);
+		}
 		draw_set_blend_mode(bm_add)
 		ang = 0
 

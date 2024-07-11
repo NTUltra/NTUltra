@@ -259,12 +259,15 @@ function scrGenerateFloorMaker(limiter) {
 					i += 2;
 					yy += 132;
 				}
-				with instance_create(x - 160, y + 320, BigGenerator)
-					image_xscale = -1;
-				instance_create(x + 192, y + 320, BigGenerator);
-				with instance_create(x - 160, y + 480, BigGenerator)
-					image_xscale = -1;
-				instance_create(x + 192, y + 480, BigGenerator);
+				if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+				{
+					with instance_create(x - 160, y + 320, BigGenerator)
+						image_xscale = -1;
+					instance_create(x + 192, y + 320, BigGenerator);
+					with instance_create(x - 160, y + 480, BigGenerator)
+						image_xscale = -1;
+					instance_create(x + 192, y + 480, BigGenerator);
+				}
 
 			}
 			if GetPlayerLoops() > 1

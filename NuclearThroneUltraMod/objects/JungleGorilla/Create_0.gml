@@ -31,12 +31,12 @@ maxSpeed = 3.4;
 gunX = -10;
 projectileSpeed = 5.1;
 projectileSpeedDif = 0.2;
-deathProjectile = 5;
+deathProjectile = 4;
 if loops > 0
 {
 	projectileSpeed += 0.5;
 	actTime -= 5;
-	deathProjectile = 9;
+	deathProjectile = 8;
 }
 fireDelay = 3;
 sleeping = false;

@@ -83,11 +83,25 @@ function scrDrawHUD() {
 			fill = sprHealthFillVenom;	
 		}
 		if dataRef.maxhealth!=0 {
-		draw_sprite_ext(fill,2,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
-		draw_sprite_ext(fill,1,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+			draw_sprite_ext(fill,2,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+			draw_sprite_ext(fill,1,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 
-		if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
-		draw_sprite_ext(fill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+			if ((dataRef.sprite_index = dataRef.spr_hurt and dataRef.image_index < 1 and !instance_exists(Portal)) or dataRef.lsthealth < dataRef.my_health) and !instance_exists(GenCont) and !instance_exists(LevCont)
+				draw_sprite_ext(fill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+			else if dataRef.my_health > dataRef.maxhealth
+			{
+				var maxCap = max(dataRef.maxhealth*2,20);
+				if dataRef.my_health >= maxCap
+				{
+					draw_sprite(sprHealthBar,2,vx+hx+2,vy+7);//Overhealthbar
+					draw_sprite_ext(fill,4,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)	
+				}
+				else
+				{
+					draw_sprite(sprHealthBar,1,vx+hx+2,vy+7);//Overhealthbar
+					draw_sprite_ext(fill,3,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
+				}
+			}
 		}
 		if dataRef.metabolism == metaBreak
 			draw_sprite(sprHealtBarMetabolismFull,0,vx+hx,vy+4)

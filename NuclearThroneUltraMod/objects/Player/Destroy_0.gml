@@ -1,4 +1,5 @@
 //UNLOCK EASY MODE
+debug("Goodbye");
 if area=1 && subarea=1 && loops=0 && visible && my_health < 1
 scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
 audio_stop_sound(sndFishRollUpgLoop);

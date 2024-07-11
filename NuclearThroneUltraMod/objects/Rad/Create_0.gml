@@ -1,6 +1,6 @@
 friction = 0.21
 image_angle = random(360)
-
+depth = -1;
 isGettingSucked = false;
 
 blink = 30

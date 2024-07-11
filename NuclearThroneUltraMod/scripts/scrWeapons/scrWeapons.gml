@@ -3928,7 +3928,7 @@ function scrWeapons() {
 	wep_name[350] = "HYPER GLOVE"
 	wep_type[350] = 4
 	wep_auto[350] = 1
-	wep_load[350] = 16//23 dead glove
+	wep_load[350] = 18//23 dead glove
 	wep_cost[350] = 2
 	wep_sprt[350] = sprHyperGlove
 	wep_area[350] = 8
@@ -6452,7 +6452,7 @@ function scrWeapons() {
 	wep_type[575] = 3
 	wep_auto[575] = 1
 	wep_load[575] = 20
-	wep_cost[575] = 3.5
+	wep_cost[575] = 4
 	wep_sprt[575] = sprHeavyPopBladegun
 	wep_area[575] = 16
 	wep_text[575] = "blades don't hurt you"
@@ -8474,7 +8474,7 @@ function scrWeapons() {
 	wep_type[757] = 3
 	wep_auto[757] = 2
 	wep_load[757] = 13
-	wep_cost[757] = 4
+	wep_cost[757] = 3.5
 	wep_sprt[757] = sprNailGun
 	wep_area[757] = 1
 	wep_text[757] = "nail them to the wall"
@@ -8797,7 +8797,7 @@ function scrWeapons() {
 	wep_name[786] = "CHARGE LANCE"
 	wep_type[786] = 0
 	wep_auto[786] = 0
-	wep_load[786] = 14
+	wep_load[786] = 12
 	wep_cost[786] = 0
 	wep_sprt[786] = sprChargeLance1
 	wep_area[786] = 6
@@ -8853,7 +8853,7 @@ function scrWeapons() {
 	wep_name[791] = "RAPIER"
 	wep_type[791] = 0
 	wep_auto[791] = 0
-	wep_load[791] = 14
+	wep_load[791] = 16
 	wep_cost[791] = 0
 	wep_sprt[791] = sprRapier
 	wep_area[791] = 8
@@ -8871,7 +8871,43 @@ function scrWeapons() {
 	wep_text[792] = "martial arts?"
 	wep_swap[792] = sndSwapSword
 	wep_rad[792] = 0;
+	
+	wep_name[793] = "RAILGUN"
+	wep_type[793] = 5
+	wep_auto[793] = 0
+	wep_load[793] = 35
+	wep_cost[793] = 5
+	wep_sprt[793] = sprRailgun
+	wep_area[793] = 10
+	wep_text[793] = "100 TO 1"
+	wep_swap[793] = sndSwapEnergy
+	wep_rad[793] = 0;
+	wep_popup[793] = "HIT SHOTS PARTIALLY RELOAD THIS GUN!";
+	
+	wep_name[794] = "DIRECTOR RETRACTOR"
+	wep_type[794] = 3
+	wep_auto[794] = 0
+	wep_load[794] = 23
+	wep_cost[794] = 1.5
+	wep_sprt[794] = sprDirectorRetractor
+	wep_area[794] = 3
+	wep_text[794] = "fire again to retract the bolt"
+	wep_swap[794] = sndSwapBow
+	wep_rad[794] = 0;
+	wep_popup[794] = "FIRE AGAIN TO#RETURN BOLT";
+	
+	wep_name[795] = "ARROW RAIN"
+	wep_type[795] = 3
+	wep_auto[795] = 2
+	wep_load[795] = 30
+	wep_cost[795] = 4
+	wep_sprt[795] = sprArrowRain
+	wep_area[795] = 6
+	wep_text[795] = "rain down the arrows!"
+	wep_swap[795] = sndSwapBow
+	wep_rad[795] = 0;
 	//EXECUTIONER
+	//Swiss army bow
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

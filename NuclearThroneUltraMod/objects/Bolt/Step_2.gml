@@ -10,6 +10,6 @@ if alarm[11] < 1
 if speed<1&&alarm[2]<1
 {
 alarm[3] = 3;
-alarm[2] = 10+random(20);//delay before destroying
+alarm[2] = stickToWallTime+irandom(stickToWallTimeRandom);//delay before destroying
 }
 

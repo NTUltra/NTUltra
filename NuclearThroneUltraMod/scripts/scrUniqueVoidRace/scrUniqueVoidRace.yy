@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrUniqueVoidRace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrUniqueVoidRace",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

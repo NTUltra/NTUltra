@@ -6,7 +6,10 @@ var vw = round(camera_get_view_width(view_camera[0]));
 if text == "SHOWLOGO"
 {
 	if !audio_is_playing(sndLogoLoop)
+	{
 		snd_loop(sndLogoLoop);
+		audio_sound_gain(sndLogoLoop, max(0, UberCont.opt_ambvol), 0);
+	}
 	var xxx = vx + vw*0.5;
 	var yyy = vy + vh*0.5;
 	draw_sprite(sprLogo,18,xxx,yyy);

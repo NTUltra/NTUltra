@@ -68,6 +68,10 @@ with JumpFishBoost
 {
 	draw_self();	
 }
+with BoltTrailTop
+{
+	event_perform(ev_draw,0);	
+}
 with Feather
 {
 	event_perform(ev_draw,0);
@@ -277,6 +281,10 @@ with LobGrenade
 {
 	if !visible
 		event_perform(ev_draw,0);	
+}
+with LobBolt
+{
+	event_perform(ev_draw,0);	
 }
 with DropGrenade
 {

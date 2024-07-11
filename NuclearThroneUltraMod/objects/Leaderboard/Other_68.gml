@@ -12,7 +12,7 @@ if (type == network_type_data) {
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
-		scrSendScore(buffer);
+			scrSendScore(buffer);
 		break;
 		case NETDATA.SCORE:
 		break;

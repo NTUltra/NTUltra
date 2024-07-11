@@ -3002,7 +3002,6 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	instance_create(x,y,Smoke)
-	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		dmg = 25;
@@ -3016,25 +3015,23 @@ function scrFire2(hasTailNow) {
 		team = other.team
 	}
 	instance_create(x,y,BigWallBreak);
-	repeat(3+Player.skill_got[13])
+	repeat(5+Player.skill_got[13])
 	{
-		if !hitWall
+		x += lengthdir_x(32,aimDirection);
+		y += lengthdir_y(32,aimDirection);
+		instance_create(x,y,Dust)
+		instance_create(x,y,Smoke)
+		with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
-			hitWall = scrMoveContactSolid(aimDirection,40)
-			instance_create(x,y,Dust)
-			instance_create(x,y,Smoke)
-			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
-			{
-				dmg = 25;
-				wallPierce *= 0.5;
-				sprite_index=sprUltraSlash;
-				longarms = 0
+			dmg = 25;
+			wallPierce *= 0.5;
+			sprite_index=sprUltraSlash;
+			longarms = 0
 				
-				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
-				image_angle = direction
-				team = other.team
-			}
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.5+longarms)
+			image_angle = direction
+			team = other.team
 		}
 	}
 	if !skill_got[2]
@@ -4662,11 +4659,11 @@ function scrFire2(hasTailNow) {
 		image_angle = direction
 		team = other.team
 	}
-	repeat(10+(Player.skill_got[13] * 5))
+	repeat(8+(Player.skill_got[13] * 5))
 	{
 		if !hitWall
 		{
-			hitWall = scrMoveContactSolid(aimDirection,42)
+			hitWall = scrMoveContactSolid(aimDirection,48)
 			instance_create(x,y,Dust)
 			instance_create(x,y,Smoke)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
@@ -4684,9 +4681,9 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-	scrForcePosition60fps();
-	xprevious = x;
-	yprevious = y;
+		scrForcePosition60fps();
+		xprevious = x;
+		yprevious = y;
 	}
 	else
 	{
@@ -16027,7 +16024,7 @@ function scrFire2(hasTailNow) {
 	//MICRO GRENADE
 	case 728:
 
-	snd_play(sndMicroMicroLauncher,0.03,true);
+	snd_play_fire(sndMicroMicroLauncher,0.03,true);
 	with instance_create(x,y,MicroMicroNade)
 	{
 		direction = aimDirection+(random(16)-8)*other.accuracy;

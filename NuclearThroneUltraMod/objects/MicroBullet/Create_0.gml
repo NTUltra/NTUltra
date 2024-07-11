@@ -12,4 +12,14 @@ radCost = 0;
 borderWidth = 0.5;
 middleColour = c_white;
 canDamage = true;
+timeIncrease = 0.3;
+canRecycle = false;
 event_user(0);
+if instance_exists(Player)
+{
+	if Player.ultra_got[28]//roids ultra d
+	{
+		dmg += 1;
+	}
+}
+knockback = 2;

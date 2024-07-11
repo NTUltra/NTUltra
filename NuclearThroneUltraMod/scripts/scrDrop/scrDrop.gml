@@ -37,6 +37,23 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 			itemdrop *= 0.95;
 			canHealth *= 0.5;
 		}
+		if itemdrop > 1
+		{
+			var lwep = Player.wep;
+			var lt = Player.wep_type[lwep];
+			var lammo = Player.ammo[lt];
+			var lcost = Player.wep_cost[lwep];
+			var lbwep = Player.bwep;
+			var lbt = Player.wep_type[lbwep];
+			var lbammo = Player.ammo[lbt];
+			var lbcost = Player.wep_cost[lbwep];
+			if lt != 0 && lammo < lcost && (lbt == 0 || (lbt != 0 && lbammo < lbcost))
+			{
+				itemdrop *= 2;
+				itemdrop += 30;
+				canHealth = 0;
+			}
+		}
 		if instance_exists(WantHealth)
 		{
 			if h >= mh
