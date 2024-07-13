@@ -22,7 +22,8 @@ if instance_exists(Player)
 	
 	alarm[1] = 6
 	scrForcePosition60fps();
-	with instance_place(x,y,hitme)
+	hitTarget = instance_place(x,y,hitme);
+	with hitTarget
 	{
 		if other.team != team && my_health > 0
 		{

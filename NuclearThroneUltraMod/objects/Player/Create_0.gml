@@ -444,7 +444,6 @@ else {
     else {
 		wep = UberCont.start_wep[UberCont.selected_start_wep[race]];
 	}
-	debug(UberCont.selected_start_bwep[race]);
 	if UberCont.secondary_start_wep[race] && UberCont.selected_start_bwep[race] != -2
 	{
 		//SECONDARY STARTING WEAPON
@@ -538,8 +537,15 @@ if bwep != 0
 	var taka = 1.25;
 	if race == 7
 		taka = 1.5;
-	ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * taka);
-	ammo[wep_type[bwep]] = round(typ_ammo[wep_type[bwep]] * taka);
+	if wep_type[wep] == wep_type[bwep]
+	{
+		ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * 2);
+	}
+	else
+	{
+		ammo[wep_type[wep]] = round(typ_ammo[wep_type[wep]] * taka);
+		ammo[wep_type[bwep]] = round(typ_ammo[wep_type[bwep]] * taka);
+	}
 }
 else
 {

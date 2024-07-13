@@ -18,11 +18,12 @@ if !openedShop
 		image_index = 1;
 		image_speed = 0.4;
 	}
-	with instance_create(x + 32,y + 52,VoidShopItemMaxHealthUpgrade)
-	{
-		image_index = 0;
-		image_speed = 0.4;
-	}
+	if !UberCont.voidShopHealthUpgrade
+		with instance_create(x + 32,y + 52,VoidShopItemMaxHealthUpgrade)
+		{
+			image_index = 0;
+			image_speed = 0.4;
+		}
 	if UberCont.extraVan > -2
 		with instance_create(x - 48,y + 96,VoidShopItemReduceIdpdVans)
 		{

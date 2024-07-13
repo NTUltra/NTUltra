@@ -50,7 +50,7 @@ function scrSpawnEndLevelPortal(){
 								}
 							}
 						}
-						else
+						else if instance_exists(BackCont)
 						{
 							if BackCont.area == 119
 							{
@@ -70,7 +70,7 @@ function scrSpawnEndLevelPortal(){
 							with Floor
 							{
 								var n = instance_nearest(x,y,Portal);
-								if (n == noone || point_distance(x,y,n.x,n.y) > 64 && point_distance(x,y,other.x,other.y) < 256)
+								if ((n == noone || point_distance(x,y,n.x,n.y) > 64) && point_distance(x,y,other.x,other.y) < 256)
 								{
 									dir = id;
 								}
@@ -114,25 +114,30 @@ function scrSpawnEndLevelPortal(){
 					if instance_exists(Portal)
 					{
 						dir = instance_furthest(Portal.x,Portal.y,Floor);
-						with Floor
-						{
-							if object_index != FloorExplo
+						if dir != noone
+							with Floor
 							{
-								var n = instance_nearest(x,y,Portal);
-								if n != noone && point_distance(n.x,n.y,x+16,y+16) > 128 {
-									dir = id;
+								if object_index != FloorExplo
+								{
+									var n = instance_nearest(x,y,Portal);
+									if n != noone && point_distance(n.x,n.y,x+16,y+16) > 128 {
+										dir = id;
+									}
 								}
 							}
-						}
 					}
 					else
 					{
 						dir = instance_nearest(x-16,y-16,Floor);
 					}
-				    with instance_create(dir.x+16,dir.y+16,Portal)
+					if dir != noone
 					{
-						type = 1
-						event_user(0);
+					    with instance_create(dir.x+16,dir.y+16,Portal)
+						{
+							type = 1
+							event_user(0);
+						}
+						instance_create(dir.x+16,dir.y+16,WallBreak);
 					}
 					with UltraChest
 					{
@@ -146,7 +151,6 @@ function scrSpawnEndLevelPortal(){
 							scrUnlockGameMode(6,"FOR COMPLETING AN AREA#IN UNDER 10 SECONDS")
 					}
         
-				    instance_create(dir.x+16,dir.y+16,WallBreak);
         
 				    Sleep(50)
 					with Corpse

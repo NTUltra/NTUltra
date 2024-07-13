@@ -172,6 +172,10 @@ function scrLoadRun(selectedRunIndex){
 			UberCont.levelIncrease = encryptedRun.levelIncrease;
 			if variable_struct_exists(encryptedRun, "voidChallengeGoing")
 				UberCont.voidChallengeGoing = encryptedRun.voidChallengeGoing;
+			if variable_struct_exists(encryptedRun, "voidChallengeCompleted")
+				UberCont.voidChallengeGoing = encryptedRun.voidChallengeCompleted;
+			if variable_struct_exists(encryptedRun, "voidShopHealthUpgrade")
+				UberCont.voidShopHealthUpgrade = encryptedRun.voidShopHealthUpgrade;
 			UberCont.savedSeed = encryptedRun.seed;
 			UberCont.useSeed = true;
 			UberCont.seed = encryptedRun.seed;

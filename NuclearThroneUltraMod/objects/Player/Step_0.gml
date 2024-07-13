@@ -1788,7 +1788,8 @@ else if race == 23 && ultra_got[92] == 0
 else if speed > maxSpeed
 	speed = maxSpeed
 maxSpeed -= tempMaxSpeed;
-
+if lockout
+	speed = 0;
 if roll = 1
 {
 	if UberCont.normalGameSpeed == 60

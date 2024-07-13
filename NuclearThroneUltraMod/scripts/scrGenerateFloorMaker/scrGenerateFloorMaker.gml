@@ -40,7 +40,7 @@ function scrGenerateFloorMaker(limiter) {
 			else if Player.area = 100
 			goal = 40+s
 			else if Player.area = 101 || Player.area == 122
-			goal = 110+s
+			goal = 130+s
 			else if Player.area = 103
 			goal = 140+s
 			else if Player.area = 102

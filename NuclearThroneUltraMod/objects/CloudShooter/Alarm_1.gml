@@ -1,6 +1,7 @@
 ///@description AI
 alarm[1] = actTime;
 scrTarget()
+sleeping = false;
 if target != noone && instance_exists(target) {
 	gunangle = point_direction(x,y,target.x,target.y);
 	var tdis = point_distance(target.x, target.y, x, y);

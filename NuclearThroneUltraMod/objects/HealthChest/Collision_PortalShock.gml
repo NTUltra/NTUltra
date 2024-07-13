@@ -16,6 +16,9 @@ with Player {
 		var targetHealth = 8;
 		if scrIsGamemode(5)
 			targetHealth = 1;
+		if scrIsGamemode(9)
+			targetHealth += UberCont.casualModeHPIncrease;
+		targetHealth += UberCont.maxHpIncrease;
 		if skill_got[1] == 1//Rhino skin
 			targetHealth += 4;
 		if skill_got[31]//Tough shell
@@ -24,11 +27,13 @@ with Player {
 			targetHealth = max(1,targetHealth-2);
 		if skill_got[41]//nerves of steel
 			targetHealth = max(1,targetHealth-2);
-		if scrIsGamemode(9)
-			targetHealth += UberCont.casualModeHPIncrease;
+		if scrIsCrown(3)//Crown of death
+			targetHealth = max(1,targetHealth-1);
+		if scrIsCrown(20)//Crown of protection
+			targetHealth = max(1,targetHealth-1);
+		
 		if skill_got[9] 
 			mHpI *= 2;
-		targetHealth += UberCont.maxHpIncrease;
 	    if maxhealth<targetHealth
 	    {
 		    maxhealth = min(maxhealth + mHpI,targetHealth);

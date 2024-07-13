@@ -21,7 +21,7 @@ if gonnashoot > 0 {
 	
 	scrTarget();
 	if target != noone{
-		gunangle = point_direction(xprevious, yprevious, target.xprevious-target.hspeed, target.yprevious-target.vspeed)
+		gunangle += angle_difference(point_direction(xprevious, yprevious, target.xprevious-target.hspeed, target.yprevious-target.vspeed),gunangle) * 0.5;
 		if point_distance(target.x, target.y, x, y) > 200 || collision_line(x, y, target.x, target.y, Wall, 0, 0) >= 0 {
 			gonnashoot = 0
 			exit;

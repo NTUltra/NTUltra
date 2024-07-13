@@ -25,7 +25,17 @@ if loops > 0
 else
 {
 	snd_play(sndExplosionXL);
-	instance_create(x,y,GreenExplosion)
+	instance_create(x,y,GreenExplosion);
+	var ang = random(360);
+	var l = 32;
+	var angstep = 120;
+	repeat(3)
+	{
+		with instance_create(x+lengthdir_x(l,ang),y+lengthdir_y(l,ang),GreenExplosion) {
+			team = other.team;	
+		}
+		ang += angstep;
+	}
 }
 scrRaddrop(10);
 

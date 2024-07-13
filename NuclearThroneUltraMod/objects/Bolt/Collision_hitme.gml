@@ -46,6 +46,7 @@ if candmg and other.team != team
 				image_index = 0
 				motion_add(other.direction,other.knockback)
 			}
+			event_user(4);
 		}
 		if other.object_index == Player
 		{

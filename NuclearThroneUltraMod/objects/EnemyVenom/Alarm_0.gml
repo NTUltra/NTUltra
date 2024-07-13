@@ -7,7 +7,15 @@ if !instance_exists(owner) || owner == noone || owner.my_health < 2 || hits > ma
 }
 else
 {
-	alarm[0] = rate;	
+	if owner.object_index == Player
+	{
+		if Player.ultra_got[62] && Player.altUltra && Player.armour < 2//LIVING ARMOUR
+		{
+			instance_destroy();
+			exit;
+		}
+	}
+	alarm[0] = rate;
 }
 with owner
 {

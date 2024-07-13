@@ -1,10 +1,16 @@
 /// @description Go to Mushroomland
+if used
+{
+	isInteractableNow = false;
+	exit
+}
 if Player.wepmod1 != 0
 {
 	if KeyCont.key_pick[Player.p] = 1
 	{
 		if !instance_exists(Technomancer)
 		{
+			used = true;
 			KeyCont.key_pick[Player.p] = 2;
 			mask_index = mskPickupThroughWall
 		

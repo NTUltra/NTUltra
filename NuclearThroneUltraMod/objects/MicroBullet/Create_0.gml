@@ -23,3 +23,4 @@ if instance_exists(Player)
 	}
 }
 knockback = 2;
+hitTarget = noone;

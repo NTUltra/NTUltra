@@ -173,6 +173,9 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 	var targetHealth = 8;
 	if scrIsGamemode(5)
 		targetHealth = 1;
+	if scrIsGamemode(9)
+		targetHealth += UberCont.casualModeHPIncrease;
+	targetHealth += UberCont.maxHpIncrease;
 	if skill_got[1] == 1//Rhino skin
 		targetHealth += 4;
 	if skill_got[31]//Tough shell
@@ -181,9 +184,10 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 		targetHealth = max(1,targetHealth-2);
 	if skill_got[41]//nerves of steel
 		targetHealth = max(1,targetHealth-2);
-	if scrIsGamemode(9)
-		targetHealth += UberCont.casualModeHPIncrease;
-	targetHealth += UberCont.maxHpIncrease;
+	if scrIsCrown(3)//Crown of death
+		targetHealth = max(1,targetHealth-1);
+	if scrIsCrown(20)//Crown of protection
+		targetHealth = max(1,targetHealth-1);
 	maxhealth = targetHealth;
 	
 }

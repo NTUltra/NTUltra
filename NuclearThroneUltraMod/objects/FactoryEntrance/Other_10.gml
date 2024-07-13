@@ -1,10 +1,9 @@
 /// @description Go to Factory
-if my_health > 0
+if my_health > 0 && !used
 {
-	with Player
-		isOnInteractable = true;
 	if KeyCont.key_pick[Player.p] = 1 && !instance_exists(AssassinBoss) && !instance_exists(InvertedAssassinBoss) && !instance_exists(WantBoss)
 	{
+		used = true;
 		spr_idle = sprFactoryEntranceActive;
 		spr_hurt = sprFactoryEntranceActiveHurt;
 		sprite_index = sprFactoryEntranceActive;
@@ -123,4 +122,8 @@ if my_health > 0
 			prevArea = 9;
 		}
 	}
+}
+else
+{
+	isInteractableNow = false;
 }

@@ -10,7 +10,7 @@ if target != noone {
             walk = 10 + random(10)
             gunangle = point_direction(x, y, target.x, target.y)
         }
-        if point_distance(target.x, target.y, x, y) < 140 {
+        if point_distance(target.x, target.y, x, y) < 135 {
             //Fire
             if random(5) < 4 && ammo > 0 {
                 gunangle = point_direction(xprevious, yprevious, target.xprevious, target.yprevious)

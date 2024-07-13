@@ -7,6 +7,7 @@ spr_dead = sprFactoryEntranceDead
 name = "DEPOSIT WEAPON?"
 
 event_inherited();
+used = false
 snd_hurt = sndHitMetal;
 canMoveOver = true;
 shadowSprite = shd24;

@@ -91,7 +91,7 @@ if !instance_exists(GenCont)
 				if skill_got[9]
 					other.num = 2;
 				my_health += other.num;
-				var maxCap = max(maxhealth*2,20);
+				var maxCap = max(maxhealth*2,10);
 				my_health = min(my_health,maxCap);
 				if (my_health == maxCap)
 				{
@@ -113,6 +113,9 @@ if !instance_exists(GenCont)
 				var targetHealth = 8;
 				if scrIsGamemode(5)
 					targetHealth = 1;
+				if scrIsGamemode(9)
+					targetHealth += UberCont.casualModeHPIncrease;
+				targetHealth += UberCont.maxHpIncrease;
 				if skill_got[1] == 1//Rhino skin
 					targetHealth += 4;
 				if skill_got[31]//Tough shell
@@ -121,11 +124,13 @@ if !instance_exists(GenCont)
 					targetHealth = max(1,targetHealth-2);
 				if skill_got[41]//nerves of steel
 					targetHealth = max(1,targetHealth-2);
-				if scrIsGamemode(9)
-					targetHealth += UberCont.casualModeHPIncrease;
+				if scrIsCrown(3)//Crown of death
+					targetHealth = max(1,targetHealth-1);
+				if scrIsCrown(20)//Crown of protection
+					targetHealth = max(1,targetHealth-1);
+				
 				if skill_got[9] 
 					mHpI *= 2;
-				targetHealth += UberCont.maxHpIncrease;
 			    if maxhealth<targetHealth
 			    {
 				    maxhealth = min(maxhealth + mHpI,targetHealth);

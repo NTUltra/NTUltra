@@ -51,7 +51,7 @@ else if um == ultramods.laserBullet
 	}
 	with instance_create(x,y,LaserKraken)
 	{
-		image_angle = aimDir;
+		image_angle = other.direction;
 		team = other.team;
 		event_perform(ev_alarm,0);
 	}

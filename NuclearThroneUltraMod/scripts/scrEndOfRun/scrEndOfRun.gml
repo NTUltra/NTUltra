@@ -112,6 +112,7 @@ function scrEndOfRun(){
 		levelIncrease = 0;
 		voidChallengeGoing = [false,false,false,false,false,false];
 		voidChallengeCompleted= [false,false,false,false,false,false];
+		voidShopHealthUpgrade = false;
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;

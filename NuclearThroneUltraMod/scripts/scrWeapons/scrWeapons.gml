@@ -161,7 +161,7 @@ function scrWeapons() {
 	wep_type[14] = 4
 	wep_auto[14] = 0
 	wep_load[14] = 30
-	wep_cost[14] = 1
+	wep_cost[14] = 1.5
 	wep_sprt[14] = sprBazooka
 	wep_area[14] = 5
 	wep_text[14] = ""
@@ -800,7 +800,7 @@ function scrWeapons() {
 	wep_type[71] = 4
 	wep_auto[71] = 0
 	wep_load[71] = 34
-	wep_cost[71] = 5
+	wep_cost[71] = 6
 	wep_sprt[71] = sprSuperBazooka
 	wep_area[71] = 14
 	wep_text[71] = "\"JW could not resist\"#- Rami 2015"
@@ -812,7 +812,7 @@ function scrWeapons() {
 	wep_type[72] = 4
 	wep_auto[72] = 1
 	wep_load[72] = 13
-	wep_cost[72] = 1
+	wep_cost[72] = 1.5
 	wep_sprt[72] = sprGatlingBazooka
 	wep_area[72] = 9
 	wep_text[72] = ""
@@ -2535,7 +2535,7 @@ function scrWeapons() {
 	wep_name[226] = "GOLDEN SLUGGER"
 	wep_type[226] = 2
 	wep_auto[226] = 0
-	wep_load[226] = 21
+	wep_load[226] = 20
 	wep_cost[226] = 1
 	wep_sprt[226] = sprGoldenSlugger
 	wep_area[226] = 19
@@ -2569,7 +2569,7 @@ function scrWeapons() {
 	wep_type[229] = 4
 	wep_auto[229] = 0
 	wep_load[229] = 26
-	wep_cost[229] = 1
+	wep_cost[229] = 1.5
 	wep_sprt[229] = sprGoldenBazooka
 	wep_area[229] = 19
 	wep_text[229] = "GOLDEN ROCKETS"
@@ -3739,7 +3739,7 @@ function scrWeapons() {
 	wep_type[333] = 4
 	wep_auto[333] = 1
 	wep_load[333] = 7
-	wep_cost[333] = 0.5
+	wep_cost[333] = 1
 	wep_sprt[333] = sprHyperGatlingBazooka
 	wep_area[333] = 13
 	wep_text[333] = "bazooka minigun"
@@ -5979,7 +5979,7 @@ function scrWeapons() {
 	wep_type[532] = 4
 	wep_auto[532] = 0
 	wep_load[532] = 28
-	wep_cost[532] = 4.5
+	wep_cost[532] = 5
 	wep_sprt[532] = sprSuperBouncerBazooka
 	wep_area[532] = 14
 	wep_text[532] = "still can't resist 2022"
@@ -8173,7 +8173,7 @@ function scrWeapons() {
 	wep_name[730] = "FROST KNIFE"
 	wep_type[730] = 0
 	wep_auto[730] = 0
-	wep_load[730] = 18
+	wep_load[730] = 17
 	wep_cost[730] = 0
 	wep_sprt[730] = sprFrostDagger
 	wep_area[730] = 4
@@ -8184,7 +8184,7 @@ function scrWeapons() {
 	wep_name[731] = "GOLDEN FROST KNIFE"
 	wep_type[731] = 0
 	wep_auto[731] = 0
-	wep_load[731] = 17
+	wep_load[731] = 16
 	wep_cost[731] = 0
 	wep_sprt[731] = sprGoldenFrostDagger
 	wep_area[731] = -1
@@ -8405,8 +8405,8 @@ function scrWeapons() {
 	wep_name[751] = "SUPER COFFEE CANNON"
 	wep_type[751] = 1
 	wep_auto[751] = 1
-	wep_load[751] = 2
-	wep_cost[751] = 5
+	wep_load[751] = 4
+	wep_cost[751] = 6
 	wep_sprt[751] = sprSuperCoffeeCannon
 	wep_area[751] = 32
 	wep_text[751] = "tttttime forrrrrr sommeeeee morrrrrrrre coffeeeeeeeeee!"
@@ -8906,8 +8906,53 @@ function scrWeapons() {
 	wep_text[795] = "rain down the arrows!"
 	wep_swap[795] = sndSwapBow
 	wep_rad[795] = 0;
-	//EXECUTIONER
+	
+	wep_name[796] = "MAGNETIC CROSSBOW"
+	wep_type[796] = 3
+	wep_auto[796] = 2
+	wep_load[796] = 30
+	wep_cost[796] = 3
+	wep_sprt[796] = sprMagneticCrossbow
+	wep_area[796] = 5
+	wep_text[796] = "seeks out enemies like crazy"
+	wep_swap[796] = sndSwapBow
+	wep_rad[796] = 0;
+	wep_popup[796] = "REDIRECTS WHEN PIERCING";
+	
+	wep_name[797] = "KRAKEN MACHINEGUN"
+	wep_type[797] = 1
+	wep_auto[797] = 1
+	wep_load[797] = 3
+	wep_cost[797] = 5
+	wep_sprt[797] = sprKrakenMachinegun
+	wep_area[797] = 10
+	wep_text[797] = "ocean bullets"
+	wep_swap[797] = sndSwapPistol
+	wep_rad[797] = 0;
+	
+	wep_name[798] = "MICRO CRASH"
+	wep_type[798] = 1
+	wep_auto[798] = 1
+	wep_load[798] = 5
+	wep_cost[798] = 6.5
+	wep_sprt[798] = sprMicroCrash
+	wep_area[798] = 9
+	wep_text[798] = "instant crash test"
+	wep_swap[798] = sndSwapShotgun
+	wep_rad[798] = 0;
+	
+	wep_name[799] = "VOID EXECUTIONER"
+	wep_type[799] = 4
+	wep_auto[799] = 3
+	wep_load[799] = 55
+	wep_cost[799] = 4
+	wep_sprt[799] = sprVoidExecutioner
+	wep_area[799] = 28
+	wep_text[799] = "rip and tear"
+	wep_swap[799] = sndSwapSword
+	wep_rad[799] = 0;
 	//Swiss army bow
+	//Charge boomerang
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

@@ -24,6 +24,11 @@ switch(array_length(UberCont.collectedRewards))
 		if scrIsGamemode(32)
 			name += "GAIN ONE MUTATION";
 		else
-			name += "GAIN 1 MAX HP";
+		{
+			if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//LIVING ARMOUR
+				name += "GAIN 1 MAX ARMOUR";
+			else
+				name += "GAIN 1 MAX HP";
+		}
 	break;
 }

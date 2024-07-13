@@ -92,15 +92,18 @@ function scrDrawGameOver() {
 		}
 		if scrIsGamemode(47)
 		{
-			if opt_gm_char_active == 0
+			with UberCont
 			{
-				do {useRaceActive = 1+irandom(racemax-1);} until (race_have[useRaceActive] = 1)
-				with instance_create(x,y,UnlockPopup)
-					mytext=other.race_name[other.useRaceActive];
-			}
-			else
-			{
-				useRaceActive = opt_gm_char_active
+				if opt_gm_char_active == 0
+				{
+					do {useRaceActive = 1+irandom(racemax-1);} until (race_have[useRaceActive] = 1)
+					with instance_create(x,y,UnlockPopup)
+						mytext=other.race_name[other.useRaceActive];
+				}
+				else
+				{
+					useRaceActive = opt_gm_char_active
+				}
 			}
 		}
 		if scrIsCrown(0)

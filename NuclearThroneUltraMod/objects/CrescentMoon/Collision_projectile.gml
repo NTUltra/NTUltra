@@ -74,7 +74,7 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 							x = xprevious;
 							y = yprevious;	
 						}
-						if other.squares[$ id] > 17
+						if other.squares[$ id] > 14
 						{
 							instance_destroy();
 							struct_remove(other.squares,id);

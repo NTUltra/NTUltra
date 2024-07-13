@@ -6,7 +6,7 @@ function scrHeal(num = 1, canOverHeal = false){
 		exit;
 	if !Player.canHeal
 		exit;
-	var maxCap = max(Player.maxhealth*2,20);
+	var maxCap = max(Player.maxhealth*2,10);
 	if canOverHeal || Player.my_health + num <= Player.maxhealth
 		Player.my_health += num
 	else
@@ -23,7 +23,7 @@ function scrHeal(num = 1, canOverHeal = false){
 			if canOverHeal
 			{
 				Player.my_health = min(Player.my_health,maxCap);
-				if (Player.my_health == max(Player.maxhealth*2,20)) {
+				if (Player.my_health == max(Player.maxhealth*2,10)) {
 					popupText.mytext = "MAX OVERHEAL!";
 				}
 				else

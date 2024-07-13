@@ -48,7 +48,8 @@ function EnemyHealthAdjustments(){
 		}
 		if scrIsCrown(22) && random(100 + floor(my_health*0.1)) < 40//Crown of luck
 		{
-			my_health = floor(my_health*0.1);
+			//my_health = floor(my_health*0.1);
+			my_health = floor(my_health * (0.1 + clamp(ogmaxhealth*0.00005,0,0.15)));
 			canBeBuffedHealed = false;
 			with instance_create(x,y,CrownOfLucked)
 			{

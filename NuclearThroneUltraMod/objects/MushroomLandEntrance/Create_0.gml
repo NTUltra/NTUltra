@@ -8,5 +8,6 @@ spr_dead = sprMushroomStatueDead;
 name = "SACRIFICE FIRST WEAPON MOD"
 
 event_inherited()
+used = false;
 snd_hurt = sndHitRock;
 scrCreateSpace(102);

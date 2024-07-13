@@ -3,7 +3,13 @@ isInteractableNow = false;
 if spr_idle == sprBigFishSkullOpen
 {
 	isInteractableNow = true;
-	if KeyCont.key_pick[Player.p] = 1 && !instance_exists(WantBoss) && !instance_exists(SandWorm)
+	var thereIsBoss = false;
+	with WantBoss
+	{
+		if !oasis
+			thereIsBoss = true;
+	}
+	if KeyCont.key_pick[Player.p] = 1 && !thereIsBoss && !instance_exists(SandWorm)
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		snd_play(sndOasisHorn);

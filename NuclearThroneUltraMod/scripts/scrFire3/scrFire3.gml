@@ -131,5 +131,125 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
+		
+		//MAGNETIC CROSSBOW
+		case 796:
+
+		snd_play_fire(sndCrossbow)
+
+		with instance_create(x,y,MagneticBolt)
+		{motion_add(aimDirection+(random(4)-2)*other.accuracy,24)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
+
+		break;
+		
+		//KRAKEN MACHINEGUN
+		case 797:
+
+		snd_play_fire(sndHeavyRevolver)
+		snd_play(choose(sndWater1,sndWater2));
+		repeat(2)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet1Kraken)
+		{
+			creator = other.id;
+			motion_add(aimDirection+(random(16)-8)*other.accuracy,14)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,FishBoost)
+		{
+			motion_add(aimDirection+random(60)-30,2+random(4));
+		}
+
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 2
+		if !skill_got[2]
+			scrMoveContactSolid(aimDirection + 180,2);
+		
+		break;
+		
+		//MICRO CRASH
+		case 798:
+
+		snd_play_fire(sndQuadMachinegun)
+		snd_play_fire(sndMicroSmg);
+
+		var am = 18;
+		var angStep = 360/am;
+		angStep *= accuracy;
+		var angg = aimDirection - (angStep * (am*0.5));
+		repeat(am)
+		{
+			with instance_create(x,y,MicroBullet)
+			{
+				direction = angg+(random(8)-4)*other.accuracy
+				image_angle = direction
+				team = other.team
+				scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+			}
+			angg += angStep
+		}
+		angStep *= 0.5;
+		with instance_create(x,y,MicroBullet)
+		{
+			direction = aimDirection+angStep+(random(8)-4)*other.accuracy
+			image_angle = direction
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+		with instance_create(x,y,MicroBullet)
+		{
+			direction = aimDirection-angStep+(random(8)-4)*other.accuracy
+			image_angle = direction
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 4
+
+		break;
+		
+		//VOID EXECUTIONER
+		case 799:
+
+		//snd_play_fire(sndPistol)
+		snd_play(sndMicroSmg,0.02,true);
+		snd_play(sndVoidShank,0.2);
+		with instance_create(x,y,VoidExecution)
+		{
+		direction = aimDirection+(random(8)-4)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		event_perform(ev_alarm,0);
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,20);
+			motion_add(aimDirection + 180, 6);
+		}
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 6
+
+		break;
 	}
 }

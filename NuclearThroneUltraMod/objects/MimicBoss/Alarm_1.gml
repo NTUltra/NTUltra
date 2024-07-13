@@ -22,29 +22,30 @@ if instance_exists(Player)
 			snd_play(sndSwapSword);
 			gunSprite = sprSword;
 		}
-		else if weaponType == 0
-		{
-			snd_play(sndSwapSword);
-		}
 		else if weaponType == 1
 		{
 			snd_play(sndSwapPistol);
+			gunSprite = sprRevolver;
 		}
 		else if weaponType == 2
 		{
 			snd_play(sndSwapShotgun);
+			gunSprite = sprShotgun;
 		}
 		else if weaponType == 3
 		{
 			snd_play(sndSwapBow);
+			gunSprite = sprCrossbow;
 		}
 		else if weaponType == 4
 		{
 			snd_play(sndSwapExplosive);
+			gunSprite = sprNader;
 		}
 		else if weaponType == 5
 		{
 			snd_play(sndSwapEnergy);
+			gunSprite = sprLaserGun;
 		}
 		exit;
 	}

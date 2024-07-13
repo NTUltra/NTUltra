@@ -70,6 +70,7 @@ function scrCopyPlayData(){
 		levelIncrease: UberCont.levelIncrease,
 		voidChallengeGoing: UberCont.voidChallengeGoing,
 		voidChallengeCompleted: UberCont.voidChallengeCompleted,
+		voidShopHealthUpgrade: UberCont.voidShopHealthUpgrade,
 		seed: UberCont.savedSeed,
 		horrorEtaken: Player.horrorEtaken,
 		hogpoints: Player.hogpoints,

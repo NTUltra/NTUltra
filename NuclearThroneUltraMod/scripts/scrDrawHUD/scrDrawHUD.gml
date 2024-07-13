@@ -90,7 +90,7 @@ function scrDrawHUD() {
 				draw_sprite_ext(fill,0,vx+hx+2,vy+7,clamp(84*(dataRef.lsthealth/dataRef.maxhealth),0,84),1,0,c_white,1)
 			else if dataRef.my_health > dataRef.maxhealth
 			{
-				var maxCap = max(dataRef.maxhealth*2,20);
+				var maxCap = max(dataRef.maxhealth*2,10);
 				if dataRef.my_health >= maxCap
 				{
 					draw_sprite(sprHealthBar,2,vx+hx+2,vy+7);//Overhealthbar
