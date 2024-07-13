@@ -649,7 +649,7 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndDiscgun)
 
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,5)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
 	image_angle = direction
 	team = other.team}
 

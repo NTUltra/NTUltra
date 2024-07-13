@@ -8,7 +8,7 @@ if other.team != team
 			DealDamage(other.dmg);
 			if team != 2
 			{
-				DealDamage(other.dmg);
+				DealDamage(other.dmg + 2);
 			}
 			sprite_index = spr_hurt
 			image_index = 0

@@ -185,7 +185,7 @@ function scrWeapons() {
 	wep_load[16] = 3
 	wep_cost[16] = 1
 	wep_sprt[16] = sprSmg
-	wep_area[16] = 3
+	wep_area[16] = 2
 	wep_text[16] = ""
 	wep_swap[16] = sndSwapPistol
 	wep_rad[16] = 0;
@@ -7790,22 +7790,22 @@ function scrWeapons() {
 	wep_name[696] = "DOUBLE FROST SHOTGUN"
 	wep_type[696] = 2
 	wep_auto[696] = 2
-	wep_load[696] = 33
+	wep_load[696] = 35
 	wep_cost[696] = 4
 	wep_sprt[696] = sprDoubleFrostShotgun
 	wep_area[696] = 9
-	wep_text[696] = "breezer"
+	wep_text[696] = "brrrrrr"
 	wep_swap[696] = sndSwapShotgun
 	wep_rad[696] = 0;
 	
 	wep_name[697] = "FROST SHOTGUNNER"
 	wep_type[697] = 2
 	wep_auto[697] = 3
-	wep_load[697] = 11
+	wep_load[697] = 12
 	wep_cost[697] = 3
 	wep_sprt[697] = sprFrostShotgunner
-	wep_area[697] = 16
-	wep_text[697] = "breezer"
+	wep_area[697] = 18
+	wep_text[697] = "cold power"
 	wep_swap[697] = sndSwapShotgun
 	wep_rad[697] = 0;
 	wep_popup[697] = "FREEZING";
@@ -8785,7 +8785,7 @@ function scrWeapons() {
 	wep_name[785] = "CHARGE HAMMER"
 	wep_type[785] = 0
 	wep_auto[785] = 0
-	wep_load[785] = 20
+	wep_load[785] = 14
 	wep_cost[785] = 0
 	wep_sprt[785] = sprChargeHammer1
 	wep_area[785] = 6
@@ -8797,7 +8797,7 @@ function scrWeapons() {
 	wep_name[786] = "CHARGE LANCE"
 	wep_type[786] = 0
 	wep_auto[786] = 0
-	wep_load[786] = 12
+	wep_load[786] = 9
 	wep_cost[786] = 0
 	wep_sprt[786] = sprChargeLance1
 	wep_area[786] = 6
@@ -8875,7 +8875,7 @@ function scrWeapons() {
 	wep_name[793] = "RAILGUN"
 	wep_type[793] = 5
 	wep_auto[793] = 0
-	wep_load[793] = 35
+	wep_load[793] = 40
 	wep_cost[793] = 5
 	wep_sprt[793] = sprRailgun
 	wep_area[793] = 10

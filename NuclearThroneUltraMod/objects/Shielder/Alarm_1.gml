@@ -26,7 +26,7 @@ if random(2) < 1 and freeze > 40
 alarm[2] = 4
 ammo = 8
 
-alarm[1] = 32
+alarm[1] = 34
 }
 else if random(3) < 1
 {

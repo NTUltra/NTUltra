@@ -15,11 +15,11 @@ if aditionalwep != 0
 	{
 		scrWeapons()
 		wep = other.aditionalwep;
-		name = wep_name[other.aditionalwep]
+		name = wep_name[wep]
 		ammo = other.ammoGet
-		type = wep_type[other.aditionalwep]
+		type = wep_type[wep]
 		curse = 0
-		sprite_index = wep_sprt[other.aditionalwep]
+		sprite_index = wep_sprt[wep]
 	}
 }
 if heavyHeart
@@ -28,11 +28,11 @@ if heavyHeart
 	{
 		scrWeapons()
 		wep = other.wep[1];
-		name = wep_name[other.wep]
+		name = wep_name[wep]
 		ammo = other.ammoGet
-		type = wep_type[other.wep]
+		type = wep_type[wep]
 		curse = 0
-		sprite_index = wep_sprt[other.wep]
+		sprite_index = wep_sprt[wep]
 	}	
 }
 

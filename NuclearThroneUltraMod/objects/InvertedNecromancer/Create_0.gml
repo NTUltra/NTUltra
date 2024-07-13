@@ -5,6 +5,7 @@ mySize = 1
 
 event_inherited()
 
+crp = noone;
 spr_idle = sprInvertedNecromancerIdle
 spr_walk = sprInvertedNecromancerWalk
 spr_hurt = sprInvertedNecromancerHurt

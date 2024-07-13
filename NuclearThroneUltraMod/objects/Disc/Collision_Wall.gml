@@ -13,3 +13,4 @@ image_angle = other.image_angle}
 
 
 
+speed = clamp(speed - 1,2,5);

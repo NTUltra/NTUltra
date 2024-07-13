@@ -486,7 +486,7 @@ function scrTips() {
 	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
-	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!","weapon smith made viking's armour"
+	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!","weapon smith made viking's armour","serpent queen","venomous"
 	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
 
 	if Player.race = 17//WEAPONSMITH

@@ -13,4 +13,8 @@ if team == 2
 }}
 alarm[2] = 3
 ammo -= 1}
+else
+{
+	alarm[1] += 6;
+}
 

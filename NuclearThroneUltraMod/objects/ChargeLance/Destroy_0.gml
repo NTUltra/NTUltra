@@ -26,7 +26,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndSword1)
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),HeavyShank)
 			{
-				dmg = 10
+				dmg = 12
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -40,7 +40,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndSword2)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
 			{
-				dmg = 12
+				dmg = 14
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -63,7 +63,7 @@ if instance_exists(Player) && instance_exists(creator)
 			}
 			with instance_create(x+lengthdir_x(16+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(16+(Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
 			{
-				dmg = 14
+				dmg = 15
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection*other.accuracy,3.5+longarms)
@@ -77,7 +77,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 16;
+				dmg = 20;
 				longarms = 0
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3
 				motion_add(aimDirection,3.5+longarms)
@@ -90,7 +90,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndBlackSwordMega)
 			with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*10),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*10),aimDirection),NarrowShank)
 			{
-				dmg = 4
+				dmg = 5
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,8+longarms)
@@ -99,7 +99,7 @@ if instance_exists(Player) && instance_exists(creator)
 			}
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 12 + r;
+				dmg = 16 + r;
 				longarms = 0
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3
 				motion_add(aimDirection,3.5+longarms)

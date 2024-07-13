@@ -4,7 +4,7 @@ meleedamage = 0
 mySize = 1
 
 event_inherited()
-
+crp = noone;
 spr_idle = sprNecromancerIdle
 spr_walk = sprNecromancerWalk
 spr_hurt = sprNecromancerHurt

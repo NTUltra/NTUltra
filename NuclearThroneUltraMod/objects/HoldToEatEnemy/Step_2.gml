@@ -3,7 +3,7 @@ if instance_exists(Player) && target != noone && instance_exists(target)
 {	
 	x = target.x;
 	y = target.y - 24;
-	if point_distance(Player.x,Player.y,target.x,target.y) > range + 4
+	if point_distance(Player.x,Player.y,target.x,target.y) > range + 8
 	{
 		if UberCont.normalGameSpeed == 60
 			image_index -= image_speed * 1.5;

@@ -94,4 +94,3 @@ else
 
 scrDrop(100,0);
 scrDrop(80,0);
-scrDrop(60,0);

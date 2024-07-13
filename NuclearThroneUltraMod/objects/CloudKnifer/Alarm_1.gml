@@ -10,7 +10,7 @@ if target != noone {
 			tx = target.x;
 			ty = target.y + knifeOffset;
 			motion_add(point_direction(x,y,target.x, ty),acc);
-			if dis < 34
+			if dis < 48//34
 			{
 				x = tx;
 				y = ty;
@@ -60,10 +60,12 @@ if target != noone {
 }
 else if point_distance(x,y,xstart,ystart) > startingPointDistance
 {
+	event_user(2);
 	direction = point_direction(x,y,xstart,ystart);
 	walk = alarm[1];
 }
 else if random(10) < 1 {
+	event_user(2);
     motion_add(random(360), acc)
     walk = actTime + random(actTime)
     alarm[1] = walk + actTime*2 + random(actTime*2)

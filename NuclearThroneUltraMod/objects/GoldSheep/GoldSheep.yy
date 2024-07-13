@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprGoldSheepIdle",
+    "path":"sprites/sprGoldSheepIdle/sprGoldSheepIdle.yy",
+  },
   "spriteMaskId":{
     "name":"mskBandit",
     "path":"sprites/mskBandit/mskBandit.yy",

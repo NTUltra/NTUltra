@@ -13,7 +13,7 @@ event_inherited()
 
 friction = 1
 
-
+existTime = 25;
 snd_hurt = sndHitRock
 snd_dead = sndScorpionDie
 snd_melee = sndScorpionMelee

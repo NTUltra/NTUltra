@@ -1,5 +1,5 @@
 /// @description Fire Bow
-if instance_exists(Player)
+if instance_exists(Player) && instance_exists(creator)
 {
 	x = creator.x;
 	y = creator.y;

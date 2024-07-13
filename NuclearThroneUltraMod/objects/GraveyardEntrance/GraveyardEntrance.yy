@@ -41,8 +41,8 @@
     "path":"sprites/sprGraveyardEntrance/sprGraveyardEntrance.yy",
   },
   "spriteMaskId":{
-    "name":"mskWepPickup",
-    "path":"sprites/mskWepPickup/mskWepPickup.yy",
+    "name":"sprGraveyardEntrance",
+    "path":"sprites/sprGraveyardEntrance/sprGraveyardEntrance.yy",
   },
   "visible":true,
 }

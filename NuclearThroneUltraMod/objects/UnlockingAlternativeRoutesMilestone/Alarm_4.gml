@@ -1,5 +1,4 @@
 /// @description Deactivate
-debug("all be gone");
 with all
 {
 	if (//object_index != BackCont && 

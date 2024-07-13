@@ -9420,23 +9420,23 @@ function scrFire2(hasTailNow) {
 	}
 
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection+(random(4)-2)*other.accuracy,6)
+	{motion_add(aimDirection+(random(4)-2)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,6)
+	{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,6)
+	{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,6)
+	{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,6)
+	{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,12)
 	image_angle = direction
 	team = other.team}
 
@@ -12788,7 +12788,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndGoldDiscGun)
 
 	with instance_create(x,y,Disc)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,6)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,11)
 	image_angle = direction
 	sprite_index = sprDiscGold;
 	alarm[1] = 5 + random(20);

@@ -213,12 +213,12 @@ function scrSecondaryPowers() {
 					if !instance_exists(HoldToEatEnemy)
 					{
 						var n = instance_nearest(x,y,enemy);
-						if n != noone && n.my_health > 0 && n.team != other.team && point_distance(x,y,n.x,n.y) < 64
+						if n != noone && n.my_health > 0 && n.team != other.team && point_distance(x,y,n.x,n.y) < 96
 						{
 							with instance_create(x,y,HoldToEatEnemy)
 							{
 								target = n;
-								image_speed = min(1,9 / n.my_health);//Increase number to go faster
+								image_speed = min(1,15 / n.my_health);//Increase number to go faster
 							}
 						}
 						else
@@ -302,7 +302,7 @@ function scrSecondaryPowers() {
 							var n = instance_nearest(x,y,Ally)
 							if n != noone && instance_exists(n) && point_distance(x,y,n.x,n.y) < 64
 							{
-								with Ally
+								with n
 								{
 									grabbed = true;
 									snd_play(sndAllyGrab,0.1);

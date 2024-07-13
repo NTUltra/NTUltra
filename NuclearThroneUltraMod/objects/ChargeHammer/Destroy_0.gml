@@ -84,7 +84,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
 			{
-				dmg = 24;
+				dmg = 25;
 				longarms = 0
 		
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -109,7 +109,7 @@ if instance_exists(Player) && instance_exists(creator)
 			{
 				sprite_index = sprBigSlash
 				mask_index = mskBigPandaSlash;
-				dmg = 20 + r;
+				dmg = 21 + r;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)

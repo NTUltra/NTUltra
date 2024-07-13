@@ -9,6 +9,7 @@ meleedamage = 0
 mySize = 3
 
 event_inherited()
+existTime = 30;
 meleedamage = 5;
 isInverted = false;
 spr_idle = sprScrapBossIdle

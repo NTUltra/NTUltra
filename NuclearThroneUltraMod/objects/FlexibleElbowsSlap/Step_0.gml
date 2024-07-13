@@ -7,7 +7,7 @@ if time == 1
 	BackCont.viewy2 += lengthdir_y(19,hk+180)*UberCont.opt_shake;
 	
 	followOwner = false;
-	with scrDrop(14,2)
+	with scrDrop(15,4)
 	{
 		x = other.tx;
 		y = other.ty;
@@ -27,7 +27,7 @@ if time == 1
 		
 		var direct = other.id;
 		var hits = ds_list_create();
-		var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
+		var al = collision_circle_list(x,y,48,hitme,false,false,hits,false)
 		for (var i = 0; i < al; i++) {
 			// code here
 			with hits[| i]

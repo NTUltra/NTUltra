@@ -142,6 +142,13 @@ function scrMakeFloor(limiter) {
 					}
 					else {
 						instance_create(x+32*xx,y+32*yy,BigMachine);//the boss
+						with instance_nearest(x,y,WeaponChest)
+						{
+							x = BigMachine.x;
+							y = BigMachine.y - 64;
+							friction = 2;
+							speed = 0;
+						}
 					}
 				}
         

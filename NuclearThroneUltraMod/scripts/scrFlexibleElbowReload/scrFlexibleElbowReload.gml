@@ -6,9 +6,10 @@ function scrFlexibleElbowReload(wp){
 	{
 		var loader = wep_load[wp];
 		var slapped = noone;
+		var theChance = 60;
 		while (loader > 0)
 		{
-			if (random(70) < loader)
+			if (random(theChance) < loader)
 			{
 				
 				if slapped == noone || !instance_exists(slapped)
@@ -43,7 +44,7 @@ function scrFlexibleElbowReload(wp){
 					}
 				}
 			}
-			loader -= 70;
+			loader -= theChance;
 		}
 	}
 }

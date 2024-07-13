@@ -165,7 +165,7 @@ function scrRaces() {
 	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
 	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>"
-	race_vision[8] = "HOLD <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
+	race_vision[8] = "PRESS <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
 	race_vision_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
@@ -326,7 +326,7 @@ function scrRaces() {
 
 	race_name[16] = "VIKING"
 	race_pass[16] = "REDUCED <r>MAX HP<r>#HAS <gb>ARMOUR<gb>##<p>PORTALS<p> GIVE <gb>ARMOUR<gb>"
-	race_acti[16] = "SERPENT <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
+	race_acti[16] = "<g>SERPENT<g> <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
 	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
 	race_butt_detail[16] = race_butt[16];
 	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y> TO <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>##CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
@@ -340,7 +340,7 @@ function scrRaces() {
 	race_eskin[16] = 0
 	race_fskin[16] = 0
 	race_gskin[16] = 0
-	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 4 ARMOUR#AS VIKING"
+	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 5 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 
 
@@ -401,7 +401,7 @@ function scrRaces() {
 	race_fskin[19] = 0
 	race_gskin[19] = 0
 	race_bskin_lock[19] = "HAVE THREE LIVES"
-	race_cskin_lock[19] = "REACH THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON"
+	race_cskin_lock[19] = "REACH THE VOLCANO#ON 400% SCREENSHAKE#AS SKELETON"
 
 
 	race_name[20] = "BUSINESS HOG"
@@ -471,7 +471,7 @@ function scrRaces() {
 		race_acti[23] = "SHIT & FART"
 	race_butt[23] = "<g>TOXIC<g> SPREADS FASTER"
 	race_butt_detail[23] = "<g>TOXIC<g> SPREADS FASTER#<g>TOXIC<g> LASTS LONGER#HOMING <g>TOXIC<g>#ACTIVE SPAWNS <g>TOXIC<g> TOWARDS YOUR AIM"
-	race_vision[23] = "PRESS <w>[E]<w> WHILE CHARGING <g>GASS<g> TO:#<g>ULTRA<g> <w>BOOST<w> YOUR GASS#COSTS <g>RADS<g>";
+	race_vision[23] = "PRESS <w>[E]<w> WHILE CHARGING <g>GAS<g> TO:#<g>ULTRA<g> <w>BOOST<w> YOUR GAS#COSTS <g>RADS<g>";
 	race_vision_detail[23] = race_vision[23];
 	race_lock[23] = "KILL BALL MOM TO UNLOCK"
 	race_have[23] = 0

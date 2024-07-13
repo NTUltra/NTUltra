@@ -13,7 +13,7 @@ with instance_create(x,y,Disc)
 {
 	if other.ultramodded
 		alarm[11] = 0;
-	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6*other.accuracy),6)
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6*other.accuracy),12)//6
 	scrCopyWeaponMod(other);
 
 	image_angle = direction

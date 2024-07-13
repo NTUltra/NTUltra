@@ -125,10 +125,10 @@ function scrSkills() {
 	if !UberCont.useSeed && random(500)<1
 		skill_name[6] = "CASINO ROLL"
 	skill_text[6] = "CHANCE KILLS REGENERATE <y>AMMO<y>"
-	skill_detail[6] = "20% CHANCE KILLS REGENERATE <y>AMMO<y>";
+	skill_detail[6] = "22% CHANCE KILLS REGENERATE <y>AMMO<y>";
 	skill_tips[6] = "ammo everywhere"
 	skill_msnd[6] =  sndMutLuckyShot
-	skill_bons[6] = "+25% CHANCE#(TOTAL: 25%)";
+	skill_bons[6] = "+25% CHANCE#(TOTAL: 27.5%)";
 	
 	
 	skill_name[7] = "BLOODLUST"

@@ -122,7 +122,9 @@ function scrDrawGameOver() {
 			skeletonlives = 0;
 		}*/
 		if !instance_exists(StartDaily)
-			room_restart()
+		{
+			room_goto(romGame);	
+		}
 		exit;
 	}
 	if ((keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) && gameovertime > 40 && !instance_exists(PlayerSpawn) && !instance_exists(PlayerInFakeDeath))

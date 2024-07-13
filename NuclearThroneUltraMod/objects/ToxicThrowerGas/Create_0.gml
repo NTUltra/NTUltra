@@ -1,6 +1,6 @@
 event_inherited();
 image_angle = random(360)
-motion_add(random(360),random(1.5)+0.75)//0.2
+motion_add(random(360),random(1.25)+0.5)//0.2
 friction = 0.06
 image_speed = 0
 image_index = random(5)

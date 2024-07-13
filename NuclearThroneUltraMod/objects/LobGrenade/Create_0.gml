@@ -4,6 +4,7 @@ event_inherited();
 alarm[1] = 0;
 alarm[0] = 50;
 alarm[3] = alarm[0] - 12;
+alarm[9] = 0;
 scale = 1;
 growRate = 0.125;
 maxScale = 2;

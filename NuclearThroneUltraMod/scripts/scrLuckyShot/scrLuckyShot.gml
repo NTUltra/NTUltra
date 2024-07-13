@@ -2,10 +2,10 @@
 // /@description
 ///@param
 function scrLuckyShot(){
-	var chance = 2;
+	var chance = 2.1;
 	var ran = 10;
 	if Player.race == 25
-		chance = 2.5
+		chance = 2.7
 	if Player.skill_got[6] = 1 and random(ran) < chance//0.214% 0.23%
     {
 		snd_play_2d(sndLuckyShotProc,0,true);
@@ -16,28 +16,28 @@ function scrLuckyShot(){
     
 	    var wepammo = Player.wep_type[Player.wep]
 	    if Player.bwep!=0
-	    var bwepammo = Player.wep_type[Player.bwep]
+			var bwepammo = Player.wep_type[Player.bwep]
 	    else
-	    var bwepammo=choose(1,2,3,4,5);
+			var bwepammo=choose(1,2,3,4,5);
 		if Player.cwep!=0
-	    var cwepammo = Player.wep_type[Player.cwep]
+			var cwepammo = Player.wep_type[Player.cwep]
 	    else
-	    var cwepammo=choose(wepammo,bwepammo);
+			var cwepammo=choose(wepammo,bwepammo);
     
 	    //melee
-	    if wepammo=0
-	    wepammo=choose(1,2,3,4,5);
+	    if wepammo == 0
+			wepammo=choose(1,2,3,4,5);
     
-	    if bwepammo=0
-	    bwepammo=choose(1,2,3,4,5);
+	    if bwepammo == 0
+			bwepammo=choose(1,2,3,4,5);
 	
-		if cwepammo=0
-	    cwepammo=choose(1,2,3,4,5);
+		if cwepammo == 0
+			cwepammo=choose(1,2,3,4,5);
     
 	    type = choose(1,2,3,4,5,
-		wepammo,wepammo,wepammo,wepammo,
-		bwepammo,bwepammo,
-		cwepammo,cwepammo)
+		wepammo,wepammo,wepammo,wepammo,wepammo,
+		bwepammo,bwepammo,bwepammo,
+		cwepammo,cwepammo,cwepammo)
     
 	    Player.ammo[type] += round(Player.typ_ammo[type]*0.5)
 	    if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
