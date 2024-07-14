@@ -13,6 +13,20 @@ if image_index == 1 && !wentIn
 		area = 102
 		subarea = 0
 		}
-		with instance_create(x+16,y+16,Portal) type = 1
+		with instance_create(x+16,y+16,Portal){
+			type = 1
+			pullstrength = 3;
+			with Player
+			{
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
+			}
+			alarm[1] = 1;
+			x = other.x+16;
+			y = other.y+16;
+			scrForcePosition60fps();
+		}
 	}
 }

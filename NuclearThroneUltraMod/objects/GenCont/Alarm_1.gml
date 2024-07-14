@@ -85,11 +85,18 @@ if instance_exists(Player)
 			instance_create(x,y+16,MorphWeaponChest)
 	    }
 	}
-	else if Player.area == 122 && Player.subarea == 2//Inv oasis
+	else if Player.area == 122 /*&& Player.subarea == 2*///Inv oasis
 	{
 		with WeaponChest
 	    {
 			instance_create(x,y+16,ToxicWeaponChest)
+	    }
+	}
+	else if Player.area == 108 || Player.area == 124/*&& Player.subarea == 2*///Inv Volcano
+	{
+		with WeaponChest
+	    {
+			instance_create(x,y+16,LightningWeaponChest)
 	    }
 	}
 	else if Player.area == 130 || Player.area == 131 || Player.area == 133 || Player.area == 134//Factory

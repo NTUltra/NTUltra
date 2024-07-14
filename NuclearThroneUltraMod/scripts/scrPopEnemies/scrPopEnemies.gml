@@ -220,7 +220,10 @@ function scrPopEnemies() {
 	        if random(10) < 1
 				instance_create(x + 16, y + 16, choose(Crab, Crab))
 	        else
-	            instance_create(x + 16, y + 16, choose(BoneFish, BoneFish, BoneFish, BoneFish, JellyFish, ScubaBandit, ScubaBandit, Crab))
+			{
+				repeat(choose(1,1,1,1,1,2))
+					instance_create(x + 16, y + 16, choose(BoneFish, BoneFish, BoneFish, BoneFish, JellyFish, JellyFish,ScubaBandit, ScubaBandit, Crab))
+			}
 		}
 
     }

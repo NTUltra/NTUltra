@@ -3,6 +3,9 @@ function scrDecideLightningWep() {
     if instance_exists(Player)
     {
 		ar = scrLightningWeaponsArray(Player.loops,scrIsGamemode(31));
+		 var maxTries = 1000;
+        if Player.race = 8
+            maxTries = 2000;
 		do 
 	    {
 	        wep = ar[irandom(array_length(ar)-1)];

@@ -164,7 +164,7 @@ function scrRaces() {
 	race_pass[8] = "FINDS BETTER TECH"
 	race_acti[8] = "HOLD TO <w>EAT WEAPONS<w>"
 	race_butt[8] = "BETTER GUN <g>NUTRITION<g>"
-	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>"
+	race_butt_detail[8] = "ANOTHER <r>HP<r>/<y>AMMO<y> DROP#AND MORE <g>RADS<g> WHEN <w>EATING<w>#ALWAYS <r>HEAL<r> WHEN EATING"
 	race_vision[8] = "PRESS <w>[E]<w> TO: <w>EAT<w> A NEARBY <r>ENEMY<r>";
 	race_vision_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"

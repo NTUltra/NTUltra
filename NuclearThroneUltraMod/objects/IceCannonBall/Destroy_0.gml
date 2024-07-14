@@ -1,26 +1,21 @@
-repeat(14)
-{
-with instance_create(x,y,IceFlame)
-{motion_add(random(360),2+random(6))
-team = other.team}
-
-}
-
+event_inherited();
+snd_play(sndExplosion)
 snd_play(sndFrostShot1)
-
-
-repeat(10)
+var ang = random(360);
+repeat(16)
 {
 
 with instance_create(x,y,FreezeBullet)
-{motion_add(other.ang,16)
+{motion_add(ang,16)
 image_angle = direction
 team = other.team}
-
-ang+=360/10
+with instance_create(x,y,IceFlame)
+{motion_add(ang,2+random(6))
+team = other.team}
+	ang+=22.5;
 }
 
-BackCont.shake += 4
+BackCont.shake += 10;
 
 audio_stop_sound(sndSnowBlowerLoop)
 

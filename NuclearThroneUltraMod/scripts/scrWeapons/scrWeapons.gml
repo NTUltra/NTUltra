@@ -8785,7 +8785,7 @@ function scrWeapons() {
 	wep_name[785] = "CHARGE HAMMER"
 	wep_type[785] = 0
 	wep_auto[785] = 0
-	wep_load[785] = 14
+	wep_load[785] = 12
 	wep_cost[785] = 0
 	wep_sprt[785] = sprChargeHammer1
 	wep_area[785] = 6
@@ -8797,7 +8797,7 @@ function scrWeapons() {
 	wep_name[786] = "CHARGE LANCE"
 	wep_type[786] = 0
 	wep_auto[786] = 0
-	wep_load[786] = 9
+	wep_load[786] = 8
 	wep_cost[786] = 0
 	wep_sprt[786] = sprChargeLance1
 	wep_area[786] = 6
@@ -8951,6 +8951,29 @@ function scrWeapons() {
 	wep_text[799] = "rip and tear"
 	wep_swap[799] = sndSwapSword
 	wep_rad[799] = 0;
+	
+	wep_name[800] = "BLOB MACHINEGUN"
+	wep_type[800] = 4
+	wep_auto[800] = 1
+	wep_load[800] = 10
+	wep_cost[800] = 4
+	wep_sprt[800] = sprBlobMachineGun
+	wep_area[800] = 13
+	wep_text[800] = "full auto writing"
+	wep_swap[800] = sndSwapExplosive
+	wep_rad[800] = 0;
+	
+	wep_name[801] = "ULTRA RAILGUN"
+	wep_type[801] = 5
+	wep_auto[801] = 0
+	wep_load[801] = 40
+	wep_cost[801] = 6
+	wep_sprt[801] = sprUltraRailgun
+	wep_area[801] = 21
+	wep_text[801] = "200"
+	wep_swap[801] = sndSwapEnergy
+	wep_rad[801] = 20;
+	wep_popup[801] = "HIT SHOTS PARTIALLY RELOAD THIS GUN!";
 	//Swiss army bow
 	//Charge boomerang
 	

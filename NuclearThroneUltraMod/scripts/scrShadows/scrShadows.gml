@@ -424,6 +424,8 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with JellyFish
 		draw_sprite(shd24,0,x-vx,y-vy+4)
+	with TinyJellyFish
+		draw_sprite(shdTinyJellyFish,0,x-vx,y-vy+3)
 	with ToxicMushroomGuy
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with SavannaBandit

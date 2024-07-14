@@ -91,7 +91,7 @@ if !instance_exists(GenCont)
 				if skill_got[9]
 					other.num = 2;
 				my_health += other.num;
-				var maxCap = max(maxhealth*2,10);
+				var maxCap = floor(max(maxhealth*2,10));
 				my_health = min(my_health,maxCap);
 				if (my_health == maxCap)
 				{

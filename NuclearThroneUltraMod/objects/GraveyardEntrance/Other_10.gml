@@ -19,7 +19,8 @@ if my_health > 0 && isInteractableNow
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
 		isInteractableNow = false;
-		maxhealth = 200 * clamp(loops*5,1,10)
+		maxhealth = 150 * clamp(loops*5,1,10)
+		my_health = maxhealth;
 		alarm[1] += 900;
 		with instance_create(x,y,WantBoss)
 		{

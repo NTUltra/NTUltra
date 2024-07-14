@@ -32,94 +32,109 @@ if KeyCont.key_west[0] == 1
 {
 	snd_play_2d(sndHover);
 	selectedIndex -= 1;
-	if instance_exists(UltraIcon)
-	{
-		if selectedIndex < 0
+	var hasSelectedSkill = false;
+	do {
+		if instance_exists(UltraIcon)
 		{
-			selectedIndex = instance_number(UltraIcon) + instance_number(SkillIcon) - 1;
+			if selectedIndex < 0
+			{
+				selectedIndex = instance_number(UltraIcon) + instance_number(SkillIcon) - 1;
+			}
+			with UltraIcon
+			{
+				if skillIndex == other.selectedIndex
+				{
+					selected = true;
+					hasSelectedSkill = true;
+				}
+				else
+					selected = false;
+			}
 		}
-		with UltraIcon
+		else if instance_exists(SkillIcon)
+		{
+			if selectedIndex < 0
+				selectedIndex = instance_number(SkillIcon) - 1;
+		}
+		with SkillIcon
 		{
 			if skillIndex == other.selectedIndex
-				selected = true;
-			else
-				selected = false;
-		}
-	}
-	else if instance_exists(SkillIcon)
-	{
-		if selectedIndex < 0
-			selectedIndex = instance_number(SkillIcon) - 1;
-	}
-	with SkillIcon
-	{
-		if skillIndex == other.selectedIndex
-		{
-			selected = true;
-			if x < camera_get_view_x(view_camera[0]) + 32 ||
-			x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
 			{
-				with other
+				hasSelectedSkill = true;
+				selected = true;
+				if x < camera_get_view_x(view_camera[0]) + 32 ||
+				x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
 				{
-					var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
-					scroll += disto;
-					with SkillIcon {
-						x -= disto;
-					}
-					with UltraIcon {
-						x -= disto;
+					with other
+					{
+						var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
+						scroll += disto;
+						with SkillIcon {
+							x -= disto;
+						}
+						with UltraIcon {
+							x -= disto;
+						}
 					}
 				}
 			}
+			else
+				selected = false;
 		}
-		else
-			selected = false;
-	}
+	} until (hasSelectedSkill)
 	
 }
 else if KeyCont.key_east[0] == 1
 {
 	snd_play_2d(sndHover);
 	selectedIndex += 1;
-	if instance_exists(UltraIcon)
-	{
-		if selectedIndex > instance_number(UltraIcon) + instance_number(SkillIcon)- 1
-			selectedIndex = 0;
-		with UltraIcon
+	var hasSelectedSkill = false;
+	do {
+		if instance_exists(UltraIcon)
+		{
+			if selectedIndex > instance_number(UltraIcon) + instance_number(SkillIcon)- 1
+				selectedIndex = 0;
+			with UltraIcon
+			{
+				if skillIndex == other.selectedIndex
+				{
+					selected = true;
+					hasSelectedSkill = true;
+				}
+				else
+					selected = false;
+			}
+		}
+		else if instance_exists(SkillIcon)
+		{
+			if selectedIndex > instance_number(SkillIcon) - 1
+				selectedIndex = 0;
+		}
+		with SkillIcon
 		{
 			if skillIndex == other.selectedIndex
+			{
+				hasSelectedSkill = true;
 				selected = true;
+				if x < camera_get_view_x(view_camera[0]) + 32 ||
+				x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
+				{
+					with other
+					{
+						var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
+						scroll += disto;
+						with SkillIcon {
+							x -= disto;
+						}
+						with UltraIcon {
+							x -= disto;
+						}
+					}
+				}
+			}
 			else
 				selected = false;
 		}
 	}
-	else if instance_exists(SkillIcon)
-	{
-		if selectedIndex > instance_number(SkillIcon) - 1
-			selectedIndex = 0;
-	}
-	with SkillIcon
-	{
-		if skillIndex == other.selectedIndex
-		{
-			selected = true;
-			if x < camera_get_view_x(view_camera[0]) + 32 ||
-			x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
-			{
-				with other
-				{
-					var disto = other.x - (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5)
-					scroll += disto;
-					with SkillIcon {
-						x -= disto;
-					}
-					with UltraIcon {
-						x -= disto;
-					}
-				}
-			}
-		}
-		else
-			selected = false;
-	}
+	until (hasSelectedSkill)
 }

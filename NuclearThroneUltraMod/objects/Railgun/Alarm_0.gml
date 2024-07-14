@@ -21,7 +21,9 @@ repeat(repeats)
 	else
 	{
 		with instance_create_depth(xx,yy,depth - 1,AnimDestroy) {
-			sprite_index = sprRailGunEffect;
+			sprite_index = other.railFx;
+			image_xscale = other.hitScale;
+			image_yscale = image_xscale;
 			image_angle = other.direction;
 			image_xscale = random_range(2,32);
 			motion_add(other.direction,2);
@@ -31,7 +33,7 @@ repeat(repeats)
 }
 with instance_create_depth(x,y,depth - 1,AnimDestroy)
 {
-	sprite_index = sprRailgunHit;
+	sprite_index = other.railHit;
 	image_angle = other.direction;
 }
 BackCont.shake += 20;

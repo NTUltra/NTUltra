@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-type = 6;
+typ = 6;
 alarm[1] = 1;
 suckedProjectiles = ds_list_create();
 dmg = 1;

@@ -14,7 +14,6 @@ friction = 0.1;
 
 alarm[1]=140;
 snd_loop(sndSnowBlowerLoop);
-ang=random(360);
 dmg = 10;
 shotgunShoulders = false;
 

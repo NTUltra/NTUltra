@@ -16,7 +16,23 @@ if !instance_exists(PlayerInPortal)
 		with Player
 		{
 			lockout = true;
+			roll = 0;
+			jump = 0;
+			angle = 0;
 			speed = 0;
+			if skill_got[32] && isAlkaline
+			{
+				scrHeal(2);
+				isAlkaline = false;
+				snd_play(sndAlkalineRefund);
+				with instance_create(x,y,HealFX)
+				{
+					depth = other.depth - 1;	
+				}
+				with instance_create(x,y,SharpTeeth)
+					owner=other.id;
+			}
+			
 			with PandaSleep
 			{
 				event_perform(ev_alarm,0);	
@@ -25,6 +41,10 @@ if !instance_exists(PlayerInPortal)
 			{
 				my_health = 0;
 				prevhealth = 0;
+			}
+			with RadMaggotChest
+			{
+				my_health = 0;	
 			}
 			instance_create(x,y,DelayEnemyKill)
 			with RadChest

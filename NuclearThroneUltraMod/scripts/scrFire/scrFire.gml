@@ -100,7 +100,7 @@ function scrFire(canDrown = true) {
 				ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
 				if skill_got[10] //BACK MUSCLE
 					ammoPercentage *= 1.4;
-				reload *= ammoPercentage;
+				reload *= clamp(ammoPercentage,0,1);
 				if ammo[wep_type[wep]] <= 0
 				{
 					snd_play_2d(sndHealthPickup);

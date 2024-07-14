@@ -42,7 +42,8 @@ if instance_exists(Player) && instance_exists(creator)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
 			sprite_index=sprHeavySlash;
-			dmg = 15//shovel is 8
+			dmg = 16//shovel is 8
+			knockback += 2;
 			longarms = 0
 	
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -56,7 +57,8 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection),Slash)
 			{
-				dmg = 18
+				dmg = 20
+				knockback += 4;
 				sprite_index=sprVeryHeavySlash;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -70,7 +72,8 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 			{
-				dmg = 10;
+				dmg = 12;
+				knockback += 2;
 				longarms = 0
 		
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -84,9 +87,9 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
 			{
-				dmg = 25;
+				dmg = 30;
 				longarms = 0
-		
+				knockback += 6;
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -109,7 +112,8 @@ if instance_exists(Player) && instance_exists(creator)
 			{
 				sprite_index = sprBigSlash
 				mask_index = mskBigPandaSlash;
-				dmg = 21 + r;
+				dmg = 24 + r;
+				knockback += 8;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)

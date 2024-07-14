@@ -11,3 +11,4 @@ canDamage = true;
 cost = 0;
 knockback = 20;
 timeIncrease = 0.1;
+destroyTime = 12;

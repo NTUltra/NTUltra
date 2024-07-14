@@ -20,7 +20,7 @@ if instance_exists(Player)
 	}
 	until dir > 150 or collision_point(x,y,Wall,false,false) or (n != noone && n.team != team)
 	
-	alarm[1] = 6
+	alarm[1] = destroyTime;
 	scrForcePosition60fps();
 	hitTarget = instance_place(x,y,hitme);
 	with hitTarget

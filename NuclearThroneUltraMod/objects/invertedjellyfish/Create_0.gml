@@ -14,7 +14,7 @@ maxSpeed = 3;
 maxAmmo = 4;
 meleedamage = 3;
 maxhealth = 5;
-raddrop = 14;
+raddrop = 12;
 tellTime = 10;
 actTime = 5;
 if loops > 0

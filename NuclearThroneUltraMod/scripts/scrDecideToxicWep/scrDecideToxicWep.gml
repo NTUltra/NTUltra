@@ -19,7 +19,7 @@ function scrDecideToxicWep() {
 		}
 		if !Player.altUltra && Player.ultra_got[29]//Refined taste
 		{
-			wepTier += 2;
+			tier += 2;
 		}
 		do 
 		{

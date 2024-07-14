@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+Sleep(20);
 with Player
 {
 	var baked = 14 + Player.skill_got[17]*2 + Player.betterlaserbrain;

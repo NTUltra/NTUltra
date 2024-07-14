@@ -31,7 +31,7 @@ if al > 0 && alarm[0] < 1
 								if instance_exists(Player)
 								{
 									DealDamage(other.dmg)
-									other.dmg = max(other.dmg - 1, 2);
+									other.dmg = max(other.dmg - 2, 2);
 
 									if Player.skill_got[17] && team == 2
 										snd_play(sndSpark2);

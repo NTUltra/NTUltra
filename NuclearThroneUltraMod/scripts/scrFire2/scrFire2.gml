@@ -17230,7 +17230,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,DirectorPenetratorBolt)
 	{
-		motion_add(aimDirection+(random(4)-2)*other.accuracy,10)
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,14)
 		image_angle = direction
 		team = other.team
 	}

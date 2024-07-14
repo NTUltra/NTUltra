@@ -37,7 +37,6 @@ if um == ultramods.toxicFire
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed*2;
-		alarm[0] -= 1;
 		dmg -= 0.4;
 		alarm[11] = 0;
 	}

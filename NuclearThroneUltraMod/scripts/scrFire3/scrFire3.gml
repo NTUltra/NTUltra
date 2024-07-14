@@ -251,5 +251,72 @@ function scrFire3(hasTailNow){
 		wkick = 6
 
 		break;
+		
+		//BLOB MACHINEGUN
+		case 800:
+
+		snd_play_fire(sndBlobFireS);
+
+		with instance_create(x,y,BlobBall)
+		{
+			motion_add(aimDirection+(random(16)-8)*other.accuracy,12)
+			team = other.team
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,4);
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 7
+
+		break;
+		
+		//ultra RAILGUN
+		case 801:
+
+		if Player.skill_got[17] = 1
+		{
+			snd_play_fire(sndUltraLaserUpg)
+			snd_play_fire(sndRailGunUpg)
+		}
+		else
+		{
+			snd_play_fire(sndUltraLaser)
+			snd_play_fire(sndRailGun)
+		}
+			
+		repeat(3 + Player.skill_got[17])
+		{
+			with instance_create(x,y,Smoke)
+				motion_add(aimDirection+(random(30)-15)*other.accuracy,2+random(3))
+		}
+		repeat(4 + Player.skill_got[17])
+		{
+			with instance_create(x,y,PlasmaFX)
+				motion_add(aimDirection+(random(30)-15)*other.accuracy,2+random(3))
+		}
+		with instance_create(x,y,UltraRailgun)
+		{
+			direction = aimDirection;
+			image_angle = direction;
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+
+		BackCont.viewx2 += lengthdir_x(80,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(80,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 35
+		wkick = 8
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,32);
+			motion_add(aimDirection + 180, 8);
+		}
+
+		break;
 	}
 }

@@ -153,6 +153,24 @@ function scrLoseSkill(skillIndex, disableInstead = false){
 				rage = 0;
 			accuracy=standartAccuracy;
 		break;
+		case 31: //TOUGH SHELL
+			if ultra_got[62] && altUltra//Living armour
+			{
+				maxarmour = max(0, maxarmour - 1)
+				armour = min(armour, maxarmour);
+			}
+			else
+			{
+				maxhealth -= 1;
+				if maxhealth < 1
+					maxhealth = 1;
+				if my_health > maxhealth
+				{
+					my_health = max(maxhealth,my_health - 1);
+					prevhealth = my_health;
+				}
+			}
+		break;
 		case 33: //GLASS ARM CANNON
 			if race != 25
 				maxhealth += 2;

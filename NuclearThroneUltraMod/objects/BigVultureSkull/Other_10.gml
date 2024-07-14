@@ -32,6 +32,7 @@ if spr_idle == sprBigVultureSkullOpen
 			alarm[1] = 1;
 			x = other.x;
 			y = other.y;
+			scrForcePosition60fps();
 		}
 		with enemy
 		{

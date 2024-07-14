@@ -474,7 +474,7 @@ if !instance_exists(LevCont) and visible = 1
 			vspeed -= 3
 			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
 			vspeed += 3*/
-			if (angle > 360 or -angle > 360) 
+			if (angle > 360 or -angle > 360) || lockout
 			{
 				reachedRollEnd = true;
 			}
@@ -490,7 +490,7 @@ if !instance_exists(LevCont) and visible = 1
 				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, JumpDust)
 			else if jump < jumpVulnerabilityWindow
 				instance_create_depth(x+random(6)-3,y+random(6) - jumpY, depth + 2, Dust)
-			if angle > 360 or -angle > 360
+			if angle > 360 or -angle > 360 or lockout
 			{
 				angle = 0
 				roll = 0
@@ -2388,7 +2388,7 @@ if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 ///Angel flying through walls
 if race==18
 {
-	if !instance_exists(LevCont) && instance_exists(Wall)// && !instance_exists(Portal)
+	if !instance_exists(LevCont) && instance_exists(WallHitMe)// && !instance_exists(Portal)
 	{
 		if flying > 0
 	    {

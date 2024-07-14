@@ -28,6 +28,10 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	var rabbit = 0;
 	if instance_exists(Player)
 	{
+		if Player.loops < 1
+		{
+			itemdrop *= 1.07;	
+		}
 		var mh = Player.maxhealth;
 		var h = Player.my_health;
 		if Player.ultra_got[62] && Player.altUltra//Living armour

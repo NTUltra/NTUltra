@@ -26,7 +26,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndSword1)
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),HeavyShank)
 			{
-				dmg = 12
+				dmg = 14
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -40,7 +40,8 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndSword2)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
 			{
-				dmg = 14
+				dmg = 16
+				knockback += 2;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
@@ -63,8 +64,9 @@ if instance_exists(Player) && instance_exists(creator)
 			}
 			with instance_create(x+lengthdir_x(16+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(16+(Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
 			{
-				dmg = 15
+				dmg = 16
 				longarms = 0
+				knockback += 4;
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection*other.accuracy,3.5+longarms)
 				image_angle = direction
@@ -77,8 +79,9 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 20;
+				dmg = 22;
 				longarms = 0
+				knockback += 6;
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3
 				motion_add(aimDirection,3.5+longarms)
 				image_angle = direction
@@ -99,7 +102,8 @@ if instance_exists(Player) && instance_exists(creator)
 			}
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 16 + r;
+				dmg = 18 + r;
+				knockback += 8;
 				longarms = 0
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3
 				motion_add(aimDirection,3.5+longarms)

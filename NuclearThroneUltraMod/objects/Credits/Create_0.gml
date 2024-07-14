@@ -148,6 +148,7 @@ credits = [
 "ELRACHOXD#"+
 "ELTORMAKZXD#"+
 "FRILIN"+
+"GASH GRUNT#"+
 "GURU JR#"+
 "HAPPYEYE#"+
 "KAZ!#"+
@@ -157,10 +158,10 @@ credits = [
 //"LOTION5238#"+ ???
 "MARTIN0304#"+
 // "GREG/MLEM5933#"+//GREG only one bug report?
-"MR. G & W JAB<g>"
+"MR. G & W JAB"+
+"MICROSANDMAN<g>"
 ,400],//ALPHABETICAL PLEASE
 ["<w>BETA TESTERS<w>#<g>"+
-"MICROSANDMAN#"+
 "MIKETAMA#"+
 "MAKORON#"+
 "NARCISE YOKU#"+
@@ -170,6 +171,7 @@ credits = [
 "ONI#"+
 "PAPERPERMANENT#"+
 "PLASMA#"+
+"RATT MERIHEM <3#"+
 "RAYMEY#"+
 "SHADY_WILLOWS#"+
 "SKELEOP#"+

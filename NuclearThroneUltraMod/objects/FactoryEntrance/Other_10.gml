@@ -51,7 +51,12 @@ if my_health > 0 && !used
 				wepmod3 = other.wepmod3;
 				wepmod4 = other.wepmod4;
 			}
-			if curse {
+			if wep == 375
+			{
+				inverted = true;
+				area = 131;
+			}
+			else if curse {
 				snd_play_2d(sndCursedReminder);
 				repeat(12)
 				{
@@ -60,6 +65,7 @@ if my_health > 0 && !used
 						motion_add(random(360),1 + random(2));	
 					}
 				}
+				inverted = false;
 				area = 132;
 			}
 			else if scrCheckGold(wep_name[wep])
@@ -72,9 +78,11 @@ if my_health > 0 && !used
 						motion_add(random(360),1 + random(2));	
 					}
 				}
+				inverted = false;
 				area = 133
 			} else if scrCheckUltra(wep_name[wep]) {
 				snd_play_2d(sndUltraGrenadeSuck);
+				inverted = false;
 				area = 134
 				repeat(8)
 				{
