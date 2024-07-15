@@ -39,6 +39,7 @@ else if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
+		dmg -= 0.75;
 		image_yscale -= 0.4;
 		scrCopyWeaponMod(other);
 		isog = false;

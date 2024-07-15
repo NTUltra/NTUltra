@@ -1,6 +1,14 @@
 /// @description Deal damage
 var theDamage = dmg;
-if !instance_exists(owner) || owner == noone || owner.my_health < 2 || hits > maxDamage
+var breakPoint = 2;
+if owner.object_index == Player
+{
+	if scrIsCrown(18)
+		breakPoint += 1;
+	if UberCont.voidChallengeGoing[1]
+		breakPoint += 1;
+}
+if !instance_exists(owner) || owner == noone || owner.my_health < breakPoint || hits > maxDamage
 {
 	instance_destroy();	
 	exit;
@@ -9,7 +17,7 @@ else
 {
 	if owner.object_index == Player
 	{
-		if Player.ultra_got[62] && Player.altUltra && Player.armour < 2//LIVING ARMOUR
+		if Player.ultra_got[62] && Player.altUltra && Player.armour < breakPoint//LIVING ARMOUR
 		{
 			instance_destroy();
 			exit;

@@ -186,6 +186,7 @@ if instance_exists(Player)
 					y = BigMachine.y - 64;
 					friction = 2;
 					speed = 0;
+					scrForcePosition60fps();
 				}
 			}
 			if instance_exists(InvertedBigMachine)

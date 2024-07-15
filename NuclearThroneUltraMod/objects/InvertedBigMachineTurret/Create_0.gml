@@ -1,6 +1,6 @@
 image_angle=90;
 
-
+depth = 2;
 alarm[1] = 90;
 
 target = -1

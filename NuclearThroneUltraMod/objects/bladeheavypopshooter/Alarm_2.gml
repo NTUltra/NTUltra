@@ -7,4 +7,4 @@ with instance_create(x,y,Bullet2Heavy)
 	scrCopyWeaponMod(other);
 }
 snd_play(sndPopgun,0.2,true,true,1);
-alarm[2] = 2;
+alarm[2] = 4;

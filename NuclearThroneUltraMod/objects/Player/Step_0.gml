@@ -261,7 +261,7 @@ if !instance_exists(LevCont) and visible = 1
 			if speed > 5.1
 				speed -= 3.5 * delta;
 			var multi = 0;//Diagonal movement is faster acceleration otherwise
-			if (canMove && !!lockout)
+			if (canMove && !lockout)
 			{
 				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
 				{
@@ -809,14 +809,14 @@ if !instance_exists(LevCont) and visible = 1
 		    }
 		if (keyboard_check_pressed(vk_tab))
 		    {
-		    repeat(3)
+		    /*repeat(3)
 		    instance_create(Player.x,Player.y,HPPickup);
 			thing = instance_create(x,y,PopupText)
-			thing.mytext = "HEALTH!";
+			thing.mytext = "HEALTH!";*/
 			
 			instance_create(x,y,HealthChest);
-			thing = instance_create(x,y,PopupText);
-			thing.mytext = "MORE HEALTH!";
+			//thing = instance_create(x,y,PopupText);
+			//thing.mytext = "MORE HEALTH!";
 		    }
 		if (keyboard_check_pressed(ord("H")))
 		    {
@@ -1755,6 +1755,12 @@ if wep == 751//Coffee makes you faster
 {
 	tempMaxSpeed += 2;
 }
+if hammerheadDig > 0
+{
+	tempMaxSpeed += 1.5;
+	if race == 25
+	tempMaxSpeed += 0.75;
+}
 outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
 {
@@ -2620,13 +2626,13 @@ if hammerheadcounter > 0
 {
 	var msk = mask_index;
 	mask_index = mskWallBreak;
-	if place_meeting(x,y,Wall)
+	if place_meeting(x,y,WallHitMe)
 	{
 		nearWall = true;
 		mask_index = msk;
 		if roll != 0 || jump > 0
 			mask_index = mskPlayer;
-		if place_meeting(x+hspeed * 1.5,y+vspeed * 1.5,Wall)
+		if place_meeting(x+hspeed * 1.5,y+vspeed * 1.5,WallHitMe)
 		{
 			if is60fps
 				hammerheadtimer += 0.5;

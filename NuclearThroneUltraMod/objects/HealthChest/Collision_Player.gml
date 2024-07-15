@@ -20,14 +20,14 @@ if !instance_exists(GenCont)
 			popupT.sprt = sprArmourIconPickup;
 			popupT.mytext = "+"+string(num)
 			if Player.armour >= Player.maxarmour
-			popupT.mytext = "MAX"
+				popupT.mytext = "MAX"
 		}
 		else
 		{
 			popupT = instance_create(x,y,PopupText)
 			popupT.mytext = "+"+string(num)+" HP"
 			if Player.armour >= Player.maxarmour
-			popupT.mytext = "MAX ARMOUR"
+				popupT.mytext = "MAX ARMOUR"
 		}
 		with Player
 		{
@@ -67,12 +67,12 @@ if !instance_exists(GenCont)
 		if UberCont.opt_ammoicon
 		{
 			var popupT = instance_create(x,y,PopupText)
-			popupT.spr = sprHPIconPickup;
+			popupT.sprt = sprHPIconPickup;
 			popupT.mytext = "+"+string(num)
 			if other.my_health = other.maxhealth
-			popupT.mytext = "MAX"
+				popupT.mytext = "MAX"
 			else if other.my_health > other.maxhealth
-			popupT.mytext = "+"+string(ceil(num))+"#OVERHEAL!"
+				popupT.mytext = "+"+string(ceil(num))+" OVERHEAL!"
 		}
 		else
 		{
@@ -81,7 +81,7 @@ if !instance_exists(GenCont)
 			if other.my_health = other.maxhealth
 			popupT.mytext = "MAX HP"
 			else if other.my_health > other.maxhealth
-			popupT.mytext = "+"+string(num)+" HP#OVERHEAL!"
+			popupT.mytext = "+"+string(num)+" HP OVERHEAL!"
 		}
 		with other {
 			//OVERHEAL

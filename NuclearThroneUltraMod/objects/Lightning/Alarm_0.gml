@@ -3,6 +3,13 @@ if UberCont.recursionCheck > 28
 	alarm[0] = 1;
 	exit;
 }
+if team != 2
+{
+	defaultYscale = 1;
+	imageSpeed = 0.4
+	accuracy=18;
+	branch = 20;
+}
 image_speed = imageSpeed;
 image_index = 0;
 visible = true;
@@ -41,6 +48,7 @@ if instance_exists(Player){
 			instance_destroy(id,false);
 			exit;
 		}
+		event_user(1);
 		isog = false;
 		simpleAccuracy = Player.accuracy;
 		accuracy += Player.accuracy*2;

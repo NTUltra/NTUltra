@@ -63,6 +63,7 @@ function scrSaveOptions() {
 	ini_write_real("OPTIONS","right",opt_right);
 	ini_write_real("OPTIONS","swap",opt_swap);
 	ini_write_real("OPTIONS","pickup",opt_pickup);
+	ini_write_real("OPTIONS","regal",opt_regal);
 
 
 

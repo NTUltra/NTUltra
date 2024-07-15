@@ -1,5 +1,5 @@
 raddrop = 9
-maxhealth = 30
+maxhealth = 35
 meleedamage = 0
 mySize = 2
 
@@ -19,4 +19,4 @@ pSpeed = 8.6;
 acc = 1.6;
 maxSpeed = 4.75;
 shootTell = 1;
-smackTell = 3;
+smackTell = 10;

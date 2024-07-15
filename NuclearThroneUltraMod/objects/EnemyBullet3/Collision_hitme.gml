@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0 && image_index < 3
+if other.team != team and other.my_health > 0 && image_index < 3 && sprite_index != sprEBullet3Disappear
 {
 	instance_destroy()
 	with other

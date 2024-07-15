@@ -1,7 +1,7 @@
 friction=0.4;
 image_speed=0.4;
 direction=90;
-
+depth = 2;
 alarm[0]=200;
 team = 1;
 gunangle=0;

@@ -1,6 +1,7 @@
 maxhealth = 150;//230
 mySize = 2;
-
+if scrIsGamemode(5)//1HP gamemode
+	maxhealth = 1;
 spr_inactive = sprBigGeneratorInactive;
 spr_idle = spr_inactive
 spr_hurt = spr_inactive

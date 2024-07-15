@@ -19,6 +19,7 @@ if loops > 2
 		waveSpeed *= -1;
 	}
 }
+/*
 with chestprop {
 	var f = instance_nearest(Player.x + random_range(32,200), Player.y + random_range(128,500), Floor);
 	x = f.x+16;
@@ -30,7 +31,7 @@ with RadChest {
 	x = f.x+16;
 	y = f.y+16;
 	scrForcePosition60fps();
-}
+}*/
 mySize = 4
 event_inherited();
 meleedamage = 7

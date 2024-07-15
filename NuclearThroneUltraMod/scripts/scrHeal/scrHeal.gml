@@ -28,7 +28,7 @@ function scrHeal(num = 1, canOverHeal = false){
 				}
 				else
 				{
-					popupText.mytext = "+"+string(num)+"#OVERHEAL!";
+					popupText.mytext = "+"+string(num)+" OVERHEAL!";
 				}
 			}
 			else

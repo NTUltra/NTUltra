@@ -1,5 +1,4 @@
 image_angle=90;
-
 alarm[1] = 90;
 team = 1;
 target = -1
@@ -13,3 +12,4 @@ if loops > 10
 
 actTime = 50;
 actTime -= min(20,loops*5)
+depth = 2;

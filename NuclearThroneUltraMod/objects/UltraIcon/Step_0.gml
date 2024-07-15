@@ -443,7 +443,8 @@ if (selected && visible &&
 			prevhealth = my_health;
 			scrUltras(true, false);
 			canHeal = false;
-			scrUnlockAltSkin(race, bskin);
+			if bskin < 3
+				scrUnlockAltSkin(race, bskin);
 			if bskin == 0 || bskin == 3
 			{
 				spr_idle=sprMutant10EIdle;

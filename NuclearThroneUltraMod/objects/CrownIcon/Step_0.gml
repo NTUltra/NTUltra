@@ -198,7 +198,7 @@ if crown == 20
 	with Player {
 		//if maxarmour < 1
 		//	gotMinimumArmour = true;
-		canCrownOfProtection = 3;
+		canCrownOfProtection = 4;
 		//not Living armour
 		if !(instance_exists(Player) && Player.ultra_got[62] && Player.altUltra)
 		{

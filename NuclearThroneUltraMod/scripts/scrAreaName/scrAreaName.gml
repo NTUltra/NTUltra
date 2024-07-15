@@ -155,6 +155,9 @@ function scrAreaName(area,subarea,loops){
 				txt = "7_"+string(subarea);
 				upsideDown = true;
 			break;
+			case 137: //Clouds
+				txt = "6C_"+string(subarea);
+			break;
 		}
 	}
 	if loops>0

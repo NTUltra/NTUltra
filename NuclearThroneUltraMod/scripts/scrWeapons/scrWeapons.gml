@@ -1946,7 +1946,7 @@ function scrWeapons() {
 
 	wep_name[174] = "FLAME DIRECTOR SHOTGUN"
 	wep_type[174] = 2
-	wep_auto[174] = 2
+	wep_auto[174] = 1
 	wep_load[174] = 20
 	wep_cost[174] = 1
 	wep_sprt[174] = sprFlameDirectorShotgun
@@ -6451,10 +6451,10 @@ function scrWeapons() {
 	wep_name[575] = "HEAVY POP BLADE GUN"
 	wep_type[575] = 3
 	wep_auto[575] = 1
-	wep_load[575] = 20
-	wep_cost[575] = 4
+	wep_load[575] = 22
+	wep_cost[575] = 4.5
 	wep_sprt[575] = sprHeavyPopBladegun
-	wep_area[575] = 16
+	wep_area[575] = 17
 	wep_text[575] = "blades don't hurt you"
 	wep_swap[575] = sndSwapBow
 	wep_rad[575] = 0;
@@ -8620,9 +8620,9 @@ function scrWeapons() {
 	wep_type[770] = 1
 	wep_auto[770] = 0
 	wep_load[770] = 7
-	wep_cost[770] = 5
+	wep_cost[770] = 5.5
 	wep_sprt[770] = sprKrakenRevolver
-	wep_area[770] = 4
+	wep_area[770] = 5
 	wep_text[770] = "ocean bullets"
 	wep_swap[770] = sndSwapPistol
 	wep_rad[770] = 0;
@@ -8762,10 +8762,10 @@ function scrWeapons() {
 	wep_name[783] = "CHARGE OVERDRIVER"
 	wep_type[783] = 1
 	wep_auto[783] = 3
-	wep_load[783] = 5
+	wep_load[783] = 4
 	wep_cost[783] = 1
 	wep_sprt[783] = sprOverdriver
-	wep_area[783] = 12
+	wep_area[783] = 8
 	wep_text[783] = "a different type of charge weapon"
 	wep_swap[783] = sndSwapMotorized
 	wep_rad[783] = 0;
@@ -8777,7 +8777,7 @@ function scrWeapons() {
 	wep_load[784] = 28
 	wep_cost[784] = 16
 	wep_sprt[784] = sprChopGun
-	wep_area[784] = 7
+	wep_area[784] = 6
 	wep_text[784] = "karate chop!"
 	wep_swap[784] = sndSwapMachinegun
 	wep_rad[784] = 0;
@@ -8812,7 +8812,7 @@ function scrWeapons() {
 	wep_load[787] = 26
 	wep_cost[787] = 2
 	wep_sprt[787] = sprChopSplinterGun
-	wep_area[787] = 7
+	wep_area[787] = 6
 	wep_text[787] = "chop the wood in half"
 	wep_swap[787] = sndSwapMachinegun
 	wep_rad[787] = 0;
@@ -8909,7 +8909,7 @@ function scrWeapons() {
 	
 	wep_name[796] = "MAGNETIC CROSSBOW"
 	wep_type[796] = 3
-	wep_auto[796] = 2
+	wep_auto[796] = 1
 	wep_load[796] = 30
 	wep_cost[796] = 3
 	wep_sprt[796] = sprMagneticCrossbow
@@ -8925,7 +8925,7 @@ function scrWeapons() {
 	wep_load[797] = 3
 	wep_cost[797] = 5
 	wep_sprt[797] = sprKrakenMachinegun
-	wep_area[797] = 10
+	wep_area[797] = 11
 	wep_text[797] = "ocean bullets"
 	wep_swap[797] = sndSwapPistol
 	wep_rad[797] = 0;
@@ -8974,6 +8974,17 @@ function scrWeapons() {
 	wep_swap[801] = sndSwapEnergy
 	wep_rad[801] = 20;
 	wep_popup[801] = "HIT SHOTS PARTIALLY RELOAD THIS GUN!";
+	
+	wep_name[802] = "LASER SMG"
+	wep_type[802] = 5
+	wep_auto[802] = 1
+	wep_load[802] = 2
+	wep_cost[802] = 0.5
+	wep_sprt[802] = sprLaserSMG
+	wep_area[802] = 5
+	wep_text[802] = "micro laser smg"
+	wep_swap[802] = sndSwapPistol
+	wep_rad[802] = 0;
 	//Swiss army bow
 	//Charge boomerang
 	

@@ -12,7 +12,7 @@ if object_index == TinyJellyFish
 	var ang = random(360);
 	var am = 3;
 	var angStep = 360/am;
-	var l = 2;
+	var l = 1;
 	repeat(am)
 	{
 		with instance_create(x,y,Lightning)

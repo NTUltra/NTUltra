@@ -103,10 +103,10 @@ image_index += 0.4
 if !place_meeting(x,y,Wall)
 {
 	image_angle += rotspeed*speed
-	if collision_line(xprevious,yprevious,x,y,Wall,false,false) && !place_meeting(xprevious,yprevious,Wall)
+	if collision_line(xprev,yprev,x,y,Wall,false,false) && !place_meeting(xprev,yprev,Wall)
 	{
-		x = xprevious;
-		y = yprevious;
+		x = xprev;
+		y = yprev;
 		scrForcePosition60fps();
 		speed *= 0.8;
 	}
@@ -141,7 +141,8 @@ else
 		}
 	}	
 }
-
+xprev = x;
+yprev = y;
 //if curse = 1 and random(6) < 1
 //instance_create(x+random(8)-4,y+random(8)-4,Curse)
 if instance_exists(Player)

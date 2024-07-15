@@ -125,10 +125,10 @@ function scrSkills() {
 	if !UberCont.useSeed && random(500)<1
 		skill_name[6] = "CASINO ROLL"
 	skill_text[6] = "CHANCE KILLS REGENERATE <y>AMMO<y>"
-	skill_detail[6] = "22% CHANCE KILLS REGENERATE <y>AMMO<y>";
+	skill_detail[6] = "20% CHANCE KILLS REGENERATE <y>AMMO<y>";
 	skill_tips[6] = "ammo everywhere"
 	skill_msnd[6] =  sndMutLuckyShot
-	skill_bons[6] = "+25% CHANCE#(TOTAL: 27.5%)";
+	skill_bons[6] = "+25% CHANCE#(TOTAL: 26%)";
 	
 	
 	skill_name[7] = "BLOODLUST"
@@ -383,10 +383,10 @@ function scrSkills() {
 
 	skill_name[26] = "HAMMER HEAD"
 	skill_text[26] = "<w>DIG<w> THROUGH SOME <w>WALLS<w>";
-	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU ARE <aq>IMMUNE<aq>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
+	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU ARE <aq>IMMUNE<aq> AND <w>FAST<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
-	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS#LONGER DIG IMMUNITY";
+	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS#LONGER DIG IMMUNITY#EVEN FASTER MOVEMENT";
 
 	skill_name[27] = "PATIENCE"
 	skill_text[27] = "CHOOSE A <g>MUTATION<g> NEXT AREA"

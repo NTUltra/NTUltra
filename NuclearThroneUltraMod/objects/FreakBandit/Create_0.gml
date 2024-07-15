@@ -1,5 +1,5 @@
 raddrop = 7
-maxhealth = 26
+maxhealth = 40
 meleedamage = 0
 mySize = 2
 
@@ -28,6 +28,6 @@ pSpeed = 7.5;
 acc = 1.4;
 maxSpeed = 4.2;
 shootTell = 3;
-smackTell = 8;
+smackTell = 14;
 wepangle = choose(-140,140)
 wepflip = 1

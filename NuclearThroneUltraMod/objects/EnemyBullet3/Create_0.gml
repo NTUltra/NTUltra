@@ -1,5 +1,5 @@
 event_inherited();
-friction = 0.6
+friction = 0.55
 depth -= 1;
 wallbounce = 0
 alarm[2] =1

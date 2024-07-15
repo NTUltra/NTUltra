@@ -69,6 +69,7 @@ function scrLoadOptions() {
 	opt_right = ini_read_real("OPTIONS","right",68);//D
 	opt_swap = ini_read_real("OPTIONS","swap",81);//Q
 	opt_pickup = ini_read_real("OPTIONS","pickup",69);//E
+	opt_regal = ini_read_real("OPTIONS","regal",70);//F
 	
 
 }

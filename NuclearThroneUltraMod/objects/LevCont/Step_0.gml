@@ -33,6 +33,7 @@ if KeyCont.key_west[0] == 1
 	snd_play_2d(sndHover);
 	selectedIndex -= 1;
 	var hasSelectedSkill = false;
+	if instance_exists(UltraIcon) || instance_exists(SkillIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{
@@ -89,6 +90,7 @@ else if KeyCont.key_east[0] == 1
 	snd_play_2d(sndHover);
 	selectedIndex += 1;
 	var hasSelectedSkill = false;
+	if instance_exists(UltraIcon) || instance_exists(SkillIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{

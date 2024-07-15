@@ -106,7 +106,9 @@ function scrUpdateScore(theOther, isPerliminary = false){
 					if (getUltraMutation() != 255 || theOther.boostLevel >= theOther.maxlevel) || array_length(runScore) <= 14
 					{
 						runScore[14] = getUltraMutation();
-						runScore[15] = scrGetAllMutations();
+						var muts = scrGetAllMutations();
+						if runScore[15] == "" || muts != ""
+						runScore[15] = muts;
 					}
 				//}
 			}

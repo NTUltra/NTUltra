@@ -9,6 +9,11 @@ with ThroneSitter
 maxhealth = 1640//1700
 scrBossHealthBuff();
 EnemyHealthAdjustments();
+if scrIsGamemode(5)//1HP gamemode
+{
+	my_health += 9;
+	maxhealth += 9;
+}
 raddrop = 600;
 isInverted = true;
 aTime = 34;

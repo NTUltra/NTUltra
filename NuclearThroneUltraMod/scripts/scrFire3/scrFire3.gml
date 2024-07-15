@@ -152,9 +152,9 @@ function scrFire3(hasTailNow){
 		//KRAKEN MACHINEGUN
 		case 797:
 
-		snd_play_fire(sndHeavyRevolver)
+		snd_play_fire(sndKrakenRevolver)
 		snd_play(choose(sndWater1,sndWater2));
-		repeat(2)
+		repeat(3)
 			with instance_create(x,y,Shell)
 				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
@@ -315,6 +315,38 @@ function scrFire3(hasTailNow){
 		{
 			scrMoveContactSolid(aimDirection + 180,32);
 			motion_add(aimDirection + 180, 8);
+		}
+
+		break;
+		
+		//LASER SMG
+		case 802:
+
+		if Player.skill_got[17] = 1
+			snd_play(sndMicroLaserUpg,0.03,true);
+		else
+			snd_play(sndMicroLaser,0.03,true);
+		with instance_create(x,y,Laser)
+		{
+			defaultPierce -= 8;
+			image_angle = aimDirection+(random(16)-8)*other.accuracy
+			team = other.team;
+			sprite_index = sprMicroLaser;
+			knockback = 2;
+			alarm[2] = 3;
+			image_yscale *= 0.5;
+			dmg -= 1;
+			event_perform(ev_alarm,0)
+		}
+		BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = 5
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,0.25);
+			motion_add(aimDirection+180,0.5)
 		}
 
 		break;

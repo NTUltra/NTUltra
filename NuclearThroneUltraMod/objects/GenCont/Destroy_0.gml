@@ -207,10 +207,10 @@ if instance_exists(Player)
 					}
 				}
 			}
-			hammerheadcounter = 25;
+			hammerheadcounter = 27;
 			if race=25
 			{
-				hammerheadcounter += 6;
+				hammerheadcounter += 7;
 			}
 	
 	    }

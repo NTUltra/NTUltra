@@ -36,6 +36,7 @@ function scrInitOptions() {
 	opt_right=68//D
 	opt_swap=81//Q
 	opt_pickup=69//E
+	opt_regal=70//F
 
 	//DETECT RESOLUTION
 	//min(floor(display_get_width()/320),floor(display_get_height()/240))

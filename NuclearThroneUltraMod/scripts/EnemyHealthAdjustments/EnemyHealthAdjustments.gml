@@ -5,6 +5,11 @@ function EnemyHealthAdjustments(){
 	if instance_exists(Player)
 	{
 		var ogmaxhealth = maxhealth;
+		if scrIsGamemode(5)//1HP gamemode
+		{
+			my_health = 1;
+			maxhealth = my_health;
+		}
 		maxhealth *= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
 		if scrIsHardMode()
 			maxhealth *= 1.1;
@@ -61,12 +66,7 @@ function EnemyHealthAdjustments(){
 		//my_health = max(1,maxhealth - hpReduction);
 		my_health = max(1,my_health);
 	}
-	if scrIsGamemode(5)//1HP gamemode
-	{
-		my_health = 1;
-		maxhealth = my_health;
-	}
-	else if scrIsGamemode(41)//Double hp
+	if scrIsGamemode(41)//Double hp
 	{
 		my_health *= 2;
 		maxhealth = my_health;

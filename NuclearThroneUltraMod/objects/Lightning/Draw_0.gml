@@ -1,4 +1,4 @@
-image_yscale = 1+random(1.5)
+image_yscale = defaultYscale+random(1.5)
 var al = array_length(lightningList);
 if al > 0 && alarm[0] < 1
 {

@@ -16,6 +16,10 @@ if image_index == 1 && !wentIn
 		with instance_create(x+16,y+16,Portal){
 			type = 1
 			pullstrength = 3;
+			alarm[1] = 1;
+			x = other.x+16;
+			y = other.y+16;
+			scrForcePosition60fps();
 			with Player
 			{
 				lockout = true;
@@ -23,10 +27,6 @@ if image_index == 1 && !wentIn
 				y = other.y;
 				scrForcePosition60fps();
 			}
-			alarm[1] = 1;
-			x = other.x+16;
-			y = other.y+16;
-			scrForcePosition60fps();
 		}
 	}
 }

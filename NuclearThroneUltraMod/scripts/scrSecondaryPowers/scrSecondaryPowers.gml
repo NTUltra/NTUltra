@@ -2,13 +2,20 @@
 // /@description
 ///@param
 function scrSecondaryPowers() {
+	var isOverlapping = false;
+	var uniqueKey = true;
+	if UberCont.opt_regal == UberCont.opt_pickup
+	{
+		uniqueKey = false;
+		isOverlapping = (targetPickup == noone || isOnInteractable);
+	}
 	if (skill_got[maxskill + 1])
 	{
 		switch (race)
 		{
 			//CRYSTAL
 			case 2:
-				if targetPickup == noone && !isOnInteractable && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				if !isOverlapping && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
 				{
 					if my_health > 1
 					{
@@ -38,7 +45,7 @@ function scrSecondaryPowers() {
 						instance_create(x,y,CrystalTorpedo);
 						snd_play(sndCrystalTorpedo);
 					}
-					else if KeyCont.key_pick[p] == 1
+					else if KeyCont.key_regal[p] == 1
 					{
 						snd_play_2d(sndCantTorpedo,0.1);
 						BackCont.shake += 10;
@@ -47,7 +54,7 @@ function scrSecondaryPowers() {
 			break;
 			//EYES
 			case 3:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
 					var a;
 					if !instance_exists(MindField)
@@ -81,7 +88,7 @@ function scrSecondaryPowers() {
 			break;
 			//YV
 			case 6:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && bwep != 0
+				if !isOverlapping && KeyCont.key_regal[p] == 1 && bwep != 0
 				{
 					var lowa = 0;
 					var lowb = 0;
@@ -117,12 +124,20 @@ function scrSecondaryPowers() {
 			break;
 			//STEROIDS
 			case 7:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
 				{
 					var canDoTheThing = false;
 					if !instance_exists(HoldToSteroidsShoot)
 					{
-						instance_create(x,y,HoldToSteroidsShoot);	
+						instance_create(x,y,HoldToSteroidsShoot);
+						if uniqueKey
+						{
+							with HoldToSteroidsShoot
+							{
+								//event_perform(ev_other,ev_animation_end);
+								visible = false;
+							}
+						}
 					}
 					with HoldToSteroidsShoot
 					{
@@ -203,7 +218,7 @@ function scrSecondaryPowers() {
 			break;
 			//ROBOT
 			case 8:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					with HoldToEatEnemy
 					{
@@ -231,7 +246,7 @@ function scrSecondaryPowers() {
 			break;
 			//CHICKEN
 			case 9:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
 					if instance_exists(ChickenRewindPosition) && chickenFocusInUse
 					{
@@ -250,7 +265,7 @@ function scrSecondaryPowers() {
 			break;
 			//REBEL
 			case 10:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
 					if instance_exists(Ally)
 					{
@@ -316,7 +331,7 @@ function scrSecondaryPowers() {
 			break;
 			//HUNTER
 			case 11:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
 					if !instance_exists(MarkerWallToggler)
 					{
@@ -359,7 +374,7 @@ function scrSecondaryPowers() {
 			break;
 			//YUNG CUZ
 			case 12:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					with HoldToHack
 					{
@@ -367,17 +382,25 @@ function scrSecondaryPowers() {
 					}
 					if !instance_exists(HoldToHack)
 					{
-						instance_create(x,y,HoldToHack)
+						instance_create(x,y,HoldToHack);
+						if uniqueKey
+						{
+							with HoldToHack
+							{
+								visible = false;
+								event_perform(ev_other,ev_animation_end);
+							}
+						}
 					}
 				}
 			break;
 			//SHEEP
 			case 13:
-				if KeyCont.key_pick[p] == 1 && !instance_exists(SheepSuperCharge) && !outOfCombat
+				if KeyCont.key_regal[p] == 1 && !instance_exists(SheepSuperCharge) && !outOfCombat
 				{
-					if sheepPower >= 9 || (justAsheep && targetPickup == noone && !isOnInteractable) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
+					if sheepPower >= 9 || (justAsheep && !isOverlapping) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
 					{
-						KeyCont.key_pick[p] = 2;
+						KeyCont.key_regal[p] = 2;
 						with SheepStorm
 						{
 							instance_destroy();
@@ -395,7 +418,7 @@ function scrSecondaryPowers() {
 			break;
 			//PANDA
 			case 14:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					
 					if !instance_exists(PandaSleep) 
@@ -441,7 +464,7 @@ function scrSecondaryPowers() {
 			break;
 			//ATOM
 			case 15:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
 					var a;
 					a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
@@ -514,7 +537,7 @@ function scrSecondaryPowers() {
 			break;
 			//VIKING
 			case 16:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					with HoldToArmour
 					{
@@ -525,7 +548,15 @@ function scrSecondaryPowers() {
 					{
 						if scrCanArmourHeal(false)
 						{
-							instance_create(x,y,HoldToArmour)
+							instance_create(x,y,HoldToArmour);
+							if uniqueKey
+							{
+								with HoldToArmour
+								{
+									visible = false;
+									event_perform(ev_other,ev_animation_end);
+								}
+							}
 						}
 						else
 						{
@@ -536,7 +567,7 @@ function scrSecondaryPowers() {
 			break;
 			//WEAPON SMITH
 			case 17:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					with HoldToShiftAmmo
 					{
@@ -555,13 +586,21 @@ function scrSecondaryPowers() {
 						else
 						{
 							instance_create(x,y,HoldToShiftAmmo);
+							if uniqueKey
+							{
+								with HoldToShiftAmmo
+								{
+									visible = false;
+									event_perform(ev_other,ev_animation_end);
+								}
+							}
 						}
 					}
 				}
 			break;
 			//ANGEL
 			case 18:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && instance_exists(AngelActive)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && instance_exists(AngelActive)
 				{
 					var alreadyMoving = false;
 					with AngelActive
@@ -592,7 +631,7 @@ function scrSecondaryPowers() {
 			break;
 			//SKELETON
 			case 19:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && !instance_exists(SkeletonSkullDestroyed)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && !instance_exists(SkeletonSkullDestroyed)
 				{
 					with HoldToSkull
 					{
@@ -601,12 +640,20 @@ function scrSecondaryPowers() {
 					if !instance_exists(HoldToSkull)
 					{
 						instance_create(x,y,HoldToSkull);	
+						if uniqueKey
+						{
+							with HoldToSkull
+							{
+								visible = false;
+								event_perform(ev_other,ev_animation_end);
+							}
+						}
 					}
 				}
 			break;
 			//HORROR
 			case 21:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > origincharge*2)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && instance_exists(Rad) && (instance_number(Rad) > origincharge*2)
 				{
 					var ballPower = 0;	
 					with Rad
@@ -665,7 +712,7 @@ function scrSecondaryPowers() {
 			break;
 			//ROGUE
 			case 22:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && my_health > 1
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && my_health > 1
 				{
 					DealDamage(1);
 					sprite_index = spr_hurt;
@@ -683,7 +730,7 @@ function scrSecondaryPowers() {
 			break;
 			//FROG
 			case 23:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && toxicamount > 1 && !toxicUltra
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && toxicamount > 1 && !toxicUltra
 				{
 					if rad > 100
 					{
@@ -745,7 +792,7 @@ function scrSecondaryPowers() {
 			break;
 			//ELEMENTOR
 			case 24:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && instance_exists(ElementorWall)
+				if !isOverlapping && KeyCont.key_regal[p] == 1 && instance_exists(ElementorWall)
 				{
 					BackCont.shake += 10 + min(40,instance_number(ElementorWall));
 					if instance_number(ElementorWall) > 13
@@ -765,7 +812,7 @@ function scrSecondaryPowers() {
 			break;
 			//DOCTOR
 			case 25:
-				if targetPickup == noone && !isOnInteractable && (KeyCont.key_pick[p] == 1) && !instance_exists(PlagueBringer)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && !instance_exists(PlagueBringer)
 				{
 					var gottenSkills = 0;
 					var si = 0;
@@ -785,7 +832,15 @@ function scrSecondaryPowers() {
 						}
 						if !instance_exists(HoldToPlague)
 						{
-							instance_create(x,y,HoldToPlague);	
+							instance_create(x,y,HoldToPlague);
+							if uniqueKey
+							{
+								with HoldToPlague
+								{
+									visible = false;
+									event_perform(ev_other,ev_animation_end);
+								}
+							}
 						}
 					}
 					else
@@ -801,7 +856,7 @@ function scrSecondaryPowers() {
 			break;
 			//HUMPHRY
 			case 26:
-				if targetPickup == noone && !isOnInteractable && KeyCont.key_pick[p] == 1 && !instance_exists(SpeedLockout)
+				if !isOverlapping && KeyCont.key_regal[p] == 1 && !instance_exists(SpeedLockout)
 				{
 					with HoldToSelfStun
 					{
@@ -810,13 +865,21 @@ function scrSecondaryPowers() {
 					if !instance_exists(HoldToSelfStun)
 					{
 						instance_create(x,y,HoldToSelfStun);
+						if uniqueKey
+						{
+							with HoldToSelfStun
+							{
+								visible = false;
+								event_perform(ev_other,ev_animation_end);
+							}
+						}
 					}
 					
 				}
 			break;
 			//HANDS
 			case 27:
-				if !instance_exists(HandBlock) && (KeyCont.key_pick[p] == 1 || KeyCont.key_pick[p] == 2)
+				if !instance_exists(HandBlock) && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
 				{
 					with Hand
 					{

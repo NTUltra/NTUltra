@@ -99,6 +99,7 @@ function scrDrawOptions() {
 		var right;
 		var swap;
 		var pickup;
+		var regal;
 		
 		up=scrAsciiChar(UberCont.opt_up);
 		down=scrAsciiChar(UberCont.opt_down);
@@ -106,11 +107,12 @@ function scrDrawOptions() {
 		right=scrAsciiChar(UberCont.opt_right);
 		swap=scrAsciiChar(UberCont.opt_swap);
 		pickup=scrAsciiChar(UberCont.opt_pickup);
+		regal=scrAsciiChar(UberCont.opt_regal);
 		
 		txt0 = "#REMAP OPTIONS#CLICK WITH LMB ON SQUARE THEN PRESS KEY##########################PRESS [RIGHT CLICK] TO RETURN";
-		txt1 = "####CUSTOMIZE CONTROLS#UP#DOWN#LEFT#RIGHT#SWAP WEAPONS#PICKUP################REMAP CONTROLS"
+		txt1 = "####CUSTOMIZE CONTROLS#UP#DOWN#LEFT#RIGHT#SWAP WEAPONS#PICKUP#REGAL VISION##RESET#############REMAP CONTROLS"
 		txt2 = "#####"+up+"#"+down+"#"+left
-		+"#"+right+"#"+swap+"#"+pickup+"################CLOSE";
+		+"#"+right+"#"+swap+"#"+pickup+"#"+regal+"###############CLOSE";
 
 		stxt0 = "#REMAP OPTIONS##########################";
 		stxt1 = "####CUSTOMIZE CONTROLS##### ####### #### ####"
@@ -127,6 +129,8 @@ function scrDrawOptions() {
 		with KeySwap
 		event_perform(ev_draw,0)
 		with KeyPickup
+		event_perform(ev_draw,0)
+		with KeyRegal
 		event_perform(ev_draw,0)
 		with KeyReset
 		event_perform(ev_draw,0)

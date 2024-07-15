@@ -92,6 +92,9 @@ function scrLoseSkill(skillIndex, disableInstead = false){
 				scrWeaponAdjustCost(1.07);
 			//Cap the ammo
 		break;
+		case 11://SCARIER FACE
+			excessDamageDeal = 0;
+		break;
 		case 13: //LONG ARMS
 			bettermelee = 0;
 		break;

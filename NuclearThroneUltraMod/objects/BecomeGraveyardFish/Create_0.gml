@@ -18,6 +18,7 @@ if instance_exists(Floor)
 	x = f.x + o;
 	y = f.y + o;
 }
+instance_create(x,y,PortalOpenWallBreak);
 if instance_exists(Player)
 {
 	move_outside_solid(point_direction(x,y,Player.x,Player.y),128)

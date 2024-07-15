@@ -34,7 +34,8 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+64,KeyRight)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+72,KeySwap)
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+80,KeyPickup)
-instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-__view_get( e__VW.WView, 0 )/4,__view_get( e__VW.YView, 0 )+yy+40,KeyReset)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+88,KeyRegal)
+instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+104,KeyReset)
 
 
 }

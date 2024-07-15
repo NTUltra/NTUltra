@@ -9,7 +9,7 @@ alarm[2] = (image_number/image_speed) + 1
 with instance_create(x, y, EnemyDamageCircle) {
     team = other.team
 }
-alarm[1] += random(actTime * 2);
+alarm[1] += alarm[2] + random(actTime * 2);
 
 var ang = random(360);
 repeat(6)
@@ -17,7 +17,7 @@ repeat(6)
 	with instance_create(x+random(6)-3,y+random(6)-3,LaserCharge)
 	{
 		motion_add(ang,2+random(1))
-		alarm[0] = 2+random(4)
+		alarm[0] = 4+irandom(4)
 	}
 	ang += 60;
 }

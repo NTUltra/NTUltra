@@ -11,7 +11,7 @@ if other.team != team and other.my_health > 0
 		
 		sprite_index = spr_hurt
 		image_index = 0
-		motion_add(other.image_angle,4)
+		motion_add(other.image_angle,other.knockback)
 		if speed > maxSpeed+1
 			speed = maxSpeed+1;
 	}

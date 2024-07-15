@@ -7,7 +7,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = 15;
+		speed = 18;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -44,7 +44,7 @@ else if um == ultramods.laserBullet
 	{
 		defaultPierce -= 8;
 		image_yscale -= 0.3;
-		dmg -= 1;
+		dmg -= 1.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

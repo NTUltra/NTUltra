@@ -4137,6 +4137,7 @@ function scrFire2(hasTailNow) {
 	{image_angle = aimDirection+(random(30)-15)*other.accuracy
 	team = other.team
 	ammo = 11
+	dmg -= 2;
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
@@ -17282,9 +17283,9 @@ function scrFire2(hasTailNow) {
 	//KRAKEN REVOLVER
 	case 770:
 
-	snd_play_fire(sndHeavyRevolver)
+	snd_play_fire(sndKrakenRevolver)
 	snd_play(choose(sndWater1,sndWater2));
-	repeat(2)
+	repeat(3)
 		with instance_create(x,y,Shell)
 			motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
@@ -17305,7 +17306,7 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 6
 	wkick = 2
 	if !skill_got[2]
-		scrMoveContactSolid(aimDirection + 180,2);
+		scrMoveContactSolid(aimDirection + 180,3);
 		
 	break;
 	
@@ -17625,7 +17626,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//CHARGE OVERDRIVER
+	//verVER
 	case 783:
 
 	with instance_create(x,y,Shell)

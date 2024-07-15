@@ -6,6 +6,7 @@ var ogxs = image_xscale;
 var ogys = image_yscale;
 var al = array_length(lightningList);
 var skipFrame = iframeskip * 2;
+var t = team;
 if al > 0 && alarm[0] < 1
 {
 	for (var i = 0; i < al; i++) {
@@ -30,9 +31,12 @@ if al > 0 && alarm[0] < 1
 							{
 								if instance_exists(Player)
 								{
-									DealDamage(other.dmg)
-									other.dmg = max(other.dmg - 2, 2);
-
+									DealDamage(other.dmg);
+									with Lightning
+									{
+										if team == t
+											dmg = max(2,dmg - 3);
+									}
 									if Player.skill_got[17] && team == 2
 										snd_play(sndSpark2);
 									else

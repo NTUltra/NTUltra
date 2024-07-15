@@ -8,6 +8,8 @@ function scrInit() {
 	opt_discdamage=2;
 	justUnlocked = [];
 	//INIT DATA
+	opt_pickup = 69;
+	opt_regal = 70;
 	scrRaces();
 	scrStartingWeapons();
 	scrGameModes();

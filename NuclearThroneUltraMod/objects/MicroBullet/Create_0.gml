@@ -15,7 +15,6 @@ canDamage = true;
 timeIncrease = 0.3;
 canRecycle = false;
 destroyTime = 6;
-event_user(0);
 if instance_exists(Player)
 {
 	if Player.ultra_got[28]//roids ultra d

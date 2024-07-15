@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 maxAmmo = 10;
-raddrop = 18
+raddrop = 16
 maxhealth = 9//13
 spr_idle = sprInvertedCrabIdle
 spr_walk = sprInvertedCrabWalk

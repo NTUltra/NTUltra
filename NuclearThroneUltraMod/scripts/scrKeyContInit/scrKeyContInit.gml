@@ -18,6 +18,7 @@ function scrKeyContInit() {
 	key_spec[p] = 0//special
 	key_pick[p] = 0//pick stuff up
 	key_swap[p] = 0//swap wep
+	key_regal[p] = 0;
 
 	key_back[p] = 0//back from pause, temp gamepad stuff
 	key_paus[p] = 0//pause

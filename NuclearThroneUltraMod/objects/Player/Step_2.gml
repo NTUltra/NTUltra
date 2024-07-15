@@ -8,7 +8,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 	if targetPickup == noone || point_distance(x,y,targetPickup.x,targetPickup.y) >= prange
 		targetPickup = instance_nearest(x,y,ThrowWep);
 	
-	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible && targetPickup.alarm[1] < 1
+	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible && targetPickup.alarm[1] < 1 && !instance_exists(PlayerInEnding) && !instance_exists(PlayerInFakeDeath)
 	{
 		with UberCont
 		{
@@ -68,10 +68,10 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					allammotypes--;
 				}
 				snd_play(sndAmmoPickup);
-				var num = 3;
+				var num = 2;
 				if skill_got[9]//Second stomache
 				{
-					num = 6;
+					num = 4;
 					snd_play(sndHealthPickupUpg);
 					with instance_create(x,y,HealFX)
 					{
@@ -110,7 +110,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
-				if (canCrownOfProtection > 2)
+				if (canCrownOfProtection > 3)
 				{
 					canCrownOfProtection = 0;
 					scrArmourPickup(1);
@@ -240,7 +240,8 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				{
 					tx = x;
 					ty = y;
-					alarm[3] = max(alarm[3],4);
+					if alarm[3] < 1 && !instance_exists(ImmunityCooldown)
+						alarm[3] = max(alarm[3],5);
 					snd_hurt = sndDamageNegate;
 					scrGiveEuphoriaShield();
 					ammoReduction = 0.5;

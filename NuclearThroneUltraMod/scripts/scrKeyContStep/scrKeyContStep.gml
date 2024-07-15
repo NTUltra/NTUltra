@@ -84,6 +84,14 @@ function scrKeyContStep() {
 	else if key_pick[p] !=2 key_pick[p] = 1}
 	else{if key_pick[p] = 3 key_pick[p] = 0
 	else if key_pick[p] !=0 key_pick[p] = 3}
+	
+	//regal
+	if keyboard_check(UberCont.opt_regal)
+	or gamepad_button_check(p,gp_face2){//joy_pressed(joy,2)
+	     if key_regal[p] = 1 key_regal[p] = 2
+	else if key_regal[p] !=2 key_regal[p] = 1}
+	else{if key_regal[p] = 3 key_regal[p] = 0
+	else if key_regal[p] !=0 key_regal[p] = 3}
 
 
 	//pause

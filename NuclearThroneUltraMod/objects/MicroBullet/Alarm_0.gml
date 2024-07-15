@@ -1,5 +1,4 @@
-if !canDamage
-	exit;
+
 if instance_exists(Player)
 {
 	if (aimed=false && team == 2)
@@ -7,7 +6,9 @@ if instance_exists(Player)
 		aimed=true;
 		direction = scrAimAssistLaser(direction,0.75);
 	}
-
+	event_user(0);
+	if !canDamage
+		exit;
 	move_contact_solid(direction,16)
 	x += lengthdir_x(8,direction);
 	y += lengthdir_y(8,direction);

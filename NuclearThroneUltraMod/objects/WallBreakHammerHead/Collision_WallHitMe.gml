@@ -1,3 +1,4 @@
+/// @description Floor
 with other
 {
 	instance_destroy(id)

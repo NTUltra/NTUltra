@@ -33,12 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprTinyJellyFish",
-    "path":"sprites/sprTinyJellyFish/sprTinyJellyFish.yy",
+    "name":"sprInvertedTinyJellyFish",
+    "path":"sprites/sprInvertedTinyJellyFish/sprInvertedTinyJellyFish.yy",
   },
   "spriteMaskId":{
     "name":"mskTinyJellyFish",
     "path":"sprites/mskTinyJellyFish/mskTinyJellyFish.yy",
   },
-  "visible":false,
+  "visible":true,
 }

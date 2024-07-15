@@ -397,9 +397,6 @@ if looping && area != 104
 	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
 		scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
-	if loops>2 && race = 4
-	scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
-
 	if scrIsGamemode(14)
 	scrUnlockBSkin(1,"FOR LOOPING ON GAMEMODE:#FISH'S PARTNER ONLY",14);
 
@@ -409,6 +406,8 @@ if looping && area != 104
 	looping=false;
 	UberCont.ctot_loop[race] += 1
 	    loops += 1
+	if loops > 2 && race = 4
+		scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
 	    if (ultra_got[73] == 1)
 		{
 			ultra_got[73] = 0;
@@ -780,7 +779,7 @@ scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRIN
 if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
 scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
 
-if ( firedthislevel=false && race = 21 && loops>0 )
+if ( firedthislevel=false && race = 21 && loops>0 && area <100 && area != 10)
 scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
 
 //if ( firedthislevel=false && race = 24 && area < 100 && area != 10 && ( area > 2 || loops > 0 )  )
@@ -803,7 +802,7 @@ if (yungCuzCskin > 2)
 }
 
 
-if scrIsCrown(4) && area !=100 && race = 15
+if scrIsCrown(4) && area !=100 && race = 15 && area != 137
 rushcrownlevels++;
 
 if rushcrownlevels=5
