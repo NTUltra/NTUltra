@@ -5,7 +5,7 @@ alarm[0] = 2
 
 var dir = random(360)
 var angstep = 360/5;
-repeat(5)
+repeat(4)
 {
 	with instance_create(x,y,Dust)
 		motion_add(dir,4+random(1))

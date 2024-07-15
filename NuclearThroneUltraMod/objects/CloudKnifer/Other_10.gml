@@ -11,11 +11,11 @@ vspeed = maxSpeed;
 hspeed = 0;
 //image_alpha = targetAlpha + 0.1;
 event_user(2);
-var n = instance_nearest_notme(x,y,CloudKnifer);
-if n != noone && point_distance(x,y,n.x,n.y) < 64
-{	
-	with n {
-		if alarm[1] < actTime
-			alarm[1] += actTime;
+with CloudKnifer
+{
+	if point_distance(x,y,other.x,other.y) < 96
+	{	
+		if alarm[1] < actTime*3
+			alarm[1] += actTime*2;
 	}
 }

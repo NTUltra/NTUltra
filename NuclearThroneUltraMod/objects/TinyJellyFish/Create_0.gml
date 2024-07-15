@@ -1,9 +1,9 @@
 raddrop = 1
-maxhealth = 4
+maxhealth = 2
 mySize = 1
 
 event_inherited()
-meleedamage = 2
+meleedamage = 3
 
 spr_idle = sprTinyJellyFish
 spr_walk = sprTinyJellyFish
@@ -11,13 +11,12 @@ spr_hurt = sprTinyJellyFishHurt
 spr_dead = sprTinyJellyFishDead
 snd_hurt = sndHitFlesh
 scrTarget();
-explodeOnHitTime = 60;
-acc = 0.15;
-maxSpeed = 3;
+acc = 0.12;
+maxSpeed = 2.8;
 draw = true;
 blink = 6;
 trailSprite = sprScrapBossMissileTrail;
-alarm[1] = 5;
+alarm[1] = 15;
 sleeping = true;
 image_xscale = choose(1,-1);
 right = image_xscale;

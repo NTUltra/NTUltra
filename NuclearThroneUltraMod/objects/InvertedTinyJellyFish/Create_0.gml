@@ -1,12 +1,12 @@
 raddrop = 1
-maxhealth = 4
+maxhealth = 1
 mySize = 1
 
 event_inherited()
-meleedamage = 2
+meleedamage = 3
 spr_idle = sprInvertedTinyJellyFish
 spr_walk = sprInvertedTinyJellyFish
 spr_hurt = sprInvertedTinyJellyFishHurt
 spr_dead = sprInvertedTinyJellyFishDead
-acc = 0.3;
-maxSpeed = 4;
+acc = 0.24;
+maxSpeed = 3.5;

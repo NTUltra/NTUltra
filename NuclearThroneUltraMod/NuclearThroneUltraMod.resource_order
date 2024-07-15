@@ -7512,6 +7512,7 @@
     {"name":"sprMaggotHurt","order":1,"path":"sprites/sprMaggotHurt/sprMaggotHurt.yy",},
     {"name":"sprMaggotHurtInvert","order":4,"path":"sprites/sprMaggotHurtInvert/sprMaggotHurtInvert.yy",},
     {"name":"sprMaggotIdleInvert","order":3,"path":"sprites/sprMaggotIdleInvert/sprMaggotIdleInvert.yy",},
+    {"name":"sprMaggotIdleOutline","order":23,"path":"sprites/sprMaggotIdleOutline/sprMaggotIdleOutline.yy",},
     {"name":"sprMaggotLauncher","order":598,"path":"sprites/sprMaggotLauncher/sprMaggotLauncher.yy",},
     {"name":"sprMagneticCrossbow","order":664,"path":"sprites/sprMagneticCrossbow/sprMagneticCrossbow.yy",},
     {"name":"sprMarkerCrosshair","order":1,"path":"sprites/sprMarkerCrosshair/sprMarkerCrosshair.yy",},

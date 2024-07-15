@@ -1,4 +1,4 @@
-scrDrop(12,2)
+scrDrop(15,2)
 if !sleeping
 {
 	if alarm[2] > 0 || loops > 1 || object_index == InvertedJellyFish

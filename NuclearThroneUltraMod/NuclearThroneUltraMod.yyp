@@ -7882,6 +7882,7 @@
     {"id":{"name":"sprMaggotHurtInvert","path":"sprites/sprMaggotHurtInvert/sprMaggotHurtInvert.yy",},},
     {"id":{"name":"sprMaggotIdle","path":"sprites/sprMaggotIdle/sprMaggotIdle.yy",},},
     {"id":{"name":"sprMaggotIdleInvert","path":"sprites/sprMaggotIdleInvert/sprMaggotIdleInvert.yy",},},
+    {"id":{"name":"sprMaggotIdleOutline","path":"sprites/sprMaggotIdleOutline/sprMaggotIdleOutline.yy",},},
     {"id":{"name":"sprMaggotLauncher","path":"sprites/sprMaggotLauncher/sprMaggotLauncher.yy",},},
     {"id":{"name":"sprMagneticCrossbow","path":"sprites/sprMagneticCrossbow/sprMagneticCrossbow.yy",},},
     {"id":{"name":"sprMarkerCrosshair","path":"sprites/sprMarkerCrosshair/sprMarkerCrosshair.yy",},},
