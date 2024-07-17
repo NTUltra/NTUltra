@@ -43,7 +43,7 @@ canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
 peaceBarrierTime = 0;
-peaceBarrierDuration = 60;
+peaceBarrierDuration = 44;
 peaceBarriers = 0;
 peaceBarriersMax = 3;
 canKillKillKill = false;
@@ -775,6 +775,7 @@ hammerheadDig = 0;
 digSurface = -1;
 nearWall = false;
 lag = -1;
+totalDupesSpawned = 0;
 
 visitedCrib = false;
 fromCribToVault = false;

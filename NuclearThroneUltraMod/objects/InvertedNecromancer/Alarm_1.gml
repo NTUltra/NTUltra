@@ -35,7 +35,6 @@ else if random(6) < 2
 					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
 			}
 			snd_play(sndNecromancerRevive)
-			alarm[1] = 15+random(20)
 		}
 	}
 	if noCorpse
@@ -43,6 +42,7 @@ else if random(6) < 2
 		crp = scrFindCorpse();
 		if crp != noone
 		{
+			noCorpse = false;
 			wkick = 5
 			gunangle = point_direction(x,y,crp.x,crp.y)
 			with crp
@@ -51,8 +51,11 @@ else if random(6) < 2
 					instance_create(x+16+random(16)-8,y+16+random(16)-8,InvertedReviveArea);
 			}
 			snd_play(sndNecromancerRevive)
-			alarm[1] = 10+random(20)
 		}	
+	}
+	if !noCorpse
+	{
+		alarm[1] = actTime*3+random(actTime*2)
 	}
 }
 else if random(2)<1

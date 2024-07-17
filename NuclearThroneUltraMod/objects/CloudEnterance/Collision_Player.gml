@@ -7,7 +7,6 @@ else if cAlpha > 0 && hasEnoughMuts
 		isOnInteractable = true;
 	if KeyCont.key_pick[Player.p] = 1 
 	{
-		instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 		KeyCont.key_pick[Player.p] = 2;
 		with Player
 		{
@@ -24,6 +23,7 @@ else if cAlpha > 0 && hasEnoughMuts
 		}
 		if array_length(gottenSkills) > 2
 		{
+			instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 			used = true;
 			isInteractableNow = false;
 			image_index = 1;

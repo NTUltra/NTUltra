@@ -241,7 +241,7 @@ function scrSkills() {
 	skill_name[14] = "BOILING VEINS"
 	if !UberCont.useSeed && random(900)<1
 		skill_name[14] = "HOT HEAD"
-	skill_text[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#<r>#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>"
+	skill_text[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>"
 	skill_detail[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>##(WEAPON SPECIFIC MUTATION)";
 	if instance_exists(Player) && Player.race == 13
 	{
@@ -447,12 +447,12 @@ function scrSkills() {
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "37% LESS ENEMY <r>HP<r>#-2 <r>MAX HP<r>"
-	skill_detail[33] = "37% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <r>MAX HP<r>"
+	skill_text[33] = "35% LESS ENEMY <r>HP<r>#-2 <r>MAX HP<r>"
+	skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "37% LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
-		skill_detail[33] = "37% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <gb>MAX ARMOUR<gb>"
+		skill_text[33] = "35% LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
+		skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -484,9 +484,9 @@ function scrSkills() {
 	
 	skill_name[35] = "PUFFY CHEEKS"
 	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+15% SECONDARY <w>RELOAD SPEED<w>"
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+20% SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+15% <w>OFFHAND RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+20% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";

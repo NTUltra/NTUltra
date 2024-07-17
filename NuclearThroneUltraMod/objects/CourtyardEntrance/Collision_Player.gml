@@ -27,13 +27,16 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 		y = other.y;
 		scrForcePosition60fps();
 		type = 3;
-		pullstrength = 3;
-		with Player
+		pullstrength = 3
+		if !instance_exists(enemy) && !instance_exists(becomenemy)
 		{
-			lockout = true;
-			x = other.x;
-			y = other.y;
-			scrForcePosition60fps();
+			with Player
+			{
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
+			}
 		}
 		alarm[1] = 1;
 	}

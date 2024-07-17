@@ -43,7 +43,7 @@ if um == ultramods.bloodMelee
 		alarm[11] = 0;
 	}
 }
-else // if um == ultramods.krakenMelee
+else if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 7 + speed + dmg;

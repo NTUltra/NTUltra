@@ -491,7 +491,7 @@ function scrMakeFloor(limiter) {
 	//CLOUD LAND
 	if area == 138 {
 		instance_create(x,y,Floor);
-		if false && random(3) < 1
+		if random(3) < 1
 		{
 			instance_create(x+lengthdir_x(32,direction+90),y+lengthdir_y(32,direction+90),Floor)
 			instance_create(x+lengthdir_x(32,direction-90),y+lengthdir_y(32,direction-90),Floor)

@@ -107,8 +107,8 @@ function scrUpdateScore(theOther, isPerliminary = false){
 					{
 						runScore[14] = getUltraMutation();
 						var muts = scrGetAllMutations();
-						if runScore[15] == "" || muts != ""
-						runScore[15] = muts;
+						if array_length(runScore) <= 15 || runScore[15] == "" || muts != ""
+							runScore[15] = muts;
 					}
 				//}
 			}

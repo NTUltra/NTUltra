@@ -14,7 +14,7 @@ function scrCrowns() {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
 		//crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#RESET <gb>ARMOUR<gb> TO MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
-		crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#REGAIN HALF <gb>ARMOUR<gb> MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
+		crown_text[2] = "NO <gb>ARMOUR DROPS<gb>#AT THE END OF EACH AREA#REGAIN 25% <gb>ARMOUR<gb> MAX <gb>ARMOUR<gb>#MORE <gb>ARMOUR<gb> CHESTS"
 	}
 	else
 		crown_text[2] = "NO <r>HEALTH<r> DROPS#AT THE END OF EACH AREA#RESET <r>HP<r> TO <r>MAX HP<r>#MORE <r>HEALTH<r> <w>CHESTS<w>"

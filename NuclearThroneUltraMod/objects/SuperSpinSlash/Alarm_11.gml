@@ -22,7 +22,7 @@ if um == ultramods.bloodMelee
 	}
 	instance_destroy(id,false);
 }
-else
+else if um == ultramods.krakenMelee
 {
 	event_inherited();
 	image_angle += 18;

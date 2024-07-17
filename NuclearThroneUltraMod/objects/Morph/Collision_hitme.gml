@@ -14,7 +14,8 @@ if other.team != 2 && alarm[0] > 2
 				
 				sprite_index = spr_hurt
 				image_index = 0
-				 BackCont.shake += 0.3
+				if BackCont.shake < 6*UberCont.opt_shake
+				 BackCont.shake += 0.4
 			}
 			morphMe = other.morphType;
 		//}

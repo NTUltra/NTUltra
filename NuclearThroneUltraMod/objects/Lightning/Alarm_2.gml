@@ -42,8 +42,10 @@ if al > 0 && alarm[0] < 1
 									else
 										snd_play(sndSpark1);
 										
-									if (Player.skill_got[43] && team != 0)
+									if (Player.skill_got[43] && team != 0 && !other.hasStunned)
 									{
+										with Lightning
+											hasStunned = true;
 										scrMoodSwingStun(6);
 										if Player.ultra_got[97] && !Player.altUltra {
 											scrMoodSwingIcicle(2, id);

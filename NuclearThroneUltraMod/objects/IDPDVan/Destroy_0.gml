@@ -60,11 +60,12 @@ repeat(3)
 	}
 	ang += angStep;
 }
-
+var didtheThing = false;
 with Hand
 {
-	if target == other.id || place_meeting(x,y,other.id) || point_distance(x,y,other.x,other.y) < 128
+	if !didtheThing && (target == other.id || place_meeting(x,y,other.id) || point_distance(x,y,other.x,other.y) < 128)
 	{
+		didtheThing = true;
 		UberCont.vansSlapped ++;
 		if UberCont.vansSlapped == 3
 		{

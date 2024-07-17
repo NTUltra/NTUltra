@@ -507,6 +507,7 @@ if !instance_exists(LevCont) and visible = 1
 			Sleep(100);
 			getVision = true;
 			//piggyBank = 100;
+			//peaceBarriers += 1;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
 			{
 				owner = other.id;
@@ -1585,8 +1586,8 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.15;
-			creload -= 0.15;
+			breload -= 0.2;
+			creload -= 0.2;
 			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.3;

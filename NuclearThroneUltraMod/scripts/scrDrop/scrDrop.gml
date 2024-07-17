@@ -39,7 +39,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 			mh = Player.maxarmour
 			h = Player.armour;
 			itemdrop *= 0.95;
-			canHealth *= 0.5;
+			canHealth *= 0.2;
 		}
 		if itemdrop > 1
 		{
@@ -276,7 +276,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
-		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (4 - Player.armour) ) {
+		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (3 - Player.armour) ) {
 			pickup = instance_create(x,y,HPPickup)
 			with WantHealth
 				instance_destroy();

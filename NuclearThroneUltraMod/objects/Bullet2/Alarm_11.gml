@@ -37,7 +37,7 @@ if um == ultramods.bulletShotgun
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBallBig)
+	with instance_create(x,y,ElectroBall)
 	{
 		dmgReduction = 2;
 		electroDelay = 16;

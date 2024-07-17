@@ -224,7 +224,10 @@ if instance_exists(Player)
 	    {
 	    lag=2;
 	    }
-    
+		if ultra_got[46]
+		{
+			totalDupesSpawned = 0;	
+		}
 	    if ultra_got[2]=1//fish ultra B gun warrant
 	    {
 	    instance_create(x,y,GunWarrant);

@@ -10,7 +10,7 @@ function scrApplyHandsInversion(){
 			var am = 2;
 			if ultra_got[106]
 				am = 4;
-			my_health += am;
+			scrHeal(am,true);
 		}
 	}
 }

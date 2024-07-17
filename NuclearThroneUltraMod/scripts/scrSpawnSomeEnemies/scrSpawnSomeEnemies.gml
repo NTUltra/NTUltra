@@ -21,7 +21,7 @@ function scrSpawnSomeEnemies(){
 	if Player.loops > 10 && random(15) < Player.loops - 13
 		scrPopEnemies();
 				
-	if scrIsHardMode() && !scrIsGamemode(40) && spawnarea != 100 && spawnarea != 104
+	if scrIsHardMode() && !scrIsGamemode(40) && spawnarea != 100 && spawnarea != 104 && spawnarea != 137
 	{
 		if (!(spawnarea == 7 && subarea == 3) && !(spawnarea == 118 && subarea == 3) || random(3) < 1 + Player.loops)
 		{

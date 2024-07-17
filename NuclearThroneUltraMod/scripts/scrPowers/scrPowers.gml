@@ -440,8 +440,7 @@ function scrPowers(raceOverwrite = -1) {
 						var corpse = corpses[| i];
 						var xx = corpse.xx;
 						var yy = corpse.yy;
-						if //xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-						point_distance(xx,yy,other.x,other.y) < 250
+						if point_distance(xx,yy,other.x,other.y) < 250
 						{
 							corpseExist = true;
 							BackCont.shake += 2;
@@ -472,29 +471,53 @@ function scrPowers(raceOverwrite = -1) {
 							
 								with instance_create(other.x,other.y,BloodBullet)
 								{
-									motion_add(d,15)
-									image_angle = direction+6;
+									motion_add(d+8,17)
+									image_angle = direction;
 									team = 2
 								}
 								with instance_create(other.x,other.y,BloodBullet)
 								{
-									motion_add(d,15)
-									image_angle = direction-6;
+									motion_add(d-8,17)
+									image_angle = direction;
+									team = 2
+								}
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d+16,15)
+									image_angle = direction;
+									team = 2
+								}
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d-16,15)
+									image_angle = direction;
 									team = 2
 								}
 								with instance_create(other.x,other.y,HeavyBloodBullet)
 								{
 						
-									motion_add(d+180,16)
+									motion_add(d+180,17)
 									image_angle = direction;
 									team = 2
 								}
 							}
 							else
 							{
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d+8,17)
+									image_angle = direction;
+									team = 2
+								}
+								with instance_create(other.x,other.y,BloodBullet)
+								{
+									motion_add(d-8,17)
+									image_angle = direction;
+									team = 2
+								}
 								with instance_create(xx,yy,BloodBullet)
 								{
-									motion_add(d+180,16)
+									motion_add(d+180,17)
 									image_angle = direction;
 									team = 2
 								}
@@ -506,7 +529,7 @@ function scrPowers(raceOverwrite = -1) {
 					
 							with instance_create(other.x,other.y,HeavyBloodBullet)
 							{
-						
+								dmg += 1;
 								motion_add(d,19)
 								image_angle = direction;
 								team = 2
@@ -523,8 +546,7 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				with Corpse
 				{
-					if (image_speed == 0 || alarm[6] < 1) && //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-						point_distance(x,y,other.x,other.y) < 250
+					if (image_speed == 0 || alarm[6] < 1) && point_distance(x,y,other.x,other.y) < 250
 					{
 						corpseExist = true;
 						BackCont.shake += 2;
@@ -553,18 +575,30 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							BackCont.shake += 1;
 							if upTo > -1
-							snd_play(sndExplosionS);
+								snd_play(sndExplosionS);
 							
 							with instance_create(other.x,other.y,BloodBullet)
 							{
-								motion_add(d,15)
-								image_angle = direction+6;
+								motion_add(d+8,17)
+								image_angle = direction;
 								team = 2
 							}
 							with instance_create(other.x,other.y,BloodBullet)
 							{
-								motion_add(d,15)
-								image_angle = direction-6;
+								motion_add(d-8,17)
+								image_angle = direction;
+								team = 2
+							}
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d+16,15)
+								image_angle = direction;
+								team = 2
+							}
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d-16,15)
+								image_angle = direction;
 								team = 2
 							}
 							with instance_create(other.x,other.y,HeavyBloodBullet)
@@ -577,9 +611,21 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d+8,17)
+								image_angle = direction;
+								team = 2
+							}
+							with instance_create(other.x,other.y,BloodBullet)
+							{
+								motion_add(d-8,17)
+								image_angle = direction;
+								team = 2
+							}
 							with instance_create(x,y,BloodBullet)
 							{
-								motion_add(d+180,16)
+								motion_add(d+180,17)
 								image_angle = direction;
 								team = 2
 							}
@@ -591,7 +637,7 @@ function scrPowers(raceOverwrite = -1) {
 					
 						with instance_create(other.x,other.y,HeavyBloodBullet)
 						{
-						
+							dmg += 1;
 							motion_add(d,19)
 							image_angle = direction;
 							team = 2
@@ -1094,7 +1140,20 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if ultra_got[46] == 0
 		{
-			canSpawn = (maxhealth*0.75 >= 1);
+			var targetHealth = maxhealth;
+			if scrIsCrown(29)//Crown of purity
+			{
+				if wepmod1 != 0
+					targetHealth += 1;
+				if wepmod2 != 0 
+					targetHealth += 1;
+				if wepmod3 != 0
+					targetHealth += 1;
+				if wepmod4 != 0
+					targetHealth += 1;
+			}
+			canSpawn = (targetHealth*0.75 >= 1);
+			
 		}
 		if canSpawn {
 		var xran;
@@ -1103,9 +1162,10 @@ function scrPowers(raceOverwrite = -1) {
 		yran=random(22)-11;
 		    if !place_meeting(x+xran,y+yran,Wall)
 		    {//SPAWN BUDDY
-		        if ultra_got[46]==1 {
-					if (instance_number(YungCuzDupe)<3)
+		        if ultra_got[46] {
+					if (totalDupesSpawned < 4)
 					{
+						totalDupesSpawned += 1;
 				        instance_create(x+xran,y+yran,YungCuzDupe);
 				        snd_play_2d(sndMutant12Wrld)
 				        Sleep(40)
@@ -1150,10 +1210,10 @@ function scrPowers(raceOverwrite = -1) {
 		    //snd_play_2d(sndMutant12Slct)
     
 		    //SPAWN BUDDY
-		        if ultra_got[46]==1&&instance_number(YungCuzDupe)<3{
-				instance_create(x,y,YungCuzDupe)
-		        snd_play_2d(sndMutant12Wrld)
-		        Sleep(40)
+		        if ultra_got[46] && instance_number(YungCuzDupe)<3{
+					instance_create(x,y,YungCuzDupe)
+			        snd_play_2d(sndMutant12Wrld)
+			        Sleep(40)
 		        }
 		        else if ultra_got[46]==0{
 		        instance_create(x,y,YungCuzDupe);
@@ -2430,6 +2490,24 @@ function scrPowers(raceOverwrite = -1) {
 				if instance_exists(WepPickup)
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
+					if tar != noone && tar.visible
+					{
+						var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
+						if (d4 < grabRange)
+						{
+							resulttar = tar;
+							slappedProjectile = false;
+							itemGrab = true;
+						}
+					}
+				}
+			}
+			if resulttar == -1
+			{
+				//CAN GO AND BREAK HAMMERHEAD WALLS
+				if instance_exists(HammerHeadWall)
+				{
+					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,HammerHeadWall);
 					if tar != noone && tar.visible
 					{
 						var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);

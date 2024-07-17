@@ -2758,7 +2758,7 @@ function scrFire(canDrown = true) {
 		image_angle = direction
 		team = other.team
 	}
-	repeat(3+Player.skill_got[13])
+	repeat(2+Player.skill_got[13])
 	{
 		if !hitWall
 		{
@@ -2768,7 +2768,6 @@ function scrFire(canDrown = true) {
 			{
 				dmg = 8
 				longarms = 0
-				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -2809,7 +2808,7 @@ function scrFire(canDrown = true) {
 	var hitWall = false;
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 	{
-		dmg = 5
+		dmg = 6
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2817,7 +2816,7 @@ function scrFire(canDrown = true) {
 		image_angle = direction
 		team = other.team
 	}
-	repeat(3+Player.skill_got[13])
+	repeat(2+Player.skill_got[13])
 	{
 		if !hitWall
 		{
@@ -2825,9 +2824,8 @@ function scrFire(canDrown = true) {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 			{
-				dmg = 5
+				dmg = 6
 				longarms = 0
-				
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -3255,7 +3253,7 @@ function scrFire(canDrown = true) {
 		image_angle = direction
 		team = other.team
 	}
-	repeat(3+Player.skill_got[13])
+	repeat(2+Player.skill_got[13])
 	{
 		if !hitWall
 		{
@@ -3271,7 +3269,7 @@ function scrFire(canDrown = true) {
 			{
 				dmg = 12
 				longarms = 0
-				
+				alarm[11] = choose(0,1);
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
@@ -5373,10 +5371,10 @@ function scrFire(canDrown = true) {
 	}
 	if !scrIsCrown(29)//Crown of purity
 	{
-		var reloadBoost = 0.07;
+		var reloadBoost = 0.065;
 		if Player.skill_got[30] == 1
 		{
-			reloadBoost = 0.12;
+			reloadBoost = 0.105;
 		}
 		if Player.ultra_got[65]
 		{

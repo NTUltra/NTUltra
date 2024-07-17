@@ -23,5 +23,3 @@ if instance_exists(Player){
 		}
 	}
 }
-audio_stop_sound(sndFlamerLoop)
-

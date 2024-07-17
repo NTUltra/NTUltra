@@ -190,16 +190,56 @@ function scrDrawHUD() {
 	//VIKING ARMOUR
 	var armour = dataRef.armour;
 	var maxArmour = dataRef.maxarmour;
+	var armo = sprArmour;
+	if (dataRef.ultra_got[62] && dataRef.altUltra)
+	{
+		if venomized
+		{
+			armo = sprArmourVenom;
+		}
+	}
 	var dir=0;
 	repeat(maxArmour)
 	{
 		dir++;
-		draw_sprite(sprArmour,dir > armour ? 1 : 0,vx+armourX+(15*dir),vy+4);
+		draw_sprite(armo,dir > armour ? 1 : 0,vx+armourX+(15*dir),vy+4);
 	}
 	if dataRef.race == 16 && dataRef.skill_got[5]
 	{
 		dir++;
 		draw_sprite(sprSerpentHUD,dataRef.freeArmourStrike ? 0 : 1,vx+armourX+(15*dir),vy+4);
+	}
+	if (dataRef.ultra_got[62] && dataRef.altUltra)
+	{
+		var hx = 22;
+		vy -= yo;
+		//if dataRef.skill_got[36] //Absorbing pores
+		//	hx += 2;
+		if dataRef.race == 20 && dataRef.skill_got[dataRef.maxskill + 1]//Piggy bank
+		{
+			hx += 13;
+			hx += 4;
+		}
+		draw_sprite(sprHealthBarMetbolismArmour,dataRef.metabolism,vx+hx,vy+4)
+		var metaBreak = 3;
+		if dataRef.metabolism == metaBreak
+			draw_sprite(sprHealthBarMetabolismFullArmour,0,vx+hx,vy+4)
+		if dataRef.skill_got[46]//INNER PEACE
+		{
+			if dataRef.peaceBarriers < dataRef.peaceBarriersMax
+			{
+				var peaceSpr = sprHealthBarPeace;
+				var peaceWidth = lerp(1,sprite_get_width(peaceSpr),dataRef.peaceBarrierTime/max(1,(dataRef.peaceBarrierDuration-1)));
+				var peaceHeight = sprite_get_height(peaceSpr);
+				var surf = surface_create(peaceWidth,peaceHeight);
+				surface_set_target(surf);
+				draw_sprite(sprHealthBarPeace,0,0,0);
+				surface_reset_target();
+				draw_surface(surf,vx+hx,vy+4);
+				surface_free(surf);
+			}
+			draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
+		}
 	}
 
 	//ROGUE AMMO
@@ -544,7 +584,7 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 76 && dataRef.altUltra && dataRef.race == 19
+			else if dir == 76 && (dataRef.altUltra || dataRef.ultimategamble) && dataRef.race == 19
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
@@ -2238,7 +2278,7 @@ function scrDrawHUD() {
 	//grid
 	//with Floor
 	//draw_rectangle(x,y,x+32,y+32,1)
-
+	draw_set_colour(c_white);
 	var tx = dataRef.x;
 	var ty = dataRef.y
 	if instance_exists(enemy) && (point_distance(tx,ty,instance_nearest(tx,ty,enemy).x,instance_nearest(tx,ty,enemy).y) > 360 ||

@@ -12,7 +12,6 @@ function scrHasAnUltraThatsCompatibleWithAlt(){
 		Player.altUltra = alty;
 	}
 	with instance_create(0,0,TempDataHolder) {
-		
 		scrUltras(true,false);
 		ultra_got = Player.ultra_got;
 		var ui = 0;

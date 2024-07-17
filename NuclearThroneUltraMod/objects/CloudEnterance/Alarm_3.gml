@@ -1,4 +1,15 @@
 /// @description LOSE A SKILL
+if !instance_exists(Player)
+{
+	//YOU DIED CLOSE
+	with EnteringClouds {
+		instance_destroy();
+	}
+	alarm[7] = 0;
+	alarm[1] = 0;
+	alarm[2] = 0;
+	exit;
+}
 var s = loseSkills;
 shake = 3 - s;
 with Player

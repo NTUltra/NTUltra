@@ -15,6 +15,8 @@ function scrExitCrownVault(){
 		else if Player.area == 6 || Player.area == 111 //Caves
 		|| Player.area == 114 || Player.area == 123//Jungle
 			Player.subarea = 1;
+		else if Player.area == 113//Banditland
+			Player.subarea = 1;
 		else
 			Player.subarea = 2
 	}

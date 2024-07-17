@@ -64,6 +64,12 @@ if !instance_exists(GenCont)
 		}
 	
 		var  mHpI = 1;
+		if other.my_health >= other.maxhealth
+		{
+			num = 1;
+			if other.skill_got[9]
+				num = 2;
+		}
 		if UberCont.opt_ammoicon
 		{
 			var popupT = instance_create(x,y,PopupText)
@@ -87,9 +93,6 @@ if !instance_exists(GenCont)
 			//OVERHEAL
 			if my_health >= maxhealth
 			{
-				other.num = 1;
-				if skill_got[9]
-					other.num = 2;
 				my_health += other.num;
 				var maxCap = floor(max(maxhealth*2,10));
 				my_health = min(my_health,maxCap);
@@ -110,25 +113,7 @@ if !instance_exists(GenCont)
 			}
 			if race==9 || race=12//Chicken maxhealth regain
 			{
-				var targetHealth = 8;
-				if scrIsGamemode(5)
-					targetHealth = 1;
-				if scrIsGamemode(9)
-					targetHealth += UberCont.casualModeHPIncrease;
-				targetHealth += UberCont.maxHpIncrease;
-				if skill_got[1] == 1//Rhino skin
-					targetHealth += 4;
-				if skill_got[31]//Tough shell
-					targetHealth += 1;
-				if skill_got[33]//Glass arm cannon
-					targetHealth = max(1,targetHealth-2);
-				if skill_got[41]//nerves of steel
-					targetHealth = max(1,targetHealth-2);
-				if scrIsCrown(3)//Crown of death
-					targetHealth = max(1,targetHealth-1);
-				if scrIsCrown(20)//Crown of protection
-					targetHealth = max(1,targetHealth-1);
-				
+				var targetHealth = scrGetMaxPossibleHealth();
 				if skill_got[9] 
 					mHpI *= 2;
 			    if maxhealth<targetHealth

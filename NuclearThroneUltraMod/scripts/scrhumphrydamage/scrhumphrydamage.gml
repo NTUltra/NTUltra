@@ -6,11 +6,11 @@ function scrHumphryDamage(dmgTaken, applySkill = false){
 	if applySkill
 	{
 		if Player.ultra_got[101] {
-			Player.humphrySkill += dmgTaken*1.5;
+			Player.humphrySkill += dmgTaken*1.25;
 		}
 		else
 		{
-			Player.humphrySkill += dmgTaken;//This should be original damage so no other dmg buffs before this
+			Player.humphrySkill += dmgTaken * 0.75;//This should be original damage so no other dmg buffs before this
 		}
 		//scrUnlockCSkin
 		if Player.humphrySkill >= 500

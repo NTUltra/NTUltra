@@ -9,6 +9,8 @@ lerpCalcBack = 0.16;
 lerpDistance = 1;
 dmg = 2;
 loseTarget = false;
+xprev = x;
+yprev = y;
 image_speed = 0.4;
 snd_play_2d(sndHandThrow,0.2);
 snd_loop(sndHandThrowLoop);

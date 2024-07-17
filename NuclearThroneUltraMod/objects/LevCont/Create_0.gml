@@ -413,23 +413,23 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 			//CROWN OF DESTINYYYYYYY
 			if Player.race == 21//horror
 			{
-			do {
-			chosenskill=choose(skill1,skill2,skill3,skill4)
-			} until (Player.ultra_got[chosenskill] == 0)
+				do {
+				chosenskill=choose(skill1,skill2,skill3,skill4)
+				} until (Player.ultra_got[chosenskill] == 0)
 
-			with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-			{
-			skill = other.chosenskill}
+				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+				{
+				skill = other.chosenskill}
  
-			if (Player.ultra_got[skill1] + Player.ultra_got[skill2] + Player.ultra_got[skill3] + Player.ultra_got[skill4] > 1)
-			{
-				do{
-				otherchosenskill=choose(skill1,skill2,skill3,skill4)
-				}until (otherchosenskill!=chosenskill && Player.ultra_got[otherchosenskill] == 0 )
+				if (Player.ultra_got[skill1] + Player.ultra_got[skill2] + Player.ultra_got[skill3] + Player.ultra_got[skill4] > 1)
+				{
+					do{
+					otherchosenskill=choose(skill1,skill2,skill3,skill4)
+					}until (otherchosenskill!=chosenskill && Player.ultra_got[otherchosenskill] == 0 )
 
-				with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
-				skill = other.otherchosenskill
-			}
+					with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28,UltraIcon)
+					skill = other.otherchosenskill
+				}
 
 			}
 			else

@@ -7,24 +7,18 @@ with instance_create(x + 8,y + 8,AnimDestroyTop)
 var n = instance_nearest(x,y,Floor);
 if n != noone
 {
+	instance_create(x, y, WallBreak);
 	mask_index = mskPickupThroughWall;
 	var o = 16;
 	if n.object_index == FloorExplo
 		o = 8;
 	x = n.x + o;
 	y = n.y + o;
-	instance_create(n.x + o, n.y + o, WallBreak);
-	if topindex < 4
-	{
-		scrRaddrop(14);
-	} else if topindex < 7
-	{
-		scrDrop(100,0);
+	instance_create(x, y, WallBreak);
+	with instance_create(x,y,HammerHeadResource) {
+		topindex = other.topindex;	
 	}
-	else
-	{
-		scrDrop(0,100);
-	}
+	
 	if !instance_exists(SpiralCont) && !instance_exists(GenCont) && fps_real >= fps
 	{
 		var xx = x + 8;

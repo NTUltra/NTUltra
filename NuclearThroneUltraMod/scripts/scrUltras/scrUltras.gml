@@ -1,4 +1,4 @@
-function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
+function scrUltras(altOverride = false, resetUltraGot = true) {
 	var isOtherCharacter = false;
 	// ULTRAS
 	ultra_name[0] = "TOTAL FORECALL"
@@ -359,7 +359,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[45] = "like one"
     
 	    ultra_name[46] = "MLG SQUAD"
-	    ultra_text[46] = "CREATE MAX 3 DUPES#DUPES DON'T DECREASE#YOUR MAX <r>HP<r>"
+	    ultra_text[46] = "CREATE MAX 4 DUPES#DUPES DON'T DECREASE#YOUR MAX <r>HP<r>"
 	    ultra_tips[46] = "teamwork"
 		
 	    ultra_name[47] = "SPAM"
@@ -564,7 +564,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 		}
 		
     
-	//SKELETON 
+	//letonLETON 
 	ultra_name[73] = "REDEMPTION"
 	ultra_text[73] = "REROLL ALL YOUR <g>MUTATIONS<g>#GET PATIENCE AS AN EXTRA#CHOICE EVERY TIME.#WHEN YOU <w>LOOP<w> YOU#CAN GET AN <g>ULTRA<g> AGAIN##NORMAL MOVEMENT <w>SPEED<w>#NORMAL <w>ACCURACY<w>"
 	ultra_tips[73] = "specific taste in mutations"
@@ -774,7 +774,7 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	    ultra_tips[104] = "discipline those projectiles!"
 		
 		//Have any director weapon
-		if altOverride || (instance_exists(Player) &&  Player.race == 26 && Player.altUltra)
+		if altOverride || (instance_exists(Player) && Player.race == 26 && Player.altUltra)
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
 			//TODO change to unequipped ammo
@@ -796,24 +796,25 @@ function scrUltras(altOverride = false, resetUltraGot = true, randomAlt = 0) {
 	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 4 <r>HP<r>"
 	ultra_tips[106] = "I'm a glass half empty kinda hand"
 	
-	if instance_exists(Player) && (Player.race == 27 && (Player.altUltra || altOverride) && randomAlt == 2)
-	{
-		//Secret C skin ultra
-		ultra_name[106] = "BOOM HANDS!"
-		ultra_text[106] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 4 <r>HP<r>"
-		ultra_tips[106] = "secret c-skin ultra mutation"
-	}
-	else if instance_exists(Player) && (Player.race == 27 &&  (Player.altUltra || altOverride))
+	if altOverride || (instance_exists(Player) && Player.race == 27 && Player.altUltra)
 	{
 		//Secret B skin ultra
 		ultra_name[106] = "HOT HANDS!"
-		ultra_text[106] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL YOU FOR 4 <r>HP<r>"
+		ultra_text[106] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR <w>4<w> <r>HP<r>"
 		ultra_tips[106] = "secret b-skin ultra mutation"
 	}
 	
 	ultra_name[107] = "MANY HANDS"
 	ultra_text[107] = "CAN HAVE <w>TWO HANDS<w> OUT AT A TIME#PUNCH PROJECTILES OUT OF EXISTENCE#YOU CAN HAVE THREE HANDS WHILE#IN AN <w>INVERTED AREA<w>"
 	ultra_tips[107] = "consecutive normal punches"
+	
+	if altOverride || (instance_exists(Player) && Player.race == 27 && Player.altUltra)
+	{
+		//Secret C skin ultra
+		ultra_name[107] = "BOOM HANDS!"
+		ultra_text[107] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR <w>4<w> <r>HP<r>"
+		ultra_tips[107] = "secret c-skin ultra mutation"
+	}
     
 	ultra_name[108] = "DELICATE HANDS"
 	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#<r>RADS<r> & <w>PICKUPS<w>##HAND LEAVES A TRAIL#THAT SPEEDS YOU UP AND SLOWS ENEMIES#INCLUDING PROJECTILES##HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN <w>INVERTED AREA<w>"

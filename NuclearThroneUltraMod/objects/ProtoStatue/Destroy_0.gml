@@ -44,5 +44,5 @@ if (instance_exists(Player) && Player.ultra_got[33] && !Player.altUltra)
 }
 if UberCont.crownHeal
 {
-	scrHeal(1,true);	
+	scrHeal(2);	
 }

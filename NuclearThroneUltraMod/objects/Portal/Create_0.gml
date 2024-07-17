@@ -95,13 +95,21 @@ else if instance_exists(Interactable)
 		{
 			var f = instance_furthest(n.x,n.y,Floor);
 			var d = point_direction(n.x,n.y,f.x,f.y);
-			var m = instance_nearest(x + lengthdir_x(256,d),
-			y + lengthdir_y(256,d), Floor);
-			var o = 16;
-			if m.object_index == FloorExplo
-				o = 8;
-			x = m.x+o;
-			y = m.y+o;
+			var tries = 1000;
+			var dis = 256;
+			while (distance_to_object(n) < 128 && tries > 0)
+			{
+				n = instance_nearest(x,y,Interactable)
+				var m = instance_nearest(x + lengthdir_x(dis,d),
+				y + lengthdir_y(dis,d), Floor);
+				var o = 16;
+				if m.object_index == FloorExplo
+					o = 8;
+				x = m.x+o;
+				y = m.y+o;
+				tries -= 1;
+				dis += 64;
+			}
 		}
 	}
 	scrForcePosition60fps();

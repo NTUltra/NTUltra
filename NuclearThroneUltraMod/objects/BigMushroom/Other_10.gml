@@ -13,7 +13,7 @@ if KeyCont.key_pick[Player.p] = 1
 		area = 113;
 		subarea = 1;
 		lastarea = 113
-		lastsubarea = 1
+		lastsubarea = 1;
 	}
 
 	//with enemy

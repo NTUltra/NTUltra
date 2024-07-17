@@ -12,7 +12,7 @@ function scrHandsDamageBuff(dmgTaken){
 		}
 		else
 		{
-			return dmgTaken + (dmgTaken/max(40,dis))*40;
+			return dmgTaken + (dmgTaken/max(40,dis))*45;
 		}
 	}
 	return dmgTaken;

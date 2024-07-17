@@ -9,7 +9,7 @@ alarm[0] = 8;
 if UberCont.ultramodSwap
 {
 	var um = GetPlayerUltramod()
-	if um == ultramods.morphFire
+	if um == ultramods.morphFire || um == ultramods.toxicMorph
 	{
 		mask_index = mskPickupThroughWall;
 		visible = false;

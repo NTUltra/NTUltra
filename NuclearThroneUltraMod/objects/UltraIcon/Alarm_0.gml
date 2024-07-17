@@ -163,20 +163,21 @@ if canAlt
 	{
 		sprite_index = sprGrumpyLecture;
 	}
-	else if skill == 106 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative) && randomHand == 1 && !Player.bskin == 1) || Player.bskin == 1)
+	else if skill == 106 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative)) || Player.bskin == 1)
 	{
 		sprite_index = sprHotHands;
 	}
-	else if skill == 106 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative) && randomHand == 2 && !Player.bskin == 2) || Player.bskin == 2)
+	else if skill == 107 && Player.race == 27 && (((Player.unlockAlternativeUltras || isAlternative)) || Player.bskin == 2)
 	{
 		sprite_index = sprBoomHands;
 	}
+	
 	if spr == sprite_index
 		instance_destroy();
-	else if skill != 106
+	else// if skill != 106
 	{
 		isAlternative = true;
-		scrUltras(true, false, randomHand);
+		scrUltras(true,false);
 		if !Player.altUltra && scrHasAnUltraThatsCompatibleWithAlt()
 		{
 			instance_destroy();

@@ -12,7 +12,6 @@ alarm[0]=4;
 image_angle=random(360);
 
 alarm[1]=120;
-snd_loop(sndFlamerLoop);
 dmg = 18;
 fireAmount = 2;
 fireExplosionAmount = 16;
@@ -21,3 +20,8 @@ fireDelay = 2;
 bloomSprite = sprMiniFlameCannonBallBloom;
 alarm[3] = 1;
 depth -= 1;
+emitter = audio_emitter_create();
+audio_emitter_position(emitter,x,y,depth);
+audio_emitter_gain(emitter, 0.8);
+audio_emitter_falloff(emitter, 50, 400, 1);
+audio_play_sound_on(emitter,sndFlamerLoop,true,1)

@@ -26,7 +26,7 @@ if (hasNoMenuOpen())
 		{
 			UberCont.selected_start_bwep[race] = -1;
 		}
-		else if bwep > 0 && race > 0 && UberCont.start_wep_have[bwep,race] == 1
+		else if race > 0 && bwep > -1 && UberCont.start_wep_have[bwep,race] == 1
 		{
 			//UberCont.cwep[race]=UberCont.start_wep[bwep];
 			UberCont.selected_start_bwep[race] = bwep;

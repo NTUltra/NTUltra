@@ -446,7 +446,7 @@ camX = 0;
 camY = 0;
 camTargetX = 0;
 camTargetY = 0;
-camLerp = 0;
+camLerp = 1;
 
 firstEntry = true;
 portraitLerp = 0;

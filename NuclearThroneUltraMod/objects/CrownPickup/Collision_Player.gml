@@ -70,6 +70,16 @@ else if !instance_exists(CrownGuardian)
 		type = 3
 		pullstrength = 3;
 		alarm[1] = 1;
+		if !instance_exists(enemy) && !instance_exists(becomenemy)
+		{
+			with Player
+			{
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
+			}
+		}
 	}
 }
 snd_play(Player.snd_crwn)

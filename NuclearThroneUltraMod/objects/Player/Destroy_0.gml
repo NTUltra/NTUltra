@@ -488,6 +488,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	}
 	else
 	{
+		UberCont.skillDeposit = [];
 		skeletonlives = other.skeletonlives-1;
 		repeat(al)
 		{

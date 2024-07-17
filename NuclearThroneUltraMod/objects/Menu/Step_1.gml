@@ -123,7 +123,7 @@ if mode = 0
 
 if mode = 1
 {
-	if (KeyCont.key_spec[p] = 1)// && (!instance_exists(LoadoutSelect) || !LoadoutSelect.wepmenuopen))
+	if (KeyCont.key_spec[p] = 1 && ((!instance_exists(LoadoutSelect) || !LoadoutSelect.wepmenuopen) || !hasNoMenuOpen()))
 	{
 		scrReturnMenu();
 	}

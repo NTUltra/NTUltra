@@ -37,7 +37,7 @@ if um == ultramods.toxicFire
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed*2;
-		dmg -= 0.4;
+		dmg -= 0.3;
 		alarm[11] = 0;
 	}
 	UberCont.ultramodSwap = true;

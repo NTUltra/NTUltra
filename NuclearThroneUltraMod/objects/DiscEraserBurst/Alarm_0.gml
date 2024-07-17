@@ -16,7 +16,7 @@ yy=creator.y;
 repeat(projectileAmount){
 		with instance_create(x,y,Disc)
 		{
-			motion_add(point_direction(x,y,other.mox,other.moy),4+other.boost)
+			motion_add(point_direction(x,y,other.mox,other.moy),8+other.boost)
 			image_angle = direction
 			team = other.team
 			scrCopyWeaponMod(other);

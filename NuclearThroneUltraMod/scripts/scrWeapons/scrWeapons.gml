@@ -3381,7 +3381,7 @@ function scrWeapons() {
 	wep_area[301] = 19
 	wep_text[301] = "ultra fingers"
 	wep_swap[301] = sndSwapHammer
-	wep_rad[301] = 12;//ultra shovel 14
+	wep_rad[301] = 16;//ultra shovel 14
 
 	wep_name[302] = "ULTRA SPLINTER GUN"
 	wep_type[302] = 3
@@ -8985,6 +8985,17 @@ function scrWeapons() {
 	wep_text[802] = "micro laser smg"
 	wep_swap[802] = sndSwapPistol
 	wep_rad[802] = 0;
+	
+	wep_name[803] = "CLAW"
+	wep_type[803] = 0
+	wep_auto[803] = 0
+	wep_load[803] = 20
+	wep_cost[803] = 0
+	wep_sprt[803] = sprClaw
+	wep_area[803] = 10
+	wep_text[803] = "claw strikes twice!"
+	wep_swap[803] = sndSwapSword
+	wep_rad[803] = 0;
 	//Swiss army bow
 	//Charge boomerang
 	

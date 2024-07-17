@@ -16,7 +16,7 @@ function scrFire3(hasTailNow){
 			if Player.skill_got[13]
 			{
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				image_xscale += 0.25;
+				image_yscale += 0.25;
 			}
 			motion_add(aimDirection,3.5+longarms)
 			image_angle = direction
@@ -234,7 +234,7 @@ function scrFire3(hasTailNow){
 		snd_play(sndVoidShank,0.2);
 		with instance_create(x,y,VoidExecution)
 		{
-		direction = aimDirection+(random(8)-4)*other.accuracy;
+		direction = aimDirection;
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
@@ -348,6 +348,59 @@ function scrFire3(hasTailNow){
 			scrMoveContactSolid(aimDirection + 180,0.25);
 			motion_add(aimDirection+180,0.5)
 		}
+
+		break;
+		
+		//CLAW
+		case 803:
+
+		snd_play_fire(sndClaw)
+
+		instance_create(x,y,Dust)
+
+		var lx = x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection);
+		var ly = y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection);
+		var len = 16 * accuracy;
+		with instance_create(lx,ly,ClawSlash)
+		{
+			owner = other.id;
+			dmg = 6
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.5+longarms)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(lx + lengthdir_x(len,aimDirection+90),ly + lengthdir_y(len,aimDirection+90),ClawSlash)
+		{
+			owner = other.id;
+			dmg = 6
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.5+longarms)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(lx + lengthdir_x(len,aimDirection-90),ly + lengthdir_y(len,aimDirection-90),ClawSlash)
+		{
+			owner = other.id;
+			dmg = 6
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.5+longarms)
+			image_angle = direction
+			team = other.team
+		}
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,5)
+			scrMoveContactSolid(aimDirection,1)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -5
 
 		break;
 	}

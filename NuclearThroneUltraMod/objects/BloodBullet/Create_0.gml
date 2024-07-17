@@ -21,6 +21,10 @@ if instance_exists(Player){
 		alarm[1] += 2;
 	}
 	if Player.ultra_got[74] && Player.altUltra
+	{
 		alarm[0] = 0;
+		alarm[1] = 0;
+		friction -= 0.2;
+	}
 }
 alarm[11] = 1;

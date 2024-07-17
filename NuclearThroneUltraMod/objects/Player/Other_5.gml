@@ -110,7 +110,7 @@ if scrIsCrown(22)//Crown of luck
 	{
 		if ultra_got[62] && altUltra //Living armour
 		{
-			armour = max(1,floor(maxarmour*0.25));
+			armour = max(1,floor(maxarmour*0.125));
 			if armour > maxarmour
 				armour = maxarmour;
 		}
@@ -141,7 +141,7 @@ if race=16
 		freeArmourStrike = true;
     armour++;
 }
-if ultra_got[62]//Viking armour up ultra
+if ultra_got[62] && !altUltra//Viking armour up ultra
 	    armour++;
 
 if race == 10 && canHeal//Rebel pasive
@@ -170,25 +170,7 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 	{
 		yungCuzCskin = 0;	
 	}
-	var targetHealth = 8;
-	if scrIsGamemode(5)
-		targetHealth = 1;
-	if scrIsGamemode(9)
-		targetHealth += UberCont.casualModeHPIncrease;
-	targetHealth += UberCont.maxHpIncrease;
-	if skill_got[1] == 1//Rhino skin
-		targetHealth += 4;
-	if skill_got[31]//Tough shell
-		targetHealth += 1;
-	if skill_got[33]//Glass arm cannon
-		targetHealth = max(1,targetHealth-2);
-	if skill_got[41]//nerves of steel
-		targetHealth = max(1,targetHealth-2);
-	if scrIsCrown(3)//Crown of death
-		targetHealth = max(1,targetHealth-1);
-	if scrIsCrown(20)//Crown of protection
-		targetHealth = max(1,targetHealth-1);
-	maxhealth = targetHealth;
+	maxhealth = scrGetMaxPossibleHealth();
 	
 }
 if ((ultra_got[40] = 1) && canHeal)
@@ -202,7 +184,7 @@ if scrIsCrown(2) && canHeal && !scrIsCrown(22)
 {
 	if ultra_got[62] && altUltra //Living armour
 	{
-		armour += floor(maxarmour*0.5);
+		armour += floor(maxarmour*0.25);
 		if armour > maxarmour
 			armour = maxarmour;
 		//armour = maxarmour;

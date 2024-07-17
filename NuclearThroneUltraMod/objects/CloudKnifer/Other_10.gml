@@ -5,6 +5,7 @@ instance_create(x,y,Notice);
 instance_create(x+5,y,Notice);
 alarm[1] += sneakTell + actTime*3;
 alarm[2] = sneakTell;
+existTime = 30 - sneakTell - 1;
 gunangle = 90;
 walk = sneakTell;
 vspeed = maxSpeed;

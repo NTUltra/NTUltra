@@ -3,7 +3,7 @@ with Player
 {
 	area = 9
 	subarea = 1
-	refundPoints = 3;
+	refundPoints = array_length(UberCont.skillDeposit);
 	getVision = true;
 	//REFUND MUTS & GAIN ROYAL VISIONS
 }

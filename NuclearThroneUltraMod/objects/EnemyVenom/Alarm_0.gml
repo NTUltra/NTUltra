@@ -1,29 +1,33 @@
 /// @description Deal damage
 var theDamage = dmg;
 var breakPoint = 2;
-if owner.object_index == Player
-{
-	if scrIsCrown(18)
-		breakPoint += 1;
-	if UberCont.voidChallengeGoing[1]
-		breakPoint += 1;
-}
-if !instance_exists(owner) || owner == noone || owner.my_health < breakPoint || hits > maxDamage
-{
-	instance_destroy();	
-	exit;
-}
-else
+var toCheck = 10;
+if instance_exists(owner)
 {
 	if owner.object_index == Player
 	{
-		if Player.ultra_got[62] && Player.altUltra && Player.armour < breakPoint//LIVING ARMOUR
+		if scrIsCrown(18)
+			breakPoint += 1;
+		if UberCont.voidChallengeGoing[1]
+			breakPoint += 1;
+		if Player.ultra_got[62] && Player.altUltra//LIVING ARMOUR
 		{
-			instance_destroy();
-			exit;
+			toCheck = Player.armour;
+		}
+		else
+		{
+			toCheck = owner.my_health;	
 		}
 	}
-	alarm[0] = rate;
+	else
+	{
+		toCheck = owner.my_health;	
+	}
+}
+if !instance_exists(owner) || owner == noone || toCheck < breakPoint || hits > maxDamage
+{
+	instance_destroy();	
+	exit;
 }
 with owner
 {
@@ -54,7 +58,7 @@ with owner
 	sprite_index = spr_hurt;
 	image_index = 0;
 }
-if !instance_exists(owner) || owner == noone || owner.my_health < 2
+if !instance_exists(owner) || owner == noone || toCheck < breakPoint - theDamage
 {
 	instance_destroy();	
 }

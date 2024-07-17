@@ -8,8 +8,12 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 			instance_create(other.x,other.y,FishBoost)
 			DealDamage(other.dmg);
 			other.dmg = max(2,other.dmg - 1);
-			if (instance_exists(Player) && Player.skill_got[43]) && team != 0
+			if (instance_exists(Player) && Player.skill_got[43]) && team != 0 && !other.hasStunned
 			{
+				with Tentacle
+				{
+					hasStunned = true;	
+				}
 				scrMoodSwingStun(6);
 				if Player.ultra_got[97] && !Player.altUltra {
 					scrMoodSwingIcicle(2, id);

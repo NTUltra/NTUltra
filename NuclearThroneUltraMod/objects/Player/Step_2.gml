@@ -40,7 +40,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			ammoMultiple = 2;
 			if ultra_got[68] && !altUltra
 			{
-				ammoMultiple = 4;
+				ammoMultiple = 3;
 				if wep_type[targetPickup.wep] == 0
 					ammoMultiple = 0;
 				var allammotypes=5;
@@ -105,7 +105,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						dir.mytext = "OVER MAX HP"
 				}
 			
-				scrRaddrop(60);
+				scrRaddrop(40);
 			}
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
@@ -169,7 +169,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					angl += anglStep;
 					}
 				}
-			instance_create(x,y,WepSwap);
+			instance_create_depth(x,y,depth - 1,WepSwap);
 			if !isGold
 			{
 				onlyusemegold = false;	
@@ -507,7 +507,7 @@ if scrIsCrown(18) && !exception
 		my_health -= dmgTaken;
 	}
 }
-if UberCont.voidChallengeGoing[1] && !exception
+if UberCont.voidChallengeGoing[1] && !exception && armour <= 0
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
@@ -610,6 +610,8 @@ if armour > 0
 	{
 		tookDamageThisArea = true;
 		armour -= 1;
+		if UberCont.voidChallengeGoing[1]
+			armour -= 1;
 		sprite_index = spr_hurt;
 		image_index = 0;
 		canAnimateDuringImmune = 0;
@@ -1022,8 +1024,26 @@ if my_health <= 0 && armour < 1
 			skillpoints --;
 			level --;
 		}
+		else if array_length(UberCont.skillDeposit) > 0
+		{
+			var al = array_length(UberCont.skillDeposit);
+			var i = 0;
+			repeat(al)
+			{
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "LOST "+other.skill_name[UberCont.skillDeposit[i]];
+					theColour=c_red;
+				}
+				i += 1;
+			}
+			UberCont.skillDeposit = [];
+			level -= al;
+		}
 		else
-			level --;
+		{
+			level --;	
+		}
 		phoenixrevives++;
 		if phoenixrevives > 2
 		{

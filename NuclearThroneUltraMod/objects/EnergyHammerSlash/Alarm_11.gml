@@ -37,7 +37,7 @@ if um == ultramods.bloodMelee
 		team = other.team;
 		alarm[11] = 0;
 	}
-}else // if um == ultramods.krakenMelee
+}else if um == ultramods.krakenMelee
 {
 	event_inherited();
 }

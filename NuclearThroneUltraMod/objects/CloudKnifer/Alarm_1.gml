@@ -10,7 +10,7 @@ if target != noone {
 			tx = target.x;
 			ty = target.y + knifeOffset;
 			motion_add(point_direction(x,y,target.x, ty),acc);
-			if dis < 48//34
+			if dis < 64//34
 			{
 				x = tx;
 				y = ty;

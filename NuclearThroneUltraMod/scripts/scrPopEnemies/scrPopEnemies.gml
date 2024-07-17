@@ -28,7 +28,7 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(7) < 1
-	            instance_create(x + 16, y + 16, choose(MaggotSpawn, Scorpion, JungleFly, MeleeBandit, Sniper))
+	            instance_create(x + 16, y + 16, choose(MaggotSpawn, Scorpion, JungleFly, MeleeBandit, Sniper, CloudShooter))
 	            else {
 	                if random(30) < 1 {
 						instance_create(x,y,BigWallBreak);
@@ -503,7 +503,7 @@ function scrPopEnemies() {
 					instance_create(x + 16, y + 16, choose(Spider,SquareBat,Spider,Spider,FireBat));
 			}
 	        else if random(12) < 1
-				instance_create(x + 16, y + 16, choose(SquareBat, ExploFreak, RhinoFreak,FireBat))
+				instance_create(x + 16, y + 16, choose(SquareBat, ExploFreak, RhinoFreak,FireBat,CloudFlyer))
 	        else
 	            instance_create(x + 16, y + 16, choose(Spider, Spider, Spider, Spider, crystal,Spider, Spider, Spider, Spider, crystal,SquareBat,FireBat))
 		} else {
@@ -554,7 +554,7 @@ function scrPopEnemies() {
 				instance_create(x + 16, y + 16, choose(InvertedSpider,InvertedSquareBat,InvertedSpider,InvertedSpider,InvertedFireBat));
 			}
 	        else if random(12) < 1
-				instance_create(x + 16, y + 16, choose(InvertedSpider, InvertedSniper, InvertedFireWorm, InvertedFireBat))
+				instance_create(x + 16, y + 16, choose(InvertedSpider, InvertedSniper, InvertedFireWorm, InvertedFireBat,CloudFlyer))
 	        else
 			{
 	            instance_create(x + 16, y + 16, choose(InvertedSpider, InvertedSpider, InvertedSpider, InvertedSpider,InvertedFireBat,
@@ -1287,7 +1287,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, CursedSpider, CursedCrystal, CloudShooter)))
+				instance_create(x + 16, y + 16, choose(GraveyardSniper,GraveyardBreeder,GraveyardSniper,GraveyardBreeder,choose(BuffMushroom, CursedSpider, CursedCrystal)))
 			}
 			if r > 4
 			{
@@ -1295,7 +1295,7 @@ function scrPopEnemies() {
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, CursedSpider, CursedSpider, CloudShooter))
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSkeleton,GraveyardSniper, BuffMushroom, CursedSpider, CursedSpider))
 			}
 		}
 		else
@@ -1324,7 +1324,7 @@ function scrPopEnemies() {
 		    var r = random(10);
 			if r > 8
 			{
-				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, LightningCrystal, CloudShooter)))//TODO INVERTED CLOUD SHOOTER
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper,InvertedGraveyardBreeder,InvertedGraveyardSniper,InvertedGraveyardBreeder,choose(InvertedBuffMushroom, InvertedSpider, LightningCrystal)))//TODO INVERTED CLOUD SHOOTER
 			}
 			if r > 4
 			{
@@ -1333,7 +1333,7 @@ function scrPopEnemies() {
 			}
 		    else
 			{
-		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider, CloudShooter))
+		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider))
 			}
 		}
 		else
@@ -1441,7 +1441,7 @@ function scrPopEnemies() {
 			}
 		}
     }
-
+	//PALACE
     if spawnarea == 9 && subarea != 3 {
 		if loops > 0 {
 			if styleb = 1 && random(8) < 2 {
@@ -1449,7 +1449,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 	            if ran > 75 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian))
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer))
 	            } else if ran > 55 {
 					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
 				}
@@ -1481,7 +1481,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 	            if ran > 70 {
-	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedGhostGuardian, InvertedGuardianDog, InvertedCubeGuardian))
+	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedGhostGuardian, InvertedGuardianDog, InvertedCubeGuardian,CloudKnifer))
 	            } else if ran > 50 {
 					instance_create(x + 16, y + 16, choose(InvertedExploFreak, InvertedBuffMushroom, InvertedJungleBandit))
 				}

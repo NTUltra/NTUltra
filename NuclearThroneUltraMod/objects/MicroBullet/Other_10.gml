@@ -42,13 +42,13 @@ else if um == ultramods.laserBullet
 	canDamage = false;
 	with instance_create(x,y,Laser)
 	{
+		team = other.team
 		defaultPierce -= 8;
 		image_yscale -= 0.3;
 		dmg -= 1.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
-		team = other.team
 		event_perform(ev_alarm,0);
 	}
 }

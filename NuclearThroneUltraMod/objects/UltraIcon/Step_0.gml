@@ -269,13 +269,13 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if bskin == 1 || (other.isAlternative && other.randomHand == 1 && !bskin == 1)
+			if bskin == 1 || (other.isAlternative && !bskin == 1)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				//Secret B skin ultra
 				with Player {
 					altUltra = true;
-					scrUltras(true,false,1);
+					scrUltras(true,false);
 					spr_idle=sprMutant27BIdle;
 					spr_walk=sprMutant27BWalk;
 					spr_hurt=sprMutant27BHurt;
@@ -283,12 +283,18 @@ if (selected && visible &&
 					bskin = 1;
 				}
 			}
-			else if bskin == 2 || (other.isAlternative && other.randomHand == 2 && !bskin == 2)
+		}
+	}
+	else if skill == 107 && Player.race == 27//Hands secret ultras
+	{
+		with Player
+		{
+			if bskin == 2 || (other.isAlternative && !bskin == 2)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				with Player {
 					altUltra = true;
-					scrUltras(true,false,2);
+					scrUltras(true,false);
 					spr_idle=sprMutant27CIdle;
 					spr_walk=sprMutant27CWalk;
 					spr_hurt=sprMutant27CHurt;

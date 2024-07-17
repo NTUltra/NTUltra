@@ -18,7 +18,7 @@ if um == ultramods.bloodMelee
 		toSpawn = UltraBloodBullet;
 	with instance_create(xx,yy,toSpawn)
 	{
-		dmg = ceil(other.dmg*0.7);
+		dmg = ceil(other.dmg*0.4);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -27,7 +27,7 @@ if um == ultramods.bloodMelee
 		alarm[11] = 0;
 	}
 }
-else // if um == ultramods.krakenMelee
+else if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 4 + speed + dmg;

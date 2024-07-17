@@ -26,11 +26,21 @@ with Player
 		{
 			if nums < 4
 				snd = sndYungCuzStartHack3
-			with instance_create(x,y,Ghosting)
+			if instance_exists(Ghosting)
 			{
-				alarm[0] = duration;
-				msk = other.mask_index;
-				other.mask_index = mskPickupThroughWall;
+				with Ghosting
+				{
+					alarm[0] = duration;	
+				}
+			}
+			else
+			{
+				with instance_create(x,y,Ghosting)
+				{
+					alarm[0] = duration;
+					msk = other.mask_index;
+					other.mask_index = mskPickupThroughWall;
+				}
 			}
 			alarm[3] = duration;
 		}

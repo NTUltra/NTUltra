@@ -7,7 +7,10 @@ if animationState == 1
 if stalking
 {
 	if image_alpha < targetAlpha + 0.1
-		motion_add(point_direction(x,y,tx,ty),acc);
+	{
+		direction = point_direction(x,y,tx,ty);
+		motion_add(direction,acc);
+	}
 	else if place_meeting(x,y,Floor)
 	{
 		var n = instance_nearest(x,y,Floor)

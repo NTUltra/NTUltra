@@ -1,7 +1,9 @@
 function scrRaces() {
 
-	var isUnique = instance_exists(UberCont) && UberCont.opt_pickup == UberCont.opt_regal;
-
+	var isUnique = instance_exists(UberCont) && UberCont.opt_pickup != UberCont.opt_regal;
+	var regalBut = "E";
+	if instance_exists(UberCont)
+		regalBut = scrAsciiChar(UberCont.opt_regal)
 	race_name[0] = "RANDOM"
 	race_pass[0] = "???"
 	race_acti[0] = "???"
@@ -49,7 +51,8 @@ function scrRaces() {
 	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
 	if isUnique
 	{
-		
+		race_vision[2] = string_replace_all(race_vision[2],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[2] = string_replace_all(race_vision_detail[2],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[2] = "UNLOCKED FROM THE START"
 	race_have[2] = 1
@@ -73,7 +76,8 @@ function scrRaces() {
 	race_vision_detail[3] = "PRESS <w>[E]<w> TO CREATE A <w>MIND SPIRAL<w>#IT PULLS EVERYTHING#CAN HAVE ONLY ONE SPIRAL OUT AT A TIME";
 	if isUnique
 	{
-		
+		race_vision[3] = string_replace_all(race_vision[3],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[3] = string_replace_all(race_vision_detail[3],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[3] = "REACH SEWERS TO UNLOCK"
 	race_have[3] = 0
@@ -139,7 +143,8 @@ function scrRaces() {
 	race_vision_detail[6] = "PRESS <w>[E]<w> WHILE RELOADING TO:#INSTANTLY <w>RELOAD<w> YOUR <w>PRIMARY<w>#AND SHIFT RELOAD TIME#TO YOUR <w>SECONDARY<w>##CAN ONLY BE DONE#WHEN SECONDARY IS RELOADED#REQUIRES YOU TO HOLD A SECONDARY";
 	if isUnique
 	{
-		
+		race_vision[6] = string_replace_all(race_vision[6],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[6] = string_replace_all(race_vision_detail[6],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[6] = "REACH Y.V.'S MANSION TO UNLOCK"
 	race_have[6] = 0
@@ -162,7 +167,7 @@ function scrRaces() {
 	race_vision[7] = "HOLD <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
 	if isUnique
 	{
-		
+		race_vision[7] = string_replace_all(race_vision[7],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_vision_detail[7] = race_vision[7];
 	race_lock[7] = "REACH LABS TO UNLOCK"
@@ -187,7 +192,8 @@ function scrRaces() {
 	race_vision_detail[8] = "PRESS <w>[E]<w> NEAR AN ENEMY TO:#START <w>EATING<w> THAT ENEMY#STAY IN RANGE TO COMPLETE THE EATING#EATING TAKES LONGER#IF THE ENEMY HAS MORE HEALTH#GET THE SAME <y>RES<y><g>OUR<g><r>CES<r>#AS IF YOU ATE A WEAPON";
 	if isUnique
 	{
-		
+		race_vision[8] = string_replace_all(race_vision[8],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[8] = string_replace_all(race_vision_detail[8],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
 	race_have[8] = 0
@@ -210,7 +216,7 @@ function scrRaces() {
 	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w> BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
 	if isUnique
 	{
-		
+		race_vision[9] = string_replace_all(race_vision[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_vision_detail[9] = race_vision[9];
 	race_lock[9] = "OPEN A BIG HP CHEST"
@@ -235,7 +241,8 @@ function scrRaces() {
 	race_vision_detail[10] = "PRESS <w>[E]<w> TO:#GRAB A NEARBY ALLY#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
 	if isUnique
 	{
-		
+		race_vision[10] = string_replace_all(race_vision[10],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[10] = string_replace_all(race_vision_detail[10],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[10] = 0
@@ -259,7 +266,8 @@ function scrRaces() {
 	race_vision_detail[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TOGGLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY, FOR <w>2<w> SECONDS";
 	if isUnique
 	{
-		
+		race_vision[11] = string_replace_all(race_vision[11],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[11] = string_replace_all(race_vision_detail[11],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[11] = "DEFLECT A SNIPER SHOT\nBACK AT THE SNIPER\nTO UNLOCK"
 	race_have[11] = 0
@@ -283,7 +291,8 @@ function scrRaces() {
 	race_vision_detail[12] = "HOLD <w>[E]<w> TO:#TURN YOUR DUPLICATES INTO <p>HACKS<p>#TEMPORARILY ENABLED <w>IN ORDER<w>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>##AFTER ALL HACKS ARE ENABLED (3+ DUPES)#NEXT DUPLICATES INCREASES <w>DURATION<w>";
 	if isUnique
 	{
-		
+		race_vision[12] = string_replace_all(race_vision[12],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[12] = string_replace_all(race_vision_detail[12],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[12] = "KILL A MIMIC TO UNLOCK"
 	race_have[12] = 0
@@ -309,7 +318,8 @@ function scrRaces() {
 	race_vision_detail[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>#COMPLETLY <aq>IMMUNE<aq> DURING <pi>SUPER CHARGE<pi>#<pi>SUPER CHARGE<pi> GOES TOWARDS YOUR <w>AIM<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>#OR RIGHT AFTER A <pi>HYPERDASH<pi>";
 	if isUnique
 	{
-		
+		race_vision[13] = string_replace_all(race_vision[13],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[13] = string_replace_all(race_vision_detail[13],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[13] = "MORPH AN ENEMY TO UNLOCK"
 	race_have[13] = 0
@@ -333,7 +343,8 @@ function scrRaces() {
 	race_vision_detail[14] = "PRESS <w>[E]<w> TO <w>TOGGLE<w> <b>SLEEP<b><w>!<w>#WHILE <b>SLEEPING<b>:#SPIN NEARBY <w>WEAPONS<w> AROUND YOU#EVERY <w>5<w> HITS YOUR <w>SPINNING WEAPONS<w> DEAL#<r>HEAL<r> <w>1<w>";
 	if isUnique
 	{
-		
+		race_vision[14] = string_replace_all(race_vision[14],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[14] = string_replace_all(race_vision_detail[14],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[14] = "VISIT THE JUNGLE TO UNLOCK"
 	race_have[14] = 0
@@ -356,7 +367,7 @@ function scrRaces() {
 	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
 	if isUnique
 	{
-		
+		race_vision[15] = string_replace_all(race_vision[15],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_vision_detail[15] = race_vision[15];
 	race_lock[15] = "TAKE CRYSTAL'S THRONE BUTT TO UNLOCK"
@@ -381,7 +392,8 @@ function scrRaces() {
 	race_vision_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>#COSTS ABOUT 5 AMMO DROPS#8 WHEN USING UNEQUIPPED AMMO#PRIORITIZES SECONDARY AMMO#WHEN ON <gb>MAX ARMOUR<gb>:#CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
 	if isUnique
 	{
-		
+		race_vision[16] = string_replace_all(race_vision[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[16] = string_replace_all(race_vision_detail[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
@@ -405,7 +417,8 @@ function scrRaces() {
 	race_vision_detail[17] = "HOLD <w>[E]<w> TO:#<w>SHIFT<w> <y>AMMO TYPE<y>#OF YOUR <w>PRIMARY<w> TO THE RIGHT##SHIFTING <y>BULLETS<y> CHANGES <y>AMMO<y> COST";
 	if isUnique
 	{
-		
+		race_vision[17] = string_replace_all(race_vision[17],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[17] = string_replace_all(race_vision_detail[17],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[17] = "MODIFY A WEAPON TO UNLOCK"
 	race_have[17] = 0
@@ -429,7 +442,8 @@ function scrRaces() {
 	race_vision_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	if isUnique
 	{
-		
+		race_vision[18] = string_replace_all(race_vision[18],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[18] = string_replace_all(race_vision_detail[18],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
 	race_have[18] = 0
@@ -453,7 +467,8 @@ function scrRaces() {
 	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
 	if isUnique
 	{
-		
+		race_vision[19] = string_replace_all(race_vision[19],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[19] = string_replace_all(race_vision_detail[19],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[19] = "DIE IN THE LABS AS MELTING TO UNLOCK"
 	race_have[19] = 0
@@ -497,7 +512,8 @@ function scrRaces() {
 	race_vision_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A BIG BALL OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
 	if isUnique
 	{
-		
+		race_vision[21] = string_replace_all(race_vision[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[21] = string_replace_all(race_vision_detail[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[21] = "REACH WONDERLAND TO UNLOCK"//"REACH PALACE"
 	race_have[21] = 0
@@ -521,7 +537,8 @@ function scrRaces() {
 	race_vision_detail[22] = "PRESS <w>[E]<w> TO:#MANUALLY TRIGGER <b>BLAST ARMOUR<b>#COSTS <w>1<w> <r>HP<r>#IF YOU <w>DON'T TAKE DAMAGE<w>#FOR A LITTLE WHILE#REFUND <w>1<w> <r>HP<r>##ONLY SCALES <g>SUPER<g> <b>BLAST ARMOUR<b>#<w>TEMPORARILY<w>";
 	if isUnique
 	{
-		
+		race_vision[22] = string_replace_all(race_vision[22],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[22] = string_replace_all(race_vision_detail[22],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[22] = "REACH THE THRONE TO UNLOCK"
 	race_have[22] = 0
@@ -546,7 +563,7 @@ function scrRaces() {
 	race_vision[23] = "PRESS <w>[E]<w> WHILE CHARGING <g>GAS<g> TO:#<g>ULTRA<g> <w>BOOST<w> YOUR GAS#COSTS <g>RADS<g>";
 	if isUnique
 	{
-		
+		race_vision[23] = string_replace_all(race_vision[23],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_vision_detail[23] = race_vision[23];
 	race_lock[23] = "KILL BALL MOM TO UNLOCK"
@@ -571,7 +588,8 @@ function scrRaces() {
 	race_vision_detail[24] = "PRESS <w>[E]<w> TO:#SEND OUT YOUR <w>WALLS<w>#LIKE PROJECTILES";
 	if isUnique
 	{
-		
+		race_vision[24] = string_replace_all(race_vision[24],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[24] = string_replace_all(race_vision_detail[24],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[24] = "REACH MUSHROOM LAND TO UNLOCK"//TAKE HEAVY HEART
 	race_have[24] = 0
@@ -595,7 +613,8 @@ function scrRaces() {
 	race_vision_detail[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#INSTANTLY <w>COLLECT<w> ALL RADS#ALL <w>PICKUPS<w> AND <g>RADS<g>#SPREAD THE <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>#ENABLE <g>MUTATIONS<g> AT THE END OF THE <w>AREA<w>";
 	if isUnique
 	{
-		
+		race_vision[25] = string_replace_all(race_vision[25],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[25] = string_replace_all(race_vision_detail[25],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[25] = "REACH LEVEL ULTRA TO UNLOCK"//REACH LEVEL ULTRA
 	race_have[25] = 0
@@ -619,7 +638,8 @@ function scrRaces() {
 	race_vision_detail[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#DEAL <w>DAMAGE<w> TO ALL <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN ADDITIONAL <w>SKILL<w> FOR#THE DAMAGE YOU DEAL USING THIS#<w>SKILL<w> DOES NOT DRAIN WHILE <w>STUNNED<w>";
 	if isUnique
 	{
-		
+		race_vision[26] = string_replace_all(race_vision[26],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[26] = string_replace_all(race_vision_detail[26],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[26] = "COLLECT FOUR BOSS BOUNTIES"//SOMETHING A LITTLE HARDER
 	race_have[26] = 0
@@ -638,11 +658,12 @@ function scrRaces() {
 	race_acti[27] = "PRESS/HOLD TO <w>GRAB<w>#CHESTS/WEAPONS/ENEMIES"
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
-	race_vision[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>";
-	race_vision_detail[27] = "PRESS/HOLD <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
+	race_vision[27] = "PRESS <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>";
+	race_vision_detail[27] = "PRESS <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
 	if isUnique
 	{
-		
+		race_vision[27] = string_replace_all(race_vision[27],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision_detail[27] = string_replace_all(race_vision_detail[27],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
 	race_have[27] = 0

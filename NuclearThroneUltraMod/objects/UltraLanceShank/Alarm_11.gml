@@ -11,7 +11,7 @@ if um == ultramods.bloodMelee
 	snd_play(sndBloodPistol,0.1,true);
 	with instance_create(xx,yy,UltraBloodBullet)
 	{
-		dmg = ceil(other.dmg*0.5);
+		dmg = ceil(other.dmg*0.4);
 		scrCopyWeaponMod(other);
 		direction = other.direction-5;
 		image_angle = direction;
@@ -21,7 +21,7 @@ if um == ultramods.bloodMelee
 	}
 	with instance_create(xx,yy,UltraBloodBullet)
 	{
-		dmg = ceil(other.dmg*0.5);
+		dmg = ceil(other.dmg*0.4);
 		scrCopyWeaponMod(other);
 		direction = other.direction+5;
 		image_angle = direction;

@@ -10,7 +10,7 @@ button = 2
 else
 button = 0
 //y+34 moet 24
-if button = 1 and UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCont.mouse__y > y and UberCont.mouse__y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
+if button = 1 and mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
 {
     if Menu.race = num
     {

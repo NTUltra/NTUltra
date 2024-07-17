@@ -9,7 +9,7 @@ if um == ultramods.bloodMelee
 	snd_play(sndBloodPistol,0.1,true);
 	with instance_create(xx,yy,UltraBloodBullet)
 	{
-		dmg = ceil(other.dmg*0.7);
+		dmg = ceil(other.dmg*0.6);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -18,11 +18,11 @@ if um == ultramods.bloodMelee
 		alarm[11] = 0;
 	}
 }
-else // if um == ultramods.krakenMelee
+else if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 6 + speed + dmg;
-	var ddd = ceil(other.dmg*0.3);
+	var ddd = ceil(other.dmg*0.25);
 	with instance_create(x,y,Tentacle)
 	{
 		sprite_index=sprUltraTentacle;

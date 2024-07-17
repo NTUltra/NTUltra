@@ -19,7 +19,7 @@ if um == ultramods.bloodMelee
 	with instance_create(xx,yy,toSpawn)
 	{
 		scrCopyWeaponMod(other);
-		ceil(other.dmg*0.5);
+		dmg = ceil(other.dmg*0.25);
 		direction = other.direction;
 		image_angle = direction;
 		speed = 14+other.speed;
@@ -30,7 +30,7 @@ if um == ultramods.bloodMelee
 	with instance_create(xx,yy,toSpawn)
 	{
 		scrCopyWeaponMod(other);
-		ceil(other.dmg*0.5);
+		dmg = ceil(other.dmg*0.25);
 		direction = other.direction-offset;
 		image_angle = direction;
 		speed = 14+other.speed;
@@ -40,7 +40,7 @@ if um == ultramods.bloodMelee
 	with instance_create(xx,yy,toSpawn)
 	{
 		scrCopyWeaponMod(other);
-		ceil(other.dmg*0.5);
+		dmg = ceil(other.dmg*0.25);
 		direction = other.direction+offset;
 		image_angle = direction;
 		speed = 14+other.speed;
@@ -48,7 +48,7 @@ if um == ultramods.bloodMelee
 		alarm[11] = 0;
 	}
 }
-else // if um == ultramods.krakenMelee
+else if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 7 + speed + dmg;

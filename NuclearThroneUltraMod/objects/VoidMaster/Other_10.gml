@@ -58,19 +58,19 @@ else
 		{
 			case 1:
 				with TextHandler {
-					text = "WELL UNFORTUNATELY";
+					text = "VERY WELL...";
 				}
 				alarm[2] = 5;
 			break;
 			case 2:
 				with TextHandler {
-					text = "THATS NOT IN THIS BETA YET";
+					text = "BUT BE WARNED,";
 				}
 				alarm[2] = 5;
 			break;
 			case 3:
 				with TextHandler {
-					text = "SORRY! COME AGAIN LATER.";
+					text = "I WILL NOT HOLD BACK";
 				}
 				alarm[2] = 5;
 			break;
