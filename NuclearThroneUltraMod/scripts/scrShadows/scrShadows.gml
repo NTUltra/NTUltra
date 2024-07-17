@@ -92,6 +92,11 @@ function scrShadows() {
 	draw_sprite(shd16,0,x-vx,y-vy+10)
 	with SquareBat
 	draw_sprite(shd32,0,x-vx,y-vy+6)
+	with VoidMasterBoss
+	{
+		if sprite_index == spr_idle || sprite_index == spr_walk || sprite_index == spr_hurt
+		draw_sprite(shd32,0,x-vx,y-vy)
+	}
 	with CloudShooter
 	{
 		if place_meeting(x,y,Floor)

@@ -80,6 +80,7 @@ else
 					text = "";
 				}
 				alarm[2] = 5;
+				event_user(4);
 			break;
 			default:
 				with TextHandler {

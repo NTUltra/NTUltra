@@ -28,7 +28,7 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(7) < 1
-	            instance_create(x + 16, y + 16, choose(MaggotSpawn, Scorpion, JungleFly, MeleeBandit, Sniper, CloudShooter))
+	            instance_create(x + 16, y + 16, choose(MaggotSpawn, Scorpion, JungleFly, MeleeBandit, Sniper))//ADD A TANK HERE
 	            else {
 	                if random(30) < 1 {
 						instance_create(x,y,BigWallBreak);
@@ -1449,7 +1449,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 	            if ran > 75 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer))
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer,CloudShooter))
 	            } else if ran > 55 {
 					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
 				}
@@ -1481,7 +1481,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 	            if ran > 70 {
-	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedGhostGuardian, InvertedGuardianDog, InvertedCubeGuardian,CloudKnifer))
+	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedGhostGuardian, InvertedGuardianDog, InvertedCubeGuardian,CloudKnifer,CloudShooter))
 	            } else if ran > 50 {
 					instance_create(x + 16, y + 16, choose(InvertedExploFreak, InvertedBuffMushroom, InvertedJungleBandit))
 				}

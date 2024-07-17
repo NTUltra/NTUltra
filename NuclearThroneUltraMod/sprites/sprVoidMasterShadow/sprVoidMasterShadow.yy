@@ -24,7 +24,7 @@
   ],
   "name":"sprVoidMasterShadow",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Void",
     "path":"folders/Sprites/Void.yy",
@@ -77,7 +77,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":24,
-    "yorigin":48,
+    "yorigin":24,
   },
   "swatchColours":null,
   "swfPrecision":2.525,
