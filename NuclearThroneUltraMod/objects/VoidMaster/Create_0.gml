@@ -7,7 +7,7 @@ spr_idle = sprVoidMasterIdle;
 alarm[0] = 15;
 depth = 3;
 dialogueStep = 0;
-with instance_create(x,y,BallBossPlateau)
+with instance_create(x,y + 24,BallBossPlateau)
 {
 	sprite_index = sprVoidMasterPlateau;
 }

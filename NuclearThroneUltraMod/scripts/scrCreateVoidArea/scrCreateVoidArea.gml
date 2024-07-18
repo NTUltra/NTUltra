@@ -33,7 +33,7 @@ function scrCreateVoidArea(){
 		var xo = x - 96;
 		var yo = y - 128;
 		//instance_create(xo, yo, VoidBench);
-		instance_create(xo, yo - 48, VoidMaster);
+		instance_create(xo, yo - 24, VoidMaster);
 		var xo = x;
 		var yo = y - 218//192;
 		instance_create(xo, yo, VoidSeer);

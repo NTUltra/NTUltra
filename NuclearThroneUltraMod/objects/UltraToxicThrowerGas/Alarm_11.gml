@@ -1,5 +1,6 @@
 /// @description ultramod
-if GetPlayerUltramod() == ultramods.toxicSwarm
+var um = GetPlayerUltramod();
+if um == ultramods.toxicSwarm
 {
 	with instance_create(x,y,UltraSwarmBolt)
 	{
@@ -23,7 +24,7 @@ else if um == ultramods.toxicMorph
 		direction = other.direction;
 		image_angle = direction;
 		speed = other.speed*2;
-		dmg -= 0.3;
+		alarm[0] += 1;
 		alarm[11] = 0;
 	}
 	UberCont.ultramodSwap = true;

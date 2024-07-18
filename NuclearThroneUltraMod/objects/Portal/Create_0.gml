@@ -114,3 +114,30 @@ else if instance_exists(Interactable)
 	}
 	scrForcePosition60fps();
 }
+if instance_number(Portal) > 1
+{
+	var n = instance_nearest_notme(x,y,Portal)
+	if distance_to_object(n) < 128 {
+		if instance_exists(Floor)
+		{
+			var f = instance_furthest(n.x,n.y,Floor);
+			var d = point_direction(n.x,n.y,f.x,f.y);
+			var tries = 1000;
+			var dis = 256;
+			while (distance_to_object(n) < 128 && tries > 0)
+			{
+				n = instance_nearest_notme(x,y,Portal)
+				var m = instance_nearest(x + lengthdir_x(dis,d),
+				y + lengthdir_y(dis,d), Floor);
+				var o = 16;
+				if m.object_index == FloorExplo
+					o = 8;
+				x = m.x+o;
+				y = m.y+o;
+				tries -= 1;
+				dis += 64;
+			}
+		}
+	}
+	scrForcePosition60fps();
+}

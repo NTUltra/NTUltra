@@ -362,7 +362,7 @@ if (hasNoMenuOpen()
 			{
 				if spriteIndex == 0
 				{
-					var uniqueStartingWeapons = 42;
+					var uniqueStartingWeapons = 43;
 					if race == 6 || race == 12
 						spriteIndex = uniqueStartingWeapons;//YC YV
 					else if race == 9

@@ -1,5 +1,5 @@
 /// @description Release
-if KeyCont.key_spec[0] == 3 && instance_exists(creator)
+if KeyCont.key_spec[0] != 1 and KeyCont.key_spec[0] != 2 && instance_exists(creator)
 {
 	alienIntestines += creator.alienIntestines;
 	event_user(0);
