@@ -6,6 +6,7 @@ function scrTranslateUltraToSecretStat(chosenUltra, bskin) {
 		case 6: return 2;
 		case 9: return 3;
 		case 13: return 4;
+		case 18: return 38;
 		case 20: return 5;
 		case 23: return 6;
 		case 27: return 7;

@@ -18,6 +18,9 @@ function scrLeaderboardAltUltra(ultraMutation){
 		case 13:
 		return sprDeathStareHUD;
 		break;
+		case 18:
+		return sprPlantPhotosynthesisHUD;
+		break;
 		case 19:
 		return sprPlantKillKillKillHUD;
 		break;
@@ -95,6 +98,12 @@ function scrLeaderboardAltUltra(ultraMutation){
 		break;
 		case 104:
 		return sprGrumpyLectureHUD;
+		break;
+		case 106:
+		return sprHothandsHUD;
+		break;
+		case 107:
+		return sprExplosiveHandsHUD;
 		break;
 		default:
 		return -1;

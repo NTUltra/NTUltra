@@ -1191,7 +1191,7 @@ function scrWeapons() {
 
 	wep_name[106] = "HEAVY ASSAULT RIFLE"
 	wep_type[106] = 1
-	wep_auto[106] = 0
+	wep_auto[106] = 2
 	wep_load[106] = 10
 	wep_cost[106] = 6
 	wep_sprt[106] = sprHeavyARifle
@@ -3606,7 +3606,7 @@ function scrWeapons() {
 	wep_name[321] = "LIGHTNING SCREWDRIVER"
 	wep_type[321] = 0
 	wep_auto[321] = 1
-	wep_load[321] = 9
+	wep_load[321] = 10
 	wep_cost[321] = 0
 	wep_sprt[321] = sprLightningScrewDriver
 	wep_area[321] = 7
@@ -6858,8 +6858,8 @@ function scrWeapons() {
 	wep_name[612] = "SEPTUPLE BLOOD RIFLE"
 	wep_type[612] = 1
 	wep_auto[612] = 1
-	wep_load[612] = 2
-	wep_cost[612] = 3
+	wep_load[612] = 3
+	wep_cost[612] = 3.5
 	wep_sprt[612] = sprSeptupleBloodRifle
 	wep_area[612] = 7
 	wep_text[612] = "its a bloody mess"

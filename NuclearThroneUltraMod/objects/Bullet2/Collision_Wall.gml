@@ -29,6 +29,7 @@ if shotgunshouldered && speed > 2
 	{
 		sprite_index = sprBullet2;
 	}
+	// scrShotgunShoulderBounce();
 }
 
 

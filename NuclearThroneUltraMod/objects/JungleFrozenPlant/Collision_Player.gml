@@ -21,12 +21,16 @@ if KeyCont.key_pick[other.p] = 1 && !used
 			if area == 114
 			{
 				area = 5;
+				lastarea = 5;
+				lastsubarea = 2;
 				subarea = 2;
 			}
 			else
 			{
 				area = 114;
 				subarea = 1;
+				lastarea = 114;
+				lastsubarea = 1;
 				/*
 				if subarea == 2
 					subarea = 2;

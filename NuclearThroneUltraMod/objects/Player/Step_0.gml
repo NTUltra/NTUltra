@@ -238,105 +238,104 @@ if !instance_exists(LevCont) and visible = 1
 				else
 					vspeed += acc;
 			}
-		}
-		if (newMovement)
-		{
-			if is60fps && speed > brakingFriction * 0.5
-				speed -= brakingFriction * 0.5
-			else if !is60fps && speed > brakingFriction
-				speed -= brakingFriction;	
-		}
-		if ultra_got[20] && altUltra
-		{
-			var delta = 1;
-			var checkDelta = 4;
-			if (is60fps)
+			if (newMovement)
 			{
-				delta = 0.5;
-				checkDelta = 3;
+				if is60fps && speed > brakingFriction * 0.5
+					speed -= brakingFriction * 0.5
+				else if !is60fps && speed > brakingFriction
+					speed -= brakingFriction;	
 			}
-			var moving = false;
-			var extraacc = 1.5 * delta;
-			var braking = 0.4/delta;
-			if speed > 5.1
-				speed -= 3.5 * delta;
-			var multi = 0;//Diagonal movement is faster acceleration otherwise
-			if (canMove && !lockout)
+			if ultra_got[20] && altUltra
 			{
-				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				var delta = 1;
+				var checkDelta = 4;
+				if (is60fps)
 				{
-					if hspeed > 0
-						hspeed *= braking;
-					hspeed -= extraacc
-					multi += extraacc;
-					moving = true;
+					delta = 0.5;
+					checkDelta = 3;
 				}
-				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				var moving = false;
+				var extraacc = 1.5 * delta;
+				var braking = 0.4/delta;
+				if speed > 5.1
+					speed -= 3.5 * delta;
+				var multi = 0;//Diagonal movement is faster acceleration otherwise
+				if (canMove && !lockout)
 				{
-					if hspeed < 0
-						hspeed *= braking;
-					hspeed += extraacc
-					multi += extraacc;
-					moving = true;
+					if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+					{
+						if hspeed > 0
+							hspeed *= braking;
+						hspeed -= extraacc
+						multi += extraacc;
+						moving = true;
+					}
+					if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+					{
+						if hspeed < 0
+							hspeed *= braking;
+						hspeed += extraacc
+						multi += extraacc;
+						moving = true;
+					}
+					if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+					{
+						if vspeed > 0
+							vspeed *= braking;
+						vspeed -= extraacc
+						multi += extraacc;
+						moving = true;
+					}
+					if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+					{
+						if vspeed < 0
+							vspeed *= braking;
+						vspeed += extraacc
+						multi += extraacc;
+						moving = true;
+					}
 				}
-				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				speed -= max(0,multi-extraacc);
+				if !moving
 				{
-					if vspeed > 0
-						vspeed *= braking;
-					vspeed -= extraacc
-					multi += extraacc;
-					moving = true;
+					speed *= braking;
 				}
-				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				var msk = mask_index;
+				if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
 				{
-					if vspeed < 0
-						vspeed *= braking;
-					vspeed += extraacc
-					multi += extraacc;
-					moving = true;
+					snd_play(sndGhettoBlast);
+					with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
+					{
+						motion_add(other.direction+180,other.speed+3)
+						image_angle = direction
+						team = other.team
+					}
+					with instance_create(x,y,PlantSonicBoom)
+					{
+						sprite_index = sprSpinSlash;
+						mask_index = mskSpinSlash;
+						image_angle = direction
+						team = other.team
+					}
+					with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
+					{
+						motion_add(other.direction,other.speed+3)
+						image_angle = direction
+						team = other.team
+					}
+				}
+				mask_index = msk;
+				if speed > maxSpeed
+				{
+					if !instance_exists(PlantCharge)
+					{
+						snd_play(sndSheepLoopStart);
+						instance_create(x,y,PlantCharge);	
+					}
 				}
 			}
-			speed -= max(0,multi-extraacc);
-			if !moving
-			{
-				speed *= braking;
-			}
-			var msk = mask_index;
-			if (abs(speed - previousSpeed) > checkDelta && !instance_exists(RocketSlash) && !place_meeting(x+hspeed,y+vspeed,WallHitMe))
-			{
-				snd_play(sndGhettoBlast);
-				with instance_create(x+lengthdir_x(16,direction),y+lengthdir_y(16,direction),PlantSonicBoom)
-				{
-					motion_add(other.direction+180,other.speed+3)
-					image_angle = direction
-					team = other.team
-				}
-				with instance_create(x,y,PlantSonicBoom)
-				{
-					sprite_index = sprSpinSlash;
-					mask_index = mskSpinSlash;
-					image_angle = direction
-					team = other.team
-				}
-				with instance_create(x+lengthdir_x(16,direction+180),y+lengthdir_y(16,direction+180),PlantSonicBoom)
-				{
-					motion_add(other.direction,other.speed+3)
-					image_angle = direction
-					team = other.team
-				}
-			}
-			mask_index = msk;
-			if speed > maxSpeed
-			{
-				if !instance_exists(PlantCharge)
-				{
-					snd_play(sndSheepLoopStart);
-					instance_create(x,y,PlantCharge);	
-				}
-			}
-		}
 
-	
+		}
 	if speed = 0 || maxSpeed == 0
 	{if sprite_index != spr_hurt
 	sprite_index = spr_idle}
@@ -393,7 +392,7 @@ if !instance_exists(LevCont) and visible = 1
 	else if UberCont.mouse__y > y
 	back = -1
 
-	if !lockout
+	if !lockout || race == 14
 	{
 		scrPowers();
 		scrSecondaryPowers();
@@ -543,8 +542,8 @@ if !instance_exists(LevCont) and visible = 1
 				}
 			}
 			*/
-			instance_create(x+32,y,FreakBandit);
-
+			instance_create(x+32,y,LightningWeaponChest);
+			instance_create(x+32,y+32,MorphWeaponChest);
 			/*
 			wep = 0;
 			var i = 0;
@@ -801,7 +800,7 @@ if !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "Ultramod ++ "+string(ultramod);
 		    }
-		if (keyboard_check_pressed(ord("F")))
+		if (keyboard_check_pressed(ord("G")))
 		    {
 		    repeat(3)
 		    instance_create(Player.x,Player.y,AmmoPickup);
@@ -843,13 +842,14 @@ if !instance_exists(LevCont) and visible = 1
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
 			thing.mytext = "LOOPS++! "+string(loops);
 		    }
+			/*
 		if (keyboard_check_pressed(ord("G")))
 		{
 			var dangle = random(1)*360;
 			thing = instance_create(x + dcos(dangle)*32,y + dsin(dangle)*32,PopupText);
 			thing.mytext = "WARPZONE";
 			scrTurnIntoPortalArea();
-		}
+		}*/
 		if (keyboard_check_pressed(ord("J")))
 		{
 			var dangle = random(1)*360;

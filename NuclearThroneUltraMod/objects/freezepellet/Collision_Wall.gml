@@ -16,6 +16,7 @@ instance_create(x,y,Dust)
 
 	if shotgunshouldered && speed > 2
 	{
+		// scrShotgunShoulderBounce();
 	dmg=4;
 	alarm[1]=3;
 	if sprite_index == sprFreezePellet

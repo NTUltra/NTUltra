@@ -8,6 +8,7 @@ if fire > 0
 		with instance_create(xx,yy,TrapFire)
 		{
 			motion_add(other.ang,other.fireSpeed);
+			dodgeAble = false;
 		}
 	else
 		fireSpeed = 0;

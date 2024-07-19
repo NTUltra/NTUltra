@@ -45,7 +45,7 @@ if mode = 0
 			var r = 0;
 			repeat(racemax + 1)
 			{
-				if (race_have[r] && r >= totals && r != 15)
+				if (race_have[r] && (r >= totals && r != 15 || r == 13))
 				{
 					justUnlockedSecondRow = true;
 				}

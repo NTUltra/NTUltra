@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrWeaponSpecificChest",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrWeaponSpecificChest",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

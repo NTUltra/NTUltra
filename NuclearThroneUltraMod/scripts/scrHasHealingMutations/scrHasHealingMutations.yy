@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrHasHealingMutations",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrHasHealingMutations",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -41,8 +41,10 @@ function BloodLust(){
 	    }
     
 	    num = 1
+		scrHeal(1);
+		/*
 	    Player.my_health = max(Player.my_health,min(Player.my_health + num,Player.maxhealth));
-    
+		
 		if UberCont.opt_ammoicon
 		{
 			dir = instance_create(x,y,PopupText)
@@ -61,6 +63,6 @@ function BloodLust(){
 		    dir.mytext = "MAX HP"
 			else if Player.my_health > Player.maxhealth
 			dir.mytext = "OVER MAX HP"
-		}
+		}*/
     }
 }

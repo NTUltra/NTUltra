@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrShotgunShoulderBounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrShotgunShoulderBounce",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

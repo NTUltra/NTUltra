@@ -1,3 +1,5 @@
 /// @description Spawn BoltWeaponChest
-instance_create(spawnLocationX,spawnLocationY,BoltWeaponChest);
+with instance_create(spawnLocationX,spawnLocationY,BoltWeaponChest) {
+	wep = other.wep;	
+}
 event_inherited();

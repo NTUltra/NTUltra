@@ -1,4 +1,4 @@
-/// @description Cycle weapon display eagle eyes
+/// @description Cycle weapon display open mind
 alarm[1] = 30;
 currentVisibleWep ++;
 if currentVisibleWep >= array_length(weps)

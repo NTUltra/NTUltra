@@ -24,7 +24,7 @@ if RogueIDPD
 }
     repeat(3+irandom(min(4,loops))+extra)
     {
-if random(5) < min(2,loops-1) //elite
+if random(4) < min(2,loops-1) //elite
 {
 
     var dir = choose(1,1,1,1,1,2,2,3,3,3);//1,1,2,3,4

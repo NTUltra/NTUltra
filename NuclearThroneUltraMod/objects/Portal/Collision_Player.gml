@@ -1,4 +1,4 @@
-if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant
+if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant || alarm[4] > 0
 	exit;
 if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprite_index != sprPopoPortalStart
 {

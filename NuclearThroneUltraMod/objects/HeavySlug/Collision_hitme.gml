@@ -3,10 +3,14 @@ if other.team != team and other.my_health > 0
 	with instance_create(x,y,BulletHit)
 		sprite_index = sprHeavySlugHit
 	var hits = ds_list_create();
-	var range = 24;
+	var range = splashRange;
 	if instance_exists(Player) && Player.skill_got[15] //Shotgun shoulder
 	{
-		range += 12;
+		range += shotgunShoulderSplashRange;
+		with instance_create(x,y,SplashDamageFX)
+		{
+			radius = range - 8;
+		}
 		with instance_create(x,y,BulletHit)
 		{
 			if other.object_index == UltraHeavySlug

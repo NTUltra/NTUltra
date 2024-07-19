@@ -13,5 +13,5 @@ function scrLightningWeaponsArray(loops, meleesOnly = false){
 	}
 	if meleesOnly
 		return [124, 321,792];
-	return [57, 58, 59, 101, 124, 257, 321, 337, 344, 345, 523, 694];
+	return [57, 58, 59, 101, 257, 321, 337, 344, 345, 523, 694];
 }

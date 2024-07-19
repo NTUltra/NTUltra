@@ -9,7 +9,7 @@ function scrEnemyDeathEvent(){
 	if instance_exists(Player)
 	{
 		//PLANT ULTRA B KILLER
-		if Player.ultra_got[18] == 1
+		if Player.ultra_got[18] == 1 && !Player.altUltra
 		{
 			var didSapling = false;
 			with Tangle {

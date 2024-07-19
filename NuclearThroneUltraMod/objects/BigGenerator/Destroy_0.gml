@@ -37,7 +37,6 @@ else
 		ang += angstep;
 	}
 }
-scrRaddrop(10);
 
 if instance_number(BigGenerator) == 1
 {
@@ -54,7 +53,8 @@ if instance_number(BigGenerator) == 1
 			}
 		}
 		with NuclearThrone1 {
-			my_health *= 0.5;
+			my_health -= maxhealth*0.75;
+			my_health = max(10,my_health);
 		}
 		with maxhealther
 		{
@@ -62,4 +62,4 @@ if instance_number(BigGenerator) == 1
 		}
 	}
 }
-scrDrop(25,0);
+scrDrop(50,0);

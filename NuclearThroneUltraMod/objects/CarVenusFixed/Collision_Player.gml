@@ -3,40 +3,45 @@ with Player
 	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
-	KeyCont.key_pick[Player.p] = 2;
-	mask_index = mskPickupThroughWall;
-	with other
+	if instance_exists(WantBoss) || instance_exists(BigFish)
 	{
-		if area !=104
+		KeyCont.key_pick[Player.p] = 2;
+		mask_index = mskPickupThroughWall;
+		with other
 		{
-			area = 103
-			subarea = 0
+			if area !=104
+			{
+				area = 103
+				subarea = 0
+			}
 		}
-	}
-	//with enemy
-	//	my_health = 0
-	snd_play(sndUseCar);
-	with instance_create(x,y,Portal) 
-	{
-		x = other.x;
-		y = other.y;
-		scrForcePosition60fps();
-		type = 1
-		alarm[1] = 1;
-		pullstrength = 3;
-		with Player
+		//with enemy
+		//	my_health = 0
+		snd_play(sndUseCar);
+		with instance_create(x,y,Portal) 
 		{
-			lockout = true;
 			x = other.x;
 			y = other.y;
 			scrForcePosition60fps();
+			type = 1
+			alarm[1] = 1;
+			pullstrength = 3;
+			with Player
+			{
+				lockout = true;
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
+			}
+		}
+	
+		with WantBoss {
+			instance_destroy();	
 		}
 	}
-	
-	with WantBoss {
-		instance_destroy();	
+	else
+	{
+		
 	}
-	
-	//instance_change(Wind,false)
 }
 

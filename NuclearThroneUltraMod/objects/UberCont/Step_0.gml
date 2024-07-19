@@ -285,15 +285,18 @@ else
 		}
 		if endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 		{
-			if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
+			if !instance_exists(Menu) || hasNoMenuOpen()
 			{
-				steam_shutdown();
-				game_end()
-				confirmState = 0;
-			}
-			else
-			{
-				confirmState = 3;	
+				if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
+				{
+					steam_shutdown();
+					game_end()
+					confirmState = 0;
+				}
+				else
+				{
+					confirmState = 3;	
+				}
 			}
 		}
 		else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME

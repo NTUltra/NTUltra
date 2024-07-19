@@ -36,7 +36,6 @@ function scrCollectHP(num = 2){
 	}
 	else
 	{
-
 		if Player.skill_got[9]
 		{
 			with instance_create(x,y,HealFX)
@@ -75,11 +74,12 @@ function scrCollectHP(num = 2){
 
 		//RUSH CROWN
 		if scrIsCrown(4)
-		num += 1
-		if Player.my_health + num <= Player.maxhealth
+			num += 1
+		scrPhotosythesis(num);
+		if Player.my_health + num <= Player.maxhealth + Player.defaultOverhealAddition
 			Player.my_health += num
 		else// if Player.crown != 2
-			Player.my_health = max(Player.my_health,Player.maxhealth);
+			Player.my_health = max(Player.my_health,Player.maxhealth + Player.defaultOverhealAddition);
 
 		if UberCont.opt_ammoicon
 		{

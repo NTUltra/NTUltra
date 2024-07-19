@@ -4,9 +4,12 @@ with MusCont {
 }
 with BigGenerator
 {
+	instance_destroy(id,false);
+	instance_create(x,y,BigGeneratorProp);
+	/*
 	sprite_index = spr_inactive;
 	spr_idle = spr_inactive;
-	spr_hurt = spr_inactive
+	spr_hurt = spr_inactive*/
 }
 snd_play_2d(sndNothingDeath1);
 instance_create(x,y,ThroneExplo);

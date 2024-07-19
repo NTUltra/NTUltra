@@ -672,7 +672,7 @@ if (tookHit)
 		{
 			isAlkaline = false;
 			var healTaken = 0;
-			if my_health < maxhealth
+			if my_health < maxhealth + defaultOverhealAddition
 			{
 				healTaken = 2;
 				if race == 25//Doctor buff
@@ -694,11 +694,11 @@ if (tookHit)
 						depth = other.depth - 1;	
 					}
 				//}
-				my_health = min(maxhealth,prevhealth+healTaken);
+				my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
 			}
 			else
 				my_health += max(0,damageTaken);
-			
+			scrPhotosythesis(healTaken);
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
 			snd_play(sndAlkalineProc,0,true);
@@ -820,6 +820,7 @@ if(my_health <= 0 && maxhealth > 0)
 			}
 			ang += 30;
 		}
+		if instance_exists(enemy)
 		with Floor {
 			var o = 16;
 			if object_index == FloorExplo
@@ -827,12 +828,15 @@ if(my_health <= 0 && maxhealth > 0)
 			var fx = x + o;
 			var fy = y + o;
 			var n = instance_nearest(fx,fy,enemy)
-			var newDis = point_distance(fx,fy,n.x,n.y)
-			if n != 2 && newDis > dis
+			if n != noone
 			{
-				dis = newDis;
-				xx = fx;
-				yy = fy;
+				var newDis = point_distance(fx,fy,n.x,n.y)
+				if n.team != 2 && newDis > dis
+				{
+					dis = newDis;
+					xx = fx;
+					yy = fy;
+				}
 			}
 		}
 		x = xx;

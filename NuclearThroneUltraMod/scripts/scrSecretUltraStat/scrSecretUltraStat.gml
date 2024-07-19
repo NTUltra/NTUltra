@@ -298,13 +298,23 @@ function scrSecretUltraStat() {
 	secret_ultra_text[36] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq> FOR 2 SECONDS"
 	secret_ultra_tips[36] = "gun god gun god gun god"
 	secret_ultra_hint[36] = "GODS DON'T DIE";
-	secret_ultra_unlk[36] = "DO NOT HAVE ANY#DEATH PREVENTION MUTATIONS";
+	secret_ultra_unlk[36] = "DO NOT HAVE ANY\nDEATH PREVENTION MUTATIONS";
 	
 	secret_ultra_name[37] = "CURSED TECHNOLOGY"
 	secret_ultra_text[37] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES"
 	secret_ultra_tips[37] = "eating guns from other dimensions"
 	secret_ultra_hint[37] = "SPOILED FOOD";
 	secret_ultra_unlk[37] = "BE CURSED ROBOT\nBY EATING A CURSED WEAPON\nUSING A-SKIN";
+	
+	var regalBut = "E";
+		if instance_exists(UberCont)
+			regalBut = scrAsciiChar(UberCont.opt_regal)
+	secret_ultra_name[38] = "PHOTOSYNTHESIS"
+	secret_ultra_text[38] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
+	secret_ultra_tips[38] = "BY THE POWER OF THE SUN!"
+	secret_ultra_hint[38] = "DOUBLE HEALING";
+	secret_ultra_unlk[38] = "HAVE ATLEAST TWO\nHEALING MUTATIONS";
+
 	
 	maxsecretultra = array_length(secret_ultra_name);
 	//109

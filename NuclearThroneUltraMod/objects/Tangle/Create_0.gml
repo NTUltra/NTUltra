@@ -9,7 +9,7 @@ dustAmount = 4;
 tangleNumber = 0;
 if instance_exists(Player)
 {
-	if (Player.ultra_got[17] || Player.ultra_got[18])
+	if !Player.altUltra && (Player.ultra_got[17] || Player.ultra_got[18])
 	{
 		sprite_index = sprTangleUpg;
 		alarm[0] = 10;

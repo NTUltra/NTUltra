@@ -1,5 +1,6 @@
 /// @description Esplode
-scrDrop(50,0)
+scrDrop(25,0)
+scrDrop(60,0,true)
 snd_play(sndExplosionL)
 with instance_create(x,y,GreenExplosion)
 	team = other.team;

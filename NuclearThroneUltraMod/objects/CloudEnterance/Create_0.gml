@@ -1,5 +1,5 @@
 /// @description Init
-depth = 8
+depth = 7
 image_speed = 0;
 name = "OFFER 3 MUTATIONS?";
 lightAngle = choose(30,-30);

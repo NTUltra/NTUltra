@@ -1,7 +1,8 @@
 /// @description Stay with the player
 if !instance_exists(Player)
 {
-	instance_destroy();	
+	instance_destroy();
+	exit;
 }
 with Player
 {

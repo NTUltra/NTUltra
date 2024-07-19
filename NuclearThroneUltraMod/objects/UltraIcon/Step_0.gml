@@ -117,6 +117,22 @@ if (selected && visible &&
 			instance_create(x,y,DeathStare);
 		}
 	}
+	else if skill == 18 && Player.race == 5 && isAlternative
+	{
+		with Player
+		{
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
+			altUltra = true;
+			scrUltras(true, false);
+			defaultOverhealAddition = 2;
+			spr_idle = sprMutant5DIdle;
+			spr_walk = sprMutant5DWalk;
+			spr_hurt = sprMutant5DHurt;
+			spr_dead = sprMutant5DDead;
+			bskin = 3;
+			scrUnlockAltSkin(race, 0);
+		}
+	}
 	else if skill == 19 && Player.race == 5 && isAlternative
 	{
 		with Player

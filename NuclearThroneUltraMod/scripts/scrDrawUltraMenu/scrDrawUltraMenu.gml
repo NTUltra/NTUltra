@@ -16,7 +16,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	false);
 	draw_set_colour(c_white);
 	var o = 64;
-	w -= o;
+	w -= o*1.5;
 	var xxx = camera_get_view_x(view_camera[0]) + o;
 	var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5)-18;//-24
 	var yyyy = yyy + 24;
@@ -34,7 +34,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 			am ++;
 		break;
 		case 5:		//Plant
-			am ++;
+			am += 2;
 		break;
 		case 6:		//YV
 			am += 2;
@@ -298,6 +298,15 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		{
 			switch (race)
 			{
+				case 5:
+					var u = 38;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_taken[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprPlantKillKillKill;
+				break;
 				case 6:
 					var u = 36;
 					name = string_hash_to_newline(secret_ultra_name[u]);

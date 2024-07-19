@@ -31,8 +31,8 @@ if instance_exists(creator)
 	{
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(a,0.5);
-			motion_add(a,0.5)
+			scrMoveContactSolid(a,0.75);
+			motion_add(a,0.75)
 		}	
 	}
 }

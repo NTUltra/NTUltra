@@ -329,6 +329,7 @@ livesRegain = [];
 ultimategamble = false;
 
 maxhealth = 8
+defaultOverhealAddition = 0;
 bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 39;

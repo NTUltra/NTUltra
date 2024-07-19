@@ -572,6 +572,14 @@ function scrDrawBloom() {
 		draw_set_alpha(1);
 		event_user(0);
 	}
+	with SunBeam
+	{
+		//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+		draw_set_alpha(cAlpha);
+		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),radius,0)
+		draw_set_alpha(1);
+		event_user(0);
+	}
 	surface_reset_target();
 	gpu_set_blendmode(bm_add);
 	draw_surface_ext(bloomSurface,vx,vy,1,1,0,c_white,0.3);

@@ -203,7 +203,7 @@ else if instance_exists(IDPDCaptain)
 else if instance_exists(UltraBigDog)
 {
 	if random(100)<1
-		name = choose("CHILD MAULTER","BABY MUNCHER");
+		name = choose("CHILD MAULER","BABY MUNCHER");
 	else
 		name = "ULTRA BIG DOG";
 }
@@ -292,7 +292,7 @@ else
 	{
 	//with instance_create(x,y,Drama)
 		if random(100)<1
-			name = choose("CHILD MAULTER","BABY MUNCHER");
+			name = choose("CHILD MAULER","BABY MUNCHER");
 		else
 		name = "ULTRA BIG DOG";
 	}

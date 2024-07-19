@@ -1,2 +1,3 @@
 /// @description Cleanup list
-ds_list_destroy(forcePositions);
+if ds_exists(forcePositions, ds_type_list)
+	ds_list_destroy(forcePositions);

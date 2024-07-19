@@ -23,29 +23,12 @@ if alarm[11] < 1 && other.team != team and other.my_health > 0
 	}
 	if shotgunshouldered
 	{
-		var direct = other.id;
-		var hits = ds_list_create();
-		var al = collision_circle_list(x,y,30,hitme,false,false,hits,false)
-		for (var i = 0; i < al; i++) {
-			// code here
-			with hits[| i]
-			{
-				if id != direct && team != other.team && my_health > 0
-				{
-					DealDamage(10)
-					sprite_index = spr_hurt
-					image_index = 0
-					motion_add(other.direction,5)
-					scrForcePosition60fps();
-					if speed > maxSpeed+1
-						speed = maxSpeed+1;
-					snd_play(snd_hurt, hurt_pitch_variation,true)
-				}
-			}
-		}
-		ds_list_destroy(hits);
+		scrSplashDamage(10,32);
+		with instance_create(x,y,BulletHit)
+			sprite_index = sprSlugHitUpg
 	}
-	with instance_create(x,y,BulletHit)
-		sprite_index = sprSlugHit
+	else
+		with instance_create(x,y,BulletHit)
+			sprite_index = sprSlugHit
 }
 

@@ -1,5 +1,6 @@
 function scrDecideLightningWep() {
 	var ar = [];
+	var myWep = 0;
     if instance_exists(Player)
     {
 		ar = scrLightningWeaponsArray(Player.loops,scrIsGamemode(31));
@@ -8,16 +9,16 @@ function scrDecideLightningWep() {
             maxTries = 2000;
 		do 
 	    {
-	        wep = ar[irandom(array_length(ar)-1)];
+	        myWep = ar[irandom(array_length(ar)-1)];
 	        maxTries --;
 	    }
-	    until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
+	    until (((myWep != Player.wep and myWep != Player.bwep) or Player.race = 7)
 	    || maxTries <= 0)
     }
     else
 	{
 		ar = scrLightningWeaponsArray(0,scrIsGamemode(31));
-		wep = ar[irandom(array_length(ar)-1)];
+		myWep = ar[irandom(array_length(ar)-1)];
 	}
-    return wep;
+    return myWep;
 }

@@ -24,33 +24,36 @@ with PlayerSpawn
 	spr_walk = other.originalWalk;
 	spr_hurt = other.originalHurt;
 }
-with wep
-{
-	snd_play(sndWepReturn,0.1);
-	with instance_create(x,y,ThrowWepReturnFX)
+if wep != noone
+	with wep
 	{
-		owner = Player.id;
-		depth = other.depth - 1;
+		snd_play(sndWepReturn,0.1);
+		with instance_create(x,y,ThrowWepReturnFX)
+		{
+			owner = Player.id;
+			depth = other.depth - 1;
+		}
+		instance_destroy(id,false);	
 	}
-	instance_destroy(id,false);	
-}
-with bwep
-{
-	snd_play(sndWepReturn,0.1);
-	with instance_create(x,y,ThrowWepReturnFX)
+if bwep != noone
+	with bwep
 	{
-		owner = Player.id;
-		depth = other.depth - 1;
+		snd_play(sndWepReturn,0.1);
+		with instance_create(x,y,ThrowWepReturnFX)
+		{
+			owner = Player.id;
+			depth = other.depth - 1;
+		}
+		instance_destroy(id,false);	
 	}
-	instance_destroy(id,false);	
-}
-with cwep
-{
-	snd_play(sndWepReturn,0.1);
-	with instance_create(x,y,ThrowWepReturnFX)
+if cwep != noone
+	with cwep
 	{
-		owner = Player.id;
-		depth = other.depth - 1;
+		snd_play(sndWepReturn,0.1);
+		with instance_create(x,y,ThrowWepReturnFX)
+		{
+			owner = Player.id;
+			depth = other.depth - 1;
+		}
+		instance_destroy(id,false);	
 	}
-	instance_destroy(id,false);	
-}

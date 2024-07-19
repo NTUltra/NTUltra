@@ -131,6 +131,17 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_name[18] = "KILLER"
 	ultra_text[18] = "ENEMIES KILLED NEAR <w>SNARE<w>#SPAWN <w>SAPLINGS<w>##SNARE <r>DAMAGES<r> ENEMIES#WHEN IN YOUR LINE OF SIGHT"
 	ultra_tips[18] = "eat the prey"
+	
+	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra))
+	{
+		var regalBut = "E";
+		if instance_exists(UberCont)
+			regalBut = scrAsciiChar(UberCont.opt_regal)
+		//TWO OR THREE HEALING MUTATIONS!
+		ultra_name[18] = "PHOTOSYNTHESIS"
+		ultra_text[18] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
+		ultra_tips[18] = "BY THE POWER OF THE SUN!"
+	}
 /*
 	ultra_name[19] = "LEACHER"
 	ultra_text[19] = "ENEMIES STUCK ON SNARE#SOMETIMES HEAL YOU#ENEMIES KILLED ON SNARE#HAVE A CHANCE TO DROP ADDITIONAL ITEMS"

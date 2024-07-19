@@ -9,6 +9,114 @@ function scrSecondaryPowers() {
 		uniqueKey = false;
 		isOverlapping = (targetPickup == noone || isOnInteractable);
 	}
+	if race == 5 && ultra_got[18] && altUltra && KeyCont.key_regal[p] == 1 && instance_exists(enemy)
+	{
+		var dis = 9999;
+		var xx = x;
+		var yy = y;
+		var ang = random(360);
+		snd_play(sndHyperLauncher);
+		repeat(12)
+		{
+			with instance_create(x,y,Dust)
+			{
+				motion_add(ang,1+random(2));
+			}
+			ang += 30;
+		}
+		var enoughDistance = 176;
+		var originX = x;
+		var originY = y;
+		var n = instance_nearest(x,y,enemy);
+		if (n != noone && n.team != 2 && point_distance(xx,yy,n.x,n.y) < enoughDistance)
+		{
+			debug("BITCH TO CLOSE");
+			var foundSpot = false;
+			do {
+				dis = enoughDistance;
+				//Oh there is a projectile nearby teleport somewhere else
+				with Floor {
+					var o = 16;
+					if object_index == FloorExplo
+						o = 8;
+					var fx = x + o;
+					var fy = y + o;
+					var n = instance_nearest(fx,fy,enemy)
+					if n != noone
+					{
+						var newDis = point_distance(fx,fy,n.x,n.y)
+						if n.team != 2 && newDis > dis
+						{
+							debug("FOUND A SPOT ", newDis);
+							foundSpot = true;
+							dis = newDis;
+							xx = fx;
+							yy = fy;
+						}
+					}
+					else
+					{
+						xx = fx;
+						yy = fy;
+					}
+				}
+				enoughDistance -= 16;
+			} until(enoughDistance < 16 || foundSpot)
+		}
+		else
+		{
+			with Floor {
+				var o = 16;
+				if object_index == FloorExplo
+					o = 8;
+				var fx = x + o;
+				var fy = y + o;
+				var n = instance_nearest(fx,fy,enemy)
+				if n != noone
+				{
+					var newDis = point_distance(fx,fy,n.x,n.y)
+					if n.team != 2 && newDis > enoughDistance && newDis < dis
+					&& point_distance(originX,originY,fx,fy) > 32//Want to actually move
+					{
+						dis = newDis;
+						xx = fx;
+						yy = fy;
+					}
+				}
+			}
+		}
+		
+		var path = path_add();
+		mp_potential_path(path,xx,yy,8,4,0);
+		var len = path_get_length(path);
+		var step = (1/len) * 32;
+		for(var i = 0; i < 1; i += step)
+		{
+			with instance_create_depth(path_get_x(path,i),path_get_y(path,i),depth,AnimDestroy) {
+				sprite_index = other.spr_walk;
+				image_alpha = 0.5;
+				image_xscale = other.right;
+			}
+		}
+		with instance_place(xx,yy,Wall)
+		{
+			instance_destroy();
+			instance_create(x,y,FloorExplo);
+		}
+		path_delete(path);
+		x = xx;
+		y = yy;
+		scrForcePosition60fps();	
+		repeat(12)
+		{
+			with instance_create(x,y,Dust)
+			{
+				motion_add(ang,1+random(2));
+			}
+			ang += 30;
+		}
+		alarm[3] = max(alarm[3],2);
+	}
 	if (skill_got[maxskill + 1])
 	{
 		switch (race)

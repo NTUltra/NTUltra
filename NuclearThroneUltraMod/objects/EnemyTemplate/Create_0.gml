@@ -1,10 +1,8 @@
 raddrop = 2
 maxhealth = 4
-meleedamage = 0
 mySize = 1
-
 event_inherited()
-
+meleedamage = 0
 spr_idle = sprToxicMushroomGuyIdle
 spr_walk = sprToxicMushroomGuyWalk
 spr_hurt = sprToxicMushroomGuyHurt

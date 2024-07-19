@@ -1,4 +1,4 @@
-raddrop = 50
+raddrop = 35
 maxhealth = 400
 scrBossHealthBuff();
 meleedamage = 0

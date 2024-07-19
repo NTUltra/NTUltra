@@ -38,6 +38,10 @@ if canAlt
 	{
 		sprite_index = sprDeathStare;
 	}
+	else if skill == 18 &&  Player.race == 5 && (Player.unlockAlternativeUltras || isAlternative || scrHasHealingMutations(2))
+	{
+		sprite_index = sprPlantKillKillKill;
+	}
 	else if skill == 19 &&  Player.race == 5 && (Player.unlockAlternativeUltras || isAlternative || scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39) || scrIsCrown(31) || scrIsCrown(30))
 	{
 		sprite_index = sprPlantKillKillKill;
@@ -150,7 +154,7 @@ if canAlt
 	{
 		sprite_index = sprSpikedFrog;
 	}
-	else if skill == 93 && Player.race == 24 && (Player.unlockAlternativeUltras || isAlternative || (Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27]))
+	else if skill == 93 && Player.race == 24 && (Player.unlockAlternativeUltras || isAlternative || (Player.patience > 0 || Player.guarenteedReroll > 0 || Player.skill_got[27] || Player.patienceUsed > 0))
 	{
 		sprite_index = sprAirLord;
 	}

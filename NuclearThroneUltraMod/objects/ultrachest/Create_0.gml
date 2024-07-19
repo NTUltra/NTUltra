@@ -21,6 +21,10 @@ if instance_exists(Player)
 
 scrWeapons()
 var wepAmount = 8;
+currentVisibleWep = 0;
+actionName = "% RADS TO OPEN"
+name = actionName;
+explainTimer = 0;
 weps = [];
 var i = 0;
 var newWep = 0;
@@ -39,6 +43,13 @@ if instance_exists(Player)
 		lowRange += 3;
 	}
 }
+if scrIsCrown(9)
+{
+	alarm[3] = 10;
+	if !instance_exists(GenCont)
+		event_perform(ev_alarm,3);
+	exit;
+}
 repeat(wepAmount)
 {
 	SetSeedWeapon();
@@ -55,13 +66,8 @@ if instance_exists(Player) && !UberCont.start_wep_have_all[Player.race]
 	weps[0] = scrDecideWepGold();
 }
 SetSeed();
-currentVisibleWep = 0;
 if instance_exists(Player) && Player.skill_got[23]
 	alarm[1] = 30;
-actionName = "% RADS TO OPEN"
-name = actionName;
-explainTimer = 0;
-
 if isOneWeaponOnlyModes()
 {
 	alarm[2] = 1;

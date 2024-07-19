@@ -35,6 +35,10 @@ else
 }
 if goTime
 {
+	if sprite_index == sprInvertedPortalDormant || sprite_index == sprProtoPortalDormant
+	{
+		alarm[4] = 20;	
+	}
 	with Trap
 	{
 		alarm[0] = 0;

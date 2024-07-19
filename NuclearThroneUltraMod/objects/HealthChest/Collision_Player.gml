@@ -90,6 +90,7 @@ if !instance_exists(GenCont)
 			popupT.mytext = "+"+string(num)+" HP OVERHEAL!"
 		}
 		with other {
+			scrPhotosythesis(other.num);
 			//OVERHEAL
 			if my_health >= maxhealth
 			{

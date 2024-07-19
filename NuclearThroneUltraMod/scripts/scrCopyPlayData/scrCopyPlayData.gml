@@ -16,6 +16,7 @@ function scrCopyPlayData(){
 		ultra_got: Player.ultra_got,
 		maxhp: Player.maxhealth,
 		hp: Player.my_health,
+		defaultOverhealAddition: Player.defaultOverhealAddition,
 		strongspirit: Player.strongspirit,
 		strongspiritused: Player.strongspiritused,
 		lastWishPrevent: Player.lastWishPrevent,
