@@ -1,6 +1,11 @@
 if instance_exists(HorrorSuckDelay)
 {
 	image_index = 0;
+	if place_meeting(x,y,Wall)
+	{
+		move_bounce_solid(false);
+		move_outside_solid(direction,8);
+	}
 	exit;
 }
 var extraRange = defaultRange;

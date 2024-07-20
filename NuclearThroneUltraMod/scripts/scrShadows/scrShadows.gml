@@ -95,7 +95,7 @@ function scrShadows() {
 	with VoidMasterBoss
 	{
 		if sprite_index == spr_idle || sprite_index == spr_walk || sprite_index == spr_hurt
-		draw_sprite(shd32,0,x-vx,y-vy)
+			draw_sprite(sprVoidMasterShadow,0,x-vx,y-vy)
 	}
 	with CloudShooter
 	{

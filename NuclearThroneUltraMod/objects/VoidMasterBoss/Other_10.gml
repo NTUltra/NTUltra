@@ -4,6 +4,11 @@ wepangle = 0;
 walk = tellTime;
 direction = gunangle;
 speed = acc;
+alarm[1] += tellTime;
 alarm[2] = tellTime;
-alarm[3] = tellTime - 10;
-snd_play(sndVoidEyeCreeping,0,false,true,2,false,false,0.8,false,id,0.2);
+alarm[3] = tellTime - 20;
+snd_play(sndVoidEyeCreeping);
+if target.x > x
+	right = -1
+else
+	right = 1

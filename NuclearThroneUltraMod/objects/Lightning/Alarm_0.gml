@@ -160,11 +160,11 @@ for(var i = floor(ammo); i > 0; i -= 1)
 	xscale = -point_distance(xxx,yyy,oldx,oldy)*0.5;
 	if ultraMod == ultramods.lightningPellet
 	{
-		if ammo % 2 == 0
+		if ammo > 0 && ammo % 2 == 0
 		{
 			snd_play(sndPopgun,0.1,true);
 			var odd = false;
-			if i > 0
+			if round(i) > 0
 			{
 				odd = round(i) % 3 == 0
 			}
@@ -204,7 +204,7 @@ for(var i = floor(ammo); i > 0; i -= 1)
 		};
 		arI += 1;
 	}
-	if i > 2 && team == 2 && round(i) % fork == 0//Forking lightning
+	if i > 2 && team == 2 && round(i) > 0 && fork > 0 && round(i) % fork == 0//Forking lightning
 	{
 		if instance_exists(Player) && Player.ultra_got[96] && choose(true,true,false)
 		{

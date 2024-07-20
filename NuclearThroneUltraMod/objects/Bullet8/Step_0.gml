@@ -14,6 +14,7 @@ if instance_exists(Player){
 
 
 			speed+=12;
+			speed = min(speed,26);
 			direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 			scrRedirectFx();
 		}

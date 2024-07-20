@@ -117,15 +117,15 @@ function scrPopChests() {
 	var gol = 1;
 	var healthChestGol = 0;
 	//Melting
-	if Player.race=4 && Player.my_health <= Player.maxhealth*0.5 and ran < 5
+	if Player.race == 4 && Player.my_health <= Player.maxhealth*0.5 and ran < 3
 	{
 		healthChestGol += 1;
 	}
-	else if Player.race!=4 && Player.my_health < round(6/2) and ran < 5
+	else if Player.race != 4 && Player.my_health < 3 and ran < 5
 	{
 		healthChestGol += 1;
 	}
-	if (instance_exists(Player) && Player.my_health < ceil(Player.maxhealth*0.8))
+	else if (instance_exists(Player) && Player.my_health < ceil(Player.maxhealth*0.8))
 		healthChestGol = choose(0,0,0,0,0,0,0,0,0,1);
 	else
 		healthChestGol = 0;
@@ -159,12 +159,12 @@ function scrPopChests() {
 		if scrIsCrown(15)//CROWN OF CHOICE
 		{
 			gol += choose(1,1,0);
-			healthChestGol += choose(0,0,0,0,0,1);
+			healthChestGol += choose(0,0,0,0,0,0,1);
 			wepChestGol += choose(1,2);
 		}
 		if scrIsCrown(2)//CROWN OF LIFE
 		{
-			healthChestGol += choose(0,1);
+			healthChestGol += choose(0,0,0,1);
 		}
 		else if Player.my_health >= Player.maxhealth
 			healthChestGol --;

@@ -8997,16 +8997,16 @@ function scrWeapons() {
 	wep_rad[803] = 0;
 	
 	wep_name[804] = "VOID BLASTER"
-	wep_type[804] = 5
+	wep_type[804] = 4
 	wep_auto[804] = 1
-	wep_load[804] = 6
+	wep_load[804] = 8
 	wep_cost[804] = 1
-	wep_sprt[804] = sprMachinegun
-	wep_area[804] = 1
-	wep_text[804] = ""
+	wep_sprt[804] = sprVoidBlaster
+	wep_area[804] = 27
+	wep_text[804] = "Deals more damage to higher health enemies but costs more ammo"
 	wep_swap[804] = sndSwapMachinegun
 	wep_rad[804] = 0;
-	wep_popup[804] = "DEALS DAMAGE BASED ON#HIT ENEMY'S MAX HEALTH";
+	wep_popup[804] = "CHANGES DAMAGE AND COST#BASED ON HIT ENEMY'S:#MAX HEALTH";
 	//Swiss army bow
 	//Charge boomerang
 	

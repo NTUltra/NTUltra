@@ -4450,8 +4450,6 @@ function scrFire(canDrown = true) {
 	if Player.skill_got[42]
 	{
 		ammo = ceil(ammo*Player.betterTail);
-		if Player.ultra_got[97] && !Player.altUltra
-			time = 1;
 		scrActivateTail(hasTailNow);
 	}
 	totalammo = ammo;

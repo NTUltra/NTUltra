@@ -285,7 +285,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if bskin == 1 || (other.isAlternative && !bskin == 1)
+			if bskin == 1 || (other.isAlternative && bskin != 1)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				//Secret B skin ultra
@@ -305,7 +305,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if bskin == 2 || (other.isAlternative && !bskin == 2)
+			if bskin == 2 || (other.isAlternative && bskin != 2)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				with Player {

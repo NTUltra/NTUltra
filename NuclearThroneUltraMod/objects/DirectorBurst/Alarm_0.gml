@@ -14,7 +14,7 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(5
 
 with instance_create(x,y,Bullet8)
 {
-motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,8)
+motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,12)
 image_angle = direction
 team = other.team
 	scrCopyWeaponMod(other);

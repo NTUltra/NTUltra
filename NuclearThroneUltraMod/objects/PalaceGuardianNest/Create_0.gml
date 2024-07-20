@@ -1,4 +1,4 @@
-maxhealth = 9999;
+maxhealth = 99;
 mySize = 1
 
 spr_idle = sprThroneStatue

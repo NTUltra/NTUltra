@@ -29,7 +29,6 @@ else
 	else
 	{
 		keepTalking += 1;
-		debug(keepTalking);
 		with TextHandler
 		{
 			text = "TAKE ON A CHALLENGE IF YOU DARE";

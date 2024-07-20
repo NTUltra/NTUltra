@@ -5,10 +5,12 @@ mySize = 4
 
 event_inherited()
 
+canFly = true;
 spr_idle = sprVoidMasterIdle
 spr_walk = sprVoidMasterWalk
 spr_hurt = sprVoidMasterHurt
 spr_dead = sprVoidMasterDead
+spr_charge = sprVoidMasterDashEnd;
 
 snd_hurt = sndHitPlant
 snd_dead = sndVoidEyeCreeping
@@ -21,7 +23,7 @@ wepflip = 1
 alarm[1] = 5;
 wkick = 0
 actTime = 12;
-tellTime = 20;
+tellTime = 35;
 
 acc = 0.4;
 maxSpeed = 1.5;

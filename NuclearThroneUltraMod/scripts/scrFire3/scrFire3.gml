@@ -403,5 +403,31 @@ function scrFire3(hasTailNow){
 		wkick = -5
 
 		break;
+		
+		//VOID BLASTER
+		case 804:
+
+		snd_play_fire(sndVoidBlaster)
+		//with instance_create(x,y,Shell)
+		//	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,VoidBullet)
+		{
+			owner = other.id;
+			motion_add(aimDirection+(random(8)-4)*other.accuracy,12 + other.accuracy)
+			image_angle = direction
+			team = other.team
+		}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,5)
+			scrMoveContactSolid(aimDirection  + 180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 5
+
+		break;
 	}
 }

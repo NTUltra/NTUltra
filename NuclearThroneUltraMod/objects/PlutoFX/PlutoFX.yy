@@ -38,5 +38,5 @@
     "path":"sprites/sprPluto/sprPluto.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

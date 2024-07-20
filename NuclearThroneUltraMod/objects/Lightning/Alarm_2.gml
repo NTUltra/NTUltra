@@ -10,7 +10,7 @@ var t = team;
 if al > 0 && alarm[0] < 1
 {
 	for (var i = 0; i < al; i++) {
-		if (i % 2 == 0)//Only half of the lightning has collision to optimize
+		if (i > 0 && i % 2 == 0)//Only half of the lightning has collision to optimize
 		{
 			var xx = lightningList[i].xx;
 			var yy = lightningList[i].yy;

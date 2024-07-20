@@ -1,5 +1,8 @@
+var wepIndex = 0;
+if alarm[2] < 10
+	wepIndex = 1;
 if gunangle <= 180
-	draw_sprite_ext(sprVoidMasterSword,-1,x,y,1,wepflip,gunangle+wepangle,c_white,1)
+	draw_sprite_ext(sprVoidMasterSword,wepIndex,x,y,1,wepflip,gunangle+wepangle,c_white,1)
 draw_sprite_ext(sprite_index,-1,x,y,right,1,0,c_white,1)
 if gunangle > 180
-	draw_sprite_ext(sprVoidMasterSword,-1,x,y,1,wepflip,gunangle+wepangle,c_white,1)
+	draw_sprite_ext(sprVoidMasterSword,wepIndex,x,y,1,wepflip,gunangle+wepangle,c_white,1)

@@ -1247,16 +1247,22 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,SlashDirectorShotgunPrep)
 	{
-	snd_play_fire(sndSlugger)
-	motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
-	image_angle=direction;
-	rate=10//for extra speed more bullets per step
-	Direction=aimDirection;
-	creator = other.id
-	ammo = 45
-	totalammo = ammo;
-	time = 1
-	team = other.team
+		snd_play_fire(sndSlugger)
+		motion_add(aimDirection+(random(6)-3)*other.accuracy,15);
+		image_angle=direction;
+		rate=10//for extra speed more bullets per step
+		Direction=aimDirection;
+		creator = other.id
+		ammo = 38
+		totalammo = ammo;
+		time = 1
+		team = other.team
+		if Player.skill_got[42]
+		{
+			ammo = ceil(ammo*Player.betterTail);
+			totalammo = ammo;
+			scrActivateTail(hasTailNow);
+		}
 	//event_perform(ev_alarm,0) 
 	}
 

@@ -234,7 +234,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		{
 			confDroprate += 0.15;
 		}
-		confDroprate *= 0.28;
+		confDroprate *= 0.3;
 		
 		if confDropChanceIndex < 0
 		{
@@ -249,7 +249,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 
 	    if (itemdrop > 0 && ran < min((itemdrop*0.5) * ((need*0.25) + confDroprate), 110))//rage=0.001
 	    {
-		    if ( scrIsCrown(2) && Player.canHeal && random(mh) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
+		    if ( scrIsCrown(2) && Player.canHeal && random(mh + 1) > h || random(100) < 10) and random(3) < 2 and random(1) <= canHealth
 			{
 				pickup = instance_create(x,y,HealthChest)
 			//return true;
