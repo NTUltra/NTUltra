@@ -493,6 +493,7 @@
     {"name":"CampFireOff","order":62,"path":"objects/CampFireOff/CampFireOff.yy",},
     {"name":"Candy","order":21,"path":"objects/Candy/Candy.yy",},
     {"name":"CanSpawnBoss","order":5,"path":"objects/CanSpawnBoss/CanSpawnBoss.yy",},
+    {"name":"CantGainSkill","order":127,"path":"objects/CantGainSkill/CantGainSkill.yy",},
     {"name":"CantTurn","order":17,"path":"objects/CantTurn/CantTurn.yy",},
     {"name":"CaptainBrokenDesk","order":3,"path":"objects/CaptainBrokenDesk/CaptainBrokenDesk.yy",},
     {"name":"Car","order":26,"path":"objects/Car/Car.yy",},

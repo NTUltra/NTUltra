@@ -55,7 +55,7 @@ else if image_xscale > 0.22 && alarm[11] < 1
 					if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical && point_distance(x,y,n.x,n.y) < 250 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 					{
 						toxicConsume ++;
-						if toxicConsume > 65
+						if toxicConsume > 50
 						{	
 							toxicConsume = 0;
 							my_health ++;

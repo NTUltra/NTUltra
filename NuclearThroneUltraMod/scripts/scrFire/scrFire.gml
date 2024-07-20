@@ -136,7 +136,7 @@ function scrFire(canDrown = true) {
 	//when firing both weapon more chance to giev other weapon ammo
 	if Player.ultra_got[25] && wep == bwep
 	{
-		if random(100)<((wep_cost[wep]/typ_ammo[wep_type[wep]])*0.5)*100
+		if random(100)<((wep_cost[wep]/typ_ammo[wep_type[wep]])*0.6)*100
 		{
 			with instance_create(x,y-16,FxOnOwner)
 			{
@@ -145,15 +145,7 @@ function scrFire(canDrown = true) {
 				yOffset = -16;
 			}
 			snd_play(sndBloodlustProc);
-			var num = 1
-			Player.my_health = max(Player.my_health,min(Player.my_health + num,Player.maxhealth));
-    
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = "+"+string(num)+" HP"
-			if Player.my_health = Player.maxhealth
-			dir.mytext = "MAX HP"
-			else if Player.my_health > Player.maxhealth
-			dir.mytext = "OVER MAX HP"
+			scrHeal(1);
 		}
 	}
 	if (Player.race=7 && Player.skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)

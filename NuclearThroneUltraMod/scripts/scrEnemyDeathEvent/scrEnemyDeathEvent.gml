@@ -93,21 +93,24 @@ function scrEnemyDeathEvent(){
 			}
 			*/
 			//Heavy heart
-			if skill_got[0]
-			{
-				scrDrop(0,0.7);
-			}
+			
 		}
 		
-		
+		var defaultWepDrop = 0;
+		if Player.skill_got[0]
+		{
+			defaultWepDrop += 0.5
+		}
 		if Player.race == 17
 		{
-			scrDrop(0,1);
+			defaultWepDrop += 0.5
 		}
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
-			scrDrop(0,2);
+			defaultWepDrop += 1;
 		}
+		if defaultWepDrop > 0
+			scrDrop(0,defaultWepDrop);
 		with Player
 		{
 			if other.countKill

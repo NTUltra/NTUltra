@@ -68,6 +68,7 @@ function scrModHit(projectileRef) {
 			pushStrength = min(pushStrength,32);
 			pushX = target.x + lengthdir_x(pushStrength,pushDirection);
 			pushY = target.y + lengthdir_y(pushStrength,pushDirection);
+			dealtDamage = false;
 		}
 	}
 	//RUN THIS CODE INSIDE OF ENEMY OBJET IN THE PROJETILE COLLISION EVENT

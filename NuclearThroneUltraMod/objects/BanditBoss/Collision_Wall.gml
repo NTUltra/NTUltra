@@ -1,5 +1,5 @@
 
-if charge > 0 or intro = 0
+if charge > 0 or intro = 0 && target != noone
 {
 	with other
 	{

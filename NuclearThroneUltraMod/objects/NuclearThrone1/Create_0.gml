@@ -48,7 +48,7 @@ spr_off = sprNothingOff;
 spr_middle_hurt_link = sprNothingMiddleHurtLink;
 spr_middle_deactivated_hurt_link = sprNothingMiddleDeactivatedHurtLink
 
-raddrop = 500;
+raddrop = 450;
 disable = false;
 firstEntry = false;
 imageIndex = 0;

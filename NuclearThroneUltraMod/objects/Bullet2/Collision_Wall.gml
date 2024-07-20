@@ -23,7 +23,8 @@ if shotgunshouldered && speed > 2
 	{
 		sprite_index = sprBullet2HighDmg;
 		dmg = 3;
-		alarm[1]=max(alarm[1],3);
+		//alarm[1] = max(alarm[1],3);
+		alarm[1] += 3;
 	}
 	else if sprite_index == sprBullet2Disappear
 	{

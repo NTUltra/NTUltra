@@ -241,7 +241,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					tx = x;
 					ty = y;
 					if alarm[3] < 1 && !instance_exists(ImmunityCooldown)
-						alarm[3] = max(alarm[3],5);
+						alarm[3] = max(alarm[3],8);
 					snd_hurt = sndDamageNegate;
 					scrGiveEuphoriaShield();
 					ammoReduction = 0.5;
@@ -325,18 +325,23 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			{
 				snd_play(sndSwapGold);	
 			}
-			dir = instance_create(x,y,PopupText)
-			dir.mytext = string(wep_name[wep])+"!"
-			if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
-				with instance_create(x,y,PopupText)
-				{
-					moveSpeed = 1;
-					alarm[1] = 60;
-					theColour = c_silver;
-					mytext = other.wep_popup[other.wep];
+			if (!array_contains(previousPickedUpWep, wep))
+			{
+				dir = instance_create(x,y,PopupText)
+				dir.mytext = string(wep_name[wep])+"!"
+				if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
+					with instance_create(x,y,PopupText)
+					{
+						moveSpeed = 1;
+						alarm[1] = 60;
+						theColour = c_silver;
+						mytext = other.wep_popup[other.wep];
+					}
 				}
 			}
-
+			previousPickedUpWep[pickupWepIndex] = wep;
+			pickupWepIndex += 1;
+			alarm[7] = 25;
 			//Done picking up
 			scrWeaponHold();
 			with targetPickup
@@ -769,11 +774,12 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 14;
+		alarm[3] += 20;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
-			alarm[7] = 10;
+			alarm[7] = 30;
+		instance_create(x,y,CantGainSkill);
 	    my_health = 1;
     }
 	if my_health <= 0 && instance_exists(SkeletonSkull)

@@ -2237,9 +2237,9 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			else {
 				failText = "NOT ENOUGH SKILL";
-				var cost = 8;
+				var cost = 5;
 				if ultra_got[104] && !altUltra
-					cost = 14
+					cost = 10
 				if loops > 0
 				{
 					cost += 2;

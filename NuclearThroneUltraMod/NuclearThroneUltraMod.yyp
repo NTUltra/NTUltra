@@ -687,6 +687,7 @@
     {"id":{"name":"CampFireOff","path":"objects/CampFireOff/CampFireOff.yy",},},
     {"id":{"name":"Candy","path":"objects/Candy/Candy.yy",},},
     {"id":{"name":"CanSpawnBoss","path":"objects/CanSpawnBoss/CanSpawnBoss.yy",},},
+    {"id":{"name":"CantGainSkill","path":"objects/CantGainSkill/CantGainSkill.yy",},},
     {"id":{"name":"CantTurn","path":"objects/CantTurn/CantTurn.yy",},},
     {"id":{"name":"CaptainBrokenDesk","path":"objects/CaptainBrokenDesk/CaptainBrokenDesk.yy",},},
     {"id":{"name":"CaptainFloor","path":"objects/CaptainFloor/CaptainFloor.yy",},},

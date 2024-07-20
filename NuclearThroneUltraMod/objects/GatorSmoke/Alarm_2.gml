@@ -15,6 +15,6 @@ wepflip = 1
 gunangle = random(360)
 instance_destroy(id,false);
 with instance_create(x,y,Gator) {
-	my_health = other.my_health;
+	my_health = min(maxhealth,other.my_health);
 	alarm[1] = max(other.alarm[1]+5,5 + random(5));
 }

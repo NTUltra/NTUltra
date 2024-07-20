@@ -36,6 +36,23 @@ if UberCont.hasBeenSaved
 }
 isInInverted = false;
 var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
+
+//SKINS
+if !scrIsCrown(34) || rewinds <= 0
+{
+	if ( firedthislevel=false && race == 10 && area < 100 && area != 10 && loops > 0 )
+	scrUnlockBSkin(10,"FOR COMPLETING A MAIN AREA#ON LOOP#WITHOUT FIRING AS REBEL",0);
+
+	if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
+	scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRING AS SHEEP",0);
+
+	if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
+	scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
+
+	if ( firedthislevel=false && race = 21 && loops>0 && area <100 && area != 10)
+	scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
+}
+
 scrNextLevel();
 if ultra_got[21] && altUltra && gunGod > 0
 {
@@ -750,19 +767,6 @@ if movethislevel==false&&race=15 &&!instance_exists(MenuGen) &&!instance_exists(
 {//ATOM TELEPORT ONLY GAMEMODE UNLOCK
 	scrUnlockGameMode(7,"FOR COMPLETING AN AREA WITHOUT WALKING")
 }
-
-//SKINS
-if ( firedthislevel=false && race == 10 && area < 100 && area != 10 && loops>0 )
-scrUnlockBSkin(10,"FOR COMPLETING A MAIN AREA#ON LOOP#WITHOUT FIRING AS REBEL",0);
-
-if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
-scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRING AS SHEEP",0);
-
-if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
-scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
-
-if ( firedthislevel=false && race = 21 && loops>0 && area <100 && area != 10)
-scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
 
 //if ( firedthislevel=false && race = 24 && area < 100 && area != 10 && ( area > 2 || loops > 0 )  )
 //scrUnlockCSkin(24,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ELEMENTOR",0);

@@ -1,6 +1,6 @@
 event_inherited()
 
-if charge = 1
+if charge == 1 && target != noone
 {
 instance_create(x+random(8)-4,y+4+random(4),Dust)
 motion_add(direction,0.5)

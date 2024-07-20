@@ -5,11 +5,10 @@ var dir = 0;
 if instance_exists(Player)
 {
 	spd = 0.1;
-	dir = point_direction(x,y,Player.x,Player.y);
+	dir = point_direction(x,y,Player.x,Player.y) + 180;
 	if sprite_index == sprNothing2Death || sprite_index == sprInvertedNothing2Death
 	{
-		dir += 180;
-		spd += 0.2;
+		spd += 0.1;
 		motion_add(dir,0.1);
 	}
 }

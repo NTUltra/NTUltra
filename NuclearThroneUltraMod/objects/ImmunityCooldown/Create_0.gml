@@ -1,2 +1,2 @@
 /// @description Microscoping cooldown
-alarm[0] = 4;
+alarm[0] = 18;

@@ -777,7 +777,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[102] = "quickdraw"
         
 	    ultra_name[103] = "PROTECTIVE FACIAL HAIR"
-	    ultra_text[103] = "WHEN YOU HAVE MORE THEN 200 <w>SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 60 SECONDS AFTER TRIGGERING THIS"
+	    ultra_text[103] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
 	    ultra_tips[103] = "strong skillet"
         
 		ultra_name[104] = "DISCIPLINE"

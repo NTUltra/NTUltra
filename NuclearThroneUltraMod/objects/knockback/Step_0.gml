@@ -25,6 +25,12 @@ if target != noone && instance_exists(target)
 			}
 		}
 		ds_list_destroy(walls);
+		if !other.dealtDamage && al > 0
+		{
+			debug("KNOCKDAMAGE");
+			DealDamage(2,false,true,false);
+			other.dealtDamage = true;
+		}
 		instance_create(x+hspeed,y+vspeed,WallBreak);
 	}
 }

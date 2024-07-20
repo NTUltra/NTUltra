@@ -45,7 +45,6 @@ function scrWeapons() {
 	wep_rad[3] = 0;
 	wep_popup[3] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
 
-
 	wep_name[4] = "MACHINEGUN"
 	wep_type[4] = 1
 	wep_auto[4] = 1
@@ -3441,7 +3440,7 @@ function scrWeapons() {
 	wep_name[307] = "FROST FLARE GUN"
 	wep_type[307] = 4
 	wep_auto[307] = 0
-	wep_load[307] = 26
+	wep_load[307] = 28
 	wep_cost[307] = 2
 	wep_sprt[307] = sprFrostFlareGun
 	wep_area[307] = 8
@@ -5812,7 +5811,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 28
+	wep_load[517] = 26
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -7502,7 +7501,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 14
+	wep_load[670] = 12
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 2
@@ -8996,6 +8995,18 @@ function scrWeapons() {
 	wep_text[803] = "claw strikes twice!"
 	wep_swap[803] = sndSwapSword
 	wep_rad[803] = 0;
+	
+	wep_name[804] = "VOID BLASTER"
+	wep_type[804] = 5
+	wep_auto[804] = 1
+	wep_load[804] = 6
+	wep_cost[804] = 1
+	wep_sprt[804] = sprMachinegun
+	wep_area[804] = 1
+	wep_text[804] = ""
+	wep_swap[804] = sndSwapMachinegun
+	wep_rad[804] = 0;
+	wep_popup[804] = "DEALS DAMAGE BASED ON#HIT ENEMY'S MAX HEALTH";
 	//Swiss army bow
 	//Charge boomerang
 	

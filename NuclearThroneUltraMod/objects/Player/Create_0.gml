@@ -216,7 +216,8 @@ portalstrikesusedthislevel = 0;
 toxicweaponsfound = 0;
 
 targetPickup = noone; //weapon pickup refrence
-
+previousPickedUpWep = [];
+pickupWepIndex = 0;
 ultramod = ultramods.nothing;
 
 //complicated fix for fantastic arcade

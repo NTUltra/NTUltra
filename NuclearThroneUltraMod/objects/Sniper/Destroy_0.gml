@@ -1,4 +1,4 @@
-scrDrop(40,0)
+scrDrop(40,5)
 if existTime > 15 && !sleeping
 {
 instance_create(x,y,Explosion);

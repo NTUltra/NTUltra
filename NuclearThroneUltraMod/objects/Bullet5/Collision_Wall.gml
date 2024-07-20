@@ -17,8 +17,8 @@ instance_create(x,y,Dust)
 
 if shotgunshouldered && speed > 2
 {
-dmg=9;
-alarm[1]=3;
+	dmg=9;
+	alarm[1] += 3;
 	if sprite_index == sprBullet5
 		sprite_index = sprUltraShellHighDmg;
 }

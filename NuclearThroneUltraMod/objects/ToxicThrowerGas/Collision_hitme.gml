@@ -54,7 +54,7 @@ else if image_xscale>0.22 && alarm[11] < 1
 					if  n != noone && point_distance(x,y,n.x,n.y) < 250 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))
 					{
 						toxicConsume += other.consumeAmount;
-						if toxicConsume > 65
+						if toxicConsume > 50
 						{	
 							toxicConsume = 0;
 							my_health ++;

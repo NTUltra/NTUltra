@@ -5,3 +5,4 @@ pushSpeed = 12;
 lerpTime = 1;
 lerpCalc = 0.17;
 lerpCalcBack = 0.17;
+dealtDamage = true;
