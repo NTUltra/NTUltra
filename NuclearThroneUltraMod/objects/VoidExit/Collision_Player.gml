@@ -32,14 +32,15 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 	{
 		with Player
 		{
-			var al = array_length(skill_got);
-			for (var i = 0; i < al; i++)
+			var i = 0;
+			repeat(maxskill + 1)//Not regal
 			{
-				if i != maxskill + 1 && skill_got[i]//Not regal
+				if skill_got[i]
 				{
 					array_push(UberCont.skillDeposit,i);
 					scrLoseSkill(i,true);	
 				}
+				i += 1;
 			}
 		}
 	}
