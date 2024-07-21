@@ -35,3 +35,6 @@ else
 }
 openedShop = false;
 keepTalking = 0;
+hasFailed = false;
+hasSucceeded = false;
+startedDuel = false;

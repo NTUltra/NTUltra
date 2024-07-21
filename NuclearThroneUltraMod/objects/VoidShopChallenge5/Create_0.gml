@@ -3,7 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
-spr_item = sprVoidItemIdpdVan;
+spr_item = sprVoidChallengeIcon;
+item_index = 5;
 challenge = "DIE IN ONE HIT"
 reward = "INCREASE MAX LEVEL";
-cost = 2;
+cost = 0;

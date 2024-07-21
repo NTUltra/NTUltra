@@ -88,6 +88,7 @@ if killerSequence
 		case 6:
 			with Player {
 				visible = false;
+				lockout = true;
 				instance_create(x,y,VoidSlash);
 				snd_play(sndVoidMegaSlash);
 				var splatDir = random(360);

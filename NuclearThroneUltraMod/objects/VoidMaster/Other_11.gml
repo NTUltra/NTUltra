@@ -17,7 +17,7 @@ else
 		}
 		alarm[2] = 5;
 	}
-	else if keepTalking > 2
+	else if keepTalking > 1
 	{
 		dialogueStep = 0;
 		with TextHandler
@@ -28,7 +28,8 @@ else
 	}
 	else
 	{
-		keepTalking += 1;
+		if !startedDuel
+			keepTalking += 1;
 		with TextHandler
 		{
 			text = "TAKE ON A CHALLENGE IF YOU DARE";

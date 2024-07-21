@@ -99,7 +99,8 @@ if ultra_got[51] && altUltra
 	sheepFakeouts = 3 + (skill_got[5] * 2);
 }
 ///at the end of a level stuff
-if (ultra_got[0] && !altUltra && !horrorEtaken)
+
+if (ultra_got[0] && !altUltra && !horrorEtaken && !UberCont.voidChallengeGoing[4])
 {
 	patience = 1;
 	skillpoints = max(0,skillpoints);

@@ -8,6 +8,11 @@ with other
 	else if !instance_exists(PlayerInFakeDeath)
 	{
 		hitBy = other.sprite_index;
+		with Player
+		{
+			visible = false;
+			lockout = true;	
+		}
 		with instance_create(x,y,PlayerInFakeDeath) {
 			sprite_index = other.spr_dead;
 		}

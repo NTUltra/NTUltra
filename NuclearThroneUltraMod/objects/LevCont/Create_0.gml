@@ -36,7 +36,7 @@ if Player.getVision
 	}
 	exit;
 }
-if Player.refundPoints > 0
+if Player.refundPoints > 0 && !UberCont.voidChallengeGoing[4]
 {
 	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,yy,SkillIcon)
@@ -703,7 +703,7 @@ if array_length(UberCont.skillDeposit) > 0
 if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
 	skill_got[30] = 0;
 }
-if scrIsGamemode(32) {
+if scrIsGamemode(32) || UberCont.voidChallengeGoing[5]{
 	// One hit wonder
 	with Player
 	{

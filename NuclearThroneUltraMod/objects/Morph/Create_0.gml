@@ -43,4 +43,3 @@ morphType = 1;
 
 image_angle = random(360);
 rot = random_range(30,-30);
-image_alpha = 0.4;

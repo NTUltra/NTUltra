@@ -1,4 +1,63 @@
 /// @description Dialogue
+if hasSucceeded > 0
+{
+	if hasSucceeded == 1
+	{
+		hasSucceeded += 1;
+		with TextHandler
+		{
+			text = "YOU BEAT ME";
+		}
+	}
+	else if hasSucceeded == 2
+	{
+		hasSucceeded += 1;
+		with TextHandler
+		{
+			text = "YOU'VE EARNED MY RESPECT";
+		}
+	}
+	else if hasSucceeded == 3
+	{
+		hasSucceeded += 1;
+		with TextHandler
+		{
+			text = "YOU ARE WORTHY OF THESE ADDITIONAL CHALLENGES";
+		}
+	}
+	else
+	{
+		hasSucceeded = 0;
+		UberCont.voidExtremeChallenges = true;
+		with TextHandler
+		{
+			text = "";
+		}
+		event_user(5);
+	}
+	alarm[2] = 5;
+}
+else if hasFailed > 0
+{
+	if hasFailed == 1
+	{
+		hasFailed += 1;
+		with TextHandler
+		{
+			text = "BUT NOT GOOD ENOUGH.";
+		}
+	}
+	else
+	{
+		hasFailed = 0;
+		with TextHandler
+		{
+			text = "";
+		}
+	}
+	alarm[2] = 5;
+}
+else
 if completedChallenge
 {
 	switch (dialogueStep)
@@ -52,7 +111,7 @@ else if introSpiel
 }
 else
 {
-	if keepTalking > 2
+	if keepTalking > 1
 	{
 		switch (dialogueStep)
 		{

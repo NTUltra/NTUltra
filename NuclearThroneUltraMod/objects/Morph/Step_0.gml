@@ -1,8 +1,9 @@
 /// @description rotate and alpha
-image_angle += rot;
-if alarm[0] > 3
-	image_alpha = max(0.4,image_alpha + 0.2);
+if UberCont.normalGameSpeed == 60
+{
+	image_angle += rot * 0.5;
+}
 else
 {
-	image_alpha = max(0.4,image_alpha - 0.2);
+	image_angle += rot;
 }

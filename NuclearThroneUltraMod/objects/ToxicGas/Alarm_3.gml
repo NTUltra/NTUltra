@@ -23,7 +23,7 @@ if n != noone && point_distance(n.x+8,n.y+8,x,y) < 24
 		}
 	}
 	with instance_create(x,y,ToxicConvertedBullet) {
-		dmg = other.dmg;
+		dmg = 1;
 		direction = other.direction;
 		image_angle = direction;
 		speed = 16;

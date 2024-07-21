@@ -7685,7 +7685,7 @@ function scrWeapons() {
 	wep_text[686] = "orbital strike"
 	wep_swap[686] = sndSwapEnergy
 	wep_rad[686] = 0;
-	wep_popup[686] = "CHARGE & BURST WEAPONS!";
+	wep_popup[686] = "CHARGE & BURST WEAPON!";
 	
 	wep_name[687] = "TRIPLE BULLET LASER"
 	wep_type[687] = 1

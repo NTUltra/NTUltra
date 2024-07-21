@@ -75,6 +75,9 @@ if completedChallenge && !collectedRewards
 			}
 			with Player
 			{
+				wep = UberCont.voidWeaponDeposit[0];
+				bwep = UberCont.voidWeaponDeposit[1];
+				cwep = UberCont.voidWeaponDeposit[2];
 				maxlevel++;
 				with instance_create(x,y,PopupText)
 				{

@@ -80,6 +80,8 @@ function scrDarkness() {
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
 	with BigFish
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
+	with VoidMasterBoss
+	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),96,0)
 	with BigVulture
 	draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),100,0)
 	with JungleBoss

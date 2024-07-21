@@ -113,6 +113,9 @@ function scrEndOfRun(){
 		voidChallengeGoing = [false,false,false,false,false,false];
 		voidChallengeCompleted= [false,false,false,false,false,false];
 		voidShopHealthUpgrade = false;
+		voidExtremeChallenges = false;
+		voidMutationDeposit = [];
+		voidWeaponDeposit = [];
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;

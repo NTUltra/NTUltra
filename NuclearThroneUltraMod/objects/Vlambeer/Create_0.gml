@@ -31,7 +31,7 @@ if instance_exists(Player)
 	{
 		instance_destroy()
 		instance_create(x,y,SpiralCont)
-		if (Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 
+		if !UberCont.voidChallengeGoing[4] && (Player.skillpoints > 0 or Player.crownpoints > 0 or Player.charpoints > 0 or 
 		(Player.ultra_got[0] && !Player.altUltra && !Player.horrorEtaken)
 		or Player.getVision or Player.refundPoints > 0
 		)

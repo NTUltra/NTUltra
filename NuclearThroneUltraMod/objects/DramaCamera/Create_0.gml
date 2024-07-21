@@ -65,6 +65,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		{
 			//song = musVisionary;
 		}
+		else if instance_exists(VoidMasterBoss)
+		{
+			//song = musVisionary;
+		}
 		else
 		{
 		    var area = instance_exists(Player) ? Player.area : UberCont.area;
@@ -199,6 +203,13 @@ else if instance_exists(IDPDCaptain)
 	name = "CAPTAIN";
 	if random(150)<1
 		name = choose("LET'S FUCKING GO","COME AT ME BRO","WE'RE HERE");
+}
+else if instance_exists(VoidMasterBoss)
+{
+	image_index = 0;
+	name = "VOID MASTER";
+	if random(150)<1
+		name = choose("DUEL!","THE GOOD, THE BAD AND THE UGLY?");
 }
 else if instance_exists(UltraBigDog)
 {

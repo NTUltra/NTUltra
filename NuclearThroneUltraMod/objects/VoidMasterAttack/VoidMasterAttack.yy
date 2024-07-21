@@ -39,8 +39,8 @@
     "path":"sprites/sprVoidSlash/sprVoidSlash.yy",
   },
   "spriteMaskId":{
-    "name":"mskVoidSlash",
-    "path":"sprites/mskVoidSlash/mskVoidSlash.yy",
+    "name":"mskVoidSlashMaster",
+    "path":"sprites/mskVoidSlashMaster/mskVoidSlashMaster.yy",
   },
   "visible":true,
 }

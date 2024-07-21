@@ -2,6 +2,7 @@
 wepflip *= -1;
 var dis = 48;
 snd_play(sndVoidMegaSlash);
+BackCont.shake += 30;
 with instance_create(x + lengthdir_x(dis,gunangle),y + lengthdir_y(dis,gunangle),VoidMasterAttack)
 {
 	image_angle = other.gunangle;
@@ -19,16 +20,18 @@ if n != noone
 	x = n.x + o;
 	y = n.y + o;
 	scrForcePosition60fps();
-	var repeats = point_distance(xo,yo,x,y) / 32;
+	var repeats = point_distance(xo,yo,x,y) / 24;
 	var xx = xo;
 	var yy = yo;
-	var xstep = lengthdir_x(32,gunangle);
-	var ystep = lengthdir_y(32,gunangle);
+	var xstep = lengthdir_x(24,gunangle);
+	var ystep = lengthdir_y(24,gunangle);
 	for (var i = 0; i < repeats; i ++)
 	{
 		with instance_create_depth(xx,yy,depth,AnimDestroyTop)
 		{
 			sprite_index = sprVoidMasterDash;
+			image_xscale = other.right;
+			image_angle = other.gunangle;
 			image_alpha = 0.5;
 		}
 		xx += xstep;
@@ -52,4 +55,4 @@ if n != noone
 	}
 	sprite_index = sprVoidMasterDashEnd;
 }
-alarm[1] = actTime * 3;
+alarm[1] = actTime * 2;

@@ -11,8 +11,7 @@ with GameRender
 with Player
 {
 	visible = true;
-		lockout = false;
-
+	lockout = false;
 }
 with DataRef
 {

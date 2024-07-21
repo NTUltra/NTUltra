@@ -521,6 +521,10 @@ function scrNextLevel(skipping = false) {
 			UberCont.extraVan = 0;
 		*/
 		area = 137;
+		if UberCont.voidChallengeCompleted[4]
+		{
+			refundPoints = array_length(UberCont.skillDeposit);
+		}
 	}
 	if ( subarea < 3 and area != 2 and area != 105 and area != 106
 	&& !(area = 6 && subarea > 1)//Labs has 2 areas

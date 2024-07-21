@@ -2,8 +2,8 @@ event_inherited()
 
 if walk > 0
 {
-walk -= 1
-motion_add(direction,acc)
+	walk -= 1
+	motion_add(direction,acc)
 }
 
 if alarm[2] > 0

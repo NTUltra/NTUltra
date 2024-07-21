@@ -456,10 +456,11 @@ with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
+/*
 with VoidMasterBoss
 {
 	event_perform(ev_draw,0);
-}
+}*/
 with CloudFlyer
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,image_yscale,image_angle,c_white,1)

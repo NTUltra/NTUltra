@@ -307,6 +307,27 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						scrFlexibleElbowReload(wep);
 					}
 				}
+				if ultra_got[66] && altUltra
+				{
+					bcan_shoot = 1
+					breload = min(breload,0)
+					bqueueshot = 0;
+					if skill_got[35]
+					{
+						var lowb = wep_load[bwep]*-2;
+						if breload <= lowb*0.5 && bqueueshot < 1
+						{
+							bqueueshot++;
+							scrPlayReloadSound(bwep);
+							scrFlexibleElbowReload(bwep);
+						} else if breload <= lowb && bqueueshot < 2
+						{
+							bqueueshot++;
+							scrPlayReloadSound(bwep);
+							scrFlexibleElbowReload(bwep);
+						}
+					}
+				}
 			}
 
 			if wep == 298//golden oops gun
@@ -378,7 +399,7 @@ if my_health < prevhealth
 			instance_destroy();
 		}
 		noHit = 0;
-		if scrIsGamemode(32) || ultra_got[109]
+		if scrIsGamemode(32) || ultra_got[109] || UberCont.voidChallengeGoing[5]
 		{
 			my_health = 0;
 			prevhealth = 0;
@@ -512,11 +533,12 @@ if scrIsCrown(18) && !exception
 		my_health -= dmgTaken;
 	}
 }
-if UberCont.voidChallengeGoing[1] && !exception && armour <= 0
+if UberCont.voidChallengeGoing[1] && !exception && armour <= 0 && !instance_exists(VoidChallengeDamage)
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
 		my_health -= 1;
+		instance_create(x,y,VoidChallengeDamage);
 	}	
 }
 ///tough shell
@@ -615,8 +637,11 @@ if armour > 0
 	{
 		tookDamageThisArea = true;
 		armour -= 1;
-		if UberCont.voidChallengeGoing[1]
+		if UberCont.voidChallengeGoing[1] && !instance_exists(VoidChallengeDamage)
+		{
 			armour -= 1;
+			instance_create(x,y,VoidChallengeDamage);
+		}
 		sprite_index = spr_hurt;
 		image_index = 0;
 		canAnimateDuringImmune = 0;
@@ -636,7 +661,7 @@ if armour > 0
 		armour = maxarmour;
 }
 else if ultra_got[62] && altUltra {
-	my_health = 0;	
+	my_health = min(1,my_health);
 }
 
 //}

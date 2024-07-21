@@ -1,4 +1,5 @@
 /// @description Create battle arena
+startedDuel = true;
 with instance_nearest(x,y,Floor)
 {
 	var myWall = Wall;
