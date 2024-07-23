@@ -14395,7 +14395,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		dmg = 3;
+		dmg = 4;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction
@@ -14426,7 +14426,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
-		dmg += 2;
+		dmg += 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.3+longarms)
 		image_angle = direction

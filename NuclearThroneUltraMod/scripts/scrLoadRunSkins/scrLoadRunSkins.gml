@@ -188,6 +188,15 @@ function scrLoadRunSkins(race,bskin,altUltra,area){
 				spr_dead = sprMutant3DDead;
 			}
 			break;
+			case 5:
+			if altUltra
+			{
+				spr_idle = sprMutant5DIdle;
+				spr_walk = sprMutant5DWalk;
+				spr_hurt = sprMutant5DHurt;
+				spr_dead = sprMutant5DDead;
+			}
+			break;
 			case 6:
 			if altUltra
 			{

@@ -21,11 +21,16 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 		{
 			instance_destroy();
 		}
+		with ThrowWep
+		{
+			instance_destroy();	
+		}
 		with Player
 		{
 			cwep = 0;
 			bwep = 0;
 			wep = 56;//RUSTY REVOLVER
+			ammo[1] = max(ammo[1],round(typ_ammo[1]*4));
 		}
 	}
 	if UberCont.voidChallengeGoing[4]

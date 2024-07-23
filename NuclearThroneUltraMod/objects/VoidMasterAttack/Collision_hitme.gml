@@ -1,4 +1,5 @@
 /// @description DESTROY EVERYTHING
+if other.team != team
 with other
 {
 	if object_index != Player
@@ -11,7 +12,8 @@ with other
 		with Player
 		{
 			visible = false;
-			lockout = true;	
+			lockout = true;
+			speed = 0;
 		}
 		with instance_create(x,y,PlayerInFakeDeath) {
 			sprite_index = other.spr_dead;

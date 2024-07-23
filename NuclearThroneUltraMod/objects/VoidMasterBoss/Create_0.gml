@@ -1,10 +1,10 @@
 raddrop = 0
-maxhealth = 500
+maxhealth = 800
 meleedamage = 0
 mySize = 4
 
 event_inherited()
-
+team = 5;
 canFly = true;
 spr_idle = sprVoidMasterIdle
 spr_walk = sprVoidMasterWalk
@@ -13,7 +13,7 @@ spr_dead = sprVoidMasterDead
 spr_charge = sprVoidMasterDashEnd;
 
 snd_hurt = sndVoidSuck
-snd_dead = sndVoidEyeCreeping
+snd_dead = sndVoidCreepEnd
 
 //behavior
 walk = 0
@@ -22,8 +22,8 @@ wepangle = choose(-140,140)
 wepflip = 1
 alarm[1] = 5;
 wkick = 0
-actTime = 20;
-tellTime = 30;
+actTime = 18;
+tellTime = 28;
 alarm[6] = 10;
 acc = 0.4;
 maxSpeed = 1.5;

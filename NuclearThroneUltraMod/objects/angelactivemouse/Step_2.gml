@@ -1,7 +1,7 @@
 /// @description Follow Mouse
 if instance_exists(Player)
 {
-	if moving
+	if !moving
 	{
 		x = UberCont.mouse__x;
 		y = UberCont.mouse__y;

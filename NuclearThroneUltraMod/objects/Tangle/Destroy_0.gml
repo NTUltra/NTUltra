@@ -1,5 +1,5 @@
 repeat(dustAmount)
-instance_create(x+random(12)-6,y+random(12)-6,Dust)
+	instance_create(x+random(12)-6,y+random(12)-6,Dust)
 
 with instance_create(x,y,AnimDestroy)
 {

@@ -676,6 +676,7 @@ function scrPowers(raceOverwrite = -1) {
 						scrHeal(1);
 						snd_play(sndBloodlustProc,0.1);
 						instance_create(x,y - 8,HealFX);
+						skeletonGambleBongas = 0;
 					}
 					else
 					{
@@ -720,21 +721,9 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							isAlkaline = false;
 							var h = 2;
-							if (skill_got[9]) //Second stomache
+							with instance_create(x,y,HealFX)
 							{
-								h = 4;
-								with instance_create(x,y,HealFX)
-								{
-									sprite_index = sprHealBigFX;
-									depth = other.depth - 1;
-								}
-							}
-							else
-							{
-								with instance_create(x,y,HealFX)
-								{
-									depth = other.depth - 1;	
-								}
+								depth = other.depth - 1;	
 							}
 							my_health = min(h,maxhealth);
 							with instance_create(x,y,SharpTeeth)
@@ -800,10 +789,10 @@ function scrPowers(raceOverwrite = -1) {
 		    }
 			else
 			{
-				if skill_got[5]
-					consecutiveGoodBloodGambles += wep_load[wep]*0.0005;
-				else
-					consecutiveGoodBloodGambles += wep_load[wep]*0.001;
+				//if skill_got[5]
+				//	consecutiveGoodBloodGambles += wep_load[wep]*0.0005;
+				//else
+				consecutiveGoodBloodGambles += wep_load[wep]*0.001;
 				//reload -= wep_load[wep]*0.8//*0.25;
 				if ultra_got[75]
 				{
@@ -2125,6 +2114,7 @@ function scrPowers(raceOverwrite = -1) {
 		//ANGEL
 		if race == 18 && !instance_exists(AngelActive) && !instance_exists(AngelActiveDelay)//ANGEL
 		{
+			KeyCont.key_spec[p] = 2;
 			var takePercentage = 0.4;
 			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 			if wepType != 0

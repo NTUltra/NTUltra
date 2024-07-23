@@ -6,7 +6,10 @@ speed+=0.4;
 if speed>4
 speed=4;
 
-reload--;
+if UberCont.normalGameSpeed == 60
+	reload -= 0.5;
+else
+	reload--;
 
 if alarm[0]>0&&reload<1
 {

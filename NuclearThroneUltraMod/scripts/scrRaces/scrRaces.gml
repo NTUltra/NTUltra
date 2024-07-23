@@ -213,7 +213,7 @@ function scrRaces() {
 	race_acti[9] = "HOLD FOR <w>SLOW MOTION<w>"
 	race_butt[9] = "NORMAL <w>MOVEMENT SPEED<w>#AND NORMAL <w>RELOAD SPEED<w>#DURING <w>SLOWMOTION<w>"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	race_butt_detail[9] = race_butt[9];
-	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w> BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
+	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN#WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w> BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
 	if isUnique
 	{
 		race_vision[9] = string_replace_all(race_vision[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -364,7 +364,7 @@ function scrRaces() {
 	race_acti[15] = "<w>TELEPORT<w>"
 	race_butt[15] = "EXPLOSIVE <p>TELEPORTATION<p>"
 	race_butt_detail[15] = "UPON <p>TELEPORTING<p>#FIRE AN EXPLOSIVE LASER#TOWARDS YOUR PREVIOUS POSITION#CAUSE <g>PLASMA<g> AND <b>LIGHTNING<b>#AT DESTINATION"
-	race_vision[15] = "PRESS <w>[E]<w> TO: CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p> <y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
+	race_vision[15] = "PRESS <w>[E]<w> TO:#CREATE A PERSISTENT <p>PORTAL<p>#THAT <p>TELEPORTS<p>#<y>RES<y><g>OUR<g><r>CES<r> <r>CHE<r><y>STS<y> AND <r>ENEMIES<r>";
 	if isUnique
 	{
 		race_vision[15] = string_replace_all(race_vision[15],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -436,14 +436,14 @@ function scrRaces() {
 	race_name[18] = "ANGEL"
 	race_pass[18] = "FLY OVER WALLS"
 	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
-	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#<w>1<w><r>HP<r> EVERY OTHER USE"
+	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#<w>1<w> <r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
-	race_vision[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
-	race_vision_detail[18] = "PRESS <w>[E]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
+	race_vision[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
+	race_vision_detail[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	if isUnique
 	{
-		race_vision[18] = string_replace_all(race_vision[18],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
-		race_vision_detail[18] = string_replace_all(race_vision_detail[18],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision[18] = string_replace_all(race_vision[18],"PRESS <w>[E]","PRESS <w>[ACTIVE]");
+		race_vision_detail[18] = string_replace_all(race_vision_detail[18],"PRESS <w>[E]","PRESS <w>[ACTIVE]");
 	}
 	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
 	race_have[18] = 0

@@ -25,6 +25,7 @@ if instance_exists(Player)
 	}
 }
 //amountOfProjectiles = 64;
+amountOfProjectiles = array_length(myCompanions);
 for (var i = 0; i < amountOfProjectiles; i++) {
 	with myCompanions[i]
 	{

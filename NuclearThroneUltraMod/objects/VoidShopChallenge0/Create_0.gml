@@ -6,4 +6,4 @@ event_inherited();
 spr_item = sprVoidChallengeIcon;
 challenge = "25% LOWER RELOAD SPEED"
 reward = "DOUBLE YOUR PORTAL ESSENCE";
-cost = 2;
+cost = 1;

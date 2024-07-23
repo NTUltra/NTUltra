@@ -20,6 +20,7 @@ else
 	else if keepTalking > 1
 	{
 		dialogueStep = 0;
+		keepTalking += 1;
 		with TextHandler
 		{
 			text = "OH YOU WANT TO CHALLENGE ME?";

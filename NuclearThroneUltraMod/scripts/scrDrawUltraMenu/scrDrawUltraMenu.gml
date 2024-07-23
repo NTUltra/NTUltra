@@ -6,6 +6,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	var xo = 0;
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		xo = 108;
+	
 	var b = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - widescreen - 3;
 	var w =  camera_get_view_width(view_camera[0]);
 	draw_rectangle(
@@ -19,14 +20,30 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	w -= o*1.5;
 	var xxx = camera_get_view_x(view_camera[0]) + o;
 	var yyy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])*0.5)-18;//-24
-	var yyyy = yyy + 24;
-	var titleNameSpace = 12;
 	var xxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5) - 147;
+	yyy -= 26;
+	//var xxxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5)
+	draw_text(xxxx,yyy - 18,"CHARACTER SPECIFIC MUTATIONS");
+	var xxxxx = xxx;
+	var canShowRegal = true;
+	var rt = "";
+	var yyyyy = yyy;
+	draw_sprite(sprSkillIcon,5,xxxxx,yyy);
+	if UberCont.got_regal[race] > 0
+		draw_sprite(sprSkillIcon,UberCont.maxskill + 1,xxxxx + 32,yyy);
+	else
+	{
+		canShowRegal = false
+		draw_sprite(sprLockedRegal,0,xxxxx + 32,yyy);
+	}
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	yyy += 49;
+	var yyyy = yyy + 22;
+	var titleNameSpace = 12;
 	var am = 5;
 	//More than 5 ultras
 	//draw_set_halign(fa_center);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
 	draw_text(xxxx,yyy-28,"ULTRA MUTATIONS");
 	switch (race)
 	{
@@ -203,13 +220,13 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					drawSprite = sprVoidStyle;
 				break;
 				case 5:
-					var u = 33;
+					var u = 38;
 					name = string_hash_to_newline(secret_ultra_name[u]);
 					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
-					drawSprite = sprPlantKillKillKill;
+					drawSprite = sprPlantPhotosynthesis;
 				break;
 				case 6:
 					var u = 35;
@@ -299,7 +316,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 			switch (race)
 			{
 				case 5:
-					var u = 38;
+					var u = 33;
 					name = string_hash_to_newline(secret_ultra_name[u]);
 					text = secret_ultra_text[u];
 					canShowThis = UberCont.ctot_secret_ultra_taken[u];
@@ -377,6 +394,42 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		xxx += step;
 		i++;
 		j++;
+	}
+	var ty = yyyyy - 14;
+	var tx = xxxxx + 48;
+	var minH = 0;
+	var minW = 0;
+	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
+	{
+		tx = xxxxx - 52;
+		ty = yyyyy + 22;
+		minH = 64;
+		minW = 300;
+	}
+	if mouse_x > xxxxx + 32 - 12 && mouse_x < xxxxx + 32 + 12 && mouse_y > yyyyy - 16 && mouse_y < yyyyy + 16
+	{
+		rt = race_vision[race];
+		var rawT = string_hash_to_newline(scrReplaceAllColourCodes(rt));
+		draw_rectangle_colour(tx, ty, tx + max(minW,string_width(rawT)),ty + max(string_height(rawT),minH),c_black,c_black,c_black,c_black,false);
+		if !canShowRegal
+		{
+			draw_text(tx,ty,scrCensorString(scrReplaceAllColourCodes(rt)));
+		}
+		else 
+		{
+			draw_set_color(make_colour_rgb(160,160,160));
+			scrDrawTextColours(tx,ty,rt);
+			draw_set_colour(c_white);
+		}
+	}
+	if mouse_x > xxxxx - 12 && mouse_x < xxxxx + 12 && mouse_y > yyyyy - 16 && mouse_y < yyyyy + 16
+	{
+		rt = race_butt[race];
+		var rawT = string_hash_to_newline(scrReplaceAllColourCodes(rt));
+		draw_rectangle_colour(tx, ty, tx + max(minW,string_width(rawT)),ty + max(string_height(rawT),minH),c_black,c_black,c_black,c_black,false);
+		draw_set_color(make_colour_rgb(160,160,160));
+		scrDrawTextColours(tx,ty,rt);
+		draw_set_colour(c_white);
 	}
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_bottom);

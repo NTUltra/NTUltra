@@ -336,6 +336,10 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.highestReachedLevel = encryptedRun.highestReachedLevel;
 			else
 				UberCont.highestReachedLevel = max(Player.level,Player.boostLevel);
+			if variable_struct_exists(encryptedRun, "canKillKillKill")
+				Player.canKillKillKill = encryptedRun.canKillKillKill;
+			if variable_struct_exists(encryptedRun, "skeletonGambleBongas")
+				Player.skeletonGambleBongas = encryptedRun.skeletonGambleBongas;
 			/*
 			if variable_struct_exists(encryptedRun, "duoPartner1")
 			{

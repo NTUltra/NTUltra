@@ -22,6 +22,10 @@ if spr_idle == sprBigVultureSkullOpen
 		{
 			type = 1
 			pullstrength = 3;
+			alarm[1] = 1;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
 			with Player
 			{
 				lockout = true;
@@ -29,10 +33,6 @@ if spr_idle == sprBigVultureSkullOpen
 				y = other.y;
 				scrForcePosition60fps();
 			}
-			alarm[1] = 1;
-			x = other.x;
-			y = other.y;
-			scrForcePosition60fps();
 		}
 		with enemy
 		{

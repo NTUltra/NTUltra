@@ -5,3 +5,12 @@ event_inherited();
 spr_item = sprVoidItemEnergyChest;
 name = "ENERGY WEAPON CHEST";
 cost = 5;
+wep = [];
+scrWeapons();
+for (var wi = 0; wi < maxwep; wi++) {
+	if wep_type[wi] != 5 && !scrIsAlsoEnergyType(wi)
+	{
+		wep_area[wi] = -1;
+	}
+}
+event_user(2);

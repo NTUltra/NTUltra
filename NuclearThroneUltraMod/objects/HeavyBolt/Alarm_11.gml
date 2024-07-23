@@ -28,7 +28,7 @@ if um == ultramods.plasmaBolt
 	snd_play_fire(sndNukeFire);
 	with instance_create(x,y,Nuke)
 	{
-		dmg = 20;
+		dmg = 15;
 		alarm[1] = 1;
 		scrCopyWeaponMod(other);
 		direction = other.direction;

@@ -17,45 +17,45 @@ if instance_exists(Player)
 
 if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = sprPortalInverted || sprite_index = sprBigPortal || sprite_index == sprPinkPortal || sprite_index == sprPopoPortal
 {
-with WepPickup
-{
-	if (point_distance(x,y,other.x,other.y) < 96 || t == 4) and collision_line(x,y,other.x,other.y,Wall,0,0) < 0
+	with WepPickup
 	{
-		//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
-			x += lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
-		//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
-			y += lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
-		image_angle -= 15*rotspeed
-
-		if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
+		if (point_distance(x,y,other.x,other.y) < 96 || t == 4) and collision_line(x,y,other.x,other.y,Wall,0,0) < 0
 		{
-			//mask_index = mskPickupThroughWall;
-			persistent = true;
-			x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
-			y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
+			//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
+				x += lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
+			//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
+				y += lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
+			image_angle -= 15*rotspeed
+
+			if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
+			{
+				//mask_index = mskPickupThroughWall;
+				persistent = true;
+				x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
+				y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
+			}
 		}
 	}
-}
-var n = instance_nearest(x,y,ThrowWep);
-with n {
-	if (point_distance(x,y,other.x,other.y) < 96 || t == 4) and collision_line(x,y,other.x,other.y,Wall,0,0) < 0
-	{
-		//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
-			x += lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
-		//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
-			y += lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
-		image_angle -= 15*rotspeed
-
-		if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
+	var n = instance_nearest(x,y,ThrowWep);
+	with n {
+		if (point_distance(x,y,other.x,other.y) < 96 || t == 4) and collision_line(x,y,other.x,other.y,Wall,0,0) < 0
 		{
-			//mask_index = mskPickupThroughWall;
-			persistent = true;
-			x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
-			y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
+			//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
+				x += lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
+			//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
+				y += lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
+			image_angle -= 15*rotspeed
+
+			if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
+			{
+				//mask_index = mskPickupThroughWall;
+				persistent = true;
+				x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
+				y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
+			}
 		}
 	}
-}
-
+	if alarm[4] < 1
 	with Player
 	{
 		var pr = other.pullRange;

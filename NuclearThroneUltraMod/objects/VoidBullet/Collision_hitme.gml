@@ -21,10 +21,10 @@ if other.team != team and other.my_health > 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			if other.owner.object_index == Player
 			{
-				var bigdmg = clamp(maxhealth*0.25,d,500);
+				var bigdmg = clamp(maxhealth*0.15,d,500);
 				with Player
 				{
-					var cost = (bigdmg * 0.1) - 1;
+					var cost = (bigdmg * 0.15) - 1;
 					if cost > 1
 					{
 						if bigdmg > 100

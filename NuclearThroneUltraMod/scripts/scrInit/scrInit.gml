@@ -7,6 +7,7 @@ function scrInit() {
 	opt_discs=6;
 	opt_discdamage=2;
 	justUnlocked = [];
+	isLeaderboardGamemode = false;
 	//INIT DATA
 	opt_pickup = 69;
 	opt_regal = 70;

@@ -31,6 +31,8 @@ if target != noone && instance_exists(target)
 		}
 		x = tx;
 		y = ty;
+		xprevious = x;
+		yprevious = y;
 		snd_play(sndAssassinPretend);
 		with instance_create(assx,assy,AssassinTeleport) {
 			self.assx = other.x;

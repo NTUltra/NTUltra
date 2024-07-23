@@ -285,6 +285,10 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant4Idle;
 	break;
 	case 5:
+	if altUltra
+	{
+		return sprMutant5DIdle;
+	}
 	return sprMutant5Idle;
 	break;
 	case 6:

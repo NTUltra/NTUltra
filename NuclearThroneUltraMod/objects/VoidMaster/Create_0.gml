@@ -15,7 +15,7 @@ loops = GetPlayerLoops();
 introSpiel = false;
 completedChallenge = false;
 collectedRewards = false;
-if loops < 1
+if loops < 1 && instance_exists(Player) && UberCont.char_void_entered[Player.race] < 2
 {
 	introSpiel = true;
 }
@@ -35,6 +35,7 @@ else
 }
 openedShop = false;
 keepTalking = 0;
-hasFailed = false;
-hasSucceeded = false;
+hasFailed = 0;
+hasSucceeded = 0;
+hasTied = 0;
 startedDuel = false;

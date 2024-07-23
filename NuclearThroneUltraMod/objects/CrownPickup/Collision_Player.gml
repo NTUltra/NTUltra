@@ -70,6 +70,9 @@ else if !instance_exists(CrownGuardian)
 		type = 3
 		pullstrength = 3;
 		alarm[1] = 1;
+		x = other.x;
+		y = other.y;
+		scrForcePosition60fps();
 		if !instance_exists(enemy) && !instance_exists(becomenemy)
 		{
 			with Player
@@ -80,6 +83,7 @@ else if !instance_exists(CrownGuardian)
 				scrForcePosition60fps();
 			}
 		}
+		//instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 	}
 }
 snd_play(Player.snd_crwn)

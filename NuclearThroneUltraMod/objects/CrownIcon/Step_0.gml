@@ -205,7 +205,7 @@ if crown == 20
 			maxarmour += 1;//max(maxarmour, 1);
 			maxhealth -= 1;
 			maxhealth = max(1,maxhealth);
-			armour = clamp(armour + 1, 0, maxarmour);
+			armour = clamp(armour, 0, maxarmour);
 		}
 	}
 }

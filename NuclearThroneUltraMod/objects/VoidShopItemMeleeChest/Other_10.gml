@@ -1,3 +1,5 @@
 /// @description Spawn MeleeWeaponChest
-instance_create(spawnLocationX,spawnLocationY,MeleeWeaponChest);
+with instance_create(spawnLocationX,spawnLocationY,MeleeWeaponChest) {
+	wep = other.wep;
+}
 event_inherited();

@@ -269,7 +269,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		confDropChanceIndex -= 2;
 	}
 	//drop items (10 + 2) * (0.75 + 0.5)
-	if !variable_instance_exists(id,"itemDropChanceIndex") || itemDropChanceIndex < 0
+	if !variable_instance_exists(id,"itemDropChanceIndex") || itemDropChanceIndex < 0 || array_length(itemDropChance) - 1 > itemDropChanceIndex
 		var ran = random(100);
 	else
 		var ran = itemDropChance[itemDropChanceIndex];

@@ -21,7 +21,7 @@ function scrCompletionPercentage() {
 	//cskins
 	everything+=racemax*12;
 
-	everything += 10;//
+	//everything += 10;???
 	//golden weapons
 
 	unlocked = 0;
@@ -44,7 +44,7 @@ function scrCompletionPercentage() {
 	repeat(racemax)
 	{
 		if race_have[countrace] = 1
-		unlocked+=30//10 instead of 1 because these should count more into the completion shit
+			unlocked+=30//10 instead of 1 because these should count more into the completion shit
 
 		if ctot_all_crowns_taken[countrace] > 0//Unlocked crownstart
 			unlocked += 3;
@@ -107,6 +107,7 @@ function scrCompletionPercentage() {
 				}
 				countstartwep++;
 			}
+			
 			postEverything += 10;
 			if ctot_loop[countrace]>0
 			{

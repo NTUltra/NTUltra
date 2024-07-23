@@ -72,6 +72,7 @@ if completedChallenge && !collectedRewards
 			with UberCont
 			{
 				levelIncrease ++;
+				
 			}
 			with Player
 			{
@@ -99,6 +100,7 @@ if completedChallenge && !collectedRewards
 			with Player
 			{
 				maxlevel++;
+				refundPoints = array_length(UberCont.skillDeposit);
 				with instance_create(x,y,PopupText)
 				{
 					mytext = "+1 MAX LEVEL!"

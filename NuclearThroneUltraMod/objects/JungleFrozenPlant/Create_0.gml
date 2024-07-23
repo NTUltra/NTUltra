@@ -34,7 +34,7 @@ if (instance_exists(Player))
 	{
 		bloodNeeded = 3;
 	}
-	if scrIsGamemode(32) || UberCont.voidChallengeGoing[5] || ultra_got[109]
+	if scrIsGamemode(32) || UberCont.voidChallengeGoing[5] || Player.ultra_got[109]
 	{
 		bloodNeeded = 0;	
 	}

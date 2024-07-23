@@ -7,7 +7,7 @@ alarm[0] = 15;
 depth = 3;
 loops = GetPlayerLoops();
 introSpiel = false;
-if loops < 1
+if loops < 1 && instance_exists(Player) && UberCont.char_void_entered[Player.race] < 2
 {
 	introSpiel = true;
 }

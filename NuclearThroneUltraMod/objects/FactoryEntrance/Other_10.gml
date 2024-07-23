@@ -110,6 +110,9 @@ if my_health > 0 && !used
 		{
 			type = 1
 			pullstrength = 3;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
 			with Player
 			{
 				lockout = true;

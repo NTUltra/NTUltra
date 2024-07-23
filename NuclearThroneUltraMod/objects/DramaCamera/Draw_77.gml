@@ -46,6 +46,7 @@ draw_sprite_ext(layerSprite,image_index,lx,yy,1,1,image_angle,c_white,1);
 draw_sprite_ext(sprite_index,image_index,x,yy,1,1,image_angle,c_white,1);
 
 draw_set_valign(fa_top);
+draw_set_halign(fa_center);
 draw_set_font(fntB);
 draw_set_colour(c_black);
 
@@ -86,3 +87,4 @@ draw_set_font(fntM);
 			accelerate = 1;
 	}
 surface_reset_target();
+draw_set_halign(fa_left);

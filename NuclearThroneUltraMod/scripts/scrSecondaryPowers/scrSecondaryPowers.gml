@@ -708,7 +708,7 @@ function scrSecondaryPowers() {
 			break;
 			//ANGEL
 			case 18:
-				if !isOverlapping && (KeyCont.key_regal[p] == 1) && instance_exists(AngelActive)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1 || KeyCont.key_spec[p] == 1) && instance_exists(AngelActive)
 				{
 					var alreadyMoving = false;
 					with AngelActive
@@ -728,12 +728,12 @@ function scrSecondaryPowers() {
 							moving = true;
 							alarm[0] += 7;
 							direction = a;
-							speed = 10;
+							speed = 12;
 							image_index = 0;
 							image_speed = (image_number-1)/alarm[0];
 							image_angle = a + 90;
 						}
-						alarm[3] += 4;
+						alarm[3] += 6;
 					}
 				}
 			break;

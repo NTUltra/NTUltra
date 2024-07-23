@@ -1,5 +1,43 @@
 /// @description Dialogue
-if hasSucceeded > 0
+if hasTied > 0
+{
+	if hasTied == 1
+	{
+		hasTied += 1;
+		with TextHandler
+		{
+			text = "I GUESS WE TIED";
+		}
+	}
+	else if hasTied == 2
+	{
+		hasTied += 1;
+		with TextHandler
+		{
+			text = "THAT'S MORE THAN I'VE EXPECTED OF YOU";
+		}
+	}
+	else if hasTied == 3
+	{
+		hasTied += 1;
+		with TextHandler
+		{
+			text = "YOU CAN TRY THESE ADDITIONAL CHALLENGES";
+		}
+	}
+	else
+	{
+		hasTied = 0;
+		UberCont.voidExtremeChallenges = true;
+		with TextHandler
+		{
+			text = "";
+		}
+		event_user(5);
+	}
+	alarm[2] = 5;
+}
+else if hasSucceeded > 0
 {
 	if hasSucceeded == 1
 	{
@@ -111,7 +149,7 @@ else if introSpiel
 }
 else
 {
-	if keepTalking > 1
+	if keepTalking > 2
 	{
 		switch (dialogueStep)
 		{

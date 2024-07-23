@@ -331,7 +331,13 @@ if scrIsGamemode(8) && area != 0
         snd_play_2d(confirmSound);
         confirmSound = false;
     }
-	
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+
+    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
+
+    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
+
+    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
 	if song != prevSong || amb != prevAmb
 	{
 	    audio_stop_all();
@@ -357,12 +363,6 @@ if scrIsGamemode(8) && area != 0
 	}
 	
 	//audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
-	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-
-    audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
-
-    audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
-
-    audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
+	
     //audio_sound_gain(sndVaultBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
 //}

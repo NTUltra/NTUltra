@@ -40,7 +40,7 @@ if canAlt
 	}
 	else if skill == 18 &&  Player.race == 5 && (Player.unlockAlternativeUltras || isAlternative || scrHasHealingMutations(2))
 	{
-		sprite_index = sprPlantKillKillKill;
+		sprite_index = sprPlantPhotosynthesis;
 	}
 	else if skill == 19 &&  Player.race == 5 && (Player.unlockAlternativeUltras || isAlternative || scrIsCrown(7) || scrIsCrown(28) || scrIsGamemode(39) || scrIsCrown(31) || scrIsCrown(30))
 	{

@@ -241,7 +241,11 @@ function scrDrawHUD() {
 			draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
 		}
 	}
-
+	//SKELETON TB
+	if dataRef.race == 19 && dataRef.skill_got[5] {
+		//skeletonGambleBongas
+		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,vx+115,vy+11)	
+	}
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
@@ -296,30 +300,46 @@ function scrDrawHUD() {
 				scrDrawHelp(gamemodeScrollString);
 			}
 		}
+		var voidX = vx + 2;
+		var voidY = vy+__view_get( e__VW.HView, 0 )-2;
 		if scrIsGamemode(26)
 		{
 			if UberCont.isLeaderboardGamemode
-				draw_sprite(sprDailyChallengeHUDGamemode,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+				draw_sprite(sprDailyChallengeHUDGamemode,0,vx+2,voidY);
 			else
-				draw_sprite(sprDailyChallengeHUDRace,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+				draw_sprite(sprDailyChallengeHUDRace,0,vx+2,voidY);
+				
+			voidX += 16;
 		}
 		else if UberCont.isLeaderboardGamemode
 		{
-			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,voidY);
+			voidX += 16;
 		}
 		else if scrIsGamemode(27)
 		{
-			draw_sprite(sprDailyChallengeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprDailyChallengeHUD,0,vx+2,voidY);
+			voidX += 16;
 		}
 		else
 		{
 			draw_set_colour(c_white);
-			draw_sprite(sprGamemodeHUD,0,vx+2,vy+__view_get( e__VW.HView, 0 )-2);
+			draw_sprite(sprGamemodeHUD,0,vx+2,voidY);
+			voidX += 16;
 			/*
 			if scrIsGamemode(17) {
 				draw_text(vx+64,vy+__view_get( e__VW.HView, 0 )-8,string(fps_real));
 			}
 			*/
+		}
+		var al = array_length(UberCont.voidChallengeGoing);
+		for (var vi = 0; vi < al; vi++)
+		{
+			if UberCont.voidChallengeGoing[vi]
+			{
+				draw_sprite(sprVoidChallengeIconHUD,vi,voidX,voidY);
+				voidX += 14;
+			}
 		}
 		//GUN GAME
 		if scrIsGamemode(11)

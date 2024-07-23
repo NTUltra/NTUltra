@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Plant",
-    "path":"folders/Sprites/Player/Plant.yy",
+    "name":"PlantD",
+    "path":"folders/Sprites/Player/Plant/PlantD.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

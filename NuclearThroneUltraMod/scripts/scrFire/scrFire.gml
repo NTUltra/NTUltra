@@ -98,9 +98,14 @@ function scrFire(canDrown = true) {
 			{
 				var ammoPercentage = 0;
 				ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
-				if skill_got[10] //BACK MUSCLE
-					ammoPercentage *= 1.4;
-				reload *= clamp(ammoPercentage,0,1);
+				//if skill_got[10] //BACK MUSCLE
+				//	ammoPercentage *= 1.4;
+				reload -= wep_load[wep] - (wep_load[wep]*clamp(ammoPercentage,0,1));
+				if ammo[wep_type[wep]] <= typ_amax[wep_type[wep]] * 0.6
+				{
+					//Additional boost when half ammo
+					reload -= wep_load[wep] * 0.1;
+				}
 				if ammo[wep_type[wep]] <= 0
 				{
 					snd_play_2d(sndHealthPickup);

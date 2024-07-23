@@ -3,7 +3,7 @@
 ///@param
 function scrLoseSkill(skillIndex, disableInstead = false){
 	skill_got[skillIndex] = 0;
-	snd_play_2d(sndLoseSkill);
+	snd_play_2d(sndLoseSkill,0,true);
 	if skillIndex==13||skillIndex==14||skillIndex==15
 	||skillIndex==16||skillIndex==17||skillIndex==21||skillIndex==42//wep specific
 	||skillIndex==43

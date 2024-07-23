@@ -2,3 +2,4 @@
 snd_play(sndWarning);
 wepangle = choose(-140,140)
 BackCont.shake += 5;
+scrDrop(25,0);

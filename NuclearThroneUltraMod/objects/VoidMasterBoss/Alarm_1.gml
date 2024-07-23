@@ -11,7 +11,7 @@ if instance_exists(PlayerInFakeDeath)
 else if target != noone {
 	var ran = random(100);
 	if my_health < maxhealth
-		my_health += 10;
+		my_health += 20;
 	if firstEntry || ran > 80
 	{
 		firstEntry = false;

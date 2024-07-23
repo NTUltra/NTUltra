@@ -549,6 +549,14 @@ if (selected && visible &&
 			}
 			visitedCrib = true;
 			altUltra = true;
+			if area == 100 || area == 128 || area == 129
+			{
+				if !instance_exists(CrownPed)
+				{
+					//Next level should be crown
+					fromCribToVault = true;
+				}
+			}
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			scrUltras(true, false);
 		}
@@ -978,7 +986,9 @@ if (selected && visible &&
 		with Player
 		{
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
-			scrUltras(true, false);
+			ultra_name[76] = "THE ULTIMATE GAMBLE"
+		    ultra_text[76] = "50% CHANCE TO <r>DIE<r> OR TO GET#TWO RANDOM ULTRA <g>MUTATIONS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+		    ultra_tips[76] = "that went well!"
 		}
 	    //with instance_create(view_xview+view_wview/2,view_yview+view_hview-24,SkillIcon)
 	    //skill = choose(//choose(other.skill1,other.skill2,other.skill3,other.skill4);

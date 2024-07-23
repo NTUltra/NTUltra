@@ -14,8 +14,8 @@
     "path":"folders/Objects/Void.yy",
   },
   "parentObjectId":{
-    "name":"VoidShopItem",
-    "path":"objects/VoidShopItem/VoidShopItem.yy",
+    "name":"VoidShopItemWeaponSpecificChest",
+    "path":"objects/VoidShopItemWeaponSpecificChest/VoidShopItemWeaponSpecificChest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -142,7 +142,7 @@ if(instance_exists(Player)){
 				yy -= 10;
 			}
 		}
-		with VoidShopItemBoltChest
+		with VoidShopItemWeaponSpecificChest
 		{
 			if place_meeting(x,y,Player)
 			{

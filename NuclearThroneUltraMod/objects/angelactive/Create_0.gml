@@ -12,6 +12,7 @@ if instance_exists(Player)
 		}
 	}
 }
+/*
 if instance_number(AngelActive) > 1
 {
 	amount *= 0.5;
@@ -32,6 +33,7 @@ if instance_number(AngelActive) > 1
 	if isActuallyStacking
 		instance_destroy();
 }
+*/
 alarm[0] = amount;
 team = 2;
 if instance_exists(Player)

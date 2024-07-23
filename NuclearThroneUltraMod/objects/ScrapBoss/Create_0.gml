@@ -10,7 +10,7 @@ mySize = 3
 
 event_inherited()
 existTime = 30;
-meleedamage = 5;
+meleedamage = 0;
 isInverted = false;
 spr_idle = sprScrapBossIdle
 spr_walk = sprScrapBossWalk
@@ -58,7 +58,6 @@ instance_create(x,y,FloorExplo)
 
 snd_hurt = sndBigDogHit
 snd_dead = sndBigDogDeath
-
 sndhalfhp = 0
 sndtaunt = 0
 tauntdelay = 0

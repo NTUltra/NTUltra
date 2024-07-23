@@ -14,7 +14,6 @@ if instance_exists(Player)
 	instance_create(x,y,BigWallBreak);
 	if place_meeting(x,y,Floor)
 	{
-		scrAddDrops(1);
 		scrDrop(7,0);
 	}
 }

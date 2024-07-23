@@ -2,10 +2,17 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 {
 	instance_destroy()
 	var hits = ds_list_create();
-	var range = 12;
+	var range = 10;
+	var d = 4;
 	if instance_exists(Player) && Player.skill_got[15] //Shotgun shoulder
 	{
-		range += 8;
+		range += 12;
+		d = 3;
+		with instance_create(x,y,SplashDamageFX)
+		{
+			col = c_lime;
+			radius = range - 4;
+		}
 	}
 	var direct = other.id;
 	var al = collision_circle_list(x,y,range,hitme,false,false,hits,false)
@@ -15,9 +22,10 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 		{
 			if team != other.team && my_health > 0
 			{
-				DealDamage(max(0,other.dmg - 4))
 				if id == direct
-					DealDamage(6);
+					DealDamage(other.dmg);
+				else
+					DealDamage(max(0,other.dmg - d))
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,4)

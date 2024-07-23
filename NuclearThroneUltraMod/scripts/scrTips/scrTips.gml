@@ -24,6 +24,7 @@ function scrTips() {
 	"you can combine multiple gamemodes!",
 	"some enemies shoot through walls!",
 	"don't worry",
+	"input targeted ad here",
 	"recycle gland recycles radiation cost",
 	"you can stack the same weapon mods",
 	"stand still over a weapon mod#for a detailed description",
@@ -90,7 +91,9 @@ function scrTips() {
 	"square bullets are immune to melee",
 	"some enemies are more vulnerable while charging",
 	"flashing effects can be turned off by setting screenshake and freezeframes to 0",
-	/*these are rare*/ choose("no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about",
+	/*these are rare*/ choose(
+	"even at 50% loading speed this tip is probably a little too long to read, oh well thats too bad. You didn't miss much though there is nothing here really. Maybe there is a secret though at the end of this loong very long tip. No there really isn't",
+	"no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about",
 	"obsidian throwing knife can one shot big bandit, if throwing during his charge","you have now seen all loading tips", "that previous loading tip sucked!"
 	,"the purple dragon","golden frog anyone?","Y.V. mony rad","the flying cat head","myth of time","sheeps are a thing","feedback is much appreciated","follow @erdeppol","I love you!",
 	"be nice#get bitches","fish can dodgeroll to prevent blood hammer self damage","I could go for a burger right now",

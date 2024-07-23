@@ -5,6 +5,7 @@ snd_play(sndVoidMegaSlash);
 BackCont.shake += 30;
 with instance_create(x + lengthdir_x(dis,gunangle),y + lengthdir_y(dis,gunangle),VoidMasterAttack)
 {
+	team = other.team;
 	image_angle = other.gunangle;
 	motion_add(image_angle,3);
 }
@@ -17,9 +18,13 @@ if n != noone
 	var o = 16;
 	if n.object_index == FloorExplo
 		o = 8;
-	x = n.x + o;
-	y = n.y + o;
-	scrForcePosition60fps();
+	
+	if !place_meeting(x,y,Tangle)
+	{
+		x = n.x + o;
+		y = n.y + o;
+		scrForcePosition60fps();
+	}
 	var repeats = point_distance(xo,yo,x,y) / 24;
 	var xx = xo;
 	var yy = yo;

@@ -9,7 +9,7 @@ function scrHasEyesMutations(){
 		repeat(maxskill+1)
 		{
 			if ( skill_got[sk] && 
-			(sk == 8 || sk == 9 || sk == 12 || sk == 13 || sk == 23 || sk == 19 || sk == 24 || sk == 28)
+			(sk == 8 || sk == 9 || sk == 12 || sk == 13 || sk == 23 || sk == 19 || sk == 24 || sk == 28 || sk == 46)
 			)
 			{
 				eyes ++;

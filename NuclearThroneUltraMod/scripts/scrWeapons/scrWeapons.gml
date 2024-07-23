@@ -8453,7 +8453,7 @@ function scrWeapons() {
 	wep_load[755] = 12
 	wep_cost[755] = 4
 	wep_sprt[755] = sprDoubleMorphOLaser
-	wep_area[755] = 11
+	wep_area[755] = 12
 	wep_text[755] = "invaders"
 	wep_swap[755] = sndSwapEnergy
 	wep_rad[755] = 0;
@@ -8806,7 +8806,7 @@ function scrWeapons() {
 	wep_popup[786] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
 	
 	wep_name[787] = "CHOP SPLINTERGUN"
-	wep_type[787] = 1
+	wep_type[787] = 3
 	wep_auto[787] = 2
 	wep_load[787] = 26
 	wep_cost[787] = 2

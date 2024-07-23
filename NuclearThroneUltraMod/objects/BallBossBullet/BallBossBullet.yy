@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSquareGuardianBullet",
-    "path":"sprites/sprSquareGuardianBullet/sprSquareGuardianBullet.yy",
+    "name":"sprBallBossProjectile",
+    "path":"sprites/sprBallBossProjectile/sprBallBossProjectile.yy",
   },
   "spriteMaskId":{
     "name":"mskGuardianBullet",

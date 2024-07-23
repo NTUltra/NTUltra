@@ -14,6 +14,7 @@ for (var i = 0; i < al; i++)
 			sprite_index = spr_idle;
 			BackCont.shake *= 0.5;
 		}
+		totemImmune = true;
 		my_health = 999;
 		prevhealth = 999;
 	}

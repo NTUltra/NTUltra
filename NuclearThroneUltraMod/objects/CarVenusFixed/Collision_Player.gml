@@ -3,7 +3,7 @@ with Player
 	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
-	if instance_exists(WantBoss) || instance_exists(BigFish)
+	if !instance_exists(WantBoss) && !instance_exists(BigFish)
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
@@ -41,7 +41,11 @@ if KeyCont.key_pick[other.p] = 1
 	}
 	else
 	{
-		
+		with instance_create(x,y,PopupText)
+		{
+			mytext = "DEFEAT BOSS FIRST!"
+			theColour=c_red;
+		}
 	}
 }
 

@@ -143,6 +143,8 @@ function scrCopyPlayData(){
 		randomDailyMod: UberCont.randomDailyMod,
 		pandaRan: UberCont.pandaRan,
 		highestReachedLevel: UberCont.highestReachedLevel,
+		canKillKillKill: Player.canKillKillKill,
+		skeletonGambleBongas: Player.skeletonGambleBongas,
 		/*
 		duoPartner1: UberCont.duoPartner[0],
 		duoPartner2: UberCont.duoPartner[1],

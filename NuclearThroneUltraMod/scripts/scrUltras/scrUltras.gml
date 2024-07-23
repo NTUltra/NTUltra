@@ -551,7 +551,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
-	    ultra_text[70] = "AS <y>AMMO<y> LOWERS#INCREASE <w>RELOAD SPEED<w>##WHEN YOU RUN OUT OF <y>AMMO<y>#HEAL 2<r>HP<r>##YOU CAN FIRE ANY WEAPON#AS LONG AS YOU HAVE MORE THAN 0 AMMO"
+	    ultra_text[70] = "AS <y>AMMO<y> LOWERS#INCREASE <w>RELOAD SPEED<w>##WHEN YOU RUN OUT OF <y>AMMO<y>#<r>HEAL<r> <w>2<w> <r>HP<r>##YOU CAN FIRE ANY WEAPON#AS LONG AS YOU HAVE MORE THAN 0 AMMO"
 	    ultra_tips[70] = "darkness"
     
 	    ultra_name[71] = "TRANQUILITY"

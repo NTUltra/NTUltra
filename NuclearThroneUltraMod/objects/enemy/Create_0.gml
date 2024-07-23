@@ -7,6 +7,7 @@ my_health = maxhealth
 prevhealth=my_health;
 walk = 0;
 morphMe = 0;
+totemImmune = false;
 frozen = noone
 maxSpeed = 16;
 team = 1
