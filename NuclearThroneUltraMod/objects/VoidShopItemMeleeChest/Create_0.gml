@@ -9,7 +9,7 @@ spawnLocationY = y - 32;
 wep = [];
 scrWeapons();
 for (var wi = 0; wi < maxwep; wi++) {
-	if wep_type[wi] != 3 && !scrIsAlsoBoltType(wi)
+	if !scrMeleeWeapons(wi)
 	{
 		wep_area[wi] = -1;
 	}

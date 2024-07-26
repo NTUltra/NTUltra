@@ -26,13 +26,14 @@ if shotgunshouldered && speed > 2
 	if sprite_index == sprBullet2Kraken
 	{
 		sprite_index = sprBullet2KrakenHighDmg;
-		dmg = 3;
+		dmg = 4;
 		alarm[1]=max(alarm[1],3);
 	}
 	else if sprite_index == sprBullet2KrakenDisappear
 	{
 		sprite_index = sprBullet2Kraken;
 	}
+	direction = scrAimAssistLaser(direction,0.75,16, true);
 }
 
 

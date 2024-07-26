@@ -22,7 +22,7 @@ if instance_exists(Player){
 			alarm[1]=2;
 
 
-			speed+=10;
+			speed+=16;
 			direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 			scrRedirectFx();
 		}

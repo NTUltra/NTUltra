@@ -10,5 +10,6 @@ if sleeping
 var n = instance_place(x,y,hitme)
 if n != noone && n.team != team && n.team != 0
 {
+	esplode = true;
 	my_health = 0;	
 }

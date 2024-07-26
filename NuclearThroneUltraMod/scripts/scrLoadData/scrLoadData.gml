@@ -17,6 +17,7 @@ function scrLoadData() {
 
 	dir += 1;}
 	race_gskin[9] = 0;//Backwards compatability bug chicken G skin
+	race_gskin[10] = 0;//Backwards compatability bug Rebel G skin
 	dir=0
 	repeat(crownmax + secretcrownmax)
 	{
@@ -51,6 +52,8 @@ function scrLoadData() {
 		gunGameSeed = seed;
 		seedText = seedModeSeedText;
 	}
+	
+	hasDoneFullCompletion = ini_read_real("DATA","hasDoneFullCompletion",0);
 	var racedir=1;
 
 	repeat(racemax)

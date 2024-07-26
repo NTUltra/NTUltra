@@ -10,7 +10,6 @@ wallbounce *= 0.9
 instance_create(x,y,Dust);
 if shotgunshouldered && speed > 2
 {
-	// scrShotgunShoulderBounce();
 	dmg = 17;
 	alarm[1] += 3;
 	if sprite_index == sprUltraFlugBullet

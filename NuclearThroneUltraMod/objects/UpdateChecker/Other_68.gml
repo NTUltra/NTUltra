@@ -16,6 +16,7 @@ if (type == network_type_data) {
 			latestVersion = buffer_read(buffer, buffer_string);
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
+			latestVersion = buffer_read(buffer, buffer_string);//BETA VERSION
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
 			{
@@ -25,7 +26,7 @@ if (type == network_type_data) {
 			}
 			else
 			{
-				notUpdated = "";	
+				notUpdated = "";
 			}
 			UberCont.notUpdated = notUpdated;
 			if (steam_initialised())

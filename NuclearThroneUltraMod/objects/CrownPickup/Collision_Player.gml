@@ -7,7 +7,28 @@ if !UberCont.canMultiCrown
 	}
 instance_change(FakeCrown,true)
 scrGiveCrownPoints(1);
-if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
+if Player.ultra_got[30] && Player.altUltra
+{
+	if Player.curse
+	{
+		if Player.bcurse
+		{
+			Player.ccurse = 1;
+		}
+		else
+		{
+			Player.bcurse = 1;	
+		}
+	}
+	else
+	{
+		Player.curse = 1;
+	}
+	snd_play_2d(sndCursedChest);
+	repeat(20)
+		instance_create(x+random(32)-16,y+random(32)-16,Curse)
+}
+else if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 {
 	if Player.curse != 0 || Player.bcurse != 0 || Player.ccurse != 0
 	{
@@ -84,6 +105,20 @@ else if !instance_exists(CrownGuardian)
 			}
 		}
 		//instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
+	}
+	with MovingCorpse
+	{
+		if alarm[0] > 1
+		{
+			alarm[0] += 90;	
+		}
+	}
+	with CorpseCollector
+	{
+		if alarm[0] > 1
+		{
+			alarm[0] += 90;	
+		}
 	}
 }
 snd_play(Player.snd_crwn)

@@ -10,6 +10,7 @@ poppop = false;
 dmg = 0;
 team = 2;
 canBeMoved = true;
+canBeAngled = true;
 isLaser = false;
 isGrenade = false;
 typ = 0;

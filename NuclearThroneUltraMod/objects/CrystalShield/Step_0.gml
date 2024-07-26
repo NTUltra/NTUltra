@@ -9,19 +9,19 @@ if instance_exists(Player){
 		}
 		exit;
 	}
-	if Player.ultra_got[6]=1 && !Player.altUltra{
-	if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-	hspeed -= 3
-	if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-	hspeed += 3
-	if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-	vspeed -= 3
-	if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-	vspeed += 3
+	if Player.ultra_got[6] && !Player.altUltra{
+		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+		hspeed -= 3
+		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+		hspeed += 3
+		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+		vspeed -= 3
+		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+		vspeed += 3
 
-	if speed > Player.maxSpeed*0.85
-		speed = Player.maxSpeed*0.85
-}
+		if speed > Player.maxSpeed*0.85 + (Player.skill_got[2]*0.75)
+			speed = Player.maxSpeed*0.85 + (Player.skill_got[2]*0.75)
+	}
 if(sprite_index!=spr_disappear){//exit code as soon as the shield starts to dissapear
 if instance_exists(Player)
 {
@@ -74,8 +74,8 @@ image_index = 0
 		}
 	
 		var dir = 0;
-		var dirStep = 45;
-		repeat(8)
+		var dirStep = 36;
+		repeat(10)
 		{
 			with instance_create(x,y,Laser)
 			{
@@ -111,8 +111,8 @@ if KeyCont.key_spec[p] = 3
 			y = mouse_y;
 		}
 		var dir = 0;
-		var dirStep = 45;
-		repeat(8)
+		var dirStep = 36;
+		repeat(10)
 		{
 			with instance_create(x,y,Laser)
 			{

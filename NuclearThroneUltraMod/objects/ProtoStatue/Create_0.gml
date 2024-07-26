@@ -82,3 +82,4 @@ for(var i = 0; i < al; i++)
 ds_list_destroy(fuks);
 
 canBeMoved = false;
+canBeAngled = false;

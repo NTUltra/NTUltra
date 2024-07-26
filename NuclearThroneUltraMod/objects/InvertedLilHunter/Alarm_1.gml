@@ -12,6 +12,8 @@ if target != noone
 			canFly = false;	
 		}
 	}
+	if place_meeting(x,y,Tangle)
+		canFly = false;
 motion_add(point_direction(x,y,target.x,target.y),3);
 //HAS A TARGET
 var dis = point_distance(x,y,target.x,target.y)

@@ -9,5 +9,5 @@ function scrSave() {
 
 	ini_close();
 
-	completionpercentage=scrCompletionPercentage();
+	completionpercentage = scrCompletionPercentage();
 }

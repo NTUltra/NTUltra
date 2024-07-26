@@ -57,7 +57,7 @@ if um == ultramods.boltBullet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = spd;
+		speed = spd * 0.5;
 		team = other.team;
 		alarm[11] = 0;
 	}

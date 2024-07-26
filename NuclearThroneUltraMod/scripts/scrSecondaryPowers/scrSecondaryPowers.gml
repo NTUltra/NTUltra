@@ -733,7 +733,7 @@ function scrSecondaryPowers() {
 							image_speed = (image_number-1)/alarm[0];
 							image_angle = a + 90;
 						}
-						alarm[3] += 6;
+						alarm[3] = max(alarm[3],6);
 					}
 				}
 			break;

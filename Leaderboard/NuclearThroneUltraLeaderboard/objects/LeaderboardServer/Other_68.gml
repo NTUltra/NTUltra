@@ -16,6 +16,7 @@ if (type == network_type_non_blocking_connect || type == network_type_connect)
 	show_debug_message("total dailies: " + string(totalDailies));
 	show_debug_message("total weeklies: " + string(totalWeeklies));
 	buffer_write(sendBuffer,buffer_u16,totalWeeklies);
+	buffer_write(sendBuffer,buffer_string,betaVersion);//BETA VERSION
 	network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 	buffer_delete(sendBuffer);
 	//hitsCounter += 1;

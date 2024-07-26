@@ -3,6 +3,13 @@ with AllMutationsLeft
 	instance_destroy();
 with AllMutationsRight
 	instance_destroy();
+/*
+with PlayerAlarms
+{
+	//Reset
+	event_user(0);	
+}
+*/
 with Player
 {
 	//Unlock Angel

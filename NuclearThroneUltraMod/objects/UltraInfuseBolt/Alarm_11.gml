@@ -38,12 +38,10 @@ if um == ultramods.boltBullet
 	image_angle = direction}
 	with instance_create(x,y,UltraInfuseElectroBall)
 	{
-		dmg += 5;
-		dmgReduction -= 5;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed*0.5;
 		team = other.team;
 		alarm[11] = 0;
 	}

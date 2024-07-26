@@ -1,6 +1,12 @@
 room_speed=UberCont.normalGameSpeed;
 SetSeed();
-
+/*
+with PlayerAlarms
+{
+	//Reset
+	event_user(0);	
+}
+*/
 if scrIsGamemode(8)
 {
 	with Floor
@@ -231,7 +237,7 @@ if instance_exists(Player)
 	    if ultra_got[2]=1//fish ultra B gun warrant
 	    {
 	    instance_create(x,y,GunWarrant);
-	    alarm[2] = 210;
+	    alarm[2] = 240;
 	    }
     
 	    if skill_got[25]//strong spirit
@@ -389,7 +395,7 @@ if instance_exists(Player)
 			{
 				tar = WeaponChest;
 			}
-			var furthest = instance_furthest(tar.x,tar,Floor);
+			var furthest = instance_furthest(tar.x,tar.y,Floor);
 			var dir = point_direction(x,y,furthest.x,furthest.y)+random_range(120,-120);
 			var len = 128+random(32);
 			var nearestFloor = instance_nearest(tar.x+lengthdir_x(len,dir),tar.y+lengthdir_y(len,dir),Floor)
@@ -399,7 +405,7 @@ if instance_exists(Player)
 			}
 		}
 	}
-	if (Player.area == 4 && Player.subarea == 2)
+	if ((Player.area == 4 || Player.area == 111) && Player.subarea == 2)
 	{
 		if instance_exists(WeaponChest)
 		{
@@ -422,7 +428,7 @@ if instance_exists(Player)
 			{
 				tar = WeaponChest;
 			}
-			var furthest = instance_furthest(tar.x,tar,Floor);
+			var furthest = instance_furthest(tar.x,tar.y,Floor);
 			var dir = point_direction(x,y,furthest.x,furthest.y)+random_range(120,-120);
 			var len = 128+random(32);
 			var nearestFloor = instance_nearest(tar.x+lengthdir_x(len,dir),tar.y+lengthdir_y(len,dir),Floor)

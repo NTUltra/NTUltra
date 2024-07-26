@@ -1,7 +1,5 @@
 //WORK IN PROGRESS< GOTTA START USING REPLACE AND FIX THE MEMORY LEAKS
 
-//DO YOU WANT MUSIC?
-wantmusic = 1
 
 //REAL STUFF
 area = 0
@@ -10,7 +8,8 @@ area = 0
 audio_stop_all();
 song = musThemeA;
 amb = amb0;
-snd_play(song)
+if !UberCont.playFullyCompleted
+	snd_play(song)
 snd_loop(amb)
 alarm[0] = 1360
 snd_play(sndRestart)
@@ -24,7 +23,6 @@ confirmSound = false;
 //JW HACK:
 //if UberCont.public = 0 wantmusic=1
 //wantmusic = 1
-if wantmusic = 0 {instance_destroy() exit;}
 
 audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 

@@ -11,6 +11,7 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 morphType = 1;
 //0 normal 1 explosive 2 ultra 3 golden
 canBeMoved = false;
+canBeAngled = false;
 isLaser = false;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 x=Player.x+lengthdir_x(16,direction);

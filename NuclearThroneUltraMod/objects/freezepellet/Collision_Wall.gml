@@ -16,9 +16,9 @@ instance_create(x,y,Dust)
 
 	if shotgunshouldered && speed > 2
 	{
-		// scrShotgunShoulderBounce();
+		direction = scrAimAssistLaser(direction,0.75,16, true);
 	dmg=4;
-	alarm[1]=3;
+	alarm[1] += 3;
 	if sprite_index == sprFreezePellet
 		sprite_index = sprFreezePelletHighDamage;
 	}

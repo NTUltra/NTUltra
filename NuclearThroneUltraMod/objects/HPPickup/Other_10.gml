@@ -13,5 +13,20 @@ if scrIsCrown(32)//Crown of misfortune
 		scrCollectAmmo(1);
 	}
 }
-scrCollectHP(2);
+var stoppedVenom = false;
+with EnemyVenom
+{
+	if venomized
+	{
+		stoppedVenom = true;
+		instance_destroy();	
+	}
+}
+if stoppedVenom
+{
+	if instance_exists(Player) && Player.skill_got[9]
+		scrCollectHP(1);
+}
+else
+	scrCollectHP(2);
 instance_destroy()

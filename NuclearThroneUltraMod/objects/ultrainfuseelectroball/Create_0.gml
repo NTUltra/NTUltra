@@ -2,6 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-
-dmg = 5;
-dmgReduction = 0;
+lightning = UltraLightning;
+dmg = 9;

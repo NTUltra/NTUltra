@@ -3,7 +3,7 @@ function scrCompletionPercentage() {
 	//scrRaces();
 	//scrStartingWeapons();
 
-
+	playFullyCompleted = false;
 	everything = 0;
 
 
@@ -129,6 +129,14 @@ function scrCompletionPercentage() {
 		}
 		postPercentage = round( (postUnlock/postEverything)*100 );
 		percentage += postPercentage;
+		if percentage >= 200 
+		{
+			if !hasDoneFullCompletion || random(100) < 5
+			{
+				playFullyCompleted = true;
+			}
+		}
+		
 	}
 	return percentage;
 }

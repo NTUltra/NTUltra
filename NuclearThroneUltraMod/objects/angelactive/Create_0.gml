@@ -39,7 +39,7 @@ team = 2;
 if instance_exists(Player)
 {
 	team=Player.team;
-	Player.alarm[3] += amount;
+	Player.alarm[3] = max(Player.alarm[3],amount);
 	dmg = 0;
 	if instance_exists(Player)
 	{

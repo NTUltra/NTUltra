@@ -49,4 +49,6 @@ function scrSaveData() {
 
 	ini_write_real("DATA","savedseed",seedModeSeed);
 	ini_write_string("DATA","savedseedtext",seedModeSeedText);
+	
+	ini_write_real("DATA","hasDoneFullCompletion",hasDoneFullCompletion);
 }

@@ -14,7 +14,7 @@ if instance_exists(Player)
 				alarm[3] = max(alarm[3],2);
 				meleeimmunity = max(meleeimmunity,2);
 			}
-			else if altUltra && ultra_got[6]
+			if altUltra && ultra_got[6]
 			{
 				meleeimmunity = max(meleeimmunity,4);
 			}

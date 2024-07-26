@@ -26,4 +26,12 @@ if KeyCont.key_pick[other.p] = 1
 		px = other.x;
 		py = other.y;
 	}
+	with instance_create(x,y,Portal)
+	{
+		type = 1
+		pullstrength = 3;
+		alarm[1] = 1;
+		x = other.x;
+		y = other.y;
+	}
 }

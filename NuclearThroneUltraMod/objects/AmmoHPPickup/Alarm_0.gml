@@ -61,12 +61,23 @@ else {
 		{
 			if !audio_is_playing(sndSpark1)&&!audio_is_playing(sndSpark2)
 				snd_play(choose(sndSpark1,sndSpark2))
-
+			var ran = random(360);
 			with instance_create(x,y,UltraLightning)
 			{
-				image_angle = random(360);
+				image_angle = ran;
 				team = 2
-				ammo = 5//60
+				ammo = 6//60
+				///if Player.ultra_got[59]=1 
+				///ammo+=4;
+				event_perform(ev_alarm,0)
+				with instance_create(x,y,LightningSpawn)
+					image_angle = other.image_angle
+			}
+			with instance_create(x,y,UltraLightning)
+			{
+				image_angle = ran + 180;
+				team = 2
+				ammo = 6//60
 				///if Player.ultra_got[59]=1 
 				///ammo+=4;
 				event_perform(ev_alarm,0)
@@ -76,13 +87,14 @@ else {
 		}
 		else
 		{
-			with instance_create(x,y,Rad)
-			{
-				motion_add(other.direction,other.speed+1)
-				motion_add(random(360),3)
-				repeat(speed)
-				speed *= 0.9
-			}
+			repeat(3)
+				with instance_create(x,y,Rad)
+				{
+					motion_add(other.direction,other.speed+1)
+					motion_add(random(360),3)
+					repeat(speed)
+					speed *= 0.9
+				}
 		}
 	}
 }

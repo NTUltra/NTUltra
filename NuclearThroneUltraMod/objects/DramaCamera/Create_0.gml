@@ -63,11 +63,11 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		}
 		else if instance_exists(CloudBoss)
 		{
-			//song = musVisionary;
+			song = musBoss6;
 		}
 		else if instance_exists(VoidMasterBoss)
 		{
-			//song = musVisionary;
+			song = musChimera2;
 		}
 		else
 		{
@@ -93,7 +93,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		    else if area = 6 || area = 112
 				song = musBoss7;
 		    else if area = 7 || area = 108
-				song = musPurpleDragonBoss;
+				song = musUltraPurpleDragonBoss;
 		    else if area = 8 || area = 109
 			{
 				if (random(100) <1)
@@ -112,21 +112,27 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			else if area == 111
 				song = choose(musBoss6,musBoss6B);
 		    else if area = 101 || area == 122
-				song = musOasisBoss;
+				song = musUltraOasisBoss;
 			else if area == 10 || area == 121
 				song = musBoss10
 			else if area == 114 || area == 123
-				song = musBushBoxBoss;
+				song = musUltraBushBoxBoss;
 			else if area == 119 || area == 120
 				song = musBoss4B;
 			else if area == 126
-				song = musGraveyardFish;
+				song = musUltraGraveyardFish;
 			else if area == 127
-				song = musInvGraveyardFish;
-			else if area == 128 || area == 129
-				song = musCrownGluttonBoss;
+				song = musUltraInvGraveyardFish;
+			else if area == 128
+			{
+				song = musUltraCrownGluttonBoss;
+				if instance_exists(InvertedCrownGlutton)
+					song = musUltraInvCrownGluttonBoss;
+			}
+			else if area == 129
+				song = musUltraInvCrownGluttonBoss;
 			else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
-				song = musBossBot;
+				song = musUltraBossBot;
 		}
     snd_loop(song)
     // snd_loop(amb)
@@ -148,6 +154,7 @@ if UberCont.opt_bossintro=0 || (instance_exists(SurvivalWave) && !instance_exist
 	instance_destroy();
 	exit;
 }
+snd_play_2d(sndBossIntroIn);
 UberCont.hadBossIntro = true;
 urgent = 2
 alarm[0] = 2;

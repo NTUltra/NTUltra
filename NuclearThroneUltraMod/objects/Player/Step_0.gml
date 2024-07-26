@@ -85,6 +85,12 @@ else if scrIsGamemode(48)
 representingCost *= ammoReduction;
 if !instance_exists(LevCont) and visible = 1
 {
+	if lockout
+	{
+		jump = 0;
+		roll = 0;
+		speed = 0;
+	}
 	if jump > 0
 	{
 		if rollIframe <= 0
@@ -1156,8 +1162,8 @@ if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 			else
 				breload *= 0.4;
 			*/
-			reload -= 10;
-			breload -= 10;
+			reload -= 9;
+			breload -= 9;
 		}
 	}
 	snd_play(wep_swap[wep])
@@ -1586,8 +1592,8 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.2;
-			creload -= 0.2;
+			breload -= 0.3;
+			creload -= 0.3;
 			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.3;
@@ -2112,16 +2118,19 @@ if (instance_exists(enemy))
 					var d = point_direction(x,y,t.x,t.y)
 					var ad = angle_difference(d,direction);
 					homeBoost *= (1 + (speed * 0.01));//0.006
-			        if (ad > 2)
-			        {
-						direction += homeBoost;
-						image_angle += homeBoost;
-			        }
-			        else if (ad < -2)
-			        {
-						direction -= homeBoost;
-						image_angle -= homeBoost;
-			        }
+					if (canBeAngled)
+					{
+				        if (ad > 2)
+				        {
+							direction += homeBoost;
+							image_angle += homeBoost;
+				        }
+				        else if (ad < -2)
+				        {
+							direction -= homeBoost;
+							image_angle -= homeBoost;
+				        }
+					}
 					x += lengthdir_x(homeBoost,d);
 					y += lengthdir_y(homeBoost,d);
 			    }
@@ -2171,28 +2180,24 @@ if (ultra_got[42])//HUNTER ULTRA C Focused projectiles
 
 ///ELEMENTOR ultra D &strong spirit
 if skill_got[25]//strong spirit
+{
+    if ( !strongspiritused && my_health >= maxhealth || ( !strongspiritused && my_health > round(maxhealth*0.75) && race == 25 ) )
     {
+	    //strongspiritused=false;
+	    if !strongspirit
+	    {
+		    snd_play(sndStrongSpiritGain);
+		    // strongspiritregained++;
     
-    if ( strongspiritused=false && my_health >= maxhealth || ( strongspiritused=false && my_health > round(maxhealth*0.75) && race == 25 ) )
-    {
-    //strongspiritused=false;
-    if strongspirit=false
-    {
-    snd_play(sndStrongSpiritGain);
-    strongspiritregained++;
+		    //UNLOCK VIKING
+		    // if strongspiritregained > 2
+			//	scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 3 TIMES")
     
-    //UNLOCK VIKING
-    if strongspiritregained>2
-		scrUnlockCharacter(16,"FOR REGAINING STRONG SPIRIT 3 TIMES")
+	    }
     
+	    strongspirit=true;
     }
-    
-    strongspirit=true;
-    
-    
-    }
-    
-    }
+}
 
 
 /* */

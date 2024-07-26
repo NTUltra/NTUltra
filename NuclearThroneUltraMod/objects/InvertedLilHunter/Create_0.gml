@@ -39,7 +39,7 @@ if instance_exists(SurvivalWave)
 {
 	alarm[2] = 5;
 }
-
+alarm[6] = 30;
 sndtaunt = 0
 tauntdelay = 0
 sndhalfhp = 0

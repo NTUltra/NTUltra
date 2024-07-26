@@ -48,10 +48,31 @@ if instance_exists(Player){
 		alarm[0] *= 0.4;
 		rerolls = 3;
 	}
+	if Player.ultra_got[60]//Anti matter
+	{
+		atomUltraD = true;
+		alarm[0] *= 0.9;
+		with instance_create(x,y,UltraLightning)
+		{
+			image_angle = random(360);
+			team = 2
+			ammo = 4//60
+			///if Player.ultra_got[59]=1 
+			///ammo+=4;
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+				image_angle = other.image_angle
+		}
+		with instance_create(x,y,Rad)
+		{
+			motion_add(other.direction,other.speed+1)
+			motion_add(random(360),3)
+			repeat(speed)
+			speed *= 0.9
+		}
+	}
 	alarm[0] *= 1 - min(0.3,loops*0.1);
 	alarm[0] = max(alarm[0],1);
-	if Player.ultra_got[60]//Anti matter
-		atomUltraD = true;
 }
 
 image_speed = 0

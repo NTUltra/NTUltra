@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"musUltra134",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":40.674942,
+  "name":"musUltra134",
+  "parent":{
+    "name":"Music & amb",
+    "path":"folders/Sounds/Music & amb.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"musUltra134.ogg",
+  "type":0,
+  "volume":1.0,
+}

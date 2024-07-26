@@ -2,6 +2,7 @@
 target = -1;
 team = 2;
 canBeMoved = false;
+canBeAngled = false;
 wepFire = -1;
 hadSpeedApplied = true;
 Mod1 = 0;

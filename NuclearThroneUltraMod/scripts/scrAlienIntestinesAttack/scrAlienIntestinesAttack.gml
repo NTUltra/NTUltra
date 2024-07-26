@@ -4,6 +4,11 @@
 function scrAlienIntestinesAttack(){
 	var ys = 0;
 	snd_play(choose(sndWater1,sndWater2) ,0.1);
+	var d = 0;
+	if loops > 1
+		d += 1;
+	if loops > 0
+		d += 0.5;
 	if alienIntestines > 30
 		snd_play_fire(sndRoll);
 	if alienIntestines > 80
@@ -26,6 +31,7 @@ function scrAlienIntestinesAttack(){
 	{
 		with instance_create(x,y,Tentacle)
 		{
+			dmg += d;
 			image_yscale += ys;
 			image_angle = aimDirection+(random(40)-20)*other.accuracy
 			creator = other.id;
@@ -58,6 +64,7 @@ function scrAlienIntestinesAttack(){
 		{
 			with instance_create(x,y,Tentacle)
 			{
+				dmg += d;
 				image_yscale += ys;
 				image_angle = ang;
 				creator = other.id;

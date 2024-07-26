@@ -17,6 +17,7 @@ instance_create(x,y,Dust)
 
 if shotgunshouldered && speed > 2
 {
+	direction = scrAimAssistLaser(direction,0.75,16, true);
 	dmg=9;
 	alarm[1] += 3;
 	if sprite_index == sprBullet5

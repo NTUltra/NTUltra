@@ -11,7 +11,6 @@ var len = 2;
 if shotgunshouldered && speed > 2
 {
 	len += 2;
-	// scrShotgunShoulderBounce();
 	dmg = 22;
 	alarm[1] += 3;
 	if sprite_index == sprLightningSlugBullet

@@ -3,6 +3,7 @@
 ///@param
 function scrWeaponModInit(){
 	canBeMoved = true;
+	canBeAngled = true;
 	Mod1=0;
 	Mod2=0;
 	Mod3=0;

@@ -17,6 +17,7 @@ sprite_index = sprProtoChestOpen
 		speed = 0;
 		alarm[5] = 0;
 		canBeMoved = false;
+		canBeAngled = false;
 	}
 	wep = 0;
 instance_create(x,y,FXChestOpen)

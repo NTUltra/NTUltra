@@ -7,11 +7,17 @@ with Menu
 	visible = true;
 	alarm[0] = 1;
 }
-snd_play(sndRestart)
+if UberCont.jokeIntro
+	snd_play_2d(sndAllyDead)
+else
+	snd_play_2d(sndRestart)
 }
 else
 {
-snd_play(sndRestart)
+if UberCont.jokeIntro
+	snd_play_2d(sndAllyHurt)
+else
+	snd_play_2d(sndRestart)
 mode = 2
 alarm[0] = 20
 }

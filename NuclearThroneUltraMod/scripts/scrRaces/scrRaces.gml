@@ -395,7 +395,7 @@ function scrRaces() {
 		race_vision[16] = string_replace_all(race_vision[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[16] = string_replace_all(race_vision_detail[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[16] = "REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
+	race_lock[16] = "GAIN ARMOUR!?"//"REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
 	race_bskin[16] = 0

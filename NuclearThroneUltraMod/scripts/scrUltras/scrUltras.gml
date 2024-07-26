@@ -19,7 +19,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "<w>INFINITE AMMO<w> THE FIRST 7 SECONDS#OF ENTERING AN AREA#KILLING A BOSS GIVES#ANOTHER 7 SECONDS OF INFINITE AMMO"
+	ultra_text[2] = "<w>INFINITE AMMO<w> THE FIRST 8 SECONDS#OF ENTERING AN AREA#KILLING A BOSS GIVES#ANOTHER 8 SECONDS OF INFINITE AMMO"
 	ultra_tips[2] = "bringer of order"
 
 	ultra_name[3] = "BUDDY COP"
@@ -39,11 +39,11 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //CRYSTAL 
 	    ultra_name[5] = "FORTRESS"
-	    ultra_text[5] = "+6 MAX <r>HP<r>"
+	    ultra_text[5] = "+ MAX <r>HP<r>"
 	    ultra_tips[5] = "indestructable"
     
 	    ultra_name[6] = "JUGGERNAUT"
-	    ultra_text[6] = "MOVE WHILE <p>SHIELDED<p>"
+	    ultra_text[6] = "MOVE WHILE <p>SHIELDED<p>#REDUCE SHIELDING COOLDOWN"
 	    ultra_tips[6] = "crab legs"
 		
 		if altOverride || (instance_exists(Player) && Player.race == 2 && Player.altUltra)
@@ -267,7 +267,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 8 && (Player.altUltra))
 		{
 			ultra_name[30] = "CURSED TECHNOLOGY"
-			ultra_text[30] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES";
+			ultra_text[30] = "TAKING <y>CROWNS<y> <p>CURSES<p> WEAPONS#INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES";
 		    ultra_tips[30] = "eating guns from other dimensions"
 		}
 		
@@ -473,7 +473,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 	
 	ultra_name[60] = "ANTI MATTER"
-	ultra_text[60] = "<w>TELEPORT<w> INTO <w>WALLS<w>#FADED PICKUPS TRANSFROM INTO#(FRIENDLY) <g>ULTRA LIGHTNING<g> AND <g>RADS<g>"
+	ultra_text[60] = "<w>TELEPORT<w> INTO <w>WALLS<w>#<w>NEW<w> AND <w>FADED PICKUPS<w>#<w>TRANSFROM<w> INTO:#(FRIENDLY) <g>ULTRA LIGHTNING<g> AND <g>RADS<g>"
 	ultra_tips[60] = "phase"
 
 	    //VIKING 
@@ -563,7 +563,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[71] = "no one can hurt me"
     
 	    ultra_name[72] = "ASCENT"
-	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#BIGGER <pi>DEFLECT<pi> AREA##PICKING UP <p>CURSED<p> WEAPONS#<w>UNCURSES<w> THEM"
+	    ultra_text[72] = "YOU CAN FLY OVER <w>WALLS<w> FOREVER#BIGGER <pi>DEFLECT<pi> AREA##PICKING UP <p>CURSED<p> WEAPONS#<w>UNCURSES<w> THEM#MORE <p>CURSED<p> WEAPONS"
 	    ultra_tips[72] = "all you need is air"
 		
 		//Have less than default max hp

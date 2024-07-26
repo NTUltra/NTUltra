@@ -206,6 +206,7 @@ if crown == 20
 			maxhealth -= 1;
 			maxhealth = max(1,maxhealth);
 			armour = clamp(armour, 0, maxarmour);
+			scrUnlockCharacter(16,"FOR GAINING ARMOUR#ARMOUR PREVENTS#ONE FULL HIT OF DAMAGE!")
 		}
 	}
 }

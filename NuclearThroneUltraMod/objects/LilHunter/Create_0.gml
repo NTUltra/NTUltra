@@ -36,6 +36,7 @@ intro = 0
 
 //FLY
 alarm[2] = 250+random(100)//30
+alarm[6] = 30;
 if instance_exists(SurvivalWave)
 {
 	alarm[2] = 5;

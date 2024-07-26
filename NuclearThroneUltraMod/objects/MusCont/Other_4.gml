@@ -58,8 +58,10 @@ if scrIsGamemode(8) && area != 0
 	var prevAmb = amb;
     if area = 0 {
 
-        song = musThemeA;
-
+		if UberCont.playFullyCompleted
+			exit;
+			
+		song = musThemeA;
         amb = amb0;
     }
     if area = 1 {
@@ -86,7 +88,7 @@ if scrIsGamemode(8) && area != 0
     }
     if area = 110 {
 
-        song = musInvertedSewers;
+        song = musUltraInvertedSewers;
 
         amb = amb102;
     }
@@ -122,9 +124,9 @@ if scrIsGamemode(8) && area != 0
     }
     if area = 7 {
 
-        song = musVulcano; //mus5b;
+        song = musUltraVulcano; //mus5b;
 
-        amb = ambVulcano;
+        amb = ambUltraVulcano;
     }
     if area = 108 || area = 109 //inverted vulcano inverted wonderland
     {
@@ -221,7 +223,7 @@ if scrIsGamemode(8) && area != 0
 
     if area = 113 //banditland
     {
-        song = musThemeP
+        song = musThemeA
 
         amb = amb0b
     }
@@ -249,22 +251,22 @@ if scrIsGamemode(8) && area != 0
 	
 	if area = 117 || area == 124//Mushroomland
     {
-        song = musMushroomland
+        song = musUltraMushroomland
 
         amb = amb102
     }
 	
 	if area == 126 {
 
-        song = mus126
+        song = musUltra126
 
-        amb = amb126;
+        amb = ambUltra126;
     }
 	else if area == 127 {
 
-        song = mus127
+        song = musUltra127
 
-        amb = amb126;
+        amb = ambUltra126;
     }
 	else if area == 128 {
 
@@ -274,39 +276,39 @@ if scrIsGamemode(8) && area != 0
     }
 	else if area == 129 {
 
-        song = mus129
+        song = musUltra129
 
         amb = amb100;
     }
 	else if area == 130 {
 
-        song = mus130
+        song = musUltra130
 
-        amb = amb130;
+        amb = ambUltra130;
     }
 	else if area == 131 {
 
-        song = mus131
+        song = musUltra131
 
-        amb = amb131;
+        amb = ambUltra131;
     }
 	else if area == 132 {
 
-        song = mus131
+        song = musUltra131
 
-        amb = amb132;
+        amb = ambUltra132;
     }
 	else if area == 133 {
 
-        song = mus133
+        song = musUltra133
 
-        amb = amb133;
+        amb = ambUltra133;
     }
 	else if area == 134 {
 
-        song = mus134
+        song = musUltra134
 
-        amb = amb134;
+        amb = ambUltra134;
     }
 	else if area == 135 {
 
@@ -324,7 +326,7 @@ if scrIsGamemode(8) && area != 0
 
         song = mus106
 
-        amb = amb138;
+        amb = ambUltra138;
     }
 	
 	if (confirmSound) {

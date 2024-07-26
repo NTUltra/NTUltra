@@ -57,7 +57,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_numb
 			else if Player.area == 107
 				song = mus5b;
 			else if Player.area == 117 || Player.area == 124
-				song = musMushroomland;
+				song = musUltraMushroomland;
 		}
 		snd_loop(song)
 		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

@@ -36,9 +36,9 @@ if instance_exists(Player)
 	if Player.ultra_got[6]=1 && Player.altUltra
 	{
 		snd_play(sndCrystalJuggerNaut)
-		var dir =  22.5;
-		var dirStep = 45;
-		repeat(8)
+		var dir =  18;
+		var dirStep = 36;
+		repeat(10)
 		{
 			with instance_create(x,y,Laser)
 			{

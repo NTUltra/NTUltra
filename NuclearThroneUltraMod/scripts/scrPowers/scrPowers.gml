@@ -1115,7 +1115,7 @@ function scrPowers(raceOverwrite = -1) {
 	if race==12
 	{
 		var canSpawn = true;
-		var radCost = 115;
+		var radCost = 120;
 		if ultra_got[47]
 		{
 			if !altUltra
@@ -1618,7 +1618,7 @@ function scrPowers(raceOverwrite = -1) {
 			    {
 					snd_play(sndPlantPopOpen);
 					poppedSeed = true;
-					event_user(0);
+					instance_destroy();
 				}
 		    }
 			else {
@@ -1629,7 +1629,7 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					snd_play(sndPlantPopOpen);
 					poppedSeed = true;
-					event_user(0);
+					instance_destroy();
 				}
 			}
 			if !poppedSeed
@@ -3361,7 +3361,7 @@ function scrPowers(raceOverwrite = -1) {
 				clicked = 0
 			}
 			*/
-			if wep_auto[wep] == 1 || wep_auto[wep] == 3
+			if wep_auto[wep] == 1 || wep_auto[wep] == 3 || KeyCont.key_spec[p] == 1
 				scrFire()
 		}
 	    scrSwapWeps();

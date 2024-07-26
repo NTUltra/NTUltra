@@ -68,7 +68,7 @@ if instance_exists(Player) && instance_exists(creator)
 				longarms = 0
 				knockback += 4;
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection*other.accuracy,3.5+longarms)
+				motion_add(aimDirection,3.5+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -79,7 +79,7 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 22;
+				dmg = 24;
 				longarms = 0
 				knockback += 6;
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3
@@ -102,7 +102,7 @@ if instance_exists(Player) && instance_exists(creator)
 			}
 			with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*20),aimDirection),BayonetteSlash)
 			{
-				dmg = 18 + r;
+				dmg = 20 + r;
 				knockback += 8;
 				longarms = 0
 				longarms = (Player.skill_got[13]+Player.bettermelee)*3

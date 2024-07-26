@@ -9,7 +9,6 @@ wallbounce *= 0.9
 instance_create(x,y,Dust);
 if shotgunshouldered && speed > 2
 {
-	// scrShotgunShoulderBounce();
 	dmg = 26;
 	alarm[1] += 3;
 }

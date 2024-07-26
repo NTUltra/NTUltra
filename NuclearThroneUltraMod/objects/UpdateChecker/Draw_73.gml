@@ -12,7 +12,7 @@ if (notUpdated == "*")
 		if mouse_check_button_pressed(mb_left)
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod");	
 	}
-	draw_text_colour(x,y,
+	draw_text_colour(x + oofsetto,y,
 	utxt + notUpdated ,col,col,col,col,1);
 }
 else

@@ -5,7 +5,7 @@ with Player
 	{
 		snd_play_2d(sndYungCuzStartHack,0.1);
 		var nums = instance_number(YungCuzDupe)
-		var duration =  100;
+		var duration =  140;
 		var snd = sndYungCuzStartHack1;
 		if nums > 3
 		{

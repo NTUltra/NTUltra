@@ -23,13 +23,15 @@ function scrDecideCurse(){
 		instance_create(x,y,EliteWeaponChest);
 		}
 		else if ( instance_exists(Crown)||Player.wepmod1!=0||Player.bwepmod1!=0 ) and random(7) < 1
-		curse = 1
+			curse = 1
 		else if scrIsCrown(14) && random(7)<5//Or you have a weapon mod
-		curse = 1
+			curse = 1
 		else if Player.hard > 4 and random(20) < 1
-		curse = 1;
+			curse = 1;
+		else if Player.ultra_got[72] && !Player.altUltra && random(7)<5//AScent angel
+			curse = 1;
 		else
-		curse = 0;
+			curse = 0;
 
 	}
 	else if instance_exists(Crown) and random(7) < 1//Or you have a weapon mod

@@ -1120,7 +1120,7 @@ function scrFire(canDrown = true) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 
@@ -1494,10 +1494,15 @@ function scrFire(canDrown = true) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection,15.6)
+	{motion_add(aimDirection,15)
 	image_angle = direction
 	team = other.team}
-
+	
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection,1);
+		motion_add(aimDirection,1)
+	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -2193,13 +2198,14 @@ function scrFire(canDrown = true) {
 	//ERASER
 	case 85:
 
-	snd_play_fire(sndEraser)
+	snd_play_fire(sndEraserNew)
 	with instance_create(x,y,EraserBurst)
 	{
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 18
+	projectileAmount = 2;
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2221,35 +2227,26 @@ function scrFire(canDrown = true) {
 		scrMoveContactSolid(aimDirection + 180,1);
 		motion_add(aimDirection+180,1)
 	}
-
+	snd_play_fire(sndEraserNew)
 	snd_play_fire(sndEraser)
 	with instance_create(x,y,EraserBurst)
 	{
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 30
+	projectileAmount = 2;
+	projectileSpeed += 4;
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
 	with instance_create(x,y,EraserBurst)
 	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
+	mox=x+lengthdir_x(64*other.accuracy,aimDirection+8*other.accuracy+(random(4)-2)*other.accuracy)
+	moy=y+lengthdir_y(64*other.accuracy,aimDirection+8*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
-	time = 1
-	team = other.team
-	event_perform(ev_alarm,0) 
-	}
-
-	with instance_create(x,y,EraserBurst)
-	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
-	creator = other.id
-	ammo = 16
+	ammo = 30
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2257,21 +2254,10 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x,y,EraserBurst)
 	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
+	mox=x+lengthdir_x(64*other.accuracy,aimDirection-8*other.accuracy+(random(4)-2)*other.accuracy)
+	moy=y+lengthdir_y(64*other.accuracy,aimDirection-8*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 16
-	time = 1
-	team = other.team
-	event_perform(ev_alarm,0) 
-	}
-
-	with instance_create(x,y,EraserBurst)
-	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
-	creator = other.id
-	ammo = 16
+	ammo = 30
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -2348,7 +2334,7 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndSlugger)
 
 	with instance_create(x,y,DirectorSlug)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,11)
 	image_angle = direction
 	team = other.team}
 
@@ -3580,17 +3566,27 @@ function scrFire(canDrown = true) {
 	case 135:
 
 	snd_play_fire(sndHammer)
-
+	snd_play_fire(sndLollipop);
 	instance_create(x,y,Dust)
-
+	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+	{
+		dmg = 8
+		longarms = 0
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2.5+longarms)
+		image_angle = direction
+		team = other.team
+		sprite_index = sprLollipopSlash;
+	}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
 	{
-	dmg = 32//shovel is 8 sledge = 16
-	longarms = 0
-	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
-	image_angle = direction
-	team = other.team}
+		dmg = 32//shovel is 8 sledge = 16
+		longarms = 0
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2.5+longarms)
+		image_angle = direction
+		team = other.team
+	}
 
 	wepangle = -wepangle
 	motion_add(aimDirection,6)
@@ -4232,7 +4228,9 @@ function scrFire(canDrown = true) {
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 14
+	ammo = 28
+	projectileAmount = 2;
+	projectileSpeed += 4;
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -4243,18 +4241,7 @@ function scrFire(canDrown = true) {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 14
-	time = 1
-	team = other.team
-	event_perform(ev_alarm,0) 
-	}
-
-	with instance_create(x,y,FlameEraserBurst)
-	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy)
-	creator = other.id
-	ammo = 14
+	ammo = 28
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -4265,18 +4252,7 @@ function scrFire(canDrown = true) {
 	mox=x+lengthdir_x(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
 	moy=y+lengthdir_y(64*other.accuracy,aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy)
 	creator = other.id
-	ammo = 14
-	time = 1
-	team = other.team
-	event_perform(ev_alarm,0) 
-	}
-
-	with instance_create(x,y,FlameEraserBurst)
-	{
-	mox=x+lengthdir_x(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
-	moy=y+lengthdir_y(64*other.accuracy,aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy)
-	creator = other.id
-	ammo = 14
+	ammo = 28
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -4831,14 +4807,15 @@ function scrFire(canDrown = true) {
 	//DIRECTOR ERASER
 	case 182:
 
-	snd_play_fire(sndEraser)
+	snd_play_fire(sndEraserNew)
 	with instance_create(x,y,DirectorEraserBurst)
 	{
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 17
 	time = 1
+	projectileAmount = 3;
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
@@ -4854,16 +4831,17 @@ function scrFire(canDrown = true) {
 	//FLAME DIRECTOR ERASER
 	case 183:
 
-	snd_play_fire(sndEraser)
+	snd_play_fire(sndEraserNew)
 	snd_play_fire(sndFireShotgun);
 	with instance_create(x,y,FlameDirectorEraserBurst)
 	{
 	mox=UberCont.mouse__x;
 	moy=UberCont.mouse__y;
 	creator = other.id
-	ammo = 16
+	ammo = 17
 	time = 1
 	team = other.team
+	projectileAmount = 3;
 	event_perform(ev_alarm,0) 
 	}
 
@@ -5234,29 +5212,27 @@ function scrFire(canDrown = true) {
 	    if Player.ultra_got[96]//ULTRA D ELEMENTOR THUNDER BOMB
 	    {
     
-	    if scrLightningWeapons(wep) // You are holding a lightning weapon
-	    {
-    
-	    if (ammo[4] + round(wep_cost[wep]*0.6) >=typ_amax[4])//get explo ammo
-	    {
-	    ammo[4]=typ_amax[4];
-	    }
-	    else
-	    ammo[4] += round(wep_cost[wep]*0.6);
-    
-	    }
-	    if scrKrakenWeapons(wep) // You are holding a kraken weapon
-	    {
-    
-		    if (ammo[5] +round(wep_cost[wep]*0.6) >=typ_amax[5])//get energy ammo
+		    if scrLightningWeapons(wep) // You are holding a lightning weapon
 		    {
-				ammo[5]=typ_amax[5];
+    
+			    if (ammo[4] + round(wep_cost[wep]*0.6) >=typ_amax[4])//get explo ammo
+			    {
+					ammo[4]=typ_amax[4];
+			    }
+			    else
+					ammo[4] += round(wep_cost[wep]*0.6);
+    
 		    }
-		    else
-				ammo[5] += round(wep_cost[wep]*0.6);
+		    if scrKrakenWeapons(wep) // You are holding a kraken weapon
+		    {
+			    if (ammo[5] +round(wep_cost[wep]*0.6) >=typ_amax[5])//get energy ammo
+			    {
+					ammo[5]=typ_amax[5];
+			    }
+			    else
+					ammo[5] += round(wep_cost[wep]*0.6);
     
-	    }
-    
+		    }
 	    }
 	if Player.skill_got[42]
 	{

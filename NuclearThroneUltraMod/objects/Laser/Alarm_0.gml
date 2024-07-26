@@ -5,6 +5,9 @@ if(instance_exists(Player)){
 		var isExplosive = object_index == LaserExplosive;
 		if um == ultramods.laserBullet
 		{
+			audio_stop_sound(sndLaser);
+			audio_stop_sound(sndLaserUpg);
+			snd_play_fire(sndMachinegun);
 			with instance_create(x,y,Shell)
 			motion_add(other.image_angle+Player.right*100+random(50)-25,2+random(2))
 			with instance_create(x,y,Bullet1)
@@ -13,6 +16,15 @@ if(instance_exists(Player)){
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
+			if sprite_index != sprMicroLaser
+			{
+				with instance_create(x,y,Bullet1)
+				{motion_add(other.image_angle,16)
+					scrCopyWeaponMod(other);
+				image_angle = direction
+				team = other.team
+				alarm[11] = 0;}	
+			}
 			if isExplosive
 			{
 				snd_play_fire(sndTripleMachinegun);
@@ -147,6 +159,8 @@ if(instance_exists(Player)){
 			with instance_create(x,y,thebolt)
 			{motion_add(other.image_angle,24)
 				dmg = round(dmg*0.4);
+				if other.sprite_index == sprMicroLaser
+					dmg = round(dmg*0.25);
 				scrCopyWeaponMod(other);
 			image_angle = direction
 			team = other.team

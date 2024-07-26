@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndMeleeSpearHit1",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.481814,
+  "name":"sndMeleeSpearHit1",
+  "parent":{
+    "name":"Melee",
+    "path":"folders/Sounds/Weapons/Melee.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMeleeSpearHit1.ogg",
+  "type":0,
+  "volume":1.0,
+}

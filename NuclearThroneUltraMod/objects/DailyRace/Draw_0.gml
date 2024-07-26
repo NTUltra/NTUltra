@@ -18,7 +18,7 @@ if hover
 		var name = dailyName;
 		if instance_exists(UpdateChecker)
 		{
-			name += UpdateChecker.dailyGM;	
+			name += string_hash_to_newline(UpdateChecker.dailyGM);
 		}
 		var yy = y+28;
 		draw_rectangle_colour(xx - 1,yy,xx+string_width(name),yy+string_height(name),c_black,c_black,c_black,c_black,false);

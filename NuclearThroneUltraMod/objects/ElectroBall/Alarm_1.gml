@@ -1,10 +1,10 @@
 /// @description Trace lightning to nearby electroballs
 target = noone;
-if instance_exists(ElectroBall)
+if instance_exists(ElectroBall) && instance_number(ElectroBall) > 1
 {
 	target = instance_nearest_notme(x,y,ElectroBall)
 
-	if target != noone && instance_number(ElectroBall)>1 && instance_exists(target)
+	if target != noone && instance_exists(target)
 	{ 
 		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 		{
@@ -15,7 +15,7 @@ if instance_exists(ElectroBall)
 			var ahead = 2;
 			var tx = target.x + (target.hspeed*ahead);
 			var ty = target.y + (target.vspeed*ahead);
-			with instance_create(x+(hspeed*ahead)*ahead,y+(vspeed*ahead),Lightning)
+			with instance_create(x+(hspeed*ahead)*ahead,y+(vspeed*ahead),lightning)
 			{
 				image_angle = point_direction(x,y,tx,ty)
 				dmg -= other.dmgReduction;
@@ -24,8 +24,8 @@ if instance_exists(ElectroBall)
 				target=other.target;
 				team = other.team
 				ammo = max(3,round(point_distance(x,y,tx,ty)*0.12));
-				if ammo>25
-				ammo=25;
+				if ammo > 25
+				ammo = 25;
 				fork = 99;
 				scrCopyWeaponMod(other);
 				event_perform(ev_alarm,0)

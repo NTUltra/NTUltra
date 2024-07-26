@@ -14,12 +14,12 @@ speed += wallbounce
 wallbounce *= 0.9
 instance_create(x,y,Dust)
 
-if instance_exists(Player)
+if shotgunshouldered && speed > 1
 {
-if Player.skill_got[15] = 1
-{
-dmg=3;
-alarm[1]=2;
-}
+	direction = scrAimAssistLaser(direction,0.75,16, true);
+	dmg=4;
+	if sprite_index == sprBullet9
+		sprite_index = sprBullet9HighDmg;
+	alarm[1] += 3;
 }
 

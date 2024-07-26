@@ -1,9 +1,9 @@
 /// @description Horror Ultra B Anomaly
-totalEnemyHealth=0;
+totalEnemyHealth = 0;
 with enemy
 {
-	if object_index != IDPDVan ||  object_index != IDPDVanVertical
-		other.totalEnemyHealth=other.totalEnemyHealth+my_health
+	if object_index != IDPDVan && object_index != IDPDVanVertical && !totemImmune
+		other.totalEnemyHealth = other.totalEnemyHealth + my_health
 }
 
 //We've reached a new high set this as the maximum hp we found this level.
@@ -11,8 +11,6 @@ with enemy
 //maxEnemyHealthInLevel=totalEnemyHealth;
 //retail is 140
 alarm[3] = 30;
-if !instance_exists(Player) || Player.ultra_got[82]
-	exit;
 var horrorBreak = 130 * min(2,1 + (loops*0.1));
 if scrIsHardMode()
 {
@@ -20,11 +18,19 @@ if scrIsHardMode()
 }
 if totalEnemyHealth<=horrorBreak&&!instance_exists(GenCont)&&!instance_exists(LevCont)&&instance_exists(enemy)&&!instance_exists(becomenemy)&&!instance_exists(WantBoss)
 {
-with enemy
-{	
-	if team != 0
-		my_health=0;
-}
+	with GoldTotem
+	{
+		my_health = 0;
+		prevhealth = 0;
+	}
+	with enemy
+	{	
+		if team != 2
+		{
+			my_health = 0;
+			prevhealth = 0;
+		}
+	}
 	var ended = false;
 	with Portal
 	{
@@ -36,4 +42,5 @@ with enemy
 		snd_play_2d(sndHorrorPortal);
 		alarm[3] = 60;
 	}
+	BackCont.shake = 50 * UberCont.opt_shake;
 }

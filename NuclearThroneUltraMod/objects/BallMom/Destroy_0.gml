@@ -12,7 +12,7 @@ with MusCont {
 		if Player.area == 2
 			song = mus6;
 		else if Player.area == 110
-			song = musInvertedSewers;
+			song = musUltraInvertedSewers;
 		else if Player.area == 10
 			song = mus10;
 	}

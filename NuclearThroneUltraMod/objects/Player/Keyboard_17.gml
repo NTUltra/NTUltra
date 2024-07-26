@@ -233,7 +233,7 @@ if UberCont.public = 0 {
 			instance_create(f.x + random(32),f.y + random(32),bandit);
 		}
 		audio_stop_all()
-		snd_loop(musThemeP)
+		snd_loop(musThemeA)
 		
 		with Wall {
 			sprite_index = sprWall0Bot;

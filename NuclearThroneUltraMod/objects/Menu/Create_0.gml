@@ -451,6 +451,10 @@ camLerp = 1;
 firstEntry = true;
 portraitLerp = 0;
 
+if UberCont.playFullyCompleted
+{
+	alarm[4] = 45;
+}
 //JOYPAD STUFF
 /*
 pick = 0

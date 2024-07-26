@@ -2,62 +2,74 @@ if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDor
 	exit;
 if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprite_index != sprPopoPortalStart
 {
-if !instance_exists(PlayerInPortal)
-{
-	other.visible = false;
-	instance_create(x,y,PortalShock);
-	with instance_create(x,y,PlayerInPortal)
+	if !instance_exists(PlayerInPortal)
 	{
-		depth = min(other.depth - 1,Player.depth);
-		image_speed = 0.4;
-		image_angle = Player.angle;
-		right = Player.right;
-		sprite_index = Player.spr_hurt;
-		with Player
+		other.visible = false;
+		instance_create(x,y,PortalShock);
+		if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep))
 		{
-			lockout = true;
-			roll = 0;
-			jump = 0;
-			angle = 0;
-			speed = 0;
-			if skill_got[32] && isAlkaline
+			Player.banditland=true;
+		}
+		with instance_create(x,y,PlayerInPortal)
+		{
+			depth = min(other.depth - 1,Player.depth);
+			image_speed = 0.4;
+			image_angle = Player.angle;
+			right = Player.right;
+			sprite_index = Player.spr_hurt;
+			with Player
 			{
-				scrHeal(2);
-				isAlkaline = false;
-				snd_play(sndAlkalineRefund);
-				with instance_create(x,y,HealFX)
+				lockout = true;
+				roll = 0;
+				jump = 0;
+				angle = 0;
+				speed = 0;
+				if skill_got[32] && isAlkaline
 				{
-					depth = other.depth - 1;	
+					scrHeal(2);
+					isAlkaline = false;
+					snd_play(sndAlkalineRefund);
+					with instance_create(x,y,HealFX)
+					{
+						depth = other.depth - 1;	
+					}
+					with instance_create(x,y,SharpTeeth)
+						owner=other.id;
 				}
-				with instance_create(x,y,SharpTeeth)
-					owner=other.id;
-			}
 			
-			with PandaSleep
-			{
-				event_perform(ev_alarm,0);	
-			}
-			with enemy
-			{
-				my_health = 0;
-				prevhealth = 0;
-			}
-			with RadMaggotChest
-			{
-				my_health = 0;	
-			}
-			instance_create(x,y,DelayEnemyKill)
-			with RadChest
-			{
-				my_health = 0;	
-			}
-			with AmmoChest
-			{
-				event_user(0);
+				with PandaSleep
+				{
+					event_perform(ev_alarm,0);	
+				}
+				with enemy
+				{
+					my_health = 0;
+					prevhealth = 0;
+				}
+				with Sheep
+				{
+					if object_index != PinkSheep
+					{
+						my_health = 0;
+						prevhealth = 0;
+					}
+				}
+				with RadMaggotChest
+				{
+					my_health = 0;	
+				}
+				instance_create(x,y,DelayEnemyKill)
+				with RadChest
+				{
+					my_health = 0;	
+				}
+				with AmmoChest
+				{
+					event_user(0);
+				}
 			}
 		}
 	}
-}
 //in portal don't decrease skill
 if other.race == 26
 {
@@ -102,10 +114,7 @@ with other
 inverted=true//take me to the inverted universe
 }
 
-if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep))
-{
-	Player.banditland=true;
-}
+
 if instance_exists(CrownPed) && !closedTheVault && alarm[1] < 1
 {
 	//Close up the survival arena

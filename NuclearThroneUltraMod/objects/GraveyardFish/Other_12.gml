@@ -22,7 +22,7 @@ with Floor {
 }
 if array_length(allFloors) > 1
 with enemy {
-	if team != 2
+	if team != 2 && !place_meeting(x,y,Tangle)
 	{
 		instance_create(x,y,Flicker);
 		repeat(mySize+1)

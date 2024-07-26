@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"musUltraBushBoxBoss",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":36.192394,
+  "name":"musUltraBushBoxBoss",
+  "parent":{
+    "name":"Music & amb",
+    "path":"folders/Sounds/Music & amb.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"musUltraBushBoxBoss.ogg",
+  "type":0,
+  "volume":1.0,
+}

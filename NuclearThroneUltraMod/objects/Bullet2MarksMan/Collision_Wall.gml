@@ -15,6 +15,12 @@ else
 	speed += wallbounce
 	instance_create(x,y,Dust)
 }
+
+if shotgunshouldered && speed > 2
+{
+	direction = scrAimAssistLaser(direction,0.75,16, true);
+}
+
 wallbounce *= 0.9
 
 

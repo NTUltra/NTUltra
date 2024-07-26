@@ -8,7 +8,6 @@ repeat(3)
 	instance_create(x,y,Smoke)
 dmg = 5;
 typ = 0;
-canBeMoved = true;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

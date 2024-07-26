@@ -19,7 +19,7 @@ if other.team != team and other.my_health > 0
 		else
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)
-			if other.owner.object_index == Player
+			if other.owner != noone && instance_exists(other.owner) && other.owner.object_index == Player
 			{
 				var bigdmg = clamp(maxhealth*0.15,d,500);
 				with Player

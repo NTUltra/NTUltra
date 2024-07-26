@@ -226,7 +226,7 @@ p = 0
 
 banditland = false;
 
-strongspiritregained = 0;
+//strongspiritregained = 0;
 lastWishPrevent = false;
 blastArmourPower = 3;
 

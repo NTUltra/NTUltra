@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndEraserNew",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.139375,
+  "name":"sndEraserNew",
+  "parent":{
+    "name":"Shell",
+    "path":"folders/Sounds/Weapons/Shell.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndEraserNew.wav",
+  "type":0,
+  "volume":1.0,
+}

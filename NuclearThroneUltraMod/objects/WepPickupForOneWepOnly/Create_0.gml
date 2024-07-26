@@ -2,6 +2,7 @@
 depth = 2;
 wasThrown = false;
 canBeMoved = true;
+canBeAngled = true;
 ammo = 0;
 image_angle = random(360)
 image_speed = 0

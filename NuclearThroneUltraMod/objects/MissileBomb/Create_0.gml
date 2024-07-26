@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-ammo = 10;
+ammo = 8;
 time = 3;
 angStep = 360/ammo;
 blinkTime = 4;

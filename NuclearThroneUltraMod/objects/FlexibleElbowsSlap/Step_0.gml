@@ -7,7 +7,7 @@ if time == 1
 	BackCont.viewy2 += lengthdir_y(19,hk+180)*UberCont.opt_shake;
 	
 	followOwner = false;
-	with scrDrop(15,4)
+	with scrDrop(18,4)
 	{
 		x = other.tx;
 		y = other.ty;

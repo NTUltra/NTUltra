@@ -1,2 +1,2 @@
 /// @description Deflect
-sprite_index = sprUltraBulletDeflected;
+owner = noone;

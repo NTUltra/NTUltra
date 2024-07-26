@@ -82,7 +82,7 @@ switch (waveNumber)
 	case 7:
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
-		song = musVulcano;
+		song = musUltraVulcano;
 		Player.area = 7;
 		with Floor
 		{
@@ -162,7 +162,7 @@ switch (waveNumber)
 		}
 	break;
 	case 12://Graveyard
-		song = mus126;
+		song = musUltra126;
 		with Floor
 		{
 			if styleb
@@ -172,7 +172,7 @@ switch (waveNumber)
 		}
 	break;
 	case 13://inv sewers
-		song = musInvertedSewers;
+		song = musUltraInvertedSewers;
 		scrApplyHandsInversion();
 		with Floor
 		{
@@ -307,7 +307,7 @@ switch (waveNumber)
 	case 24://inv banditland
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
-		song = musThemeP;
+		song = musThemeA;
 		with Floor
 		{
 			if styleb

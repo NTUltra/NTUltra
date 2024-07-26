@@ -1,5 +1,7 @@
 var area;
 depth = 7;
+time = 10
+mySize = 1;
 if instance_exists(SpiralCont) || instance_exists(GenCont)
 {
 	instance_destroy();
@@ -64,10 +66,8 @@ default: sprite_index = sprDebris0; break;
 image_speed = 0
 image_index = irandom(image_number-1)
 image_angle = random(360)
-mySize = 1
 motion_add(random(360),7+random(2))
 alarm[0] = 150+irandom(90)
-time = 10
 
 
 

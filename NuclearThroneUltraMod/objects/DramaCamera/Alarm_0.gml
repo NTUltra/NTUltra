@@ -1,4 +1,5 @@
-instance_destroy()
+instance_destroy();
+snd_play_2d(sndBossIntroOut);
 /*
 with UberCont
 {

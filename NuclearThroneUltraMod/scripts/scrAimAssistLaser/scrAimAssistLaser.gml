@@ -1,10 +1,10 @@
 ///scrAimAssistLaser();
 // /@description for laser and hyperlaunchers
 ///@param
-function scrAimAssistLaser(originalDirection, adjustAimAssist = 1){
+function scrAimAssistLaser(originalDirection, adjustAimAssist = 1, additionalAimAssist = 0, onlyTargetNearest = false){
 	if team != 2
 		return originalDirection;
-	var aimAssist = 0;
+	var aimAssist = additionalAimAssist;
 	//if Player.race == 11
 	//	aimAssist += 6;
 	
@@ -39,16 +39,33 @@ function scrAimAssistLaser(originalDirection, adjustAimAssist = 1){
 	aimAssist *= adjustAimAssist;
 	if aimAssist > 0 && instance_exists(enemy)
 	{
-		var t = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-		if (collision_line(x,y,t.x,t.y,Wall,false,true) < 0)
+		var n = instance_nearest(x,y,enemy);
+		if n != noone && (onlyTargetNearest || point_distance(x,y,n.x,n.y) < 40)
 		{
-			var wantD = point_direction(x,y,t.x,t.y);
-			//Check the angle difference
-			if abs(angle_difference(wantD,originalDirection)) < aimAssist
+			if (collision_line(x,y,n.x,n.y,Wall,false,true) < 0)
 			{
-				return wantD;
+				var wantD = point_direction(x,y,n.x,n.y);
+				//Check the angle difference
+				if abs(angle_difference(wantD,originalDirection)) < aimAssist*1.5
+				{
+					return wantD;
+				}
+				return originalDirection;
 			}
-			return originalDirection;
+		}
+		else
+		{
+			var t = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+			if (collision_line(x,y,t.x,t.y,Wall,false,true) < 0)
+			{
+				var wantD = point_direction(x,y,t.x,t.y);
+				//Check the angle difference
+				if abs(angle_difference(wantD,originalDirection)) < aimAssist
+				{
+					return wantD;
+				}
+				return originalDirection;
+			}
 		}
 		return originalDirection;
 	}

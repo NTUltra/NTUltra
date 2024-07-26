@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrDrawUltraMenu(race, widescreen = 0) {
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
 	draw_set_colour(c_black);
 	var xo = 0;
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
@@ -23,7 +25,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	var xxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5) - 147;
 	yyy -= 26;
 	//var xxxxx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])*0.5)
-	draw_text(xxxx,yyy - 18,"CHARACTER SPECIFIC MUTATIONS");
+	draw_text(xxxx,yyy - 28,"CHARACTER SPECIFIC MUTATIONS");
 	var xxxxx = xxx;
 	var canShowRegal = true;
 	var rt = "";
@@ -36,8 +38,6 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 		canShowRegal = false
 		draw_sprite(sprLockedRegal,0,xxxxx + 32,yyy);
 	}
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
 	yyy += 49;
 	var yyyy = yyy + 22;
 	var titleNameSpace = 12;

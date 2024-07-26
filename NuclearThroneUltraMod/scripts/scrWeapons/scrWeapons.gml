@@ -259,10 +259,10 @@ function scrWeapons() {
 	wep_name[23] = "ASSAULT SLUGGER"
 	wep_type[23] = 2
 	wep_auto[23] = 2
-	wep_load[23] = 32
+	wep_load[23] = 33
 	wep_cost[23] = 3
 	wep_sprt[23] = sprAssaultSlugger
-	wep_area[23] = 5
+	wep_area[23] = 4
 	wep_text[23] = ""
 	wep_swap[23] = sndSwapShotgun
 	wep_rad[23] = 0;
@@ -667,7 +667,7 @@ function scrWeapons() {
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
-	wep_popup[59] = "LIGHTNING DAMAGE DOES STACKS";
+	wep_popup[59] = "LIGHTNING DAMAGE STACKS";
 	//35! dmg 45
 
 	//BELOW THIS IS MODDED by Juul (Erdeppol/CouchPotato)
@@ -824,7 +824,7 @@ function scrWeapons() {
 	wep_load[73] = 7
 	wep_cost[73] = 1
 	wep_sprt[73] = sprExplosiveMorphORay
-	wep_area[73] = 12
+	wep_area[73] = 10
 	wep_text[73] = "butcher"
 	wep_swap[73] = sndSwapEnergy
 	wep_rad[73] = 0;
@@ -958,7 +958,7 @@ function scrWeapons() {
 	wep_name[85] = "ERASER"
 	wep_type[85] = 2
 	wep_auto[85] = 2
-	wep_load[85] = 18
+	wep_load[85] = 22
 	wep_cost[85] = 2
 	wep_sprt[85] = sprEraser
 	wep_area[85] = 6
@@ -970,7 +970,7 @@ function scrWeapons() {
 	wep_type[86] = 2
 	wep_auto[86] = 2
 	wep_load[86] = 40
-	wep_cost[86] = 9
+	wep_cost[86] = 6
 	wep_sprt[86] = sprSuperEraser
 	wep_area[86] = 14
 	wep_text[86] = "pencils"
@@ -1216,7 +1216,7 @@ function scrWeapons() {
 	wep_load[108] = 24
 	wep_cost[108] = 1
 	wep_sprt[108] = sprDeadGlove
-	wep_area[108] = 4
+	wep_area[108] = 3
 	wep_text[108] = "cold touch of death"
 	wep_swap[108] = sndSwapHammer
 	wep_rad[108] = 0;
@@ -1250,7 +1250,7 @@ function scrWeapons() {
 	wep_load[111] = 30
 	wep_cost[111] = 5
 	wep_sprt[111] = sprFlameCannon
-	wep_area[111] = 12
+	wep_area[111] = 11
 	wep_text[111] = "fireball!"
 	wep_swap[111] = sndSwapFlame
 	wep_rad[111] = 0;
@@ -1460,7 +1460,7 @@ function scrWeapons() {
 	wep_load[130] = 4
 	wep_cost[130] = 0.75
 	wep_sprt[130] = sprToxicDragon
-	wep_area[130] = 10
+	wep_area[130] = 9
 	wep_text[130] = "stinky breath"
 	wep_swap[130] = sndSwapDragon
 	wep_rad[130] = 0;
@@ -1512,10 +1512,10 @@ function scrWeapons() {
 	wep_name[135] = "LOLLIPOP"
 	wep_type[135] = 0
 	wep_auto[135] = 0
-	wep_load[135] = 37
+	wep_load[135] = 35
 	wep_cost[135] = 0
 	wep_sprt[135] = sprLollipop
-	wep_area[135] = 15
+	wep_area[135] = 16
 	wep_text[135] = "lick it"
 	wep_swap[135] = sndSwapHammer
 	wep_rad[135] = 0;
@@ -1799,7 +1799,7 @@ function scrWeapons() {
 	wep_type[161] = 2
 	wep_auto[161] = 2
 	wep_load[161] = 35
-	wep_cost[161] = 10
+	wep_cost[161] = 7
 	wep_sprt[161] = sprSuperFlameEraser
 	wep_area[161] = 16//14 SUPER ERASER
 	wep_text[161] = "vaporize"
@@ -2402,7 +2402,7 @@ function scrWeapons() {
 	wep_name[214] = "VIKING GREAT AXE"
 	wep_type[214] = 0
 	wep_auto[214] = 0
-	wep_load[214] = 30
+	wep_load[214] = 29
 	wep_cost[214] = 0
 	wep_sprt[214] = sprVikingAxe
 	wep_area[214] = -1
@@ -2413,7 +2413,7 @@ function scrWeapons() {
 	wep_name[215] = "VIKING AXE"
 	wep_type[215] = 0
 	wep_auto[215] = 0
-	wep_load[215] = 34
+	wep_load[215] = 32
 	wep_cost[215] = 0
 	wep_sprt[215] = sprVikingSmallAxe
 	wep_area[215] = -1
@@ -2730,7 +2730,7 @@ function scrWeapons() {
 	wep_swap[243] = sndSwapBow
 	wep_rad[243] = 0;
 
-	wep_name[244] = "ULTRA SUPER LASER PISTOL"
+	wep_name[244] = "infSUPER LASER PISTOL"
 	wep_type[244] = 5
 	wep_auto[244] = 0
 	wep_load[244] = 50
@@ -2941,7 +2941,7 @@ function scrWeapons() {
 	wep_load[262] = 20
 	wep_cost[262] = 6
 	wep_sprt[262] = sprSpiralYoyoGun
-	wep_area[262] = 6
+	wep_area[262] = 5
 	wep_text[262] = "this looks stupid"
 	wep_swap[262] = sndSwapBow
 	wep_rad[262] = 0;
@@ -3663,7 +3663,7 @@ function scrWeapons() {
 	wep_load[326] = 32
 	wep_cost[326] = 4
 	wep_sprt[326] = sprToxicCannon
-	wep_area[326] = 11
+	wep_area[326] = 9
 	wep_text[326] = "Ball of gas"
 	wep_swap[326] = sndSwapExplosive
 	wep_rad[326] = 0;
@@ -3862,7 +3862,7 @@ function scrWeapons() {
 	wep_load[344] = 12
 	wep_cost[344] = 1
 	wep_sprt[344] = sprElectroGun
-	wep_area[344] = 6
+	wep_area[344] = 5
 	wep_text[344] = "considered plasma & lightning"
 	wep_swap[344] = sndSwapEnergy
 	wep_rad[344] = 0;
@@ -3874,7 +3874,7 @@ function scrWeapons() {
 	wep_load[345] = 6
 	wep_cost[345] = 1
 	wep_sprt[345] = sprElectroRifle
-	wep_area[345] = 8
+	wep_area[345] = 7
 	wep_text[345] = "connected"
 	wep_swap[345] = sndSwapEnergy
 	wep_rad[345] = 0;
@@ -3897,10 +3897,11 @@ function scrWeapons() {
 	wep_load[347] = 5
 	wep_cost[347] = 2.5
 	wep_sprt[347] = sprTripleElectroGun
-	wep_area[347] = 13
+	wep_area[347] = 12
 	wep_text[347] = "chain lightning"
 	wep_swap[347] = sndSwapEnergy
 	wep_rad[347] = 0;
+	wep_popup[347] = "LIGHTNING CONNECTS#THE ELECTRO BALLS";
 
 	wep_name[348] = "FROG PISTOL"
 	wep_type[348] = 1
@@ -4557,7 +4558,7 @@ function scrWeapons() {
 	wep_load[404] = 48
 	wep_cost[404] = 5
 	wep_sprt[404] = sprMissileBombThrower
-	wep_area[404] = 11
+	wep_area[404] = 12
 	wep_text[404] = "be very carefull"
 	wep_swap[404] = sndSwapExplosive
 	wep_rad[404] = 0;
@@ -4601,7 +4602,7 @@ function scrWeapons() {
 	wep_name[408] = "MORPH-O-RIFLE"
 	wep_type[408] = 1
 	wep_auto[408] = 1
-	wep_load[408] = 6
+	wep_load[408] = 5
 	wep_cost[408] = 2
 	wep_sprt[408] = sprMorphORifle
 	wep_area[408] = 5
@@ -4651,7 +4652,7 @@ function scrWeapons() {
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
 	wep_area[412] = 4
-	wep_text[412] = "poke"
+	wep_text[412] = "stab"
 	wep_swap[412] = sndSwapSword
 	wep_rad[412] = 0;
 	
@@ -4762,7 +4763,7 @@ function scrWeapons() {
 	wep_load[422] = 17
 	wep_cost[422] = 0
 	wep_sprt[422] = sprSuperLance
-	wep_area[422] = 20
+	wep_area[422] = 16
 	wep_text[422] = "mine is longer"
 	wep_swap[422] = sndSwapSword
 	wep_rad[422] = 0;
@@ -4917,7 +4918,7 @@ function scrWeapons() {
 	wep_load[436] = 16
 	wep_cost[436] = 2
 	wep_sprt[436] = sprBoxGun
-	wep_area[436] = 8
+	wep_area[436] = 7
 	wep_text[436] = "[]"
 	wep_swap[436] = sndSwapShotgun
 	wep_rad[436] = 0;
@@ -7501,7 +7502,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 12
+	wep_load[670] = 11
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 2
@@ -7534,7 +7535,7 @@ function scrWeapons() {
 	wep_name[673] = "DROM"
 	wep_type[673] = 0
 	wep_auto[673] = 0
-	wep_load[673] = 18
+	wep_load[673] = 19
 	wep_cost[673] = 0
 	wep_sprt[673] = sprDrom
 	wep_area[673] = 9
@@ -7659,7 +7660,7 @@ function scrWeapons() {
 	wep_load[684] = 45
 	wep_cost[684] = 38
 	wep_sprt[684] = sprBouncerCannon
-	wep_area[684] = 13
+	wep_area[684] = 14
 	wep_text[684] = "bounce and pounce"
 	wep_swap[684] = sndSwapMachinegun
 	wep_rad[684] = 0;
@@ -8186,7 +8187,7 @@ function scrWeapons() {
 	wep_load[731] = 16
 	wep_cost[731] = 0
 	wep_sprt[731] = sprGoldenFrostDagger
-	wep_area[731] = -1
+	wep_area[731] = 17
 	wep_text[731] = "elegantly cold hands"
 	wep_swap[731] = sndSwapSword
 	wep_rad[731] = 0;
@@ -8296,7 +8297,7 @@ function scrWeapons() {
 	wep_load[741] = 22
 	wep_cost[741] = 2.5
 	wep_sprt[741] = sprPaperGun
-	wep_area[741] = 8
+	wep_area[741] = 7
 	wep_text[741] = "origami pro"
 	wep_swap[741] = sndSwapBow
 	wep_rad[741] = 0;
@@ -8761,10 +8762,10 @@ function scrWeapons() {
 	wep_name[783] = "CHARGE OVERDRIVER"
 	wep_type[783] = 1
 	wep_auto[783] = 3
-	wep_load[783] = 4
+	wep_load[783] = 3
 	wep_cost[783] = 1
 	wep_sprt[783] = sprOverdriver
-	wep_area[783] = 8
+	wep_area[783] = 9
 	wep_text[783] = "a different type of charge weapon"
 	wep_swap[783] = sndSwapMotorized
 	wep_rad[783] = 0;
@@ -8796,7 +8797,7 @@ function scrWeapons() {
 	wep_name[786] = "CHARGE LANCE"
 	wep_type[786] = 0
 	wep_auto[786] = 0
-	wep_load[786] = 8
+	wep_load[786] = 9
 	wep_cost[786] = 0
 	wep_sprt[786] = sprChargeLance1
 	wep_area[786] = 6
@@ -8852,7 +8853,7 @@ function scrWeapons() {
 	wep_name[791] = "RAPIER"
 	wep_type[791] = 0
 	wep_auto[791] = 0
-	wep_load[791] = 16
+	wep_load[791] = 13
 	wep_cost[791] = 0
 	wep_sprt[791] = sprRapier
 	wep_area[791] = 8
@@ -9007,6 +9008,17 @@ function scrWeapons() {
 	wep_swap[804] = sndSwapMachinegun
 	wep_rad[804] = 0;
 	wep_popup[804] = "CHANGES DAMAGE AND COST#BASED ON HIT ENEMY'S:#MAX HEALTH";
+	
+	wep_name[805] = "SPEAR"
+	wep_type[805] = 0
+	wep_auto[805] = 0
+	wep_load[805] = 23
+	wep_cost[805] = 0
+	wep_sprt[805] = sprMeleeSpear
+	wep_area[805] = 7
+	wep_text[805] = "poke"
+	wep_swap[805] = sndSwapSword
+	wep_rad[805] = 0;
 	//Swiss army bow
 	//Charge boomerang
 	

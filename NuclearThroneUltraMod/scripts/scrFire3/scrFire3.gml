@@ -16,7 +16,7 @@ function scrFire3(hasTailNow){
 			if Player.skill_got[13]
 			{
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				image_yscale += 0.25;
+				image_yscale += other.bettermelee;
 			}
 			motion_add(aimDirection,3.5+longarms)
 			image_angle = direction
@@ -414,6 +414,8 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,VoidBullet)
 		{
 			owner = other.id;
+			if instance_exists(Player)
+				owner = Player.id;
 			motion_add(aimDirection+(random(8)-4)*other.accuracy,12 + other.accuracy)
 			image_angle = direction
 			team = other.team
@@ -427,6 +429,38 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 5
 		wkick = 5
+
+		break;
+		
+		//SPEAR
+		case 805:
+
+		snd_play_fire(sndMeleeSpear)
+		instance_create(x,y,Dust)
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SpearShank)
+		{
+			longarms = 0
+			if Player.skill_got[13]
+			{
+				longarms = (Player.skill_got[13]+other.bettermelee)
+				image_yscale += 0.25 + other.bettermelee;
+				maxRange += 20+other.bettermelee;
+				minRange += 10+other.bettermelee;
+			}
+			motion_add(aimDirection,1+longarms)
+			image_angle = direction
+			team = other.team
+			event_perform(ev_alarm,0);
+		}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,10)
+			scrMoveContactSolid(aimDirection,20)
+		}
+		BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = -20
 
 		break;
 	}

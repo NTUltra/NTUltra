@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "31.BETA"
-subUpdateVersion = ".13";
+subUpdateVersion = ".14";
 notUpdated = "";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -18,6 +18,8 @@ optY = 24;
 everything=69;
 unlocked=69;
 ultraMenuOpen = false;
+
+jokeIntro = false;
 
 //DEFAULT STUFF
 race = 0

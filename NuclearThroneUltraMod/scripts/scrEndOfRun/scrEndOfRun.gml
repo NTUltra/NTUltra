@@ -124,5 +124,11 @@ function scrEndOfRun(){
 		refundLastWishPrevent = false
 		refundSkeletonLives = 0
 		refundLastWish = false;
+		if playFullyCompleted
+		{
+			playFullyCompleted = false;
+			jokeIntro = true;
+			hasDoneFullCompletion = true;
+		}
 	}
 }

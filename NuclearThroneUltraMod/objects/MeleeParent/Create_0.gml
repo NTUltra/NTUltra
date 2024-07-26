@@ -1,5 +1,6 @@
 event_inherited();
-image_speed = 0.4
+image_speed = 0.4;
+canBeAngled = false;
 appliedBoost = false;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable 4 = laser
 hits = 1;
@@ -44,5 +45,6 @@ if instance_exists(Player)
 		hits ++;
 	}
 }
+alarm[10] = 1;
 knockback = 7;
 alarm[3] = 1;

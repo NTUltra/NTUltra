@@ -19,6 +19,7 @@ wallbounce *= 0.9
 
 if shotgunshouldered && speed > 2
 {
+	direction = scrAimAssistLaser(direction,0.75,16, true);
 	if sprite_index == sprBullet2
 	{
 		sprite_index = sprBullet2HighDmg;

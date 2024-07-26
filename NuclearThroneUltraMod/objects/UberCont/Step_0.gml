@@ -269,10 +269,13 @@ else
 			{
 				if instance_exists(Menu)
 				{
-					if Menu.mode == 1 && scrReturnMenu()
+					debug("MENU ", Menu.mode);
+					if Menu.mode == 0
 					{
 						endMe = true;
 					}
+					else
+						scrReturnMenu()
 				}
 				else
 					scrRestart()
@@ -283,8 +286,10 @@ else
 		{
 			endMe = true;
 		}
-		if endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
+		if (endMe || (confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))))
 		{
+			if instance_exists(Menu)
+			debug("END, ", Menu.mode);
 			if !instance_exists(Menu) || hasNoMenuOpen()
 			{
 				if confirmState == 3 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1))
@@ -297,6 +302,10 @@ else
 				{
 					confirmState = 3;	
 				}
+			}
+			else if Menu.mode == 0
+			{
+				confirmState = 3;	
 			}
 		}
 		else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME

@@ -53,7 +53,7 @@ function scrReturnMenu(){
 			image_index = 0
 			alarm[0] = 10
 		}
-		exit;
+		return true;
 	}
 	else
 	{

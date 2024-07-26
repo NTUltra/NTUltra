@@ -27,11 +27,13 @@ var totRepeats = round(repeats);
 totRepeats = clamp(lerp(1,totRepeats + 1,time),1,totRepeats);
 var strengthStep = 1/totRepeats;
 var j = 0;
+var yys = 1;
+var xxs = 1;
 repeat(totRepeats)
 {
 	var waveStrength = lerp(0,maxWaveStrength,j) * lerp(1,0,j);//LERP FROM 0 to 1 to 0
-	var xxs = xx + lengthdir_x(sin(i)*waveStrength,image_angle + 90);
-	var yys = yy + lengthdir_y(sin(i)*waveStrength,image_angle + 90);
+	xxs = xx + lengthdir_x(sin(i)*waveStrength,image_angle + 90);
+	yys = yy + lengthdir_y(sin(i)*waveStrength,image_angle + 90);
 	ang = point_direction(px,py,xxs,yys);
 	if j == 0
 	{
