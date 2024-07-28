@@ -14,9 +14,9 @@ if (type == network_type_data) {
 		//SEND TIME
 			myClientId = buffer_read(buffer, buffer_u16);
 			latestVersion = buffer_read(buffer, buffer_string);
-			debug(latestVersion);
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
+			latestVersion = buffer_read(buffer, buffer_string); //BETA VERSION
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if !gotSteam || (latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion)
 			{

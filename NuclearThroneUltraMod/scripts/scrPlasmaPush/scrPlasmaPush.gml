@@ -4,6 +4,8 @@
 function scrPlasmaPush(){
 	x -= hspeed// * 0.9;
 	y -= vspeed// * 0.9;
+	x +=  (other.x - x) * 0.25;
+	y +=  (other.y - y) * 0.25;
 	image_xscale -= hitShrink;
 	image_yscale -= hitShrink;
 	BackCont.shake += 2;

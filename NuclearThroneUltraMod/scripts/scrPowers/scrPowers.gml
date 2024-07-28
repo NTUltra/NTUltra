@@ -2408,7 +2408,7 @@ function scrPowers(raceOverwrite = -1) {
 		}
 
 		//HANDS
-		if race == 27 && (!instance_exists(Hand) || (ultra_got[107] && instance_exists(Hand) && instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 2)))//Hands
+		if race == 27 && (!instance_exists(Hand) || ((ultra_got[107] && altUltra) && instance_exists(Hand) && (instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 3))))//Hands
 		{
 			var targetPickup = false;
 			var grabRange = 48;//same as hunter mark
@@ -2422,7 +2422,7 @@ function scrPowers(raceOverwrite = -1) {
 			var slappedProjectile = false;
 			var itemGrab = false;
 			//Ultra target projectiles
-			if ultra_got[107]
+			if ultra_got[107] && !altUltra
 			{
 				if instance_exists(projectile)
 				{
@@ -2538,25 +2538,32 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if other.ultra_got[107]
 					{
-						alarm[3] = 1;//Destroy projectiles
+						if other.altUltra
+						{
+							if !scrIsInInvertedArea()
+								lerpSpeed *= 0.85;//Slower hand
+						}
+						else
+						{
+							alarm[3] = 1;//Destroy projectiles
+						}
+					}
+					if other.ultra_got[106] && altUltra
+					{
+						alarm[4] = 1;
 					}
 					if other.bskin == 2
 					{
 						sprite_index = sprHandCOpen;
 						spr_close = sprHandCClose;
 						spr_closing = sprHandCClosing;
-						if !scrIsInInvertedArea()
-							lerpSpeed *= 0.85;//Slower hand
+						
 					}
 					else if other.bskin == 1
 					{
 						sprite_index = sprHandBOpen;
 						spr_close = sprHandBClose;
 						spr_closing = sprHandBClosing;
-						if other.ultra_got[106]
-						{
-							alarm[4] = 1;
-						}
 					}
 					if (other.skill_got[5])
 					{
@@ -2799,7 +2806,7 @@ function scrPowers(raceOverwrite = -1) {
 						    {
 						        my_health++;
 								snd_play(sndHealthPickup);
-						        with instance_create(x,y,HealFX)
+						        with instance_create(x,y - 8,HealFX)
 									sprite_index=sprHorrorTB;
         
 						        if UberCont.opt_ammoicon
@@ -2838,7 +2845,7 @@ function scrPowers(raceOverwrite = -1) {
 					with instance_create(x,y,HorrorMoney)
 					{
 						charge=other.horrorcharge;
-						motion_add(aimDirection+(random(charge*4)-charge*2),8.5+random(3)+(charge*0.5))
+						motion_add(aimDirection+((random(charge*4)-charge*2)*other.accuracy),8.5+random(3)+(charge*0.5))
 						image_angle = direction
 						team = other.team
 					}
@@ -2943,6 +2950,8 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamB;
 					else if bskin = 2
 						sprite_index=sprHorrorBeamC;
+					else if bskin = 3
+						sprite_index=sprHorrorBeamD;
     
 				    originnr=instance_number(HorrorBeam);
     
@@ -2959,6 +2968,8 @@ function scrPowers(raceOverwrite = -1) {
 							sprite_index=sprHorrorBeamSpawnB
 						else if other.bskin=2
 							sprite_index=sprHorrorBeamSpawnC
+						else if other.bskin=3
+							sprite_index=sprHorrorBeamSpawnD
 				        else
 							sprite_index=sprHorrorBeamSpawn
 				        image_angle = other.image_angle
@@ -2974,6 +2985,8 @@ function scrPowers(raceOverwrite = -1) {
 					sprite_index=sprHorrorBeamB;
 				else if bskin = 2
 					sprite_index=sprHorrorBeamC;
+				else if bskin = 3
+					sprite_index=sprHorrorBeamD;
 
 				originnr=instance_number(HorrorBeam);
 
@@ -2990,6 +3003,8 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamSpawnB
 					else if other.bskin=2
 						sprite_index=sprHorrorBeamSpawnC
+					else if other.bskin=3
+						sprite_index=sprHorrorBeamSpawnD
 				    else
 						sprite_index=sprHorrorBeamSpawn
 				    image_angle = other.image_angle
@@ -3007,6 +3022,8 @@ function scrPowers(raceOverwrite = -1) {
 				sprite_index=sprHorrorBeamB;
 			else if bskin = 2
 				sprite_index=sprHorrorBeamC;
+			else if bskin = 3
+				sprite_index=sprHorrorBeamD;
     
 		    originnr=instance_number(HorrorBeam);
     
@@ -3023,6 +3040,8 @@ function scrPowers(raceOverwrite = -1) {
 					sprite_index=sprHorrorBeamSpawnB
 				else if other.bskin=2
 					sprite_index=sprHorrorBeamSpawnC
+				else if other.bskin=3
+					sprite_index=sprHorrorBeamSpawnD
 		        else
 					sprite_index=sprHorrorBeamSpawn
 		        image_angle = other.image_angle
@@ -3709,10 +3728,18 @@ function scrPowers(raceOverwrite = -1) {
 				sprite_index=sprBecomeHorrorBigBalB;
 			else if other.bskin = 2
 				sprite_index=sprBecomeHorrorBigBalC;
+			else if other.bskin == 3
+				sprite_index=sprBecomeHorrorBigBalD;
 			team = other.team;
 			//Max is about 20
 			myPower = other.horrorcharge;
 			image_xscale = (0.1 + clamp(myPower*0.025,0,0.75))*2;
+			if other.skill_got[17]
+			{
+				image_xscale *= 1.1;
+				image_xscale += 0.15;
+				myPower += 1;
+			}
 			image_yscale = image_xscale;
 			direction = aimDirection;
 			speed = 1;

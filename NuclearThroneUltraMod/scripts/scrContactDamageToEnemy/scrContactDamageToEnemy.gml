@@ -63,7 +63,7 @@ function scrContactDamageToEnemy(hitEnemy){
 		if hitEnemy.meleedamage > 0 && hitEnemy.existTime > 18 && !justAsheep && !hitEnemy.isSnooze && !instance_exists(HumphryDiscipline)//is it a melee enemy?
 		&& hitEnemy.frozen == noone && hitEnemy.alarm[11] < 1 && !collision_line(x,y,hitEnemy.x,hitEnemy.y,Wall,false,false)
 		{
-			if meleeimmunity < 1 || alarm[3] < 1
+			if meleeimmunity < 1 && alarm[3] < 1 && mask_index != mskPickupThroughWall
 			{
 				if loops > 0
 					meleeimmunity = hurtDurationLoop - 1;

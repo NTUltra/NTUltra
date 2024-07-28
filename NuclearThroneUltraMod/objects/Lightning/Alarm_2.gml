@@ -35,7 +35,7 @@ if al > 0 && alarm[0] < 1
 									with Lightning
 									{
 										if team == t
-											dmg = max(2,dmg - 3);
+											dmg = max(3,dmg - 1);
 									}
 									if Player.skill_got[17] && team == 2
 										snd_play(sndSpark2);

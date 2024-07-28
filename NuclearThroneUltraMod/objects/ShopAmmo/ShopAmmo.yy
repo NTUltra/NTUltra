@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprShopMenuAmmo",
-    "path":"sprites/sprShopMenuAmmo/sprShopMenuAmmo.yy",
+    "name":"sprShopMenuCashExplosion",
+    "path":"sprites/sprShopMenuCashExplosion/sprShopMenuCashExplosion.yy",
   },
   "spriteMaskId":{
     "name":"mskShopAmmo",

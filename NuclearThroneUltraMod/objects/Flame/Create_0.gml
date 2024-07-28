@@ -33,7 +33,7 @@ if instance_exists(Player)
 		image_speed -= 0.06;
 		sprite_index = sprTrapFireUpg;
 	}
-	if (Player.bskin == 1 && Player.ultra_got[106])
+	if (Player.altUltra && Player.ultra_got[106])
 	{
 		alarm[1] = 1;
 		image_xscale += 0.1;

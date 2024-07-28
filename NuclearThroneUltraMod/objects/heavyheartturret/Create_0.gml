@@ -3,8 +3,8 @@ mySize = 1
 scrWeapons();
 owner = -1;
 
-//behavior
-//gunangle = random(360)
+//behaviorprojectileSpeed
+gunangle = random(360)
 //alarm[0] = 20
 wkick = 0
 maxhealth = 10;
@@ -50,7 +50,7 @@ can_shoot = 1
 bcan_shoot = 1//Player.bcan_shoot
 right = 1
 wepright = 1
-
+projectileSpeed = 1;
 bettermelee = 0;
 betterlaserbrain = 0;
 betterpluto = 39;

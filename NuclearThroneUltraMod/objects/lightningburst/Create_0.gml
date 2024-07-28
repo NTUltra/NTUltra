@@ -1,5 +1,5 @@
 /// @description init
 event_inherited();
 snd = sndMachinegun;
-lightningAmmo = 10;
+lightningAmmo = 12;
 lightningAmmoChange = 10;

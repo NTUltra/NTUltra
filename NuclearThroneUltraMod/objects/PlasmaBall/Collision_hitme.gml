@@ -21,5 +21,6 @@ if other.team != team and other.my_health > 0
 	{
 		with other
 			scrIframeSkipper(0.2);
+		scrPlasmaStick();
 	}
 }

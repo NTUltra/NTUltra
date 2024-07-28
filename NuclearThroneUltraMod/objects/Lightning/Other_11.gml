@@ -1,5 +1,6 @@
 /// @description Apply Energy brain
 if Player.skill_got[17] = 1{
+	travelLength += 1;
 	defaultYscale += 1;
 	bloom += 0.1;
 	imageSpeed = 0.35-(Player.betterlaserbrain*0.06)

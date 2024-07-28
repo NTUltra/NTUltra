@@ -248,6 +248,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				}
 				with instance_create(tx,ty,WepPickup)
 				{
+					heavyHeartDelay = 0;
 					pickedup=true;
 					scrWeapons()
 					wep = other.wep;

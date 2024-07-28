@@ -109,6 +109,7 @@ bcurse = Player.bcurse
 ccurse = Player.ccurse;
 reload = 0//Player.reload
 breload = 0//Player.breload
+loops = Player.loops;
 team = Player.team
 mySize = Player.mySize
 queueshot = 0;

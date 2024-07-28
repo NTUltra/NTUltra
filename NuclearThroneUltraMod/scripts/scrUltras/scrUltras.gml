@@ -39,7 +39,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //CRYSTAL 
 	    ultra_name[5] = "FORTRESS"
-	    ultra_text[5] = "+ MAX <r>HP<r>"
+	    ultra_text[5] = "+6 MAX <r>HP<r>"
 	    ultra_tips[5] = "indestructable"
     
 	    ultra_name[6] = "JUGGERNAUT"

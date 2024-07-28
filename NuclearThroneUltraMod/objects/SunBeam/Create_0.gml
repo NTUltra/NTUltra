@@ -1,4 +1,5 @@
 /// @description Init
+depth = -999;
 radius = 8;
 lightWidth = 8;
 lightWidthTop = 4;

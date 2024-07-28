@@ -303,7 +303,7 @@ function scrWeapons() {
 	wep_name[27] = "SCREWDRIVER"
 	wep_type[27] = 0
 	wep_auto[27] = 0
-	wep_load[27] = 11
+	wep_load[27] = 9
 	wep_cost[27] = 0
 	wep_sprt[27] = sprScrewDriver
 	wep_area[27] = 1
@@ -663,7 +663,7 @@ function scrWeapons() {
 	wep_load[59] = 25
 	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
-	wep_area[59] = 15
+	wep_area[59] = 11
 	wep_text[59] = "hurricane"
 	wep_swap[59] = sndSwapEnergy
 	wep_rad[59] = 0;
@@ -2578,7 +2578,7 @@ function scrWeapons() {
 	wep_name[230] = "GOLDEN SCREWDRIVER"
 	wep_type[230] = 0
 	wep_auto[230] = 0
-	wep_load[230] = 9//11
+	wep_load[230] = 8//11
 	wep_cost[230] = 0
 	wep_sprt[230] = sprGoldenScrewdriver
 	wep_area[230] = 19
@@ -4992,7 +4992,7 @@ function scrWeapons() {
 	wep_name[443] = "RUSTY SAWED-OFF SHOTGUN"
 	wep_type[443] = 2
 	wep_auto[443] = 2
-	wep_load[443] = 26//28
+	wep_load[443] = 24//28
 	wep_cost[443] = 2
 	wep_sprt[443] = sprRustySawnOffShotgun
 	wep_area[443] = -1

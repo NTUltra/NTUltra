@@ -87,6 +87,14 @@ if target != noone && instance_exists(target)
 						speed *= 0.75;
 					}
 					speed = other.pushSpeed/max(1,(mySize*0.5));
+					if !collision_point(x,y,Floor,false,false)
+					{
+						with other
+						{
+							target = noone;
+						}
+						speed *= 0.5;
+					}
 				}
 			}
 		}

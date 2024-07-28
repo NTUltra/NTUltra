@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scrPlasmaStick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlasmaStick",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

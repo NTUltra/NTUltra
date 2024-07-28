@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Horror",
-    "path":"folders/Sprites/Player/Custom/Horror.yy",
+    "name":"HorrorC",
+    "path":"folders/Sprites/Player/Custom/Horror/HorrorC.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

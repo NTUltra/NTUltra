@@ -9,16 +9,17 @@ var accuracycharge=charge
 
 if accuracycharge<2
 accuracycharge=2;
+accuracycharge *= accuracyBoost;
 if instance_exists(enemy)
 {
-var enem = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<48
-{
-direction=point_direction(x,y,enem.x,enem.y);
-image_angle=direction;
-}
-else
-direction = image_angle+(random(accuracycharge*4)-(accuracycharge*2))//30 15
+	var enem = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+	if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<48
+	{
+	direction=point_direction(x,y,enem.x,enem.y);
+	image_angle=direction;
+	}
+	else
+	direction = image_angle+(random(accuracycharge*4)-(accuracycharge*2))//30 15
 
 }
 
@@ -60,7 +61,7 @@ if ammo > 0
 //{var indexammo = 20;}
 //else
 //{var indexammo = ammo;}
-image_index += 0.4/ammo//indexammo
+image_index += image_speed/ammo//indexammo
 with instance_create(x,y,HorrorBeam)
 {
 originnr=other.originnr
@@ -69,10 +70,14 @@ if bskin=1
 sprite_index=sprHorrorBeamB;
 else if bskin=2
 sprite_index=sprHorrorBeamC;
+else if bskin==3
+sprite_index=sprHorrorBeamD;
 
 rad=other.rad;
 direction = other.direction
 image_angle = direction
+image_yscale = other.image_yscale;
+image_speed = other.image_speed;
 ammo = other.ammo;
 team = other.team
 charge=other.charge;
@@ -99,6 +104,11 @@ else if bskin=2
 {
 with instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
 sprite_index=sprHorrorHitC;
+}
+else if bskin == 3
+{
+with instance_create(x+lengthdir_x(image_xscale/2,image_angle),y+lengthdir_y(image_xscale/2,image_angle),LightningHit)
+sprite_index=sprHorrorHitD;
 }
 else
 {

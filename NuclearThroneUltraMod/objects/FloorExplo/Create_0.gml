@@ -23,6 +23,12 @@ if (!instance_exists(WallRemover))
 
 	
 	}
+	else if instance_exists(PlayerSpawn)
+	{
+		area = Player.area
+		event_perform(ev_alarm,2);
+		event_perform(ev_alarm,0);
+	}
 	else 
 	{
 		area = BackCont.area

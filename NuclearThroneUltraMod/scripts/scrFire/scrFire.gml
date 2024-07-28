@@ -1500,8 +1500,8 @@ function scrFire(canDrown = true) {
 	
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection,1);
-		motion_add(aimDirection,1)
+		scrMoveContactSolid(aimDirection + 180,1);
+		motion_add(aimDirection + 180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
@@ -1549,7 +1549,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(6)-3)*other.accuracy
 	team = other.team
-	ammo = 32
+	ammo = 33
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}
@@ -1575,13 +1575,16 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
-	ammo = 10+random(5)
-	iframeskip -= 0.02;
+	ammo = 11+random(6)
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}}
 
-
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,3);
+		motion_add(aimDirection + 180,1)
+	}
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 10

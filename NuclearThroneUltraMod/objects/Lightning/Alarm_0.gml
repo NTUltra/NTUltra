@@ -50,8 +50,8 @@ if instance_exists(Player){
 		}
 		event_user(1);
 		isog = false;
-		simpleAccuracy = Player.accuracy;
-		accuracy += Player.accuracy*2;
+		simpleAccuracy = Player.accuracy - 0.5;
+		accuracy += Player.accuracy*1.8;
 		if Player.skill_got[19] == 1
 		{accuracy-=3;}
 		if Player.ultra_got[42]&&instance_exists(Marker)//hunter focused fire
@@ -143,7 +143,9 @@ for(var i = floor(ammo); i > 0; i -= 1)
 	angle = direction
 	speed = 0
 	var j = 0;
-	var dis = 8;
+	var dis = travelLength;
+	if team == 2
+		dis += 2;
 	while (j < dis)
 	{
 		xxx += lengthdir_x(1,direction);
@@ -240,6 +242,7 @@ for(var i = floor(ammo); i > 0; i -= 1)
 				branch = clamp(other.branch*2.5,80,200);
 				canUltraMod = other.canUltraMod;
 				dmg = other.dmg;
+				travelLength = other.travelLength;
 				scrCopyWeaponMod(other);
 				accuracy=other.accuracy*2;
 				direction = other.direction+choose(80+random(30),-80+random(-30))

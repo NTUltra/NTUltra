@@ -41,6 +41,7 @@ mod3[]
 7 kraken
 */
 wepmod1=0;
+heavyHeartDelay = 90;
 if instance_exists(Player)
 {
 	if Player.skill_got[30]//power craving

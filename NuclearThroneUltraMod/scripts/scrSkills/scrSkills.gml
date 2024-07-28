@@ -268,7 +268,11 @@ function scrSkills() {
 
 	skill_name[16] = "RECYCLE GLAND"
 	skill_text[16] = "SOME <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>";
+	if instance_exists(Player) && (Player.race == 21 && canCheckUltra && Player.altUltra && Player.ultra_got[0])
+		skill_text[16] += "#ALSO APPLIES TO <g>CASH FLOW<g>";
 	skill_detail[16] = "65% OF HIT <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>#<w>BULLETS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
+	if instance_exists(Player) && (Player.race == 21 && canCheckUltra && Player.altUltra && Player.ultra_got[0])
+		skill_detail[16] += "#ALSO APPLIES TO <g>CASH FLOW<g>";
 	skill_tips[16] = "no need to aim"
 	skill_msnd[16] =  sndMutRecycleGland
 	skill_bons[16] = "+9% CHANCE#+10% SPLASH DAMAGE RANGE";
@@ -277,6 +281,8 @@ function scrSkills() {
 
 	skill_name[17] = "ENERGY BRAIN"
 	skill_text[17] = "<g>ENERGY<g> WEAPONS DEAL MORE DAMAGE"
+	if instance_exists(Player) && (Player.race == 21)
+			skill_text[17] += "#<g>BEAM<g> LASTS LONGER AND IS BIGGER";
 	skill_detail[17] = skill_text[17] + "#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[17] = "neurons everywhere"
 	skill_msnd[17] =  sndMutLaserBrain
@@ -303,10 +309,16 @@ function scrSkills() {
 
 	skill_name[19] = "EAGLE EYES"
 	skill_text[19] = "BETTER <w>ACCURACY<w>";
+	if instance_exists(Player) && (Player.race == 21)
+		skill_text[19] += "#IMPROVE <g>BEAM<g> <w>ACCURACY<w>";
 	if !UberCont.useSeed && random(500) < 1
 		skill_detail[19] = "BETTER <w>ACCURACY<w>#<w>AIM ASSIST<w>/<w>HOMING<w>#SEE CONTENTS OF WEAPON CHESTS#SEE FURTHER#SHOW WEAPON TIER#SHOW DAMAGE INDICATORS#INCREASE <aq>LU<aq><g>CK<g>#MORE DAMAGE#FASTER <w>FIRE RATE<w>#INSTANTLY <w>LOOP<w>#INCREASE MAX <g>LEVEL<g> BY 5#MORE <g>RAD<g> DROPS#EVERY KILL <r>OVERHEALS<r> FOR 6<r>HP<r>#GET TWO <g>ULTRA MUTATIONS<g>#SIT ON THE <p>THRONE<p>#EVERY ENEMY MORPHS INTO A CHICKEN#THE <w>CHICKEN<w> WILL DROP#A HIGH TIER WEAPON#GET <b>QUAD SPC<b>#IT COSTS 2 AMMO#<pi>AIRHORN.WAV<pi> EVERYTIME YOU SHOOT"
 	else
+	{
 		skill_detail[19] = "BETTER <w>ACCURACY<w>#<w>AIM ASSIST<w>/<w>HOMING<w>#SEE FURTHER";
+		if instance_exists(Player) && (Player.race == 21)
+			skill_detail[19] += "#IMPROVE <g>BEAM<g> <w>ACCURACY<w>";
+	}
 	skill_tips[19] = "every shot connects"
 	skill_msnd[19] =  sndMutEagleEyes
 	skill_bons[19] = "+20% ACCURACY +15% HOMING";

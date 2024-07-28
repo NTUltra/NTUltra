@@ -15,6 +15,15 @@ if target != noone && instance_exists(target)
 		y = lerp(other.pushY,other.pushStartY,other.lerpTime);
 		scrForcePosition60fps();
 		mask_index = msk;
+		if !collision_point(x,y,Floor,false,false)
+		{
+			with other
+			{
+				instance_destroy();	
+			}
+			speed *= 0.5;
+			exit;
+		}
 		var walls = ds_list_create();
 		var al = instance_place_list(x,y,Wall,walls,false)
 		for (var j = 0; j < al; j++) {
@@ -25,12 +34,11 @@ if target != noone && instance_exists(target)
 			}
 		}
 		ds_list_destroy(walls);
-		if !other.dealtDamage && al > 0
-		{
-			debug("KNOCKDAMAGE");
-			DealDamage(2,false,true,false);
-			other.dealtDamage = true;
-		}
+			if !other.dealtDamage && al > 0
+			{
+				DealDamage(2,false,true,false);
+				other.dealtDamage = true;
+			}
 		instance_create(x+hspeed,y+vspeed,WallBreak);
 	}
 }

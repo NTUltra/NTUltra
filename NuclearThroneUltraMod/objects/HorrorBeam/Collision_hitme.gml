@@ -33,6 +33,11 @@ if other.team != team and other.my_health > 0
 		with instance_create(x,y,BulletHit)
 		sprite_index=sprHorrorHitC;
 		}
+		else if bskin==3
+		{
+		with instance_create(x,y,BulletHit)
+		sprite_index=sprHorrorHitD;
+		}
 		else
 		{
 		with instance_create(x,y,BulletHit)

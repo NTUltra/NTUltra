@@ -2,6 +2,7 @@ side = choose(0,1)
 depth = -8;
 alarm[0] = 100+random(40)
 image_index = 0;
+image_speed = 0;
 fire = 0
 myscorch = instance_create(x,y,TrapScorchMark)
 

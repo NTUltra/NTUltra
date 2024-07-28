@@ -1,7 +1,7 @@
 /// @description Switch to return
-if instance_exists(Player) && Player.ultra_got[106]
+if instance_exists(Player) && Player.altUltra
 {
-	if (Player.bskin == 1)
+	if (Player.ultra_got[106])
 	{
 		var am = 8;
 		var angStep = 180/8;
@@ -15,7 +15,7 @@ if instance_exists(Player) && Player.ultra_got[106]
 			ang += angStep;
 		}
 	}
-	else if (Player.bskin == 2)
+	else if (Player.ultra_got[107])
 	{
 		snd_play(sndIDPDNadeExplo,0.1,true);
 		var d = point_direction(creator.x,creator.y,touchpointX,touchpointY);

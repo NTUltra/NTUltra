@@ -12,8 +12,9 @@ if other.team != team and other.my_health > 0 && speed > 3
 	}
 	with instance_create(x,y,BulletHit)
 		sprite_index=sprHorrorHitD;
-
-	//scrRecycleGland(1);
+		
+	if choose(false,false,true)
+	scrRecycleGland(0.5);
 }
 
 

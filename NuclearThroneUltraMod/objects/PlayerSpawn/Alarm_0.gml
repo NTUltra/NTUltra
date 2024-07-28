@@ -29,6 +29,7 @@ with Player//Data to keep
 			scrForcePosition60fps();
 		}
 	}
+	instance_create(x,y,WallBreak);
 	canCrownOfProtection = other.canCrownOfProtection;
 	if scrIsCrown(20)//Crown of protection re-apply
 	{

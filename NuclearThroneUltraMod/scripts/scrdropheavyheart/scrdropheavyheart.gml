@@ -1,7 +1,7 @@
 ///scrDropHeavyHeart();
 // /@description
 ///@param
-function scrDropHeavyHeart(){
+function scrDropHeavyHeart(newDrop = 0){
 	var daGun = instance_create(x,y,HeavyHeartTurret)
 	with daGun {
 		owner = other.id;
@@ -30,7 +30,7 @@ function scrDropHeavyHeart(){
 		reload=wep_load[wep];
 
 		scrWeaponHold();
-		alarm[0]=clamp(reload*0.5,5,60);
+		alarm[0] = newDrop + clamp(reload*0.5,5,60);
 	}
 	return daGun;
 }

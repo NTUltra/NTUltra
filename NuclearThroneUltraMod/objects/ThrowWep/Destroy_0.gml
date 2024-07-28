@@ -61,7 +61,7 @@ if canHeavyHeart
 	canHeavyHeart = false;
 		with scrDropHeavyHeart()
 		{
-		alarm[0] = 1;	 
+			alarm[0] = 1;	 
 		}
 }
 with instance_create(x,y,WepPickupForOneWepOnly)

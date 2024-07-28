@@ -7,6 +7,8 @@ with instance_create(x,y,HorrorBigBall)
 		sprite_index = sprHorrorBigBallB;
 	else if other.sprite_index == sprBecomeHorrorBigBalC
 		sprite_index = sprHorrorBigBallC;
+	else if other.sprite_index == sprBecomeHorrorBigBalD
+		sprite_index = sprHorrorBigBallD;
 	team = other.team;
 	//Max is about 20
 	myPower = other.myPower;

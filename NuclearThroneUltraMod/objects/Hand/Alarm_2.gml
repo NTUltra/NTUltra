@@ -63,6 +63,14 @@ if target != noone && instance_exists(target)
 			}
 			ds_list_destroy(walls);
 			scrForcePosition60fps();
+			if !collision_point(x,y,Floor,false,false)
+			{
+				with other
+				{
+					target = noone;
+				}
+				speed *= 0.5;
+			}
 		}
 		else
 		{

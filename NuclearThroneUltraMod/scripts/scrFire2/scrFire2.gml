@@ -1294,7 +1294,7 @@ function scrFire2(hasTailNow) {
 		rate=10//for extra speed more bullets per step
 		Direction=aimDirection;
 		creator = other.id
-		ammo = 38
+		ammo = 32
 		totalammo = ammo;
 		time = 1
 		team = other.team
@@ -7634,6 +7634,12 @@ function scrFire2(hasTailNow) {
 	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
+	
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,3);
+		motion_add(aimDirection + 180,1)
+	}
 
 	break;
 	
@@ -16268,7 +16274,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),FrostShank)
 	{
-		dmg = 8;
+		dmg = 10;
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
@@ -16295,7 +16301,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*10,aimDirection),FrostShank)
 	{
 		sprite_index = sprGoldFrostShank;
-		dmg = 8;
+		dmg = 10;
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
