@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrRaceToPortraitIndex",
   "isCompatibility":false,
   "isDnD":false,

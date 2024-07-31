@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSpawnSurvivalWaveReward",
   "isCompatibility":false,
   "isDnD":false,

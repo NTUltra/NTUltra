@@ -1,5 +1,5 @@
 event_inherited();
-hitShrink += 0.4;
+hitShrink += 0.42;
 dmg -= 4
 acc += 4;
 maxSpeed += 4;

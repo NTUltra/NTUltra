@@ -1,5 +1,5 @@
 /// @description DESTROY EVERYTHING
-if other.team != team
+if other.team != team && (instance_exists(VoidMasterBoss) || instance_exists(VoidMasterBossWin))
 with other
 {
 	if object_index != Player

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"TopDecals",
   "isCompatibility":false,
   "isDnD":false,

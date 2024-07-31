@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrWeekTimeLeft",
   "isCompatibility":false,
   "isDnD":false,

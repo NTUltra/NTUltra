@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLoadData",
   "isCompatibility":false,
   "isDnD":false,

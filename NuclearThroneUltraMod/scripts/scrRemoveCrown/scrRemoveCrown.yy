@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrRemoveCrown",
   "isCompatibility":false,
   "isDnD":false,

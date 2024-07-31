@@ -2548,7 +2548,7 @@ function scrPowers(raceOverwrite = -1) {
 							alarm[3] = 1;//Destroy projectiles
 						}
 					}
-					if other.ultra_got[106] && altUltra
+					if other.ultra_got[106] && other.altUltra
 					{
 						alarm[4] = 1;
 					}

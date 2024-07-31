@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSleepyPopo",
   "isCompatibility":false,
   "isDnD":false,

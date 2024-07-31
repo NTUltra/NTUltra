@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"romConnect",
   "creationCodeFile":"",
   "inheritCode":false,

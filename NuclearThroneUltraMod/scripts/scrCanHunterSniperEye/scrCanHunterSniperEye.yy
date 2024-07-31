@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCanHunterSniperEye",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ShotgunShouldersType",
   "isCompatibility":false,
   "isDnD":false,

@@ -20,15 +20,21 @@ if KeyCont.key_pick[other.p] = 1 && !used
 				snd_play(snd_thrn);
 			if area == 114
 			{
-				area = 5;
+				if area != 100
+				{
+					area = 5;
+					subarea = 2;
+				}
 				lastarea = 5;
 				lastsubarea = 2;
-				subarea = 2;
 			}
 			else
 			{
-				area = 114;
-				subarea = 1;
+				if area != 100
+				{
+					area = 114;
+					subarea = 1;
+				}
 				lastarea = 114;
 				lastsubarea = 1;
 				/*
@@ -42,6 +48,9 @@ if KeyCont.key_pick[other.p] = 1 && !used
 		{
 			type = 1;
 			pullstrength = 3;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
 			with Player
 			{
 				lockout = true;

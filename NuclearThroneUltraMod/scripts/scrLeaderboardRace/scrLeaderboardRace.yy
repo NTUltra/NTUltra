@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLeaderboardRace",
   "isCompatibility":false,
   "isDnD":false,

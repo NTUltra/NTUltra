@@ -44,7 +44,7 @@ with Player
 					rate += irandom_range(-4,1);
 					alarm[0] = rate;
 					amount += 2;
-					dmg += 1;
+					dmg += 2;
 				}
 			}
 		}

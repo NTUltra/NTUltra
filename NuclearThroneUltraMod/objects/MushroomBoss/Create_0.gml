@@ -1,0 +1,38 @@
+raddrop = 2
+maxhealth = 4
+mySize = 1
+event_inherited()
+meleedamage = 0
+
+spr_idle_earth = sprBigMushroomEarthIdle;
+spr_walk_earth = sprBigMushroomEarthIdle;
+spr_hurt_earth = sprBigMushroomEarthHurt;
+spr_dead_earth = sprBigMushroomEarthDead;
+spr_fire_earth = sprBigMushroomEarthAttack;
+spr_to_toxic = sprBigMushroomShiftToToxic;
+spr_grow = sprBigMushroomGrow;
+
+spr_idle_toxic = sprBigMushroomToxicIdle;
+spr_walk_toxic = sprBigMushroomToxicIdle;
+spr_hurt_toxic = sprBigMushroomToxicHurt;
+spr_dead_toxic = sprBigMushroomToxicDead;
+spr_fire_toxic = sprBigMushroomToxicAttack;
+spr_to_earth = sprBigMushroomShiftToEarth;
+spr_shrink = sprBigMushroomShrink;
+
+spr_idle = spr_idle_earth;
+spr_walk = spr_walk_earth;
+spr_hurt = spr_hurt_earth;
+spr_dead = spr_dead_earth;
+spr_fire = spr_fire_earth;
+
+snd_hurt = sndHitPlant
+snd_dead = sndFrogExplode
+
+//behavior
+walk = 0
+gunangle = random(360)
+alarm[1] = 30+random(90)
+wkick = 0
+actTime = 15;
+maxSpeed = 0;

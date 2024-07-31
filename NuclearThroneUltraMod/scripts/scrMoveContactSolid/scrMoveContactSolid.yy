@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrMoveContactSolid",
   "isCompatibility":false,
   "isDnD":false,

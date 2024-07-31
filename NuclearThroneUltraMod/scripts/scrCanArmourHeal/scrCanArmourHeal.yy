@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCanArmourHeal",
   "isCompatibility":false,
   "isDnD":false,

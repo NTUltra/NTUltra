@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasDirector",
   "isCompatibility":false,
   "isDnD":false,

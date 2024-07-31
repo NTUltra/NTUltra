@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrItteratePotentialRaceGamemodeLeaderboard",
   "isCompatibility":false,
   "isDnD":false,

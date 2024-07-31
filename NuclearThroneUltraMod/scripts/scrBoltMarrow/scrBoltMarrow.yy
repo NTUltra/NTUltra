@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrBoltMarrow",
   "isCompatibility":false,
   "isDnD":false,

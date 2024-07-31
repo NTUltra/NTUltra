@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"RecycleGlandType",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPopEnemies1vs1",
   "isCompatibility":false,
   "isDnD":false,

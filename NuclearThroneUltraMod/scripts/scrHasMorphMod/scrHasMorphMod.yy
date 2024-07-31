@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasMorphMod",
   "isCompatibility":false,
   "isDnD":false,

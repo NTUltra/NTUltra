@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDoesntHaveReloadMutation",
   "isCompatibility":false,
   "isDnD":false,

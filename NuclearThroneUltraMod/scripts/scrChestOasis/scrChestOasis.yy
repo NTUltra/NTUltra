@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrChestOasis",
   "isCompatibility":false,
   "isDnD":false,

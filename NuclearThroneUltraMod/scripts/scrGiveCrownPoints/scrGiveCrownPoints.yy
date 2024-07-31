@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGiveCrownPoints",
   "isCompatibility":false,
   "isDnD":false,

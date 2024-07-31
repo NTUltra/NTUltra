@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"EnemyHealthAdjustments",
   "isCompatibility":false,
   "isDnD":false,

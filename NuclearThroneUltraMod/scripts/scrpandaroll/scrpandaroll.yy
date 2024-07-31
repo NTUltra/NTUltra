@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPandaRoll",
   "isCompatibility":false,
   "isDnD":false,

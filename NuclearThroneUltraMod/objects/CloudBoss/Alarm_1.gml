@@ -5,7 +5,7 @@ if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dis = point_distance(x,y,target.x,target.y);
 		gunangle = point_direction(x,y,target.x,target.y);
-		motion_add(gunangle,acc * 0.75);
+		motion_add(gunangle,acc * 2);
         if (dis < 64) {
             motion_add(gunangle,maxSpeed);
 			alarm[1] = actTime;

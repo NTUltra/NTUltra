@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCheckOneGold",
   "isCompatibility":false,
   "isDnD":false,

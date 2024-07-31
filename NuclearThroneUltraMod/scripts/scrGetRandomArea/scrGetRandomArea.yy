@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGetRandomArea",
   "isCompatibility":false,
   "isDnD":false,

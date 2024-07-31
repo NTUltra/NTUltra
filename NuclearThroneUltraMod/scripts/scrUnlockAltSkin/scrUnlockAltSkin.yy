@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrUnlockAltSkin",
   "isCompatibility":false,
   "isDnD":false,

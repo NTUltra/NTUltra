@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"StartHogInvestment",
   "isCompatibility":false,
   "isDnD":false,

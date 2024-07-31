@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasEyesMutations",
   "isCompatibility":false,
   "isDnD":false,

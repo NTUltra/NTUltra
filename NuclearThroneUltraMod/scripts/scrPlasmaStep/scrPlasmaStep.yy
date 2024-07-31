@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPlasmaStep",
   "isCompatibility":false,
   "isDnD":false,

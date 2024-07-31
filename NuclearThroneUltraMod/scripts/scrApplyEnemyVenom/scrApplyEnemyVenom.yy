@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrApplyEnemyVenom",
   "isCompatibility":false,
   "isDnD":false,

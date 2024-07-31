@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrIsWeaponValidForUnlocks",
   "isCompatibility":false,
   "isDnD":false,

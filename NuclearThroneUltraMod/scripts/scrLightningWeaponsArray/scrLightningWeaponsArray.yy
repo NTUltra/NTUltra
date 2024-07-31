@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLightningWeaponsArray",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrRedirectFx",
   "isCompatibility":false,
   "isDnD":false,

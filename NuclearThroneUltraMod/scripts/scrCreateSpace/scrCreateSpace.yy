@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateSpace",
   "isCompatibility":false,
   "isDnD":false,

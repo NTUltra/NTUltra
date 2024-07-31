@@ -25,9 +25,9 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,tar
 	alarm[1]=walk;
 
 	if target.x < x
-		right = -1
+		image_xscale = -1
 	else if target.x > x
-		right = 1
+		image_xscale = 1
 }
 else if random(4) < 3
 {
@@ -37,9 +37,9 @@ motion_add(random(360),0.4);
 walk = 4+random(2)
 alarm[1] = walk+2
 if hspeed > 0
-right = 1
+image_xscale = 1
 else if hspeed < 0
-right = -1
+image_xscale = -1
 }
 else if random(4) < 3
 {
@@ -50,9 +50,9 @@ alarm[1] = walk;
 else{
 alarm[1]=5+random(10);
 if hspeed > 0
-right = 1
+image_xscale = 1
 else if hspeed < 0
-right = -1
+image_xscale = -1
 }
 }
 else if random(8) < 2
@@ -63,15 +63,15 @@ else if random(8) < 2
 walk = 3+random(3)
 alarm[1] = walk+4+random(40);
 if hspeed > 0
-right = 1
+image_xscale = 1
 else if hspeed < 0
-right = -1
+image_xscale = -1
 }
 else{
 alarm[1]=30+random(60);
 if hspeed > 0
-right = 1
+image_xscale = 1
 else if hspeed < 0
-right = -1
+image_xscale = -1
 }
 

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCanComboGamemode",
   "isCompatibility":false,
   "isDnD":false,

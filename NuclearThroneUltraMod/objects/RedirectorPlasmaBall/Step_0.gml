@@ -12,6 +12,8 @@ if instance_exists(Player){
 		with instance_create(x,y,PlasmaImpact)
 		{
 			sprite_index = sprRedirectorPlasmaImpact;
+			direction = other.direction;
+			speed += 2;
 			scrCopyWeaponMod(other);
 		}
 		scrRedirectFx();

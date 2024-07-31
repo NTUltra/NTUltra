@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrBlankArmour",
   "isCompatibility":false,
   "isDnD":false,

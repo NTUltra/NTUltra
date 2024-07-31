@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDecideInvader",
   "isCompatibility":false,
   "isDnD":false,

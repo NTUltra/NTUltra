@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawRoute",
   "isCompatibility":false,
   "isDnD":false,

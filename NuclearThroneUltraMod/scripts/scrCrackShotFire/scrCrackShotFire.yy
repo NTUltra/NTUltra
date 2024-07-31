@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCrackShotFire",
   "isCompatibility":false,
   "isDnD":false,

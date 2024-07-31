@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDoctorThroneButt",
   "isCompatibility":false,
   "isDnD":false,

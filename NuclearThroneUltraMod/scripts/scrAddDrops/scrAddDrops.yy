@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAddDrops",
   "isCompatibility":false,
   "isDnD":false,

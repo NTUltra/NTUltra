@@ -6,8 +6,12 @@ if loops > 0
 {
 	maxhealth = 5;
 }
+else
+{
+	raddrop = 0;	
+}
 event_inherited()
-droprate = 4;
+droprate = 1;
 meleedamage = 3
 
 spr_idle = sprGraveyardSkeletonIdle

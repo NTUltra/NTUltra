@@ -7,9 +7,11 @@ raddrop = 5
 maxhealth = 1
 if loops > 0
 	maxhealth = 3;
+else
+	raddrop = 0;
 EnemyHealthAdjustments();
 meleedamage = 3
-droprate = 3;
+droprate = 1;
 
 spr_idle = sprInvertedGraveyardSkeletonIdle
 spr_walk = sprInvertedGraveyardSkeletonWalk

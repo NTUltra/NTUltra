@@ -1,8 +1,4 @@
 /// @description Donezo
-with PlayerDead
-{
-	instance_destroy();	
-}
 with Player
 {
 	visible = true;
@@ -15,7 +11,14 @@ with Player
 		{
 			text = "WELL";
 		}
-		hasSucceeded = 1;
+		if instance_exists(PlayerDead)
+			hasTied = 1;
+		else
+			hasSucceeded = 1;
 		alarm[2] = 5;
 	}
+}
+with PlayerDead
+{
+	instance_destroy();	
 }

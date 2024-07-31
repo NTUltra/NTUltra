@@ -6,7 +6,7 @@ team = 2
 repeat(3)
 instance_create(x,y,Smoke)
 
-dmg = 2;
+dmg = 1.5;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

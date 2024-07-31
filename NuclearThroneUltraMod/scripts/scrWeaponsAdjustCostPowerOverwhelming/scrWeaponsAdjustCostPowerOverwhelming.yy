@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrWeaponsAdjustCostPowerOverwhelming",
   "isCompatibility":false,
   "isDnD":false,

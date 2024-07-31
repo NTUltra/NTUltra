@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPlasmaPush",
   "isCompatibility":false,
   "isDnD":false,

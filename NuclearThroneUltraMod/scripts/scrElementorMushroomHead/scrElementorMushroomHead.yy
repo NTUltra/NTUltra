@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrElementorMushroomHead",
   "isCompatibility":false,
   "isDnD":false,

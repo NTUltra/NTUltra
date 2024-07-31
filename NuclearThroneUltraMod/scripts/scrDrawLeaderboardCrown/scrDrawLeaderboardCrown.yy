@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawLeaderboardCrown",
   "isCompatibility":false,
   "isDnD":false,

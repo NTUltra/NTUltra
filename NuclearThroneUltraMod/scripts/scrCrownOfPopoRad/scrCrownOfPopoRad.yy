@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCrownOfPopoRad",
   "isCompatibility":false,
   "isDnD":false,

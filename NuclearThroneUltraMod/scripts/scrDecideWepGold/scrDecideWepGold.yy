@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDecideWepGold",
   "isCompatibility":false,
   "isDnD":false,

@@ -60,8 +60,16 @@ if Player.area == 138
 	with Floor
 	{
 		if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
-		if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
-		if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+		//if !position_meeting(x,y-16,Floor) instance_create(x,y-16,myWall)
+		//if !position_meeting(x+16,y-16,Floor) instance_create(x+16,y-16,myWall)
+		if !position_meeting(x-16,y-16,Floor) instance_create(x-16,y-16,myWall)
+		if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
+		
+		if !position_meeting(x,y-32,Floor) instance_create(x,y-32,myWall)
+		if !position_meeting(x+16,y-32,Floor) instance_create(x+16,y-32,myWall)
+		if !position_meeting(x-16,y-32,Floor) instance_create(x-16,y-32,myWall)
+		if !position_meeting(x+32,y-32,Floor) instance_create(x+32,y-32,myWall)
+		
 		if !position_meeting(x+32,y-16,Floor) instance_create(x+32,y-16,myWall)
 		if !position_meeting(x+32,y,Floor) instance_create(x+32,y,myWall)
 		if !position_meeting(x+32,y+16,Floor) instance_create(x+32,y+16,myWall)

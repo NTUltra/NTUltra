@@ -14,6 +14,8 @@ if object_index == Devastator
 		with instance_create(xx,yy,PlasmaImpact)
 		{
 			team = other.team;
+			direction = d;
+			speed += 2;
 			scrCopyWeaponMod(other);
 		}
 	}

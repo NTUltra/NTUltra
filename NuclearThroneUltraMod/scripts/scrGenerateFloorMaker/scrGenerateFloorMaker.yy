@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGenerateFloorMaker",
   "isCompatibility":false,
   "isDnD":false,

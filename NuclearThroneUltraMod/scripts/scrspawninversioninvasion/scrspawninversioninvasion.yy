@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSpawnInversionInvasion",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateMissingChest",
   "isCompatibility":false,
   "isDnD":false,

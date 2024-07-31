@@ -93,6 +93,12 @@ function scrAreaFullName(area){
 			case 136://Ultra scrapyard
 				txt = "ULTRA SCRAPYARD"
 			break;
+			case 137://VOID
+				txt = "THE VOID"
+			break;
+			case 138://SKY
+				txt = "IRRATIATED SKIES"
+			break;
 			case 116://Survival Arena
 				txt = "SURVIVAL ARENA"
 			break;
@@ -176,9 +182,6 @@ function scrAreaFullName(area){
 			case 118: //Inverted Palace
 				txt = "THE PALACE";
 				upsideDown = true;
-			break;
-			case 137: //void
-				txt = "THE VOID";
 			break;
 		}
 	}

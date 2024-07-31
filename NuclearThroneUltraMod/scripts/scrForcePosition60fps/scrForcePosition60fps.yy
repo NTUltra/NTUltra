@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrForcePosition60fps",
   "isCompatibility":false,
   "isDnD":false,

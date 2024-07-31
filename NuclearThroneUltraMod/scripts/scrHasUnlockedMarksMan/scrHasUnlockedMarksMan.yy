@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasUnlockedMarksMan",
   "isCompatibility":false,
   "isDnD":false,

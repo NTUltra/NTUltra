@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"isValidGamemodeToUnlock",
   "isCompatibility":false,
   "isDnD":false,

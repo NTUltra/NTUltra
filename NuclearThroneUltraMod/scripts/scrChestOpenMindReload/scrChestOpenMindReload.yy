@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrChestOpenMindReload",
   "isCompatibility":false,
   "isDnD":false,

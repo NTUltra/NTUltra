@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLoseSkill",
   "isCompatibility":false,
   "isDnD":false,

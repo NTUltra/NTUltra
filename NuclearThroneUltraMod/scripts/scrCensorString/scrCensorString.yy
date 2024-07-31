@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCensorString",
   "isCompatibility":false,
   "isDnD":false,

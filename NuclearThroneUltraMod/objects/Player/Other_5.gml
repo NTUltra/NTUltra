@@ -311,12 +311,18 @@ if race == 14//PANDA
 
 if scrIsGamemode(10)//random areas
 {
-	SetSeed();
+	UberCont.areasVisited += 1;
+	if UberCont.useSeed
+	{
+		var a = loops * 14;
+		a += UberCont.areasVisited*1414;
+		random_set_seed(UberCont.seed+a)
+	}
 	area = scrGetRandomArea();
 	if rnglevelloop==18
 	{
-		loops+=1;
-		rnglevelloop=0;
+		loops += 1;
+		rnglevelloop = 0;
 	}
 	rnglevelloop+=1;
 	subarea=choose(1,2,3);

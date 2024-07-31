@@ -8,11 +8,11 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 friction = 0.4;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 //friction=0.4;
-dmg = 6;
+dmg = 7;
 nomscale = 1;
-wallScale = 0.14;
+wallScale = 0.135;//0.14
 grow = 0.04;
-hitShrink = 0.4;
+hitShrink = 0.37;
 destroyScale = 0.4;
 maxSpeed = 8;
 acc = 1;
@@ -20,9 +20,9 @@ if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
-		nomscale += 0.4;
-		wallScale -= 0.04;
-		grow += 0.01;
+		nomscale += 0.38;
+		wallScale -= 0.035;
+		grow += 0.008;
 		destroyScale -= 0.05;
 		if Player.betterlaserbrain > 1
 		{

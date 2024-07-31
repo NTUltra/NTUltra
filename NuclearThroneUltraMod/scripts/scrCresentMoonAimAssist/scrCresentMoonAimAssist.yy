@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCresentMoonAimAssist",
   "isCompatibility":false,
   "isDnD":false,

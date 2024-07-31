@@ -1005,7 +1005,7 @@ function scrWeapons() {
 	wep_load[89] = 23
 	wep_cost[89] = 1
 	wep_sprt[89] = sprDirectorSlugger
-	wep_area[89] = 4
+	wep_area[89] = 3
 	wep_text[89] = "control"
 	wep_swap[89] = sndSwapShotgun
 	wep_rad[89] = 0;
@@ -1172,7 +1172,7 @@ function scrWeapons() {
 	wep_load[104] = 5
 	wep_cost[104] = 2
 	wep_sprt[104] = sprHeavyRevolver
-	wep_area[104] = 8
+	wep_area[104] = 7
 	wep_text[104] = "heavy bullets"
 	wep_swap[104] = sndSwapPistol
 	wep_rad[104] = 0;
@@ -1183,7 +1183,7 @@ function scrWeapons() {
 	wep_load[105] = 4
 	wep_cost[105] = 2
 	wep_sprt[105] = sprHeavyMachineGun
-	wep_area[105] = 9
+	wep_area[105] = 8
 	wep_text[105] = "weight"
 	wep_swap[105] = sndSwapMachinegun
 	wep_rad[105] = 0;
@@ -1191,10 +1191,10 @@ function scrWeapons() {
 	wep_name[106] = "HEAVY ASSAULT RIFLE"
 	wep_type[106] = 1
 	wep_auto[106] = 2
-	wep_load[106] = 10
+	wep_load[106] = 9
 	wep_cost[106] = 6
 	wep_sprt[106] = sprHeavyARifle
-	wep_area[106] = 12
+	wep_area[106] = 11
 	wep_text[106] = "hefty"
 	wep_swap[106] = sndSwapMachinegun
 	wep_rad[106] = 0;
@@ -6421,7 +6421,7 @@ function scrWeapons() {
 	wep_load[572] = 11
 	wep_cost[572] = 14//18
 	wep_sprt[572] = sprTripleHeavyAssaultRifle
-	wep_area[572] = 23
+	wep_area[572] = 22
 	wep_text[572] = "some discount on these bullets"
 	wep_swap[572] = sndSwapMachinegun
 	wep_rad[572] = 0;

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHorrorUltraE",
   "isCompatibility":false,
   "isDnD":false,

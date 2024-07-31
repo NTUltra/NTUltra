@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_nearest_not_one_of_these",
   "isCompatibility":false,
   "isDnD":false,

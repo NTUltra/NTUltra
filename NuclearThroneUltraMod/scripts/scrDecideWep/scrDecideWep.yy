@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDecideWep",
   "isCompatibility":false,
   "isDnD":false,

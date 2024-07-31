@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"getUltraMutation",
   "isCompatibility":false,
   "isDnD":false,

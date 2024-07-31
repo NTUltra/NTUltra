@@ -8,4 +8,4 @@ hitShrink += 0.5;
 acc += 5;
 maxSpeed += 4;
 ptime = 3;
-dmg -= 1;
+dmg -= 2;

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrIgniteToxic",
   "isCompatibility":false,
   "isDnD":false,

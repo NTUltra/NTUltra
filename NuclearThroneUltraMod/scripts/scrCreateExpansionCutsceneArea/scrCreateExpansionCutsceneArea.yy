@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateExpansionCutsceneArea",
   "isCompatibility":false,
   "isDnD":false,

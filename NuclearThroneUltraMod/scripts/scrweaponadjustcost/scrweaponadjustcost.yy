@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrWeaponAdjustCost",
   "isCompatibility":false,
   "isDnD":false,

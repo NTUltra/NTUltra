@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawUltraMenu",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPopUpStayInScreenY",
   "isCompatibility":false,
   "isDnD":false,

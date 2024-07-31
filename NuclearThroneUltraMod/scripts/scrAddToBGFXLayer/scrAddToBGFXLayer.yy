@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAddToBGFXLayer",
   "isCompatibility":false,
   "isDnD":false,

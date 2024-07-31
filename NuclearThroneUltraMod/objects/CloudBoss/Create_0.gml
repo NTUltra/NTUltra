@@ -28,7 +28,7 @@ wkick = 0
 actTime = 12;
 
 acc = 1.2;
-maxSpeed = 3.7;
+maxSpeed = 2;
 time = 0;
 instance_create(x,y,DramaCamera);
 scrAddDrops(1);

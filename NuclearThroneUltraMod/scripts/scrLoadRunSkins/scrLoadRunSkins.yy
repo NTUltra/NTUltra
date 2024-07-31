@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLoadRunSkins",
   "isCompatibility":false,
   "isDnD":false,

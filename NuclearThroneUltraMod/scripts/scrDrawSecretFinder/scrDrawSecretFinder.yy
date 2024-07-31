@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawSecretFinder",
   "isCompatibility":false,
   "isDnD":false,

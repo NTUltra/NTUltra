@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrScarierFace",
   "isCompatibility":false,
   "isDnD":false,

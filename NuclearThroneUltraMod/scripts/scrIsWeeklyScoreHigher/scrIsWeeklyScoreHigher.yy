@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrIsWeeklyScoreHigher",
   "isCompatibility":false,
   "isDnD":false,

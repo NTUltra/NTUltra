@@ -10,6 +10,6 @@ if radius > maxRange
 	if width >= maxWidth
 	{
 		alarm[0] = 0;
-		alarm[1] = 10;	
+		alarm[1] = 15;	
 	}
 }

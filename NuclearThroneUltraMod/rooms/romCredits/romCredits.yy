@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"romCredits",
   "creationCodeFile":"",
   "inheritCode":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"collision_line_width",
   "isCompatibility":false,
   "isDnD":false,

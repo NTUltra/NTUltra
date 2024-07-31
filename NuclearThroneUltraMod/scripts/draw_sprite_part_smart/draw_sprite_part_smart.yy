@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"draw_sprite_part_smart",
   "isCompatibility":false,
   "isDnD":false,

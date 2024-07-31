@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLoadEncrypted",
   "isCompatibility":false,
   "isDnD":false,

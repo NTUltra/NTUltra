@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateDataRef",
   "isCompatibility":false,
   "isDnD":false,

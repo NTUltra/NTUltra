@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrReplaceAllColourCodes",
   "isCompatibility":false,
   "isDnD":false,

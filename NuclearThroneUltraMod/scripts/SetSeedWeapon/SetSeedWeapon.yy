@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SetSeedWeapon",
   "isCompatibility":false,
   "isDnD":false,

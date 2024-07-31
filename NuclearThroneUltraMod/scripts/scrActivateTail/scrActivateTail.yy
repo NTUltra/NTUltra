@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrActivateTail",
   "isCompatibility":false,
   "isDnD":false,

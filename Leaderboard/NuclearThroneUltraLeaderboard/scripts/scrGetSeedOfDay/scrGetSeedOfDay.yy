@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGetSeedOfDay",
   "isCompatibility":false,
   "isDnD":false,

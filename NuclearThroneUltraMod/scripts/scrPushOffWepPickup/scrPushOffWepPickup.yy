@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPushOffWepPickup",
   "isCompatibility":false,
   "isDnD":false,

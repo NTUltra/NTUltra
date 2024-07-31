@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrFindCorpse",
   "isCompatibility":false,
   "isDnD":false,

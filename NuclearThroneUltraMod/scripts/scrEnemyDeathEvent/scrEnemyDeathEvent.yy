@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrEnemyDeathEvent",
   "isCompatibility":false,
   "isDnD":false,

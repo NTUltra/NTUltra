@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrNextLevelInverted",
   "isCompatibility":false,
   "isDnD":false,

@@ -2337,7 +2337,7 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndSlugger)
 
 	with instance_create(x,y,DirectorSlug)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,11)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,10)
 	image_angle = direction
 	team = other.team}
 

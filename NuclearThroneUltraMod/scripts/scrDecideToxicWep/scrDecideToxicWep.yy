@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDecideToxicWep",
   "isCompatibility":false,
   "isDnD":false,

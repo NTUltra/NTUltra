@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrStartAGamemode",
   "isCompatibility":false,
   "isDnD":false,

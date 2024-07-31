@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrActivateAllOutOfRange",
   "isCompatibility":false,
   "isDnD":false,

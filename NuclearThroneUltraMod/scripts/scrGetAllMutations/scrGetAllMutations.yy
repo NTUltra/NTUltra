@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGetAllMutations",
   "isCompatibility":false,
   "isDnD":false,

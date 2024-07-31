@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrChooseGamemodesWeekly",
   "isCompatibility":false,
   "isDnD":false,

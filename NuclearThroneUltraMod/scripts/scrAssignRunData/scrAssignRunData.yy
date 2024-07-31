@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAssignRunData",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAddArea",
   "isCompatibility":false,
   "isDnD":false,

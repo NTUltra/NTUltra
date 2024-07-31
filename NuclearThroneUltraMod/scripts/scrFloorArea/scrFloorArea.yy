@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrFloorArea",
   "isCompatibility":false,
   "isDnD":false,

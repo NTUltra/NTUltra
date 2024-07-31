@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrWalkAwayFromNade",
   "isCompatibility":false,
   "isDnD":false,

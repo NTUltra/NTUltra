@@ -67,4 +67,9 @@ else
 	snd_play(sndVlambeer)
 	instance_create(x,y,MenuGen)
 	instance_create(64,96,Menu)
+	with UberCont
+	{
+		runRace = [];
+		runScore = [];
+	}
 }

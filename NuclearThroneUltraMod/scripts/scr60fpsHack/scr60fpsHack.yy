@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr60fpsHack",
   "isCompatibility":false,
   "isDnD":false,

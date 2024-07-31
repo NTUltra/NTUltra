@@ -15,3 +15,4 @@ alarm[3] = 30;//Stay alive
 maxhealth = 50;
 my_health = maxhealth;
 name = "BRING SHEEP HOME?";
+used = false;

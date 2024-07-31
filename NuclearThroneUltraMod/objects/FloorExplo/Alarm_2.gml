@@ -27,37 +27,37 @@ if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/ || instance_exists(Wall
 	}
 	alarm[3] = 0;
 }
+
 if !place_meeting(x-16,y,Floor)
-instance_create(x-16,y,wantWall)
-
-
+	instance_create(x-16,y,wantWall)
 if !place_meeting(x+16,y,Floor)
-instance_create(x+16,y,wantWall)
-
-
-if !place_meeting(x,y+16,Floor)
-instance_create(x,y+16,wantWall)
-
+	instance_create(x+16,y,wantWall)
 
 if !place_meeting(x,y-16,Floor)
-instance_create(x,y-16,wantWall)
-
-
+	instance_create(x,y-16,wantWall)
 if !place_meeting(x-16,y+16,Floor)
-instance_create(x-16,y+16,wantWall)
-
-
+	instance_create(x-16,y+16,wantWall)
 if !place_meeting(x+16,y-16,Floor)
-instance_create(x+16,y-16,wantWall)
-
-
+	instance_create(x+16,y-16,wantWall)
 if !place_meeting(x+16,y+16,Floor)
-instance_create(x+16,y+16,wantWall)
-
-
+	instance_create(x+16,y+16,wantWall)
 if !place_meeting(x-16,y-16,Floor)
-instance_create(x-16,y-16,wantWall)
+	instance_create(x-16,y-16,wantWall)
 
+//if mask_index != mskFloorExploCloud
+//{
+	if !place_meeting(x,y+16,Floor)
+		instance_create(x,y+16,wantWall)
+/*}
+else
+{
+	if !place_meeting(x,y+32,Floor)
+		instance_create(x,y+32,wantWall)
+	if !place_meeting(x+16,y+32,Floor)
+		instance_create(x,y+32,wantWall)
+	if !place_meeting(x-16,y+32,Floor)
+		instance_create(x,y+32,wantWall)
+}*/
 if wantWall != WallHitMe
 {
 	if !place_meeting(x-32,y,Floor) && !place_meeting(x-32,y,wantWall)

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasFoundAllSecretUltrasFor",
   "isCompatibility":false,
   "isDnD":false,

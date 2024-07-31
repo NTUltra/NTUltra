@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCheckStartingWepUnlocked",
   "isCompatibility":false,
   "isDnD":false,

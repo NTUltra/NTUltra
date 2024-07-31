@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"collision_line_point",
   "isCompatibility":false,
   "isDnD":false,

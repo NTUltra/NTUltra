@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrEyesTelekinesisThroughWalls",
   "isCompatibility":false,
   "isDnD":false,

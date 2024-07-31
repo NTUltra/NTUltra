@@ -2,7 +2,9 @@ raddrop = 7
 maxhealth = 10
 meleedamage = 0
 mySize = 1
-
+loops = GetPlayerLoops();
+if loops < 1
+	raddrop = 2;
 event_inherited()
 
 spr_idle = sprGraveyardSniper
@@ -19,7 +21,6 @@ gunangle = random(360)
 alarm[1] = 60+random(90)
 wkick = 0
 proj = EnemyBullet4;
-loops = GetPlayerLoops();
 tellTime = 7
 actTime = 25;
 maxAmmo = 4;

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrReturnMenu",
   "isCompatibility":false,
   "isDnD":false,

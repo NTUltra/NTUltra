@@ -5,9 +5,9 @@
 // Inherit the parent event
 event_inherited();
 if GetPlayerLoops() > 0
-	scrDrop(14,0);
+	scrDrop(16,0);
 else
-	scrDrop(18,0);
+	scrDrop(20,0);
 repeat(3)
 {
 	instance_create(x+random(8)-4,y+random(8)-4,Curse)	

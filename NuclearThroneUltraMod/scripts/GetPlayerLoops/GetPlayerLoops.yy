@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetPlayerLoops",
   "isCompatibility":false,
   "isDnD":false,

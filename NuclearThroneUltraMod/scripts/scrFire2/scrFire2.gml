@@ -12268,7 +12268,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),PlasmaFlail)
 	{
-		dmg = 15;
+		dmg = 13;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3

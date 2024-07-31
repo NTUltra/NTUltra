@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrMoodSwingIcicle",
   "isCompatibility":false,
   "isDnD":false,

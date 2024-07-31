@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrBoltUltraMod",
   "isCompatibility":false,
   "isDnD":false,

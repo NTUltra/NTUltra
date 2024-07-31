@@ -19,7 +19,10 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 27;
+actTime = 26;
+loops = GetPlayerLoops();
+if loops < 1
+	actTime = 29;
 maxRange = 350;
 minRange = 96;
 originRange = 100;

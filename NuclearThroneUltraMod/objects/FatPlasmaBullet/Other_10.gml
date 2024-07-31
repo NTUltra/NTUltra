@@ -1,3 +1,8 @@
 /// @description Plasma
 snd_play(sndPlasmaHit);
-instance_create(x,y,PlasmaImpact);
+with instance_create(x,y,PlasmaImpact)
+{
+	direction = other.direction;
+	speed += 2;
+	scrCopyWeaponMod(other);
+}

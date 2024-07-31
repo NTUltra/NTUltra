@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrHasAnUltraThatsCompatibleWithAlt",
   "isCompatibility":false,
   "isDnD":false,

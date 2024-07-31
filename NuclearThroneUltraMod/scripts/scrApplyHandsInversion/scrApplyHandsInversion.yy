@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrApplyHandsInversion",
   "isCompatibility":false,
   "isDnD":false,

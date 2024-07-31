@@ -469,7 +469,7 @@ function scrPopEnemies() {
 		}
     }
 	//CLOUDLAND
-    if spawnarea = 138 && (instance_number(enemy) < 2 || random(3) < 2) {
+    if spawnarea = 138 && (instance_number(enemy) < 2 || random(10) < 6) {
 		if loops > 0 {
 			if random(35) < 1
 				instance_create(x + 16, y + 16, GraveyardSniper)
@@ -517,7 +517,7 @@ function scrPopEnemies() {
 				instance_create(x + 16, y + 16, Spider)
 				instance_create(x + 16, y + 16, choose(Spider,SquareBat,Spider,Spider,FireBat));
 			}
-	        else
+	        else if instance_number(enemy) < 1 || random(10) < 8
 	            instance_create(x + 16, y + 16, choose(Spider, Spider, Spider, Spider, crystal,
 				Spider, Spider, Spider, Spider, crystal,SquareBat))
 		}
@@ -661,9 +661,9 @@ function scrPopEnemies() {
 	            instance_create(x + 16, y + 16, choose(Freak, Freak, Freak, Freak, Turret, RhinoFreak));
 
 	        } else {
-	            var ran = random(100);
+	            var ran = random(110);
 	            if ran > 80 {
-	                repeat(5)//Used to be 10
+	                repeat(choose(4,5))//Used to be 10
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, Freak, ExploFreak, ExploFreak, RhinoFreak, Freak, Freak, Freak))
 	            }
 	            else if ran > 70 {

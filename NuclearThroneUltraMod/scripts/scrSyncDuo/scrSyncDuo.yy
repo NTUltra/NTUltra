@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSyncDuo",
   "isCompatibility":false,
   "isDnD":false,

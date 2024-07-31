@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrEnableBigScreen",
   "isCompatibility":false,
   "isDnD":false,

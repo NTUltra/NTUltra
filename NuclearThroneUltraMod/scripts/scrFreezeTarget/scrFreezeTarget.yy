@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrFreezeTarget",
   "isCompatibility":false,
   "isDnD":false,

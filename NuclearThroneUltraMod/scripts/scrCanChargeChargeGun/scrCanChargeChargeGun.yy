@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCanChargeChargeGun",
   "isCompatibility":false,
   "isDnD":false,

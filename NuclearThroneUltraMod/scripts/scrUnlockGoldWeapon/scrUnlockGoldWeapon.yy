@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrUnlockGoldWeapon",
   "isCompatibility":false,
   "isDnD":false,

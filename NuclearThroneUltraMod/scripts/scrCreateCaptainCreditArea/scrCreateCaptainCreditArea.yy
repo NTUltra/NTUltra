@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateCaptainCreditArea",
   "isCompatibility":false,
   "isDnD":false,

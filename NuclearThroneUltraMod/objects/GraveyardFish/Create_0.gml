@@ -3,6 +3,8 @@ maxhealth = 250;
 loops = GetPlayerLoops()
 if loops > 0
 	maxhealth = 350;
+else
+	raddrop = 20;
 mySize = 3
 scrBossHealthBuff();
 event_inherited()

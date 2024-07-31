@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCheckLoopAll",
   "isCompatibility":false,
   "isDnD":false,

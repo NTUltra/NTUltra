@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrExitCrownVault",
   "isCompatibility":false,
   "isDnD":false,

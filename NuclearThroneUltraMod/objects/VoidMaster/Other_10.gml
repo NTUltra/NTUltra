@@ -46,6 +46,14 @@ else if hasSucceeded > 0
 		{
 			text = "YOU BEAT ME";
 		}
+		if instance_exists(PlayerInFakeDeath)
+		{
+			hasTied = 1;
+			with PlayerInFakeDeath
+			{
+				instance_destroy();	
+			}
+		}
 	}
 	else if hasSucceeded == 2
 	{
@@ -54,6 +62,14 @@ else if hasSucceeded > 0
 		{
 			text = "YOU'VE EARNED MY RESPECT";
 		}
+		if instance_exists(PlayerInFakeDeath)
+		{
+			hasTied = 1;
+			with PlayerInFakeDeath
+			{
+				instance_destroy();	
+			}
+		}
 	}
 	else if hasSucceeded == 3
 	{
@@ -61,6 +77,14 @@ else if hasSucceeded > 0
 		with TextHandler
 		{
 			text = "YOU ARE WORTHY OF THESE ADDITIONAL CHALLENGES";
+		}
+		if instance_exists(PlayerInFakeDeath)
+		{
+			hasTied = 1;
+			with PlayerInFakeDeath
+			{
+				instance_destroy();	
+			}
 		}
 	}
 	else

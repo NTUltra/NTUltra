@@ -8,7 +8,7 @@ if (place_meeting(x,y,FloorExplo))
 }
 scrInitDrops(1);
 canCount = false;
-var area;
+area = 0;
 canSpawnSwarm = true
 if (!instance_exists(WallRemover))
 {
@@ -17,7 +17,9 @@ if (!instance_exists(WallRemover))
 
 	if instance_exists(Player) 
 	{
-		area = Player.area
+		area = Player.area;
+		//if area == 138
+		//	mask_index = mskFloorExploCloud;
 		event_perform(ev_alarm,2);
 		event_perform(ev_alarm,0);
 
@@ -25,13 +27,17 @@ if (!instance_exists(WallRemover))
 	}
 	else if instance_exists(PlayerSpawn)
 	{
-		area = Player.area
+		area = PlayerSpawn.area;
+		//if area == 138
+		//	mask_index = mskFloorExploCloud;
 		event_perform(ev_alarm,2);
 		event_perform(ev_alarm,0);
 	}
 	else 
 	{
-		area = BackCont.area
+		area = BackCont.area;
+		//if area == 138
+		//	mask_index = mskFloorExploCloud;
 		event_perform(ev_alarm,2);
 		event_perform(ev_alarm,0);
 	}
@@ -72,11 +78,8 @@ snd_play(UberCont.snd_wallbreak,0.05,true,true,1,false,false,0.6)
 
 styleb = 0
 
-if(instance_exists(Player))
-{if Player.area=7{
+if area == 7
 	alarm[1] = irandom(90);
-}
-}
 depth = 8;
 isArenaFloor = true;
 event_user(0);

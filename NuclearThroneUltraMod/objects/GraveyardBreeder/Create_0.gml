@@ -1,7 +1,9 @@
-raddrop = 12
+raddrop = 3
 maxhealth = 28
 mySize = 2
-
+loops = GetPlayerLoops();
+if loops > 0
+	raddrop = 12;
 
 
 event_inherited()
@@ -26,7 +28,6 @@ ammo = maxAmmo;
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
-loops = GetPlayerLoops();
 if loops > 0
 {
 	vomitSpeed = 0.6;

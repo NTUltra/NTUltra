@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPopPropsAlt",
   "isCompatibility":false,
   "isDnD":false,

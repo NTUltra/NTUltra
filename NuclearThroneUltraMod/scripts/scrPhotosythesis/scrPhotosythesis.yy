@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPhotosythesis",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSheepHit",
   "isCompatibility":false,
   "isDnD":false,

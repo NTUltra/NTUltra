@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrFlexibleElbowReload",
   "isCompatibility":false,
   "isDnD":false,

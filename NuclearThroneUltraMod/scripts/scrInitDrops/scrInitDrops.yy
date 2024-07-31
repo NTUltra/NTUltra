@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrInitDrops",
   "isCompatibility":false,
   "isDnD":false,

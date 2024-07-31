@@ -24,4 +24,8 @@ if loops > 0
 	actTime = 14;
 	pspeed = 12;
 }
+else
+{
+	raddrop = 3;	
+}
 alarm[3] = 0;

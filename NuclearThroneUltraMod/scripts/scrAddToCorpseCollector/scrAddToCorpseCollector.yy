@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAddToCorpseCollector",
   "isCompatibility":false,
   "isDnD":false,

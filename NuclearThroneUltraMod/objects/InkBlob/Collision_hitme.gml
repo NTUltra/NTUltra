@@ -17,13 +17,14 @@ if other.team != team and other.my_health > 0
 				image_yscale = 0.8;
 			}
 		}
+		if UberCont.normalGameSpeed == 60
+		{
+			speed *= 0.5;
+		}
+		else
+		{
+			speed *= 0.25;
+		}
 	}
-	if UberCont.normalGameSpeed == 60
-	{
-		other.speed *= 0.5;
-	}
-	else
-	{
-		other.speed *= 0.25;
-	}
+	
 }

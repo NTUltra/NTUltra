@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrRewindTime",
   "isCompatibility":false,
   "isDnD":false,

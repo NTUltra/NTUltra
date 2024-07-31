@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPlayReloadSound",
   "isCompatibility":false,
   "isDnD":false,

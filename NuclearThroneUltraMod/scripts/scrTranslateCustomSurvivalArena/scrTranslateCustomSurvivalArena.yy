@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrTranslateCustomSurvivalArena",
   "isCompatibility":false,
   "isDnD":false,

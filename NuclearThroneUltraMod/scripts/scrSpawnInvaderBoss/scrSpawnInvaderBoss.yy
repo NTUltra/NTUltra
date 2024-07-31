@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSpawnInvaderBoss",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCheckForAllParents",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawTextColoursExt",
   "isCompatibility":false,
   "isDnD":false,

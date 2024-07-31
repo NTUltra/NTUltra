@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDrawTextBackgrounded",
   "isCompatibility":false,
   "isDnD":false,

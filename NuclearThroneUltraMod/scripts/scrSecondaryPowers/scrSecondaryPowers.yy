@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSecondaryPowers",
   "isCompatibility":false,
   "isDnD":false,

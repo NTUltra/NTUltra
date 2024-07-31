@@ -5,8 +5,8 @@ alarm[0] = 60*/
 
 image_speed = 0.4
 friction = 0.4
-right = choose(1,-1)
-
+image_xscale = choose(1,-1)
+alarm[5] = 1;
 offx = random(2)-1
 offy = random(2)-1
 
@@ -25,5 +25,7 @@ walk = 5
 alarm[1] = 2+random(10)
 alarm[4] = 20;
 alarm[0]=120+random(120);
-alarm[3] = alarm[0] - 12;
+blinkTime += 1;
+alarm[3] = alarm[0] - 40;
 dmg = 7;
+blink = false;

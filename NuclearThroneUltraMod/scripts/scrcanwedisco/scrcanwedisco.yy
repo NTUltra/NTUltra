@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCanWeDisco",
   "isCompatibility":false,
   "isDnD":false,

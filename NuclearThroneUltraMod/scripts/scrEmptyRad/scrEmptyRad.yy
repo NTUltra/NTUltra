@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrEmptyRad",
   "isCompatibility":false,
   "isDnD":false,

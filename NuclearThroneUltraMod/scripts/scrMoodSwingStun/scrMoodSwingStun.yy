@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrMoodSwingStun",
   "isCompatibility":false,
   "isDnD":false,

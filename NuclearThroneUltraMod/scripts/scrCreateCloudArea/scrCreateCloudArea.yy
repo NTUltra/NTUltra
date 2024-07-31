@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCreateCloudArea",
   "isCompatibility":false,
   "isDnD":false,

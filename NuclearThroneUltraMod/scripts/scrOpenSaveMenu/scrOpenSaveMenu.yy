@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrOpenSaveMenu",
   "isCompatibility":false,
   "isDnD":false,

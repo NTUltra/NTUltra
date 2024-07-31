@@ -35,16 +35,12 @@ if (type == network_type_data) {
 			var canParticipateDailyScore = buffer_read(buffer, buffer_bool);
 			var canParticipateDailyGm = false;
 			var dailyDay = 1;
-			debug("CAN I PARTICIPATE? ",canParticipateDailyScore);
 			if buffer_get_size(buffer) > 1
 			{
 				dailyDay = buffer_read(buffer, buffer_u8);
 				canParticipateDailyGm = buffer_read(buffer, buffer_bool);
-				debug("GM! ",canParticipateDailyGm);
 			}
-			debug(dailyDay);
 			if UberCont.isLeaderboardGamemode {
-				debug("WEEKLY");
 				var sendBuffer = buffer_create(3,buffer_fixed,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.STARTWEEKLY);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
@@ -61,15 +57,10 @@ if (type == network_type_data) {
 			}
 			else
 			{
-				debug("DAILY");
-				debug("day: ",dailyDay % 2);
-				debug("gm: ", !scrIsGamemode(27));
 				if (!scrIsGamemode(27) && dailyDay % 2 == 0)
 				{
-					debug("daily gm")
 					if !canParticipateDailyGm
 					{
-						debug("FAIL");
 						//FAIL TO START DAILY GM
 						alarm[0] = min(alarm[0],1);
 						break;

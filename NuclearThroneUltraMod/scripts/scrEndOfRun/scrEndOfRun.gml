@@ -3,6 +3,10 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with Marker
+	{
+		instance_destroy();	
+	}
 	with Cursor
 	{
 		inGameVisibleState = true;
@@ -48,6 +52,7 @@ function scrEndOfRun(){
 		{
 			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");
 		}
+		areasVisited = 0;
 		lastwishused=false;
 		hasLeveledUp = false;
 		usedUltraMutationStart = false;

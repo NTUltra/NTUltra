@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrUpdateScore(theOther, isPerliminary = false){
-	if scrIsGamemode(27) || scrIsGamemode(26) || UberCont.isLeaderboardGamemode
+	if ((scrIsGamemode(27) || scrIsGamemode(26) || UberCont.isLeaderboardGamemode) && !instance_exists(Leaderboard))
 	{
 		if (scrIsGamemode(27) && !instance_exists(StartDaily))
 		{

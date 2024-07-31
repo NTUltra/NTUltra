@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrIsAlsoEnergyType",
   "isCompatibility":false,
   "isDnD":false,

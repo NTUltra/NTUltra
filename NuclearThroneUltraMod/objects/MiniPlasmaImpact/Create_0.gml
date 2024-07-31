@@ -1,9 +1,9 @@
 event_inherited();
-image_speed = 1.2;
+image_speed = 0.5;
 
 BackCont.shake += 1
 team = 2;
-dmg = 0.5;
+dmg = 2;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

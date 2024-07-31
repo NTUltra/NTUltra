@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrAimAssistLaser",
   "isCompatibility":false,
   "isDnD":false,

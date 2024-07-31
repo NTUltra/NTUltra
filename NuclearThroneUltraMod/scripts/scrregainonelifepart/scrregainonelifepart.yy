@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrRegainOneLifePart",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,10 +1,12 @@
 /// @description CATCH SHEEP BRING IT HOME
+if !used
 with Player
 	isOnInteractable = true;
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && !used
 {
 	if other.area != 8 && other.area != 113
 	{
+		used = true;
 		KeyCont.key_pick[Player.p] = 2;
 		snd_play(sndSheep);
 		if other.race == 13

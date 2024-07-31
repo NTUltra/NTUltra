@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGetMaxPossibleHealth",
   "isCompatibility":false,
   "isDnD":false,

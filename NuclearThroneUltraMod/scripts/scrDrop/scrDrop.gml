@@ -222,7 +222,17 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	if Player.loops < 1
 	{
 		if random(mh) > h
+		{
+			//Increase odds of healthdrop
 			need += 0.1;
+			if h < 4
+			{
+				need += 0.05;
+				canHealth *= 1.25;
+				mh *= 1.25;
+				h = max(h-1,min(h,1));
+			}
+		}
 	}
 	else if random(mh) > h
 		need += 0.08;

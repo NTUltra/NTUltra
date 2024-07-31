@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrGetDailyNumber",
   "isCompatibility":false,
   "isDnD":false,

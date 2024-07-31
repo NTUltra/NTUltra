@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ApplyEuphoria",
   "isCompatibility":false,
   "isDnD":false,

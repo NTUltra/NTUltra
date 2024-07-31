@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrDefeatedRequiredBoss",
   "isCompatibility":false,
   "isDnD":false,

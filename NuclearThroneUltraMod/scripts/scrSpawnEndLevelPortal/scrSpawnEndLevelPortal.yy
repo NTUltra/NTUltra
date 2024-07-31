@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrSpawnEndLevelPortal",
   "isCompatibility":false,
   "isDnD":false,

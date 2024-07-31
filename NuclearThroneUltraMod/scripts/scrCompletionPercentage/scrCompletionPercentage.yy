@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCompletionPercentage",
   "isCompatibility":false,
   "isDnD":false,

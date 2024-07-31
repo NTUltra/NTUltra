@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrPlasmaStick",
   "isCompatibility":false,
   "isDnD":false,

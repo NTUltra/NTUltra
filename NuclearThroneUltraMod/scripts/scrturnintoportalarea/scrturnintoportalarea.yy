@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrTurnIntoPortalArea",
   "isCompatibility":false,
   "isDnD":false,

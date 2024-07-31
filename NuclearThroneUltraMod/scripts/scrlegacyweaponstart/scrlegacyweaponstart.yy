@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrLegacyWeaponStart",
   "isCompatibility":false,
   "isDnD":false,
