@@ -1166,6 +1166,8 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(45,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick = 6
+	if !skill_got[2]
+		scrMoveContactSolid(aimDirection + 180,2);
 
 	break;
 

@@ -129,6 +129,8 @@ function scrEndOfRun(){
 		refundLastWishPrevent = false
 		refundSkeletonLives = 0
 		refundLastWish = false;
+		runScore = [];
+		runRace = [];
 		if playFullyCompleted
 		{
 			playFullyCompleted = false;

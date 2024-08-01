@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Reposition
 with Player
 {
 	mask_index = other.msk;

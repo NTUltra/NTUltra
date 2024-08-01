@@ -1,2 +1,2 @@
-with instance_create(x,y,ScrapBoss)
-	existTime = 30;
+if !instance_exists(MushroomBoss) && !instance_exists(BecomeMushroomBossGrow)
+	instance_create(x,y,BecomeMushroomBossGrow)

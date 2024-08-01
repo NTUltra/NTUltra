@@ -230,14 +230,13 @@ if crown == 31
 {
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
-		var am = clamp(Player.maxarmour-1,0,1);
-		Player.maxarmour -= am;
+		Player.maxarmour = max(0,Player.maxhealth - 2);
+		UberCont.maxHpIncrease = max(0,UberCont.maxHpIncrease - 2);
 	}
 	else
 	{
-		var am = clamp(Player.maxhealth-2,0,2);
-		Player.maxhealth -= am;
-		UberCont.maxHpIncrease -= am;
+		Player.maxhealth = max(0,Player.maxhealth - 2);
+		UberCont.maxHpIncrease = max(0,UberCont.maxHpIncrease - 2);
 	}
 }
 

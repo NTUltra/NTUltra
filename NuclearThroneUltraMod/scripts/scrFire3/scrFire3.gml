@@ -463,5 +463,34 @@ function scrFire3(hasTailNow){
 		wkick = -20
 
 		break;
+		
+		//POWER CROSSBOW
+		case 806:
+
+		snd_play_fire(sndOldHeavyPowerCrossbow)
+		repeat(3)
+		{
+			with instance_create(x,y,Smoke)
+				motion_add(aimDirection+(random(16)-8)*other.accuracy,3+random(2))
+		}
+		with instance_create(x,y,HeavyPowerBolt)
+		{
+			owner = other.id;
+			motion_add(aimDirection+(random(16)-8)*other.accuracy,24)
+			image_angle = direction
+			team = other.team
+		}
+
+		BackCont.viewx2 += lengthdir_x(80,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(80,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 40
+		wkick = 6
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,20)
+			scrMoveContactSolid(aimDirection + 180,32)
+		}
+		
+		break;
 	}
 }

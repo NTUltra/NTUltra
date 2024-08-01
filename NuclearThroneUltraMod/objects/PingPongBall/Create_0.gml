@@ -10,7 +10,7 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 dmg = 9;
 image_speed = 0.5
 friction = 0;
-bounces = 8 + choose(0,1);
+bounces = 8;
 if instance_exists(Player) && Player.skill_got[15]
 {
 	bounces += 1;

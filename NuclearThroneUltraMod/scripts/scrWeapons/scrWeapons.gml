@@ -7359,7 +7359,7 @@ function scrWeapons() {
 	wep_load[657] = 40
 	wep_cost[657] = 3
 	wep_sprt[657] = sprBalista
-	wep_area[657] = 12
+	wep_area[657] = 11
 	wep_text[657] = "ancient painbringer"
 	wep_swap[657] = sndSwapBow
 	wep_rad[657] = 0;
@@ -9019,6 +9019,18 @@ function scrWeapons() {
 	wep_text[805] = "poke"
 	wep_swap[805] = sndSwapSword
 	wep_rad[805] = 0;
+	
+	wep_name[806] = "POWER CROSSBOW"
+	wep_type[806] = 3
+	wep_auto[806] = 1
+	wep_load[806] = 15
+	wep_cost[806] = 10
+	wep_sprt[806] = sprCrossbow
+	wep_area[806] = 12
+	wep_text[806] = "lots of ammo lots of damage, hard to handle"
+	wep_swap[806] = sndSwapBow
+	wep_rad[806] = 0;
+	wep_popup[806] = "REFUNDS AMMO ON EACH HIT";
 	//Swiss army bow
 	//Charge boomerang
 	

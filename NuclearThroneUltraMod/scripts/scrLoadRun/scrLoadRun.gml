@@ -87,7 +87,8 @@ function scrLoadRun(selectedRunIndex){
 			*/
 			Player.maxhealth = encryptedRun.maxhp;
 			Player.my_health = encryptedRun.hp;
-			Player.defaultOverhealAddition = encryptedRun.defaultOverhealAddition;
+			if variable_struct_exists(encryptedRun, "defaultOverhealAddition")
+				Player.defaultOverhealAddition = encryptedRun.defaultOverhealAddition;
 			Player.strongspirit = encryptedRun.strongspirit;
 			Player.strongspiritused = encryptedRun.strongspiritused;
 			Player.isAlkaline = encryptedRun.alkaline;

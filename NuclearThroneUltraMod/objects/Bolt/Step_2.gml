@@ -1,4 +1,4 @@
-if collision_line(xprev,yprev,x,y,Wall,false,false) || place_meeting(x,y,Wall)
+if collision_line(xprev,yprev,x,y,Wall,false,false) || collision_point(x,y,Wall,false,false)
 {
 	event_user(1);
 }

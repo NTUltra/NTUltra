@@ -14,7 +14,8 @@ for (var i = 0; i < al; i++)
 {
 	instance_activate_object(forcePositions[| i]);
 }
-ds_list_clear(forcePositions);
+ds_list_destroy(forcePositions);
+forcePositions = ds_list_create();
 //Individual timers
 if !instance_exists(GenCont) && !instance_exists(LevCont)
 with Player

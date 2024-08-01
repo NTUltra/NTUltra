@@ -9,17 +9,17 @@ alarm[11] = 0;
 nomscale = 1;
 wallScale = 0.2;
 grow = 0.04;
-hitShrink = 0.3;
+hitShrink = 0.37;
 destroyScale = 0.4;
-maxSpeed = 7;
+maxSpeed = 8;
 acc = 1;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
-		nomscale += 0.4;
-		wallScale -= 0.05;
-		grow += 0.01;
+		nomscale += 0.38;
+		wallScale -= 0.035;
+		grow += 0.008;
 		destroyScale -= 0.05;
 		image_xscale = nomscale;
 		image_yscale = nomscale;

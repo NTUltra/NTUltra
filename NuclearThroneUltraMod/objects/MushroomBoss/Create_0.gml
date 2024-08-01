@@ -1,6 +1,6 @@
-raddrop = 2
-maxhealth = 4
-mySize = 1
+raddrop = 60;
+maxhealth = 1000
+mySize = 3
 event_inherited()
 meleedamage = 0
 
@@ -30,9 +30,14 @@ snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
 
 //behavior
+mode = 0;//EARTH / TOXIC
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
 actTime = 15;
 maxSpeed = 0;
+
+forceAnimation = spr_idle_earth;
+animationDuration = sprite_get_number(forceAnimation);
+forceImageIndex = 0;

@@ -20,7 +20,7 @@ if um == ultramods.bulletShotgun
 	{
 		image_angle = other.direction;
 		team = other.team
-		ammo = 5 + round(other.speed*0.8);
+		ammo = 7 + round(other.speed*0.9);
 		canUltraMod = false;
 		dmg -= 2;
 		event_perform(ev_alarm,0)

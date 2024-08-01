@@ -35,14 +35,13 @@ function scrRemoveCrown(oldcrown){
 	{
 		if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 		{
-			var am = clamp(Player.maxarmour-1,0,1);
-			Player.maxarmour -= am;
+			Player.maxarmour = max(Player.maxarmour - 1, 0);
+			UberCont.maxHpIncrease = max(UberCont.maxHpIncrease - 1, 0);
 		}
 		else
 		{
-			var am = clamp(Player.maxhealth-1,0,1);
-			Player.maxhealth -= am;
-			UberCont.maxHpIncrease -= am;
+			Player.maxhealth = max(Player.maxhealth - 1, 0);
+			UberCont.maxHpIncrease = max(UberCont.maxHpIncrease - 1, 0);
 		}
 	}
 	//CROWN OF BOUNTY

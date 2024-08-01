@@ -50,6 +50,7 @@ if instance_exists(Player){
 			instance_destroy(id,false);
 			exit;
 		}
+		event_user(1);
 		isog = false;
 		simpleAccuracy = Player.accuracy;
 		accuracy += Player.accuracy*2;

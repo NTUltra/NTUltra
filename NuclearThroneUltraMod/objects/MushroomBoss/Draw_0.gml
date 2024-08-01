@@ -1,6 +1,10 @@
-if gunangle <= 180
-draw_sprite_ext(sprBanditGun,-1,x+lengthdir_x(-wkick,gunangle),y+lengthdir_y(-wkick,gunangle),1,right,gunangle,c_white,1)
-draw_sprite_ext(sprite_index,-1,x,y,right,1,0,c_white,1)
-if gunangle > 180
-draw_sprite_ext(sprBanditGun,-1,x+lengthdir_x(-wkick,gunangle),y+lengthdir_y(-wkick,gunangle),1,right,gunangle,c_white,1)
-
+if sprite_index == spr_hurt && image_index < 1
+{
+	shader_set(shdDrawWhite);
+	draw_sprite_ext(forceAnimation,image_index,x,y,right,image_yscale,image_angle,c_white,1);
+	shader_reset();
+}
+else
+{
+	draw_sprite_ext(forceAnimation,image_index,x,y,right,image_yscale,image_angle,c_white,1)	
+}
