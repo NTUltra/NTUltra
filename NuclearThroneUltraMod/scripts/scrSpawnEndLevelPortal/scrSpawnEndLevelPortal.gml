@@ -23,7 +23,14 @@ function scrSpawnEndLevelPortal(){
 			}
 			if !portalExists
 			{
-			    if !instance_exists(CrownPickup) && instance_exists(Floor)
+				with Portal
+			    {
+					if inverted == false && type = 1
+					{
+						other.canspawnportal=false;
+					}
+			    }
+			    if canspawnportal && !instance_exists(CrownPickup) && instance_exists(Floor)
 			    {
 					
 					dir = instance_nearest(x-16,y-16,Floor)

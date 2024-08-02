@@ -9020,13 +9020,13 @@ function scrWeapons() {
 	wep_swap[805] = sndSwapSword
 	wep_rad[805] = 0;
 	
-	wep_name[806] = "POWER CROSSBOW"
+	wep_name[806] = "POWER BOLT LAUNCHER"
 	wep_type[806] = 3
 	wep_auto[806] = 1
-	wep_load[806] = 15
+	wep_load[806] = 17
 	wep_cost[806] = 10
-	wep_sprt[806] = sprCrossbow
-	wep_area[806] = 12
+	wep_sprt[806] = sprPowerBoltLauncher
+	wep_area[806] = 10
 	wep_text[806] = "lots of ammo lots of damage, hard to handle"
 	wep_swap[806] = sndSwapBow
 	wep_rad[806] = 0;

@@ -484,7 +484,7 @@ function scrFire3(hasTailNow){
 		BackCont.viewx2 += lengthdir_x(80,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(80,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 40
-		wkick = 6
+		wkick = 12
 		if !skill_got[2]
 		{
 			motion_add(aimDirection + 180,20)

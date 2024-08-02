@@ -1,7 +1,5 @@
 
 function scrMakeFloor(limiter) {
-	if instance_exists(MushroomBoss)
-		debug("GO on create");
 	with UberCont
 	{
 		var a = loops;
@@ -550,7 +548,7 @@ function scrMakeFloor(limiter) {
 	
 	//Mushroom swamp
 	if area = 117 || area == 124 {
-		if random(9) < 1
+		if instance_number(Floor) < 2 || (instance_number(Floor) > 42 && random(11) < 1)
 		{
 			instance_create(x,y,Floor)
 			instance_create(x+32,y,Floor)
@@ -561,11 +559,11 @@ function scrMakeFloor(limiter) {
 			instance_create(x+32,y-32,Floor)
 			instance_create(x-32,y-32,Floor)
 			instance_create(x-32,y+32,Floor)
-		} if random (4) < 1
+		} if (instance_number(Floor) > 30 && random (6) < 1)
 		{
 			instance_create(x,y,Floor)
 			instance_create(x,y-32,Floor)
-		} else if random (4) < 1
+		} else if (instance_number(Floor) > 30 && random (6) < 1)
 		{
 			instance_create(x,y,Floor)
 			instance_create(x,y+32,Floor)
@@ -779,7 +777,7 @@ function scrMakeFloor(limiter) {
 	else if area == 114 || area == 123
 	trn = choose(0,0,0,0,0,0,0,90,-90,180)
 	else if area == 117 || area == 124
-	trn = choose(0,0,0,0,90,-90,180)
+	trn = choose(0,0,0,0,0,0,90,-90,180)
 	else if area == 119 || area == 120
 	trn = choose(0,0,90,-90,90,-90,180)
 	else if area == 126 || area == 127

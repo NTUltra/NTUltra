@@ -8994,6 +8994,7 @@
     {"id":{"name":"sprPowBolt","path":"sprites/sprPowBolt/sprPowBolt.yy",},},
     {"id":{"name":"sprPowBoltDone","path":"sprites/sprPowBoltDone/sprPowBoltDone.yy",},},
     {"id":{"name":"sprPowBow","path":"sprites/sprPowBow/sprPowBow.yy",},},
+    {"id":{"name":"sprPowerBoltLauncher","path":"sprites/sprPowerBoltLauncher/sprPowerBoltLauncher.yy",},},
     {"id":{"name":"sprProtectionArea","path":"sprites/sprProtectionArea/sprProtectionArea.yy",},},
     {"id":{"name":"sprProtectorWand","path":"sprites/sprProtectorWand/sprProtectorWand.yy",},},
     {"id":{"name":"sprProtoChest","path":"sprites/sprProtoChest/sprProtoChest.yy",},},

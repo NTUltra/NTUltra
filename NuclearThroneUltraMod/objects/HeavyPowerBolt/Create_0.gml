@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 image_speed = 0.4;
-dmg = 80;
+dmg = 70;
 alarm[4] = 2;
 emitter = audio_emitter_create();
 audio_emitter_position(emitter,x,y,depth);

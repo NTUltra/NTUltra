@@ -8597,6 +8597,7 @@
     {"name":"sprPowBolt","order":505,"path":"sprites/sprPowBolt/sprPowBolt.yy",},
     {"name":"sprPowBoltDone","order":506,"path":"sprites/sprPowBoltDone/sprPowBoltDone.yy",},
     {"name":"sprPowBow","order":523,"path":"sprites/sprPowBow/sprPowBow.yy",},
+    {"name":"sprPowerBoltLauncher","order":674,"path":"sprites/sprPowerBoltLauncher/sprPowerBoltLauncher.yy",},
     {"name":"sprProtectionArea","order":40,"path":"sprites/sprProtectionArea/sprProtectionArea.yy",},
     {"name":"sprProtectorWand","order":1,"path":"sprites/sprProtectorWand/sprProtectorWand.yy",},
     {"name":"sprProtoChest","order":5,"path":"sprites/sprProtoChest/sprProtoChest.yy",},
