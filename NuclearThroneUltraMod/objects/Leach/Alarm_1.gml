@@ -13,7 +13,7 @@ with instance_create(x,y,BloodStreak)
 
 snd_play(sndBloodlustProc,0.1);
 
-if image_index >= image_number-1 && random(100) < 40
+if image_index >= image_number-1 && random(100) < 30
 {
 	if instance_exists(Player)
 	{

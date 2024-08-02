@@ -1,8 +1,10 @@
 raddrop = 60;
 maxhealth = 1000
 mySize = 3
-event_inherited()
+event_inherited();
+scrAddDrops(1);
 meleedamage = 0
+immuneToTypeDamage = 1;
 
 spr_idle_earth = sprBigMushroomEarthIdle;
 spr_walk_earth = sprBigMushroomEarthIdle;
@@ -20,11 +22,7 @@ spr_fire_toxic = sprBigMushroomToxicAttack;
 spr_to_earth = sprBigMushroomShiftToEarth;
 spr_shrink = sprBigMushroomShrink;
 
-spr_idle = spr_idle_earth;
-spr_walk = spr_walk_earth;
-spr_hurt = spr_hurt_earth;
-spr_dead = spr_dead_earth;
-spr_fire = spr_fire_earth;
+reachedHalfHealth = false;
 
 snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
@@ -38,6 +36,13 @@ wkick = 0
 actTime = 15;
 maxSpeed = 0;
 
-forceAnimation = spr_idle_earth;
+spr_idle = spr_idle_earth;
+spr_walk = spr_walk_earth;
+spr_hurt = spr_hurt_earth;
+spr_dead = spr_dead_earth;
+spr_fire = spr_fire_earth;
+spr_shrink = spr_shrink
+forceAnimation = spr_idle;
 animationDuration = sprite_get_number(forceAnimation);
 forceImageIndex = 0;
+buddyAmount = 3;

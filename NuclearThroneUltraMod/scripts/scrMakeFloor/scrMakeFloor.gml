@@ -1,5 +1,7 @@
 
 function scrMakeFloor(limiter) {
+	if instance_exists(MushroomBoss)
+		debug("GO on create");
 	with UberCont
 	{
 		var a = loops;

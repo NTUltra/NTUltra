@@ -1,5 +1,10 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
+if !reachedHalfHealth && my_health < maxhealth*0.5
+{
+	reachedHalfHealth = true;
+	event_user(3);	
+}
 scrTarget()
 if target != noone {
 	var ran = random(100);
@@ -20,6 +25,18 @@ if target != noone {
 			if ran > 75
 			{
 				event_user(1);
+			}
+			else if ran > 50
+			{
+				
+			}
+			else if ran > 25
+			{
+				
+			}
+			else
+			{
+				event_user(0);
 			}
 		}
     }

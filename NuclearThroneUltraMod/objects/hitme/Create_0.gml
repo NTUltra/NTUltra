@@ -12,3 +12,4 @@ right = 1;
 walk = 0;
 frozen = noone;
 meleedamage = 0;
+immuneToTypeDamage = 0;//0 = noting 1 = toxicGas

@@ -140,6 +140,11 @@ function scrGenerateFloorMaker(limiter) {
 			fc ++;
 	}
 	var maxLimit = 600;
+	if instance_exists(MushroomBoss)
+	{
+		fc = 0;
+		debug("GO AHEAD");
+	}
 	while (fc <= globalGoal && myFloors < goal && limiter < maxLimit)//1000
 	{
 		fc = 0;
@@ -168,7 +173,7 @@ function scrGenerateFloorMaker(limiter) {
 					}
 					direction = 90;
 				}
-				if Player.ultra_got[66] && Player.altUltra
+				if Player.ultra_got[66] && Player.altUltra && !instance_exists(MushroomBoss)
 				{
 					snd_play(sndWeaponChest);
 					with instance_create(x,y,WepPickup)
@@ -205,115 +210,115 @@ function scrGenerateFloorMaker(limiter) {
 			event_user(0);
 		return limiter;
 	}
-	if point_distance(x,y,10016,10016) > 48 
+	if !instance_exists(MushroomBoss) && point_distance(x,y,10016,10016) > 48 
 	{
 		if instance_exists(Player){
-			/*
-		if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
-			Player.x=x+16;
-			Player.y=y+16;
-		}*/
-		instance_create(x,y,Floor)
-		if (Player.area == 9 && Player.subarea == 3)
-		{
+				/*
+			if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
+				Player.x=x+16;
+				Player.y=y+16;
+			}*/
 			instance_create(x,y,Floor)
-			instance_create(x+32,y,Floor)
-			instance_create(x-32,y,Floor)
-			instance_create(x+64,y,Floor)
-			instance_create(x-64,y,Floor)
-			instance_create(x+96,y,Floor)
-			instance_create(x-96,y,Floor)
-			instance_create(x+128,y,Floor)
-			instance_create(x-128,y,Floor)
-			instance_create(x+16,y+16,Carpet);
-			if scrIsGamemode(44)
+			if (Player.area == 9 && Player.subarea == 3)
 			{
-				with Carpet
+				instance_create(x,y,Floor)
+				instance_create(x+32,y,Floor)
+				instance_create(x-32,y,Floor)
+				instance_create(x+64,y,Floor)
+				instance_create(x-64,y,Floor)
+				instance_create(x+96,y,Floor)
+				instance_create(x-96,y,Floor)
+				instance_create(x+128,y,Floor)
+				instance_create(x-128,y,Floor)
+				instance_create(x+16,y+16,Carpet);
+				if scrIsGamemode(44)
 				{
-					image_yscale = 0.5;	
-				}
-				instance_create(x,y,ChesireCat);
-			}
-			else
-			{
-				instance_create(x,y,NuclearThrone1);
-				var yy = y + 404;
-				var i = 0;
-				repeat(5)
-				{
-					with instance_create(x - 96, yy, PalaceGuardianNest) {
-						image_index = i;	
-					}
-					i += 2;
-					yy += 132;
-				}
-				var yy = y + 404;
-				var i = 0;
-				repeat(5)
-				{
-					with instance_create(x + 128, yy, PalaceGuardianNest)
+					with Carpet
 					{
-						breakY -= 32;
-						image_index = i;
+						image_yscale = 0.5;	
 					}
-					i += 2;
-					yy += 132;
+					instance_create(x,y,ChesireCat);
 				}
-				if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+				else
 				{
-					with instance_create(x - 160, y + 320, BigGenerator)
-						image_xscale = -1;
-					instance_create(x + 192, y + 320, BigGenerator);
-					with instance_create(x - 160, y + 480, BigGenerator)
-						image_xscale = -1;
-					instance_create(x + 192, y + 480, BigGenerator);
-				}
+					instance_create(x,y,NuclearThrone1);
+					var yy = y + 404;
+					var i = 0;
+					repeat(5)
+					{
+						with instance_create(x - 96, yy, PalaceGuardianNest) {
+							image_index = i;	
+						}
+						i += 2;
+						yy += 132;
+					}
+					var yy = y + 404;
+					var i = 0;
+					repeat(5)
+					{
+						with instance_create(x + 128, yy, PalaceGuardianNest)
+						{
+							breakY -= 32;
+							image_index = i;
+						}
+						i += 2;
+						yy += 132;
+					}
+					if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+					{
+						with instance_create(x - 160, y + 320, BigGenerator)
+							image_xscale = -1;
+						instance_create(x + 192, y + 320, BigGenerator);
+						with instance_create(x - 160, y + 480, BigGenerator)
+							image_xscale = -1;
+						instance_create(x + 192, y + 480, BigGenerator);
+					}
 
-			}
-			if GetPlayerLoops() > 1
-				instance_create(x,y + 512, WantTank);
-			if scrIsGamemode(6)
-			{
-				with Carpet
+				}
+				if GetPlayerLoops() > 1
+					instance_create(x,y + 512, WantTank);
+				if scrIsGamemode(6)
 				{
-					image_yscale = 0.5;	
+					with Carpet
+					{
+						image_yscale = 0.5;	
+					}
 				}
 			}
-		}
-		else if (Player.area == 118 && Player.subarea == 3)
-		{
-			with instance_create(x+16,y+16,Carpet)
-				sprite_index = sprInvertedCarpet;
-			if scrIsGamemode(44)
+			else if (Player.area == 118 && Player.subarea == 3)
 			{
-				with Carpet
+				with instance_create(x+16,y+16,Carpet)
+					sprite_index = sprInvertedCarpet;
+				if scrIsGamemode(44)
 				{
-					image_yscale = 0.5;	
+					with Carpet
+					{
+						image_yscale = 0.5;	
+					}
+					instance_create(x,y,InvertedChesireCat);
 				}
-				instance_create(x,y,InvertedChesireCat);
-			}
-			else
-			{
-				instance_create(x,y,InvertedNuclearThrone1);
-			}
-			if GetPlayerLoops() > 1
-				instance_create(x,y + 512, WantTank);
-			// instance_create(x,y + 256, WantTank); No tank here hmmmm
-			if scrIsGamemode(6)
-			{
-				with Carpet
+				else
 				{
-					image_yscale = 0.5;	
+					instance_create(x,y,InvertedNuclearThrone1);
+				}
+				if GetPlayerLoops() > 1
+					instance_create(x,y + 512, WantTank);
+				// instance_create(x,y + 256, WantTank); No tank here hmmmm
+				if scrIsGamemode(6)
+				{
+					with Carpet
+					{
+						image_yscale = 0.5;	
+					}
 				}
 			}
-		}
-		else if Player.race=22
-		{
-			if Player.area!=104 && Player.area!=100 && !instance_exists(RogueAmmoChest)
-				instance_create(x+16,y+16,RogueAmmoChest)
-		}
-		else if !instance_exists(RogueAmmoChest) && Player.area!=104 && Player.area != 137 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
-		instance_create(x+16,y+16,RadChest)
+			else if Player.race=22
+			{
+				if Player.area!=104 && Player.area!=100 && !instance_exists(RogueAmmoChest)
+					instance_create(x+16,y+16,RogueAmmoChest)
+			}
+			else if !instance_exists(RogueAmmoChest) && Player.area!=104 && Player.area != 137 && Player.race != 25 && !(Player.area == 9 && Player.subarea ==3)&& !(Player.area == 118 && Player.subarea ==3)//Not mutation smith
+				instance_create(x+16,y+16,RadChest)
 		}
 	}
 	instance_destroy();

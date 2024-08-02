@@ -4,6 +4,7 @@ mySize = 1
 
 event_inherited()
 meleedamage = 2;
+immuneToTypeDamage = 1;
 
 spr_gun = sprToxicMushroomGuyGun
 spr_idle = sprToxicMushroomGuyIdle
