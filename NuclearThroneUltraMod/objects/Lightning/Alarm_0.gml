@@ -160,7 +160,7 @@ for(var i = floor(ammo); i > 0; i -= 1)
 	}
 	speed = 0
 	xscale = -point_distance(xxx,yyy,oldx,oldy)*0.5;
-	if ultraMod == ultramods.lightningPellet
+	if isog &&  ultraMod == ultramods.lightningPellet
 	{
 		if ammo > 0 && ammo % 2 == 0
 		{
@@ -255,7 +255,7 @@ for(var i = floor(ammo); i > 0; i -= 1)
 		}
 	}
 }
-if ultraMod != ultramods.lightningPellet
+if !isog || ultraMod != ultramods.lightningPellet
 {
 	instance_create(xxx,yyy,LightningHit);
 	event_perform(ev_alarm,2);

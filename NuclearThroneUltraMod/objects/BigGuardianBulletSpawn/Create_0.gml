@@ -6,3 +6,4 @@ image_speed = 0.4
 typ = 2;
 isInverted = false;
 isThrone2 = false;
+shootOutPickup = false

@@ -1,5 +1,5 @@
 ///@description AI
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 alarm[1] = actTime;
 sprite_index = spr_fire;
 alarm[2] = 5;

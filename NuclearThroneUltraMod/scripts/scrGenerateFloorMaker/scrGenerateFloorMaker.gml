@@ -101,6 +101,8 @@ function scrGenerateFloorMaker(limiter) {
 				goal = 1;
 			else if Player.area == 138//Cloudland
 				goal = 17;
+			else if Player.area == 139//The pit
+				goal = 150;
 			if scrIsGamemode(6)//small levels
 			{
 				goal=45+s;

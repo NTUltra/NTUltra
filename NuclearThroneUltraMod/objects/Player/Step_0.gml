@@ -89,6 +89,7 @@ if !instance_exists(LevCont) and visible = 1
 	{
 		jump = 0;
 		roll = 0;
+		didJumpRoll = false;
 		speed = 0;
 	}
 	if jump > 0
@@ -184,7 +185,7 @@ if !instance_exists(LevCont) and visible = 1
 		else
 			specBuffer -= 1;
 	}
-	if roll = 0
+	if roll == 0
 	{
 		if canMove && !lockout
 		{
@@ -499,6 +500,8 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				angle = 0
 				roll = 0
+				if lockout
+					didJumpRoll = false;
 			}
 		}
 	}
@@ -1498,12 +1501,24 @@ if (!instance_exists(LevCont))
 			}
 			scrFlexibleElbowReload(bwep);
 		}
-		if skill_got[41] && armour < maxarmour
+		if skill_got[41]
 		{
-			if race == 25
-				reload -= 0.18;
+			if armour < maxarmour
+			{
+				if race == 25
+					reload -= 0.18;
+				else
+					reload -= 0.21;
+				reload *= 0.99;
+			}
 			else
-				reload -= 0.2;
+			{
+				if race == 25
+					reload -= 0.08;
+				else
+					reload -= 0.11;
+				reload *= 0.9999;
+			}
 		}
 		if skill_got[22]
 		{
@@ -1592,8 +1607,8 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.3;
-			creload -= 0.3;
+			breload -= 0.45;
+			creload -= 0.45;
 			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.3;
@@ -2327,7 +2342,10 @@ microseconds=0;
 		with Portal
 		{
 			if inverted
+			{
 				targetFloor = noone
+				invertedportalcounter = -2;
+			}
 		}
 		if targetFloor != noone
 		{
@@ -2352,7 +2370,7 @@ microseconds=0;
 				event_user(0);
 		    }
     
-		    invertedportalcounter=-1;
+		    invertedportalcounter= -2;
 		}
     }
     

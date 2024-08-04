@@ -49,13 +49,13 @@ else
 
 
 
-
-if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 || currentarea = 109 || currentarea = 112) && currentsubarea < 2 && random(5) < chance )//inverted bosses
+/*
+if ( (scrIsInInvertedArea()) && currentsubarea < 2 && random(5) < chance )//inverted bosses
 {
 	inverted=true;
 	if instance_exists(Player)
 	{
-		Player.inverted=true;
+		Player.inverted = true;
 	}
 	else if instance_exists(PlayerSpawn)
 	{
@@ -63,7 +63,7 @@ if ( (currentarea=105 || currentarea=106|| currentarea=107 || currentarea = 108 
 	}
 	with Corpse
 		canspawnportal=false;
-}
+}*/
 pullstrength=1;
 pullRange = 96
 isPink = false;

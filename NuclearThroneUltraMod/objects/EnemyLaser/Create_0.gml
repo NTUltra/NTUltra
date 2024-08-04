@@ -13,6 +13,7 @@ img = 0
 laserDecrease = 0.2;
 sprStart = sprEnemyLaserStart;
 sprEnd = sprEnemyLaserEnd;
+maxDistance = 160;
 alarm[2] = 3;
 if instance_exists(Player) && Player.skill_got[12]
 {

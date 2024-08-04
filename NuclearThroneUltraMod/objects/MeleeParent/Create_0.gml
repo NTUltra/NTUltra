@@ -24,13 +24,14 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 	}
 }
-wallPierce = 1;
+wallPierce = 0.6;
 if instance_exists(Player) 
 {
 	//Long arms
 	if Player.skill_got[13]
 	{
-		wallPierce = 0.25;
+		wallPierce = 0.15;
+		friction *= 0.5;
 		image_xscale += 0.18;//0.1;
 		image_yscale += 0.18;//0.1;
 		if Player.ultra_got[97] && !Player.altUltra

@@ -1,6 +1,6 @@
 /// @description Init
 image_speed = 0.8;
-dmg = 6;
+dmg = 10;
 team = 2;
 maxSpeed = 24;
 forcePlayer = true;

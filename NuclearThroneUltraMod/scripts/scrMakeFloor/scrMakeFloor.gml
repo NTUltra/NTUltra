@@ -506,6 +506,26 @@ function scrMakeFloor(limiter) {
 		instance_create(x - 32,y + 32,Floor)
 		instance_create(x + 32,y - 32,Floor)*/
 	}
+	//THE PIT
+	if area == 139 {
+		instance_create(x,y,Floor);
+		instance_create(x,y+32,Floor)
+		instance_create(x+32,y+32,Floor)
+		instance_create(x+32,y+64,Floor)
+		instance_create(x+64,y+64,Floor)
+		instance_create(x+64,y+32,Floor)
+		instance_create(x+96,y+32,Floor)
+		instance_create(x+96,y,Floor)
+		/*
+		instance_create(x+32,y,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x,y + 32,Floor)
+		instance_create(x,y - 32,Floor)
+		instance_create(x + 32,y + 32,Floor)
+		instance_create(x - 32,y - 32,Floor)
+		instance_create(x - 32,y + 32,Floor)
+		instance_create(x + 32,y - 32,Floor)*/
+	}
 	//savanna
 	if area = 10 || area == 121{ 
 		if random(5) < 2

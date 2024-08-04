@@ -512,7 +512,7 @@ function scrWeapons() {
 	wep_name[46] = "CHICKEN SWORD"
 	wep_type[46] = 0
 	wep_auto[46] = 0
-	wep_load[46] = 22
+	wep_load[46] = 18
 	wep_cost[46] = 0
 	wep_sprt[46] = sprSword
 	wep_area[46] = -1
@@ -1611,7 +1611,7 @@ function scrWeapons() {
 	wep_name[144] = "HYPER LIGHTNING LAUNCHER"
 	wep_type[144] = 5
 	wep_auto[144] = 1
-	wep_load[144] = 24
+	wep_load[144] = 21
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
 	wep_area[144] = 18
@@ -2611,7 +2611,7 @@ function scrWeapons() {
 	wep_name[233] = "BLADE GUN"
 	wep_type[233] = 3
 	wep_auto[233] = 1
-	wep_load[233] = 12
+	wep_load[233] = 14
 	wep_cost[233] = 1
 	wep_sprt[233] = sprBladeGun
 	wep_area[233] = 5
@@ -3550,8 +3550,8 @@ function scrWeapons() {
 	wep_name[316] = "HUNTER HEAVY SNIPER"
 	wep_type[316] = 1
 	wep_auto[316] = 1
-	wep_load[316] = 11
-	wep_cost[316] = 7
+	wep_load[316] = 13
+	wep_cost[316] = 8
 	wep_sprt[316] = sprHeavySniper
 	wep_area[316] = -1
 	wep_text[316] = "efficiency is on par"
@@ -4179,7 +4179,7 @@ function scrWeapons() {
 	wep_name[372] = "VAN CANNON"
 	wep_type[372] = 4
 	wep_auto[372] = 0
-	wep_load[372] = 60
+	wep_load[372] = 50
 	wep_cost[372] = 12
 	wep_sprt[372] = sprVanCannon
 	wep_area[372] = 20
@@ -5257,10 +5257,10 @@ function scrWeapons() {
 	wep_name[467] = "BOOM BOOM CANNON"
 	wep_type[467] = 4
 	wep_auto[467] = 2
-	wep_load[467] = 25
+	wep_load[467] = 24
 	wep_cost[467] = 2
 	wep_sprt[467] = sprBoomBoomCannon
-	wep_area[467] = 15
+	wep_area[467] = 14
 	wep_text[467] = "10/10"
 	wep_swap[467] = sndSwapExplosive
 	wep_rad[467] = 0;
@@ -5649,7 +5649,7 @@ function scrWeapons() {
 	wep_load[502] = 17
 	wep_cost[502] = 1
 	wep_sprt[502] = sprBow
-	wep_area[502] = 2
+	wep_area[502] = 1
 	wep_text[502] = "hold fire to charge#and deal more damage"
 	wep_swap[502] = sndSwapBow
 	wep_rad[502] = 0;
@@ -5812,7 +5812,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 26
+	wep_load[517] = 23
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 3
@@ -6465,7 +6465,7 @@ function scrWeapons() {
 	wep_load[576] = 29
 	wep_cost[576] = 5
 	wep_sprt[576] = sprSuperBow
-	wep_area[576] = 8
+	wep_area[576] = 7
 	wep_text[576] = "hold for power"
 	wep_swap[576] = sndSwapBow
 	wep_rad[576] = 0;
@@ -6495,7 +6495,7 @@ function scrWeapons() {
 	wep_name[579] = "TRIPLE VAN CANNON"
 	wep_type[579] = 4
 	wep_auto[579] = 0
-	wep_load[579] = 150
+	wep_load[579] = 140
 	wep_cost[579] = 24
 	wep_sprt[579] = sprTripleVanCannon
 	wep_area[579] = 31
@@ -6660,7 +6660,7 @@ function scrWeapons() {
 	wep_name[594] = "HEAVY CLUB"
 	wep_type[594] = 0
 	wep_auto[594] = 0
-	wep_load[594] = 28
+	wep_load[594] = 22
 	wep_cost[594] = 0
 	wep_sprt[594] = sprHeavyClub
 	wep_area[594] = 8
@@ -6836,8 +6836,8 @@ function scrWeapons() {
 	wep_name[610] = "CUBER SNIPER"
 	wep_type[610] = 1
 	wep_auto[610] = 1
-	wep_load[610] = 12
-	wep_cost[610] = 5
+	wep_load[610] = 7
+	wep_cost[610] = 4.5
 	wep_sprt[610] = sprCuberSniper
 	wep_area[610] = -1
 	wep_text[610] = "it's only fair"
@@ -6847,8 +6847,8 @@ function scrWeapons() {
 	wep_name[611] = "HEAVY CUBER SNIPER"
 	wep_type[611] = 1
 	wep_auto[611] = 1
-	wep_load[611] = 9
-	wep_cost[611] = 8
+	wep_load[611] = 6
+	wep_cost[611] = 7
 	wep_sprt[611] = sprHeavyCuberSniper
 	wep_area[611] = -1
 	wep_text[611] = "ultra moddable!"
@@ -7502,7 +7502,7 @@ function scrWeapons() {
 	wep_name[670] = "NEEDLE"
 	wep_type[670] = 0
 	wep_auto[670] = 1
-	wep_load[670] = 11
+	wep_load[670] = 8
 	wep_cost[670] = 0
 	wep_sprt[670] = sprNeedle
 	wep_area[670] = 2
@@ -7635,7 +7635,7 @@ function scrWeapons() {
 	wep_name[682] = "ROPE KNIFE"
 	wep_type[682] = 0
 	wep_auto[682] = 1
-	wep_load[682] = 19
+	wep_load[682] = 18
 	wep_cost[682] = 0
 	wep_sprt[682] = sprRopeKnife
 	wep_area[682] = 6
@@ -8823,7 +8823,7 @@ function scrWeapons() {
 	wep_load[788] = 21
 	wep_cost[788] = 1.5
 	wep_sprt[788] = sprWazerPistol
-	wep_area[788] = 8
+	wep_area[788] = 7
 	wep_text[788] = "wawawawazer"
 	wep_swap[788] = sndSwapEnergy
 	wep_rad[788] = 0;

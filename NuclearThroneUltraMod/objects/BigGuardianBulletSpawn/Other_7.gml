@@ -16,7 +16,8 @@ if target != noone && instance_exists(target)
 		if isInverted
 		{
 			with instance_create(x,y,InvertedBigGuardianBullet)
-			{	
+			{
+				shootOutPickup = other.shootOutPickup;
 				owner = other.owner;
 				team = other.team;
 				x += lengthdir_x(8, dir);
@@ -42,7 +43,8 @@ if target != noone && instance_exists(target)
 		if isInverted
 		{
 			with instance_create(x,y,InvertedBigGuardianSquareBullet)
-			{	
+			{
+				shootOutPickup = other.shootOutPickup;
 				alarm[0] += 1;
 				owner = other.owner;
 				team = other.team;

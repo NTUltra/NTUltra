@@ -8,6 +8,10 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 			BackCont.shake += 2;
 			snd_play(sndRicochet,0.1,true);
 			scrDeflectNade(other.image_angle);
+			if instance_exists(Player)
+			{
+				motion_add(point_direction(Player.x,Player.y,x,y),3);	
+			}
 		}
 		else if team != 2
 		{

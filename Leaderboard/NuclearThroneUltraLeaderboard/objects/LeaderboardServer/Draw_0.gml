@@ -22,6 +22,9 @@ repeat(string_count("\n",raceLeaderboardString))
 	yy -= string_height("W");
 	i++;
 }
+draw_set_halign(fa_right);
+draw_text(x-32,y-16,log);
+draw_set_halign(fa_left)
 /*
 var al = array_length(totalHitsCounter);
 var tx = x - 64;

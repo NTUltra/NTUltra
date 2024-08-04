@@ -1,6 +1,6 @@
 ///AI
 alarm[1] = 9 + random(4);
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {

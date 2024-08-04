@@ -20,11 +20,11 @@ gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
 
-actTime = 14;
+actTime = 16;
 loops = GetPlayerLoops();
 range = 300;
 if loops > 0
-	actTime = 8;
+	actTime = 9;
 if loops > 1
 	range += 50;
 if loops > 2

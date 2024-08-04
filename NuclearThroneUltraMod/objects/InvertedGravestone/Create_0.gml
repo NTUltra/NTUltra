@@ -1,6 +1,7 @@
 maxhealth = 6
 mySize = 1
-if GetPlayerLoops > 0
+loops = GetPlayerLoops();
+if loops > 0
 	maxhealth = 12;
 
 

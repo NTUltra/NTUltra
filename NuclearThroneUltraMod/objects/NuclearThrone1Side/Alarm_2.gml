@@ -13,6 +13,7 @@ if owner > -1 && instance_exists(owner) && instance_exists(Player)
 				owner = other.id;
 				team = other.team
 				isInverted = other.isInverted;
+				shootOutPickup = true;
 				if isInverted
 				{
 					sprite_index = sprInvertedBigGuardianSquareBulletSpawn;
@@ -30,6 +31,7 @@ if owner > -1 && instance_exists(owner) && instance_exists(Player)
 				owner = other.id;
 				team = other.team
 				isInverted = other.isInverted;
+				shootOutPickup = true;
 				if isInverted
 				{
 					sprite_index = sprInvertedBigGuardianBulletSpawn;

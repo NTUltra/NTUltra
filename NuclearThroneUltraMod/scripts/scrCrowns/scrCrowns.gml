@@ -226,10 +226,10 @@ function scrCrowns() {
 	crown_used[34] = 0
 	crown_tips[34] = "again"
 	
-	//have no melee
+	//have nerves of steel or adrenline fuel?
 	/*
-	crown_name[35] = "[CROWN OF DROWNING]"
-	crown_text[35] = "DOUBLE <y>AMMO<y> COST#WHENEVER YOU RUN OUT OF AMMO#<r>HEAL<r> 4HP"
+	crown_name[35] = "[CROWN OF AGGRESSION]"
+	crown_text[35] = "TAKE DAMAGE OVER TIME#+10% RELOAD SPEED"
 	crown_used[35] = 0
 	crown_tips[35] = "again"
 	*/

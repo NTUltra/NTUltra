@@ -24,7 +24,7 @@ switch(array_length(UberCont.collectedRewards))
 		snd_play(other.snd_chst);
 		with instance_create(x,y,PopupText)
 		{
-			mytext = "+1 RADIATION VALUE!"
+			mytext = "+10% RADIATION VALUE!"
 			theColour = c_lime;
 			moveSpeed = 1;
 			alarm[1] = 60;

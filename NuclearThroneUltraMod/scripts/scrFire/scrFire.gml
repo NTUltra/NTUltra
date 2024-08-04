@@ -45,24 +45,32 @@ function scrFire(canDrown = true) {
 		{
 			if armour < maxarmour
 			{
+				if reload > 200
+					reload -= 50;
+				if reload > 300
+					reload -= 100;
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.3332;
+					reload -= wep_load[wep]*0.34;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.37;
+					reload -= wep_load[wep]*0.385;
 				}
 			}
 			else if armour == maxarmour
 			{
+				if reload > 200
+					reload -= 50;
+				if reload > 300
+					reload -= 80;
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.14;
+					reload -= wep_load[wep]*0.15;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.15;
+					reload -= wep_load[wep]*0.165;
 				}
 			}
 		}
@@ -301,7 +309,7 @@ function scrFire(canDrown = true) {
 	dmg = 8
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -531,7 +539,7 @@ function scrFire(canDrown = true) {
 	dmg = 10
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),Slash)
@@ -539,7 +547,7 @@ function scrFire(canDrown = true) {
 	dmg = 8
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+50*other.accuracy,2+longarms)
+	motion_add(aimDirection+50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),Slash)
@@ -547,7 +555,7 @@ function scrFire(canDrown = true) {
 	dmg = 8
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-50*other.accuracy,2+longarms)
+	motion_add(aimDirection-50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -762,7 +770,7 @@ function scrFire(canDrown = true) {
 	{
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -1145,7 +1153,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -1273,13 +1281,14 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	dmg = 9
-	longarms = 0
+		dmg = 10
+		longarms = 0
 	
-	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
-	image_angle = direction
-	team = other.team}
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,2.7+longarms)
+		image_angle = direction
+		team = other.team
+	}
 
 	wepangle = -wepangle
 	speed = +speed*0.5;
@@ -2537,7 +2546,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x,y,SuperFlakBullet)
 	{
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,11+random(2))
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,13+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -2563,7 +2572,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team
 	}
@@ -2740,7 +2749,7 @@ function scrFire(canDrown = true) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.5+longarms)
+		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2755,7 +2764,7 @@ function scrFire(canDrown = true) {
 				dmg = 8
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -2798,7 +2807,7 @@ function scrFire(canDrown = true) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.5+longarms)
+		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -2813,7 +2822,7 @@ function scrFire(canDrown = true) {
 				dmg = 6
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -3078,7 +3087,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,3+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),Slash)
@@ -3089,7 +3098,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+50*other.accuracy,2+longarms)
+	motion_add(aimDirection+50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),Slash)
@@ -3100,7 +3109,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-50*other.accuracy,2+longarms)
+	motion_add(aimDirection-50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3235,7 +3244,7 @@ function scrFire(canDrown = true) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.5+longarms)
+		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -3257,7 +3266,7 @@ function scrFire(canDrown = true) {
 				longarms = 0
 				alarm[11] = choose(0,1);
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -3301,7 +3310,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.5+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3335,7 +3344,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,3+longarms)
+	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),LightningSlash)
@@ -3344,7 +3353,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+50*other.accuracy,2+longarms)
+	motion_add(aimDirection+50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y((Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),LightningSlash)
@@ -3353,7 +3362,7 @@ function scrFire(canDrown = true) {
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection-50*other.accuracy,2+longarms)
+	motion_add(aimDirection-50*other.accuracy,2.6+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -3576,7 +3585,7 @@ function scrFire(canDrown = true) {
 		dmg = 8
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.5+longarms)
+		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
 		team = other.team
 		sprite_index = sprLollipopSlash;
@@ -3586,7 +3595,7 @@ function scrFire(canDrown = true) {
 		dmg = 32//shovel is 8 sledge = 16
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.5+longarms)
+		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
 		team = other.team
 	}

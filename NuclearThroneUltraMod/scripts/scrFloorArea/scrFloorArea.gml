@@ -160,6 +160,9 @@ function scrFloorArea(area, styleb){
 	case 138:
 	sprite_index=sprFloor138;
 	break;
+	case 139:
+	sprite_index=sprFloor139B;
+	break;
 	default:
 	sprite_index=sprFloor0B;
 	break;
@@ -314,6 +317,9 @@ function scrFloorArea(area, styleb){
 	break;
 	case 138:
 	sprite_index=sprFloor138;
+	break;
+	case 139:
+	sprite_index=sprFloor139;
 	break;
 	default:
 	sprite_index=sprFloor0;

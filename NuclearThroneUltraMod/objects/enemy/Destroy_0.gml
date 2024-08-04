@@ -60,23 +60,31 @@ else if morphMe != 6
 	instance_create(x,y,PortalChecker);
 	if morphMe == 2
 	{
-		instance_create(x,y,ExplosiveSheep);
+		with instance_create(x,y,ExplosiveSheep) {
+			mySize = other.mySize;	
+		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");
 	} else if morphMe == 3
 	{
-		instance_create(x,y,UltraSheep);
+		with instance_create(x,y,UltraSheep) {
+			mySize = other.mySize;	
+		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} else if morphMe == 4
 	{
-		instance_create(x,y,GoldSheep);
+		with instance_create(x,y,GoldSheep) {
+			mySize = other.mySize;	
+		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	}
 	else 
 	{
-		instance_create(x,y,Sheep);
+		with instance_create(x,y,Sheep) {
+			mySize = other.mySize;	
+		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} 

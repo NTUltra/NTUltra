@@ -1,5 +1,5 @@
 alarm[1] = 30+random(20)
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 scrTarget()
 if target != noone
 {

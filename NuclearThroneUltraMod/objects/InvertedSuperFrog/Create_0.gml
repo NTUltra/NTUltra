@@ -29,7 +29,7 @@ alarm[2] = 5
 scrInitDrops(1);
 
 
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 {
 	sleeping = true;

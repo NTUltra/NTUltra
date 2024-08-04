@@ -4,7 +4,10 @@ if !sleeping
 	with instance_create(x,y,EnemyHomingTriangle)
 	{
 		motion_add(other.gunangle+random(20)-10,1);
-		homingSpeed = 1.25;
+		if GetPlayerLoops() < 1
+			homingSpeed = 1.2;
+		else
+			homingSpeed = 1.25;
 		image_angle = direction
 		team = other.team
 	}

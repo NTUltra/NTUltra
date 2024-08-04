@@ -1,5 +1,5 @@
 alarm[1] = 40+random(30)
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player)
 {
 if Player.loops>0

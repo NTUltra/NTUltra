@@ -7,11 +7,18 @@ if (other.team != 2 && (mySize >= other.mySize-1 or impactWrist) and speed > 2)
 		{
 			if point_distance(x,y,other.x,other.y) > 480
 				exit;
-			if Player.ultra_got[52] == 1 && random(10) < 3
+			if Player.ultra_got[52] == 1
 			{
-				snd_play(sndMeatExplo,0.1,true);
-				snd_play(sndExplosionS,0.1,true);
-				instance_create(x,y,MeatExplosion);
+				if random(10) < 4
+				{
+					snd_play(sndMeatExplo,0.1,true);
+					snd_play(sndExplosionS,0.1,true);
+					instance_create(x,y,MeatExplosion);
+				} else
+				{
+					snd_play(sndMeatExplo,0.1,true);
+					instance_create(x,y,SmallMeatExplosion);	
+				}
 			}
 			if point_distance(Player.x,Player.y,other.x,other.y) > 350
 				dmg *= 0.5;

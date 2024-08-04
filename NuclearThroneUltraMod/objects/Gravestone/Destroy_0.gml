@@ -4,7 +4,7 @@
 
 // Inherit the parent event
 event_inherited();
-if GetPlayerLoops() > 0
+if loops > 0
 	scrDrop(16,0);
 else
 	scrDrop(20,0);

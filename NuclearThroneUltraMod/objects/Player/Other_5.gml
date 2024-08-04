@@ -3,6 +3,9 @@ if instance_exists(Credits)
 	exit;
 if swapChar
 	exit;
+jump = 0;
+roll = 0;
+didJumpRoll = false;
 consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
 if ultra_got[50] && altUltra
@@ -468,29 +471,29 @@ if looping && area != 104
 	if race = 11 && loops = 1
 	{
 		if scrIsHardMode() //HARD MODE EXCLUSIVE
-		with instance_create(x,y,WepPickup)
-		{
-			persistent = true;
-			scrWeapons()
-			wep = 610
-			name = wep_name[wep]
-			ammo = 0
-			type = wep_type[wep]
-			curse = 0
-			sprite_index = wep_sprt[wep]
-		}
+			with instance_create(x,y,WepPickup)
+			{
+				persistent = true;
+				scrWeapons()
+				wep = 610
+				name = wep_name[wep]
+				ammo = 0
+				type = wep_type[wep]
+				curse = 0
+				sprite_index = wep_sprt[wep]
+			}
 		else
-		with instance_create(x,y,WepPickup)
-		{
-			persistent = true;
-			scrWeapons()
-			wep = 316
-			name = wep_name[wep]
-			ammo = 0
-			type = wep_type[wep]
-			curse = 0
-			sprite_index = wep_sprt[wep]
-		}
+			with instance_create(x,y,WepPickup)
+			{
+				persistent = true;
+				scrWeapons()
+				wep = 316
+				name = wep_name[wep]
+				ammo = 0
+				type = wep_type[wep]
+				curse = 0
+				sprite_index = wep_sprt[wep]
+			}
 	}
 	else if race = 11 && loops = 2 && scrIsHardMode()
 	{

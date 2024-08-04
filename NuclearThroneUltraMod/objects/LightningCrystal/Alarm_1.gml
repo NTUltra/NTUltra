@@ -1,5 +1,5 @@
 ///@description AI
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 alarm[1] = 8+random(10)//30+r10
 
 scrTarget()

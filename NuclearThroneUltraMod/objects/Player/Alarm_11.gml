@@ -1,6 +1,6 @@
 /// @description Robot curse ultra
 alarm[11] = 46;
-if !outOfCombat
+if !outOfCombat && instance_exists(enemy)
 {
 	if skill_got[17] = 1
 		snd_play_fire(sndLaserUpg)

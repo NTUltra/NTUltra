@@ -7,8 +7,8 @@ impactWristed = false;
 team = 0;
 corpseHome = 0.3;
 if instance_exists(Player){
-	if Player.ultra_got[52] == 1{
-		friction=0.33;
+	if Player.ultra_got[52] {
+		friction=0.32;
 		dmg = 1.5;
 	}
 	if Player.skill_got[20] {

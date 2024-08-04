@@ -665,11 +665,11 @@ if race == 19 //skeleton
     maxSpeed = 3.65
     accuracy = 1.2
 }
-if race == 16
+if race == 16//Viking
 {
-	maxhealth = 5;
+	maxhealth = 6;
 }
-if race == 26//Good O'l Humphry & Viking
+if race == 26//Good O'l Humphry
 {
 	maxhealth = 6;
 }

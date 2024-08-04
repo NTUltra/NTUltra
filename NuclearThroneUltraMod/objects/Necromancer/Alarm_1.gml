@@ -18,7 +18,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(5) < 4
 		else if hspeed < 0
 			right = -1
 	}
-	else
+	else if !instance_exists(ReviveArea) || random(3) < 1
 	{
 		event_user(1);
 	}

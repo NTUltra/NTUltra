@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-if instance_exists(UberCont) && !UberCont.unlocked_alt_routes
+if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes)
 {
 	instance_destroy(id,false);
 	exit;

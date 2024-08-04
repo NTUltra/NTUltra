@@ -1,5 +1,5 @@
 alarm[1] = actTime+random(actTime)//20 20
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if team=2
 	scrRogueTarget()
 else

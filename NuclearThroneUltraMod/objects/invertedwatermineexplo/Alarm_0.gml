@@ -18,6 +18,7 @@ image_angle = direction;}*/
 with instance_create(x,y,EnemyLaser)
 {image_angle = ang
 	team = 0;
+	maxDistance = 36;
 event_perform(ev_alarm,0)}
 ang += 60}
 

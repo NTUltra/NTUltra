@@ -27,6 +27,6 @@ actTime = 60;
 alarm[0] = 30;
 type = 0;
 
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

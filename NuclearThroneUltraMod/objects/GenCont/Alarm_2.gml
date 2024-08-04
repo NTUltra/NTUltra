@@ -24,12 +24,12 @@ if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 
 	if tots > 1
 		scrSpawnMoreBosses(GoldTotem,tots);
 		
-	var tots = clamp(round(GetPlayerLoops()*0.5) - 4,0,6);
+	var tots = clamp(round(GetPlayerLoops()*0.5) - 3,0,6);
 	if scrIsHardMode()//HARD MODE
 		tots ++;
-	if tots > 0
-		scrSpawnBoss(GoldImmuneTotem);
 	if tots > 1
+		scrSpawnBoss(GoldImmuneTotem);
+	if tots > 2
 		scrSpawnMoreBosses(GoldImmuneTotem,tots);
 }
 if (Player.area = 3 and Player.subarea = 3)

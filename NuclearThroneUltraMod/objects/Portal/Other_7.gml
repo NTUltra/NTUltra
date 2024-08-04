@@ -7,8 +7,8 @@ if sprite_index = sprPortalSpawn
 if type = 1
 {
 sprite_index = sprPortal
-if inverted
-sprite_index = sprPortalInverted
+if inverted || (scrIsInInvertedArea() && instance_exists(Player) && Player.subarea < 3)
+	sprite_index = sprPortalInverted
 }
 if type = 3
 sprite_index = sprProtoPortal

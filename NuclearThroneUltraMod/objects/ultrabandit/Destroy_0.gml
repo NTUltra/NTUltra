@@ -1,4 +1,4 @@
-scrDrop(40,6)
+scrDrop(40,10)
 scrDrop(5,0)
 if !sleeping
 {

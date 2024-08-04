@@ -58,6 +58,6 @@ lasty = y
 alarm[3] = 20;
 stuck=false;
 
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

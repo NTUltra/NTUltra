@@ -42,7 +42,7 @@ snd_dead = sndSheepDead
 walk = 0
 alarm[1] = 30+random(90)
 wkick = 0
-alarm[0] = 20;
+alarm[0] = 12;
 snd_play(sndSheep,0.1,true);
 
 scrInitDrops(5);

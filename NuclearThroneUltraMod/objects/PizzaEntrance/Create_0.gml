@@ -4,7 +4,7 @@ with ToxicBarrel{
 if point_distance(x,y,other.x,other.y) < 64
 instance_change(Wind,false)
 }
-if instance_exists(UberCont) && !UberCont.unlocked_alt_routes
+if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes)
 {
 	instance_destroy(id,false);
 	exit;

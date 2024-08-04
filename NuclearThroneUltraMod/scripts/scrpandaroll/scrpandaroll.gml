@@ -20,9 +20,9 @@ function scrPandaRoll(){
 		prevwep=9//minigun tier 6
 		scrUnlockBSkin(14,"FOR CONVERTING A GOLDEN WEAPON",0)
 	}
-    else if wep_area[prevwep] == -1
+    else if prevwep > 0 && prevwep < array_length(wep_area) && wep_area[prevwep] == -1
 	{
-		 prevwep = 8;
+		 prevwep = 8;//Minigun tier 6
 		 //Double shotgun (tier 2)
 	}
 		if Player.ultra_got[55]
@@ -32,7 +32,7 @@ function scrPandaRoll(){
 			wep=prevwep;}
 			until ( ( (wep_area[wep] = wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep+1]) || (wep_area[wep] = wep_area[prevwep+2]) )||(dir>1000) )
 		}
-		else{
+		else if prevwep > 0 && prevwep < array_length(wep_area) {
 			do {wep = irandom(maxwep-1)+1;dir++;
 			if dir >999
 			wep=prevwep;}

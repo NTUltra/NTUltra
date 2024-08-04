@@ -5,8 +5,10 @@ for (var j = 0; j < tal; j++)
 {
 	if myGuys[| j] != noone && instance_exists(myGuys[| j])
 	{
-		myGuys[| j].my_health = healths[| j];
-		myGuys[| j].prevhealth = healths[| j];
+		var h = min(myGuys[| j].maxhealth,healths[| j]);
+		myGuys[| j].my_health = h;
+		myGuys[| j].prevhealth = h;
+		myGuys[| j].totemImmune = false;
 	}
 }
 ds_list_clear(myGuys);

@@ -2571,6 +2571,8 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if other.ultra_got[105] || other.ultra_got[106] || other.ultra_got[107] || other.ultra_got[107]
 						dmg ++;
+					if other.loops > 0 || scrIsHardMode()
+						dmg ++;
 					grabbingPickup = targetPickup;
 					team = other.team;
 					creator = other.id;

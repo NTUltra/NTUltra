@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSlash",
-    "path":"sprites/sprSlash/sprSlash.yy",
+    "name":"sprBlackSlash",
+    "path":"sprites/sprBlackSlash/sprBlackSlash.yy",
   },
   "spriteMaskId":{
     "name":"mskSlash",

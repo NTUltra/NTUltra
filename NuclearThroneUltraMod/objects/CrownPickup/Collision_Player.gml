@@ -9,8 +9,14 @@ instance_change(FakeCrown,true)
 scrGiveCrownPoints(1);
 if Player.ultra_got[30] && Player.altUltra
 {
+	canUncurse = false;
+	
 	if Player.curse
 	{
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1, true);	
+		}
 		if Player.bcurse
 		{
 			Player.ccurse = 1;

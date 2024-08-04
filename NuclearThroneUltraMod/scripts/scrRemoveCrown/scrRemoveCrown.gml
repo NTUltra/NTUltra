@@ -35,12 +35,12 @@ function scrRemoveCrown(oldcrown){
 	{
 		if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 		{
-			Player.maxarmour = max(Player.maxarmour - 1, 0);
+			Player.maxarmour = max(Player.maxarmour - 1, 1);
 			UberCont.maxHpIncrease = max(UberCont.maxHpIncrease - 1, 0);
 		}
 		else
 		{
-			Player.maxhealth = max(Player.maxhealth - 1, 0);
+			Player.maxhealth = max(Player.maxhealth - 1, 1);
 			UberCont.maxHpIncrease = max(UberCont.maxHpIncrease - 1, 0);
 		}
 	}

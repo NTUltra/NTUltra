@@ -50,7 +50,7 @@ if instance_exists(Player)
     
 	    if ultra_got[69]//Angel protector
 	    instance_create(x,y,AngelDeflect);
-		if UberCont.unlocked_alt_routes
+		if UberCont.unlocked_alt_routes && !scrIsGamemode(10)
 		{
 		    if area=1&&subarea<3
 		    {oasisskip=instance_number(chestprop);
@@ -80,7 +80,7 @@ if instance_exists(Player)
 		if instance_exists(ForceInversion)
 			ic += 100;
 		var didSpawnInv = false;
-		if (UberCont.unlocked_alt_routes && (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375))//Inversion magnet
+		if (UberCont.unlocked_alt_routes/* && !scrIsGamemode(10)*/ && (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375))//Inversion magnet
 		{
 		    if ( (area=1&&subarea<3)  )
 		    {

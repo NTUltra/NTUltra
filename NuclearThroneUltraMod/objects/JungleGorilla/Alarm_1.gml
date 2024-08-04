@@ -1,6 +1,6 @@
 ///@description AI
 alarm[1] = actTime + irandom(actTime);
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 scrTarget()
 if target != noone {
 	var ran = random(10);

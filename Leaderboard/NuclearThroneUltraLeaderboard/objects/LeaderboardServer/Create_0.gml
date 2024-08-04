@@ -1,6 +1,6 @@
 /// @description Init
 updateVersion = "30.21.00";
-betaVersion = "31.BETA.18"
+betaVersion = "31.BETA.19"
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 maxwep = 802;
@@ -53,3 +53,4 @@ draw_set_font(fntM);
 alarm[1] = 120;
 noFile = false;
 x += 64;//Show me hits
+log = "LOG:\n\n";

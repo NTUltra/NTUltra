@@ -3,7 +3,7 @@ if sprite_index == spr_death
 {
 	image_speed = 0;
 	image_index = image_number - 1;
-	if instance_exists(BigGenerator)
+	if instance_exists(BigGeneratorProp)
 	{
 		with ThronePipes
 			depth = other.depth + 1;

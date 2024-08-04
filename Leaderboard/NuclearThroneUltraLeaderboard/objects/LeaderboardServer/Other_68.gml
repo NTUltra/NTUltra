@@ -219,6 +219,14 @@ if (type == network_type_data) {
 				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
+			if newScore[array_length(newScore) - 1] == newScore[3]
+			{
+				show_debug_message("WRONG SCORE DETECTED");
+				show_debug_message(string(newScore));
+				log += "\nWRONG SCORE DETECTED";
+				log += "\nstring(newScore)\n";
+				exit;
+			}
 			var scoreString = "";
 			for (var i = 0; i < array_length(newScore); i++)
 			{

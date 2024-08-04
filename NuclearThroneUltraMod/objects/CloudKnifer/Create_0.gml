@@ -22,12 +22,12 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 12;
+actTime = 14;
 
 acc = 0.8;
 maxSpeed = 4.7;
 stalking = (instance_number(CloudKnifer) % 2 == 0);
-maxDistance = 300;
+maxDistance = 280;
 startingPointDistance = 250;
 tx = x;
 ty = y;

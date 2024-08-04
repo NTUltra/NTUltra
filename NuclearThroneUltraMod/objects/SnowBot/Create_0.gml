@@ -27,6 +27,6 @@ maxChargeSpeed = 6.8 + clamp(loops*0.2,0,3);
 if loops > 0
 	actTime = 12;
 
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

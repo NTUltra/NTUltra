@@ -6,6 +6,7 @@ with GraveyardEntrance
 	with instance_create(x,y,Portal)
 	{
 		type = 1
+		alarm[1] += 30;
 	}
 	with Player
 	{

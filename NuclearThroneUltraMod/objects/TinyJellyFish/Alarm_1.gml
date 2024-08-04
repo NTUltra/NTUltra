@@ -1,5 +1,5 @@
 /// @description AI
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 alarm[1] = 2;
 if target != noone && instance_exists(target)
 {

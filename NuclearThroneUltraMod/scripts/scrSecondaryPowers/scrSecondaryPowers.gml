@@ -341,7 +341,7 @@ function scrSecondaryPowers() {
 							with instance_create(x,y,HoldToEatEnemy)
 							{
 								target = n;
-								image_speed = min(1,15 / n.my_health);//Increase number to go faster
+								image_speed = min(1,17 / n.my_health);//Increase number to go faster
 							}
 						}
 						else
@@ -506,7 +506,7 @@ function scrSecondaryPowers() {
 			case 13:
 				if KeyCont.key_regal[p] == 1 && !instance_exists(SheepSuperCharge) && !outOfCombat
 				{
-					if sheepPower >= 9 || (justAsheep && !isOverlapping) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
+					if sheepPower >= 8 || (justAsheep && !isOverlapping) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
 					{
 						KeyCont.key_regal[p] = 2;
 						with SheepStorm

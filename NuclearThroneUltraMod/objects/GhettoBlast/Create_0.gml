@@ -1,4 +1,5 @@
 event_inherited();
+friction *= 0.5;
 canAlwaysDeflect = true;
 image_speed = 0;
 dmg = 10;

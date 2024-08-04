@@ -22,8 +22,8 @@ wkick = 0
 actTime = 26;
 loops = GetPlayerLoops();
 if loops < 1
-	actTime = 29;
-maxRange = 350;
+	actTime = 32;
+maxRange = 335;
 minRange = 96;
 originRange = 100;
 acc = 1;
@@ -33,6 +33,6 @@ moveDirection = direction;
 image_yscale = choose(1,-1);
 right = 1;
 scrAddDrops(1);
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

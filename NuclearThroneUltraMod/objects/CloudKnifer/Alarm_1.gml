@@ -21,7 +21,7 @@ if target != noone {
 		else if dis > 34
 		{
 			var ran = random(100);
-			if image_alpha > 0.9 && ran < 30 {
+			if image_alpha > 0.9 && ran < 25 {
 				event_user(2);
 				gunangle = point_direction(x, y, target.x, target.y)
 				alarm[4] = 3;
@@ -31,10 +31,10 @@ if target != noone {
 					walk = alarm[1] + actTime + random(actTime);
 				}
 		    }
-		    else if ran < 50 && instance_number(enemy) > 4 {
+		    else if ran < 45 && instance_number(enemy) > 4 {
 				event_user(1);
 		    }
-			else if ran < 80 {
+			else if ran < 75 {
 				motion_add(random(360),acc);
 				walk = alarm[1] + actTime + random(actTime);
 			}

@@ -41,5 +41,12 @@ if canSpawn
 		angle += angleStep;
 	}
 }
-scrDrop(90,0);
+var drop = scrDrop(90,0);
+if shootOutPickup && drop != noone
+{
+	with drop
+	{
+		vspeed = 4.5;	
+	}
+}
 scrRaddrop(2);

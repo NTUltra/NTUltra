@@ -31,7 +31,7 @@ if loops > 0
 fuseAmount = 0;
 shadowY = 0;
 
-sleeping = false;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 {
 	sleeping = true;
