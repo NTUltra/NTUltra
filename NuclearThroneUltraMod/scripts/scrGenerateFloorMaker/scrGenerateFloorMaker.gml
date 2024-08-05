@@ -212,9 +212,9 @@ function scrGenerateFloorMaker(limiter) {
 			event_user(0);
 		return limiter;
 	}
-	if !instance_exists(MushroomBoss) && point_distance(x,y,10016,10016) > 48 
+	if !instance_exists(MushroomBoss) && point_distance(x,y,10016,10016) > 48
 	{
-		if instance_exists(Player){
+		if instance_exists(Player) && Player.area != 139{
 				/*
 			if (Player.area == 3 and Player.subarea == 3){//#safe spawns 4 big dog
 				Player.x=x+16;

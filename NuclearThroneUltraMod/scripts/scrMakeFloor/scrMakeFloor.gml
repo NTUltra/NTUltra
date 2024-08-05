@@ -513,18 +513,73 @@ function scrMakeFloor(limiter) {
 		instance_create(x+32,y+32,Floor)
 		instance_create(x+32,y+64,Floor)
 		instance_create(x+64,y+64,Floor)
-		instance_create(x+64,y+32,Floor)
-		instance_create(x+96,y+32,Floor)
-		instance_create(x+96,y,Floor)
-		/*
-		instance_create(x+32,y,Floor)
-		instance_create(x-32,y,Floor)
-		instance_create(x,y + 32,Floor)
-		instance_create(x,y - 32,Floor)
-		instance_create(x + 32,y + 32,Floor)
-		instance_create(x - 32,y - 32,Floor)
-		instance_create(x - 32,y + 32,Floor)
-		instance_create(x + 32,y - 32,Floor)*/
+		instance_create(x+64,y+96,Floor)
+		instance_create(x+96,y+96,Floor)
+		instance_create(x+96,y+128,Floor)
+		instance_create(x+128,y+128,Floor)
+		instance_create(x+128,y+96,Floor)
+		instance_create(x+160,y+96,Floor)
+		instance_create(x+160,y+64,Floor)
+		instance_create(x+192,y+64,Floor)
+		instance_create(x+192,y+32,Floor)
+		instance_create(x+224,y+32,Floor)
+		instance_create(x+224,y,Floor)
+		
+		instance_create(x,y-32,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x+32,y-64,Floor)
+		instance_create(x+64,y-64,Floor)
+		instance_create(x+64,y-96,Floor)
+		instance_create(x+96,y-96,Floor)
+		instance_create(x+96,y-128,Floor)
+		instance_create(x+128,y-128,Floor)
+		instance_create(x+128,y-96,Floor)
+		instance_create(x+160,y-96,Floor)
+		instance_create(x+160,y-64,Floor)
+		instance_create(x+192,y-64,Floor)
+		instance_create(x+192,y-32,Floor)
+		instance_create(x+224,y-32,Floor)
+		var wantHorizontal = choose(true,false);
+		var wantFlipped = choose(1,1,-1);
+		var w = 224;
+		var h = 256;
+		if wantHorizontal
+		{
+			if !place_meeting(x + w * wantFlipped, y, Floor)
+			{
+				x += w * wantFlipped;
+			}
+			else if !place_meeting(x - w * wantFlipped, y,Floor)
+			{
+				x += -w * wantFlipped;
+			}
+			else
+			{
+				wantHorizontal = false;	
+			}
+		}
+		if !wantHorizontal
+		{
+			if !place_meeting(x, y + h * wantFlipped, Floor)
+			{
+				y += h * wantFlipped;
+			}
+			else if !place_meeting(x, y - h * wantFlipped,Floor)
+			{
+				y += -h * wantFlipped;
+			}
+			else
+			{
+				if choose(true,false)
+				{
+					x += w * choose(1,-1);	
+				}
+				else
+				{
+					y += h * choose(1,-1);
+				}
+			}
+		}
 	}
 	//savanna
 	if area = 10 || area == 121{ 
@@ -816,6 +871,8 @@ function scrMakeFloor(limiter) {
 	}
 	else if area == 135
 		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
+	else if area == 139
+		trn = choose(0,0,0,0,0,0,180,90,-90)
 	else if area == 138
 	{
 		trn = 0;
@@ -887,7 +944,7 @@ function scrMakeFloor(limiter) {
 
 	//instance_create(x,y,Floor)
 
-	if !instance_exists(WeaponChest) && (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || (area == 9 && subarea != 3)
+	if !instance_exists(WeaponChest) && (trn = 180 or (abs(trn) = 90 and (area = 3 || area = 106 || area == 136 || area == 139 ||(area == 9 && subarea != 3)
 	|| (area == 118 && subarea != 3)))) and point_distance(x,y,10016,10016) > 48 and area != 104 and area != 137{
 	instance_create(x,y,Floor)
 	instance_create(x+16,y+16,WeaponChest)}
@@ -1136,7 +1193,6 @@ function scrMakeFloor(limiter) {
 	instance_create(x,y,Floor)
 	instance_create(x,y+32,Floor)
 	}}
-
 
 	x += lengthdir_x(32,direction);
 	y += lengthdir_y(32,direction);
