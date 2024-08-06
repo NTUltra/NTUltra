@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrCreateThePit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrCreateThePit",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

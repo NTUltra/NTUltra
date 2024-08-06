@@ -34,11 +34,14 @@ with owner
 	snd_play(sndVenom,0.1);
 	DealDamage(theDamage);
 	other.hits += 1;
-	BackCont.shake += 20;
-	var d = random(360);
-	BackCont.viewx2 += lengthdir_x(10,d)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,d)*UberCont.opt_shake
-	Sleep(20);
+	if object_index == Player
+	{
+		BackCont.shake += 20;
+		var d = random(360);
+		BackCont.viewx2 += lengthdir_x(10,d)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,d)*UberCont.opt_shake
+		Sleep(20);
+	}
 	repeat(3)
 		with instance_create(x,y,AcidStreak)
 		{

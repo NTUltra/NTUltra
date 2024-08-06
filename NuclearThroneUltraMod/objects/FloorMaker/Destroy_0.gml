@@ -6,46 +6,7 @@ if instance_exists(Player) && !endPieceSpawned
 	//End piece
 	if area == 139 && !instance_exists(ThePit)
 	{
-		instance_create(x + 64,y,Floor)
-		instance_create(x + 64,y + 32,Floor)
-		instance_create(x + 32,y + 32,Floor)
-		instance_create(x + 32,y + 64,Floor)
-		instance_create(x,y + 64,Floor)
-		//instance_create(x,y + 128,Floor)
-		
-		instance_create(x - 96,y,Floor)
-		instance_create(x - 96,y + 32,Floor)
-		instance_create(x - 64,y + 32,Floor)
-		instance_create(x - 64,y + 64,Floor)
-		instance_create(x - 32,y + 64,Floor)
-		
-		//instance_create(x + 64,y,Floor)
-		instance_create(x + 64,y - 32,Floor)
-		instance_create(x + 64,y - 64,Floor)
-		instance_create(x + 32,y - 64,Floor)
-		instance_create(x + 32,y - 96,Floor)
-		instance_create(x,y - 96,Floor)
-		//instance_create(x,y - 128,Floor)
-		
-		//instance_create(x - 64,y,Floor)
-		instance_create(x - 96,y - 32,Floor)
-		instance_create(x - 96,y - 64,Floor)
-		instance_create(x - 64,y - 64,Floor)
-		instance_create(x - 64,y - 96,Floor)
-		instance_create(x - 32,y - 96,Floor)
-		
-		instance_create(x + 96,y,Floor)
-		instance_create(x + 96,y - 32,Floor)
-		instance_create(x + 128,y,Floor)
-		instance_create(x + 128,y - 32,Floor)
-		instance_create(x + 160,y,Floor)
-		instance_create(x + 160,y - 32,Floor)
-		instance_create(x + 192,y,Floor)
-		instance_create(x + 192,y - 32,Floor)
-		instance_create(x + 224,y,Floor)
-		instance_create(x + 224,y - 32,Floor)
-		instance_create(x + 256,y,Floor)
-		instance_create(x + 256,y - 32,Floor)
+		scrCreateThePit();
 		
 		instance_create(x,y,ThePit);
 	}

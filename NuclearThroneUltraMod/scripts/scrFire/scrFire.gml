@@ -5163,7 +5163,7 @@ function scrFire(canDrown = true) {
 		var pr = Player.phoenixrevives
 		if  pr > 4 && reload > 0
 	    {
-			reload -= wep_load[wep] * min(0.25,(Player.phoenixrevives-3)*0.2)
+			reload -= wep_load[wep] * min(0.2,(Player.phoenixrevives-3)*0.1)
 	    }
 		if pr > 3
 		{

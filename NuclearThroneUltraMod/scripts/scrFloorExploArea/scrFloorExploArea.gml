@@ -149,6 +149,9 @@ function scrFloorExploArea(area){
 	case 138:
 	sprite_index=sprFloor138Explo;
 	break;
+	case 139:
+	sprite_index=sprFloor139Explo;
+	break;
 	default:
 	sprite_index=sprFloor0Explo;
 	break;

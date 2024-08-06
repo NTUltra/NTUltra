@@ -486,6 +486,25 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	
+	//THE PIT!
+    if spawnarea = 139 && (instance_number(enemy) < 2 || random(10) < 6) {
+		if loops > 0 {
+			if random(35) < 1
+				instance_create(x + 16, y + 16, GraveyardSniper)
+	        else if random(3) < 1
+				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,CloudShooter,Raven,JungleFly))
+	        else {
+	            instance_create(x + 16, y + 16, choose(Bandit,CloudFlyer,CloudFlyer,CloudFlyer, CloudShooter,CloudKnifer))
+	        }
+		} else {
+	        if random(3) < 1
+				instance_create(x + 16, y + 16, choose(FreakBandit,FreakBandit,FreakBandit,FreakBandit))
+	        else {
+	            instance_create(x + 16, y + 16, choose(FreakBandit,InvertedFreakBandit))
+	        }
+		}
+    }
     //CAVES
     if spawnarea = 4  && (subarea == 1 || random(2) < 1){
 		var crystal = LaserCrystal
