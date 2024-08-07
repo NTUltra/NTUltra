@@ -52,7 +52,7 @@ stuck=false;
 maxSpeed = 4.8;
 shootingMovementSpeed = 0.8;
 minMovementSpeed = 1.4;
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 acc = 2;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

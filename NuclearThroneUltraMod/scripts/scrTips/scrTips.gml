@@ -10,7 +10,7 @@ function scrTips() {
 	"always move",
 	"the wastelands show no mercy",
 	"stunned or sleeping enemies do not deal contact damage to you",
-	"overhealth is capped at double your max hp or at minimum 20hp",
+	"overhealth is capped at double your max hp or at minimum 10hp",
 	"secret ultras require a specific#crown, mutation, skin or weapon setup",
 	"secret ultras require a specific type of#crown, weapon, or mutation#when you reach level ultra",
 	"secret ultras all require a specific setup#when you reach level ultra",

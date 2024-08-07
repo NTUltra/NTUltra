@@ -1,4 +1,4 @@
-spr/// @description Replace walls
+/// @description Replace walls
 with other
 {
 	instance_destroy(id,false);

@@ -55,6 +55,19 @@ function scrPowers(raceOverwrite = -1) {
 			race = keepRace;
 			exit;
 		}
+		if (scrIsCrown(35) && (my_health > 1 || armour > 1))
+		{
+			if armour > 0
+				armour -= 1;
+			else
+				DealDamage(1,false,false,false);
+			exception = true;
+			hitBy = sprite_index;
+			image_index=0;
+		    sprite_index=spr_hurt;
+		    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+			scrCollectAmmo(2);
+		}
 		var alien = alienIntestines*0.5;
 		scrAlienIntestines();
 		var delay = 5;

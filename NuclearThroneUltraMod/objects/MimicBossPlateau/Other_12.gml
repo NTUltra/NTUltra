@@ -1,4 +1,12 @@
-/// @description DONE DONE GET YOUR REWARD HERE!
+/// @description DONE DONE GET YOUR REWARD HERE!\
+with PlayerSpawn
+{
+	area = 9;
+	subarea = 1;
+	if (!UberCont.voidChallengeGoing[4])
+		refundPoints = array_length(UberCont.skillDeposit);
+	getVision = true;
+}
 with Player
 {
 	area = 9

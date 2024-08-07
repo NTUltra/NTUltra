@@ -44,6 +44,6 @@ droprate = 20;
 maxSpeed = 1.5;
 alarm[0] = 1;
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

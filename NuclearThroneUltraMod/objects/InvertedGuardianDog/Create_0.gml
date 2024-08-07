@@ -19,6 +19,6 @@ spr_dead = sprInvertedDogGuardianDead
 spr_fire = sprInvertedDogGuardianCharge;
 spr_jump_up = sprInvertedDogGuardianJumpUp;
 spr_jump_down = sprInvertedDogGuardianJumpDown;
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

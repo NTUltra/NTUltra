@@ -7,5 +7,9 @@ with target
 	{
 		image_xscale = other.right
 	}
+	if object_index == BigGenerator
+	{
+		instance_destroy();	
+	}
 }
 instance_destroy();

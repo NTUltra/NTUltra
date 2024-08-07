@@ -373,6 +373,8 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	crownvisits = other.crownvisits;
 	gunGameKill = other.gunGameKill;
 	canCrownOfProtection = other.canCrownOfProtection;
+	getVision = other.getVision;
+	refundPoints = other.refundPoints;
 	//gotMinimumArmour = other.gotMinimumArmour;
 	freeArmourStrike = other.freeArmourStrike;
 	if other.ultra_got[87] && other.altUltra && other.rogueammo > 0

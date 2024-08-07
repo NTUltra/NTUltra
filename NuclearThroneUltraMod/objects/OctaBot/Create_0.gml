@@ -25,6 +25,6 @@ maxSpeed = 3.5;
 projectileSpeed = 4.5;
 type = 0;
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

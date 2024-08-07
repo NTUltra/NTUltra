@@ -35,6 +35,6 @@ if loops > 2
 if loops > 4
 	length ++;
 	
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

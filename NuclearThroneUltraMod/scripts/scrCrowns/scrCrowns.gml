@@ -225,6 +225,12 @@ function scrCrowns() {
 	crown_text[34] = "REPLACE YOUR ACTIVE WITH <w>REWIND<w>:#RESET <p>TIME<p>#TO THE START OF THE CURRENT AREA##CAN BE USED ONCE EACH AREA#TWICE IF YOU HAVE <g>THRONEBUTT<g>"
 	crown_used[34] = 0
 	crown_tips[34] = "again"
+
+	//PRESS ACTIVE ON CROWN SELECT
+	crown_name[35] = "[CROWN OF DICHOTOMY]"
+	crown_text[35] = "WHENEVER YOU TRY TO USE YOUR <w>ACTIVE<w>#TAKE <w>1<w> <r>DAMAGE<r>#AND GAIN SOME <y>AMMO<y>"
+	crown_used[35] = 0
+	crown_tips[35] = "lifetap"
 	
 	//have nerves of steel or adrenline fuel?
 	/*
@@ -234,8 +240,8 @@ function scrCrowns() {
 	crown_tips[35] = "again"
 	*/
 	
-	crownmax = 23//+12
-	secretcrownmax = 12;
+	crownmax = 23
+	secretcrownmax = 13;
 
 
 

@@ -156,5 +156,9 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown33Idle
 			spr_walk = sprCrown33Walk
 		break;
+		case 35://Dichotomy
+			spr_idle = sprCrown34Idle
+			spr_walk = sprCrown34Walk
+		break;
 	}
 }

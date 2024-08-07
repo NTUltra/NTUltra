@@ -2,7 +2,7 @@ meleedamage = 0
 mySize = 1
 scrWeapons();
 owner = -1;
-
+scrWeaponModInit();
 //behaviorprojectileSpeed
 gunangle = random(360)
 //alarm[0] = 20

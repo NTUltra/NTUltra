@@ -39,7 +39,7 @@ if loops > 0
 	deathProjectile = 8;
 }
 fireDelay = 3;
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;
 wasBehindWall = false;

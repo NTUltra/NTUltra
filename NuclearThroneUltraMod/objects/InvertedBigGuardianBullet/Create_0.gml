@@ -4,3 +4,4 @@
 event_inherited();
 projectileToSpawn = InvertedGuardianBulletSpawn;
 hitSprite = sprInvertedGuardianBulletHit
+stopSpeed = 0.3;

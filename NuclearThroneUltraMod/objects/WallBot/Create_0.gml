@@ -44,6 +44,6 @@ speed = 0;
 alarm[0] = 20;
 type = 0;
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

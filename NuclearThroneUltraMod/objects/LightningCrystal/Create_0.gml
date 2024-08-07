@@ -22,6 +22,6 @@ alarm[1] = 30+random(90)
 alarm[0] = 1;
 loops = GetPlayerLoops();
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

@@ -17,6 +17,6 @@ maxSpeed = 6.8;
 if loops > 0
 	maxSpeed = 7.5
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

@@ -19,3 +19,4 @@ race=0;
 rowPosition = 0;
 canReAdd = false;
 yOffset = 0;
+secretToggle = false;

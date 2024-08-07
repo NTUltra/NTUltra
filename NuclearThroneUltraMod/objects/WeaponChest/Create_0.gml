@@ -59,6 +59,6 @@ else if oneweponly
 {
 		sprite_index = sprWeaponChestReplaced;
 		shadowSprite = shd16;
-		wep = 0;
+		wep = [0,0];
 		curse = 0;
 }

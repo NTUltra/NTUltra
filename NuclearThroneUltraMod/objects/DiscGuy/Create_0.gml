@@ -31,6 +31,6 @@ instance_exists(Player) && Player.area != 106 && Player.area != 125//HARD MODE
 	instance_create(x,y,UltraDiscGuy);
 }
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

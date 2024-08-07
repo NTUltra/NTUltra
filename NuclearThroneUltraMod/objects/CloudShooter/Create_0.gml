@@ -33,6 +33,6 @@ moveDirection = direction;
 image_yscale = choose(1,-1);
 right = 1;
 scrAddDrops(1);
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

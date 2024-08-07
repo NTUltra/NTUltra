@@ -3,6 +3,21 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 	x = xstart+54;	
 } else
 	x = xstart;
+if (KeyCont.key_spec[p] == 1 && !instance_exists(UnlockingSecondRow) && (crown == 21 || crown == 35))
+{
+	secretToggle = !secretToggle;
+	if secretToggle
+	{
+		image_index = 35;
+		crown = 35;
+	}
+	else
+	{
+		image_index = 21;
+		crown = 21;
+	}
+	
+}
 if  KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset)
 {
 	KeyCont.key_fire[p] = 2;

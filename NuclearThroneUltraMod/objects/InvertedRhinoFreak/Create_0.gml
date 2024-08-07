@@ -22,6 +22,6 @@ alarm[1] = 40+random(10)
 
 walk = 0
 
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

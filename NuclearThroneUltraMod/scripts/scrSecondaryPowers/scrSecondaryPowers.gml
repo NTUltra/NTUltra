@@ -506,7 +506,7 @@ function scrSecondaryPowers() {
 			case 13:
 				if KeyCont.key_regal[p] == 1 && !instance_exists(SheepSuperCharge) && !outOfCombat
 				{
-					if sheepPower >= 8 || (justAsheep && !isOverlapping) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
+					if sheepPower >= 7 || (justAsheep && !isOverlapping) || instance_exists(SheepHyperDash) || instance_exists(HyperDashBuffer)
 					{
 						KeyCont.key_regal[p] = 2;
 						with SheepStorm

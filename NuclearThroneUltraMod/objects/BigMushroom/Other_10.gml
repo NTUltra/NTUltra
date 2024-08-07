@@ -1,5 +1,5 @@
 /// @description Go to banditland
-if KeyCont.key_pick[Player.p] = 1
+if KeyCont.key_pick[Player.p] = 1 && my_health > 0
 {
 	KeyCont.key_pick[Player.p] = 2;
 	
@@ -19,7 +19,12 @@ if KeyCont.key_pick[Player.p] = 1
 	//with enemy
 	//	my_health = 0
 
-	with instance_create(x,y,Portal) type = 1
+	with instance_create(x,y,Portal) {
+		x = other.x;
+		y = other.y;
+		scrForcePosition60fps();
+		type = 1
+	}
 
-	instance_change(Wind,false)
+	my_health = 0;
 }

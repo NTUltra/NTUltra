@@ -14,7 +14,7 @@ if (esplode)
 		var ang = random(360);
 		var am = 3;
 		var angStep = 360/am;
-		var l = 1;
+		var l = 2;
 		repeat(am)
 		{
 			with instance_create(x,y,Lightning)

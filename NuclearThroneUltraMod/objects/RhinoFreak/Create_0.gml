@@ -24,6 +24,6 @@ walk = 0
 with instance_create(x,y,WallBreak)
 	canSpawnSwarm = false;
 	
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;
