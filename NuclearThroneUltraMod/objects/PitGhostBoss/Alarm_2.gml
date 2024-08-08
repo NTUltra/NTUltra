@@ -1,4 +1,4 @@
-/// @description Fire
+/// @description Fire bullets
 if goToTarget
 	exit;
 sprite_index = spr_fire;
@@ -11,7 +11,30 @@ with instance_create(x, y, EnemyBullet1Small) {
     team = other.team
 }
 with instance_create(x, y, EnemyBullet1Small) {
+    motion_add(other.gunangle, 1)
+    image_angle = direction
+    team = other.team
+}
+with instance_create(x, y, EnemyBullet1Small) {
     motion_add(other.gunangle - 5, 1)
     image_angle = direction
     team = other.team
+}
+with instance_create(x, y, PitGhostLaser) {
+	raddrop = 0;
+    motion_add(other.gunangle + 5, 1)
+    image_angle = direction
+    team = other.team
+	walk = actTime;
+	alarm[1] = actTime;
+	existTime = 30;
+}
+with instance_create(x, y, PitGhostLaser) {
+	raddrop = 0;
+    motion_add(other.gunangle - 5, 1)
+    image_angle = direction
+    team = other.team
+	walk = actTime;
+	alarm[1] = actTime;
+	existTime = 30;
 }

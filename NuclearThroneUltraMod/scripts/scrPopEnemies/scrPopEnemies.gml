@@ -499,7 +499,7 @@ function scrPopEnemies() {
 	        }
 		} else {
 	        if random(3) < 1
-				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostLaser,PitGhostSpawner))
+				instance_create(x + 16, y + 16, choose(PitGhost,PitGhost,PitGhostLaser,PitGhostSpawner))
 	        else {
 	            instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostSpawner))
 	        }

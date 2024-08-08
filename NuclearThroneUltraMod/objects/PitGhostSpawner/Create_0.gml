@@ -1,5 +1,5 @@
 raddrop = 12
-maxhealth = 26
+maxhealth = 24
 mySize = 1
 event_inherited()
 canFly = true;

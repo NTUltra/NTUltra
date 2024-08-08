@@ -48,7 +48,7 @@ if ultra_got[43] && altUltra && hunterEye < hunterEyeMax && !instance_exists(Hun
 		}
 	}
 }
-if ultra_got[75] && speed == 0
+if ultra_got[75] && speed == 0 && point_distance(x,y,xprevious,yprevious) < 2
 {
 	alarm[3] = max(alarm[3],1);
 	meleeimmunity = max(1,meleeimmunity);

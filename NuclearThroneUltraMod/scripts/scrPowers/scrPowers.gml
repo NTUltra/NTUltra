@@ -666,7 +666,7 @@ function scrPowers(raceOverwrite = -1) {
 				snd_play_fire(sndHeavyBloodPistol);
 			}
 		}
-		else if wep_type[wep]!=0&&(can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
+		else if wep_type[wep] != 0 && wep_cost[wep] > 0 && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 		{
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
@@ -809,7 +809,7 @@ function scrPowers(raceOverwrite = -1) {
 				//reload -= wep_load[wep]*0.8//*0.25;
 				if ultra_got[75]
 				{
-					alarm[3] = max(10,alarm[3]);
+					alarm[3] = max(min(wep_load[wep],8),alarm[3],1);
 					if myShield == -1 || !instance_exists(myShield)
 					{
 						myShield = instance_create(x,y,EuphoriaShield);

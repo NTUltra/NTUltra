@@ -186,6 +186,11 @@ else if instance_exists(CloudBoss)
 	name = "THE VISIONARY";
 	//image_index = 18;
 }
+else if instance_exists(PitGhostBoss)
+{
+	name = "THE PIT GHOST";
+	//image_index = 18;
+}
 else if instance_exists(InvertedSandWorm)
 {
 	name = "INVERTED SAND WORM";

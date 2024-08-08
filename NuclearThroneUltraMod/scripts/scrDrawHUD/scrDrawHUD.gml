@@ -244,7 +244,7 @@ function scrDrawHUD() {
 	//SKELETON TB
 	if dataRef.race == 19 && dataRef.skill_got[5] {
 		//skeletonGambleBongas
-		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,vx+115,vy+11)	
+		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,vx+armourX+115,vy+11)	
 	}
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1

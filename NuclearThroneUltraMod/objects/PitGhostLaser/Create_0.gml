@@ -22,7 +22,7 @@ actTime = 12;
 
 acc = 1;
 maxSpeed = 4;
-materializeRange = 128;
+materializeRange = 132;
 justAroundWall = true;
 targetPreviousX = x;
 targetPreviousY = y;

@@ -9,6 +9,8 @@ if target != noone {
 		event_user(0);
 	else
 		event_user(1);
+	if instance_number(enemy) < 8
+		direction = point_direction(x,y,target.x,target.y);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if !justAroundWall && dis > 32 {
 			alarm[2] = 5;

@@ -11,7 +11,10 @@ if target != noone {
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if !justAroundWall && dis > 32 {
-			alarm[2] = 5;
+			if choose(true,false)
+				alarm[2] = 5;
+			else
+				alarm[5] = 5;
 			alarm[1] += actTime;
 			speed *= 0.5;
 			gunangle = point_direction(x, y, target.x, target.y)
