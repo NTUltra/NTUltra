@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndGhostHurt",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.301312,
+  "name":"sndGhostHurt",
+  "parent":{
+    "name":"ThePit",
+    "path":"folders/Sounds/Enemies/ThePit.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndGhostHurt.ogg",
+  "type":0,
+  "volume":1.0,
+}

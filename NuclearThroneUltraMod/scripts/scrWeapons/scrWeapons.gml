@@ -332,6 +332,7 @@ function scrWeapons() {
 	wep_text[29] = "built with spare parts"
 	wep_swap[29] = sndSwapExplosive
 	wep_rad[29] = 0;
+	wep_popup[29] = "BLOOD EXPLOSIONS DESTROY ENEMY BULLETS#AND WORK WITH CROWN OF DEATH";
 
 	wep_name[30] = "SPLINTER GUN"
 	wep_type[30] = 3

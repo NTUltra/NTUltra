@@ -51,11 +51,11 @@ function scrFire(canDrown = true) {
 					reload -= 100;
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.34;
+					reload -= wep_load[wep]*0.338;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.385;
+					reload -= wep_load[wep]*0.38;
 				}
 			}
 			else if armour == maxarmour
@@ -66,11 +66,11 @@ function scrFire(canDrown = true) {
 					reload -= 80;
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.15;
+					reload -= wep_load[wep]*0.148;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.165;
+					reload -= wep_load[wep]*0.16;
 				}
 			}
 		}

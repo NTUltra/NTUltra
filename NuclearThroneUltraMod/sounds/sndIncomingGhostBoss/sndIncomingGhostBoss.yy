@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndIncomingGhostBoss",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.948005,
+  "name":"sndIncomingGhostBoss",
+  "parent":{
+    "name":"ThePit",
+    "path":"folders/Sounds/Enemies/ThePit.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndIncomingGhostBoss.ogg",
+  "type":0,
+  "volume":1.0,
+}

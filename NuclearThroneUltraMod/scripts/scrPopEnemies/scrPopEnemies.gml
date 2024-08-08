@@ -488,7 +488,7 @@ function scrPopEnemies() {
     }
 	
 	//THE PIT!
-    if spawnarea = 139 && (instance_number(enemy) < 2 || random(10) < 6) {
+    if spawnarea = 139 {
 		if loops > 0 {
 			if random(35) < 1
 				instance_create(x + 16, y + 16, GraveyardSniper)
@@ -499,9 +499,9 @@ function scrPopEnemies() {
 	        }
 		} else {
 	        if random(3) < 1
-				instance_create(x + 16, y + 16, choose(FreakBandit,FreakBandit,FreakBandit,FreakBandit))
+				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostLaser,PitGhostSpawner))
 	        else {
-	            instance_create(x + 16, y + 16, choose(FreakBandit,InvertedFreakBandit))
+	            instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostSpawner))
 	        }
 		}
     }

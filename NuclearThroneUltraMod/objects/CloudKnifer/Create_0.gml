@@ -14,8 +14,8 @@ spr_dead_mid_air = sprCloudKniferDeadMidAir;
 spr_chrg = sprCloudKniferShank;
 spr_fire = spCloudKniferFire;
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
+snd_hurt = sndCloudKniferHurt
+snd_dead = sndCloudKniferDie
 
 //behavior
 walk = 0

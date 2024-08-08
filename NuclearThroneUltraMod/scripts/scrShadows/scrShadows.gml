@@ -589,7 +589,12 @@ function scrShadows() {
 	draw_sprite(shd64B,0,x-vx,y-vy)
 	with Sheep
 	draw_sprite(shd26,0,x-vx,y-vy)
-
+	with PitGhost
+		draw_sprite(shd24,0,x-vx,y-vy)
+	with PitGhostLaser
+		draw_sprite(shd24,0,x-vx,y-vy)
+	with PitGhostSpawner
+		draw_sprite(shd24,0,x-vx,y-vy)
 	with CrystalShield
 	{
 	if image_speed = 0

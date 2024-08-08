@@ -1,5 +1,5 @@
 
-function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = true,volume = 0.8,loop = false,owner = -1,specificPitch = 0, overlapRange = 70) {
+function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = true,volume = 0.8,loop = false,owner = -1,specificPitch = 0, overlapRange = 70, falOff = 50, falOffMax = 400) {
 	//SS_Init();
 	if noOverlap && audio_is_playing(sndId)
 		return false;
@@ -59,7 +59,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 				emitter = audio_emitter_create();
 				audio_emitter_position(emitter,x,y,depth);
 				audio_emitter_gain(emitter, volume);
-				audio_emitter_falloff(emitter, 50, 400, 1);
+				audio_emitter_falloff(emitter, falOff, falOffMax, 1);
 				if specificPitch != 0
 					audio_sound_pitch(audio_play_sound_on(emitter,sndId,loop,priority), specificPitch);
 				else

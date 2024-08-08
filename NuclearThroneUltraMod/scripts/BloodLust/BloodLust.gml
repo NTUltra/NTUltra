@@ -42,6 +42,27 @@ function BloodLust(){
     
 	    num = 1
 		scrHeal(1);
+		if instance_exists(YungCuzDupe)
+		{
+			var healedOne = false;
+			var tries = 1000;
+			while !healedOne && tries > 0
+			{
+				with YungCuzDupe
+				{
+					if !healedOne && random(4) < 1
+					{
+						healedOne = true;
+						my_health = min(my_health + 1, maxhealth);
+						with instance_create(x,y-2,HealFX)
+						{
+							sprite_index=sprBloodlust;
+						}
+					}
+				}
+				tries -= 1;
+			}
+		}
 		/*
 	    Player.my_health = max(Player.my_health,min(Player.my_health + num,Player.maxhealth));
 		

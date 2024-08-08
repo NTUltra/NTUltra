@@ -38,6 +38,11 @@ function scrCollectHP(num = 2){
 	{
 		if Player.skill_got[9]
 		{
+			with YungCuzDupe
+			{
+				my_health = min(my_health + 1, maxhealth);
+				instance_create(x,y-2,HealFX)
+			}
 			with instance_create(x,y,HealFX)
 			{
 				sprite_index = sprHealBigFX;

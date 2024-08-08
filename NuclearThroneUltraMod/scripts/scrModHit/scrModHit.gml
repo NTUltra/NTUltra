@@ -187,7 +187,7 @@ function scrModHit(projectileRef) {
 					//freeze bitch!
 				    if newfrost{
 				        with other{//enemy
-							scrFreezeTarget(7);
+							scrFreezeTarget(6);
 						}
 				        newfrost=false;
 				    }

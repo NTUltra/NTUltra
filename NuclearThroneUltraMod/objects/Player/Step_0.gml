@@ -1506,17 +1506,17 @@ if (!instance_exists(LevCont))
 			if armour < maxarmour
 			{
 				if race == 25
-					reload -= 0.18;
+					reload -= 0.17;
 				else
-					reload -= 0.21;
+					reload -= 0.2;
 				reload *= 0.99;
 			}
 			else
 			{
 				if race == 25
-					reload -= 0.08;
+					reload -= 0.07;
 				else
-					reload -= 0.11;
+					reload -= 0.1;
 				reload *= 0.9999;
 			}
 		}
@@ -1607,8 +1607,8 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.45;
-			creload -= 0.45;
+			breload -= 0.4;
+			creload -= 0.4;
 			var crm = 0.4;
 			if race == 25//Doctor puffy cheeks
 				crm = 0.3;

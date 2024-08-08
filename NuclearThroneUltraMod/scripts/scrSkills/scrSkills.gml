@@ -136,6 +136,11 @@ function scrSkills() {
 		skill_name[7] = "BUTTERED BREAD"
 	skill_text[7] = "CHANCE KILLS REGENERATE <r>HP<r>"
 	skill_detail[7] = "7.6% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU <r>HEAL<r> FROM EXPLODE IN <r>BLOOD<r>"
+	if instance_exists(Player) && (Player.race == 12)//YC
+	{
+		skill_text[7] = "CHANCE KILLS REGENERATE <r>HP<r>#CAN <r>HEAL<r> <w>DUPLICATES<w>"
+		skill_detail[7] = "7.6% CHANCE KILLS REGENERATE <r>HP<r>#BOSS KILLS ALWAYS <r>HEAL<r>#ENEMIES YOU <r>HEAL<r> FROM EXPLODE IN <r>BLOOD<r>#CAN <r>HEAL<r> ONE RANDOM <w>DUPLICATE<w>"
+	}
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
 	skill_bons[7] = "+25% CHANCE#(TOTAL: 9.6%)";
@@ -174,6 +179,11 @@ function scrSkills() {
 	skill_name[9] = "SECOND STOMACH"
 	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";
 	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS"
+	if instance_exists(Player) && (Player.race == 12)//YC
+	{
+		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>";
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> (1 HP)"
+	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
 	{
@@ -496,9 +506,9 @@ function scrSkills() {
 	
 	skill_name[35] = "PUFFY CHEEKS"
 	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+45% SECONDARY <w>RELOAD SPEED<w>"
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+45% <w>OFFHAND RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";

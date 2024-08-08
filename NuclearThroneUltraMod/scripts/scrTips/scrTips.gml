@@ -379,7 +379,9 @@ function scrTips() {
 	if Player.area = 137//VOID
 	tip = choose("void","nothing","empty","the good? the bad and the ugly","...","essence","space in between worlds","nothingness","darkness","the unknown","not of our worlds");
 	if Player.area = 138//CLOUDLAND
-	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!");
+	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!","venom damages you until you are at 1hp or you pickup hp");
+	if Player.area = 139//THE PIT
+	tip = choose("the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths");
 	}
 
 
@@ -465,8 +467,8 @@ function scrTips() {
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
 	"not immortal","how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
 	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
-	"you have to get good","Buddies copy most mutations","yc is a god gamer","I'm number 1",
-	"your dupes copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version")
+	"you have to get good","duplicates get your mutations","yc is a god gamer","I'm number 1",
+	"your duplicates copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version")
 
 	if Player.race = 13//sheep
 	tip = choose("BAAHHH","farmville","don't mess with me"

@@ -28,7 +28,7 @@ function scrMoodSwingStun(duration){
 			alarm[0] = duration;
 		}
 	}
-	if alarm[1] > 2 && alarm[1] < 20
+	if alarm[1] > 3 && alarm[1] < duration + 3 && alarm[11] < 20
 	{
 		alarm[11] += duration
 		alarm[1] += duration;

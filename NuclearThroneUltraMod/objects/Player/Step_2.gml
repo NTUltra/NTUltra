@@ -1259,11 +1259,14 @@ if scrIsCrown(24)//Crown of sloth
 }
 if ultra_got[51] && altUltra
 {
+	var t = 0.3;
+	if UberCont.normalGameSpeed == 60
+		t = 0.15;
 	with enemy
 	{
 		speed *= 0.8;
-		if alarm[1] > 1
-			alarm[1] += 0.3;
+		if alarm[1] > 2
+			alarm[1] += t;
 	}
 }
 if (!canHeal)

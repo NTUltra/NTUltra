@@ -9,6 +9,8 @@ if other.team != team and other.my_health > 0
 				if alarm[3] > 0//When immune dont deal damage and dont trigger blast armour
 					exit;
 				hitBy = sprEnemyLaserRepresent;
+				if other.alarm[2] > 1
+					other.alarm[2] = 1;
 			}
 			DealDamage(other.dmg)
 			sprite_index = spr_hurt

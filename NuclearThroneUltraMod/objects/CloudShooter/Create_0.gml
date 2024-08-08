@@ -11,8 +11,8 @@ spr_walk = sprCloudShooter
 spr_hurt = sprCloudShooterHurt
 spr_dead = sprCloudShooterDead
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
+snd_hurt = sndCloudShooterHit
+snd_dead = sndCloudShooterDie
 
 //behavior
 walk = 0

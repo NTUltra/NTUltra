@@ -30,7 +30,6 @@ function scrSecondaryPowers() {
 		var n = instance_nearest(x,y,enemy);
 		if (n != noone && n.team != 2 && point_distance(xx,yy,n.x,n.y) < enoughDistance)
 		{
-			debug("BITCH TO CLOSE");
 			var foundSpot = false;
 			do {
 				dis = enoughDistance;
@@ -47,7 +46,6 @@ function scrSecondaryPowers() {
 						var newDis = point_distance(fx,fy,n.x,n.y)
 						if n.team != 2 && newDis > dis
 						{
-							debug("FOUND A SPOT ", newDis);
 							foundSpot = true;
 							dis = newDis;
 							xx = fx;
@@ -218,8 +216,8 @@ function scrSecondaryPowers() {
 							}
 							snd_play_2d(sndYVQuickReload);
 						
-							var reduction = reload + lowa;
-							breload += reduction;
+							//var reduction = reload + wep_load[wep];
+							breload += wep_load[wep];
 							reload = lowa;
 						}
 						else

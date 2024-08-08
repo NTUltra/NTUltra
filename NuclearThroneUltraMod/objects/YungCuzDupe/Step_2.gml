@@ -213,21 +213,21 @@ if dis >= 300
 	y = Player.y;
 }
 else
-	{
+{
 	if dis > 100
 	{
-	returntoplayer=30;
-	returntoplayerfast=0;
+		returntoplayer=30;
+		returntoplayerfast=0;
 	}
 
-	if (Player.speed=0)&&dis>32&&random(10)<1
+	if (Player.speed=0)&&dis>16//&&random(10)<1
 	{
-	returntoplayerfast=20;
-	returntoplayer=0;
+		returntoplayerfast=20;
+		returntoplayer=0;
 	}
 
-	if dis<32
-	returntoplayerfast=0;
+	if dis < 16
+		returntoplayerfast=0;
 
 	if returntoplayer>0
 	{//motion_add(point_direction(x,y,Player.x,Player.y),3);
