@@ -2,7 +2,7 @@ image_speed = 0.4
 depth = 1;
 scrWeaponModInit();
 dmg = 5;
-myExplosionMask = -1;
+myExplosionMask = noone;
 myScorchMark = noone;
 moodAmount = 1;
 var um = GetPlayerUltramod()
@@ -11,6 +11,7 @@ if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 	mask_index = mskPickupThroughWall;
 	mask_index = mskPickupThroughWall;
 	visible = false;
+	debug("can ultramod");
 	alarm[11] = 1;
 }
 else

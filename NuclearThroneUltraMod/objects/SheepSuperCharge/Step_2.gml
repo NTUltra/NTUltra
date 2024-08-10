@@ -5,8 +5,8 @@ if forcePlayer
 	{
 		x = other.x;
 		y = other.y;
-		alarm[3] = max(alarm[3],6);
-		meleeimmunity = max(meleeimmunity,6);
+		alarm[3] = max(alarm[3],8);
+		meleeimmunity = max(meleeimmunity,8);
 	}
 }
 speed = maxSpeed;

@@ -31,6 +31,10 @@ draw_self();
 	with Wall {
 		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,colour,1);
 	}
+	with PlayerGhostTeleporter
+	{
+		draw_self();
+	}
 	with ElementorWall
 	{
 		if !visible
@@ -40,7 +44,7 @@ draw_self();
 	}
 	with ElementorWallDisappear
 	{
-		draw_self();	
+		draw_self();
 	}
 	with WallWireFrame
 	{

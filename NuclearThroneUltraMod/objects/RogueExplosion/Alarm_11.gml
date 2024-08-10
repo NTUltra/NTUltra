@@ -1,4 +1,5 @@
 /// @description ultramov destroy squares
+debug("ULTRAMOD");
 var um = GetPlayerUltramod()
 if um == ultramods.bloodExplosionExplosion
 {

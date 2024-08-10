@@ -9,17 +9,19 @@ if target != noone {
 		event_user(0);
 	else
 		event_user(1);
-	if instance_number(enemy) < 8
-		direction = point_direction(x,y,target.x,target.y);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if !justAroundWall && dis > 32 {
-			alarm[2] = 5;
+			instance_create(x,y,Notice);
+			alarm[2] = 10;
 			alarm[1] += actTime;
 			speed *= 0.5;
-			gunangle = point_direction(x, y, target.x, target.y)
+			if choose(true,false)
+				gunangle = point_direction(x, y, target.x, target.y);
+			else
+				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
         }
         else {
-            direction = point_direction(target.x, target.y, x, y) + random(20) - 10
+            direction = point_direction(x,y,target.x, target.y) + random_range(90,-90);
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }
@@ -41,6 +43,8 @@ if target != noone {
 				right = -1
 	    }
 	}
+	if instance_number(enemy) < 10 || random(10) < 1
+		direction = point_direction(x,y,target.x,target.y);
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

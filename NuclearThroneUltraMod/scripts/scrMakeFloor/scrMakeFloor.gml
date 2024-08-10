@@ -510,6 +510,10 @@ function scrMakeFloor(limiter) {
 	if area == 139 {
 		instance_create(x,y,Floor);
 		instance_create(x,y+32,Floor)
+		with instance_create(x+30,y,PlayerGhostTeleporter)
+		{
+			direction = 0;
+		}
 		instance_create(x+32,y+32,Floor)
 		instance_create(x+32,y+64,Floor)
 		instance_create(x+64,y+64,Floor)
@@ -524,6 +528,10 @@ function scrMakeFloor(limiter) {
 		instance_create(x+192,y+32,Floor)
 		instance_create(x+224,y+32,Floor)
 		instance_create(x+224,y,Floor)
+		with instance_create(x+210,y,PlayerGhostTeleporter)
+		{
+			direction = 180;
+		}
 		
 		instance_create(x,y-32,Floor)
 		instance_create(x+32,y-32,Floor)
@@ -965,9 +973,9 @@ function scrMakeFloor(limiter) {
 	}
 	if area == 138//CLOUD
 	{
-		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5 || (subarea == 2 && !instance_exists(MimicBossPlateau))
+		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5 || ((subarea == 2 || instance_exists(PitNavigation)) && !instance_exists(MimicBossPlateau))
 		{
-			if subarea == 2 && !instance_exists(MimicBossPlateau) {
+			if ((subarea == 2 || instance_exists(PitNavigation)) && !instance_exists(MimicBossPlateau)) {
 				instance_create(x+16,y+48,MimicBossPlateau);
 				instance_create(x + 32,y + 32,Floor);
 				instance_create(x - 32,y + 32,Floor);

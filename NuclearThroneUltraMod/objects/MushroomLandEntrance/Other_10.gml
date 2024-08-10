@@ -32,6 +32,9 @@ if Player.wepmod1 != 0
 			{
 				type = 1
 				pullstrength = 3;
+				x = other.y;
+				y = other.y;
+				scrForcePosition60fps();
 				with Player
 				{
 					lockout = true;

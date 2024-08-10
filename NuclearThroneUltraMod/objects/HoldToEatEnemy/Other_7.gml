@@ -1,7 +1,8 @@
 /// @description EAT
 with target
 {
-	my_health = 0;
+	if canBeEaten
+		my_health = 0;
 	scrBasicRobotEat(x,y,0, false);
 	with instance_create(x,y,RobotEat)
 	{

@@ -1,6 +1,6 @@
 /// @description Go time
 var goTime = false;
-if type == 3 || inverted
+if !byPassCheck && (type == 3 || inverted)
 {	
 	var numEn = 0;
 	var totalHp = 0;
@@ -55,6 +55,11 @@ if goTime
 		alarm[1] = 0;
 	}
 	with VulcanoTrap
+	{
+		alarm[0] = 0;
+		alarm[1] = 0;
+	}
+	with VenomTrap
 	{
 		alarm[0] = 0;
 		alarm[1] = 0;

@@ -3,10 +3,13 @@
 {
 	exit;
 }*/
+debug(UberCont.ultramodSwap);
 with instance_create(x,y,RogueExplosion)
-{team=2;
+{
+	team = other.team;
 	with myExplosionMask
-		instance_destroy(id,false)}
+		instance_destroy(id,false)
+}
 //blastArmourDelay = 2;
 if ultra_got[86]//SUPER BLAST ARMOUR
 {

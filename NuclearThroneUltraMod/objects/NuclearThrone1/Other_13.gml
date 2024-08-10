@@ -4,16 +4,19 @@ spr_idle = spr_middle;
 spr_hurt = spr_middle_hurt;
 mask_index = mskNothingMiddle;
 image_speed = 0.4;
+canBeEaten = true;
 with leftSide
 {
 	visible = true;
 	meleedamage = 10;
+	canBeEaten = true;
 	mask_index = mskNothingSide;
 }
 with rightSide
 {
 	visible = true;
 	meleedamage = 10;
+	canBeEaten = true;
 	mask_index = mskNothingSide;
 }
 with ThroneFlame

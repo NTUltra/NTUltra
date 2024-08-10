@@ -1,5 +1,6 @@
 event_inherited();
 grabbed = false;
+grabOffset = 0;
 raddrop = 4
 depth = -2;
 hurt_pitch_variation = 0;

@@ -32,7 +32,7 @@ if grabbed
 	if instance_exists(Player)
 	{
 		var len = 12;
-		var a = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y);
+		var a = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y) + grabOffset;
 		x = Player.x + lengthdir_x(len,a);
 		y = Player.y + lengthdir_y(len,a);
 		scrForcePosition60fps();

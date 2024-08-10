@@ -42,7 +42,6 @@ if mode == 0 && instance_exists(Player)
 	}
 	with instance_create(tx,ty,FloorMaker)
 	{
-		debug("oke thats good");
 		globalGoal = 100;
 		goal = 100;
 		event_perform(ev_alarm,0);

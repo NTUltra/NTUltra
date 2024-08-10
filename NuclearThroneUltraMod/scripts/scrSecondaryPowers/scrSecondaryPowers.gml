@@ -334,7 +334,7 @@ function scrSecondaryPowers() {
 					if !instance_exists(HoldToEatEnemy)
 					{
 						var n = instance_nearest(x,y,enemy);
-						if n != noone && n.my_health > 0 && n.team != other.team && point_distance(x,y,n.x,n.y) < 96
+						if n != noone && n.my_health > 0 && n.team != other.team && point_distance(x,y,n.x,n.y) < 96 && n.canBeEaten
 						{
 							with instance_create(x,y,HoldToEatEnemy)
 							{
@@ -420,6 +420,31 @@ function scrSecondaryPowers() {
 						}
 						if !hasAnAlly
 						{
+							var grabbedAllies = 0;
+							with Ally
+							{
+								if !grabbed && point_distance(x,y,other.x,other.y) < 64
+								{
+									grabbed = true;
+									grabbedAllies += 1;
+								}
+							}
+							if grabbedAllies > 0
+							{
+								snd_play(sndAllyGrab,0.1);
+								BackCont.shake += 4 + grabbedAllies;
+								var ang = 0;
+								var angStep = 360/grabbedAllies;
+								with Ally
+								{
+									if grabbed
+									{
+										grabOffset = ang;
+									}
+									ang += angStep;
+								}
+							}
+							/*
 							var n = instance_nearest(x,y,Ally)
 							if n != noone && instance_exists(n) && point_distance(x,y,n.x,n.y) < 64
 							{
@@ -429,7 +454,7 @@ function scrSecondaryPowers() {
 									snd_play(sndAllyGrab,0.1);
 								}
 								BackCont.shake += 5;
-							}
+							}*/
 						}
 					}
 					

@@ -13,49 +13,62 @@ if team == 2
 with instance_create(x,y,GhostLaser)
 {image_angle = other.gunangle
 team = other.team
-maxDistance = 4;
+maxDistance = 4 + other.maxAmmo - other.ammo;
 laserDecrease -= 0.15;
 laserDecrease = max(laserDecrease,0.05);
-alarm[2] += 12;
+alarm[2] += 12 + other.maxAmmo - other.ammo;
 image_yscale = 0.25;
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
-with instance_create(x,y,GhostLaser)
-{image_angle = other.gunangle - 2;
-team = other.team
-maxDistance = 2;
-laserDecrease -= 0.15;
-laserDecrease = max(laserDecrease,0.05);
-alarm[2] += 14;
-image_yscale = 0.25;
-event_perform(ev_alarm,0)
-sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
-with instance_create(x,y,GhostLaser)
-{image_angle = other.gunangle + 2;
-team = other.team
-maxDistance = 2;
-laserDecrease -= 0.15;
-laserDecrease = max(laserDecrease,0.05);
-alarm[2] += 14;
-image_yscale = 0.25;
-event_perform(ev_alarm,0)
-sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
-walk = 0;
-with instance_create(x, y, PitGhostLaser) {
-	raddrop = 0;
-    motion_add(other.gunangle + 5, 1)
-    image_angle = direction
-    team = other.team
-	walk = actTime;
-	alarm[1] = actTime;
-	existTime = 30;
+if ammo > maxAmmo - 1
+{
+	with instance_create(x,y,GhostLaser)
+	{image_angle = other.gunangle - 2;
+	team = other.team
+	maxDistance = 2 + other.maxAmmo - other.ammo;
+	laserDecrease -= 0.15;
+	laserDecrease = max(laserDecrease,0.05);
+	alarm[2] += 14 + other.maxAmmo - other.ammo;
+	image_yscale = 0.25;
+	event_perform(ev_alarm,0)
+	sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
+	with instance_create(x,y,GhostLaser)
+	{image_angle = other.gunangle + 2;
+	team = other.team
+	maxDistance = 2 + other.maxAmmo - other.ammo;
+	laserDecrease -= 0.15;
+	laserDecrease = max(laserDecrease,0.05);
+	alarm[2] += 14 + other.maxAmmo - other.ammo;
+	image_yscale = 0.25;
+	event_perform(ev_alarm,0)
+	sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 }
-with instance_create(x, y, PitGhostLaser) {
-	raddrop = 0;
-    motion_add(other.gunangle - 5, 1)
-    image_angle = direction
-    team = other.team
-	walk = actTime;
-	alarm[1] = actTime;
-	existTime = 30;
+walk = 0;
+if ammo > 0
+{
+	ammo -= 1;
+	alarm[5] = 6;
+	alarm[1] += 6;
+}
+else
+{
+	with instance_create(x, y, PitGhostLaser) {
+		raddrop = 0;
+	    motion_add(other.gunangle + 5, 2)
+	    image_angle = direction
+	    team = other.team
+		walk = actTime;
+		alarm[1] = actTime;
+		existTime = 30;
+	}
+	with instance_create(x, y, PitGhostLaser) {
+		raddrop = 0;
+	    motion_add(other.gunangle - 5, 2)
+	    image_angle = direction
+	    team = other.team
+		walk = actTime;
+		alarm[1] = actTime;
+		existTime = 30;
+	}
+	motion_add(gunangle,acc);
 }

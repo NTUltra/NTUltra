@@ -8,7 +8,7 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 && dis < 250 {
-        if dis > 96 {
+        if dis > 64 && random(3) < 1{
 			alarm[2] = 5;
 			alarm[1] += actTime;
 			gunangle = point_direction(x, y, target.x, target.y)

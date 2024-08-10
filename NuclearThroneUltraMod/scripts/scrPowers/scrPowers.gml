@@ -666,12 +666,12 @@ function scrPowers(raceOverwrite = -1) {
 				snd_play_fire(sndHeavyBloodPistol);
 			}
 		}
-		else if wep_type[wep] != 0 && wep_cost[wep] > 0 && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
+		else if wep_type[wep] != 0 && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 		{
 			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
 			var failedGamble = false;
-		    if (wep_cost[wep]/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
+		    if (max(0.5,wep_cost[wep])/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				consecutiveGoodBloodGambles = 0;
 				failedGamble = true;

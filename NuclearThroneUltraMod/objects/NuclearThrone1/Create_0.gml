@@ -58,6 +58,7 @@ cantrishot = true;
 riseStep = false;
 
 event_inherited()
+canBeEaten = false;
 walk = 0;
 alarm[1] = 0;
 

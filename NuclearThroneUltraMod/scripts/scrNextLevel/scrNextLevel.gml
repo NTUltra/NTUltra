@@ -99,6 +99,10 @@ function scrNextLevel(skipping = false) {
 	}
 	//show_message("inverted: "+ string(inverted)+"#area :"+string(area));
 	lastsubarea = subarea;
+	if instance_exists(PitNavigation)
+	{
+		scrNextLevelPitRoute();	
+	}
 	if area == 137
 	{
 		//WE LOOP HERE!

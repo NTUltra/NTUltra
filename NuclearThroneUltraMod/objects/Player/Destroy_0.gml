@@ -319,7 +319,10 @@ snd_play_2d(sndExplosionXL);
 //Crown of death
 if scrIsCrown(3) && visible && my_health < 1
 {
-	instance_create(x,y,CrownOfDeathBoom);
+	with instance_create(x,y,CrownOfDeathBoom) {
+		if other.ultra_got[87] && other.altUltra && other.rogueammo > 0
+			alarm[0] = 20;
+	}
 }
 if actualLives>0 && !reincarnate && visible && my_health < 1
 {

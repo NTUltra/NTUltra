@@ -1,7 +1,10 @@
 /// @description DONE DONE GET YOUR REWARD HERE!\
+var a = 9;
+if instance_exists(PitNavigation)
+	a = 138;
 with PlayerSpawn
 {
-	area = 9;
+	area = a;
 	subarea = 1;
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);
@@ -9,7 +12,7 @@ with PlayerSpawn
 }
 with Player
 {
-	area = 9
+	area = a
 	subarea = 1
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);

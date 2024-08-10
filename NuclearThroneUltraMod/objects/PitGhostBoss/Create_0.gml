@@ -1,5 +1,5 @@
 raddrop = 120;
-maxhealth = 300
+maxhealth = 250
 mySize = 3
 event_inherited()
 canFly = true;
@@ -17,13 +17,13 @@ snd_dead = sndGhostDie
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 10;
 wkick = 0
 actTime = 10;
 
 acc = 1;
 maxSpeed = 3.5;
-materializeRange = 128;
+materializeRange = 140;
 justAroundWall = true;
 targetPreviousX = x;
 targetPreviousY = y;
@@ -33,3 +33,8 @@ targetLerp = 0;
 goToTarget = false;
 vspeed = -2;
 event_user(0);
+if instance_exists(Player) && Player.skill_got[29] {
+	alarm[1] += 60;
+	scrGiveSnooze();
+}
+maxAmmo = 3;

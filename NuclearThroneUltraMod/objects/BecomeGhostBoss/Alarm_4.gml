@@ -1,7 +1,7 @@
 /// @description Spawn more enemies
 if ammo > 0
 {
-	alarm[4] = 4;
+	alarm[4] = 8;
 	with instance_create(x + random_range(32,-32),y + random_range(32, - 32), PitGhostLaser)
 	{
 		motion_add(random(360),6);
@@ -16,4 +16,5 @@ if ammo > 0
 			motion_add(other.direction,1);	
 		}
 	}
+	BackCont.shake += 4;
 }

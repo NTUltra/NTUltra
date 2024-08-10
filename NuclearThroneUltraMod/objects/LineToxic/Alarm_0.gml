@@ -27,7 +27,7 @@ move_contact_solid(direction,4)}*/
 with instance_create(x,y,ToxicThrowerGas)
 {
 	scrCopyWeaponMod(other);
-	speed += 1;
+	motion_add(other.direction,1);
 }
 //}
 

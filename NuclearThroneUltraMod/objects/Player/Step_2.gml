@@ -725,7 +725,10 @@ if (tookHit)
 						depth = other.depth - 1;	
 					}
 				//}
-				my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
+				if my_health > maxhealth
+					my_health = prevhealth;
+				else
+					my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
 			}
 			else
 				my_health += max(0,damageTaken);
