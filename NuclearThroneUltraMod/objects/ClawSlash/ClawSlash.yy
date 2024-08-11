@@ -13,8 +13,8 @@
     "path":"folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId":{
-    "name":"ShankParent",
-    "path":"objects/ShankParent/ShankParent.yy",
+    "name":"SlashParent",
+    "path":"objects/SlashParent/SlashParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

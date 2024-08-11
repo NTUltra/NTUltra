@@ -160,5 +160,9 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown34Idle
 			spr_walk = sprCrown34Walk
 		break;
+		case 36://Stability
+			spr_idle = sprCrown35Idle
+			spr_walk = sprCrown35Walk
+		break;
 	}
 }

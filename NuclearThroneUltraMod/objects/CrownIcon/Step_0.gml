@@ -150,6 +150,8 @@ if crown == 2 && !canReAdd
 	Player.my_health = max(Player.maxhealth,Player.my_health + overheal);
 	*/
 }
+if crown == 36
+	UberCont.hasTakenCrownOfStability = true;
 if crown == 34
 {
 	if Player.skill_got[5]

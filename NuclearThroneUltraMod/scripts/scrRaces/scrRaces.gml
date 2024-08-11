@@ -108,7 +108,7 @@ function scrRaces() {
 	race_eskin[4] = 0
 	race_fskin[4] = 0
 	race_gskin[4] = 0
-	race_bskin_lock[4] = "LOOP WITHOUT#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH, INNER PEACE#CROWN OF PROTECTION#AND CROWN OF LIFE#AS MELTING"
+	race_bskin_lock[4] = "LOOP WITHOUT#SURVIVAL MUTATIONS AND#SURVIVAL CROWNS"//#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH, INNER PEACE#CROWN OF PROTECTION#AND CROWN OF LIFE#CROWN OF STABILITY#AS MELTING"
 	race_cskin_lock[4] = "REACH LOOP 3 ON#1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
@@ -237,8 +237,8 @@ function scrRaces() {
 	race_acti[10] = "SPAWN ALLIES"
 	race_butt[10] = "HIGHER <w>ALLY RELOAD SPEED<w>"
 	race_butt_detail[10] = "+50% <w>ALLY RELOAD SPEED<w>";
-	race_vision[10] = "PRESS <w>[E]<w> TO: GRAB AN ALLY#PRESS AGAIN TO <w>THROW<w> YOUR ALLY";
-	race_vision_detail[10] = "PRESS <w>[E]<w> TO:#GRAB A NEARBY ALLY#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
+	race_vision[10] = "PRESS <w>[E]<w> TO: GRAB NEARBY ALLIES#PRESS AGAIN TO <w>THROW<w> YOUR ALLY";
+	race_vision_detail[10] = "PRESS <w>[E]<w> TO:#GRAB NEARBY ALLIES#PRESS <w>[E]<w> AGAIN TO <w>THROW<w> YOUR ALLY";
 	if isUnique
 	{
 		race_vision[10] = string_replace_all(race_vision[10],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -464,7 +464,7 @@ function scrRaces() {
 	race_butt[19] = "EVERY <w>FOURTH<w> FAILED <r>BLOOD GAMBLE<r>#<r>HEALS<r> YOU INSTEAD";//"BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_butt_detail[19] = "EVERY <w>FOURTH<w> FAILED <r>BLOOD GAMBLE<r>#<r>HEALS<r> YOU <w>1<w> <r>HP<r> INSTEAD";//"33% BETTER <r>BLOOD<r> <w>GAMBLE<w> ODDS"
 	race_vision[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#DURING THIS <w>AREA<w>"
-	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
+	race_vision_detail[19] = "HOLD <w>[E]<w> TO:#DROP A <w>SKULL<w> THAT#CAN BE <r>DESTROYED<r> BY <r>ENEMIES<r>##UPON TAKING <aq>LETHAL<aq> <w>DAMAGE<w>#<aq>REVIVE<aq> AT THE <w>SKULL<w>#YOU GET ONLY <w>ONE<w> SKULL PER <w>AREA<w>##IF THE <w>SKULL<w> IS DESTROYED:#GAIN <w>2<w> <r>MAX HEALTH<r>#RESETS AT <w>THE END<w> OF THE <w>AREA<w>##IF IT STAYS ALIVE:#(OVER)<r>HEAL<r> <w>2<w>#UP TO 2 ABOVE MAX HP##<w>SKULL<w> CAN BE <w>MOVED<w> BY HOLDING <w>[E]<w>"
 	if isUnique
 	{
 		race_vision[19] = string_replace_all(race_vision[19],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");

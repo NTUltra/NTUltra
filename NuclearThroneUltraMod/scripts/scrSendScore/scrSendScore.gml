@@ -40,10 +40,10 @@ function scrSendScore(buffer, perliminary = false){
 				buffer_write(sendBuffer,buffer_u8,NETDATA.SCORE);
 		}
 		buffer_write(sendBuffer,buffer_u16,myClientId);
-		if viewingWeekly
+		if viewingWeekly 
 		{
+			
 			buffer_write(sendBuffer,buffer_u16,UberCont.weeklyWeek);
-			buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UUID
 			if !perliminary
 			{
 				UberCont.encrypted_data.ctot_weeklies_score[0] = "";
@@ -52,6 +52,12 @@ function scrSendScore(buffer, perliminary = false){
 					UberCont.encrypted_data.ctot_weeklies_score[0] += string(UberCont.runScore[i])+" ";
 				}
 			}
+			if !is_string(UberCont.encrypted_data.ctot_weeklies_score[0])
+			{
+				buffer_delete(sendBuffer);
+				return;
+			}
+			buffer_write(sendBuffer,buffer_string,UberCont.encrypted_data.ctot_weeklies_score[0]);//Send UUID
 		}
 		else
 			buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run

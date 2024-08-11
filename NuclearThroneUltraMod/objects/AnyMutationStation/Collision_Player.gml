@@ -32,5 +32,6 @@ if KeyCont.key_pick[other.p] = 1
 		alarm[1] = 75;
 		x = other.x;
 		y = other.y;
+		scrForcePosition60fps();
 	}
 }

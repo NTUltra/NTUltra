@@ -12,6 +12,8 @@ repeat(am)
 {
 	with instance_create(x,y,myBat)
 	{
+		alarm[1] = 10;
+		existTime = 25;
 		motion_add(ang,4);
 		if instance_exists(Player) && Player.skill_got[29] {
 			alarm[1] += 60;

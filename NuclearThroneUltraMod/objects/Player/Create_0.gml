@@ -324,6 +324,7 @@ skillsChosen = 0; //To check for ultra mutation (always last)
 totalSkills = 0;
 skeletonlives = 0;
 skeletonGambleBongas = 0;
+skeletonBonusHealth = 0;
 consecutiveGoodBloodGambles = 0;
 livesRegain = [];
 
@@ -786,6 +787,7 @@ lastEnemyKilled = noone;
 
 exception = false;
 sharpteeth = 0; //stress embedded
+stressTargetHealth = 99;
 crackshotsfired = 0; //hunter ultra d
 ogmx = 0;//Original mouse pos
 ogmy = 0;

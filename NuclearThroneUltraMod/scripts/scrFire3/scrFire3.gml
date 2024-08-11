@@ -492,5 +492,24 @@ function scrFire3(hasTailNow){
 		}
 		
 		break;
+		
+		//ULTRA MAGNETIC CROSSBOW
+		case 807:
+
+		snd_play_fire(sndCrossbow)
+
+		with instance_create(x,y,UltraMagneticBolt)
+		{
+			motion_add(aimDirection+(random(4)-2)*other.accuracy,24)
+			image_angle = direction
+			team = other.team
+		}
+
+		BackCont.viewx2 += lengthdir_x(60,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(60,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 4
+
+		break;
 	}
 }

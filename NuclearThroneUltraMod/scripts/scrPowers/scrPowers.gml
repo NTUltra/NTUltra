@@ -186,7 +186,7 @@ function scrPowers(raceOverwrite = -1) {
 			if my_health == 1 && skill_got[32] && isAlkaline
 			{
 				isAlkaline = false;
-				var h = 3;
+				var h = 4;
 				my_health = min(h,maxhealth);
 				
 				with instance_create(x,y,SharpTeeth)
@@ -1199,6 +1199,8 @@ function scrPowers(raceOverwrite = -1) {
 						maxhealth=percMax;//0.5
 						if my_health > maxhealth
 							my_health = max(1,my_health-lostHp,maxhealth);
+						if scrIsCrown(35)
+							my_health = max(my_health - 1, 1);
 						hitBy = sprite_index;
 			        }
         
@@ -1243,6 +1245,8 @@ function scrPowers(raceOverwrite = -1) {
 					maxhealth=percMax;//0.5
 					if my_health > maxhealth
 						my_health = max(1,my_health-lostHp,maxhealth);
+					if scrIsCrown(35)
+						my_health = max(my_health - 1, 1);
 					hitBy = sprite_index;
 		        }
         

@@ -35,8 +35,20 @@ function scrCreateThePit(){
 	instance_create(x + 96,y - 32,Floor)
 	instance_create(x + 128,y,Floor)
 	instance_create(x + 128,y - 32,Floor)
-	instance_create(x + 128,y - 16,Wall)
-	instance_create(x + 128,y,Wall)
+	with instance_create(x + 128,y - 16,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
+	with instance_create(x + 128,y,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
 	instance_create(x + 160,y,Floor)
 	instance_create(x + 160,y - 32,Floor)
 	instance_create(x + 192,y,Floor)
@@ -50,8 +62,20 @@ function scrCreateThePit(){
 	instance_create(x - 96,y - 32,Floor)
 	instance_create(x - 128,y,Floor)
 	instance_create(x - 128,y - 32,Floor)
-	instance_create(x - 128,y - 16,Wall)
-	instance_create(x - 128,y,Wall)
+	with instance_create(x - 128,y - 16,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
+	with instance_create(x - 128,y,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
 	instance_create(x - 160,y,Floor)
 	instance_create(x - 160,y - 32,Floor)
 	instance_create(x - 192,y,Floor)
@@ -65,8 +89,20 @@ function scrCreateThePit(){
 	instance_create(x,y      - 128,Floor)
 	instance_create(x - 32,y - 160,Floor)
 	instance_create(x,y      - 160,Floor)
-	instance_create(x - 16,y - 160,Wall)
-	instance_create(x,y - 160,Wall)
+	with instance_create(x - 16,y - 160,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
+	with instance_create(x,y - 160,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
 	instance_create(x - 32,y - 192,Floor)
 	instance_create(x,y      - 192,Floor)
 	instance_create(x - 32,y - 224,Floor)
@@ -78,8 +114,20 @@ function scrCreateThePit(){
 	instance_create(x,y      + 96,Floor)
 	instance_create(x - 32,y + 128,Floor)
 	instance_create(x,y      + 128,Floor)
-	instance_create(x - 16,y + 128,Wall)
-	instance_create(x,y + 128,Wall)
+	with instance_create(x - 16,y + 128,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
+	with instance_create(x,y + 128,Wall)
+	{
+		if place_meeting(x,y,hitme)
+		{
+			instance_destroy(id,false);	
+		}
+	}
 	instance_create(x - 32,y + 160,Floor)
 	instance_create(x,y      + 160,Floor)
 	instance_create(x - 32,y + 192,Floor)

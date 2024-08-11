@@ -460,8 +460,8 @@ if (selected && visible &&
 		with Player {
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
-			maxhealth += 50;
-			my_health += 50;
+			maxhealth += 60;
+			my_health += 60;
 			prevhealth = my_health;
 			scrUltras(true, false);
 			canHeal = false;

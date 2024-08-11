@@ -147,59 +147,64 @@ function scrFire(canDrown = true) {
 	
 	// ROIDS THRONE BUTT
 	//when firing both weapon more chance to giev other weapon ammo
-	if Player.ultra_got[25] && wep == bwep
+	with Player
 	{
-		if random(100)<((wep_cost[wep]/typ_ammo[wep_type[wep]])*0.6)*100
+		if ultra_got[25] && wep == bwep && wep_cost[wep] > 0
 		{
-			with instance_create(x,y-16,FxOnOwner)
-			{
-				owner = other.id;
-				sprite_index=sprBloodlust;
-				yOffset = -16;
-			}
-			snd_play(sndBloodlustProc);
-			scrHeal(1);
+			scrAmbidexturous(wep);
 		}
-	}
-	if (Player.race=7 && Player.skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
-	{
-//	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
-//	    {
-	        if random(100)<(
-				(wep_cost[wep]/typ_ammo[wep_type[wep]])*0.69
-			)*100
-			{
-			    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
-			    if (ammo[wep_type[bwep]] + wantAmmo >=typ_amax[wep_type[bwep]] && !ultra_got[26])
-			    {
-					ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
-			    }
-			    else
-					ammo[wep_type[bwep]] += wantAmmo;
-					
-				with instance_create(x,y-16,FxOnOwner)
+		if (race=7 && skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
+		{
+	//	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
+	//	    {
+		        if random(100)<(
+					(wep_cost[wep]/typ_ammo[wep_type[wep]])*0.69
+				)*100
 				{
-					owner = other.id;
-					sprite_index=sprSteroidsTB;
-					yOffset = -16;
+				    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
+				    if (ammo[wep_type[bwep]] + wantAmmo >=typ_amax[wep_type[bwep]] && !ultra_got[26])
+				    {
+						ammo[wep_type[bwep]] = typ_amax[wep_type[bwep]];
+				    }
+				    else
+						ammo[wep_type[bwep]] += wantAmmo;
+					if wep_rad[bwep] > 0
+					{
+						var ang = random(360);
+						repeat(6)
+						{
+							with instance_create(x,y,PlutoFX)
+							{
+								motion_add(ang,1);
+							}
+							ang += 60;
+						}
+						rad += 2;
+					}
+					with instance_create(x,y-16,FxOnOwner)
+					{
+						owner = other.id;
+						sprite_index=sprSteroidsTB;
+						yOffset = -16;
+					}
+					if (UberCont.opt_ammoicon)
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.sprt = sprAmmoIconsPickup;
+						dir.ii = wep_type[bwep]-1;
+						dir.mytext = "+"+string(wantAmmo);
+						if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
+							dir.mytext = "MAX ";
+					}
+					else
+					{
+						dir = instance_create(x,y,PopupText)
+						dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
+						if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
+							dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
+					}
 				}
-				if (UberCont.opt_ammoicon)
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.sprt = sprAmmoIconsPickup;
-					dir.ii = wep_type[bwep]-1;
-					dir.mytext = "+"+string(wantAmmo);
-					if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
-						dir.mytext = "MAX ";
-				}
-				else
-				{
-					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(wantAmmo)+" "+string(other.typ_name[wep_type[bwep]])
-					if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
-						dir.mytext = "MAX "+string(other.typ_name[wep_type[bwep]])
-				}
-			}
+		}
 	}
 	if object_index == Player && (ultra_got[43] && !altUltra) {
 		with instance_create(x,y,CloneShooter) {

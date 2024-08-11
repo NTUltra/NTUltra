@@ -77,6 +77,7 @@ function scrEndOfRun(){
 		canPickFrogCrown = true;
 		hasTakenCrownOfLife = false;
 		hasTakenCrownOfProtection = false;
+		hasTakenCrownOfStability = false;
 		loadedLoops = 0;
 		loadedKills = 0;
 		if !scrIsGamemode(38)

@@ -4,6 +4,10 @@ if spr_idle == sprBigFishSkullOpen
 {
 	isInteractableNow = true;
 	var thereIsBoss = false;
+	with Portal
+	{
+		instance_destroy();	
+	}
 	with WantBoss
 	{
 		if !oasis

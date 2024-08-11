@@ -12,6 +12,9 @@ enemyHealthWasChanged = true;
 playerHealthWasChanged = true;
 detectedEnemyHealth = 0;
 detectedPlayerHealth = 0;
+
+stabilize = 0;
+stabilizeDelay = 30;
 //13.4
 //20.8
 //0.065 0.054 

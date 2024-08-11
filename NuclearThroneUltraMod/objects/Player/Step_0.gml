@@ -103,7 +103,7 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			if UberCont.normalGameSpeed == 60
 				jumpDecrease *= 0.5;
-			if collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false)
+			if !instance_exists(WallRemover) && (collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false))
 			{
 				jumpDecrease *= 0.5;	
 			}
@@ -122,7 +122,7 @@ if !instance_exists(LevCont) and visible = 1
 		{
 			var msk = mask_index;
 			mask_index = mskPlayer
-			if place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor)
+			if !instance_exists(WallRemover) && (place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor))
 			{
 				var t = instance_nearest(x - 16 + lengthdir_x(4,direction),y - 16 + lengthdir_y(4,direction),Floor);
 				if t != noone
@@ -1525,14 +1525,41 @@ if (!instance_exists(LevCont))
 			//nerves of steel g  STRESS
 			var reduction = 0;
 			if ultra_got[62] && altUltra//Living armour 
-				reduction = (1-(armour/maxarmour))*0.7
+			{
+				stressTargetHealth = min(stressTargetHealth,armour);
+				if armour < 2
+				{
+					//Default reduction 1/8 = 0.125 =  1 - 0.125 = 0.875;
+					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxarmour))*0.7)
+				}
+				else
+				{
+					reduction = (1-(stressTargetHealth/maxarmour))*0.7
+				}
+			}
 			else if race == 25
 			{
-				reduction = (1-(my_health/maxhealth))*0.75
+				stressTargetHealth = min(stressTargetHealth,my_health);
+				if my_health < 2
+				{
+					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.75)
+				}
+				else
+				{
+					reduction = (1-(stressTargetHealth/maxhealth))*0.75
+				}
 			}
 			else
 			{
-				reduction = (1-(my_health/maxhealth))*0.7//*1//0.35 the original has 80% boost
+				stressTargetHealth = min(stressTargetHealth,my_health);
+				if my_health < 2
+				{
+					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.7)
+				}
+				else
+				{
+					reduction = (1-(stressTargetHealth/maxhealth))*0.7//*1//0.35 the original has 80% boost
+				}
 			}
 			if scrIsGamemode(24)//SHARP STRESS GAMEMODE
 				reduction *= level;

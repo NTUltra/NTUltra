@@ -68,7 +68,7 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 						else
 							other.squares[$ id] += 1;
 						var n = other.squares[$ id];
-						if n > 6
+						if n > 5
 						{
 							x = xprevious + irandom_range(-2,2);
 							y = yprevious + irandom_range(-2,2);	
@@ -78,12 +78,12 @@ if (deflectDurability < maxDeflect || alarm[1] > 0)
 							x = xprevious;
 							y = yprevious;	
 						}
-						if other.squares[$ id] > 14
+						if other.squares[$ id] > 10
 						{
 							instance_destroy();
 							struct_remove(other.squares,id);
 							snd_play(sndProjectileDestroy,0.1,true);
-							deflected = true;
+							//deflected = true;
 						}
 					}
 					else

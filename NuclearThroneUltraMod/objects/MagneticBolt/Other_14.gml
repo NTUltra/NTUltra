@@ -7,7 +7,7 @@ if team == 2 && instance_exists(Player) && Player.skill_got[21]
 else
 	var pierceDmg = actualDmg*0.5
 		
-
+BackCont.shake += 1;
 with hitme
 {
 	if team != other.team &&

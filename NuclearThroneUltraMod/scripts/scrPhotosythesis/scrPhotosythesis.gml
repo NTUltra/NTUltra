@@ -4,6 +4,11 @@
 function scrPhotosythesis(healAmount){
 	with Player
 	{
+		if skill_got[22]
+		{
+			//Stress linger
+			alarm[10] = 90;
+		}
 		if ultra_got[18] && altUltra
 		{
 			healAmount = max(healAmount + 1,1);

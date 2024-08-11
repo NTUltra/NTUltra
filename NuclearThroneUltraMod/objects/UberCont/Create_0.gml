@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "31.BETA"
-subUpdateVersion = ".20";
+subUpdateVersion = ".21";
 notUpdated = "";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -176,6 +176,7 @@ canMultiCrown = false;
 canPickFrogCrown = true;
 hasTakenCrownOfLife = false;
 hasTakenCrownOfProtection = false;
+hasTakenCrownOfStability = false;
 loadedLoops = 0;
 loadedKills = 0;
 encrypted_run_data = {}

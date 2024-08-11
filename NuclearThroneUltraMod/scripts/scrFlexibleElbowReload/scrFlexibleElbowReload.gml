@@ -11,7 +11,6 @@ function scrFlexibleElbowReload(wp){
 		{
 			if (random(theChance) < loader)
 			{
-				
 				if slapped == noone || !instance_exists(slapped)
 				{
 					var activationList = ds_list_create();

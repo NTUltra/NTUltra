@@ -232,6 +232,14 @@ function scrCrowns() {
 	crown_used[35] = 0
 	crown_tips[35] = "lifetap"
 	
+	//WAIT 4 SECONDS ON CROWN SELECT
+	crown_name[36] = "[CROWN OF STABILITY]"
+	crown_text[36] = "<w>WHILE IN COMBAT<w>:#<r>HEALTH<r> SLOWLY <w>RESETS<w> TO <w>4<w>"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[36] = "<w>WHILE IN COMBAT<w>:#<gb>ARMOUR<gb> SLOWLY <w>RESETS<w> TO <w>4<w>"
+	crown_used[36] = 0
+	crown_tips[36] = "balance and stabalize"
+	
 	//have nerves of steel or adrenline fuel?
 	/*
 	crown_name[35] = "[CROWN OF AGGRESSION]"
@@ -241,7 +249,7 @@ function scrCrowns() {
 	*/
 	
 	crownmax = 23
-	secretcrownmax = 13;
+	secretcrownmax = 14;
 
 
 

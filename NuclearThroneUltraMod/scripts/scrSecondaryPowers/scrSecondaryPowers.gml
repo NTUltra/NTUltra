@@ -394,8 +394,8 @@ function scrSecondaryPowers() {
 								alarm[1] += alarm[0];
 								throwStart = alarm[0] - 3;
 								walk = 0;
-								x = other.x;
-								y = other.y;
+								//x = other.x;
+								//y = other.y;
 								throwSpeed = 8;
 								throwDamage = 6;
 								isInFight = 0;
@@ -764,13 +764,18 @@ function scrSecondaryPowers() {
 			case 19:
 				if !isOverlapping && (KeyCont.key_regal[p] == 1) && !instance_exists(SkeletonSkullDestroyed)
 				{
+					var h = 100;
 					with HoldToSkull
 					{
+						h = skullHealth;
 						instance_destroy();
 					}
 					if !instance_exists(HoldToSkull)
 					{
-						instance_create(x,y,HoldToSkull);	
+						with instance_create(x,y,HoldToSkull)
+						{
+							skullHealth = h;	
+						}
 						if uniqueKey
 						{
 							with HoldToSkull

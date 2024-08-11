@@ -56,23 +56,6 @@ function scrRemoveCrown(oldcrown){
 			Player.maxhealth += 2
 			UberCont.maxHpIncrease += 2;
 		}
-		if scrIsCrown(30)
-		{
-			var al = array_length(Player.crown);
-			//Remove
-			for (var i = 0; i < al; i++) {
-				if (Player.crown[i] == 30)
-				{
-					array_delete(Player.crown,i,1);
-					i = al;
-				}
-			}
-			with Crown
-			{
-				if crown == 30
-					instance_destroy();
-			}	
-		}
 	}
 	//Crown of drowning
 	if oldcrown == 13

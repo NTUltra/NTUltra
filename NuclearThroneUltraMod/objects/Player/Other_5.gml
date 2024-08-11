@@ -8,6 +8,7 @@ roll = 0;
 didJumpRoll = false;
 consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
+stressTargetHealth = 99;
 if ultra_got[50] && altUltra
 	charpoints = 1;
 if ultra_got[19] && altUltra
@@ -124,6 +125,17 @@ invertedportalcounter=0;
 if hard > UberCont.cbst_diff[race]
 UberCont.cbst_diff[race] = hard
 
+if (race == 19 && skill_got[maxskill + 1] && !instance_exists(SkeletonSkullDestroyed))
+{
+	my_health = min(my_health + 2, maxhealth + 2);
+	snd_play_2d(sndSkeletonHealSkull);
+}
+if skeletonBonusHealth > 0
+{
+	maxhealth -= skeletonBonusHealth;
+	skeletonBonusHealth = 0;
+}
+	
 //Health manipulation!
 if scrIsCrown(22)//Crown of luck
 {
@@ -194,6 +206,7 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 	maxhealth = scrGetMaxPossibleHealth();
 	
 }
+
 if ((ultra_got[40] = 1) && canHeal)
 {
 	//Rebel Ultra D YUNG CUZ ULTRA C
@@ -403,7 +416,7 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection
+	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection && !UberCont.hasTakenCrownOfStability
 		scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
 	if scrIsGamemode(14)

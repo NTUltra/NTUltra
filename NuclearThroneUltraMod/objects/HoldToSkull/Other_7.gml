@@ -7,6 +7,7 @@ if instance_exists(Player)
 		snd_play(sndExplosionS);
 		with SkeletonSkull
 		{
+			my_health = other.skullHealth;
 			var ang = random(360);
 			repeat(6)
 			{

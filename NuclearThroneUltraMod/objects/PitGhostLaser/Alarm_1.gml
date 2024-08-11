@@ -39,6 +39,7 @@ if target != noone {
 	else
 	{
 		justAroundWall = true;
+		alarm[1] *= 0.5;
 		if random(4) < 1 {
 	        motion_add(random(360), acc)
 	        walk = actTime + random(actTime*2)

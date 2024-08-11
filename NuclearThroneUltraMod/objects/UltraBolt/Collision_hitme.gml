@@ -9,5 +9,6 @@ if (candmg && other.team != team && other.my_health > 0 && !array_contains(hitEn
 		image_index = 0
 		motion_add(other.direction,6)
 	}
+	event_user(4);
 }
 

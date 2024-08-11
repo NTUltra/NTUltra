@@ -48,3 +48,8 @@ if instance_exists(Player) && !UberCont.start_wep_have_all[Player.race]
 	weps[0] = scrDecideWepGold();
 }
 SetSeed();
+if scrIsCrown(9)//Crown of love
+{
+	instance_destroy(id,false);
+	instance_create(x,y,GiantGoldenAmmoChest);
+}

@@ -42,6 +42,7 @@ if target != noone {
 	else
 	{
 		justAroundWall = true;
+		motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);
 		if random(4) < 1 {
 	        motion_add(random(360), acc)
 	        walk = actTime + random(actTime*2)

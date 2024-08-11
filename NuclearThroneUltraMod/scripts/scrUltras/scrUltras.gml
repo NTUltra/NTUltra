@@ -216,7 +216,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//STEROIDS 
 	ultra_name[25] = "AMBIDEXTUROUS"
-	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU"
+	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU#CHANCE DEPENDS ON:#RELOAD TIME AND AMMO COST"
 	ultra_tips[25] = "big wep chests drop two duplicates"
 
 	ultra_name[26] = "GET LOADED"
@@ -330,7 +330,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra))
 		{
 			ultra_name[39] = "BIG REBEL"
-		    ultra_text[39] = "+50 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
+		    ultra_text[39] = "+60 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
 		    ultra_tips[39] = "she is a maniac!"
 		}
 		

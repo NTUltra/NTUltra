@@ -7603,7 +7603,7 @@ function scrWeapons() {
 	wep_type[679] = 4
 	wep_auto[679] = 2
 	wep_load[679] = 18
-	wep_cost[679] = 3
+	wep_cost[679] = 2
 	wep_sprt[679] = sprStickyGrenadeRifle
 	wep_area[679] = 9
 	wep_text[679] = "stick and boomboom"
@@ -9016,7 +9016,7 @@ function scrWeapons() {
 	wep_load[805] = 23
 	wep_cost[805] = 0
 	wep_sprt[805] = sprMeleeSpear
-	wep_area[805] = 7
+	wep_area[805] = 6
 	wep_text[805] = "poke"
 	wep_swap[805] = sndSwapSword
 	wep_rad[805] = 0;
@@ -9032,6 +9032,17 @@ function scrWeapons() {
 	wep_swap[806] = sndSwapBow
 	wep_rad[806] = 0;
 	wep_popup[806] = "REFUNDS AMMO ON EACH HIT";
+	
+	wep_name[807] = "ULTRA MAGNETIC CROSSBOW"
+	wep_type[807] = 3
+	wep_auto[807] = 0
+	wep_load[807] = 17
+	wep_cost[807] = 3
+	wep_sprt[807] = sprUltraMagneticCrossbow
+	wep_area[807] = 20
+	wep_text[807] = "feeling the magnetism"
+	wep_swap[807] = sndSwapShotgun
+	wep_rad[807] = 16;
 	//Swiss army bow
 	//Charge boomerang
 	

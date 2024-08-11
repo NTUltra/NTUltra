@@ -324,8 +324,7 @@ if scrIsGamemode(8) && area != 0
     }
 	else if area == 138 {
 
-        song = mus106
-
+        song = musUltraIrradiatedSkies
         amb = ambUltra138;
     }
 	

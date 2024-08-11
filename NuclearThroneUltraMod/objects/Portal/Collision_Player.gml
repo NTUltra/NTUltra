@@ -26,7 +26,10 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 				speed = 0;
 				if skill_got[32] && isAlkaline
 				{
-					scrHeal(2);
+					if race == 25
+						scrHeal(3);
+					else
+						scrHeal(2);
 					isAlkaline = false;
 					snd_play(sndAlkalineRefund);
 					with instance_create(x,y,HealFX)

@@ -97,7 +97,10 @@ function scrAreaFullName(area){
 				txt = "THE VOID"
 			break;
 			case 138://SKY
-				txt = "IRRATIATED SKIES"
+				txt = "IRRADIATED SKIES"
+			break;
+			case 139://THE PIT
+				txt = "THE PIT"
 			break;
 			case 116://Survival Arena
 				txt = "SURVIVAL ARENA"

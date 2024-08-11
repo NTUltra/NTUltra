@@ -30,6 +30,7 @@ if instance_exists(Player)
 	}
 	if scrIsCrown(9)//Crown of love
 	{
+		instance_create(x,y,AmmoChest);
 		instance_destroy(id,false);
 	}
 }

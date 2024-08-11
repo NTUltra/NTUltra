@@ -92,7 +92,10 @@ function scrTips() {
 	"square bullets are immune to melee",
 	"some enemies are more vulnerable while charging",
 	"flashing effects can be turned off by setting screenshake and freezeframes to 0",
+	"casual mode is just normal mode",
 	/*these are rare*/ choose(
+	"don't get angry just blame the game",
+	"don't get mad just blame the dev, but he will tell you: 'skill issue'",
 	"even at 50% loading speed this tip is probably a little too long to read, oh well thats too bad. You didn't miss much though there is nothing here really. Maybe there is a secret though at the end of this loong very long tip. No there really isn't",
 	"no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about",
 	"obsidian throwing knife can one shot big bandit, if throwing during his charge","you have now seen all loading tips", "that previous loading tip sucked!"

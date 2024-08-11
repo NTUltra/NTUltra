@@ -38,7 +38,7 @@ function scrHeal(num = 1, canOverHeal = false){
 	}
 	else
 	{
-		var popupText = instance_create(x,y,PopupText)
+		var popupText = instance_create(x,y - 16,PopupText)
 		popupText.mytext = "+"+string(num)+" HP"
 		if Player.my_health == Player.maxhealth
 			popupText.mytext = "MAX HP"

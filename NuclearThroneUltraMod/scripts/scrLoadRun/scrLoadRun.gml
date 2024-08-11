@@ -341,6 +341,8 @@ function scrLoadRun(selectedRunIndex){
 				Player.canKillKillKill = encryptedRun.canKillKillKill;
 			if variable_struct_exists(encryptedRun, "skeletonGambleBongas")
 				Player.skeletonGambleBongas = encryptedRun.skeletonGambleBongas;
+			if variable_struct_exists(encryptedRun, "portalEssence")
+				Player.portalEssence = encryptedRun.portalEssence;
 			/*
 			if variable_struct_exists(encryptedRun, "duoPartner1")
 			{

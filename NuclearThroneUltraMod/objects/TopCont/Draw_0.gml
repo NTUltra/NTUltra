@@ -82,6 +82,10 @@ with Feather
 }
 with CrownOfLucked
 	event_perform(ev_draw,0);
+with HealFX
+	event_perform(ev_draw,0);
+with FxOnOwner
+	event_perform(ev_draw,0);
 with AtomPulse
 {
 	event_perform(ev_draw,0);	
@@ -220,25 +224,34 @@ with Player
 
 if instance_exists(Player){
 if Player.area = 2 || Player.area=8 || Player.area == 126 || Player.area == 127
-{draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog2,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)}
-if Player.area = 102
-{draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
-draw_sprite_ext(sprFog102,0,round(__view_get( e__VW.XView, 0 )/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)}
+{
+var fvx = __view_get( e__VW.XView, 0 );
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	fvx += 54
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
+}
+else if Player.area = 102
+{
+var fvx = __view_get( e__VW.XView, 0 );
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	fvx += 54
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360-360,1,1,0,c_white,0.1)
+draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360+360,1,1,0,c_white,0.1)}
 }
 if UberCont.normalGameSpeed == 60
 	fogscroll += 0.25
@@ -519,10 +532,6 @@ with UltraProtector
 with GoldImmuneTotem
 {
 	event_user(0);
-}
-with HealFX
-{
-	draw_self();
 }
 with Snooze
 {

@@ -34,14 +34,19 @@ if target != noone {
 	else
 	{
 		justAroundWall = true;
-		if random(4) < 1 {
+		alarm[1] *= 0.5;
+		var ran = random(4)
+		if ran < 1 {
 	        motion_add(random(360), acc)
 	        walk = actTime + random(actTime*2)
 	        if hspeed > 0
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    }
+	    } else if ran < 2
+		{
+			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);		
+		}
 	}
 	if instance_number(enemy) < 10 || random(10) < 1
 		direction = point_direction(x,y,target.x,target.y);

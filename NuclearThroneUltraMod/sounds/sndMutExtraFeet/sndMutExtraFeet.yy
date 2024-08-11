@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":1,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.962585,
   "name":"sndMutExtraFeet",
   "parent":{
     "name":"Mutations",

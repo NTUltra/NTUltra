@@ -329,9 +329,9 @@ function scrPopChests() {
 		{
 			if random(12) < 1 and (Player.area >= 2 or Player.loops >= 1)
 			{
-			instance_create(x,y,Mimic)
-			image_speed = 0.4
-			instance_destroy(id,false);
+				instance_create(x,y,Mimic)
+				image_speed = 0.4
+				instance_destroy(id,false);
 			}
 		}
 		if instance_exists(Player)

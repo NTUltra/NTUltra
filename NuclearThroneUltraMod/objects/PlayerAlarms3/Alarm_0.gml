@@ -1,4 +1,4 @@
-/// @description Adrenaline & Peace Ammo & Healing
+/// @description Adrenaline & Peace & stability Ammo & Healing
 alarm[0] = 10;
 var isInCombat = false;
 if enemyHealthWasChanged || playerHealthWasChanged
@@ -14,7 +14,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 		if isInCombat
 		{
 			var canAmmo = false;
-			var canHeal = false;
+			var canAdrenalineHeal = false;
 			if skill_got[45]
 			{
 				var n = instance_nearest(x,y,enemy);
@@ -31,7 +31,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 						}
 						if adrenalineHealTimer <= 0 && other.my_health < other.maxhealth
 						{
-							canHeal = true;
+							canAdrenalineHeal = true;
 							adrenalineHealTimer = adrenalineHealCooldown;
 						}
 					}
@@ -43,7 +43,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 							scrRaddrop(1);
 						//scrSwapWeps();
 					}
-					if canHeal
+					if canAdrenalineHeal
 					{
 						scrHeal(1);
 						snd_play(sndAdrenalineHeal,0.01);
@@ -105,6 +105,125 @@ if enemyHealthWasChanged || playerHealthWasChanged
 							alpha = 0;
 							alarm[1] = 6;
 							sprite_index = other.sprite_index;
+						}
+					}
+				}
+			}
+			if scrIsCrown(36)
+			{
+				other.stabilize += 1;
+				if other.stabilize > other.stabilizeDelay
+				{
+					other.stabilize = 0;
+					with Player
+					{
+						if ultra_got[62] && altUltra
+						{
+							if armour < 4 && canHeal
+							{
+								snd_play(sndCrownOfStability,0.05);
+								armour += 1;
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprCrownHealFX;
+								}
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35IdleGottaHeal
+										spr_walk = sprCrown35WalkGottaHeal	
+									}
+								}
+							}
+							else if armour > 4
+							{
+								snd_play(sndCrownOfStability,0.05);
+								exception = true;
+								hitBy = sprite_index;
+								image_index=0;
+							    sprite_index=spr_hurt;
+							    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+								armour -= 1;
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprCrownDamageFX;
+									speed = other.speed;
+									direction = other.direction;
+								}
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35IdleGottaDamage
+										spr_walk = sprCrown35WalkGottaDamage	
+									}
+								}
+							}
+							else
+							{
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35Idle;
+										spr_walk = sprCrown35Walk;	
+									}
+								}
+							}
+						}
+						else
+						{
+							if my_health < 4 && canHeal
+							{
+								snd_play(sndCrownOfStability,0.05);
+								scrHeal(1,true);
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprCrownHealFX;
+								}
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35IdleGottaHeal
+										spr_walk = sprCrown35WalkGottaHeal	
+									}
+								}
+							}
+							else if my_health > 4
+							{
+								snd_play(sndCrownNo,0.05);
+								exception = true;
+								hitBy = sprite_index;
+								image_index=0;
+							    sprite_index=spr_hurt;
+							    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+								my_health -= 1;
+								with instance_create(x,y,HealFX)
+								{
+									sprite_index = sprCrownDamageFX;
+								}
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35IdleGottaDamage
+										spr_walk = sprCrown35WalkGottaDamage	
+									}
+								}
+							}
+							else
+							{
+								with Crown
+								{
+									if crown == 36
+									{
+										spr_idle = sprCrown35Idle;
+										spr_walk = sprCrown35Walk;	
+									}
+								}
+							}
 						}
 					}
 				}

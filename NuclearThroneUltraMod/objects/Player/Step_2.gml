@@ -430,13 +430,15 @@ if my_health < prevhealth
 }
 if skill_got[22]//Stress Sharp teeth part
 {
-	if tookHit && alarm[10] < 1 && alarm[3] < 1//I been hit
+	if tookHit /*&& alarm[10] < 1*/ && alarm[3] < 1//I been hit
 	{
-		alarm[10]=25;
+		//alarm[10] = 2;
 		sharpteeth = prevhealth - my_health;
-		var multiplier = 2.5;
+		var multiplier = 2;
 		if race = 25
-			multiplier = 3//Sharp teeth's damage!
+		{
+			multiplier = 2.5//Sharp teeth's damage!
+		}
 		if scrIsGamemode(24) //SHARP STRESS GAMEMODE
 			multiplier *= level;
 		if scrIsCrown(18) //Crown of greed
@@ -703,7 +705,7 @@ if (tookHit)
 		{
 			isAlkaline = false;
 			var healTaken = 0;
-			if my_health < maxhealth + defaultOverhealAddition
+			if prevhealth < maxhealth + defaultOverhealAddition
 			{
 				healTaken = 2;
 				if race == 25//Doctor buff
@@ -725,13 +727,12 @@ if (tookHit)
 						depth = other.depth - 1;	
 					}
 				//}
-				if my_health > maxhealth
-					my_health = prevhealth;
-				else
-					my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
+				my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
 			}
 			else
-				my_health += max(0,damageTaken);
+			{
+				my_health = prevhealth;
+			}
 			scrPhotosythesis(healTaken);
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;

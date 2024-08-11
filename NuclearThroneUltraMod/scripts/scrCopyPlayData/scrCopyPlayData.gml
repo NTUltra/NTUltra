@@ -14,7 +14,7 @@ function scrCopyPlayData(){
 		maxammo: [Player.typ_amax[0],Player.typ_amax[1],Player.typ_amax[2],Player.typ_amax[3],Player.typ_amax[4],Player.typ_amax[5]],
 		skill_got: Player.skill_got,
 		ultra_got: Player.ultra_got,
-		maxhp: Player.maxhealth,
+		maxhp: scrCalculatePlayerBaseMaxHealth(),
 		hp: Player.my_health,
 		defaultOverhealAddition: Player.defaultOverhealAddition,
 		strongspirit: Player.strongspirit,
@@ -145,6 +145,7 @@ function scrCopyPlayData(){
 		highestReachedLevel: UberCont.highestReachedLevel,
 		canKillKillKill: Player.canKillKillKill,
 		skeletonGambleBongas: Player.skeletonGambleBongas,
+		portalEssence: UberCont.portalEssence,
 		/*
 		duoPartner1: UberCont.duoPartner[0],
 		duoPartner2: UberCont.duoPartner[1],
