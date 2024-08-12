@@ -25,6 +25,14 @@ function scrCreateCloudArea(){
 	var sprb = sprBackFloorCloud;
 	var sprb2 = sprBackFloorCloud2;
 	var sprs = sprBackFloorSmallCloud;
+	if Player.area == 140
+	{
+		sprExplo = sprFloor140Explo;
+		spr = sprFloor140;
+		sprb = sprInvertedBackFloorCloud;
+		sprb2 = sprInvertedBackFloorCloud2;
+		sprs = sprInvertedBackFloorSmallCloud;
+	}
 	with Floor
 	{
 		var d = max(9, targetDepth -  round(y/16));
@@ -55,6 +63,8 @@ function scrCreateCloudArea(){
 	}
 	with instance_create(x,y,CloudArea)
 	{
-		depth = deepestDepths + 2;	
+		depth = deepestDepths + 2;
+		if Player.area == 140
+			fogCloud = sprInvertedCloudsFog;
 	}
 }

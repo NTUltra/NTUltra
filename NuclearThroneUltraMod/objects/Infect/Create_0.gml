@@ -9,4 +9,3 @@ repeat(6+irandom(6))
 }
 image_speed=0;
 alarm[0]=10;
-

@@ -70,14 +70,18 @@ function scrEnemyTakingDamage() {
 				if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 				{
 					//Living armour
-					if Player.maxarmour > 1
+					if Player.armour > Player.maxarmour
+						dmgBuff = 1 + (((8 + Player.armour - Player.maxarmour - 1) / max(8 - 1,2)) * part);
+					else if Player.maxarmour > 1
 						dmgBuff = 1 + (((Player.armour - 1) / max(Player.maxarmour - 1,2)) * part);
 					else
 						dmgBuff = 1 + part;
 				}
 				else if Player.my_health > 0 && Player.maxhealth > 0
 				{
-					if Player.maxhealth > 1
+					if Player.my_health > Player.maxhealth
+						dmgBuff = 1 + (((8 + Player.my_health - Player.maxhealth - 1) / max(8 - 1,2)) * part);
+					else if Player.maxhealth > 1
 						dmgBuff = 1 + (((Player.my_health - 1) / max(Player.maxhealth - 1,2)) * part);
 					else
 						dmgBuff = 1 + part;

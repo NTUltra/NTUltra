@@ -4,12 +4,12 @@
 function scrAmbidexturous(wp){
 	var loader = wep_load[wp];
 	var slapped = noone;
-	var theChance = 65;
+	var theChance = 60;
 	var heals = 0;
 	while (loader > 0)
 	{
 		if (random(theChance) < loader &&
-		random(100)< ((wep_cost[wep]/typ_ammo[wep_type[wep]]) * 1.25) * 100)
+		random(100) < ((wep_cost[wep]/typ_ammo[wep_type[wep]]) * 1.4) * 100)
 		{
 			heals += 1;
 		}

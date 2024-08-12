@@ -594,7 +594,7 @@ function scrShadows() {
 	with PitGhostLaser
 		draw_sprite(shd16,0,x-vx,y-vy + 4)
 	with PitGhostSpawner
-		draw_sprite(shd24,0,x-vx,y-vy)
+		draw_sprite(shd24,0,x-vx,y-vy + 1)
 	with PitGhostBoss
 		draw_sprite(shd32,0,x-vx,y-vy + 12)
 	with CrystalShield

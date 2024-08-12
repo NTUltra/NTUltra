@@ -7672,7 +7672,7 @@ function scrWeapons() {
 	wep_load[685] = 21
 	wep_cost[685] = 2
 	wep_sprt[685] = sprChargeBouncerLaserGun
-	wep_area[685] = 13
+	wep_area[685] = 15
 	wep_text[685] = "charging railgun"
 	wep_swap[685] = sndSwapEnergy
 	wep_rad[685] = 0;

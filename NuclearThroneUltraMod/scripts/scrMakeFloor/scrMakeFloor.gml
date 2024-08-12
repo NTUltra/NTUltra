@@ -489,7 +489,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x - 32,y - 32,Floor);
 	}
 	//CLOUD LAND
-	if area == 138 {
+	if area == 138 || area == 140{
 		instance_create(x,y,Floor);
 		if random(3) < 1
 		{
@@ -881,7 +881,7 @@ function scrMakeFloor(limiter) {
 		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
 	else if area == 139
 		trn = choose(0,0,0,0,0,0,180,90,-90)
-	else if area == 138
+	else if area == 138 || area == 140
 	{
 		trn = 0;
 		if myFloors > 6
@@ -971,7 +971,7 @@ function scrMakeFloor(limiter) {
 		if random(8) < 1
 		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area == 138//CLOUD
+	if area == 138 || area == 140//CLOUD
 	{
 		if instance_number(FloorMaker) < 2 && instance_number(Floor) < 5 || ((subarea == 2 || instance_exists(PitNavigation)) && !instance_exists(MimicBossPlateau))
 		{

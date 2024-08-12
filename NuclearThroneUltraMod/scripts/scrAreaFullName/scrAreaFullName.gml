@@ -186,6 +186,10 @@ function scrAreaFullName(area){
 				txt = "THE PALACE";
 				upsideDown = true;
 			break;
+			case 140: //Inverted Palace
+				txt = "IRRADIATED SKIES";
+				upsideDown = true;
+			break;
 		}
 	}
 	return [txt,upsideDown];

@@ -18,6 +18,11 @@ if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/ || instance_exists(Wall
 				sprite_index = sprFloor138Explo;
 				spr = sprBackFloorSmallCloud;
 			}
+			else if Player.area == 140
+			{
+				sprite_index = sprFloor140Explo;
+				spr = sprInvertedBackFloorSmallCloud;
+			}
 		}
 		with instance_create(x,y,BackFloorSmall)
 		{

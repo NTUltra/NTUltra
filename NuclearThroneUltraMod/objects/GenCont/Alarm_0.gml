@@ -50,7 +50,7 @@ if Player.area == 125 && Player.loops > 0
 		instance_create(x,y + 128,NOWALLSHEREPLEASE);
 	}
 }
-if Player.area == 138
+if Player.area == 138 || Player.area == 140
 {
 	myWall = WallHitMe;
 	with Floor
@@ -111,7 +111,7 @@ else
 		if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,myWall)
 	}
 }
-if Player.area == 138
+if Player.area == 138 || Player.area == 140
 {
 	scrCreateCloudArea();
 }

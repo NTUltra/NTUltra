@@ -486,6 +486,24 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	//CLOUDLAND
+    if spawnarea = 140 && (instance_number(enemy) < 2 || random(10) < 6) {
+		if loops > 0 {
+			if random(35) < 1
+				instance_create(x + 16, y + 16, InvertedGraveyardSniper)
+	        else if random(3) < 1
+				instance_create(x + 16, y + 16, choose(InvertedCloudShooter,InvertedCloudKnifer,InvertedCloudShooter,InvertedCloudShooter,InvertedRaven,InvertedJungleFly))
+	        else {
+	            instance_create(x + 16, y + 16, choose(BanditInverted,InvertedCloudFlyer,InvertedCloudFlyer,InvertedCloudFlyer, InvertedCloudShooter,InvertedCloudKnifer))
+	        }
+		} else {
+	        if random(3) < 1
+				instance_create(x + 16, y + 16, choose(InvertedCloudShooter,InvertedCloudKnifer,InvertedCloudShooter,InvertedCloudShooter))
+	        else {
+	            instance_create(x + 16, y + 16, choose(BanditInverted,InvertedCloudFlyer, InvertedCloudFlyer, InvertedCloudFlyer, InvertedCloudShooter,InvertedCloudKnifer))
+	        }
+		}
+    }
 	
 	//THE PIT!
     if spawnarea = 139 {

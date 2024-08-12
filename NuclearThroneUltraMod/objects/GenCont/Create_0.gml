@@ -208,6 +208,9 @@ if instance_exists(Player)
 			case 139:
 			__background_set_colour( make_color_rgb(30, 87, 102) )
 			break;
+			case 140:
+			__background_set_colour( make_color_rgb(127, 12, 58) )
+			break;
 		}
 	}
 	else
@@ -329,6 +332,8 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(53, 178, 105) )
 		else if Player.area == 139//The pit
 			__background_set_colour( make_color_rgb(30, 87, 102) )
+		else if Player.area == 140//Cloudland
+			__background_set_colour( make_color_rgb(127, 12, 58) )
 	}
 }
 else
@@ -427,7 +432,7 @@ goal = 130+s;
 }
 else if Player.area == 137//Void
 goal = 1;
-else if Player.area == 138//Cloudland
+else if Player.area == 138 || Player.area == 140//Cloudland || Player.are
 goal = 150 + s;
 else if Player.area == 139//THE PIT
 goal = 150 + s;

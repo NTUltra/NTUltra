@@ -70,6 +70,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with PlantSonicBoom
 	draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,1.25,1.25,image_angle,c_white,ba)
+	with Infect
+	draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,1,1,image_angle,c_black,ba)
 	with ElementorWind
 	draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,1.25,1.25,image_angle,c_white,ba)
 	with HorrorMoney

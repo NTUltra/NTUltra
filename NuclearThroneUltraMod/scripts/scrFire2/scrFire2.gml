@@ -15043,7 +15043,7 @@ function scrFire2(hasTailNow) {
 		cost = 1;
 		creator = other.id
 		chargetime = 4;
-		costtime = 9;
+		costtime = 8;
 		team = other.team
 		if Player.skill_got[42]
 		{
