@@ -48,6 +48,31 @@ BackCont.shake += 1.12*sp*0.5;
 		    sprite_index = spr_hurt                                 //2*1=2*p<<ULTRA
 		    image_index = 0
 			// scrSheepHit();
+			//NOW BROKEN
+			if (Player.sheepPower < Player.sheepPowerToHaveEffect)
+			{
+				debug("break hitme");
+				BackCont.shake += 10;
+				var ang = random(360);
+				repeat(8)
+				{
+					with instance_create(Player.x,Player.y,Smoke)
+					{
+						motion_add(ang,2);
+						motion_add(other.direction,1);
+					}
+					ang += 45;
+				}
+				with Player
+				{
+					snd_play(sndChargeBreak);
+					with EuphoriaShield
+						instance_destroy();
+					alarm[3] = max(alarm[3],8);//imunity
+					snd_hurt = sndDamageNegate;
+					meleeimmunity = max(meleeimmunity,1);
+				}
+			}
 		}
     }
 }}

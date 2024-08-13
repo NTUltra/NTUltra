@@ -1,5 +1,5 @@
 maxhealth = 100;//230
-mySize = 2;
+mySize = 3;
 raddrop = 10;
 spr_inactive = sprBigGeneratorInactive;
 spr_idle = spr_inactive;

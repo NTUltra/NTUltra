@@ -1,6 +1,6 @@
 /// @description Bitchass screen lasers vertical
 var range = 400;
-var am = 8;
+var am = laserAmount;
 var step = range/am;
 var xx = target.x - (range*0.5);
 var flip = false;

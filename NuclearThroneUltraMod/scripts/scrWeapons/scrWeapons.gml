@@ -2731,7 +2731,7 @@ function scrWeapons() {
 	wep_swap[243] = sndSwapBow
 	wep_rad[243] = 0;
 
-	wep_name[244] = "infSUPER LASER PISTOL"
+	wep_name[244] = "SUPER LASER PISTOL"
 	wep_type[244] = 5
 	wep_auto[244] = 0
 	wep_load[244] = 50

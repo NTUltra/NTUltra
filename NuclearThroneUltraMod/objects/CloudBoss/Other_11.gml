@@ -1,6 +1,6 @@
 /// @description Bitchass screen lasers Horitontal
 var range = 400;
-var am = 8;
+var am = laserAmount;
 var step = range/am;
 var yy = target.y - (range*0.5);
 var flip = false;

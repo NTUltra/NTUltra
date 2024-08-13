@@ -218,7 +218,7 @@ function scrNextLevel(skipping = false) {
 				//To big bad bat
 		        area = 4
 				lastarea = 4;
-		        subarea = 2
+		        subarea = 1
 				inverted = false;
 		        exit;
 	        }
@@ -567,7 +567,7 @@ function scrNextLevel(skipping = false) {
 				{
 					//Wonderland 3 to cave 2
 					area = 4;
-					subarea = 2;
+					subarea = 1;
 				}
 				else
 				{

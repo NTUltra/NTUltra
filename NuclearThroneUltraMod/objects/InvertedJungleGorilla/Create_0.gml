@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-raddrop = 18
+raddrop = 17
 maxhealth = 51;
 if loops > 0
 	maxhealth = 61;

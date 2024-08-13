@@ -3540,7 +3540,7 @@ function scrPowers(raceOverwrite = -1) {
 	if race==13 && instance_exists(SheepStorm) && !ultra_got[49]
 	{
 		var is60fps = UberCont.normalGameSpeed == 60;
-		if speed > 5
+		if speed > 4
 		{
 			var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
 			

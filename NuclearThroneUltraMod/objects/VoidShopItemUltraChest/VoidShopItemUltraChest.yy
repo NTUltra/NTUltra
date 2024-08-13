@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"InactiveAnyMutationStation",
+  "%Name":"VoidShopItemUltraChest",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":12,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"InactiveAnyMutationStation",
+  "name":"VoidShopItemUltraChest",
   "overriddenProperties":[],
   "parent":{
-    "name":"CrownVault",
-    "path":"folders/Objects/CrownVault.yy",
+    "name":"Void",
+    "path":"folders/Objects/Void.yy",
   },
   "parentObjectId":{
-    "name":"Interactable",
-    "path":"objects/Interactable/Interactable.yy",
+    "name":"VoidShopItemWeaponSpecificChest",
+    "path":"objects/VoidShopItemWeaponSpecificChest/VoidShopItemWeaponSpecificChest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprInactiveAnyMutationStation",
-    "path":"sprites/sprInactiveAnyMutationStation/sprInactiveAnyMutationStation.yy",
+    "name":"sprVoidShopItem",
+    "path":"sprites/sprVoidShopItem/sprVoidShopItem.yy",
   },
   "spriteMaskId":{
-    "name":"sprBossHolderInactive",
-    "path":"sprites/sprBossHolderInactive/sprBossHolderInactive.yy",
+    "name":"mskPickupThroughWall",
+    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
   },
   "visible":true,
 }

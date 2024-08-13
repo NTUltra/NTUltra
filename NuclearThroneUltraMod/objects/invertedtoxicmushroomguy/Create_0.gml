@@ -1,7 +1,7 @@
 
 event_inherited()
 meleedamage = 3;
-raddrop = 16
+raddrop = 12
 maxhealth = 9;
 EnemyHealthAdjustments();
 spr_idle = sprInvertedToxicMushroomGuyIdle

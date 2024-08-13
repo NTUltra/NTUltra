@@ -2,20 +2,20 @@
 snd_play(sndEnemyFire);
 with instance_create(x,y,EnemyBullet1Square)
 {
-	motion_add(other.gunangle,4.6);
+	motion_add(other.gunangle,other.squareProjectileSpeed);
 	image_angle = direction
 	team = other.team
 }
 with instance_create(x,y,EnemyBullet1Square)
 {
-	motion_add(other.gunangle + 15,6);
+	motion_add(other.gunangle + 17,other.squareProjectileSpeedOff);
 	image_angle = direction
 	team = other.team
 }
 
 with instance_create(x,y,EnemyBullet1Square)
 {
-	motion_add(other.gunangle - 15,6);
+	motion_add(other.gunangle - 17,other.squareProjectileSpeedOff);
 	image_angle = direction
 	team = other.team
 }

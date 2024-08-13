@@ -64,17 +64,20 @@ if instance_exists(Player)
 	{
 		with WeaponChest
 	    {
-			instance_create(x,y,UltraWeaponChest)
+			instance_create(x,y,UltraWeaponChest);
+			instance_create(x,y + 16,UltraWeaponChest);
 			instance_destroy(id,false);
 	    }
 	    with BigWeaponChest
 	    {
 			instance_create(x+1,y+1,UltraWeaponChest)
+			instance_create(x+1,y+16,UltraWeaponChest)
 			instance_destroy(id,false);
 	    }
 	    with EliteWeaponChest
 	    {
 			instance_create(x-1,y-1,UltraWeaponChest)
+			instance_create(x-1,y+16,UltraWeaponChest)
 			instance_destroy(id,false);
 	    }
 	}

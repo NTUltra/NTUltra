@@ -85,7 +85,8 @@ function scrLoadRun(selectedRunIndex){
 				Player.ultra_got[array_length(Player.ultra_got)] = 0;
 			}
 			*/
-			Player.maxhealth = encryptedRun.maxhp;
+			if encryptedRun.maxhp != pointer_null
+				Player.maxhealth = encryptedRun.maxhp;
 			Player.my_health = encryptedRun.hp;
 			if variable_struct_exists(encryptedRun, "defaultOverhealAddition")
 				Player.defaultOverhealAddition = encryptedRun.defaultOverhealAddition;

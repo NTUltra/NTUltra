@@ -56,7 +56,7 @@ if (sp > Player.sheepPowerToHaveEffect)
 			if !sound_isplaying(sndSheepLoop)
 				snd_loop(sndSheepLoop);
 		}
-		Sleep(5);
+		Sleep(10);
 	}
 	if Player.ultra_got[49]
 	{
@@ -75,7 +75,7 @@ if (sp > Player.sheepPowerToHaveEffect)
 	{
 		with EuphoriaShield
 			instance_destroy();
-		alarm[3]=max(alarm[3],1);//imunity
+		alarm[3]=max(alarm[3],3);//imunity
 		snd_hurt = sndDamageNegate;
 		meleeimmunity = max(meleeimmunity,1);
 	}

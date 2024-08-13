@@ -2,6 +2,7 @@
 // /@description
 ///@param
 function scrWeaponSpecificChest(){
+	SetSeedWeapon();
 	ammoGet = 0;
 	curse = 0
 	heavyHeart = false;
@@ -32,4 +33,5 @@ function scrWeaponSpecificChest(){
 		}
 	}
 	wep = wantWep;
+	SetSeed();
 }
