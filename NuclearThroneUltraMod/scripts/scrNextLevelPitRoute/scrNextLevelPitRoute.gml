@@ -4,8 +4,19 @@
 function scrNextLevelPitRoute() {
 	switch (area)
 	{
-		case 139:
-			area = 124;//Mushroom INV VOLCANO AND THEN INV FROZ
+		case 139://THE PIT
+			inverted = true;
+			area = 140;//Get regal!
+			subarea = 1;
+		break;
+		case 140:
+			if subarea < 2
+				subarea += 1;
+			else
+			{
+				area = 107;
+				subarea = 1;
+			}
 		break;
 		case 107:
 			area = 121;//Inv frozen city to Inv savanna

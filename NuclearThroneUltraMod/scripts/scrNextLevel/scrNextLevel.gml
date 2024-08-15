@@ -105,15 +105,28 @@ function scrNextLevel(skipping = false) {
 	}
 	if area == 137
 	{
-		//WE LOOP HERE!
-		looping = true;
-		area=1;
-		subarea=1;
-		lastarea = 1;
-		lastsubarea = 1;
-		inverted = false;
-		hard -= 1;
-		hard = max(hard,0);
+		if instance_exists(RegalNavigation)
+		{
+			area = 9;
+			subarea = 1;
+			lastarea = 9;
+			lastsubarea = 1;
+			inverted = false;
+			hard -= 1;
+			hard = max(hard,0);
+		}
+		else
+		{
+			//WE LOOP HERE!
+			looping = true;
+			area=1;
+			subarea=1;
+			lastarea = 1;
+			lastsubarea = 1;
+			inverted = false;
+			hard -= 1;
+			hard = max(hard,0);
+		}
 		exit;
 	}
 	if area < 100

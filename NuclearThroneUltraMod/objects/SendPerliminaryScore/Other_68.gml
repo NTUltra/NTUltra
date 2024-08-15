@@ -13,6 +13,8 @@ if (type == network_type_data) {
 		case NETDATA.CLIENT_ID:
 		//SENDING SCORE
 			scrSendScore(buffer, true);
+			UberCont.runScore = [];
+			UberCont.runRace = [];
 			alarm[0] = 2;
 		break;
 	}

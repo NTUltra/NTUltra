@@ -324,6 +324,7 @@ function scrSecretUltraStat() {
 	secret_ultra_hint[maxsecretultra + 1] = "";
 	secret_ultra_unlk[maxsecretultra + 1] = "WIELD NO WEAPON";
 	
+
 	/*
 	secret_ultra_name[38] = "CRYSTALINE TORPEDO"
 	secret_ultra_text[38] = "+2 MAX HP#ACTIVE COSTS 1 HP#WHILE SHIELDING#LAUNCH YOURSELF INTO A MASSIVE CRYSTAL TORPEDO#BREAK WALLS AND DEAL TONS OF DAMAGE#COMPLETLY <aq>IMMUNE<aq> WHILE SHIELDING"

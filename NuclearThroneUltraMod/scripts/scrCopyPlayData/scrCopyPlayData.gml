@@ -72,6 +72,7 @@ function scrCopyPlayData(){
 		voidChallengeGoing: UberCont.voidChallengeGoing,
 		voidChallengeCompleted: UberCont.voidChallengeCompleted,
 		voidShopHealthUpgrade: UberCont.voidShopHealthUpgrade,
+		voidShopMutationUpgrade: UberCont.voidShopMutationUpgrade,
 		voidExtremeChallenges: UberCont.voidExtremeChallenges,
 		voidMutationDeposit: UberCont.voidMutationDeposit,
 		voidWeaponDeposit: UberCont.voidWeaponDeposit,

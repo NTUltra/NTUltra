@@ -4,7 +4,10 @@ scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
 audio_stop_sound(sndFishRollUpgLoop);
 if scrCheckLoopAll()
 	scrUnlockCSkin(1,"FOR LOOPING WITH EVERY CHARACTER",0);
-
+with Ally
+{
+	grabbed = false;	
+}
 if scrIsGamemode(8)
 {
 	with VanFan

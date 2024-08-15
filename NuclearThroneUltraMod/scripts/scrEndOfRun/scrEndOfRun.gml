@@ -118,10 +118,12 @@ function scrEndOfRun(){
 		levelIncrease = 0;
 		voidChallengeGoing = [false,false,false,false,false,false];
 		voidChallengeCompleted= [false,false,false,false,false,false];
-		voidShopHealthUpgrade = false;
+		voidShopHealthUpgrade = 30;
+		voidShopMutationUpgrade = 40;
 		voidExtremeChallenges = false;
 		voidMutationDeposit = [];
 		voidWeaponDeposit = [];
+		gotRegalThisRun = false;
 		visitedScrap = false;
 		visitedOasis = false;
 		visitedSavanna = false;
@@ -130,8 +132,6 @@ function scrEndOfRun(){
 		refundLastWishPrevent = false
 		refundSkeletonLives = 0
 		refundLastWish = false;
-		runScore = [];
-		runRace = [];
 		if playFullyCompleted
 		{
 			playFullyCompleted = false;

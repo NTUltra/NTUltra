@@ -64,7 +64,7 @@ else if (Player.area = 136 and Player.subarea == 3)
 	var ds = point_distance(n.x,n.y,f.x,f.y)*0.6;
 	var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
 }
-if Player.area == 101 and Player.subarea == 3
+if ((Player.area == 101 || Player.area == 122) and Player.subarea == 3)
 {
 	if instance_exists(SunkenCar)
 	{
@@ -668,7 +668,7 @@ else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!
 	}
 }
 
-if Player.area=1
+if Player.area=1 || Player.area == 105
 {
 	if Player.subarea == 1 && Player.loops < 2
 	{
@@ -685,7 +685,7 @@ if Player.area == 9 && Player.subarea == 1
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor)
 		instance_create(x+16,y+16,FactoryEntrance)
 }
-if Player.area == 3 && Player.subarea == 2
+if ((Player.area == 3 || Player.area == 106) && Player.subarea == 2)
 {
 	if instance_exists(ProtoStatue)
 		with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
@@ -763,7 +763,7 @@ if Player.area == 103
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,MushroomLandEntrance)
 }
-if ( ((Player.area == 5 && Player.subarea < 3) || (Player.area == 114 && Player.subarea == 2)) && (Player.skill_got[18] || Player.skeletonlives > 0))
+if ( (((Player.area == 5 || Player.area == 107) && Player.subarea < 3) || (Player.area == 114 && Player.subarea == 2)) && (Player.skill_got[18] || Player.skeletonlives > 0))
 {
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,JungleFrozenPlant)

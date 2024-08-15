@@ -179,6 +179,10 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.voidChallengeGoing = encryptedRun.voidChallengeCompleted;
 			if variable_struct_exists(encryptedRun, "voidShopHealthUpgrade")
 				UberCont.voidShopHealthUpgrade = encryptedRun.voidShopHealthUpgrade;
+			if UberCont.voidShopHealthUpgrade < 20
+				UberCont.voidShopHealthUpgrade = 60;
+			if variable_struct_exists(encryptedRun, "voidShopMutationUpgrade")
+				UberCont.voidShopMutationUpgrade = encryptedRun.voidShopMutationUpgrade;
 			if variable_struct_exists(encryptedRun, "voidExtremeChallenges")
 				UberCont.voidExtremeChallenges = encryptedRun.voidExtremeChallenges;	
 			if variable_struct_exists(encryptedRun, "voidWeaponDeposit")

@@ -2,7 +2,13 @@ mediumchest=0;
 shadowSprite = shd24;
 ammoValue = 1.5;
 chestValue = 1;
-if object_index != AmmoChestMystery && object_index != GiantGoldenAmmoChest
+if instance_exists(Player) && Player.ultra_got[26]==1 && object_index != GiantGoldenAmmoChest
+{
+	mediumchest=1;
+}
+if mediumchest==1
+	sprite_index=sprMediumAmmoChest;
+else if object_index != AmmoChestMystery && object_index != GiantGoldenAmmoChest
 {
 	if instance_exists(Player)
 	{
@@ -25,10 +31,5 @@ if object_index != AmmoChestMystery && object_index != GiantGoldenAmmoChest
 
 
 event_inherited()
-if instance_exists(Player) && Player.ultra_got[26]==1 && object_index != GiantGoldenAmmoChest
-{
-	mediumchest=1;
-}
-if mediumchest==1
-	sprite_index=sprMediumAmmoChest;
+
 

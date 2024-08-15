@@ -78,6 +78,7 @@ function scrSaveStats() {
 	repeat(maxsecretultra + 1)
 	{
 		ini_write_real("STATS","ctotsecretultrataken" + string(dir),ctot_secret_ultra_taken[dir]);
+		ini_write_real("STATS","secret_ultra_requirement_unlocked" + string(dir),secret_ultra_requirement_unlocked[dir]);
 		dir ++;
 	}
 	foundRoutes = array_unique(foundRoutes);

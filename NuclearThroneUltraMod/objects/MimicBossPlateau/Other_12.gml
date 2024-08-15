@@ -13,6 +13,11 @@ with PlayerSpawn
 with Player
 {
 	area = a
+	if skill_got[maxskill + 1]
+	{
+		area = 137;
+		instance_create(x,y,RegalNavigation);
+	}
 	subarea = 1
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);

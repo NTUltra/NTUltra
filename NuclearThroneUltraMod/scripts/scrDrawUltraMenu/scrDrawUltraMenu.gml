@@ -85,6 +85,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	var i = ((race-1)*4) + 1;
 	var j = 0;
 	var canShowThis = (UberCont.ctot_ultra_taken[i] || UberCont.ctot_ultra_taken[i+1] || UberCont.ctot_ultra_taken[i+2] || UberCont.ctot_ultra_taken[i+3])
+	var unlockedRequirement = false;
 	repeat(am)
 	{
 		var drawIndex = i;
@@ -115,6 +116,8 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 			canShowThis = UberCont.ctot_secret_ultra_taken[u];
 			unlockHint = "HINT: " + secret_ultra_hint[u];
 			howToUnlock = "UNLOCK: " + secret_ultra_unlk[u]
+			if UberCont.secret_ultra_requirement_unlocked[u]
+				unlockedRequirement = true;
 			switch (race)
 			{
 				case 1:
@@ -375,7 +378,10 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					draw_text(xxxx,yyyy + titleNameSpace,scrCensorString(scrReplaceAllColourCodes(text)));
 					if j > 3
 					{
-						draw_text_colour(xxxx,bb, unlockHint,c_gray,c_gray,c_gray,c_gray,1);
+						if unlockedRequirement
+							draw_text_colour(xxxx,bb,howToUnlock,c_gray,c_gray,c_gray,c_gray,1);
+						else
+							draw_text_colour(xxxx,bb, unlockHint,c_gray,c_gray,c_gray,c_gray,1);
 					}
 				}
 				else 

@@ -73,6 +73,7 @@ if selected && visible
 				getVision = false;
 				with UberCont
 				{
+					gotRegalThisRun = true;
 					if isValidGamemodeToUnlock()
 					{
 						got_regal[other.race] += 1;

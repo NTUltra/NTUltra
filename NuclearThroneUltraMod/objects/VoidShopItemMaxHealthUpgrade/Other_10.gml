@@ -29,6 +29,6 @@ with Player
 		}
 	}
 }
-UberCont.voidShopHealthUpgrade = true;
-UberCont.maxHpIncrease += 1
-event_user(1);
+UberCont.voidShopHealthUpgrade *= 2;
+//UberCont.maxHpIncrease += 1
+cost = UberCont.voidShopHealthUpgrade;
