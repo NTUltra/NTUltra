@@ -297,6 +297,8 @@ if Player.area = 100
 		instance_create(exitX+96,exitY,Floor);
 		with instance_create(exitX+94+16,exitY-16,CrownVaultSecretExit)
 			event_user(1)
+		with instance_create(exitX + 16,exitY+80,CrownVaultSecretExit)
+			event_user(2)
 	}
 	with instance_furthest(Player.x,Player.y,Floor)
 	{

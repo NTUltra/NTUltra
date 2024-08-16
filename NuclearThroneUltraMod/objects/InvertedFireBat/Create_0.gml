@@ -23,10 +23,10 @@ if instance_exists(Player)
 motion_add(point_direction(Player.x,Player.y,x,y),1)
 
 canDodge = false;
-actTime = 14;
+actTime = 10;
 nukeIt = false;
 loops = GetPlayerLoops();
 if loops > 0
-	actTime = 10;
+	actTime = 8;
 if loops > 12
 	nukeIt = true;

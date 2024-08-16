@@ -9,6 +9,10 @@ if !used
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
 		snd_play_2d(sndVoidCreepEnd);
+		with MusCont
+		{
+			audio_stop_sound(song);	
+		}
 		with instance_create(x,y,DarkOverlay)
 		{
 			alarm[0] = 90;

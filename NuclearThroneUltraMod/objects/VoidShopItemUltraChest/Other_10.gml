@@ -1,4 +1,4 @@
-/// @description Spawn BulletWeaponChest
+/// @description Spawn Ultra weapon chest
 with instance_create(spawnLocationX,spawnLocationY,UltraWeaponChest) {
 	weps = other.wep;
 }

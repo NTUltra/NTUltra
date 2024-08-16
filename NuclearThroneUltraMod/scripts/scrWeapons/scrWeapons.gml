@@ -661,7 +661,7 @@ function scrWeapons() {
 	wep_name[59] = "LIGHTNING SHOTGUN"
 	wep_type[59] = 5
 	wep_auto[59] = 1
-	wep_load[59] = 25
+	wep_load[59] = 23
 	wep_cost[59] = 4
 	wep_sprt[59] = sprLightningShotgun
 	wep_area[59] = 11
@@ -2238,7 +2238,7 @@ function scrWeapons() {
 	wep_type[199] = 3
 	wep_auto[199] = 0
 	wep_load[199] = 16
-	wep_cost[199] = 2
+	wep_cost[199] = 3
 	wep_sprt[199] = sprUltraSeekerPistol
 	wep_area[199] = 19
 	wep_text[199] = "ultra seekers can destroy projectiles"
@@ -8023,7 +8023,7 @@ function scrWeapons() {
 	wep_load[716] = 7
 	wep_cost[716] = 1.5
 	wep_sprt[716] = sprPlasmaLaserRifle
-	wep_area[716] = 11
+	wep_area[716] = 13
 	wep_text[716] = "bubble laser"
 	wep_swap[716] = sndSwapEnergy
 	wep_rad[716] = 0;

@@ -17,4 +17,5 @@ with UberCont
 if !scrHasAnySecretUltraUnlockRequirementsLeft()
 {
 	event_user(1);
+	instance_create(x,y,VoidShopWeaponShifter);
 }

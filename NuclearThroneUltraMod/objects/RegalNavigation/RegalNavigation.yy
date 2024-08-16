@@ -9,10 +9,7 @@
     "name":"LevelGen",
     "path":"folders/Objects/LevelGen.yy",
   },
-  "parentObjectId":{
-    "name":"becomenemy",
-    "path":"objects/becomenemy/becomenemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,5 +29,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

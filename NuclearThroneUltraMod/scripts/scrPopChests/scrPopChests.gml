@@ -178,32 +178,32 @@ function scrPopChests() {
 			{
 				instance_destroy(id,false);
 				if !scrIsGamemode(26) && !scrIsGamemode(27) && isValidGamemodeToUnlock()//not dayly
-				if Player.skill_got[23] //OPEN MIND
-				{
-					instance_create(x,y-24,ProtoChest)
-					with instance_create(x,y+24,ProtoChest)
+					if Player.skill_got[23] //OPEN MIND
 					{
-						issecond = true;
-						wep = UberCont.protowep2
-						wepmod1=UberCont.protowepmod12
-						wepmod2=UberCont.protowepmod22
-						wepmod3=UberCont.protowepmod32
-						wepmod4=UberCont.protowepmod42
-						if wep == 0
+						instance_create(x,y-24,ProtoChest)
+						with instance_create(x,y+24,ProtoChest)
 						{
-							wep = 56;
-							wepmod1=0;
-							wepmod2=0;
-							wepmod3=0;
-							wepmod4=0;
-						}
+							issecond = true;
+							wep = UberCont.protowep2
+							wepmod1=UberCont.protowepmod12
+							wepmod2=UberCont.protowepmod22
+							wepmod3=UberCont.protowepmod32
+							wepmod4=UberCont.protowepmod42
+							if wep == 0
+							{
+								wep = 56;
+								wepmod1=0;
+								wepmod2=0;
+								wepmod3=0;
+								wepmod4=0;
+							}
 							
+						}
 					}
-				}
-				else
-				{
-					instance_create(x,y,ProtoChest)
-				}
+					else
+					{
+						instance_create(x,y,ProtoChest)
+					}
 			}
 		}
 			gol = 0

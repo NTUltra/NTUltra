@@ -602,7 +602,7 @@ function scrSkills() {
 	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>";
 	skill_detail[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>#SUBSEQUENT <aq>BARRIERS<aq> CHARGE SLOWER";
 	skill_tips[46] = "rush of adrenaline"
-	skill_msnd[46] =  sndMutAdrenalineFuel;
+	skill_msnd[46] =  sndMutInnerPeace;
 	skill_bons[46] = "+23% CHARGE RATE#CAN CHARGE UP TO 4 BARRIERS"
 	
 	skill_name[maxskill + 1] = "REGAL VISION"

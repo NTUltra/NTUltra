@@ -3559,23 +3559,23 @@ function scrPowers(raceOverwrite = -1) {
 			if (skill_got[5])
 			{
 				if is60fps
-					sheepPower += 0.06*0.5;
+					sheepPower += 0.055*0.5;
 				else
-					sheepPower += 0.06;
+					sheepPower += 0.055;
 			}
 			if (skill_got[2])
 			{
 				if is60fps
-					sheepPower += 0.03*0.5;
+					sheepPower += 0.025*0.5;
 				else
-					sheepPower += 0.03;
+					sheepPower += 0.025;
 			}
 			if (ultra_got[51])
 			{
 				if is60fps
-					sheepPower += 0.09*0.5;
+					sheepPower += 0.085*0.5;
 				else
-					sheepPower += 0.09;
+					sheepPower += 0.085;
 			}
 			if sheepPower > sheepPowerToHaveEffect
 				image_speed = 0.6;
@@ -3617,7 +3617,14 @@ function scrPowers(raceOverwrite = -1) {
 				vspeed -= 2.2-moveBoost
 				motion_add(direction,3.5);
 			}
+			if sheepPower < sheepPowerToHaveEffect && speed > maxSpeed
+				speed = maxSpeed;
 		}
+		if instance_exists(SheepBreak) && speed > maxSpeed - 1
+		{
+			speed = maxSpeed - 1;
+		}
+		
 	}
 	}//END OF HOLD RMB
 	else if audio_is_playing(sndEyesLoop) or audio_is_playing(sndChickenLoop) or audio_is_playing(sndEyesLoopUpg) 

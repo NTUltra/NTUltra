@@ -14,3 +14,5 @@ with Player
 	}
 }
 event_user(1);
+if UberCont.extraVan > -2
+	instance_create(x,y,VoidShopItemReduceIdpdVans);

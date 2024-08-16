@@ -274,8 +274,13 @@ if crown == 11
 	if Player.crownvisits > 0 && !UberCont.canPickFrogCrown
 	{
 		var hasReachedUltra = false;
+		var gotTheRegal = false;
 		with Player
 		{
+			if skill_got[maxskill + 1]
+			{
+				gotTheRegal = true;
+			}
 			skeletonlives=0;
 			reincarnate = true;
 			crownpoints = 0;
@@ -318,6 +323,8 @@ if crown == 11
 		instance_create(x,y,Player);
 		with Player//Data to keep
 		{
+			if gotTheRegal
+				skill_got[maxskill + 1] = 1;
 			crownpoints = 0;
 			disableAltUltra = disableAltU;
 			rnglevelloop = rngloop;

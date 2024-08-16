@@ -4,10 +4,6 @@ if spr_idle == sprBigFishSkullOpen
 {
 	isInteractableNow = true;
 	var thereIsBoss = false;
-	with Portal
-	{
-		instance_destroy();	
-	}
 	with WantBoss
 	{
 		if !oasis
@@ -15,6 +11,15 @@ if spr_idle == sprBigFishSkullOpen
 	}
 	if KeyCont.key_pick[Player.p] = 1 && !thereIsBoss && !instance_exists(SandWorm)
 	{
+		with Portal
+		{
+			instance_destroy();	
+		}
+		with Player
+		{
+			roll = 0;
+			angle = 0;
+		}
 		KeyCont.key_pick[Player.p] = 2;
 		snd_play(sndOasisHorn);
 		/*

@@ -201,6 +201,8 @@ lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;
 boostLevel = 0;
 level = 1
+ultraLevel = 0;
+ultraLevelBoost = 0;
 if instance_exists(BackCont)
 BackCont.alarm[4] = 10;
 canblacksword = false;
@@ -240,7 +242,7 @@ brakingFriction = 0.25;
 vSlide = 0;
 hSlide = 0;
 wallSlideSpeed = 0.6;
-wallSlideTime = 0.02;
+wallSlideTime = 0.03//0.02;
 slideEnd = 0.05;
 flipDir = 1;
 weaponspickedup = 0;

@@ -14,7 +14,10 @@ function drawMenuBSkin(skin,race,theColour){
 	}
 	else if (skin == 3)
 	{
-		var spr = scrLeaderboardRace(race,0,true,0);
+		if race == 16
+			var spr = scrLeaderboardRace(race,3,true,0);
+		else
+			var spr = scrLeaderboardRace(race,0,true,0);
 	}
 	else if (skin == 4)
 	{

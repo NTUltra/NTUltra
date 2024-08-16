@@ -9,41 +9,53 @@ if other.isGrenade && Player.ultra_got[51] {
 }
 if team != other.team
 {
-	Player.sheepPower -= projectileHitBrake*min(2,round(other.dmg*0.5));
+	Player.sheepPower -= projectileHitBrake * min(2,round(other.dmg*0.5));
 	Player.speed *= 0.4;
-	Sleep(2);
 	BackCont.viewx2 += lengthdir_x(1,direction)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(1,direction)*UberCont.opt_shake
 	BackCont.shake += 5
+	/*
 	if other.typ == 2
 	{
 		BackCont.shake += 1;
 		with other{
 		instance_destroy();}
 	}
-	else if (Player.ultra_got[51]) {
+	else if (Player.ultra_got[51]) {*/
 	    //deflect
 		BackCont.shake += 2;
 		if other.typ == 1
 		{
-			with other
+			if (Player.ultra_got[51])
 			{
-				team = other.team;
-				snd_play(sndRicochet,0.1,true);
-				event_user(15);
-				if instance_exists(enemy)
+				with other
 				{
-					var n = instance_nearest(x,y,enemy)
-					direction = point_direction(x,y,n.x,n.y);
-				}
-				else
-					direction = point_direction(other.x,other.y,x,y);
-				speed *= 2;
-			    image_angle = other.direction
-				speed += 1;
+					team = other.team;
+					snd_play(sndRicochet,0.1,true);
+					event_user(15);
+					if instance_exists(enemy)
+					{
+						var n = instance_nearest(x,y,enemy)
+						direction = point_direction(x,y,n.x,n.y);
+					}
+					else
+						direction = point_direction(other.x,other.y,x,y);
+					speed *= 2;
+				    image_angle = other.direction
+					speed += 1;
 			
-			    with instance_create(x,y,Deflect)
-					image_angle = other.direction
+				    with instance_create(x,y,Deflect)
+						image_angle = other.direction
+				}
+			}
+			else
+			{
+				snd_play(sndProjectileDestroy,0.1,true);
+				BackCont.shake += 1;
+				with other
+				{
+					instance_destroy();
+				}
 			}
 		}
 		else if other.typ == 0 && !other.canBeMoved
@@ -58,40 +70,26 @@ if team != other.team
 			Player.sheepPower += 0.1;
 		}
 		else
-		{	with other
-				instance_destroy();	
+		{
+			if other.typ == 3 && !Player.ultra_got[51]
+			{
+				Player.sheepPower -= projectileHitBrake * 0.5;
+			}
+			snd_play(sndProjectileDestroy,0.1,true);
+			BackCont.shake += 1;
+			with other
+			{
+				instance_destroy();
+			}
 		}
-	} else if other.typ == 1
+	/*} else if other.typ == 1
 	{
 		snd_play(sndProjectileDestroy,0.1,true);
 		BackCont.shake += 1;
 		with other{
 		instance_destroy();}
-	}
+	}*/
 	//NOW BROKEN
-	if (Player.sheepPower < Player.sheepPowerToHaveEffect)
-	{
-		debug("break projectiles");
-		BackCont.shake += 10;
-		var ang = random(360);
-		repeat(8)
-		{
-			with instance_create(Player.x,Player.y,Smoke)
-			{
-				motion_add(ang,2);
-				motion_add(other.direction,1);
-			}
-			ang += 45;
-		}
-		with Player
-		{
-			snd_play(sndChargeBreak);
-			with EuphoriaShield
-				instance_destroy();
-			alarm[3] = max(alarm[3],8);//imunity
-			snd_hurt = sndDamageNegate;
-			meleeimmunity = max(meleeimmunity,1);
-		}
-	}
+	event_user(0);
 }
 

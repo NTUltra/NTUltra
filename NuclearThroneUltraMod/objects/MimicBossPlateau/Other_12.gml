@@ -6,6 +6,8 @@ with PlayerSpawn
 {
 	area = a;
 	subarea = 1;
+	lastarea = 9;
+	lastsubarea = 2;
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);
 	getVision = true;
@@ -13,15 +15,22 @@ with PlayerSpawn
 with Player
 {
 	area = a
+	subarea = 1
+	lastarea = 9;
+	lastsubarea = 2;
 	if skill_got[maxskill + 1]
 	{
 		area = 137;
+		subarea = 0;
 		instance_create(x,y,RegalNavigation);
 	}
-	subarea = 1
+	else
+	{
+		getVision = true;
+	}
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);
-	getVision = true;
+	
 	//REFUND MUTS & GAIN ROYAL VISIONS
 }
 mask_index = mskPickupThroughWall;

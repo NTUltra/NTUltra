@@ -53,7 +53,7 @@ if instance_number(BigGenerator) == 1
 			}
 		}
 		with NuclearThrone1 {
-			my_health -= maxhealth*0.25;
+			my_health -= maxhealth*0.3;
 			my_health = max(10,my_health);
 		}
 		with maxhealther

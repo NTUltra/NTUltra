@@ -17,6 +17,7 @@ with UberCont
 				moveSpeed = 1;
 				alarm[1] = 60;
 			}
+			instance_create(x,y,VoidShopItemEliteWeaponChest);
 		}
 	}
 	else

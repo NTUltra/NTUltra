@@ -32,8 +32,9 @@ if Player.wepmod1 != 0
 			{
 				type = 1
 				pullstrength = 3;
-				x = other.y;
+				x = other.x;
 				y = other.y;
+				alarm[1] = 1;
 				scrForcePosition60fps();
 				with Player
 				{
@@ -47,7 +48,6 @@ if Player.wepmod1 != 0
 						prevhealth = 0;
 					}
 				}
-				alarm[1] = 1;
 			}
 		}
 		else

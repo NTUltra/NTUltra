@@ -452,6 +452,7 @@ if looping && area != 104
     
     
 	    //uncurse some shit
+		/*
 		if (!(ultra_got[30] && altUltra))
 		{
 			if (curse == 1 || bcurse == 1 || ccurse == 1)
@@ -466,6 +467,7 @@ if looping && area != 104
 		    bcurse=0;
 		    ccurse=0;	
 		}
+		*/
     
 	//drop VIKING GREAT AXE?
 	if race=16&&loops=1{

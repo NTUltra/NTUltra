@@ -819,6 +819,10 @@ if (selected && visible &&
 				instance_destroy(id,false);
 				with newPlayer//Data to keep
 				{
+					if other.skill_got[maxskill + 1]
+					{
+						getVision = true;
+					}
 					race = other.race
 					crown = other.crown
 					lastarea = other.lastarea;

@@ -16,6 +16,7 @@ if um == ultramods.plasmaBolt
 		alarm[11] = 0;
 		dmg -= 1;
 	}
+	repeat(2)
 	with instance_create(x,y,SwarmBolt)
 	{
 		scrCopyWeaponMod(other);
@@ -50,7 +51,7 @@ else if um == ultramods.plasmaRocket
 {
 	snd_play_fire(sndQuadMachinegun)
 	var d = random(360);
-	repeat(5)
+	repeat(6)
 	{
 		with instance_create(x,y,Bullet1)
 		{
@@ -61,7 +62,7 @@ else if um == ultramods.plasmaRocket
 			team = other.team;
 			alarm[11] = 0;
 		}
-		d += 72;
+		d += 60;
 	}
 	instance_destroy(id,false);
 	mask_index = mskPickupThroughWall;

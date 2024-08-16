@@ -1,4 +1,3 @@
-/// @description No ultra mod
 /// @description ultramod
 var um = GetPlayerUltramod();
 if um == ultramods.plasmaBolt

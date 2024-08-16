@@ -1,7 +1,7 @@
 /// @description Is player close?
 if instance_exists(PlayerInEnding)
 {
-	if point_distance(x,y,PlayerInEnding.x,PlayerInEnding.y) < 12
+	if point_distance(x,y,PlayerInEnding.x,PlayerInEnding.y) < 12 || alarm[0] < 1
 	{
 		with PlayerInEnding
 		{
@@ -32,8 +32,9 @@ if instance_exists(PlayerInEnding)
 }
 else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 {
-	if point_distance(x,y,Player.x,Player.y) < 64
+	if point_distance(x,y,Player.x,Player.y) < 64 || alarm[1] < 1
 	{
+		alarm[0] = 90;
 		var et = endingType;
 		with Player
 		{

@@ -2,7 +2,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	var isOtherCharacter = false;
 	// ULTRAS
 	ultra_name[0] = "TOTAL FORECALL"
-	ultra_text[0] = "CHOOSE AN <g>ULTRA MUTATION<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)#GET OFFERED <g>PATIENCE<g> WITH EVERY CHOICE"
+	ultra_text[0] = "CHOOSE AN <g>ULTRA MUTATION<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)#GET OFFERED <g>PATIENCE<g> WITH EVERY CHOICE"
 	ultra_tips[0] = "adapting"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 21 && Player.altUltra)
@@ -406,7 +406,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 	
 	ultra_name[51] = "IMPENETRABLE"
-	ultra_text[51] = "BETTER <pi>CHARGE<pi>!#CHARGING <pi>DEFLECTS<pi> ENEMY PROJECTILES#CHARGE BLOCKS ALL TYPES OF PROJECTILES"
+	ultra_text[51] = "BETTER <pi>CHARGE<pi>!#CHARGING <pi>DEFLECTS<pi> ENEMY PROJECTILES"
 	ultra_tips[51] = "what a beast"
 	
 	/* 

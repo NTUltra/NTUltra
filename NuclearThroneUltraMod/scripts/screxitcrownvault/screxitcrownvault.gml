@@ -11,6 +11,7 @@ function scrExitCrownVault(){
 		if Player.crownvisits == 0
 		|| Player.area == 126 || Player.area == 127 //Graveyard
 		|| Player.area == 115 || Player.area == 124	//Mushroom
+		|| Player.area == 137
 			Player.subarea = 0;
 		else if Player.area == 6 || Player.area == 111 //Caves
 		|| Player.area == 114 || Player.area == 123//Jungle

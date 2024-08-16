@@ -17,12 +17,13 @@ Sleep(2);
 BackCont.viewx2 += lengthdir_x(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.shake += 1.12*sp*0.5;
-
 	with other
 	{
 		if my_health > 0
 		{
 			var deal = max(3,round((sp-1)*other.dmg));
+			if team == 0
+				deal *= 0.5;
 			if UberCont.normalGameSpeed == 60
 			{
 				DealDamage(deal*0.5,false,true,false);
@@ -49,31 +50,12 @@ BackCont.shake += 1.12*sp*0.5;
 		    image_index = 0
 			// scrSheepHit();
 			//NOW BROKEN
-			if (Player.sheepPower < Player.sheepPowerToHaveEffect)
+			with other
 			{
-				debug("break hitme");
-				BackCont.shake += 10;
-				var ang = random(360);
-				repeat(8)
-				{
-					with instance_create(Player.x,Player.y,Smoke)
-					{
-						motion_add(ang,2);
-						motion_add(other.direction,1);
-					}
-					ang += 45;
-				}
-				with Player
-				{
-					snd_play(sndChargeBreak);
-					with EuphoriaShield
-						instance_destroy();
-					alarm[3] = max(alarm[3],8);//imunity
-					snd_hurt = sndDamageNegate;
-					meleeimmunity = max(meleeimmunity,1);
-				}
+				event_user(0);
 			}
 		}
     }
-}}
+}
+}
 

@@ -6,6 +6,7 @@ imageIndex = 0;
 baseDmg = 1.2;
 gotVision = false;
 dmg = baseDmg;
+depth = -1;
 if instance_exists(Player)
 {
 	if scrIsHardMode()
@@ -14,7 +15,7 @@ if instance_exists(Player)
 	dmg = baseDmg*damageBoost;
 	if Player.skill_got[2]//Extra feet synergy why not
 	{
-		projectileHitBrake-= 0.13;
+		projectileHitBrake-= 0.1;
 		enemyHitbrake -= 0.8;
 		bloomSprite = sprSheepDashBloomExtraFeet;
 		if (Player.skill_got[8])
@@ -28,19 +29,20 @@ if instance_exists(Player)
 	}
 	if Player.skill_got[5]
 	{
-		projectileHitBrake -= 0.13;
+		projectileHitBrake -= 0.12;
 		enemyHitbrake -= 0.8;
 	}
     if Player.ultra_got[51]
     {
 		sprite_index=sprSheepDashFXultra;
-		projectileHitBrake-= 0.2;
+		projectileHitBrake-= 0.18;
 		enemyHitbrake -= 1.4;
 		dmg = baseDmg*damageBoost;
     }
     if Player.skill_got[5]==1
     {
 		sprite_index=sprSheepDashFXthrn;
+		alarm[0] = 5;
     }
     if Player.skill_got[5] && Player.ultra_got[51]
     {

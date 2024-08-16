@@ -187,20 +187,27 @@ function scrLoseSkill(skillIndex, disableInstead = false){
 			alienIntestines = 0;
 		break;
 		case 41: //NERVES OF STEEL
-			if race == 25
+			if ultra_got[62] && altUltra
 			{
-				maxhealth += 1;
+				maxarmour += 1;
 			}
 			else
 			{
-				maxhealth += 2;
+				if race == 25
+				{
+					maxhealth += 1;
+				}
+				else
+				{
+					maxhealth += 2;
+				}
+				//if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
+				//{
+					maxarmour -= 1;
+					armour = min(maxarmour,armour);
+					//gotMinimumArmour = false;
+				//}
 			}
-			//if gotMinimumArmour && !scrIsCrown(10) && maxarmour <= 1
-			//{
-				maxarmour -= 1;
-				armour = min(maxarmour,armour);
-				//gotMinimumArmour = false;
-			//}
 		break;
 		case 42: //TAIL END
 			betterTail = 1.5;

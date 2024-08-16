@@ -1,5 +1,9 @@
 raddrop = 10
-maxhealth = 350
+loops = GetPlayerLoops();
+if loops < 1
+	maxhealth = 300;
+else
+	maxhealth = 350;
 meleedamage = 0
 mySize = 2
 
@@ -31,6 +35,8 @@ fireRate = 2;
 wakeupTime = 15;
 race = 1;
 tellTime = 14;
+if loops < 1
+	tellTime += 2;
 wepangle = choose(-140,140)
 wepflip = 1
 smackRange = 8;
@@ -44,6 +50,8 @@ if instance_exists(Player)
 	spr_hurt = Player.spr_hurt;
 	spr_dead = Player.spr_dead;
 	race = Player.race;
+	snd_hurt = Player.snd_hurt_actual;
+	snd_dead = Player.snd_dead;
 	if Player.skill_got[29] {
 		wakeupTime += 60;
 		scrGiveSnooze();

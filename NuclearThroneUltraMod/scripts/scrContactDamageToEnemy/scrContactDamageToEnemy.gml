@@ -21,7 +21,7 @@ function scrContactDamageToEnemy(hitEnemy){
 				if ultra_got[58]
 					contactDmg += 6;
 			}
-			if contactDmg > 0 && PlayerAlarms2.alarm[3] < 1 && !justAsheep
+			if contactDmg > 0 && instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[3] < 1 && !justAsheep
 			{
 				if UberCont.normalGameSpeed == 60
 				{

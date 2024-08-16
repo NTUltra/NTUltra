@@ -4,7 +4,7 @@
 event_inherited();
 with Player
 {
-	skillpoint += 1;
+	skillpoints += 1;
 	with instance_create(x,y,PopupText)
 	{
 		mytext = "+1 MUTATION!"
@@ -13,6 +13,6 @@ with Player
 		alarm[1] = 60;
 	}
 }
-UberCont.voidShopMutationUpgrade *= 2;
+UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 1.5);
 //UberCont.maxHpIncrease += 1
 cost = UberCont.voidShopMutationUpgrade;

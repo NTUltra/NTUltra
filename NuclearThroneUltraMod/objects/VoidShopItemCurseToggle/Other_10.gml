@@ -25,5 +25,10 @@ with Player
 			moveSpeed = 1;
 			alarm[1] = 60;
 		}
+		if scrIsCrown(14) {
+			snd_play(sndHealthPickup);
+			scrHeal(1,true);	
+		}
 	}
 }
+cost *= 2;

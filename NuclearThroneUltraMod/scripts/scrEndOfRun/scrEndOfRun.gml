@@ -118,7 +118,7 @@ function scrEndOfRun(){
 		levelIncrease = 0;
 		voidChallengeGoing = [false,false,false,false,false,false];
 		voidChallengeCompleted= [false,false,false,false,false,false];
-		voidShopHealthUpgrade = 30;
+		voidShopHealthUpgrade = 25;
 		voidShopMutationUpgrade = 40;
 		voidExtremeChallenges = false;
 		voidMutationDeposit = [];

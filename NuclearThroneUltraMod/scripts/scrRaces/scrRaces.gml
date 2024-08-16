@@ -310,8 +310,8 @@ function scrRaces() {
 	race_name[13] = "SHEEP"
 	race_pass[13] = "ENEMIES WON'T ATTACK#UNTIL THEY SPOT YOU"
 	race_acti[13] = "HOLD TO <pi>CHARGE<pi>"
-	race_butt[13] = "BETTER <pi>CHARGE<pi>"
-	race_butt_detail[13] = "BETTER <pi>CHARGE<pi>#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
+	race_butt[13] = "<r>FIRE<r> <pi>CHARGE<pi>"
+	race_butt_detail[13] = "<r>FIRE<r> <pi>CHARGE<pi>#MORE CHARGE DAMAGE#MORE CHARGE CONTROL#FASTER CHARGE"
 	//race_vision[13] = "PRESS <w>[E]<w> WHILE CHARGING TO PARRY INCOMING DAMAGE";
 	//race_vision[13] = "PRESS <w>[E]<w> WHILE AT <w>FULL<w> <pi>CHARGE<pi> TO:#<pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO BE USE WHEN <w>UNSEEN<w>";
 	race_vision[13] = "PRESS <w>[E]<w> WHEN AT <w>FULL<w> <pi>CHARGE<pi> TO:#ACTIVATE A <pi>SUPER CHARGE<pi><w>!<w>##CAN ALSO <pi>SUPER CHARGE<pi> WHEN <w>UNSEEN<w>";

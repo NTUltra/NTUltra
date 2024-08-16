@@ -8669,7 +8669,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndUltraShotgun);
 
 	with instance_create(x,y,UltraHeavySlug)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,15)//16
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)//16
 	image_angle = direction
 	team = other.team}
 
@@ -17899,7 +17899,7 @@ function scrFire2(hasTailNow) {
 	{
 		fireAim = aimDirection;
 		creator = other.id
-		ammo = 16
+		ammo = 17
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -17973,7 +17973,7 @@ function scrFire2(hasTailNow) {
 	{
 		fireAim = aimDirection;
 		creator = other.id
-		ammo = 12
+		ammo = 13
 		time = 2
 		team = other.team
 		event_perform(ev_alarm,0) 

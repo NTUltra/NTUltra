@@ -166,6 +166,19 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				roll = 0;
 				angle = 0;
+				if instance_exists(WallHitMe) && !collision_point(x,y,Floor,false,false)
+				{
+					var n = instance_nearest(x,y,Floor);
+					if n != noone
+					{
+						var o = 16;
+						if n.object_index == FloorExplo
+							o = 8;
+						x = n.x + o;
+						y = n.y + o;
+						scrForcePosition60fps();
+					}
+				}
 			}
 			/*
 			if place_meeting(x,y,WallHitMe)
@@ -1530,7 +1543,14 @@ if (!instance_exists(LevCont))
 				if armour < 2
 				{
 					//Default reduction 1/8 = 0.125 =  1 - 0.125 = 0.875;
-					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxarmour))*0.7)
+					if maxarmour < 2
+					{
+						reduction = max(0.875 * 0.7,(1-(1/6))*0.7)
+					}
+					else
+					{
+						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxarmour))*0.7)
+					}
 				}
 				else
 				{
@@ -1542,7 +1562,14 @@ if (!instance_exists(LevCont))
 				stressTargetHealth = min(stressTargetHealth,my_health);
 				if my_health < 2
 				{
-					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.75)
+					if maxhealth < 2
+					{
+						reduction = max(0.875 * 0.7,(1-(1/6))*0.75)
+					}
+					else
+					{
+						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.75)
+					}
 				}
 				else
 				{
@@ -1554,7 +1581,14 @@ if (!instance_exists(LevCont))
 				stressTargetHealth = min(stressTargetHealth,my_health);
 				if my_health < 2
 				{
-					reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.7)
+					if maxhealth < 2
+					{
+						reduction = max(0.875 * 0.7,(1-(1/6))*0.7)
+					}
+					else
+					{
+						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.7)
+					}
 				}
 				else
 				{
@@ -2829,6 +2863,45 @@ if !instance_exists(Ghosting) && jump <= 0
 				{
 					hSlide = 0;	
 				}
+			}
+		}
+		var slideSpeed = 2;
+		if is60fps
+			slideSpeed = 1;
+		var h = 0;
+		if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+			h -= 8;
+		if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+			h += 8;
+		if h != 0 && place_meeting(x + h,y,WallHitMe)
+		{
+			if !collision_line(x + h,y + 12,x + h, y + 8,WallHitMe,false,false)
+			{
+				if !place_meeting(x,y + slideSpeed,WallHitMe)
+					y += slideSpeed;
+			}
+			else if !collision_line(x + h,y - 12,x + h, y - 4,WallHitMe,false,false)
+			{
+				if !place_meeting(x,y - slideSpeed,WallHitMe)
+					y -= slideSpeed;
+			}
+		}
+		var v = 0;
+		if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+			v -= 8;
+		if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+			v += 8;
+		if v != 0 && place_meeting(x,y + v,WallHitMe)
+		{
+			if !collision_line(x + 12,y + v,x + 5,y + v,WallHitMe,false,false)
+			{
+				if !place_meeting(x + slideSpeed,y,WallHitMe)
+					x += slideSpeed;
+			}
+			else if !collision_line(x - 12,y + v,x - 5,y + v,WallHitMe,false,false)
+			{
+				if !place_meeting(x - slideSpeed,y,WallHitMe)
+					x -= slideSpeed;
 			}
 		}
 		mask_index = msk;

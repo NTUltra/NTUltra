@@ -31,6 +31,12 @@ with Player
 	{
 		x = px + nextMoveX;
 		y = py + nextMoveY;
+		if skill_got[5]
+			with instance_create(x,y,Flame)
+			{
+				motion_add(random(360),2);
+				motion_add(other.dashDir,3);
+			}
 		scrForcePosition60fps();
 	}
 }

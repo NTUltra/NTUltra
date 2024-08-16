@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.496168,
+  "duration":0.820907,
   "name":"sndChargeBreak",
   "parent":{
     "name":"Sheep",

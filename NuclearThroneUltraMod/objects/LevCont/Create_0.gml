@@ -1,6 +1,6 @@
 pick = 0
 depth = -100;
-
+var preventDoublePatience = false;
 canmove = 1
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
@@ -497,6 +497,11 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
 		skill_got[41] = 1;
 	}
+	if !Player.skill_got[27] && Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
+	{
+		skill_got[27] = 1;
+		preventDoublePatience = true;
+	}
     if scrIsGamemode(32) {
 		//No alkaline boiling veins and no strong spirit
 		// One hit wonder
@@ -709,6 +714,8 @@ if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
 if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
 	skill_got[41] = 0;
 }
+if preventDoublePatience
+	skill_got[27] = 0;
 if scrIsGamemode(32) || UberCont.voidChallengeGoing[5]{
 	// One hit wonder
 	with Player

@@ -51,6 +51,10 @@ else if type == 1
 	{
 		instance_destroy();	
 	}
+	with becomenemy
+	{
+		instance_destroy();	
+	}
 	with GameRender
 	{
 		gameoverText = "THE STRUGGLE IS OVER..."

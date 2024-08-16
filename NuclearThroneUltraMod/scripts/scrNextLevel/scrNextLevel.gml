@@ -107,13 +107,52 @@ function scrNextLevel(skipping = false) {
 	{
 		if instance_exists(RegalNavigation)
 		{
-			area = 9;
-			subarea = 1;
-			lastarea = 9;
-			lastsubarea = 1;
-			inverted = false;
-			hard -= 1;
-			hard = max(hard,0);
+			if subarea < 1
+			{
+				subarea = 1;
+				with UberCont
+				{
+					portalEssence += 4;
+					if voidChallengeGoing[0]
+						portalEssence += 4;
+				}
+			}
+			else
+			{
+				area = 9;
+				subarea = 1;
+				lastarea = 9;
+				lastsubarea = 1;
+				inverted = false;
+				hard -= 1;
+				hard = max(hard,0);
+				with RegalNavigation
+				{
+					instance_destroy();	
+				}
+			}
+		}
+		else if instance_exists(SecretSheepNavigation)
+		{
+			debug("yea here we are boi");
+			debug(subarea);
+			if subarea < 1
+			{
+				subarea = 1;
+			}
+			else
+			{
+				hard -= 1;
+				hard = max(hard,0);
+				with SecretSheepNavigation
+				{
+					other.lastarea = lastarea;
+					other.inverted = inverted;
+					other.lastsubarea = lastsubarea;
+					instance_destroy();	
+				}
+				scrExitCrownVault();
+			}
 		}
 		else
 		{

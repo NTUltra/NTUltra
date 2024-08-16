@@ -65,6 +65,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		{
 			song = musUltraVisionary;
 		}
+		else if instance_exists(MimicBoss)
+		{
+			song = musUltraVisionary;
+		}
 		else if instance_exists(VoidMasterBoss)
 		{
 			song = musChimera2;
@@ -134,16 +138,16 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
 				song = musUltraBossBot;
 		}
-    snd_loop(song)
-    // snd_loop(amb)
-    //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
-	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+	    snd_loop(song)
+	    // snd_loop(amb)
+	    //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
+		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
     
-    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+	    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
     
-    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
+	    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
     
-    //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
+	    //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
     }
 
 }
@@ -595,6 +599,7 @@ else
 	else if area = 130
 	{
 		name = "BOSS BOT";
+		
 	}
 	else if area = 131
 	{
@@ -607,6 +612,8 @@ else
 	else if area = 133
 	{
 		name = "GOLDEN BOSS BOT";
+		if random(80) < 1
+			name = choose("SUPREME ROYAL ROBOTTO");
 	}
 	else if area = 134
 	{

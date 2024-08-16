@@ -30,7 +30,7 @@ function scrIsWeaponOnGround(wantWep){
 	}
 	with UltraWeaponChest
 	{
-		if id != other.id && wep == wantWep
+		if id != other.id && array_contains(weps,wantWep)
 			return true;
 	}
 	with WeaponSpecificChest

@@ -6,15 +6,15 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	{
 		bskin = 0;
 		altUltra = true;
+		if race == 16
+		{
+			return sprMutant16DIdle	
+		}
 	}
 	else if bskin == 4
 	{
 		bskin = 1;
 		altUltra = true;
-		if race == 16
-		{
-			return sprMutant16DIdle	
-		}
 	} else if bskin == 5
 	{
 		bskin = 2;

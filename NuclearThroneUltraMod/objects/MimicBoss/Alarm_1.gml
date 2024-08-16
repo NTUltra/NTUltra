@@ -1,7 +1,8 @@
 ///@description AI
 if firstTime
 {
-	instance_create(x,y,DramaCamera);	
+	firstTime = false;
+	instance_create(x,y,DramaCamera);
 }
 alarm[1] = actTime + random(actTime)
 scrTarget();
