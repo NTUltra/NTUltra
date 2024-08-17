@@ -15,7 +15,7 @@ else
 var len = 1;
 if instance_exists(Player)
 {
-	len = len
+	len = len +( Player.skill_got[13]+Player.bettermelee) *3
 }
 with instance_create(x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),Slash)
 {

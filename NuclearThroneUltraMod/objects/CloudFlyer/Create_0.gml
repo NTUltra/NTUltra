@@ -20,6 +20,9 @@ alarm[1] = 30+random(90);
 gunangle = 0;
 wkick = 0
 actTime = 18;
+loops = GetPlayerLoops();
+if loops < 1
+	actTime = 22;
 minRange = 64;
 maxRange = 320;
 startingPointDistance = 200;

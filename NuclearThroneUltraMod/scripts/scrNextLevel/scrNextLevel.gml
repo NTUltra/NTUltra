@@ -385,10 +385,21 @@ function scrNextLevel(skipping = false) {
 			//TODO
 	        if inverted && area = 105 &&subarea<3
 	        {
-	        //inverted big bandit
-	        area = 105
-	        subarea=3;
-	        inverted = false;
+				if ( oasis )
+				{
+					debug("GO TO OASISPLEEEASE");
+					area=101;
+					lastarea = 101;
+					subarea=1;
+					inverted = false;
+				}
+				else
+				{
+				    //inverted big bandit
+				    area = 105
+				    subarea=3;
+				    inverted = false;
+				}
 	        exit;
 	        }
 	        else

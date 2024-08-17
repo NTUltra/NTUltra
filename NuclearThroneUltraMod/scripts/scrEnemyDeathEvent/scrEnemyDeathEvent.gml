@@ -6,6 +6,7 @@ function scrEnemyDeathEvent(){
 	{
 		raddrop*=1.2;
 	}
+	scrCrownOfFright();
 	if instance_exists(Player)
 	{
 		//PLANT ULTRA B KILLER

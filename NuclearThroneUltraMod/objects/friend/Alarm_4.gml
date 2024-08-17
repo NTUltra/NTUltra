@@ -1,4 +1,9 @@
 /// @description Position on room start
+if instance_exists(GenCont)
+{
+	alarm[4] = 10;
+	exit;
+}
 if instance_exists(Player)
 {
 	x = Player.x;

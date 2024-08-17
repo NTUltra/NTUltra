@@ -3,6 +3,7 @@
 ///@param
 function scrEnemyTakingDamage() {
 	if prevhealth > my_health
+	
 	{
 		var dmgTaken = prevhealth - my_health;//Damage increase
 		var ogDmgTaken = dmgTaken;
@@ -63,7 +64,7 @@ function scrEnemyTakingDamage() {
 			}
 			if (Player.skill_got[37]) //ECSTATIC FISTS
 			{
-				var part = 0.34;
+				var part = 0.3333333333333333333333333333333;
 				if Player.race == 25 //Doctor
 					part = 0.425;
 				var dmgBuff = 1;

@@ -37,7 +37,12 @@ else
 		ang += angstep;
 	}
 }
-
+with instance_create(x,y,AnimDestroyTop)
+{
+	sprite_index = sprBigGeneratorDeadFX;
+	hspeed = other.image_xscale * 2;
+	image_xscale = other.image_xscale;
+}
 if instance_number(BigGenerator) == 1
 {
 	if loops < 1

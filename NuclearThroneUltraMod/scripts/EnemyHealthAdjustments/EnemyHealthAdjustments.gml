@@ -44,7 +44,7 @@ function EnemyHealthAdjustments(){
 			if Player.race == 25
 				my_health *= 0.80 + clamp(ogmaxhealth*0.00005,0,0.15);
 			else
-				my_health *= 0.65 + clamp(ogmaxhealth*0.00005,0,0.15);
+				my_health *= 0.66 + clamp(ogmaxhealth*0.00005,0,0.15);//should really be 65% but micro balance
 		}
 		if scrIsGamemode(9)//easy mode
 		{

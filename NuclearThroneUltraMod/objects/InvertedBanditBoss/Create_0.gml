@@ -9,11 +9,6 @@ scrBossHealthBuff();
 
 event_inherited()
 
-if instance_exists(Player){
-my_health=round( (1+(Player.loops*0.2))*my_health )//bandit loop 1: 1.1*4= 5(rounded up)
-maxhealth=my_health;
-}
-
 spr_idle = sprInvertedBanditBossIdle
 spr_walk = sprInvertedBanditBossWalk
 spr_hurt = sprInvertedBanditBossHurt

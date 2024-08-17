@@ -43,7 +43,7 @@ function scrFire(canDrown = true) {
 		//Nerves of steel
 		if skill_got[41]
 		{
-			if armour < maxarmour
+			if armour < 1
 			{
 				if reload > 200
 					reload -= 50;

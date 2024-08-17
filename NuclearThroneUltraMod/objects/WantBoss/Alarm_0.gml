@@ -71,7 +71,15 @@ if target != noone && instance_exists(target)
 			}
 			else if other.area=105
 			{
-				instance_create(x,y,InvertedSandWorm)
+				if other.oasis
+				{
+					with instance_create(x,y,InvertedBanditBoss)
+				    {oasis=true;}
+				}
+				else
+				{
+					instance_create(x,y,InvertedSandWorm)
+				}
 			}
 			else if other.area == 128
 			{

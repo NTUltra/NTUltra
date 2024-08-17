@@ -11,6 +11,7 @@ function scrCrownOfDeath(am = 3,dis = 26, reduc = 2){
 			with instance_create(x+lengthdir_x(dis,ang),y+lengthdir_y(dis,ang),SmallExplosion)
 			{
 				dmg -= reduc;
+				direction = ang;
 				alarm[0] = 0;
 				alarm[2] = 0;
 			}

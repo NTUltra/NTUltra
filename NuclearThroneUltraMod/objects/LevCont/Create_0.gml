@@ -219,6 +219,10 @@ if Player.crownpoints > 0
 			{
 				crown = other.dir;
 				rowPosition = other.dir;
+				if crown == 12 && scrIsInInvertedArea()
+				{
+					crown = 37;//CROWN OF FRIGHT
+				}
 			}
 		}
 		dir += 1

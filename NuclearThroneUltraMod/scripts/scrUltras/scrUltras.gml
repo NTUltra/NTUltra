@@ -733,7 +733,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[94] = "cool down"
     
 	    ultra_name[95] = "BURNING HOT"
-	    ultra_text[95] = "<r>FIRE<r> TRAIL#MORE <r>FLAME<r> DAMAGE#<r>FIRE<r> HOMES"
+	    ultra_text[95] = "<r>FIRE<r> TRAIL ON ALL YOUR PROJECTILES#MORE <r>FLAME<r> DAMAGE#<r>FIRE<r> HOMES"
 	    ultra_tips[95] = "spicy"
 		
 	    ultra_name[96] = "TSUNAMI"

@@ -20,8 +20,8 @@ if speed > 1 and other.team != team
 		instance_destroy();
 		with instance_create(x,y,Venom)
 		{
-			scrCopyWeaponMod(other);
 			team = other.team;
+			scrCopyWeaponMod(other);
 			owner = hit;
 			amount = 2;
 			dmg = 1;

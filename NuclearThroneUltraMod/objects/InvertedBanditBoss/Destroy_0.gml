@@ -1,3 +1,5 @@
+if oasis
+	raddrop = min(raddrop,10);
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(InvertedBanditBoss) == 1
 with MusCont
 {
@@ -44,5 +46,10 @@ if oasis && !instance_exists(SurvivalWave)
 {
 instance_create(x,y,Portal);
 with Player
+{
 oasis=true;
+area = 101;
+subarea = 0;
+inverted = false;
+}
 }

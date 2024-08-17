@@ -1852,17 +1852,23 @@ if instance_exists(SurvivalWave)
 			other.outOfCombat = false;
 	}
 }
-if outOfCombat && !scrIsGamemode(25)
-	tempMaxSpeed += 1;
+if outOfCombat
+{
+	with FrightningCrownGhost
+		instance_destroy();
+	if !scrIsGamemode(25)
+		tempMaxSpeed += 1;
+}
 	
 maxSpeed += tempMaxSpeed;
 //CAP SPEED
+/*
 var por = instance_place(x,y,Portal);
 if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn) || instance_exists(SpiralCont)
 {
 	speed = 0;
 }
-else if race == 23 && ultra_got[92] == 0
+else */if race == 23 && ultra_got[92] == 0
 {
 	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 	if toxicamount > 0

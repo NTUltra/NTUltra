@@ -2237,13 +2237,14 @@ function scrWeapons() {
 	wep_name[199] = "ULTRA SEEKER PISTOL"
 	wep_type[199] = 3
 	wep_auto[199] = 0
-	wep_load[199] = 16
+	wep_load[199] = 17
 	wep_cost[199] = 3
 	wep_sprt[199] = sprUltraSeekerPistol
 	wep_area[199] = 19
 	wep_text[199] = "ultra seekers can destroy projectiles"
 	wep_swap[199] = sndSwapBow
 	wep_rad[199] = 19;
+	wep_popup[199] = "SEEKERS DESTROY ENEMY PROJECTILES";
 
 	wep_name[200] = "PANDA STICK"
 	wep_type[200] = 0
@@ -8741,8 +8742,8 @@ function scrWeapons() {
 	wep_name[781] = "CORE SPLITTER"
 	wep_type[781] = 4
 	wep_auto[781] = 3
-	wep_load[781] = 5
-	wep_cost[781] = 1.25
+	wep_load[781] = 4
+	wep_cost[781] = 1
 	wep_sprt[781] = sprCoreSplitter
 	wep_area[781] = 18
 	wep_text[781] = "split the earth's core"
@@ -8821,7 +8822,7 @@ function scrWeapons() {
 	wep_name[788] = "WAZER PISTOL"
 	wep_type[788] = 5
 	wep_auto[788] = 3
-	wep_load[788] = 21
+	wep_load[788] = 19
 	wep_cost[788] = 1.5
 	wep_sprt[788] = sprWazerPistol
 	wep_area[788] = 7

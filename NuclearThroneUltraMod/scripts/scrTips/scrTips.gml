@@ -93,6 +93,7 @@ function scrTips() {
 	"some enemies are more vulnerable while charging",
 	"flashing effects can be turned off by setting screenshake and freezeframes to 0",
 	"casual mode is just normal mode",
+	"when looping the game wants you dead",
 	/*these are rare*/ choose(
 	"don't get angry just blame the game",
 	"don't get mad just blame the dev, but he will tell you: 'skill issue'",

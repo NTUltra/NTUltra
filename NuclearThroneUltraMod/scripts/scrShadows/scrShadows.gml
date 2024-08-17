@@ -589,6 +589,8 @@ function scrShadows() {
 	draw_sprite(shd64B,0,x-vx,y-vy)
 	with Sheep
 	draw_sprite(shd26,0,x-vx,y-vy)
+	with FrightningCrownGhost
+		draw_sprite(myShadow,0,x-vx,y-vy + myShadowOffset)
 	with PitGhost
 		draw_sprite(shd24,0,x-vx,y-vy + 2)
 	with PitGhostLaser

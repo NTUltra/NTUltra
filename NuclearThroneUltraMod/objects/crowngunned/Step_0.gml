@@ -34,3 +34,5 @@ sprite_index = spr_walk
 else
 sprite_index = spr_idle
 
+if place_meeting(x,y,WallHitMe)
+	event_user(1);

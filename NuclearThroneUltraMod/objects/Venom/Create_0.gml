@@ -5,3 +5,4 @@ dmg = 2;
 rate = 11;
 amount = 3;
 alarm[0] = rate;
+team = 2;

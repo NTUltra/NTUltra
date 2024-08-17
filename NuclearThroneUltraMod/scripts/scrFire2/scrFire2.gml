@@ -4248,7 +4248,11 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	var t = team;
-	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
+	var toSpawn = FrostSlash;
+	var um = GetPlayerUltramod();
+	if um == ultramods.fireFrost
+		toSpawn = FlameSlash;
+	with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),toSpawn)
 	{
 		dmg = 20//shovel is 12 is frostglove
 		longarms = 0

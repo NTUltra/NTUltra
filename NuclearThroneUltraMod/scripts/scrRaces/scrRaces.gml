@@ -117,7 +117,7 @@ function scrRaces() {
 	race_acti[5] = "<w>SNARE<w> ENEMIES"
 	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#<w>SNARE<w> IS SLIGHTLY BIGGER"
 	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#SNARE IS 25% BIGGER";
-	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>";
+	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>#<w>TRAPPED<w> <r>ENEMIES<r> DEAL <w>NO<w> CONTACT DAMAGE";
 	race_vision_detail[5] = race_vision[5];
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0

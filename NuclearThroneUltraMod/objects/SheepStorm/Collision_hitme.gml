@@ -13,7 +13,6 @@ instance_destroy();
 if Player.ultra_got[49]=0
 enemyHits-=1
 */
-Sleep(2);
 BackCont.viewx2 += lengthdir_x(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(1.12*sp*0.5,direction)*UberCont.opt_shake
 BackCont.shake += 1.12*sp*0.5;
@@ -27,7 +26,7 @@ BackCont.shake += 1.12*sp*0.5;
 			if UberCont.normalGameSpeed == 60
 			{
 				DealDamage(deal*0.5,false,true,false);
-				motion_add(other.image_angle,sp*1.5);
+				motion_add(other.image_angle,sp);
 				if (team != 0 && my_health - deal*0.5 > 0)
 				{
 					//Didnea care bout props yo
@@ -38,7 +37,7 @@ BackCont.shake += 1.12*sp*0.5;
 			else
 			{
 				DealDamage(deal,false,true,false);
-				motion_add(other.image_angle,sp*3);
+				motion_add(other.image_angle,sp*2);
 				if (team != 0 && my_health > 0)
 				{
 					//Didnea care bout props yo

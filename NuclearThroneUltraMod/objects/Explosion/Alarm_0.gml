@@ -1,2 +1,2 @@
-//if collision_point(x,y,Floor,false,false)
+/// @description Scorchmark
 myScorchMark = instance_create(x,y,BigScorchMark);

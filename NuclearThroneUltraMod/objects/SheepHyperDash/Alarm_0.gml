@@ -8,6 +8,7 @@ var px = Player.x;
 var py = Player.y; 
 var nextMoveX = lengthdir_x(step,dashDir);
 var nextMoveY = lengthdir_y(step,dashDir);
+var d = dashDir;
 image_xscale = destroyStep;
 x = px;
 y = py;
@@ -35,7 +36,7 @@ with Player
 			with instance_create(x,y,Flame)
 			{
 				motion_add(random(360),2);
-				motion_add(other.dashDir,3);
+				motion_add(d,3);
 			}
 		scrForcePosition60fps();
 	}

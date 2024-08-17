@@ -31,4 +31,11 @@ if speed > 0
 sprite_index = spr_walk
 else
 sprite_index = spr_idle
+image_alpha = 1;
 
+if hspeed > 0
+	image_xscale = 1;
+else if hspeed < 0
+	image_xscale = -1;
+if place_meeting(x,y,WallHitMe)
+	event_user(1);

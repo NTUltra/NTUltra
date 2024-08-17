@@ -22,7 +22,10 @@ walk = 0
 gunangle = 270;
 alarm[1] = 30;
 wkick = 0
-actTime = 12;
+actTime = 16;
+loops = GetPlayerLoops();
+if loops > 2
+	actTime = 14;
 direction = 180;
 moveDirection = 180;
 acc = 2;
@@ -40,7 +43,7 @@ walk = alarm[1] * 2 + 120;
 laserY = 31;
 laserDelay = 60;
 gunDelay = 75;
-projectileSpeed = 5.4;
+projectileSpeed = 5;
 projectileSpeedAdd = -0.7;
 gunInBetween = 6;
 normalGunAngle = gunangle;
@@ -50,12 +53,12 @@ alarm[8] = 30;
 crazyAmmoReverseMax = 20;
 crazyAmmoReverse = crazyAmmoReverseMax;
 crazyPattern = true;
-crazyProjectileSpeed = 3.5;
+crazyProjectileSpeed = 3.4;
 crazyGap = 50;
 crazyWaveSpeed = 8;
 noY = verticalDistanceBeteenTanks * 0.5;
 noYDir = 1;
-
+idpdSpawnCooldown = 4;
 
 if instance_exists(Player) && Player.skill_got[29]
 {

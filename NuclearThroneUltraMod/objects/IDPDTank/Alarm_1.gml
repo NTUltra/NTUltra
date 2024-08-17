@@ -62,6 +62,7 @@ if !firstEntry
 	}
 }
 scrTarget()
+idpdSpawnCooldown -= 1;
 var ran = random(10);
 if target != noone {
 	walk = alarm[1] * 2;
@@ -85,8 +86,9 @@ if target != noone {
 	}
 	else if ran < 3 && !instance_exists(IDPDSpawn)
 	{
-		if (!isDown)
+		if (!isDown && idpdSpawnCooldown < 1)
 		{
+			idpdSpawnCooldown = 6;
 			with instance_create(xx,yy,IDPDSpawn) {
 				x = xx;
 				y = yy;

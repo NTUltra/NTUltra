@@ -24,7 +24,7 @@ if ShopWheel.alarm[0] > 0
 				if other.skill_got[42]
 				{
 					ammo = ceil(ammo*Player.betterTail);
-					scrActivateTail(hasTailNow);
+					scrActivateTail(drawTail);
 				}
 				event_perform(ev_alarm,0) 
 			}

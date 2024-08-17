@@ -22,7 +22,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 14;
+actTime = 16;
 
 acc = 0.8;
 maxSpeed = 4.7;
@@ -55,5 +55,5 @@ if stalking
 if loops > 0
 {
 	sneakTell -= 3;
-	actTime -= 1;
+	actTime -= 4;
 }

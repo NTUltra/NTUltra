@@ -11,22 +11,27 @@ if um == ultramods.bloodExplosionExplosion && UberCont.ultramodSwap
 	mask_index = mskPickupThroughWall;
 	mask_index = mskPickupThroughWall;
 	visible = false;
-	debug("can ultramod");
 	alarm[11] = 1;
 }
 else
 {
+	image_angle = random(360);
 	//seperate mask for players
 	myExplosionMask = instance_create(x,y,ExplosionMask);
 	with myExplosionMask {
 		owner = other.id;
 	}
-	repeat (4)
-	with instance_create(x,y,Smoke)
-	motion_add(random(360),1+random(2))
+	
 
 	ang = random(360)
-	var angstep = 360/4
+	var angstep = 90;
+	repeat (4)
+	{
+	with instance_create(x,y,Smoke)
+	motion_add(other.ang,2.5)
+	ang += angstep;
+	}
+	ang = random(360)
 	repeat(4)
 	{
 	with instance_create(x,y,Dust)

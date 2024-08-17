@@ -240,6 +240,12 @@ function scrCrowns() {
 	crown_used[36] = 0
 	crown_tips[36] = "balance and stabalize"
 	
+	//ENTER CROWNVAULT IN AN INVERTED AREA
+	crown_name[37] = "[CROWN OF FRIGHT]"
+	crown_text[37] = "<w>EXCESS DAMAGE<w> SPAWNS A <b>GHOST<b>#THE <b>GHOST<b> <r>EXPLODES<r>#DEALING HALF THE EXCESS DAMAGE#CAN DAMAGE ANYONE!"
+	crown_used[37] = 0
+	crown_tips[37] = "haunted"
+	
 	//have nerves of steel or adrenline fuel?
 	/*
 	crown_name[35] = "[CROWN OF AGGRESSION]"
@@ -249,7 +255,7 @@ function scrCrowns() {
 	*/
 	
 	crownmax = 23
-	secretcrownmax = 14;
+	secretcrownmax = 15;
 
 
 

@@ -1,6 +1,7 @@
 /// @description Spawn the EXTREME challenges
-if UberCont.voidExtremeChallenges
+if UberCont.voidExtremeChallenges && !openedAdditionalChallenges
 {
+	openedAdditionalChallenges = true;
 	hasFailed = false;
 	hasSucceeded = true;
 	startedDuel = true;

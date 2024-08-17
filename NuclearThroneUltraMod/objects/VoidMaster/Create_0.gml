@@ -34,6 +34,7 @@ else
 	}
 }
 openedShop = false;
+openedAdditionalChallenges = false;
 keepTalking = 0;
 hasFailed = 0;
 hasSucceeded = 0;

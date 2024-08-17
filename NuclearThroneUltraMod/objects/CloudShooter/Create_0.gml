@@ -22,7 +22,7 @@ wkick = 0
 actTime = 26;
 loops = GetPlayerLoops();
 if loops < 1
-	actTime = 32;
+	actTime = 34;
 maxRange = 335;
 minRange = 96;
 originRange = 100;

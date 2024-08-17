@@ -8,16 +8,23 @@ if chooseTimer == 0
 	{
 		other.originalWep = wep;
 		var wantTier = wep_area[wep];
+		if wantTier < -1
+			wantTier = 19;
 		wep = irandom(maxwep);
 		if wep > maxwep
 			wep = 1;
 		var tries = maxwep * 2;
-		while (tries > 0 && wep_area[wep] != wantTier && wep != other.originalWep)
+		while (tries > 0 && wantTier > -2 && wep_area[wep] != wantTier && wep != other.originalWep)
 		{
 			wep ++;
 			if wep > maxwep
 				wep = 1;
 			tries -= 1;
+		}
+		//UNLOCK GOLDEN WEAPON
+		if scrCheckGold(wep_name[wep])
+		{
+			scrUnlockGoldWeapon(wep);
 		}
 		with instance_create(x,y,PopupText) {
 			mytext = other.wep_name[other.wep];

@@ -42,6 +42,8 @@ if spr_idle == sprBigFishSkullOpen
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 101;
+			if instance_exists(Player) && Player.area == 105
+				pevArea = 105;
 			prevArea = 1;
 		}
 	}

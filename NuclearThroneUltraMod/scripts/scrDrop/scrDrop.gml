@@ -72,7 +72,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 				if GetPlayerLoops() > 0
 					mh += (instance_number(WantHealth) * 0.05);
 				else
-					mh += (instance_number(WantHealth) * 0.1);
+					mh += (instance_number(WantHealth) * 0.15);
 			}
 		}
 		var rebelBuff = 0;
@@ -88,7 +88,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		+ (Player.skill_got[28]*(Player.rage*0.00009))//max is 50%
 		if scrIsCrown(21) //Crown of risk
 		{
-			if h >= floor(mh*0.75)
+			if h >= fopsor(mh*0.75)
 			{
 				dropRateBuff += 0.7;
 			}
@@ -286,7 +286,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
-		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (3 - Player.armour) ) {
+		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (3 - (Player.armour * 0.5)) ) {
 			pickup = instance_create(x,y,HPPickup)
 			with WantHealth
 				instance_destroy();

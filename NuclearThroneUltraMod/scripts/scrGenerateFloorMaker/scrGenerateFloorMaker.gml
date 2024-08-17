@@ -278,7 +278,7 @@ function scrGenerateFloorMaker(limiter) {
 
 				}
 				if GetPlayerLoops() > 1
-					instance_create(x,y + 512, WantTank);
+					instance_create(x,y + 544, WantTank);
 				if scrIsGamemode(6)
 				{
 					with Carpet
@@ -304,7 +304,7 @@ function scrGenerateFloorMaker(limiter) {
 					instance_create(x,y,InvertedNuclearThrone1);
 				}
 				if GetPlayerLoops() > 1
-					instance_create(x,y + 512, WantTank);
+					instance_create(x,y + 544, WantTank);
 				// instance_create(x,y + 256, WantTank); No tank here hmmmm
 				if scrIsGamemode(6)
 				{

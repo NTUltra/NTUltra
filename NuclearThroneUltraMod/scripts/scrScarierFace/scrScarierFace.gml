@@ -2,6 +2,7 @@
 // /@description
 ///@param
 function scrScarierFace(theDamage, isPerFrame){
+	//Player.ultra_got[57] 
 	if (instance_exists(Player) && Player.skill_got[11]) {
 		var flatDmg = 0.5;
 		if Player.race == 25

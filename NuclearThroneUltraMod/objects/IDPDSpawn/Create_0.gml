@@ -64,7 +64,7 @@ loops = UberCont.loops
 
 if loops > 3 && random(3) < 1
 	popoSpawnType = 2;
-else if loops > 0 && random(3.5)<1+min(loops-1,2)
+else if loops > 0 && random(3)<1+min(loops-1,2)
 	popoSpawnType = 1;
 if popoSpawnType > 0
 	snd_play(sndEliteIDPDPortalSpawn,0,true)
