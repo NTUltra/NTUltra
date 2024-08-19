@@ -95,7 +95,7 @@ function scrFire(canDrown = true) {
 			}
 			if canDrown && scrIsCrown(13)
 			{
-				if ammo[wep_type[wep]] <= 0
+				if ammo[wep_type[wep]] <= 0 && wep_cost[wep] > 0
 				{
 					with Crown {
 						event_user(0);	

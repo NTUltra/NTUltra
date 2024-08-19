@@ -7,6 +7,7 @@ hitEntities = [];
 spr_disappear = sprTangleDisappear;
 dustAmount = 4;
 tangleNumber = 0;
+alarm[1] = 1;
 if instance_exists(Player)
 {
 	if !Player.altUltra && (Player.ultra_got[17] || Player.ultra_got[18])

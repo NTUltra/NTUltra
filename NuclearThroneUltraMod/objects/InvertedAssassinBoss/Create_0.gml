@@ -18,13 +18,13 @@ spr_stunned = sprInvertedAssassinBossStunned
 spr_fake = sprInvertedAssassinBossDeadFake;
 spr_respawn = sprInvertedAssassinBossRespawn;
 
-smackdelayReduction += 6;
+smackdelayReduction += 2;
 deflectRate = 1;
 deflectTell = 1;
 maxSpeed = 6.2
 acc = 4;
 shifty = 8;
-smackMoveSpeed = 3;
+smackMoveSpeed = 2;
 smackRange += 3;
 smackSpeed += 2;
 actTime -= 1;

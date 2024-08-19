@@ -246,6 +246,21 @@ function scrCrowns() {
 	crown_used[37] = 0
 	crown_tips[37] = "haunted"
 	
+	crown_name[38] = "[CROWN OF ABUNDANCE]"
+	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS ABOVE <w>25%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	crown_used[38] = 0
+	crown_tips[38] = "fuel for days"
+	
+	crown_name[39] = "[CROWN OF REGENERATION]"
+	crown_text[39] = "WHEN HEALTH IS MISSING#INCREASE AMMO VALUE BY 15%#WHEN ABOVE MAX HEALTH#REDUCE AMMO VALUE BY 15%";
+	crown_used[39] = 0
+	crown_tips[39] = "revitalize"
+	
+	crown_name[39] = "[CROWN OF SHARPNESS]"
+	crown_text[39] = "INCREASE <w>MELEE<w> <aq>DEFLECT<aq> DURATION#MELEE CAN <aq>DESTROY<aq> <pi>SQUARES<pi>##TO <aq>DEFLECT<aq> A PROJECTILE#IT WILL NOW COST <w>MELEE<w> <y>AMMO<y>";
+	crown_used[39] = 0
+	crown_tips[39] = "hone your sword"
+	
 	//have nerves of steel or adrenline fuel?
 	/*
 	crown_name[35] = "[CROWN OF AGGRESSION]"

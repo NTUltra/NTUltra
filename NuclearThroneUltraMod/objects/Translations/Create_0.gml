@@ -5,6 +5,7 @@ translationKeys = ds_map_create();
 for (var i = 0; i < hh; i++) {
 	ds_map_add(translationKeys,translations[# 0, i], i);
 }
+/*
 [
   {
     "": "strFirstVisit",
@@ -577,3 +578,4 @@ for (var i = 0; i < hh; i++) {
     "Hands": ""
   }
 ]
+*/

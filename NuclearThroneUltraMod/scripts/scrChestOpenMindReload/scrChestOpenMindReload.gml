@@ -6,6 +6,14 @@ function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 	var cy = y;
 	with thePlayer
 	{
+		if ultra_got[1]
+		{
+			with instance_create(cx,cy,HandBlock) {
+				team = other.team;
+				image_xscale = 1.125;
+				image_yscale = image_xscale;
+			}
+		}
 		if scrIsCrown(6)
 		{
 			scrRaddrop(17);

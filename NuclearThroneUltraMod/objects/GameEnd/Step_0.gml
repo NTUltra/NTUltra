@@ -5,8 +5,16 @@ if instance_exists(PlayerInEnding)
 	{
 		with PlayerInEnding
 		{
+			
 			x = other.x;
 			y = other.y;
+			with Player
+			{
+				x = other.x;
+				y = other.y;
+				scrForcePosition60fps();
+			}
+			scrForcePosition60fps();
 			reachedIt = true;
 			speed = 0;
 			if alarm[0] < 1 && !isFading
@@ -34,7 +42,7 @@ else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 {
 	if point_distance(x,y,Player.x,Player.y) < 64 || alarm[1] < 1
 	{
-		alarm[0] = 90;
+		alarm[0] = 300;
 		var et = endingType;
 		with Player
 		{
@@ -48,6 +56,7 @@ else if instance_exists(Player) && !instance_exists(PlayerInEnding)
 				}
 				with instance_create_depth(x,y,depth - 2,PlayerInEnding)
 				{
+					race = other.race;
 					endingType = et;	
 				}
 			}

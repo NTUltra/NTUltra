@@ -5,22 +5,24 @@ repeat(12)
 		motion_add(random(360),random(3));
 
 }
+debug(maxReach);
 if maxReach > 1
 {
 	var ii = imageIndex;
 	with instance_create(x,y,SheepChargeProjectile)
 	{
 		bloomSprite = other.bloomSprite;
-		image_xscale = other.maxScale + 0.2;
+		image_xscale = other.maxScale + 0.4;
 		image_yscale = image_xscale - 0.4;
 		direction = other.image_angle;
 		image_angle = direction;
 		sheepPower = other.maxReach;
 		dmg = clamp(round((sheepPower-1)*(other.dmg - 0.2)),1,3);
-		speed = clamp(dmg,2,6);
+		speed = clamp(dmg*2.5,3,14);
 		sprite_index = other.sprite_index;
 		mask_index = other.mask_index;
-		alarm[0] = max(1,ceil(dmg));
+		debug(dmg);
+		alarm[0] = max(10,6+ceil(dmg*2));
 		maxAlarm = max(1,alarm[0]);
 		imageIndex = ii;
 	}

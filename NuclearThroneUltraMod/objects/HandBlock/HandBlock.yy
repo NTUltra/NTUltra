@@ -44,5 +44,5 @@
     "name":"mskProtectionArea",
     "path":"sprites/mskProtectionArea/mskProtectionArea.yy",
   },
-  "visible":true,
+  "visible":false,
 }

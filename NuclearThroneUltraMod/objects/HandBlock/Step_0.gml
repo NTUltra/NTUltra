@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Scale
 if UberCont.normalGameSpeed == 60
 	image_xscale += 0.005;
 else

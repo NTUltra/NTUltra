@@ -2,7 +2,7 @@
 var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Bullet2HeavySquare)
+	with instance_create(xstart,ystart,Bullet2HeavySquare)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;
@@ -16,9 +16,9 @@ if um == ultramods.bulletShotgun
 {
 	instance_destroy(id,false);
 	snd_play_fire(sndSplinterGun)
-	with instance_create(x,y,CuberSplinter)
+	with instance_create(xstart,ystart,CuberSplinter)
 	{
-		dmg = 5;
+		dmg = 6;
 		scrCopyWeaponMod(other);
 		direction = other.direction-2;
 		image_angle = direction;
@@ -26,9 +26,9 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
-	with instance_create(x,y,CuberSplinter)
+	with instance_create(xstart,ystart,CuberSplinter)
 	{
-		dmg = 5;
+		dmg = 6;
 		scrCopyWeaponMod(other);
 		direction = other.direction+2;
 		image_angle = direction;
@@ -47,7 +47,7 @@ else if um == ultramods.laserBullet
 			snd_play_fire(sndLaser)	
 	}
 	instance_destroy(id,false);
-	with instance_create(x,y,LaserWallDestroyer)
+	with instance_create(xstart,ystart,LaserWallDestroyer)
 	{
 		scrCopyWeaponMod(other);
 		isog = false;
@@ -68,7 +68,7 @@ else if um == ultramods.bulletPlasma
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,SquarePlasmaBall)
+	with instance_create(xstart,ystart,SquarePlasmaBall)
 	{
 		dmg = 10;
 		scrCopyWeaponMod(other);

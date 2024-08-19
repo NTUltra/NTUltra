@@ -26,6 +26,20 @@ if target != noone && instance_exists(target) {
 			
 			alarm[1] += 10;
 			alarm[2] = 5;
+			with instance_create(x,y,AnimDestroyTop)
+			{
+				if other.object_index == InvertedCourtyardGuardian
+				{
+					sprite_index = sprInvertedCourtyardGuardianTrack;
+				}
+				else
+				{
+					sprite_index = sprCourtyardGuardianTrack;
+					image_speed = 0.3;
+
+				}
+				image_xscale = other.right;
+			}
 			originX = x;
 			originY = y;
 			with CourtyardGuardian

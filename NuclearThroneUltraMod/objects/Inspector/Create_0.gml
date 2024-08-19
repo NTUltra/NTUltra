@@ -48,11 +48,11 @@ else
 	lastx = x
 	lasty = y
 }
-tellTime = 4;
+tellTime = 5;
 loops = GetPlayerLoops();
 projectileSpeed = 13;
 if loops > 0
 {
-	tellTime = 2;
+	tellTime = 3;
 	projectileSpeed = 14.5;
 }

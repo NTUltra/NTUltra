@@ -53,6 +53,17 @@ for (var i = 0; i < al; i ++) {
 	
 }
 ds_list_destroy(projs);
+var shield = ds_list_create();
+al = instance_place_list(x,y,HandBlock,shield,false);
+for (var i = 0; i < al; i ++) {
+	with shield[| i]
+	{
+		motion_add(other.direction,1);
+		direction = other.direction;
+	}
+	
+}
+ds_list_destroy(shield);
 image_xscale = actualScale;
 image_yscale = actualScale;
 var xo = x + lengthdir_x(32*image_xscale,direction + 180);

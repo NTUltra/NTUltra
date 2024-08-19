@@ -30,5 +30,5 @@ pspeed = 8 + min(loops,2);
 if loops > 0
 {
 	actTime = 8;
-	tellTime = 9;
+	tellTime = 10;
 }

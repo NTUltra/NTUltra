@@ -1066,7 +1066,7 @@ function scrPowers(raceOverwrite = -1) {
 			var noWalls = !instance_exists(Wall)
 			if ultra_got[59] && altUltra
 			{
-				var step = 18;
+				var step = 24;
 				var reps = 1 + (point_distance(x,y,mx,my)/step);
 				var pd = point_direction(x,y,mx,my);
 				var xx = x;
@@ -3540,87 +3540,90 @@ function scrPowers(raceOverwrite = -1) {
 	if race==13 && instance_exists(SheepStorm) && !ultra_got[49]
 	{
 		var is60fps = UberCont.normalGameSpeed == 60;
-		if speed > 4
+		if !instance_exists(SheepBreak)
 		{
-			var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
+			if speed > 4
+			{
+				var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
 			
-			image_speed = 0.5;
-			if sheepPower < powerMax
+				image_speed = 0.5;
+				if sheepPower < powerMax
+				{
+					if is60fps
+						sheepPower += 0.38*0.5;
+					else
+						sheepPower += 0.38;
+				}
+				else
+				{
+					sheepPower = powerMax;
+				}
+				if (skill_got[5])
+				{
+					if is60fps
+						sheepPower += 0.055*0.5;
+					else
+						sheepPower += 0.055;
+				}
+				if (skill_got[2])
+				{
+					if is60fps
+						sheepPower += 0.025*0.5;
+					else
+						sheepPower += 0.025;
+				}
+				if (ultra_got[51])
+				{
+					if is60fps
+						sheepPower += 0.085*0.5;
+					else
+						sheepPower += 0.085;
+				}
+				if sheepPower > sheepPowerToHaveEffect
+					image_speed = 0.6;
+				if sheepPower >= 10
+					image_speed = 0.7;
+			}
+			else if sheepPower > 0
 			{
 				if is60fps
-					sheepPower += 0.38*0.5;
+					sheepPower = sheepPower - (0.4*0.5);
 				else
-					sheepPower += 0.38;
-			}
-			else
-			{
-				sheepPower = powerMax;
-			}
-			if (skill_got[5])
-			{
-				if is60fps
-					sheepPower += 0.055*0.5;
+					sheepPower = sheepPower - 0.4;
+				sheepPower = max(sheepPower,0);
+				//speed=10;
+				var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
+				if (is60fps)
+				{
+					//Move in opposite direction to reduce control
+					if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+					hspeed += (2.2-moveBoost)*0.5
+					if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+					hspeed -= (2.2-moveBoost)*0.5
+					if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+					vspeed += (2.2-moveBoost)*0.5
+					if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+					vspeed -= (2.2-moveBoost)*0.5
+					motion_add(direction,(3.5)*0.5);
+				}
 				else
-					sheepPower += 0.055;
+				{
+					//Move in opposite direction to reduce control
+					if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+					hspeed += 2.2-moveBoost
+					if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+					hspeed -= 2.2-moveBoost
+					if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+					vspeed += 2.2-moveBoost
+					if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+					vspeed -= 2.2-moveBoost
+					motion_add(direction,3.5);
+				}
+				if sheepPower < sheepPowerToHaveEffect && speed > maxSpeed
+					speed = maxSpeed;
 			}
-			if (skill_got[2])
-			{
-				if is60fps
-					sheepPower += 0.025*0.5;
-				else
-					sheepPower += 0.025;
-			}
-			if (ultra_got[51])
-			{
-				if is60fps
-					sheepPower += 0.085*0.5;
-				else
-					sheepPower += 0.085;
-			}
-			if sheepPower > sheepPowerToHaveEffect
-				image_speed = 0.6;
-			if sheepPower >= 10
-				image_speed = 0.7;
 		}
-		else if sheepPower > 0
-		{
-			if is60fps
-				sheepPower = sheepPower - (0.4*0.5);
-			else
-				sheepPower = sheepPower - 0.4;
-			sheepPower = max(sheepPower,0);
-			//speed=10;
-			var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
-			if (is60fps)
-			{
-				//Move in opposite direction to reduce control
-				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-				hspeed += (2.2-moveBoost)*0.5
-				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-				hspeed -= (2.2-moveBoost)*0.5
-				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-				vspeed += (2.2-moveBoost)*0.5
-				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-				vspeed -= (2.2-moveBoost)*0.5
-				motion_add(direction,(3.5)*0.5);
-			}
-			else
-			{
-				//Move in opposite direction to reduce control
-				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-				hspeed += 2.2-moveBoost
-				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-				hspeed -= 2.2-moveBoost
-				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-				vspeed += 2.2-moveBoost
-				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-				vspeed -= 2.2-moveBoost
-				motion_add(direction,3.5);
-			}
-			if sheepPower < sheepPowerToHaveEffect && speed > maxSpeed
-				speed = maxSpeed;
-		}
-		if instance_exists(SheepBreak) && speed > maxSpeed - 1
+		else if speed > maxSpeed - 1
 		{
 			speed = maxSpeed - 1;
 		}
@@ -3897,6 +3900,9 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			snd_play(sndFishFlushStart,0.1);
 			targetScale = max(0.4,0.25 + min(other.flushCharge*0.025,1.75));
+			BackCont.shake += 5;
+			BackCont.shake += targetScale;
+			debug(targetScale);
 			if targetScale < 1
 			{
 				snd_play(sndFishFlushShort,0.01);
@@ -3904,6 +3910,11 @@ function scrPowers(raceOverwrite = -1) {
 			else
 			{
 				snd_play(sndFishFlushLong,0.01);
+			}
+			if targetScale > 1.5
+			{
+				BackCont.shake += 5;
+				snd_play(sndFishFlushStartBig);
 			}
 			image_angle = point_direction(x,y,mouse_x,mouse_y);
 			direction = image_angle;
@@ -3941,20 +3952,23 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			//with SheepStorm
 			//	instance_destroy();
-			if sheepPower > 0
+			if !instance_exists(SheepBreak)
 			{
-				if UberCont.normalGameSpeed == 60
-					sheepPower = max(0, sheepPower - 5);
+				if sheepPower > 0
+				{
+					if UberCont.normalGameSpeed == 60
+						sheepPower = max(0, sheepPower - 5);
+					else
+						sheepPower = max(0, sheepPower - 10);
+				}
 				else
-					sheepPower = max(0, sheepPower - 10);
-			}
-			else
-			{
-				if UberCont.normalGameSpeed == 60
-					sheepPower += 0.2*0.5;
-				else
-					sheepPower += 0.2;
-				sheepPower = min(sheepPower,0);
+				{
+					if UberCont.normalGameSpeed == 60
+						sheepPower += 0.2*0.5;
+					else
+						sheepPower += 0.2;
+					sheepPower = min(sheepPower,0);
+				}
 			}
 			if sheepPower < 1
 				instance_destroy(SheepStorm);

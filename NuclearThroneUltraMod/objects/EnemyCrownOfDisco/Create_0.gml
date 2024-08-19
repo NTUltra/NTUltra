@@ -1,4 +1,6 @@
 event_inherited();
+maxhealth = 15;
+EnemyHealthAdjustments();
 alarm[4] = 60;
 spr_idle = sprCrown26IdleEnemy
 spr_walk = sprCrown26WalkEnemy

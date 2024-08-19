@@ -25,13 +25,13 @@ wepflip = 1
 isInverted = false;
 dodge=0;
 range = 74;
-tellTime = 9;
+tellTime = 12;
 actTime = 4;
 maxSpeed = 3;
 loops = GetPlayerLoops();
 if loops > 0
 {
 	actTime = 3;
-	tellTime = 4;
+	tellTime = 10;
 }
 canDodge = false;

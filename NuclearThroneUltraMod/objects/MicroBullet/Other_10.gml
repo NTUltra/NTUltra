@@ -34,15 +34,17 @@ else if um == ultramods.laserBullet
 	with Player
 	{
 		if Player.skill_got[17] = 1
-			snd_play_fire(sndLaserUpg)
+			snd_play(sndMicroLaserUpg,0.03,true);
 		else
-			snd_play_fire(sndLaser)	
+			snd_play(sndMicroLaser,0.03,true);
 	}
 	instance_destroy(id,false);
 	canDamage = false;
 	with instance_create(x,y,Laser)
 	{
 		team = other.team
+		sprite_index = sprMicroLaser;
+		knockback = 2;
 		defaultPierce -= 8;
 		image_yscale -= 0.3;
 		dmg -= 1.5;

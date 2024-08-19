@@ -5,4 +5,4 @@ event_inherited();
 spawnLocationY = y - 32;
 spr_item = sprVoidItemAmmoChests;
 name = "TWO AMMO CHESTS";
-cost = 4;
+cost = 3;

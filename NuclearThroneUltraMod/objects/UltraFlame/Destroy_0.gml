@@ -1,5 +1,1 @@
-/// @description Spreading more fire
-if instance_exists(Player) && Player.skill_got[43]
-{
-	scrMoodSwingFlameSpread(64, dmg - 2);
-}
+/// @description No need to spread more flames this gets replaced with a normal flame

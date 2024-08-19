@@ -25,4 +25,4 @@ isog = true;
 canBeMoved = false;
 isLaser = true;
 defaultPierce = 64;
-event_perform(ev_alarm,1);
+alarm[1] = 1;

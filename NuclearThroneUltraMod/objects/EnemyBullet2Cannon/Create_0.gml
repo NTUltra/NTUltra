@@ -9,7 +9,9 @@ alarm[4] = 2;
 projectileAmount = 4;
 angleStep = 360/projectileAmount;
 projectileSpeed = 3.5;
-maxProjectileSpeed = 16;
+maxProjectileSpeed = 14;
 alarm[5] = 90;
+//alarm[6] = 1;
+targetSpeed = 3;
 if GetPlayerLoops() > 3
 	projectileAmount = 8;

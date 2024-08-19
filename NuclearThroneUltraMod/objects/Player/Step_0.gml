@@ -539,10 +539,11 @@ if !instance_exists(LevCont) and visible = 1
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//instance_create(x+32,y,PinkSheep);
 			//instance_create(x+48,y,ExplosiveSheep);
+			/*
 			with enemy
 			{
 				my_health = 0;	
-			}
+			}*/
 			//scrn++;
 			
 			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
@@ -564,8 +565,8 @@ if !instance_exists(LevCont) and visible = 1
 				}
 			}
 			*/
-			instance_create(x+32,y,LightningWeaponChest);
-			instance_create(x+32,y+32,MorphWeaponChest);
+			instance_create(x+32,y,CourtyardGuardian);
+			instance_create(x+32,y+32,CourtyardGuardian);
 			/*
 			wep = 0;
 			var i = 0;
@@ -2973,4 +2974,61 @@ if skill_got[8] {
 		}
 	}
 	ds_list_destroy(gutsRange);
+}
+if instance_exists(Tangle)
+{
+	var projs = []
+	with Tangle
+	{
+		/// @description Projectile collision
+		var myProjs = ds_list_create();
+		var al = instance_place_list(x,y,projectile,myProjs,false);
+		for (var i = 0; i < al; i ++) {
+			if !array_contains(projs, myProjs[| i])
+			{
+				projs[array_length(projs)] = myProjs[| i];
+			}
+		}
+		ds_list_destroy(myProjs);
+	}
+	var dt = 1;
+	if UberCont.normalGameSpeed == 60
+		dt = 1.25;
+	var al = array_length(projs);
+	if Player.ultra_got[20] && !Player.altUltra//plant STEREO ultra D
+	{
+		for (var i = 0; i < al; i ++) {
+			with projs[i]
+			{
+				if object_index == ToxicGas || object_index == TrapFire
+				{
+					x -= hspeed * dt;
+					y -= vspeed * dt;
+					scrForcePosition60fps();
+
+				}
+				else if team != Player.team && canBeMoved
+				{
+					x -= hspeed * 0.75 * dt;
+					y -= vspeed * 0.75 * dt;
+					scrForcePosition60fps();
+
+				}
+			}
+		}
+	}
+	else
+	{
+		for (var i = 0; i < al; i ++) {
+			with projs[i]
+			{
+				if object_index == ToxicGas || object_index == TrapFire
+				{
+					x -= hspeed * dt;
+					y -= vspeed * dt;
+					scrForcePosition60fps();
+				}
+			}
+		}
+	}
 }

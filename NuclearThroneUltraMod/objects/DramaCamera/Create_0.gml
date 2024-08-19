@@ -106,7 +106,12 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 					song = musBoss6B;
 			}
 			if area = 2 || (area == 10 && subarea == 2)
-				song = musBoss5;
+			{
+				if instance_exists(BanditBoss) && !instance_exists(BallMom)
+					song = musBoss1;
+				else
+					song = musBoss5;
+			}
 			else if area == 110 && subarea == 2
 				song = musBoss5B;
 			else if area == 4

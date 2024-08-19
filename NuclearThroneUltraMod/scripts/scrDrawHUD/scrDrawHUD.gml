@@ -1,4 +1,5 @@
 function scrDrawHUD() {
+	var godZijnKleren = true;
 	if instance_exists(DataRef)
 	{
 		var dataRef = DataRef;
@@ -663,7 +664,7 @@ function scrDrawHUD() {
 	dir = 0;
 	var extraSpace = 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
-		extraSpace += 6;
+		extraSpace += 8;
 		
 	if dataRef.totalSkills > extraSpace
 	{
@@ -785,8 +786,17 @@ function scrDrawHUD() {
 	var spr, col, wid;
 	spr = dataRef.wep_sprt[dataRef.cwep]
 	wid = 16
+	var odi = 0;
 	if dataRef.wep_type[dataRef.cwep] = 0
-	wid = 32
+	{
+		if !godZijnKleren
+			wid = 32
+		else
+		{
+			wid = 18;
+			odi = max(0,sprite_get_width(spr) - 20);
+		}
+	}
 	col = c_dkgray
 
 	//Wepon
@@ -801,10 +811,10 @@ function scrDrawHUD() {
 	var ss = 20;
 	var xxx = camera_get_view_x(view_camera[0]) + wxx;
 	var yyy = camera_get_view_y(view_camera[0]) + wyy;
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+110,vy+16,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+112,vy+16,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+15,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+17,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+110,vy+16,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+112,vy+16,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+15,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+17,col,1)
 	
 	var wwep = dataRef.cwep;
 	var pcc = dataRef.cqueueshot;
@@ -819,68 +829,68 @@ function scrDrawHUD() {
 	}
 	if dataRef.creload > dataRef.wep_load[wwep]
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_red,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.creload,1-(dataRef.wep_load[dataRef.cwep]/dataRef.creload))),14,vx+111,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.creload,1-(dataRef.wep_load[dataRef.cwep]/dataRef.creload))),14,vx+111,vy+16,loadColour,loadA)
 	}
 	else if dataRef.creload > 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[dataRef.cwep],1-(dataRef.creload/dataRef.wep_load[dataRef.cwep]))),14,vx+111,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,c_black,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[dataRef.cwep],1-(dataRef.creload/dataRef.wep_load[dataRef.cwep]))),14,vx+111,vy+16,loadColour,loadA)
 	}
 	else if dataRef.creload != 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)
 		if pcc == 2
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,puffColour,puffA)
 		else if pcc == 1
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,vx+111,vy+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+111,vy+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,pcsw,14,vx+111,vy+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+111,vy+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+111,vy+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+111,vy+16,loadColour,loadA)
 		}
 	}
 	else
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)	
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)	
 	}
 	
-	if dataRef.wep_type[dataRef.cwep] != 0
+	if dataRef.wep_type[dataRef.cwep] != 0 || godZijnKleren
 	{
-	draw_set_halign(fa_left)
-	draw_set_color(c_black)
-	var cam = round(dataRef.ammo[dataRef.wep_type[dataRef.cwep]]);
-	var txx = 130;
-	if cam < 0
-	{
-		var cAmmo = string_replace(string(cam),"-","");
-		txx += 3;
-	}
-	else
-		var cAmmo = string(cam)
-	draw_text(vx+txx,vy+22,cAmmo)
-	draw_text(vx+txx+1,vy+22,cAmmo)
-	draw_text(vx+txx+1,vy+21,cAmmo)
-	if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
-	draw_set_color(c_white)
-	else
-	draw_set_color(c_silver)
-	if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.cwep]]
-	{
-	if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
-	draw_set_color(c_red)
-	else
-	draw_set_color(c_gray)
-	}
-	if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= 0
-	draw_set_color(c_dkgray)
-	if cam < 0
-	{
-		draw_sprite(sprMinus,0,vx+txx,vy+21);
-	}
-	draw_text(vx+txx,vy+21,cAmmo)
+		draw_set_halign(fa_left)
+		draw_set_color(c_black)
+		var cam = round(dataRef.ammo[dataRef.wep_type[dataRef.cwep]]);
+		var txx = 130;
+		if cam < 0
+		{
+			var cAmmo = string_replace(string(cam),"-","");
+			txx += 3;
+		}
+		else
+			var cAmmo = string(cam)
+		draw_text(vx+txx,vy+22,cAmmo)
+		draw_text(vx+txx+1,vy+22,cAmmo)
+		draw_text(vx+txx+1,vy+21,cAmmo)
+		if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
+		draw_set_color(c_white)
+		else
+		draw_set_color(c_silver)
+		if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.cwep]]
+		{
+		if dataRef.wep_type[dataRef.wep] = dataRef.wep_type[dataRef.cwep]
+		draw_set_color(c_red)
+		else
+		draw_set_color(c_gray)
+		}
+		if dataRef.ammo[dataRef.wep_type[dataRef.cwep]] <= 0
+		draw_set_color(c_dkgray)
+		if cam < 0
+		{
+			draw_sprite(sprMinus,0,vx+txx,vy+21);
+		}
+		draw_text(vx+txx,vy+21,cAmmo)
 	}
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
@@ -908,8 +918,17 @@ function scrDrawHUD() {
 	var spr, col, wid;
 	spr = dataRef.wep_sprt[dataRef.bwep]
 	wid = 16
+	var odi = 0;
 	if dataRef.wep_type[dataRef.bwep] = 0
-	wid = 32
+	{
+		if !godZijnKleren
+			wid = 32
+		else
+		{
+			wid = 18;
+			odi = max(0,sprite_get_width(spr) - 20);
+		}
+	}
 	col = c_dkgray
 	if dataRef.race = 7
 	col = c_white
@@ -929,10 +948,10 @@ function scrDrawHUD() {
 	var yyy = camera_get_view_y(view_camera[0]) + wyy;
 	var ss = 20;
 	
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+67,vy+16,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+69,vy+16,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+15,col,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+17,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+67,vy+16,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+69,vy+16,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+15,col,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+17,col,1)
 
 	var wwep = dataRef.bwep;
 	var pcc = dataRef.bqueueshot;
@@ -947,34 +966,34 @@ function scrDrawHUD() {
 	}
 	if dataRef.breload > dataRef.wep_load[wwep]
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_red,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.breload,1-(dataRef.wep_load[wwep]/dataRef.breload))),14,vx+68,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.breload,1-(dataRef.wep_load[wwep]/dataRef.breload))),14,vx+68,vy+16,loadColour,loadA)
 	}
 	else if dataRef.breload > 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.breload/dataRef.wep_load[wwep]))),14,vx+68,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,c_black,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.breload/dataRef.wep_load[wwep]))),14,vx+68,vy+16,loadColour,loadA)
 	}
 	else if dataRef.breload != 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,loadedColour,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,loadedColour,1)
 		if pcc == 2
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,puffColour,puffA)
 		}
 		else if pcc == 1
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,vx+68,vy+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+68,vy+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,pcsw,14,vx+68,vy+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+68,vy+16,loadColour,loadA)
 		}
 		else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+68,vy+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+68,vy+16,loadColour,loadA)	
 		}
 	}
 	else
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,loadedColour,1)	
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+68,vy+16,loadedColour,1)	
 	}
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
@@ -995,7 +1014,7 @@ function scrDrawHUD() {
 	}
 
 
-	if dataRef.wep_type[dataRef.bwep] != 0
+	if dataRef.wep_type[dataRef.bwep] != 0 || godZijnKleren
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
@@ -1037,8 +1056,17 @@ function scrDrawHUD() {
 	var spr, wid;
 	spr = dataRef.wep_sprt[dataRef.wep]
 	wid = 16
+	var odi = 0;
 	if dataRef.wep_type[dataRef.wep] = 0
-	wid = 32
+	{
+		if !godZijnKleren
+			wid = 32
+		else
+		{
+			wid = 18;
+			odi = max(0,sprite_get_width(spr) - 20);
+		}
+	}
 
 	wepcolour=c_white;
 	if dataRef.curse==1
@@ -1054,25 +1082,25 @@ function scrDrawHUD() {
 	var ss = 20;
 	
 
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+22,vy+16+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+17+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+15+1,c_black,1)
-	
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+25,vy+16+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+17+1,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+15+1,c_black,1)
-	
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+25,vy+16,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+17,c_black,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+15,c_black,1)
-	
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+22,vy+16,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+17,wepcolour,1)
-	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+15,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+22,vy+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+17+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+15+1,c_black,1)
+
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+25,vy+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+17+1,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+15+1,c_black,1)
+
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+25,vy+16,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+17,c_black,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+15,c_black,1)
+
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+24,vy+16,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+22,vy+16,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+17,wepcolour,1)
+	draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+15,wepcolour,1)
 	
 	var wwep = dataRef.wep;
 	var pcc = dataRef.queueshot;
@@ -1087,33 +1115,33 @@ function scrDrawHUD() {
 	}
 	if dataRef.reload > dataRef.wep_load[wwep]
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_red,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.reload,1-(dataRef.wep_load[wwep]/dataRef.reload))),14,vx+23,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_red,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.reload,1-(dataRef.wep_load[wwep]/dataRef.reload))),14,vx+23,vy+16,loadColour,loadA)
 	}
 	else if dataRef.reload > 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_black,1)
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.reload/dataRef.wep_load[wwep]))),14,vx+23,vy+16,loadColour,loadA)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,c_black,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-(dataRef.reload/dataRef.wep_load[wwep]))),14,vx+23,vy+16,loadColour,loadA)
 	}
 	else if dataRef.reload != 0
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,loadedColour,1)
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,loadedColour,1)
 		if pcc == 1
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,pcsw,14,vx+23,vy+16,puffColour,puffA)
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+23,vy+16,loadColour,loadA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,pcsw,14,vx+23,vy+16,puffColour,puffA)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+23,vy+16,loadColour,loadA)
 		}
 		else if pcc == 2
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,puffColour,1)
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,puffColour,1)
 		} else
 		{
-			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+23,vy+16,loadColour,loadA)	
+			draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,max(0,fillw*min(dataRef.wep_load[wwep],1-pci)),14,vx+23,vy+16,loadColour,loadA)	
 		}
 	}
 	else
 	{
-		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr),sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,loadedColour,1)	
+		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+23,vy+16,loadedColour,1)	
 	}
 	if (UberCont.opt_hud_des && mouse_x > xxx && mouse_x < xxx+ss && mouse_y < yyy+ss && mouse_y > yyy)
 	{
@@ -1278,7 +1306,7 @@ function scrDrawHUD() {
 	{
 		holdExplainWepModTimer = 0;
 	}
-	if dataRef.wep_type[dataRef.wep] != 0
+	if dataRef.wep_type[dataRef.wep] != 0 || godZijnKleren
 	{
 	var aam = round(dataRef.ammo[dataRef.wep_type[dataRef.wep]]);
 	var txx = 42;
@@ -1446,10 +1474,23 @@ function scrDrawHUD() {
 		img = 3;
 	draw_sprite(sprEnergyIconBG,img,vx+42,vy+ammoheight)
 	draw_sprite(sprEnergyIcon,clamp(7-ceil((dataRef.ammo[5]/dataRef.typ_amax[5])*7),-1,7)+1,vx+42,vy+ammoheight)
+	
+	img = 0
+	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 0 && dataRef.wep_type[dataRef.bwep] != 0)
+	{
+		img = 3
+	}
+	else if dataRef.wep_type[dataRef.wep] = 0 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 0)
+	{img = 2}
+	else if dataRef.wep_type[dataRef.bwep] = 0
+	{img = 1}
+	if dataRef.ammo[0] < 0
+		img = 3;
+	draw_sprite(sprMeleeIconBG,img,vx+52,vy+ammoheight)
+	draw_sprite(sprMeleeIcon,clamp(7-ceil((dataRef.ammo[0]/dataRef.typ_amax[0])*7),-1,7)+1,vx+52,vy+ammoheight)
 
 	//LOW AMMO WARNING
-
-	if dataRef.wep_type[dataRef.wep] > 0 && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0
+	if ((dataRef.wep_type[dataRef.wep] > 0 || godZijnKleren) && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0)
 	{
 		if dataRef.drawempty == 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
 			snd_play_2d(dataRef.snd_lowa,0,true,false,10);
@@ -1533,6 +1574,9 @@ function scrDrawHUD() {
 					var xx = x-ox
 					var yy = y-oy;
 					draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
+					if type = 0{
+					draw_sprite(sprMeleeIconBG,2,xx+7,yy-21)
+					draw_sprite(sprMeleeIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,xx+7,yy-21)}
 					if type = 1{
 					draw_sprite(sprBulletIconBG,2,xx+7,yy-21)
 					draw_sprite(sprBulletIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,xx+7,yy-21)}

@@ -1,6 +1,7 @@
 /// @description BREAK
 if (Player.sheepPower < Player.sheepPowerToHaveEffect)
 {
+	var b = breakReduction;
 	BackCont.shake += 10;
 	BackCont.viewx2 += lengthdir_x(20,direction + 180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(20,direction + 180)*UberCont.opt_shake
@@ -25,14 +26,16 @@ if (Player.sheepPower < Player.sheepPowerToHaveEffect)
 	}
 	with Player
 	{
-		sheepPower -= 7;
-		instance_create(x,y,SheepBreak);
+		sheepPower -= other.loseOnBreak;
+		with instance_create(x,y,SheepBreak) {
+			alarm[0] -= b;	
+		}
 		speed = 0;
 		snd_play(sndChargeBreak,0.1);
 		with EuphoriaShield
 			instance_destroy();
-		alarm[3] = max(alarm[3],7);//imunity
+		alarm[3] = max(alarm[3],other.breakImmunity);//imunity
 		snd_hurt = sndDamageNegate;
-		meleeimmunity = max(meleeimmunity,1);
+		meleeimmunity = max(meleeimmunity,other.breakImmunity);
 	}
 }

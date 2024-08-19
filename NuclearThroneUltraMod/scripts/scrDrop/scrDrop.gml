@@ -88,7 +88,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		+ (Player.skill_got[28]*(Player.rage*0.00009))//max is 50%
 		if scrIsCrown(21) //Crown of risk
 		{
-			if h >= fopsor(mh*0.75)
+			if h >= floor(mh*0.75)
 			{
 				dropRateBuff += 0.7;
 			}

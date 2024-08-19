@@ -901,7 +901,7 @@ function scrWeapons() {
 	wep_name[80] = "HUNTER SNIPER"
 	wep_type[80] = 1
 	wep_auto[80] = 1
-	wep_load[80] = 16
+	wep_load[80] = 15
 	wep_cost[80] = 2
 	wep_sprt[80] = sprSniper
 	wep_area[80] = -1
@@ -4219,7 +4219,7 @@ function scrWeapons() {
 		wep_type[375] = 0
 		wep_auto[375] = 0
 		wep_load[375] = 10
-		wep_cost[375] = 1
+		wep_cost[375] = 0
 		wep_sprt[375] = sprHamburgerMagnet
 		wep_area[375] = -1
 		wep_text[375] = "100% beef"
@@ -4233,7 +4233,7 @@ function scrWeapons() {
 		wep_type[375] = 0
 		wep_auto[375] = 0
 		wep_load[375] = 10
-		wep_cost[375] = 1
+		wep_cost[375] = 0
 		wep_sprt[375] = sprInversionMagnet
 		wep_area[375] = -1
 		wep_text[375] = "100% inversion"
@@ -5237,7 +5237,7 @@ function scrWeapons() {
 	wep_name[465] = "HEAVY CUBER REVOLVER"
 	wep_type[465] = 1
 	wep_auto[465] = 0
-	wep_load[465] = 6
+	wep_load[465] = 5
 	wep_cost[465] = 3
 	wep_sprt[465] = sprHeavyCuberRevolver
 	wep_area[465] = 18
@@ -7570,7 +7570,7 @@ function scrWeapons() {
 	wep_name[676] = "MICRO ASSAULT RIFLE"
 	wep_type[676] = 1
 	wep_auto[676] = 3
-	wep_load[676] = 14
+	wep_load[676] = 13
 	wep_cost[676] = 3
 	wep_sprt[676] = sprMicroAssaultRifle
 	wep_area[676] = 1
@@ -7581,7 +7581,7 @@ function scrWeapons() {
 	wep_name[677] = "SUPER MICRO ASSAULT RIFLE"
 	wep_type[677] = 1
 	wep_auto[677] = 3
-	wep_load[677] = 14
+	wep_load[677] = 13
 	wep_cost[677] = 12
 	wep_sprt[677] = sprSuperMicroAssaultRifle
 	wep_area[677] = 12
@@ -8057,7 +8057,7 @@ function scrWeapons() {
 	wep_load[719] = 25
 	wep_cost[719] = 10
 	wep_sprt[719] = sprSniperScythe
-	wep_area[719] = 15
+	wep_area[719] = 18
 	wep_text[719] = "is that a reference to what I think it is?"
 	wep_swap[719] = sndSwapSword
 	wep_rad[719] = 0;
@@ -9066,16 +9066,16 @@ function scrWeapons() {
 		}
 	}
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
-	typ_ammo[0] = 333 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
+	typ_ammo[0] = 33 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
 
 	if instance_exists(Player){
 		if Player.race = 1 {
-			typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 12
+			typ_ammo[0] = 41 typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 12
 			if Player.skill_got[5] {//fish's new thronebutt
-				typ_ammo[1] = 49 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
+				typ_ammo[0] = 41 typ_ammo[1] = 49 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
 			}
 		}
-		typ_amax[0] = 1000 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
+		typ_amax[0] = 255+Player.skill_got[10]*300 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
 		if variable_instance_exists(Player,"ultra_got")
 		{
 			if Player.ultra_got[15] == 1//Power overwhelming
@@ -9096,7 +9096,7 @@ function scrWeapons() {
 		}
 	}
 	else{
-		typ_amax[0] = 1000 typ_amax[1] = 255 typ_amax[2] = 55 typ_amax[3] = 55 typ_amax[4] = 55 typ_amax[5] = 55}
+		typ_amax[0] = 255 typ_amax[1] = 255 typ_amax[2] = 55 typ_amax[3] = 55 typ_amax[4] = 55 typ_amax[5] = 55}
 
 	typ_name[0] = "MELEE" typ_name[1] = "BULLETS" typ_name[2] = "SHELLS" typ_name[3] = "BOLTS" typ_name[4] = "EXPLOSIVES" typ_name[5] = "ENERGY"
 

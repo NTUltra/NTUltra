@@ -1,5 +1,7 @@
 image_speed=0;
-projectileHitBrake = 1.8;
+projectileHitBrake = 3.5;
+breakImmunity = 6;
+loseOnBreak = 12;
 enemyHitbrake = 5;
 bloomSprite = sprSheepDashBloom;
 imageIndex = 0;
@@ -7,6 +9,7 @@ baseDmg = 1.2;
 gotVision = false;
 dmg = baseDmg;
 depth = -1;
+breakReduction = 0;
 if instance_exists(Player)
 {
 	if scrIsHardMode()
@@ -29,13 +32,16 @@ if instance_exists(Player)
 	}
 	if Player.skill_got[5]
 	{
-		projectileHitBrake -= 0.12;
+		projectileHitBrake -= 0.25;
 		enemyHitbrake -= 0.8;
 	}
     if Player.ultra_got[51]
     {
+		breakReduction = 4;
 		sprite_index=sprSheepDashFXultra;
-		projectileHitBrake-= 0.18;
+		projectileHitBrake-= 1;
+		breakImmunity = 7;
+		loseOnBreak = 9;
 		enemyHitbrake -= 1.4;
 		dmg = baseDmg*damageBoost;
     }

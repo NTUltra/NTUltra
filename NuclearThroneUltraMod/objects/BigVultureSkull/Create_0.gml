@@ -19,7 +19,7 @@ name = "ENTER?"
 event_inherited()
 shadowSprite = shd48;
 snd_hurt = sndHitRock
-alarm[1]=620;
+alarm[1]=610;
 if scrIsHardMode() || scrIsGamemode(20)
 	alarm[1] += 160;
 alarm[1] *= clamp(loops*2.5,1,6)//335//10 seconds 300

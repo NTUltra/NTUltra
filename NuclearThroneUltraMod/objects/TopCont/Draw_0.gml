@@ -269,6 +269,7 @@ with Statue
 {
 	draw_self();
 }
+with HandBlock{draw_self();}
 with EuphoriaShield{draw_self();}
 with EuphoriaShieldEnd{draw_self();}
 with CampChar

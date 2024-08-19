@@ -17,6 +17,15 @@ if target != noone {
 			tempchance = 0;
             if ran > 6
 			{
+				if other.object_index == InvertedCrownGlutton
+					with instance_create(x,y,AnimDestroyTop)
+					{
+						if other.object_index == InvertedCrownGlutton
+						{
+							sprite_index = sprInvertedCrownGluttonBossTrack;
+						}
+						image_xscale = other.right;
+					}
                 direction = point_direction(x, y, target.x, target.y) + random(60) - 30
                 speed *= 0.5;
 				walk *= 0.5;

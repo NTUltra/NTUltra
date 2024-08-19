@@ -8,9 +8,9 @@ if um == ultramods.morphFire
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed*2;
-		alarm[0] -= 1;
-		dmg -= 0.6;
+		speed = other.speed*2 + 2;
+		alarm[0] -= 3;
+		dmg -= 0.5;
 		alarm[11] = 0;
 	}
 	UberCont.ultramodSwap = true;

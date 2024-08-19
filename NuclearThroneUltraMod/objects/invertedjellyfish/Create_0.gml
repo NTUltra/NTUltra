@@ -20,7 +20,7 @@ actTime = 5;
 if loops > 0
 {
 	actTime = 4;
-	tellTime = 8;
+	tellTime = 9;
 	maxSpeed = 3.5
 }
 	

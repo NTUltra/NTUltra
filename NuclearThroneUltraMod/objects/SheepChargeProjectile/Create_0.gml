@@ -10,3 +10,4 @@ maxAlarm = 2;
 snd_play(sndSheepChargeFire,0.3);
 imageIndex = 0;
 friction = 0.2;
+alarm[1] = 3;

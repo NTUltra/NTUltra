@@ -63,14 +63,14 @@ afterImageDelay = 4;
 run = false;
 afterImageDuration = afterImageDelay;
 alarm[7] = afterImageDelay;
-smackdelayReduction = clamp(4 + ((GetPlayerLoops()-1)*2),0,6);
+smackdelayReduction = clamp(2 + ((GetPlayerLoops()-1)*2),0,6);
 scrAddDrops(1);
 canDodge = false;
 deflectRate = 0;
 deflectTell = 0;
 maxSpeed = 5.4;
 acc = 3;
-smackMoveSpeed = 1;
+smackMoveSpeed = 0.5;
 shifty = 3;
 smackRange = 8;
 smackSpeed = 3

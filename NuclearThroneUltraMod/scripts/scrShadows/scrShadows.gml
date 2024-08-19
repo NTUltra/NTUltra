@@ -328,6 +328,24 @@ function scrShadows() {
 				draw_sprite(shd24,0,x-vx,py-vy)
 		}
 	}
+	with PlayerInEnding
+	{
+		var py = y;
+		if hammerheadDig > 0
+			py -= 2;
+		if visible = 1
+		{
+			if race == 14
+				draw_sprite(shdPanda,0,x-vx,py-vy)
+			if race = 18
+			{
+				if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
+					draw_sprite(shd24,0,x-vx,py-vy+12)
+			}
+			else
+				draw_sprite(shd24,0,x-vx,py-vy)
+		}
+	}
 	with MimicBoss
 	{
 		if race == 14
