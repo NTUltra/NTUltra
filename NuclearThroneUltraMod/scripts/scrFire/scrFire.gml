@@ -153,12 +153,26 @@ function scrFire(canDrown = true) {
 		{
 			scrAmbidexturous(wep);
 		}
-		if (race=7 && skill_got[5] && wep_cost[wep] > 0 && wep_cost[bwep] > 0)
+		var wac = wep_cost[wep];
+		var wbc = wep_cost[bwep];
+		if scrIsCrown(40)
+		{
+			if wep_type[wep] == 0
+			{
+				wac = max(wac,2);
+			}
+			if wep_type[bwep] == 0
+			{
+				wbc = max(wbc,2);
+			}
+		}
+			
+		if (race=7 && skill_got[5] && wac > 0 && wbc > 0)
 		{
 	//	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
 	//	    {
 		        if random(100)<(
-					(wep_cost[wep]/typ_ammo[wep_type[wep]])*0.69
+					(wac/typ_ammo[wep_type[wep]])*0.69
 				)*100
 				{
 				    var wantAmmo = round(typ_ammo[wep_type[bwep]]*0.5);
@@ -191,7 +205,7 @@ function scrFire(canDrown = true) {
 					{
 						dir = instance_create(x,y,PopupText)
 						dir.sprt = sprAmmoIconsPickup;
-						dir.ii = wep_type[bwep]-1;
+						dir.ii = wep_type[bwep];
 						dir.mytext = "+"+string(wantAmmo);
 						if ammo[wep_type[bwep]] == typ_amax[wep_type[bwep]]
 							dir.mytext = "MAX ";
@@ -5207,12 +5221,12 @@ function scrFire(canDrown = true) {
 
 	    if !Player.altUltra && Player.ultra_got[23]//ULTRA C
 	    {
-			if wep_type[wep] == 2 // You are holding a shotgun
+			if wep_type[wep] == 2 || scrIsAlsoShotgunType(wep)// You are holding a shotgun
 			{
 				reload -= wep_load[wep]*0.6;//shotgun speed
 				//ammo[1] += wep_cost[wep]//bullet magic
 			}
-			else if wep_type[wep] == 1 // You are holding a bullet weapon
+			else if wep_type[wep] == 1 || scrIsAlsoBulletType(wep)// You are holding a bullet weapon
 			{
 				reload -= wep_load[wep]*0.1;//bullet speed
 				ammo[2] += wep_cost[wep] * 0.1;//Ten bullets is 1 shotgun pellet
@@ -5232,22 +5246,22 @@ function scrFire(canDrown = true) {
 		    if scrLightningWeapons(wep) // You are holding a lightning weapon
 		    {
     
-			    if (ammo[4] + round(wep_cost[wep]*0.6) >=typ_amax[4])//get explo ammo
+			    if (ammo[4] + round(wep_cost[wep]*0.4) >=typ_amax[4])//get explo ammo
 			    {
 					ammo[4]=typ_amax[4];
 			    }
 			    else
-					ammo[4] += round(wep_cost[wep]*0.6);
+					ammo[4] += round(wep_cost[wep]*0.4);
     
 		    }
 		    if scrKrakenWeapons(wep) // You are holding a kraken weapon
 		    {
-			    if (ammo[5] +round(wep_cost[wep]*0.6) >=typ_amax[5])//get energy ammo
+			    if (ammo[5] + round(wep_cost[wep]*0.4) >=typ_amax[5])//get energy ammo
 			    {
 					ammo[5]=typ_amax[5];
 			    }
 			    else
-					ammo[5] += round(wep_cost[wep]*0.6);
+					ammo[5] += round(wep_cost[wep]*0.4);
     
 		    }
 	    }

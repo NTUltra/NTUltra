@@ -1,6 +1,6 @@
 ///scrIsAlsoShotgun();
 // /@description
 ///@param
-function scrIsAlsoShotgun(wepIndex){
+function scrIsAlsoShotgunType(wepIndex){
 	return wepIndex == 258 || wepIndex == 680 || scrIsAllAmmoTypes(wepIndex)
 }

@@ -247,19 +247,27 @@ function scrCrowns() {
 	crown_tips[37] = "haunted"
 	
 	crown_name[38] = "[CROWN OF ABUNDANCE]"
-	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS ABOVE <w>25%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS ABOVE <w>30%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
 	crown_used[38] = 0
 	crown_tips[38] = "fuel for days"
 	
-	crown_name[39] = "[CROWN OF REGENERATION]"
-	crown_text[39] = "WHEN HEALTH IS MISSING#INCREASE AMMO VALUE BY 15%#WHEN ABOVE MAX HEALTH#REDUCE AMMO VALUE BY 15%";
+	crown_name[39] = "[CROWN OF DANGER]"
+	crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REDUCE<g> <y>AMMO<y> <w>COST<w> BY <w>7%<w>#OTHERWISE:#<r>INCREASE<r> <y>AMMO<y> <w>COST<w> BY <w>5%<w>";
+	//crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REFUND<g> 7% <y>AMMO<y> <w>COST<w> WHEN FIRING#OTHERWISE:#<r>TAKE<r> 5% <y>AMMO<y> WHEN FIRING";
 	crown_used[39] = 0
 	crown_tips[39] = "revitalize"
 	
-	crown_name[39] = "[CROWN OF SHARPNESS]"
-	crown_text[39] = "INCREASE <w>MELEE<w> <aq>DEFLECT<aq> DURATION#MELEE CAN <aq>DESTROY<aq> <pi>SQUARES<pi>##TO <aq>DEFLECT<aq> A PROJECTILE#IT WILL NOW COST <w>MELEE<w> <y>AMMO<y>";
-	crown_used[39] = 0
-	crown_tips[39] = "hone your sword"
+	crown_name[40] = "[CROWN OF A THOUSAND CUTS]"
+	crown_text[40] = "INCREASE <w>MELEE<w> <aq>DEFLECT<aq> DURATION#MELEE CAN <aq>DESTROY<aq> <pi>SQUARES<pi>##IT WILL NOW COST <w>MELEE<w> <y>AMMO<y>#TO <aq>DEFLECT<aq> A PROJECTILE";
+	crown_used[40] = 0
+	crown_tips[40] = "hone your sword"
+	
+	crown_name[41] = "[CROWN OF MEDIOCRITY]"
+	crown_text[41] = "YOUR <r>HEALTH<r> CANNOT GO BELOW <w>2<w>#UNLESS YOU TAKE A <r>LETHAL<r> HIT#YOUR <r>HEALTH<r> CANNOT REACH#HIGHER THAN <w>1<w> BELOW YOUR <r>MAX HP<r>";
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[41] = "WHEN YOU REACH 2 <gb>ARMOUR<gb>#BECOME <aq>IMMUNE<aq> FOR A SHORT PERIOD#YOUR <gb>ARMOUR<gb> CANNOT REACH#HIGHER THAN <w>1<w> BELOW YOUR <gb>MAX ARMOUR<gb>#YOUR ACTIVE CAN'T KILL YOU";
+	crown_used[41] = 0
+	crown_tips[41] = "a happy medium"
 	
 	//have nerves of steel or adrenline fuel?
 	/*
@@ -270,7 +278,7 @@ function scrCrowns() {
 	*/
 	
 	crownmax = 23
-	secretcrownmax = 15;
+	secretcrownmax = 18;
 
 
 

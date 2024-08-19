@@ -1,6 +1,6 @@
 /// @description WepPickup
 if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont) && !instance_exists(PandaSleep){
-
+	var canMeleeAmmo = scrIsCrown(40);
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
 	if ultra_got[66] && altUltra
@@ -35,7 +35,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			scrUnlockGoldWeapon(targetPickup.wep);
 		}
 		//first get ammo
-		if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || (ultra_got[68] && !altUltra))
+		if targetPickup.ammo > 0 and (wep_type[targetPickup.wep] != 0 || canMeleeAmmo || (ultra_got[68] && !altUltra))
 		{
 			ammoMultiple = 2;
 			if ultra_got[68] && !altUltra
@@ -53,7 +53,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					{
 						dir = instance_create(x,y,PopupText);
 						dir.sprt = sprAmmoIconsPickup
-						dir.ii = allammotypes-1;
+						dir.ii = allammotypes;
 						dir.mytext = "+"+string(typ_ammo[allammotypes]);
 						if ammo[allammotypes] = typ_amax[allammotypes]
 							dir.mytext = "MAX";
@@ -130,7 +130,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				{
 					dir = instance_create(x,y,PopupText);
 					dir.sprt = sprAmmoIconsPickup
-					dir.ii = targetPickup.wep_type[targetPickup.wep]-1;
+					dir.ii = targetPickup.wep_type[targetPickup.wep];
 					dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
 					if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
 						dir.mytext = "MAX";
@@ -645,6 +645,11 @@ if armour > 0
 			armour -= 1;
 			instance_create(x,y,VoidChallengeDamage);
 		}
+		if armour == 2 && ultra_got[62] && altUltra && scrIsCrown(41)
+		{
+			alarm[3] = max(alarm[3],12);
+			scrGiveEuphoriaShield();
+		}
 		sprite_index = spr_hurt;
 		image_index = 0;
 		canAnimateDuringImmune = 0;
@@ -931,14 +936,17 @@ if(my_health <= 0 && maxhealth > 0)
 		if race == 25
 			takePercentage = 0.54;
 		var baseammo;
-		baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
+		baseammo[0] = 33 baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;
 		for (var i = 1; i < al; i++) {
 			if (ammo[i] < 0) {
 				takePercentage += 0.03;
 			}
 		}
-		for (var i = 1; i < al; i++) {
+		var startI = 1;
+		if canMeleeAmmo
+			startI = 0;
+		for (var i = startI; i < al; i++) {
 			var wasAbove = (ammo[i] > 0);
 			var usePercentage = takePercentage;
 			if i == wep_type[wep] || i == wep_type[bwep] {
@@ -1315,4 +1323,26 @@ if scrIsCrown(29)
 if lockout
 {
 	speed = 0;
+}
+//Crown of mediocrity
+if scrIsCrown(41)
+{
+	if ultra_got[62] && altUltra//Living armour
+	{
+		if armour > maxarmour - 1
+		{
+			armour = max(1,maxarmour - 1);
+		}
+	}
+	else if my_health > 0
+	{
+		if my_health > maxhealth - 1
+		{
+			my_health = max(1,maxhealth - 1);
+		}
+		if my_health < 2
+		{
+			my_health = 2;
+		}
+	}
 }

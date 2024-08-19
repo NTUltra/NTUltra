@@ -523,15 +523,15 @@ function scrSkills() {
 	
 	skill_name[37] = "ECSTATIC FISTS"//REJUVINATED SKIN
 	skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <r>HEALTH<r> IS";
-	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+35% AT <r>MAX HP<r>"
+	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+33% AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS";
-		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+35% AT <gb>MAX ARMOUR<gb>"
+		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+33% AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists
-	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 44%)"
+	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 42%)"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY <w>FOURTH<w> HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"

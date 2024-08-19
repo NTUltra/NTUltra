@@ -42,7 +42,10 @@ function scrModHit(projectileRef) {
 		{
 			var al = 6;//weapon types total
 			var unequippedAmmoPercentage = 0;
-			for (var i = 1; i < al; i++) {
+			var startingIndex = 1;
+			if scrIsCrown(40)
+				startingIndex = 0;
+			for (var i = startingIndex; i < al; i++) {
 				unequippedAmmoPercentage += ammo[i] / typ_amax[i];
 			}
 			if skill_got[10] //BACK MUSCLE

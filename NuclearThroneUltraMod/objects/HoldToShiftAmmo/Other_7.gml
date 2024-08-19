@@ -2,7 +2,7 @@
 with Player
 {
 	var t = wep_type[wep];
-	if t == 0
+	if t == 0 && !scrIsCrown(40)
 	{
 		BackCont.shake += 5;
 		with instance_create(x,y,PopupText)

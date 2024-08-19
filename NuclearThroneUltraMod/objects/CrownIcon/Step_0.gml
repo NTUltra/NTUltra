@@ -152,6 +152,13 @@ if crown == 2 && !canReAdd
 }
 if crown == 36
 	UberCont.hasTakenCrownOfStability = true;
+if crown == 40
+{
+	with Player
+	{
+		ammo[0] = round(max(ammo[0],round(typ_ammo[0]*2)));
+	}
+}
 if crown == 34
 {
 	if Player.skill_got[5]

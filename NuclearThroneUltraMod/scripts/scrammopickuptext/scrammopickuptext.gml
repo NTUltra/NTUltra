@@ -6,7 +6,7 @@ function scrAmmoPickupText(type, amount){
 	{
 		dir = instance_create(x,y,PopupText)
 		dir.sprt = sprAmmoIconsPickup
-		dir.ii = type-1;
+		dir.ii = type;
 		dir.mytext = "+"+string(round(amount))
 		if ammo[type] >= typ_amax[type]
 			dir.mytext = "MAX"

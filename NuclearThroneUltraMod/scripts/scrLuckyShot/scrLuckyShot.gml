@@ -8,6 +8,7 @@ function scrLuckyShot(){
 		chance = 2.6
 	if Player.skill_got[6] = 1 and random(ran) < chance//0.214% 0.23%
     {
+		var canMeleeAmmo = scrIsCrown(40);
 		snd_play_2d(sndLuckyShotProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)
 	    {
@@ -18,26 +19,36 @@ function scrLuckyShot(){
 	    if Player.bwep!=0
 			var bwepammo = Player.wep_type[Player.bwep]
 	    else
-			var bwepammo=choose(1,2,3,4,5);
+		{
+			if canMeleeAmmo
+				var bwepammo=choose(0,1,2,3,4,5);
+			else
+				var bwepammo=choose(1,2,3,4,5);
+		}
 		if Player.cwep!=0
 			var cwepammo = Player.wep_type[Player.cwep]
 	    else
 			var cwepammo=choose(wepammo,bwepammo);
     
 	    //melee
-	    if wepammo == 0
+	    if !canMeleeAmmo && wepammo == 0
 			wepammo=choose(1,2,3,4,5);
     
-	    if bwepammo == 0
+	    if !canMeleeAmmo && bwepammo == 0
 			bwepammo=choose(1,2,3,4,5);
 	
-		if cwepammo == 0
+		if !canMeleeAmmo && cwepammo == 0
 			cwepammo=choose(1,2,3,4,5);
-    
-	    type = choose(1,2,3,4,5,
-		wepammo,wepammo,wepammo,wepammo,wepammo,
-		bwepammo,bwepammo,bwepammo,
-		cwepammo,cwepammo,cwepammo)
+		if canMeleeAmmo
+			type = choose(0,1,2,3,4,5,
+			wepammo,wepammo,wepammo,wepammo,wepammo,
+			bwepammo,bwepammo,bwepammo,
+			cwepammo,cwepammo,cwepammo)
+		else
+		    type = choose(1,2,3,4,5,
+			wepammo,wepammo,wepammo,wepammo,wepammo,
+			bwepammo,bwepammo,bwepammo,
+			cwepammo,cwepammo,cwepammo)
     
 	    Player.ammo[type] += round(Player.typ_ammo[type]*0.5)
 	    if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
@@ -47,7 +58,7 @@ function scrLuckyShot(){
 		{
 			dir = instance_create(x,y,PopupText);
 			dir.sprt = sprAmmoIconsPickup
-			dir.ii = type-1;
+			dir.ii = type;
 		    dir.mytext = "+"+string(round(Player.typ_ammo[type]*0.5));
 		    if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX";

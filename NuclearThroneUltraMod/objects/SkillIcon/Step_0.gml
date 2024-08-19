@@ -169,21 +169,23 @@ if selected && visible
 				}
 				if race == 25
 				{
+					typ_amax[0] = 33+skill_got[10]*42
 					typ_amax[1] = 255+skill_got[10]*375
 					typ_amax[2] = 55+skill_got[10]*60
 					typ_amax[3] = 55+skill_got[10]*60
 					typ_amax[4] = 55+skill_got[10]*60
 					typ_amax[5] = 55+skill_got[10]*60
-					scrWeaponAdjustCost(0.93);
+					scrWeaponAdjustCost(0.89);
 				}
 				else
 				{
+					typ_amax[0] = 33+skill_got[10]*33
 					typ_amax[1] = 255+skill_got[10]*300
 					typ_amax[2] = 55+skill_got[10]*44
 					typ_amax[3] = 55+skill_got[10]*44
 					typ_amax[4] = 55+skill_got[10]*44
 					typ_amax[5] = 55+skill_got[10]*44
-					scrWeaponAdjustCost(0.89);
+					scrWeaponAdjustCost(0.93);
 				}
 			}
 		}

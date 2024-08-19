@@ -9,6 +9,13 @@ hitEntities = [];
 longarms = 0;
 walled = 0
 canAlwaysDeflect = false;
+hasCosted = false;
+canKillSquares = false;
+if scrIsCrown(40)
+{
+	canKillSquares = true;
+	canAlwaysDeflect = true;
+}
 friction = 0.1
 
 snd_wallhit=sndMeleeWall;

@@ -1,5 +1,5 @@
 /// @description Spawn the challenges
-if !openedShop
+if !openedShop && !instance_exists(RegalNavigation)
 {
 	openedShop = true;
 	if !UberCont.voidChallengeCompleted[0]

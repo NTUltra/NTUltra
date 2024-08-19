@@ -2,6 +2,8 @@ if image_index < 1 || canAlwaysDeflect
 {
 	if other.isGrenade
 	{
+		if scrMeleeAmmoCost(2)
+			exit;
 		with other
 		{
 			scrDeflectNade(other.direction);
@@ -13,6 +15,8 @@ if image_index < 1 || canAlwaysDeflect
 	{
 		if other.typ == 1
 		{
+			if scrMeleeAmmoCost(2)
+				exit;
 			other.team = team
 			other.direction = image_angle
 			other.image_angle = other.direction
@@ -24,16 +28,24 @@ if image_index < 1 || canAlwaysDeflect
 		}
 		else if other.typ == 2
 		{
+			if scrMeleeAmmoCost(1)
+				exit;
 			with other
 				instance_destroy()
 		}
 		else if other.typ == 3
 		{
-			with other
-			{
-				x = xprevious;
-				y = yprevious;
-			}
+			if scrMeleeAmmoCost(3)
+				exit;
+			if canKillSquares
+				with other
+					instance_destroy();
+			else
+				with other
+				{
+					x = xprevious;
+					y = yprevious;
+				}
 		}
 	}
 }

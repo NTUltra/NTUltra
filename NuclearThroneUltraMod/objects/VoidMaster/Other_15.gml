@@ -1,5 +1,5 @@
 /// @description Spawn the EXTREME challenges
-if UberCont.voidExtremeChallenges && !openedAdditionalChallenges
+if UberCont.voidExtremeChallenges && !openedAdditionalChallenges && !instance_exists(RegalNavigation)
 {
 	openedAdditionalChallenges = true;
 	hasFailed = false;

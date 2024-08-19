@@ -364,6 +364,20 @@ function scrSecondaryPowers() {
 								BackCont.shake += 5;
 								active = true;
 								alarm[0] = 1;
+								with other
+								{
+									BackCont.shake += 5;
+									var ang = random(360);
+									var angStep = 60;
+									repeat(6)
+									{
+										with instance_create(x,y,Smoke)
+										{
+											motion_add(ang, 2);
+										}
+										ang += angStep;
+									}
+								}
 							}
 						}
 					}
@@ -706,7 +720,7 @@ function scrSecondaryPowers() {
 					}
 					if !instance_exists(HoldToShiftAmmo)
 					{
-						if wep_type[wep] == 0
+						if wep_type[wep] == 0 && !scrIsCrown(40)
 						{
 							with instance_create(x,y,PopupText)
 							{

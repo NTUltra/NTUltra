@@ -18,12 +18,12 @@ if target != noone && instance_exists(target)
 		
 		if alarm[2] < 1 && alarm[11] < 1 && point_distance(target.x,target.y,x,y) < 70 && point_distance(target.x,target.y,x,y) > 24 {//SMACK THAT
 			gunangle = point_direction(x,y,target.x,target.y);
-			alarm[2]=20-smackdelayReduction
+			alarm[2]=24-smackdelayReduction
 			snd_play(sndAssassinGetUp);
 			instance_create(x,y,Notice);
 			instance_create(x+5,y,Notice);
 			instance_create(x-5,y,Notice);
-			alarm[1]=30-smackdelayReduction;
+			alarm[1]=34-smackdelayReduction;
 			speed = smackMoveSpeed;
 			walk = 0;
 			dodge = 0;
@@ -44,12 +44,12 @@ if target != noone && instance_exists(target)
 	else if alarm[2] < 1 && alarm[11] < 1 && point_distance(target.x,target.y,x,y) < 70 && alarm[5] < 1
 	{//SMACK THAT ANYWAYS WE CAN GO THROUGH WALLS FK THAT SHIT
 		gunangle = point_direction(x,y,target.x,target.y)
-		alarm[2]=25-smackdelayReduction
+		alarm[2]=30-smackdelayReduction
 		snd_play(sndAssassinGetUp);
 		instance_create(x,y,Notice);
 		instance_create(x+5,y,Notice);
 		instance_create(x-5,y,Notice);
-		alarm[1]=30-smackdelayReduction;
+		alarm[1]=35-smackdelayReduction;
 		
 	}
 	else if random(4) < 1

@@ -66,7 +66,7 @@ function scrEnemyTakingDamage() {
 			{
 				var part = 0.3333333333333333333333333333333;
 				if Player.race == 25 //Doctor
-					part = 0.425;
+					part = 0.42;
 				var dmgBuff = 1;
 				if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 				{

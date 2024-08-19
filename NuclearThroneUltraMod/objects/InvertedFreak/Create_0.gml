@@ -26,7 +26,7 @@ acc = 0.5;
 maxSpeed = 4;
 if loops > 0
 {
-	maxSpeed = 4.8;
+	maxSpeed = 4.7;
 	acc = 0.6;
 }
 fuseAmount = 0;

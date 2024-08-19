@@ -370,6 +370,17 @@ function scrLoadRun(selectedRunIndex){
 			scrLoadRunSkins(race,bskin,altUltra,area);//ALT ultra skins
 			//Some ultras change weapon stats:
 			scrWeapons();
+			if skill_got[10]//Re-apply back muscle
+			{
+				if race == 25
+				{
+					scrWeaponAdjustCost(0.89);
+				}
+				else
+				{
+					scrWeaponAdjustCost(0.93);
+				}	
+			}
 			if ultra_got[59] && !altUltra
 			{
 				for (var i = 0; i < maxwep; i++) {

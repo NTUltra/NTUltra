@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrIsAlsoShotgun",
+  "%Name":"scrIsAlsoShotgunType",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrIsAlsoShotgun",
+  "name":"scrIsAlsoShotgunType",
   "parent":{
     "name":"Weapons",
     "path":"folders/Scripts/Weapons.yy",

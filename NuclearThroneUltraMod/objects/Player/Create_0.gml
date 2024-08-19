@@ -524,7 +524,6 @@ maxtoxicamount = 120;
 toxicConsume = 0;
 toxicUltra = false;
 
-ammo[0] = 999
 var am = 0.85;
 if race == 7
 	am = 1;
@@ -532,6 +531,7 @@ else if UberCont.lastwishused
 {
 	am = 1.25;
 }
+ammo[0] = round(typ_ammo[0]*am);
 ammo[1] = round(typ_ammo[1]*am);
 ammo[2] = round(typ_ammo[2]*am);
 ammo[3] = round(typ_ammo[3]*am);

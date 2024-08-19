@@ -1,5 +1,5 @@
 function scrDrawHUD() {
-	var godZijnKleren = true;
+	var canMeleeAmmo = scrIsCrown(40);
 	if instance_exists(DataRef)
 	{
 		var dataRef = DataRef;
@@ -789,7 +789,7 @@ function scrDrawHUD() {
 	var odi = 0;
 	if dataRef.wep_type[dataRef.cwep] = 0
 	{
-		if !godZijnKleren
+		if !canMeleeAmmo
 			wid = 32
 		else
 		{
@@ -857,7 +857,7 @@ function scrDrawHUD() {
 		draw_sprite_part_smart(spr,1,sprite_get_xoffset(spr) + odi,sprite_get_yoffset(spr)-8,wid,14,vx+111,vy+16,loadedColour,1)	
 	}
 	
-	if dataRef.wep_type[dataRef.cwep] != 0 || godZijnKleren
+	if dataRef.wep_type[dataRef.cwep] != 0 || canMeleeAmmo
 	{
 		draw_set_halign(fa_left)
 		draw_set_color(c_black)
@@ -921,7 +921,7 @@ function scrDrawHUD() {
 	var odi = 0;
 	if dataRef.wep_type[dataRef.bwep] = 0
 	{
-		if !godZijnKleren
+		if !canMeleeAmmo
 			wid = 32
 		else
 		{
@@ -1014,7 +1014,7 @@ function scrDrawHUD() {
 	}
 
 
-	if dataRef.wep_type[dataRef.bwep] != 0 || godZijnKleren
+	if dataRef.wep_type[dataRef.bwep] != 0 || canMeleeAmmo
 	{
 	draw_set_halign(fa_left)
 	draw_set_color(c_black)
@@ -1059,7 +1059,7 @@ function scrDrawHUD() {
 	var odi = 0;
 	if dataRef.wep_type[dataRef.wep] = 0
 	{
-		if !godZijnKleren
+		if !canMeleeAmmo
 			wid = 32
 		else
 		{
@@ -1306,7 +1306,7 @@ function scrDrawHUD() {
 	{
 		holdExplainWepModTimer = 0;
 	}
-	if dataRef.wep_type[dataRef.wep] != 0 || godZijnKleren
+	if dataRef.wep_type[dataRef.wep] != 0 || canMeleeAmmo
 	{
 	var aam = round(dataRef.ammo[dataRef.wep_type[dataRef.wep]]);
 	var txx = 42;
@@ -1490,7 +1490,7 @@ function scrDrawHUD() {
 	draw_sprite(sprMeleeIcon,clamp(7-ceil((dataRef.ammo[0]/dataRef.typ_amax[0])*7),-1,7)+1,vx+52,vy+ammoheight)
 
 	//LOW AMMO WARNING
-	if ((dataRef.wep_type[dataRef.wep] > 0 || godZijnKleren) && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0)
+	if ((dataRef.wep_type[dataRef.wep] > 0 || canMeleeAmmo) && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0)
 	{
 		if dataRef.drawempty == 10 and dataRef.ammo[dataRef.wep_type[dataRef.wep]] > dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]]-dataRef.wep_cost[dataRef.wep]
 			snd_play_2d(dataRef.snd_lowa,0,true,false,10);
@@ -1525,7 +1525,7 @@ function scrDrawHUD() {
 	draw_rectangle(cl,ct,cr,cb,true);
 	}
 	draw_set_color(c_white)
-	draw_sprite(sprAmmoIconsEmpty,dataRef.wep_type[dataRef.wep] - 1,
+	draw_sprite(sprAmmoIconsEmpty,dataRef.wep_type[dataRef.wep],
 	vx+54+(string_width(string_hash_to_newline(string(txt)))),
 	vy+34);
 	

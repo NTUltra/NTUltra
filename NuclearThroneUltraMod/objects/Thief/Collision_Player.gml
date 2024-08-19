@@ -85,7 +85,7 @@ with other
 		{
 			dir = instance_create(x,y,PopupText);
 			dir.sprt = sprAmmoIconsPickup
-			dir.ii = wep_type[wep]-1;
+			dir.ii = wep_type[wep];
 		    dir.mytext = "-"+string(other.typ_ammo[wep_type[wep]]*other.stealAmount)
 		    dir.theColour=c_red;
 		}
@@ -105,7 +105,7 @@ with other
 		{
 			dir = instance_create(x,y,PopupText);
 			dir.sprt = sprAmmoIconsPickup
-			dir.ii = wep_type[cwep]-1;
+			dir.ii = wep_type[cwep];
 		    dir.mytext = "-"+string(other.typ_ammo[wep_type[cwep]]*other.stealAmount)
 		    dir.theColour=c_red;
 		}
@@ -147,7 +147,7 @@ with other
 			{
 				dir = instance_create(x,y,PopupText);
 				dir.sprt = sprAmmoIconsPickup
-				dir.ii = wep_type[bwep]-1;
+				dir.ii = wep_type[bwep];
 			    dir.mytext = "-"+string(other.typ_ammo[wep_type[bwep]]*other.stealAmount)
 			    dir.theColour=c_red;
 			}

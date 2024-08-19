@@ -5,6 +5,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	if scrIsGamemode(48)
 		return;
 	var type = 0;
+	var canMeleeAmmo = scrIsCrown(40);
 	with Player
 	{
 		var pt = wep_type[wep];//primary ammo type
@@ -15,9 +16,9 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		var sc = wep_cost[bwep];
 		var pam = typ_amax[pt];//primary max ammo
 		var sam = typ_amax[st]//secondary max ammo
-		if pt == 0
+		if !canMeleeAmmo && pt == 0
 			pa = pam;
-		if st == 0
+		if !canMeleeAmmo && st == 0
 			sa = sam;
 	}
 	if Player.skill_got[36] && ammoPickup
@@ -31,14 +32,14 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	var prioritizeSecondary = choose(true,true,false);
 	if prioritizeSecondary
 	{
-		if (sa < sc && st != 0 && ((pt == 0)
+		if (sa < sc && (!canMeleeAmmo && st != 0) && ((!canMeleeAmmo && pt == 0)
 			|| (pa < pc)))
 		{
 			//Secondary is empty & primary is also empty or uses no ammo
 			type = st;
 			randomAmmo = false
 		}
-		else if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
+		else if (pa < pc && (!canMeleeAmmo && pt != 0) && (Player.bwep == 0 || (!canMeleeAmmo && st == 0)
 			|| (sa < sc)))
 		{
 			//Primary is empty & secondary is also empty or uses no ammo
@@ -48,14 +49,14 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	}
 	else
 	{
-		if (pa < pc && pt != 0 && (Player.bwep == 0 || st == 0
+		if (pa < pc && (!canMeleeAmmo && pt != 0) && (Player.bwep == 0 || (!canMeleeAmmo && st == 0)
 			|| (sa < sc)))
 		{
 			//Primary is empty & secondary is also empty or uses no ammo
 			type = pt;
 			randomAmmo = false;
 		}
-		else if (sa < sc && st != 0 && ((pt == 0)
+		else if (sa < sc && (!canMeleeAmmo && st != 0) && ((!canMeleeAmmo && pt == 0)
 			|| (pa < pc)))
 		{
 			//Secondary is empty & primary is also empty or uses no ammo
@@ -87,12 +88,18 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 					type = st;
 				else if (pa < pam) && sa == sam
 					type = pt;
+				else if canMeleeAmmo
+					type = choose(0,1,2,3,4,5);
 				else
 					type = choose(1,2,3,4,5);
+					
 			}
 			else
 			{
-				type = choose(1,2,3,4,5)
+				if canMeleeAmmo
+					type = choose(0,1,2,3,4,5);
+				else
+					type = choose(1,2,3,4,5)
 			}
 		}
 		else if Player.bwep != 0
@@ -102,7 +109,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			{
 				var pap = pa/pam;//primary ammo percentage
 				var sap = sa/sam;//secondary ammo percentage
-				if pap < sap && pt != 0
+				if pap < sap && (!canMeleeAmmo && pt != 0)
 				{
 					type = pt;	
 				}
@@ -114,7 +121,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			else
 			{
 				if pt == st && ran > 5.5//Ammo type is the same very slim chance to get completly random ammo
-					type = 0;
+					type = -1;
 				else
 					type = choose(pt,st);
 			}
@@ -139,7 +146,12 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	{
 		type = 5;
 	}
-	if type == 0 || Player.ammo[type] > Player.typ_amax[type]
+	if canMeleeAmmo 
+	{
+		if type < 1 || Player.ammo[type] > Player.typ_amax[type]
+			type = choose(0,1,2,3,4,5);
+	}
+	else if type < 1 || Player.ammo[type] > Player.typ_amax[type]
 		type = choose(1,2,3,4,5);
 
 	extra = 0
@@ -170,7 +182,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		{
 			dir = instance_create(x,y,PopupText)
 			dir.sprt = sprAmmoIconsPickup
-			dir.ii = type-1;
+			dir.ii = type;
 			dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
 			if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX"//+string(Player.typ_name[type])
@@ -192,7 +204,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		snd_play_2d(sndSmallAmmoGain,0.1);
 		dir = instance_create(x,y,AmmoPopUp)
 		dir.sprt = sprAmmoIconsPickup
-		dir.ii = type-1;
+		dir.ii = type;
 		dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
 		if Player.ammo[type] == Player.typ_amax[type]
 			dir.mytext = "MAX"//+string(Player.typ_name[type])

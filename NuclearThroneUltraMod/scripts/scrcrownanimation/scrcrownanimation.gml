@@ -168,5 +168,17 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown36Idle
 			spr_walk = sprCrown36Idle
 		break;
+		case 38://Abundance
+			spr_idle = sprCrown37Idle
+			spr_walk = sprCrown37Walk
+		break;
+		case 39://Regeneration
+			spr_idle = sprCrown38Idle
+			spr_walk = sprCrown38Walk
+		break;
+		case 40://THOUSAND CUTS
+			spr_idle = sprCrown39Idle
+			spr_walk = sprCrown39Walk
+		break;
 	}
 }

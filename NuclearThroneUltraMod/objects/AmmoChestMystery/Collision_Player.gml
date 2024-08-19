@@ -11,7 +11,7 @@ if (UberCont.opt_ammoicon)
 {
 	dir = instance_create(x,y,PopupText)
 	dir.sprt = sprAmmoIconsPickup
-	dir.ii = type-1;
+	dir.ii = type;
 	dir.mytext = "+"+string(other.typ_ammo[type]*3);
 	if other.ammo[type] == other.typ_amax[type]
 		dir.mytext = "MAX";
