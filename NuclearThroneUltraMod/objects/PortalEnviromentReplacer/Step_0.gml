@@ -1,5 +1,4 @@
 /// @description Radius
-scrActivateAllOutOfRange();
 var ar = showNewArea ? area : prevArea;
 var newcollision = ds_list_create();
 var al = collision_circle_list(x,y,radius,Wall,false,false,newcollision,false);

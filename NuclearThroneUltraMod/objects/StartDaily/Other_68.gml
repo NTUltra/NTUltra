@@ -104,7 +104,6 @@ if (type == network_type_data) {
 				with UberCont {
 					seed += 4;
 					todaysSeed = seed;
-					debug("DOUBLE: ", seed);
 				    var al = array_length(encrypted_data.ctot_dailies_score_seed);
 				    encrypted_data.ctot_dailies_score_seed[al] = todaysSeed;
 					encrypted_data.daily_score_dates[al] = UberCont.today;
@@ -318,6 +317,13 @@ if (type == network_type_data) {
 			if scrIsGamemode(43)//Multi-crown
 			{
 				UberCont.canMultiCrown = true;
+			}
+			if scrIsGamemode(49)
+			{
+				with Player
+				{
+					getVision = true;	
+				}
 			}
 			#endregion
 			alarm[3] = 90;

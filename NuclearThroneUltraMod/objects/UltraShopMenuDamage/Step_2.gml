@@ -6,18 +6,18 @@ if instance_exists(Player)
 if place_meeting(x,y,ShopSelector)
 {
 image_index=1;
-if ShopWheel.alarm[0] > 0
+if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 {
 	if (HogSpend())
 	{
 	    with enemy{
-			if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+			if point_distance(x,y,Player.x,Player.y) < 450
 			{
 			//if sprite_index!=spr_hurt{
 			snd_play(snd_hurt, hurt_pitch_variation)
 			Sleep(10)
 
-			DealDamage(22)//damage
+			DealDamage(30)//damage
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,6)

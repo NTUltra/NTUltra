@@ -236,7 +236,11 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	}
 	else if random(mh) > h
 		need += 0.08;
-
+	if h > 8
+	{
+		need *= 0.75;
+		canHealth *= 0.5;
+	}
 	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
 	{
 		var confDroprate = dropRateBuff

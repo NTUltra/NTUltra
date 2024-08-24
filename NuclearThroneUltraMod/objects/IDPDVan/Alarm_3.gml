@@ -24,89 +24,148 @@ if RogueIDPD
 }
     repeat(3+irandom(min(4,loops))+extra)
     {
-if random(4) < min(2,loops-1) //elite
+if random(3) < min(2,loops-1) //elite
 {
 
-    var dir = choose(1,1,1,1,1,2,2,3,3,3);//1,1,2,3,4
+    var dir = choose(1,1,6,6,5,5,2,2,3,3,4,4)
     
     
     if dir = 1
     {
     
-    with instance_create(x+random(4)-2,y+random(4)-2,EliteGrunt)
-    {
-	    if other.RogueIDPD=true
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteGrunt)
 	    {
-			team=2;
-			mask_index=mskAlly;
-		    spr_idle=sprRogueEliteGruntIdle;
-		    spr_walk=sprRogueEliteGruntWalk;
-		    spr_hurt=sprRogueEliteGruntHurt;
-		    spr_dead=sprRogueEliteGruntDead;
-			scrBecomeRoguePopo();
+		    if other.RogueIDPD=true
+		    {
+				team=2;
+				mask_index=mskAlly;
+			    spr_idle=sprRogueEliteGruntIdle;
+			    spr_walk=sprRogueEliteGruntWalk;
+			    spr_hurt=sprRogueEliteGruntHurt;
+			    spr_dead=sprRogueEliteGruntDead;
+				scrBecomeRoguePopo();
+		    }
+			else
+				scrSleepyPopo()
+		    if instance_exists(Player)
+		    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,6)
+		    else
+		    motion_add(random(360),4)
+	    }
+    }
+    else if dir = 2
+    {
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteShielder)
+	    {
+	    if other.RogueIDPD=true
+	    {team=2;
+	    mask_index=mskAlly;
+	    spr_idle=sprRogueEliteShielderIdle;
+	    spr_walk=sprRogueEliteShielderWalk;
+	    spr_hurt=sprRogueEliteShielderHurt;
+	    spr_dead=sprRogueEliteShielderDead;
+		scrBecomeRoguePopo();
 	    }
 		else
 			scrSleepyPopo()
 	    if instance_exists(Player)
-	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,6)
+	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
 	    else
 	    motion_add(random(360),4)
+	    }
     }
-    }
-    if dir = 2
+    else if dir = 3
     {
-    with instance_create(x+random(4)-2,y+random(4)-2,EliteShielder)
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteInspector)
+	    {
+	    if other.RogueIDPD=true
+	    {team=2;
+	    mask_index=mskAlly;
+	    spr_idle=sprRogueEliteInspectorIdle;
+	    spr_walk=sprRogueEliteInspectorWalk;
+	    spr_hurt=sprRogueEliteInspectorHurt;
+	    spr_dead=sprRogueEliteInspectorDead;
+		scrBecomeRoguePopo();}
+		else
+			scrSleepyPopo()
+	    if instance_exists(Player)
+	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
+	    else
+	    motion_add(random(360),4)
+	    }
+    }
+	else if dir = 4
     {
-    if other.RogueIDPD=true
-    {team=2;
-    mask_index=mskAlly;
-    spr_idle=sprRogueEliteShielderIdle;
-    spr_walk=sprRogueEliteShielderWalk;
-    spr_hurt=sprRogueEliteShielderHurt;
-    spr_dead=sprRogueEliteShielderDead;
-	scrBecomeRoguePopo();
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteSegwayPopo)
+	    {
+	    if other.RogueIDPD=true
+	    {team=2;
+	    mask_index=mskAlly;
+	    spr_idle=sprRogueEliteSegwayIDPDIdle;
+	    spr_walk=sprRogueEliteSegwayIDPDWalk;
+	    spr_hurt=sprRogueEliteSegwayIDPDHurt;
+	    spr_dead=sprRogueEliteSegwayIDPDDead;
+		scrBecomeRoguePopo();}
+		else
+			scrSleepyPopo()
+	    if instance_exists(Player)
+	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
+	    else
+	    motion_add(random(360),4)
+	    }
     }
-	else
-		scrSleepyPopo()
-    if instance_exists(Player)
-    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
-    else
-    motion_add(random(360),4)
-    }
-    }
-    if dir = 3
+	else if dir = 5
     {
-    with instance_create(x+random(4)-2,y+random(4)-2,EliteInspector)
-    {
-    if other.RogueIDPD=true
-    {team=2;
-    mask_index=mskAlly;
-    spr_idle=sprRogueEliteInspectorIdle;
-    spr_walk=sprRogueEliteInspectorWalk;
-    spr_hurt=sprRogueEliteInspectorHurt;
-    spr_dead=sprRogueEliteInspectorDead;
-	scrBecomeRoguePopo();}
-	else
-		scrSleepyPopo()
-    if instance_exists(Player)
-    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
-    else
-    motion_add(random(360),4)
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteBuffPopo)
+	    {
+	    if other.RogueIDPD=true
+	    {team=2;
+	    mask_index=mskAlly;
+	    spr_idle=sprRogueEliteBuffPopoIdle;
+	    spr_walk=sprRogueEliteBuffPopoWalk;
+	    spr_hurt=sprRogueEliteBuffPopoHurt;
+	    spr_dead=sprRogueEliteBuffPopoDead;
+		scrBecomeRoguePopo();}
+		else
+			scrSleepyPopo()
+	    if instance_exists(Player)
+	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
+	    else
+	    motion_add(random(360),4)
+	    }
     }
+	else if dir = 6
+    {
+	    with instance_create(x+random(4)-2,y+random(4)-2,EliteExploderPopo)
+	    {
+	    if other.RogueIDPD=true
+	    {team=2;
+	    mask_index=mskAlly;
+	    spr_idle=sprRogueEliteExploderPopo;
+	    spr_walk=sprRogueEliteExploderPopoWalk;
+	    spr_hurt=sprRogueEliteExploderPopoHurt;
+	    spr_dead=sprRogueEliteExploderPopoDead;
+		scrBecomeRoguePopo();}
+		else
+			scrSleepyPopo()
+	    if instance_exists(Player)
+	    motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,5)
+	    else
+	    motion_add(random(360),4)
+	    }
     }
     
 }
 else//normal popo
 {
-dir = choose(1,1,1,1,5,5,5,2,2,3,3,3,4,4,4);//1,1,2,3,4
-
+dir = choose(1,1,1,6,6,5,5,2,2,3,3,4,4);//1,1,2,3,4
 
 if instance_exists(Player)
 {
-if(Player.loops<1&&Player.area<2)//no shielders in desert start
-{
-dir = choose(1,1,1,5,5,1,3,3,4);//less chance inspector
-}
+	if(Player.loops<1&&Player.area<2)//no shielders in desert start
+	{
+		dir = choose(1,1,1,6,6,5,5,2,2,3,3,4,4);//1,1,2,3,4
+	}
 }
 
 
@@ -207,6 +266,28 @@ else if dir = 5
 		    spr_walk=sprRogueBuffPopoWalk;
 		    spr_hurt=sprRogueBuffPopoHurt;
 		    spr_dead=sprRogueBuffPopoDead;
+			scrBecomeRoguePopo();
+		}
+		else
+			scrSleepyPopo()
+		if instance_exists(Player)
+			motion_add(point_direction(x,y,Player.x,Player.y)+random(90)-45,4)
+		else
+			motion_add(random(360),4)
+	}	
+}
+else if dir = 6
+{
+	with instance_create(x+random(4)-2,y+random(4)-2,ExploderPopo)
+	{
+		if other.RogueIDPD=true
+		{
+			team=2;
+		    mask_index=mskAlly;
+		    spr_idle=sprRogueExploderPopo;
+		    spr_walk=sprRogueExploderPopoWalk;
+		    spr_hurt=sprRogueExploderPopoHurt;
+		    spr_dead=sprRogueExploderPopoDead;
 			scrBecomeRoguePopo();
 		}
 		else

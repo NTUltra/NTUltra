@@ -8,4 +8,4 @@ with instance_create(x,y,Splinter)
 }
 if !audio_is_playing(sndJackHammer)
 snd_play(sndJackHammer,0.2,true,true,1);
-alarm[2] = 2;
+alarm[2] = 4;

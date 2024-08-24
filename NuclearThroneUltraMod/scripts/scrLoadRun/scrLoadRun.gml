@@ -215,6 +215,8 @@ function scrLoadRun(selectedRunIndex){
 			UberCont.race = encryptedRun.race;
 			GenCont.race = encryptedRun.race;
 			Player.ultimategamble = encryptedRun.ultimategamble;
+			if variable_struct_exists(encryptedRun, "hasUltimateGamble")
+				Player.hasUltimateGamble = encryptedRun.hasUltimateGamble;
 			Player.bettermelee = encryptedRun.bettermelee;
 			Player.betterlaserbrain = encryptedRun.betterlaserbrain;
 			Player.betterpluto = max(Player.betterpluto,encryptedRun.betterpluto);

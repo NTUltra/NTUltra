@@ -11,11 +11,11 @@ with Player
 	spr_idle = other.originalIdle;
 	spr_walk = other.originalWalk;
 	spr_hurt = other.originalHurt;
-	if wep != 0
+	if wep != 0 && other.wep != noone
 		wep_sprt[wep] = other.originalWepA;
-	if bwep != 0
+	if bwep != 0 && other.bwep != noone
 		wep_sprt[bwep] = other.originalWepB;
-	if cwep != 0
+	if cwep != 0 && other.cwep != noone
 		wep_sprt[cwep] = other.originalWepC;
 }
 with PlayerSpawn

@@ -111,7 +111,7 @@ repeat(am)
 	{
 		if(loops<1&&Player.area<2)//no shielders in desert start
 		{
-			dir = choose(1,1,1,5,5,1,3,3,4);//less chance inspector
+			dir = choose(1,1,1,5,5,1,3,3,4,6);//less chance inspector
 		}
 	}
 

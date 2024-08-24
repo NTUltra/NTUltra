@@ -47,8 +47,8 @@ function scrRaces() {
 	race_acti[2] = "<p>SHIELD<p>"
 	race_butt[2] = "LONGER <p>SHIELD<p>"
 	race_butt_detail[2] = "75% LONGER <p>SHIELD<p>"
-	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>";
-	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>1<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
+	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>2<w> <r>HEALTH<r>";
+	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>2<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
 	if isUnique
 	{
 		race_vision[2] = string_replace_all(race_vision[2],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -440,7 +440,7 @@ function scrRaces() {
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#<w>1<w> <r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
 	race_vision[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
-	race_vision_detail[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO: <w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
+	race_vision_detail[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO:#<w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	if isUnique
 	{
 		race_vision[18] = string_replace_all(race_vision[18],"PRESS <w>[E]","PRESS <w>[ACTIVE]");

@@ -175,7 +175,12 @@ function scrLoseSkill(skillIndex, disableInstead = false){
 			}
 		break;
 		case 33: //GLASS ARM CANNON
-			if race != 25
+			
+			if ultra_got[62] && altUltra
+			{
+				maxarmour += 2;
+			}
+			else if race != 25
 				maxhealth += 2;
 		break;
 		case 38: //ENRICHED METABOLISM

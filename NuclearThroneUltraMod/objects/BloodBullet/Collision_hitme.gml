@@ -20,7 +20,8 @@ if other.team != team and other.my_health > 0 && other.id != ignoreMe
 with(instance_create(x + hspeed,y + vspeed,BulletHit))
 {sprite_index = sprBloodBulletHit}
 
-scrRecycleGland(1);
+if canRecycle
+	scrRecycleGland(1);
 
 }
 

@@ -134,8 +134,6 @@ function scrNextLevel(skipping = false) {
 		}
 		else if instance_exists(SecretSheepNavigation)
 		{
-			debug("yea here we are boi");
-			debug(subarea);
 			if subarea < 1
 			{
 				subarea = 1;
@@ -490,11 +488,19 @@ function scrNextLevel(skipping = false) {
 	        }
 	        else//go to crystal caves
 	        {
-		        area = 4;
-		        subarea = 1;
-				lastarea = 4;
-				lastsubarea = 1;
-				inverted = false;
+		       if (curse || bcurse || ccurse)
+				{
+					area = 115;
+					subarea = 1;
+					inverted = false;
+				}
+				else
+				{
+					area = 4;
+					lastarea = 4;
+					subarea = 1;
+					inverted = false;
+				}
 	        }
         
 	    }
@@ -618,8 +624,16 @@ function scrNextLevel(skipping = false) {
 				}
 				else if area == 5
 				{
-					area = 4
-					subarea = 1;
+					if (curse || bcurse || ccurse)
+					{
+						area = 115;
+						subarea = 1;
+					}
+					else
+					{
+						area = 4;
+						subarea = 1;
+					}
 				}
 				else if area == 6 && subarea == 2
 				{
@@ -628,9 +642,17 @@ function scrNextLevel(skipping = false) {
 				}
 				else if area == 8 && subarea == 3
 				{
-					//Wonderland 3 to cave 2
-					area = 4;
-					subarea = 1;
+					//Wonderland 3 to cave
+					if (curse || bcurse || ccurse)
+					{
+						area = 115;
+						subarea = 1;
+					}
+					else
+					{
+						area = 4;
+						subarea = 1;
+					}
 				}
 				else
 				{

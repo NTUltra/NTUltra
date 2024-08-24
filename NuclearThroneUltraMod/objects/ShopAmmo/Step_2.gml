@@ -6,7 +6,7 @@ if instance_exists(Player)
 if place_meeting(x,y,ShopSelector)
 {
 image_index=1;
-if ShopWheel.alarm[0] > 0
+if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 {
     if (HogSpend())
 	{
@@ -24,7 +24,7 @@ if ShopWheel.alarm[0] > 0
 				if other.skill_got[42]
 				{
 					ammo = ceil(ammo*Player.betterTail);
-					scrActivateTail(drawTail);
+					scrActivateTail(Player.drawTail);
 				}
 				event_perform(ev_alarm,0) 
 			}

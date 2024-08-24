@@ -58,7 +58,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[7] = "the iron fist"
     
 	    ultra_name[8] = "VENGEFUL"
-	    ultra_text[8] = "SIGNIFICANTLY SHORTER <p>SHIELD<p>#<pi>DEFLECTED<pi> PROJECTILES#HOME IN ON ENEMIES#<aq>INVULNERABLE<aq> TO ALL DAMAGE#WHILE <p>SHIELDING<p>"
+	    ultra_text[8] = "SIGNIFICANTLY SHORTER <p>SHIELD<p>#<pi>DEFLECTED<pi> PROJECTILES#HOME IN ON ENEMIES#<aq>INVULNERABLE<aq> TO ALL DAMAGE#WHILE <p>SHIELDING<p>#LONGER SHIELDING COOLDOWN"
 	    ultra_tips[8] = "homing effects wear of#when you're not shielding"
 		/*
 		if altOverride || (instance_exists(Player) && Player.race == 2 && Player.altUltra)
@@ -180,7 +180,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //Y.V. YUNG VENUZ YV
 	    ultra_name[21] = "IM A GUN GOD"
-	    ultra_text[21] = "+40% PRIMARY <w>RELOAD SPEED<w>#+10% SECONDARY <w>RELOAD SPEED<w>"
+	    ultra_text[21] = "+40% PRIMARY <w>RELOAD SPEED<w>"
 	    ultra_tips[21] = "+40% higher rate of fire"
 		if altOverride || (instance_exists(Player) && Player.race == 6 && Player.altUltra)
 		{
@@ -291,7 +291,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (Player.altUltra))
 	{
 		ultra_name[33] = "PHOENIX"
-		ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> 1#<aq>PREVENT<aq> <w>DEATH<w>#LOSE A LEVEL AND A RANDOM <g>MUTATION<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
+		ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> <w>2<w>#<aq>PREVENT<aq> <w>DEATH<w>#LOSE <w>TWO LEVELS<w> AND <w>TWO RANDOM<w> <g>MUTATIONS<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
 		ultra_tips[33] = "rise and rise again"
 	}
 
@@ -575,7 +575,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
 		
     
-	//letonLETON 
+	//SKELETON 
 	ultra_name[73] = "REDEMPTION"
 	ultra_text[73] = "REROLL ALL YOUR <g>MUTATIONS<g>#GET PATIENCE AS AN EXTRA#CHOICE EVERY TIME.#WHEN YOU <w>LOOP<w> YOU#CAN GET AN <g>ULTRA<g> AGAIN##NORMAL MOVEMENT <w>SPEED<w>#NORMAL <w>ACCURACY<w>"
 	ultra_tips[73] = "specific taste in mutations"
@@ -594,7 +594,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	/*
 	ultra_name[75] = "THE BIG GAMBLE"
-	ultra_text[75] = "GET A RANDOM ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	ultra_text[75] = "GET A RANDOM ULTRA MUTATION#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)"
 	ultra_tips[75] = "hybrid character"
 	*/
 	ultra_name[75] = "HARDENED BONE"
@@ -608,7 +608,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 19 && Player.ultimategamble==true)
 	{
 	    ultra_name[76] = "THE ULTIMATE GAMBLE"
-	    ultra_text[76] = "50% CHANCE TO <r>DIE<r> OR TO GET#TWO RANDOM ULTRA <g>MUTATIONS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+	    ultra_text[76] = "<w>50% CHANCE<w> TO <r>DIE<r> OR TO GET#<w>TWO RANDOM<w> <g>ULTRA MUTATIONS<g>#FROM <w>ANOTHER CHARACTER<w>#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)##<r>YOU CANNOT USE ANY<r> <w>LIVES!<w>"
 	    ultra_tips[76] = "that went well!"
 	}
 
@@ -632,11 +632,11 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_name[79] = "INVESTMENT"
 		if GetPlayerLoops() > 1
 		{
-			ultra_text[79] = "GAIN <w>NOTHING<w> NOW#IF YOU REACH THE NEXT <w>LOOP<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+			ultra_text[79] = "GAIN <w>NOTHING<w> NOW#IF YOU REACH THE NEXT <w>LOOP<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)"
 		}
 		else
 		{
-			ultra_text[79] =  "GAIN <w>NOTHING<w> NOW#IF YOU REACH <w>LOOP 2<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
+			ultra_text[79] =  "GAIN <w>NOTHING<w> NOW#IF YOU REACH <w>LOOP 2<w>:##GAIN ONE EXTRA MUTATION#AND <w>STEAL<w> A RANDOM <g>ULTRAS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)"
 		}
 	    ultra_tips[79] = "are you that good?"
     
@@ -688,7 +688,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
     
 	    ultra_name[88] = "ULTRA POPO"
-	    ultra_text[88] = "<g>ULTRA<g> WEAPONS COST 30% LESS <g>RADS<g>#<b>PORTAL STRIKE<b> COSTS <g>RADS<g> INSTEAD#REPLACE <b>PORTAL STRIKE<b> AMMO CHESTS#WITH <g>RAD<g> CANNISTERS#<b>BLAST ARMOUR<b> PRODUCES <g>RADS<g>#<g>RADS<g> SPAWN <g>ULTRA LIGHTNING<g>"
+	    ultra_text[88] = "<g>ULTRA<g> WEAPONS COST <w>30%<w> LESS <g>RADS<g>#<b>PORTAL STRIKE<b> COSTS <g>RADS<g> INSTEAD#REPLACE <b>PORTAL STRIKE<b> AMMO CHESTS#WITH <g>RAD<g> CANNISTERS#<b>BLAST ARMOUR<b> PRODUCES <g>RADS<g>#<g>RADS<g> SPAWN <g>ULTRA LIGHTNING<g>"
 	    ultra_tips[88] = "I can do that better"
     
     

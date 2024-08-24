@@ -29,6 +29,6 @@ with Player
 		}
 	}
 }
-UberCont.voidShopHealthUpgrade = round(UberCont.voidShopHealthUpgrade * 1.5)
+UberCont.voidShopHealthUpgrade = round(UberCont.voidShopHealthUpgrade * 2)
 //UberCont.maxHpIncrease += 1
 cost = UberCont.voidShopHealthUpgrade;

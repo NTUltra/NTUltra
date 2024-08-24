@@ -78,6 +78,9 @@ function scrEndOfRun(){
 		hasTakenCrownOfLife = false;
 		hasTakenCrownOfProtection = false;
 		hasTakenCrownOfStability = false;
+		hasTakenCrownOfMediocrity = false;
+		hasTakenCrownOfAbundance = false;
+		hasTakenCrownOfScarcity = false;
 		loadedLoops = 0;
 		loadedKills = 0;
 		if !scrIsGamemode(38)

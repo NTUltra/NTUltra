@@ -52,13 +52,14 @@ function scrEnemyTakingDamage() {
 			//HUNTERS A ULTRA
 			if (Player.ultra_got[41])
 			{
-				if(point_distance(x,y,Player.x,Player.y)<100)
+				var damageDeal = 0;
+				if(point_distance(x,y,Player.x,Player.y) < 100)
 			    {
-					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.0011;
+					damageDeal = dmgTaken * min(0.2,point_distance(x,y,Player.x,Player.y)*0.0005);
 			    }
 			    else
 			    {
-					var damageDeal = dmgTaken * point_distance(x,y,Player.x,Player.y)*0.003;
+					damageDeal = dmgTaken * min(0.4,point_distance(x,y,Player.x,Player.y)*0.0015);
 			    }
 				dmgTaken += damageDeal;
 			}

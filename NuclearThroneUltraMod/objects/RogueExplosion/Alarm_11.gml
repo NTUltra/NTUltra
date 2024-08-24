@@ -1,12 +1,11 @@
 /// @description ultramov destroy squares
-debug("ULTRAMOD");
 var um = GetPlayerUltramod()
 if um == ultramods.bloodExplosionExplosion
 {
 	UberCont.ultramodSwap = false;
 	with instance_create(x,y,MeatExplosion)
 	{
-		dmg = other.dmg;
+		dmg = max(0.5,other.dmg-1);
 		direction = other.direction;
 		image_angle = other.image_angle;
 		speed = other.speed;

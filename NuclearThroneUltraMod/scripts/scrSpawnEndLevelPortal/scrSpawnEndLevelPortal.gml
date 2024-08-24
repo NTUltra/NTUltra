@@ -96,11 +96,6 @@ function scrSpawnEndLevelPortal(){
 							if seconds<11 && area != 100 && area != 135 && area != 104 && area != 137 && !instance_exists(CrownVaultExit) && ( my_health>0 || bleed>0 )
 								scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
 						}
-						with UltraChest
-						{
-							instance_destroy();
-							scrRaddrop(50);
-						}
 					    instance_create(dir.x+16,dir.y+16,WallBreak);
         
 					    Sleep(50)
@@ -146,11 +141,6 @@ function scrSpawnEndLevelPortal(){
 							event_user(0);
 						}
 						instance_create(dir.x+16,dir.y+16,WallBreak);
-					}
-					with UltraChest
-					{
-						instance_destroy();
-						scrRaddrop(50);
 					}
 					//UNLOCK GAME MODE CLAUSTROFOBIA
 					with Player

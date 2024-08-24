@@ -102,6 +102,27 @@ function scrLeaderboardCrown(takenCrown){
 		case 33://ECHO
 			return sprCrown32Idle
 		break;
+		case 34://TIME
+			return sprCrown33Idle
+		break;
+		case 35://DICHOTOMY
+			return sprCrown34Idle
+		break;
+		case 36://STABILITY
+			return sprCrown35Idle
+		break;
+		case 37://FRIGHT
+			return sprCrown36Idle
+		break;
+		case 38://ABUNDANCE
+			return sprCrown37Idle
+		break;
+		case 39://DANGER
+			return sprCrown38Idle
+		break;
+		case 40://Thousand cuts
+			return sprCrown39Idle
+		break;
 	}
 	return sprCrownFrogIdle;
 }

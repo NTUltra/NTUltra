@@ -24,7 +24,7 @@ if instance_exists(creator)
 				{
 					dmg = 14
 					longarms = 0
-					mask_index = mskExcaliburSlash;
+					mask_index = mskExcaliburHammerSlash;
 					sprite_index = sprSlapperSlash;
 					image_yscale = -1;
 					longarms = (Player.skill_got[13]+other.bettermelee)*3

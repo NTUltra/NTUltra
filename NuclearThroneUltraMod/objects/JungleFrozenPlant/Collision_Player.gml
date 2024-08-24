@@ -3,7 +3,11 @@ with Player
 	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1 && !used
 {
-	if blood >= bloodNeeded
+	if instance_exists(WantBoss) || instance_exists(JungleBoss) || instance_exists(BecomeJungleBoss) || instance_exists(LilHunter) || instance_exists(LilHunterFly) || instance_exists(InvertedLilHunter) || instance_exists(InvertedLilHunterFly)
+	{
+			
+	}
+	else if blood >= bloodNeeded
 	{
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{

@@ -6,7 +6,7 @@ if place_meeting(x,y,ShopSelector)
 	image_index=1;
 	if instance_exists(Player)
 	{
-		if ShopWheel.alarm[0] > 0
+		if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 		{
 			if instance_exists(TemporaryBuff)
 			{

@@ -7,5 +7,5 @@ with instance_create(x,y,Splinter)
 	scrCopyWeaponMod(other);
 }
 instance_create(x,y,Smoke)
-alarm[1] = 2;
+alarm[1] = 4;
 ang += 30;

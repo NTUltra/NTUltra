@@ -21,7 +21,8 @@ if instance_exists(Player)
 	}
 	if Player.ultra_got[34]//CHICKEN ninja ultra
 	{
-		is *= 0.5;	
+		hits ++;
+		is *= 0.8;	
 	}
 }
 image_xscale -= 0.2;

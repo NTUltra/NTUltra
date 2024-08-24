@@ -2,15 +2,10 @@
 with Player {
 	if phoenixrevives > 10
 	{
-		alarm[2] = 1;
+		alarm[2] = 2;
 		with instance_create(x,y,Flame)
 		{
 			motion_add(random(360),3);
-			team = other.team
-		}
-		with instance_create(x,y,Flame)
-		{
-			motion_add(random(360),5);
 			team = other.team
 		}
 		exit;

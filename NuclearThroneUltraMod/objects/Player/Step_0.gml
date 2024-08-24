@@ -1,7 +1,12 @@
 /// @description main
 
 if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
+{
+	if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
+		scrSwapWeps();
 	exit;
+}
+var canMeleeAmmo = scrIsCrown(40);
 if ultra_got[21] && altUltra
 {
 	if canInfiniteFire
@@ -535,6 +540,7 @@ if !instance_exists(LevCont) and visible = 1
 				my_health = other.my_health;
 			}
 			UberCont.portalEssence += 200;
+			rage = 500;
 			var dangle = random(1)*360;
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			//instance_create(x+32,y,PinkSheep);
@@ -565,8 +571,8 @@ if !instance_exists(LevCont) and visible = 1
 				}
 			}
 			*/
-			instance_create(x+32,y,CourtyardGuardian);
-			instance_create(x+32,y+32,CourtyardGuardian);
+			//instance_create(x+32,y,WeaponMod);
+			//instance_create(x+32,y+32,WeaponMod);
 			/*
 			wep = 0;
 			var i = 0;
@@ -1012,14 +1018,35 @@ if !instance_exists(LevCont) and visible = 1
 			}
 		}
 	}
-
-
+	if scrIsCrown(39)//Crown of Danger
+	{
+		if canMeleeAmmo || wep_type[wep] != 0
+		{
+			
+			if my_health < maxhealth
+			{
+				wep_cost[wep] = wep_cost_base[wep] * 0.95;
+			}
+			else
+			{
+				wep_cost[wep] = wep_cost_base[wep] * 1.15;
+			}
+		}
+		else
+		{
+			wep_cost[wep] = wep_cost_base[wep];
+		}
+	}
+	else
+	{
+		wep_cost[wep] = wep_cost_base[wep];	
+	}
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1) and (wep_auto[wep] == 0 || wep_auto[wep] == 2) and ((wep_type[wep] = 0 or wep_type[wep] = 1) or can_shoot == 1) and reload < 8//15 INPUT BUFFERING
 		clicked = 1
 	
 	if (KeyCont.key_fire[p] = 1 or keyfire = 1)
 	{
-		if  ammo[wep_type[wep]] < representingCost && wep_type[wep] != 0  && alarm[2] < 1//alarm = Fish Ultra B
+		if  ammo[wep_type[wep]] < representingCost && (canMeleeAmmo || wep_type[wep] != 0)  && alarm[2] < 1//alarm = Fish Ultra B
 		{
 			scrEmpty()
 		}
@@ -1034,7 +1061,7 @@ if !instance_exists(LevCont) and visible = 1
 	}
 	fired = false;
 	if can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and !instance_exists(StunLockout) &&
-	(ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+	(ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || (!canMeleeAmmo && wep_type[wep] == 0)) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
@@ -1393,7 +1420,7 @@ if (!instance_exists(LevCont))
 			with CloneShooter
 				instance_destroy();
 		
-			if ammo[wep_type[wep]] < representingCost and wep_type[wep] != 0
+			if ammo[wep_type[wep]] < representingCost and (canMeleeAmmo || wep_type[wep] != 0)
 				scrEmpty()
 
 			wepflip = -wepflip
@@ -1452,9 +1479,9 @@ if (!instance_exists(LevCont))
 		}
 		if altUltra && ultra_got[33]//Phoenix
 		{
-			reload -= phoenixrevives*0.1;
-			breload -= phoenixrevives*0.05;
-			creload -= phoenixrevives*0.05;
+			reload -= phoenixrevives*0.05;
+			breload -= phoenixrevives*0.025;
+			creload -= phoenixrevives*0.025;
 		}
 		if ultra_got[7] && speed < 2//BUNKER
 		{
@@ -1634,11 +1661,7 @@ if (!instance_exists(LevCont))
 		}
 		if ultra_got[24] && !altUltra// YV ultra D
 		{
-			breload -= 0.6325;
-		}
-		if ultra_got[21] && !altUltra//YV ULTRA A
-		{
-			breload -=0.1;//Small bonus
+			breload -= 0.5;
 		}
 		if skill_got[28] = 1
 		{
@@ -1735,7 +1758,7 @@ if (!instance_exists(LevCont))
 	if !lockout && (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0 && !instance_exists(StunLockout)
 	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
-		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
+		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || (!canMeleeAmmo && wep_type[wep] == 0)) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -2595,26 +2618,7 @@ if moddelay > -30*modQueue
 			moddelay -= 0.3;
 	}
 }
-/* */
-///Rogue  heat
-if (RogueHeat==true)
-{
-	var numEn = 0;
-	with enemy
-	{
-		if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
-		{
-			numEn ++;
-		}
-	}
-    if ( numEn > 2 && instance_exists(enemy) && instance_number(enemy) < BackCont.enemiesInStartLevel * 0.8 )
-    {
-		instance_create(x,y,IDPDSpawn);
-	 RogueHeat=false
-    }
-}
 
-/* */
 //INSOMNIA TIMER !?
 ///Lets try aggro
 

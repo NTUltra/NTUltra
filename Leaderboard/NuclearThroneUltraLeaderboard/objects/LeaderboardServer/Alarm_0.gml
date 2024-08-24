@@ -33,12 +33,12 @@ if day != yesterday
 	var gamemodeReturn = scrChooseGamemodes();
 	dayGamemode = gamemodeReturn[0];
 	dayOption = gamemodeReturn[1];
-	show_debug_message(dayOption);
 	dailyScoreSaveFileString="ds"+string(totalDailies) + "_ntultradailyscore"+string(day)+".sav";
 	dailyRaceSaveFileString=string(totalDailies) + "_ntultradailyrace"+string(day)+".sav";
 	biDailyGamemodeSaveFileString = string(totalDailies) + "_ntultradailygamemode"+string(day)+"+"+string(dayGamemode)+".sav";
 	scoreLeaderboardString = "";
 	raceLeaderboardString = "";
+	tomorrow = date_inc_day(date_current_datetime(),1);
 	if week != lastweek
 	{
 		show_debug_message("WEEK");

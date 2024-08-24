@@ -225,7 +225,7 @@ with Player//Data to keep
 		}
 		with instance_create(x,y,RespawnLightning)
 		{
-			amount = ceil((other.boostLevel-1)*0.2);
+			amount = floor((other.boostLevel-1)*0.2);
 		}
 	}
 	if scrIsGamemode(48)

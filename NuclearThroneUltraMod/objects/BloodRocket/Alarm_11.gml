@@ -31,9 +31,9 @@ if um == ultramods.plasmaRocket
 	{motion_add(other.direction,18);
 	image_angle = direction
 	team = other.team}
-	with instance_create(x,y,Splinter)
+	with instance_create(x,y,BloodSplinter)
 	{
-		dmg = other.dmg + 1
+		dmg = other.dmg + 2
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;

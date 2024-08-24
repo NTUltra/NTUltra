@@ -339,7 +339,10 @@ if instance_exists(Player)
 else
 	__background_set_colour( make_color_rgb(229,56,153) )
 
-
+dir = 1
+deaths = 0
+repeat(UberCont.racemax)
+deaths += UberCont.ctot_dead[dir]
 
 scrTips()
 

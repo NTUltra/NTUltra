@@ -31,6 +31,10 @@ lastwishused=true;
 with CrystalShield
 instance_destroy();
 var actualLives = skeletonlives;
+if (ultra_got[76] && hasUltimateGamble)
+	actualLives = 0;
+if instance_exists(PlayerInEnding) || instance_exists(Credits)
+	actualLives = 0;
 if ultra_got[87] && altUltra
 {
 	actualLives += rogueammo;
@@ -359,6 +363,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	onlyusemerevolver = other.onlyusemerevolver;
 	ultramod = other.ultramod;
 	ultimategamble=true;
+	hasUltimateGamble = other.hasUltimateGamble;
 	var si= 0;
 	livesRegain = other.livesRegain;
 	var al = array_length(livesRegain);

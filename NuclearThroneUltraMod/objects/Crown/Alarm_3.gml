@@ -4,8 +4,14 @@ if !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(Sp
 	with instance_nearest(x,y,Wall)
 	{
 		instance_create(x,y,WallBreak);
+		with instance_create(x,y,PortalEnviromentReplacer)
+		{
+			area = 1;
+			prevArea = 2;
+		}
 		instance_create(x,y,BanditBoss);
 	}
+	alarm[8] = 15;
 }
 else
 {

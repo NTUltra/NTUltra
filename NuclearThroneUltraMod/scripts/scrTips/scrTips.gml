@@ -3,7 +3,24 @@ function scrTips() {
 	if !instance_exists(Player)
 		tiptype = 0
 	tip = "";
-	if tiptype = 0
+	if (deaths < 10 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
+	{
+		tip = choose("WELCOME TO NUCLEAR THRONE!","TRY TO ALWAYS STAY ON THE MOVE",
+		"ENEMIES DROP HEALTH AND AMMO","HEALTH CAN DROP MORE OFTEN WHEN IT'S LOW",
+		"most projectiles can be deflected or destroyed by melee#except for pink squares",
+		"pink square bullets toxic gas and fire cannot be deflected","director weapons can be redirected by firing again",
+		"sheep have a high chance to drop health, ammo and radiation", "use radiation to mutate!","pick your mutations wisely",
+		"the number next to a weapon indicates its tier","do not stick with a low tier weapon for too long", "always try out a new weapon",
+		"some weapons have a green popup with a small explanation","having three weapon specific mutations will offer you a secret mutation",
+		"when you reach level 10 you get an ultra mutation!","use cover!","you can do this!","you will unlock tons of stuff#check the gamemode menu for some of the unlockables",
+		"if you die in the first area you will unlock casual mode","casual mode is essentially a normal mode#nuclear throne is just very difficult",
+		"your health can go beyond max#by picking up big healthchests at max health", "health = HP", "radiation = rads", "once you get further in the game you will unlock alternative paths",
+		"you can loop the game by destroying the big generators!","when you have an light blue outline you are immune to damage!",
+		"shells are the shotgun projectiles that bounce#they don't necessarily use shotgun ammo!",
+		"most weapon specific mutations are based on your projectile type#not on your ammo type",
+		"blood bullets are also bullets#and will be refunded with recycle gland",);
+	}
+	else if tiptype = 0
 	{
 	//RANDOM
 	tip = choose(
@@ -21,6 +38,7 @@ function scrTips() {
 	"idpd grunts can roll",
 	"fish can play guitar",
 	"you've got this!",
+	"some crowns are kinda cute",
 	"after getting 100% you can get 200% completion!",
 	"for 200% completion you have to#find all alternative ultras#get all golden weapons#and loop on all characters",
 	"you can swap cursed weapons#with other cursed weapons",
@@ -268,8 +286,7 @@ function scrTips() {
 	"all weapons are full auto#but single fire weapons#fire faster when clicking"
 	)
 	}
-
-	if tiptype = 1
+	else if tiptype = 1
 	{
 	//AREA BASED
 
@@ -391,9 +408,7 @@ function scrTips() {
 	if Player.area = 139//THE PIT
 	tip = choose("the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths");
 	}
-
-
-	if tiptype = 2
+	else if tiptype = 2
 	{
 	//CHARACTER BASED
 
@@ -561,13 +576,9 @@ function scrTips() {
 	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",)
 	
 	}
-
-	//WEAPONS
-	if tiptype = 3
-	tip = Player.wep_text[Player.wep]
-
-	//MUTATIONS
-	if tiptype = 4
+	else if tiptype = 3 //WEAPONS
+		tip = Player.wep_text[Player.wep]
+	else if tiptype = 4//MUTATIONS
 	{
 		var hasSomeMutations = false;
 		var i = 0;
@@ -592,13 +603,9 @@ function scrTips() {
 			tip = "";	
 		}
 	}
-
-	//CROWNS
-	if tiptype = 5
+	else if tiptype = 5 	//CROWNS
 		tip = Player.crown_tips[Player.crown[irandom(array_length(Player.crown)-1)]]
-
-	//ULTRAS
-	if tiptype = 6 
+	else if tiptype = 6  //ULTRAS
 	{
 	if Player.level>=10
 	    {
@@ -611,11 +618,8 @@ function scrTips() {
 	    else 
 	    tip=""
 	}
-
-	///GAMEMODE
-	if tiptype == 7
+	else if tiptype == 7 ///GAMEMODE
 		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[irandom(array_length(UberCont.opt_gamemode)-1)]];
-	
 	if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
 	{
 		tip = "KILL KILL KILL";	

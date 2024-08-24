@@ -33,7 +33,7 @@ for (var i = 0; i < al; i++)
 		for (var j = 0; j < pal; j++)
 		{
 			with projs[| j] {
-				if team != 2
+				if team == 2
 				{
 					if typ == 0 && !canBeMoved && isLaser
 					{

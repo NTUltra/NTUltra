@@ -89,6 +89,7 @@ function scrCopyPlayData(){
 		time_hours: UberCont.time_hours,
 		race: Player.race,
 		ultimategamble: Player.ultimategamble,
+		hasUltimateGamble: Player.hasUltimateGamble,
 		bettermelee: Player.bettermelee,
 		betterlaserbrain: Player.betterlaserbrain,
 		betterpluto: Player.betterpluto,

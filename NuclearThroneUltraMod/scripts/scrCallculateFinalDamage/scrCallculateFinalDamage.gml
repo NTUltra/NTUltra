@@ -42,13 +42,13 @@ function scrCallculateFinalDamage(inputDamage){
 		if (ultra_got[41])
 		{
 			var damageDeal = 0;
-			if(point_distance(other.x,other.y,x,y)<100)
+			if(point_distance(x,y,Player.x,Player.y) < 100)
 			{
-				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.0011;
+				damageDeal = dmgTaken * min(0.2,point_distance(x,y,Player.x,Player.y)*0.0005);
 			}
 			else
 			{
-				damageDeal = dmgDeal * point_distance(other.x,other.y,x,y)*0.003;
+				damageDeal = dmgTaken * min(0.4,point_distance(x,y,Player.x,Player.y)*0.0015);
 			}
 			dmgDeal += damageDeal;
 		}

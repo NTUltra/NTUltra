@@ -6,7 +6,7 @@ if instance_exists(Player)
 if place_meeting(x,y,ShopSelector)
 {
 image_index=1;
-if ShopWheel.alarm[0] > 0
+if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 {
 	var lowa = 0;
 	var lowb = 0;
@@ -35,6 +35,7 @@ if ShopWheel.alarm[0] > 0
 	}
 	else
 	{
+		ShopWheel.used = true;
 		with instance_create(x,y,PopupText)
 		{
 			mytext = "ALREADY RELOADED!";

@@ -3,12 +3,16 @@ event_inherited();
 typ = 5;
 owner = -1;
 team = 2;
-dmg = 2;
+dmg = 2.25;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
+	{
+		dmg += 0.25;
 		image_yscale = 1.8+(Player.betterlaserbrain*0.22)
+	}
 }
+alarm[3] = 20;
 offset = 16;
 camKick = 0;
 wkick = 4;

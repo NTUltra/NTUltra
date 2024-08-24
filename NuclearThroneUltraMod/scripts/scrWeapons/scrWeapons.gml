@@ -1513,7 +1513,7 @@ function scrWeapons() {
 	wep_name[135] = "LOLLIPOP"
 	wep_type[135] = 0
 	wep_auto[135] = 0
-	wep_load[135] = 35
+	wep_load[135] = 30
 	wep_cost[135] = 0
 	wep_sprt[135] = sprLollipop
 	wep_area[135] = 16
@@ -1859,7 +1859,7 @@ function scrWeapons() {
 	wep_cost[166] = 2
 	wep_sprt[166] = sprSlashShotgun
 	wep_area[166] = 4
-	wep_text[166] = "shoot them out of there cover"
+	wep_text[166] = "around cover"
 	wep_swap[166] = sndSwapShotgun
 	wep_rad[166] = 0;
 
@@ -3695,7 +3695,7 @@ function scrWeapons() {
 	wep_name[329] = "DARK SWORD"
 	wep_type[329] = 0
 	wep_auto[329] = 0
-	wep_load[329] = 25//16 usual
+	wep_load[329] = 27//16 usual
 	wep_cost[329] = 0
 	wep_sprt[329] = sprDarkSword
 	wep_area[329] = -1
@@ -3772,7 +3772,7 @@ function scrWeapons() {
 	wep_name[336] = "FROST ASSAULT RIFLE"
 	wep_type[336] = 1
 	wep_auto[336] = 2
-	wep_load[336] = 13
+	wep_load[336] = 12
 	wep_cost[336] = 6
 	wep_sprt[336] = sprFrostARifle
 	wep_area[336] = 6
@@ -5384,7 +5384,7 @@ function scrWeapons() {
 	wep_name[478] = "ULTRA LOLLIPOP"
 	wep_type[478] = 0
 	wep_auto[478] = 0
-	wep_load[478] = 32
+	wep_load[478] = 28
 	wep_cost[478] = 0
 	wep_sprt[478] = sprUltraLollipop
 	wep_area[478] = 27
@@ -7015,7 +7015,7 @@ function scrWeapons() {
 	wep_name[626] = "BLOOD WALL"
 	wep_type[626] = 1
 	wep_auto[626] = 1
-	wep_load[626] = 10
+	wep_load[626] = 11
 	wep_cost[626] = 6
 	wep_sprt[626] = sprBloodWall
 	wep_area[626] = 11
@@ -7103,7 +7103,7 @@ function scrWeapons() {
 	wep_name[634] = "BURNING DARK SWORD"
 	wep_type[634] = 0
 	wep_auto[634] = 0
-	wep_load[634] = 20//16 usual
+	wep_load[634] = 26//16 usual
 	wep_cost[634] = 0
 	wep_sprt[634] = sprBurningDarkSword
 	wep_area[634] = -1
@@ -7114,7 +7114,7 @@ function scrWeapons() {
 	wep_name[635] = "DOUBLE SIDED BLADE"
 	wep_type[635] = 0
 	wep_auto[635] = 2
-	wep_load[635] = 17
+	wep_load[635] = 19
 	wep_cost[635] = 0
 	wep_sprt[635] = sprDoubleSidedBlade
 	wep_area[635] = 13
@@ -7670,8 +7670,8 @@ function scrWeapons() {
 	wep_name[685] = "BOUNCER CHARGE LASER"
 	wep_type[685] = 5
 	wep_auto[685] = 0
-	wep_load[685] = 21
-	wep_cost[685] = 2
+	wep_load[685] = 14
+	wep_cost[685] = 3
 	wep_sprt[685] = sprChargeBouncerLaserGun
 	wep_area[685] = 15
 	wep_text[685] = "charging railgun"
@@ -7803,10 +7803,10 @@ function scrWeapons() {
 	wep_name[697] = "FROST SHOTGUNNER"
 	wep_type[697] = 2
 	wep_auto[697] = 3
-	wep_load[697] = 12
+	wep_load[697] = 17
 	wep_cost[697] = 3
 	wep_sprt[697] = sprFrostShotgunner
-	wep_area[697] = 18
+	wep_area[697] = 17
 	wep_text[697] = "cold power"
 	wep_swap[697] = sndSwapShotgun
 	wep_rad[697] = 0;
@@ -8010,8 +8010,8 @@ function scrWeapons() {
 	wep_name[715] = "DOOM LOBBER"
 	wep_type[715] = 4
 	wep_auto[715] = 0
-	wep_load[715] = 25
-	wep_cost[715] = 5
+	wep_load[715] = 23
+	wep_cost[715] = 4
 	wep_sprt[715] = sprDoomLobber
 	wep_area[715] = 13
 	wep_text[715] = "doom party"
@@ -8066,7 +8066,7 @@ function scrWeapons() {
 	wep_type[720] = 4
 	wep_auto[720] = 0
 	wep_load[720] = 70
-	wep_cost[720] = 20
+	wep_cost[720] = 22
 	wep_sprt[720] = sprRogueVanCannon
 	wep_area[720] = -1
 	wep_text[720] = "rogue power"
@@ -8386,7 +8386,7 @@ function scrWeapons() {
 	wep_type[749] = 4
 	wep_auto[749] = 3
 	wep_load[749] = 9
-	wep_cost[749] = 6
+	wep_cost[749] = 7
 	wep_sprt[749] = sprSuperBloodRocketGun
 	wep_area[749] = 20
 	wep_text[749] = "I see red"
@@ -9067,15 +9067,18 @@ function scrWeapons() {
 	}
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 	typ_ammo[0] = 4 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
-
-	if instance_exists(Player){
+	typ_amax_base[0] = 33 typ_amax_base[1] = 255 typ_amax_base[2] = 55 typ_amax_base[3] = 55 typ_amax_base[4] = 55 typ_amax_base[5] = 55
+	if instance_exists(Player) {
 		if Player.race = 1 {
 			typ_ammo[0] = 5 typ_ammo[1] = 41 typ_ammo[2] = 10 typ_ammo[3] = 9 typ_ammo[4] = 8 typ_ammo[5] = 12
 			if Player.skill_got[5] {//fish's new thronebutt
 				typ_ammo[0] = 6 typ_ammo[1] = 49 typ_ammo[2] = 12 typ_ammo[3] = 11 typ_ammo[4] = 10 typ_ammo[5] = 15
 			}
 		}
-		typ_amax[0] = 33+Player.skill_got[10]*33 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44
+		if (object_index == Player)
+			{ typ_amax[0] = 33+skill_got[10]*33 typ_amax[1] = 255+skill_got[10]*300 typ_amax[2] = 55+skill_got[10]*44 typ_amax[3] = 55+skill_got[10]*44 typ_amax[4] = 55+skill_got[10]*44 typ_amax[5] = 55+skill_got[10]*44 }
+		else
+			{ typ_amax[0] = 33+Player.skill_got[10]*33 typ_amax[1] = 255+Player.skill_got[10]*300 typ_amax[2] = 55+Player.skill_got[10]*44 typ_amax[3] = 55+Player.skill_got[10]*44 typ_amax[4] = 55+Player.skill_got[10]*44 typ_amax[5] = 55+Player.skill_got[10]*44 }
 		if variable_instance_exists(Player,"ultra_got")
 		{
 			if Player.ultra_got[15] == 1//Power overwhelming
@@ -9097,7 +9100,6 @@ function scrWeapons() {
 	}
 	else{
 		typ_amax[0] = 33 typ_amax[1] = 255 typ_amax[2] = 55 typ_amax[3] = 55 typ_amax[4] = 55 typ_amax[5] = 55}
-
 	typ_name[0] = "MELEE" typ_name[1] = "BULLETS" typ_name[2] = "SHELLS" typ_name[3] = "BOLTS" typ_name[4] = "EXPLOSIVES" typ_name[5] = "ENERGY"
 
 	
@@ -9105,6 +9107,9 @@ function scrWeapons() {
 	// var highestTierWeapon = 0;
 	for (var i = 0; i < maxwep+1; i++) {
 	    // code here
+		wep_cost_base[i] = wep_cost[i];
+		wep_rad_base[i] = wep_rad[i];
+		wep_type_base[i] = wep_type[i];
 		if wep_area[i] > highest_wep_tier
 		{
 			highest_wep_tier = wep_area[i];

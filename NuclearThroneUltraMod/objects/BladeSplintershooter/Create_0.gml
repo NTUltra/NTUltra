@@ -7,5 +7,5 @@ dmg = 8;
 ang = 0;
 alarm[0] = 1;
 alarm[1] = 2;
-alarm[2] = 3;
-alarm[4] = 90;
+alarm[2] = 4;
+alarm[4] = 45;

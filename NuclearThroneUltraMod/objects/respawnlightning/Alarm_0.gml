@@ -6,7 +6,7 @@ with Player
 	snd_play_2d(sndThunder);
 	var langle = random(360);
 	var langstep = 360/8;
-	repeat(8)
+	repeat(5)
 	{
 		with instance_create(x,y,UltraLightning)
 		{
@@ -26,5 +26,5 @@ if amount < 0
 {
 	instance_destroy();	
 }
-alarm[0] = 20;
+alarm[0] = 22;
 amount --;

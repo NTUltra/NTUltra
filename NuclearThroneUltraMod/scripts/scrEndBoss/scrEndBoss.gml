@@ -4,7 +4,7 @@ function scrEndBoss() {
 	{
 	with UberCont
 	{
-		if scrIsGamemode(26) //DAILY RACE
+		if scrIsGamemode(26) && !UberCont.isLeaderboardGamemode//DAILY RACE
 		{
 			//var al = array_length(encrypted_data.ctot_dailies_race_seed) - 1;//Minus one to overwrite the original score we set
 	        //encrypted_data.ctot_dailies_race_seed[al] = seed;

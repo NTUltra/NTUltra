@@ -49,6 +49,8 @@ with Player
 {
 oasis=true;
 area = 101;
+lastarea = 101;
+lastsubarea = 0;
 subarea = 0;
 inverted = false;
 }

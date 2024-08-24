@@ -13,6 +13,6 @@ with Player
 		alarm[1] = 60;
 	}
 }
-UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 1.5);
+UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 2);
 //UberCont.maxHpIncrease += 1
 cost = UberCont.voidShopMutationUpgrade;

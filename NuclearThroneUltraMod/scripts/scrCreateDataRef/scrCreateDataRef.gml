@@ -4,6 +4,7 @@
 function scrCreateDataRef(){
 	with instance_create(x,y,DataRef)
 	{
+		hasUltimateGamble = other.hasUltimateGamble
 		hard = other.hard;
 		loops = other.loops;
 		hitBy = other.hitBy;

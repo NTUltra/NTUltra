@@ -1,4 +1,4 @@
-maxhealth = 100
+maxhealth = 50
 mySize = 2
 
 spr_idle = sprSkeletonSkull
@@ -12,3 +12,4 @@ canMoveOver = true;
 snd_hurt = sndHitRock
 
 revived = false;
+alarm[1] = 10;

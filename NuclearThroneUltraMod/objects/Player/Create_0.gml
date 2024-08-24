@@ -10,6 +10,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,yimm,FPSHACK);p
 }*/
+alarm[0] = 120;
 justLoadedRun = false;
 isOnInteractable = false;
 lockout = false;
@@ -80,6 +81,7 @@ noHit = 0;
 fired = false;
 closedodges = 0;
 isPureHealthBoost = 0;
+abundanceHealth = 0;
 hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
@@ -187,6 +189,7 @@ ultraNow = false;
 tookDestiny = false;
 //show_message("hi")
 //if joystick_exists(0) joy = 0 else joy = 0
+useForMeleeAmmoType = 0;
 meleeimmunity = 0;
 usedHogInvestment = false;
 hogpoints = 0; //INVESTMENT ULTRA amount of ultra mutations you get
@@ -331,6 +334,7 @@ consecutiveGoodBloodGambles = 0;
 livesRegain = [];
 
 ultimategamble = false;
+hasUltimateGamble = false;
 
 maxhealth = 8
 defaultOverhealAddition = 0;

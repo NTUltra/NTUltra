@@ -416,7 +416,10 @@ if looping && area != 104
 	if race =3 && skill_got[19]
 	scrUnlockCSkin(3,"FOR LOOPING WITH EAGLE EYES#AS EYES",0);
 
-	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32] && !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46] && !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection && !UberCont.hasTakenCrownOfStability
+	if race = 4 && !UberCont.lastwishused && !skill_got[1] && !skill_got[25] && !skill_got[32]
+	&& !skill_got[40] && !skill_got[41] && !skill_got[18] && !skill_got[31] && !skill_got[46]
+	&& !UberCont.hasTakenCrownOfLife && !UberCont.hasTakenCrownOfProtection && !UberCont.hasTakenCrownOfStability
+	&& !UberCont.hasTakenCrownOfMediocrity && !UberCont.hasTakenCrownOfAbundance && !UberCont.hasTakenCrownOfScarcity
 		scrUnlockBSkin(4,"FOR LOOPING WITHOUT#SURVIVAL MUTATIONS AND CROWNS#AS MELTING",0);
 
 	if scrIsGamemode(14)
@@ -1037,9 +1040,12 @@ if area > 1 || loops > 0
 	{
 		if scrIsGamemode(26) || scrIsGamemode(27) || UberCont.isLeaderboardGamemode
 		{
-			scrUpdateScore(other, true);
-			goToLeaderboard = false;
-			instance_create(x,y,SendPerliminaryScore);
+			if array_length(UberCont.runRace) == 0 && !(scrIsGamemode(26) && !UberCont.isLeaderboardGamemode)
+			{//NOT A RACE
+				scrUpdateScore(other, true);
+				goToLeaderboard = false;
+				instance_create(x,y,SendPerliminaryScore);
+			}
 		}
 	}
 

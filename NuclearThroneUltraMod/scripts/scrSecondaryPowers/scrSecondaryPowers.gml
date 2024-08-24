@@ -123,12 +123,12 @@ function scrSecondaryPowers() {
 			case 2:
 				if !isOverlapping && instance_exists(CrystalShield) && !instance_exists(CrystalTorpedo) && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
 				{
-					if my_health > 1
+					if my_health > 2
 					{
 						if armour > 0
 							armour -= 1;
 						else
-							DealDamage(1,false,false,false);
+							DealDamage(2,false,false,false);
 					
 						hitBy = sprite_index;
 						exception=true;
@@ -566,7 +566,7 @@ function scrSecondaryPowers() {
 				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
 					
-					if !instance_exists(PandaSleep) 
+					if !instance_exists(PandaSleep)
 					{
 						BackCont.shake += 10;
 						var ang = random(360);
@@ -587,7 +587,7 @@ function scrSecondaryPowers() {
 						if skill_got[2]
 							scrApplyExtraFeet();
 					}
-					else
+					else if PandaSleep.alarm[0] < 1
 					{
 						BackCont.shake += 10;
 						var ang = random(360);
@@ -862,7 +862,7 @@ function scrSecondaryPowers() {
 			break;
 			//ROGUE
 			case 22:
-				if !isOverlapping && (KeyCont.key_regal[p] == 1) && my_health > 1
+				if !isOverlapping && (KeyCont.key_regal[p] == 1) && (my_health > 1 && !scrIsCrown(41) || my_health > 2)
 				{
 					DealDamage(1);
 					sprite_index = spr_hurt;

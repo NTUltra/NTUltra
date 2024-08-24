@@ -11,3 +11,4 @@ ang = direction;
 ammo = 7;
 minAmmo = 4;
 time = 2;
+alarm[3] = 90;

@@ -8,7 +8,7 @@ if um == ultramods.bloodExplosionExplosion
 	var dis = 48;
 	with instance_create(x,y,MeatExplosion)
 		{
-			dmg = max(1,other.dmg * 0.2);
+			dmg = max(0.5,other.dmg * 0.2);
 			direction = other.direction;
 			image_angle = other.image_angle;
 			speed = other.speed;
@@ -19,7 +19,7 @@ if um == ultramods.bloodExplosionExplosion
 	{
 		with instance_create(x+lengthdir_x(dis,ang),y+lengthdir_y(dis,ang),MeatExplosion)
 		{
-			dmg = max(1,other.dmg * 0.2);
+			dmg = max(0.5,other.dmg * 0.2);
 			direction = other.direction;
 			image_angle = other.image_angle;
 			speed = other.speed;

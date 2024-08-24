@@ -3604,7 +3604,7 @@ function scrFire(canDrown = true) {
 		dmg = 8
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,4+longarms)
 		image_angle = direction
 		team = other.team
 		sprite_index = sprLollipopSlash;
@@ -3614,7 +3614,7 @@ function scrFire(canDrown = true) {
 		dmg = 32//shovel is 8 sledge = 16
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,4+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -5182,12 +5182,12 @@ function scrFire(canDrown = true) {
 		var pr = Player.phoenixrevives
 		if  pr > 4 && reload > 0
 	    {
-			reload -= wep_load[wep] * min(0.2,(Player.phoenixrevives-3)*0.1)
+			reload -= wep_load[wep] * min(0.15,(Player.phoenixrevives-3)*0.05)
 	    }
 		if pr > 3
 		{
 			pr += max(0,(wep_load[wep]*0.03));
-			pr = clamp(round(pr),1,25);
+			pr = clamp(round(pr),1,10);
 			repeat(pr-3)
 			{
 				with instance_create(x,y,Bullet6)
@@ -5196,6 +5196,17 @@ function scrFire(canDrown = true) {
 					image_angle = direction
 					team = other.team
 				}
+			}
+		}
+	}
+	if wep_type_base[wep] == 0 && scrIsCrown(40)
+	{
+		with MeleeParent
+		{
+			if !appliedAmmoChange
+			{
+				meleeAmmoType = other.wep_type[other.wep];
+				appliedAmmoChange = true;
 			}
 		}
 	}
@@ -5208,10 +5219,10 @@ function scrFire(canDrown = true) {
 				if !appliedBoost
 				{
 					appliedBoost = true;
-					dmg *= 1.20;
+					dmg *= 1.15;
 					dmg = ceil(dmg);
 					BackCont.shake += 2;
-					image_speed *= 0.75;
+					image_speed *= 0.8;
 				}
 			}
 		}

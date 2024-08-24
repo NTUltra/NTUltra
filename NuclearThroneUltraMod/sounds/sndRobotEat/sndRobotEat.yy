@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.932,
   "name":"sndRobotEat",
   "parent":{
     "name":"Player",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndRobotEat",
+  "soundFile":"sndRobotEat.wav",
   "type":0,
   "volume":1.0,
 }

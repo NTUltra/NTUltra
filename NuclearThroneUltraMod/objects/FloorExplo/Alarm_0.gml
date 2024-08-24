@@ -71,6 +71,7 @@ else
 					direction = d//random(360);
 					image_angle = direction
 					team = 2;
+					dmg = 1;
 				}
 			}
 			if instance_exists(Player) && Player.ultra_got[94] {

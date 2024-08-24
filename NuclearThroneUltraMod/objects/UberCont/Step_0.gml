@@ -20,6 +20,7 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 	{
 		confirmState = 0;
 		debug("QUICK RESTART");
+		runRace = [];
 		//scrEndOfRun(); already run in player destroy
 		with MusCont
 		{

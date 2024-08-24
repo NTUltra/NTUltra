@@ -1,8 +1,10 @@
 ///scrDayTimeLeft();
 // /@description
 ///@param
-function scrDayTimeLeft(){
-	var tomorrow = date_inc_day(date_current_datetime(),1);
+function scrDayTimeLeft(countingDays = true){
+	var tomorrow = UberCont.tomorrow;//date_inc_day(date_current_datetime(),1);
+	if tomorrow == 0
+		return "";
 	var cutoff = date_create_datetime
 		(
 			date_get_year(tomorrow),

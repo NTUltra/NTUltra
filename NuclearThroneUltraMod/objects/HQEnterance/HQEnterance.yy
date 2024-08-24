@@ -35,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskVanEnter",
+    "path":"sprites/mskVanEnter/mskVanEnter.yy",
   },
   "spriteMaskId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskVanEnter",
+    "path":"sprites/mskVanEnter/mskVanEnter.yy",
   },
   "visible":false,
 }

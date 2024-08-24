@@ -19,11 +19,13 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 		UberCont.voidWeaponDeposit[2] = Player.cwep;
 		with WepPickup
 		{
-			instance_destroy();
+			if !isPermanent
+				instance_destroy();
 		}
 		with ThrowWep
 		{
-			instance_destroy();	
+			if !isPermanent
+				instance_destroy();	
 		}
 		with Player
 		{

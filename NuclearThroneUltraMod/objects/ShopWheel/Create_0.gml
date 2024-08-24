@@ -1,5 +1,6 @@
 image_speed=0;
 discount = 1;
+used = false;
 if instance_exists(Player)
 {
 	instance_create(x,y,ShopSelector);

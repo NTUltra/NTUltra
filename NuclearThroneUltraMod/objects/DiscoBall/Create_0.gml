@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-alarm[0] = 90;
+alarm[0] = 80;
 alarm[11] = 0;
 friction = 0;
 alarm[2] = 4;

@@ -1,6 +1,6 @@
 /// @description ultramod
 var um = GetPlayerUltramod();
-if um == ultramods.plasmaBolt
+if (um == ultramods.plasmaBolt)
 {
 	with Player
 	{
@@ -24,8 +24,11 @@ if um == ultramods.plasmaBolt
 	}
 	instance_destroy(id,false);
 } 
-else if um == ultramods.rocketBolt
+else if (um == ultramods.rocketBolt)
 {
+	var accu = 1;
+	if instance_exists(Player)
+		accu = Player.accuracy;
 	instance_destroy(id,false);
 	with instance_create(x,y,Missile)
 	{

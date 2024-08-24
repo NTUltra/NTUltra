@@ -25,7 +25,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			if my_health > immunelimit
 			{
 				dealtDamage = true;
-				if my_health - dealDmg < immunelimit
+				if my_health - dealDmg <= immunelimit
 					my_health = immunelimit
 				else
 				{
@@ -43,7 +43,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			if ultra_got[62] && altUltra && armour > immunelimit//Living armour
 			{
 				dealtDamage = true;
-				if armour-dealDmg < immunelimit
+				if armour-dealDmg <= immunelimit
 					armour = immunelimit
 				else
 				{
@@ -53,7 +53,7 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			else if my_health > immunelimit
 			{
 				dealtDamage = true;
-				if my_health - dealDmg < immunelimit
+				if my_health - dealDmg <= immunelimit
 				{
 					my_health = immunelimit
 					prevhealth = my_health;

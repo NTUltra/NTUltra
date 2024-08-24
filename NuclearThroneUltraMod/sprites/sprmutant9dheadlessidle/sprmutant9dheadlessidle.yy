@@ -26,7 +26,7 @@
   ],
   "name":"sprMutant9DHeadlessIdle",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"ChickenDskin",
     "path":"folders/Sprites/Player/Chicken/ChickenDskin.yy",
@@ -88,7 +88,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":8,
-    "yorigin":6,
+    "yorigin":5,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

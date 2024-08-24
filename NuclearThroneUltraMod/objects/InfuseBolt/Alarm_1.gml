@@ -1,4 +1,5 @@
 /// @description xxx
+if stickTarget != noone && instance_exists(stickTarget)
 with stickTarget
 {
 	DealDamage(4)

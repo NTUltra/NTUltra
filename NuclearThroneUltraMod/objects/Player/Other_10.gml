@@ -3,7 +3,6 @@
 {
 	exit;
 }*/
-debug(UberCont.ultramodSwap);
 with instance_create(x,y,RogueExplosion)
 {
 	team = other.team;

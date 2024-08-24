@@ -2,7 +2,6 @@
 // /@description
 ///@param
 function scrSendScore(buffer, perliminary = false){
-	debug("CLIENT ID");
 	myClientId = buffer_read(buffer, buffer_u16);
 	var latestVersion = buffer_read(buffer, buffer_string);
 	UberCont.totalDailies = buffer_read(buffer, buffer_u16);
@@ -10,7 +9,6 @@ function scrSendScore(buffer, perliminary = false){
 	UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
 	if array_length(UberCont.runScore) > 1
 	{
-		debug("send score: ",string(UberCont.runScore));
 		var sendBuffer = buffer_create(29,buffer_grow,1);
 		if UberCont.isLeaderboardGamemode
 		{
@@ -107,7 +105,6 @@ function scrSendScore(buffer, perliminary = false){
 		//Just get leaderboard
 		UberCont.weeklyWeek = UberCont.totalWeeklies;
 		UberCont.dailyDay = UberCont.totalDailies;
-		debug("total dailies ", UberCont.dailyDay);
 		event_user(0);
 	}
 	if !perliminary

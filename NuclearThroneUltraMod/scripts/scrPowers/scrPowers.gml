@@ -436,7 +436,8 @@ function scrPowers(raceOverwrite = -1) {
 
 	if race == 20 //business hog
 	{
-		instance_create(x,y,ShopWheel);
+		if !instance_exists(ShopWheel)
+			instance_create(x,y,ShopWheel);
 	}
 
 	if race == 19//Skeleton
@@ -675,12 +676,11 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if (scrIsCrown(40) || wep_type[wep] != 0) && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
 		{
-			snd_play_2d(sndBloodGamble);
 		    //gamble some blood
 			var failedGamble = false;
 			var wepCost = max(0.5,wep_cost[wep]);
 			var cancelBloodGamble = false;
-			if wep_type[wep] == 0// && scrIsCrown(40)
+			if wep_type[wep] == 0
 			{
 				wepCost = 2;
 			}
@@ -844,6 +844,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			if !cancelBloodGamble
 			{
+				snd_play_2d(sndBloodGamble);
 				var t = wep_type[wep];
 				var wantRad = rad;
 				var wantAmmo = ammo[t]
@@ -1378,7 +1379,7 @@ function scrPowers(raceOverwrite = -1) {
 			var cost = wep_cost[wep]*(4-skill_got[5])
 			if wep_cost[wep] == 0
 			{
-				wep_cost[wep] = clamp(round(wep_area[wep] * 1.5),6,40);	
+				cost = clamp(round(wep_area[wep] * 1.5),6,40);	
 			}
 			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 			{
@@ -3257,8 +3258,10 @@ function scrPowers(raceOverwrite = -1) {
 							scrForcePosition60fps();
 							if maxhealth > 0
 							{
-								my_health = max(my_health,other.my_health);
-								armour = max(armour, other.armour);
+								//my_health = max(my_health,other.my_health);
+								//armour = max(armour, other.armour);
+								my_health = other.my_health;
+								armour = other.armour;
 							}
 							alarm[3] = max(alarm[3],2);
 						}
@@ -3692,8 +3695,10 @@ function scrPowers(raceOverwrite = -1) {
 					y = other.y;
 					if maxhealth > 0
 					{
-						my_health = max(my_health,other.my_health);
-						armour = max(armour, other.armour);
+						//my_health = max(my_health,other.my_health);
+						//armour = max(armour, other.armour);
+						my_health = other.my_health;
+						armour = other.armour;
 					}
 					scrForcePosition60fps();
 					alarm[3] = max(alarm[3],2);

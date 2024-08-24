@@ -24,10 +24,12 @@ function HogSpend(){
 		}
 	    with instance_create(x,y,PopupText)
 	    mytext = "-"+string(other.cost*100)+"% RADS";
+		ShopWheel.used = true;
 		return true;
 	}
 	else
 	{
+		ShopWheel.used = true;
 		snd_play(sndUltraEmpty,0.05,true);
 		with instance_create(x,y,PopupText)
 		{

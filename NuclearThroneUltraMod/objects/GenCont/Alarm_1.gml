@@ -173,6 +173,7 @@ if instance_exists(Player)
 			y = SurvivalArenaStarter.y-128;
 			scrForcePosition60fps();
 		}
+		scrForcePosition60fps();
 	}
 	else if Player.subarea == 2 && (Player.area==6 || Player.area == 112)//Labs boss
 	{
@@ -326,4 +327,11 @@ if scrIsGamemode(48) {
 			ammo[1] = totalHealth*0.1;
 		}
 	}	
+}
+if instance_exists(Player) && instance_exists(Crown)
+with Crown
+{
+	x = Player.x;
+	y = Player.y;
+	scrForcePosition60fps();
 }

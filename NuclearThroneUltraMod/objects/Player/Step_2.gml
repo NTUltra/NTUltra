@@ -356,7 +356,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					{
 						moveSpeed = 1;
 						alarm[1] = 60;
-						theColour = c_silver;
+						theColour = c_green;
 						mytext = other.wep_popup[other.wep];
 					}
 				}
@@ -393,40 +393,44 @@ if my_health < prevhealth
 		instance_create(x,y,DropReducer);
 	}
 	//Insakill
-	if !exception && alarm[3] < 1
+	if !exception
 	{
 		with RogueRefund
 		{
 			instance_destroy();
 		}
-		noHit = 0;
-		if scrIsGamemode(32) || ultra_got[109] || UberCont.voidChallengeGoing[5]
+		if alarm[3] < 1
 		{
-			my_health = 0;
-			prevhealth = 0;
-			armour = 0;
-		}
-		else if ultra_got[40] && my_health <= 0 && instance_exists(Ally) && instance_number(Ally) > 1
-		{
-			with instance_nearest(x,y,Ally)
+			noHit = 0;
+			if scrIsGamemode(32) || ultra_got[109] || UberCont.voidChallengeGoing[5]
 			{
 				my_health = 0;
-				with instance_nearest_notme(x,y,Ally)
+				prevhealth = 0;
+				armour = 0;
+			}
+			else if ultra_got[40] && my_health <= 0 && instance_exists(Ally) && instance_number(Ally) > 1
+			{
+				with instance_nearest(x,y,Ally)
 				{
 					my_health = 0;
+					with instance_nearest_notme(x,y,Ally)
+					{
+						my_health = 0;
+					}
 				}
+				my_health = 1;
 			}
-			my_health = 1;
-		}
-		if phoenixrevives > 0
-		{
-			with instance_create(x,y,Flame)
+			if phoenixrevives > 0
 			{
-				motion_add(random(360),4);
-				team = other.team
+				with instance_create(x,y,Flame)
+				{
+					motion_add(random(360),4);
+					team = other.team
+				}
 			}
 		}
 	}
+	
 }
 if skill_got[22]//Stress Sharp teeth part
 {
@@ -796,7 +800,7 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 17;
+			alarm[3] += 19;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
@@ -809,7 +813,7 @@ if(my_health <= 0 && maxhealth > 0)
 		Sleep(50);
 		BackCont.shake += 10;
 		snd_play_2d(sndProtectiveMustache,0,true);
-		alarm[3] += 20;
+		alarm[3] += 21;
 		snd_hurt = sndDamageNegate;
 		scrGiveEuphoriaShield();
 		with PlayerAlarms
@@ -827,6 +831,18 @@ if(my_health <= 0 && maxhealth > 0)
 		x = SkeletonSkull.x;
 		y = SkeletonSkull.y;
 		scrForcePosition60fps();
+		if !place_meeting(x,y,Floor)
+		{
+			var n = instance_nearest(x,y,Floor);
+			if n != noone
+			{
+				var o = 16;
+				if n.object_index == FloorExplo
+					o = 8;
+				x = n.x + o;
+				y = n.y + o;
+			}
+		}
 		with instance_create(x,y,HealFX)
 		{
 			sprite_index = sprHealBigFX;
@@ -931,6 +947,8 @@ if(my_health <= 0 && maxhealth > 0)
 		BackCont.shake += 10;
 		Sleep(50);
 		my_health = 1;
+		scrGiveEuphoriaShield();
+		alarm[3] += 7;
 		var al = 6;//weapon types total
 		var takePercentage = 0.71;
 		if race == 25
@@ -944,7 +962,7 @@ if(my_health <= 0 && maxhealth > 0)
 			}
 		}
 		var startI = 1;
-		if canMeleeAmmo
+		if scrIsCrown(40)
 			startI = 0;
 		for (var i = startI; i < al; i++) {
 			var wasAbove = (ammo[i] > 0);
@@ -978,7 +996,6 @@ if(my_health <= 0 && maxhealth > 0)
 			scrEmpty();	
 		}
 	}
-	
 }
 
 
@@ -1044,60 +1061,63 @@ if rollIframe > 0
 if my_health <= 0 && armour < 1
 {
 	my_health = 0
-	if altUltra && ultra_got[33] && level > 1//PHOENIX secret chicken ultra
+	if altUltra && ultra_got[33] && level > 2//PHOENIX secret chicken ultra
 	{
-		var gottenSkills = [];
-		var si = 0;
-		repeat(maxskill)
+		repeat(2)
 		{
-			if skill_got[si]
+			var gottenSkills = [];
+			var si = 0;
+			repeat(maxskill)
 			{
-				array_push(gottenSkills,si);
+				if skill_got[si]
+				{
+					array_push(gottenSkills,si);
+				}
+				si++;
 			}
-			si++;
-		}
-		//Its possible to have a skillpoint so leveled up but not have a skill to lose yet
-		if array_length(gottenSkills) > 0
-		{
-			var chosenSkillToLose = gottenSkills[irandom(array_length(gottenSkills)-1)]
-			scrLoseSkill(chosenSkillToLose);
-			with instance_create(x,y,PopupText)
+			//Its possible to have a skillpoint so leveled up but not have a skill to lose yet
+			if array_length(gottenSkills) > 0
 			{
-				mytext = "LOST "+other.skill_name[chosenSkillToLose];
-				theColour=c_red;
-			}
-		}
-		else if skillpoints > 0
-		{
-			skillpoints --;
-			level --;
-		}
-		else if array_length(UberCont.skillDeposit) > 0
-		{
-			var al = array_length(UberCont.skillDeposit);
-			var i = 0;
-			repeat(al)
-			{
+				var chosenSkillToLose = gottenSkills[irandom(array_length(gottenSkills)-1)]
+				scrLoseSkill(chosenSkillToLose);
 				with instance_create(x,y,PopupText)
 				{
-					mytext = "LOST "+other.skill_name[UberCont.skillDeposit[i]];
+					mytext = "LOST "+other.skill_name[chosenSkillToLose];
 					theColour=c_red;
 				}
-				i += 1;
 			}
-			UberCont.skillDeposit = [];
-			level -= al;
-		}
-		else
-		{
-			level --;	
+			else if skillpoints > 0
+			{
+				skillpoints --;
+				level --;
+			}
+			else if array_length(UberCont.skillDeposit) > 0
+			{
+				var al = array_length(UberCont.skillDeposit);
+				var i = 0;
+				repeat(al)
+				{
+					with instance_create(x,y,PopupText)
+					{
+						mytext = "LOST "+other.skill_name[UberCont.skillDeposit[i]];
+						theColour=c_red;
+					}
+					i += 1;
+				}
+				UberCont.skillDeposit = [];
+				level -= al;
+			}
+			else
+			{
+				level --;	
+			}
 		}
 		phoenixrevives++;
 		if phoenixrevives > 2
 		{
 			with PlayerAlarms2
 			{
-				alarm[2] = 1;	
+				alarm[2] = 2;	
 			}
 			if phoenixrevives == 5 || phoenixrevives == 12
 				pSpeedBoost += 0.1
@@ -1212,23 +1232,29 @@ if my_health <= 0 && armour < 1
 			Sleep(60)
 		}
 
-		if random(12) < 1{
-		with instance_create(x,y-4,BloodStreak){
-		motion_add(45+random(90),2+random(3))
-		image_angle = direction}}
-
-		if bleed > 100
-		{
-			with instance_create(x,y,BloodStreak){
-			motion_add(random(360),2+random(3))
-			image_angle = direction}
-		}
+		
 		if !instance_exists(LevCont) && !instance_exists(GenCont) && !place_meeting(x,y,Portal) && !instance_exists(SpiralCont) && !outOfCombat
 		{
+			audio_resume_sound(sndChickenHeadlessLoop);
+			if random(12) < 1{
+				with instance_create(x,y-4,BloodStreak){
+				motion_add(45+random(90),2+random(3))
+				image_angle = direction}}
+
+				if bleed > 100
+				{
+					with instance_create(x,y,BloodStreak){
+					motion_add(random(360),2+random(3))
+					image_angle = direction}
+			}
 			if UberCont.normalGameSpeed == 60
 				bleed += 0.5;
 			else
 				bleed += 1;
+		}
+		else
+		{
+			audio_pause_sound(sndChickenHeadlessLoop);	
 		}
 		my_health = 0
 	}
@@ -1290,7 +1316,7 @@ if (!canHeal)
 }
 if alarm[3] > 0
 	snd_hurt = sndDamageNegate;
-if scrIsCrown(29)
+if scrIsCrown(29) && maxhealth > 0
 {
 	var wantHealth = 0
 	if wepmod1 != 0
@@ -1320,6 +1346,44 @@ if scrIsCrown(29)
 		}
 	}
 }
+if maxhealth > 0
+{
+	maxhealth -= abundanceHealth;
+	abundanceHealth = 0;
+	if scrIsCrown(38) && !scrIsCrown(42)
+	{
+		//Abundance
+		if scrIsCrown(40) || wep_type[wep] != 0
+		{
+			if (ammo[wep_type[wep]] >= typ_amax[wep_type[wep]]*0.5)
+			{
+				abundanceHealth = 3;
+			}
+			else
+			{
+				abundanceHealth = -3;	
+			}
+		}
+	}
+	if scrIsCrown(42) && !scrIsCrown(38) && maxhealth > 0
+	{
+		//Scarcity
+		maxhealth -= abundanceHealth;
+		abundanceHealth = 0;
+		if scrIsCrown(40) || wep_type[wep] != 0
+		{
+			if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
+			{
+				abundanceHealth = -3;
+			}
+			else
+			{
+				abundanceHealth = 3;	
+			}
+		}
+	}
+	maxhealth = max(1,maxhealth + abundanceHealth);
+}
 if lockout
 {
 	speed = 0;
@@ -1334,7 +1398,7 @@ if scrIsCrown(41)
 			armour = max(1,maxarmour - 1);
 		}
 	}
-	else if my_health > 0
+	else if my_health > 0 && maxhealth > 0
 	{
 		if my_health > maxhealth - 1
 		{

@@ -130,7 +130,7 @@ function scrCrowns() {
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[20] = "NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY THIRD <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>"
+		crown_text[20] = "NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY THIRD <r>WEAPON CHEST<r> GIVES <w>1<w> <gb>ARMOUR<gb>"
 	else
 		crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY FOURTH <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>"
 	crown_used[20] = 0
@@ -246,28 +246,38 @@ function scrCrowns() {
 	crown_used[37] = 0
 	crown_tips[37] = "haunted"
 	
+	//NEAR MAX AMMO ON PRIMARY
 	crown_name[38] = "[CROWN OF ABUNDANCE]"
-	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS ABOVE <w>30%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <g>ABOVE<g> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
 	crown_used[38] = 0
 	crown_tips[38] = "fuel for days"
 	
+	//BELOW MAX HP
 	crown_name[39] = "[CROWN OF DANGER]"
-	crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REDUCE<g> <y>AMMO<y> <w>COST<w> BY <w>7%<w>#OTHERWISE:#<r>INCREASE<r> <y>AMMO<y> <w>COST<w> BY <w>5%<w>";
+	crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REDUCE<g> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>5%<w>#OTHERWISE:#<r>INCREASE<r> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>15%<w>";
 	//crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REFUND<g> 7% <y>AMMO<y> <w>COST<w> WHEN FIRING#OTHERWISE:#<r>TAKE<r> 5% <y>AMMO<y> WHEN FIRING";
 	crown_used[39] = 0
-	crown_tips[39] = "revitalize"
+	crown_tips[39] = "a wounded animal is at its most dangerous"
 	
+	//HAVE A MELEE WEAPON
 	crown_name[40] = "[CROWN OF A THOUSAND CUTS]"
 	crown_text[40] = "INCREASE <w>MELEE<w> <aq>DEFLECT<aq> DURATION#MELEE CAN <aq>DESTROY<aq> <pi>SQUARES<pi>##IT WILL NOW COST <w>MELEE<w> <y>AMMO<y>#TO <aq>DEFLECT<aq> A PROJECTILE";
 	crown_used[40] = 0
 	crown_tips[40] = "hone your sword"
 	
+	//ONLY IN BASIC ROUTE
 	crown_name[41] = "[CROWN OF MEDIOCRITY]"
-	crown_text[41] = "YOUR <r>HEALTH<r> CANNOT GO BELOW <w>2<w>#UNLESS YOU TAKE A <r>LETHAL<r> HIT#YOUR <r>HEALTH<r> CANNOT REACH#HIGHER THAN <w>1<w> BELOW YOUR <r>MAX HP<r>";
+	crown_text[41] = "YOUR <r>HEALTH<r> CANNOT GO <w>BELOW 2<w>#UNLESS YOU TAKE A <r>LETHAL HIT<r>#YOUR <r>HEALTH<r> CANNOT REACH#<w>HIGHER THAN 1<w> BELOW YOUR <r>MAX HP<r>";
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 		crown_text[41] = "WHEN YOU REACH 2 <gb>ARMOUR<gb>#BECOME <aq>IMMUNE<aq> FOR A SHORT PERIOD#YOUR <gb>ARMOUR<gb> CANNOT REACH#HIGHER THAN <w>1<w> BELOW YOUR <gb>MAX ARMOUR<gb>#YOUR ACTIVE CAN'T KILL YOU";
 	crown_used[41] = 0
 	crown_tips[41] = "a happy medium"
+	
+	//NEAR EMPTY ON PRIMARY
+	crown_name[42] = "[CROWN OF SCARCITY]"
+	crown_text[42] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <r>BELOW<r> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	crown_used[42] = 0
+	crown_tips[42] = "starving"
 	
 	//have nerves of steel or adrenline fuel?
 	/*
@@ -278,7 +288,7 @@ function scrCrowns() {
 	*/
 	
 	crownmax = 23
-	secretcrownmax = 18;
+	secretcrownmax = 20;
 
 
 

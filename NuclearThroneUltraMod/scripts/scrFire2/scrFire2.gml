@@ -3573,12 +3573,12 @@ function scrFire2(hasTailNow) {
 	team = other.team
 	if Player.skill_got[42]
 	{
-		chargetime = -8;
+		chargetime = 1;
 		costtime *= Player.betterTail;
 		rate += 2;
 		if Player.ultra_got[97] && !Player.altUltra
 		{
-			chargetime = -100;
+			chargetime = 1;
 			rate += 2;
 			Player.ammo[type]-=cost
 		}
@@ -3623,11 +3623,11 @@ function scrFire2(hasTailNow) {
 	{motion_add(aimDirection,18)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x + lengthdir_x(3,aimDirection+(4*other.accuracy)),y + lengthdir_y(3,aimDirection+(4*other.accuracy)),HeavyBullet)
+	with instance_create(x + lengthdir_x(3,aimDirection+(4*accuracy)),y + lengthdir_y(3,aimDirection+(4*accuracy)),HeavyBullet)
 	{motion_add(aimDirection+(4*other.accuracy),17)
 	image_angle = direction
 	team = other.team}
-	with instance_create(x + lengthdir_x(3,aimDirection-(4*other.accuracy)),y + lengthdir_y(3,aimDirection-(4*other.accuracy)),HeavyBullet)
+	with instance_create(x + lengthdir_x(3,aimDirection-(4*accuracy)),y + lengthdir_y(3,aimDirection-(4*accuracy)),HeavyBullet)
 	{motion_add(aimDirection-(4*other.accuracy),17)
 	image_angle = direction
 	team = other.team}
@@ -4007,7 +4007,7 @@ function scrFire2(hasTailNow) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -6375,6 +6375,10 @@ function scrFire2(hasTailNow) {
 	
 	//HEALTH DISPENSER
 	case 401:
+		if object_index == Player && alarm[2] > 0
+			ammo[wep_type[401]] -= wep_cost[401];
+		wep_cost[401] += 1;
+		wep_cost_base[401] += 1;
 		var aimDir = aimDirection+(random(20)-10);
 		with instance_create(x+lengthdir_x(8,aimDir),y+lengthdir_y(8,aimDir),HPPickup)
 		{
@@ -7310,7 +7314,7 @@ function scrFire2(hasTailNow) {
 		}
 	break;
 	
-	//ULTRA  BLOOD RIFLE
+	//ULTRA BLOOD RIFLE
 	case 434:
 
 	snd_play_fire(sndHeavyBloodPistol)
@@ -8812,7 +8816,7 @@ function scrFire2(hasTailNow) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,4+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -8822,7 +8826,7 @@ function scrFire2(hasTailNow) {
 		longarms = 0
 	
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,4+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -11996,8 +12000,12 @@ function scrFire2(hasTailNow) {
 	
 	//RADIATION GENERATOR
 	case 587:
+		if object_index == Player && alarm[2] > 0
+			ammo[wep_type[587]] -= wep_cost[587];
 		snd_play_fire(sndRadMod);
 		snd_play_fire(sndUltraGrenade);
+		wep_cost[587] += 1;
+		wep_cost_base[587] += 1;
 		with instance_create(x,y,BigRad)
 		{
 			motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
@@ -13231,7 +13239,10 @@ function scrFire2(hasTailNow) {
 		var xstep = lengthdir_x(len,aimDir+90);
 		var ystep = lengthdir_y(len,aimDir+90);
 		var count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
+		var checkWall = true;
+		if Player.ultra_got[74] && Player.altUltra
+			checkWall = false;
+		while ((!checkWall || !place_meeting(bx,by,Wall)) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,BloodBullet)
@@ -13249,7 +13260,7 @@ function scrFire2(hasTailNow) {
 		bx = x + xstep;
 		by = y + ystep;
 		count = 0;
-		while (!place_meeting(bx,by,Wall) && count < 16 || count < 1)
+		while ((!checkWall || !place_meeting(bx,by,Wall)) && count < 16 || count < 1)
 		{
 			instance_create(bx,by,Dust);
 			with instance_create(bx,by,BloodBullet)
@@ -13547,7 +13558,7 @@ function scrFire2(hasTailNow) {
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -15350,7 +15361,7 @@ function scrFire2(hasTailNow) {
 	{
 		creator = other.id
 		ammo = 2
-		time = 2
+		time = 3
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
@@ -15369,7 +15380,7 @@ function scrFire2(hasTailNow) {
 	{
 		creator = other.id
 		ammo = 4
-		time = 2
+		time = 3
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
@@ -15389,7 +15400,7 @@ function scrFire2(hasTailNow) {
 		creator = other.id
 		projectileSpeed -= 2;
 		ammo = 5
-		time = 2
+		time = 3
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
@@ -16807,7 +16818,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//SUPER BLOOD ROCKET GUN
+	//ocketOCKET GUN
 	case 749:
 	if !skill_got[2]
 	{
@@ -16819,7 +16830,7 @@ function scrFire2(hasTailNow) {
 	{
 		creator = other.id
 		aimOffset = 4* other.accuracy;
-		ammo = 4
+		ammo = 3
 		time = 3
 		team = other.team
 		accuracyRange = 20;
@@ -16828,7 +16839,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,BloodRocketBurst)
 	{
 		creator = other.id
-		ammo = 5
+		ammo = 3
 		time = 2
 		accuracyRange = 10;
 		team = other.team
@@ -16837,7 +16848,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,BloodRocketBurst)
 	{
 		creator = other.id
-		ammo = 4
+		ammo = 3
 		aimOffset = -4 * other.accuracy;
 		time = 3
 		accuracyRange = 20;

@@ -5,15 +5,23 @@ alarm[1] = 1;
 spr_disappear = sprCrystalTorpedoDisappear;
 direction = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 image_angle = direction;
-alarm[0] = 15;
+alarm[0] = 18;
 if instance_exists(Player) && Player.skill_got[5]
-	alarm[0] = 22;
+	alarm[0] = 28;
+if(Player.ultra_got[8])
+{
+	alarm[0] -= 8;
+}
+if(Player.ultra_got[7])
+{
+	alarm[0] -= 5;
+}
 time = 1;
 fadeNumber = 2;
 team = 2;
 maxSpeed = 13;
 speed = maxSpeed;
-dmg = 5;
+dmg = 6;
 gammaGuts = false;
 if instance_exists(Player)
 {
@@ -24,6 +32,10 @@ if instance_exists(Player)
 		dmg = 9;
 		if Player.race == 25
 			dmg = 11;
+	}
+	if Player.ultra_got[6] && !Player.altUltra
+	{
+		maxSpeed += 2;	
 	}
 	if Player.bskin == 2
 	{

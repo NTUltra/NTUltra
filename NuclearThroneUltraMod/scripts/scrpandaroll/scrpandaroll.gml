@@ -30,7 +30,7 @@ function scrPandaRoll(){
 			do {wep = irandom(maxwep-1)+1;dir+=1;
 			if dir >999
 			wep=prevwep;}
-			until ( ( (wep_area[wep] = wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep+1]) || (wep_area[wep] = wep_area[prevwep+2]) )||(dir>1000) )
+			until ( ( (wep_area[wep] == wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep] + 1) )||(dir>1000) )
 		}
 		else if prevwep > 0 && prevwep < array_length(wep_area) {
 			do {wep = irandom(maxwep-1)+1;dir++;

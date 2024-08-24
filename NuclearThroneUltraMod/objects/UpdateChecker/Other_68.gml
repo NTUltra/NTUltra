@@ -68,7 +68,7 @@ if (type == network_type_data) {
 			{
 				var dailyDay = buffer_read(buffer, buffer_u8);
 				canParticipateInGamemode = buffer_read(buffer, buffer_bool);
-				if dailyDay % 1 == 0 {
+				if dailyDay % 2 == 0 {
 					isRace = false;
 					if buffer_get_size(buffer) > 4
 					{
@@ -104,6 +104,7 @@ if (type == network_type_data) {
 					}
 				}
 			}
+			UberCont.tomorrow =  buffer_read(buffer, buffer_u16);
 			network_destroy(serverSocket);
 		break;
 	}

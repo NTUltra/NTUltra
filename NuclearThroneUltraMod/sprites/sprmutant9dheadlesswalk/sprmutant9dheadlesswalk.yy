@@ -28,7 +28,7 @@
   ],
   "name":"sprMutant9DHeadlessWalk",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"ChickenDskin",
     "path":"folders/Sprites/Player/Chicken/ChickenDskin.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":9,
-    "yorigin":7,
+    "yorigin":6,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

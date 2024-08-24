@@ -40,7 +40,26 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 					with instance_create(x,y,SharpTeeth)
 						owner=other.id;
 				}
-			
+				with projectile
+				{
+					if team != 2
+						instance_destroy(id,false);
+				}
+				with EnemyVenom
+				{
+					instance_destroy();	
+				}
+				with BackCont
+				{
+					alarm[1] = 0;
+					alarm[2] = 0;
+					alarm[8] = 0;
+				}
+				with UltraChest
+				{
+					instance_destroy();
+					scrRaddrop(50);
+				}
 				with PandaSleep
 				{
 					event_perform(ev_alarm,0);	
@@ -114,8 +133,8 @@ endgame = 12;//originally 30
 }
 }
 if inverted{
-with other
-inverted=true//take me to the inverted universe
+	with other
+	inverted=true//take me to the inverted universe
 }
 
 

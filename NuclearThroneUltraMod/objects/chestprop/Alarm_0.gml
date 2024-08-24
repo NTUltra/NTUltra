@@ -1,13 +1,14 @@
 /// @description break wall on spawn
-if speed > 1
-	alarm[0] = 2;
+if speed > 1 || instance_exists(SpiralCont) || instance_exists(GenCont)
+	alarm[0] = 5;
 else
 {
-	with instance_position(x,y,Wall)
+	var w = instance_position(x,y,Wall);
+	if w != noone
+		alarm[0] = 2;
+	with w
 	{
 		instance_destroy();
 		instance_create(x,y,FloorExplo);
 	}
-	instance_create(x,y,SmallWallBreak);
-	speed += 1;
 }

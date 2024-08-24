@@ -62,7 +62,7 @@ if instance_exists(Player) && instance_exists(creator)
 				sprite_index=sprVeryHeavySlash;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection*other.accuracy,2+longarms)
+				motion_add(aimDirection,2+longarms)
 				image_angle = direction
 				team = other.team
 			}

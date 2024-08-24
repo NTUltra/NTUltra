@@ -1,2 +1,2 @@
 /// @description Active delay
-alarm[0] = 14;
+alarm[0] = 15;

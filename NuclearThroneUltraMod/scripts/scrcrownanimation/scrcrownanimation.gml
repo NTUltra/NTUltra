@@ -48,6 +48,10 @@ function scrCrownAnimation(takenCrown){
 			{
 				spr_idle = sprCrownFrogIdle
 				spr_walk = sprCrownFrogWalk
+				crown_name[11] = "[CROWN OF FROG]"
+				crown_text[11] = "<g>LEVEL UP!<g>#START IN THE <g>SEWERS<g>"
+				crown_used[11] = 0
+				crown_tips[11] = "quick start"
 				alarm[3] = 90;
 				
 			}
@@ -172,13 +176,22 @@ function scrCrownAnimation(takenCrown){
 			spr_idle = sprCrown37Idle
 			spr_walk = sprCrown37Walk
 		break;
-		case 39://Regeneration
+		case 39://Danger
 			spr_idle = sprCrown38Idle
 			spr_walk = sprCrown38Walk
 		break;
 		case 40://THOUSAND CUTS
 			spr_idle = sprCrown39Idle
 			spr_walk = sprCrown39Walk
+			alarm[7] = 2;
+		break;
+		case 41://Mediocrity
+			spr_idle = sprCrown40Idle
+			spr_walk = sprCrown40Walk
+		break;
+		case 42://Scarcity
+			spr_idle = sprCrown41Idle
+			spr_walk = sprCrown41Walk
 		break;
 	}
 }

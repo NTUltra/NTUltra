@@ -1,4 +1,5 @@
 ///xxx();
+
 // /@description
 ///@param
 function scrEnemyDeathEvent(){
@@ -325,9 +326,13 @@ function scrEnemyDeathEvent(){
 			    {
 				    if race = 9 and bleed < 150
 				    {
-				        if bleed>0{
-				        bleed-=30;
+				        if bleed > 0 {
+							bleed-=30;
 				        }
+						if bleed <= 0
+						{
+							bleed = 1;	
+						}
 				    }
 			    }
 		    }

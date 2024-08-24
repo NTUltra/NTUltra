@@ -3,6 +3,7 @@
 ///@param
 function scrForcePosition60fps(){
 	with FPSHACK {
-		ds_list_add(forcePositions, other.id);	
+		if is_undefined(ds_list_find_value(forcePositions,other.id))
+			ds_list_add(forcePositions, other.id);	
 	}
 }

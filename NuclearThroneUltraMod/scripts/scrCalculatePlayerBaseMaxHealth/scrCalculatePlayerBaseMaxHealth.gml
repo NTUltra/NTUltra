@@ -4,7 +4,7 @@
 function scrCalculatePlayerBaseMaxHealth(){
 	with Player
 	{
-		return maxhealth - isPureHealthBoost - skeletonBonusHealth;
+		return maxhealth - isPureHealthBoost - skeletonBonusHealth - abundanceHealth;
 	}
 	return 8;
 }

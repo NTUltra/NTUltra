@@ -5,7 +5,6 @@ UberCont.useSeed = true;
 UberCont.runScore = [];
 myClientId = -1;
 gotSteam = false;
-debug("START DAILY");
 with UpdateChecker
 {
 	instance_destroy();	

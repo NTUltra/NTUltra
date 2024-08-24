@@ -1,5 +1,5 @@
 raddrop = 0
-maxhealth = 9
+maxhealth = 10
 meleedamage = 0
 mySize = 1
 scrCrownOfPopoRad(4);

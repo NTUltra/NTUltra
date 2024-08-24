@@ -4,8 +4,7 @@ if instance_exists(Player)
 	with Player
 	{
 		maxhealth -= other.maxhp;
-		if my_health > maxhealth
-			my_health = max(my_health-4,maxhealth);
+		my_health = max(my_health-other.maxhp,1);
 		prevhealth = my_health;
 		maxSpeed -= other.maxSpeed;
 	}

@@ -24,7 +24,7 @@ with UberCont
 		random_set_seed(seed+(UberCont.globalMutationsChosen * 3));
 	}
 }
-if Player.getVision
+if Player.getVision && !UberCont.voidChallengeGoing[4]
 {
 	//ROYAL VISION
 	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
@@ -183,7 +183,7 @@ if Player.crownpoints > 0
 					{
 						//Crown of start
 						crown_name[11] = "[CROWN OF FROG]"
-						crown_text[11] = "START IN THE <g>SEWERS<g>"
+						crown_text[11] = "<g>LEVEL UP!<g>#START IN THE <g>SEWERS<g>"
 						crown_used[11] = 0
 						crown_tips[11] = "quick start"
 						sprite_index = sprCrownSelectStart;
@@ -227,10 +227,28 @@ if Player.crownpoints > 0
 				{
 					crown = 40;//CROWN OF THOUSAND CUTS	
 				}
-				else if crown == 19 && (Player.my_health < Player.maxhealth)
+				else if crown == 21 && ((Player.my_health < Player.maxhealth) || (scrIsCrown(39) && UberCont.canMultiCrown && (Player.maxhealth == 1 || Player.my_health > Player.maxhealth)))
 				{
-					crown = 40;//CROWN OF THOUSAND CUTS	
+					crown = 39;//CROWN OF DANGER
 				}
+				else if crown == 17 && (Player.lastarea == 1 || Player.lastarea == 2 || Player.lastarea == 3 || Player.lastarea == 4 || Player.lastarea == 5 || Player.lastarea == 6 || Player.lastarea == 9)
+				{
+					//BASIC ROUTE
+					crown = 41;//CROWN OF MEDIOCRITY
+				}
+				/* This can change every frame
+				else if crown == 18
+				{
+					if (Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*0.75)
+					{
+						crown = 38;//CROWN OF ABUNDANCE
+					}
+					else if (Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*0.25)
+					{
+						crown = 42;//CROWN OF SCARSCITY
+					}
+				}
+				*/
 			}
 		}
 		dir += 1
@@ -258,6 +276,11 @@ if Player.crownpoints > 0
 }
 else
 {
+	if UberCont.voidChallengeGoing[4]
+	{
+		instance_destroy();
+		exit;
+	}
 if Player.hogpoints > 1// && Player.area=105 && Player.subarea=1
 {
 	scrUnlockCSkin(20,"FOR SUCCESSFULLY USING#THE INVESTMENT ULTRA",0);
@@ -504,14 +527,14 @@ else if (Player.skillsChosen>7 || (Player.ultra_got[0] && !Player.altUltra && !P
 	}
 	//Power craving locked out when you dont have inverted areas
 	if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
-		skill_got[30] = 1;
+		Player.skill_got[30] = 1;
 	}
 	if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
-		skill_got[41] = 1;
+		Player.skill_got[41] = 1;
 	}
 	if !Player.skill_got[27] && Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
 	{
-		skill_got[27] = 1;
+		Player.skill_got[27] = 1;
 		preventDoublePatience = true;
 	}
     if scrIsGamemode(32) {
@@ -721,13 +744,13 @@ if array_length(UberCont.skillDeposit) > 0
 }
 //Power craving locked out when you dont have inverted areas
 if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
-	skill_got[30] = 0;
+	Player.skill_got[30] = 0;
 }
 if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
-	skill_got[41] = 0;
+	Player.skill_got[41] = 0;
 }
 if preventDoublePatience
-	skill_got[27] = 0;
+	Player.skill_got[27] = 0;
 if scrIsGamemode(32) || UberCont.voidChallengeGoing[5]{
 	// One hit wonder
 	with Player

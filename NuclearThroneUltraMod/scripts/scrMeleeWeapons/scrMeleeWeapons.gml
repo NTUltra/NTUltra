@@ -1,14 +1,14 @@
 function scrMeleeWeapons(wep) {
 	with Player
 	{
-		if (wep_type[wep] == 0 || wep == 24 || wep == 36 || wep == 53 || wep == 223 || wep == 553
+		if (wep != 0 && (wep_type[wep] == 0 || wep == 24 || wep == 36 || wep == 53 || wep == 223 || wep == 553
 		|| wep==198 || wep==37|| wep==126|| wep==108 || wep==109 || wep == 286 || wep == 301 || wep == 350
 		|| wep==123 || wep == 222|| wep==239 || wep==220 || wep==291 || wep == 332 || wep == 377 || wep == 458 
 		|| wep == 495 || wep == 577 || wep == 588 || wep == 591 || wep == 592 || wep == 593 || wep == 596
 		|| wep == 625 || wep == 481 || wep == 669 || wep == 492 || wep == 603 || wep == 604 || wep == 177
 		|| wep == 674 || wep == 67 || wep == 253 || wep == 254 || wep == 255 || wep == 256 || wep == 479 || wep == 480
 		|| wep == 81 || wep == 605 || wep == 719 || wep == 752
-		) && (string_copy(wep_name[wep],0,8) != "INFINITY" || wep == 526)
+		) && (string_copy(wep_name[wep],0,8) != "INFINITY" || wep == 526))
 		{
 			return true;
 		}

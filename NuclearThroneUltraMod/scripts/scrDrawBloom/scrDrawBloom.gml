@@ -408,9 +408,9 @@ function scrDrawBloom() {
 				var d = max(40,point_distance(x - vx,y - vy,Player.x - vx,Player.y - vy))
 				var ixs = xs;
 				var iys = ys;
-		        if(d < 128)
+		        if(d < 180)
 		        {
-					var a = 0.95 - d*0.007//clamp(32/max(40,d),0.01,0.8);
+					var a = 1 - d*0.007//clamp(32/max(40,d),0.01,0.8);
 					if d == 40
 					{
 						a += 0.1;

@@ -285,7 +285,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if bskin == 1 || (other.isAlternative && bskin != 1)
+			if (other.isAlternative)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				//Secret B skin ultra
@@ -305,7 +305,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
-			if bskin == 2 || (other.isAlternative && bskin != 2)
+			if (other.isAlternative)
 			{
 				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 				with Player {
@@ -989,6 +989,7 @@ if (selected && visible &&
 	    ultimategamble=2;
 		with Player
 		{
+			hasUltimateGamble = true;
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			ultra_name[76] = "THE ULTIMATE GAMBLE"
 		    ultra_text[76] = "50% CHANCE TO <r>DIE<r> OR TO GET#TWO RANDOM ULTRA <g>MUTATIONS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"

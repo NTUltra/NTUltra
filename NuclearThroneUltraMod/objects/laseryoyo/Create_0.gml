@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+alarm[2] = 45;
 alarm[0] = 5;
 dmg -= 1;
 snd = sndLaser;

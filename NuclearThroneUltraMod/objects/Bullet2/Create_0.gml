@@ -24,7 +24,6 @@ if instance_exists(Player)
 			alarm[1]+=2;
 		}
 	}
-
 }
 
 typ = 1

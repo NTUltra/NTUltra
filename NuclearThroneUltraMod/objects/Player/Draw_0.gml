@@ -1,5 +1,10 @@
 if !canDrawMe
 	exit;
+var originalRace = race;
+if ultra_got[50] && altUltra
+{
+	race = fakeRace;
+}
 var yy = y;
 if hammerheadDig > 0
 {
@@ -369,3 +374,4 @@ bwkick += 1
 if nearWall
 	draw_sprite(sprHammerHeadNear,wave,x,yy-16);
 	
+race = originalRace;

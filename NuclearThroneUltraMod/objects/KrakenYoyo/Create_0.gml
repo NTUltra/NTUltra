@@ -4,3 +4,4 @@
 event_inherited();
 
 alarm[0] = 5;
+alarm[2] = 45;

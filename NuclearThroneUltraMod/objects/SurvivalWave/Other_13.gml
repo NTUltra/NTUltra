@@ -6,6 +6,7 @@ if instance_exists(SurvivalArenaStarter)
 	centerY = SurvivalArenaStarter.y;
 	x = centerX;
 	y = centerY;
+	scrForcePosition60fps();
 }
 if instance_exists(Player)
 {

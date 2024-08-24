@@ -8,6 +8,10 @@ with other
 	}
 	else if !instance_exists(PlayerInFakeDeath)
 	{
+		with CrystalShield
+			instance_destroy();
+		with SheepStorm
+			instance_destroy();
 		hitBy = other.sprite_index;
 		with Player
 		{

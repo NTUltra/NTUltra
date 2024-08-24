@@ -331,8 +331,6 @@ function scrShadows() {
 	with PlayerInEnding
 	{
 		var py = y;
-		if hammerheadDig > 0
-			py -= 2;
 		if visible = 1
 		{
 			if race == 14

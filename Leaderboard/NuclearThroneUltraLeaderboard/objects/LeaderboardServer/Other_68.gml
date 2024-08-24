@@ -46,7 +46,7 @@ if (type == network_type_data) {
 			show_debug_message("participation day:");
 			show_debug_message(dailyDay);
 			buffer_write(sendBuffer,buffer_u8,dailyDay);
-			if dailyDay % 1 == 0
+			if dailyDay % 2 == 0
 			{
 				show_debug_message("This is agm!");
 				//Daily gamemode
@@ -58,6 +58,7 @@ if (type == network_type_data) {
 				show_debug_message("This is a race");
 				buffer_write(sendBuffer,buffer_bool,true);	
 			}
+			buffer_write(sendBuffer,buffer_u16,tomorrow);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 		break;
 		case NETDATA.STARTDAILY:
@@ -223,8 +224,8 @@ if (type == network_type_data) {
 			{
 				show_debug_message("WRONG SCORE DETECTED");
 				show_debug_message(string(newScore));
-				log += "\nWRONG SCORE DETECTED";
-				log += "\nstring(newScore)\n";
+				//log += "\nWRONG SCORE DETECTED";
+				//log += "\nstring(newScore)\n";
 				exit;
 			}
 			var scoreString = "";

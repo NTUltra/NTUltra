@@ -17,38 +17,49 @@ with Player
 		BackCont.shake += 10
 		if t == 5
 		{
-			wep_type[wep] = 1;
-			wep_cost[wep] *= 4.6363636363636363636363636363636;
-			BackCont.viewx2 += lengthdir_x(20,180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(20,180)*UberCont.opt_shake
-			with Player
+			if scrIsCrown(40)
 			{
-				repeat(4)
+				wep_type[wep] = 0;
+				if !scrIsAllAmmoTypes(wep)
 				{
-					with instance_create(x,y,Smoke)
-					{
-						motion_add(180 + random_range(30,-30),2);	
-					}
+					wep_cost_base[wep] /= 1.6666666666666666666666666666667;
+					debug(wep_cost_base[wep]);
+				}
+			}
+			else
+			{
+				wep_type[wep] = 1;
+				if !scrIsAllAmmoTypes(wep)
+					wep_cost_base[wep] *= 4.6363636363636363636363636363636;
+			}
+			BackCont.viewx2 += lengthdir_x(40,180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(40,180)*UberCont.opt_shake
+			repeat(4)
+			{
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(180 + random_range(30,-30),2);	
 				}
 			}
 		}
 		else
 		{
-			if t == 1
+			if t == 0 && !scrIsAllAmmoTypes(wep)
 			{
-				wep_cost[wep] /= 4.6363636363636363636363636363636;
+				wep_cost_base[wep] *= 7.7272727272727272727272727272727;
+			}
+			if t == 1 && !scrIsAllAmmoTypes(wep)
+			{
+				wep_cost_base[wep] /= 4.6363636363636363636363636363636;
 			}
 			wep_type[wep] += 1;
-			BackCont.viewx2 += lengthdir_x(20,0)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(20,0)*UberCont.opt_shake
-			with Player
+			BackCont.viewx2 += lengthdir_x(40,0)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(40,0)*UberCont.opt_shake
+			repeat(4)
 			{
-				repeat(4)
+				with instance_create(x,y,Smoke)
 				{
-					with instance_create(x,y,Smoke)
-					{
-						motion_add(random_range(30,-30),2);	
-					}
+					motion_add(random_range(30,-30),2);	
 				}
 			}
 		}

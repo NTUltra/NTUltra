@@ -3,16 +3,15 @@ if (audio_emitter_exists(emitter))
 	audio_emitter_position(emitter,x,y,depth);
 if instance_exists(Player)
 {
-	var lerpp = lp;
-	if alarm[4] > 0
-		lerpp = 1;
-	x += ((Player.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
-	y += ((Player.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
-	hspeed = x - xprevious;
-	vspeed = y - yprevious;
-	
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 	{
+		var lerpp = lp;
+		if alarm[4] > 0
+			lerpp = 1;
+		x += ((Player.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
+		y += ((Player.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
+		hspeed = x - xprevious;
+		vspeed = y - yprevious;
 		angle += rotationSpeed;
 		if (UberCont.normalGameSpeed == 60)
 		{

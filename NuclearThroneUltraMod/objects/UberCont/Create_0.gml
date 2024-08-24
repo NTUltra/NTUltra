@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "31.BETA"
-subUpdateVersion = ".25";
+subUpdateVersion = ".27";
 notUpdated = "";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -58,6 +58,7 @@ lastwishused=false;
 kills = 0;
 hard = 0;
 
+tomorrow = 0;
 todaysSeed = -1;
 gunGameSeed = todaysSeed;
 useRaceActive = 1;
@@ -179,6 +180,9 @@ canPickFrogCrown = true;
 hasTakenCrownOfLife = false;
 hasTakenCrownOfProtection = false;
 hasTakenCrownOfStability = false;
+hasTakenCrownOfMediocrity = false;
+hasTakenCrownOfAbundance = false;
+hasTakenCrownOfScarcity = false;
 loadedLoops = 0;
 loadedKills = 0;
 encrypted_run_data = {}

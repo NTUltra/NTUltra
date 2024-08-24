@@ -243,7 +243,7 @@ function scrDrawHUD() {
 		}
 	}
 	//SKELETON TB
-	if dataRef.race == 19 && dataRef.skill_got[5] {
+	if dataRef.race == 19 && dataRef.skill_got[5] && !(dataRef.ultra_got[74] && dataRef.altUltra) {
 		//skeletonGambleBongas
 		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,vx+armourX+115,vy+11)	
 	}
@@ -443,14 +443,18 @@ function scrDrawHUD() {
 	//ULTRA ICON
 	dir=0;
 	dix=0;
+	
 	var totalLives = array_length(dataRef.livesRegain);
-	if totalLives > 0
+	if !(dataRef.ultra_got[76] && dataRef.hasUltimateGamble)
 	{
-	    repeat(totalLives)
-	    {
-			dix++;
-			draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],vx+__view_get( e__VW.WView, 0 )-16*dix,vy+36,1,1,0,c_white,1);
-	    }
+		if totalLives > 0
+		{
+		    repeat(totalLives)
+		    {
+				dix++;
+				draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],vx+__view_get( e__VW.WView, 0 )-16*dix,vy+36,1,1,0,c_white,1);
+		    }
+		}
 	}
 	if (dataRef.lastWishPrevent)
 	{
@@ -609,7 +613,7 @@ function scrDrawHUD() {
 			{
 				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
 			}
-			else if dir == 76 && (dataRef.altUltra || dataRef.ultimategamble) && dataRef.race == 19
+			else if dir == 76 && (dataRef.altUltra || dataRef.hasUltimateGamble) && dataRef.race == 19
 			{
 				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
 			}
@@ -1474,20 +1478,22 @@ function scrDrawHUD() {
 		img = 3;
 	draw_sprite(sprEnergyIconBG,img,vx+42,vy+ammoheight)
 	draw_sprite(sprEnergyIcon,clamp(7-ceil((dataRef.ammo[5]/dataRef.typ_amax[5])*7),-1,7)+1,vx+42,vy+ammoheight)
-	
-	img = 0
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 0 && dataRef.wep_type[dataRef.bwep] != 0)
+	if (canMeleeAmmo)
 	{
-		img = 3
+		img = 0
+		if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 0 && dataRef.wep_type[dataRef.bwep] != 0)
+		{
+			img = 3
+		}
+		else if dataRef.wep_type[dataRef.wep] = 0 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 0)
+		{img = 2}
+		else if dataRef.wep_type[dataRef.bwep] = 0
+		{img = 1}
+		if dataRef.ammo[0] < 0
+			img = 3;
+		draw_sprite(sprMeleeIconBG,img,vx+52,vy+ammoheight)
+		draw_sprite(sprMeleeIcon,clamp(7-ceil((dataRef.ammo[0]/dataRef.typ_amax[0])*7),-1,7)+1,vx+52,vy+ammoheight)
 	}
-	else if dataRef.wep_type[dataRef.wep] = 0 or (dataRef.race = 7 and dataRef.wep_type[dataRef.bwep] = 0)
-	{img = 2}
-	else if dataRef.wep_type[dataRef.bwep] = 0
-	{img = 1}
-	if dataRef.ammo[0] < 0
-		img = 3;
-	draw_sprite(sprMeleeIconBG,img,vx+52,vy+ammoheight)
-	draw_sprite(sprMeleeIcon,clamp(7-ceil((dataRef.ammo[0]/dataRef.typ_amax[0])*7),-1,7)+1,vx+52,vy+ammoheight)
 
 	//LOW AMMO WARNING
 	if ((dataRef.wep_type[dataRef.wep] > 0 || canMeleeAmmo) && dataRef.ammo[dataRef.wep_type[dataRef.wep]] <= dataRef.typ_ammo[dataRef.wep_type[dataRef.wep]] and sin(wave) > 0 and dataRef.drawempty > 0)
@@ -1574,7 +1580,7 @@ function scrDrawHUD() {
 					var xx = x-ox
 					var yy = y-oy;
 					draw_sprite(sprEPickup,UberCont.opt_gamepad,xx,yy-7)
-					if type = 0{
+					if type = 0 && canMeleeAmmo{
 					draw_sprite(sprMeleeIconBG,2,xx+7,yy-21)
 					draw_sprite(sprMeleeIcon,clamp(7-ceil((Player.ammo[type]/Player.typ_amax[type])*7),-1,7)+1,xx+7,yy-21)}
 					if type = 1{
@@ -2183,14 +2189,17 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player)
 			{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+				var txt = name;
+				if instance_exists(WantBoss) || instance_exists(JungleBoss) || instance_exists(BecomeJungleBoss) || instance_exists(LilHunter) || instance_exists(LilHunterFly) || instance_exists(InvertedLilHunter) || instance_exists(InvertedLilHunterFly)
+					txt = "DEFEAT BOSS FIRST";
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 
-			draw_set_color(c_black)
-			draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+				draw_set_color(c_black)
+				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(txt)))
+				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(txt)))
+				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(txt)))
+				draw_set_color(c_white)
+				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(txt)))
 			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

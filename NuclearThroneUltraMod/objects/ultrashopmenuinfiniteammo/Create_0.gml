@@ -5,6 +5,6 @@ image_speed=0;
 drawx = x
 drawy = y
 
-cost= 0.35;//0.25;
+cost= 0.4;//0.25;
 cost*=ShopWheel.discount; event_inherited();
 txt = "TEMPORARY INFINITE AMMO#RADS: "+string(round(cost*100))+"%";

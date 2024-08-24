@@ -14,7 +14,7 @@ if (canExplode && (!instance_exists(Player) || !Player.outOfCombat))
 			dmg = other.dmg;
 			with myExplosionMask
 			{
-				dmg = other.dmg;	
+				dmg = min(3,ceil(other.dmg * 0.5));
 			}
 			direction = other.direction;	
 		}
@@ -27,7 +27,7 @@ if (canExplode && (!instance_exists(Player) || !Player.outOfCombat))
 			dmg = other.dmg;
 			with myExplosionMask
 			{
-				dmg = other.dmg;	
+				dmg = min(3,ceil(other.dmg * 0.5));
 			}
 			direction = other.direction;	
 		}
@@ -40,7 +40,7 @@ if (canExplode && (!instance_exists(Player) || !Player.outOfCombat))
 			dmg = other.dmg;
 			with myExplosionMask
 			{
-				dmg = other.dmg;	
+				dmg = min(3,ceil(other.dmg * 0.5));
 			}
 			direction = other.direction;	
 		}

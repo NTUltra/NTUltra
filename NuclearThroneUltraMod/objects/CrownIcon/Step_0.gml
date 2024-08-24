@@ -18,6 +18,22 @@ if (KeyCont.key_spec[p] == 1 && !instance_exists(UnlockingSecondRow) && (crown =
 	}
 	
 }
+if crown == 18 || crown == 38 || crown == 42
+{
+	if (Player.ammo[Player.wep_type[Player.wep]] >= Player.typ_amax[Player.wep_type[Player.wep]] * 0.9)
+	{
+		crown = 38;//CROWN OF ABUNDANCE
+	}
+	else if (Player.ammo[Player.wep_type[Player.wep]] <= max(Player.typ_amax[Player.wep_type[Player.wep]] * 0.1,Player.wep_cost[Player.wep]))
+	{
+		crown = 42;//CROWN OF SCARSCITY
+	}
+	else
+	{
+		crown = 18;//Crown of greed
+	}
+	image_index = crown;
+}
 if  KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset)
 {
 	KeyCont.key_fire[p] = 2;
@@ -152,6 +168,12 @@ if crown == 2 && !canReAdd
 }
 if crown == 36
 	UberCont.hasTakenCrownOfStability = true;
+if crown == 41
+	UberCont.hasTakenCrownOfMediocrity = true;
+if crown == 38
+	UberCont.hasTakenCrownOfAbundance = true;
+if crown == 42
+	UberCont.hasTakenCrownOfScarcity = true;
 if crown == 40
 {
 	with Player
@@ -387,7 +409,8 @@ if crown == 11
 		//FROG
 		with Player
 		{
-			hard += 1;
+			hard += 2;
+			rad = max(rad,GetPlayerMaxRad()) + 1;
 			if area == 100
 				lastarea = 2;
 			else
