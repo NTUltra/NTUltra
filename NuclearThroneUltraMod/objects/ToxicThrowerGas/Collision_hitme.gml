@@ -48,7 +48,7 @@ else if image_xscale>0.22 && alarm[11] < 1
 		{
 			if object_index == Player && race == 23 && (ultra_got[92] && !altUltra)
 			{
-				if my_health < maxhealth && !outOfCombat
+				if my_health < maxhealth + 2 && !outOfCombat
 				{
 					var n = instance_nearest(x,y,enemy)
 					if  n != noone && point_distance(x,y,n.x,n.y) < 250 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))

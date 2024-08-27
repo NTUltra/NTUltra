@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-snd = sndMiniRocketFly;
-dmg = 8;
+
+dmg = 1;

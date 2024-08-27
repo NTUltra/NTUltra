@@ -1170,10 +1170,10 @@ function scrWeapons() {
 	wep_name[104] = "HEAVY REVOLVER"
 	wep_type[104] = 1
 	wep_auto[104] = 0
-	wep_load[104] = 5
+	wep_load[104] = 6
 	wep_cost[104] = 2
 	wep_sprt[104] = sprHeavyRevolver
-	wep_area[104] = 7
+	wep_area[104] = 6
 	wep_text[104] = "heavy bullets"
 	wep_swap[104] = sndSwapPistol
 	wep_rad[104] = 0;
@@ -8915,7 +8915,7 @@ function scrWeapons() {
 	wep_load[796] = 30
 	wep_cost[796] = 3
 	wep_sprt[796] = sprMagneticCrossbow
-	wep_area[796] = 5
+	wep_area[796] = 6
 	wep_text[796] = "seeks out enemies like crazy"
 	wep_swap[796] = sndSwapBow
 	wep_rad[796] = 0;

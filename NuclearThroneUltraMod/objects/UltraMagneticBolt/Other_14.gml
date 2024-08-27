@@ -12,7 +12,7 @@ if wallsdestroyed > 5
 {
 	with hitme
 	{
-		if team != other.team &&
+		if team != other.team && team != 0 &&
 		my_health > 0 && other.my_health < pierceDmg &&
 		!array_contains(other.hitEntities,id)// &&
 		//!collision_line(x,y,other.x,other.y,Wall,false,false)

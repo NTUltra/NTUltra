@@ -1,28 +1,35 @@
 /// @description Switch to return
-if instance_exists(Player) && Player.altUltra
+if instance_exists(Player)
 {
-	if (Player.ultra_got[106])
+	if (Player.altUltra)
 	{
-		var am = 8;
-		var angStep = 180/8;
-		var ang = image_angle - angStep * (am*0.5)
-		repeat(am)
+		if (Player.ultra_got[106])
 		{
-			with instance_create(x,y,Flame)
+			var am = 8;
+			var angStep = 180/8;
+			var ang = image_angle - angStep * (am*0.5)
+			repeat(am)
 			{
-				motion_add(ang,5);
+				with instance_create(x,y,Flame)
+				{
+					motion_add(ang,5);
+				}
+				ang += angStep;
 			}
-			ang += angStep;
+		}
+		if (Player.ultra_got[107])
+		{
+			snd_play(sndIDPDNadeExplo,0.1,true);
+			var d = point_direction(creator.x,creator.y,touchpointX,touchpointY);
+			with instance_create(x+lengthdir_x(24,d),y+lengthdir_y(24,d),RogueExplosion) {
+				dmg -= 1;
+				sprite_index=sprRogueExplosion;
+			}
 		}
 	}
-	else if (Player.ultra_got[107])
+	else if Player.ultra_got[107] && !place_meeting(x,y,EuphoriaBlock)
 	{
-		snd_play(sndIDPDNadeExplo,0.1,true);
-		var d = point_direction(creator.x,creator.y,touchpointX,touchpointY);
-		with instance_create(x+lengthdir_x(24,d),y+lengthdir_y(24,d),RogueExplosion) {
-			dmg -= 1;
-			sprite_index=sprRogueExplosion;
-		}
+		instance_create(x,y,EuphoriaBlock);
 	}
 }
 if loseTarget

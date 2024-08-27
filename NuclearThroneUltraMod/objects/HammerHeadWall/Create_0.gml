@@ -11,7 +11,7 @@ topindex = irandom(sprite_get_number(topspr) - 1);
 image_xscale = choose(1,-1);
 //HANDS VARIABLES
 team = 0;
-spr_hurt = sprHammerHeadWallResource;
+spr_hurt = false;
 mySize = 1;
 my_health = 1;
 meleedamage = 0;

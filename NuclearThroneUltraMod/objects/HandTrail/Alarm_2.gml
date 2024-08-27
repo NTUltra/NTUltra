@@ -9,5 +9,5 @@ else if alarm[3] < 1
 {
 	image_xscale = 1;
 	image_yscale = image_xscale;
-	alarm[3] = 60;
+	alarm[3] = 75;
 }

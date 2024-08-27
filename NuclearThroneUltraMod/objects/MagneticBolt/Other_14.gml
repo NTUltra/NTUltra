@@ -10,10 +10,10 @@ else
 BackCont.shake += 1;
 with hitme
 {
-	if team != other.team &&
-	my_health > 0 && other.my_health < pierceDmg &&
-	!array_contains(other.hitEntities,id) &&
-	!collision_line(x,y,other.x,other.y,Wall,false,false)
+	if team != other.team && team != 0 &&
+		my_health > 0 && other.my_health < pierceDmg &&
+		!array_contains(other.hitEntities,id) &&
+		!collision_line(x,y,other.x,other.y,Wall,false,false)
 	{
 		var newDis = point_distance(x,y,other.x,other.y);
 		if (newDis < dis)

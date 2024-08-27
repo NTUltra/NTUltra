@@ -1,5 +1,5 @@
 raddrop = 30
-maxhealth = 500
+maxhealth = 550
 mySize = 3
 loops = GetPlayerLoops();
 if loops > 0

@@ -4,6 +4,12 @@ if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
+	if wasBehindWall
+	{
+		alarm[1] += 10;
+		wasBehindWall = false;
+		exit;
+	}
 if point_distance(target.x,target.y,x,y) > 15
 {
 if random(3) < 1 && point_distance(target.x,target.y,x,y) < 280
@@ -56,6 +62,7 @@ right = 1
 }
 else if instance_number(enemy) < 10
 {
+	wasBehindWall = true;
 	var t = target;
 	if instance_exists(Player)
 	{
@@ -72,6 +79,7 @@ else if instance_number(enemy) < 10
 } 
 else if random(3) < 1
 {
+	wasBehindWall = true;
 motion_add(random(360),0.4)
 walk = 20+random(10)
 alarm[1] = walk+10+random(30)
@@ -83,21 +91,24 @@ right = -1
 }
 else if instance_number(enemy)<5 && random(4)<1
 {
+	wasBehindWall = true;
 scrInvertedRavenLift()
 with instance_furthest(x,y,InvertedRaven)
 scrInvertedRavenLift()
 }
 else if (my_health < maxhealth or random(50) < 1) and random(4) < 1
 {
+	wasBehindWall = true;
 scrInvertedRavenLift()
 with instance_furthest(x,y,InvertedRaven)
 scrInvertedRavenLift()
 }
 else if random(20)<1
 {
+	wasBehindWall = true;
 //FIRE
-alarm[2] = 1
-ammo = 6
+alarm[2] = 5
+ammo = 4
 gunangle = point_direction(x,y,target.x,target.y)
 alarm[1] = 20+random(10)
 }

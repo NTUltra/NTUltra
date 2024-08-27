@@ -2,7 +2,6 @@
 // /@description
 ///@param
 function scrChooseGamemodesWeekly(){
-	return [[49,0,0],[]];
 	var gamemode = [irandom_range(1,60),0,0];//41
 	//Manual gamemode injection here
 	var option = [];

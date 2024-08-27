@@ -5,6 +5,12 @@ if target != noone && instance_exists(target)
 {
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
+		if wasBehindWall
+		{
+			alarm[1] += 10;
+			wasBehindWall = false;
+			exit;
+		}
 		if point_distance(target.x,target.y,x,y) > minRange
 		{
 			if random(4) < 1 && point_distance(target.x,target.y,x,y) < maxRange
@@ -52,6 +58,7 @@ if target != noone && instance_exists(target)
 	}
 	else if instance_number(enemy) < 10
 	{
+		wasBehindWall = true;
 		var t = target;
 		if instance_exists(Player)
 		{
@@ -68,6 +75,7 @@ if target != noone && instance_exists(target)
 	} 
 	else if random(3) < 1
 	{
+		wasBehindWall = true;
 		motion_add(random(360),0.4)
 		walk = 20+random(10)
 		alarm[1] = walk+10+random(30)
@@ -79,12 +87,14 @@ if target != noone && instance_exists(target)
 	}
 	else if instance_number(enemy)<5 && random(4)<1
 	{
+		wasBehindWall = true;
 		scrRavenLift()
 		with instance_furthest(x,y,Raven)
 			scrRavenLift()
 	}
 	else if (my_health < maxhealth or random(50) < 1) and random(4) < 1
 	{
+		wasBehindWall = true;
 		scrRavenLift()
 		with instance_furthest(x,y,Raven)
 			scrRavenLift()

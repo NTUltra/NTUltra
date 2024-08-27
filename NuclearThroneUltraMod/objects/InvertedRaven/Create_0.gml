@@ -29,3 +29,4 @@ nofly = 30
 targetx = x;
 targety = y;
 ravenFly = InvertedRavenFly;
+wasBehindWall = false;

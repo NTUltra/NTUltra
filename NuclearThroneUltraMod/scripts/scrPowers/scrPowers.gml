@@ -2474,7 +2474,7 @@ function scrPowers(raceOverwrite = -1) {
 		}
 
 		//HANDS
-		if race == 27 && (!instance_exists(Hand) || ((ultra_got[107] && altUltra) && instance_exists(Hand) && (instance_number(Hand) < 2 || (scrIsInInvertedArea() && instance_number(Hand) < 3))))//Hands
+		if race == 27 && (!instance_exists(Hand) || ((ultra_got[107] && !altUltra) && instance_exists(Hand) && (instance_number(Hand) < 3 || (scrIsInInvertedArea() && instance_number(Hand) < 4))))//Hands
 		{
 			var targetPickup = false;
 			var grabRange = 48;//same as hunter mark
@@ -2487,6 +2487,16 @@ function scrPowers(raceOverwrite = -1) {
 			var grabbedEnemy = false;
 			var slappedProjectile = false;
 			var itemGrab = false;
+			var listOfHandTargets = [];
+			var h = 0;
+			if instance_number(Hand) > 1
+			{
+				with Hand
+				{
+					listOfHandTargets[h] = originalTarget;
+					h += 1;
+				}
+			}
 			//Ultra target projectiles
 			if ultra_got[107] && !altUltra
 			{
@@ -2496,7 +2506,7 @@ function scrPowers(raceOverwrite = -1) {
 					if tar.team != other.team
 					{
 						d0 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-						if d0 < grabRange
+						if d0 < grabRange && !array_contains(listOfHandTargets,tar)
 						{
 							resulttar = tar;
 							slappedProjectile = true;
@@ -2509,7 +2519,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,chestprop);
 				d1 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y)
-				if d1 < grabRange && d1 < d0
+				if d1 < grabRange && d1 < d0  && !array_contains(listOfHandTargets,tar)
 				{
 					resulttar = tar;
 					slappedProjectile = false;
@@ -2520,7 +2530,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,RadChest);
 				d2 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) 
-				if d2 < grabRange && d2 < d1 && d2 < d0
+				if d2 < grabRange && d2 < d1 && d2 < d0 && !array_contains(listOfHandTargets,tar)
 				{
 					resulttar = tar;
 					slappedProjectile = false;
@@ -2532,7 +2542,7 @@ function scrPowers(raceOverwrite = -1) {
 				tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 				d3 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 				if ((tar.team != 0  && tar.team != team && tar.my_health > 0 || (skill_got[5] && (tar.object_index == IDPDVan || tar.object_index == IDPDVanVertical)))
-				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0)
+				&& tar.team != team && d3 < grabRange && d3 < d2 && d3 < d1 && d3 < d0 && !array_contains(listOfHandTargets,tar))
 				{
 					grabbedEnemy = true;
 					resulttar = tar;
@@ -2546,7 +2556,7 @@ function scrPowers(raceOverwrite = -1) {
 				if instance_exists(WepPickup)
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,WepPickup);
-					if tar != noone && tar.visible
+					if tar != noone && tar.visible && !array_contains(listOfHandTargets,tar)
 					{
 						var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 						if (d4 < grabRange)
@@ -2564,7 +2574,7 @@ function scrPowers(raceOverwrite = -1) {
 				if instance_exists(HammerHeadWall)
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,HammerHeadWall);
-					if tar != noone && tar.visible
+					if tar != noone && tar.visible && !array_contains(listOfHandTargets,tar)
 					{
 						var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
 						if (d4 < grabRange)
@@ -2582,7 +2592,7 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,AmmoHPPickup);
 					var d4 = point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y);
-					if (d4 < grabRange)
+					if (d4 < grabRange && !array_contains(listOfHandTargets,tar))
 					{
 						resulttar = tar;
 						targetPickup = true;
@@ -2643,6 +2653,7 @@ function scrPowers(raceOverwrite = -1) {
 					team = other.team;
 					creator = other.id;
 					target = resulttar;
+					originalTarget = resulttar;
 					lerpDistance = point_distance(x,y,target.x,target.y);
 					if other.ultra_got[108]
 					{

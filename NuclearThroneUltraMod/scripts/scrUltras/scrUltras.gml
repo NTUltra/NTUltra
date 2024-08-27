@@ -106,7 +106,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 4 && Player.altUltra)
 		{
 			ultra_name[13] = "DEATH STARE"
-			ultra_text[13] = "LOOKING AT ENEMIES SLOWLY KILLS THEM#ENEMIES ARE <w>SCARED<w> OF YOU"
+			ultra_text[13] = "LOOKING AT ENEMIES SLOWLY <r>KILLS<r> THEM#ENEMIES ARE <w>SCARED<w> OF YOU"
 			ultra_tips[13] = "the face of death"
 		}
     
@@ -311,7 +311,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 
 	ultra_name[36] = "VANISH"
-	ultra_text[36] = "WHEN IN <w>SLOW MOTION<w>#YOU <w>VANISH<w> AND DROP A <p>DECOY<p>#WHEN <w>VANISHED<w> ENEMIES WON'T TARGET YOU##THE <p>DECOY<p> <aq>DEFLECTS<aq> <r>ENEMY<r> PROJECTILES!"
+	ultra_text[36] = "WHEN IN <w>SLOW MOTION<w>#YOU <w>VANISH<w> AND DROP A <p>DECOY<p>#WHEN <w>VANISHED<w> ENEMIES WON'T TARGET YOU##THE <p>DECOY<p> <aq>DEFLECTS<aq> ALL <r>ENEMY<r> PROJECTILES!"
 	ultra_tips[36] = "stealthy"
 
 	    //REBEL 
@@ -707,7 +707,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[91] = "I am the mother now"
 	
 	ultra_name[92] = "POTENCY"
-	ultra_text[92] = "NORMAL <w>CONTROLS<w>##WHILE IN COMBAT#SLOWLY CONSUME <g>GAS<g> TO <r>HEAL<r>"
+	ultra_text[92] = "NORMAL <w>CONTROLS<w>##WHILE IN COMBAT#SLOWLY CONSUME <g>GAS<g> TO <r>HEAL<r>#CAN <r>OVERHEAL<r> UP TO <w>2<w> ABOVE <r>MAX HP<r>"
 	ultra_tips[92] = "you can gas while moving"
 
 		if altOverride || (instance_exists(Player) && Player.race == 23 && Player.altUltra) {
@@ -813,11 +813,11 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		//Secret B skin ultra
 		ultra_name[106] = "HOT HANDS!"
 		ultra_text[106] = "<r>FIERY<r> HANDS#MORE <r>FIRE<r> DAMAGE#HOMING <r>FIRE<r>#EVEN MORE <r>FIRE<r> DAMAGE#WHILE IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR <w>4<w> <r>HP<r>"
-		ultra_tips[106] = "secret b-skin ultra mutation"
+		ultra_tips[106] = "cooking hands"
 	}
 	
 	ultra_name[107] = "MANY HANDS"
-	ultra_text[107] = "CAN HAVE <w>TWO HANDS<w> OUT AT A TIME#PUNCH PROJECTILES OUT OF EXISTENCE#YOU CAN HAVE THREE HANDS WHILE#IN AN <w>INVERTED AREA<w>"
+	ultra_text[107] = "CAN HAVE <w>TWO HANDS<w> OUT AT A TIME#PUNCH PROJECTILES OUT OF EXISTENCE#YOU CAN HAVE <w>THREE HANDS<w> WHILE#IN AN <w>INVERTED AREA<w>"
 	ultra_tips[107] = "consecutive normal punches"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 27 && Player.altUltra)
@@ -825,11 +825,11 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		//Secret C skin ultra
 		ultra_name[107] = "BOOM HANDS!"
 		ultra_text[107] = "<w>EXPLOSIVE<w> HANDS#HAND IS SLOWER#NORMAL HAND SPEED IN <w>INVERTED AREAS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR <w>4<w> <r>HP<r>"
-		ultra_tips[107] = "secret c-skin ultra mutation"
+		ultra_tips[107] = "everything you touch just fucking explodes"
 	}
     
 	ultra_name[108] = "DELICATE HANDS"
-	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#<r>RADS<r> & <w>PICKUPS<w>##HAND LEAVES A TRAIL#THAT SPEEDS YOU UP AND SLOWS ENEMIES#INCLUDING PROJECTILES##HAND IS FASTER#THE HAND IS EVEN FASTER#WHILE IN AN <w>INVERTED AREA<w>"
+	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#<r>RADS<r> & <w>PICKUPS<w>##HAND LEAVES A <w>TRAIL<w>#THAT <w>SPEEDS YOU UP<w> AND <w>SLOWS<w> <r>ENEMIES<r>#INCLUDING <w>PROJECTILES<w>##<w>HAND IS FASTER<w>#THE HAND IS EVEN FASTER#WHILE IN AN <w>INVERTED AREA<w>"
 	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
 	maxultra = 108;

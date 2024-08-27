@@ -103,7 +103,7 @@ else
 	if walk > 0
 	{
 		walk --;
-		if UberCont.normalGameSpeed == 60
+		if UberCont.normalGameSpeed == 60 && speed > friction
 			vspeed += walkDir;
 		else
 			vspeed += walkDir*2;

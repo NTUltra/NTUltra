@@ -454,7 +454,6 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"lum - 1.csv","CopyToMask":-1,"filePath":"datafiles","name":"lum - 1.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Steamworks_Extension_Documentation.html","CopyToMask":0,"filePath":"datafiles","name":"Steamworks_Extension_Documentation.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -3563,6 +3562,7 @@
     {"id":{"name":"sndMicroMinigun","path":"sounds/sndMicroMinigun/sndMicroMinigun.yy",},},
     {"id":{"name":"sndMicroSmg","path":"sounds/sndMicroSmg/sndMicroSmg.yy",},},
     {"id":{"name":"sndMinigun","path":"sounds/sndMinigun/sndMinigun.yy",},},
+    {"id":{"name":"sndMiniRocketFly","path":"sounds/sndMiniRocketFly/sndMiniRocketFly.yy",},},
     {"id":{"name":"sndMolefishDie","path":"sounds/sndMolefishDie/sndMolefishDie.yy",},},
     {"id":{"name":"sndMolefishFire","path":"sounds/sndMolefishFire/sndMolefishFire.yy",},},
     {"id":{"name":"sndMolefishHurt","path":"sounds/sndMolefishHurt/sndMolefishHurt.yy",},},

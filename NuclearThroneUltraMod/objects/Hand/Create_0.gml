@@ -1,6 +1,7 @@
 /// @description Init
 alarm[1] = 1;
 target = noone;
+originalTarget = noone;
 creator = -1;
 lerpTime = 0;
 lerpSpeed = 22;//16 Range of instant speed of hand

@@ -9,7 +9,7 @@ if instance_exists(target) && target != noone
 		with instance_create(x,y,InvertedEnemyFlakBullet)
 		{
 			loops = 1;
-			motion_add(other.gunangle,15);
+			motion_add(other.gunangle,14.5);
 			image_angle = direction
 			team = other.team
 		}
@@ -20,7 +20,7 @@ if instance_exists(target) && target != noone
 		with instance_create(x,y,InvertedEnemyFlakBullet)
 		{
 			loops = 1;
-			motion_add(other.gunangle,13.7);
+			motion_add(other.gunangle,13.5);
 			image_angle = direction
 			team = other.team
 		}

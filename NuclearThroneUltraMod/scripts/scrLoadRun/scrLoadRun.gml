@@ -364,6 +364,10 @@ function scrLoadRun(selectedRunIndex){
 				Player.skeletonGambleBongas = encryptedRun.skeletonGambleBongas;
 			if variable_struct_exists(encryptedRun, "portalEssence")
 				Player.portalEssence = encryptedRun.portalEssence;
+			if variable_struct_exists(encryptedRun, "crownpoints")
+				Player.crownpoints = encryptedRun.crownpoints;
+			else
+				Player.crownpoints = 0;
 			/*
 			if variable_struct_exists(encryptedRun, "duoPartner1")
 			{

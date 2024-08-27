@@ -3293,6 +3293,7 @@
     {"name":"sndMicroMinigun","order":100,"path":"sounds/sndMicroMinigun/sndMicroMinigun.yy",},
     {"name":"sndMicroSmg","order":62,"path":"sounds/sndMicroSmg/sndMicroSmg.yy",},
     {"name":"sndMinigun","order":27,"path":"sounds/sndMinigun/sndMinigun.yy",},
+    {"name":"sndMiniRocketFly","order":109,"path":"sounds/sndMiniRocketFly/sndMiniRocketFly.yy",},
     {"name":"sndMolefishDie","order":9,"path":"sounds/sndMolefishDie/sndMolefishDie.yy",},
     {"name":"sndMolefishFire","order":11,"path":"sounds/sndMolefishFire/sndMolefishFire.yy",},
     {"name":"sndMolefishHurt","order":10,"path":"sounds/sndMolefishHurt/sndMolefishHurt.yy",},

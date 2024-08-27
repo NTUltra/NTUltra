@@ -165,3 +165,20 @@ else if instance_exists(ThroneBeam)
 		event_user(0);
 	}
 }
+var msk = mask_index;
+mask_index = mskNothingInactive;
+if place_meeting(x,y,DeathStare)
+{
+	if DeathStare.y > y
+	{
+		walkDir = -0.3;
+		vspeed = 0;
+	}
+	else
+	{
+		walkDir = 0.3;
+		vspeed = 0;
+	}
+	walk = max(walk,alarm[1]);
+}
+mask_index = msk;

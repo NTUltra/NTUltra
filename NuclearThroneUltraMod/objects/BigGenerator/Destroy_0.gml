@@ -40,8 +40,8 @@ else
 with instance_create(x,y,AnimDestroyTop)
 {
 	sprite_index = sprBigGeneratorDeadFX;
-	hspeed = other.image_xscale * 2;
-	image_xscale = other.image_xscale;
+	hspeed = other.image_xscale * -2;
+	image_xscale = other.image_xscale * -1;
 }
 if instance_number(BigGenerator) == 1
 {

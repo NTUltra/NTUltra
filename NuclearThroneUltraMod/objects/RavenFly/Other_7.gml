@@ -11,12 +11,15 @@ if !place_meeting(x,y,Floor)
 	//Shuffle clsoer to floor to prevent softlock
 	var n = instance_nearest(x,y,Floor)
 	var o = 16;
-	if n.object_index == FloorExplo
-		o = 8;
-	var d = point_direction(x,y,n.x+o,n.y+o)
-	x += lengthdir_x(3,d);
-	y += lengthdir_y(3,d);
-	scrForcePosition60fps();
+	if n != noone
+	{
+		if n.object_index == FloorExplo
+			o = 8;
+		var d = point_direction(x,y,n.x+o,n.y+o)
+		x += lengthdir_x(3,d);
+		y += lengthdir_y(3,d);
+		scrForcePosition60fps();
+	}
 	scrRavenLift()
 }
 else
@@ -32,7 +35,7 @@ else
 	{
 		with Raven
 		{
-			if point_distance(x,y,other.x,other.y) < 120 and point_distance(x,y,other.x,other.y) > 32
+			if target != noone && instance_exists(target) && point_distance(x,y,other.x,other.y) < 120 and point_distance(x,y,other.x,other.y) > 32
 			{
 				if collision_line(other.target.x,other.target.y,x,y,Wall,1,1) < 0 and random(3) < 2
 					scrRavenLift()

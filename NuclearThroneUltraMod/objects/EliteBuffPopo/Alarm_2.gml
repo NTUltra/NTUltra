@@ -78,6 +78,16 @@ if ammo < 1
 		alarm[2] = 0;	
 	}
 }
+else if collision_line(x,y,target.x,target.y,Wall,false,false)
+{
+	alarm[2] += 1;
+	alarm[1] += 1;
+	if fireRate < minFireRate
+	{
+		fireRate += 1;	
+	}
+	ammo -= 1;
+}
 if fireRate > 1
 {
 	fireRate -= 0.5;

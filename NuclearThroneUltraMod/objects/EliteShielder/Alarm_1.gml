@@ -14,7 +14,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,targ
 	if wasBehindWall
 	{
 		wasBehindWall = false;
-		alarm[1] += 10;
+		alarm[1] += 20;
 		exit;
 	}
 //SEE TARGET

@@ -152,6 +152,7 @@ function scrCopyPlayData(){
 		canKillKillKill: Player.canKillKillKill,
 		skeletonGambleBongas: Player.skeletonGambleBongas,
 		portalEssence: UberCont.portalEssence,
+		crownpoints: Player.crownpoints,
 		/*
 		duoPartner1: UberCont.duoPartner[0],
 		duoPartner2: UberCont.duoPartner[1],

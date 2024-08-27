@@ -14,7 +14,7 @@ if target != noone && instance_exists(target)
 		if  wasBehindWall
 		{
 			wasBehindWall = false;
-			alarm[1] = actTime * 3;
+			alarm[1] = actTime * 4;
 			exit;
 		}
 		gunangle = point_direction(x,y,target.x,target.y)

@@ -4,7 +4,11 @@ if um == ultramods.bloodMelee
 {
 	var acc = 1;
 	if instance_exists(Player)
+	{
 		acc = Player.accuracy;
+		x = Player.x;
+		y = Player.y;
+	}
 	snd_play(sndHeavyBloodPistol,0.1,true);
 	var am = 3;
 	var angstep = (40*acc)/am;
@@ -32,7 +36,11 @@ else
 	var spd = 2 + speed + dmg;
 	var acc = 1;
 	if instance_exists(Player)
+	{
 		acc = Player.accuracy;
+		x = Player.x;
+		y = Player.y;
+	}
 	var angstep = (40*acc)/am;
 	var ang = image_angle - (angstep*2)
 	repeat(am)
