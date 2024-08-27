@@ -20,6 +20,10 @@ function scrProjectileStyle(pt, px, py){
 			}
 			//Bigger mask for hitting other bullets
 			//What if the projectile is big such as flame cannon?
+			var xs = image_xscale;
+			var ys = image_yscale
+			image_xscale *= 2;
+			image_yscale *= 2;
 			var projectiles = ds_list_create();
 			var al = instance_place_list(x,y,projectile,projectiles,false);
 			var hitSomething = false;
@@ -55,6 +59,8 @@ function scrProjectileStyle(pt, px, py){
 				}
 			}
 			ds_list_destroy(projectiles);
+			image_xscale = xs;
+			image_yscale = ys;
 			if hitSomething
 				snd_play(sndProjectileDestroy,0.1,true);
 		}

@@ -10,7 +10,7 @@ if scrIsCrown(32)//Crown of misfortune
 	}
 	else
 	{
-		scrCollectAmmo(1);
+		scrCollectAmmo(1.25);
 	}
 }
 var stoppedVenom = false;

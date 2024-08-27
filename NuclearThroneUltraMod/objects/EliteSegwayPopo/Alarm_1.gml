@@ -69,7 +69,7 @@ if target != noone
 				walk = actTime;
 			}
 		}
-		else if random(2) < 1
+		else if random(2) < 1 && !wasBehindWall
 		{
 			//SHOOT
 			walk = actTime * 2;
@@ -84,9 +84,16 @@ if target != noone
 			mp_potential_step(target.x,target.y,1,false);
 			walk = actTime * 3;
 		}
+		if wasBehindWall
+		{
+			wasBehindWall = false;
+			alarm[1] += 5;
+			exit;
+		}
 	}
 	else 
 	{
+		wasBehindWall = true;
 		alarm[1] += actTime;
 		motion_add(random(360),acc*0.75);
 		//DONT SEE PLAYER

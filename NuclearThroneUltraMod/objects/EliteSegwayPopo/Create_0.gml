@@ -36,6 +36,7 @@ smackRange = 8;
 smackSpeed = 6;
 tellTime = 13;
 actTime = 8;
+wasBehindWall = false;
 freeze = 0
 if instance_exists(Player)
 {

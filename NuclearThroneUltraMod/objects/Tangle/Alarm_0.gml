@@ -16,7 +16,7 @@ if sprite_index == sprTangleUpg || sprite_index == sprTangleVineUpg
 					}
 				}
 				ds_list_destroy(tangle);
-				DealDamage(2);
+				DealDamage(3);
 				sprite_index = spr_hurt;
 				image_index = 0;
 				snd_play(snd_hurt, hurt_pitch_variation,true);
@@ -44,7 +44,7 @@ if sprite_index == sprTangleUpg || sprite_index == sprTangleVineUpg
 					}
 				}
 				ds_list_destroy(tangle);
-				DealDamage(2);
+				DealDamage(3);
 				sprite_index = spr_hurt;
 				image_index = 0;
 				snd_play(snd_hurt, hurt_pitch_variation,true);

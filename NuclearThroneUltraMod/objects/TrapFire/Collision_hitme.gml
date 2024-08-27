@@ -33,10 +33,19 @@ if other.team != team and other.team != 0 && (other.team!=2 || image_index<5/*no
 				{
 					snd_play(snd_hurt, hurt_pitch_variation)
 					Sleep(10)
+					var d = other.dmg;
 					if object_index == Player
+					{
+						if scrIsCrown(18)
+							d *= 2;
 						hitBy = other.sprite_index;
-					if my_health-other.dmg < immunelimit
+					}
+					if my_health - d < immunelimit
+					{
 						my_health = immunelimit
+						if object_index == Player
+							greedException = true;
+					}
 					else
 					{
 						sprite_index = spr_hurt

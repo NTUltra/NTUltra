@@ -44,7 +44,9 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			{
 				dealtDamage = true;
 				if armour-dealDmg <= immunelimit
+				{
 					armour = immunelimit
+				}
 				else
 				{
 					armour -= 1
@@ -53,10 +55,15 @@ if alarm[0] < 1 && other.team == 2 && instance_exists(Player) && (!ezMode || oth
 			else if my_health > immunelimit
 			{
 				dealtDamage = true;
-				if my_health - dealDmg <= immunelimit
+				var d = dealDmg;
+				if scrIsCrown(18)
+					d *= 2;
+				if my_health - d <= immunelimit
 				{
-					my_health = immunelimit
-					prevhealth = my_health;
+					my_health = immunelimit;
+					if object_index == Player
+						greedException = true;
+					//prevhealth = my_health;
 				}
 				else
 				{

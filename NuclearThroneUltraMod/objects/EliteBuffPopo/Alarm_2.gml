@@ -5,19 +5,27 @@ scrRogueTarget()
 else
 scrTarget();
 walk += 1;
+
 if fireRate < 2
 	motion_add(gunangle + 180,0.4);
 else if fireRate > 3
 	motion_add(gunangle,0.4);
+var far = true;
 if target != noone && instance_exists(target)
 {
+	far = point_distance(x,y,target.x,target.y) > 350;
+	if far
+		walk += 1;
 	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
 	if target.x < x
 	    right = -1
 	else if target.x > x
 		right = 1
 }
-
+else
+{
+	ammo = 1;
+}
 if bfire
 {
 	bwkick = 4;
@@ -38,14 +46,20 @@ if team == 2
 else
 {
 	var range = 23 - fireRate;
-	var ps = 7.2 - (fireRate*0.5)//4.9 start
+	var ps = 7 - (fireRate*0.5)//4.9 start
+	if far ps -= 0.5;
 	with instance_create(x,y,PopoBouncerBullet){
 		motion_add(other.gunangle+random_range(range,-range),ps)
 		image_angle = direction
 		team = other.team
 	}
 }
-alarm[2] = floor(fireRate);	
+alarm[2] = floor(fireRate);
+if far
+{
+	alarm[1] += 1;
+	alarm[2] += 2;
+}
 ammo --;
 if ammo < 1
 {
@@ -72,4 +86,5 @@ else
 {
 	fireRate = 2;	
 }
+
 	

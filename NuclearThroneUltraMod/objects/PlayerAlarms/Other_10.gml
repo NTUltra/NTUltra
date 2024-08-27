@@ -21,7 +21,8 @@ if instance_exists(Player)
 		//Doomed Melting
 		with Player
 		{
-			meltingd = lastEnemyKilled;	
+			meltingd = lastEnemyKilled;
+			debug(meltingd);
 		}
 		alarm[10] = 10;
 	}

@@ -13,6 +13,7 @@ function scrCopyOtherWeapon(othr, weapon){
 	wepmod3 = othr.wepmod3;
 	wepmod4 = othr.wepmod4;
 	isPermanent = othr.isPermanent;
+	visitedPortals = othr.visitedPortals;
 	hasBeenEaten = othr.hasBeenEaten;
 	sprite_index = othr.wep_sprt[wep];
 	wep_area = othr.wep_area;

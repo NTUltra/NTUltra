@@ -8,6 +8,7 @@ spr_hurt = spr_inactive;
 spr_dead = sprBigGeneratorDead
 
 event_inherited()
+team = 3;
 maxhealth = 80;
 meleedamage = 0;
 loops = GetPlayerLoops();

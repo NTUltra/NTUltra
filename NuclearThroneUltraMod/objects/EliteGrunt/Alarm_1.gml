@@ -35,6 +35,12 @@ if target==Player
     right = 1
     lastx = target.x
     lasty = target.y
+	if wasBehindWall
+	{
+		wasBehindWall = false;
+		alarm[1] += 10;
+		exit;
+	}
     //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
     if random(3) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
     {
@@ -74,6 +80,7 @@ if target==Player
     }
     else 
     {
+		wasBehindWall = true;
     //DONT SEE PLAYER
     if random(10) < 1
     {

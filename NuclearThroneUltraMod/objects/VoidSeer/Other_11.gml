@@ -2,22 +2,20 @@
 var t = "";
 if UberCont.char_void_entered[race] == 1
 {
-	t = scrText(race - 1, "strFirstVisit");
+	t = scrText(race - 1, 0);
 }
-else if loops > 1
+else if specialConditionMet > -1
 {
-	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomLoop2-" + string(ranLine));
+	//HERE SPECIAL LORE!
+	t = scrText(race, 4, specialConditionMet);
 }
-else if loops > 0
+else if loops < 2
 {
-	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomLoop1-" + string(ranLine));
+	t = scrText(race - 1, loops + 1);
 }
 else
 {
-	var ranLine = irandom(3);
-	t = scrText(race - 1, "strRandomLoop0-" + string(ranLine));
+	t = scrText(race - 1, 3);
 }
 textQueue = string_split(t,"*");
 /*

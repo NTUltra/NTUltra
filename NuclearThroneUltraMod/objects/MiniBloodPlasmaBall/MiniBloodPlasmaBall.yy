@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBloodPlasmaBall",
-    "path":"sprites/sprBloodPlasmaBall/sprBloodPlasmaBall.yy",
+    "name":"sprMiniBloodPlasmaBall",
+    "path":"sprites/sprMiniBloodPlasmaBall/sprMiniBloodPlasmaBall.yy",
   },
   "spriteMaskId":{
     "name":"mskMiniPlasmaBall",

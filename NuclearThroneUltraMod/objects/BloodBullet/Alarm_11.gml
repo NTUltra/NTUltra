@@ -32,7 +32,7 @@ else if um == ultramods.bulletShotgun
 			scrCopyWeaponMod(other);
 			direction = other.direction;
 			image_angle = direction;
-			speed = other.speed+4;
+			speed = other.speed+1;
 			team = other.team;
 			alarm[11] = 0;
 		}
@@ -44,7 +44,7 @@ else if um == ultramods.bulletShotgun
 			scrCopyWeaponMod(other);
 			direction = other.direction;
 			image_angle = direction;
-			speed = other.speed+4;
+			speed = other.speed+1;
 			team = other.team;
 			alarm[11] = 0;
 		}
@@ -84,6 +84,7 @@ else if um == ultramods.laserBullet
 		image_angle = other.direction;
 		team = other.team
 		event_perform(ev_alarm,0);
+		alarm[2] -= 1;
 	}
 }
 else if um == ultramods.bulletPlasma

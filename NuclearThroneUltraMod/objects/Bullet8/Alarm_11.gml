@@ -40,7 +40,7 @@ else if um == ultramods.laserBullet
 	with instance_create(x,y,Laser)
 	{
 		image_yscale -= 0.4;
-		laserhit=2;
+		laserhit += 2;
 		sprite_index=sprBouncingLaser;
 		scrCopyWeaponMod(other);
 		isog = false;

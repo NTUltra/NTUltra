@@ -11,6 +11,7 @@ function scrDropHeavyHeart(newDrop = 0){
 		wepmod3 = other.wepmod3;
 		wepmod4 = other.wepmod4;
 		isPermanent = other.isPermanent;
+		visitedPortals = other.visitedPortals;
 		hasBeenEaten = other.hasBeenEaten;
 		curse = other.curse;
 		wep = other.wep

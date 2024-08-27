@@ -37,5 +37,5 @@ if hspeed > 0
 	image_xscale = 1;
 else if hspeed < 0
 	image_xscale = -1;
-if place_meeting(x,y,WallHitMe)
+if place_meeting(x,y,WallHitMe) || collision_line(x,y,x + hspeed, y + vspeed,WallHitMe,false,false)
 	event_user(1);

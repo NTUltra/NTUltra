@@ -4,6 +4,7 @@ team = 2;
 canBeMoved = false;
 canBeAngled = false;
 wepFire = -1;
+isVenomized = 0;
 hadSpeedApplied = true;
 Mod1 = 0;
 Mod2 = 0;

@@ -26,6 +26,13 @@ function scrAmbidexturous(wp){
 		snd_play(sndBloodlustProc);
 		if heals > 2
 			snd_play(sndSteroidsUpg);
-		scrHeal(heals);
+		if my_health + heals <= maxhealth + 2
+		{
+			scrHeal(heals,true);
+		}
+		else if my_health < maxhealth + 2 {
+			heals = maxhealth + 2 - my_health;
+			scrHeal(heals,true);
+		}
 	}
 }

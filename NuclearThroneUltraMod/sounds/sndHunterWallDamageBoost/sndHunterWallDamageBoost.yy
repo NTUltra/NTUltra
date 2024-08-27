@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndHunterWallDamageBoost",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.131202,
+  "name":"sndHunterWallDamageBoost",
+  "parent":{
+    "name":"Hunter",
+    "path":"folders/Sounds/Player/Hunter.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndHunterWallDamageBoost.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -39,8 +39,8 @@
     "path":"sprites/sprSlash/sprSlash.yy",
   },
   "spriteMaskId":{
-    "name":"sprSlash",
-    "path":"sprites/sprSlash/sprSlash.yy",
+    "name":"mskSlash",
+    "path":"sprites/mskSlash/mskSlash.yy",
   },
   "visible":true,
 }

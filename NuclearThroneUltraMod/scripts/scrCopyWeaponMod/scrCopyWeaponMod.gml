@@ -13,6 +13,7 @@ function scrCopyWeaponMod(othr){
 		}
 		poppop = othr.poppop;
 		wepFire = othr.wepFire;
+		isVenomized = othr.isVenomized;
 		//speed *= Player.pSpeedBoost;
 		if !hadSpeedApplied && canBeMoved//speed > 0
 		{

@@ -899,6 +899,9 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		isPermanent = other.isPermanent;
 		isPermanentB = other.isPermanentB;
 		isPermanentC = other.isPermanentC;
+		visitedPortals = other.visitedPortals;
+		visitedPortalsB = other.visitedPortalsB;
+		visitedPortalsC = other.visitedPortalsC;
 		hasBeenEaten = other.hasBeenEaten;
 		hasBeenEatenB = other.hasBeenEatenB;
 		hasBeenEatenC = other.hasBeenEatenC;
@@ -948,6 +951,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		maxCash = other.maxCash;
 		canHeal = other.canHeal;
 		lastEnemyKilled = other.lastEnemyKilled;
+		lastEnemyKilledIndex = other.lastEnemyKilledIndex;
 		guarenteedReroll = other.guarenteedReroll;
 		phoenixrevives = other.phoenixrevives;
 		cwepmod2 = other.cwepmod2

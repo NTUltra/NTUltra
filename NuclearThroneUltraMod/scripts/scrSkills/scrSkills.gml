@@ -367,8 +367,8 @@ function scrSkills() {
 	}
 	else
 	{
-		skill_text[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>#<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER#RELOAD BOOST <w>LINGERS<w>#AFTER <r>HEALING<r>"//#<w>KEEP RELOAD SPEED BOOST<w>#UNTIL THE END OF AN AREA"
-		skill_detail[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER#UP TO 70% RELOAD SPEED#UP TO 35% FOR OFFHAND WEAPONS#RELOAD BOOST <w>LINGERS<w>#FOR 3 SECONDS AFTER <r>HEALING<r>#ALSO GET RELOAD BOOST WHEN MAX HP IS 1"//#<w>KEEP MAX REACHED RELOAD SPEED BOOST<w>#UNTIL <w>THE END OF AN AREA<w>"
+		skill_text[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>:#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER"//#<w>KEEP RELOAD SPEED BOOST<w>#UNTIL THE END OF AN AREA"
+		skill_detail[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>:#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER#UP TO 70% RELOAD SPEED#UP TO 35% FOR OFFHAND WEAPONS#RELOAD BOOST <w>LINGERS<w>#FOR 3 SECONDS AFTER <r>HEALING<r>#ALSO GET RELOAD BOOST WHEN MAX HP IS 1"//#<w>KEEP MAX REACHED RELOAD SPEED BOOST<w>#UNTIL <w>THE END OF AN AREA<w>"
 	}
 	skill_tips[22] = "ultimate low health hybrid"
 	skill_msnd[22] =  sndMutSharpStress
@@ -398,7 +398,7 @@ function scrSkills() {
 	else
 		skill_name[25] = "STRONG SPIRIT"
 	skill_text[25] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w> ONCE PER AREA";
-	skill_detail[25] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w> ONCE PER AREA#RECHARGES WHEN AT FULL <r>HP<r>"
+	skill_detail[25] = "<aq>PREVENT<aq> <w>LETHAL DAMAGE<w> ONCE PER AREA#AND CAST A <aq>SHIELD<aq>##RECHARGES WHEN AT FULL <r>HP<r>"
 	skill_tips[25] = "denied"
 	skill_msnd[25] =  sndMutStrongSpirit
 	skill_bons[25] = "RECHARGES WHEN AT 75% HP";
@@ -462,7 +462,7 @@ function scrSkills() {
 	
 	skill_name[32] = "ALKALINE SALIVA"
 	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (2<r>HP<r>)"
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (2<r>HP<r>)#CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING";

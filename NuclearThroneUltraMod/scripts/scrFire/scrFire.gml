@@ -41,6 +41,10 @@ function scrFire(canDrown = true) {
 			canPuffyCheek = 3;
 		}
 		//Nerves of steel
+		if ultra_got[2]&& alarm[2] > 0
+		{
+		 	reload -= wep_load[wep]*0.1;
+		}
 		if skill_got[41]
 		{
 			if armour < 1

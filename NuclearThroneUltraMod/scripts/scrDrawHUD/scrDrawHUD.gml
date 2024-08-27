@@ -1226,6 +1226,13 @@ function scrDrawHUD() {
 	if dataRef.wepmod1 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod1,xx,yy);
+		with NewWeaponModHUD
+		{
+			if modNumber == 1
+			{
+				draw_sprite(sprModHUDNew,image_index,xx,yy);
+			}
+		}
 		var xxx = camera_get_view_x(view_camera[0]) + xx;
 		var yyy = camera_get_view_y(view_camera[0]) + yy;
 		if (mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
@@ -1247,6 +1254,13 @@ function scrDrawHUD() {
 	if dataRef.wepmod2 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod2,xx,yy);
+		with NewWeaponModHUD
+		{
+			if modNumber == 2
+			{
+				draw_sprite(sprModHUDNew,image_index,xx,yy);
+			}
+		}
 		var xxx = camera_get_view_x(view_camera[0]) + xx;
 		var yyy = camera_get_view_y(view_camera[0]) + yy;
 		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
@@ -1268,6 +1282,13 @@ function scrDrawHUD() {
 	if dataRef.wepmod3 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod3,xx,yy);
+		with NewWeaponModHUD
+		{
+			if modNumber == 3
+			{
+				draw_sprite(sprModHUDNew,image_index,xx,yy);
+			}
+		}
 		var xxx = camera_get_view_x(view_camera[0]) + xx;
 		var yyy = camera_get_view_y(view_camera[0]) + yy;
 		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
@@ -1289,6 +1310,13 @@ function scrDrawHUD() {
 	if dataRef.wepmod4 != 0
 	{
 		draw_sprite(sprModHUD,dataRef.wepmod4,xx,yy);
+		with NewWeaponModHUD
+		{
+			if modNumber == 4
+			{
+				draw_sprite(sprModHUDNew,image_index,xx,yy);
+			}
+		}
 		var xxx = camera_get_view_x(view_camera[0]) + xx;
 		var yyy = camera_get_view_y(view_camera[0]) + yy;
 		if (noHover && mouse_x > xxx && mouse_x < xxx+xs && mouse_y < yyy+xs && mouse_y > yyy)
@@ -2267,7 +2295,7 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 				holdExplainTimer += 1*dt;
 				//Ultra mod destription
-				if holdExplainTimer > 30
+				if holdExplainTimer > 30 || UberCont.weapons_modded < 4
 				{
 					var yy = y-oy + 32;
 					draw_set_color(c_black)

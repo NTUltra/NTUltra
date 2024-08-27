@@ -21,8 +21,6 @@ else
 	with myExplosionMask {
 		owner = other.id;
 	}
-	
-
 	ang = random(360)
 	var angstep = 90;
 	repeat (4)
@@ -46,7 +44,7 @@ team = -1
 if instance_exists(Player) {
 	if Player.ultra_got[57]
 	{
-		dmg += 4;
+		dmg += 2;
 	}
 	if Player.skill_got[14]
 		alarm[3] = 1;

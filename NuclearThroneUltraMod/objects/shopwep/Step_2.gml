@@ -34,6 +34,7 @@ if place_meeting(x,y,ShopSelector)
 					wepmod3 = hogWepmod3[i]
 					wepmod4 = hogWepmod4[i]
 					isPermanent = hogIsPermanent[i];
+					visitedPortals = hogVisitedPortals[i];
 					hasBeenEaten = hogHasBeenEaten[i];
 					reload = hogReload[i];
 					if wep != 0

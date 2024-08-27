@@ -26,6 +26,12 @@ if target != noone
 			else
 				other.stuck=false;
 		}
+		if wasBehindWall && !stuck
+		{
+			wasBehindWall = false;
+			alarm[1] += 10;
+			exit;
+		}
 		//SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
 		if freeze > 10 and point_distance(x,y,target.x,target.y)<120
 		{
@@ -93,6 +99,7 @@ if target != noone
 	}
 	else 
 	{
+		wasBehindWall = true;
 		//DONT SEE PLAYER
 		if random(6) < 1
 		{

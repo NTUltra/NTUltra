@@ -210,7 +210,7 @@ function scrCrowns() {
 	
 	//MISFORTUNE have luck
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
-	crown_text[32] = "LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>"
+	crown_text[32] = "SIGNIFICANTLY LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>#INCREASE <y>AMMO<y> VALUE OF DROPS"
 	crown_used[32] = 0
 	crown_tips[32] = "don't leave it up to chance"
 	

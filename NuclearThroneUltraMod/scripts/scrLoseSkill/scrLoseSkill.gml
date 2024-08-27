@@ -147,6 +147,7 @@ function scrLoseSkill(skillIndex, disableInstead = false){
 		case 26: //HAMMER HEAD
 			hammerheadtimer = 0;
 			hammerheadcounter = 0;
+			nearWall = false;
 		break;
 		case 27: //PATIENCE
 			patience--;

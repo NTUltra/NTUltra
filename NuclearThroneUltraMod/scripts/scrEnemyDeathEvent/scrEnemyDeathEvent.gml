@@ -107,10 +107,12 @@ function scrEnemyDeathEvent(){
 		{
 			defaultWepDrop += 0.5
 		}
+		/*
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
 			defaultWepDrop += 1;
 		}
+		*/
 		if defaultWepDrop > 0
 			scrDrop(0,defaultWepDrop);
 		with Player
@@ -351,8 +353,19 @@ function scrEnemyDeathEvent(){
 	    }
 		if instance_exists(Player)
 		{
-			if Player.ultra_got[16]
-				Player.lastEnemyKilled = object_index;
+			with Player
+			{
+				if ultra_got[16]
+				{
+					if lastEnemyKilled[lastEnemyKilledIndex] != other.object_index
+					{
+						lastEnemyKilled[lastEnemyKilledIndex] = other.object_index;
+						lastEnemyKilledIndex += 1;
+						if lastEnemyKilledIndex > 1
+							lastEnemyKilledIndex = 0;
+					}
+				}
+			}
 		}
 		if instance_number(enemy) <= instance_number(IDPDVan)+1 && !instance_exists(becomenemy)
 		{

@@ -236,8 +236,8 @@ if instance_exists(Player)
 		}
 	    if ultra_got[2]=1//fish ultra B gun warrant
 	    {
-	    instance_create(x,y,GunWarrant);
-	    alarm[2] = 240;
+			instance_create(x,y,GunWarrant);
+			alarm[2] = 270;
 	    }
     
 	    if skill_got[25]//strong spirit

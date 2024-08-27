@@ -32,11 +32,11 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)
 image_angle = direction
 speed = 0
 if ultraD
-mask_index=mskPickupThroughWall;
+	mask_index=mskPickupThroughWall;
 //move_contact_solid(direction,10+random(4))//8 r 4
 var dis = 10 + random(4);
 var i = 0;
-while (i < dis && !place_meeting(x,y,Wall))
+while (i < dis && (ultraD || !collision_point(x,y,Wall,false,false)))
 {
 	x += lengthdir_x(1,direction);
 	y += lengthdir_y(1,direction);
@@ -49,11 +49,12 @@ image_xscale = -point_distance(x,y,oldx,oldy)*0.5;
 
 ammo -= 1;
 
-if place_meeting(x,y,Wall) && !ultraD
+if collision_point(x,y,Wall,false,false) && !ultraD
 {
-x = xprevious
-y = yprevious
-ammo=0;}
+	x = xprevious
+	y = yprevious
+	ammo=0;
+}
 
 if ammo > 0
 {

@@ -51,6 +51,7 @@ else
 tellTime = 5;
 loops = GetPlayerLoops();
 projectileSpeed = 13;
+wasBehindWall = false;
 if loops > 0
 {
 	tellTime = 3;

@@ -171,13 +171,13 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if ultra_got[98]
 		{
-			if rad > 13
+			if rad > 15
 			{
 				audio_stop_sound(sndMutant0Slct)
 				audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
 				audio_play_sound(sndMutant0Slct,90,0)
 				instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-				rad -= 13;
+				rad -= 15;
 				scrDoctorThroneButt();
 			}
 			else
@@ -440,7 +440,7 @@ function scrPowers(raceOverwrite = -1) {
 			instance_create(x,y,ShopWheel);
 	}
 
-	if race == 19//Skeleton
+	if race == 19 && !instance_exists(SkeletonGambleCooldown)//Skeleton
 	{
 		if ultra_got[74] && altUltra//Skeleton alt ultra
 		{
@@ -684,7 +684,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				wepCost = 2;
 			}
-		    if (wepCost/typ_ammo[wep_type[wep]] > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
+		    if (max(0.1,wepCost/typ_ammo[wep_type[wep]]) > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
 		    {//thronebutt adds 1/3 chance of not taking damage
 				if !scrIsCrown(41) || my_health > 2
 				{
@@ -817,7 +817,9 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				else
 				{
+					snd_play(sndSkeletonGambleCancel);
 					instance_create(x,y,Smoke);
+					instance_create(x,y,SkeletonGambleCooldown);
 					BackCont.shake += 10;
 					cancelBloodGamble = true;
 				}
@@ -1143,11 +1145,24 @@ function scrPowers(raceOverwrite = -1) {
 		}
 	}
 
-	if ultra_got[36]//CHICKEN VANISH
+	if ultra_got[36] && !instance_exists(Decoy)//CHICKEN VANISH
 	{
+		var ang = direction;
+		var angstep = 45;
+		repeat(8)
+		{
+			with instance_create(x,y,Smoke)
+			{
+				motion_add(ang,3);
+			}
+			ang += angstep;
+		}
 		with instance_create(x,y,Decoy)
-			alarm[0]=80;//decoy duration
-		image_xscale=Player.right;
+		{
+			motion_add(other.direction + 180,6);
+			image_xscale = other.right;
+			alarm[0] = 120;
+		}
 	}
 
 	//YUNG CUZ
@@ -1289,9 +1304,9 @@ function scrPowers(raceOverwrite = -1) {
 	// SHEEP
 	if race==13 && !instance_exists(SheepSuperCharge)
 	{
-		if (ultra_got[51] && altUltra)
+		if (ultra_got[51] && altUltra && sheepFakeouts > 0)
 		{
-			if sheepFakeouts > 0 && !justAsheep
+			if !justAsheep
 			{
 				justAsheep = true;
 				var marginDuration = 120;
@@ -1624,7 +1639,7 @@ function scrPowers(raceOverwrite = -1) {
 	//PLANT
 	if race == 5
 	{
-		if !ultra_got[19]
+		if !ultra_got[19] || canKillKillKill <= 0
 		{
 			var poppedSeed = false;
 			var tangles = 0;
@@ -2785,10 +2800,15 @@ function scrPowers(raceOverwrite = -1) {
 					if ultra_got[92] && altUltra
 					{
 						var g = Splinter;
+						var d = 5;
 						if toxicUltra
+						{
 							g = UltraSplinter;
+							d = 10;
+						}
 						with instance_create(x,y,g)
 						{
+							dmg = d;
 							motion_add(random(360),18)
 							image_angle = direction
 							team = other.team
@@ -2983,9 +3003,9 @@ function scrPowers(raceOverwrite = -1) {
 
 			// this makes the beam more efficient
 			//if random(3)<2
-			var cost = 1.06;
+			var cost = 1.3;
 			if ultra_got[83]
-				cost = 0.95;
+				cost = 1.1;
 			if  UberCont.normalGameSpeed == 60
 			{
 				cost *= 0.5;
@@ -3709,7 +3729,9 @@ function scrPowers(raceOverwrite = -1) {
 		room_speed=UberCont.normalGameSpeed;
 
 		with Decoy//CHICKEN VANISH
-		{instance_destroy();}
+		{
+			instance_destroy();
+		}
 
 		if my_health > 0 && raceOverwrite == -1
 		{
@@ -3883,16 +3905,20 @@ function scrPowers(raceOverwrite = -1) {
 				var ta = random(360);
 				var taStep = 360 / toxicamount;
 				var g = Splinter;
+				var d = 5;
 					if toxicUltra
+					{
 						g = UltraSplinter;
+						d = 9;
+					}
 				if toxicamount > 3
 				{
 					with instance_create(x,y,g)
 					{
+						dmg = d;
 						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),18)
 						image_angle = direction
 						team = other.team
-						//dmg += 1;
 					}
 				}
 				repeat(toxicamount)

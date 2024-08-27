@@ -17,7 +17,7 @@ function scrDecideInvader(){
 		}
 		if scrIsHardMode()//Hard mode
 			loops += 1;
-		if loops > 2
+		if loops > 3
 		{
 			var am2 = clamp(ceil(loops/4),1,3);//Amount of different spawn locations
 			var am = clamp(floor(loops/am2),1,4);//Amount of enemies per spawn

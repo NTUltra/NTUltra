@@ -4,6 +4,7 @@ Mod2=0;
 Mod3=0;
 Mod4=0;
 wepFire = 0;
+isVenomized = 0;
 hadSpeedApplied = true;
 poppop = false;
 team = 0;

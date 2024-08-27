@@ -1,14 +1,19 @@
 /// @description apply mod and give wep
-
+UberCont.weapons_modded += 1;
+alarm[6] = 0;
+var modTarget = 1;
 if (wepmod1==0)
 {wepmod1=wepmod;}
 else if (wepmod2==0)
-{wepmod2=wepmod;}
+{wepmod2=wepmod;
+	modTarget = 2;}
 else if (wepmod3==0)
-{wepmod3=wepmod;}
+{wepmod3=wepmod;
+	modTarget = 3;}
 else if instance_exists(Player) && Player.skill_got[30] && wepmod4==0//power craving
 {
     wepmod4=wepmod;
+	modTarget = 4;
     scrUnlockCSkin(17,"FOR ADDING FOUR MODS#TO ONE WEAPON",0);
 }
 else
@@ -18,19 +23,26 @@ else
 	{
 		case 1:
 			wepmod1 = wepmod;
+			modTarget = 1;
 		break;
 		case 2:
 			wepmod2 = wepmod;
+			modTarget = 2;
 		break;
 		case 3:
 			wepmod3 = wepmod;
+			modTarget = 3;
 		break;
 		case 4:
 			wepmod4 = wepmod;
+			modTarget = 4;
 		break;
 	}
 }
-
+with instance_create(x,y,NewWeaponModHUD)
+{
+	modNumber = modTarget;
+}
 /*wepmod1=wepmod;
 wepmod2=wepmod;
 wepmod3=wepmod;*/
@@ -103,7 +115,9 @@ with myWeaponPickup
 	wepmod2 = other.wepmod2;
 	wepmod3 = other.wepmod3;
 	wepmod4 = other.wepmod4;
+	newMod = other.replaceModNr;
 	isPermanent = other.isPermanent;
+	visitedPortals = other.visitedPortals;
 	sprite_index = wep_sprt[wep]
             
 }

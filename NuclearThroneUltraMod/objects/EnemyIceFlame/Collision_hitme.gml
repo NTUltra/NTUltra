@@ -38,8 +38,19 @@ if other.team != team && (image_index<5)
 				}
 				else if my_health > immunelimit
 				{
-					if my_health-2 < immunelimit
+					var d = other.dmg;
+					if object_index == Player
+					{
+						if scrIsCrown(18)
+							d *= 2;
+						hitBy = other.sprite_index;
+					}
+					if my_health-d < immunelimit
+					{
 						my_health = immunelimit
+						if object_index == Player
+							greedException = true;
+					}
 					else
 					{
 						DealDamage(2)

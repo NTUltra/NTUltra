@@ -15,6 +15,7 @@ if active && sprite_index == spr_idle && KeyCont.key_pick[other.p] = 1
 			scrHeal(1,true);	
 		}
 		Player.isPermanent = true;
+		Player.visitedPortals = 0;
 		hasASecret = false;
 		scrUnlockGameMode(46,"FOR COMPLETING THE QUEST#FROM A CURSED FIEND");
 		event_perform(ev_alarm,3);

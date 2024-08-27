@@ -15,6 +15,12 @@ if target != noone
 	{
 		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 		{
+			if wasBehindWall
+			{
+				wasBehindWall = false;
+				alarm[1] += actTime;
+				return;
+			}
 			gunangle = tdir;
 			if target.x < x
 				right = -1
@@ -61,6 +67,7 @@ if target != noone
 		}
 		else 
 		{
+			wasBehindWall = true;
 			//DONT SEE target
 			if random(8) < 1
 			{

@@ -94,4 +94,5 @@ function scrSaveStats() {
 	ini_write_real("STATS","unlocked_inverted_areas",string(unlocked_inverted_areas));
 	ini_write_real("STATS","unlocked_more_crowns",string(unlocked_more_crowns));
 	ini_write_real("STATS","unlocked_more_characters",string(unlocked_more_characters));
+	ini_write_real("STATS","weapons_modded",string(weapons_modded));
 }

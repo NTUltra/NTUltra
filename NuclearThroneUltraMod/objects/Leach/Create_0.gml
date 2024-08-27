@@ -15,6 +15,7 @@ confDropChanceIndex = -1;
 itemDropChanceIndex = -1;
 weaponDropChanceIndex = -1;
 wepFire = 0;
+isVenomized = 0;
 hadSpeedApplied = false;
 poppop = false;
 canBeMoved = true;

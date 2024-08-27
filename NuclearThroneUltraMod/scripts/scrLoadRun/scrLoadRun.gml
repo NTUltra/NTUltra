@@ -85,9 +85,10 @@ function scrLoadRun(selectedRunIndex){
 				Player.ultra_got[array_length(Player.ultra_got)] = 0;
 			}
 			*/
-			if encryptedRun.maxhp != pointer_null
+			if encryptedRun.maxhp != pointer_null && encryptedRun.maxhp != undefined
 				Player.maxhealth = encryptedRun.maxhp;
 			Player.my_health = encryptedRun.hp;
+			Player.lsthealth = Player.my_health;
 			if variable_struct_exists(encryptedRun, "defaultOverhealAddition")
 				Player.defaultOverhealAddition = encryptedRun.defaultOverhealAddition;
 			Player.strongspirit = encryptedRun.strongspirit;
@@ -126,6 +127,12 @@ function scrLoadRun(selectedRunIndex){
 				Player.hasBeenEatenC = encryptedRun.hasBeenEatenC;
 			if variable_struct_exists(encryptedRun, "lastWishPrevent")
 				Player.lastWishPrevent = encryptedRun.lastWishPrevent;
+			if variable_struct_exists(encryptedRun, "visitedPortals")
+				Player.visitedPortals = encryptedRun.visitedPortals;
+			if variable_struct_exists(encryptedRun, "visitedPortalsB")
+				Player.visitedPortalsB = encryptedRun.visitedPortalsB;
+			if variable_struct_exists(encryptedRun, "visitedPortalsC")
+				Player.visitedPortalsC = encryptedRun.visitedPortalsC;
 			Player.wepmod1 = encryptedRun.wepmod1;
 			Player.wepmod2 = encryptedRun.wepmod2;
 			Player.wepmod3 = encryptedRun.wepmod3;
@@ -314,6 +321,13 @@ function scrLoadRun(selectedRunIndex){
 				Player.spr_dead = encryptedRun.spr_dead;
 			if variable_struct_exists(encryptedRun, "lastEnemyKilled")
 				Player.lastEnemyKilled = encryptedRun.lastEnemyKilled;
+			if variable_struct_exists(encryptedRun, "lastEnemyKilledIndex")
+				Player.lastEnemyKilledIndex = encryptedRun.lastEnemyKilledIndex;
+			if !is_array(Player.lastEnemyKilled)
+			{
+				Player.lastEnemyKilled = [Player.lastEnemyKilled,noone];
+				Player.lastEnemyKilledIndex = 1;
+			}
 			if variable_struct_exists(encryptedRun, "guarenteedReroll")
 				Player.guarenteedReroll = encryptedRun.guarenteedReroll;
 			else

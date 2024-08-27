@@ -38,7 +38,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		{
 			mh = Player.maxarmour
 			h = Player.armour;
-			itemdrop *= 0.95;
+			itemdrop *= 0.9;
 			canHealth *= 0.2;
 		}
 		if itemdrop > 1
@@ -136,7 +136,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 	}
 	else if scrIsCrown(32)//Crown of Misfortune
 	{
-		itemdrop *= 0.5;
+		itemdrop *= 0.3;
 	}
 	if Player.ultra_got[30] && !Player.altUltra {//Robot regurgitate
 		weapondrop *= 1.15;

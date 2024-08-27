@@ -20,6 +20,12 @@ if target != noone && instance_exists(target)
 	    right = 1
 	    lastx = target.x
 	    lasty = target.y
+		if wasBehindWall
+		{
+			wasBehindWall = false;
+			alarm[1] += 10;
+			exit;
+		}
 	    //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
 	    if alarm[2] < 1 && random(2) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
 	    {
@@ -41,6 +47,7 @@ if target != noone && instance_exists(target)
 	    }
 	    else 
 	    {
+			wasBehindWall = true;
 	    //DONT SEE PLAYER
 	    if random(4) < 1
 	    {

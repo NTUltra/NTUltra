@@ -22,6 +22,12 @@ if target != noone
 				right = 1
 			lastx = target.x
 			lasty = target.y
+			if wasBehindWall
+			{
+				wasBehindWall = false;
+				alarm[1] += 5;
+				exit;
+			}
 			//SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
 			var ran = random(3);
 			if ran < 1 and freeze > 40
@@ -61,6 +67,7 @@ if target != noone
 		}
 		else 
 		{
+			wasBehindWall = true;
 			//DONT SEE target
 			if random(8) < 1
 			{

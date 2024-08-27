@@ -29,7 +29,7 @@ if instance_exists(Player)
 	if Player.skill_got[17]
 	{
 		image_yscale = 3;
-		image_speed = 0.3;
+		image_speed = 0.35;
 	}
 }
 canBeMoved = false;

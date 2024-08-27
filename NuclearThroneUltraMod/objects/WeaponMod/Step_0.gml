@@ -77,6 +77,7 @@ if place_meeting(x,y,Player)
 					wepmod3=other.wepmod3;
 					wepmod4=other.wepmod4;
 					isPermanent = other.isPermanent;
+					visitedPortals = other.visitedPortals;
 					hasBeenEaten = other.hasBeenEaten;
 				}
 				if curse == 1

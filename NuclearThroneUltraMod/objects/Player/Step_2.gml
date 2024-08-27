@@ -208,6 +208,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			{
 				bcurse = curse
 				isPermanentB = isPermanent;
+				visitedPortalsB = visitedPortals;
 				hasBeenEatenB = hasBeenEaten;
 				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
 				{
@@ -224,6 +225,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			{
 				ccurse = curse
 				isPermanentC = isPermanent;
+				visitedPortalsC = visitedPortals;
 				hasBeenEatenC = hasBeenEaten;
 				cwep = wep
 				cwepmod1 = wepmod1;
@@ -256,6 +258,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					type = wep_type[wep];
 					curse = other.curse;
 					isPermanent = other.isPermanent;
+					visitedPortals = other.visitedPortals;
 					hasBeenEaten = other.hasBeenEaten;
 					wepmod1 = other.wepmod1;
 					wepmod2 = other.wepmod2;
@@ -280,7 +283,13 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				curse = 0;
 			}
 			isPermanent = targetPickup.isPermanent;
+			visitedPortals = targetPickup.visitedPortals;
 			hasBeenEaten = targetPickup.hasBeenEaten;
+			newWeaponMod = targetPickup.newWeaponMod;
+			with NewWeaponModHUD
+			{
+				alarm[0] = 1;
+			}
 			wepmod1 = targetPickup.wepmod1
 			wepmod2 = targetPickup.wepmod2
 			wepmod3 = targetPickup.wepmod3
@@ -532,7 +541,7 @@ if (skill_got[46]) && (tookHit && !exception && alarm[3] < 1 && alarm[1] < 1)
 	peaceBarrierTime = 0;
 }
 //Crown of Greed
-if scrIsCrown(18) && !exception
+if scrIsCrown(18) && !exception && !greedException
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
 	{
@@ -540,6 +549,7 @@ if scrIsCrown(18) && !exception
 		my_health -= dmgTaken;
 	}
 }
+greedException = false;
 if UberCont.voidChallengeGoing[1] && !exception && armour <= 0 && !instance_exists(VoidChallengeDamage)
 {
 	if tookHit && !instance_exists(GenCont) && !instance_exists(LevCont)
@@ -713,6 +723,10 @@ if (tookHit)
 		if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 		{
 			isAlkaline = false;
+			with EnemyVenom
+			{
+				instance_destroy();	
+			}
 			var healTaken = 0;
 			if prevhealth < maxhealth + defaultOverhealAddition
 			{
@@ -800,11 +814,15 @@ if(my_health <= 0 && maxhealth > 0)
 		    my_health = 1;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 19;
+			alarm[3] += 18;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
 		    strongspirit=false;
+			with instance_create(x,y,StrongSpiritBlock)
+			{
+				image_speed = 0.5;
+			}
 	    }
     }
     if ultra_got[103] && humphrySkill >= 200 && (skill_got[25]=0||strongspiritused=true)//Humphry Protective mustache C

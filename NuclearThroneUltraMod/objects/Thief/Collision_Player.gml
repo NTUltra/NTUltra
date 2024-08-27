@@ -39,6 +39,7 @@ with other
 			other.wepmod4=cwepmod4;
 		    other.curse=ccurse;
 			other.isPermanent=isPermanentC;
+			other.visitedPortals = visitedPortalsC;
 			other.hasBeenEaten=hasBeenEatenC;
 		    dir= instance_create(x,y-8,PopupText)
 			dir.theColour = c_red;
@@ -60,6 +61,7 @@ with other
 			other.wepmod4=bwepmod4;
 		    other.curse=bcurse;
 			other.isPermanent=isPermanentB;
+			other.visitedPortals = visitedPortalsB;
 			other.hasBeenEaten=hasBeenEatenB;
     
 		    dir= instance_create(x,y-8,PopupText)
@@ -127,6 +129,7 @@ with other
 		other.wepmod4=cwepmod4;
 	    other.curse=ccurse;
 		other.isPermanent=isPermanentC;
+		other.visitedPortals = visitedPortalsC;
 		other.hasBeenEaten = hasBeenEatenC;
 	    dir= instance_create(x,y,PopupText)
 	    dir.mytext = "WEAPON STOLEN!"
@@ -168,6 +171,7 @@ with other
 	    other.wepmod3=bwepmod3;
 	    other.curse=bcurse;
 		other.isPermanent=isPermanentB;
+		other.visitedPortals = visitedPortalsB;
 		other.hasBeenEaten = hasBeenEatenB;
 		
 	    dir= instance_create(x,y,PopupText)

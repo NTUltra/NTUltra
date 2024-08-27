@@ -2150,7 +2150,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
-	laserhit=3;
+	laserhit += 3;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.14
 	event_perform(ev_alarm,0)
@@ -2174,7 +2174,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(8)-4)*other.accuracy
 	team = other.team
-	laserhit=4;
+	laserhit += 4;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.14
 	event_perform(ev_alarm,0)
@@ -5354,6 +5354,7 @@ function scrFire2(hasTailNow) {
 		wepmod4=other.wepmod4;
 		isPermanent = other.isPermanent;
 		hasBeenEaten = other.hasBeenEaten;
+		visitedPortals = other.visitedPortals;
 		thrownByCuz = yc;
 		sprite_index = wep_sprt[wep]
 	}
@@ -6589,7 +6590,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(len,aimDir+90),y+lengthdir_y(len,aimDir+90),Laser)
 	{image_angle = aimDir+(random(2)-1)*other.accuracy
 	team = other.team
-	laserhit=3;
+	laserhit += 3;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.14
 	event_perform(ev_alarm,0)
@@ -6597,7 +6598,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(len,aimDir-90),y+lengthdir_y(len,aimDir-90),Laser)
 	{image_angle = aimDir+(random(2)-1)*other.accuracy
 	team = other.team
-	laserhit=3;
+	laserhit += 3;
 	sprite_index=sprBouncingLaser;
 	image_yscale -= 0.14
 	event_perform(ev_alarm,0)
@@ -12476,7 +12477,7 @@ function scrFire2(hasTailNow) {
 	{
 		image_angle = aimDirection+(random(2)-1)*other.accuracy
 		team = other.team
-		laserhit=35+(Player.skill_got[17]*5);
+		laserhit += 32+(Player.skill_got[17]*5);
 		sprite_index=sprBouncingLaser;
 		image_yscale += 1.5
 		event_perform(ev_alarm,0)

@@ -30,6 +30,7 @@ roll = 1
 ammo=3;
 rolltime=15+random(40);
 freeze = 0
+wasBehindWall = false;
 scrTarget();
 if target != noone && instance_exists(target)
 {

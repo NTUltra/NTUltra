@@ -9,8 +9,8 @@
   "name":"ReviveRogue",
   "overriddenProperties":[],
   "parent":{
-    "name":"IDPD",
-    "path":"folders/Objects/Enemies/IDPD.yy",
+    "name":"Freaks",
+    "path":"folders/Objects/Enemies/IDPD/Freaks.yy",
   },
   "parentObjectId":{
     "name":"All",

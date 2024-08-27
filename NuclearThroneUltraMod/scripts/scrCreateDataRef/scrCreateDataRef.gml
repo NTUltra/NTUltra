@@ -71,6 +71,9 @@ function scrCreateDataRef(){
 		hasBeenEaten = other.hasBeenEaten;
 		hasBeenEatenB = other.hasBeenEatenB;
 		hasBeenEatenC = other.hasBeenEatenC;
+		visitedPortals = other.visitedPortals;
+		visitedPortalsB = other.visitedPortalsB;
+		visitedPortalsC = other.visitedPortalsC;
 		wepmod1 = other.wepmod1;
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;

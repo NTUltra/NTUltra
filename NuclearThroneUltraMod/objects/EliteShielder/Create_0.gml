@@ -27,6 +27,7 @@ roll = 1
 angle = 0
 ammo = 10
 
+wasBehindWall = false;
 canshield=true;
 Shielding=false;
 xx=x;

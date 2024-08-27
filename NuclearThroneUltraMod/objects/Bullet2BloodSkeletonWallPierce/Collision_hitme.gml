@@ -17,10 +17,11 @@ if other.team != team && alarm[0] < 1
 	}
 	image_angle = direction;
 	alarm[0] = 2;
-	bounce -= 1;
+	wallbounce -= 1;
+	dmg = max(dmg - 1,1);
 	image_index = max(1,image_index - 1);
 	image_speed += 0.05;
-	if bounce <= 0
+	if wallbounce <= 0
 	{
 		with(instance_create(x + hspeed,y + vspeed,BulletHit))
 		{sprite_index = sprBloodBulletHit}

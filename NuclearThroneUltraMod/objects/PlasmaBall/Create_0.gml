@@ -16,6 +16,7 @@ hitShrink = 0.37;
 destroyScale = 0.4;
 maxSpeed = 8;
 acc = 1;
+hasWallCollision = true;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1

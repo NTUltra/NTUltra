@@ -29,9 +29,10 @@ alarm[2] = 1;
 arrowSprite = sprVanPortalDirectionStart;
 dropFreaks = false;
 
-amountOfBullets = 4 + (clamp(loops*2,0,6));
+amountOfBullets = 4 + (clamp(loops,0,6));
 //xStep = 320 / (amountOfBullets - 1);
 //yStep = 240 / (amountOfBullets - 1);
 bulletStep = 450 / (amountOfBullets - 1);
 squareRight = 0;
-alarm[3] = 2;
+if loops > 1
+	alarm[3] = 2;

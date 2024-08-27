@@ -10,6 +10,7 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.4//1.2
 alarm[2] = 2;
 knockback = 4;
+laserhit=0;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
@@ -17,10 +18,13 @@ if instance_exists(Player)
 		alarm[2] = 3;
 		image_yscale = 1.8+(Player.betterlaserbrain*0.2)
 	}
+	if Player.ultra_got[6] && Player.altUltra
+	{
+		laserhit += 1;	
+	}
 }
 aimed=false;
 img = 0
-laserhit=0;
 dmg = 2;
 isog = true;
 startImg = sprLaserStart;
@@ -30,3 +34,4 @@ canBeMoved = false;
 isLaser = true;
 canSmoke = true;
 defaultPierce = 32;
+hasWallCollision = true;

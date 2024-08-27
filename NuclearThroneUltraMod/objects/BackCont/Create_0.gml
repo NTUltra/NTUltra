@@ -12,7 +12,8 @@ shake = 0
 kills = 0
 enemiesInStartLevel=0;
 //maxEnemyHealthInLevel=0;
-totalEnemyHealth=0;
+totalEnemyHealth = 0;
+maxEnemyHealth = 0;
 hard = 0
 area = 0
 subarea = 0
@@ -40,7 +41,7 @@ canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,7);
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;
-vanDelay = 280;
+vanDelay = 200;
 vanDelayRandom = 60;
 verticalVans = false;
 spawnedFriendlyPopo = false;
@@ -78,7 +79,7 @@ if instance_exists(Player)
 		wantVanAmount = clamp((GetPlayerLoops()*0.5)-2,0,2);
 	if wantVanAmount > 2
 		verticalVans = true;
-	wantVanAmount = min(wantVanAmount,6);
+	//wantVanAmount = min(wantVanAmount,6);
 	if scrIsCrown(16) //CROWN OF POPO
 	{
 		wantVanAmount ++;

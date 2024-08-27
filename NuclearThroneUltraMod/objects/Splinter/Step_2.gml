@@ -1,4 +1,4 @@
-if collision_line(xprev,yprev,x,y,Wall,false,false)
+if hasWallCollision && collision_line(xprev,yprev,x,y,Wall,false,false)
 {
 	event_user(1);
 }

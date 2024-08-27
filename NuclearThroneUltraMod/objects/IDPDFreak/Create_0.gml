@@ -37,6 +37,7 @@ lifes = clamp(1 + (loops - 3),1,2);
 maxWalkSpeed = 3;
 bulletGap = 0.73;
 nadeAmount = 1;
+hasDoneVenomizer = false;
 if loops > 8
 {
 	nadeAmount = 3;

@@ -8,9 +8,9 @@ function scrModHit(projectileRef) {
 	{
 		target = noone;
 		walk = 0;
-		var amount = 1;
+		var sleepAmount = 1;
 		if wp != 0
-			amount = ceil(Player.wep_load[wp]*0.6);
+			sleepAmount = ceil(Player.wep_load[wp]*0.6);
 		with projectile
 		{
 			if wepFire == wp
@@ -20,13 +20,13 @@ function scrModHit(projectileRef) {
 		if alarm[1] > 1 && alarm[1] < 30
 		{
 			speed *= 0.6;
-			alarm[1] += amount;
-			alarm[11] += amount;
+			alarm[1] += sleepAmount;
+			alarm[11] += sleepAmount;
 			with instance_create(x,y-6,SleepFX) {
 				if !other.isSnooze
 					owner = other.id;
 				depth = other.depth - 1;
-				alarm[0] = max(2,amount+1);
+				alarm[0] = max(2,sleepAmount+1);
 			}
 			isSnooze = true;
 		}

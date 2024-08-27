@@ -2,7 +2,7 @@ function scrSwapWeps() {
 	with YVCantQuickReload
 		instance_destroy();
 	//SWAP DA WEPS
-	var twep, treload, tcanPuffyCheek, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT, hasBeenEatenT;//temporary wep
+	var twep, treload, tcanPuffyCheek, tqueueshot, twkick, twepflip, twepangle, tcan_shoot, tcurse,twepmod1,twepmod2,twepmod3,twepmod4, isPermanentT, visitedPortalsT, hasBeenEatenT;//temporary wep
 	if ultra_got[31] && cwep!=0//robots third weapon robot is cool very cool
 	{
 		//save primary in temporary A B C A
@@ -17,6 +17,7 @@ function scrSwapWeps() {
 		tqueueshot=queueshot
 		twep=wep
 		isPermanentT=isPermanent;
+		visitedPortalsT = visitedPortals;
 		hasBeenEatenT = hasBeenEaten;
 		//TMODIFIERS!
 		twepmod1=wepmod1;
@@ -37,6 +38,7 @@ function scrSwapWeps() {
 		queueshot=bqueueshot
 		wep=bwep
 		isPermanent = isPermanentB;
+		visitedPortals = visitedPortalsB;
 		hasBeenEaten = hasBeenEatenB;
 		//MODIFIERS!
 		wepmod1=bwepmod1;
@@ -56,6 +58,7 @@ function scrSwapWeps() {
 		bqueueshot=cqueueshot
 		bwep=cwep
 		isPermanentB = isPermanentC;
+		visitedPortalsB = visitedPortalsC;
 		hasBeenEatenB = hasBeenEatenC;
 		//BMODIFIERS!
 		bwepmod1=cwepmod1;
@@ -75,6 +78,7 @@ function scrSwapWeps() {
 		cqueueshot=tqueueshot
 		cwep=twep
 		isPermanentC=isPermanentT;
+		visitedPortalsC = visitedPortalsT;
 		hasBeenEatenC = hasBeenEatenT;
 		//CMODIFIERS!
 		cwepmod1=twepmod1;
@@ -98,6 +102,7 @@ function scrSwapWeps() {
 	twepangle = wepangle 
 	tcan_shoot = can_shoot
 	isPermanentT=isPermanent;
+	visitedPortalsT = visitedPortals;
 	hasBeenEatenT = hasBeenEaten;
 	//TMODIFIERS
 	twepmod1=wepmod1
@@ -107,6 +112,7 @@ function scrSwapWeps() {
 
 	wep = bwep
 	isPermanent = isPermanentB;
+	visitedPortals = visitedPortalsB;
 	curse = bcurse
 	reload = breload
 	canPuffyCheek = canPuffyCheekB;
@@ -131,6 +137,7 @@ function scrSwapWeps() {
 	bqueueshot=tqueueshot
 	bwep = twep
 	isPermanentB = isPermanentT;
+	visitedPortalsB = visitedPortalsT;
 	hasBeenEatenB = hasBeenEatenT;
 	//BMODIFIERS
 	bwepmod1=twepmod1;

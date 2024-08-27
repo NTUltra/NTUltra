@@ -542,56 +542,17 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
+			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
-			//instance_create(x+32,y,PinkSheep);
-			//instance_create(x+48,y,ExplosiveSheep);
-			/*
-			with enemy
+			var n = instance_nearest(x,y,WallHitMe)
+			if n != noone
 			{
-				my_health = 0;	
+				with instance_create(x,y,FreakVenomizerProjectile)
+				{
+					motion_add(point_direction(x,y,n.x+8,n.y+8),12);
+					image_angle = direction;
+				}
 			}*/
-			//scrn++;
-			
-			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			//thing.mytext = "TOGGLE SHEEP WALK ANIM";
-			//repeat(40)
-			//instance_create(x+32,y,Raven);
-			
-			//instance_create(x+32,y,MimicBoss);
-			/*
-			if !instance_exists(GifRecorder)
-			{
-				instance_create(x,y,GifRecorder);
-			}
-			else
-			{
-				with GifRecorder
-				{
-					instance_destroy();	
-				}
-			}
-			*/
-			//instance_create(x+32,y,WeaponMod);
-			//instance_create(x+32,y+32,WeaponMod);
-			/*
-			wep = 0;
-			var i = 0;
-			repeat(maxwep)
-			{
-				wep = i;
-				if wep!=69&&wep!=298
-				{
-					ammo[wep_type[wep]] += wep_cost[wep];
-					reload = 0;
-					scrFire();
-				}
-				i++;
-			}
-			*/
-			//if newMovement
-			//thing.mytext = "newMovement: " ;
-			//else
-			//thing.mytext = "OLD Movement: " ;
 		}
 		if keyboard_check_pressed(ord("C")) {
 			var dangle = random(1)*360;
@@ -1356,9 +1317,9 @@ if (!instance_exists(LevCont))
 		if ultra_got[29] && !altUltra
 		{
 			var t = wep_area[wep];
-			if t < 1
+			if t < 0
 				t = 19;
-			t *= 0.01;
+			t *= 0.016;
 			reload -= t;
 			
 		}

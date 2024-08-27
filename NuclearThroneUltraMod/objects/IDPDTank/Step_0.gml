@@ -9,8 +9,9 @@ else {
 	speed *= 0.5;
 }
 if speed > maxSpeed
-speed = maxSpeed
-
+	speed = maxSpeed
+if firstEntry && !isDown && alarm[2] < 8
+	hspeed = 0;
 vspeed = 0;
 
 if (x > middleX + moveRange && moveDirection == 0) || (x < middleX - moveRange && moveDirection == 180)

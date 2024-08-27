@@ -30,6 +30,12 @@ else if target.x > x
 right = 1
 lastx = target.x
 lasty = target.y
+if wasBehindWall
+{
+	wasBehindWall = false;
+	alarm[1] += 10;
+	exit;
+}
 //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
 if random(2) < 1 and freeze > 40
 {
@@ -55,6 +61,7 @@ alarm[1] += random(25)
 }
 else 
 {
+	wasBehindWall = true;
 //DONT SEE PLAYER
 if random(6) < 1
 {

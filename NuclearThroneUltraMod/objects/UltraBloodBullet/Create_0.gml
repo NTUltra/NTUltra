@@ -9,7 +9,7 @@ friction = 0.2;
 if instance_exists(Player){
 	if Player.ultra_got[16]//Melting doomed
 	{
-		dmg = 25;//24
+		dmg = 24;//24
 		friction -= 0.05;
 	}
 }

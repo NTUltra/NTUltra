@@ -22,10 +22,8 @@ walk = 0
 gunangle = 270;
 alarm[1] = 30;
 wkick = 0
-actTime = 16;
+actTime = 22;
 loops = GetPlayerLoops();
-if loops > 2
-	actTime = 14;
 direction = 180;
 moveDirection = 180;
 acc = 2;
@@ -41,25 +39,43 @@ if instance_exists(NuclearThrone1)
 
 walk = alarm[1] * 2 + 120;
 laserY = 31;
-laserDelay = 60;
-gunDelay = 75;
-projectileSpeed = 5;
-projectileSpeedAdd = -0.7;
-gunInBetween = 6;
+laserDelay = 80;
+gunDelay = 90;
+projectileSpeed = 3;
+projectileSpeedAdd = -0.2;
+gunInBetween = 10;
 normalGunAngle = gunangle;
-crazyDelay = 8;
-crazyStep = 28;
+crazyDelay = 10;
+crazyStep = 30;
 alarm[8] = 30;
 crazyAmmoReverseMax = 20;
 crazyAmmoReverse = crazyAmmoReverseMax;
 crazyPattern = true;
-crazyProjectileSpeed = 3.4;
+crazyProjectileSpeed = 3.1;
 crazyGap = 50;
 crazyWaveSpeed = 8;
 noY = verticalDistanceBeteenTanks * 0.5;
 noYDir = 1;
 idpdSpawnCooldown = 4;
-
+if loops > 2
+{
+	crazyStep = 28;
+	crazyDelay -= 1;
+	gunDelay -= 15;
+	actTime = 18;
+	crazyProjectileSpeed += 0.1;
+	gunInBetween -= 1;
+}
+if loops > 3
+{
+	crazyDelay -= 1;
+	gunDelay -= 15;
+	gunInBetween -= 1;
+	projectileSpeed += 0.4;
+	projectileSpeedAdd -= 0.2;
+	laserDelay -= 10;
+	crazyProjectileSpeed += 0.3;
+}
 if instance_exists(Player) && Player.skill_got[29]
 {
 	alarm[1] += 50;

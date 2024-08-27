@@ -135,7 +135,6 @@ with Player//Data to keep
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;
 		visitedCrib = other.visitedCrib;
-		meltingd = other.meltingd;
 		heavyheart = other.heavyheart;
 		freeArmourStrike = other.freeArmourStrike;
 		armour = other.armour;

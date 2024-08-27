@@ -33,7 +33,7 @@ alarm[1] = 30+random(15)
 wkick = 0
 freeze = 0
 actTime = 10;
-
+wasBehindWall = false;
 if instance_exists(Player)
 {
 lastx = Player.x

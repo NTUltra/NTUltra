@@ -32,7 +32,8 @@ if target != noone
 			}
 			else
 			{
-				direction = point_direction(x,y,target.x,target.y)+random(60)-30
+				direction = point_direction(x,y,target.x,target.y)+random_range(30,-30);
+				mp_potential_step(target.x,target.y,1,false);
 				walk = 10 + random(10)
 				gunangle = point_direction(x,y,target.x,target.y)
 			}
@@ -47,7 +48,7 @@ if target != noone
 	}
 	else
 	{
-		direction = point_direction(target.x,target.y,x,y)+random(20)-10
+		direction = point_direction(x,y,target.x,target.y)+random(20)-10
 		walk = 40+random(10)
 		gunangle = point_direction(x,y,target.x,target.y)
 	}

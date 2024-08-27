@@ -25,7 +25,7 @@ snd_hurt = sndSegwayHurtF
 snd_dead = sndSegwayDeadF
 snd_play(sndSegwayEnterF,0.01,true)
 }
-
+wasBehindWall = false;
 team = 3
 
 //behavior

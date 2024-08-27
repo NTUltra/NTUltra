@@ -6904,7 +6904,7 @@ function scrWeapons() {
 	wep_name[616] = "DIRECTOR BURST GRENADE LAUNCHER"
 	wep_type[616] = 4
 	wep_auto[616] = 2
-	wep_load[616] = 45
+	wep_load[616] = 38
 	wep_cost[616] = 3
 	wep_sprt[616] = sprDirectorBurstGrenadeLauncher
 	wep_area[616] = 6
@@ -8241,10 +8241,10 @@ function scrWeapons() {
 	wep_name[736] = "LIGHTNING DRONE LAUNCHER"
 	wep_type[736] = 5
 	wep_auto[736] = 1
-	wep_load[736] = 30
+	wep_load[736] = 28
 	wep_cost[736] = 5
 	wep_sprt[736] = sprLightningDroneLauncher
-	wep_area[736] = 17
+	wep_area[736] = 16
 	wep_text[736] = "drone strike!"
 	wep_swap[736] = sndSwapPistol
 	wep_rad[736] = 0;

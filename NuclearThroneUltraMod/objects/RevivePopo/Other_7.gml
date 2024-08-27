@@ -32,6 +32,7 @@ with myCorpse
 }
 with instance_create(x,y,IDPDFreak)
 {
+	hasDoneVenomizer = other.hasDoneVenomizer;
 	alarm[1] *= 0.5;
 	scrSleepyPopo()
 	lifes = other.lifes;

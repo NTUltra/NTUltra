@@ -19,7 +19,7 @@ if UberCont.ultramodSwap
 		alarm[11] = 1;
 		if instance_exists(Player) && Player.ultra_got[57]
 		{
-			dmg += 1;
+			dmg += 0.5;
 		}
 	}
 	else if um == ultramods.bloodMelee
@@ -46,7 +46,7 @@ if visible && object_index != SmallMeatExplosion
 	if instance_exists(Player)
 	{
 		if Player.ultra_got[16]//Doomed melting
-			dmg=6;
+			dmg += 1.5;
 	}
 	snd_play(sndMeatExplo,0.1,true)
 	BackCont.shake += max(1,3 - (BackCont.shake*0.1))

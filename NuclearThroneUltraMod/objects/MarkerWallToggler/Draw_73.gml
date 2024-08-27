@@ -10,3 +10,17 @@ if alarm[1] > 0
 		}
 	}	
 }
+if alarm[2] > 0
+{
+	with WallWireFrame
+	{
+		image_index = 1;	
+	}
+}
+else
+{
+	with WallWireFrame
+	{
+		image_index = 0;	
+	}
+}

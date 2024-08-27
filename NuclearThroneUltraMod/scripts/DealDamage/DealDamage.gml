@@ -16,4 +16,39 @@ function DealDamage(theDamage, isPerFrame = false,boostDamage = true, canMod = t
 			}
 		}
 	}
+	if variable_instance_exists(other, "isVenomized") && other.isVenomized == 1
+	{
+		var projectileRef = other;
+		projectileRef.isVenomized += 1;
+		if team != 2
+		{
+			with instance_create(x,y,Venom)
+			{
+				team = projectileRef.team;
+				scrCopyWeaponMod(projectileRef);
+				owner = other;
+				amount = 2;
+				dmg = 2;
+				if projectileRef.dmg <= 2
+				{
+					amount = 1;
+					dmg = 0.5;
+				}
+				else if projectileRef.dmg < 10
+				{
+					dmg = 1;
+					amount = 1;
+				}
+				else if projectileRef.dmg < 40
+				{
+					dmg = 1;
+				}
+				rate = 5;
+			}
+		}
+		else
+		{
+			scrApplyEnemyVenom(other.team, id);
+		}
+	}
 }

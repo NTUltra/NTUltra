@@ -7,7 +7,7 @@ if walk > 0
 {
 	walk -= 1
 	motion_add(direction,1)
-	if target != noone && point_distance(x,y,target.x,target.y) > 16
+	if target != noone && point_distance(x,y,target.x,target.y) > 48
 		mp_potential_step(target.x,target.y,2,false)
 }
 

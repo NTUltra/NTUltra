@@ -13,8 +13,8 @@
   "name":"EliteBuffPopo",
   "overriddenProperties":[],
   "parent":{
-    "name":"IDPD",
-    "path":"folders/Objects/Enemies/IDPD.yy",
+    "name":"EliteIDPD",
+    "path":"folders/Objects/Enemies/IDPD/EliteIDPD.yy",
   },
   "parentObjectId":{
     "name":"enemyCollisionWall",

@@ -106,6 +106,10 @@ if (KeyCont.key_paus[0] = 1) ||
 		snd_play_2d(sndClickBack);
 		exit;
 	}
+	with SaveRunMenu
+	{
+		instance_destroy();	
+	}
 	if ultraMenuOpen
 	{
 		ultraMenuOpen = false;

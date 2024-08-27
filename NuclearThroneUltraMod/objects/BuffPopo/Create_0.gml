@@ -35,7 +35,7 @@ wkick = 0
 bwkick = 0;
 roll = 1
 angle = 0
-
+wasBehindWall = false;
 freeze = 0
 if instance_exists(Player)
 {

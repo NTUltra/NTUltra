@@ -11,6 +11,12 @@ if target != noone && instance_exists(target)
 
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400
 {
+	if wasBehindWall
+	{
+		wasBehindWall = false;
+		alarm[1] += 10;
+		exit;
+	}
 //SEE TARGET
 gunangle = point_direction(x,y,target.x,target.y)
 if target.x < x
@@ -95,6 +101,7 @@ alarm[1] += random(30)
 }
 else if random(3) < 1
 {
+	wasBehindWall = true;
 //WALK
 motion_add(random(360),0.4)
 walk = 20+random(10)
@@ -106,6 +113,7 @@ right = -1
 }
 else if freeze > 40 and random(5) < 1
 {
+	wasBehindWall = true;
 //SHIELD
 canshield=false;
 var dir = 0;
@@ -159,6 +167,7 @@ walk = 0
 }
 else if random(10) < 1 and roll = 0
 {
+	wasBehindWall = true;
 //NO TARGET
 motion_add(random(360),0.4)
 walk = 20+random(10)

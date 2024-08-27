@@ -266,7 +266,7 @@ do {
 	y += lengthdir_y(1,image_angle);
 	dir += 1;
 }
-until ((dir > pierce && hit != noone && hit.team != team) || collision_point(x,y,Wall,false,false) || dir > 320)
+until ((dir > pierce && hit != noone && hit.team != team) || (hasWallCollision && collision_point(x,y,Wall,false,false)) || dir > 320)
 /*
 while !((place_meeting(x,y,hitme) and dir > pierce) or collision_point(x,y,Wall,false,false) or dir > 320)
 {
@@ -346,13 +346,13 @@ if laserhit>0// && random(3)<1
 			isog = false;
 		    team = other.team
 			sprite_index=other.sprite_index;
-		    laserhit=other.laserhit-1;
+		    laserhit = other.laserhit-1;
 			//dir = 0;
 			//do {x += lengthdir_x(1,image_angle) y += lengthdir_y(1,image_angle) dir += 1}
 			//until place_meeting(x,y,Wall) or dir > 320
 			alarm[0] = 1;
 		}
-		laserhit=0;
+		laserhit = 0;
 		if instance_exists(Player) && Player.skill_got[17]
 			snd_play(sndLaserBounceUpg,0.3,false,true);
 		else

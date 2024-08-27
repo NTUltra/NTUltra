@@ -3,7 +3,7 @@ if ammo > 0
 {
 spr_index=spr_fire;
 ammo -= 1
-alarm[1] = 2
+alarm[1] = fireRate
 snd_play(sndLaser)
 //sprite_index = spr_fire
 with instance_create(x,y,EnemyLaser)
@@ -14,8 +14,8 @@ event_perform(ev_alarm,0)}
 else
 {
 sprite_index=spr_idle;
-alarm[1]=60;
-ammo=4;
+alarm[1]=laserDelay;
+ammo=maxAmmo;
 
 if random(7)
 scrDrop(16,0);

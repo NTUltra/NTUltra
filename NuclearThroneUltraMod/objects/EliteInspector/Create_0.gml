@@ -29,7 +29,7 @@ alarm[1] = 30+random(15)
 wkick = 0
 control = 0
 angle = 0
-
+wasBehindWall = false;
 freeze = 0
 if instance_exists(Player)
 {

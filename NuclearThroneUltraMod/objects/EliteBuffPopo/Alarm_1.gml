@@ -25,9 +25,14 @@ if target != noone && instance_exists(target)
 		lastx = target.x
 		lasty = target.y
 		//SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
+		var far = point_distance(x,y,target.x,target.y) > 350
+		if far
+			alarm[1] += actTime*2;
 		if alarm[2] < 1 and freeze > 40
 		{
 			alarm[2] = 4;
+			if far
+				alarm[2] = 8;
 		}
 		else
 		{

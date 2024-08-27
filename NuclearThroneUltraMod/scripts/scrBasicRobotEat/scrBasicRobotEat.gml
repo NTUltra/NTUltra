@@ -64,6 +64,7 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 					wepmod3 = other.wepmod3;
 					wepmod4 = other.wepmod4;
 					isPermanent = other.isPermanent;
+					visitedPortals = other.visitedPortals;
 					hasBeenEaten = true;
 				}
 				snd_play(sndPortalCloseShort,0,false,true,2,false,false,0.8,false,id,2);

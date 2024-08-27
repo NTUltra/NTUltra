@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-wallbounce = 1;
+wallbounce = 2;
 if instance_exists(Player)
 {
 	if Player.skill_got[15] = 1

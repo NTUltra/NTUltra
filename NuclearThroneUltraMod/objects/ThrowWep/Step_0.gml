@@ -180,20 +180,35 @@ if visible
 	var n = instance_nearest(x,y,Portal);
 	if n != noone && point_distance(x,y,n.x,n.y) < 24
 	{
-		if n.sprite_index == sprProtoPortalDormant ||  n.sprite_index == sprInvertedPortalDormant
+		if !(n.sprite_index = sprPortal or n.sprite_index = sprProtoPortal or n.sprite_index = sprPortalInverted || n.sprite_index = sprBigPortal || n.sprite_index == sprPinkPortal || n.sprite_index == sprPopoPortal)
 			exit;
-		snd_play(sndWepPortal,0.1,false,true,1,false,false);
-		visible = false;
+		var portalDepth = n.depth - 1;
 		speed = 0;
-		var portalDepth = n.depth;
-		with instance_create(x,y,ImpactFX)
+		visitedPortals += 1;
+		if visitedPortals > 2
 		{
-			sprite_index = sprWepPortal;
-			image_angle=other.image_angle;
-			depth = portalDepth - 1;
+			snd_play(sndWeaponLost,0.1,false,true,1,false,false);
+			visible = false;
+			with instance_create(x,y,ImpactFX)
+			{
+				sprite_index = sprWepPortalLost;
+				image_angle = random_range(30,-30);
+				depth = portalDepth;
+			}
+			instance_destroy();
 		}
-		persistent = true
-		dontteleport=true;
-		instance_destroy();
+		else
+		{
+			dontteleport = true;
+			snd_play(sndWepPortal,0.1,false,true,1,false,false);
+			visible = false;
+			with instance_create(x,y,ImpactFX)
+			{
+				sprite_index = sprWepPortal;
+				image_angle=other.image_angle;
+				depth = portalDepth;
+			}
+			instance_destroy();
+		}
 	}
 }

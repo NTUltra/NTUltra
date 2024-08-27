@@ -19,12 +19,20 @@ if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = s
 {
 	with WepPickup
 	{
-		if (point_distance(x,y,other.x,other.y) < 96 || t == 4) and collision_line(x,y,other.x,other.y,Wall,0,0) < 0
+		if (point_distance(x,y,other.x,other.y) < 96 || t == 4) && collision_line(x,y,other.x,other.y,Wall,0,0) < 0
 		{
 			//if place_free(x+lengthdir_x(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)),y)
+			if visitedPortals < 3
+			{
 				x += lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
 			//if place_free(x,y+lengthdir_y(other.pullstrength,point_direction(x,y,Portal.x,Portal.y)))
 				y += lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
+			}
+			else
+			{
+				x -= lengthdir_x(other.pullstrength,point_direction(x,y,other.x,other.y))
+				y -= lengthdir_y(other.pullstrength,point_direction(x,y,other.x,other.y))
+			}
 			image_angle -= 15*rotspeed
 
 			if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible

@@ -17,3 +17,13 @@ for (var i = 0; i < al; i++;)
 }
 surface_reset_target();
 draw_surface_ext(surf,cx,cy,1,1,0,c_white,1);
+//DRAW VENOMIZED PROJECTILES
+shader_set(shdDrawLime);
+with projectile
+{
+	if isVenomized == 1
+	{
+		draw_sprite_ext(sprite_index,image_index,x,y,1.5,1.5,image_angle,c_white,1);
+	}
+}
+shader_reset();

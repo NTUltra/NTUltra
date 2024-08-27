@@ -132,7 +132,7 @@ if alarm[3] > 0
 
 
 		//Dodge bullet or hit it back
-		if  !instance_exists(Marker) && canDodge && instance_exists(projectile) && target != noone && instance_exists(target)
+		if  !instance_exists(Marker) && canDodge && instance_exists(projectile) && target != noone && instance_exists(target) && alarm[8] < 50
 		{
 		    dodgethis = noone
 			var dis = 90;
@@ -149,7 +149,7 @@ if alarm[3] > 0
 			    var forwardprojectilex = lengthdir_x(dodgethis.speed,dodgethis.direction);
 			    var forwardprojectiley = lengthdir_y(dodgethis.speed,dodgethis.direction);
 				var tdis = point_distance(target.x, target.y, x, y);
-			    if alarm[2] < 1 && alarm[0] < 1 && alarm[11] < 1 && tdis > 64 && spamDeflect < 4
+			    if alarm[2] < 1 && alarm[0] < 1 && alarm[11] < 1 && tdis > 80 && spamDeflect < 4
 			    {//SMACK THAT PROJECTILE BACK
 					if dodgethis.x < x
 						right = -1
@@ -157,11 +157,11 @@ if alarm[3] > 0
 						right = 1
 					var projectiledir = point_direction(x,y,dodgethis.x,dodgethis.y);
 					gunangle = projectiledir;
-					if tdis < 128 {
+					if tdis < 160 {
 						walk += 9;
-						alarm[2] = 12 - deflectTell;
+						alarm[2] = 14 - deflectTell;
 						alarm[0] = 16 - deflectRate;
-						alarm[1] += 5;
+						alarm[1] += 8;
 						alarm[8] = max(1,alarm[8] - 2);
 						speed += 1;
 						move_contact_solid(projectiledir+90,acc);

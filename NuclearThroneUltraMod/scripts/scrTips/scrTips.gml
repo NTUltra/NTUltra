@@ -3,7 +3,7 @@ function scrTips() {
 	if !instance_exists(Player)
 		tiptype = 0
 	tip = "";
-	if (deaths < 10 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
+	if (deaths < 11 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
 	{
 		tip = choose("WELCOME TO NUCLEAR THRONE!","TRY TO ALWAYS STAY ON THE MOVE",
 		"ENEMIES DROP HEALTH AND AMMO","HEALTH CAN DROP MORE OFTEN WHEN IT'S LOW",
@@ -18,7 +18,12 @@ function scrTips() {
 		"you can loop the game by destroying the big generators!","when you have an light blue outline you are immune to damage!",
 		"shells are the shotgun projectiles that bounce#they don't necessarily use shotgun ammo!",
 		"most weapon specific mutations are based on your projectile type#not on your ammo type",
-		"blood bullets are also bullets#and will be refunded with recycle gland",);
+		"blood bullets are also bullets#and will be refunded with recycle gland",
+		"hover over HUD elements in the top of your screen#such as mutations and weapons#for a short explanation",
+		"you can speed up this loading screen#in the options menu","most ultra mutations can destroy squares",
+		"when you reach level 10 you get your ultra mutation!",
+		"just have fun", "don't get baited by items", "wield one strong slow firing weapon#and one quick firing weapon",
+		"crowns can be very beneficial in certain situations!","taking a crown unlocks crown start!","golden weapons can be unlocked as starting weapons");
 	}
 	else if tiptype = 0
 	{

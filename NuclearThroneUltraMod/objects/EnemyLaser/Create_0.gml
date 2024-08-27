@@ -4,7 +4,7 @@ damagers have a DAMAGE
 their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
-event_inherited();
+event_inherited(); 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.25
 canBeMoved = false;
@@ -15,6 +15,7 @@ sprStart = sprEnemyLaserStart;
 sprEnd = sprEnemyLaserEnd;
 maxDistance = 160;
 alarm[2] = 3;
+alarm[3] = 2;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	alarm[2] = 1;

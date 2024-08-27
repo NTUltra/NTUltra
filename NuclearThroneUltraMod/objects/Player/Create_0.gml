@@ -171,6 +171,15 @@ hogIsPermanent[5] = false;
 hogIsPermanent[6] = false;
 hogIsPermanent[7] = false;
 
+hogVisitedPortals[0] = false;
+hogVisitedPortals[1] = false;
+hogVisitedPortals[2] = false;
+hogVisitedPortals[3] = false;
+hogVisitedPortals[4] = false;
+hogVisitedPortals[5] = false;
+hogVisitedPortals[6] = false;
+hogVisitedPortals[7] = false;
+
 hogHasBeenEaten[0] = false;
 hogHasBeenEaten[1] = false;
 hogHasBeenEaten[2] = false;
@@ -368,6 +377,9 @@ ccurse = 0
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;
+visitedPortals = false;
+visitedPortalsB = false;
+visitedPortalsC = false;
 hasBeenEaten = false;
 hasBeenEatenB = false;
 hasBeenEatenC = false;
@@ -386,6 +398,7 @@ cwepmod1 = 0;
 cwepmod2 = 0;
 cwepmod3 = 0;
 cwepmod4 = 0;
+newWeaponMod = -1;
 ultra_got[109] = 0;//Initialize ultra array
 scrCrowns()
 scrUltras()
@@ -509,7 +522,12 @@ if race = 17// && !instance_exists(StartDaily)//GunSmith random wepmod
         wepmod1 = scrMods();
     }
     until(wepmod1 != 14) //radiation mod
-
+	newWeaponMod = 1;
+	with instance_create(x,y,NewWeaponModHUD)
+	{
+		modNumber = 1;
+		alarm[0] = 1;
+	}
 }
 
 
@@ -746,7 +764,7 @@ chickenFocusMax = 100;
 chickenFocus = chickenFocusMax;
 chickenFocusCostRate = 1;
 chickenFocusReturnRate = 3;
-chickenFocusDelay = 9;
+chickenFocusDelay = 20//9;
 chickenFocusDelayTime = 0;
 chickenFocusDelayRate = 1;
 chickenFocusInUse = false;
@@ -788,10 +806,12 @@ totalDupesSpawned = 0;
 
 visitedCrib = false;
 fromCribToVault = false;
-meltingd = noone;
-lastEnemyKilled = noone;
+meltingd = [noone,noone];
+lastEnemyKilled = [noone,noone];
+lastEnemyKilledIndex = 0;
 
 exception = false;
+greedException = false;
 sharpteeth = 0; //stress embedded
 stressTargetHealth = 99;
 crackshotsfired = 0; //hunter ultra d

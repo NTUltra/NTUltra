@@ -37,7 +37,7 @@ if !isDown
 		|| (y < other.y) || (y > other.y + other.verticalDistanceBeteenTanks))
 		{
 			snd_play_2d(sndIonCharge);
-			alarm[3] = max(alarm[3],2);
+			alarm[3] = max(alarm[3],4);
 			with instance_create(x,y,ExploderPopoExplode)
 			{
 				targetX = xx;
@@ -66,15 +66,17 @@ idpdSpawnCooldown -= 1;
 var ran = random(10);
 if target != noone {
 	walk = alarm[1] * 2;
-	if ran < 1
+	if ran < 1 && !instance_exists(PopoMissile) && !instance_exists(IDPDSpawn)
 	{
 	    snd_play(sndEliteGruntRocketFire);
 	    wkick = 8
 	    with instance_create(x,y,PopoMissile) {
-		    motion_add(other.gunangle+random(10)-5,4.5)
+		    motion_add(other.gunangle+random(10)-5,0.5)
 		    image_angle = direction
+			alarm[2] += 5;
 		    team = other.team
 		}
+		speed = 0;
 	    alarm[1] = actTime * 2;
 		walk = alarm[1] * 2;
 
@@ -111,7 +113,7 @@ if target != noone {
 		var yyy = y;
 		x = xx;
 		y = yy;
-		scrDrop(10,0);
+		scrDrop(14,0);
 		x = xxx;
 		y = yyy;
 	}

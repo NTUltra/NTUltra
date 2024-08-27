@@ -478,43 +478,47 @@ function scrSecondaryPowers() {
 			case 11:
 				if !isOverlapping && KeyCont.key_regal[p] == 1
 				{
-					if !instance_exists(MarkerWallToggler)
+					//if !instance_exists(MarkerWallToggler)
+					//{
+					with MarkerWallToggler
 					{
-						if instance_exists(Marker)
-						{
+						event_perform(ev_alarm,0);	
+					}
+					if instance_exists(Marker)
+					{
 						
-							with Marker
-							{
-								with instance_create(x,y,MarkerWallToggler)
-								{
-									event_user(0);
-									BackCont.shake += 5;
-									if ds_exists(myWalls,ds_type_list) && ds_list_size(myWalls) > 0
-									{
-										snd_play_2d(sndHunterWallToggle,0.1);
-										var a = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
-										BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake
-										BackCont.viewy2 += lengthdir_y(15,a + 180)*UberCont.opt_shake
-									}
-								}
-							}
-						}
-						else if ultra_got[43] && altUltra
+						with Marker
 						{
-							var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-							BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake
-							BackCont.viewy2 += lengthdir_y(15,a + 180)*UberCont.opt_shake
-							with instance_create(x + lengthdir_x(300,a),y + lengthdir_y(300,a),MarkerWallToggler)
+							with instance_create(x,y,MarkerWallToggler)
 							{
 								event_user(0);
 								BackCont.shake += 5;
 								if ds_exists(myWalls,ds_type_list) && ds_list_size(myWalls) > 0
 								{
 									snd_play_2d(sndHunterWallToggle,0.1);
+									var a = point_direction(other.x,other.y,UberCont.mouse__x,UberCont.mouse__y);
+									BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake
+									BackCont.viewy2 += lengthdir_y(15,a + 180)*UberCont.opt_shake
 								}
 							}
 						}
 					}
+					else if ultra_got[43] && altUltra
+					{
+						var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+						BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(15,a + 180)*UberCont.opt_shake
+						with instance_create(x + lengthdir_x(300,a),y + lengthdir_y(300,a),MarkerWallToggler)
+						{
+							event_user(0);
+							BackCont.shake += 5;
+							if ds_exists(myWalls,ds_type_list) && ds_list_size(myWalls) > 0
+							{
+								snd_play_2d(sndHunterWallToggle,0.1);
+							}
+						}
+					}
+					//}
 				}
 			break;
 			//YUNG CUZ
@@ -910,8 +914,8 @@ function scrSecondaryPowers() {
 								}
 							}
 						}
-						if ultra_got[92] && altUltra
-						{
+						if !ultra_got[92] && altUltra
+						{/*
 							repeat(3)
 							with instance_create(x,y,UltraSplinter)
 							{
@@ -921,13 +925,13 @@ function scrSecondaryPowers() {
 							}
 						}
 						else
-						{
+						{*/
 							repeat(3)
-							with instance_create(x,y,UltraToxicThrowerGas)
-							{
-								motion_add(random(360),3+random(1)+(other.skill_got[5]));
-								//dmg += 1;
-							}
+								with instance_create(x,y,UltraToxicThrowerGas)
+								{
+									motion_add(random(360),3+random(1)+(other.skill_got[5]));
+									//dmg += 1;
+								}
 						}
 					}
 					else

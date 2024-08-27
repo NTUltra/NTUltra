@@ -111,4 +111,5 @@ function scrLoadStats() {
 	unlocked_inverted_areas = ini_read_real("STATS","unlocked_inverted_areas",0);
 	unlocked_more_crowns = ini_read_real("STATS","unlocked_more_crowns",0);
 	unlocked_more_characters = ini_read_real("STATS","unlocked_more_characters",0);
+	weapons_modded = ini_read_real("STATS","weapons_modded",0);
 }

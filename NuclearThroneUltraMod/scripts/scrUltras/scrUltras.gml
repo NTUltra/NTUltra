@@ -19,7 +19,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "<w>INFINITE AMMO<w> THE FIRST 8 SECONDS#OF ENTERING AN AREA#KILLING A BOSS GIVES#ANOTHER 8 SECONDS OF INFINITE AMMO"
+	ultra_text[2] = "<g>INFINITE AMMO<g> AND <w>+10% RELOAD SPEED<w>#FOR THE <w>FIRST 8 SECONDS<w>#OF <w>ENTERING AN AREA<w>##KILLING A BOSS GIVES ANOTHER 8 SECONDS OF#INFINITE AMMO AND RELOAD SPEED"
 	ultra_tips[2] = "bringer of order"
 
 	ultra_name[3] = "BUDDY COP"
@@ -49,7 +49,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 2 && Player.altUltra)
 		{
 			ultra_name[6] = "CURSED"
-		    ultra_text[6] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>##<aq>IMMUNE<aq> TO ENEMY CONTACT DAMAGE#WHILE <p>SHIELDED<p>"
+		    ultra_text[6] = "<w>TELEPORT<w> AFTER <p>SHIELDING<p>#<p>SHIELDING<p> FIRES <g>LASERS<g>#ALL <g>LASERS<g> BECOME <aq>BOUNCY<aq>##<aq>IMMUNE<aq> TO ENEMY CONTACT DAMAGE#WHILE <p>SHIELDED<p>"
 		    ultra_tips[6] = "cursed crystal"
 		}
     
@@ -119,7 +119,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[15] = "ultra ultra ultra ultra"
     
 	    ultra_name[16] = "DOOMED"
-	    ultra_text[16] = "THE TYPE OF ENEMY THAT DIES#LAST IN AN AREA#IS DEAD IN THE NEXT AREA#MORE <r>BLOOD<r> DAMAGE"
+	    ultra_text[16] = "<w>LAST TWO<w> TYPES OF ENEMIES#THAT DIED IN AN AREA#ARE <r>DEAD<r> IN THE NEXT AREA##MORE <r>BLOOD<r> DAMAGE"
 	    ultra_tips[16] = "blood sweat and tears"
 		
     
@@ -161,12 +161,12 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	{
 		//EXTRA FEET OR CROWN OF SPEED
 		ultra_name[19] = "KILL KILL KILL"
-		ultra_text[19] = "YOUR ACTIVE CHANGES INTO#<w>KILL KILL KILL<w>:#TARGET ONE ENEMY#DEAL AN <r>ABSURD<r> AMOUNT OF <r>DAMAGE<r> TO IT#AND ANY OF ITS <w>TYPE<w>#IF YOU HAVE <p>THRONEBUTT<p> ALSO <r>HEAL<r> 2 <r>HP<r>#CAN BE DONE THRICE PER AREA"
+		ultra_text[19] = "YOUR ACTIVE CHANGES INTO#<w>KILL KILL KILL<w>:#TARGET ONE ENEMY#DEAL AN <r>ABSURD<r> AMOUNT OF <r>DAMAGE<r> TO IT#AND ANY OF ITS <w>TYPE<w>#IF YOU HAVE <p>THRONEBUTT<p> ALSO <r>HEAL<r> 2 <r>HP<r>#CAN BE DONE THRICE PER AREA##WHEN <r>KILL KILL KILL<r> HAS BEEN USED#ENABLE <g>SNARE<g> AGAIN"
 		ultra_tips[19] = "KILL KILL KILL"
 	}
 	
 	ultra_name[20] = "STEREO SNARES"
-	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#CAN ENSNARE ENEMY PROJECTILES"
+	ultra_text[20] = "SPAWN TWO <w>SNARES<w>#CAN ENSNARE ENEMY PROJECTILES##SNARE <r>DAMAGES<r> ENEMIES#WHEN IN YOUR LINE OF SIGHT"
 	ultra_tips[20] = "better then original stereo snares"
 	
 	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra))
@@ -216,7 +216,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//STEROIDS 
 	ultra_name[25] = "AMBIDEXTUROUS"
-	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU#CHANCE DEPENDS ON:#RELOAD TIME AND AMMO COST"
+	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU#CHANCE DEPENDS ON:#RELOAD TIME AND AMMO COST#CAN <r>OVERHEAL<r> UP TO <w>2<w> ABOVE MAX"
 	ultra_tips[25] = "big wep chests drop two duplicates"
 
 	ultra_name[26] = "GET LOADED"
@@ -251,9 +251,9 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		{
 			ultra_name[29] = "REFINED TASTE"
 			if isOtherCharacter
-				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#EVERY ENEMY HAS A +1% CHANCE#TO DROP A WEAPON#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
+				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
 			else
-				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#EVERY ENEMY HAS A +1% CHANCE#TO DROP A WEAPON#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
+				ultra_text[29] = "ONLY <w>HIGH TIER<w> WEAPON DROPS#INCREASE <w>RELOAD SPEED<w> BASED ON WEAPON TIER"
 		    ultra_tips[29] = "delicacy"
 		}
 		
@@ -284,7 +284,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//CHICKEN 
 	ultra_name[33] = "HARDER TO KILL"
-	ultra_text[33] = "<w>KILLS<w> EXTEND <r>BLEED<r> TIME#<g>CROWN VAULTS<g> REGENERATE 1 <r>MAX HP<r>"
+	ultra_text[33] = "<w>KILLS<w> EXTEND <r>BLEED<r> TIME#<g>CROWN VAULTS<g> REGENERATE <w>1<w> <r>MAX HP<r>"
 	ultra_tips[33] = "immortal"
 	
 	//FIRE WEAPON
@@ -311,7 +311,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 
 	ultra_name[36] = "VANISH"
-	ultra_text[36] = "WHEN IN <w>SLOW MOTION<w>#YOU <w>VANISH<w> AND DROP A <p>DECOY<p>#WHEN <w>VANISHED<w> ENEMIES WON'T TARGET YOU"
+	ultra_text[36] = "WHEN IN <w>SLOW MOTION<w>#YOU <w>VANISH<w> AND DROP A <p>DECOY<p>#WHEN <w>VANISHED<w> ENEMIES WON'T TARGET YOU##THE <p>DECOY<p> <aq>DEFLECTS<aq> <r>ENEMY<r> PROJECTILES!"
 	ultra_tips[36] = "stealthy"
 
 	    //REBEL 
@@ -418,7 +418,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 13 && (Player.altUltra))
 	{
 		ultra_name[51] = "HYPNOTIZE"
-		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO <pi>HYPNOSIS<pi>#<pi>HYPNOSIS<pi> RE-ACTIVATES YOUR <w>PASSIVE<w>#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5"
+		ultra_text[51] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO <pi>HYPNOSIS<pi>#<pi>HYPNOSIS<pi> RE-ACTIVATES YOUR <w>PASSIVE<w>#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5##WHEN OUT OF <pi>HYPNOSIS<pi>#RE-ENABLE <pi>CHARGE<pi>"
 		ultra_tips[51] = "no one expects a sheep to carry a gun"
 	}
 
@@ -655,7 +655,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[82] = "the anomaly meta"
 
 	ultra_name[83] = "MELTDOWN"
-	ultra_text[83] = "INCREASE <g>RADIATION<g> VALUE BY 20%#REDUCE <g>BEAM<g> COST BY 15%#<g>ULTRA WEAPONS<g> COST 40% LESS <g>RADS<g>"
+	ultra_text[83] = "INCREASE <g>RADIATION<g> VALUE BY 20%#REDUCE <g>BEAM<g> COST BY 20%#<g>ULTRA WEAPONS<g> COST 40% LESS <g>RADS<g>"
 	ultra_tips[83] = "freezeup"
 
 	ultra_name[84] = "POWER"

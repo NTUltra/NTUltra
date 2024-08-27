@@ -29,11 +29,28 @@ if target != noone {
 
         }
         else {
-            direction = point_direction(x, y,target.x, target.y) + random(20) - 10
-            speed = max(speed,0.8);
-            walk = 20 + random(10)
-			alarm[1] += 2;
-            gunangle = point_direction(x, y, target.x, target.y)
+			if instance_number(FreakVenomizerProjectile) < 8 && random(4) < 1
+			{
+				alarm[1] += actTime;
+				hasDoneVenomizer = true;
+				var n = instance_nearest(x,y,WallHitMe)
+				if n != noone
+				{
+					with instance_create(x,y,FreakVenomizerProjectile)
+					{
+						motion_add(point_direction(x,y,n.x+8,n.y+8),12);
+						image_angle = direction;
+					}
+				}
+			}
+			else
+			{
+	            direction = point_direction(x, y,target.x, target.y) + random(20) - 10
+	            speed = max(speed,0.8);
+	            walk = 20 + random(10)
+				alarm[1] += 2;
+	            gunangle = point_direction(x, y, target.x, target.y)
+			}
         }
 
         if target.x < x

@@ -27,6 +27,7 @@ if my_health > 0 && !used
 				{
 					scrWeapons()
 					isPermanent = other.isPermanent;
+					visitedPortals = 0;
 					hasBeenEaten = other.hasBeenEaten;
 					wep = other.wep;
 					wepmod1 = other.wepmod1;
@@ -44,6 +45,7 @@ if my_health > 0 && !used
 			with instance_create(x,y,WeaponDeposit)
 			{
 				isPermanent = other.isPermanent;
+				visitedPortals = 0;
 				hasBeenEaten = other.hasBeenEaten;
 				wep = other.wep;
 				wepmod1 = other.wepmod1

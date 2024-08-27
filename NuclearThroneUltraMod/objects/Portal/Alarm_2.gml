@@ -13,6 +13,11 @@ if instance_exists(Player)
 				instance_destroy()
 		}
 		instance_create(x,y,PortalShock);
+		with instance_create(x,y,WallBreakLine)
+		{
+			image_angle = point_direction(x,y,Player.x,Player.y);
+			image_xscale = point_distance(x,y,Player.x,Player.y);
+		}
 	}
 }
 else if !inverted

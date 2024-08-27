@@ -28,7 +28,7 @@ snd_play(sndShielderEnterF,0.01,true);
 }
 
 team = 3
-
+wasBehindWall = false;
 //behavior
 walk = 0
 gunangle = random(360)

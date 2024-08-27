@@ -32,12 +32,12 @@ with instance_create(x,y,Laser)
 {image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + other.aimOffset
 	scrCopyWeaponMod(other);
 team = other.team
-laserhit=1;
+laserhit += 1;
 sprite_index=sprBouncingLaser;
 if other.isUltra
 {
 	sprite_index = sprUltraBouncingLaser;
-	laserhit = 3;
+	laserhit += 3;
 	image_yscale += 0.25;
 }
 event_perform(ev_alarm,0)}

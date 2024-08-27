@@ -14,11 +14,16 @@ if um == ultramods.bloodMelee
 	var yy = y + lengthdir_y(ol,image_angle+180);
 	snd_play(sndBloodPistol,0.1,true);
 	var toSpawn = HeavyBloodBullet;
+	if dmg < 6
+	{
+		toSpawn = BloodBullet;
+		dmg += 0.5;
+	}
 	if sprite_index == sprUltraShank
 		toSpawn = UltraBloodBullet;
 	with instance_create(xx,yy,toSpawn)
 	{
-		dmg = ceil(other.dmg*0.4);
+		dmg = max(1,ceil(other.dmg*0.4));
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -31,7 +36,7 @@ else if um == ultramods.krakenMelee
 {
 	snd_play_fire(choose(sndWater1,sndWater2) );
 	var am = 4 + speed + dmg;
-	var ddd = ceil(other.dmg*0.3);
+	var ddd = max(1,ceil(other.dmg*0.3));
 	with instance_create(x,y,Tentacle)
 	{
 		isog = false;

@@ -2,14 +2,14 @@
 if other.team != team and other.my_health > 0
 {
 	if alarm[1] < 1
-	with instance_create(other.x,other.y,Morph)
-	{
-		team = other.team;
-		alarm[0] -= 1;
-		if instance_exists(Player) && Player.skill_got[17]
+		with instance_create(other.x,other.y,Morph)
+		{
+			team = other.team;
 			alarm[0] -= 1;
-	}
-	alarm[1] = 1;
+			if instance_exists(Player) && Player.skill_got[17]
+				alarm[0] -= 1;
+		}
+	alarm[1] = 2;
 	with other
 	{
 		if UberCont.normalGameSpeed == 60

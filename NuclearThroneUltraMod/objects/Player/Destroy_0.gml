@@ -221,6 +221,7 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && v
 		ammo = 50
 		curse = other.curse
 		isPermanent = other.isPermanent;
+		visitedPortals = other.visitedPortals;
 		hasBeenEaten = other.hasBeenEaten;
 		name = wep_name[wep]
 		type = wep_type[wep]
@@ -234,6 +235,8 @@ if wep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && v
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;
 		wepmod4 = other.wepmod4;
+		if isPermanent
+			persistent = true;
 	}
 
 if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && visible && my_health < 1
@@ -246,6 +249,7 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && 
 		curse = other.bcurse
 		pickedup = true;
 		isPermanent = other.isPermanentB;
+		visitedPortals = other.visitedPortalsB;
 		hasBeenEaten = other.hasBeenEatenB;
 		name = wep_name[wep]
 		type = wep_type[wep]
@@ -258,6 +262,8 @@ if bwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && 
 		wepmod2 = other.bwepmod2;
 		wepmod3 = other.bwepmod3;
 		wepmod4 = other.bwepmod4;
+		if isPermanent
+			persistent = true;
 	}
 }
 if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && visible && my_health < 1
@@ -269,6 +275,7 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && 
 		ammo = 50
 		curse = other.ccurse
 		isPermanent = other.isPermanentC;
+		visitedPortals = other.visitedPortalsC;
 		hasBeenEaten = other.hasBeenEatenC;
 		name = wep_name[wep]
 		type = wep_type[wep]
@@ -281,6 +288,8 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && 
 		wepmod2 = other.cwepmod2;
 		wepmod3 = other.cwepmod3;
 		wepmod4 = other.cwepmod4;
+		if isPermanent
+			persistent = true;
 	}
 }
 if race == 23 && visible && my_health < 1//Frog explode!
@@ -465,6 +474,9 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		isPermanent = other.isPermanent;
 		isPermanentB = other.isPermanentB;
 		isPermanentC = other.isPermanentC;
+		visitedPortals = other.visitedPortals;
+		visitedPortalsB = other.visitedPortalsB;
+		visitedPortalsC = other.visitedPortalsC;
 		wepmod1 = other.wepmod1;
 		wepmod2 = other.wepmod2;
 		wepmod3 = other.wepmod3;
