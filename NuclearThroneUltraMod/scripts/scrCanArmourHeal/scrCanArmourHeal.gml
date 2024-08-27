@@ -70,7 +70,7 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 	else
 	{
 		snd_play(sndNoArmour);
-		snd_play_2d(snd_lowa,0,true,false,10);
+		// snd_play_2d(snd_lowa,0,true,false,10);
 		snd_play(sndEmpty)
 		var dir = instance_create(x,y,PopupText)
 		dir.mytext = "NOT ENOUGH AMMO";

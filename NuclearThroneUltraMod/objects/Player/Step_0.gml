@@ -1784,31 +1784,6 @@ if sprite_index != spr_hurt and lsthealth > my_health// && alarm[3] < 1
 	lsthealth -= 0.5
 
 }
-if  ultra_got[40]=1//Ultra D
-{
-	if lsthealth > my_health
-	{
-		if canrebel = 1
-		{
-			canrebel = 0
-			//REBEL DEFENCE PASSIVE
-			var ang = random(360)
-			var angstep = 360/14;
-			repeat(14)
-			{
-				with instance_create(x,y,AllyBullet)
-				{
-					motion_add(ang,6)
-					image_angle = direction
-					team = other.team
-				}
-				ang += angstep;
-			}
-		}
-	}
-	else
-		canrebel = 1
-}
 var tempMaxSpeed = 0;
 tempMaxSpeed += 0.1;//A minor speed boost to all for the game feel
 if ultra_got[108] && place_meeting(x,y,HandTrail)

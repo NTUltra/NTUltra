@@ -1,4 +1,4 @@
-if instance_exists(Drama)
+if instance_exists(DramaCamera)
 {
 with InvertedBanditBoss
 {

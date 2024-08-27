@@ -33,7 +33,7 @@
   ],
   "name":"sprMutant7Idle",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Steroids",
     "path":"folders/Sprites/Player/Steroids.yy",
@@ -116,7 +116,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":9,
-    "yorigin":9,
+    "yorigin":10,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

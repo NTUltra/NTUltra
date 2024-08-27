@@ -164,10 +164,11 @@ function scrRaces() {
 	race_acti[7] = "<w>DUAL WIELDING<w>"
 	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
 	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
-	race_vision[7] = "HOLD <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
+	//race_vision[7] = "HOLD <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
+	race_vision[7] = "PRESS <w>[E]<w> TO:#TOGGLE <w>FIRING STANCE<w>##<w>NORMAL<w> OR##<w>CROUCHED<w>:#FIRE AT A <w>HIGHER ACCURACY<w> AND#FASTER <w>RELOAD SPEED<w>#BUT YOU ARE ALMOST <r>STATIONARY<r>";
 	if isUnique
 	{
-		race_vision[7] = string_replace_all(race_vision[7],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		race_vision[7] = string_replace_all(race_vision[7],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	race_vision_detail[7] = race_vision[7];
 	race_lock[7] = "REACH LABS TO UNLOCK"

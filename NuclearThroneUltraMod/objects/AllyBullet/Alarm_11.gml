@@ -46,6 +46,7 @@ else if um == ultramods.laserBullet
 		image_angle = other.direction;
 		team = other.team
 		event_perform(ev_alarm,0);
+		alarm[2] = max(1,alarm[2] - 1);
 	}
 }
 else if um == ultramods.bulletPlasma
@@ -60,6 +61,9 @@ else if um == ultramods.bulletPlasma
 	}
 	with instance_create(x,y,MiniPlasmaBall)
 	{
+		dmg = 1;
+		acc += 1.5;
+		maxSpeed += 3;
 		scrCopyWeaponMod(other);
 		ptime = 6;
 		direction = other.direction;

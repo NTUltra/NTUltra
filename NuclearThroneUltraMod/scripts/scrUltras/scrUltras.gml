@@ -193,7 +193,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[22] = "more pop"
     
 	    ultra_name[23] = "MAKE IT RAIN"
-	    ultra_text[23] = "+60% <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)##+10% <w>BULLET<w> WEAPON <w>RELOAD SPEED<w>"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
+	    ultra_text[23] = "+50% <w>SHOTGUN RELOAD SPEED<w>#USED <w>BULLET<w> <y>AMMO<y>#CONVERTS TO <w>SHOTGUN<w> <y>AMMO<y>#(10 BULLET TO 1 SHOTGUN AMMO)##+10% <w>BULLET<w> WEAPON <w>RELOAD SPEED<w>"//"REALLY HIGH SHOTGUN FIRE RATE#USED SHOTGUN AMMO CONVERTS#TO BULLET AMMO"
 	    ultra_tips[23] = "shells and bullets <3"
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra))
 		{
@@ -324,7 +324,8 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[38] = "more is better"
     
 	    ultra_name[39] = "EVERYONE IS CONNECTED"
-	    ultra_text[39] = "ALLIES CAST <g>LASERS<g> TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR <w>DROP RATE<w> IS#ALIES DROP MORE <y>RES<y><g>OUR<g><r>CES<r>#WHEN THEY DIE"
+	    //ultra_text[39] = "ALLIES CAST <g>LASERS<g> TOWARDS EACH OTHER#THE MORE ALLIES YOU HAVE#THE HIGHER YOUR <w>DROP RATE<w> IS#ALIES DROP MORE <y>RES<y><g>OUR<g><r>CES<r>#WHEN THEY DIE"
+		ultra_text[39] = "ALLIES CAST <g>LASERS<g> TOWARDS EACH OTHER"
 	    ultra_tips[39] = "hurt stone"
 		
 		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra))
@@ -381,7 +382,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 12 && (Player.altUltra))
 		{
 			ultra_name[47] = "GREEN TEAM"
-		    ultra_text[47] = "SPAWNING DUPES COSTS <g>RADS<g>#INSTEAD OF MAX <r>HP<r>#DUPES DROP MORE <y>RES<y><g>OUR<g><r>CES<r>"
+		    ultra_text[47] = "SPAWNING DUPES COSTS <g>RADS<g>#INSTEAD OF MAX <r>HP<r>"
 		    ultra_tips[47] = "pay up"
 		}
     
@@ -478,13 +479,13 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //VIKING 
 	    ultra_name[61] = "MEGA SERPENT ARMOUR STRIKE"
-	    ultra_text[61] = "<w>TRIPLE SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#GAIN 1 <gb>ARMOUR<gb> WHEN YOU KILL A BOSS"
+	    ultra_text[61] = "<w>TRIPLE SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#GAIN 1 <gb>ARMOUR<gb> WHEN YOU KILL A BOSS##WHENEVER YOU <gb>ARMOUR<gb> <w>STRIKE<w>:#GAIN SOME <y>AMMO<y> AND <r>HEAL<r> <w>1<w>"
 	    ultra_tips[61] = "break down the walls!"
 		
 		if altOverride || (instance_exists(Player) &&  Player.race == 16 && (Player.altUltra))
 		{
 			ultra_name[61] = "CAPTAIN OF THE KRAKEN"
-			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOUR<gb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
+			ultra_text[61] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 25% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOUR<gb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"//TENTACLES DESTROY ALL ENEMY PROJECTILES <-- nope
 			ultra_tips[61] = "from the sea she came"
 		}
 		
@@ -519,7 +520,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[65] = "modder"
 
 	ultra_name[66] = "ARMOUR SMITH"
-	ultra_text[66] = "WHEN <w>UPGRADING<w> A WEAPON#YOU ALSO GAIN TWO <gb>ARMOUR<gb>#<gb>ARMOUR<gb> MAX +3"
+	ultra_text[66] = "WHEN <w>UPGRADING<w> A WEAPON#YOU ALSO GAIN TWO <gb>ARMOUR<gb>#<gb>ARMOUR<gb> MAX <w>+3<w>"
 	ultra_tips[66] = "craft changer"
 	
 	//EMPY HAND

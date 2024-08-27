@@ -40,6 +40,7 @@ function scrCreateDataRef(){
 		maxCash = other.maxCash;
 		canKillKillKill = other.canKillKillKill;
 		skeletonGambleBongas = other.skeletonGambleBongas;
+		firingStance = other.firingStance;
 		livesRegain = other.livesRegain;
 		sheepFakeouts = other.sheepFakeouts;
 		bskin = other.bskin;

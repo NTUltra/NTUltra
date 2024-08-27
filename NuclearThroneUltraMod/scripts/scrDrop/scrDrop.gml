@@ -75,16 +75,16 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 					mh += (instance_number(WantHealth) * 0.15);
 			}
 		}
-		var rebelBuff = 0;
-		if Player.ultra_got[39] && !Player.altUltra
-			rebelBuff = instance_number(Ally)*0.1;
+		//var rebelBuff = 0;
+		//if Player.ultra_got[39] && !Player.altUltra
+		//	rebelBuff = instance_number(Ally)*0.1;
 		if itemdrop >= 100
 			dropRateBuff = 0.07;
 		else
 			dropRateBuff = 0;
 		rabbit = (Player.skill_got[4]*(0.34+Player.betterrabbitpaw));
 		dropRateBuff += 0.98 + rabbit
-		+ rebelBuff
+		//+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.00009))//max is 50%
 		if scrIsCrown(21) //Crown of risk
 		{

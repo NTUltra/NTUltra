@@ -43,7 +43,8 @@ function scrSerpentArmourStrike(){
     
 	if ultra_got[61] && !Player.altUltra//MEGA ARMOUR STRIKE
 	{
-    
+		scrCollectAmmo(0.5);
+		scrHeal(1);
 		with instance_create(x,y,SerpentStrike)
 		{
 			perFrame -= 2;

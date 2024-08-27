@@ -46,11 +46,5 @@ with instance_create(x,y,MovingCorpse)
 }
 var d = 4;
 var w = 0;
-if instance_exists(Player) && Player.ultra_got[47] && Player.altUltra
-{
-	d = 15;
-	w = 4;
-	raddrop = 7;
-}
 scrDrop(d,w)
 scrRaddrop();

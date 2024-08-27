@@ -441,6 +441,22 @@ if my_health < prevhealth
 	}
 	
 }
+if  ultra_got[40] && tookHit && alarm[3] < 1//Ultra D
+{
+	//REBEL DEFENCE PASSIVE
+	var ang = random(360)
+	var angstep = 360/16;
+	repeat(16)
+	{
+		with instance_create(x,y,AllyBullet)
+		{
+			motion_add(ang,8)
+			image_angle = direction
+			team = other.team
+		}
+		ang += angstep;
+	}
+}
 if skill_got[22]//Stress Sharp teeth part
 {
 	if tookHit /*&& alarm[10] < 1*/ && alarm[3] < 1//I been hit
@@ -637,12 +653,11 @@ if race == 25 && tookHit
 ///imunity codes
 if ultra_got[48]&&lag>0
 {
-if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
-{lag-=1;
-
-
-alarm[3] = max(alarm[3],12);//before your lag lowers again}
-}
+	if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
+	{
+		lag -= 1;
+		alarm[3] = max(alarm[3],12);//before your lag lowers again}
+	}
 }
 
 //if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsmith use armour and Skeleton and businesshog actually
@@ -1400,7 +1415,15 @@ if maxhealth > 0
 			}
 		}
 	}
-	maxhealth = max(1,maxhealth + abundanceHealth);
+	if maxhealth + abundanceHealth <= 0
+	{
+		abundanceHealth += maxhealth;
+		maxhealth = 1;
+	}
+	else
+	{
+		maxhealth = maxhealth + abundanceHealth;
+	}
 }
 if lockout
 {

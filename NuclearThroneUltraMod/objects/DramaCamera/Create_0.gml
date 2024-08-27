@@ -67,7 +67,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		}
 		else if instance_exists(MimicBoss)
 		{
-			song = musUltraVisionary;
+			song = musUltraMimicBoss;
 		}
 		else if instance_exists(VoidMasterBoss)
 		{

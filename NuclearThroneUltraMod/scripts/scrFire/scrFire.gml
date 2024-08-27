@@ -224,21 +224,50 @@ function scrFire(canDrown = true) {
 				}
 		}
 	}
-	if object_index == Player && (ultra_got[43] && !altUltra) {
-		with instance_create(x,y,CloneShooter) {
-			snd_play(sndHitscan,0.1,true);
-			alarm[2] = 4;
-			dmg = min(ceil(wep_load[wep]*0.5),9);
-			depth = other.depth + 1;
-			hitscanMode = true;
-			alarm[0] = wep_load[wep] + 4
-			offset = (random(12) - 6) * other.accuracy;
-			event_perform(ev_step,ev_step_end);
-			scrFire();
-			alarm[0] = wep_load[wep] + 4
-			alarm[1] = 1;
+	if object_index == Player
+	{
+		if (ultra_got[43] && !altUltra) {
+			with instance_create(x,y,CloneShooter) {
+				snd_play(sndHitscan,0.1,true);
+				alarm[2] = 4;
+				dmg = min(ceil(wep_load[wep]*0.5),9);
+				depth = other.depth + 1;
+				hitscanMode = true;
+				alarm[0] = wep_load[wep] + 4
+				offset = (random(12) - 6) * other.accuracy;
+				event_perform(ev_step,ev_step_end);
+				scrFire();
+				alarm[0] = wep_load[wep] + 4
+				alarm[1] = 1;
+			}
+			exit;
 		}
-		exit;
+		if firingStance
+		{
+			speed = 0;
+			var firingStanceAccuracy = accuracy;
+			accuracy *= 0.45;
+			if (instance_exists(SpeedLockout))
+			{
+				with SpeedLockout
+				{
+					alarm[0] = lockoutTime;	
+				}
+			}
+			else
+			{
+				with instance_create(x,y,SpeedLockout)
+				{
+					resetSpeed = other.maxSpeed;
+				}
+				maxSpeed = 1.25;
+				if skill_got[2]
+				{
+					scrApplyExtraFeet();
+					maxSpeed += 0.75;
+				}
+			}	
+		}
 	}
 	drawempty = 10
 
@@ -5238,7 +5267,7 @@ function scrFire(canDrown = true) {
 	    {
 			if wep_type[wep] == 2 || scrIsAlsoShotgunType(wep)// You are holding a shotgun
 			{
-				reload -= wep_load[wep]*0.6;//shotgun speed
+				reload -= wep_load[wep]*0.5;//shotgun speed
 				//ammo[1] += wep_cost[wep]//bullet magic
 			}
 			else if wep_type[wep] == 1 || scrIsAlsoBulletType(wep)// You are holding a bullet weapon
@@ -5327,7 +5356,7 @@ function scrFire(canDrown = true) {
 	{
 		if scrKrakenWeapons(wep)
 		{
-			ammo[wep_type[wep]] += wep_cost[wep]*0.30;//return one ammo
+			ammo[wep_type[wep]] += wep_cost[wep]*0.25;//return one ammo
 		}
 	}
 
@@ -5385,6 +5414,15 @@ function scrFire(canDrown = true) {
 		firedthislevel=true;
 		firedOnce = true;
 		fired=true;
+	}
+	if object_index == Player
+	{
+		if firingStance
+		{
+			reload -= 1;
+			reload -= ceil(wep_load[wep] * 0.17);
+			accuracy = firingStanceAccuracy;	
+		}
 	}
 	if !scrIsCrown(29)//Crown of purity
 	{

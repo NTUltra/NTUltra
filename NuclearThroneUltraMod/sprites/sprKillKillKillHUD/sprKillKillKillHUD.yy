@@ -26,7 +26,7 @@
   ],
   "name":"sprKillKillKillHUD",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"UnsortedProp",
     "path":"folders/Sprites/Enviroment/UnsortedProp.yy",
@@ -87,7 +87,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":30,
     "yorigin":0,
   },
   "swatchColours":null,

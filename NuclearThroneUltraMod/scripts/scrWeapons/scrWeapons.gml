@@ -8175,7 +8175,7 @@ function scrWeapons() {
 	wep_name[730] = "FROST KNIFE"
 	wep_type[730] = 0
 	wep_auto[730] = 0
-	wep_load[730] = 17
+	wep_load[730] = 15
 	wep_cost[730] = 0
 	wep_sprt[730] = sprFrostDagger
 	wep_area[730] = 4
@@ -8186,7 +8186,7 @@ function scrWeapons() {
 	wep_name[731] = "GOLDEN FROST KNIFE"
 	wep_type[731] = 0
 	wep_auto[731] = 0
-	wep_load[731] = 16
+	wep_load[731] = 14
 	wep_cost[731] = 0
 	wep_sprt[731] = sprGoldenFrostDagger
 	wep_area[731] = 17

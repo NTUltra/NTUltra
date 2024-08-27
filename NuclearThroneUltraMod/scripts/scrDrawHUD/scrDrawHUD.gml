@@ -242,11 +242,6 @@ function scrDrawHUD() {
 			draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
 		}
 	}
-	//SKELETON TB
-	if dataRef.race == 19 && dataRef.skill_got[5] && !(dataRef.ultra_got[74] && dataRef.altUltra) {
-		//skeletonGambleBongas
-		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,vx+armourX+115,vy+11)	
-	}
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
@@ -434,12 +429,6 @@ function scrDrawHUD() {
 			draw_text(xx,yy,rc)
 		}
 	}
-	if dataRef.ultra_got[19] && dataRef.altUltra {
-		var xx =vx+__view_get( e__VW.WView, 0 )-16-16;
-		var yy =vy+40;
-		var w = 28;
-		draw_sprite(sprKillKillKillHUD,dataRef.canKillKillKill,xx-2,yy-3)	
-	}
 	//ULTRA ICON
 	dir=0;
 	dix=0;
@@ -468,7 +457,7 @@ function scrDrawHUD() {
 	{
 	    repeat(sheepFakouts)
 	    {
-			draw_sprite_ext(sprJustASheep,0,vx+__view_get( e__VW.WView, 0 )-16*dix,vy+40,1,1,0,c_white,1);
+			draw_sprite_ext(sprJustASheep,0,vx+__view_get( e__VW.WView, 0 ) + 8 - (16*dix),vy+40,1,1,0,c_white,1);
 			dix++;
 	    }
 	}
@@ -476,7 +465,7 @@ function scrDrawHUD() {
 	{
 	    if dataRef.ultra_got[dir]
 	    {
-			var xx =vx+__view_get( e__VW.WView, 0 )-12-16*dix;
+			var xx =vx+__view_get( e__VW.WView, 0 )-4-16*dix;
 			var yy =vy+20;
 			var xxx = camera_get_view_x(view_camera[0]) + xx;
 			var yyy = camera_get_view_y(view_camera[0]) + yy;
@@ -661,6 +650,31 @@ function scrDrawHUD() {
 			
 	    }
 	dir+=1;
+	}
+	//ADDITIONAL ABILITIES
+	//var xx = vx+__view_get( e__VW.WView, 0 )-16-16;
+	//var yy = vy+40;
+	dix -= 1;
+	//SKELETON TB
+	if dataRef.race == 19 && dataRef.skill_got[5] && !(dataRef.ultra_got[74] && dataRef.altUltra) {
+		//skeletonGambleBongas
+		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
+		var yy = vy+20;
+		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,xx,yy)
+		dix += 1;
+	}
+	//STEROIDS REGAL
+	if dataRef.race == 7 && dataRef.skill_got[dataRef.maxskill + 1] {
+		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
+		var yy = vy+20;
+		draw_sprite(sprFiringStance,dataRef.firingStance,xx,yy);
+		dix += 1;
+	}
+	if dataRef.ultra_got[19] && dataRef.altUltra {
+		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
+		var yy = vy+20;
+		draw_sprite(sprKillKillKillHUD,dataRef.canKillKillKill,xx,yy);
+		dix += 1;
 	}
 	//SKILL ICONS
 	vy -= yo;

@@ -230,8 +230,10 @@ function scrSecondaryPowers() {
 			break;
 			//STEROIDS
 			case 7:
-				if !isOverlapping && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
+				if !isOverlapping && (KeyCont.key_regal[p] == 1/* || KeyCont.key_regal[p] == 2*/)
 				{
+					firingStance = !firingStance;
+					/*
 					var canDoTheThing = false;
 					if !instance_exists(HoldToSteroidsShoot)
 					{
@@ -316,10 +318,13 @@ function scrSecondaryPowers() {
 								}
 								maxSpeed = 0;
 								if skill_got[2]
+								{
 									scrApplyExtraFeet();
+									maxSpeed += 1;
+								}
 							}	
 						}
-					}
+					}*/
 				}
 			break;
 			//ROBOT
@@ -589,7 +594,10 @@ function scrSecondaryPowers() {
 						snd_play_2d(sndPandaFlopSleep,0.1);
 						maxSpeed = 0;
 						if skill_got[2]
+						{
 							scrApplyExtraFeet();
+							maxSpeed += 1;
+						}
 					}
 					else if PandaSleep.alarm[0] < 1
 					{

@@ -1558,7 +1558,6 @@ function scrPowers(raceOverwrite = -1) {
 	{
 		if my_health > 2 || !scrIsCrown(41) || ammoRebel
 		{
-			canrebel = 1
 			if ammoRebel
 			{
 				ammo[wepType] -= typ_ammo[wepType]*takePercentage
@@ -2313,7 +2312,7 @@ function scrPowers(raceOverwrite = -1) {
 				effective = false;
 				if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
 				{
-					snd_play_2d(snd_lowa,0,true,false,10);
+					//snd_play_2d(snd_lowa,0,true,false,10);
 					snd_play(sndEmpty)
 					dir = instance_create(x,y,PopupTextLockoutPlayer);
 					dir.mytext = failText;
