@@ -6277,7 +6277,7 @@ function scrWeapons() {
 	wep_name[559] = "ASSAULT FLUGGER"
 	wep_type[559] = 2
 	wep_auto[559] = 2
-	wep_load[559] = 35//18*3
+	wep_load[559] = 32//18*3
 	wep_cost[559] = 4.5
 	wep_sprt[559] = sprAssaultFlugger
 	wep_area[559] = 11

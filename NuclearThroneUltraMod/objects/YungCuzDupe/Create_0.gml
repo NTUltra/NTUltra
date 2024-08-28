@@ -54,6 +54,7 @@ altFire = true;
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;
+newWeaponMod = -1;
 visitedPortals = 0;
 visitedPortalsB = 0;
 visitedPortalsC = 0;

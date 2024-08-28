@@ -357,16 +357,14 @@ if instance_exists(Player)
     {
     repeat(UberCont.opt_discs)
     {
-    
-    with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(300)-150,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(300)-150,Floor)
-    {
-    
-	    with instance_create(x+16,y+16,PermanentDisc)
-			motion_add(random(360),2+random(5) )
-    
-    }
-    
-    
+	    with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(300)-150,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(300)-150,Floor)
+	    {
+			var o = 16;
+			if object_index == FloorExplo
+				o = 8;
+		    with instance_create(x+o,y+o,PermanentDisc)
+				motion_add(random(360),2+random(5) )
+	    }
     }
     
     

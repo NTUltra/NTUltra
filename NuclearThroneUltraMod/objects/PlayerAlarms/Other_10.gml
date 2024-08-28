@@ -19,11 +19,6 @@ if instance_exists(Player)
 	if Player.ultra_got[16]
 	{
 		//Doomed Melting
-		with Player
-		{
-			meltingd = lastEnemyKilled;
-			debug(meltingd);
-		}
 		alarm[10] = 10;
 	}
 	if Player.skill_got[22] == 1 //STRESS

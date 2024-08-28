@@ -131,15 +131,44 @@ if Player.area!=104
 alarm[1] = 2
 if Player.area == 100 && Player.crownvisits > 1
 {
-	with instance_furthest(irandom_range(Player.x + 400,Player.x - 400),
-	irandom_range(Player.y + 400,Player.y - 400),Torch)
+	if !instance_exists(Torch)
 	{
-		if point_distance(x,y,Player.x,Player.y) > 128
+		with instance_furthest(Player.x,Player.y,Floor)
 		{
-			maxhealth = 100;
-			my_health = 100;
-			with instance_create_depth(x,y,depth - 1,HintGiver) {
-				owner = other.id;
+			with instance_create(x+16,y+16,Torch) {
+				maxhealth = 100;
+				my_health = 100;
+				with instance_create_depth(x,y,depth - 1,HintGiver) {
+					owner = other.id;
+				}
+			}
+		}
+	}
+	else
+	{
+		with instance_furthest(irandom_range(Player.x + 400,Player.x - 400),
+		irandom_range(Player.y + 400,Player.y - 400),Torch)
+		{
+			if point_distance(x,y,Player.x,Player.y) > 128 && !place_meeting(x,y,CrownVaultExit)
+			{
+				maxhealth = 100;
+				my_health = 100;
+				with instance_create_depth(x,y,depth - 1,HintGiver) {
+					owner = other.id;
+				}
+			}
+		}
+	}
+	if !instance_exists(HintGiver)
+	{
+		with instance_furthest(Player.x,Player.y,Floor)
+		{
+			with instance_create(x+16,y+16,Torch) {
+				maxhealth = 100;
+				my_health = 100;
+				with instance_create_depth(x,y,depth - 1,HintGiver) {
+					owner = other.id;
+				}
 			}
 		}
 	}

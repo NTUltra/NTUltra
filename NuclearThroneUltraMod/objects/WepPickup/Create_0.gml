@@ -48,6 +48,7 @@ if instance_exists(Player)
 	if Player.skill_got[30]//power craving
 	{
 		wepmod1=scrMods();
+		newWeaponMod = 1;
 	}
 	if Player.skill_got[0]//Heavy heart
 	{

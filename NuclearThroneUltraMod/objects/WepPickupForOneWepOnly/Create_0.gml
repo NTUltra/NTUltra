@@ -42,11 +42,13 @@ my_health = 1;
 maxhealth = 1;
 meleedamage = 0;
 wepmod1=0;
+newWeaponMod = -1;
 if instance_exists(Player)
 {
 	if Player.skill_got[30]//power craving
 	{
 		wepmod1 = scrMods();
+		newWeaponMod = 1;
 	}
 }
 wepmod2=0;

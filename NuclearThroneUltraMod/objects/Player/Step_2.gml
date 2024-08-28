@@ -1417,8 +1417,15 @@ if maxhealth > 0
 	}
 	if maxhealth + abundanceHealth <= 0
 	{
-		abundanceHealth += maxhealth;
-		maxhealth = 1;
+		if maxhealth == 1
+		{
+			abundanceHealth = 0;
+		}
+		else
+		{
+			abundanceHealth += maxhealth;
+			maxhealth = 1;
+		}
 	}
 	else
 	{

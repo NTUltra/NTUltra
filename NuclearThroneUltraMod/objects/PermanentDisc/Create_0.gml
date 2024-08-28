@@ -1,6 +1,6 @@
 //event_inherited();
 //typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-
+depth = 1;
 alarm[0] = 15
 team=2;
 

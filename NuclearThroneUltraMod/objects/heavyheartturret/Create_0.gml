@@ -42,6 +42,7 @@ isPermanentC = false;
 visitedPortals = false;
 visitedPortalsB = false;
 visitedPortalsC = false;
+newWeaponMod = -1;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;

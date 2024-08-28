@@ -3,7 +3,7 @@ friction=0.1;
 //friction = 0.6
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 
-target=0;
+target=noone;
 dmg = 5;
 alarm[0]=6
 

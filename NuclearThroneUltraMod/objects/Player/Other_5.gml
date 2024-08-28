@@ -3,6 +3,11 @@ if instance_exists(Credits)
 	exit;
 if swapChar
 	exit;
+if ultra_got[16]
+{
+	meltingd = lastEnemyKilled;
+	lastEnemyKilled = [noone, noone];
+}
 jump = 0;
 roll = 0;
 didJumpRoll = false;

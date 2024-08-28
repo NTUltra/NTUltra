@@ -51,7 +51,7 @@ else
 
 dontteleport=false;
 returnFX = true;
-	
+	newWeaponMod = -1;
 	ammo = 0;
     wep=0
     curse = 0
