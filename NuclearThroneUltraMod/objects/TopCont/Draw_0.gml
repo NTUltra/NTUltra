@@ -61,7 +61,49 @@ if instance_exists(Spiral)
 
 with TopDecal
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
-
+if UberCont.opt_enemy_xray
+{
+		shader_set(shdDither);
+		var alph = gpu_get_alphatestenable();
+		gpu_set_alphatestenable(false);
+		with enemy
+		{
+			if visible && sprite_exists(sprite_index)
+			{
+				var xrcol = collision_rectangle(bbox_left,y,bbox_right,bbox_bottom + 16,Wall,false,false)
+				if xrcol != noone
+				{
+					
+					/*
+					E = 60;
+					W = 70;
+					S = 80;
+					*/
+					var wallTop = xrcol.y - 16;
+					var xsb = y + sprite_height * 0.5;
+					var xh = xsb - wallTop;
+					var xdt = sprite_height - xh;
+					var xwx = x - (sprite_width*0.5*right)
+					//var xyh = max(0,sprite_height - 16);
+					//var xyhh = sprite_height - xyh;
+					var xyy = y + (sprite_height * 0.5) - xh;
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh-1,xwx,xyy,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh+1,xwx,xyy,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy+1,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xyh,sprite_width,xyhh,xwx,xyy-1,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xyh,sprite_width,xyhh,xwx-1,xyy-1,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xyh,sprite_width,xyhh,xwx+1,xyy-1,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx+1,xyy+1,right,image_yscale,c_white,1);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx-1,xyy+1,right,image_yscale,c_white,1);
+					//shader_reset();
+					draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy,right,image_yscale,c_white,1);
+					shader_set(shdDither);
+				}
+			}
+		}
+		shader_reset();
+		gpu_set_alphatestenable(alph);
+}
 with WaterMine
 draw_self();
 with JumpDust

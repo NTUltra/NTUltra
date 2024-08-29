@@ -3,8 +3,8 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 	//SS_Init();
 	if noOverlap && audio_is_playing(sndId)
 		return false;
-	if UberCont.opt_3d_audio == 0
-	{
+	//if UberCont.opt_3d_audio == 0
+	//{
 		snd_play_2d(sndId,randompitch,cancelPrev,usesLocation,priority);
 		/*
 		if sndId==sndHitWall||sndId==sndShotgunHitWall{
@@ -22,9 +22,9 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 		} else {
 			audio_sound_pitch(audio_play_sound(sndId,2,false), 1 + (random(randompitch)*2 - randompitch));
 		}*/
-	}
-	else
-	{
+	//}
+	//else
+	//{
 		var playSound = true;
 		if cancelPrev
 		{
@@ -72,5 +72,5 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 			}
 			return sfx;
 		}
-	}
+	//}
 }

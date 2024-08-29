@@ -8,6 +8,7 @@ function scrSaveOptions() {
 
 	//visual
 	ini_write_real("OPTIONS","fulscrn",opt_fulscrn);
+	ini_write_real("OPTIONS","opt_enemy_xray",opt_enemy_xray);
 	ini_write_real("OPTIONS","crosshair",opt_crosshair);
 	ini_write_real("OPTIONS","crosshairscale",opt_crosshair_scale);
 	ini_write_string("OPTIONS","customcrosshair",opt_custom_crosshair);

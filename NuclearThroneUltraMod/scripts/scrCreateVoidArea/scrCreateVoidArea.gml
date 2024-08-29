@@ -1,7 +1,7 @@
 ///scrCreateVoidArea();
 // /@description
 ///@param
-function scrCreateVoidArea(){
+function scrCreateVoidArea(defaultVoidCreation = true){
 	if !instance_exists(VoidFiend)
 	{
 		var ham = 5;
@@ -20,23 +20,33 @@ function scrCreateVoidArea(){
 					instance_create(x + fxx,y + fyy,Floor);
 			}
 		}
-		instance_create(x,y,Translations);
-		instance_create(x,y+48,VoidExit);
-		var xo = x;
-		var yo = y + 64;
-		instance_create(x,y,DarkOverlay);
-		instance_create(x,y,TextHandler);
-		var xo = x + 112;
-		var yo = y - 160;
-		instance_create(xo, yo, VoidBench);
-		instance_create(xo, yo + 16, VoidFiend);
-		var xo = x - 96;
-		var yo = y - 128;
-		//instance_create(xo, yo, VoidBench);
-		if !instance_exists(SecretSheepNavigation)
-			instance_create(xo, yo - 24, VoidMaster);
-		var xo = x;
-		var yo = y - 218//192;
-		instance_create(xo, yo, VoidSeer);
+		if defaultVoidCreation && GetPlayerLoops() == 5
+		{
+			instance_create(x + 112,y - 160,BecomeMimic);
+			instance_create(x - 92,y - 160,BecomeMimic);
+			instance_create(x,y - 160,MimicActivater);
+			instance_create(x,y,DelayVoidCreation);
+		}
+		else
+		{
+			instance_create(x,y,Translations);
+			instance_create(x,y+48,VoidExit);
+			var xo = x;
+			var yo = y + 64;
+			instance_create(x,y,DarkOverlay);
+			instance_create(x,y,TextHandler);
+			var xo = x + 112;
+			var yo = y - 160;
+			instance_create(xo, yo, VoidBench);
+			instance_create(xo, yo + 16, VoidFiend);
+			var xo = x - 96;
+			var yo = y - 128;
+			//instance_create(xo, yo, VoidBench);
+			if !instance_exists(SecretSheepNavigation)
+				instance_create(xo, yo - 24, VoidMaster);
+			var xo = x;
+			var yo = y - 218//192;
+			instance_create(xo, yo, VoidSeer);
+		}
 	}
 }

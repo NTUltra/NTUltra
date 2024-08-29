@@ -13,6 +13,10 @@ else if loops < 2
 {
 	t = scrText(race - 1, loops + 1);
 }
+else if loops == 5
+{
+	t = choose("WHAT WAS THAT?","WHERE DID THOSE GUYS COME FROM?","THE VOID DOES SOME STRANGE THINGS");
+}
 else
 {
 	t = scrText(race - 1, 3);

@@ -8,6 +8,7 @@ function scrLoadOptions() {
 
 	//visual
 	opt_fulscrn = ini_read_real("OPTIONS","fulscrn",1);
+	opt_enemy_xray = ini_read_real("OPTIONS","opt_enemy_xray",1);
 	opt_crosshair = ini_read_real("OPTIONS","crosshair",0);
 	opt_crosshair_scale = ini_read_real("OPTIONS","crosshairscale",16);
 	opt_custom_crosshair = ini_read_string("OPTIONS","customcrosshair",0);

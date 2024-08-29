@@ -6,3 +6,8 @@ with MimicBossPlateau
 {
 	event_user(2);	
 }
+if instance_number(MimicBoss) < 2
+	with DelayVoidCreation
+	{
+		event_user(0);	
+	}
