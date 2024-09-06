@@ -1,8 +1,12 @@
 /// @description Init
 updateVersion = "30.21.00";
 betaVersion = "31.BETA.29"
+serverPort = "1414";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
+disableDebug = false;
+if disableDebug
+	visible = false;
 maxwep = 802;
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
@@ -18,6 +22,7 @@ week = -1;
 	Then when the new week hits it will run the new code there for the first time,
 	So you can force your rng there
 */
+sockets = [];
 defaultTotalDailies = -1;
 defaultTotalWeeklies = -1;
 weekGamemode = -1;

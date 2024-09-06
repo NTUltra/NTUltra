@@ -222,17 +222,17 @@ if (Player.loops > 0 && Player.area == 112 && Player.subarea == 1)
 {
 	scrSpawnTechnomancer(InvertedTechnomancer);
 }
-/*
 if (Player.loops > 0 && Player.area == 117 && Player.subarea == 1)
 {
+	scrSpawnBoss(BecomeMushroomBoss)
 	scrSpawnMoreBosses(BecomeMushroomBoss,3);
 }
 if (Player.loops > 0 && Player.area == 124 && Player.subarea == 1)
 {
 	//INV mushroomland
+	scrSpawnBoss(BecomeMushroomBoss)
 	scrSpawnMoreBosses(BecomeMushroomBoss,3);
 }
-*/
 
 if (Player.race=22 && Player.area!=100 && Player.area!=104 && !( (Player.area == 9 || Player.area == 118) && Player.subarea == 3))
 {

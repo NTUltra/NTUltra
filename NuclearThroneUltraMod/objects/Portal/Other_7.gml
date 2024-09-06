@@ -55,7 +55,7 @@ sprite_index = sprPortalInvertedDisappear || sprite_index = sprBigPortalDisappea
 		breload = lowb;
 		creload = lowc;
 		scrFullyReloadHogWeapons();
-		if my_health >= 0
+		if my_health >= 0 || armour >= 0
 			canRestart = true;
 	}
 	audio_stop_sound(sndPortalLoop)

@@ -18,8 +18,8 @@ if instance_exists(creator)
 				snd_play_fire(sndSword1)
 				instance_create(x,y,Dust)
 				with instance_create(
-				x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDir)
-				,y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDir)
+				x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
+				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
 				,Slash)
 				{
 					dmg = 14
@@ -42,8 +42,8 @@ if instance_exists(creator)
 				snd_play_fire(sndSword2)
 				instance_create(x,y,Dust)
 				with instance_create(
-				x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDir)
-				,y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDir),Slash)
+				x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
+				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir),Slash)
 				{
 					dmg = 14
 					longarms = 0

@@ -12,12 +12,60 @@ if mode == 1
 	{
 		with instance_create(x + lengthdir_x(len,ang),y + lengthdir_y(len,ang),ToxicGas)
 		{
-			motion_add(ang,3);	
+			motion_add(ang,4);	
 		}
 		ang += angStep;
 	}
+	var dir = 0;
+	var randir = 1;
+	var bspd = 2;
+	var spd = bspd;
+	var acc = 0.3;
+	var am = 8;
+	repeat(am)
+	{
+		with instance_create(x,y,ToxicGas)
+		{
+			direction = dir + random_range(randir,-randir); 
+			speed = spd;	
+		}
+		spd += acc;
+	}
+	dir = 90;
+	spd = bspd;
+	repeat(am)
+	{
+		with instance_create(x,y,ToxicGas)
+		{
+			direction = dir + random_range(randir,-randir);
+			speed = spd;
+		}
+		spd += acc;
+	}
+	dir = 180;
+	spd = bspd;
+	repeat(am)
+	{
+		with instance_create(x,y,ToxicGas)
+		{
+			direction = dir + random_range(randir,-randir);
+			speed = spd;	
+		}
+		spd += acc;
+	}
+	dir = 270;
+	spd = bspd;
+	repeat(am)
+	{
+		with instance_create(x,y,ToxicGas)
+		{
+			direction = dir + random_range(randir,-randir);
+			speed = spd;
+		}
+		spd += acc;
+	}
 }
-else
+else if instance_number(BuddyShroom) < 6
 {
 	var ran = random(360);
 	var ranStep = 360/buddyAmount;

@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrMeleeAmmoCost(myCost = 1){
-	if (scrIsCrown(40) /*&& !hasCosted */&& instance_exists(Player))
+	if (scrIsCrown(40) && hasCosted < 6 && instance_exists(Player))
 	{
 		var hasEnoughAmmo = false;
 		var hasEnoughRads = true;
@@ -121,7 +121,7 @@ function scrMeleeAmmoCost(myCost = 1){
 		}
 		else if hasEnoughAmmo
 		{
-			hasCosted = true;
+			hasCosted += myCost;
 			with Player
 			{
 				ammo[targetAmmo] -= myCost;

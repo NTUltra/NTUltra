@@ -16,7 +16,6 @@ if target != noone && instance_exists(target)
 		else
 			timer -= 0.25
 	}
-
 	if !instance_exists(MushroomBoss) && !instance_exists(BecomeMushroomBossGrow) && point_distance(x,y,target.x,target.y) < 160 and !instance_exists(Portal) and (timer > 300 || my_health < 50)
 	{
 		instance_destroy()

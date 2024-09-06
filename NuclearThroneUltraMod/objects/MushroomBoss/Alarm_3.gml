@@ -46,7 +46,34 @@ if mode == 0 && instance_exists(Player)
 		goal = 100;
 		event_perform(ev_alarm,0);
 	}
+	with projectile
+	{
+		instance_destroy(id,false);	
+	}
 	instance_create(x,y,AreaResetter);
+	with hitme
+	{
+		if point_distance(x,y,Player.x,Player.y) < 128
+		{
+			with Floor
+			{
+				if object_index != FloorExplo && point_distance(x + 16,y + 16,Player.x,Player.y) > 128
+				{
+					other.x = x + 16;
+					other.y = y + 16;
+					with other
+					{
+						scrForcePosition60fps();
+					}	
+				}
+			}
+		}
+	}
+	with enemy
+	{
+		if team != 2
+			alarm[1] += 30;//Daze	
+	}
 	with Floor
 	{
 		GenBones();	

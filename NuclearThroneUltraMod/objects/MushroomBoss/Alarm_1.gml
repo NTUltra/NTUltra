@@ -3,7 +3,7 @@ alarm[1] = actTime + random(actTime)
 if !reachedHalfHealth && my_health < maxhealth*0.5
 {
 	reachedHalfHealth = true;
-	event_user(3);	
+	event_user(3);
 }
 scrTarget()
 if target != noone {
@@ -17,7 +17,7 @@ if target != noone {
 		var dis = point_distance(target.x, target.y, x, y)
         if dis < 64 && mode == 1
 		{
-			event_user(0);	
+			event_user(0);
 		}
 		else
 		{
@@ -28,11 +28,11 @@ if target != noone {
 			}
 			else if ran > 50
 			{
-				
+				event_user(2);
 			}
 			else if ran > 25
 			{
-				
+				event_user(3);
 			}
 			else
 			{

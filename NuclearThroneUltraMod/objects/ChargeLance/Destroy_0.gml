@@ -38,7 +38,7 @@ if instance_exists(Player) && instance_exists(creator)
 		else if r < 4
 		{
 			snd_play_fire(sndSword2)
-			with instance_create(x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
+			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LanceShank)
 			{
 				dmg = 16
 				knockback += 2;

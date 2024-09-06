@@ -11,7 +11,7 @@ hitEntities = [];
 longarms = 0;
 walled = 0
 canAlwaysDeflect = false;
-hasCosted = false;
+hasCosted = 0;
 canKillSquares = false;
 if scrIsCrown(40)
 {

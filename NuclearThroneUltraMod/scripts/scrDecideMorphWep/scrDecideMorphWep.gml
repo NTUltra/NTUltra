@@ -10,7 +10,7 @@ function scrDecideMorphWep() {
 		{
 			do 
 	        {
-	            wep = choose(70, 73, 98, 198, 307, 408, 659, 468, 495, 646, 663, 750, 755)
+	            wep = choose(70, 73, 98, 198, 408, 659, 468, 495, 646, 663, 750, 755)
 	            maxTries --;
 	        }
 	        until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
@@ -20,7 +20,7 @@ function scrDecideMorphWep() {
 		{
 	        do 
 	        {
-	            wep = choose(70, 73, 98, 198, 307, 408, 495, 646, 663, 750, 755)
+	            wep = choose(70, 73, 98, 198, 408, 495, 646, 663, 750, 755)
 	            maxTries --;
 	        }
 	        until (((wep != Player.wep and wep != Player.bwep) or Player.race = 7)
@@ -28,7 +28,7 @@ function scrDecideMorphWep() {
 		}
     }
     else
-        wep = choose(70, 73, 98, 198, 307, 408, 495, 646, 663, 750, 755)
+        wep = choose(70, 73, 98, 198, 408, 495, 646, 663, 750, 755)
     
     return wep;
 }

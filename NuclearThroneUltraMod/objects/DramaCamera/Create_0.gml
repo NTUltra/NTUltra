@@ -69,6 +69,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		{
 			song = musUltraMimicBoss;
 		}
+		else if instance_exists(BecomeMushroomBossGrow)
+		{
+			song = musUltraVisionary;
+		}
 		else if instance_exists(VoidMasterBoss)
 		{
 			song = musChimera2;
@@ -193,6 +197,11 @@ else if instance_exists(CloudBoss)
 {
 	UberCont.hadBossIntro = false;
 	name = "THE VISIONARY";
+	//image_index = 18;
+}
+else if instance_exists(BecomeMushroomBossGrow)
+{
+	name = "MYCELIUM MONSTER";
 	//image_index = 18;
 }
 else if instance_exists(PitGhostBoss)

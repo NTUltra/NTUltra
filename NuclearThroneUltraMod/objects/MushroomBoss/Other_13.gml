@@ -8,5 +8,7 @@ if mode == 0
 }
 else
 {
-	
+	event_user(2);
+	alarm[5] = max(1,(animationDuration/image_speed) - 1) + 1;
+	alarm[1] += alarm[5];
 }

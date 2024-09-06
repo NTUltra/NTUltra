@@ -1,4 +1,19 @@
 /// @description opening Chest
+with Player {
+	nochest = 0;
+	if (scrIsCrown(20))
+	{
+		if (canCrownOfProtection > 3)
+		{
+			canCrownOfProtection = 0;
+			scrArmourPickup(1);
+		}
+		else
+		{
+			canCrownOfProtection += 1;	
+		}
+	}
+}
 repeat(1+mediumchest) {
 	var al = array_length(wep);
 	for (var i = 0; i < al; i++)

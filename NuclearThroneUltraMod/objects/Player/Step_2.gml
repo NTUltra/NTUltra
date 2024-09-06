@@ -110,15 +110,6 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			if scrIsCrown(20) && ammoMultiple > 0//Crown of protection
 			{
 				ammoMultiple -= 2;
-				if (canCrownOfProtection > 3)
-				{
-					canCrownOfProtection = 0;
-					scrArmourPickup(1);
-				}
-				else
-				{
-					canCrownOfProtection += 1;	
-				}
 			}
 			
 			if ammoMultiple > 0{

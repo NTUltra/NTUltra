@@ -1,7 +1,22 @@
 /// @description Open Chest
 if !instance_exists(GenCont) && instance_exists(Player)
 {
-	Player.nochest = 0
+	with Player {
+		nochest = 0;
+		if (scrIsCrown(20))
+		{
+			if (canCrownOfProtection > 3)
+			{
+				canCrownOfProtection = 0;
+				scrArmourPickup(1);
+			}
+			else
+			{
+				canCrownOfProtection += 1;	
+			}
+		}
+	}
+	
 	var ang = random(360);
 	repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 	with instance_create(x-8,y,WepPickup)

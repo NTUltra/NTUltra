@@ -80,11 +80,17 @@ function scrLoadStats() {
 	}
 	
 	dir = 0;
-	repeat(maxskill+2)
+	repeat(maxskill+1)
 	{
 		ctot_skill_taken[dir] = ini_read_real("STATS","ctotskilltaken" + string(dir),0);
 		dir ++;
 	}
+	dir += 1;
+	if ini_key_exists("STATS","ctotskilltaken" + string(dir))
+		ctot_regal_taken[dir] = ini_read_real("STATS","ctotskilltaken" + string(dir),0);
+	else
+		ctot_regal_taken[dir] = ini_read_real("STATS","ctotregaltaken" + string(dir),0);
+	//TODO FUTURE MUTATION
 	dir = 0;
 	repeat(maxultra+2)
 	{

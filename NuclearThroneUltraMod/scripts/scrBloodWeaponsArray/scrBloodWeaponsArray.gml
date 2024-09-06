@@ -5,7 +5,7 @@ function scrBloodWeaponsArray(loops, meleesOnly = false){
 	if loops > 0
 	{
 		if meleesOnly
-			return [109, 548, 549, 599];
+			return [109, 548, 549, 599,808];
 		
 		return [29, 60, 61, 83,
 		84, 109, 132, 142,
@@ -14,7 +14,8 @@ function scrBloodWeaponsArray(loops, meleesOnly = false){
 		549, 599, 609,
 		612, 499, 626, 643, 644,
 		645 ,658, 717, 718, 413, 274, 304, 313,
-		774, 749, 763, 774, 775, 776, 777, 778];
+		774, 749, 763, 774, 775, 776, 777, 778,
+		808];
 	}
 	if meleesOnly
 		return [109, 548];

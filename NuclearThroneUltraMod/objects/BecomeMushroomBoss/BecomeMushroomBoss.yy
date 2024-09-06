@@ -39,8 +39,8 @@
     "path":"sprites/sprBigMushroomPropIdle/sprBigMushroomPropIdle.yy",
   },
   "spriteMaskId":{
-    "name":"mskScrapBoss",
-    "path":"sprites/mskScrapBoss/mskScrapBoss.yy",
+    "name":"mskBigMushroomPropIdle",
+    "path":"sprites/mskBigMushroomPropIdle/mskBigMushroomPropIdle.yy",
   },
   "visible":true,
 }

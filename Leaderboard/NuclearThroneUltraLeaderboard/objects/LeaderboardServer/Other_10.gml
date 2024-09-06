@@ -11,8 +11,11 @@ while(ini_key_exists("scorelb",i))
 }
 ini_close();
 totalScoreEntries = i;
-scoreLeaderboardString = scoreLeaderboard;
-scoreLeaderboardString = string_replace_all(scoreLeaderboardString,"|","\n");
+if !disableDebug
+{
+	scoreLeaderboardString = scoreLeaderboard;
+	scoreLeaderboardString = string_replace_all(scoreLeaderboardString,"|","\n");
+}
 
 //Bi-Daily Race
 ini_open(dailyRaceSaveFileString);
@@ -25,8 +28,12 @@ while(ini_key_exists("racelb",i))
 }
 ini_close();
 totalRaceEntries = i;
-raceLeaderboardString = raceLeaderboard;
-raceLeaderboardString = string_replace_all(raceLeaderboardString,"|","\n");
+totalScoreEntries = i;
+if !disableDebug
+{
+	raceLeaderboardString = raceLeaderboard;
+	raceLeaderboardString = string_replace_all(raceLeaderboardString,"|","\n");
+}
 
 ini_open(weeklySaveFileString);
 var weeklyLeaderboard = "";
@@ -38,5 +45,9 @@ while(ini_key_exists("weeklylb",i))
 }
 ini_close();
 totalWeeklyEntries = i;
-weeklyLeaderboardString = weeklyLeaderboard;
-weeklyLeaderboardString = string_replace_all(weeklyLeaderboardString,"|","\n");
+totalScoreEntries = i;
+if !disableDebug
+{
+	weeklyLeaderboardString = weeklyLeaderboard;
+	weeklyLeaderboardString = string_replace_all(weeklyLeaderboardString,"|","\n");
+}

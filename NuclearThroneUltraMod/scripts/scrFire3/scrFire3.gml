@@ -358,8 +358,8 @@ function scrFire3(hasTailNow){
 
 		instance_create(x,y,Dust)
 
-		var lx = x+lengthdir_x((Player.skill_got[13]+bettermelee)*20,aimDirection);
-		var ly = y+lengthdir_y((Player.skill_got[13]+bettermelee)*20,aimDirection);
+		var lx = x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection);
+		var ly = y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection);
 		var len = 16 * accuracy;
 		with instance_create(lx,ly,ClawSlash)
 		{
@@ -509,6 +509,52 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(60,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 8
 		wkick = 4
+
+		break;
+		
+		//SUPER BLOOD LANCE
+		case 808:
+
+		snd_play_fire(sndSuperBloodLance)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SuperBloodLanceSlash)
+		{
+			image_yscale = sign(other.wepangle);
+			owner = other.id;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection,8);
+			motion_add(aimDirection,9)
+		}
+		BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 20
+		wkick = -6
+
+		break;
+		
+		//CHAINSAW
+		case 809:
+
+		with instance_create(x,y,ChainSawBurst)
+		{
+			accuracy = other.accuracy;
+			creator = other.id
+			ammo = 8
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
 
 		break;
 	}

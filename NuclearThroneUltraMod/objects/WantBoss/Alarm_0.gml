@@ -60,6 +60,13 @@ if target != noone && instance_exists(target)
 			else if other.area == 10
 			{
 				instance_create(x,y,BigVulture);
+				if other.subarea < 3
+				{
+					with BigVulture
+					{
+						raddrop = 20;	
+					}
+				}
 			}
 			else if other.area == 121
 			{

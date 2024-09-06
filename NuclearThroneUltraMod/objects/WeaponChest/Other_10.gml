@@ -6,6 +6,18 @@ if !instance_exists(GenCont) && instance_exists(Player)
 	scrChestOpenMindReload(Player);
 	with Player {
 		nochest = 0;
+		if (scrIsCrown(20))
+		{
+			if (canCrownOfProtection > 3)
+			{
+				canCrownOfProtection = 0;
+				scrArmourPickup(1);
+			}
+			else
+			{
+				canCrownOfProtection += 1;	
+			}
+		}
 	}
 	if !oneweponly
 	{

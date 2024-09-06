@@ -47,6 +47,9 @@
     "name":"sprToxicGas",
     "path":"sprites/sprToxicGas/sprToxicGas.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskToxicGas",
+    "path":"sprites/mskToxicGas/mskToxicGas.yy",
+  },
   "visible":true,
 }

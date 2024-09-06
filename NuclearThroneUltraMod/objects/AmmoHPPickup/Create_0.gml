@@ -29,7 +29,6 @@ if scrIsHardMode() //HARD MODE
 	alarm[0] -= 20;
 
 rerolls = 0;
-//RUSH CROWN
 loops = 0;
 if instance_exists(Player){
 	loops = Player.loops;
@@ -39,6 +38,7 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
+	//RUSH CROWN
 	if scrIsCrown(4) { alarm[0] *= 0.4}
 
 	if Player.race = 15{ alarm[0] *= 0.7}//atomf

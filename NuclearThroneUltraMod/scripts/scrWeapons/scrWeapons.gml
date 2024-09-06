@@ -36,7 +36,7 @@ function scrWeapons() {
 	wep_name[3] = "WRENCH"
 	wep_type[3] = 0
 	wep_auto[3] = 0
-	wep_load[3] = 18
+	wep_load[3] = 20
 	wep_cost[3] = 0
 	wep_sprt[3] = sprWrench
 	wep_area[3] = 1
@@ -237,7 +237,7 @@ function scrWeapons() {
 	wep_name[21] = "SLUGGER"
 	wep_type[21] = 2
 	wep_auto[21] = 0
-	wep_load[21] = 22
+	wep_load[21] = 20
 	wep_cost[21] = 1
 	wep_sprt[21] = sprSlugger
 	wep_area[21] = 2
@@ -251,7 +251,7 @@ function scrWeapons() {
 	wep_load[22] = 8
 	wep_cost[22] = 1
 	wep_sprt[22] = sprGatlingSlugger
-	wep_area[22] = 9
+	wep_area[22] = 8
 	wep_text[22] = "time to gatle"
 	wep_swap[22] = sndSwapShotgun
 	wep_rad[22] = 0;
@@ -447,7 +447,7 @@ function scrWeapons() {
 	wep_name[40] = "GOLDEN WRENCH"
 	wep_type[40] = 0
 	wep_auto[40] = 0
-	wep_load[40] = 17
+	wep_load[40] = 19
 	wep_cost[40] = 0
 	wep_sprt[40] = sprGoldWrench
 	wep_area[40] = 17
@@ -549,7 +549,7 @@ function scrWeapons() {
 	wep_load[49] = 4
 	wep_cost[49] = 4
 	wep_sprt[49] = sprQuadrupleMachinegun
-	wep_area[49] = 12
+	wep_area[49] = 11
 	wep_text[49] = "the future is here"
 	wep_swap[49] = sndSwapMachinegun
 	wep_rad[49] = 0;
@@ -1003,7 +1003,7 @@ function scrWeapons() {
 	wep_name[89] = "DIRECTOR SLUGGER"
 	wep_type[89] = 2
 	wep_auto[89] = 0
-	wep_load[89] = 23
+	wep_load[89] = 22
 	wep_cost[89] = 1
 	wep_sprt[89] = sprDirectorSlugger
 	wep_area[89] = 3
@@ -2536,7 +2536,7 @@ function scrWeapons() {
 	wep_name[226] = "GOLDEN SLUGGER"
 	wep_type[226] = 2
 	wep_auto[226] = 0
-	wep_load[226] = 20
+	wep_load[226] = 18
 	wep_cost[226] = 1
 	wep_sprt[226] = sprGoldenSlugger
 	wep_area[226] = 19
@@ -2602,7 +2602,7 @@ function scrWeapons() {
 	wep_name[232] = "HEAVY CROSSBOW"
 	wep_type[232] = 3
 	wep_auto[232] = 0
-	wep_load[232] = 45
+	wep_load[232] = 38
 	wep_cost[232] = 2
 	wep_sprt[232] = sprHeavyCrossbow
 	wep_area[232] = 4
@@ -3208,7 +3208,7 @@ function scrWeapons() {
 	wep_swap[285] = sndSwapMachinegun
 	wep_rad[285] = 0;
 
-	wep_name[286] = "GOLDEN GLOVE"
+	wep_name[286] = "GOLDEN DEAD GLOVE"
 	wep_type[286] = 4
 	wep_auto[286] = 0
 	wep_load[286] = 22
@@ -6709,7 +6709,7 @@ function scrWeapons() {
 	wep_load[598] = 7//8
 	wep_cost[598] = 1.5
 	wep_sprt[598] = sprExplosiveGatlingSlugger
-	wep_area[598] = 17
+	wep_area[598] = 16
 	wep_text[598] = "time to frattle"
 	wep_swap[598] = sndSwapShotgun
 	wep_rad[598] = 0;
@@ -9044,6 +9044,28 @@ function scrWeapons() {
 	wep_text[807] = "feeling the magnetism"
 	wep_swap[807] = sndSwapShotgun
 	wep_rad[807] = 16;
+	
+	wep_name[808] = "SUPER BLOOD LANCE"
+	wep_type[808] = 0
+	wep_auto[808] = 0
+	wep_load[808] = 25
+	wep_cost[808] = 0
+	wep_sprt[808] = sprSuperBloodLance
+	wep_area[808] = 30
+	wep_text[808] = "don't miss"
+	wep_swap[808] = sndSwapExplosive
+	wep_rad[808] = 0;
+	
+	wep_name[809] = "CHAINSAW"
+	wep_type[809] = 4
+	wep_auto[809] = 3
+	wep_load[809] = 15
+	wep_cost[809] = 1
+	wep_sprt[809] = sprJackHammer
+	wep_area[809] = 8
+	wep_text[809] = "the man with the saw"
+	wep_swap[809] = sndSwapMotorized
+	wep_rad[809] = 0;
 	//Swiss army bow
 	//Charge boomerang
 	

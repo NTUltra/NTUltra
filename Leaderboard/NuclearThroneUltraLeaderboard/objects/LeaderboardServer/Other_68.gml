@@ -21,6 +21,12 @@ if (type == network_type_non_blocking_connect || type == network_type_connect)
 	buffer_delete(sendBuffer);
 	//hitsCounter += 1;
 }
+if (type == network_type_disconnect)
+{
+	var socket = async_load[? "socket"];
+	show_debug_message("LOST CONNECTION: "+string(socket));
+	network_destroy(socket);
+}
 //Data to act on
 if (type == network_type_data) {
 	var buffer = async_load[? "buffer"];
@@ -37,14 +43,13 @@ if (type == network_type_data) {
 	{
 		case NETDATA.CANIPARTICIPATE:
 			var socket = buffer_read(buffer, buffer_u16);
+			show_debug_message("SOCKET: ", socket);
 			var userId = buffer_read(buffer, buffer_u64);
 			var canParticipate = scrGetExistingScore(dailyScoreSaveFileString,userId);
 			var sendBuffer = buffer_create(4,buffer_grow,1);
 			buffer_write(sendBuffer,buffer_u8,NETDATA.CANIPARTICIPATE);
 			buffer_write(sendBuffer,buffer_bool,canParticipate);
 			var dailyDay = scrGetDailyNumber();
-			show_debug_message("participation day:");
-			show_debug_message(dailyDay);
 			buffer_write(sendBuffer,buffer_u8,dailyDay);
 			if dailyDay % 2 == 0
 			{
@@ -60,6 +65,7 @@ if (type == network_type_data) {
 			}
 			buffer_write(sendBuffer,buffer_u16,tomorrow);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
+			//network_destroy(socket);
 		break;
 		case NETDATA.STARTDAILY:
 			var socket = buffer_read(buffer, buffer_u16);
@@ -114,6 +120,7 @@ if (type == network_type_data) {
 				network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 				buffer_delete(sendBuffer);
 			}
+			//network_destroy(socket);
 		break;
 		case NETDATA.STARTWEEKLY:
 			var socket = buffer_read(buffer, buffer_u16);
@@ -122,6 +129,7 @@ if (type == network_type_data) {
 			scrStartAGamemode(socket, sendBuffer, weekSeed, weekGamemode, weeklyOption);
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
+			//network_destroy(socket);
 		break;
 		//Receiving score
 		case NETDATA.UPDATEBIDAILYSCORE:
@@ -455,10 +463,14 @@ if (type == network_type_data) {
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
-			if isScore
-				scoreLeaderboardString = scoreLeaderboard;
-			else
-				raceLeaderboardString = scoreLeaderboard;
+			if !disableDebug
+			{
+				if isScore
+					scoreLeaderboardString = scoreLeaderboard;
+				else
+					raceLeaderboardString = scoreLeaderboard;
+			}
+		//network_destroy(socket);
 		break;
 		case NETDATA.LEADERBOARDRACE:
 			getScore = false;
@@ -559,10 +571,14 @@ if (type == network_type_data) {
 			network_send_packet(socket, sendBuffer, buffer_get_size(sendBuffer));
 			buffer_delete(sendBuffer);
 			scoreLeaderboard = string_replace_all(scoreLeaderboard,"|","\n");
-			if getScore
-				scoreLeaderboardString = scoreLeaderboard;
-			else
-				raceLeaderboardString = scoreLeaderboard;
+			if !disableDebug
+			{
+				if getScore
+					scoreLeaderboardString = scoreLeaderboard;
+				else
+					raceLeaderboardString = scoreLeaderboard;
+			}
+		//network_destroy(socket);
 		break;
 	}
 	buffer_delete(buffer);

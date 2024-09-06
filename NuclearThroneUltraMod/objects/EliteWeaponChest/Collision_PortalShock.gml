@@ -1,5 +1,19 @@
 if !instance_exists(Player){exit;}
-Player.nochest = 0
+with Player {
+		nochest = 0;
+		if (scrIsCrown(20))
+		{
+			if (canCrownOfProtection > 3)
+			{
+				canCrownOfProtection = 0;
+				scrArmourPickup(1);
+			}
+			else
+			{
+				canCrownOfProtection += 1;	
+			}
+		}
+	}
 scrChestOpenMindReload(Player);
 repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 	if !oneweponly

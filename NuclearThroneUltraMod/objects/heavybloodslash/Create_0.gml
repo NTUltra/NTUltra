@@ -11,7 +11,7 @@ if GetPlayerUltramod() == ultramods.bloodMelee
 {
 	alarm[11] = 0;//Is already blood
 	visible = true;
-	mask_index = mskSlash;
+	mask_index = mskHeavyBloodSlash;
 }
 if instance_exists(Player)
 {
