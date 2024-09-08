@@ -2410,6 +2410,7 @@
     {"name":"scrLegacyWeaponStart","order":14,"path":"scripts/scrLegacyWeaponStart/scrLegacyWeaponStart.yy",},
     {"name":"scrLightningWeapons","order":11,"path":"scripts/scrLightningWeapons/scrLightningWeapons.yy",},
     {"name":"scrLightningWeaponsArray","order":95,"path":"scripts/scrLightningWeaponsArray/scrLightningWeaponsArray.yy",},
+    {"name":"scrListOfFireWeapons","order":102,"path":"scripts/scrListOfFireWeapons/scrListOfFireWeapons.yy",},
     {"name":"scrLoad","order":4,"path":"scripts/scrLoad/scrLoad.yy",},
     {"name":"scrLoadCustomSurvivalArena","order":16,"path":"scripts/scrLoadCustomSurvivalArena/scrLoadCustomSurvivalArena.yy",},
     {"name":"scrLoadData","order":7,"path":"scripts/scrLoadData/scrLoadData.yy",},

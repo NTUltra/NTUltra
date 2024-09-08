@@ -8,5 +8,5 @@ spr_idle = sprInvertedTinyJellyFish
 spr_walk = sprInvertedTinyJellyFish
 spr_hurt = sprInvertedTinyJellyFishHurt
 spr_dead = sprInvertedTinyJellyFishDead
-acc = 0.24;
+acc = 0.2;
 maxSpeed = 3;

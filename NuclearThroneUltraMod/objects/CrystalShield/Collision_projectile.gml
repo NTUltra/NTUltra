@@ -31,8 +31,8 @@ if team != other.team
 				{
 				    if!(collision_line(x,y,target.x,target.y,Wall,false,true) )//No walls between player and target?
 				    {
-				        if(other.direction<point_direction(x,y,target.x,target.y)+60)
-				            {
+				       // if(other.direction < point_direction(x,y,target.x,target.y)+60)
+				        //    {
 						        other.image_angle=point_direction(x,y,target.x,target.y);
 						        other.direction=point_direction(x,y,target.x,target.y);
 						        other.speed+=2;
@@ -44,7 +44,7 @@ if team != other.team
 				            image_yscale=2;
 				            image_angle = other.direction
 				            }
-				        }
+				       // }
 				    }
 
 				}

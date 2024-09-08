@@ -2039,7 +2039,7 @@ if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
 					{
 						friction = 0.1
 						//when player isn't frozen increase the time that determines when it should get frozeen
-						if frozen<1
+						if frozen < 1
 						{
 							if is60fps
 								getFrozen += 0.5;
@@ -2204,17 +2204,9 @@ if (ultra_got[42])//HUNTER ULTRA C Focused projectiles
 						y += lengthdir_y(str,point_direction(x,y,Marker.x,Marker.y))
 
 				image_angle=direction;
-
-				if (direction<point_direction(x,y,Marker.x,Marker.y) )
-			    {
-					direction+=ang;
-					image_angle+=ang;
-			    }
-			    else if (direction>point_direction(x,y,Marker.x,Marker.y) )
-			    {
-					direction-=ang;
-					image_angle-=ang;
-			    }
+				ang = ang * sign(angle_difference(direction,point_direction(x,y,Marker.x,Marker.y)))
+				direction += ang;
+				image_angle += ang;
 			}
 		}
     }

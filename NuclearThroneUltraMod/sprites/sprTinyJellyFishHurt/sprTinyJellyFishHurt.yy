@@ -5,16 +5,16 @@
   "bbox_bottom":9,
   "bbox_left":1,
   "bbox_right":9,
-  "bbox_top":2,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"77c0fda0-c60d-4483-b5ab-269c1120b621","name":"77c0fda0-c60d-4483-b5ab-269c1120b621","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f2658771-c4d3-455e-8768-f75c854535a9","name":"f2658771-c4d3-455e-8768-f75c854535a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"063911d7-b8b3-45c3-8b2f-b6435a552cce","name":"063911d7-b8b3-45c3-8b2f-b6435a552cce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"35b49d28-3186-420f-b528-d22a51e2f742","name":"35b49d28-3186-420f-b528-d22a51e2f742","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"dc16605e-8bba-4da7-9418-fcb5ca4dda08","name":"dc16605e-8bba-4da7-9418-fcb5ca4dda08","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"13f017b3-dabc-4932-b0ce-8246d69301c2","name":"13f017b3-dabc-4932-b0ce-8246d69301c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,14 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"77c0fda0-c60d-4483-b5ab-269c1120b621","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9360cb04-25e1-4b1a-80a6-29eb34f5d56b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"35b49d28-3186-420f-b528-d22a51e2f742","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c36df317-1066-4f17-95b4-9a1004fcf5a3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f2658771-c4d3-455e-8768-f75c854535a9","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2e36087f-54f5-45ec-a0b7-4997f4817041","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dc16605e-8bba-4da7-9418-fcb5ca4dda08","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e0e6f7c9-d381-4ea6-85fa-dc497596fb79","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"063911d7-b8b3-45c3-8b2f-b6435a552cce","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2a57a4de-7c76-4b52-afa4-242a6e943b5f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"13f017b3-dabc-4932-b0ce-8246d69301c2","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b81d1431-858f-49e2-8a7a-d81e238139f5","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

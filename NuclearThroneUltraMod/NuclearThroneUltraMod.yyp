@@ -2649,6 +2649,7 @@
     {"id":{"name":"scrLegacyWeaponStart","path":"scripts/scrLegacyWeaponStart/scrLegacyWeaponStart.yy",},},
     {"id":{"name":"scrLightningWeapons","path":"scripts/scrLightningWeapons/scrLightningWeapons.yy",},},
     {"id":{"name":"scrLightningWeaponsArray","path":"scripts/scrLightningWeaponsArray/scrLightningWeaponsArray.yy",},},
+    {"id":{"name":"scrListOfFireWeapons","path":"scripts/scrListOfFireWeapons/scrListOfFireWeapons.yy",},},
     {"id":{"name":"scrLoad","path":"scripts/scrLoad/scrLoad.yy",},},
     {"id":{"name":"scrLoadCustomSurvivalArena","path":"scripts/scrLoadCustomSurvivalArena/scrLoadCustomSurvivalArena.yy",},},
     {"id":{"name":"scrLoadData","path":"scripts/scrLoadData/scrLoadData.yy",},},

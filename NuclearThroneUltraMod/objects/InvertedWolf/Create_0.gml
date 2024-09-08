@@ -1,5 +1,5 @@
 raddrop = 9
-maxhealth = 10//20
+maxhealth = 11//20
 mySize = 1
 
 if UberCont.loops>1

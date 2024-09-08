@@ -63,11 +63,12 @@ function scrSaveStats() {
 		ini_write_real("STATS","totarea"+string(i),tot_areas[i]);
 	}
 	dir = 0;
-	repeat(maxskill+2)
+	repeat(maxskill+1)
 	{
 		ini_write_real("STATS","ctotskilltaken" + string(dir),ctot_skill_taken[dir]);
 		dir ++;
 	}
+	ini_write_real("STATS","ctot_regal_taken" + string(dir),ctot_regal_taken);
 	dir = 0;
 	repeat(maxultra+2)
 	{

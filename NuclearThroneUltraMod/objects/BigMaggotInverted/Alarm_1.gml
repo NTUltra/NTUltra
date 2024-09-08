@@ -15,11 +15,10 @@ if my_health < maxhealth and random(3) < 1 && instance_number(BigMaggotBurrowInv
 image_index = 0
 snd_play(sndBigMaggotBurrow,0,true)
 speed = 0;
-with instance_change(BigMaggotBurrowInverted,false)
-{
-	my_health = other.my_health;
-	speed = 0;
-}
+var mh = my_health;
+instance_change(BigMaggotBurrowInverted,false)
+my_health = mh
+speed = 0;
 }
 rage = 0
 motion_add(random(360),1)

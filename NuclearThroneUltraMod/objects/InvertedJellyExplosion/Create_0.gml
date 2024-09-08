@@ -1,6 +1,6 @@
 spawned = 0
 image_speed = 0.4
-alarm[0] = 2
+alarm[0] = 4
 
 
 var dir = random(360)

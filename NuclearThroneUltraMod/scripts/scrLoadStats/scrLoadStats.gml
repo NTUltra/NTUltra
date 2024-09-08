@@ -87,9 +87,9 @@ function scrLoadStats() {
 	}
 	dir += 1;
 	if ini_key_exists("STATS","ctotskilltaken" + string(dir))
-		ctot_regal_taken[dir] = ini_read_real("STATS","ctotskilltaken" + string(dir),0);
+		ctot_regal_taken = ini_read_real("STATS","ctotskilltaken" + string(dir),0);
 	else
-		ctot_regal_taken[dir] = ini_read_real("STATS","ctotregaltaken" + string(dir),0);
+		ctot_regal_taken = ini_read_real("STATS","ctotregaltaken",0);
 	//TODO FUTURE MUTATION
 	dir = 0;
 	repeat(maxultra+2)

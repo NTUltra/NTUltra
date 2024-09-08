@@ -471,13 +471,19 @@ if selected && visible
 		}
 		snd_play_2d(skill_msnd[skill], 0, false, false)//skill_msnd no more array sorry but memory
 
-		if skill != maxskill + 2
 		with UberCont
 		{
-			ctot_skill_taken[other.skill] += 1;
-			if other.skill == 22 && ctot_skill_taken[other.skill] >= 10
+			if skill != maxskill + 2
 			{
-				scrUnlockGameMode(24,"FOR TAKING STRESS 10 TIMES");
+				ctot_skill_taken[other.skill] += 1;
+				if other.skill == 22 && ctot_skill_taken[other.skill] >= 10
+				{
+					scrUnlockGameMode(24,"FOR TAKING STRESS 10 TIMES");
+				}
+			}
+			else
+			{
+				ctot_regal_taken += 1;	
 			}
 			var gotEmAll = true;
 			var dir = 0;

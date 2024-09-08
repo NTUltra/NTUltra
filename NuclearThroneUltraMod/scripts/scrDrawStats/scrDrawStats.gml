@@ -66,7 +66,7 @@ function scrDrawStats() {
 	var skillstats  = "";
 	var skillnames = "";
 	var whiteEnter = "";
-	var maxSkill = UberCont.maxskill + 2;
+	var maxSkill = UberCont.maxskill + 1;
 	var dir = 0;
 	var totSkills = 0;
 	repeat(maxSkill)
@@ -77,6 +77,11 @@ function scrDrawStats() {
 		whiteEnter+="#";
 		dir ++;
 	}
+	//AND REGAL VISIONS
+	skillstats += string(UberCont.ctot_regal_taken)+"#";
+	totSkills += UberCont.ctot_regal_taken;
+	skillnames += UberCont.skill_name[dir]+"#";
+	whiteEnter+="#";
 	if totSkills > 999
 	{
 		totSkills = string(totSkills);
