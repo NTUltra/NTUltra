@@ -440,7 +440,7 @@ function scrRaces() {
 	race_acti[18] = "<aq>DEFLECT<aq> ALL DAMAGE#COSTS <y>AMMO<y>"
 	race_butt[18] = "ACTIVE ALSO <r>HEALS<r>#<w>1<w> <r>HP<r> EVERY OTHER USE"
 	race_butt_detail[18] = race_butt[18];
-	race_vision[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO CAST OUT YOUR DEFLECT";
+	race_vision[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO:#CAST OUT YOUR DEFLECT";
 	race_vision_detail[18] = "PRESS <w>[ACTIVE]<w> WHILE DEFLECTING TO:#<w>CAST<w> OUT YOUR <aq>DEFLECT<aq>#YOU REMAIN <aq>IMMUNE<aq> DURING CAST#INCREASE SHIELD CONTACT DAMAGE";
 	if isUnique
 	{

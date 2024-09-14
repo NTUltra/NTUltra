@@ -109,7 +109,7 @@ if isPaused == 1 && alarm[7] < 1
 
 
 				stxt0 = "#OPTIONS"
-				stxt1 = "######AUDIO#####VISUALS########OTHER####"
+				stxt1 = "######AUDIO#####VISUALS#########OTHER####"
 				stxt2 = txt2
 
 				var gamemodeScrollString = "";

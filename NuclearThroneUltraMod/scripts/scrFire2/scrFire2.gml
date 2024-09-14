@@ -2215,9 +2215,8 @@ function scrFire2(hasTailNow) {
 	//GHOST BLADE
 	case 272:
 
-	snd_play_fire(choose(sndSword1,sndSword2))
 
-	snd_play_fire(sndBloodLauncher)
+	snd_play_fire(sndGhostBlade)
 
 	instance_create(x,y,Smoke)
 	instance_create(x,y,Dust)
@@ -2307,8 +2306,7 @@ function scrFire2(hasTailNow) {
 	//GHOST SHOVEL
 	case 275:
 
-	snd_play_fire(sndShovel)
-	snd_play_fire(sndBloodLauncher)
+	snd_play_fire(sndGhostShovel)
 
 	instance_create(x,y,Smoke)
 	instance_create(x,y,Dust)
@@ -2322,7 +2320,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2338,7 +2336,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 6;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2354,7 +2352,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 6;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2366,7 +2364,7 @@ function scrFire2(hasTailNow) {
 	var l = 32;
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 10;
+		dmg = 8;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2375,7 +2373,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 6;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8953,7 +8951,7 @@ function scrFire2(hasTailNow) {
 	//GHOST DAGGER
 	case 484:
 
-	snd_play_fire(sndGhostShank)
+	snd_play_fire(sndGhostDagger)
 
 	instance_create(x,y,Smoke)
 	instance_create(x,y,Dust)
@@ -15828,8 +15826,7 @@ function scrFire2(hasTailNow) {
 	//GHOST SPEAR
 	case 714:
 
-	snd_play_fire(sndGhostShank)
-	snd_play_fire(choose(sndSword1,sndSword2))
+	snd_play_fire(sndGhostLance)
 	instance_create(x,y,Smoke)
 	instance_create(x,y,Dust)
 
@@ -15845,6 +15842,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+lengthdir_x(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(58+((Player.skill_got[13]+bettermelee)*20),aimDirection),GhostSpearShank)
 	{
+		canSound = false;
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.5+longarms)

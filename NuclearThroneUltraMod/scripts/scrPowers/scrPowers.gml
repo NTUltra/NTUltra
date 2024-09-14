@@ -1183,18 +1183,7 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		else if ultra_got[46] == 0
 		{
-			var targetHealth = maxhealth;
-			if scrIsCrown(29)//Crown of purity
-			{
-				if wepmod1 != 0
-					targetHealth += 1;
-				if wepmod2 != 0 
-					targetHealth += 1;
-				if wepmod3 != 0
-					targetHealth += 1;
-				if wepmod4 != 0
-					targetHealth += 1;
-			}
+			var targetHealth = scrCalculatePlayerBaseMaxHealth()
 			canSpawn = (targetHealth*0.75 >= 1);
 			
 		}
@@ -1234,14 +1223,17 @@ function scrPowers(raceOverwrite = -1) {
 							rad = max(rad - radCost, 0);	
 						}
 			        }
-			        else{
-						var percMax = floor(maxhealth*0.75);
-						var lostHp = maxhealth - percMax;
-						maxhealth=percMax;//0.5
+			        else {
+						var baseHealth = scrCalculatePlayerBaseMaxHealth();
+						var bonusHealth = maxhealth - baseHealth;
+						var percMax = floor(baseHealth*0.75);
+						var lostHp = baseHealth - percMax;
+						maxhealth = percMax;//0.5
 						if my_health > maxhealth
 							my_health = max(1,my_health-lostHp,maxhealth);
 						if scrIsCrown(35)
 							my_health = max(my_health - 1, 1);
+						maxhealth += bonusHealth;
 						hitBy = sprite_index;
 			        }
         

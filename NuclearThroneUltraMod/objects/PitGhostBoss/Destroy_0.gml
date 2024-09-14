@@ -19,3 +19,11 @@ with ThePit
 	}
 	instance_create(x,y,PitNavigation);
 }
+
+repeat(12)
+{
+	with instance_create(x,y,GhostEffect)
+	{
+		motion_add(random(360),2 + random(4));
+	}
+}

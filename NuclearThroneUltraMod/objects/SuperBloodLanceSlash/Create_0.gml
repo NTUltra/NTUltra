@@ -3,6 +3,6 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 25;
+dmg = 50;
 alarm[2] = 3;
-alarm[4] = 11;
+alarm[4] = 8;

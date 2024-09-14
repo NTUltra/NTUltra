@@ -519,7 +519,17 @@ function scrFire3(hasTailNow){
 
 		instance_create(x,y,Dust)
 
-		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SuperBloodLanceSlash)
+		with instance_create(x,y,BloodStreak)
+		{
+			motion_add(aimDirection + 10,7)
+			image_angle = direction;
+		}
+		with instance_create(x,y,BloodStreak)
+		{
+			motion_add(aimDirection - 10,7)
+			image_angle = direction;
+		}
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*15),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*15),aimDirection),SuperBloodLanceSlash)
 		{
 			image_yscale = sign(other.wepangle);
 			owner = other.id;
@@ -545,16 +555,181 @@ function scrFire3(hasTailNow){
 		
 		//CHAINSAW
 		case 809:
-
+		if !instance_exists(ChainSawBurst)
+		{
+			snd_play_fire(sndChainSawStart);
+			repeat(3)
+			{
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(aimDirection+random_range(20,-20),2);
+				}
+			}
+		}
 		with instance_create(x,y,ChainSawBurst)
 		{
 			accuracy = other.accuracy;
 			creator = other.id
-			ammo = 8
-			time = 2
+			ammo = 4
+			time = 4
 			team = other.team
-			event_perform(ev_alarm,0) 
+			alarm[0] = 6;
+			if Player.skill_got[42]
+			{
+				alarm[0] -= 2;
+				alarm[1] -= 2;
+				alarm[3] -= 2;
+			}
 		}
+
+		break;
+		
+		//PAPER CRAFT SHOTGUN
+		case 810:
+		snd_play_fire(sndShotgun)
+		with instance_create(x,y,PaperCraftShotgunBurst)
+		{
+			creator = other.id
+			ammo = 2
+			time = 3
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+	
+		break;
+		
+		//SHARP SHOOTER
+		case 811:
+
+		var shake = 4;
+		var move = 0;
+		if instance_exists(BulletScaler)
+		{
+			shake += BulletScaler.dmg*0.5;
+			wkick = 2
+			if BulletScaler.dmg > 29
+			{
+				snd_play_fire(sndHeavySlugger);
+				move = 12;
+				wkick = 4;
+			}
+			else if BulletScaler.dmg > 19
+			{
+				snd_play_fire(sndSlugger);
+				move = 7;
+				wkick = 3;
+			}
+			else if BulletScaler.dmg > 7
+			{
+				snd_play_fire(sndHeavyRevolver);
+				move = 3;
+			}
+			else
+				snd_play_fire(sndPistol)
+		}
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet1ScaleDamage)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+			if instance_exists(BulletScaler)
+				speed += min(6,BulletScaler.dmg * 0.5);
+		image_angle = direction
+		team = other.team}
+		
+		BackCont.viewx2 += lengthdir_x(shake,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(shake,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += shake - 2;
+		if !skill_got[2] && move > 0
+		{
+			scrMoveContactSolid(aimDirection + 180,move);
+			motion_add(aimDirection+180,move * 0.5)
+		}
+		break;
+		
+		//GHOST DRILL
+		case 812:
+		if !instance_exists(GhostDrillBurst)
+		{
+			snd_play_fire(sndGhostDrillStart);
+			repeat(3)
+			{
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(aimDirection+random_range(20,-20),2);
+				}
+			}
+			repeat(5)
+			{
+				with instance_create(x,y,GhostEffect)
+				{
+					motion_add(aimDirection+random_range(60,-60),3);
+				}
+			}
+		}
+		with instance_create(x,y,GhostDrillBurst)
+		{
+			accuracy = other.accuracy;
+			creator = other.id
+			ammo = 2
+			time = 7
+			team = other.team
+			alarm[0] = 6;
+			if Player.skill_got[42]
+			{
+				alarm[0] -= 2;
+				alarm[1] -= 2;
+				alarm[3] -= 2;
+			}
+		}
+
+		break;
+		
+		//BIG DOG LAUNCHER
+		case 813:
+		snd_play(sndExplosionS);
+		snd_play_fire(sndBigDogIntro)
+
+		instance_create(x,y,NoDrama);
+		with instance_create(x,y,ScrapBoss)
+		{
+			motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+			image_angle = direction
+			team = 2;
+			team = other.team
+			var walls = ds_list_create();
+			var al = instance_place_list(x,y,Wall,walls,false)
+			for (var i = 0; i < al; i++)
+			{
+				with walls[| i] {
+					instance_destroy();
+					instance_create(x,y,FloorExplo);
+				}
+			}
+			alarm[2] = 2;
+		}
+		var rando = random(360);
+		BackCont.viewx2 += lengthdir_x(100,rando)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(100,rando)*UberCont.opt_shake
+		BackCont.shake += 100
+		wkick = 6
+
+		break;
+		
+		//SNAREBOW
+		case 814:
+
+		snd_play_fire(sndCrossbow)
+
+		with instance_create(x,y,SnareBolt)
+		{motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
 
 		break;
 	}

@@ -15,11 +15,13 @@ if alarm[11] < 1 && other.team != team and other.my_health > 0
 		DealDamage(other.dmg)
 		sprite_index = spr_hurt
 		image_index = 0
-		motion_add(other.direction,12)
+		motion_add(other.direction,22);
 		snd_play(snd_hurt, hurt_pitch_variation,true)
 		scrForcePosition60fps();
-		if speed > maxSpeed+3
-			speed = maxSpeed+3;
+		if my_health < 0
+		{
+			corpseBoost += 1;
+		}
 	}
 	if shotgunshouldered
 	{

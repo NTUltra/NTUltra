@@ -4,7 +4,7 @@
 function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = false, ammoPickup = true, topHUD = false) {
 	if scrIsGamemode(48)
 		return;
-	var type = 0;
+	var type = -1;
 	var canMeleeAmmo = scrIsCrown(40);
 	with Player
 	{
@@ -148,8 +148,14 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	}
 	if canMeleeAmmo 
 	{
-		if type < 1 || Player.ammo[type] > Player.typ_amax[type]
+		if type < 0 || Player.ammo[type] > Player.typ_amax[type]
+		{
 			type = choose(0,1,2,3,4,5);
+		}
+		else if type == pt && scrMeleeWeapons(Player.wep)
+			type = choose(type,type,0);
+		else if type == st && scrMeleeWeapons(Player.bwep)
+			type = choose(type,type,0);
 	}
 	else if type < 1 || Player.ammo[type] > Player.typ_amax[type]
 		type = choose(1,2,3,4,5);

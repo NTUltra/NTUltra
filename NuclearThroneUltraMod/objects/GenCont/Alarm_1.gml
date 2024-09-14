@@ -253,7 +253,8 @@ if instance_exists(Player)
 	}
 	with WepPickup
 	{
-		persistent = false;
+		if !isPermanent
+			persistent = false;
 		x = Player.x;
 		y = Player.y;
 		speed = 0;

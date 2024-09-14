@@ -9,19 +9,22 @@ if other.team != team
 		alarm[1] = hitDelay;
 		with other
 		{
-			DealDamage(other.dmg);
-			var ang = other.image_angle;
-			repeat(3)
+			if my_health > 0
 			{
-				instance_create(x+lengthdir_x(6,ang),y+lengthdir_y(6,ang),MeatExplosion);
-				ang += 120;
-			}
-			snd_play(snd_hurt, hurt_pitch_variation)
-			sprite_index = spr_hurt
-			image_index = 0
-			motion_add(other.direction,8)
+				DealDamage(other.dmg);
+				var ang = other.image_angle;
+				repeat(3)
+				{
+					instance_create(x+lengthdir_x(6,ang),y+lengthdir_y(6,ang),MeatExplosion);
+					ang += 120;
+				}
+				snd_play(snd_hurt, hurt_pitch_variation)
+				sprite_index = spr_hurt
+				image_index = 0
+				motion_add(other.direction,8)
 			
-			BackCont.shake += 6
+				BackCont.shake += 6
+			}
 		}
 	}
 }

@@ -10,14 +10,16 @@ if other.team != team
 			event_user(0);
 			with other
 			{
-				snd_play(snd_hurt, hurt_pitch_variation,true)
-				DealDamage(other.dmg)
-				sprite_index = spr_hurt
-				image_index = 0
-				motion_add(other.direction,other.knockback)
-				if speed > maxSpeed+1
-					speed = maxSpeed+1;
-		
+				if my_health > 0
+				{
+					snd_play(snd_hurt, hurt_pitch_variation,true)
+					DealDamage(other.dmg)
+					sprite_index = spr_hurt
+					image_index = 0
+					motion_add(other.direction,other.knockback)
+					if speed > maxSpeed+1
+						speed = maxSpeed+1;
+				}
 			}
 			BackCont.shake += shk;
 			alarm[1] = hitDelay;

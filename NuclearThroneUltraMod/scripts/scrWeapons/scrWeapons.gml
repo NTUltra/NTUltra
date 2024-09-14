@@ -5457,6 +5457,7 @@ function scrWeapons() {
 	wep_text[484] = "ghastly"
 	wep_swap[484] = sndSwapSword
 	wep_rad[484] = 0;
+	wep_popup[484] = "DESTROYS SQUARES!";
 	
 	wep_name[485] = "POTSHOT"
 	wep_type[485] = 1
@@ -6163,6 +6164,7 @@ function scrWeapons() {
 	wep_text[548] = "don't miss"
 	wep_swap[548] = sndSwapExplosive
 	wep_rad[548] = 0;
+	wep_popup[548] = "MISSING DAMAGES YOU";
 	
 	wep_name[549] = "HEAVY BLOOD HAMMER"
 	wep_type[549] = 0
@@ -6174,6 +6176,7 @@ function scrWeapons() {
 	wep_text[549] = "this hurts you more#than it hurts me"
 	wep_swap[549] = sndSwapExplosive
 	wep_rad[549] = 0;
+	wep_popup[549] = "MISSING DAMAGES YOU";
 	
 	wep_name[550] = "EXPLOSIVE MINIGUN"
 	wep_type[550] = 1
@@ -6214,7 +6217,7 @@ function scrWeapons() {
 	wep_load[553] = 20
 	wep_cost[553] = 14
 	wep_sprt[553] = sprBulletShovel
-	wep_area[553] = 15
+	wep_area[553] = 13
 	wep_text[553] = ""
 	wep_swap[553] = sndSwapSword
 	wep_rad[553] = 0;
@@ -8006,6 +8009,7 @@ function scrWeapons() {
 	wep_text[714] = "piercing ghast"
 	wep_swap[714] = sndSwapSword
 	wep_rad[714] = 0;
+	wep_popup[714] = "DESTROYS SQUARES!";
 	
 	wep_name[715] = "DOOM LOBBER"
 	wep_type[715] = 4
@@ -8419,7 +8423,7 @@ function scrWeapons() {
 	wep_name[752] = "VOID RIPPER"
 	wep_type[752] = 4
 	wep_auto[752] = 3
-	wep_load[752] = 45
+	wep_load[752] = 50
 	wep_cost[752] = 3.5
 	wep_sprt[752] = sprVoidSword
 	wep_area[752] = 29
@@ -9045,27 +9049,86 @@ function scrWeapons() {
 	wep_swap[807] = sndSwapShotgun
 	wep_rad[807] = 16;
 	
-	wep_name[808] = "SUPER BLOOD LANCE"
+	wep_name[808] = "CRIMSON DELUGE"
 	wep_type[808] = 0
 	wep_auto[808] = 0
-	wep_load[808] = 25
+	wep_load[808] = 35
 	wep_cost[808] = 0
 	wep_sprt[808] = sprSuperBloodLance
 	wep_area[808] = 30
-	wep_text[808] = "don't miss"
-	wep_swap[808] = sndSwapExplosive
+	wep_text[808] = "river of blood"
+	wep_swap[808] = sndSwapSword
 	wep_rad[808] = 0;
+	wep_popup[808] = "MISSING DAMAGES YOU";
 	
 	wep_name[809] = "CHAINSAW"
 	wep_type[809] = 4
 	wep_auto[809] = 3
-	wep_load[809] = 15
-	wep_cost[809] = 1
-	wep_sprt[809] = sprJackHammer
-	wep_area[809] = 8
+	wep_load[809] = 16
+	wep_cost[809] = 2
+	wep_sprt[809] = sprChainSaw1
+	wep_area[809] = 14
 	wep_text[809] = "the man with the saw"
 	wep_swap[809] = sndSwapMotorized
 	wep_rad[809] = 0;
+	
+	wep_name[810] = "PAPER CRAFT SHOTGUN"
+	wep_type[810] = 3
+	wep_auto[810] = 3
+	wep_load[810] = 30
+	wep_cost[810] = 6
+	wep_sprt[810] = sprPaperShotgun
+	wep_area[810] = 14
+	wep_text[810] = "shogunate"
+	wep_swap[810] = sndSwapBow
+	wep_rad[810] = 0;
+	
+	wep_name[811] = "SHARP SHOOTER"
+	wep_type[811] = 1
+	wep_auto[811] = 1
+	wep_load[811] = 6
+	wep_cost[811] = 2
+	wep_sprt[811] = sprSharpShooter
+	wep_area[811] = 8
+	wep_text[811] = "eagle eyed"
+	wep_swap[811] = sndSwapPistol
+	wep_rad[811] = 0;
+	wep_popup[811] = "SCALES DAMAGE ON EACH HIT";
+	
+	wep_name[812] = "GHOST DRILL"
+	wep_type[812] = 4
+	wep_auto[812] = 3
+	wep_load[812] = 14
+	wep_cost[812] = 3
+	wep_sprt[812] = sprGhostDrill1
+	wep_area[812] = 24
+	wep_text[812] = "DRILLS ANYTHING"
+	wep_swap[812] = sndSwapMotorized
+	wep_rad[812] = 0;
+	wep_popup[812] = "DESTROYS SQUARES!";
+	
+	wep_name[813] = "BIG DOG LAUNCHER"
+	wep_type[813] = 5
+	wep_auto[813] = 0
+	wep_load[813] = 600
+	wep_cost[813] = 50
+	wep_sprt[813] = sprBigDogLauncher
+	wep_area[813] = -2
+	wep_text[813] = "this is why you dont let your community design weapons"
+	wep_swap[813] = sndSwapShotgun
+	wep_rad[813] = 0;
+	wep_popup[813] = "NOT WORTH";
+	
+	wep_name[814] = "SNAREBOW"
+	wep_type[814] = 3
+	wep_auto[814] = 1
+	wep_load[814] = 14
+	wep_cost[814] = 1
+	wep_sprt[814] = sprSnareBow
+	wep_area[814] = 6
+	wep_text[814] = "the power of nature"
+	wep_swap[814] = sndSwapBow
+	wep_rad[814] = 0;
 	//Swiss army bow
 	//Charge boomerang
 	

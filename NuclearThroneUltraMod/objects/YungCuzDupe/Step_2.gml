@@ -226,8 +226,21 @@ else
 		returntoplayer=0;
 	}
 
-	if dis < 16
-		returntoplayerfast=0;
+	if (dis < 16)
+		returntoplayerfast = 0;
+	else if dis < 32
+	{
+		var n = instance_nearest_notme(x,y,YungCuzDupe);
+		if n != noone
+		{
+			if point_distance(n.x,n.y,Player.x,Player.y) < 16
+			{
+				var ndis = point_distance(x,y,n.x,n.y);
+				if ndis < 16
+					returntoplayerfast = 0;
+			}
+		}
+	}
 
 	if returntoplayer>0
 	{//motion_add(point_direction(x,y,Player.x,Player.y),3);

@@ -473,7 +473,7 @@ if selected && visible
 
 		with UberCont
 		{
-			if skill != maxskill + 2
+			if other.skill < other.maxskill + 1
 			{
 				ctot_skill_taken[other.skill] += 1;
 				if other.skill == 22 && ctot_skill_taken[other.skill] >= 10

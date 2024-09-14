@@ -1,5 +1,6 @@
 /// @description Variables
 mySize = 2;
+corpseBoost = 0;
 existTime = 0;
 depth = 1;
 myConfusion = noone;

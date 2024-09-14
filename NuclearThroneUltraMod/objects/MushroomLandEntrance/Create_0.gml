@@ -1,5 +1,5 @@
 loops = GetPlayerLoops();
-maxhealth = 90 * clamp(loops*2,1,4)
+maxhealth = 100 * clamp(loops*3,1,5)
 mySize = 1
 spr_idle = sprMushroomStatue;
 spr_hurt = sprMushroomStatueHurt;

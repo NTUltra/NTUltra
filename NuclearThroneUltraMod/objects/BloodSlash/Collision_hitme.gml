@@ -6,13 +6,16 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	alarm[1] = hitDelay;
 	with other
 	{
-		DealDamage(other.dmg);
-		instance_create(x,y,MeatExplosion);
-		snd_play(snd_hurt, hurt_pitch_variation)
-		sprite_index = spr_hurt
-		image_index = 0
-		motion_add(other.direction,8)
+		if my_health > 0
+		{
+			DealDamage(other.dmg);
+			instance_create(x,y,MeatExplosion);
+			snd_play(snd_hurt, hurt_pitch_variation)
+			sprite_index = spr_hurt
+			image_index = 0
+			motion_add(other.direction,8)
 		
-		BackCont.shake += 5
+			BackCont.shake += 5
+		}
 	}
 }

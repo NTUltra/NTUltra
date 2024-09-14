@@ -52,6 +52,8 @@ if(morphMe == 0){
 			speed /= mySize*0.83
 			
 		speed = min(speed,18);
+		speed += other.corpseBoost;
+		dmg += other.corpseBoost;
 	}
 	snd_play(snd_dead, 0.1,true);
 }
@@ -61,21 +63,24 @@ else if morphMe != 6
 	if morphMe == 2
 	{
 		with instance_create(x,y,ExplosiveSheep) {
-			mySize = other.mySize;	
+			mySize = other.mySize;
+			corpseBoost = other.corpseBoost;
 		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");
 	} else if morphMe == 3
 	{
 		with instance_create(x,y,UltraSheep) {
-			mySize = other.mySize;	
+			mySize = other.mySize;
+			corpseBoost = other.corpseBoost;
 		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} else if morphMe == 4
 	{
 		with instance_create(x,y,GoldSheep) {
-			mySize = other.mySize;	
+			mySize = other.mySize;
+			corpseBoost = other.corpseBoost;
 		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
@@ -83,7 +88,8 @@ else if morphMe != 6
 	else 
 	{
 		with instance_create(x,y,Sheep) {
-			mySize = other.mySize;	
+			mySize = other.mySize;
+			corpseBoost = other.corpseBoost;
 		}
 	    //Unlock sheep
 	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	

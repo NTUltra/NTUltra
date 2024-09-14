@@ -35,8 +35,8 @@ alarm[0] = 20
 ammo = 15
 turn = choose(1,-1)
 walk = 0
-
-instance_create(x,y,DramaCamera)
+if !instance_exists(NoDrama)
+	instance_create(x,y,DramaCamera)
 
 dir = random(360)
 repeat(10)

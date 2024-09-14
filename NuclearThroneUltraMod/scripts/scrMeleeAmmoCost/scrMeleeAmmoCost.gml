@@ -2,20 +2,20 @@
 // /@description
 ///@param
 function scrMeleeAmmoCost(myCost = 1){
-	if (scrIsCrown(40) && hasCosted < 6 && instance_exists(Player))
+	if (scrIsCrown(40) && hasCosted < 5 && instance_exists(Player))
 	{
 		var hasEnoughAmmo = false;
 		var hasEnoughRads = true;
 		with Player
 		{
+			var targetAmmo = other.meleeAmmoType;
 			if alarm[2] > 0
 			{
 				myCost = 0;
 				hasEnoughAmmo = true;
 			}
 			else
-				{
-				var targetAmmo = other.meleeAmmoType;
+			{
 				if targetAmmo == 1
 				{
 					myCost *= 7.7272727272727272727272727272727;

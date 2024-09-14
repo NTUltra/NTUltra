@@ -4,7 +4,7 @@ with Player
 {
 	if alarm[2]>0
 		canFire = true;
-	else if ultra_got[45] == 0 && alarm[3] < 1
+	else if !ultra_got[45]
 	{
 		if ((ammo[wep_type[wep]] >= wep_cost[wep] || wep_type[wep] == 0) and rad>=wep_rad[wep])
 		{

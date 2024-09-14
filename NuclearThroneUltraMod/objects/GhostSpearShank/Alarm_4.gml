@@ -13,8 +13,8 @@ motion_add(other.direction,3.5+longarms)
 image_angle = direction
 team = other.team
 }
-
-snd_play(sndGhostShank);
+if canSound
+	snd_play(sndGhostDagger);
 repeat(3)
 {
 with instance_create(x,y,GhostEffect)

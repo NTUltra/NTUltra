@@ -3,7 +3,7 @@ function scrTips() {
 	if !instance_exists(Player)
 		tiptype = 0
 	tip = "";
-	if (deaths < 11 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
+	if (deaths < 20 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
 	{
 		tip = choose("WELCOME TO NUCLEAR THRONE!","TRY TO ALWAYS STAY ON THE MOVE",
 		"ENEMIES DROP HEALTH AND AMMO","HEALTH CAN DROP MORE OFTEN WHEN IT'S LOW",
@@ -21,7 +21,7 @@ function scrTips() {
 		"blood bullets are also bullets#and will be refunded with recycle gland",
 		"hover over HUD elements in the top of your screen#such as mutations and weapons#for a short explanation",
 		"you can speed up this loading screen#in the options menu","most ultra mutations can destroy squares",
-		"when you reach level 10 you get your ultra mutation!",
+		"when you reach level 10 you get your ultra mutation!","destroy the generators to loop",
 		"just have fun", "don't get baited by items", "wield one strong slow firing weapon#and one quick firing weapon",
 		"crowns can be very beneficial in certain situations!","taking a crown unlocks crown start!","golden weapons can be unlocked as starting weapons");
 	}
@@ -495,7 +495,7 @@ function scrTips() {
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
 	"not immortal","how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
 	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
-	"you have to get good","duplicates get your mutations","yc is a god gamer","I'm number 1",
+	"you have to get good","duplicates get your mutations","yc is a god gamer","I'm number 1","clones","duplicate!","ctrl + C#ctrl + V",
 	"your duplicates copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version")
 
 	if Player.race = 13//sheep

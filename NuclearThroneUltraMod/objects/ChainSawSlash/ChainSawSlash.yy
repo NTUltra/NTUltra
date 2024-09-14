@@ -13,8 +13,8 @@
     "path":"folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId":{
-    "name":"SmallSlash",
-    "path":"objects/SmallSlash/SmallSlash.yy",
+    "name":"ShankParent",
+    "path":"objects/ShankParent/ShankParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,12 +34,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSmallSlash",
-    "path":"sprites/sprSmallSlash/sprSmallSlash.yy",
+    "name":"sprChainSawShank",
+    "path":"sprites/sprChainSawShank/sprChainSawShank.yy",
   },
   "spriteMaskId":{
-    "name":"mskSmallSlash",
-    "path":"sprites/mskSmallSlash/mskSmallSlash.yy",
+    "name":"mskChainSawShank",
+    "path":"sprites/mskChainSawShank/mskChainSawShank.yy",
   },
   "visible":true,
 }

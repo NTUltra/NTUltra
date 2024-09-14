@@ -884,7 +884,7 @@ function scrPopEnemies() {
 		                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireWorm, InvertedFireWorm, InvertedLavaBallEnemy, InvertedSalamander))
 		            }
 		            else if random(7) < 1
-		            instance_create(x + 16, y + 16, choose(FireWorm, Thief, InvertedFireWorm, InvertedFireBat, BanditInverted, InvertedBanditSquare, InvertedFireWorm, InvertedFireWorm))
+		            instance_create(x + 16, y + 16, choose(InvertedFireWorm, Thief, InvertedFireWorm, InvertedFireBat, BanditInverted, InvertedBanditSquare, InvertedFireWorm, InvertedFireWorm))
 					else if instance_number(enemy) < 1
 					{
 						instance_create(x + 16, y + 16,InvertedLavaBallEnemy);

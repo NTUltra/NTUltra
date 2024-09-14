@@ -1,10 +1,10 @@
 /// @description big splat
+dmg += 20;
+hitEntities = [];
 var xx = x + lengthdir_x(150,direction);
 var yy = y + lengthdir_y(150,direction);
-snd_play(sndExplosionS);
-snd_play(sndMeatExplo);
 var ang = direction + 180;
-repeat(3)
+repeat(2)
 {
 	with instance_create(xx,yy,BloodStreak)
 	{
@@ -12,4 +12,10 @@ repeat(3)
 		image_angle = direction;
 	}
 	ang += 120;
+}
+with instance_create(xx,yy,BloodStreak)
+{
+	motion_add(ang,7)
+	image_angle = direction;
+	snd_play(sndSuperBloodLanceCircle,0.1);
 }

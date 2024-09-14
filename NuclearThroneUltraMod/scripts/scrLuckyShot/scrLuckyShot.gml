@@ -49,7 +49,15 @@ function scrLuckyShot(){
 			wepammo,wepammo,wepammo,wepammo,wepammo,
 			bwepammo,bwepammo,bwepammo,
 			cwepammo,cwepammo,cwepammo)
-    
+		if canMeleeAmmo
+		{
+			if type == wepammo && scrMeleeWeapons(Player.wep)
+				type = choose(type,type,0);
+			else if type == bwepammo && scrMeleeWeapons(Player.bwep)
+				type = choose(type,type,0);
+			else if Player.cwep != 0 && type == cwepammo && scrMeleeWeapons(Player.cwep)
+				type = choose(type,type,0);
+		}
 	    Player.ammo[type] += round(Player.typ_ammo[type]*0.5)
 	    if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
 			Player.ammo[type] = Player.typ_amax[type]
