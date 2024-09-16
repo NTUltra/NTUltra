@@ -25,7 +25,7 @@ if instance_exists(enemy)
 	if target!=noone &&  instance_exists(target) && target.team != 2
 		motion_add(point_direction(x,y,target.x,target.y),0.7+Player.skill_got[19]);
 }
-if speed>6+Player.skill_got[19]
-speed=6+Player.skill_got[19];
+if speed > maxSpeed
+	speed = maxSpeed
 
 image_angle=direction;

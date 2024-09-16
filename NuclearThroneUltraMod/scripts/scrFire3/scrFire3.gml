@@ -732,5 +732,62 @@ function scrFire3(hasTailNow){
 		wkick = 4
 
 		break;
+		
+		//MISSILE RAIN
+		case 815:
+
+		snd_play_fire(sndRocket)
+		snd_play(sndRocketFly);
+		with instance_create(x,y,RocketRainBurst)
+		{
+			creator = other.id
+			maxAmmo = 5;
+			ammo = maxAmmo
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		with instance_create(x,y,RocketRainBurst)
+		{
+			creator = other.id
+			maxAmmo = 4;
+			ammo = maxAmmo
+			time = 2
+			team = other.team
+			alarm[0] = 1;
+		}
+
+		break;
+		
+		//CHARGE PLASMA CANNON
+		case 816:
+
+		with instance_create(x,y,ChargePlasmaCannon)
+		{
+			maxcharge = 8;//MAX CHARGE
+			type = 5;
+			cost = 1;
+			creator = other.id
+			chargetime = 4;
+			costtime = 4;
+			team = other.team
+			if Player.skill_got[42]
+			{
+				chargetime = 2;
+				rate += 2;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					rate += 1;
+					costtime = 5;
+					chargetime = 1
+				}
+				maxcharge *= Player.betterTail;
+				scrActivateTail(hasTailNow);
+			}
+			event_perform(ev_alarm,0)
+			alarm[1] = costtime;
+		}
+
+		break;
 	}
 }

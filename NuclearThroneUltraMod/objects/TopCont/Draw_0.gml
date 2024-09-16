@@ -352,6 +352,10 @@ with LobBolt
 {
 	event_perform(ev_draw,0);	
 }
+with LobRocket
+{
+	event_perform(ev_draw,0);	
+}
 with DropGrenade
 {
 	if !visible

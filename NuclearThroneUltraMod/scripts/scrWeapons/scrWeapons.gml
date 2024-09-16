@@ -9055,7 +9055,7 @@ function scrWeapons() {
 	wep_load[808] = 35
 	wep_cost[808] = 0
 	wep_sprt[808] = sprSuperBloodLance
-	wep_area[808] = 30
+	wep_area[808] = 29
 	wep_text[808] = "river of blood"
 	wep_swap[808] = sndSwapSword
 	wep_rad[808] = 0;
@@ -9101,7 +9101,7 @@ function scrWeapons() {
 	wep_load[812] = 14
 	wep_cost[812] = 3
 	wep_sprt[812] = sprGhostDrill1
-	wep_area[812] = 24
+	wep_area[812] = 25
 	wep_text[812] = "DRILLS ANYTHING"
 	wep_swap[812] = sndSwapMotorized
 	wep_rad[812] = 0;
@@ -9129,8 +9129,31 @@ function scrWeapons() {
 	wep_text[814] = "the power of nature"
 	wep_swap[814] = sndSwapBow
 	wep_rad[814] = 0;
+	
+	wep_name[815] = "MISSILE RAIN"
+	wep_type[815] = 5
+	wep_auto[815] = 2
+	wep_load[815] = 28
+	wep_cost[815] = 5
+	wep_sprt[815] = sprMissileRain
+	wep_area[815] = 9
+	wep_text[815] = "bomba"
+	wep_swap[815] = sndSwapBow
+	wep_rad[815] = 0;
+	
+	wep_name[816] = "CHARGE PLASMA CANNON"
+	wep_type[816] = 5
+	wep_auto[816] = 0
+	wep_load[816] = 15
+	wep_cost[816] = 1
+	wep_sprt[816] = sprChargePlasmaCannon
+	wep_area[816] = 10
+	wep_text[816] = "all or nothing charge"
+	wep_swap[816] = sndSwapEnergy
+	wep_rad[816] = 0;
+	wep_popup[816] = "WIND UP GUN";
 	//Swiss army bow
-	//Charge boomerang
+	//Charge boomerang;,\,l
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
