@@ -31,7 +31,7 @@ function scrDrawOptions() {
 	if !openRemapper
 	{
 		txt0 = "#OPTIONS###########################PRESS [RIGHT CLICK] TO RETURN"
-		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME##VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION##OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS#DELETE SAVE#REMAP CONTROLS"
+		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME##VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION#OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS#DELETE SAVE#REMAP CONTROLS"
 		txt2 = "####"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
 		+"%###"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(scrOnOff(UberCont.opt_enemy_xray))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect +"#"+
 		string(UberCont.opt_resolution_scale) + "X#" +
@@ -40,7 +40,7 @@ function scrDrawOptions() {
 		"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode+"#HOLD#OPEN"
 		
 		stxt0 = "#OPTIONS"
-		stxt1 = "###AUDIO#####VISUALS##########OTHER####"
+		stxt1 = "###AUDIO#####VISUALS#########OTHER####"
 		stxt2 = txt2
 
 		with MusVolSlider

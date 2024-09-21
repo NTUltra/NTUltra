@@ -17,7 +17,7 @@ spr_idle_b = sprSheepIdleB;
 spr_walk = sprSheepWalk
 spr_hurt = sprSheepHurt
 spr_dead = sprSheepDead
-
+maxSpeed = 3;
 
 image_speed = 0.4
 friction = 0.4

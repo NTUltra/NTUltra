@@ -6,10 +6,24 @@ if chooseTimer == 0
 	alarm[0] = 30;
 	with Player
 	{
+		if wep == 0
+		{
+			snd_play(sndEmpty)
+			with instance_create(x,y,PopupText)
+			{
+				mytext = "NOT A WEAPON";
+				theColour=c_red;
+			}
+			other.chooseTimer = 0;
+			UberCont.portalEssence += other.cost;
+			exit;
+		}
 		other.originalWep = wep;
 		var wantTier = wep_area[wep];
 		if wantTier < -1
 			wantTier = 19;
+		if array_contains(start_wep, originalWep) || array_contains(race_swep,originalWep)
+			wantTier = 13;
 		wep = irandom(maxwep);
 		if wep > maxwep
 			wep = 1;

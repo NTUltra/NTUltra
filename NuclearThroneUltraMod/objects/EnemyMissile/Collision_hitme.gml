@@ -8,6 +8,10 @@ if other.team != team
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(other.direction,7)
+		if object_index == Player
+		{
+			hitBy = other.sprite_index;	
+		}
 	}
 }
 

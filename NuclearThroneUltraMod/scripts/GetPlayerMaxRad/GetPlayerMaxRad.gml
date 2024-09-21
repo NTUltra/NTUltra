@@ -1,7 +1,8 @@
 ///GetPlayerMaxRad();
 // /@description Gets maximum rads player can have need to run in player for access to variables
 function GetPlayerMaxRad(){
-	var multiplier = 62;
+	var l = level - 1;
+	var multiplier = 45 + (l*3);//62
 	if (scrIsGamemode(22))//Slow leveling
 	{
 		multiplier *= 2;
@@ -23,5 +24,5 @@ function GetPlayerMaxRad(){
 		multiplier *= 0.5;//0.45;
 		return level*multiplier;
 	}
-	return (level*multiplier)// + (600*ultra_got[83]);
+	return (level * multiplier)// + (600*ultra_got[83]);
 }

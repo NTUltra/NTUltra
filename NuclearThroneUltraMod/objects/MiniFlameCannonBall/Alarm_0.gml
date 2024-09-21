@@ -1,3 +1,4 @@
+/// @description Fire
 alarm[0]=fireDelay;
 image_angle+=12;
 if instance_exists(Player){
@@ -23,11 +24,13 @@ else{
 	{
 	with instance_create(x,y,Flame)
 	{motion_add(other.image_angle+random(10)-5,4+random(2))
+		scrCopyWeaponMod(other);
 	team = other.team
 	}
 
 	with instance_create(x,y,Flame)
 	{motion_add(other.image_angle+180+random(10)-5,4+random(2))
+		scrCopyWeaponMod(other);
 	team = other.team
 	}
 	}

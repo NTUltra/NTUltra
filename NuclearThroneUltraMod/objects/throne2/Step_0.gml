@@ -6,6 +6,9 @@ if instance_exists(Player) && crossAmmo < 1
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 	{
 		var lerpp = lp;
+		var currentAngle = point_direction(Player.x,Player.y,x,y);
+		if abs(angle_difference(angle,currentAngle)) > 30
+			angle = currentAngle;
 		x += ((Player.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;
 		y += ((Player.y + lengthdir_y(distanceToTarget,angle))-y)*lerpp;
 		hspeed = x - xprevious;

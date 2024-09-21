@@ -18,8 +18,8 @@ walk -= 1
 motion_add(direction,0.8)
 }
 
-if speed > 3 && my_health > 0
-speed = 3
+if speed > maxSpeed && my_health > 0
+	speed = maxSpeed
 
 image_xscale=right*-1;
 

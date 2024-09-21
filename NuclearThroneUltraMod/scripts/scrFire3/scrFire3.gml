@@ -333,7 +333,7 @@ function scrFire3(hasTailNow){
 			team = other.team;
 			sprite_index = sprMicroLaser;
 			knockback = 2;
-			alarm[2] = 3;
+			alarm[2] = 4;
 			image_yscale *= 0.5;
 			dmg -= 1;
 			event_perform(ev_alarm,0)
@@ -788,6 +788,189 @@ function scrFire3(hasTailNow){
 			alarm[1] = costtime;
 		}
 
+		break;
+		
+		//METEOR STRIKER
+		case 817:
+		snd_play_fire(sndFlameCannon)
+		var ang = aimDirection;
+		var am = 8;
+		var angstep = 360/am;
+		repeat(am)
+		{
+			with instance_create(x,y,HeavyFlame)
+			{
+				team = other.team;
+				motion_add(ang,2)
+				motion_add(aimDirection,2);
+				team = other.team
+				ang += angstep;
+			}
+		}
+		with instance_create(x,y,LobMeteor)
+		{
+			accuracy = other.accuracy;
+			sticky = 0
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,6)
+			image_angle = direction
+			team = other.team
+		}
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wepangle = -wepangle
+		wkick = -5
+		break;
+		
+		//GROUND SLAM
+		case 818:
+
+		snd_play_fire(sndHammer)
+
+		instance_create(x,y,Dust)
+		if object_index == Player
+		{
+			jump = maxJump;
+			with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+			{
+				image_speed = 0.4;
+				sprite_index = sprJump;
+				image_xscale = choose(1,-1);
+			}
+			with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+			{
+				image_speed = 0.4;
+				sprite_index = sprJumpUp;
+				image_xscale = choose(1,-1);
+				image_angle = other.hspeed * -10;
+			}
+		}
+		with instance_create(x,y,JumpStomp)
+		{
+			team = other.team;
+			owner = other.id;
+			Mod1=other.wepmod1;
+			Mod2=other.wepmod2;
+			Mod3=other.wepmod3;
+			Mod4=other.wepmod4;
+		}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,12)
+			scrMoveContactSolid(aimDirection,12)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 1
+		wkick = -20;
+
+		break;
+		
+		//RAM CANNON
+		case 819:
+
+		snd_play_fire(sndClusterOpen)
+		var ang = direction;
+		var am = 8;
+		var angstep = 360/am;
+		repeat(am)
+		{
+			with instance_create(x,y,Dust)
+			{
+				motion_add(ang,3);
+				motion_add(aimDirection,2);
+			}
+		}
+		with instance_create(x,y,Ram)
+		{
+			direction = aimDirection+(random(12)-6);
+			originalDirection = direction;
+			Mod1 = other.wepmod1;
+			Mod2 = other.wepmod2;
+			Mod3 = other.wepmod3;
+			Mod4 = other.wepmod4;
+		}
+		
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,6)
+			scrMoveContactSolid(aimDirection + 180,6)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 20
+		wkick = 2
+
+		break;
+		
+		//DREAM LAUNCHER
+		case 820:
+
+		snd_play_fire(sndClusterLauncher)
+		var ang = direction;
+		var am = 8;
+		var angstep = 360/am;
+		repeat(am)
+		{
+			with instance_create(x,y,Smoke)
+			{
+				motion_add(ang,3);
+				motion_add(aimDirection,2);
+			}
+		}
+		with instance_create(x,y,ExplosionSheep)
+		{
+			direction = aimDirection+(random(12)-6);
+			originalDirection = direction;
+			Mod1 = other.wepmod1;
+			Mod2 = other.wepmod2;
+			Mod3 = other.wepmod3;
+			Mod4 = other.wepmod4;
+		}
+		
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,6)
+			scrMoveContactSolid(aimDirection + 180,6)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 20
+		wkick = 2
+
+		break;
+		
+		//TENNIS RACKET
+		case 821:
+
+		snd_play_fire(sndChickenThrow);
+		if Player.skill_got[42]
+			scrActivateTail(hasTailNow);
+		repeat(3)
+			with instance_create(x,y,Dust)
+			{
+				speed += 1;
+				motion_add(90,3);
+				motion_add(aimDirection,1);
+			}
+		with instance_create(x,y,TennisBall)
+		{
+			owner = other.id;
+			motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
+			image_angle = direction
+			team = other.team
+			fireRotation = direction;
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,1);
+			motion_add(aimDirection+180,1)
+		}
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 6
 		break;
 	}
 }

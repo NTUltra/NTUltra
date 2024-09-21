@@ -9837,9 +9837,9 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 	{
-		image_xscale -= 0.15;
-		image_yscale -= 0.15;
-		dmg = 6;
+		image_xscale -= 0.2;
+		image_yscale -= 0.2;
+		dmg = 10;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -13374,6 +13374,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x + lengthdir_x(l,aimDirection-ango*accuracy),
 		y + lengthdir_y(l,aimDirection-ango*accuracy),PlasmaDelay)
 		{ 
+			dmgReduc = 1;
 			team = other.team
 			Mod1=other.wepmod1;
 			Mod2=other.wepmod2;
@@ -13392,7 +13393,9 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x + lengthdir_x(l,aimDirection+ango*accuracy),
 		y + lengthdir_y(l,aimDirection+ango*accuracy),PlasmaDelay)
-		{ team = other.team
+		{ 
+			dmgReduc = 1;
+			team = other.team
 			Mod1=other.wepmod1;
 			Mod2=other.wepmod2;
 			Mod3=other.wepmod3;
@@ -17195,7 +17198,8 @@ function scrFire2(hasTailNow) {
 	
 	with instance_create(x + lengthdir_x(32,aimDirection),y + lengthdir_y(32,aimDirection),PlasmaImpact)
 	{
-		dmg = 4;
+		image_speed = 0.4;
+		dmg = 5;
 		motion_add(aimDirection,5);
 		if other.altFire
 			image_xscale = -1;

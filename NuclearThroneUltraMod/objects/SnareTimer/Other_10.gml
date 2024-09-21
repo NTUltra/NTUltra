@@ -3,5 +3,5 @@ thrusts++;
 alarm[0] = 8;
 if thrusts > 16
 {
-	scrUnlockGameMode(38,"FOR RAPPIDLY SPAWNING SEED");	
+	scrUnlockGameMode(38,"FOR RAPIDLY SPAWNING SEED");	
 }

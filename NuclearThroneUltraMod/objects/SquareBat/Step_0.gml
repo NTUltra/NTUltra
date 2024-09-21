@@ -10,6 +10,9 @@ if circleMode {
 		{
 			rt *= 0.5;
 		}
+		var currentAngle = point_direction(target.x,target.y,x,y);
+		if abs(angle_difference(angle,currentAngle)) > 30
+			angle = currentAngle;
 		x += clamp(((target.x + lengthdir_x(circleDistance,angle))-x)*lerpp,-maxSpeed,maxSpeed);
 		y += clamp(((target.y + lengthdir_y(circleDistance,angle))-y)*lerpp,-maxSpeed,maxSpeed);
 		angle += rt; 

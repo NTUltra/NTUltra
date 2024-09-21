@@ -177,6 +177,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
 	with LaserCannon
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
+	with AnimDestroyBloom
+	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with Lightning
 	{
 		var al = array_length(lightningList);

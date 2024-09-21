@@ -41,7 +41,8 @@ if target != noone {
 		speed = acc*2
         walk = actTime * 3
         alarm[1] = walk;
-        gunangle = direction
+		if alarm[2] < 1 && alarm[3] < 1 && alarm[4] < 1
+			 gunangle = direction
         if hspeed > 0
 			right = 1
         else if hspeed < 0

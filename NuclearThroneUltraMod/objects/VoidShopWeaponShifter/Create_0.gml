@@ -9,3 +9,5 @@ cost = 1;
 originalWep = 0;
 wep = 0;
 chooseTimer = 0;
+scrStartingWeapons();
+scrRaces();

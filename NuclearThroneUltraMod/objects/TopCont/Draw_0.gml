@@ -79,6 +79,7 @@ if UberCont.opt_enemy_xray
 					W = 70;
 					S = 80;
 					*/
+					/*
 					var wallTop = xrcol.y - 16;
 					var xsb = y + sprite_height * 0.5;
 					var xh = xsb - wallTop;
@@ -86,7 +87,8 @@ if UberCont.opt_enemy_xray
 					var xwx = x - (sprite_width*0.5*right)
 					//var xyh = max(0,sprite_height - 16);
 					//var xyhh = sprite_height - xyh;
-					var xyy = y + (sprite_height * 0.5) - xh;
+					var xyy = wallTop;//y - (sprite_height * 0.5) - xh;
+					*/
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh-1,xwx,xyy,right,image_yscale,c_white,1);
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh+1,xwx,xyy,right,image_yscale,c_white,1);
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy+1,right,image_yscale,c_white,1);
@@ -96,8 +98,9 @@ if UberCont.opt_enemy_xray
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx+1,xyy+1,right,image_yscale,c_white,1);
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx-1,xyy+1,right,image_yscale,c_white,1);
 					//shader_reset();
-					draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy,right,image_yscale,c_white,1);
-					shader_set(shdDither);
+					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy,right,image_yscale,c_white,1);
+					draw_sprite_ext(sprite_index,image_index,x,y,right,image_yscale,image_angle,c_white,1);
+					//shader_set(shdDither);
 				}
 			}
 		}
@@ -331,11 +334,28 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with TopFlame
+{
+	draw_self();
+}
+with TopHeavyFlame
+{
+	draw_self();
+}
+with MiniFlameCannonBallTop
+{
+	if !visible
+		draw_self();
+}
 with BoltTrailDrone
 {
 	event_perform(ev_draw,0);
 }
 with LightningDrone
+{
+	event_perform(ev_draw,0);
+}
+with TennisBall
 {
 	event_perform(ev_draw,0);
 }

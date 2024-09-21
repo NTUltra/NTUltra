@@ -23,6 +23,11 @@ if jump > 0
 	yy = y - jumpY;
 }
 var aimDirection = point_direction(x,yy,UberCont.mouse__x,UberCont.mouse__y);
+if wep == 818 // POGO STICK
+{
+	var f = 270;//point_direction(x,y,FocusAim.x,FocusAim.y);
+	aimDirection += angle_difference(f,aimDirection) * 0.9;
+}
 if (drawTailIntro == 1) {
 	draw_sprite_ext(sprTailIntro,tailWave,x,yy,-right,1,0,c_white,1);
 	if round(tailWave) == sprite_get_number(sprTailIntro)

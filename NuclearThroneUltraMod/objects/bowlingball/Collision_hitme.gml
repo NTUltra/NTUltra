@@ -13,10 +13,7 @@ if other.team != team and other.my_health > 0
 		{
 			if sprite_index != spr_hurt
 			{
-				if is60fps
-				DealDamage(other.dmg * 0.5, true)
-				else
-					DealDamage(other.dmg, true)
+				DealDamage(5, true)
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,4)

@@ -1,6 +1,6 @@
 var am = 3;
 var ang = direction+180;
-var angStep = 360/am;
+var angStep = 120;
 repeat(am)
 {
 	with instance_create(x,y,Dust)

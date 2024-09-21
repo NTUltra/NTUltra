@@ -542,6 +542,7 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
+			instance_create(x + 64,y,JungleGorilla);
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)
@@ -1865,7 +1866,7 @@ if roll = 1
 		instance_create(x,y,Dust);
 	}
 }
-if (!outOfCombat and !instance_exists(LevCont) and !instance_exists(FloorMaker))
+if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) && !instance_exists(SpiralCont))
 {
 	var remainHotFloor = 0;
 	var remainFrostFloor = 0;

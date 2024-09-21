@@ -1,8 +1,8 @@
 ///scrSplashDamage();
 // /@description
 ///@param
-function scrSplashDamage(dmg, range){
-	if instance_exists(Player)
+function scrSplashDamage(dmg, range, canBoost = true){
+	if instance_exists(Player) && canBoost
 	{
 		if Player.race == 25
 			range *= 1.1;
@@ -17,10 +17,11 @@ function scrSplashDamage(dmg, range){
 	var direct = other.id;
 	var hits = ds_list_create();
 	var al = collision_circle_list(x,y,range+4,hitme,false,false,hits,false)
-	with instance_create(x,y,SplashDamageFX)
-	{
-		radius = range - 4;
-	}
+	if canBoost
+		with instance_create(x,y,SplashDamageFX)
+		{
+			radius = range - 4;
+		}
 	for (var i = 0; i < al; i++) {
 		// code here
 		with hits[| i]

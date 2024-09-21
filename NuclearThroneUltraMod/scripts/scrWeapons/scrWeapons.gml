@@ -5298,7 +5298,7 @@ function scrWeapons() {
 	wep_load[470] = 20
 	wep_cost[470] = 3
 	wep_sprt[470] = sprLineFrost
-	wep_area[470] = 15
+	wep_area[470] = 14
 	wep_text[470] = "don't get in the line of fire"
 	wep_swap[470] = sndSwapFrost
 	wep_rad[470] = 0;
@@ -5818,7 +5818,7 @@ function scrWeapons() {
 	wep_load[517] = 23
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
-	wep_area[517] = 3
+	wep_area[517] = 4
 	wep_text[517] = "welcome to the club"
 	wep_swap[517] = sndSwapHammer
 	wep_rad[517] = 0;
@@ -9138,7 +9138,7 @@ function scrWeapons() {
 	wep_sprt[815] = sprMissileRain
 	wep_area[815] = 9
 	wep_text[815] = "bomba"
-	wep_swap[815] = sndSwapBow
+	wep_swap[815] = sndSwapExplosive
 	wep_rad[815] = 0;
 	
 	wep_name[816] = "CHARGE PLASMA CANNON"
@@ -9152,6 +9152,61 @@ function scrWeapons() {
 	wep_swap[816] = sndSwapEnergy
 	wep_rad[816] = 0;
 	wep_popup[816] = "WIND UP GUN";
+	
+	wep_name[817] = "METEOR STRIKER"
+	wep_type[817] = 4
+	wep_auto[817] = 0
+	wep_load[817] = 60
+	wep_cost[817] = 5
+	wep_sprt[817] = sprMeteorStriker
+	wep_area[817] = 12
+	wep_text[817] = "R.I.P. the dinosaurs"
+	wep_swap[817] = sndSwapDragon
+	wep_rad[817] = 0;
+	
+	wep_name[818] = "HOT POGO STICK"
+	wep_type[818] = 5
+	wep_auto[818] = 0
+	wep_load[818] = 30
+	wep_cost[818] = 1
+	wep_sprt[818] = sprHotPogoStick
+	wep_area[818] = 9
+	wep_text[818] = "THATS A LOTTA DAMAGE!"
+	wep_swap[818] = sndSwapHammer
+	wep_rad[818] = 0;
+	
+	wep_name[819] = "RAM CANNON"
+	wep_type[819] = 3
+	wep_auto[819] = 0
+	wep_load[819] = 25
+	wep_cost[819] = 1
+	wep_sprt[819] = sprRamCannon
+	wep_area[819] = 11
+	wep_text[819] = "sheep impact sheep impact"
+	wep_swap[819] = sndSheep
+	wep_rad[819] = 0;
+	
+	wep_name[820] = "DREAM LAUNCHER"
+	wep_type[820] = 3
+	wep_auto[820] = 0
+	wep_load[820] = 25
+	wep_cost[820] = 1
+	wep_sprt[820] = sprDreamLauncher
+	wep_area[820] = 11
+	wep_text[820] = "make shoarma"
+	wep_swap[820] = sndSheep
+	wep_rad[820] = 0;
+	
+	wep_name[821] = "TENNIS RACKET"
+	wep_type[821] = 3
+	wep_auto[821] = 3
+	wep_load[821] = 24
+	wep_cost[821] = 1
+	wep_sprt[821] = sprTennisRacket
+	wep_area[821] = 11
+	wep_text[821] = "cause a racket"
+	wep_swap[821] = sndSwapHammer
+	wep_rad[821] = 0;
 	//Swiss army bow
 	//Charge boomerang;,\,l
 	

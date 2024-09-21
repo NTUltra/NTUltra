@@ -6,6 +6,9 @@ if instance_exists(Player)
 	if alarm[6] < 1 && !place_meeting(x,y,Tangle) && alarm[11] < 1
 	{
 		var lerpp = lp;
+		var currentAngle = point_direction(Player.x,Player.y,x,y);
+		if abs(angle_difference(angle,currentAngle)) > 30
+			angle = currentAngle;
 		if alarm[4] > 0
 			lerpp = 1;
 		x += ((Player.x + lengthdir_x(distanceToTarget,angle))-x)*lerpp;

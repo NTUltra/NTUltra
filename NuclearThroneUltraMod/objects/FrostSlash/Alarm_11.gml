@@ -1,5 +1,6 @@
 /// @description Additional frost ultramods
 var um = GetPlayerUltramod()
+var t = team;
 if um == ultramods.fireFrost
 {
 	instance_destroy(id,false);

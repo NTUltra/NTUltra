@@ -1,7 +1,7 @@
 right = 1;
 z = 0;
 wantWall = Wall;
-if (place_meeting(x,y,FloorExplo))
+if (place_meeting(x,y,Floor))//USED TO BE CHECKING FOR FLOOREXPLO
 {
 	instance_destroy();
 	exit;
