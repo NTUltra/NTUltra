@@ -22,7 +22,7 @@ if chooseTimer == 0
 		var wantTier = wep_area[wep];
 		if wantTier < -1
 			wantTier = 19;
-		if array_contains(start_wep, originalWep) || array_contains(race_swep,originalWep)
+		if array_contains(other.start_wep, wep) || array_contains(other.race_swep,wep)
 			wantTier = 13;
 		wep = irandom(maxwep);
 		if wep > maxwep

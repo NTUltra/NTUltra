@@ -22,6 +22,7 @@ if time < 1
 	}
 	if time >= 1
 	{
+		yOffset = 0;
 		direction = d
 		speed = maxSpeed + 1;
 		with owner
@@ -37,7 +38,7 @@ if time < 1
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),d),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),d),Slash)
 			{
 				sprite_index = sprTennisSlash;
-				dmg = 20
+				dmg = 19
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(d,2.7+longarms)

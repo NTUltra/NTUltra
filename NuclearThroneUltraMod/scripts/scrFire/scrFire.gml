@@ -1799,6 +1799,7 @@ function scrFire(canDrown = true) {
 	ammo = 5
 	time = 1
 	team = other.team
+	projectileSpeed += 3;
 	event_perform(ev_alarm,0) 
 	}
 
@@ -1862,7 +1863,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Grenade)
 	{
 	sticky = 0
-	motion_add(aimDirection+(random(10)-3)*other.accuracy,11)
+	motion_add(aimDirection+(random(10)-3)*other.accuracy,13)
 	image_angle = direction
 	team = other.team}
 
@@ -3358,7 +3359,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
 	{
-	dmg = 12//shovel is 8
+	dmg = 13//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

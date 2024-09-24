@@ -41,7 +41,7 @@ if instance_exists(Player)
 	var multiplier;
 	multiplier=1;
 
-	multiplier = (Player.ultra_got[53] * 0.2) + 1;//Ultra A
+	//multiplier = (Player.ultra_got[53] * 0.2) + 1;//Ultra A
 	multiplier += Player.skill_got[5] * 0.2;
 
 	dmg = (10 + (1.5*Player.level)) * multiplier

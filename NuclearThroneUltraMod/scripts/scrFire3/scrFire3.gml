@@ -223,7 +223,7 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 5
 		wkick = 4
-
+		scrSpinnableWeapon(wep);
 		break;
 		
 		//VOID EXECUTIONER
@@ -971,6 +971,176 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 4
 		wkick = 6
+		break;
+		
+		//LIGHTNING GLOVE
+		case 822:
+		snd_play_fire(sndLightningHammer)
+		instance_create(x,y,Dust)
+		var currentX = x;
+		var currentY = y;
+		var hitWall = false;
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
+		{
+			longarms = 0
+		
+				longarms = (Player.skill_got[13]+other.bettermelee)*2
+			motion_add(aimDirection,1+longarms)
+			image_angle = aimDirection
+			team = other.team
+			dmg = 11;
+		}
+		repeat(2+Player.skill_got[13])
+		{
+			if !hitWall
+			{
+				hitWall = scrMoveContactSolid(aimDirection,42)
+				instance_create(x,y,Dust)
+				with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
+				{
+					longarms = 0
+					longarms = (Player.skill_got[13]+other.bettermelee)*2
+				motion_add(aimDirection,1+longarms)
+				image_angle = aimDirection
+				team = other.team
+				dmg = 11;
+				}
+			}
+		}
+		if !skill_got[2]
+		{
+		scrForcePosition60fps();
+		xprevious = x;
+		yprevious = y;
+		}
+		else
+		{
+			x = currentX;
+			y = currentY;
+		}
+
+		alarm[3]=max(4,alarm[3]);//imunity
+		//wepangle = -wepangle
+		BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -12
+
+		break;
+		
+		//LASER SHOTGUN
+		case 823:
+		snd_play_fire(sndShotgun);
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndLaserUpg);
+		else
+			snd_play_fire(sndLaser);
+		with instance_create(x,y,LaserShotgunBurst)
+		{
+			creator = other.id
+			ammo = 4
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = 7
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,0.25);
+			motion_add(aimDirection+180,0.5)
+		}
+
+		break;
+		
+		//TEMPERATURE CONTROL
+		case 824:
+			snd_play_fire(sndHammer)
+			snd_play_fire(sndFlareExplode)
+			snd_play_fire(sndFrostShot1);
+			instance_create(x,y,Dust)
+			var t = team;
+			var mx = x + lengthdir_x(34+(Player.skill_got[13]+bettermelee)*20,aimDirection)
+			var my = y + lengthdir_y(34+(Player.skill_got[13]+bettermelee)*20,aimDirection)
+			var multi = 1;
+			if altFire
+				multi = -1;
+			altFire = !altFire;
+			mx -= lengthdir_x(24,aimDirection + (90 * multi));
+			my -= lengthdir_y(24,aimDirection + (90 * multi));
+			with instance_create(mx,my,FlameSlash)
+			{
+				dmg = 16//shovel is 12 is frostglove
+				longarms = 0
+			
+				longarms = (Player.skill_got[13]+other.bettermelee)*3
+				motion_add(aimDirection + (90 * multi),2.7+longarms)
+				image_angle = direction
+				team = t
+			}
+			var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
+			var angStep = (100*accuracy) / 10;
+			var aimDir = aimDirection - (angStep*5) + (90 * multi);
+			var fx = mx + lengthdir_x(len,aimDir);
+			var fy = my + lengthdir_y(len,aimDir);
+			repeat(10)
+			{
+				with instance_create(fx,fy,Flame)
+				{
+					motion_add(aimDir,4+random(1))
+					//image_angle = direction
+					team = t
+				}
+				aimDir += angStep;
+				fx = mx + lengthdir_x(len,aimDir);
+				fy = my + lengthdir_y(len,aimDir);
+			}
+			mx -= lengthdir_x(48,aimDirection - (90 * multi));
+			my -= lengthdir_y(48,aimDirection - (90 * multi));
+			var toSpawn = FrostSlash;
+			var um = GetPlayerUltramod();
+			if um == ultramods.fireFrost
+				toSpawn = FlameSlash;
+			with instance_create(mx,my,toSpawn)
+			{
+				dmg = 16//shovel is 12 is frostglove
+				longarms = 0
+		
+				longarms = (Player.skill_got[13]+other.bettermelee)*3
+				motion_add(aimDirection - (90 * multi),2.7+longarms)
+				image_angle = direction
+				team = t
+			}
+			var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
+			var angStep = (100*accuracy) / 6;
+			var aimDir = aimDirection - (angStep*3) - (90 * multi);
+			var fx = mx + lengthdir_x(len,aimDir)
+			var fy = my + lengthdir_y(len,aimDir)
+			repeat(6)
+			{
+				with instance_create(fx,fy,IceFlame)
+				{
+					motion_add(aimDir,4+random(1))
+					image_angle = direction
+					team = t
+				}
+				aimDir += angStep;
+				fx = mx + lengthdir_x(len,aimDir);
+				fy = my + lengthdir_y(len,aimDir);
+			}
+			wepangle = -wepangle
+			if !skill_got[2]
+			{
+				motion_add(aimDirection,5)
+				scrMoveContactSolid(aimDirection,4)
+			}
+			BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 5
+			wkick = -6
 		break;
 	}
 }

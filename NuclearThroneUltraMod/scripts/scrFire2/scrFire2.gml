@@ -8380,7 +8380,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick += 4
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//BOUNCER CRASH
@@ -8420,7 +8420,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 8
 	wkick += 4
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//GYRO INCINERATOR
@@ -9940,7 +9940,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
 	wkick = 4
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//SUPER CHUNKY BLADE GUN
@@ -10180,7 +10180,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 10
 	wkick = -5
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//LIGHTNING CRASH
@@ -10238,7 +10238,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 12
 	wkick += 4
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//ULTRA HEAVY REVOLVER
@@ -10452,7 +10452,7 @@ function scrFire2(hasTailNow) {
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick += 4
-
+	scrSpinnableWeapon(wep);
 	break;
 	
 	//SEEKER CANNON

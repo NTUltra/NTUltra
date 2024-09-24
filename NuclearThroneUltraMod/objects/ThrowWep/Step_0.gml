@@ -30,7 +30,7 @@ if speed > 1
 					sprite_index = spr_hurt
 					image_index = 0
 					motion_add(other.direction,8)
-
+					/*
 					if instance_exists(Player)
 					{
 					    if Player.ultra_got[55] = 1 && !Player.altUltra//ULTRA C PANDA
@@ -43,7 +43,7 @@ if speed > 1
 						        speed *= 0.9}
 					        }
 					    }
-					}
+					}*/
 					snd_play(snd_hurt, hurt_pitch_variation);
 					with instance_create(x,y,ImpactFX)
 					{
@@ -79,10 +79,12 @@ if speed > 1
 			}
 		}
 	}
+	/*
 	if hitAnEnemy && instance_exists(Player) && Player.ultra_got[55] && !Player.altUltra
 	{
 		scrDrop(15,0.02);
 	}
+	*/
 	mask_index = msk;
 	image_xscale = 1;
 	image_yscale = 1;

@@ -1,8 +1,8 @@
 /// @description Walk toward an enemy behind a wall
-if alarm[1] > 2
+if alarm[1] > 2 && instance_exists(enemy)
 {
 	var n = instance_nearest(x,y,enemy);
-	if n.team != 2 && point_distance(x,y,n.x,n.y) < 400
+	if n != noone && n.team != 2 && point_distance(x,y,n.x,n.y) < 400
 	{
 		var d = point_direction(x,y,n.x,n.y);
 		if !collision_line(x,y,n.x,n.y,WallHitMe,false,false)

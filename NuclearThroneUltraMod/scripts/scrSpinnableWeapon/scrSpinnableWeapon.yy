@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrSpinnableWeapon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSpinnableWeapon",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Scripts/Weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

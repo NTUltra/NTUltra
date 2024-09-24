@@ -28,6 +28,10 @@ if wep == 818 // POGO STICK
 	var f = 270;//point_direction(x,y,FocusAim.x,FocusAim.y);
 	aimDirection += angle_difference(f,aimDirection) * 0.9;
 }
+else if instance_exists(SpinWeapon)
+{
+	aimDirection += SpinWeapon.rotation;
+}
 if (drawTailIntro == 1) {
 	draw_sprite_ext(sprTailIntro,tailWave,x,yy,-right,1,0,c_white,1);
 	if round(tailWave) == sprite_get_number(sprTailIntro)

@@ -429,7 +429,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //PANDA 
 	    ultra_name[53] = "TURNING BADASS"
-	    ultra_text[53] = "THROWS <w>PIERCE<w> AND <pi>DEFLECT<pi> PROJECTILES#MORE THROW DAMAGE##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_text[53] = "THROWS <w>PIERCE<w> AND <pi>DEFLECT<pi> PROJECTILES#MORE THROW DAMAGE#WHEN A WEAPON RETURNS#IT FIRES A MASSIVE <g>LASER<g>##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[53] = "strong arms!"
     
 	    ultra_name[54] = "FUCK IT"//DELIBERATE REINCARNATION"
@@ -437,14 +437,14 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[54] = "rngezus"
     
 	    ultra_name[55] = "DONE BEING EXTINCT"
-	    ultra_text[55] = "WHEN A WEAPON RETURNS#IT FIRES A MASSIVE <g>LASER<g>##WHENEVER A THROWN WEAPON HITS#DROP EXTRA <y>RES<y><g>OUR<g><r>CES<r>##CHANCE <p>PORTALS<p> CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_text[55] = "YOUR <w>HITBOX<w> IS EVEN SMALLER##ANY <w>WEAPON<w> COMING THROUGH A <p>PORTAL<p>#BECOMES A <w>DRONE<w> THAT FOLLOWS YOU AROUND#AND SHOOTS ENEMIES##CHANCE <p>PORTALS<p> CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
 	    ultra_tips[55] = "rise above"
 		
 		//Flexible elbows and or long arms
 		if altOverride || (instance_exists(Player) &&  Player.race == 14 && (Player.altUltra))
 		{
 			ultra_name[55] = "INCONSISTENT INCOMPATABILITY"
-		    ultra_text[55] = "ALL WEAPONS ARE <w>FULLY AUTOMATIC<w>#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR <w>CROSSHAIR<w>";
+		    ultra_text[55] = "YOUR <w>HITBOX<w> IS EVEN SMALLER##ALL WEAPONS ARE <w>FULLY AUTOMATIC<w>#YOU NO LONGER THROW WEAPONS#INSTEAD YOUR ACTIVE FIRES YOUR WEAPON#FROM THE ORIGIN OF YOUR <w>CROSSHAIR<w>";
 		    ultra_tips[55] = "how does it do that"
 		}
 		

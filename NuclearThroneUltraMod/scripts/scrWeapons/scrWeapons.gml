@@ -1392,7 +1392,7 @@ function scrWeapons() {
 	wep_name[124] = "LIGHTNING HAMMER"
 	wep_type[124] = 0
 	wep_auto[124] = 1
-	wep_load[124] = 32
+	wep_load[124] = 29
 	wep_cost[124] = 0
 	wep_sprt[124] = sprLightningHammer
 	wep_area[124] = 13
@@ -3266,7 +3266,7 @@ function scrWeapons() {
 	wep_name[291] = "ENERGY GLOVE"
 	wep_type[291] = 5
 	wep_auto[291] = 0
-	wep_load[291] = 26
+	wep_load[291] = 24
 	wep_cost[291] = 3
 	wep_sprt[291] = sprEnergyGlove
 	wep_area[291] = 9
@@ -3805,7 +3805,7 @@ function scrWeapons() {
 	wep_name[339] = "FROST AXE"
 	wep_type[339] = 0
 	wep_auto[339] = 0
-	wep_load[339] = 30
+	wep_load[339] = 27
 	wep_cost[339] = 0
 	wep_sprt[339] = sprFrostHammer
 	wep_area[339] = 10
@@ -4445,7 +4445,7 @@ function scrWeapons() {
 	wep_name[394] = "FLAME AXE"
 	wep_type[394] = 0
 	wep_auto[394] = 0
-	wep_load[394] = 26
+	wep_load[394] = 24
 	wep_cost[394] = 0
 	wep_sprt[394] = sprFlameAxe
 	wep_area[394] = 10//10frost hammer
@@ -4650,7 +4650,7 @@ function scrWeapons() {
 	wep_name[412] = "LANCE"
 	wep_type[412] = 0
 	wep_auto[412] = 0
-	wep_load[412] = 18
+	wep_load[412] = 17
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
 	wep_area[412] = 4
@@ -6632,10 +6632,10 @@ function scrWeapons() {
 	wep_name[591] = "ENERGY LANCE"
 	wep_type[591] = 5
 	wep_auto[591] = 0
-	wep_load[591] = 10
+	wep_load[591] = 12
 	wep_cost[591] = 2
 	wep_sprt[591] = sprEnergyLance
-	wep_area[591] = 11
+	wep_area[591] = 10
 	wep_text[591] = ""
 	wep_swap[591] = sndSwapEnergy
 	wep_rad[591] = 0;
@@ -7293,7 +7293,7 @@ function scrWeapons() {
 	wep_name[651] = "GOLDEN LANCE"
 	wep_type[651] = 0
 	wep_auto[651] = 0
-	wep_load[651] = 17
+	wep_load[651] = 16
 	wep_cost[651] = 0
 	wep_sprt[651] = sprGoldenLance
 	wep_area[651] = 19
@@ -7304,7 +7304,7 @@ function scrWeapons() {
 	wep_name[652] = "SUPER TRIDENT"
 	wep_type[652] = 0
 	wep_auto[652] = 0
-	wep_load[652] = 30
+	wep_load[652] = 29
 	wep_cost[652] = 0
 	wep_sprt[652] = sprSuperTrident
 	wep_area[652] = 15
@@ -9200,13 +9200,46 @@ function scrWeapons() {
 	wep_name[821] = "TENNIS RACKET"
 	wep_type[821] = 3
 	wep_auto[821] = 3
-	wep_load[821] = 24
-	wep_cost[821] = 1
+	wep_load[821] = 26
+	wep_cost[821] = 1.5
 	wep_sprt[821] = sprTennisRacket
-	wep_area[821] = 11
+	wep_area[821] = 12
 	wep_text[821] = "cause a racket"
 	wep_swap[821] = sndSwapHammer
 	wep_rad[821] = 0;
+	
+	wep_name[822] = "LIGHTNING GLOVE"
+	wep_type[822] = 5
+	wep_auto[822] = 0
+	wep_load[822] = 31
+	wep_cost[822] = 0
+	wep_sprt[822] = sprLightningGlove
+	wep_area[822] = 10
+	wep_text[822] = ""
+	wep_swap[822] = sndSwapHammer
+	wep_rad[822] = 0;
+	
+	wep_name[823] = "LASER SHOTGUN"
+	wep_type[823] = 5
+	wep_auto[823] = 4
+	wep_load[823] = 17
+	wep_cost[823] = 2
+	wep_sprt[823] = sprLaserShotgun
+	wep_area[823] = 10
+	wep_text[823] = ""
+	wep_swap[823] = sndSwapShotgun
+	wep_rad[823] = 0;
+	
+	wep_name[824] = "FROSTBURN AXE"
+	wep_type[824] = 0
+	wep_auto[824] = 0
+	wep_load[824] = 35
+	wep_cost[824] = 0
+	wep_sprt[824] = sprHotAndColdAxe
+	wep_area[824] = 10
+	wep_text[824] = ""
+	wep_swap[824] = sndSwapHammer
+	wep_rad[824] = 0;
 	//Swiss army bow
 	//Charge boomerang;,\,l
 	
