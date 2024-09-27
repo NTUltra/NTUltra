@@ -21,15 +21,15 @@ if wallbounce > 0
 if shotgunshouldered && speed > 2
 {
 	direction = scrAimAssistLaser(direction,0.75,16, true);
-	if sprite_index == sprBullet2
+	if sprite_index == sprBullet12
 	{
-		sprite_index = sprBullet2HighDmg;
-		dmg = 3;
+		sprite_index = sprBullet12HighDamage;
+		dmg = 4;
 		alarm[1] += 3;
 	}
-	else if sprite_index == sprBullet2Disappear
+	else if sprite_index == sprBullet12Disappear
 	{
-		sprite_index = sprBullet2;
+		sprite_index = sprBullet12;
 	}
 }
 if wallbounce < 6

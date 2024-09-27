@@ -5,7 +5,7 @@ damagers have a DAMAGE
 their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
-
+defaultScale = 1;
 typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 ShotgunShouldersType();
@@ -14,7 +14,6 @@ norecycle = false;
 dmg = 4;
 alarm[11] = 1;
 bulletCost = 1;
-shotgunCost = 1;
 radCost = 0;
 wallbounce = 1;
 shotgunshouldered = false;

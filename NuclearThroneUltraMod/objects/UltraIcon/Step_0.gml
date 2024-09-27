@@ -47,9 +47,10 @@ if (selected && visible &&
 		}
 		else
 		{
-			Player.patience += 1;
-			//Player.skillpoints ++;
+			//Player.patience += 1;
+			Player.skillpoints ++;
 			Player.skillsChosen -= 1;
+			Player.ultraNow = true;
 			giveMeMore = true;
 		}
 	}
@@ -1059,26 +1060,26 @@ if (selected && visible &&
 	if !scrIsCrown(8)
 	{
 
-	//HORROR ULTRA E
-	if Player.ultra_got[0] && !Player.altUltra
-	{
-	    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
-	    skill = 27//patience
-	}
+		//HORROR ULTRA E
+		if Player.ultra_got[0] && !Player.altUltra
+		{
+		    with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-112,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,SkillIcon)
+		    skill = 27//patience
+		}
 
 
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
-	{skill = other.skill1
-	ultimategamble=other.ultimategamble-1;}
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
-	{skill = other.skill2
-	ultimategamble=other.ultimategamble-1;}
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
-	{skill = other.skill3
-	ultimategamble=other.ultimategamble-1;}
-	with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
-	{skill = other.skill4
-	ultimategamble=other.ultimategamble-1;}
+		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		{skill = other.skill1
+		ultimategamble=other.ultimategamble-1;}
+		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2-24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		{skill = other.skill2
+		ultimategamble=other.ultimategamble-1;}
+		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+24,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		{skill = other.skill3
+		ultimategamble=other.ultimategamble-1;}
+		with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+72,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24,UltraIcon)
+		{skill = other.skill4
+		ultimategamble=other.ultimategamble-1;}
 
 	}
 	else

@@ -1,6 +1,6 @@
 event_inherited();
 friction = 0.75
-
+defaultScale = 1;
 wallbounce = 0
 alarm[1] = 4;
 shotgunshouldered = false;

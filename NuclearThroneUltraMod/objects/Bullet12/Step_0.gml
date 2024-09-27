@@ -19,10 +19,10 @@ if wallbounce > 0
 	if speed < minSpeed
 		speed = minSpeed;
 }
-if speed < 6 and sprite_index != sprBullet2Disappear and sprite_index != sprEBullet3Disappear
+if speed < 6 and sprite_index != sprBullet12Disappear and sprite_index != sprEBullet3Disappear
 {
 	friction = 0.7;
-	sprite_index = sprBullet2Disappear
+	sprite_index = sprBullet12Disappear
 	if team != 2
 		sprite_index = sprEBullet3Disappear
 	image_index = 0

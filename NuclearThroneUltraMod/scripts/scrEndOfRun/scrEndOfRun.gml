@@ -95,6 +95,9 @@ function scrEndOfRun(){
 		killedInvertedThrone2 = false;
 		extraVan = 0;
 		skillDeposit = [];
+		droppedWeapons = [];
+		foundWeapons = [];
+		usedWeapons = [];
 		hasFoughtInvadingThrone = false;
 		tookUnstoppable = false;
 		revivedCharacters = [];

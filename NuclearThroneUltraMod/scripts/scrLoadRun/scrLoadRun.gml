@@ -299,6 +299,14 @@ function scrLoadRun(selectedRunIndex){
 				Player.canHeal = encryptedRun.canHeal;
 			if variable_struct_exists(encryptedRun, "extraVan")
 				UberCont.extraVan = encryptedRun.extraVan;
+			if variable_struct_exists(encryptedRun, "skillDeposit")
+				UberCont.skillDeposit = encryptedRun.skillDeposit;
+			if variable_struct_exists(encryptedRun, "droppedWeapons")
+				UberCont.droppedWeapons = encryptedRun.droppedWeapons;
+			if variable_struct_exists(encryptedRun, "foundWeapons")
+				UberCont.foundWeapons = encryptedRun.foundWeapons;
+			if variable_struct_exists(encryptedRun, "usedWeapons")
+				UberCont.usedWeapons = encryptedRun.usedWeapons;
 			if variable_struct_exists(encryptedRun, "killedInvertedThrone2")
 				UberCont.killedInvertedThrone2 = encryptedRun.killedInvertedThrone2;
 			if variable_struct_exists(encryptedRun, "hasFoughtInvadingThrone")

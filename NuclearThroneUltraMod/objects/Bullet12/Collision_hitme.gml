@@ -34,7 +34,7 @@ if other.team != team and other.my_health > 0
 	}
 	if !norecycle
 	{
-		scrRecycleGlandShotgun(shotgunCost, bulletCost, radCost, false);
+		scrRecycleGland(bulletCost, radCost, false);
 	}
 }
 

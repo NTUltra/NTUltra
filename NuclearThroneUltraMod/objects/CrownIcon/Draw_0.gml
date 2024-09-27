@@ -2,6 +2,8 @@ draw_set_color(c_dkgray)
 //draw_rectangle(x-12,yy-16,x+12,yy+16,0)
 var yy = y + yOffset;
 var hover = (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > yy-16 and UberCont.mouse__y < yy+16)
+if instance_exists(MultiCrownMenu) && MultiCrownMenu.hoverSelected && MultiCrownMenu.selectedCrown == crown
+	hover = true;
 if (instance_exists(UnlockingSecondRow))
 {
 	draw_sprite(sprite_index,crown,x,yy)

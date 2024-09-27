@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndEnergyPopgunUpg2",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.319161,
+  "name":"sndEnergyPopgunUpg2",
+  "parent":{
+    "name":"Bullet",
+    "path":"folders/Sounds/Weapons/Bullet.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndEnergyPopgunUpg2.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1518,5 +1518,55 @@ function scrFire3(hasTailNow){
 		wkick = 2
 
 		break;
+		
+		//ENERGY SHOTGUN
+		case 836:
+		if Player.skill_got[17]
+			snd_play_fire(sndEnergyShotgunUpg);
+		else
+			snd_play_fire(sndEnergyShotgun);
+		with instance_create(x,y,EnergyShotgunBurst)
+		{
+			creator = other.id
+			ammo = 2
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,3);
+			motion_add(aimDirection+180,2)
+		}
+
+		BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 8
+
+		break;
+		
+		//ENERGY POPGUN
+		case 837:
+
+		if Player.skill_got[17]
+			snd_play_fire(choose(sndEnergyPopgunUpg1,sndEnergyPopgunUpg2))
+		else
+			snd_play_fire(choose(sndEnergyPopgun1,sndEnergyPopgun2))
+
+		with instance_create(x,y,Bullet2Energy)
+		{motion_add(aimDirection+(random(16)-8)*other.accuracy,15)
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = 2
+
+		break;
 	}
 }

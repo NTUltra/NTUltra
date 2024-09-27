@@ -44,8 +44,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBullet1",
-    "path":"sprites/sprBullet1/sprBullet1.yy",
+    "name":"sprBullet12HighDamage",
+    "path":"sprites/sprBullet12HighDamage/sprBullet12HighDamage.yy",
   },
   "spriteMaskId":{
     "name":"mskBullet1",

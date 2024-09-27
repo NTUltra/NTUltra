@@ -7,22 +7,11 @@ if walled == 0
 	walled = 1;
 	snd_play(snd_wallhit,0.05,true,true,1,false);
 }
-with myOwner
+if myOwner != noone
 {
-	if array_length(hitEntities) > array_length(other.hitEntities)
+	with myOwner
 	{
-		other.hitEntities = hitEntities;	
-	}
-	else
-	{
-		hitEntities = other.hitEntities;
-	}
-}
-/// @description Keep the pieces together
-if myOwner == noone
-{
-	with myEnd
-	{
+		alarm[1] = 1;
 		if array_length(hitEntities) > array_length(other.hitEntities)
 		{
 			other.hitEntities = hitEntities;	
@@ -32,15 +21,33 @@ if myOwner == noone
 			hitEntities = other.hitEntities;
 		}
 	}
-	with myStart
-	{
-		if array_length(hitEntities) > array_length(other.hitEntities)
-		{
-			other.hitEntities = hitEntities;	
-		}
-		else
-		{
-			hitEntities = other.hitEntities;
-		}
 	}
+else //if myOwner == noone
+{
+	if myEnd != noone
+		with myEnd
+		{
+			alarm[1] = 1;
+			if array_length(hitEntities) > array_length(other.hitEntities)
+			{
+				other.hitEntities = hitEntities;	
+			}
+			else
+			{
+				hitEntities = other.hitEntities;
+			}
+		}
+	if myStart != noone
+		with myStart
+		{
+			alarm[1] = 1;
+			if array_length(hitEntities) > array_length(other.hitEntities)
+			{
+				other.hitEntities = hitEntities;	
+			}
+			else
+			{
+				hitEntities = other.hitEntities;
+			}
+		}
 }

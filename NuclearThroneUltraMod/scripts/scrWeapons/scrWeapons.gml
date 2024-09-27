@@ -2765,7 +2765,7 @@ function scrWeapons() {
 	wep_swap[246] = sndSwapBow
 	wep_rad[246] = 0;
 
-	wep_name[247] = "BOMB LAUNCHER"
+	wep_name[247] = "BOMBER LAUNCHER"
 	wep_type[247] = 4
 	wep_auto[247] = 0
 	wep_load[247] = 20
@@ -9343,10 +9343,10 @@ function scrWeapons() {
 	wep_rad[833] = 0;
 	
 	wep_name[834] = "PLOP SHOTGUN"
-	wep_type[834] = 2
+	wep_type[834] = 1
 	wep_auto[834] = 2
 	wep_load[834] = 20
-	wep_cost[834] = 2
+	wep_cost[834] = 20
 	wep_sprt[834] = sprPlopShotgun
 	wep_area[834] = 3
 	wep_text[834] = "plop weapons fire a bullet shell hybrid projectile"
@@ -9366,6 +9366,30 @@ function scrWeapons() {
 	wep_swap[835] = sndSwapShotgun
 	wep_rad[835] = 0;
 	wep_popup[835] = "WORKS WITH RECYCLE GLAND!#AND SHOTGUN SHOULDERS";
+	
+	wep_name[836] = "ENERGY SHOTGUN"
+	wep_type[836] = 5
+	wep_auto[836] = 3
+	wep_load[836] = 18
+	wep_cost[836] = 3
+	wep_sprt[836] = sprEnergyShotgun
+	wep_area[836] = 5
+	wep_text[836] = "fires energy shells"
+	wep_swap[836] = sndSwapShotgun
+	wep_rad[836] = 0;
+	wep_popup[836] = "WORKS WITH ENERGY BRAIN!#AND SHOTGUN SHOULDERS";
+	
+	wep_name[837] = "ENERGY POPGUN"
+	wep_type[837] = 5
+	wep_auto[837] = 3
+	wep_load[837] = 4
+	wep_cost[837] = 0.5
+	wep_sprt[837] = sprEnergyPopgun
+	wep_area[837] = 5
+	wep_text[837] = "fires energy shells"
+	wep_swap[837] = sndSwapShotgun
+	wep_rad[837] = 0;
+	wep_popup[837] = "WORKS WITH ENERGY BRAIN!#AND SHOTGUN SHOULDERS";
 	//Swiss army bow
 	//Charge boomerang;,\,l
 	

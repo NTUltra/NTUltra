@@ -1,7 +1,10 @@
 scrCrowns();
-depth = -999;
+depth = -998;
 currentCrown = Player.crown;
+totalCrowns = array_length(currentCrown);
+newSelectedCrown = -1;
 selectedCrown = -1;
-selectedCrownIndex = 0;
 scale = 1;
 selectedCrownSprite = sprCrownSelect;
+canActuallySelectNow = false;
+hoverSelected = false;
