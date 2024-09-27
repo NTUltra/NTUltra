@@ -415,6 +415,10 @@ function scrLoadRun(selectedRunIndex){
 					}
 				}
 			}
+			if ultra_got[55] && altUltra
+			{
+				mask_index = mskSmallPanda;	
+			}
 			if ultra_got[80]
 			{
 				for (var i = 0; i < maxwep; i++) {

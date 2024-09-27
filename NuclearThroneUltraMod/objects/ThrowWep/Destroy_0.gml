@@ -83,7 +83,7 @@ with instance_create(x,y,WepPickupForOneWepOnly)
 	isPermanent = other.isPermanent;
 	visitedPortals = other.visitedPortals;
 	hasBeenEaten = other.hasBeenEaten;
-	persistent=other.persistent;
+	persistent = other.persistent;
 	visible = other.visible;
 	if persistent
 		wasThrown = true;

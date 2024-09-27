@@ -28,6 +28,7 @@ function scrLoadOptions() {
 	customSideArt = sprite_add(opt_custom_sideart,0,false,false,0,0);
 	opt_dmgindicator = ini_read_real("OPTIONS","dmgindicator",0);
 	opt_camera_follow = ini_read_real("OPTIONS","camerafollowaim",1);
+	opt_hud_dynamic = ini_read_real("OPTIONS","huddynamic",0);
 	opt_hud_des = ini_read_real("OPTIONS","huddes",1);
 	//opt_nicedrk = ini_read_real("OPTIONS","nicedrk",0);
 

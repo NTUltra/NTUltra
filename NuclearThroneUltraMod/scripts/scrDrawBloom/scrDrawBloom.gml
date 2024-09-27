@@ -106,6 +106,8 @@ function scrDrawBloom() {
 	}
 	with Bullet2//PELLETS
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,1+imageXscale,1+imageYscale,image_angle,c_white,ba)
+	with Bullet12//BulletPellet
+	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,1+imageXscale,1+imageYscale,image_angle,c_white,ba)
 	with Bullet6//FLAME PELLETS
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with Bullet7//DIRECTOR
@@ -577,6 +579,14 @@ function scrDrawBloom() {
 		event_user(0);
 	}
 	with SunBeam
+	{
+		//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+		draw_set_alpha(cAlpha);
+		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),radius,0)
+		draw_set_alpha(1);
+		event_user(0);
+	}
+	with LightningBeam
 	{
 		//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 		draw_set_alpha(cAlpha);

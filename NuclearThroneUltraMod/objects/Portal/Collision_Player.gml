@@ -90,6 +90,14 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 				{
 					event_user(0);
 				}
+				with WepPickup
+				{
+					if isPermanent && visible
+					{
+						persistent = false;
+						event_user(0);	
+					}
+				}
 			}
 		}
 	}

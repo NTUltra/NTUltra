@@ -12,7 +12,7 @@ function scrPandaRoll(){
 	var dir= 0;
 	var prevwep;
         
-	prevwep=wep;
+	prevwep = wep;
         
 	//handling golden weapons
 	if scrCheckGold(wep_name[prevwep])
@@ -25,12 +25,27 @@ function scrPandaRoll(){
 		 prevwep = 8;//Minigun tier 6
 		 //Double shotgun (tier 2)
 	}
-		if Player.ultra_got[55]
+		if Player.ultra_got[56]
 		{
-			do {wep = irandom(maxwep-1)+1;dir+=1;
-			if dir >999
-			wep=prevwep;}
-			until ( ( (wep_area[wep] == wep_area[prevwep]) || (wep_area[wep] = wep_area[prevwep] + 1) )||(dir>1000) )
+			//ONLY MELEE
+			var i = wep;
+			var targetTier = wep_area[wep];
+			do {
+				i += 1;
+				wep = i;
+				if i >= maxwep
+				{
+					i = 0;
+					targetTier -= 1;
+					if targetTier < -1
+						targetTier = 1;
+				}
+				dir += 1;
+			}
+			until ( ( (wep_area[wep] == targetTier && scrMeleeWeapons(wep)) ) || (dir > 9999) )
+			
+			if dir > 9999
+				wep = prevwep;
 		}
 		else if prevwep > 0 && prevwep < array_length(wep_area) {
 			do {wep = irandom(maxwep-1)+1;dir++;

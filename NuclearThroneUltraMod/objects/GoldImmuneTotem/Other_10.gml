@@ -16,4 +16,5 @@ for (var i = 0; i < al; i++)
 	}
 }
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
-draw_circle_width_colour(x,y,range,1,circleCol);
+if cooldownTimer > 0
+	draw_circle_width_colour(x,y,range,1,circleCol);

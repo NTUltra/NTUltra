@@ -2,7 +2,7 @@
 
 // /@description
 ///@param
-function scrEnemyDeathEvent(){
+function scrEnemyDeathEvent(isSheep = false){
 	if scrIsGamemode(9)//easy mode
 	{
 		raddrop*=1.2;
@@ -107,6 +107,58 @@ function scrEnemyDeathEvent(){
 		{
 			defaultWepDrop += 0.5
 		}
+		if Player.ultra_got[55] && !Player.altUltra //&& !isSheep
+		{
+			if instance_number(object_index) == 1
+			{
+				snd_play(sndPandaExtinction,0.1,true);//TEMP
+				Sleep(20)
+				with instance_create(x,y,AnimDestroyBloom)
+				{
+					sprite_index = sprPandaExtinctionEvent;
+					image_angle = random(360);	
+				}
+				var splatDir = random(360);
+				var rpt = 6 + mySize;
+				var angStep = 360 / rpt;
+				var i = 0;
+				repeat(rpt)
+				{
+					with instance_create(x,y,BloodStreak)
+					{
+						motion_add(splatDir,6 + i + other.mySize)
+						image_angle = direction
+					}
+					scrAddToBGFXLayer(
+						sprBloodSplat,
+						irandom(sprite_get_number(sprBloodSplat)),
+						x + lengthdir_x(random_range(4,8) + i*2 + mySize,splatDir),
+						y + lengthdir_y(random_range(4,8) + i*2 + mySize,splatDir),
+						random_range(0.8,1),
+						random_range(0.8,1),
+						splatDir,
+						c_white,
+						1
+					);
+					splatDir += angStep;
+					i += 1;
+				}
+				with enemy
+				{
+					if my_health > 0
+					{
+						var dealDamage = max(1,my_health*0.17);
+						sprite_index = spr_hurt;
+						image_index = 0;
+						DealDamage(dealDamage,false,false,false);
+						scrScarierFace(dealDamage,false)
+						BackCont.shake += 1;
+					}
+				}
+				if BackCont.shake > 100
+					BackCont.shake = 100;
+			}
+		}
 		/*
 		if Player.ultra_got[29] && !Player.altUltra//Refined taste
 		{
@@ -122,48 +174,50 @@ function scrEnemyDeathEvent(){
 				
 			var t = 0;
 			
-
-			//Sheep Ultra B Just A Sheep
-			if ultra_got[50] == 1 && !altUltra
+			if !isSheep
 			{
-				if justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.7//if70% left enemies will notice you
+				//Sheep Ultra B Just A Sheep
+				if ultra_got[50] == 1 && !altUltra
 				{
+					if justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.7//if70% left enemies will notice you
+					{
+						if (scrWasSpottedDoingCrime(true))
+						{
+						    justAsheep = false;
+						    instance_create(x-5,y-16,Notice);
+						    instance_create(x+5,y-16,Notice);
+							if skill_got[29]//Insomnia
+								t = 290;
+						}
+					}
+				}
+				else if (justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.9) {
 					if (scrWasSpottedDoingCrime(true))
 					{
-					    justAsheep = false;
-					    instance_create(x-5,y-16,Notice);
-					    instance_create(x+5,y-16,Notice);
+						justAsheep = false;
+						instance_create(x-5,y-16,Notice);
+						instance_create(x+5,y-16,Notice);
 						if skill_got[29]//Insomnia
 							t = 290;
 					}
 				}
-			}
-			else if (justAsheep && instance_number(enemy) < BackCont.enemiesInStartLevel*0.9) {
-				if (scrWasSpottedDoingCrime(true))
+				//Insomnia should not trigger again after first justASheep
+				if skill_got[29] && ultra_got[51] && altUltra && sheepFakeouts != 3 + skill_got[5]
+					t = 0;
+				if t > 0
 				{
-					justAsheep = false;
-					instance_create(x-5,y-16,Notice);
-					instance_create(x+5,y-16,Notice);
-					if skill_got[29]//Insomnia
-						t = 290;
-				}
-			}
-			//Insomnia should not trigger again after first justASheep
-			if skill_got[29] && ultra_got[51] && altUltra && sheepFakeouts != 3 + skill_got[5]
-				t = 0;
-			if t > 0
-			{
-				with enemy
-				{
-					if alarm[1]>0
+					with enemy
 					{
-						alarm[1]+=t;
-						scrGiveSnooze();
+						if alarm[1]>0
+						{
+							alarm[1]+=t;
+							scrGiveSnooze();
+						}
 					}
-				}
-				with PlayerAlarms2
-				{
-					alarm[0] = t;	
+					with PlayerAlarms2
+					{
+						alarm[0] = t;	
+					}
 				}
 			}
 			//RADS
@@ -349,7 +403,10 @@ function scrEnemyDeathEvent(){
 					scrRollGunGame();
 				}
 			}
-			
+			with GameRender
+			{
+				gamemodeDynamicHud = dynamicHudResetTime;	
+			}
 	    }
 		if instance_exists(Player)
 		{

@@ -1,8 +1,9 @@
 /// @description Exit
 with Player
 	isOnInteractable = true;
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && !disable
 {
+	disable = true;
 	snd_play(sndPortalOld);
 	KeyCont.key_pick[Player.p] = 2;
 	mask_index = mskPickupThroughWall;
@@ -15,19 +16,21 @@ if KeyCont.key_pick[other.p] = 1
 	{
 		snd_play(snd_crwn);
 		scrGiveCrownPoints(1);
+		lockout = true;
 	}
 	UberCont.canMultiCrown = true;
 	Sleep(20);
-	instance_destroy();
 	scrUnlockGameMode(43,"FOR AQUIRING THE MULTI-CROWN!");
-	with instance_create(x,y,UnlockPopup)
-		mytext="YOU CAN NOW EQUIP#MULTIPLE CROWNS#AT THE SAME TIME!";
-	with instance_create(x,y,Portal)
+	//with instance_create(x,y,UnlockPopup)
+	//	mytext="YOU CAN NOW EQUIP#MULTIPLE CROWNS#AT THE SAME TIME!";
+	with EnemyCrownOfDeath
 	{
-		type = 1
-		alarm[1] = 75;
-		x = other.x;
-		y = other.y;
-		scrForcePosition60fps();
+		instance_destroy(id,false);	
 	}
+	with enemy
+	{
+		instance_destroy();	
+	}
+	alarm[1] = 30;
+	alarm[2] = 20;
 }

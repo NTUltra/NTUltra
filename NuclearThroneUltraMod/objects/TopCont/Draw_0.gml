@@ -494,6 +494,15 @@ with Yoyo
 {
 	draw_self();	
 }
+with LightningBeam
+{
+	event_user(1);
+	if alarm[0] > 1 && alarm[0] < 3
+	{
+		draw_circle(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),radius - 2,0)
+		event_user(0);
+	}
+}
 with GyroBurst
 {
 	draw_self();	

@@ -1,4 +1,8 @@
 /// @description Go to the clouds
+with GameRender
+{
+	mutationDynamicHud = max(mutationDynamicHud,dynamicHudResetTime * 0.5);
+}
 if used
 	isInteractableNow = false;	
 else if cAlpha > 0 && hasEnoughMuts
@@ -33,6 +37,10 @@ else if cAlpha > 0 && hasEnoughMuts
 			snd_play(sndAboutToLoseSkill);
 			alarm[0] = 5;
 			BackCont.shake += 10;
+			with GameRender
+			{
+				mutationDynamicHud = max(90,dynamicHudResetTime);
+			}
 		}
 		else
 		{

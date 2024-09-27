@@ -14,6 +14,8 @@ else
 {
 	speed += wallbounce
 	instance_create(x,y,Dust)
+	if speed > 28
+		speed = 28;
 }
 wallbounce *= 0.9
 

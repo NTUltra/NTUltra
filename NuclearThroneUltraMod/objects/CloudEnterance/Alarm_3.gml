@@ -74,3 +74,7 @@ else
 	alarm[3] = 60;
 	snd_play(sndAboutToLoseSkill);
 }
+with GameRender
+{
+	mutationDynamicHud = dynamicHudResetTime;
+}

@@ -673,7 +673,7 @@ function scrFire(canDrown = true) {
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(28)-14)*other.accuracy,16)
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,16.5)
 	image_angle = direction
 	team = other.team}
 
@@ -2241,15 +2241,15 @@ function scrFire(canDrown = true) {
 	}
 
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,16)
+	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,16)
+	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 
@@ -4083,15 +4083,15 @@ function scrFire(canDrown = true) {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,15+random(2))
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16.5+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
+	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,16.5+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
+	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,16.5+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -4135,11 +4135,11 @@ function scrFire(canDrown = true) {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
+	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,15+random(2))
+	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
 	image_angle = direction
 	team = other.team}
 
@@ -4343,20 +4343,20 @@ function scrFire(canDrown = true) {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
+	{motion_add(aimDirection+6*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
+	{motion_add(aimDirection-6*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+18*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
+	{motion_add(aimDirection+18*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-18*other.accuracy+(random(6)-3)*other.accuracy,16+random(2))
+	{motion_add(aimDirection-18*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 

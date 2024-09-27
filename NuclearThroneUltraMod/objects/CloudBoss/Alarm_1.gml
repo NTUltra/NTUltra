@@ -2,7 +2,12 @@
 alarm[1] = actTime + random(actTime)
 scrTarget()
 if target != noone {
-    if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
+	if my_health < maxhealth * 0.5 && !reachedHalfHp
+	{
+		reachedHalfHp = true;
+		event_user(4);
+	}
+    else if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dis = point_distance(x,y,target.x,target.y);
 		gunangle = point_direction(x,y,target.x,target.y);
 		motion_add(gunangle,acc * 2);
@@ -12,7 +17,7 @@ if target != noone {
 			walk = alarm[1];
         }
         else {
-            var ran = random(110);
+            var ran = random(121);
 			if ran < 23
 			{
 				event_user(0);
@@ -54,6 +59,10 @@ if target != noone {
 				walk = alarm[1] + actTime;
 				motion_add(gunangle,acc);
 			}
+			else if ran < 110
+			{
+				event_user(4);
+			}
 			else if my_health < maxhealth * 0.5
 			{
 				event_user(0);
@@ -63,6 +72,10 @@ if target != noone {
 					walk = actTime + random(actTime*3);
 					motion_add(random(360),acc);
 				}
+			}
+			else
+			{
+				alarm[1] = actTime;	
 			}
         }
 
@@ -85,6 +98,10 @@ if target != noone {
         else if hspeed < 0
         right = -1
     }
+	else if random(5) < 1
+	{
+		event_user(4);	
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), acc)

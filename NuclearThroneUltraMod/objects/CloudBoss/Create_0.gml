@@ -1,9 +1,9 @@
 raddrop = 30
-maxhealth = 550
+maxhealth = 600
 mySize = 3
 loops = GetPlayerLoops();
 if loops > 0
-	maxhealth = 650;
+	maxhealth = 700;
 event_inherited()
 meleedamage = 3
 canFly = true;
@@ -30,15 +30,19 @@ wkick = 0
 if loops < 1
 	actTime = 16;
 else
-	actTime = 12;
+	actTime = 13;
 
-acc = 1.2;
-maxSpeed = 2;
+acc = 2;
+maxSpeed = 3;
 time = 0;
 squareProjectileSpeed = 4.5;
 squareProjectileSpeedOff = 5.8
 homingSpeed = 1.5;
 laserAmount = 6;
+smackRange = 12;
+smackSpeed = 14;
+reachedHalfHp = false;
+sneakTime = 30;
 if loops > 0
 {
 	laserAmount = 8;

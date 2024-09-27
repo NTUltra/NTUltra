@@ -275,6 +275,7 @@ if cwep > 0 && !reincarnate && !(ultra_got[87] && altUltra && rogueammo > 0) && 
 		ammo = 50
 		curse = other.ccurse
 		isPermanent = other.isPermanentC;
+		persistent = other.persistent;
 		visitedPortals = other.visitedPortalsC;
 		hasBeenEaten = other.hasBeenEatenC;
 		name = wep_name[wep]

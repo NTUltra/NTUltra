@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "31.BETA"
-subUpdateVersion = ".35";
+subUpdateVersion = ".38";
 notUpdated = "";
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
@@ -20,6 +20,11 @@ unlocked=69;
 ultraMenuOpen = false;
 
 jokeIntro = false;
+isHalloween = false;
+if date_compare_date(date_create_datetime(current_year, 10, 31, 0, 0, 0), date_current_datetime()) == 0
+{
+	isHalloween = true;
+}
 
 //DEFAULT STUFF
 race = 0

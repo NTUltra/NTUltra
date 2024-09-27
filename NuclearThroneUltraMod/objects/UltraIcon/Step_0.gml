@@ -223,6 +223,7 @@ if (selected && visible &&
 	{
 		with Player
 		{
+			mask_index = mskSmallPanda;
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);

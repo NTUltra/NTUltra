@@ -15,3 +15,4 @@ x += 16;
 y += 16;
 name = "TAKE THE MULTI-CROWN";
 textAngle = 0;
+disable = false;

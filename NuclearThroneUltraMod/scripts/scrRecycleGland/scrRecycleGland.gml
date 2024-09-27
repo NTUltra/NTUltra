@@ -1,7 +1,7 @@
 ///scrRecycleGland();
 // /@description
 ///@param
-function scrRecycleGland(ammoIncrease, radIncrease = 0){
+function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true){
 	//RECYCLE GLAND
 	if instance_exists(Player) {
 		if Player.skill_got[16] {
@@ -13,7 +13,8 @@ function scrRecycleGland(ammoIncrease, radIncrease = 0){
 				if !Player.ultra_got[26]
 					Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
 			}
-			scrSplashDamage(clamp(ceil(dmg*0.5),1,6),min(24,18 + dmg));
+			if canSplashDamage
+				scrSplashDamage(clamp(ceil(dmg*0.5),1,6),min(24,18 + dmg));
 		}
 	}
 }

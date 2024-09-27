@@ -38,7 +38,7 @@ if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = s
 			if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
 			{
 				//mask_index = mskPickupThroughWall;
-				persistent = true;
+				//persistent = true;
 				x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
 				y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
 			}
@@ -57,7 +57,7 @@ if sprite_index = sprPortal or sprite_index = sprProtoPortal or sprite_index = s
 			if /*point_distance(x,y,Portal.x,Portal.y) < 48 &&*/ visible
 			{
 				//mask_index = mskPickupThroughWall;
-				persistent = true;
+				//persistent = true;
 				x += lengthdir_x(2,point_direction(x,y,other.x,other.y))
 				y += lengthdir_y(2,point_direction(x,y,other.x,other.y))
 			}

@@ -86,6 +86,10 @@ if Player.crownpoints > 0
 	// If you still have that crown give option echo on random.
 	if UberCont.canMultiCrown
 	{
+		with instance_create(x,y,MultiCrownMenu)
+		{
+			
+		}
 		with instance_create(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49 - 33,CrownIcon)//24
 		{
 			depth = -998;

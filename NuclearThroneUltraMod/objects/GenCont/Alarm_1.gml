@@ -1,5 +1,10 @@
 /// @description Final and player position
 instance_destroy()
+with GameRender
+{
+	gamemodeDynamicHud = dynamicHudResetTime;
+	mutationDynamicHud = dynamicHudResetTime;
+}
 SetSeed();
 instance_create(x,y,StartAreaBuffer);
 if instance_exists(Player)

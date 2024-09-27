@@ -3,10 +3,11 @@ var portalDepth = - 5;
 if instance_exists(Portal)
 	portalDepth = other.depth - 1;
 visitedPortals += 1;
-if visitedPortals > 2
+if visitedPortals > 2 && !isPermanent
 {
 	snd_play(sndWeaponLost,0.1,false,true,1,false,false);
 	visible = false;
+	persistent = false;
 	with instance_create(x,y,ImpactFX)
 	{
 		sprite_index = sprWepPortalLost;
@@ -19,11 +20,17 @@ if visitedPortals > 2
 }
 else
 {
-	snd_play(sndWepPortal,0.1,false,true,1,false,false);
+	if isPermanent
+		snd_play(sndWepPortalUpg,0.1,false,true,1,false,false);
+	else
+		snd_play(sndWepPortal,0.1,false,true,1,false,false);
 	visible = false;
 	with instance_create(x,y,ImpactFX)
 	{
-		sprite_index = sprWepPortal;
+		if other.isPermanent
+			sprite_index = sprWepPortalUpg;
+		else
+			sprite_index = sprWepPortal;;
 		image_angle=other.image_angle;
 		depth = portalDepth;
 	}

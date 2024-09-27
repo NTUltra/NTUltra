@@ -13,7 +13,7 @@ with instance_create(tx,ty,choose(Freak,ExploFreak))
 	snd_play(choose(sndSpark1,sndSpark2),0.1)
 	var ang = random(360);
 	var am = 3;
-	var angStep = 360/am;
+	var angStep = 120;
 	var l = 4;
 	repeat(am)
 	{

@@ -40,4 +40,4 @@ if UberCont.opt_resolution_scale == 4
 else if UberCont.opt_resolution_scale > 4
 	draw_text(x+20,y,"WARNING MAY\nAFFECT\nPERFORMANCE")
 x=round(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width("16X"))
-y=round(__view_get( e__VW.YView, 0 )+96+8)
+y=round(__view_get( e__VW.YView, 0 )+96)

@@ -3,7 +3,7 @@ if team != other.team
 {
 	if other.isGrenade
 	{
-		if other.alarm[9] < 1
+		if other.alarm[10] < 1
 		{
 			Sleep(40)
 			BackCont.shake += 3

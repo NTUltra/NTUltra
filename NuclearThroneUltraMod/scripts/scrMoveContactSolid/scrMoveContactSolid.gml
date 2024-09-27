@@ -1,9 +1,13 @@
 function scrMoveContactSolid(ang, mdis) {
 	var mask = mask_index;
+	/*
 	if mask == mskPanda
 		mask_index = mskPanda
+	else if mask == mskSmallPanda
+		mask_index = mskSmallPanda
 	else
 		mask_index = mskPlayer;
+	*/
 	var sx = x;
 	var sy = y;
 	var hitAwall = false;
@@ -14,7 +18,7 @@ function scrMoveContactSolid(ang, mdis) {
 			y += lengthdir_y(1,ang);
 		}
 		until(point_distance(x,y,sx,sy) > mdis || 
-			place_meeting(x+lengthdir_x(4,ang),y+lengthdir_y(4,ang),WallHitMe)
+			place_meeting(x+lengthdir_x(2,ang),y+lengthdir_y(2,ang),WallHitMe)
 		)
 		while place_meeting(x,y,WallHitMe)
 		{
@@ -24,5 +28,6 @@ function scrMoveContactSolid(ang, mdis) {
 		}
 	}
 	mask_index = mask;
+	scrForcePosition60fps();
 	return hitAwall || point_distance(x,y,sx,sy) < mdis;
 }

@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 18;
+dmg = 22;
 walled = 0;
 minRange = 6;
 maxRange = 30;
@@ -14,3 +14,4 @@ startMsk = mskSpearSlashStart;
 endSpr = sprSpearSlashEnd;
 endMsk = mskSpearSlashEnd;
 snd_wallhit = choose(sndMeleeSpearHit1,sndMeleeSpearHit2);
+alarm[10] = 0;

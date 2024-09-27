@@ -30,20 +30,6 @@ if speed > 1
 					sprite_index = spr_hurt
 					image_index = 0
 					motion_add(other.direction,8)
-					/*
-					if instance_exists(Player)
-					{
-					    if Player.ultra_got[55] = 1 && !Player.altUltra//ULTRA C PANDA
-					    {
-							repeat(4)//16 is one ultra lazerpistol ammo
-					        {
-						        with instance_create(x,y,Rad)
-						        {motion_add(random(360),random(2)+3)
-						        repeat(speed)
-						        speed *= 0.9}
-					        }
-					    }
-					}*/
 					snd_play(snd_hurt, hurt_pitch_variation);
 					with instance_create(x,y,ImpactFX)
 					{
@@ -187,7 +173,7 @@ if visible
 		var portalDepth = n.depth - 1;
 		speed = 0;
 		visitedPortals += 1;
-		if visitedPortals > 2
+		if visitedPortals > 2 && !isPermanent
 		{
 			snd_play(sndWeaponLost,0.1,false,true,1,false,false);
 			visible = false;
@@ -201,12 +187,19 @@ if visible
 		}
 		else
 		{
+			persistent = true;
 			dontteleport = true;
-			snd_play(sndWepPortal,0.1,false,true,1,false,false);
+			if isPermanent
+				snd_play(sndWepPortalUpg,0.1,false,true,1,false,false);
+			else
+				snd_play(sndWepPortal,0.1,false,true,1,false,false);
 			visible = false;
 			with instance_create(x,y,ImpactFX)
 			{
-				sprite_index = sprWepPortal;
+				if other.isPermanent
+					sprite_index = sprWepPortalUpg;
+				else
+					sprite_index = sprWepPortal;
 				image_angle=other.image_angle;
 				depth = portalDepth;
 			}

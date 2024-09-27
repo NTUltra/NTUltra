@@ -1,7 +1,11 @@
 ///scrLoseSkill();
 // /@description need to run in player
 ///@param
-function scrLoseSkill(skillIndex, disableInstead = false){
+function scrLoseSkill(skillIndex, disableInstead = false) {
+	with GameRender
+	{
+		mutationDynamicHud = dynamicHudResetTime;
+	}
 	skill_got[skillIndex] = 0;
 	snd_play_2d(sndLoseSkill,0,true);
 	if skillIndex==13||skillIndex==14||skillIndex==15

@@ -4,6 +4,7 @@ if instance_exists(Player)
 	if (team == Player.team)
 	{
 		direction = scrAimAssistLaser(direction);
+		image_angle = direction;
 		alarm[10] = 0;
 	}
 	move_outside_solid(direction,16);
@@ -21,6 +22,7 @@ image_xscale = point_distance(xstart,ystart,x,y)* 0.25;
 myStart = instance_create(xstart,ystart,SpearShank)
 with myStart
 {
+	dmg = other.dmg;
 	myOwner = other.id;
 	sprite_index = other.startSpr
 	mask_index = other.startMsk;
@@ -31,6 +33,7 @@ with myStart
 myEnd = instance_create(x,y,SpearShank)
 with myEnd
 {
+	dmg = other.dmg;
 	myOwner = other.id;
 	sprite_index = other.endSpr
 	mask_index = other.endMsk;

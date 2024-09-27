@@ -2,7 +2,7 @@ if team != other.team && (image_index < 1 || canAlwaysDeflect)
 {
 	if other.isGrenade
 	{
-		if other.alarm[9] < 1
+		if other.alarm[10] < 1
 		{
 			if scrMeleeAmmoCost(1)
 				exit;

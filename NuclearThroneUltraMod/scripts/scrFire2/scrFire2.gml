@@ -2717,7 +2717,7 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(24)-12)*other.accuracy,16)
+	{motion_add(aimDirection+(random(24)-12)*other.accuracy,16.5)
 	image_angle = direction
 	team = other.team}
 
@@ -14561,14 +14561,14 @@ function scrFire2(hasTailNow) {
 	case 669:
 
 	//snd_play_fire(sndSplinterPistol)
-	snd_play_fire(sndWrench)
+	snd_play_fire(sndStaff)
 
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 	{
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,2.5+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -16408,7 +16408,7 @@ function scrFire2(hasTailNow) {
 	if !skill_got[2]
 	{
 		scrMoveContactSolid(aimDirection + 180,0.2);
-		motion_add(aimDirection+180,0.2)
+		motion_add(aimDirection+180,3)
 	}
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake

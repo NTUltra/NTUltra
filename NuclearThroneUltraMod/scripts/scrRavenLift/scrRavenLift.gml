@@ -2,9 +2,15 @@
 function scrRavenLift() {
 	var dir;
 	if (nofly <= 0 && sprite_index != spr_hurt) {
-	    repeat (6) with (instance_create(x + random(16) - 8, y + random(16), Dust)) motion_add(random(360), 3 + random(1));
-	    if (x > __view_get( e__VW.XView, 0 ) && y > __view_get( e__VW.YView, 0 ) && x < __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) && y < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 )) snd_play(sndRavenLift);
-	    z = 0;
+	    if (x > __view_get( e__VW.XView, 0 ) && y > __view_get( e__VW.YView, 0 ) && x < __view_get( e__VW.XView, 0 ) + __view_get( e__VW.WView, 0 ) && y < __view_get( e__VW.YView, 0 ) + __view_get( e__VW.HView, 0 ))
+		{
+			snd_play(sndRavenLift,0.1);
+			repeat (6) 
+			{
+				with (instance_create(x + random(16) - 8, y + random(16), Dust)) motion_add(random(360), 3 + random(1));
+			}
+		}
+		z = 0;
 	    //scrTarget();
 	    if (target != noone && instance_exists(target) && target.object_index == Player) {
 	        var mx = UberCont.mouse__x;

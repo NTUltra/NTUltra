@@ -14,7 +14,7 @@ with Player
 			if team != other.team && team != 0// && !collision_line(x,y,other.x,other.y,Wall,false,false)
 			{
 				BackCont.shake += 2;
-				DealDamage(30);
+				DealDamage(32);
 				other.humphrySkill += 5;
 			}
 		}

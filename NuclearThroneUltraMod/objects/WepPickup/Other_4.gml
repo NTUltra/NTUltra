@@ -9,3 +9,5 @@ if instance_exists(Player)
 	}
 	scrForcePosition60fps();
 }
+if !isPermanent
+	persistent = false;

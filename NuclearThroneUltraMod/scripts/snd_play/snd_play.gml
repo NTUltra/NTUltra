@@ -5,7 +5,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 		return false;
 	//if UberCont.opt_3d_audio == 0
 	//{
-		snd_play_2d(sndId,randompitch,cancelPrev,usesLocation,priority);
+		//snd_play_2d(sndId,randompitch,cancelPrev,usesLocation,priority);
 		/*
 		if sndId==sndHitWall||sndId==sndShotgunHitWall{
 			if !sound_isplaying(sndId){

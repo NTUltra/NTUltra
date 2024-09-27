@@ -65,6 +65,22 @@ if isPaused == 1 && alarm[7] < 1
 		{
 			if !(ultraMenuOpen)
 			{
+				if (UberCont.ctot_void_entered > 0)
+				{
+					var vx = camera_get_view_x(view_camera[0]) + 12 + 24
+					var ty = camera_get_view_y(view_camera[0]) + 32;
+					draw_set_halign(fa_left)
+					draw_set_valign(fa_middle)
+					draw_sprite(sprPortalEssenceHUD,0,vx - 2, ty);
+					var tx = vx + 2;
+					var pe = UberCont.portalEssence
+					draw_text_colour(tx, ty + 1,pe,c_black,c_black,c_black,c_black,1);
+					draw_text_colour(tx + 1, ty + 1,pe,c_black,c_black,c_black,c_black,1);
+					draw_text_colour(tx + 1, ty,pe,c_black,c_black,c_black,c_black,1);
+					draw_text_colour(tx, ty,pe,c_white,c_white,c_white,c_white,1);
+					draw_set_valign(fa_top)
+				}
+	
 				var res = scrAreaName(area,subarea,loops);
 				var text = res[0];
 				var upsideDown = res[1];
@@ -98,18 +114,18 @@ if isPaused == 1 && alarm[7] < 1
 				var fpsMode = "#OFF";
 					if UberCont.normalGameSpeed == 60
 						fpsMode = "#ON";
-				txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME##VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#HUD DESCRIPTION#OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS"
+				txt1 = "######AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#DYNAMIC HUD#HUD DESCRIPTION#OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS"
 				txt2 = "#######"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
-				+"%###"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(scrOnOff(UberCont.opt_enemy_xray))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect+"#"+
+				+"%##"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(scrOnOff(UberCont.opt_enemy_xray))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect+"#"+
 				string(UberCont.opt_resolution_scale) + "X#" +
 				string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_camera_follow))+"#"//
-				+string(scrOnOff(UberCont.opt_hud_des))+
+				+string(scrOnOff(UberCont.opt_hud_dynamic))+"#"+string(scrOnOff(UberCont.opt_hud_des))+
 				"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode
 
 
 
 				stxt0 = "#OPTIONS"
-				stxt1 = "######AUDIO#####VISUALS#########OTHER####"
+				stxt1 = "######AUDIO####VISUALS##########OTHER####"
 				stxt2 = txt2
 
 				var gamemodeScrollString = "";
@@ -148,6 +164,8 @@ if isPaused == 1 && alarm[7] < 1
 				event_perform(ev_draw,0)
 				with EnemyXRay
 				event_perform(ev_draw,0)
+				with CursorUpDown
+				event_perform(ev_draw,0)
 				with SideArtUpDown
 				event_perform(ev_draw,0)
 				with FreezeFrameUpDown
@@ -155,6 +173,8 @@ if isPaused == 1 && alarm[7] < 1
 				with DamageIndicatorToggle
 				event_perform(ev_draw,0)
 				with CameraFollowToggle
+				event_perform(ev_draw,0)
+				with DynamicHudToggle
 				event_perform(ev_draw,0)
 				with HighQualityToggle
 				event_perform(ev_draw,0)
@@ -176,8 +196,6 @@ if isPaused == 1 && alarm[7] < 1
 				with TimerToggle
 				event_perform(ev_draw,0)
 				with FPSToggle
-				event_perform(ev_draw,0)
-				with CursorUpDown
 				event_perform(ev_draw,0)
 
 				draw_set_valign(fa_top)

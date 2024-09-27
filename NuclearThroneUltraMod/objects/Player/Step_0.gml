@@ -532,6 +532,7 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			getVision = true;
+			isPermanent = true;
 			//piggyBank = 100;
 			//peaceBarriers += 1;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)
@@ -542,7 +543,10 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
-			instance_create(x + 64,y,JungleGorilla);
+			with enemy
+			{
+				my_health = 0;	
+			}
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)
@@ -804,7 +808,7 @@ if !instance_exists(LevCont) and visible = 1
 		    instance_create(Player.x,Player.y,HPPickup);
 			thing = instance_create(x,y,PopupText)
 			thing.mytext = "HEALTH!";*/
-			
+			armour = maxarmour;
 			instance_create(x,y,HealthChest);
 			//thing = instance_create(x,y,PopupText);
 			//thing.mytext = "MORE HEALTH!";

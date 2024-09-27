@@ -19,6 +19,7 @@ function scrSaveOptions() {
 	ini_write_string("OPTIONS","customsideart",opt_custom_sideart);
 	ini_write_real("OPTIONS","dmgindicator",opt_dmgindicator);
 	ini_write_real("OPTIONS","camerafollowaim",opt_camera_follow);
+	ini_write_real("OPTIONS","huddynamic",opt_hud_dynamic);
 	ini_write_real("OPTIONS","huddes",opt_hud_des);
 	//ini_write_real("OPTIONS","nicedrk",opt_nicedrk);
 

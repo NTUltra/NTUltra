@@ -2,7 +2,7 @@ if instance_exists(Credits)
 	exit;
 if instance_exists(Player)
 {
-	if Player.area == 1 && instance_exists(UberCont) && UberCont.about_to_unlock_alt_routes && !instance_exists(UnlockingAlternativeRoutesMilestone) && !scrIsGamemode(26) && !scrIsGamemode(27)
+	if Player.area == 1 && instance_exists(UberCont) && UberCont.about_to_unlock_alt_routes && !instance_exists(Tutorializer) && !scrIsGamemode(26) && !scrIsGamemode(27)
 	{
 		rememberArea = Player.area;
 		with all
@@ -64,7 +64,10 @@ else
 	instance_create(x,y,MusCont);
 
 	mode = 0
-	snd_play(sndVlambeer)
+	if UberCont.isHalloween
+		snd_play_2d(sndHalloweenWolf)
+	else
+		snd_play_2d(sndVlambeer)
 	instance_create(x,y,MenuGen)
 	instance_create(64,96,Menu)
 	with UberCont

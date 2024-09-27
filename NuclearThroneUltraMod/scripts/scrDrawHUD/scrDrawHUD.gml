@@ -275,6 +275,13 @@ function scrDrawHUD() {
 		var xxx = camera_get_view_x(view_camera[0]);
 		var yyy = camera_get_view_y(view_camera[0]) + __view_get( e__VW.HView, 0 );
 		var s = 18;
+		if (!UberCont.opt_hud_dynamic || (mouse_x < xxx + camera_get_view_width(view_camera[0]) * 0.5 && 
+		mouse_x > xxx && 
+		mouse_y > yyy - 24 &&
+		mouse_y < yyy))
+		{
+			gamemodeDynamicHud = dynamicHudResetTime;
+		}
 		if (mouse_x > xxx && mouse_x < xxx + s && mouse_y < yyy && mouse_y > yyy - s)
 		{
 			holdExplainGamemode += 2*dt;
@@ -296,45 +303,49 @@ function scrDrawHUD() {
 				scrDrawHelp(gamemodeScrollString);
 			}
 		}
-		var voidX = vx + 2;
-		var voidY = vy+__view_get( e__VW.HView, 0 )-2;
-		if scrIsGamemode(26)
+		if (gamemodeDynamicHud > 0)
 		{
-			if UberCont.isLeaderboardGamemode
-				draw_sprite(sprDailyChallengeHUDGamemode,0,vx+2,voidY);
-			else
-				draw_sprite(sprDailyChallengeHUDRace,0,vx+2,voidY);
-				
-			voidX += 16;
-		}
-		else if UberCont.isLeaderboardGamemode
-		{
-			draw_sprite(sprWeeklyChallengeHUD,0,vx+2,voidY);
-			voidX += 16;
-		}
-		else if scrIsGamemode(27)
-		{
-			draw_sprite(sprDailyChallengeHUD,0,vx+2,voidY);
-			voidX += 16;
-		}
-		else
-		{
-			draw_set_colour(c_white);
-			draw_sprite(sprGamemodeHUD,0,vx+2,voidY);
-			voidX += 16;
-			/*
-			if scrIsGamemode(17) {
-				draw_text(vx+64,vy+__view_get( e__VW.HView, 0 )-8,string(fps_real));
-			}
-			*/
-		}
-		var al = array_length(UberCont.voidChallengeGoing);
-		for (var vi = 0; vi < al; vi++)
-		{
-			if UberCont.voidChallengeGoing[vi]
+			gamemodeDynamicHud -= dt;
+			var voidX = vx + 2;
+			var voidY = vy+__view_get( e__VW.HView, 0 )-2;
+			if scrIsGamemode(26)
 			{
-				draw_sprite(sprVoidChallengeIconHUD,vi,voidX,voidY);
-				voidX += 14;
+				if UberCont.isLeaderboardGamemode
+					draw_sprite(sprDailyChallengeHUDGamemode,0,vx+2,voidY);
+				else
+					draw_sprite(sprDailyChallengeHUDRace,0,vx+2,voidY);
+				
+				voidX += 16;
+			}
+			else if UberCont.isLeaderboardGamemode
+			{
+				draw_sprite(sprWeeklyChallengeHUD,0,vx+2,voidY);
+				voidX += 16;
+			}
+			else if scrIsGamemode(27)
+			{
+				draw_sprite(sprDailyChallengeHUD,0,vx+2,voidY);
+				voidX += 16;
+			}
+			else
+			{
+				draw_set_colour(c_white);
+				draw_sprite(sprGamemodeHUD,0,vx+2,voidY);
+				voidX += 16;
+				/*
+				if scrIsGamemode(17) {
+					draw_text(vx+64,vy+__view_get( e__VW.HView, 0 )-8,string(fps_real));
+				}
+				*/
+			}
+			var al = array_length(UberCont.voidChallengeGoing);
+			for (var vi = 0; vi < al; vi++)
+			{
+				if UberCont.voidChallengeGoing[vi]
+				{
+					draw_sprite(sprVoidChallengeIconHUD,vi,voidX,voidY);
+					voidX += 14;
+				}
 			}
 		}
 		//GUN GAME
@@ -405,6 +416,8 @@ function scrDrawHUD() {
 	{
 		var xx =vx+__view_get( e__VW.WView, 0 )-16-16;
 		var yy =vy+40;
+		if mutationDynamicHud <= 0
+			yy -= 16;
 		var w = 28;
 		draw_sprite(sprCashBar,0,xx-2,yy-3)
 		if dataRef.cash > 0{
@@ -432,7 +445,19 @@ function scrDrawHUD() {
 	//ULTRA ICON
 	dir=0;
 	dix=0;
-	
+	var livesY = 36;
+	if mutationDynamicHud <= 0
+	{
+		livesY = 18;	
+	}
+	if (!UberCont.opt_hud_dynamic || (mouse_x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) * 0.5 && 
+		mouse_x < camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) && 
+		mouse_y > camera_get_view_y(view_camera[0]) && 
+		mouse_y < camera_get_view_y(view_camera[0]) + 24))
+	{
+		mutationDynamicHud = dynamicHudResetTime;
+	}
+	mutationDynamicHud -= dt;
 	var totalLives = array_length(dataRef.livesRegain);
 	if !(dataRef.ultra_got[76] && dataRef.hasUltimateGamble)
 	{
@@ -441,13 +466,13 @@ function scrDrawHUD() {
 		    repeat(totalLives)
 		    {
 				dix++;
-				draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],vx+__view_get( e__VW.WView, 0 )-16*dix,vy+36,1,1,0,c_white,1);
+				draw_sprite_ext(sprExtraLivesHud,dataRef.livesRegain[dix-1],vx+__view_get( e__VW.WView, 0 )-16*dix,vy+livesY,1,1,0,c_white,1);
 		    }
 		}
 	}
 	if (dataRef.lastWishPrevent)
 	{
-		draw_sprite_ext(sprLastWishPrevent,0,vx+__view_get( e__VW.WView, 0 )-16,vy+36,1,1,0,c_white,1);
+		draw_sprite_ext(sprLastWishPrevent,0,vx+__view_get( e__VW.WView, 0 )-16,vy+livesY,1,1,0,c_white,1);
 		if totalLives < 1
 			dix++;
 	}
@@ -461,195 +486,198 @@ function scrDrawHUD() {
 			dix++;
 	    }
 	}
-	repeat(dataRef.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
+	if mutationDynamicHud > 0
 	{
-	    if dataRef.ultra_got[dir]
-	    {
-			var xx =vx+__view_get( e__VW.WView, 0 )-4-16*dix;
-			var yy =vy+20;
-			var xxx = camera_get_view_x(view_camera[0]) + xx;
-			var yyy = camera_get_view_y(view_camera[0]) + yy;
-			var s = 18;
-			if dir == 0 && dataRef.altUltra && dataRef.race == 21
-			{
-				draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 4 && dataRef.altUltra && dataRef.race == 1
-			{
-				draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 6 && dataRef.altUltra && dataRef.race == 2
-			{
-				draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 9 && dataRef.altUltra && dataRef.race == 3
-			{
-				draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 10 && dataRef.altUltra && dataRef.race == 3
-			{
-				draw_sprite_ext(sprVoidStyleHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 13 && dataRef.altUltra && dataRef.race == 4
-			{
-				draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 18 && dataRef.altUltra && dataRef.race == 5
-			{
-				draw_sprite_ext(sprPlantPhotosynthesisHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 19 && dataRef.altUltra && dataRef.race == 5
-			{
-				draw_sprite_ext(sprPlantKillKillKillHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 20 && dataRef.altUltra && dataRef.race == 5
-			{
-				draw_sprite_ext(sprPlantSonicSpeedHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 27 && dataRef.altUltra && dataRef.race == 7
-			{
-				draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 29 && (dataRef.altUltra)  && dataRef.race == 8
-			{
-				draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 30 && (dataRef.altUltra)  && dataRef.race == 8
-			{
-				draw_sprite_ext(sprCursedTechonologyHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 33 && dataRef.altUltra && dataRef.race == 9
-			{
-				draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 35 && dataRef.altUltra && dataRef.race == 9
-			{
-				draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 39 && dataRef.altUltra && dataRef.race == 10
-			{
-				draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 43 && dataRef.altUltra && dataRef.race == 11
-			{
-				draw_sprite_ext(sprSniperEyeHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 47 && dataRef.altUltra && dataRef.race == 12
-			{
-				draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 50 && dataRef.altUltra && dataRef.race == 13
-			{
-				draw_sprite_ext(sprSASHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 51 && dataRef.altUltra && dataRef.race == 13
-			{
-				draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 55 && dataRef.altUltra && dataRef.race == 14
-			{
-				draw_sprite_ext(sprInconsistentIncompatabilityHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 59 && dataRef.altUltra && dataRef.race == 15
-			{
-				draw_sprite_ext(sprPathOfDestructionHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 61 && dataRef.altUltra && dataRef.race == 16
-			{
-				draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 62 && dataRef.altUltra && dataRef.race == 16
-			{
-				draw_sprite_ext(sprLivingArmourHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 66 && dataRef.altUltra && dataRef.race == 17
-			{
-				draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 68 && dataRef.altUltra && dataRef.race == 17
-			{
-				draw_sprite_ext(sprEnginuityHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 72 && dataRef.altUltra && dataRef.race == 18
-			{
-				draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 74 && dataRef.altUltra && dataRef.race == 19
-			{
-				draw_sprite_ext(sprReminisceHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 77 && dataRef.altUltra && dataRef.race == 20
-			{
-				draw_sprite_ext(sprHoardingThiefHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 96 && dataRef.altUltra && dataRef.race == 24
-			{
-				draw_sprite_ext(sprAirLordHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 97 && dataRef.altUltra && dataRef.race == 25
-			{
-				draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 104 && dataRef.altUltra && dataRef.race == 26
-			{
-				draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 106 && dataRef.altUltra && dataRef.bskin == 1 && dataRef.race == 27
-			{
-				draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 107 && dataRef.altUltra && dataRef.bskin == 2 && dataRef.race == 27
-			{
-				draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 76 && (dataRef.altUltra || dataRef.hasUltimateGamble) && dataRef.race == 19
-			{
-				draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 21 && dataRef.altUltra && dataRef.race == 6
-			{
-				draw_sprite_ext(sprYvVenuzianAirhornHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 23 && dataRef.altUltra && dataRef.race == 6
-			{
-				draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 24 && dataRef.altUltra && dataRef.race == 6
-			{
-				draw_sprite_ext(sprYvGodsDontDieHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 87 && dataRef.altUltra && dataRef.race == 22
-			{
-				draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-			else if dir == 92 && dataRef.altUltra && dataRef.race == 23
-			{
-				draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
-			}
-		    else {//if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
-				draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
-			}
-			if (mouse_x > xxx && mouse_x < xxx + s && mouse_y > yyy && mouse_y < yyy + s)
-			{
-				holdExplainMutation += 2*dt;
-				if holdExplainMutation > 10
-					holdExplainMutation = 10;
-				if holdExplainMutation >= 10
+		repeat(dataRef.maxultra+2)//+1 because secret trash + 1BECAUSE HORROR EXTRA
+		{
+		    if dataRef.ultra_got[dir]
+		    {
+				var xx =vx+__view_get( e__VW.WView, 0 )-4-16*dix;
+				var yy =vy+20;
+				var xxx = camera_get_view_x(view_camera[0]) + xx;
+				var yyy = camera_get_view_y(view_camera[0]) + yy;
+				var s = 18;
+				if dir == 0 && dataRef.altUltra && dataRef.race == 21
 				{
-					if (dir == 33 && dataRef.altUltra)
+					draw_sprite_ext(sprCashFlowHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 4 && dataRef.altUltra && dataRef.race == 1
+				{
+					draw_sprite_ext(sprFishCanGunHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 6 && dataRef.altUltra && dataRef.race == 2
+				{
+					draw_sprite_ext(sprCrystalCursedUltraHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 9 && dataRef.altUltra && dataRef.race == 3
+				{
+					draw_sprite_ext(sprEyesStrangeStyleHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 10 && dataRef.altUltra && dataRef.race == 3
+				{
+					draw_sprite_ext(sprVoidStyleHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 13 && dataRef.altUltra && dataRef.race == 4
+				{
+					draw_sprite_ext(sprDeathStareHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 18 && dataRef.altUltra && dataRef.race == 5
+				{
+					draw_sprite_ext(sprPlantPhotosynthesisHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 19 && dataRef.altUltra && dataRef.race == 5
+				{
+					draw_sprite_ext(sprPlantKillKillKillHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 20 && dataRef.altUltra && dataRef.race == 5
+				{
+					draw_sprite_ext(sprPlantSonicSpeedHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 27 && dataRef.altUltra && dataRef.race == 7
+				{
+					draw_sprite_ext(sprSteroidsPunchSwapHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 29 && (dataRef.altUltra)  && dataRef.race == 8
+				{
+					draw_sprite_ext(sprExclusiveTasteHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 30 && (dataRef.altUltra)  && dataRef.race == 8
+				{
+					draw_sprite_ext(sprCursedTechonologyHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 33 && dataRef.altUltra && dataRef.race == 9
+				{
+					draw_sprite_ext(sprPhoenixHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 35 && dataRef.altUltra && dataRef.race == 9
+				{
+					draw_sprite_ext(sprReverseFocusHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 39 && dataRef.altUltra && dataRef.race == 10
+				{
+					draw_sprite_ext(sprBigRebelHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 43 && dataRef.altUltra && dataRef.race == 11
+				{
+					draw_sprite_ext(sprSniperEyeHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 47 && dataRef.altUltra && dataRef.race == 12
+				{
+					draw_sprite_ext(sprGreenTeamHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 50 && dataRef.altUltra && dataRef.race == 13
+				{
+					draw_sprite_ext(sprSASHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 51 && dataRef.altUltra && dataRef.race == 13
+				{
+					draw_sprite_ext(sprHypnotizeHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 55 && dataRef.altUltra && dataRef.race == 14
+				{
+					draw_sprite_ext(sprInconsistentIncompatabilityHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 59 && dataRef.altUltra && dataRef.race == 15
+				{
+					draw_sprite_ext(sprPathOfDestructionHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 61 && dataRef.altUltra && dataRef.race == 16
+				{
+					draw_sprite_ext(sprCaptainOfTheKrakenHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 62 && dataRef.altUltra && dataRef.race == 16
+				{
+					draw_sprite_ext(sprLivingArmourHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 66 && dataRef.altUltra && dataRef.race == 17
+				{
+					draw_sprite_ext(sprQuickSwapperHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 68 && dataRef.altUltra && dataRef.race == 17
+				{
+					draw_sprite_ext(sprEnginuityHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 72 && dataRef.altUltra && dataRef.race == 18
+				{
+					draw_sprite_ext(sprMirrorHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 74 && dataRef.altUltra && dataRef.race == 19
+				{
+					draw_sprite_ext(sprReminisceHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 77 && dataRef.altUltra && dataRef.race == 20
+				{
+					draw_sprite_ext(sprHoardingThiefHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 96 && dataRef.altUltra && dataRef.race == 24
+				{
+					draw_sprite_ext(sprAirLordHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 97 && dataRef.altUltra && dataRef.race == 25
+				{
+					draw_sprite_ext(sprBeeKeeperHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 104 && dataRef.altUltra && dataRef.race == 26
+				{
+					draw_sprite_ext(sprGrumpyLectureHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 106 && dataRef.altUltra && dataRef.bskin == 1 && dataRef.race == 27
+				{
+					draw_sprite_ext(sprHothandsHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 107 && dataRef.altUltra && dataRef.bskin == 2 && dataRef.race == 27
+				{
+					draw_sprite_ext(sprExplosiveHandsHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 76 && (dataRef.altUltra || dataRef.hasUltimateGamble) && dataRef.race == 19
+				{
+					draw_sprite_ext(sprUltimateGambleIconHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 21 && dataRef.altUltra && dataRef.race == 6
+				{
+					draw_sprite_ext(sprYvVenuzianAirhornHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 23 && dataRef.altUltra && dataRef.race == 6
+				{
+					draw_sprite_ext(sprYVBlasphemyHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 24 && dataRef.altUltra && dataRef.race == 6
+				{
+					draw_sprite_ext(sprYvGodsDontDieHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 87 && dataRef.altUltra && dataRef.race == 22
+				{
+					draw_sprite_ext(sprFreakRogueHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 92 && dataRef.altUltra && dataRef.race == 23
+				{
+					draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+			    else {//if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
+					draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
+				}
+				if (mouse_x > xxx && mouse_x < xxx + s && mouse_y > yyy && mouse_y < yyy + s)
+				{
+					holdExplainMutation += 2*dt;
+					if holdExplainMutation > 10
+						holdExplainMutation = 10;
+					if holdExplainMutation >= 10
 					{
-						scrDrawHelp("["+dataRef.ultra_name[dir]+"][" + string(dataRef.phoenixrevives) + "]\n"+dataRef.ultra_text[dir]);
-					}
-					else
-					{
-						scrDrawHelp("["+dataRef.ultra_name[dir]+"]\n"+dataRef.ultra_text[dir]);
+						if (dir == 33 && dataRef.altUltra)
+						{
+							scrDrawHelp("["+dataRef.ultra_name[dir]+"][" + string(dataRef.phoenixrevives) + "]\n"+dataRef.ultra_text[dir]);
+						}
+						else
+						{
+							scrDrawHelp("["+dataRef.ultra_name[dir]+"]\n"+dataRef.ultra_text[dir]);
+						}
 					}
 				}
-			}
-			dix+=1
+				dix+=1
 			
-	    }
-	dir+=1;
+		    }
+		dir+=1;
+		}
 	}
 	//ADDITIONAL ABILITIES
 	//var xx = vx+__view_get( e__VW.WView, 0 )-16-16;
@@ -660,6 +688,8 @@ function scrDrawHUD() {
 		//skeletonGambleBongas
 		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
 		var yy = vy+20;
+		if mutationDynamicHud <= 0
+			yy -= 16;
 		draw_sprite(sprSkeletonThronebutt,dataRef.skeletonGambleBongas,xx,yy)
 		dix += 1;
 	}
@@ -667,12 +697,16 @@ function scrDrawHUD() {
 	if dataRef.race == 7 && dataRef.skill_got[dataRef.maxskill + 1] {
 		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
 		var yy = vy+20;
+		if mutationDynamicHud <= 0
+			yy -= 16;
 		draw_sprite(sprFiringStance,dataRef.firingStance,xx,yy);
 		dix += 1;
 	}
 	if dataRef.ultra_got[19] && dataRef.altUltra {
 		var xx =vx+__view_get( e__VW.WView, 0 )-4-(18*dix);
 		var yy = vy+20;
+		if mutationDynamicHud <= 0
+			yy -= 16;
 		draw_sprite(sprKillKillKillHUD,dataRef.canKillKillKill,xx,yy);
 		dix += 1;
 	}
@@ -683,102 +717,56 @@ function scrDrawHUD() {
 	var extraSpace = 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		extraSpace += 8;
-		
-	if dataRef.totalSkills > extraSpace
+	if mutationDynamicHud > 0
 	{
-		var cdir = 0;
-		var fs = 0;
-		repeat(dataRef.maxskill+1)
+		if dataRef.totalSkills > extraSpace
 		{
-			if dataRef.skill_got[cdir] == 1
+			var cdir = 0;
+			var fs = 0;
+			repeat(dataRef.maxskill+1)
 			{
-				fs++
-				if fs == skillscroll
+				if dataRef.skill_got[cdir] == 1
 				{
-					dir = cdir;	
-				}
-			}
-			cdir ++;
-		}
-	}
-	repeat(dataRef.maxskill+2)
-	{
-		if dataRef.skill_got[dir] = 1 && dix < extraSpace
-		{
-			var xx = vx+__view_get( e__VW.WView, 0 )-10-16*dix;
-			var xxx = camera_get_view_x(view_camera[0]) + xx;
-			var yy = vy+12;
-			var yyy = camera_get_view_y(view_camera[0]) + yy;
-			var s = 8;
-			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy+1,1,1,0,c_black,1)
-			draw_sprite_ext(sprSkillIconHUD,dir,xx,yy,1,1,0,c_white,1)
-			dix += 1
-			if (mouse_x > xxx-s && mouse_x < xxx + s && mouse_y > yyy-s && mouse_y < yyy + s)
-			{
-				var ht;
-				if dir == 28//RAGE
-					ht = "["+dataRef.skill_name[dir]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[dir];//MAX RAGE
-				else
-					ht = "["+dataRef.skill_name[dir]+"]\n"+dataRef.skill_text[dir];
-				
-				holdExplainMutation +=2*dt;
-				if holdExplainMutation >= 10
-				{
-					scrDrawHelp(ht);
-					if dataRef.race == 25 && dataRef.skill_bons[dir] != ""
+					fs++
+					if fs == skillscroll
 					{
-						//DOCTOR BONUS
-						txt = string_replace_all(ht,"#"," ");
-						var w = 206;
-						var s = string_height("A");
-						scrDrawHelp(dataRef.skill_bons[dir], string_height_ext(txt,s,w)+2,c_lime);
+						dir = cdir;	
 					}
 				}
-				
-				if holdExplainMutation > 10
-					holdExplainMutation = 10;
+				cdir ++;
 			}
 		}
-		dir += 1
-		if dir > dataRef.maxskill + 1
-			dir = 0;
-	}
-	var dal = array_length(UberCont.skillDeposit)
-	if dal > 0
-	{
-		var dir = 0;
-		repeat(dal)
+		repeat(dataRef.maxskill+2)
 		{
-			var skillIndex = UberCont.skillDeposit[dir];
-			if dix < extraSpace
+			if dataRef.skill_got[dir] = 1 && dix < extraSpace
 			{
 				var xx = vx+__view_get( e__VW.WView, 0 )-10-16*dix;
 				var xxx = camera_get_view_x(view_camera[0]) + xx;
 				var yy = vy+12;
 				var yyy = camera_get_view_y(view_camera[0]) + yy;
 				var s = 8;
-				draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy+1,1,1,0,c_black,1)
-				draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy,1,1,0,c_dkgray,1)
+				draw_sprite_ext(sprSkillIconHUD,dir,xx,yy+1,1,1,0,c_black,1)
+				draw_sprite_ext(sprSkillIconHUD,dir,xx,yy,1,1,0,c_white,1)
 				dix += 1
 				if (mouse_x > xxx-s && mouse_x < xxx + s && mouse_y > yyy-s && mouse_y < yyy + s)
 				{
 					var ht;
 					if dir == 28//RAGE
-						ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[skillIndex];//MAX RAGE
+						ht = "["+dataRef.skill_name[dir]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[dir];//MAX RAGE
 					else
-						ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"]\n"+dataRef.skill_text[skillIndex];
+						ht = "["+dataRef.skill_name[dir]+"]\n"+dataRef.skill_text[dir];
 				
 					holdExplainMutation +=2*dt;
 					if holdExplainMutation >= 10
 					{
 						scrDrawHelp(ht);
-						if dataRef.race == 25 && dataRef.skill_bons[skillIndex] != ""
+						if dataRef.race == 25 && dataRef.skill_bons[dir] != ""
 						{
 							//DOCTOR BONUS
 							txt = string_replace_all(ht,"#"," ");
 							var w = 206;
 							var s = string_height("A");
-							scrDrawHelp(dataRef.skill_bons[skillIndex], string_height_ext(txt,s,w)+2,c_lime);
+							scrDrawHelp(dataRef.skill_bons[dir], string_height_ext(txt,s,w)+2,c_lime);
 						}
 					}
 				
@@ -787,11 +775,58 @@ function scrDrawHUD() {
 				}
 			}
 			dir += 1
+			if dir > dataRef.maxskill + 1
+				dir = 0;
 		}
+		var dal = array_length(UberCont.skillDeposit)
+		if dal > 0
+		{
+			var dir = 0;
+			repeat(dal)
+			{
+				var skillIndex = UberCont.skillDeposit[dir];
+				if dix < extraSpace
+				{
+					var xx = vx+__view_get( e__VW.WView, 0 )-10-16*dix;
+					var xxx = camera_get_view_x(view_camera[0]) + xx;
+					var yy = vy+12;
+					var yyy = camera_get_view_y(view_camera[0]) + yy;
+					var s = 8;
+					draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy+1,1,1,0,c_black,1)
+					draw_sprite_ext(sprSkillIconHUD,skillIndex,xx,yy,1,1,0,c_dkgray,1)
+					dix += 1
+					if (mouse_x > xxx-s && mouse_x < xxx + s && mouse_y > yyy-s && mouse_y < yyy + s)
+					{
+						var ht;
+						if dir == 28//RAGE
+							ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"] ["+string(dataRef.rage)+"/500]\n"+dataRef.skill_text[skillIndex];//MAX RAGE
+						else
+							ht = "DISABLED\n["+dataRef.skill_name[skillIndex]+"]\n"+dataRef.skill_text[skillIndex];
+				
+						holdExplainMutation +=2*dt;
+						if holdExplainMutation >= 10
+						{
+							scrDrawHelp(ht);
+							if dataRef.race == 25 && dataRef.skill_bons[skillIndex] != ""
+							{
+								//DOCTOR BONUS
+								txt = string_replace_all(ht,"#"," ");
+								var w = 206;
+								var s = string_height("A");
+								scrDrawHelp(dataRef.skill_bons[skillIndex], string_height_ext(txt,s,w)+2,c_lime);
+							}
+						}
+				
+						if holdExplainMutation > 10
+							holdExplainMutation = 10;
+					}
+				}
+				dir += 1
+			}
+		}
+		if holdExplainMutation > 0
+			holdExplainMutation -= 1*dt;
 	}
-	if holdExplainMutation > 0
-		holdExplainMutation -= 1*dt;
-	
 	vy += yo*4;
 	var puffColour = make_colour_rgb(250,171,0);//make_colour_rgb(178,122,0);
 	var puffA = 0.8

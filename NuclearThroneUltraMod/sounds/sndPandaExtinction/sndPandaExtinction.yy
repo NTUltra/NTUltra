@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndPandaExtinction",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.021678,
+  "name":"sndPandaExtinction",
+  "parent":{
+    "name":"Panda",
+    "path":"folders/Sounds/Player/Panda.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndPandaExtinction.ogg",
+  "type":0,
+  "volume":1.0,
+}

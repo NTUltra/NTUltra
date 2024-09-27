@@ -4,7 +4,8 @@ event_inherited()
 if walk > 0
 {
 	walk -= 1
-	motion_add(direction,acc)
+	motion_add(direction,acc);
+	motion_add(point_direction(x,y,xstart,ystart),acc * 0.25);
 	
 }
 if point_distance(xstart,ystart,x,y) > 500
@@ -26,6 +27,29 @@ else
 		}
 	}
 }
-if speed > maxSpeed
+if walk > 0
+{
+	if speed > maxSpeed + 1
+		speed = maxSpeed + 1;
+}
+else if speed > maxSpeed - 1
 	speed = maxSpeed
-	
+if alarm[5] > 0
+{
+	if alarm[5] < sneakTime
+	{
+		image_alpha = (sneakTime - alarm[5]) / sneakTime
+	}
+	speed = 0;
+	if instance_exists(Player)
+	{
+		x = Player.x;
+		y = Player.y + 96;
+		scrForcePosition60fps();
+	}
+}
+if alarm[6] > 0
+{
+	vspeed = -1;
+	hspeed = 0;
+}

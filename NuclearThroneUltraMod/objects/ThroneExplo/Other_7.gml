@@ -20,6 +20,19 @@ if sprite_index == spr_death
 			alarm[1] = 0;
 			sprite_index = sprBigPortalSpawn;
 			visible = true;
+			if !place_meeting(x,y,Floor)
+			{
+				if instance_exists(Player)
+				{
+					x = Player.x;
+					y = Player.y;
+				} else if instance_exists(PlayerSpawn)
+				{
+					x = PlayerSpawn.x;
+					y = PlayerSpawn.y;
+				}
+				scrForcePosition60fps();
+			}
 		}
 	}
 }

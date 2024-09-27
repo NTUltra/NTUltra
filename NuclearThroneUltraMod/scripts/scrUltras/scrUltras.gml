@@ -429,16 +429,17 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //PANDA 
 	    ultra_name[53] = "TURNING BADASS"
-	    ultra_text[53] = "THROWS <w>PIERCE<w> AND <pi>DEFLECT<pi> PROJECTILES#MORE THROW DAMAGE#WHEN A WEAPON RETURNS#IT FIRES A MASSIVE <g>LASER<g>##THROWS BOUNCE TOWARDS ENEMIES"
-	    ultra_tips[53] = "strong arms!"
+	    ultra_text[53] = "THROWS <w>PIERCE<w> AND <pi>DEFLECT<pi> PROJECTILES#WHEN A WEAPON RETURNS#IT FIRES A MASSIVE <g>LASER<g>##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_tips[53] = "we've got a badass over here"
     
 	    ultra_name[54] = "FUCK IT"//DELIBERATE REINCARNATION"
 	    ultra_text[54] = "THROWN WEAPONS <w>EXPLODE<w> ON HIT##WHENEVER YOU THROW YOUR WEAPON#IT TRANSFORMS INTO A#<pi>RANDOM<pi> WEAPON OF THE SAME TIER##THROWS BOUNCE TOWARDS ENEMIES"
-	    ultra_tips[54] = "rngezus"
+	    ultra_tips[54] = "FUCK IT!"
     
-	    ultra_name[55] = "DONE BEING EXTINCT"
-	    ultra_text[55] = "YOUR <w>HITBOX<w> IS EVEN SMALLER##ANY <w>WEAPON<w> COMING THROUGH A <p>PORTAL<p>#BECOMES A <w>DRONE<w> THAT FOLLOWS YOU AROUND#AND SHOOTS ENEMIES##CHANCE <p>PORTALS<p> CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
-	    ultra_tips[55] = "rise above"
+	    ultra_name[55] = "EXTINCTION EVENT"
+	    //ultra_text[55] = "YOUR <w>HITBOX<w> IS EVEN SMALLER##ANY <w>WEAPON<w> COMING THROUGH A <p>PORTAL<p>#BECOMES A <w>DRONE<w> THAT FOLLOWS YOU AROUND#AND SHOOTS ENEMIES##CHANCE <p>PORTALS<p> CHANGE#WEAPONS INTO A HIGHER TIER WEAPON##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_text[55] = "WHEN AN <r>ENEMY<r> <w>TYPE<w> GOES <r>EXTINCT<r>#<w>DEAL DAMAGE<w> TO <w>ALL ENEMIES<w>#(BASED ON THEIR REMAINING HEALTH)##THROWS BOUNCE TOWARDS ENEMIES"
+		ultra_tips[55] = "rise above"
 		
 		//Flexible elbows and or long arms
 		if altOverride || (instance_exists(Player) &&  Player.race == 14 && (Player.altUltra))
@@ -449,8 +450,8 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
 		
 	    ultra_name[56] = "CLEANSING"
-	    ultra_text[56] = "MORE <w>MELEE<w> SWING RATE#<p>PORTALS<p> NO LONGER <pi>RANDOMIZE<pi> WEAPONS##THROWS BOUNCE TOWARDS ENEMIES"
-	    ultra_tips[56] = "survival above pacifism"
+	    ultra_text[56] = "MORE <w>MELEE<w> SWING RATE#<p>PORTALS<p> <w>RE-ROLL<w> WEAPONS INTO#<w>MELEE WEAPONS<w>##THROWS BOUNCE TOWARDS ENEMIES"
+	    ultra_tips[56] = "clean your hands from those filthy guns instead use knives"
     
 	//ATOM 
 	ultra_name[57] = "NEUTRON"

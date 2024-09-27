@@ -123,6 +123,12 @@ function scrLeaderboardCrown(takenCrown){
 		case 40://Thousand cuts
 			return sprCrown39Idle
 		break;
+		case 41://Mediocrity
+			return sprCrown40Idle
+		break;
+		case 42://Scarcity
+			return sprCrown41Idle
+		break;
 	}
 	return sprCrownFrogIdle;
 }

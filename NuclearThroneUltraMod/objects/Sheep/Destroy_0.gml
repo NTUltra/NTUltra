@@ -64,4 +64,4 @@ raddrop += 1
 }
 
 //Mutations
-scrEnemyDeathEvent();
+scrEnemyDeathEvent(true);

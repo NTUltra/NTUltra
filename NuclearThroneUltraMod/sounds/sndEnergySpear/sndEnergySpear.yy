@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndEnergySpear",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.751179,
+  "name":"sndEnergySpear",
+  "parent":{
+    "name":"Energy",
+    "path":"folders/Sounds/Weapons/Energy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndEnergySpear.ogg",
+  "type":0,
+  "volume":1.0,
+}

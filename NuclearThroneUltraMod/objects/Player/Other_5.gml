@@ -310,7 +310,7 @@ if scrIsCrown(15)
 }
 if race == 14//PANDA
 {
-	if ultra_got[56]=0 && !(ultra_got[55] && altUltra)
+	if !(ultra_got[55] && altUltra)
     {
 		with WepPickup
 		{

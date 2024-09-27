@@ -1,4 +1,8 @@
 /// @description Within my range make immune
+if cooldownTimer < 0
+{
+	cooldownTimer = cooldown;
+}
 alarm[1] = actTime;
 var tal = ds_list_size(myGuys);
 for (var j = 0; j < tal; j++)
@@ -19,6 +23,11 @@ ds_list_clear(healths);
 ds_list_clear(shieldX);	
 ds_list_clear(shieldY);	
 ds_list_clear(shieldRadius);
+cooldownTimer -= 1;
+if cooldownTimer < 0
+{
+	exit;
+}
 var al = collision_circle_list(x,y,range,enemy,false,true,myGuys,false);
 var deleters = [];
 for (var i = 0; i < al; i++)

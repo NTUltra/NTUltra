@@ -21,7 +21,14 @@ if loops > 2
 		instance_create(x,y,FreakBandit);
 	}
 }
-if UberCont.encrypted_data.secrets[1] == true
+if UberCont.isHalloween
+{
+	spr_idle = sprSpookyBanditIdle
+	spr_walk = sprSpookyBanditWalk
+	spr_hurt = sprSpookyBanditHurt
+	spr_dead = sprSpookyBanditDead
+}
+else if UberCont.encrypted_data.secrets[1] == true
 {
 	spr_idle = sprPinkBanditIdle
 	spr_walk = sprPinkBanditWalk

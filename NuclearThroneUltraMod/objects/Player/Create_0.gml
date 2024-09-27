@@ -10,6 +10,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 {
 	instance_create(x,yimm,FPSHACK);p
 }*/
+event_inherited();
 alarm[0] = 120;
 justLoadedRun = false;
 isOnInteractable = false;
@@ -207,8 +208,8 @@ firingStance = false;
 patience = 0;
 patienceUsed = 0;
 raddrop = 0;
-hurtDuration = 15; //Additional iframes
-hurtDurationLoop = 8;
+hurtDuration = 18; //Additional iframes
+hurtDurationLoop = 10;
 hurtTime = 0;
 lockoutElementor = false; //When no ammo lockout ability for elementor
 mushroomhead = sprMutant24IdleHead;
@@ -421,7 +422,7 @@ if race == 25
 }
 if race == 14//Panda
 {
-	mask_index = mskPanda;	
+	mask_index = mskPanda;
 }
 if race == 21//Horror
 {
@@ -736,6 +737,7 @@ if race == 25 // DOCTOR
 if scrIsGamemode(9)
 {
 	maxhealth += UberCont.casualModeHPIncrease;
+	hurtDuration += 5;
 }
 my_health = maxhealth
 lsthealth = maxhealth //lasthealth

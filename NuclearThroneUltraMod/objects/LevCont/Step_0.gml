@@ -1,5 +1,10 @@
 __view_set( e__VW.XView, 0, 0 )
 __view_set( e__VW.YView, 0, 0 )
+with GameRender
+{
+	gamemodeDynamicHud = dynamicHudResetTime;
+	mutationDynamicHud = dynamicHudResetTime;
+}
 if scrIsGamemode(28) || instance_exists(AllMutationsLeft)//ALL MUTATION CHOICES
 {
 	var spd = scrollSpeed;
