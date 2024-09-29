@@ -1,5 +1,5 @@
 event_inherited();
-dmg = 6;
+dmg = 7;
 middleColour = c_black;
 col = make_colour_rgb(252,56,0);
 width = 3.5;

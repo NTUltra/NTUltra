@@ -2,11 +2,6 @@ event_inherited()
 
 
 
-
-
-
-
-
 if speed<0.8 && idle
 {
 	idle=false;
@@ -36,7 +31,8 @@ for (var i = 0; i < al; i++) {
 				if y < y
 					vspeed -= 1;
 				else
-					vspeed += 1;	
+					vspeed += 1;
+				hspeed = min(hspeed,1);
 			}
 			else
 			{
@@ -44,12 +40,12 @@ for (var i = 0; i < al; i++) {
 					hspeed -= 1;
 				else
 					hspeed += 1;
-				
+				vspeed = min(vspeed,1);
 			}
 			walk += 1;
 		}
 	}
 }
 ds_list_destroy(overlap);
-if speed>maxSpeed
-	speed=maxSpeed;
+if speed > maxSpeed
+	speed = maxSpeed;

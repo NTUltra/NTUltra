@@ -13,7 +13,9 @@ else {
 if crown = 0
 {
 	usedRandom = true;
-	crown = ceil(irandom(crownmax)+1)//Includes 24 crown of sloth
+	do {
+		crown = 2 + irandom(crownmax + secretcrownmax - 3)
+	} until (crown != 43)//Not crown of the frog
 }
 oldcrown = 1;
 

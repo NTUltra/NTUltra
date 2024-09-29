@@ -4,5 +4,5 @@
 event_inherited();
 spawnLocationY = y - 32;
 spr_item = sprVoidItemCrownPoint;
-name = "+1 CROWN";
+name = "GET A (MULTI) CROWN";
 cost = 5;

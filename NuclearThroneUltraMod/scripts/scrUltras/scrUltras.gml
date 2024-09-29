@@ -19,7 +19,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
-	ultra_text[2] = "<g>INFINITE AMMO<g> AND <w>+10% RELOAD SPEED<w>#FOR THE <w>FIRST 8 SECONDS<w>#OF <w>ENTERING AN AREA<w>##KILLING A BOSS GIVES ANOTHER 8 SECONDS OF#INFINITE AMMO AND RELOAD SPEED"
+	ultra_text[2] = "<g>INFINITE AMMO<g> AND <w>+10% RELOAD SPEED<w>#FOR THE <w>FIRST 8 SECONDS<w>#OF <w>ENTERING AN AREA<w>##KILLING A BOSS#GIVES ANOTHER 8 SECONDS OF#INFINITE AMMO AND RELOAD SPEED"
 	ultra_tips[2] = "bringer of order"
 
 	ultra_name[3] = "BUDDY COP"
@@ -27,7 +27,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[3] = choose("I missed you partner","partner stays close to you#when you reload#if not it'll go out aggro","partner actively body blocks projectiles")
 
 	ultra_name[4] = "FISH CAN ROLL"
-	ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 5%#SIGNIFICANTLY INCREASE PRIMARY <w>RELOAD SPEED<w>#DEPENDING ON YOUR <w>SPEED<w>#MUCH MORE EFFECTIVE WHEN <w>ROLLING<w>"
+	ultra_text[4] = "REDUCE <y>AMMO<y>/<g>RAD<g> COST BY 5%#INCREASE PRIMARY <w>RELOAD SPEED<w>#DEPENDING ON YOUR <w>SPEED<w>#MUCH MORE EFFECTIVE WHEN <w>ROLLING<w>"
 	ultra_tips[4] = "is waterboost a thing now?"
 	
 	if altOverride || instance_exists(Player) && Player.race == 1 && (Player.altUltra)

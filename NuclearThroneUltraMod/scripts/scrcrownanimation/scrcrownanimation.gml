@@ -44,6 +44,7 @@ function scrCrownAnimation(takenCrown){
 			spr_walk = sprCrown9Walk
 		break;
 		case 11://Reincarnation
+		/*
 			if instance_exists(Player) && UberCont.canPickFrogCrown && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
 			{
 				spr_idle = sprCrownFrogIdle
@@ -56,10 +57,10 @@ function scrCrownAnimation(takenCrown){
 				
 			}
 			else
-			{
+			{*/
 				spr_idle = sprCrown10Idle
 				spr_walk = sprCrown10Walk
-			}
+			//}
 		break;
 		case 12://Inversion
 			spr_idle = sprCrown11Idle
@@ -192,6 +193,10 @@ function scrCrownAnimation(takenCrown){
 		case 42://Scarcity
 			spr_idle = sprCrown41Idle
 			spr_walk = sprCrown41Walk
+		break;
+		case 43://Frog
+			spr_idle = sprCrownFrogIdle
+			spr_walk = sprCrownFrogWalk
 		break;
 	}
 }

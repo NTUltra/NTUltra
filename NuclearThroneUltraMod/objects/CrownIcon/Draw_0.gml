@@ -2,8 +2,16 @@ draw_set_color(c_dkgray)
 //draw_rectangle(x-12,yy-16,x+12,yy+16,0)
 var yy = y + yOffset;
 var hover = (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > yy-16 and UberCont.mouse__y < yy+16)
-if instance_exists(MultiCrownMenu) && MultiCrownMenu.hoverSelected && MultiCrownMenu.selectedCrown == crown
-	hover = true;
+var l = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]);
+if instance_exists(MultiCrownMenu)
+{
+	var width = 128;
+	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
+		width -= 32;
+	l = l - width;
+	if MultiCrownMenu.hoverSelected && MultiCrownMenu.selectedCrown == crown
+		hover = true;
+}
 if (instance_exists(UnlockingSecondRow))
 {
 	draw_sprite(sprite_index,crown,x,yy)
@@ -62,23 +70,22 @@ if hover
 {
 
 	drawx = x
+	if instance_exists(MultiCrownMenu)
+		drawx = l;
 	drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-58//48
 	if keeper
 		drawy -= 34;
-
+	if drawx+string_width(string_hash_to_newline(txt2))/2+2> l-2
+		drawx = l-4-string_width(string_hash_to_newline(txt2))/2
 	if drawx-string_width(string_hash_to_newline(txt2))/2-2 < __view_get( e__VW.XView, 0 )+2
-	drawx = __view_get( e__VW.XView, 0 )+4+string_width(string_hash_to_newline(txt2))/2
-
-	if drawx+string_width(string_hash_to_newline(txt2))/2+2> __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-2
-	drawx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-4-string_width(string_hash_to_newline(txt2))/2
-
+		drawx = __view_get( e__VW.XView, 0 )+4+string_width(string_hash_to_newline(txt2))/2
 	draw_set_color(c_black)
 	draw_set_alpha(0.8)
 	draw_rectangle(drawx-string_width(string_hash_to_newline(txt2))/2-2,drawy-17-string_height(string_hash_to_newline(txt2)),drawx+string_width(string_hash_to_newline(txt2))/2+2,drawy-12,0)
 	draw_set_alpha(1)
 
-
-	draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
+	if !instance_exists(MultiCrownMenu)
+		draw_sprite_ext(sprMenuPointer,0,x,drawy-12,1,1,0,c_white,0.8)
 /*
 	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-13,string_hash_to_newline(fulltxt))
 	scrDrawTextColours(drawx+string_width(string_hash_to_newline(txt2))/2+1,drawy-13,string_hash_to_newline(fulltxt))
@@ -98,7 +105,5 @@ if hover
 	}
 	draw_set_color(c_white)
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(preTxt+string_hash_to_newline(crown_name[crown])),string_hash_to_newline(string(crown_name[crown])))
-
-
 
 }

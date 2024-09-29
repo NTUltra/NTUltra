@@ -6,16 +6,26 @@ if selectedCrown == -1
 		keeper = true;
 		event_user(0);
 	}
-	instance_destroy();
+	if Player.crownpoints <= 0
+		instance_destroy();
+	else
+	{
+		selectedCrown = -1;
+		event_user(0);
+	}
 }
 else
 {
-	with CrownIcon
+	with instance_create(x,y,CrownIcon)
 	{
-		if crown == other.selectedCrown
-		{
-			event_user(0);
-		}
+		crown = other.selectedCrown;
+		event_user(0);
 	}
-	instance_destroy();
+	if Player.crownpoints <= 0
+		instance_destroy();
+	else
+	{
+		selectedCrown = -1;
+		event_user(0);
+	}
 }

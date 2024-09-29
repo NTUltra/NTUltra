@@ -129,6 +129,9 @@ function scrLeaderboardCrown(takenCrown){
 		case 42://Scarcity
 			return sprCrown41Idle
 		break;
+		case 43://Frog
+			return sprCrownFrogIdle
+		break;
 	}
 	return sprCrownFrogIdle;
 }

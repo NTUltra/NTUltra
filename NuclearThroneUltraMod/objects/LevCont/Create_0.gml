@@ -86,9 +86,9 @@ if Player.crownpoints > 0
 	// If you still have that crown give option echo on random.
 	if UberCont.canMultiCrown
 	{
-		with instance_create(x,y,MultiCrownMenu)
+		if !instance_exists(MultiCrownMenu)
 		{
-			
+			instance_create(x,y,MultiCrownMenu)
 		}
 		/*
 		with instance_create(__view_get( e__VW.XView, 0 )+14,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49 - 33,CrownIcon)//24
@@ -188,11 +188,7 @@ if Player.crownpoints > 0
 					if Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
 					{
 						//Crown of start
-						crown_name[11] = "[CROWN OF FROG]"
-						crown_text[11] = "<g>LEVEL UP!<g>#START IN THE <g>SEWERS<g>"
-						crown_used[11] = 0
-						crown_tips[11] = "quick start"
-						sprite_index = sprCrownSelectStart;
+						crown = 43;
 					}
 					else
 					{
@@ -278,6 +274,11 @@ if Player.crownpoints > 0
 		{
 			if array_contains(Player.currentCrowns, crown)
 				canReAdd = true;
+			else if instance_exists(MultiCrownMenu)
+			{
+				if array_contains(MultiCrownMenu.currentCrown, crown)
+					canReAdd = true;
+			}
 		}
 }
 else

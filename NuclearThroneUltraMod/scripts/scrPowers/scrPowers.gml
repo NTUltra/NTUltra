@@ -400,22 +400,22 @@ function scrPowers(raceOverwrite = -1) {
 
 			    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 			    {
-			    bskin=other.bskin
+				    bskin=other.bskin
     
-			    if bskin = 1
-					sprite_index=sprHorrorBeamB;
-			    else if bskin = 2
-					sprite_index=sprHorrorBeamC;
+				    if bskin = 1
+						sprite_index=sprHorrorBeamB;
+				    else if bskin = 2
+						sprite_index=sprHorrorBeamC;
     
-			    originnr=instance_number(HorrorBeam);
+				    originnr=instance_number(HorrorBeam);
     
-			    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-			    team = other.team
-			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-			    ammo=50
-			    charge=other.horrorcharge;
-			    event_perform(ev_alarm,0)
-			    rad=1;
+				    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+				    team = other.team
+				    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+				    ammo=50
+				    charge=other.horrorcharge;
+				    event_perform(ev_alarm,0)
+				    rad=1;
 			        with instance_create(x,y,LightningSpawn)
 			        {
 				        if other.bskin=1

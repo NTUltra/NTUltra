@@ -17284,6 +17284,7 @@ function scrFire2(hasTailNow) {
 	{
 		with instance_create(x,y,MicroNade)
 		{
+			dmg -= 1;
 			direction = aimDirection+(random(30)-15) * other.accuracy;
 			image_angle = direction;
 			team = other.team

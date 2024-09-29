@@ -1,6 +1,6 @@
 function scrCrowns() {
 	crown_name[0] = "[RANDOM]"
-	crown_text[0] = "???"
+	crown_text[0] = "GET ANY <w>RANDOM<w> <y>CROWN<y>#INCLUDING SECRET CROWNS"
 	crown_used[0] = 0
 	crown_tips[0] = ""
 
@@ -279,6 +279,12 @@ function scrCrowns() {
 	crown_used[42] = 0
 	crown_tips[42] = "starving"
 	
+	//CROWN START
+	crown_name[43] = "[CROWN OF FROG]"
+	crown_text[43] = "<g>LEVEL UP!<g>#START IN THE <g>SEWERS<g>"
+	crown_used[43] = 0
+	crown_tips[43] = "quick start"
+	
 	//have nerves of steel or adrenline fuel?
 	/*
 	crown_name[35] = "[CROWN OF AGGRESSION]"
@@ -288,7 +294,7 @@ function scrCrowns() {
 	*/
 	
 	crownmax = 23
-	secretcrownmax = 20;
+	secretcrownmax = 21;
 
 
 
