@@ -6,11 +6,11 @@ lightWidth = 12;
 lightWidthTop = 4;
 cAlpha = 1;
 disappear = false;
-dmg = 5;
+dmg = 6;
 damageTicks = 2;
 if instance_exists(Player) && Player.skill_got[17]
 {
-	dmg = 8 + Player.betterlaserbrain;
+	dmg = 7 + Player.betterlaserbrain;
 	damageTicks += 1;
 }
 team = 2;

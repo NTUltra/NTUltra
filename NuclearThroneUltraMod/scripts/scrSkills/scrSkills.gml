@@ -465,7 +465,7 @@ function scrSkills() {
 	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (2<r>HP<r>)#CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
-	skill_bons[32] = "+1 HP HEALING";
+	skill_bons[32] = "+1 HP HEALING#LONGER IMMUNITY";
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess

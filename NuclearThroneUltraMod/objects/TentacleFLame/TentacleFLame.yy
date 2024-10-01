@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"TentacleFLame",
+  "%Name":"TentacleFlame",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"hitme","path":"objects/hitme/hitme.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"TentacleFLame",
+  "name":"TentacleFlame",
   "overriddenProperties":[],
   "parent":{
     "name":"Projectiles",

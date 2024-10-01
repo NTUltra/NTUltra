@@ -29,8 +29,8 @@ if instance_exists(creator)
 	{
 		if object_index != Player || !skill_got[2]
 		{
-			scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.6);
-			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,0.6)
+			scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.1);
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,3)
 		}	
 		wkick = 8
 	}

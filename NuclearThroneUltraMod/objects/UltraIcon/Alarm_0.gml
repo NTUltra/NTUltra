@@ -10,6 +10,13 @@ if (!isAlternative && !canAlt)// && !scrIsGamemode(22) && !scrIsGamemode(30) <-L
 		if (scrTranslateUltraToSecretStat(skill,Player.bskin) > -1 && UberCont.ctot_secret_ultra_found[scrTranslateUltraToSecretStat(skill,Player.bskin)])
 			isAlternative = true;
 	}
+	if isValidGamemodeToUnlock()
+	{
+		with UberCont
+		{
+			ctot_ultra_found[other.skill] += 1;
+		}
+	}
 }
 if canAlt
 {
@@ -188,16 +195,18 @@ if canAlt
 			instance_destroy();
 		}
 		if isValidGamemodeToUnlock()
+		{
 			with UberCont
 			{
 				ctot_secret_ultra_found[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] += 1;
 				if (ctot_secret_ultra_found[scrTranslateUltraToSecretStat(other.skill,Player.bskin)] == 1)
 					with instance_create(x,y,UnlockPopup)
 					{
-						mytext="SECRET ULTRA FOUND"+unlockText
-						alarm[0] += string_length(unlockText);
+						mytext="SECRET ULTRA FOUND#"+n
+						alarm[0] += string_length(n);
 					}
 			}
+		}
 	}
 }
 else if skill == 76 && Player.race == 19 && UberCont.tookUnstoppable

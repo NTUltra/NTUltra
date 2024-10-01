@@ -22,10 +22,13 @@ function scrCreateVoidArea(defaultVoidCreation = true){
 		}
 		if defaultVoidCreation && GetPlayerLoops() == 5
 		{
-			instance_create(x + 112,y - 160,BecomeMimic);
-			instance_create(x - 92,y - 160,BecomeMimic);
-			instance_create(x,y - 160,MimicActivater);
-			instance_create(x,y,DelayVoidCreation);
+			if !instance_exists(BecomeMimic)
+			{
+				instance_create(x + 112,y - 160,BecomeMimic);
+				instance_create(x - 92,y - 160,BecomeMimic);
+				instance_create(x,y - 160,MimicActivater);
+				instance_create(x,y,DelayVoidCreation);
+			}
 		}
 		else
 		{

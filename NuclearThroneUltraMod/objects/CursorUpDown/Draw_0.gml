@@ -62,7 +62,7 @@ if UberCont.opt_crosshair == sprite_get_number(sprCrosshair)
 				var w = sprite_get_width(UberCont.customCrosshair);
 				var h = sprite_get_height(UberCont.customCrosshair);
 				sprite_set_offset(UberCont.customCrosshair,w*0.5,h*0.5);
-				scrSave();
+				scrSaveGamePreferenceOptions();
 				with Cursor
 				{
 					sprite_index = UberCont.customCrosshair;
@@ -104,7 +104,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > xx+10 and UberCon
 		opt_crosshair_scale += 2;
 		if opt_crosshair_scale > 64
 			opt_crosshair_scale = 2;
-		scrSave();
+		scrSaveGamePreferenceOptions();
 	}
 	with Cursor
 	{
@@ -122,7 +122,7 @@ else if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > xx and UberC
 		opt_crosshair_scale -= 2;
 		if opt_crosshair_scale < 2
 			opt_crosshair_scale = 64;
-		scrSave();
+		scrSaveGamePreferenceOptions();
 	}
 	with Cursor
 	{

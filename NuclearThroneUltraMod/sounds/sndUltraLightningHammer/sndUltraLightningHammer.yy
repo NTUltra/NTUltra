@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndUltraLightningHammer",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.6205,
+  "name":"sndUltraLightningHammer",
+  "parent":{
+    "name":"Melee",
+    "path":"folders/Sounds/Weapons/Melee.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndUltraLightningHammer.ogg",
+  "type":0,
+  "volume":1.0,
+}

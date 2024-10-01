@@ -1,12 +1,10 @@
 /// @description ultramod coming soon
-event_inherited();
-event_inherited();
-exit;
 var um = GetPlayerUltramod();
 if um == ultramods.bulletShotgun
 {
 	with instance_create(x,y,HeavyBullet)
 	{
+		dmg += 2;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -18,7 +16,7 @@ if um == ultramods.bulletShotgun
 } else if um == ultramods.shotgunBolt
 {
 	snd_play_fire(sndSplinterGun)	
-	with instance_create(x,y,Splinter)
+	with instance_create(x,y,StormSplinter)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction+2;
@@ -27,7 +25,7 @@ if um == ultramods.bulletShotgun
 		team = other.team;
 		alarm[11] = 0;
 	}
-	with instance_create(x,y,Splinter)
+	with instance_create(x,y,StormSplinter)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction-2;
@@ -49,19 +47,11 @@ if um == ultramods.bulletShotgun
 	with instance_create(x,y,ElectroBallSpawn)
 	{motion_add(other.direction+(random(8)-4),1)
 	image_angle = direction}
-	with instance_create(x,y,ElectroBall)
+	with instance_create(x,y,ElectroBallBig)
 	{
+		balls = 6;
 		scrCopyWeaponMod(other);
 		direction = other.direction+4;
-		image_angle = direction;
-		speed = clamp(speed+3,4.5,11);
-		team = other.team;
-		alarm[11] = 0;
-	}
-	with instance_create(x,y,ElectroBall)
-	{
-		scrCopyWeaponMod(other);
-		direction = other.direction-4;
 		image_angle = direction;
 		speed = clamp(speed+3,4.5,11);
 		team = other.team;
@@ -77,7 +67,7 @@ else if um == ultramods.lightningPellet
 		dmg += 1;
 		image_angle = other.direction;
 		team = other.team
-		ammo = 5+round(other.speed*0.8);
+		ammo = 6+round(other.speed*0.8);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		with instance_create(x,y,LightningSpawn)

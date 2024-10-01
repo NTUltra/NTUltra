@@ -116,6 +116,10 @@ if (KeyCont.key_paus[0] = 1) ||
 		exit;
 	}
 	KeyCont.key_spec[0] = 2;
+	if instance_exists(option)
+	{
+		scrSaveGamePreferenceOptions();	
+	}
 	with option
 		instance_destroy()
 
@@ -159,6 +163,10 @@ if (KeyCont.key_paus[0] = 1) ||
 		if (confirmState == 2 && (mouse_check_button_pressed(mb_left) || KeyCont.key_fire[0] == 1 || gamepad_button_check(0,gp_face1)))
 		{
 			confirmState = 0;
+			if instance_exists(option)
+			{
+				scrSaveGamePreferenceOptions();	
+			}
 			/*
 			if isLeaderboardGamemode
 			{
@@ -260,11 +268,11 @@ else
 			{
 				opt_gamemode = [0];
 			}
-			scrSave();
 			if !instance_exists(OptionSelect)
 			{
 				endMe = true;
-			}/*
+			}
+			/*
 			else if OptionSelect.selected = 0 and CreditsSelect.selected = 0 and StatsSelect.selected = 0 and OptionSelect2.selected = 0// and UpdateSelect.selected = 0
 			{
 				steam_shutdown();

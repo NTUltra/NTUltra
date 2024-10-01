@@ -72,7 +72,8 @@ function scrSaveStats() {
 	dir = 0;
 	repeat(maxultra+2)
 	{
-		ini_write_real("STATS","ctotultrataken" + string(dir),ctot_ultra_taken[dir]);
+		ini_write_real("STATS","ctotultrataken" + string(dir),ctot_ultra_found[dir]);
+		ini_write_real("STATS","ctotultratakennew" + string(dir),ctot_ultra_taken[dir]);
 		dir ++;
 	}
 	dir = 0;

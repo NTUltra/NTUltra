@@ -48,7 +48,9 @@ else if um == ultramods.bulletPlasma
 	{
 		laserhit += 2;
 		sprite_index=sprBouncingLaser;
-		image_yscale -= 0.16
+		image_yscale -= 0.25
+		alarm[2] = max(1,alarm[2] - 1);
+		defaultPierce -= 32;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

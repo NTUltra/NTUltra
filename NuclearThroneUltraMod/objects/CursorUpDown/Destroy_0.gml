@@ -2,5 +2,5 @@
 if colourMenuOpen
 {
 	with UberCont
-		scrSave();	
+		scrSaveGamePreferenceOptions();	
 }

@@ -1,6 +1,6 @@
 /// @description Init
 updateVersion = "30.21.00";
-betaVersion = "31.BETA.38"
+betaVersion = "31.BETA.40"
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;

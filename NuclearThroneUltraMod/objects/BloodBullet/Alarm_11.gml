@@ -77,14 +77,14 @@ else if um == ultramods.laserBullet
 	with instance_create(x,y,BloodLaser)
 	{
 		dmg -= 1;
-		defaultPierce -= 16;
-		image_yscale -= 0.6;
+		defaultPierce -= 64;
+		image_yscale = max(0.2,image_yscale - 0.6);
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
 		team = other.team
 		event_perform(ev_alarm,0);
-		alarm[2] -= 1;
+		alarm[2] = max(1,alarm[2] - 1);
 	}
 }
 else if um == ultramods.bulletPlasma

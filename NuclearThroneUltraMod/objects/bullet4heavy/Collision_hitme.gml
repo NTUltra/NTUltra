@@ -3,10 +3,10 @@ if other.team != team and other.my_health > 0
 {
 	instance_destroy()
 	var hits = ds_list_create();
-	var range = 14;
+	var range = 12;
 	if instance_exists(Player) && Player.skill_got[16] //Recycle Gland
 	{
-		range += 6;
+		range += 4;
 	}
 	var direct = other.id;
 	var roidBuff = instance_exists(Player) && Player.ultra_got[28] ? 1 : 0;
@@ -28,9 +28,11 @@ if other.team != team and other.my_health > 0
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,14)
+				if my_health < 0
+				{
+					corpseBoost += 2;
+				}
 				scrForcePosition60fps();
-				if speed > maxSpeed+4
-					speed = maxSpeed+4;
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 			}
 		}

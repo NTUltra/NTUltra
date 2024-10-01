@@ -2,6 +2,14 @@ SetSeedPopoSpawn();
 var am = 1;
 if loops > 5
 	am = 2;
+if loops > 6
+	am = 3;
+var forceLessPopo = false;
+if instance_exists(Player) && ((Player.area == 9 && Player.subarea == 3) || Player.area == 138)
+{
+	forceLessPopo = true;
+	am = 1;
+}
 if popoSpawnType == 2
 {
 	repeat (am)
@@ -99,14 +107,20 @@ if popoSpawnType == 1//elite
 
 
 //NORMAL
-var am = 1;
-if loops > 0
-	am = 2;
+if forceLessPopo
+	am = 1;
+else
+{
+	if loops > 0
+		am += 1;
+	if loops > 4
+		am += 1;
+	if loops > 6
+		am += 1;
+}
 repeat(am)
 {
 	dir = choose(1,1,1,6,6,5,5,2,2,3,3,4,4);//1,1,2,3,4
-
-
 	if instance_exists(Player)
 	{
 		if(loops<1&&Player.area<2)//no shielders in desert start

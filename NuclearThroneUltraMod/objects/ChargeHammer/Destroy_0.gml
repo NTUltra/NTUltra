@@ -14,10 +14,10 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndWrench)
 			with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
 			{
-				dmg = 13
+				dmg = 15
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.6+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 				image_xscale += 0.25;
@@ -28,10 +28,10 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
 			{
-				dmg = 13
+				dmg = 15
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -42,12 +42,12 @@ if instance_exists(Player) && instance_exists(creator)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
 			sprite_index=sprHeavySlash;
-			dmg = 18//shovel is 8
+			dmg = 20//shovel is 8
 			knockback += 2;
 			longarms = 0
 	
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
-			motion_add(aimDirection,2.5+longarms)
+			motion_add(aimDirection,2.7+longarms)
 			image_angle = direction
 			team = other.team
 			}
@@ -57,12 +57,12 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*15,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*15,aimDirection),Slash)
 			{
-				dmg = 22
+				dmg = 24
 				knockback += 4;
 				sprite_index=sprVeryHeavySlash;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2+longarms)
+				motion_add(aimDirection,2.5+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -72,12 +72,12 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigPandaSlash)
 			{
-				dmg = 14;
+				dmg = 16;
 				knockback += 2;
 				longarms = 0
 		
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -87,11 +87,11 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndHammer)
 			with instance_create(x+lengthdir_x(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(-1+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
 			{
-				dmg = 35;
+				dmg = 40;
 				longarms = 0
 				knockback += 6;
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -101,10 +101,10 @@ if instance_exists(Player) && instance_exists(creator)
 			snd_play_fire(sndFlail)
 			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
 			{
-				dmg = 6
+				dmg = 9
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}
@@ -112,11 +112,11 @@ if instance_exists(Player) && instance_exists(creator)
 			{
 				sprite_index = sprBigSlash
 				mask_index = mskBigPandaSlash;
-				dmg = 29 + r;
+				dmg = 34 + r;
 				knockback += 8;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
-				motion_add(aimDirection,2.5+longarms)
+				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction
 				team = other.team
 			}

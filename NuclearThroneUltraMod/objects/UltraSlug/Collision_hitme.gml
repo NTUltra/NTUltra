@@ -1,6 +1,5 @@
 if other.team != team and other.my_health > 0
 {instance_destroy()
-
 	var hits = ds_list_create();
 	var range = 26;
 	if instance_exists(Player) && Player.skill_got[15] //Shotgun shoulder
@@ -35,10 +34,12 @@ if other.team != team and other.my_health > 0
 				}
 				sprite_index = spr_hurt
 				image_index = 0
-				motion_add(other.direction,9)
+				motion_add(other.direction,22)
+				if my_health < 0
+				{
+					corpseBoost += 1;
+				}
 				scrForcePosition60fps();
-				if speed > maxSpeed+1
-					speed = maxSpeed+1;
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 			}
 		}

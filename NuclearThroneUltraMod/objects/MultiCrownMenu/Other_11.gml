@@ -4,6 +4,7 @@ if selectedCrown == -1
 	with instance_nearest(x,y,CrownIcon)
 	{
 		keeper = true;
+		crown = 1;
 		event_user(0);
 	}
 	if Player.crownpoints <= 0

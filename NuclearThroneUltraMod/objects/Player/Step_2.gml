@@ -450,7 +450,7 @@ if  ultra_got[40] && tookHit && alarm[3] < 1//Ultra D
 }
 if skill_got[22]//Stress Sharp teeth part
 {
-	if tookHit /*&& alarm[10] < 1*/ && alarm[3] < 1//I been hit
+	if (tookHit /*&& alarm[10] < 1*/ && (alarm[3] < 1 || exception))//I been hit
 	{
 		//alarm[10] = 2;
 		sharpteeth = prevhealth - my_health;
@@ -738,7 +738,10 @@ if (tookHit)
 			{
 				healTaken = 2;
 				if race == 25//Doctor buff
+				{
 					healTaken += 1
+					alarm[3] = max(alarm[3],20);
+				}
 					/*
 				if (skill_got[9]) //Second stomache
 				{
@@ -789,7 +792,9 @@ if (tookHit)
 			}
 			Sleep(50);
 			scrGiveEuphoriaShield();
-			alarm[3] = max(alarm[3],6);
+			alarm[3] = max(alarm[3],14);
+			if skill_got[12]
+				alarm[3] += 2;
 		}
 	}
 	if skill_got[12]//euphoria resistance?
@@ -797,9 +802,9 @@ if (tookHit)
 		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
 		{
 			if race=25
-				alarm[3] = max(11,alarm[3]);
+				alarm[3] = max(16,alarm[3]);
 			else
-				alarm[3] = max(alarm[3],9);//duration
+				alarm[3] = max(alarm[3],12);//duration
 			canAnimateDuringImmune = 0;
 			snd_hurt = sndDamageNegate;
 			instance_create(x,y,EuphoriaBlock);
@@ -1372,55 +1377,111 @@ if scrIsCrown(29) && maxhealth > 0
 }
 if maxhealth > 0
 {
-	maxhealth -= abundanceHealth;
-	abundanceHealth = 0;
-	if scrIsCrown(38) && !scrIsCrown(42)
+	if ultra_got[62] && altUltra//Living armour
 	{
-		//Abundance
-		if scrIsCrown(40) || wep_type[wep] != 0
-		{
-			if (ammo[wep_type[wep]] >= typ_amax[wep_type[wep]]*0.5)
-			{
-				abundanceHealth = 3;
-			}
-			else
-			{
-				abundanceHealth = -3;	
-			}
-		}
-	}
-	if scrIsCrown(42) && !scrIsCrown(38) && maxhealth > 0
-	{
-		//Scarcity
-		maxhealth -= abundanceHealth;
+		maxarmour -= abundanceHealth;
 		abundanceHealth = 0;
-		if scrIsCrown(40) || wep_type[wep] != 0
+		if scrIsCrown(38) && !scrIsCrown(42)
 		{
-			if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
+			//Abundance
+			if scrIsCrown(40) || wep_type[wep] != 0
 			{
-				abundanceHealth = -3;
+				if (ammo[wep_type[wep]] >= typ_amax[wep_type[wep]]*0.5)
+				{
+					abundanceHealth = 3;
+				}
+				else
+				{
+					abundanceHealth = -3;	
+				}
+			}
+		}
+		if scrIsCrown(42) && !scrIsCrown(38) && maxarmour > 0
+		{
+			//Scarcity
+			maxarmour -= abundanceHealth;
+			abundanceHealth = 0;
+			if scrIsCrown(40) || wep_type[wep] != 0
+			{
+				if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
+				{
+					abundanceHealth = -3;
+				}
+				else
+				{
+					abundanceHealth = 3;	
+				}
+			}
+		}
+		if maxarmour + abundanceHealth <= 0
+		{
+			if maxarmour == 1
+			{
+				abundanceHealth = 0;
 			}
 			else
 			{
-				abundanceHealth = 3;	
+				abundanceHealth += maxarmour;
+				maxarmour = 1;
 			}
-		}
-	}
-	if maxhealth + abundanceHealth <= 0
-	{
-		if maxhealth == 1
-		{
-			abundanceHealth = 0;
 		}
 		else
 		{
-			abundanceHealth += maxhealth;
-			maxhealth = 1;
+			maxarmour = maxarmour + abundanceHealth;
 		}
 	}
 	else
 	{
-		maxhealth = maxhealth + abundanceHealth;
+		maxhealth -= abundanceHealth;
+		abundanceHealth = 0;
+		if scrIsCrown(38) && !scrIsCrown(42)
+		{
+			//Abundance
+			if scrIsCrown(40) || wep_type[wep] != 0
+			{
+				if (ammo[wep_type[wep]] >= typ_amax[wep_type[wep]]*0.5)
+				{
+					abundanceHealth = 3;
+				}
+				else
+				{
+					abundanceHealth = -3;	
+				}
+			}
+		}
+		if scrIsCrown(42) && !scrIsCrown(38) && maxhealth > 0
+		{
+			//Scarcity
+			maxhealth -= abundanceHealth;
+			abundanceHealth = 0;
+			if scrIsCrown(40) || wep_type[wep] != 0
+			{
+				if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
+				{
+					abundanceHealth = -3;
+				}
+				else
+				{
+					abundanceHealth = 3;	
+				}
+			}
+		}
+		if maxhealth + abundanceHealth <= 0
+		{
+			if maxhealth == 1
+			{
+				abundanceHealth = 0;
+			}
+			else
+			{
+				abundanceHealth += maxhealth;
+				maxhealth = 1;
+			}
+		}
+		else
+		{
+			maxhealth = maxhealth + abundanceHealth;
+		}
 	}
 }
 if lockout

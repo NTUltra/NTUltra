@@ -13,7 +13,7 @@ extrafeetalarm = 0;
 extrafeetdodged = false;
 if ultra_got[0] && altUltra
 {
-	cash = min(cash + 100,maxCash);
+	cash = min(cash + 200,maxCash);
 	if cash <= 0
 		inDebt = true;
 	else 

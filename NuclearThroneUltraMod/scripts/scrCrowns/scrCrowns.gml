@@ -188,7 +188,10 @@ function scrCrowns() {
 	
 	//Weapon mods
 	crown_name[29] = "[CROWN OF PURITY]"
-	crown_text[29] = "DISABLE <w>WEAPON MODS<w>#FOR EACH <w>WEAPON MOD<w> ON A WEAPON#GAIN +1 <r>MAX HP<r>#WHILE HOLDING THAT WEAPON"
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[29] = "DISABLE <w>WEAPON MODS<w>#FOR EACH <w>WEAPON MOD<w> ON A WEAPON#GAIN +1 <gb>MAX ARMOUR<gb>#WHILE HOLDING THAT WEAPON"
+	else
+		crown_text[29] = "DISABLE <w>WEAPON MODS<w>#FOR EACH <w>WEAPON MOD<w> ON A WEAPON#GAIN +1 <r>MAX HP<r>#WHILE HOLDING THAT WEAPON"
 	crown_used[29] = 0
 	crown_tips[29] = "pure"
 	
@@ -248,13 +251,19 @@ function scrCrowns() {
 	
 	//NEAR MAX AMMO ON PRIMARY
 	crown_name[38] = "[CROWN OF ABUNDANCE]"
-	crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <g>ABOVE<g> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <g>ABOVE<g> <w>50%<w>#<w>INCREASE<w> <gb>MAX ARMOUR<gb> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	else
+		crown_text[38] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <g>ABOVE<g> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
 	crown_used[38] = 0
 	crown_tips[38] = "fuel for days"
 	
 	//BELOW MAX HP
 	crown_name[39] = "[CROWN OF DANGER]"
-	crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REDUCE<g> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>5%<w>#OTHERWISE:#<r>INCREASE<r> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>15%<w>";
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[39] = "WHEN <gb>ARMOUR<gb> IS BELOW <gb>MAX ARMOUR<gb>#<g>REDUCE<g> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>5%<w>#OTHERWISE:#<r>INCREASE<r> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>15%<w>";
+	else
+		crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REDUCE<g> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>5%<w>#OTHERWISE:#<r>INCREASE<r> WEAPON <y>AMMO<y>/<g>RAD<g> <w>COST<w> BY <w>15%<w>";
 	//crown_text[39] = "WHEN <r>HEALTH<r> IS BELOW <r>MAX HP<r>#<g>REFUND<g> 7% <y>AMMO<y> <w>COST<w> WHEN FIRING#OTHERWISE:#<r>TAKE<r> 5% <y>AMMO<y> WHEN FIRING";
 	crown_used[39] = 0
 	crown_tips[39] = "a wounded animal is at its most dangerous"
@@ -275,7 +284,10 @@ function scrCrowns() {
 	
 	//NEAR EMPTY ON PRIMARY
 	crown_name[42] = "[CROWN OF SCARCITY]"
-	crown_text[42] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <r>BELOW<r> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		crown_text[42] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <r>BELOW<r> <w>50%<w>#<w>INCREASE<w> <gb>MAX ARMOUR<gb> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
+	else
+		crown_text[42] = "WHEN YOUR <w>PRIMARY<w> <y>AMMO<y> IS <r>BELOW<r> <w>50%<w>#<w>INCREASE<w> <r>MAX HEALTH<r> BY <w>3<w>#IF NOT <r>REDUCE<r> IT BY <w>3<w>##DOES NOT WORK ON WEAPONS#THAT DO NOT USE AMMO";
 	crown_used[42] = 0
 	crown_tips[42] = "starving"
 	

@@ -1,9 +1,24 @@
 function scrLoad() {
 	var saveFileString;
-	saveFileString="ntultra"+string(version)+".sav";
+	saveFileString = "ntultrapreferences.sav";
+	if file_exists(saveFileString)
+	{
+		ini_open(saveFileString);
+		scrLoadOptions();
+		ini_close();
+	}
+	else
+	{
+		//Backwards compatability
+		saveFileString = "ntultra"+string(version)+".sav";
+		ini_open(saveFileString);
+		scrLoadOptions();
+		ini_close();
+	}
+	saveFileString="ntultra"+string(currentSave)+".sav";
 	    ini_open(saveFileString);
 	    scrLoadStats();
-	    scrLoadOptions();
+		scrLoadGameSpecificOptions();
 	    scrLoadData();
 	    ini_close();
 

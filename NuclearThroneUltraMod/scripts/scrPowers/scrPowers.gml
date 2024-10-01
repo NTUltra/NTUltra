@@ -2860,15 +2860,16 @@ function scrPowers(raceOverwrite = -1) {
 					if horrorcharge=origincharge
 						snd_play_2d(sndHorrorCashFlowStart);
 						//snd_play_2d(sndHorrorBeam);
-
-					if horrorcharge<maxcharge
+					var m = maxcharge;
+					if skill_got[5]
+						m += 5;
+					if horrorcharge < m
 					{
 						if  UberCont.normalGameSpeed == 60
 							horrorcharge += 0.1+(skill_got[5]*0.15);
 						else
 							horrorcharge += 0.2+(skill_got[5]*0.3);
 					}
-
 					if skill_got[5]
 					{
 						if  UberCont.normalGameSpeed == 60
@@ -2920,7 +2921,7 @@ function scrPowers(raceOverwrite = -1) {
 					repeat(r)
 					with instance_create(x,y,HorrorMoney)
 					{
-						charge=other.horrorcharge;
+						charge = other.horrorcharge;
 						motion_add(aimDirection+((random(charge*4)-charge*2)*other.accuracy),8.5+random(3)+(charge*0.5))
 						image_angle = direction
 						team = other.team
@@ -3007,7 +3008,7 @@ function scrPowers(raceOverwrite = -1) {
 			//if random(3)<2
 			var cost = 1.3;
 			if ultra_got[83]
-				cost = 1.1;
+				cost = 1.2;
 			if  UberCont.normalGameSpeed == 60
 			{
 				cost *= 0.5;

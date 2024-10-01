@@ -52,7 +52,7 @@ function scrEnemyDeathEvent(isSheep = false){
 		{
 			if ultra_got[0] && altUltra
 			{
-				cash = min(cash + 1,maxCash);
+				cash = min(cash + 2,maxCash);
 			}
 			/*
 			if skill_got[34] //FLEXIBLE ELBOWS

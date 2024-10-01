@@ -46,6 +46,7 @@ else if um == ultramods.laserBullet
 		isog = false;
 		image_angle = other.direction;
 		team = other.team
+		alarm[2] = max(alarm[2] - 1,1);
 		event_perform(ev_alarm,0);
 	}
 }

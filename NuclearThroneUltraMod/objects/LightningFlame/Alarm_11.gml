@@ -55,7 +55,7 @@ if um == ultramods.morphFire
 else if um == ultramods.lightningKraken
 {
 	UberCont.ultramodSwap = false;
-	with instance_create(x,y,TentacleFLame)
+	with instance_create(x,y,TentacleFlame)
 	{
 		scrCopyWeaponMod(other);
 		direction = other.direction;

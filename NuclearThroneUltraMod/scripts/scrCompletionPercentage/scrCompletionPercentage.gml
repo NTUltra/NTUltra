@@ -122,7 +122,7 @@ function scrCompletionPercentage() {
 		}
 		for (var i = 0; i < maxsecretultra; i++) {
 			postEverything += 10;
-			if (ctot_secret_ultra_taken[i] > 0)
+			if (ctot_secret_ultra_found[i] > 0)
 			{
 				postUnlock += 10;
 			}

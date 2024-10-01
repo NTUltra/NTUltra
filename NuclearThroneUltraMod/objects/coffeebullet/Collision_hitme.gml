@@ -26,7 +26,7 @@ snd_play(snd_hurt, hurt_pitch_variation,true)
 
 }
 with instance_create(x,y,BulletHit)
-sprite_index=sprHeavyBulletHit;
+	sprite_index=sprHeavyBulletHit;
 
 scrRecycleGland(2);
 

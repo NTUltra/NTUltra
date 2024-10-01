@@ -439,9 +439,13 @@ img = 0
 wave = 0
 p = 0
 scrGameModes();
-
 updatepage=0;
 openRemapper = false;
+openSaveSlots = false;
+saveSlotState = 0;
+saveGameSlots = 3;
+savedGames = scrLoadInAllGames();
+selectedSaveSlot = 0;
 camX = 0;
 camY = 0;
 camTargetX = 0;

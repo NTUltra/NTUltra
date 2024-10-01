@@ -14,4 +14,4 @@ snd_play_2d(sndClick);
 		scrDisableBigScreen();	
 	}
 
-scrSave();
+scrSaveGamePreferenceOptions();

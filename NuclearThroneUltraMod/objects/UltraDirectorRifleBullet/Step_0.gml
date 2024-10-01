@@ -9,21 +9,21 @@ if instance_exists(Player){
 		sprite_index = sprPlayerUltraDirectorRifleBullet;
 		with instance_create(x,y,UltraDirectorRifleSplitBullet)
 		{
-			speed = max(2,other.speed - 2);
+			speed = max(6,other.speed - 1);
 			direction = other.direction;
 			image_angle = direction;
 			turnRate = 0;
 		}
 		with instance_create(x,y,UltraDirectorRifleSplitBullet)
 		{
-			speed = max(2,other.speed - 2);
+			speed = max(6,other.speed - 1);
 			direction = other.direction + 90;
 			image_angle = direction;
 			turnRate = 0.7;
 		}
 		with instance_create(x,y,UltraDirectorRifleSplitBullet)
 		{
-			speed = max(2,other.speed - 2);
+			speed = max(6,other.speed - 1);
 			direction = other.direction - 90;
 			image_angle = direction;
 			turnRate = -0.7;

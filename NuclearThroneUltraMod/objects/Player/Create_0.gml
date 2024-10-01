@@ -669,12 +669,9 @@ if UberCont.crown_start[r] && !instance_exists(PlayerSpawn) && !scrIsGamemode(25
 		alarm[2] = 0;
 	crownpoints = 1;
 }
-crownpoints = 10;
 if scrIsGamemode(25) {
     area = 116;
 }
-
-
 
 
 IsShielding = 0;

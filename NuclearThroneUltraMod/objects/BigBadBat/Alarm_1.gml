@@ -1,5 +1,12 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
+with BigBadBat
+{
+	if id != other.id
+	{
+		alarm[1] += 2;	
+	}
+}
 if !reachHalfHealth && my_health < maxhealth
 {
 	reachHalfHealth = true;

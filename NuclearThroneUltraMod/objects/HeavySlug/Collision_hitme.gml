@@ -1,5 +1,6 @@
 if other.team != team and other.my_health > 0
 {
+	var cb = boostCorpse;
 	with instance_create(x,y,BulletHit)
 		sprite_index = sprHeavySlugHit
 	var hits = ds_list_create();
@@ -44,10 +45,12 @@ if other.team != team and other.my_health > 0
 					DealDamage(other.dmg - 40);
 				sprite_index = spr_hurt
 				image_index = 0
-				motion_add(other.direction,9)
+				motion_add(other.direction,22 + cb)
+				if my_health < 0
+				{
+					corpseBoost += cb;
+				}
 				scrForcePosition60fps();
-				if speed > maxSpeed+1
-					speed = maxSpeed+1;
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 			}
 		}

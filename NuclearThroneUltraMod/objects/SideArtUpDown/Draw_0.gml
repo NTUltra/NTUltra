@@ -63,7 +63,7 @@ if UberCont.opt_sideart == sprite_get_number(sprSideArt)
 		{
 			UberCont.opt_custom_sideart = sideArtFilePath;
 			UberCont.customSideArt = sprite_add(sideArtFilePath,0,false,false,0,0);
-			scrSave();
+			scrSaveGamePreferenceOptions();
 		}
 	}
 }

@@ -54,6 +54,7 @@ reachHalfHealth = false;
 if loops > 0
 {
 	actTime -= 5;
+	laserDuration -= 5;
 	pSpeedAccurate += 0.3;
 	pSpeedJawbreaker += 0.5;
 	pSpeedSpinny += 0.2;
@@ -64,6 +65,7 @@ if loops > 2
 }
 if loops > 4
 {
+	laserDuration -= 5;
 	rotationSpeed *= 1.1;
 	pSpeedSpinny += 0.2;
 }
@@ -86,5 +88,12 @@ if instance_exists(Player) && Player.skill_got[29] {
 	alarm[1] += 90;
 	alarm[6] += 90;
 	scrGiveSnooze();
+}
+with BigBadBat
+{
+	if id != other.id
+	{
+		alarm[1] += 10;	
+	}
 }
 alarm[7] = 10;

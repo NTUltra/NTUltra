@@ -45,7 +45,7 @@ if team == 2
 }
 else
 {
-	var range = 23 - fireRate;
+	var range = max(1,23 - fireRate * 1.5);
 	var ps = 7 - (fireRate*0.5)//4.9 start
 	if far ps -= 0.5;
 	with instance_create(x,y,PopoBouncerBullet){

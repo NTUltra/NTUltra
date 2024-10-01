@@ -11,6 +11,7 @@ for (var i = 0; i < al; i++)
 		}
 	}
 }
+ds_list_destroy(hits);
 if damageTicks > 0
 {
 	damageTicks -= 1;

@@ -185,7 +185,7 @@ function scrFire3(hasTailNow){
 		snd_play_fire(sndQuadMachinegun)
 		snd_play_fire(sndMicroSmg);
 
-		var am = 18;
+		var am = 14;
 		var angStep = 360/am;
 		angStep *= accuracy;
 		var angg = aimDirection - (angStep * (am*0.5));
@@ -1505,7 +1505,6 @@ function scrFire3(hasTailNow){
 			team = other.team;
 			minSpeed += 1;
 			bulletCost = 2;
-			shotgunCost = 0.25;
 		}
 		if !skill_got[2]
 		{
@@ -1566,6 +1565,402 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 2
 		wkick = 2
+
+		break;
+		
+		//ULTRA BULLET CRASH
+		case 838:
+
+		snd_play_fire(sndQuadMachinegun)
+		snd_play_fire(sndUltraPistol)
+		var am = 12;
+		var angStep = 360/am;
+		angStep *= accuracy;
+		var angg = aimDirection - (angStep * (am*0.5));
+		repeat(am)
+		{
+			with instance_create(x,y,Bullet4)
+			{
+				motion_add(angg+(random(8)-4)*other.accuracy,22);
+				image_angle = direction
+				team = other.team
+			}
+			angg += angStep
+		}
+		angStep *= 0.5;
+		with instance_create(x,y,Bullet4)
+		{
+			motion_add(aimDirection+angStep+(random(8)-4)*other.accuracy,22);
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,Bullet4)
+		{
+			motion_add(aimDirection-angStep+(random(8)-4)*other.accuracy,22);
+			image_angle = direction
+			team = other.team
+		}
+		var ran = random(360);
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(ran,2);
+			motion_add(ran,2)
+		}
+		BackCont.viewx2 += lengthdir_x(11,ran)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(11,ran)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 5
+		scrSpinnableWeapon(wep);
+		break;
+		
+		//ULTRA SUPER BAZOOKA
+		case 839:
+		snd_play_fire(sndUltraSuperBazooka)
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,32);
+			motion_add(aimDirection+180,8)
+		}
+
+		with instance_create(x,y,UltraRocket)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,UltraRocket)
+		{motion_add(aimDirection+10*other.accuracy+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,UltraRocket)
+		{motion_add(aimDirection+20*other.accuracy+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,UltraRocket)
+		{motion_add(aimDirection-10*other.accuracy+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,UltraRocket)
+		{motion_add(aimDirection-20*other.accuracy+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(120,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(120,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 25
+		wkick = 10
+
+		break;
+		
+		//GATLING FLAME BAZOOKA
+		case 840:
+
+		snd_play_fire(sndRocket);
+
+		with instance_create(x,y,FireRocket)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,5)
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 8
+
+		break;
+		
+		//ULTRA KRAKEN WHIRLPOOL
+		case 841:
+
+		snd_play_fire(sndRoll);
+		snd_play_fire(sndBloodCannon);
+		snd_play_fire(choose(sndWater1,sndWater2) );
+
+		var len = 96;
+		var hit = collision_line_point(x,y,
+		x + lengthdir_x(len,aimDirection),
+		y + lengthdir_y(len,aimDirection),
+		Wall,false,false);
+		while place_meeting(hit[1],hit[2],Wall)
+		{
+			hit[1] += lengthdir_x(2,aimDirection + 180);
+			hit[2] += lengthdir_y(2,aimDirection + 180);
+		}
+		with instance_create(x,y,Tentacle)
+		{
+			sprite_index=sprUltraTentacle;
+			ultra=true;
+			dmg = 6;//10+irandom(4)
+			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+			{
+				dmg += 1;
+			}
+			image_angle = aimDirection+(random(60)-30)*other.accuracy
+			team = other.team
+			ammo = 20//24
+			image_yscale += 0.3;
+			event_perform(ev_alarm,0)
+			visible = 0
+			with instance_create(x,y,LightningSpawn)
+			{
+				sprite_index=sprTentacleSpawn
+				image_angle = other.image_angle
+			}
+		}
+		with instance_create(hit[1],hit[2],UltraKrakenWhirlPool)
+		{
+			team = other.team;
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = -8
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,2)
+			scrMoveContactSolid(aimDirection + 180,8)
+		}
+		break;
+		
+		//PLOP REVOLVER
+		case 842:
+
+		snd_play_fire(choose(sndPlopMachinegun1,sndPlopMachinegun2))
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet12)
+		{
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+			image_angle = direction
+			team = other.team;
+			minSpeed += 1;
+			bulletCost = 2;
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,0.75);
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 3
+
+		break;
+		
+		//TURTLE SLUGGER
+		case 843:
+		snd_play_fire(sndTurtleShotgun)
+		repeat(3)
+		{
+			with instance_create(x,y,Smoke)
+				motion_add(aimDirection+(random(16)-8)*other.accuracy,3+random(2))
+		}
+		repeat(3)
+		{
+			with instance_create(x,y,Dust)
+				motion_add(aimDirection+(random(16)-8)*other.accuracy,3+random(2))
+		}
+		with instance_create(x,y,SlugBurst)
+		{
+			creator = other.id
+			ammo = 4
+			time = 4
+			team = other.team
+			alarm[0] = 15;
+			if Player.skill_got[42]
+			{
+				alarm[0] = 8;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					alarm[0] = 1;
+				}
+				scrActivateTail(hasTailNow);
+			}
+		}
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = -4
+		break;
+		
+		//SUPER PLOP MACHINEGUN
+		case 844:
+
+		snd_play_fire(choose(sndPlopShotgun1,sndPlopShotgun2))
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		
+		var ang = aimDirection;
+		var am = 7;
+		var range = 35 * accuracy;
+		var angStep = range / am;
+		ang -= range * 0.5;
+		repeat(am)
+		{
+			with instance_create(x,y,Bullet12)
+			{
+				motion_add(ang,18)
+				image_angle = direction
+				team = other.team;
+				minSpeed += 1;
+				bulletCost = 2;
+			}
+			ang += angStep;
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,0.5);
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 4
+
+		break;
+		
+		//SUPER ENERGY SHOTGUN
+		case 845:
+		if Player.skill_got[17]
+			snd_play_fire(sndEnergyShotgunUpg);
+		else
+			snd_play_fire(sndEnergyShotgun);
+		with instance_create(x,y,EnergyShotgunBurst)
+		{
+			creator = other.id
+			ammo = 8
+			time = 2
+			projectileSpeed += 2;
+			accuracy = 32;
+			amountOfProjectiles += 2;
+			team = other.team
+			alarm[1] = 4;
+			event_perform(ev_alarm,0)
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,4);
+			motion_add(aimDirection+180,4)
+		}
+
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 9
+
+		break;
+		
+		//ULTRA SHOVEL CRASH
+		case 846:
+		
+		with instance_create(x,y,UltraShovelCrashBurst)
+		{
+			creator = other.id
+			ammo = 2
+			time = 5
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = -4
+
+		break;
+		
+		//ULTRA AUTO CROSSBOW
+		case 847:
+
+		snd_play_fire(sndUltraCrossbow)
+
+		with instance_create(x,y,UltraBolt)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,24)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 5
+
+		break;
+		
+		//ULTRA GATLING SLUGGER
+		case 848:
+
+		snd_play_fire(sndUltraSlugger)
+
+		with instance_create(x,y,UltraSlug)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,18)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(25,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(25,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 9
+
+		break;
+		
+		//ULTRA DIRECTOR REVOLVER
+		case 849:
+
+		snd_play_fire(sndUltraDirectorRifle)
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+ 180,3)
+		}	
+		repeat(2)
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+180+random(50)-25,2+random(2))
+
+		with instance_create(x,y,UltraDirectorRifleBullet)
+		{
+			motion_add(aimDirection+random(6)-3,9)
+			image_angle = direction
+			team = other.team
+		}
+		BackCont.viewx2 += lengthdir_x(15,aimDirection + 180)*UberCont.opt_shake;
+		BackCont.viewy2 += lengthdir_y(15,aimDirection + 180)*UberCont.opt_shake;
+		BackCont.shake += 10;
+		wkick = 5;
+		
+		break;
+		
+		//ULTRA LIGHTNING HAMMER
+		case 850:
+
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndUltraLightningHammerUpg);
+		else
+			snd_play_fire(sndUltraLightningHammer);
+
+		instance_create(x,y,Smoke)
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection,4);
+			motion_add(aimDirection,8)
+		}
+		with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraLightningSlash)
+		{
+			//shovel is 8
+		longarms = 0
+	
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,3+longarms)
+		image_angle = direction
+		team = other.team}
+
+		wepangle = -wepangle
+		
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -4
 
 		break;
 	}

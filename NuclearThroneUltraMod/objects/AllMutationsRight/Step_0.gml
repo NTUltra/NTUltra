@@ -1,7 +1,8 @@
 /// @description xxx
 x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - 32
 y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 64;
-
+if instance_exists(UltraIcon)
+	y -= 24;
 if 
 mouse_x > x - 12 && mouse_x < x + 12 &&
 mouse_y > y - 12 && mouse_y < y + 12

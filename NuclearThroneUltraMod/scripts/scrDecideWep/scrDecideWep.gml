@@ -110,7 +110,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			decideWep = maxValidTierWep;
 		}
 	}
-	while (decideWep == 402 && !(scrIsCrown(5) || dataRef.skill_got[0] ))//Rolled gun gun? you must have crown of guns or heavy heart
+	while (decideWep == 402 && !(scrIsCrown(5) || dataRef.skill_got[0] || dataRef.area == 130 || dataRef.area == 131 || dataRef.area == 132 || dataRef.area == 133 || dataRef.area == 134))//Rolled gun gun? you must have crown of guns or heavy heart
 	{
 		decideWep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 	}

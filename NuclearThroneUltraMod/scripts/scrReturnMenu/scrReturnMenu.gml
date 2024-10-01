@@ -2,7 +2,15 @@
 // /@description
 ///@param
 function scrReturnMenu(){
-	if (UberCont.loadRunMenuState > 0)
+	if Menu.openSaveSlots
+	{
+		if Menu.saveSlotState > 0
+			Menu.saveSlotState -= 1;
+		else
+			Menu.openSaveSlots = 0;
+		return false;
+	}
+	else if (UberCont.loadRunMenuState > 0)
 	{
 		return false;
 	}
@@ -23,9 +31,13 @@ function scrReturnMenu(){
 		//room_goto(romInit)
 		//if OptionSelect2.selected = 1
 		//room_goto(romInit)
+		/*
+		debug("SAVE!?");
 		with UberCont
-		scrSave();
-
+		{
+			scrSave();
+		}
+		*/
 		with LoadoutSelect
 		instance_destroy()
 		with CharSelect
@@ -59,6 +71,13 @@ function scrReturnMenu(){
 	{
 		snd_play_2d(sndClickBack);
 		with OptionSelect {
+			if instance_exists(DeleteSave)
+			{
+				with UberCont
+				{
+					scrSaveGamePreferenceOptions();	
+				}
+			}
 			alarm[0] = 1;
 			with option
 				instance_destroy()

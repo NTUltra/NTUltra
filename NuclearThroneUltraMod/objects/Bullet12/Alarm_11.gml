@@ -1,13 +1,11 @@
 /// @description ultramod coming soon
-exit;
 var um = GetPlayerUltramod()
-if um == ultramods.boltBullet
+if um == ultramods.boltBullet || um == ultramods.shotgunBolt
 {
 	instance_destroy(id,false);
-	snd_play_fire(sndSplinterGun)
-	with instance_create(x,y,Splinter)
+	snd_play(choose(sndNailGun1,sndNailGun2,sndNailGun3))
+	with instance_create(x,y,Nail)
 	{
-		dmg -= choose(0,1);
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -28,13 +26,16 @@ else if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
+		laserhit += 1;
+		sprite_index=sprBouncingLaser;
 		dmg -= 1;
 		defaultPierce -= 8;
-		image_yscale -= 0.4;
+		image_yscale -= 0.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
 		team = other.team
+		alarm[2] = max(alarm[2] - 1, 1);
 		event_perform(ev_alarm,0);
 	}
 }
@@ -48,7 +49,7 @@ else if um == ultramods.bulletPlasma
 		else
 			snd_play_fire(sndPlasmaMinigun)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	with instance_create(x,y,BouncerPlasmaBall)
 	{
 		dmg = 1;
 		acc += 2;
@@ -62,20 +63,7 @@ else if um == ultramods.bulletPlasma
 		team = other.team;
 		alarm[11] = 0;
 	}
-} else if um == ultramods.shotgunBolt //SHOTGUN
-{
-	with instance_create(x,y,Splinter)
-	{
-		dmg -= choose(0,1,1,1);
-		scrCopyWeaponMod(other);
-		direction = other.direction;
-		image_angle = direction;
-		speed = other.speed+4;
-		team = other.team;
-		alarm[11] = 0;
-	}
-	instance_destroy(id,false);
-}else if um == ultramods.shotgunSplinterElectro
+} else if um == ultramods.shotgunSplinterElectro
 {
 	with Player
 	{
@@ -89,9 +77,9 @@ else if um == ultramods.bulletPlasma
 	image_angle = direction}
 	with instance_create(x,y,ElectroBall)
 	{
-		dmgReduction = 2;
-		electroDelay = 16;
-		damageDelay += 5;
+		dmgReduction = 1;
+		electroDelay = 14;
+		damageDelay += 4;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
@@ -109,7 +97,7 @@ else if um == ultramods.lightningPellet
 		dmg -= 3;
 		image_angle = other.direction;
 		team = other.team
-		ammo = 4 + round(other.speed*0.9);
+		ammo = 6 + round(other.speed*0.9);
 		canUltraMod = false;
 		event_perform(ev_alarm,0)
 		with instance_create(x,y,LightningSpawn)

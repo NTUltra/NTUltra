@@ -989,13 +989,27 @@ if !instance_exists(LevCont) and visible = 1
 		if canMeleeAmmo || wep_type[wep] != 0
 		{
 			
-			if my_health < maxhealth
+			if ultra_got[62] && altUltra//Living armour
 			{
-				wep_cost[wep] = wep_cost_base[wep] * 0.95;
+				if armour < maxarmour
+				{
+					wep_cost[wep] = wep_cost_base[wep] * 0.95;
+				}
+				else
+				{
+					wep_cost[wep] = wep_cost_base[wep] * 1.15;
+				}
 			}
 			else
 			{
-				wep_cost[wep] = wep_cost_base[wep] * 1.15;
+				if my_health < maxhealth
+				{
+					wep_cost[wep] = wep_cost_base[wep] * 0.95;
+				}
+				else
+				{
+					wep_cost[wep] = wep_cost_base[wep] * 1.15;
+				}
 			}
 		}
 		else

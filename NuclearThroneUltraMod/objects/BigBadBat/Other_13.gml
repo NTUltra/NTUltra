@@ -1,6 +1,17 @@
 /// @description EXPLOSION WAZER
 snd_play(sndWazerStart,0,true,false,3,false,false,0.8,false,id);
 sprite_index = spr_fire;
+if array_length(myLasers) > 1
+{
+	with myLasers[0]
+	{
+		event_perform(ev_alarm,0);	
+	}
+	with myLasers[1]
+	{
+		event_perform(ev_alarm,0);	
+	}
+}
 myLasers = [];
 if instance_exists(Player)
 var dir = point_direction(x,y,Player.x,Player.y);

@@ -74,11 +74,12 @@ image_index = 0
 		}
 	
 		var dir = 0;
-		var dirStep = 36;
-		repeat(10)
+		var dirStep = 45;
+		repeat(8)
 		{
 			with instance_create(x,y,Laser)
 			{
+				sprite_index=sprBouncingLaser;
 				image_angle = dir
 				team = other.team
 				event_perform(ev_alarm,0)
@@ -111,11 +112,12 @@ if KeyCont.key_spec[p] = 3
 			y = mouse_y;
 		}
 		var dir = 0;
-		var dirStep = 36;
-		repeat(10)
+		var dirStep = 45;
+		repeat(8)
 		{
 			with instance_create(x,y,Laser)
 			{
+				sprite_index=sprBouncingLaser;
 				image_angle = dir
 				team = other.team
 				event_perform(ev_alarm,0)

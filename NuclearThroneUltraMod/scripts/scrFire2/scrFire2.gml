@@ -162,7 +162,7 @@ function scrFire2(hasTailNow) {
 	{
 	if Player.skill_got[17] = 1//laserbrain
 	{
-	dmg=17+(other.betterlaserbrain*2)
+	dmg=19+(other.betterlaserbrain)
 	}
 	else
 	dmg = 16//rench4//sledge16
@@ -2731,15 +2731,15 @@ function scrFire2(hasTailNow) {
 	//ULTRA SLUGGER
 	case 289:
 
-	snd_play_fire(sndSuperSlugger)
+	snd_play_fire(sndUltraSlugger)
 
 	with instance_create(x,y,UltraSlug)
-	{motion_add(aimDirection+(random(10)-5)*other.accuracy,16)
+	{motion_add(aimDirection+(random(10)-5)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 16
 	wkick = 9
 
@@ -4331,7 +4331,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 
-	//ULTRA KRAKEN CANNON
+	//ULTRA KRAKEN LAUNCHER
 	case 341:
 
 	if !skill_got[2]
@@ -7886,7 +7886,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+ldx,y+ldy,Slug)
 	{
-		motion_add(aimdir,16)
+		motion_add(aimdir,17)
 		image_angle = direction
 		team = other.team
 	}
@@ -7902,7 +7902,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,Slug)
 	{
-		motion_add(aimdir,16)
+		motion_add(aimdir,17)
 		image_angle = direction
 		team = other.team
 	}
@@ -7932,7 +7932,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+ldx,y+ldy,HeavySlug)
 	{
-		motion_add(aimdir,14)
+		motion_add(aimdir,15)
 		image_angle = direction
 		team = other.team
 	}
@@ -7948,7 +7948,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+ldx,y+ldy,HeavySlug)
 	{
-		motion_add(aimdir,14)
+		motion_add(aimdir,15)
 		image_angle = direction
 		team = other.team
 	}
@@ -8348,7 +8348,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndSplinterGun)
 
-	var am = 24;
+	var am = 20;
 	var angStep = 360/am;
 	angStep *= accuracy;
 	var angg = aimDirection - (angStep * (am*0.5));
@@ -8388,7 +8388,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndBouncerShotgun)
 
-	var am = 14;
+	var am = 10;
 	var angStep = 360/am;
 	angStep *= accuracy;
 	var angg = aimDirection - (angStep * (am*0.5));
@@ -8672,8 +8672,7 @@ function scrFire2(hasTailNow) {
 	//ULTRA HEAVY SLUGGER
 	case 472:
 
-	snd_play_fire(sndHeavySlugger);
-	snd_play_fire(sndUltraShotgun);
+	snd_play_fire(sndUltraHeavySlugger);
 
 	with instance_create(x,y,UltraHeavySlug)
 	{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)//16
@@ -8694,7 +8693,7 @@ function scrFire2(hasTailNow) {
 	//ULTRA BAZOOKA
 	case 473:
 
-	snd_play_fire(sndNukeFire);
+	snd_play_fire(sndUltraBazooka);
 
 	with instance_create(x,y,UltraRocket)
 	{motion_add(aimDirection+(random(4)-2)*other.accuracy,20)
@@ -8702,7 +8701,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,2);
+		scrMoveContactSolid(aimDirection + 180,3);
 		motion_add(aimDirection+180,5)
 	}
 	BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
@@ -9181,10 +9180,10 @@ function scrFire2(hasTailNow) {
 	{
 		if Player.skill_got[17] = 1//laserbrain
 		{
-		dmg=10+(other.betterlaserbrain)
+			dmg=13+(other.betterlaserbrain)
 		}
 		else
-		dmg = 9
+			dmg = 10
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -9534,18 +9533,21 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Smoke)
 	if !skill_got[2]
-	scrMoveContactSolid(aimDirection,5)
+	{
+		scrMoveContactSolid(aimDirection,5)
+		motion_add(aimDirection,2)
+	}
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x(6+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(6+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index=sprUltraSlash;
-		dmg = 30
+		dmg = 35
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
-		motion_add(aimDirection,2.7+longarms)
+		motion_add(aimDirection,3+longarms)
 		image_angle = direction
 		team = other.team
 	}
@@ -9908,7 +9910,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndQuadMachinegun)
 
-	var am = 16;
+	var am = 13;
 	var angStep = 360/am;
 	angStep *= accuracy;
 	var angg = aimDirection - (angStep * (am*0.5));
@@ -10341,23 +10343,23 @@ function scrFire2(hasTailNow) {
 	}
 
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection+(random(8)-4)*other.accuracy,15)
+	{motion_add(aimDirection+(random(8)-4)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection+10*other.accuracy+(random(8)-4)*other.accuracy,15)//18
+	{motion_add(aimDirection+10*other.accuracy+(random(8)-4)*other.accuracy,17)//18
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection+20*other.accuracy+(random(8)-4)*other.accuracy,15)
+	{motion_add(aimDirection+20*other.accuracy+(random(8)-4)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection-10*other.accuracy+(random(8)-4)*other.accuracy,15)
+	{motion_add(aimDirection-10*other.accuracy+(random(8)-4)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,HeavySlug)
-	{motion_add(aimDirection-20*other.accuracy+(random(8)-4)*other.accuracy,15)
+	{motion_add(aimDirection-20*other.accuracy+(random(8)-4)*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 
@@ -11382,7 +11384,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x,y,ChargeBow)
 	{
-		boltSprite = sprGoldBolt;
+		boltSprite = sprGoldenChargeBolt;
 		maxcharge=3;//maxrate
 		creator = other.id
 		chargetime = 5;//6
@@ -17935,18 +17937,18 @@ function scrFire2(hasTailNow) {
 		maxcharge = 6;//maxrate
 		type = 0;
 		creator = other.id
-		chargetime = 8;
+		chargetime = 7;
 		team = other.team
 		if Player.skill_got[42]
 		{
 			maxcharge += 1;
-			chargetime = 6;
+			chargetime = 5;
 			rate += 1;
 			costtime *= Player.betterTail;
 			if Player.ultra_got[97] && !Player.altUltra
 			{
 				rate += 1;
-				chargetime = 4;
+				chargetime = 3;
 			}
 			maxcharge *= Player.betterTail;
 			scrActivateTail(hasTailNow);

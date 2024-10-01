@@ -8,7 +8,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) && Player.race == 21 && Player.altUltra)
 	{
 		ultra_name[0] = "CASH FLOW"
-		ultra_text[0] = "REPLACE BEAM WITH <y>CASH FLOW<y>#<y>CASH FLOW<y> USES <y>CASH<y> INSTEAD OF <g>RADS<g>#GET 100 <y>CASH<y> EVERY AREA#<y>CASH<y> MAXIMUM IS 500#KILLS GENERATE <y>CASH<y>#(UPGRADES TO BEAM STILL APPLY)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN <r>DEBT<r>#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF <r>DEBT<r> AT THE START OF AN AREA"
+		ultra_text[0] = "REPLACE BEAM WITH <y>CASH FLOW<y>#<y>CASH FLOW<y> USES <y>CASH<y> INSTEAD OF <g>RADS<g>#GET 200 <y>CASH<y> EVERY AREA#<y>CASH<y> MAXIMUM IS 500#KILLS GENERATE <y>CASH<y>#(UPGRADES TO BEAM STILL APPLY#BUT RECYCLE GLAND#INSTEAD OF ENERGY BRAIN)##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN <r>DEBT<r>#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF <r>DEBT<r> AT THE START OF AN AREA"
 		ultra_tips[0] = "C.R.E.A.M."
 	}
 	
@@ -657,7 +657,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[82] = "the anomaly meta"
 
 	ultra_name[83] = "MELTDOWN"
-	ultra_text[83] = "INCREASE <g>RADIATION<g> VALUE BY 20%#REDUCE <g>BEAM<g> COST BY 20%#<g>ULTRA WEAPONS<g> COST 40% LESS <g>RADS<g>"
+	ultra_text[83] = "INCREASE <g>RADIATION<g> VALUE BY 20%#REDUCE <g>BEAM<g> COST BY 10%#<g>ULTRA WEAPONS<g> COST 40% LESS <g>RADS<g>"
 	ultra_tips[83] = "freezeup"
 
 	ultra_name[84] = "POWER"
