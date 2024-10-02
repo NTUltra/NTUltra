@@ -2,6 +2,7 @@ raddrop = 3
 maxhealth = 3
 mySize = 1
 event_inherited()
+team = 7;
 canFly = true;
 meleedamage = 0
 spr_idle = sprPitGhostLaserGuy;

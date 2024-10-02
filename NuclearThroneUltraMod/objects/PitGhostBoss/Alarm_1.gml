@@ -42,6 +42,10 @@ if target != noone {
 	else
 	{
 		justAroundWall = true;
+		if target.object_index == Player && random(4) < 1
+		{
+			event_user(2);
+		}
 		motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);
 		if random(4) < 1 {
 	        motion_add(random(360), acc)

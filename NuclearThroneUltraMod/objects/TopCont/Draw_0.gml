@@ -99,7 +99,7 @@ if UberCont.opt_enemy_xray
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx-1,xyy+1,right,image_yscale,c_white,1);
 					//shader_reset();
 					//draw_sprite_part_ext(sprite_index,image_index,0,xdt,sprite_width,xh,xwx,xyy,right,image_yscale,c_white,1);
-					draw_sprite_ext(sprite_index,image_index,x,y,right,image_yscale,image_angle,c_white,1);
+					draw_sprite_ext(sprite_index,image_index,x,y,right,image_yscale,image_angle,c_white,image_alpha);
 					//shader_set(shdDither);
 				}
 			}
@@ -240,6 +240,10 @@ with TeleportationField
 	event_user(0);
 }
 with AnimDestroyTop
+{
+	draw_self();	
+}
+with BecomeGhostExplosion
 {
 	draw_self();	
 }
@@ -427,6 +431,10 @@ with GhettoBlast
 	if visible
 		draw_self();
 }*/
+with GhostCorpse
+{
+	event_perform(ev_draw,0);
+}
 with GhostEffect
 {
 	draw_self();

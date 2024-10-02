@@ -2,6 +2,7 @@ raddrop = 12
 maxhealth = 24
 mySize = 1
 event_inherited()
+team = 7;
 canFly = true;
 meleedamage = 0
 spr_idle = sprPitGhostSpawner;

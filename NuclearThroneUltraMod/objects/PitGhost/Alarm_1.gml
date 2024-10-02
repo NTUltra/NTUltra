@@ -21,7 +21,7 @@ if target != noone {
 				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
         }
         else {
-            direction = point_direction(x,y,target.x, target.y) + random_range(90,-90);
+            direction = point_direction(x,y,target.x, target.y) + random_range(60,-60);
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }

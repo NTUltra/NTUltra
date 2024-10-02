@@ -55,7 +55,10 @@ else
 	with instance_create(x, y, PitGhostLaser) {
 		raddrop = 0;
 	    motion_add(other.gunangle + 5, 2)
-	    image_angle = direction
+	    if hspeed > 0
+			right = 1;
+		else
+			right = -1;
 	    team = other.team
 		walk = actTime;
 		alarm[1] = actTime;
@@ -64,7 +67,10 @@ else
 	with instance_create(x, y, PitGhostLaser) {
 		raddrop = 0;
 	    motion_add(other.gunangle - 5, 2)
-	    image_angle = direction
+	    if hspeed > 0
+			right = 1;
+		else
+			right = -1;
 	    team = other.team
 		walk = actTime;
 		alarm[1] = actTime;

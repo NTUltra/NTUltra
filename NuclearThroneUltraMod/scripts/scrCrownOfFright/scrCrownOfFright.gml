@@ -6,7 +6,7 @@ function scrCrownOfFright(){
 	if scrIsCrown(37) && canGhost
 	{
 		var ghostDamage = my_health
-		ghostDamage += 2;
+		ghostDamage += 1;
 		if ghostDamage < 0
 		{
 			ghostDamage *= -0.5;

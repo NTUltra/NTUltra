@@ -84,7 +84,7 @@ else if um == ultramods.laserBullet
 	with instance_create(x,y,BloodLaser)
 	{
 		dmg -= 1;
-		defaultPierce -= 16;
+		defaultPierce -= 12;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

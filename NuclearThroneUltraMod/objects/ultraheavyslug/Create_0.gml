@@ -5,4 +5,4 @@ dmg = 140;
 typ = 3;
 splashRange += 4;
 shotgunShoulderSplashRange += 3;
-corpseBoost += 2;
+corpseBoost += 1;

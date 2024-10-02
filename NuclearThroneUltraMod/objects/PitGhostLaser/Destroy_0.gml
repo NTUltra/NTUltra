@@ -1,7 +1,20 @@
 scrDrop(24,0)
-
+morphMe = 6;
 event_inherited()
-
+with instance_create(x,y,GhostCorpse)
+{
+	mySize = other.mySize;
+	sprite_index = other.spr_hurt;
+	my_health = other.my_health;
+	spr_dead = other.spr_dead;
+	corpseBoost = other.corpseBoost;
+	right = other.right;
+	holdSpeed = other.speed;
+	holdDirection = other.direction;
+	speed = other.speed;
+	direction = other.direction;
+	image_angle = direction;
+}
 repeat(3)
 {
 	with instance_create(x,y,GhostEffect)

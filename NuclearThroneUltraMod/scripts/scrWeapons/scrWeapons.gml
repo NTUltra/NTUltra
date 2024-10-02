@@ -9523,7 +9523,7 @@ function scrWeapons() {
 	wep_cost[849] = 5
 	wep_sprt[849] = sprUltraDirectorRifle
 	wep_area[849] = 18
-	wep_text[849] = "what way am I coming from"
+	wep_text[849] = "each projectile deals more damage#before redirecting!"
 	wep_swap[849] = sndSwapPistol
 	wep_rad[849] = 13;
 	wep_popup[849] = "CAN REDIRECT MULTIPLE TIMES";
@@ -9535,7 +9535,7 @@ function scrWeapons() {
 	wep_cost[850] = 0
 	wep_sprt[850] = sprLightningHammer
 	wep_area[850] = 33
-	wep_text[850] = "shocking"
+	wep_text[850] = "God hammer"
 	wep_swap[850] = sndSwapHammer
 	wep_rad[850] = 20;
 	//Swiss army bowwa
