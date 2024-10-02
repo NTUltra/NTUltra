@@ -4,7 +4,7 @@ if instance_exists(Player) && place_meeting(x,y,Player)
 {
 	with Player
 	{
-		snd_play_2d(sndGhostTeleport);
+		snd_play_2d(sndGhostTeleport,0.1,false,false,3,0.9);
 		var dis = 0;
 		var xxx = x;
 		var yyy = y;

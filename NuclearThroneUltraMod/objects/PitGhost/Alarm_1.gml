@@ -21,7 +21,10 @@ if target != noone {
 				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
         }
         else {
-            direction = point_direction(x,y,target.x, target.y) + random_range(60,-60);
+			if target.object_index == Player && (Player.skill_got[8] || Player.race == 15)
+				direction = point_direction(x,y,target.x, target.y);
+			else
+				direction = point_direction(x,y,target.x, target.y) + random_range(60,-60);
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }
@@ -43,7 +46,7 @@ if target != noone {
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2
+	    } else if ran < 2 && (dis < 250 || dis > 400)
 		{
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);		
 		}

@@ -9,10 +9,10 @@ if explosionSize == 2
 	with instance_create(x,y,MediumGhostExplosion)
 	{
 		team = 7;
-		dmg = 3
+		dmg = 4
 		with myExplosionMask
 		{
-			dmg = 3
+			dmg = 4
 		}
 		direction = other.direction;
 		speed = 3;
@@ -24,7 +24,7 @@ else
 	with instance_create(x,y,SmallGhostExplosion)
 	{
 		team = 7;
-		dmg = 6
+		dmg = 3
 		with myExplosionMask
 		{
 			dmg = 3

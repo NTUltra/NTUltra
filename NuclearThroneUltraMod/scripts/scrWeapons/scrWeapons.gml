@@ -754,7 +754,7 @@ function scrWeapons() {
 	wep_name[67] = "SWORD GUN"
 	wep_type[67] = 3
 	wep_auto[67] = 1
-	wep_load[67] = 19
+	wep_load[67] = 20
 	wep_cost[67] = 3
 	wep_sprt[67] = sprSwordGun
 	wep_area[67] = 8
@@ -4054,10 +4054,10 @@ function scrWeapons() {
 	wep_name[361] = "REWIRER"
 	wep_type[361] = 5
 	wep_auto[361] = 1
-	wep_load[361] = 12
+	wep_load[361] = 15
 	wep_cost[361] = 2.5
 	wep_sprt[361] = sprRewirer
-	wep_area[361] = 14
+	wep_area[361] = 15
 	wep_text[361] = "connect the dots"
 	wep_swap[361] = sndSwapBow
 	wep_rad[361] = 0;
@@ -5395,7 +5395,7 @@ function scrWeapons() {
 	wep_name[479] = "FROST SWORD GUN"
 	wep_type[479] = 3
 	wep_auto[479] = 1
-	wep_load[479] = 19
+	wep_load[479] = 20
 	wep_cost[479] = 4
 	wep_sprt[479] = sprFrostSwordGun
 	wep_area[479] = 12
@@ -7875,7 +7875,7 @@ function scrWeapons() {
 	wep_name[703] = "MICRO MACHINEGUN"
 	wep_type[703] = 1
 	wep_auto[703] = 1
-	wep_load[703] = 4
+	wep_load[703] = 3
 	wep_cost[703] = 0.75
 	wep_sprt[703] = sprMicroMachinegun
 	wep_area[703] = 0
@@ -8568,7 +8568,7 @@ function scrWeapons() {
 	wep_name[765] = "GOLDEN MICRO MACHINEGUN"
 	wep_type[765] = 1
 	wep_auto[765] = 1
-	wep_load[765] = 3.5
+	wep_load[765] = 3
 	wep_cost[765] = 0.75
 	wep_sprt[765] = sprGoldenMicroMachinegun
 	wep_area[765] = 17

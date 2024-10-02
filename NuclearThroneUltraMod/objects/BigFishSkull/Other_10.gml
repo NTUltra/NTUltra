@@ -39,12 +39,13 @@ if spr_idle == sprBigFishSkullOpen
 		with instance_create(x,y,WantBoss)
 		{oasis=true;
 		event_perform(ev_alarm,0) }
+		var prev = 1;
+		if instance_exists(Player) && Player.area == 105
+			prev = 105;
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 101;
-			if instance_exists(Player) && Player.area == 105
-				pevArea = 105;
-			prevArea = 1;
+			prevArea = prev;
 		}
 	}
 }

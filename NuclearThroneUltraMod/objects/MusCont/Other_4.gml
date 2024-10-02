@@ -327,7 +327,11 @@ if scrIsGamemode(8) && area != 0
         song = musUltraIrradiatedSkies
         amb = ambUltra138;
     }
-	
+	else if area == 139 {
+
+        song = musUltraThePit
+        amb = ambUltra126;
+    }
 	if (confirmSound) {
         snd_play_2d(confirmSound);
         confirmSound = false;

@@ -5525,16 +5525,17 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*8,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*8,aimDirection),Shank)
+	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*8,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*8,aimDirection),InversionMagnetShank)
 	{
 		dmg = 3;
 		
-	longarms = 0
+		longarms = 0
 	
-	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,2+longarms)
-	image_angle = direction
-	team = other.team}
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection+(random(10)-5)*other.accuracy,2+longarms)
+		image_angle = direction
+		team = other.team
+	}
 
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(2,aimDirection)*UberCont.opt_shake

@@ -9,6 +9,8 @@ if firstTime
 		scrGiveSnooze();
 	}
 }
+if alarm[7] > 0 && my_health < targetHealth
+	my_health += 1;
 if target != noone {
 	scrDrop(4,0);
 	var ran = random(100);

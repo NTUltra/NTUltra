@@ -1,6 +1,6 @@
 /// @description Start a boss fight?
 alarm[0] = 30;
-if instance_exists(Player)
+if instance_exists(Player) && alarm[1] < 1
 {
 	if point_distance(x,y,Player.x,Player.y) < 200
 	{
@@ -10,10 +10,9 @@ if instance_exists(Player)
 			if team != 2
 				numEn ++;
 		}
-		if numEn < 8 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+		if numEn < 6 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 		{
-			instance_create_depth(x,y,depth-1,BecomeGhostBoss);
-			alarm[0] = 0;
+			alarm[1] = 60;
 		}
 	}
 }

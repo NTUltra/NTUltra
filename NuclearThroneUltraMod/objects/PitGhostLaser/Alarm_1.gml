@@ -15,7 +15,7 @@ if target != noone {
 		speed *= 0.5;
 	}
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall && dis > 48 && random(2) < 1{
+        if !justAroundWall && dis > 48 && random(2) < 1 {
 			alarm[2] = 12;
 			alarm[1] += 12 + actTime + 10;
 			walk = 0;
@@ -26,7 +26,11 @@ if target != noone {
 			instance_create(x+5,y,Notice);
         }
         else {
-            direction = point_direction(x,y,target.x, target.y) +  180 + random_range(90,-90)
+			if target.object_index == Player && (Player.skill_got[8] || Player.race == 15)
+				direction = point_direction(x,y,target.x, target.y);
+			else
+				direction = point_direction(x,y,target.x, target.y) + 180 + random_range(90,-90);
+            //direction = point_direction(x,y,target.x, target.y) +  180 + random_range(90,-90)
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }
@@ -48,7 +52,7 @@ if target != noone {
 	        else if hspeed < 0
 				right = -1
 	    }
-		else
+		else if dis < 250 || dis > 400
 		{
 			direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);	
 		}

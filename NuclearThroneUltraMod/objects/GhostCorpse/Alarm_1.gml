@@ -8,9 +8,11 @@ if explosionSize == 2
 	with myAnim
 	{
 		sprite_index = sprGhostAboutToExplodeMedium;
+		image_speed = 0.45;
 	}
 else
 	with myAnim
 	{
 		sprite_index = sprGhostAboutToExplodeSmall;
+		image_speed = 0.45;
 	}

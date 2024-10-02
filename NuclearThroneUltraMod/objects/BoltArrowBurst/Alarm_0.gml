@@ -38,8 +38,8 @@ if instance_exists(creator)
 		if !skill_got[2]
 		{
 			var aimDirection = point_direction(x,y,xx,yy);
-			scrMoveContactSolid(aimDirection + 135,0.5);
-			motion_add(aimDirection+135,0.8)
+			//scrMoveContactSolid(aimDirection + 135,0.25);
+			motion_add(aimDirection+135,1)
 		}
 
 	}

@@ -5,6 +5,10 @@ with PlayerInFakeDeath
 }
 with Player
 {
+	with MusCont
+	{
+		audio_stop_sound(song);	
+	}
 	visible = true;
 	x = VoidMaster.x;
 	y = VoidMaster.y + 48;

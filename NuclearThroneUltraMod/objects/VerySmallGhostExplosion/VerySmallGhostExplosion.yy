@@ -43,5 +43,5 @@
     "name":"mskCrownGhostVerySmallExplode",
     "path":"sprites/mskCrownGhostVerySmallExplode/mskCrownGhostVerySmallExplode.yy",
   },
-  "visible":true,
+  "visible":false,
 }

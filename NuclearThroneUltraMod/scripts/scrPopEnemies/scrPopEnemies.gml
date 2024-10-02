@@ -508,16 +508,16 @@ function scrPopEnemies() {
 	//THE PIT!
     if spawnarea = 139 {
 		if loops > 0 {
-			if random(35) < 1
-				instance_create(x + 16, y + 16, GraveyardSniper)
+			if random(30) < 1
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper, InvertedRaven, InvertedMeleeBandit,InvertedBuffGator,InvertedGator))
 	        else if random(3) < 1
-				instance_create(x + 16, y + 16, choose(CloudShooter,CloudKnifer,CloudShooter,CloudShooter,Raven,JungleFly))
+				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostExploder,PitGhostLaser,PitGhostSpawner))
 	        else {
-	            instance_create(x + 16, y + 16, choose(Bandit,CloudFlyer,CloudFlyer,CloudFlyer, CloudShooter,CloudKnifer))
+	            instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostSpawner))
 	        }
 		} else {
 	        if random(3) < 1
-				instance_create(x + 16, y + 16, choose(PitGhost,PitGhost,PitGhostLaser,PitGhostSpawner))
+				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostExploder,PitGhostLaser,PitGhostSpawner))
 	        else {
 	            instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostSpawner))
 	        }

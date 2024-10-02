@@ -1,2 +1,5 @@
 /// @description Spawn the boss
-instance_create(x,y,CloudBoss);
+if sprite_index == sprInvertedCloudBoss
+	instance_create(x,y,InvertedCloudBoss);
+else
+	instance_create(x,y,CloudBoss);

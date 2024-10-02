@@ -3,6 +3,7 @@ morphMe = 6;
 event_inherited()
 with instance_create(x,y,GhostCorpse)
 {
+	snd_play(sndGhostFlyDie,0.1,false,true,3,false,false,0.65,false,id);
 	mySize = other.mySize;
 	sprite_index = other.spr_hurt;
 	my_health = other.my_health;

@@ -438,7 +438,7 @@ goal = 1;
 else if Player.area == 138 || Player.area == 140//Cloudland || Player.are
 goal = 150 + s;
 else if Player.area == 139//THE PIT
-goal = 150 + s;
+goal = 170 + s;
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;

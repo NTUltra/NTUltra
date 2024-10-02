@@ -9,6 +9,7 @@ mySize = 2
 scrBossHealthBuff();
 
 event_inherited()
+targetHealth = maxhealth;
 instance_create(x,y,DramaCamera);
 spr_idle = sprStatueBossIdle
 spr_walk = sprStatueBossIdle
@@ -26,6 +27,7 @@ myCompanions = [];
 amountOfProjectiles = 54//64;
 alarm[2] = 10;
 alarm[3] = 110;
+alarm[7] = 200;
 spinRate = 1.8;
 pSpeed = 2.8;
 waveSpeed = 3.2;

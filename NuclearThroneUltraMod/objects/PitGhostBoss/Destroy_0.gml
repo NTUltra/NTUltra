@@ -3,6 +3,7 @@
 // Inherit the parent event
 event_inherited();
 scrBossKill();
+scrEndBossMusic();
 with enemy
 {
 	my_health = 0;	
@@ -26,4 +27,10 @@ repeat(12)
 	{
 		motion_add(random(360),2 + random(4));
 	}
+}
+with instance_create(x,y,BecomeGhostExplosion)
+{
+	team = other.team;
+	sprite_index = sprGhostAboutToExplodeBig;
+	explosionSize = 3;
 }

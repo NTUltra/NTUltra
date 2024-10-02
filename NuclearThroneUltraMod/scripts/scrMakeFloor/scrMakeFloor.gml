@@ -521,6 +521,12 @@ function scrMakeFloor(limiter) {
 		instance_create(x+96,y+96,Floor)
 		instance_create(x+96,y+128,Floor)
 		instance_create(x+128,y+128,Floor)
+		/*
+		with instance_create(x+128,y+128,PlayerGhostTeleporter)
+		{
+			direction = 270;
+			image_angle = 90;
+		}*/
 		instance_create(x+128,y+96,Floor)
 		instance_create(x+160,y+96,Floor)
 		instance_create(x+160,y+64,Floor)
@@ -532,7 +538,6 @@ function scrMakeFloor(limiter) {
 		{
 			direction = 180;
 		}
-		
 		instance_create(x,y-32,Floor)
 		instance_create(x+32,y-32,Floor)
 		instance_create(x+32,y-64,Floor)
@@ -541,6 +546,13 @@ function scrMakeFloor(limiter) {
 		instance_create(x+96,y-96,Floor)
 		instance_create(x+96,y-128,Floor)
 		instance_create(x+128,y-128,Floor)
+		/*
+		with instance_create(x+128,y-128,PlayerGhostTeleporter)
+		{
+			direction = 90;
+			image_angle = 90;
+		}
+		*/
 		instance_create(x+128,y-96,Floor)
 		instance_create(x+160,y-96,Floor)
 		instance_create(x+160,y-64,Floor)
@@ -880,7 +892,9 @@ function scrMakeFloor(limiter) {
 	else if area == 135
 		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
 	else if area == 139
-		trn = choose(0,0,0,0,0,0,180,90,-90)
+	{
+		trn = choose(0,0,0,0,0,0,180,90,-90);
+	}
 	else if area == 138 || area == 140
 	{
 		trn = 0;

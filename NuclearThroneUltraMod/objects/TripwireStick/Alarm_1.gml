@@ -24,6 +24,8 @@ if instance_exists(TripwireStick) && instance_number(TripwireStick) > 1
 				with instance_create(xx,yy,Laser)
 				{
 					scrCopyWeaponMod(other);
+					if instance_exists(Player) && Player.skill_got[17]
+						image_yscale -= 0.1;
 					image_angle = dir
 					team = other.team
 					event_perform(ev_alarm,0)
@@ -32,4 +34,4 @@ if instance_exists(TripwireStick) && instance_number(TripwireStick) > 1
 		}
 	}
 }
-alarm[1] = 15;
+alarm[1] = 16 + instance_number(TripwireStick);

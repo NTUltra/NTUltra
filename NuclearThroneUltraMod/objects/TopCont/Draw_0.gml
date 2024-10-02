@@ -35,6 +35,10 @@ draw_self();
 	{
 		draw_self();
 	}
+	with PitEnterance
+	{
+		draw_self();
+	}
 	with ElementorWall
 	{
 		if !visible
@@ -244,6 +248,10 @@ with AnimDestroyTop
 	draw_self();	
 }
 with BecomeGhostExplosion
+{
+	draw_self();	
+}
+with GhostExplosion
 {
 	draw_self();	
 }
