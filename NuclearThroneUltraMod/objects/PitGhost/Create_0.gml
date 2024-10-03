@@ -31,3 +31,4 @@ targetX = x;
 targetY = y;
 targetLerp = 0;
 goToTarget = false;
+loops = GetPlayerLoops();

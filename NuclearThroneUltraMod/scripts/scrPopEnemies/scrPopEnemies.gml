@@ -507,6 +507,7 @@ function scrPopEnemies() {
 	
 	//THE PIT!
     if spawnarea = 139 {
+		var n = instance_nearest(x,y,enemy);
 		if loops > 0 {
 			if random(30) < 1
 				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper, InvertedRaven, InvertedMeleeBandit,InvertedBuffGator,InvertedGator))
@@ -515,7 +516,7 @@ function scrPopEnemies() {
 	        else {
 	            instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostSpawner))
 	        }
-		} else {
+		} else if n == noone || (point_distance(x,y,n.x,n.y) > 48 || random(2) < 1){
 	        if random(3) < 1
 				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostExploder,PitGhostLaser,PitGhostSpawner))
 	        else {

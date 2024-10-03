@@ -19,7 +19,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 10;
+actTime = 11;
 
 acc = 1;
 maxSpeed = 4;
@@ -31,3 +31,4 @@ targetX = x;
 targetY = y;
 targetLerp = 0;
 goToTarget = false;
+loops = GetPlayerLoops();

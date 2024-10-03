@@ -10,9 +10,11 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall {
+        if !justAroundWall || loops > 4{
 			alarm[2] = 5;
 			alarm[1] += actTime;
+			if loops < 1
+				justAroundWall = true;
 			speed *= 0.5;
 			if choose(true,false)
 				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
@@ -22,7 +24,7 @@ if target != noone {
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }
-		justAroundWall = false;
+		//justAroundWall = false;
         if target.x < x
 			right = -1
         else if target.x > x
@@ -33,7 +35,7 @@ if target != noone {
 		if dis < 300 && random(20) < 1
 		{
 			alarm[2] = 5;
-			alarm[1] += actTime;
+			alarm[1] += actTime * 3;
 			direction = point_direction(x, y, target.x, target.y);
 		}
 		justAroundWall = true;
@@ -46,7 +48,7 @@ if target != noone {
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2 && (dis < 250 || dis > 400)
+	    } else if ran < 2 && (dis < 200 || dis > 450)
 		{
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);		
 		}

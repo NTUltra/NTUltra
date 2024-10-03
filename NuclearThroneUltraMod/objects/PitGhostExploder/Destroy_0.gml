@@ -9,7 +9,7 @@ with instance_create(x,y,GhostCorpse)
 	my_health = other.my_health;
 	spr_dead = sprPitGhostExploderDead1;
 	corpseBoost = other.corpseBoost;
-	right = other.right;
+	right = 1;
 	holdSpeed = other.speed * 0.5;
 	explosionSize = 2;
 	direction = 45;
@@ -29,7 +29,7 @@ with instance_create(x,y,GhostCorpse)
 	my_health = other.my_health;
 	spr_dead = sprPitGhostExploderDead2;
 	corpseBoost = other.corpseBoost;
-	right = other.right;
+	right = 1
 	holdSpeed = other.speed * 0.5;
 	explosionSize = 2;
 	direction = 225;
@@ -49,7 +49,7 @@ with instance_create(x,y,GhostCorpse)
 	my_health = other.my_health;
 	spr_dead = sprPitGhostExploderDead3;
 	corpseBoost = other.corpseBoost;
-	right = other.right;
+	right = 1
 	holdSpeed = other.speed * 0.5;
 	explosionSize = 1;
 	direction = 135;
@@ -69,7 +69,7 @@ with instance_create(x,y,GhostCorpse)
 	my_health = other.my_health;
 	spr_dead = sprPitGhostExploderDead4;
 	corpseBoost = other.corpseBoost;
-	right = other.right;
+	right = 1
 	holdSpeed = other.speed * 0.5;
 	explosionSize = 1;
 	direction = 315;

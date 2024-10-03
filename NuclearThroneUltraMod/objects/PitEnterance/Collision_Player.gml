@@ -19,6 +19,8 @@ if !disable
 					team = 7;
 					sprite_index = sprGhostAboutToExplodeMedium;
 					explosionSize = 2;
+					if instance_exists(Player)
+						motion_add(point_direction(Player.x,Player.y,x,y),0.25);
 				}
 			}
 		}

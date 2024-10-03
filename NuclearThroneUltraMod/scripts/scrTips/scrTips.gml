@@ -411,7 +411,7 @@ function scrTips() {
 	if Player.area = 138//CLOUDLAND
 	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!","venom damages you until you are at 1hp or you pickup hp");
 	if Player.area = 139//THE PIT
-	tip = choose("the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug");
+	tip = choose("the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?");
 	}
 	else if tiptype = 2
 	{

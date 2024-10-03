@@ -10,7 +10,9 @@ if place_meeting(x,y,Player) && spawnDelayed < 6
 	spawnDelayed ++;
 	exit;
 }
-	BackCont.shake += 30;
+alarm[0] = 0;
+alarm[2] = 0;
+BackCont.shake += 30;
 snd_play(sndExplosionL);
 snd_play(sndPortalOld);
 
@@ -41,7 +43,6 @@ var fs = floorA;
 var fsb = floorB;
 var fse = floorE;
 
-scrActivateAllOutOfRange();
 //Make a nice floor
 var s = clamp(instance_number(InvaderInversionSpawnPortal)+0.2,0.25,1);
 image_xscale/=s;
@@ -73,7 +74,7 @@ for (var i = 0; i < al; i++) {
 ds_list_destroy(floors);
 image_xscale = 1;
 image_yscale = 1;
-
+alarm[3] = 30;
 //Reset stuff
 image_angle = 90;
 //instance_destroy();

@@ -5,7 +5,7 @@ if ((instance_exists(Player) && Player.area == 140) ||
 {
 	with instance_create(x,y,BecomeCloudBoss)
 	{
-		sprite_index = sprInvertedCloudBoss);
+		sprite_index = sprInvertedCloudBoss;
 	}
 }
 else

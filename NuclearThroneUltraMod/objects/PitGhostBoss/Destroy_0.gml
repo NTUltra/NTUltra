@@ -33,4 +33,5 @@ with instance_create(x,y,BecomeGhostExplosion)
 	team = other.team;
 	sprite_index = sprGhostAboutToExplodeBig;
 	explosionSize = 3;
+	alarm[0] = 15;
 }

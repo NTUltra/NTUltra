@@ -17,6 +17,7 @@ if instance_exists(target) && target != noone
 		{
 			team = other.team;
 			direction = point_direction(x,y,Player.x,Player.y);
+			speed = 0.5;
 		}
 	}
 }

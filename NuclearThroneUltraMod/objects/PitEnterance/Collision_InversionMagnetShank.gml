@@ -1,5 +1,6 @@
 /// @description YOU SOLVED THE PUZZLE
 mask_index = mskPickupThroughWall;
+instance_destroy();
 disable = true;
 with BigVultureSkull
 {

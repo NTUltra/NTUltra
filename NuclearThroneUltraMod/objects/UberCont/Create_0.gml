@@ -15,6 +15,7 @@ if public == 0
 	show_debug_overlay(true);
 */
 //DEBUG STUFF
+canSave = true;
 scrn = 0
 optY = 24;
 everything=69;

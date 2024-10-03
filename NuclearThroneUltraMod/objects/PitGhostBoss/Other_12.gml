@@ -15,7 +15,8 @@ if instance_exists(Player)
 		with instance_create(tx + lengthdir_x(len,ranDir),ty + lengthdir_y(len,ranDir),BecomeGhostExplosion)
 		{
 			team = other.team;
-			direction = point_direction(x,y,Player.x,Player.y)
+			direction = point_direction(x,y,Player.x,Player.y);
+			speed = 0.5;
 		}
 	}
 	repeat(3)
@@ -26,6 +27,7 @@ if instance_exists(Player)
 		{
 			team = other.team;
 			direction = point_direction(x,y,Player.x,Player.y);
+			speed = 0.5;
 			sprite_index = sprGhostAboutToExplodeMedium;
 			explosionSize = 2;
 		}

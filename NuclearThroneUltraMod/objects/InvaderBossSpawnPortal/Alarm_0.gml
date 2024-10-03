@@ -2,7 +2,7 @@
 if !instance_exists(Player)
 	alarm[0] = 20;
 
-	BackCont.shake += 10;
+BackCont.shake += 10;
 
 snd_play(sndPortalOpen);
 scrBossFloor();

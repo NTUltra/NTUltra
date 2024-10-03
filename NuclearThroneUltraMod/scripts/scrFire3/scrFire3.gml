@@ -513,7 +513,7 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//SUPER BLOOD LANCE
+		//CRIMSON DELUGE
 		case 808:
 
 		snd_play_fire(sndSuperBloodLance)

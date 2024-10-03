@@ -1,7 +1,7 @@
 /// @description Fire
 if goToTarget
 	exit;
-if !instance_exists(Player) || point_distance(x,y,Player.x,Player.y) > 48
+if !instance_exists(Player) || point_distance(x,y,Player.x,Player.y) > 42-loops
 {
 	sprite_index = spr_fire;
 	image_index = 0;

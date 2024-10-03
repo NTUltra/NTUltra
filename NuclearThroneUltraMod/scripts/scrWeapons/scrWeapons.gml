@@ -4490,7 +4490,7 @@ function scrWeapons() {
 	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
 	wep_type[398] = 5
 	wep_auto[398] = 1
-	wep_load[398] = 10
+	wep_load[398] = 14
 	wep_cost[398] = 3
 	wep_sprt[398] = sprLightningLaserGun
 	wep_area[398] = 15
@@ -7762,7 +7762,7 @@ function scrWeapons() {
 	wep_name[693] = "ULTRA ROPE KNIFE"
 	wep_type[693] = 0
 	wep_auto[693] = 1
-	wep_load[693] = 16
+	wep_load[693] = 18
 	wep_cost[693] = 0
 	wep_sprt[693] = sprUltraRopeKnife
 	wep_area[693] = 20
@@ -8975,7 +8975,7 @@ function scrWeapons() {
 	wep_load[801] = 40
 	wep_cost[801] = 6
 	wep_sprt[801] = sprUltraRailgun
-	wep_area[801] = 21
+	wep_area[801] = 26
 	wep_text[801] = "200"
 	wep_swap[801] = sndSwapEnergy
 	wep_rad[801] = 20;
@@ -9052,7 +9052,7 @@ function scrWeapons() {
 	wep_name[808] = "CRIMSON DELUGE"
 	wep_type[808] = 0
 	wep_auto[808] = 0
-	wep_load[808] = 35
+	wep_load[808] = 40
 	wep_cost[808] = 0
 	wep_sprt[808] = sprSuperBloodLance
 	wep_area[808] = 29
@@ -9075,7 +9075,7 @@ function scrWeapons() {
 	wep_name[810] = "PAPER CRAFT SHOTGUN"
 	wep_type[810] = 3
 	wep_auto[810] = 3
-	wep_load[810] = 30
+	wep_load[810] = 31
 	wep_cost[810] = 6
 	wep_sprt[810] = sprPaperShotgun
 	wep_area[810] = 14

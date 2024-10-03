@@ -3,7 +3,8 @@ if isLeaderboardGamemode
 {
 	opt_gamemode = [0];	
 }
-scrSave();
+if canSave
+	scrSave();
 ds_list_destroy(keepDeactive);
 if sprite_exists(pauseimg)
 	sprite_delete(pauseimg);

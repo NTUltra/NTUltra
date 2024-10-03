@@ -8,7 +8,9 @@ if alarm[0] > 1
 		if team != 2
 			numEn ++;
 	}
-	if numEn == 0 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+	if instance_exists(IDPDVan)
+		numEn -= instance_number(IDPDVan);
+	if numEn < 2
 	{
 		alarm[0] = 1;
 	}

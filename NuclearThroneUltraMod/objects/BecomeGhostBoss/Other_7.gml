@@ -15,5 +15,6 @@ instance_create(x,y,DramaCamera);
 visible = false;
 image_speed = 0;
 alarm[2] = 0;
-alarm[3] = 10;
-alarm[4] = 15;
+alarm[3] = 10 + 4;
+alarm[4] = 16 + 4;
+alarm[5] = 13 + 4;

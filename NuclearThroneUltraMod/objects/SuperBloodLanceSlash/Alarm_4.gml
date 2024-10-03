@@ -1,5 +1,5 @@
 /// @description big splat
-dmg += 20;
+dmg += 18;
 hitEntities = [];
 var xx = x + lengthdir_x(150,direction);
 var yy = y + lengthdir_y(150,direction);

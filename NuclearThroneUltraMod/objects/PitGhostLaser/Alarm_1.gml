@@ -15,9 +15,11 @@ if target != noone {
 		speed *= 0.5;
 	}
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall && dis > 48 && random(2) < 1 {
+        if !justAroundWall && dis > 48 - loops && random(2) < 1 || loops > 4{
 			alarm[2] = 12;
 			alarm[1] += 12 + actTime + 10;
+			if loops < 1 && mask_index != mskPickupThroughWall
+				justAroundWall = true;
 			walk = 0;
 			speed = 0;
 			gunangle = point_direction(x, y, target.x, target.y);
@@ -52,7 +54,7 @@ if target != noone {
 	        else if hspeed < 0
 				right = -1
 	    }
-		else if dis < 250 || dis > 400
+		else if dis < 200 || dis > 450
 		{
 			direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);	
 		}

@@ -8,7 +8,7 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 && dis < 250 {
-        if dis > 64 && random(3) < 1{
+        if dis > 64 && random(3) < 1 {
 			alarm[2] = 5;
 			alarm[1] += actTime;
 			gunangle = point_direction(x, y, target.x, target.y)
@@ -31,6 +31,11 @@ if target != noone {
         else if hspeed < 0
 			right = -1
     }
+	else if random(3) < 1 && (dis > 500)
+	{
+		motion_add(point_direction(x,y,target.x, target.y) + random_range(60,-60),acc);	
+		walk = actTime;
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

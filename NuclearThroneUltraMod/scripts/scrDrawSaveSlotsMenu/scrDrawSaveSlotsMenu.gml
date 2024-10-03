@@ -94,6 +94,8 @@ function scrDrawSaveSlotsMenu() {
 		{
 			currentSave = gameI;
 			scrSaveGamePreferenceOptions();
+			canSave = false;
+			instance_destroy();
 		}
 		game_restart();
 	}

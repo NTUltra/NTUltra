@@ -16,7 +16,7 @@ else if sprite_index == sprBigPortal && instance_exists(Player)
 }
 else if sprite_index == sprBigPortalDisappear || sprite_index == sprInvertedBigPortalDisappear
 {
-	//instance_destroy();
+	instance_destroy();
 	visible = false;
 }
 else if sprite_index == sprInvertedBigPortal && instance_exists(Player)

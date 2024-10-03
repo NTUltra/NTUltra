@@ -26,5 +26,6 @@ function scrChangeRaven(ravenType){
 		team = other.team;
 		alarm[1] = 5;
 		alarm[5] = 0;
+		alarm[7] = 600;
 	}
 }

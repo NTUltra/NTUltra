@@ -7,9 +7,14 @@ if point_distance(x,y,Player.x,Player.y) < 200
 		if team != 2
 			numEn ++;
 	}
-	if numEn < 3 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+	if numEn < 2 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
-		instance_create_depth(x,y,depth-1,BecomeGhostBoss);
+		if (!jumpScared)
+			alarm[2] = 30;
+		else
+		{
+			instance_create_depth(x,y,depth-1,BecomeGhostBoss);
+		}
 		alarm[0] = 0;
 		alarm[1] = 0;
 	}

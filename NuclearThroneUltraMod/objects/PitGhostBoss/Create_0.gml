@@ -1,5 +1,5 @@
 raddrop = 120;
-maxhealth = 250
+maxhealth = 245
 mySize = 3
 event_inherited()
 team = 7;
@@ -20,7 +20,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 10;
 wkick = 0
-actTime = 10;
+actTime = 11;
 
 acc = 1;
 maxSpeed = 3.5;
@@ -39,3 +39,5 @@ if instance_exists(Player) && Player.skill_got[29] {
 	scrGiveSnooze();
 }
 maxAmmo = 3;
+loops = GetPlayerLoops();
+reachedHalfHealth = false;

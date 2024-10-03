@@ -2,6 +2,11 @@
 alarm[1] = actTime + random(actTime)
 if goToTarget
 	exit;
+if my_health < maxhealth && !reachedHalfHealth
+{
+	reachedHalfHealth = true;
+	instance_create(x,y,PortalOpenWallBreak);
+}
 scrTarget()
 if target != noone {
 	var dis = point_distance(target.x, target.y, x, y);
@@ -10,7 +15,12 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall && dis > 32 {
+		if random(3) < 1
+		{
+			motion_add(random(360),acc * 2);
+			walk = alarm[1];
+		}
+        if !justAroundWall && dis > 32 || loops > 4{
 			instance_create(x,y,Notice);
 			ammo = maxAmmo;
 			if choose(true,false)
