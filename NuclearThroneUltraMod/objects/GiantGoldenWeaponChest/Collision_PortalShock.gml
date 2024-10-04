@@ -8,6 +8,7 @@ for (var i = 0; i < al; i++)
 		scrWeapons()
 		wep = other.weps[i];
 		name = wep_name[wep]
+		scrAddNewWeaponDrop(wep);
 		ammo = 50
 		curse = 0
 		type = wep_type[wep]

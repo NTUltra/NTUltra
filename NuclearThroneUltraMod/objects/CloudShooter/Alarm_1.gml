@@ -22,21 +22,7 @@ if target != noone && instance_exists(target) {
 				alarm[1] += actTime * 0.3;
 			}
 		}
-		var ang = gunangle - 100;
-		var am = 5;
-		var ps = 2.6;
-		var angStep = 200/am;
-		repeat(am)
-		{
-			with instance_create(x,y,EnemyBullet1Square)
-			{
-				onlyHitPlayerTeam = true;
-				motion_add(ang,ps);
-				image_angle = direction
-				team = other.team
-			}
-			ang += angStep;
-		}
+		event_user(0);
     }
 	else
 	{

@@ -1,7 +1,7 @@
 ///scrCreateDataRef();
 // /@description
 ///@param
-function scrCreateDataRef(){
+function scrCreateDataRef() {
 	with instance_create(x,y,DataRef)
 	{
 		hasUltimateGamble = other.hasUltimateGamble

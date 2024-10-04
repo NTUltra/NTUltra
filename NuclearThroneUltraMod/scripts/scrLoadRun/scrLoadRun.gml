@@ -307,6 +307,8 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.foundWeapons = encryptedRun.foundWeapons;
 			if variable_struct_exists(encryptedRun, "usedWeapons")
 				UberCont.usedWeapons = encryptedRun.usedWeapons;
+			if variable_struct_exists(encryptedRun, "newWeapons")
+				UberCont.newWeapons = encryptedRun.newWeapons;
 			if variable_struct_exists(encryptedRun, "killedInvertedThrone2")
 				UberCont.killedInvertedThrone2 = encryptedRun.killedInvertedThrone2;
 			if variable_struct_exists(encryptedRun, "hasFoughtInvadingThrone")

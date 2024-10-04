@@ -15,6 +15,7 @@ if loops < 2
 	{
 	scrWeapons()
 	wep = 813
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = 0
 	type = wep_type[wep]

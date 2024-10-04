@@ -3420,7 +3420,8 @@ function scrFire(canDrown = true) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -5415,6 +5416,17 @@ function scrFire(canDrown = true) {
 		firedthislevel=true;
 		firedOnce = true;
 		fired=true;
+		if lastFiredWeapon != wep
+		{
+			lastFiredWeapon = wep;
+			with UberCont
+			{
+				if !array_contains(usedWeapons,other.wep)
+				{
+					usedWeapons[array_length(usedWeapons)] = other.wep;
+				}
+			}	
+		}
 	}
 	if object_index == Player
 	{

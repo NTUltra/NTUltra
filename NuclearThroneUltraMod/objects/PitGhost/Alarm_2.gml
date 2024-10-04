@@ -18,3 +18,11 @@ if !instance_exists(Player) || point_distance(x,y,Player.x,Player.y) > 42-loops
 	    team = other.team
 	}
 }
+if target != noone && instance_exists(target)
+{
+	var dis = point_distance(target.x, target.y, x, y);
+	if (dis > materializeRange || (dis > 96 && random(5) < 1))
+		event_user(0);
+	else
+		event_user(1);
+}

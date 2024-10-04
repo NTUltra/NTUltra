@@ -33,6 +33,7 @@ if KeyCont.key_pick[other.p] == 1
 		{
 			scrWeapons()
 			wep = 311
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]

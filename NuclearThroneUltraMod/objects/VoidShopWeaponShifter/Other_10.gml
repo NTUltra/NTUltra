@@ -40,6 +40,7 @@ if chooseTimer == 0
 		{
 			scrUnlockGoldWeapon(wep);
 		}
+		scrAddNewWeaponDrop(wep, true);
 		with instance_create(x,y,PopupText) {
 			mytext = other.wep_name[other.wep];
 			theColour=c_lime;

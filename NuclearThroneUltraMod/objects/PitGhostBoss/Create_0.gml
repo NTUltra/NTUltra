@@ -22,8 +22,8 @@ alarm[1] = 10;
 wkick = 0
 actTime = 11;
 
-acc = 1;
-maxSpeed = 3.5;
+acc = 2;
+maxSpeed = 4;
 materializeRange = 140;
 justAroundWall = true;
 targetPreviousX = x;

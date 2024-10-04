@@ -23,6 +23,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 	{
 	scrWeapons()
 	wep=other.wep1;
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = 50
 	curse = 0
@@ -36,6 +37,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 	{
 	scrWeapons()
 	wep=other.wep2;
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = 50
 	curse = 0
@@ -50,6 +52,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 	{
 	scrWeapons()
 	wep=other.wep3;
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = 50
 	curse = 0
@@ -64,6 +67,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 		{
 		scrWeapons()
 		wep=other.wep4;
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 50
 		curse = 0

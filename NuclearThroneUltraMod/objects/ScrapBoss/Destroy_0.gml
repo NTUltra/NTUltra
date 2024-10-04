@@ -63,6 +63,7 @@ else
 		{
 		scrWeapons()
 		wep = 75
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]

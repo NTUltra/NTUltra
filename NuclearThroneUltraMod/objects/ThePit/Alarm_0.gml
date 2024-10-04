@@ -12,7 +12,7 @@ if instance_exists(Player) && alarm[1] < 1
 		}
 		if numEn < 2 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 		{
-			alarm[1] = 70;
+			alarm[1] = 60;
 		}
 	}
 }

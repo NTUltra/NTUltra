@@ -20,7 +20,7 @@ with instance_create(x,y,Portal)
 		subarea = 0
 		lockout = true;
 		if loops < 1
-			hard += 1;
+			hard += 2;
 		x = other.x;
 		y = other.y;
 		scrForcePosition60fps();

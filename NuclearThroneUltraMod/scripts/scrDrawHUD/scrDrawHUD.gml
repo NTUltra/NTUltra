@@ -307,7 +307,7 @@ function scrDrawHUD() {
 		{
 			gamemodeDynamicHud -= dt;
 			var voidX = vx + 2;
-			var voidY = vy+__view_get( e__VW.HView, 0 )-2;
+			var voidY = vy+__view_get( e__VW.HView, 0 );
 			if scrIsGamemode(26)
 			{
 				if UberCont.isLeaderboardGamemode

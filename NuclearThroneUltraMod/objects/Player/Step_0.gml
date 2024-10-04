@@ -545,7 +545,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			with enemy
 			{
-				my_health = 0;	
+				my_health = 0;
 			}
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);

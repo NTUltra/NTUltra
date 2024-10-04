@@ -19,6 +19,8 @@ fogscroll = 0
 gameoverText = "YOU DID NOT REACH THE NUCLEAR THRONE";
 gmwidth = 1;
 gmScroll = 0;
+wepScroll = 0;
+wepSurf = -1;
 
 hudSurface = -1;
 screenY = 0;

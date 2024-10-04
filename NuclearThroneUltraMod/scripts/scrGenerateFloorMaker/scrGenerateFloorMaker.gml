@@ -99,10 +99,12 @@ function scrGenerateFloorMaker(limiter) {
 			}
 			else if Player.area == 137//Void
 				goal = 1;
-			else if Player.area == 138 || Player.area == 140//Cloudland
+			else if Player.area == 138
 				goal = 17;
+			else if Player.area == 140
+				goal = 22;
 			else if Player.area == 139//The pit
-				goal = 220;//150
+				goal = 200;//150
 			if scrIsGamemode(6)//small levels
 			{
 				goal=45+s;
@@ -183,6 +185,7 @@ function scrGenerateFloorMaker(limiter) {
 						scrWeapons()
 						SetSeedWeapon();
 						wep = scrDecideWep(0, 8)
+						scrAddNewWeaponDrop(wep);
 						SetSeed();
 						name = wep_name[wep]
 						ammo = 40
@@ -266,7 +269,7 @@ function scrGenerateFloorMaker(limiter) {
 						i += 2;
 						yy += 132;
 					}
-					if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
+					if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37) && !scrIsGamemode(50)
 					{
 						with instance_create(x - 160, y + 320, BigGenerator)
 						{

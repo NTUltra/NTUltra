@@ -21,13 +21,13 @@ while place_meeting(hit[1],hit[2],Wall)
 	hit[1] += lengthdir_x(2,aimDirection + 180);
 	hit[2] += lengthdir_y(2,aimDirection + 180);
 }
-repeat (6)
+repeat(6)
 {
 	with instance_create(hit[1],hit[2],Bullet2)
 	{
 		if other.ultramodded
 			alarm[11] = 0;
-		motion_add(aimDirection,5)
+		motion_add(aimDirection,5.5)
 		scrCopyWeaponMod(other);
 
 		image_angle = direction

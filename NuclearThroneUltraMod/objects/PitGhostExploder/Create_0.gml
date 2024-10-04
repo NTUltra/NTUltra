@@ -17,12 +17,12 @@ snd_dead = sndGhostDie
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 30+random(60)
 wkick = 0
 actTime = 10;
 
-acc = 1;
-maxSpeed = 3.5;
+acc = 2;
+maxSpeed = 4.25;
 materializeRange = 128;
 justAroundWall = true;
 targetPreviousX = x;

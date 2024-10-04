@@ -1963,5 +1963,31 @@ function scrFire3(hasTailNow){
 		wkick = -4
 
 		break;
+		
+		//OLD SHOTGUN
+		case 851:
+
+		snd_play_fire(sndSuperSlugger)
+	
+		with instance_create(x,y,Bullet2Heavy)
+		{motion_add(aimDirection,13+random(5))
+		image_angle = direction
+		team = other.team}
+		repeat(4)
+		{
+			with instance_create(x,y,Bullet2Heavy)
+			{motion_add(aimDirection+(random(30)-15)*other.accuracy,13+random(5))
+			image_angle = direction
+			team = other.team}
+		}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 12
+		wkick = 7
+		if !skill_got[2]
+			scrMoveContactSolid(aimDirection + 180,20);
+
+		break;
 	}
 }

@@ -32,6 +32,7 @@ if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists
 		scrWeapons()
 		SetSeedWeapon();
 		wep = scrDecideWep(choose(1,2), 1000, 0)
+		scrAddNewWeaponDrop(wep);
 		SetSeed();
 		name = wep_name[wep]
 		ammo = 30

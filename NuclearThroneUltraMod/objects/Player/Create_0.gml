@@ -224,6 +224,7 @@ phoenixrevives = 0;
 firedthislevel = false;
 firedOnce = false;
 fired = false;
+lastFiredWeapon = -1;
 poppop = false;
 rushcrownlevels = 0;
 consecutiveCrownVisits = 0;
@@ -978,3 +979,6 @@ if scrToxicWeapons(wep, wep_name[wep])
 	toxicweaponsfound += 1;	
 }
 ammoReduction = 1;
+scrAddNewWeaponDrop(wep, true);
+scrAddNewWeaponDrop(bwep, true);
+scrAddNewWeaponDrop(cwep, true);

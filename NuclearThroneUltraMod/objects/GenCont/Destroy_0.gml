@@ -369,7 +369,10 @@ if instance_exists(Player)
     
     
     }
-    
+    if Player.area == 139
+	{
+		instance_create(x,y,GhostJumpScare);
+	}
     if (Player.area == 1 && Player.subarea == 1)
 	{
 		if instance_exists(WeaponChest)

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndCloudShooterLaserShoot",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.381344,
+  "name":"sndCloudShooterLaserShoot",
+  "parent":{
+    "name":"Clouds",
+    "path":"folders/Sounds/Enemies/Clouds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCloudShooterLaserShoot.ogg",
+  "type":0,
+  "volume":1.0,
+}

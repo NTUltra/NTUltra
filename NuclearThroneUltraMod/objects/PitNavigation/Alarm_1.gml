@@ -11,17 +11,17 @@ if instance_exists(Player)
 			case 124:
 				//INV mush to inv volc
 				area = 108;
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 108:
 			//Inv volc to inv Labs
 				area = 112;
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 112:
 			//Inv Labs to inv froz
 				area = 107
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 107:
 				with CorpseCollector
@@ -42,32 +42,32 @@ if instance_exists(Player)
 			
 			case 121://Inv savanna
 				area = 102;//Inv swer
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 102:
 				//Inv sewer to inv crystal caves
 				area = 111;
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 111:
 				area = 138;//Inv crystal to cloudlands
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			
 			case 106:
 				//Scrap to jungle
 				area = 123;
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 123:
 				//Jungle to YV
 				area = 125;
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 125:
 				//YV to Wonder
 				area = 109
-				event_user(0);
+				with other { event_user(0); }
 			break;
 			case 109:
 				//Wonder to palace and end game

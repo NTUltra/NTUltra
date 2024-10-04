@@ -538,7 +538,7 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 	{
 		with Crown
 			instance_destroy();
-			
+		scrSortWeaponsFound();
 		scrEndOfRun();
 		//Horror and atom bskin drop rads
 		if race == 21 || (race == 15 && bskin = 1)

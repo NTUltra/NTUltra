@@ -45,6 +45,7 @@ with instance_create(x,y,AnimDestroyTop)
 }
 if instance_number(BigGenerator) == 1
 {
+	scrUnlockGameMode(50,"FOR DESTROYING THE GENERATORS!")
 	if loops < 1
 	{
 		var maxhealther = NuclearThrone1;

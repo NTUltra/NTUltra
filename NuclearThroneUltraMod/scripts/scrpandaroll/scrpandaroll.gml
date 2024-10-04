@@ -53,6 +53,7 @@ function scrPandaRoll(){
 			wep=prevwep;}
 			until ( (wep_area[wep] = wep_area[prevwep])||(dir>1000) )
 		}
+		scrAddNewWeaponDrop(wep);
 		sprite_index = wep_sprt[wep]
 		name = wep_name[wep]
 		type = wep_type[wep]

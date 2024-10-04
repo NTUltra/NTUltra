@@ -1,6 +1,11 @@
 /// @description WepPickup
 if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont) && !instance_exists(PandaSleep){
 	var canMeleeAmmo = scrIsCrown(40);
+	var findingNewWeapon = false;
+	if targetPickup == noone
+	{
+		findingNewWeapon = true;
+	}
 	targetPickup = instance_nearest(x,y,WepPickup);
 	var prange = 36;
 	if ultra_got[66] && altUltra
@@ -10,6 +15,19 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 	
 	if targetPickup != noone && point_distance(x,y,targetPickup.x,targetPickup.y) < prange  && targetPickup.visible && targetPickup.alarm[1] < 1 && !instance_exists(PlayerInEnding) && !instance_exists(PlayerInFakeDeath)
 	{
+		if findingNewWeapon
+		{
+			var newWep = targetPickup.wep
+			with UberCont
+			{
+				if !array_contains(foundWeapons,newWep)
+				{
+					foundWeapons[array_length(foundWeapons)] = newWep;
+				}
+			}
+		}
+		/*
+		THIS IS NOW DONE WHEN A WEAPON DROPS
 		with UberCont
 		{
 			if (!wep_found[other.race, other.targetPickup.wep]) {
@@ -23,6 +41,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				ini_close();
 			}
 		}
+		*/
 		var isGold = false;
 		if targetPickup.wep == 239//ROCKET GLOVE GM UNLOCK
 			scrUnlockGameMode(13,"FOR FINDING A ROCKET GLOVE")
@@ -370,6 +389,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			{
 				instance_destroy(id,false)
 			}
+			targetPickup = noone;
 			}
 			if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
 			{

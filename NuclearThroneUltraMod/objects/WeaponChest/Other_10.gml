@@ -26,6 +26,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 			{
 				scrWeapons()
 				wep = other.wep[0];
+				scrAddNewWeaponDrop(wep);
 				name = wep_name[wep]
 				ammo = other.ammoGet
 				type = wep_type[wep]
@@ -37,6 +38,7 @@ if !instance_exists(GenCont) && instance_exists(Player)
 				{
 					scrWeapons()
 					wep = other.wep[1];
+					scrAddNewWeaponDrop(wep);
 					name = wep_name[wep]
 					ammo = other.ammoGet
 					type = wep_type[wep]

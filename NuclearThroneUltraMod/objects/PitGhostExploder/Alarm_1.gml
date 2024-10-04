@@ -15,9 +15,11 @@ if target != noone {
 			alarm[1] += actTime;
 			if loops < 1
 				justAroundWall = true;
-			speed *= 0.5;
-			if choose(true,false)
-				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
+			if random (3) < 1
+			{
+				motion_add(random(360),acc);
+				walk = alarm[1] + actTime;
+			}
         }
         else {
             direction = point_direction(x,y,target.x, target.y) + random_range(60,-60);
@@ -48,9 +50,10 @@ if target != noone {
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2 && (dis < 200 || dis > 450)
+	    } else if ran < 2 && (dis < 176 || dis > 450)
 		{
-			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);		
+			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);	
+			walk = actTime;
 		}
 	}
 	if instance_number(enemy) < 10 || random(10) < 1

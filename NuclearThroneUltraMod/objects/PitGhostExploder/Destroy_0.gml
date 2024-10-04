@@ -1,4 +1,4 @@
-scrDrop(15,10)
+scrDrop(15,20,1)
 morphMe = 6;
 event_inherited()
 snd_play(sndGhostFlyDieQuick,0.1);

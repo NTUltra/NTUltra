@@ -152,6 +152,7 @@ if (type == network_type_data) {
 					else {
 					    wep = UberCont.opt_gm1wep
 					}
+					scrAddNewWeaponDrop(wep);
 					if race == 7
 						bwep = wep;
 					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
@@ -187,6 +188,7 @@ if (type == network_type_data) {
 						if race == 7
 							bwep = wep;
 					}
+					scrAddNewWeaponDrop(wep);
 					scrWeaponHold();
 				}
 			}
@@ -215,6 +217,7 @@ if (type == network_type_data) {
 					wep = 239;
 					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
 						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					scrAddNewWeaponDrop(wep);
 					scrWeaponHold();
 				}
 			}

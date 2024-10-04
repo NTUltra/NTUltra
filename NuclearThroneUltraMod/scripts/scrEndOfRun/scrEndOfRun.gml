@@ -98,6 +98,7 @@ function scrEndOfRun(){
 		droppedWeapons = [];
 		foundWeapons = [];
 		usedWeapons = [];
+		newWeapons = [];
 		hasFoughtInvadingThrone = false;
 		tookUnstoppable = false;
 		revivedCharacters = [];

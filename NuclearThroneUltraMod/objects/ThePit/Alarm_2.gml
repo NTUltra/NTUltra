@@ -9,32 +9,48 @@ with Player
 	var ang = random(360);
 	var angStep = 72;
 	snd_play(sndGhostTeleport);
-	var ghosts = [PitGhost,PitGhostLaser,PitGhostExploder,PitGhostSpawner,PitGhost];
 	var i = 0;
-	BackCont.shake += 30;
-	repeat(5)
+	BackCont.shake += 10;
+	var ghosts = [sprPitGhost,sprPitGhostLaserGuy,sprPitGhostExploder,sprPitGhostSpawner,sprPitGhost,sprPitGhostSpawner];
+	repeat(6)
 	{
-		with instance_create(x + lengthdir_x(64,ang),y + lengthdir_x(64,ang), ghosts[i])
+		var xx = x + lengthdir_x(96,ang)
+		var yy = y + lengthdir_x(96,ang)
+		var n = instance_nearest(xx,yy,Floor);
+		if n != noone
 		{
-			motion_add(ang,2);
-			walk += 2;
-			alarm[1] *= 0.5;
-			if instance_exists(Player) && Player.skill_got[29] {
-				alarm[1] += 50;
-				scrGiveSnooze();
-			}
-			with instance_create(x,y,Smoke)
+			var o = 16;
+			if n.object_index == FloorExplo
+				o = 8;
+			other.ghostLocations[i][0] = n.x + o;
+			other.ghostLocations[i][1] = n.y + o;
+		}
+		
+		with instance_create(other.ghostLocations[i][0],other.ghostLocations[i][1],AnimFade) {
+			sprite_index = ghosts[i];
+			if other.x > x
+				image_xscale = 1;
+			else
+				image_xscale = -1;
+		}
+		with instance_create(x,y,Smoke)
+		{
+			motion_add(ang + 180,3);	
+		}
+		with instance_create(x,y,Smoke)
+		{
+			motion_add(other.direction,2);	
+		}
+		repeat(2)
+		{
+			with instance_create(other.ghostLocations[i][0],other.ghostLocations[i][1],GhostEffect)
 			{
-				motion_add(ang + 180,3);	
-			}
-			with instance_create(x,y,Smoke)
-			{
-				motion_add(other.direction,2);	
+				motion_add(random(360),1 + random(2));
 			}
 		}
 		ang += angStep;
 		i++;
 	}
 }
+alarm[3] = 20;
 jumpScared = true;
-alarm[0] = 140;

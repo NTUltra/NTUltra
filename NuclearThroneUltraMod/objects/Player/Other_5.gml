@@ -484,6 +484,7 @@ if looping && area != 104
 		persistent=true;
 		scrWeapons()
 		wep =214
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -499,6 +500,7 @@ if looping && area != 104
 				persistent = true;
 				scrWeapons()
 				wep = 610
+				scrAddNewWeaponDrop(wep);
 				name = wep_name[wep]
 				ammo = 0
 				type = wep_type[wep]
@@ -511,6 +513,7 @@ if looping && area != 104
 				persistent = true;
 				scrWeapons()
 				wep = 316
+				scrAddNewWeaponDrop(wep);
 				name = wep_name[wep]
 				ammo = 0
 				type = wep_type[wep]
@@ -525,6 +528,7 @@ if looping && area != 104
 			persistent = true;
 			scrWeapons()
 			wep = 611
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -543,6 +547,7 @@ if looping && area != 104
 		wep = 329
 		if other.altUltra && other.ultra_got[33]//Burning
 			wep = 634;
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -560,6 +565,7 @@ if looping && area != 104
 			wep = 328
 			if other.altUltra && other.ultra_got[33]//Burning
 				wep = 633;
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -577,6 +583,7 @@ if looping && area != 104
 			persistent=true;
 			scrWeapons()
 			wep = 512
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -632,6 +639,7 @@ if looping && area != 104
 		persistent=true;
 		scrWeapons()
 		wep = 427
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -649,6 +657,7 @@ if looping && area != 104
 		persistent=true;
 		scrWeapons()
 		wep = 602
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -666,6 +675,7 @@ if looping && area != 104
 			persistent=true;
 			scrWeapons()
 			wep = 114
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -680,6 +690,7 @@ if looping && area != 104
 			persistent=true;
 			scrWeapons()
 			wep = 530
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -697,6 +708,7 @@ if looping && area != 104
 	persistent=true;
 	scrWeapons()
 	wep =231
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = 0
 	type = wep_type[wep]
@@ -709,6 +721,7 @@ if looping && area != 104
 		persistent=true;
 		scrWeapons()
 		wep =263
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -726,6 +739,7 @@ if looping && area != 104
 			persistent=true;
 			scrWeapons()
 			wep = 568
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = 0
 			type = wep_type[wep]
@@ -743,6 +757,7 @@ if looping && area != 104
 				persistent=true;
 				scrWeapons()
 				wep =349
+				scrAddNewWeaponDrop(wep);
 				name = wep_name[wep]
 				ammo = 0
 				type = wep_type[wep]

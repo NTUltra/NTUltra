@@ -609,6 +609,8 @@ function scrShadows() {
 		draw_sprite(myShadow,0,x-vx,y-vy + myShadowOffset)
 	with PitGhost
 		draw_sprite(shd24,0,x-vx,y-vy + 2)
+	with PitGhostExploder
+		draw_sprite(shd24,0,x-vx,y-vy + 2)
 	with PitGhostLaser
 		draw_sprite(shd16,0,x-vx,y-vy + 4)
 	with PitGhostSpawner

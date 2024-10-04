@@ -31,6 +31,7 @@ with instance_create(x,y,WepPickup)
 {
 scrWeapons()
 wep = 264
+scrAddNewWeaponDrop(wep);
 name = wep_name[264]
 ammo = 0
 type = wep_type[264]

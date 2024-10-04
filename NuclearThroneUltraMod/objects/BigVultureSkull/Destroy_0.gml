@@ -10,6 +10,7 @@ if spr_idle == sprBigVultureSkullOpen
 	{
 	scrWeapons()
 	wep = 375
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[375]
 	ammo = 0
 	type = wep_type[375]

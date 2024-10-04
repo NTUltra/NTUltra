@@ -134,6 +134,7 @@ function scrCopyPlayData(){
 		skillDeposit: UberCont.skillDeposit,
 		droppedWeapons: UberCont.droppedWeapons,
 		foundWeapons: UberCont.foundWeapons,
+		newWeapons: UberCont.newWeapons,
 		usedWeapons: UberCont.usedWeapons,
 		killedInvertedThrone2: UberCont.killedInvertedThrone2,
 		hasFoughtInvadingThrone: UberCont.hasFoughtInvadingThrone,

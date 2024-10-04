@@ -1,7 +1,7 @@
 event_inherited();
 image_speed = 0.4;
 BackCont.shake -= 4;
-team = -1
+team = 7
 moodAmount = 0;
 boostDamage = false;
 with myExplosionMask

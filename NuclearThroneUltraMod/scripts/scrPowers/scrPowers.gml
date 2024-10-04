@@ -922,6 +922,7 @@ function scrPowers(raceOverwrite = -1) {
 					if wep > maxwep
 						wep = 1;
 				}
+				scrAddNewWeaponDrop(wep, true);
 				with instance_create(x,y,PopupText) {
 					mytext = other.wep_name[other.wep];
 				}

@@ -597,6 +597,7 @@ if (selected && visible &&
 			{
 				scrWeapons()
 				wep = 720;
+				scrAddNewWeaponDrop(wep);
 				SetSeed();
 				name = wep_name[wep]
 				ammo = 50

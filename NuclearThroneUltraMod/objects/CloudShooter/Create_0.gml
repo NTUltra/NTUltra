@@ -21,8 +21,14 @@ alarm[1] = 30+random(90)
 wkick = 0
 actTime = 26;
 loops = GetPlayerLoops();
+homingSpeed = 1.25;
+homingTimeAdjustment = 10;
 if loops < 1
+{
+	homingTimeAdjustment = 0;
 	actTime = 36;
+	homingSpeed = 1.2;
+}
 maxRange = 335;
 minRange = 96;
 originRange = 100;

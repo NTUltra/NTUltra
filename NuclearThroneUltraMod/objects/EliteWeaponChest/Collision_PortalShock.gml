@@ -22,6 +22,7 @@ repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 		{
 			scrWeapons()
 			wep=other.wep[0];
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			ammo = other.ammoGet
 			curse = other.curse;
@@ -34,6 +35,7 @@ repeat(1+Player.ultra_got[25]){//ROIDS ULTRA A DOUBLE WEPS
 			{
 				scrWeapons()
 				wep=other.wep[1];
+				scrAddNewWeaponDrop(wep);
 				name = wep_name[wep]
 				ammo = other.ammoGet
 				curse = other.curse;

@@ -12,7 +12,10 @@ if other.team != team and other.my_health > 0
 	
 	with instance_create(other.x,other.y,Morph)
 	{
+		direction = other.direction;
+		speed = 0.25;
 		team = other.team;
+		alarm[0] -= 1;
 	}
 	scrRecycleGland(1);
 }

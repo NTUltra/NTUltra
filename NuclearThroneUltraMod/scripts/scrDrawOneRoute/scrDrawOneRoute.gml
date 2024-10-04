@@ -12,7 +12,7 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 	}
 	var totalWidth = camera_get_view_width(0) - (camera_get_view_width(0)*0.25)
 	var ox = camera_get_view_x(0) + (camera_get_view_width(0)*0.125);
-	var oy = camera_get_view_y(0) + (camera_get_view_height(0)*0.5);
+	var oy = camera_get_view_y(0) + (camera_get_view_height(0)*0.5) - 32;
 	var xm = camera_get_view_x(0) + (camera_get_view_width(0)*0.5)
 	var xx = ox;
 	var yy = oy;

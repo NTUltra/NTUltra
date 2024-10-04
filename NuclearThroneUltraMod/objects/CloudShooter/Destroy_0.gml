@@ -3,11 +3,9 @@ scrDropNearby(7,0);
 if !sleeping
 	with instance_create(x,y,EnemyHomingTriangle)
 	{
-		motion_add(other.gunangle+random(20)-10,1);
-		if GetPlayerLoops() < 1
-			homingSpeed = 1.2;
-		else
-			homingSpeed = 1.25;
+		motion_add(other.gunangle+random(20)-10,1.5);
+		alarm[3] -= other.homingTimeAdjustment;
+		homingSpeed = other.homingSpeed;
 		image_angle = direction
 		team = other.team
 	}

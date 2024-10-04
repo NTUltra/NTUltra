@@ -18,7 +18,7 @@ if UberCont.ultramodSwap
 }
 if visible
 {
-	repeat(3)
+	repeat(2)
 		with(instance_create(x,y,Smoke)){
 		image_blend = make_color_rgb(244,145,255);
 	}
@@ -26,7 +26,7 @@ if visible
 	{
 		with instance_create(x,y,ImpactFX)
 		{
-			motion_add(random(360),0.5);
+			motion_add(random(360),1);
 			sprite_index = sprMorphFX;
 		}
 	}

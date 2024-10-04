@@ -28,7 +28,7 @@ scrDrop(0,50)
 scrBossKill();
 
 
-if GetPlayerLoops() > 0 && UberCont.gamemode_have[13] == 0 && (scrIsGamemode(0) || scrIsGamemode(9))
+if GetPlayerLoops() > 0 && UberCont.gamemode_have[13] == 0 && isValidGamemodeToUnlock()
 {
 	//Drop rocket glove
 	var noRocketGloveDropped = true;
@@ -42,6 +42,7 @@ if GetPlayerLoops() > 0 && UberCont.gamemode_have[13] == 0 && (scrIsGamemode(0) 
 	{
 		scrWeapons()
 		wep = 239
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
@@ -55,6 +56,7 @@ if(random(200)<1 && GetPlayerLoops() < 1){
 	{
 		scrWeapons()
 		wep = 69
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[69]
 		ammo = 0
 		type = wep_type[69]

@@ -337,7 +337,7 @@ function scrWeapons() {
 	wep_name[30] = "SPLINTER GUN"
 	wep_type[30] = 3
 	wep_auto[30] = 2
-	wep_load[30] = 20
+	wep_load[30] = 19
 	wep_cost[30] = 1
 	wep_sprt[30] = sprSplinterGun
 	wep_area[30] = 4
@@ -2558,7 +2558,7 @@ function scrWeapons() {
 	wep_name[228] = "GOLDEN SPLINTER GUN"
 	wep_type[228] = 3
 	wep_auto[228] = 2
-	wep_load[228] = 19
+	wep_load[228] = 18
 	wep_cost[228] = 1
 	wep_sprt[228] = sprGoldenSplinterGun
 	wep_area[228] = 19
@@ -3988,7 +3988,7 @@ function scrWeapons() {
 	wep_name[355] = "JAWBREAKER"
 	wep_type[355] = 2
 	wep_auto[355] = 2
-	wep_load[355] = 17
+	wep_load[355] = 16
 	wep_cost[355] = 1.25
 	wep_sprt[355] = sprJawbreaker
 	wep_area[355] = 1
@@ -4323,7 +4323,7 @@ function scrWeapons() {
 	wep_name[383] = "GOLDEN JAWBREAKER"
 	wep_type[383] = 2
 	wep_auto[383] = 2
-	wep_load[383] = 16
+	wep_load[383] = 15
 	wep_cost[383] = 1.25
 	wep_sprt[383] = sprGoldenJawbreaker
 	wep_area[383] = 17
@@ -4334,10 +4334,10 @@ function scrWeapons() {
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
 	wep_auto[384] = 1
-	wep_load[384] = 10
+	wep_load[384] = 12
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
-	wep_area[384] = 2
+	wep_area[384] = 1
 	wep_text[384] = "mini plasma is faster and smaller#than regular plasma"
 	wep_swap[384] = sndSwapPistol
 	wep_rad[384] = 0;
@@ -4400,7 +4400,7 @@ function scrWeapons() {
 	wep_name[390] = "JAWSPLITTER"
 	wep_type[390] = 3
 	wep_auto[390] = 2
-	wep_load[390] = 19
+	wep_load[390] = 17
 	wep_cost[390] = 1.25
 	wep_sprt[390] = sprJawSplitter
 	wep_area[390] = 1
@@ -4411,7 +4411,7 @@ function scrWeapons() {
 	wep_name[391] = "GOLDEN JAWSPLITTER"
 	wep_type[391] = 3
 	wep_auto[391] = 2
-	wep_load[391] = 18
+	wep_load[391] = 16
 	wep_cost[391] = 1.25
 	wep_sprt[391] = sprGoldenJawSplitter
 	wep_area[391] = 17
@@ -4653,7 +4653,7 @@ function scrWeapons() {
 	wep_load[412] = 17
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
-	wep_area[412] = 4
+	wep_area[412] = 3
 	wep_text[412] = "stab"
 	wep_swap[412] = sndSwapSword
 	wep_rad[412] = 0;
@@ -7876,7 +7876,7 @@ function scrWeapons() {
 	wep_type[703] = 1
 	wep_auto[703] = 1
 	wep_load[703] = 3
-	wep_cost[703] = 0.75
+	wep_cost[703] = 0.5
 	wep_sprt[703] = sprMicroMachinegun
 	wep_area[703] = 0
 	wep_text[703] = "hitscan"
@@ -7910,7 +7910,7 @@ function scrWeapons() {
 	wep_name[706] = "DENSE GUN"
 	wep_type[706] = 1
 	wep_auto[706] = 0
-	wep_load[706] = 23
+	wep_load[706] = 22
 	wep_cost[706] = 10
 	wep_sprt[706] = sprDenseGun
 	wep_area[706] = 1
@@ -8569,7 +8569,7 @@ function scrWeapons() {
 	wep_type[765] = 1
 	wep_auto[765] = 1
 	wep_load[765] = 3
-	wep_cost[765] = 0.75
+	wep_cost[765] = 0.5
 	wep_sprt[765] = sprGoldenMicroMachinegun
 	wep_area[765] = 17
 	wep_text[765] = "goldscan"
@@ -8579,7 +8579,7 @@ function scrWeapons() {
 	wep_name[766] = "HEAVY DENSE GUN"
 	wep_type[766] = 1
 	wep_auto[766] = 0
-	wep_load[766] = 29
+	wep_load[766] = 25
 	wep_cost[766] = 18
 	wep_sprt[766] = sprHeavyDenseGun
 	wep_area[766] = 5
@@ -9266,7 +9266,7 @@ function scrWeapons() {
 	wep_name[827] = "THUNDER STRIKE"
 	wep_type[827] = 5
 	wep_auto[827] = 1
-	wep_load[827] = 56
+	wep_load[827] = 50
 	wep_cost[827] = 5
 	wep_sprt[827] = sprThunderStrike
 	wep_area[827] = 2
@@ -9299,7 +9299,7 @@ function scrWeapons() {
 	wep_name[830] = "STAFF"
 	wep_type[830] = 0
 	wep_auto[830] = 1
-	wep_load[830] = 13
+	wep_load[830] = 12
 	wep_cost[830] = 0
 	wep_sprt[830] = sprStaff
 	wep_area[830] = 2
@@ -9538,6 +9538,18 @@ function scrWeapons() {
 	wep_text[850] = "God hammer"
 	wep_swap[850] = sndSwapHammer
 	wep_rad[850] = 20;
+	
+	wep_name[851] = "OLD SHOTGUN"
+	wep_type[851] = 2
+	wep_auto[851] = 0
+	wep_load[851] = 30
+	wep_cost[851] = 4
+	wep_sprt[851] = sprOldShotgun
+	wep_area[851] = 1
+	wep_text[851] = "old but still effective"
+	wep_swap[851] = sndSwapShotgun
+	wep_rad[851] = 0;
+	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

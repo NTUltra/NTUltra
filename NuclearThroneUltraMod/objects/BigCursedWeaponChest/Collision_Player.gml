@@ -8,6 +8,7 @@ with instance_create(x-8,y,WepPickup)
 {
 scrWeapons()
 wep=other.wep1;
+scrAddNewWeaponDrop(wep);
 name = wep_name[wep]
 ammo = 50
 curse = 1
@@ -18,6 +19,7 @@ with instance_create(x,y,WepPickup)//WE INCLUDE THE SECOND WEAPON TO DUPLICATE
 {
 scrWeapons()
 wep=other.wep2;
+scrAddNewWeaponDrop(wep);
 name = wep_name[wep]
 ammo = 50
 curse = 1
@@ -29,6 +31,7 @@ with instance_create(x+8,y,WepPickup)//THIS ONE IS SADLY NOT DUPLICATED CUS THAT
 {
 scrWeapons()
 wep=other.wep3;
+scrAddNewWeaponDrop(wep);
 name = wep_name[wep]
 ammo = 50
 curse = 1

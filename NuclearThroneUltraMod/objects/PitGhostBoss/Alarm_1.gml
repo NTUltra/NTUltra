@@ -34,8 +34,16 @@ if target != noone {
 				instance_create(x+5,y,Notice);
 			}
 			alarm[1] += actTime;
-			speed *= 0.5;
-			walk *= 0.5;
+			if !reachedHalfHealth
+			{
+				speed *= 0.5;
+				walk *= 0.5;
+			}
+			else if random(3) < 1
+			{
+				walk = max(walk,actTime);
+				motion_add(random(360),acc);
+			}
 			gunangle = point_direction(x,y,target.x, target.y)
         }
         else {
@@ -56,9 +64,9 @@ if target != noone {
 		{
 			event_user(2);
 		}
-		motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);
+		motion_add(point_direction(x,y,target.x, target.y) + random_range(80,-80),acc);
 		if random(4) < 1 {
-	        motion_add(random(360), acc)
+	        direction = random(360);
 	        walk = actTime + random(actTime*2)
 	        if hspeed > 0
 				right = 1
@@ -68,6 +76,7 @@ if target != noone {
 		else
 		{
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);
+			walk = alarm[1];
 			if hspeed > 0
 				right = 1
 	        else if hspeed < 0

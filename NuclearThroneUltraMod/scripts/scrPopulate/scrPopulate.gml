@@ -589,7 +589,7 @@ function scrPopulate() {
             with AmmoChest
             instance_create(x, y, Bandit)
         }
-        else if Player.area != 101 && Player.area != 128 && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
+        else if Player.area != 101 && Player.area != 128 && Player.area != 138 && Player.area != 140 && Player.area != 139 && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
             with WeaponChest
             instance_create(x, y, Grunt)
             //with RadChest

@@ -3,6 +3,7 @@ with instance_create(x,y,WepPickup)
 {
 	scrWeapons()
 	wep = other.wep[0];
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[wep]
 	ammo = other.ammoGet
 	type = wep_type[wep]
@@ -15,6 +16,7 @@ if aditionalwep != 0
 	{
 		scrWeapons()
 		wep = other.aditionalwep;
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = other.ammoGet
 		type = wep_type[wep]
@@ -28,6 +30,7 @@ if heavyHeart
 	{
 		scrWeapons()
 		wep = other.wep[1];
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep]
 		ammo = other.ammoGet
 		type = wep_type[wep]

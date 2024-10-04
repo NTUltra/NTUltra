@@ -6404,6 +6404,7 @@ function scrFire2(hasTailNow) {
 		motion_add(aimDirection,16);
 		scrWeapons()
 		wep = scrDecideWep(0,8,0);
+		scrAddNewWeaponDrop(wep);
 		name = wep_name[wep];
 		ammo = 0;
 		type = wep_type[wep];
@@ -13929,7 +13930,6 @@ function scrFire2(hasTailNow) {
 	{
 		sprite_index = sprGoldenLanceSlash;
 		longarms = 0
-		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3.5+longarms)
 		image_angle = direction
@@ -15325,7 +15325,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -16226,7 +16227,7 @@ function scrFire2(hasTailNow) {
 	BackCont.shake += 7
 	wkick = 6
 	if !skill_got[2]
-	scrMoveContactSolid(aimDirection + 180,8);
+		scrMoveContactSolid(aimDirection + 180,8);
 
 	break;
 	

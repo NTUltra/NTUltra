@@ -30,7 +30,6 @@ function scrPandaThrow(){
 			scrWeapons()
 			if other.ultra_got[54]=1
 			{
-				
 				if UberCont.useSeed
 				{
 					random_set_seed(UberCont.pandaRan * 10);
@@ -43,7 +42,7 @@ function scrPandaThrow(){
     
 				do {wep = round(random(maxwep-1)+1)}
 				until (wep_area[wep] == wep_area[prevwep] && wep != 298 && wep != 373)
-				
+				scrAddNewWeaponDrop(wep, true);
 				curse = other.curse
 				wepmod1=other.wepmod1;
 				wepmod2=other.wepmod2;

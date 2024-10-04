@@ -32,6 +32,7 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 			cwep = 0;
 			bwep = 0;
 			wep = 56;//RUSTY REVOLVER
+			scrAddNewWeaponDrop(wep);
 			ammo[1] = max(ammo[1],round(typ_ammo[1]*4));
 		}
 	}

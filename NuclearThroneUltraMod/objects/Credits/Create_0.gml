@@ -164,9 +164,9 @@ credits = [
 "KIDANDO#"+
 "KNIFE#"+
 "KTHAAR#"+
+"LOOZED#"+
 "LUCKYLUCIANOPE#"+
 "LUCKY (PASOS REALES)#"+
-//"LOOZED#"+
 //"LOTION5238#"+ ???
 "MARTIN0304#"+
 // "GREG/MLEM5933#"+//GREG only one bug report?

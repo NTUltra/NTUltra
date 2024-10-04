@@ -197,14 +197,14 @@ function scrGameModes() {
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "ON ODD DAYS RACE COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II##ON EVEN DAYS PLAY ANOTHER GAMEMODE";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -275,7 +275,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48,49];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48,49,50];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -371,6 +371,13 @@ function scrGameModes() {
 	gamemode_description[49] = "START WITH REGAL VISION";
 	gamemode_nocombo[49] = [25,42,26,27,37,8];
 	
+	gamemode[50] = "NO THRONE GENERATORS";//
+	gamemode_unlock[50] = "DESTROY THE GENERATORS";
+	gamemode_have[50] = 0;
+	gamemode_tip[50] = "";
+	gamemode_description[50] = "DISABLES THE GENERATORS\nON THE THRONE FIGHT\n(YOU CAN NO LONGER SIT ON THE THRONE)";
+	gamemode_nocombo[50] = [26,27,37];
+	
 	var i = 0;
 	gamemodeOrder[i] = 0;
 	i++; gamemodeOrder[i] = 9;//Casual
@@ -378,6 +385,7 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 32;//One hit wonder
 	i++; gamemodeOrder[i] = 21;//Loop start
 	i++; gamemodeOrder[i] = 18;//No elite idpd
+	i++; gamemodeOrder[i] = 50;//No generators
 	i++; gamemodeOrder[i] = 3;//No HUD
 	i++; gamemodeOrder[i] = 39;//Gore galore
 	i++; gamemodeOrder[i] = 1;//One wep only

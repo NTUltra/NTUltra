@@ -4,6 +4,7 @@ image_speed = 0.4;
 with Player
 {
 	lockout = true;
+	scrSortWeaponsFound();
 	scrCreateDataRef();
 	DataRef.my_health = 0;
 	BackCont.loops = loops;

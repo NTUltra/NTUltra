@@ -21,6 +21,8 @@ if target != noone {
 			if ran < 23
 			{
 				event_user(0);
+				if isInverted
+					event_user(1);
 				if ran < 8
 				{
 					walk = actTime + random(actTime*3);
@@ -30,6 +32,8 @@ if target != noone {
 			else if ran < 46
 			{
 				event_user(1);
+				if isInverted
+					event_user(0);
 				if ran < 31
 				{
 					walk = actTime + random(actTime*3);

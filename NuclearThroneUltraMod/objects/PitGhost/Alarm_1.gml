@@ -48,9 +48,15 @@ if target != noone {
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2 && (dis < 200 || dis > 450)
+	    } else if ran < 2 && (dis < 176 || dis > 450)
 		{
-			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);		
+			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);	
+			walk = actTime;
+		}
+		else if ran < 3 && instance_exists(ThePit)
+		{
+			motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
+			walk = actTime;
 		}
 	}
 	if instance_number(enemy) < 10 || random(10) < 1

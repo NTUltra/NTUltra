@@ -8,14 +8,14 @@ with instance_create(x,y,EnemyBullet1Square)
 }
 with instance_create(x,y,EnemyBullet1Square)
 {
-	motion_add(other.gunangle + 17,other.squareProjectileSpeedOff);
+	motion_add(other.gunangle + other.squareOffset,other.squareProjectileSpeedOff);
 	image_angle = direction
 	team = other.team
 }
 
 with instance_create(x,y,EnemyBullet1Square)
 {
-	motion_add(other.gunangle - 17,other.squareProjectileSpeedOff);
+	motion_add(other.gunangle - other.squareOffset,other.squareProjectileSpeedOff);
 	image_angle = direction
 	team = other.team
 }

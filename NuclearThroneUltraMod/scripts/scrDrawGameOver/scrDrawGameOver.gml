@@ -10,7 +10,10 @@ function scrDrawGameOver() {
 	var hh = h*0.5;
 	gameover = "";
 	if gameovertime == 0
+	{
 		alarm[4] = 1;
+		alarm[8] = 50;
+	}
 	var area = BackCont.area;
 	var subarea = BackCont.subarea
 	var loops = BackCont.loops;
@@ -18,21 +21,23 @@ function scrDrawGameOver() {
 	var res = scrAreaName(area,subarea,loops);
 	var txt = res[0];
 	var upsideDown = res[1];
+	var killText = "";
+	var tierText = "";
 	if (!scrIsGamemode(25) && !scrIsGamemode(8))
-		gameover = gameoverText+"##KILLS: "+string(BackCont.kills)+"#DIFFICULTY: "+string(BackCont.hard)
+	{
+		killText = string(BackCont.kills);
+		tierText = string(BackCont.hard);
+		gameover = gameoverText//+"##KILLS: "+string(BackCont.kills)+"#TIER: "+string(BackCont.hard)
+	}
 	else if (scrIsGamemode(25))
 	{
 		txt = "";
-		gameover = "WAVE: "+string(BackCont.subarea)+"##KILLS: "+string(BackCont.kills)+"#DIFFICULTY: "+string(BackCont.hard)
+		gameover = gameoverText
+		//gameover = "WAVE: "+string(BackCont.subarea)+"##KILLS: "+string(BackCont.kills)+"#TIER: "+string(BackCont.hard)
+		killText = string(BackCont.kills);
+		tierText = string(BackCont.hard);
 	}
-	//if BackCont.loops > 0 && UberCont.opt_gamemode != 8
-	//gameover += "#LOOPS: "+string(BackCont.loops)
-/*
-	if UberCont.public = 0
-	gameover += "##MODDED EARLY ACCESS DEVELOPMENT BUILD"
-	if UberCont.public = 1
-	gameover += "##MODDED EARLY ACCESS BUILD";
-*/
+
 	var normalMode = scrIsOnlyNormalGamemode();
 	var gmt = "";
 	if (array_length(UberCont.opt_gamemode) > 1)
@@ -146,64 +151,90 @@ function scrDrawGameOver() {
 	}
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center)
-	var yy = vy + 44;//48
-	if gameovertime > 30
+	var yy = vy + 32;//48
+	if gameovertime > 20
 	{
 		draw_set_color(c_black)
-		draw_set_alpha(0.8);
+		draw_set_alpha(lerp(0,0.8,clamp(((gameovertime-20) / 10),0,1)));
 		draw_rectangle(vx,vy,vx+__view_get( e__VW.WView, 0 ),vy+__view_get( e__VW.HView, 0 ),0)
 		draw_set_alpha(1);
-		draw_rectangle(vx,vy+hh-20,vx+__view_get( e__VW.WView, 0 ),vy+hh + 20,0);
-		draw_text(vx+wh,yy+1,string_hash_to_newline(string(gameover)))
-		draw_text(vx+wh+1,yy+1,string_hash_to_newline(string(gameover)))
-		draw_text(vx+wh+1,yy,string_hash_to_newline(string(gameover)))
+	}
+	if gameovertime > 30
+	{
+		draw_rectangle(vx,vy+hh-20 - 32,vx+__view_get( e__VW.WView, 0 ),vy+hh + 20 - 32,0);
 		
+		var syy = yy + 22;
+		var titleWidth = 210;
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			titleWidth = 310;
+			var sxx = vx + wh - 144
+			var splatStep = 96;
+		} else {
+			var sxx = vx + wh - 120
+			var splatStep = 80;
+		}
+		draw_text_ext(vx+wh,yy+1,string_hash_to_newline(string(gameover)),8,titleWidth)
+		draw_text_ext(vx+wh+1,yy+1,string_hash_to_newline(string(gameover)),8,titleWidth)
+		draw_text_ext(vx+wh+1,yy,string_hash_to_newline(string(gameover)),8,titleWidth)
+		draw_set_halign(fa_left)
+		draw_sprite(sprScoreSplat,clamp(((gameovertime-30) / 3),0,2),sxx,syy);
+		if upsideDown
+		{
+			draw_set_color(c_black)
+			draw_text_transformed(sxx,syy + 1,string_hash_to_newline(txt),-1,-1,0)
+			draw_text_transformed(sxx+1,syy + 1,string_hash_to_newline(txt),-1,-1,0)
+			draw_text_transformed(sxx+1,syy,string_hash_to_newline(txt),-1,-1,0)
+	
+			draw_set_color(c_white)
+			draw_text_transformed(sxx,syy,string_hash_to_newline(txt),-1,-1,0)
+		}
+		else
+		{
+			draw_set_color(c_black)
+			draw_text(sxx,syy + 1,string_hash_to_newline(txt))
+			draw_text(sxx+1,syy + 1,string_hash_to_newline(txt))
+			draw_text(sxx+1,syy,string_hash_to_newline(txt))
+	
+			draw_set_color(c_white)
+			draw_text(sxx,syy,string_hash_to_newline(txt))
+		}
+		sxx += splatStep;
+		draw_sprite(sprScoreSplat,clamp(((gameovertime-30) / 5),0,2),sxx,syy);
+		draw_sprite(sprKills,0,sxx - 4,syy + 6);
+		scrDrawTextBackgrounded(sxx + 12,syy,killText);
+		sxx += splatStep;
+		draw_sprite(sprScoreSplat,clamp(((gameovertime-30) / 6),0,2),sxx,syy);
+		draw_sprite(sprWepTier,0,sxx + 2,syy + 1);
+		scrDrawTextBackgrounded(sxx + 10,syy,tierText);
+		
+		draw_set_halign(fa_center);
+		draw_set_color(c_black);
 		draw_text(vx+wh,vy+h-20,endText);
 		draw_text(vx+wh+1,vy+h+1-20,endText);
 		draw_text(vx+wh+1,vy+h-20,endText);
 	
 	
 		draw_set_color(c_white)
-		//draw_set_halign(fa_left)
-		var gotHover = scrDrawRoute();
-		//draw_set_halign(fa_center)
-		draw_text(vx+wh,yy,string_hash_to_newline(string(gameover)))
-		
+		draw_text_ext(vx+wh,yy,string_hash_to_newline(string(gameover)),8,titleWidth)
 		draw_text(vx+wh,vy+h-20,endText);
 		
-		var yy = vy + hh - 32;
-		if upsideDown
-		{
-			draw_set_color(c_black)
-			draw_text_transformed(vx+wh,yy + 1,string_hash_to_newline(txt),-1,-1,0)
-			draw_text_transformed(vx+wh+1,yy + 1,string_hash_to_newline(txt),-1,-1,0)
-			draw_text_transformed(vx+wh+1,yy,string_hash_to_newline(txt),-1,-1,0)
-	
-			draw_set_color(c_white)
-			draw_text_transformed(vx+wh,yy,string_hash_to_newline(txt),-1,-1,0)
-		}
-		else
-		{
-			draw_set_color(c_black)
-			draw_text(vx+wh,yy + 1,string_hash_to_newline(txt))
-			draw_text(vx+wh+1,yy + 1,string_hash_to_newline(txt))
-			draw_text(vx+wh+1,yy,string_hash_to_newline(txt))
-	
-			draw_set_color(c_white)
-			draw_text(vx+wh,yy,string_hash_to_newline(txt))
-		}
+		var gotHover = scrDrawRoute();
+		
 		if instance_exists(DataRef) && DataRef.hitBy != noone && DataRef.my_health <= 0
 		{
-			var xxx = vx + wh;
-			var yyy = vy + hh + 44;
-			var txt = "KILLED BY:";
+			var xxx = sxx;//vx + wh + splatStep;
+			var yyy = vy + hh + 4;
+			var ktxt = "KILLED BY:";
+			draw_sprite(sprKilledBySplat,clamp(((gameovertime-30) / 7),0,2),xxx,yyy);
 			draw_set_color(c_black)
-			draw_text(xxx,yyy+1,txt)
-			draw_text(xxx+1,yyy+1,txt)
-			draw_text(xxx+1,yyy,txt)
+			draw_set_halign(fa_left);
+			draw_text(xxx,yyy+1,ktxt)
+			draw_text(xxx+1,yyy+1,ktxt)
+			draw_text(xxx+1,yyy,ktxt)
 	
 			draw_set_color(c_white)
-			draw_text(xxx,yyy,txt)
+			draw_text(xxx,yyy,ktxt)
 			var a = 1;
 			if sprite_get_number(DataRef.hitBy) > 2
 			{
@@ -216,15 +247,101 @@ function scrDrawGameOver() {
 				if imageIndex > sprite_get_number(DataRef.hitBy)
 					imageIndex = 0;
 			}
-			draw_sprite(DataRef.hitBy,a,round(xxx),round(yyy) + 32);
+			xxx = round(xxx + 40);
+			yyy = round(yyy);
+			draw_sprite(DataRef.hitBy,a,xxx,yyy + 32);
+			draw_set_halign(fa_center);
 		}
+		//DRAW WEAPONS
+		draw_set_halign(fa_left);
+		var wyy = vy + hh + 4;
+		var surfW = 128;
+		var surfH = 86;
+		var margin = 20;
+		var vMargin = 20;
+		var hMargin = 20;
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			titleWidth = 310;
+			var wxx = vx + wh - 144 - 12
+			surfW += 64;
+		} else {
+			var wxx = vx + wh - 120
+		}
+		var wepsurfx = wxx - 4
+		var wepsurfy = wyy + 9;
+		draw_sprite(sprKilledBySplat,clamp(((gameovertime-30) / 5),0,2),wxx,wyy);
+		scrDrawTextBackgrounded(wxx,wyy,"WEAPONS FOUND:");
+		if !surface_exists(wepSurf)
+			wepSurf = surface_create(surfW,surfH);
+		if mouse_wheel_down() {
+			wepScroll += 8;
+			if alarm[8] > 0
+			{
+				alarm[9] = 0;
+				alarm[8] = 30;	
+			}
+			else if alarm[9] > 0
+			{
+				alarm[8] = 0;
+				alarm[9] = 30;	
+			}
+			var maxi = (vMargin * (UberCont.longestWeaponRow + 1)) - surfH
+			if wepScroll > maxi
+			{
+				wepScroll = max(0,maxi);
+				alarm[8] = 0;
+				alarm[9] = 30;
+			}
+		} else if mouse_wheel_up() {
+			wepScroll -= 8;
+			if alarm[8] > 0
+			{
+				alarm[9] = 0;
+				alarm[8] = 30;	
+			}
+			else if alarm[9] > 0
+			{
+				alarm[8] = 0;
+				alarm[9] = 30;
+			}
+			if wepScroll < 0
+			{
+				wepScroll = 0;
+				alarm[9] = 0;
+				alarm[8] = 30;
+			}
+		}
+		var wy = vMargin - 8 + -wepScroll;
+		surface_set_target(wepSurf);
+		draw_clear_alpha(c_black,0);
+		
+		with UberCont
+		{
+			var al = array_length(finalizedWeapons);
+			if (al > 0)
+			{
+				var weaponStep = surfW/al;
+				var weaponX = hMargin;
+				for (var i = 0; i < al; i++)
+				{
+					scrDrawWeaponsFound(finalizedWeapons[i],vMargin,weaponX,wy);
+					weaponX += weaponStep;
+				}
+			}
+		}
+		surface_reset_target();
+		draw_surface(wepSurf,wepsurfx,wepsurfy);
+		surface_free(wepSurf);
+		draw_set_halign(fa_center);
 		if is_array(gotHover)
 		{
 			draw_set_valign(fa_top)
 			var tx = gotHover[2]
 			var w = round((string_width(gotHover[0]) * 0.5) + 1);
 			var th = round((string_height(gotHover[0]) * 0.5) + 1);
-			var tty = round(yy - 6);
+			var tty = round(vy+hh - 10)//round(vy+hh - 16)//20
+			//var tty = round(yy - 6);
 			if gotHover[1]
 			{
 				tty += 17;
@@ -242,7 +359,8 @@ function scrDrawGameOver() {
 
 	if gameovertime > 30
 	{
-		var yyy = vy+hh + 22;//20
+		var yyy = vy + h - 9;//20
+		/*
 		draw_set_color(c_black)
 		draw_text(vx + wh+1,yyy+1,gmt)
 		draw_text(vx + wh+1,yyy+1,gmt)
@@ -250,6 +368,8 @@ function scrDrawGameOver() {
 		
 		draw_set_color(c_white)
 		draw_text(vx + wh,yyy,gmt)
+		*/
+		draw_set_halign(fa_left)
 		if !normalMode
 		{
 			var gamemodeScrollString = "";
@@ -264,18 +384,21 @@ function scrDrawGameOver() {
 				}
 			}
 			//var yyy = vy+__view_get( e__VW.HView, 0 )*0.5;
-			gmwidth = max(0,string_width(gamemodeScrollString) - camera_get_view_width(0));
+			gmwidth = max(0,string_width(gamemodeScrollString) - (camera_get_view_width(0) - 116));
+			//if string_width(gamemodeScrollString) > camera_get_view_width(view_camera[0])
+			//	gmwidth = string_width(gamemodeScrollString);
 			var xx = lerp(
-			vx+(wh) - gmwidth*0.5,
-			vx+(wh) + gmwidth*0.5,
+			vx+(20) - gmwidth,
+			vx+(20),
 			gmScroll);
 			//
 			draw_set_color(c_black)
-			draw_text(xx,yyy+1+9,gamemodeScrollString)
-			draw_text(xx+1,yyy+1+9,gamemodeScrollString)
-			draw_text(xx+1,yyy+9,gamemodeScrollString)
+			draw_text(xx,yyy+1,gamemodeScrollString)
+			draw_text(xx+1,yyy+1,gamemodeScrollString)
+			draw_text(xx+1,yyy,gamemodeScrollString)
+			draw_set_color(c_gray)
+			draw_text(xx,yyy,gamemodeScrollString);
 			draw_set_color(c_white)
-			draw_text(xx,yyy+9,gamemodeScrollString)
 		}
 	}
 	with UberCont

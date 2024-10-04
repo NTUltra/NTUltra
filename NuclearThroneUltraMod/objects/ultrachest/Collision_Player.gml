@@ -86,6 +86,7 @@ if !instance_exists(GenCont)
 					{
 						scrWeapons()
 						wep=other.weps[i];
+						scrAddNewWeaponDrop(wep);
 						name = wep_name[wep]
 						ammo = 50
 						type = wep_type[wep]

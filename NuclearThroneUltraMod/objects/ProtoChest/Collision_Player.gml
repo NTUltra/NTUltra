@@ -5,6 +5,7 @@ sprite_index = sprProtoChestOpen
 	{
 		scrWeapons()
 		wep = other.wep
+		scrAddNewWeaponDrop(wep);
 		wepmod1=other.wepmod1
 		wepmod2=other.wepmod2
 		wepmod3=other.wepmod3

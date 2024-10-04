@@ -1004,7 +1004,10 @@ function scrMakeFloor(limiter) {
 				d += 90;
 				with instance_create(x,y,FloorMaker) { 
 					firstTry = false;
-					goal = 17;
+					if other.area == 140
+						goal = 22;
+					else
+						goal = 17;
 					styleb = other.styleb;
 					direction = d;
 					limiter = scrGenerateFloorMaker(limiter)

@@ -400,7 +400,8 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		{
 			scrWeapons()
 			SetSeedWeapon();
-			wep = scrDecideWep(weaponTier + max(0,-1),2)
+			wep = scrDecideWep(max(0,weaponTier - 1),2 + weaponTier)
+			scrAddNewWeaponDrop(wep);
 			name = wep_name[wep]
 			type = wep_type[wep]
 			ammo = 20

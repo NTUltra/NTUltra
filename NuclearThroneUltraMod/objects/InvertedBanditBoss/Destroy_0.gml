@@ -33,6 +33,7 @@ if instance_exists(Player)
 	{
 	scrWeapons()
 	wep = 298
+	scrAddNewWeaponDrop(wep);
 	name = wep_name[298]
 	ammo = 0
 	type = wep_type[298]

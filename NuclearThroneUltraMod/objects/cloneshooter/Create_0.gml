@@ -135,5 +135,6 @@ poppop = Player.poppop;
 firedOnce = Player.firedOnce;
 fired = Player.fired;
 firedthislevel = Player.firedthislevel;
+lastFiredWeapon = Player.lastFiredWeapon;
 
 hitscanMode = false;

@@ -1,4 +1,4 @@
-scrDrop(24,0)
+scrDrop(25,0)
 morphMe = 6;
 event_inherited()
 with instance_create(x,y,GhostCorpse)

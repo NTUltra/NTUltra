@@ -33,8 +33,4 @@ surface_reset_target()}
 wave = 0
 fogscroll = 0
 depth = -10;
-gmwidth = 1;
-gmScroll = 0;
-
-hudSurface = -1;
 bloomSurface = -1;

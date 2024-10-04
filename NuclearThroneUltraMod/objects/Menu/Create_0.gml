@@ -1,5 +1,10 @@
 //if !instance_exists(Cursor)
 //instance_create(0,0,Cursor);
+with UberCont
+{
+	debug("RESET FINAL WEAPONS");
+	finalizedWeapons = [];	
+}
 depth = -11;
 creditpage = 0;
 mode = 0
