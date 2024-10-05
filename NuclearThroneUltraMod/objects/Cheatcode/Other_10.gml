@@ -15,6 +15,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		race_have[dir]=1
 		race_bskin[dir]=1
 		race_cskin[dir]=1
+		secondary_start_wep[dir] = 1;
 		//Crownstart unlock
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;

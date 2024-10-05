@@ -22,15 +22,14 @@ if instance_exists(creator)
 		}
 		ang += angstep;
 	}
-	BackCont.viewx2 += lengthdir_x(14,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(14,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 9
 	with creator
 	{
 		if object_index != Player || !skill_got[2]
 		{
-			scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180,0.1);
-			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,3)
+			motion_add(aimDirection+180,3.4)
 		}	
 		wkick = 8
 	}

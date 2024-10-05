@@ -66,12 +66,13 @@ exit;
 }
 //*/
 randomize();
-debug("seed: ", random_get_seed());
 if !audio_group_is_loaded(agsfx)
 	audio_group_load(agsfx);
 	
 if !instance_exists(UberCont)
-instance_create(0,0,UberCont)
+{
+	instance_create(0,0,UberCont)
+}
 
 if !instance_exists(KeyCont)
 instance_create(0,0,KeyCont)
@@ -80,6 +81,7 @@ if !instance_exists(GameRender)
 instance_create(0,0,GameRender)
 	
 draw_set_font(fntM)
-
-room_goto(romGame)
+if !instance_exists(CanLoadRetailSave)
+	room_goto(romGame)
+	
 instance_destroy()

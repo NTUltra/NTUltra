@@ -26,4 +26,4 @@ else
 {
 	snd_play(snd);
 }
-snd_loop(sndPortalLoop)
+snd_play(sndPortalLoop,0,false,true,3,false,false,0.8,true,id);

@@ -260,15 +260,17 @@ function scrDrawGameOver() {
 		var margin = 20;
 		var vMargin = 20;
 		var hMargin = 20;
+		var wxo = 4;
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		{
 			titleWidth = 310;
 			var wxx = vx + wh - 144 - 12
-			surfW += 64;
+			surfW += 80;
+			wxo += 16;
 		} else {
 			var wxx = vx + wh - 120
 		}
-		var wepsurfx = wxx - 4
+		var wepsurfx = wxx - wxo
 		var wepsurfy = wyy + 9;
 		draw_sprite(sprKilledBySplat,clamp(((gameovertime-30) / 5),0,2),wxx,wyy);
 		scrDrawTextBackgrounded(wxx,wyy,"WEAPONS FOUND:");
@@ -315,7 +317,7 @@ function scrDrawGameOver() {
 		var wy = vMargin - 8 + -wepScroll;
 		surface_set_target(wepSurf);
 		draw_clear_alpha(c_black,0);
-		
+		var wepHover = 0;
 		with UberCont
 		{
 			var al = array_length(finalizedWeapons);
@@ -325,14 +327,36 @@ function scrDrawGameOver() {
 				var weaponX = hMargin;
 				for (var i = 0; i < al; i++)
 				{
-					scrDrawWeaponsFound(finalizedWeapons[i],vMargin,weaponX,wy);
+					var newHover = scrDrawWeaponsFound(finalizedWeapons[i],vMargin,weaponX,wy,wepsurfx,wepsurfy, surfH, weaponStep);
+					if newHover != 0
+						wepHover = newHover;
 					weaponX += weaponStep;
 				}
 			}
 		}
 		surface_reset_target();
 		draw_surface(wepSurf,wepsurfx,wepsurfy);
-		surface_free(wepSurf);
+		if wepHover > 0
+		{
+			if alarm[8] > 0
+			{
+				alarm[9] = 0;
+				alarm[8] = 30;	
+			}
+			else if alarm[9] > 0
+			{
+				alarm[8] = 0;
+				alarm[9] = 30;
+			}
+			var wtxt = UberCont.wep_name[wepHover];
+			var w = string_width(wtxt) + 1.5;
+			var th = string_height(wtxt) + 1.5;
+			var tx = mouse_x - camera_get_view_x(view_camera[0]) + 12;
+			var ty = mouse_y - camera_get_view_y(view_camera[0]) - 12;
+			draw_rectangle_colour(tx-1,ty-1,tx+w,ty+th,c_black,c_black,c_black,c_black,false);
+			draw_set_colour(c_white);
+			draw_text(tx + 1,ty + 1,wtxt);
+		}
 		draw_set_halign(fa_center);
 		if is_array(gotHover)
 		{

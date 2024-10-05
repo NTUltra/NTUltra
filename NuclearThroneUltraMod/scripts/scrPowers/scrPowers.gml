@@ -294,7 +294,7 @@ function scrPowers(raceOverwrite = -1) {
 		    {
 		        DealDamage(2,false,false,false);
 				hitBy = sprite_index;
-		        exception=true
+		        exception = true
 		    }
 			scrBlankArmour();
 			scrSerpentArmourStrike();
@@ -1208,7 +1208,7 @@ function scrPowers(raceOverwrite = -1) {
 		        instance_create(x+xran,y+yran,YungCuzDupe);
     
 			    //for rage and euphoria
-			    exception=true;
+			    exception = true;
     
 			        if ultra_got[47] {
 						if !altUltra
@@ -1257,7 +1257,7 @@ function scrPowers(raceOverwrite = -1) {
 		        instance_create(x,y,YungCuzDupe);
     
 		    //for rage and euphoria
-		    exception=true;
+		    exception = true;
     
 		        if ultra_got[47] {
 					if !altUltra
@@ -1578,7 +1578,7 @@ function scrPowers(raceOverwrite = -1) {
 						DealDamage(2,false,false,false);
 					hitBy = sprite_index;
 				}
-				exception=true;
+				exception = true;
 			
 				sprite_index = spr_hurt
 				image_index = 0

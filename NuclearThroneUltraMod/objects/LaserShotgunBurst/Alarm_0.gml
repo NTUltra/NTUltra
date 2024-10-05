@@ -27,7 +27,7 @@ if instance_exists(creator)
 			team = other.team;
 			sprite_index = sprMicroLaser;
 			knockback = 1;
-			alarm[2] = 4;
+			alarm[2] += 2;
 			image_yscale *= 0.5;
 			dmg -= 1;
 			scrCopyWeaponMod(other);

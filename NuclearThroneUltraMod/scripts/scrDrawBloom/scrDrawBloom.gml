@@ -163,6 +163,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with PlasmaBall
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale*2,image_yscale*2,image_angle,c_white,ba)
+	with EnergySnailCannon
+	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,yScale + 0.5, xScale + 0.5,image_angle,c_white,ba)
 	with BouncerPlasmaBall
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with BouncerPlasmaBallBig

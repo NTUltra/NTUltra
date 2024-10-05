@@ -2,8 +2,8 @@ var maxspd = 14;
 var modBoost = 1.5;
 if instance_exists(Player)
 {
-	if Player.skill_got[30] == 1
-		modBoost = 3;
+	//if Player.skill_got[30] == 1
+	//	modBoost = 3;
 	if Player.wepmod1 == 11
 		maxspd += modBoost;
 	if Player.wepmod2 == 11
@@ -25,20 +25,42 @@ totalSpeed = min(totalSpeed,maxspd);
 with creator
 {
 	var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-	motion_add(aimDir,1);
-	speed = max(speed,4);
-	var tspd = other.totalSpeed;
-	if !place_meeting(x + lengthdir_x(tspd,aimDir),y,WallHitMe) && !collision_line(x,y,x + lengthdir_x(tspd,aimDir),y,WallHitMe,false,false)
-		x += lengthdir_x(tspd,aimDir);
-	if !place_meeting(x,y + lengthdir_y(tspd,aimDir),WallHitMe) && !collision_line(x,y,x,y + lengthdir_y(tspd,aimDir),WallHitMe,false,false)
-		y += lengthdir_y(tspd,aimDir);
-	with RocketSlash
+	if object_index == Player && !skill_got[2]
 	{
-	x=other.x;
-	y=other.y;
-	image_angle=other.direction;
-	dmg+=0.02;
+		motion_add(aimDir,1);
+		speed = max(speed,4);
+	
+		var tspd = other.totalSpeed;
+		if !place_meeting(x + lengthdir_x(tspd,aimDir),y,WallHitMe) && !collision_line(x,y,x + lengthdir_x(tspd,aimDir),y,WallHitMe,false,false)
+			x += lengthdir_x(tspd,aimDir);
+		if !place_meeting(x,y + lengthdir_y(tspd,aimDir),WallHitMe) && !collision_line(x,y,x,y + lengthdir_y(tspd,aimDir),WallHitMe,false,false)
+			y += lengthdir_y(tspd,aimDir);
+		
+		with RocketSlash
+		{
+			x=other.x;
+			y=other.y;
+			image_angle=other.direction;
+		}
 	}
+	else
+	{
+		if instance_exists(Player)
+		{
+			if !Player.canMove
+			{
+				Player.canMove = true;
+				other.disablePlayerMove = true;
+			}
+		}
+		with RocketSlash
+		{
+			x = other.x;
+			y = other.y;
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+		}
+	}
+	
 	instance_create(x,y,Smoke);
 	if other.Speed>6
 	instance_create(x,y,Smoke);

@@ -2,7 +2,6 @@
 //instance_create(0,0,Cursor);
 with UberCont
 {
-	debug("RESET FINAL WEAPONS");
 	finalizedWeapons = [];	
 }
 depth = -11;

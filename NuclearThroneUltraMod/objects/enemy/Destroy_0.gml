@@ -2,7 +2,7 @@ if(morphMe == 0){
 
 	myCorpse = instance_create(xprevious,yprevious,MovingCorpse)
 	scrSpawnCorpse();
-	snd_play(snd_dead, 0.1,true);
+	snd_play(snd_dead, 0.1);
 }
 else if morphMe != 6
 {

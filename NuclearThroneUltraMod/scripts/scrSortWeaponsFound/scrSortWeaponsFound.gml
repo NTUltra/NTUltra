@@ -4,13 +4,11 @@
 function scrSortWeaponsFound(){
 	with UberCont
 	{
-		debug("THESE WEAPONS: ", droppedWeapons);
 		finalizedWeapons = [];
 		var rows = 2;
 		if opt_sideart == sprite_get_number(sprSideArt) + 1
-			rows += 1;
+			rows += 2;
 			
-		droppedWeapons = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,29,20,21,22];
 		var al = array_length(droppedWeapons);
 		var weaponTracking = 0;
 		longestWeaponRow = 0;

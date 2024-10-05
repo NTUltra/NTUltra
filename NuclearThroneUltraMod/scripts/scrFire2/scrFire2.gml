@@ -1110,7 +1110,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
+	if !skill_got[2]
+		motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -2925,7 +2926,7 @@ function scrFire2(hasTailNow) {
 		type = 5;
 		cost = 1;
 		creator = other.id
-		chargetime = 4;
+		chargetime = 3;
 		costtime = 11;
 		team = other.team
 		if Player.skill_got[42]
@@ -4910,7 +4911,7 @@ function scrFire2(hasTailNow) {
 	//JAWBREAKER
 	case 355:
 	var aimdir = aimDirection+(random(10)-5*accuracy);
-	var offset = 10 * accuracy;
+	var offset = 9 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -5801,7 +5802,7 @@ function scrFire2(hasTailNow) {
 	//GOLDEN JAWBREAKER
 	case 383:
 	var aimdir = aimDirection+(random(6)-3*accuracy);
-	var offset = 9 * accuracy;
+	var offset = 8 * accuracy;
 	var ldx = lengthdir_x(offset,aimdir+90);
 	var ldy = lengthdir_y(offset,aimdir+90);
 	var cldx = x+lengthdir_x(offset+8,aimdir+90);
@@ -6913,7 +6914,8 @@ function scrFire2(hasTailNow) {
 		image_yscale = 1;
 	}
 	wepangle = -wepangle
-	motion_add(aimDirection,12)
+	if !skill_got[2]
+		motion_add(aimDirection,12)
 	BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -8795,10 +8797,11 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 1
+	BackCont.shake += 5
 	wkick = -4
 
 	break;
@@ -8832,7 +8835,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(25,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(25,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 10
@@ -8982,7 +8986,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
@@ -9120,7 +9125,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -9194,7 +9200,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,8)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -9742,7 +9749,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -10798,7 +10806,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
@@ -10895,8 +10904,6 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team}
 
-	motion_add(aimDirection,2.5)
-
 	BackCont.viewx2 += lengthdir_x(60,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(60,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 16
@@ -10969,7 +10976,8 @@ function scrFire2(hasTailNow) {
 
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3
@@ -11774,7 +11782,8 @@ function scrFire2(hasTailNow) {
 
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3
@@ -12067,7 +12076,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,8)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -12131,7 +12141,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -12159,7 +12170,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
+	if !skill_got[2]
+		motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -12410,7 +12422,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,5)
+	if !skill_got[2]
+		motion_add(aimDirection,5)
 	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -12542,7 +12555,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -12726,7 +12740,8 @@ function scrFire2(hasTailNow) {
 		team = other.team}
 
 		wepangle = -wepangle
-		motion_add(aimDirection,6)
+		if !skill_got[2]
+			motion_add(aimDirection,6)
 		BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 2
@@ -13221,7 +13236,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,2.5)
+	if !skill_got[2]
+		motion_add(aimDirection,2.5)
 	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -13937,7 +13953,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,8)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -14014,7 +14031,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(24,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(24,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3
@@ -14612,7 +14630,8 @@ function scrFire2(hasTailNow) {
 		image_angle = direction
 		team = other.team
 	}
-	motion_add(aimDirection,2);
+	if !skill_got[2]
+		motion_add(aimDirection,2);
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(6,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection)*UberCont.opt_shake
@@ -14656,7 +14675,8 @@ function scrFire2(hasTailNow) {
 		xx += lengthdir_x(l,aimDirection);
 		yy += lengthdir_y(l,aimDirection);
 	}
-	motion_add(aimDirection,4);
+	if !skill_got[2]
+		motion_add(aimDirection,4);
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(6,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection)*UberCont.opt_shake
@@ -14706,7 +14726,8 @@ function scrFire2(hasTailNow) {
 		l += 18 + Player.skill_got[13];
 		oA *= -1;
 	}
-	motion_add(aimDirection,2);
+	if !skill_got[2]
+		motion_add(aimDirection,2);
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
@@ -14989,7 +15010,8 @@ function scrFire2(hasTailNow) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -15865,7 +15887,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 7
@@ -16077,7 +16100,8 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,3.5)
+	if !skill_got[2]
+		motion_add(aimDirection,3.5)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 1
@@ -16575,7 +16599,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//BAYONETTE RIFLE
+	//CHARGE BAYONETTE RIFLE
 	case 740:
 	wep_sprt[740] = sprBayonetteRifle;
 	with instance_create(x,y,BayonetteRifle)
@@ -16584,8 +16608,8 @@ function scrFire2(hasTailNow) {
 		type = 2;
 		cost = 1;
 		creator = other.id
-		chargetime = 3;
-		costtime = 9
+		chargetime = 2;
+		costtime = 8
 		team = other.team
 		if Player.skill_got[42]
 		{

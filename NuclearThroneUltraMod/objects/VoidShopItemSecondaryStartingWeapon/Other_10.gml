@@ -1,4 +1,4 @@
-/// @description Increase save slots
+/// @description Unlock second starting weapons
 event_inherited();
 if instance_exists(Player) && !UberCont.secondary_start_wep[Player.race]
 with UberCont

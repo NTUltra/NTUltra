@@ -18,3 +18,7 @@ if spr_idle == sprBigVultureSkullOpen
 	sprite_index = wep_sprt[375]
 	}
 }
+with PitEnterance
+{
+	disable = true;	
+}

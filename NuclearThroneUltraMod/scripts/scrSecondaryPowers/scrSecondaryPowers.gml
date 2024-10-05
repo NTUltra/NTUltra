@@ -131,7 +131,7 @@ function scrSecondaryPowers() {
 							DealDamage(2,false,false,false);
 					
 						hitBy = sprite_index;
-						exception=true;
+						exception = true;
 						sprite_index = spr_hurt
 						image_index = 0
 						//snd_play_2d(snd_hurt, hurt_pitch_variation)

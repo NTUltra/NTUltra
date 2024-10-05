@@ -45,7 +45,7 @@ if instance_exists(Player) && instance_exists(creator)
 		rate -= 4;
 		instance_create(x,y,Smoke);
 	}
-	repeat(ceil(max(4,rate) * 0.5))
+	repeat(ceil(max(4,rate) * 0.4))
 	{
 		with instance_create(x,y,Bullet2Heavy)
 		{

@@ -17,7 +17,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = other.direction+180;
 team = other.team
-ammo = 14
+ammo = other.lightningAmmo
 event_perform(ev_alarm,0)
 with instance_create(x,y,LightningSpawn)
 image_angle = other.image_angle}

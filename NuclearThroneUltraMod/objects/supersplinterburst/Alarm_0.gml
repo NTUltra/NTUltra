@@ -9,13 +9,12 @@ if instance_exists(creator)
 	y = creator.y;
 
 	//FIRING
-	//with instance_create(xx,yy,Shell)
-	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))
 	snd_play_fire(sndSuperSplinterGun);
 	var d = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
 	with creator
 	{
-		motion_add(d+180,1);
+		if !skill_got[2]
+			motion_add(d+180,1.5);
 		wkick = 5
 	}
 	BackCont.viewx2 += lengthdir_x(15,d+180)*UberCont.opt_shake

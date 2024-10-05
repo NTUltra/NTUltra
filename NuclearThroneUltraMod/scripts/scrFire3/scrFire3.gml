@@ -333,7 +333,7 @@ function scrFire3(hasTailNow){
 			team = other.team;
 			sprite_index = sprMicroLaser;
 			knockback = 2;
-			alarm[2] = 4;
+			alarm[2] += 2;
 			image_yscale *= 0.5;
 			dmg -= 1;
 			event_perform(ev_alarm,0)
@@ -345,8 +345,7 @@ function scrFire3(hasTailNow){
 
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.25);
-			motion_add(aimDirection+180,0.5)
+			motion_add(aimDirection+180,1)
 		}
 
 		break;
@@ -632,7 +631,7 @@ function scrFire3(hasTailNow){
 		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 		with instance_create(x,y,Bullet1ScaleDamage)
-		{motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+		{motion_add(aimDirection,12)
 			if instance_exists(BulletScaler)
 				speed += min(6,BulletScaler.dmg * 0.5);
 		image_angle = direction
@@ -1495,8 +1494,9 @@ function scrFire3(hasTailNow){
 		case 835:
 
 		snd_play_fire(choose(sndPlopMachinegun1,sndPlopMachinegun2))
-		with instance_create(x,y,Shell)
-		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		repeat(2)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 		with instance_create(x,y,Bullet12)
 		{
@@ -1854,7 +1854,7 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//ULTRA SHOVEL CRASH
+		//ULTRA SHOVEL BURST CRASH
 		case 846:
 		
 		with instance_create(x,y,UltraShovelCrashBurst)
@@ -1865,6 +1865,7 @@ function scrFire3(hasTailNow){
 			team = other.team
 			event_perform(ev_alarm,0)
 		}
+		scrSpinnableWeapon(wep);
 		BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 5
@@ -1981,13 +1982,286 @@ function scrFire3(hasTailNow){
 			team = other.team}
 		}
 
-		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
-		BackCont.shake += 12
-		wkick = 7
+		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 16
+		wkick = 9
 		if !skill_got[2]
 			scrMoveContactSolid(aimDirection + 180,20);
 
 		break;
+		
+		//DOUBLE PLOP GUN
+		case 852:
+
+		snd_play_fire(choose(sndDoublePlopGun1,sndDoublePlopGun2))
+		repeat(4)
+			with instance_create(x,y,Shell)
+			motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet12)
+		{
+			motion_add(aimDirection+(8+random(8)-4)*other.accuracy,17)
+			image_angle = direction
+			team = other.team;
+		}
+		with instance_create(x,y,Bullet12)
+		{
+			motion_add(aimDirection+(8-random(8)-4)*other.accuracy,17)
+			image_angle = direction
+			team = other.team;
+		}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,3)
+		}
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 2
+
+		break;
+		
+		//ENERGY POP PISTOL
+		case 853:
+		
+		with instance_create(x,y,EnergyPopGunBurst)
+		{
+			creator = other.id
+			ammo = 2
+			time = 4
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		/*
+		if Player.skill_got[17]
+			snd_play_fire(choose(sndEnergyPopgunUpg1,sndEnergyPopgunUpg2))
+		else
+			snd_play_fire(choose(sndEnergyPopgun1,sndEnergyPopgun2))
+		snd_play_fire(sndEnergyPopPistol)
+		with instance_create(x,y,Bullet2Energy)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,15)
+			friction += 0.1;
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,3)
+		}
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4*/
+
+		break;
+		
+		//DOUBLE REVOLVER
+		case 854:
+
+		snd_play_fire(sndDoubleRevolver)
+		var aimdir = aimDirection+(random(6)-3*accuracy);
+		var offset = 5 * accuracy;
+		var ldx = lengthdir_x(offset,aimdir+90);
+		var ldy = lengthdir_y(offset,aimdir+90);
+		var cldx = x+lengthdir_x(offset+8,aimdir+90);
+		var cldy = y+lengthdir_y(offset+8,aimdir+90);
+		if (collision_line(x,y,cldx,cldy,Wall,false,false) > 0)
+		{
+			ldx = 0;
+			ldy = 0;
+		}
+		repeat(2)
+			with instance_create(x,y,Shell)
+			motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x + ldx,y + ldy,Bullet1)
+		{motion_add(aimdir,15)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x - ldx,y - ldy,Bullet1)
+		{motion_add(aimdir,15)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 2
+
+		break;
+		
+		//TOXIC MACHINEGUN
+		case 855:
+
+		snd_play_fire(sndMachinegunToxic)
+
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet1Toxic)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,15)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = 3
+
+		break;
+		
+		//FROST BURN MACHINEGUN
+		case 856:
+		
+		repeat(2)
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		
+		altFire = !altFire;
+		if altFire
+		{
+			snd_play_fire(sndFrostShot2)
+			with instance_create(x,y,FreezeBullet)
+			{motion_add(aimDirection+(random(12)-6)*other.accuracy,17)
+			image_angle = direction
+			team = other.team}
+		}
+		else
+		{
+			snd_play_fire(sndFlameMachinegun)
+			with instance_create(x,y,Bullet1Flame)
+			{motion_add(aimDirection+(random(8)-4)*other.accuracy,17)
+			image_angle = direction
+			team = other.team}
+		}
+
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 5
+
+		break;
+		
+		//CHARGE LIGHTNING BOW
+		case 857:
+
+		with ChargeLightningBow {
+			if scrChargeRelease()
+			{
+				instance_destroy();
+			}
+		}
+		with instance_create(x,y,ChargeLightningBow)
+		{
+			maxcharge=3;//maxrate
+			creator = other.id
+			chargetime = 6;
+			team = other.team
+			if Player.skill_got[42]
+			{
+				chargetime = 2;
+				maxcharge++;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					chargetime = 1;
+					rate = maxcharge;
+					maxcharge++;
+				}
+				scrActivateTail(hasTailNow);
+			}
+			event_perform(ev_alarm,0)
+		}
+
+		break;
+		
+		//CHARGE EXPLOSIVE BOW
+		case 858:
+
+		with ChargeExplosiveBow {
+			if scrChargeRelease()
+			{
+				instance_destroy();
+			}
+		}
+		with instance_create(x,y,ChargeExplosiveBow)
+		{
+			maxcharge=3;//maxrate
+			creator = other.id
+			chargetime = 6;
+			team = other.team
+			if Player.skill_got[42]
+			{
+				chargetime = 2;
+				maxcharge++;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					chargetime = 1;
+					rate = maxcharge;
+					maxcharge++;
+				}
+				scrActivateTail(hasTailNow);
+			}
+			event_perform(ev_alarm,0)
+		}
+
+		break;
+		
+		//ENERGY SNAIL CANNON
+		case 859:
+
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndPlasmaBigUpg)
+		else
+		snd_play_fire(sndPlasmaBig)
+
+		with instance_create(x,y,EnergySnailCannon)
+		{
+			motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
+			image_angle = direction
+			team = other.team
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,16);
+			motion_add(aimDirection+180,4)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 8
+
+		break;
+		
+		//ENERGY SNAIL GUN
+		case 860:
+
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndPlasmaUpg)
+		else
+		snd_play_fire(sndPlasma)
+
+		with instance_create(x,y,EnergySnail)
+		{
+			alarm[2] += 30;
+			hitResetRate += 2;
+			motion_add(aimDirection+(random(10)-5)*other.accuracy,5.5)
+			minSpeed -= 0.3;
+			image_angle = direction
+			team = other.team
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,6);
+			motion_add(aimDirection+180,3)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 8
+
+		break;
+		
 	}
 }

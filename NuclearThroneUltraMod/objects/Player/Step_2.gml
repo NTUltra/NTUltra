@@ -742,7 +742,7 @@ if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 if (tookHit)
 {
 	//Took a hit?
-	if (skill_got[32] && isAlkaline/* && lag < 1 && armour < 1*/ && exception=false)//Alkaline Savila
+	if (skill_got[32] && isAlkaline/* && lag < 1 && armour < 1*/ && !exception)//Alkaline Savila
 	{
 		var damageTaken = (prevhealth - my_health) - damageReduced;
 		//Needs to be healable or lethal
@@ -819,7 +819,7 @@ if (tookHit)
 	}
 	if skill_got[12]//euphoria resistance?
 	{
-		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&exception=false
+		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&!exception
 		{
 			if race=25
 				alarm[3] = max(16,alarm[3]);
@@ -1049,7 +1049,7 @@ if(my_health <= 0 && maxhealth > 0)
 
 
 
-if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
+if my_health < prevhealth && !exception// && alarm[3] < 1//I been hit
 {
 	tookDamageThisArea = true;
 	///rage
@@ -1074,7 +1074,21 @@ if my_health < prevhealth && exception=false// && alarm[3] < 1//I been hit
 // Audio
 audio_listener_position(x, y, depth*-10);
 
-exception = false;
+if exception
+{
+	if sprite_index == spr_hurt && hurtTime == 0
+	{
+		if loops > 0
+		{
+			hurtTime = hurtDurationLoop - 6;
+		}
+		else
+		{
+			hurtTime = hurtDuration - 6;
+		}
+	}
+	exception = false;
+}
 if rollIframe > 0
 {
 	if UberCont.normalGameSpeed == 60

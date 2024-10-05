@@ -1210,7 +1210,8 @@ function scrFire(canDrown = true) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,6)
 	BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -2695,6 +2696,7 @@ function scrFire(canDrown = true) {
 	case 103:
 
 	snd_play_fire(sndFrostShot2)
+	repeat(2)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
@@ -3167,7 +3169,8 @@ function scrFire(canDrown = true) {
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(26,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(26,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -3655,7 +3658,8 @@ function scrFire(canDrown = true) {
 	}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,6)
+	if !skill_got[2]
+		motion_add(aimDirection,8)
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 3

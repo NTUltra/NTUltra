@@ -17,14 +17,13 @@ if target != noone {
 				justAroundWall = true;
 			if random (3) < 1
 			{
-				motion_add(random(360),acc);
+				motion_add(point_direction(target.x, target.y,x,y),acc);
 				walk = alarm[1] + actTime;
 			}
         }
         else {
-            direction = point_direction(x,y,target.x, target.y) + random_range(60,-60);
+            direction = random(360);
             walk = actTime + random(actTime*2)
-            gunangle = point_direction(x, y, target.x, target.y)
         }
 		//justAroundWall = false;
         if target.x < x

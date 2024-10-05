@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.461338,
   "name":"sndMutant2Dead",
   "parent":{
     "name":"Crystal",
