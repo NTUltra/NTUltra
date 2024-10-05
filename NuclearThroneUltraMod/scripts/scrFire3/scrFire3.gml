@@ -1977,7 +1977,7 @@ function scrFire3(hasTailNow){
 		repeat(4)
 		{
 			with instance_create(x,y,Bullet2Heavy)
-			{motion_add(aimDirection+(random(30)-15)*other.accuracy,13+random(5))
+			{motion_add(aimDirection+(random(36)-18)*other.accuracy,13+random(5))
 			image_angle = direction
 			team = other.team}
 		}
@@ -2022,7 +2022,7 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//ENERGY POP PISTOL
+		//ENERGY POP RIFLE
 		case 853:
 		
 		with instance_create(x,y,EnergyPopGunBurst)

@@ -94,31 +94,34 @@ function scrEnemyTakingDamage() {
 				dmgTaken = dmgTaken - frac(dmgTaken*10)*0.1
 				if Player.my_health > Player.maxhealth
 				{
-					with instance_create_depth(x,y,depth - 1,ImpactFX)
-					{
-						var reduc = 0.03
-						var size = clamp(power(dmgTaken*reduc,0.5),0.2,2.5);
-						BackCont.shake += size*2;
-						sprite_index = sprEcstaticFXPlusUltra;	
-					}
+					if !collision_point(x,y,EcstaticFX,false,false)
+						with instance_create_depth(x,y,depth - 1,EcstaticFX)
+						{
+							var reduc = 0.03
+							var size = clamp(power(dmgTaken*reduc,0.5),0.2,2.5);
+							BackCont.shake += size*2;
+							sprite_index = sprEcstaticFXPlusUltra;	
+						}
 				}
 				else if Player.my_health == Player.maxhealth
 				{
-					with instance_create_depth(x,y,depth - 1,ImpactFX)
-					{
-						var reduc = 0.025;
-						var size = clamp(power(dmgTaken*reduc,0.5),0.15,2.5);
-						BackCont.shake += size*2;
-						sprite_index = sprEcstaticFX;	
-					}
+					if !collision_point(x,y,EcstaticFX,false,false)
+						with instance_create_depth(x,y,depth - 1,EcstaticFX)
+						{
+							var reduc = 0.025;
+							var size = clamp(power(dmgTaken*reduc,0.5),0.15,2.5);
+							BackCont.shake += size*2;
+							sprite_index = sprEcstaticFX;	
+						}
 				} else if Player.my_health > ceil(Player.maxhealth*0.5)
 				{
-					with instance_create_depth(x,y,depth - 1,ImpactFX)
-					{
-						var reduc = 0.02;
-						var size = clamp(power(dmgTaken*reduc,0.5),0.15,2);
-						sprite_index = sprEcstaticFXMinor;	
-					}
+					if !collision_point(x,y,EcstaticFX,false,false)
+						with instance_create_depth(x,y,depth - 1,EcstaticFX)
+						{
+							var reduc = 0.02;
+							var size = clamp(power(dmgTaken*reduc,0.5),0.15,2);
+							sprite_index = sprEcstaticFXMinor;	
+						}
 				}
 			}
 			my_health = prevhealth - dmgTaken;

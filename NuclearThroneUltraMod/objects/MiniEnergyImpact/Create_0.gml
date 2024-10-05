@@ -1,2 +1,2 @@
 event_inherited();
-dmg -= 1;
+dmg = max(0.5,dmg - 1.5);

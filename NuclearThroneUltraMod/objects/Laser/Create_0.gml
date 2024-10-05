@@ -9,7 +9,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.4//1.2
 alarm[2] = 2;
-knockback = 4;
+knockback = 5;
 laserhit=0;
 if instance_exists(Player)
 {

@@ -650,7 +650,7 @@ swapChar = false;
 crownvisits = 0
 reincarnate = false;
 if scrIsGamemode(21) { //loop start
-    hard = 18
+    hard = 12;
     loops = 1;
 }
 var r = UberCont.racepick;

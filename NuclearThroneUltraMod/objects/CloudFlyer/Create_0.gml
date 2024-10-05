@@ -13,7 +13,7 @@ spr_dead = sprCloudFlyerDead
 spr_fire = sprCloudFlyerFire;
 snd_hurt = sndCloudFlyerHurt
 snd_dead = sndCloudFlyerDie
-
+isInverted = false;
 //behavior
 walk = 0
 alarm[1] = 30+random(90);

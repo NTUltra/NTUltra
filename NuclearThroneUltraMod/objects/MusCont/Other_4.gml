@@ -322,11 +322,16 @@ if scrIsGamemode(8) && area != 0
 		audio_stop_sound(amb);
 		exit;
     }
-	else if area == 138 {
+	else if area == 138 || area == 140{
 
         song = musUltraIrradiatedSkies
         amb = ambUltra138;
     }
+	/*else if area == 140 {
+
+        song = musUltraInvIrradiatedSkies
+        amb = ambUltra138;
+    }*/
 	else if area == 139 {
 
         song = musUltraThePit

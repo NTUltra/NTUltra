@@ -9565,7 +9565,7 @@ function scrWeapons() {
 	wep_name[853] = "ENERGY POP RIFLE"
 	wep_type[853] = 5
 	wep_auto[853] = 3
-	wep_load[853] = 16
+	wep_load[853] = 15
 	wep_cost[853] = 1.5
 	wep_sprt[853] = sprEnergyPopRifle
 	wep_area[853] = 2

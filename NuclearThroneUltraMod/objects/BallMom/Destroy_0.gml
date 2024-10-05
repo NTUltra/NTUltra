@@ -10,7 +10,7 @@ with MusCont {
 	if instance_exists(Player) 
 	{
 		if Player.area == 2
-			song = mus6;
+			song = mus2;
 		else if Player.area == 110
 			song = musUltraInvertedSewers;
 		else if Player.area == 10

@@ -49,16 +49,7 @@ if um == ultramods.bulletShotgun
 	with instance_create(x,y,ElectroBall)
 	{
 		scrCopyWeaponMod(other);
-		direction = other.direction+4;
-		image_angle = direction;
-		speed = clamp(speed+3,4.5,11);
-		team = other.team;
-		alarm[11] = 0;
-	}
-	with instance_create(x,y,ElectroBall)
-	{
-		scrCopyWeaponMod(other);
-		direction = other.direction-4;
+		direction = other.direction;
 		image_angle = direction;
 		speed = clamp(speed+3,4.5,11);
 		team = other.team;

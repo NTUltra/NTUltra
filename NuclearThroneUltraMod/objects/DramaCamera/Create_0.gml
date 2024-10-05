@@ -79,7 +79,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		}
 		else if instance_exists(PitGhostBoss)
 		{
-			song = musUltraPitGhost;	
+			song = musUltraPitGhostBoss;	
 		}
 		else
 		{

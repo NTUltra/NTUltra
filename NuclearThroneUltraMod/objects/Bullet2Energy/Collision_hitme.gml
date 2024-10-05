@@ -43,9 +43,9 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	with instance_create(x,y,BulletHit)
 	{
 		if other.shotgunshouldered
-			sprite_index = sprBullet2Hit;
+			sprite_index = sprIDPDBulletHitRogue;
 		else
-			sprite_index = sprBullet2Disappear
+			sprite_index = sprBullet2Energy
 	}
 	
 }

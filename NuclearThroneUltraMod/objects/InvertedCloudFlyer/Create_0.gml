@@ -7,7 +7,8 @@ raddrop = 8
 maxhealth = 8
 EnemyHealthAdjustments();
 mySize = 1
-
+actTime -= 4;
+isInverted = true;
 spr_idle = sprInvertedCloudFlyer
 spr_walk = sprInvertedCloudFlyer
 spr_hurt = sprInvertedCloudFlyerHurt

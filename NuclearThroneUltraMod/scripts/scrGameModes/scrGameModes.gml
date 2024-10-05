@@ -371,8 +371,8 @@ function scrGameModes() {
 	gamemode_description[49] = "START WITH REGAL VISION";
 	gamemode_nocombo[49] = [25,42,26,27,37,8];
 	
-	gamemode[50] = "NO THRONE GENERATORS";//
-	gamemode_unlock[50] = "DESTROY THE GENERATORS";
+	gamemode[50] = "NO GENERATORS";//
+	gamemode_unlock[50] = "DESTROY THE GENERATORS\nON THE THRONE FIGHT";
 	gamemode_have[50] = 0;
 	gamemode_tip[50] = "";
 	gamemode_description[50] = "DISABLES THE GENERATORS\nON THE THRONE FIGHT\n(YOU CAN NO LONGER SIT ON THE THRONE)";

@@ -6,6 +6,12 @@ speed = 0;
 sprite_index = spr_fire;
 image_index = 0;
 alarm[2] = (image_number/image_speed) + 1
+if isInverted
+{
+	with instance_create(x, y, EnemyDamageCircleInverted) {
+	    team = other.team
+	}
+}
 with instance_create(x, y, EnemyDamageCircle) {
     team = other.team
 }

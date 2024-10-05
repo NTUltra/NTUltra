@@ -7,7 +7,7 @@ raddrop = 50
 maxhealth = 450
 EnemyHealthAdjustments();
 acc += 2;
-maxSpeed += 1;
+maxSpeed += 1.5;
 spr_idle = sprInvertedCloudBoss
 spr_walk = sprInvertedCloudBoss
 spr_hurt = sprInvertedCloudBossHurt;
@@ -20,7 +20,7 @@ squareProjectileSpeed -= 0.1;
 squareProjectileSpeedOff -= 2;
 isInverted = true;
 sneakTime = 5;
-laserAmount += 2;
+laserAmount += 1;
 homingSpeed += 0.5;
 sneakTell -= 3;
 homingDurationAdjustment += 10;

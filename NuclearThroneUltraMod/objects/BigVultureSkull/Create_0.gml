@@ -36,4 +36,4 @@ x -= 16;
 scrCreateSpace(1);
 y += 8;
 x += 16;
-//alarm[2] = 15; OH BOY NEW CONTENT
+alarm[2] = 15;

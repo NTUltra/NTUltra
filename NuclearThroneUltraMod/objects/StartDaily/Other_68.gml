@@ -247,7 +247,7 @@ if (type == network_type_data) {
 			{
 				with Player
 				{
-					hard = 18;
+					hard = 12;
 					loops = 1;	
 				}
 			}

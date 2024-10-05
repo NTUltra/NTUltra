@@ -2,7 +2,8 @@
 // /@description
 ///@param
 function scrSpawnCorpse(){
-	with instance_create(xprevious,yprevious,MovingCorpse)
+	var c = instance_create(xprevious,yprevious,MovingCorpse);
+	with c
 	{
 		skidScale = min(4,(max(2,(other.bbox_right - other.bbox_left - 1))*0.5)/6);
 		mySize = other.mySize
@@ -55,4 +56,5 @@ function scrSpawnCorpse(){
 		speed += other.corpseBoost;
 		dmg += other.corpseBoost;
 	}
+	return c;
 }

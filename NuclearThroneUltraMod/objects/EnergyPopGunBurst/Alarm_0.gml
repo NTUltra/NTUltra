@@ -12,15 +12,12 @@ if instance_exists(creator)
 	else
 		snd_play_fire(choose(sndEnergyPopgun1,sndEnergyPopgun2))
 	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-	repeat(amountOfProjectiles)
+	with instance_create(x,y,Bullet2Energy)
 	{
-		with instance_create(x,y,Bullet2Energy)
-		{
-			motion_add(aimDirection,other.projectileSpeed + (other.ammo * 2))
-			image_angle = direction
-			team = other.team
-			scrCopyWeaponMod(other);
-		}
+		motion_add(aimDirection,other.projectileSpeed + (other.ammo * 2))
+		image_angle = direction
+		team = other.team
+		scrCopyWeaponMod(other);
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
