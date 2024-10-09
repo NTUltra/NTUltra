@@ -11,6 +11,7 @@ with instance_create(x,y,BloodStreak)
 image_xscale += ceil(longarms);
 with instance_create(x,y,SewingNeedleLine)
 {
+	right = other.right;
 	image_yscale = other.image_yscale;
 	scrCopyWeaponMod(other);
 	image_angle = other.image_angle;

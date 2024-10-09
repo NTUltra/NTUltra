@@ -15,6 +15,7 @@
     {"$GMSpriteFrame":"","%Name":"89a34a3f-c1c9-42bb-956f-ceb1b89450d2","name":"89a34a3f-c1c9-42bb-956f-ceb1b89450d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"59681d1c-b8c4-48bf-95b5-f4f5cefb1caa","name":"59681d1c-b8c4-48bf-95b5-f4f5cefb1caa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"dd87da34-f5dd-4cb0-a60e-094e441c5dfd","name":"dd87da34-f5dd-4cb0-a60e-094e441c5dfd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"41cf6a63-cb6c-4c7a-ade6-b6ba31f9514f","name":"41cf6a63-cb6c-4c7a-ade6-b6ba31f9514f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -51,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":3.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -79,6 +80,9 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dd87da34-f5dd-4cb0-a60e-094e441c5dfd","path":"sprites/sprBloodSewingNeedleLine/sprBloodSewingNeedleLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"10ac939d-31d5-4e10-b6f7-ef93c20e66e8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"41cf6a63-cb6c-4c7a-ade6-b6ba31f9514f","path":"sprites/sprBloodSewingNeedleLine/sprBloodSewingNeedleLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"42ba04ba-3782-476d-86cd-fc7a5b571876","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

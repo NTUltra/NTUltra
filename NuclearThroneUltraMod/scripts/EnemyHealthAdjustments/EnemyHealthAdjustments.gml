@@ -42,7 +42,7 @@ function EnemyHealthAdjustments(){
 		{
 			//hpReduction += round(maxhealth*0.25)
 			if Player.race == 25
-				my_health *= 0.80 + clamp(ogmaxhealth*0.00005,0,0.15);
+				my_health *= 0.75 + clamp(ogmaxhealth*0.00005,0,0.15);
 			else
 				my_health *= 0.65 + clamp(ogmaxhealth*0.00006,0,0.3);//should really be 65% but micro balance
 		}

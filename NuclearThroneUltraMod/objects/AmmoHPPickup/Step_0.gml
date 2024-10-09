@@ -44,9 +44,9 @@ if !supercursed || gotPluto {
 	{
 		if point_distance(x, y, Player.x, Player.y) < range or levelEnded {
 			suckDirection = point_direction(x, y, Player.x, Player.y)
-			if levelEnded || !place_meeting(x + lengthdir_x(as, suckDirection), y, Wall)
+			if levelEnded || !collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
 				x += lengthdir_x(as, suckDirection)
-			if levelEnded || !place_meeting(x, y + lengthdir_y(as, suckDirection), Wall)
+			if levelEnded || !collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
 				y += lengthdir_y(as, suckDirection)
 		    isGettingSucked = true;
 			if place_meeting(x,y,Player)
@@ -60,9 +60,9 @@ if !supercursed || gotPluto {
 		if instance_exists(Implosion) {
 		    if point_distance(x, y, Implosion.x, Implosion.y) < range or instance_exists(Implosion) {
 				suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
-		        if levelEnded || Player.ultra_got[12] == 1 || place_meeting(x + lengthdir_x(as, suckDirection), y,Wall) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+		        if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
 					x += lengthdir_x(as, suckDirection)
-		        if levelEnded || Player.ultra_got[12] == 1 || place_meeting(x, y + lengthdir_y(as, suckDirection),Wall) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+		        if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
 					y += lengthdir_y(as, suckDirection)
 				
 				if place_meeting(x,y,Implosion)
@@ -74,9 +74,9 @@ if !supercursed || gotPluto {
 		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < range)
 		{
 			suckDirection = point_direction(x, y, Hand.x, Hand.y);
-			if levelEnded || place_meeting(x + lengthdir_x(as, suckDirection), y,Wall)
+			if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
 				x += lengthdir_x(as, suckDirection)
-	        if levelEnded || place_meeting(x, y + lengthdir_y(as, suckDirection),Wall)
+	        if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
 				y += lengthdir_y(as, suckDirection)
 			if place_meeting(x,y,Hand)
 			{
@@ -89,9 +89,9 @@ if !supercursed || gotPluto {
 			if point_distance(x, y, n.x, n.y) < range
 			{
 				suckDirection = point_direction(x, y, n.x, n.y);
-				if levelEnded || place_meeting(x + lengthdir_x(as, suckDirection), y,Wall)
+				if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
 					x += lengthdir_x(as, suckDirection)
-			    if levelEnded || place_meeting(x, y + lengthdir_y(as, suckDirection),Wall)
+			    if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
 					y += lengthdir_y(as, suckDirection)
 				if place_meeting(x,y,YungCuzDupe)
 				{
@@ -102,12 +102,13 @@ if !supercursed || gotPluto {
 	}
 } else {
 	if instance_exists(Player) {
+		suckDirection = point_direction(x, y, Player.x, Player.y)
 		var dis = point_distance(x, y, Player.x, Player.y);
 	    if dis < 48 && dis > 16 {//37
-	        if levelEnded || !place_meeting(x + lengthdir_x(curseSpeed, point_direction(x, y, Player.x, Player.y)), y, Wall)
-	        x -= lengthdir_x(curseSpeed, point_direction(x, y, Player.x, Player.y))
-	        if levelEnded || !place_meeting(x, y + lengthdir_y(curseSpeed, point_direction(x, y, Player.x, Player.y)), Wall)
-				y -= lengthdir_y(curseSpeed, point_direction(x, y, Player.x, Player.y))
+	        if levelEnded || !collision_line(x,y,x + lengthdir_x(curseSpeed, suckDirection),y,Wall,false,false)
+	        x -= lengthdir_x(curseSpeed, suckDirection)
+	        if levelEnded || !collision_line(x,y,x,y + lengthdir_y(curseSpeed, suckDirection),Wall,false,false)
+				y -= lengthdir_y(curseSpeed, suckDirection)
 		}
 		if place_meeting(x,y,Player)
 		{

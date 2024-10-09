@@ -2412,6 +2412,173 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//TOXIC DENSE GUN
+		case 866:
+
+		snd_play_fire(sndToxicRevolver);
+		snd_play(sndClusterOpen);
+
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		var am = 5;
+		var aim = aimDirection+(random(8)-4)*other.accuracy
+		var ang = aim;
+		var angStep = 60;
+		var spd = 14;
+		var len = 4 * accuracy;
+		with instance_create(x,y,Bullet1Toxic)
+		{motion_add(aim,spd)
+		image_angle = direction
+		team = other.team}
+		repeat(am)
+		{
+			with instance_create(x + lengthdir_x(len,ang),y + lengthdir_y(len,ang),Bullet1Toxic)
+			{motion_add(aim,spd)
+			image_angle = direction
+			team = other.team}
+			ang += angStep;
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,8);
+			motion_add(aimDirection + 180,3);
+		}
+		BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 4
+
+		break
+		
+		//TOXIC HAND CANNON
+		case 867:
+
+		snd_play_fire(sndToxicLauncher)
+
+		with instance_create(x,y,ToxicCannonBall)
+		{
+			alarm[0] = 10;
+			motion_add(aimDirection,4)
+			alarm[3] = 5;
+			image_angle = direction
+			team = other.team
+		}
+		if !skill_got[2]
+		{
+			//scrMoveContactSolid(aimDirection + 180,4);
+			motion_add(aimDirection + 180,5);
+		}
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 6
+
+		break;
+		
+		//PLOP MINIGUN
+		case 868:
+
+		snd_play(sndPlopMinigun,0.08)
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
+
+		with instance_create(x,y,Bullet12)
+		{motion_add(aimDirection+(random(26)-13)*other.accuracy,15)
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,1)
+		}
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
+
+		break;
+		
+		//TRIPLE KRAKEN MACHINEGUN
+		case 869:
+
+		snd_play_fire(sndTripleKrakenMachinegun)
+		snd_play(choose(sndWater1,sndWater2));
+		repeat(5)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,Bullet1Kraken)
+		{
+			creator = other.id;
+			motion_add(aimDirection+(random(8)-4)*other.accuracy,15)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,Bullet1Kraken)
+		{
+			creator = other.id;
+			motion_add(aimDirection+(random(6)-3+ 10)*other.accuracy,15)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,Bullet1Kraken)
+		{
+			creator = other.id;
+			motion_add(aimDirection+(random(6)-3 - 10)*other.accuracy,15)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,FishBoost)
+		{
+			motion_add(aimDirection+random(60)-30,2+random(4));
+		}
+
+		BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 3
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,1)
+		}
+		
+		break;
+		
+		//TORPEDO LAUNCHER
+		case 870:
+
+		snd_play_fire(sndTorpedoFire)
+		var ang = random(360);
+		repeat(6)
+		{
+			with instance_create(x,y,Dust)
+			{
+				sprite_index = sprBubble;
+				motion_add(ang,2);
+				motion_add(aimDirection,1);
+			}
+			ang += 60;
+		}
+		with instance_create(x,y,LightningSpawn)
+		{
+			sprite_index=sprTentacleSpawn
+			image_angle = aimDirection
+		}
+		with instance_create(x,y,Torpedo)
+		{motion_add(aimDirection+(random(4)-2)*other.accuracy,2)
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,8)
+			scrMoveContactSolid(aimDirection + 180,16)
+		}
+		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 10
+
+		break;
 		
 	}
 }

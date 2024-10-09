@@ -11,12 +11,14 @@ if (alarm[11] < 1 || GetPlayerUltramod() != ultramods.rocketBolt)
 		instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),Explosion)
 		with instance_create(xx+lengthdir_x(24,ang+90),yy+lengthdir_y(24,ang+90),SmallExplosion)
 		{
+			scrCopyWeaponMod(other);
 			dmg -= 1;
 			with myExplosionMask
 				dmg -= 1;
 		}
 		with instance_create(xx+lengthdir_x(24,ang-90),yy+lengthdir_y(24,ang-90),SmallExplosion)
 		{
+			scrCopyWeaponMod(other);
 			dmg -= 1;
 			with myExplosionMask
 				dmg -= 1;
@@ -24,6 +26,9 @@ if (alarm[11] < 1 || GetPlayerUltramod() != ultramods.rocketBolt)
 	}
 	else
 	{
-		instance_create(x,y,Explosion)
+		with instance_create(x,y,Explosion)
+		{
+			scrCopyWeaponMod(other);	
+		}
 	}
 }

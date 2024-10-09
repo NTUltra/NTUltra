@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndTorpedoLinger1",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":16.618912,
+  "name":"sndTorpedoLinger1",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Sounds/Weapons.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndTorpedoLinger1.ogg",
+  "type":0,
+  "volume":1.0,
+}

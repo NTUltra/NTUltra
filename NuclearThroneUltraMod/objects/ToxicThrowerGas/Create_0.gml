@@ -18,10 +18,12 @@ consumeAmount = 1;
 dodgeAble = false;
 moodSwingable = false;
 isDoc = false;
+avoidPlayer = true;
 if instance_exists(Player)
 {
 	if Player.race=23
 	{
+		avoidPlayer = false;
 		alarm[0] = 0;
 		if Player.skill_got[5]
 		{

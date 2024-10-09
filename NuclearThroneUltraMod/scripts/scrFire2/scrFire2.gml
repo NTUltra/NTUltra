@@ -15684,7 +15684,11 @@ function scrFire2(hasTailNow) {
 		team = other.team}
 		ang += angStep;
 	}
-
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,4);
+		motion_add(aimDirection + 180,3);
+	}
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 10
@@ -17465,7 +17469,10 @@ function scrFire2(hasTailNow) {
 	wkick = 5
 	
 	if !skill_got[2]
-	scrMoveContactSolid(aimDirection + 180,8);
+	{
+		scrMoveContactSolid(aimDirection + 180,8);
+		motion_add(aimDirection + 180,3);
+	}
 
 	break
 	

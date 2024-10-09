@@ -171,7 +171,9 @@ strongspiritused=Player.strongspiritused;//false
 
 maxhealth = 6;
 if skill_got[1]//rhino skin
-maxhealth += 4;
+	maxhealth += 4;
+if skill_got[9]//second stomach
+	maxhealth += 1;
 if skill_got[31]//Tough shell
 	maxhealth += 1;
 if skill_got[33]//GLASS ARM CANNON

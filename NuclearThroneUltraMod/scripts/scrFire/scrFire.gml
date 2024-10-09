@@ -492,8 +492,7 @@ function scrFire(canDrown = true) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.4);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
@@ -957,8 +956,7 @@ function scrFire(canDrown = true) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,1)
+		motion_add(aimDirection+180,1.5)
 	}
 
 	break;
@@ -1486,17 +1484,18 @@ function scrFire(canDrown = true) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),EnergyShank)
+	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),EnergyShank)
 	{
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,4.5+longarms)
 	image_angle = direction
 	team = other.team}
 
 	wepangle = -wepangle
-	motion_add(aimDirection,3)
+	if !skill_got[2]
+		motion_add(aimDirection,3)
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -2064,8 +2063,7 @@ function scrFire(canDrown = true) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,1);
-		motion_add(aimDirection+180,1)
+		motion_add(aimDirection+180,2)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -2355,8 +2353,7 @@ function scrFire(canDrown = true) {
 	}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.7);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,2)
 	}
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
@@ -3298,9 +3295,15 @@ function scrFire(canDrown = true) {
 	var currentX = x;
 	var currentY = y;
 	var hitWall = false;
+	with instance_create(x,y,IceFlame)
+	{
+		motion_add(aimDirection,4)
+		image_angle = direction
+		team = other.team;
+	}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 	{
-		dmg = 12
+		dmg = 14
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3316,13 +3319,13 @@ function scrFire(canDrown = true) {
 			instance_create(x,y,Dust)
 			with instance_create(x,y,IceFlame)
 			{
-				motion_add(aimDirection,3.5+random(1))
+				motion_add(aimDirection,4)
 				image_angle = direction
 				team = other.team;
 			}
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 			{
-				dmg = 12
+				dmg = 14
 				longarms = 0
 				alarm[11] = choose(0,1);
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3761,8 +3764,7 @@ function scrFire(canDrown = true) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.3);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake

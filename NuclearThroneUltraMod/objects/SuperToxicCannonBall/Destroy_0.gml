@@ -3,9 +3,9 @@
 // Inherit the parent event
 event_inherited();
 
-ang = random(360)
-var angstep = 360/5;
-repeat(5)
+var ang = random(360)
+var angstep = 360/6;
+repeat(6)
 {
 	with instance_create(xprevious,yprevious,ToxicCannonBall)
 	{motion_add(other.ang,4)

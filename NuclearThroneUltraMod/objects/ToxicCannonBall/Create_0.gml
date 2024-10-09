@@ -14,6 +14,7 @@ angle=random(360);
 team = 2;
 alarm[2]=8;
 alarm[1]=140;
-snd_loop(sndFlamerLoop);
 
 dmg = 20;
+mySound = snd_play(sndToxicGasLoop,
+0,false,true,2,false,false,0.8,true,id);

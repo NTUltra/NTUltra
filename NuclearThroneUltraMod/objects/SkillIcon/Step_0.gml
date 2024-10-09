@@ -151,7 +151,14 @@ if selected && visible
 		scrUnlockCharacter(15,"FOR TAKING THRONE BUTT AS CRYSTAL");
 
 		}
-		else if skill = 10
+		else if skill == 9
+		{
+			with Player
+			{
+				defaultOverhealAddition += 1;	
+			}
+		}
+		else if skill == 10
 		{
 			with Player
 			{

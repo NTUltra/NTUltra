@@ -14,11 +14,11 @@ destroyTime = 30;
 railFx = sprUltraRailGunEffect;
 railHit = sprUltraRailgunHit;
 hitScale = 1;
-splashDamage = 20;
+splashDamage = 24;
 if instance_exists(Player) && Player.skill_got[17]
 {
-	dmg += 50 + (Player.betterlaserbrain * 5);
-	splashDamage += 5;
+	dmg += 60 + (Player.betterlaserbrain * 5);
+	splashDamage += 6;
 	hitScale = 1.25;
 	width += 2;
 	borderWidth += 1;

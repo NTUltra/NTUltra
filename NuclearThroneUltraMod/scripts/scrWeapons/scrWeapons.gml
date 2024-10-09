@@ -348,7 +348,7 @@ function scrWeapons() {
 	wep_name[31] = "TOXIC CROSSBOW"
 	wep_type[31] = 3
 	wep_auto[31] = 0
-	wep_load[31] = 27
+	wep_load[31] = 24
 	wep_cost[31] = 1
 	wep_sprt[31] = sprToxicBow
 	wep_area[31] = 3
@@ -1052,7 +1052,7 @@ function scrWeapons() {
 	wep_cost[93] = 1.5
 	wep_sprt[93] = sprBouncerSMG
 	wep_area[93] = 5
-	wep_text[93] = "first reddit requested"
+	wep_text[93] = "first reddit requested weapon"
 	wep_swap[93] = sndSwapPistol
 	wep_rad[93] = 0;
 
@@ -1262,7 +1262,7 @@ function scrWeapons() {
 	wep_load[112] = 3
 	wep_cost[112] = 0
 	wep_sprt[112] = sprInfinityPistol
-	wep_area[112] = 10
+	wep_area[112] = 9
 	wep_text[112] = "trusty new revolver"
 	wep_swap[112] = sndSwapPistol
 	wep_rad[112] = 0;
@@ -3899,7 +3899,7 @@ function scrWeapons() {
 	wep_load[347] = 5
 	wep_cost[347] = 2.5
 	wep_sprt[347] = sprTripleElectroGun
-	wep_area[347] = 12
+	wep_area[347] = 11
 	wep_text[347] = "chain lightning"
 	wep_swap[347] = sndSwapEnergy
 	wep_rad[347] = 0;
@@ -4103,7 +4103,7 @@ function scrWeapons() {
 	wep_load[365] = 28
 	wep_cost[365] = 2
 	wep_sprt[365] = sprSplinterShotgun
-	wep_area[365] = 11
+	wep_area[365] = 10
 	wep_text[365] = "fractured wood"
 	wep_swap[365] = sndSwapBow
 	wep_rad[365] = 0;
@@ -4501,7 +4501,7 @@ function scrWeapons() {
 	wep_name[399] = "WRONG DIRECTION"
 	wep_type[399] = 3
 	wep_auto[399] = 0
-	wep_load[399] = 34
+	wep_load[399] = 30
 	wep_cost[399] = 1
 	wep_sprt[399] = sprWrongDirection
 	wep_area[399] = 4
@@ -4708,7 +4708,7 @@ function scrWeapons() {
 	wep_type[417] = 4
 	wep_auto[417] = 0
 	wep_load[417] = 44
-	wep_cost[417] = 7
+	wep_cost[417] = 6.5
 	wep_sprt[417] = sprSuperToxicCannon
 	wep_area[417] = 14
 	wep_text[417] = "so much gas"
@@ -6204,7 +6204,7 @@ function scrWeapons() {
 	wep_name[552] = "SUPER WRONG DIRECTION"
 	wep_type[552] = 3
 	wep_auto[552] = 0
-	wep_load[552] = 50
+	wep_load[552] = 45
 	wep_cost[552] = 4.5
 	wep_sprt[552] = sprSuperWrongDirection
 	wep_area[552] = 14
@@ -7911,8 +7911,8 @@ function scrWeapons() {
 	wep_name[706] = "DENSE GUN"
 	wep_type[706] = 1
 	wep_auto[706] = 0
-	wep_load[706] = 22
-	wep_cost[706] = 10
+	wep_load[706] = 21
+	wep_cost[706] = 7.5
 	wep_sprt[706] = sprDenseGun
 	wep_area[706] = 1
 	wep_text[706] = "a dense amount of bullets"
@@ -8159,7 +8159,7 @@ function scrWeapons() {
 	wep_type[728] = 4
 	wep_auto[728] = 1
 	wep_load[728] = 9
-	wep_cost[728] = 1.75
+	wep_cost[728] = 1.5
 	wep_sprt[728] = sprMicroGrenade
 	wep_area[728] = 1
 	wep_text[728] = "step 1: blow it up"
@@ -8437,7 +8437,7 @@ function scrWeapons() {
 	wep_type[753] = 3
 	wep_auto[753] = 0
 	wep_load[753] = 30
-	wep_cost[753] = 9
+	wep_cost[753] = 8.5
 	wep_sprt[753] = sprBoltBomb
 	wep_area[753] = 11
 	wep_text[753] = "packed with bolts"
@@ -8580,8 +8580,8 @@ function scrWeapons() {
 	wep_name[766] = "HEAVY DENSE GUN"
 	wep_type[766] = 1
 	wep_auto[766] = 0
-	wep_load[766] = 25
-	wep_cost[766] = 18
+	wep_load[766] = 23
+	wep_cost[766] = 14.5
 	wep_sprt[766] = sprHeavyDenseGun
 	wep_area[766] = 5
 	wep_text[766] = "a brick"
@@ -8973,8 +8973,8 @@ function scrWeapons() {
 	wep_name[801] = "ULTRA RAILGUN"
 	wep_type[801] = 5
 	wep_auto[801] = 0
-	wep_load[801] = 40
-	wep_cost[801] = 6
+	wep_load[801] = 38
+	wep_cost[801] = 5
 	wep_sprt[801] = sprUltraRailgun
 	wep_area[801] = 26
 	wep_text[801] = "200"
@@ -9709,6 +9709,62 @@ function scrWeapons() {
 	wep_swap[865] = sndSwapSword
 	wep_rad[865] = 0;
 	wep_popup[865] = "MISSING DOES NOT DAMAGE YOU!";
+	
+	
+	wep_name[866] = "TOXIC DENSE GUN"
+	wep_type[866] = 1
+	wep_auto[866] = 0
+	wep_load[866] = 18
+	wep_cost[866] = 6
+	wep_sprt[866] = sprToxicDenseGun
+	wep_area[866] = 4
+	wep_text[866] = "packed with toxic bullets!"
+	wep_swap[866] = sndSwapPistol
+	wep_rad[866] = 0;
+	
+	wep_name[867] = "TOXIC HAND CANNON"
+	wep_type[867] = 1
+	wep_auto[867] = 0
+	wep_load[867] = 30
+	wep_cost[867] = 1.5
+	wep_sprt[867] = sprToxicHandCannon
+	wep_area[867] = 4
+	wep_text[867] = ""
+	wep_swap[867] = sndSwapExplosive
+	wep_rad[867] = 0;
+	
+	wep_name[868] = "PLOP MINIGUN"
+	wep_type[868] = 1
+	wep_auto[868] = 1
+	wep_load[868] = 1
+	wep_cost[868] = 1.5
+	wep_sprt[868] = sprMinigun
+	wep_area[868] = 7
+	wep_text[868] = "plop! plop! plop!"
+	wep_swap[868] = sndSwapMachinegun
+	wep_rad[868] = 0;
+	
+	wep_name[869] = "TRIPLE KRAKEN MACHINEGUN"
+	wep_type[869] = 1
+	wep_auto[869] = 1
+	wep_load[869] = 3
+	wep_cost[869] = 5
+	wep_sprt[869] = sprKrakenMachinegun
+	wep_area[869] = 18
+	wep_text[869] = "much more ammo efficient compared to other kraken bullet weapons"
+	wep_swap[869] = sndSwapPistol
+	wep_rad[869] = 0;
+	
+	wep_name[870] = "TORPEDO LAUNCHER"
+	wep_type[870] = 4
+	wep_auto[870] = 1
+	wep_load[870] = 35
+	wep_cost[870] = 3
+	wep_sprt[870] = sprKrakenMachinegun
+	wep_area[870] = 18
+	wep_text[870] = "Filled with kraken"
+	wep_swap[870] = sndSwapPistol
+	wep_rad[870] = 0;
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

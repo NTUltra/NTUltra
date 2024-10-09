@@ -5,7 +5,7 @@ if goToTarget
 if my_health < maxhealth*0.5 && !reachedHalfHealth
 {
 	reachedHalfHealth = true;
-	instance_create(x,y,PortalOpenWallBreak);
+	instance_create(x,y,WallBreakWallOnlyBigCircle);
 	scrDrop(40,0,true);
 	if instance_exists(Player) && Player.my_health < Player.maxhealth
 		scrDrop(80,0,false,0,3)//Only drops health

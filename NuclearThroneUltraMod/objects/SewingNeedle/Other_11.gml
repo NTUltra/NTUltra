@@ -8,3 +8,4 @@ with instance_create(x + lengthdir_x(sprWdth * image_xscale,image_angle),y + len
 	image_angle = direction;
 }
 image_yscale *= choose(1,-1);
+right = choose(1,-1);

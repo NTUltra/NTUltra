@@ -125,7 +125,7 @@ if (selected && visible &&
 			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
 			altUltra = true;
 			scrUltras(true, false);
-			defaultOverhealAddition = 2;
+			defaultOverhealAddition += 2;
 			spr_idle = sprMutant5DIdle;
 			spr_walk = sprMutant5DWalk;
 			spr_hurt = sprMutant5DHurt;

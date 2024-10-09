@@ -139,7 +139,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 			regalBut = scrAsciiChar(UberCont.opt_regal)
 		//TWO OR THREE HEALING MUTATIONS!
 		ultra_name[18] = "PHOTOSYNTHESIS"
-		ultra_text[18] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
+		ultra_text[18] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>+2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
 		ultra_tips[18] = "BY THE POWER OF THE SUN!"
 	}
 /*

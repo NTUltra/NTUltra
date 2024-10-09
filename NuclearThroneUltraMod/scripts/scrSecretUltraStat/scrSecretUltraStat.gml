@@ -310,7 +310,7 @@ function scrSecretUltraStat() {
 		if instance_exists(UberCont)
 			regalBut = scrAsciiChar(UberCont.opt_regal)
 	secret_ultra_name[38] = "PHOTOSYNTHESIS"
-	secret_ultra_text[38] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
+	secret_ultra_text[38] = "PRESS <w>[" + regalBut + "]<w> TO MOVE#AWAY FROM <r>ENEMIES<r> AT <w>LIGHTSPEED<w>##YOU CAN ALWAYS <r>OVERHEAL<r> <w>+2<w>##WHENEVER YOU <r>HEAL<r>:#CAST THE POWER OF THE <y>SUN<y>#ON YOUR <w>CROSSHAIR<w>"
 	secret_ultra_tips[38] = "BY THE POWER OF THE SUN!"
 	secret_ultra_hint[38] = "DOUBLE HEALING";
 	secret_ultra_unlk[38] = "HAVE ATLEAST TWO\nHEALING MUTATIONS";

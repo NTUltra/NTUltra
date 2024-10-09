@@ -177,12 +177,12 @@ function scrSkills() {
 
 	
 	skill_name[9] = "SECOND STOMACH"
-	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS"
+	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>";
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{
-		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>";
-		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> (1 HP)"
+		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>";
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
@@ -485,7 +485,7 @@ function scrSkills() {
 			skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
-	skill_bons[33] = "20% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
+	skill_bons[33] = "25% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
 	
 	/* OLD
 	skill_name[34] = "FLEXIBLE ELBOWS"
@@ -680,6 +680,10 @@ function scrSkills() {
 		WHENEVER YOU USE YOUR ACTIVE TENTACLES COME OUT OF YOUR BODY#MORE POWERFULL IF YOU WAIT BETWEEN ACTIVE USES
 		skill_tips[39] = ""
 		skill_msnd[39] =  sndPartyHorn
+		
+		GREAT LIBIDO <- lol
+		COLLECTING EXCESS RESOURCES DEALS SIGNIFICANT DAMAGE TO ENEMIES
+		COLLECTING EXCESS RESOURCES HYPNOTIZES ENEMIES
 	*/
 	/*
 	skill_name[33] = "THRONE BACK"
