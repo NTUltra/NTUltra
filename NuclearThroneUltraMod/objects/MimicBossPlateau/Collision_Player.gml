@@ -19,10 +19,11 @@ if !used
 		}
 		alarm[0] = 60;
 		mask_index = mskPickupThroughWall;
+		var preva = Player.area;
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 137;
-			prevArea = 138;
+			prevArea = preva;
 		}
 		image_index = 1;
 		instance_create(x,y,MimicBossSummonFail)

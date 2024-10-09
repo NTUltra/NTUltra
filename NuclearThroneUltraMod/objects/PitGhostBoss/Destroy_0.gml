@@ -2,6 +2,10 @@
 
 // Inherit the parent event
 event_inherited();
+scrDrop(0,100,false,2);
+scrDrop(50,0);
+scrDrop(50,0);
+scrDrop(100,0);
 scrBossKill();
 scrEndBossMusic();
 with enemy
@@ -18,7 +22,9 @@ with ThePit
 		inverted = true;
 		byPassCheck = true;
 	}
-	instance_create(x,y,PitNavigation);
+	alarm[4] = 0;
+	if !instance_exists(PitNavigation)
+		instance_create(x,y,PitNavigation);
 }
 
 repeat(12)

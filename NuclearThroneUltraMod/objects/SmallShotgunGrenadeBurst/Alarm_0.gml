@@ -13,14 +13,17 @@ snd_play_fire(sndSmallGrenadeBurst);
 
 //repeat(3)
 //{
-repeat(2)
+var am = 2;
+if ammo == 0
+	am += 1;
+repeat(am)
 {
 	with instance_create(x,y,SmallGrenade)
 	{
-		alarm[0] = 16;
+		alarm[0] = 20;
 		if other.isGold
 			sprite_index = sprSmallGoldGrenade
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(other.randomAccuracy)-(other.randomAccuracy*0.5))*other.creator.accuracy,other.projectileSpeed+random(3.5))//speed=10
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(other.randomAccuracy)-(other.randomAccuracy*0.5))*other.creator.accuracy,other.projectileSpeed+other.ammo)//speed=10
 		image_angle = direction
 		team = other.team
 			scrCopyWeaponMod(other);

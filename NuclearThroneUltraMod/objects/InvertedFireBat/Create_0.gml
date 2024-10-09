@@ -19,9 +19,7 @@ dodge=0;
 //behavior
 alarm[1] = 10+random(10)
 
-if instance_exists(Player)
-motion_add(point_direction(Player.x,Player.y,x,y),1)
-
+gunangle = 0;
 canDodge = false;
 actTime = 10;
 nukeIt = false;

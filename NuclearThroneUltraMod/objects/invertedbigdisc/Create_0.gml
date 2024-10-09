@@ -14,3 +14,8 @@ actTime = 28;
 rotation = 12;
 acc = 2.5;
 discAmount += 6;
+if instance_exists(PitNavigation) && GetPlayerLoops() < 1
+{
+	actTime += 8;
+	projectileSpeed -= 0.25;
+}

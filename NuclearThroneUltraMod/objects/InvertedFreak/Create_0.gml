@@ -17,13 +17,13 @@ snd_dead = sndFreakDead
 snd_melee = sndFreakMelee
 
 //behavior
-alarm[1] = 20+random(40)
+alarm[1] = 60+random(40)
 
 walk = 0
 
 loops = GetPlayerLoops();
 acc = 0.5;
-maxSpeed = 4;
+maxSpeed = 3.9;
 if loops > 0
 {
 	maxSpeed = 4.7;

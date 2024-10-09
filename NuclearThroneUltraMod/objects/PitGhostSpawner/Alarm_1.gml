@@ -36,6 +36,11 @@ if target != noone {
 		motion_add(point_direction(x,y,target.x, target.y) + random_range(60,-60),acc);	
 		walk = actTime;
 	}
+	else if dis > 96 && instance_number(enemy) < 3
+	{
+		motion_add(point_direction(x,y,target.x, target.y),acc);	
+		walk = actTime;
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

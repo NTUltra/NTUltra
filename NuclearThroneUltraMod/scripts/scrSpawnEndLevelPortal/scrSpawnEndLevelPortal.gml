@@ -2,8 +2,8 @@
 // /@description
 ///@param
 function scrSpawnEndLevelPortal(){
-	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo)
-	exit;
+	if instance_exists(SurvivalWave) || instance_exists(ThroneExplo) || instance_exists(PitNavigation)
+		exit;
 	var dir = noone;
 	var numEn = 0;
 	with enemy

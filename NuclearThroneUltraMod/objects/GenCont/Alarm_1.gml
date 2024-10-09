@@ -10,6 +10,8 @@ instance_create(x,y,StartAreaBuffer);
 if instance_exists(Player)
 {
 	with Player {
+		if instance_exists(PitNavigation) && area == 127
+			area = 141;
 		if skill_got[44] && !instance_exists(CrescentMoon){
 			with instance_create(x,y,CrescentMoon)
 			{

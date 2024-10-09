@@ -47,7 +47,7 @@ repeat(6)
 }
 scrEnemyDeathEvent();
 Sleep(50)
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) < 2
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) < 2 && !instance_exists(PitNavigation)
 	with MusCont {
 		audio_stop_sound(song)
 		if instance_exists(Player) 

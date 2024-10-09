@@ -3,7 +3,7 @@ BackCont.shake += 1;
 scrTarget()
 if target != noone && instance_exists(target)
 {
-	var ps = 5;
+	var ps = 4.8;
 	if point_distance(x,y,target.x,target.y) > 200
 		ps += 1;
 	if ammo == 1
@@ -37,7 +37,7 @@ if ammo > 0
 }
 else
 {
-	alarm[1] = actTime * 2 + random(actTime);	
+	alarm[1] = actTime * 3 + random(actTime);	
 }
 motion_add(gunangle,acc);
 if ammo > maxAmmo

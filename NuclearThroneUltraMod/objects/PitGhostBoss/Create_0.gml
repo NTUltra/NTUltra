@@ -1,7 +1,8 @@
-raddrop = 120;
-maxhealth = 245
+raddrop = 40;
+maxhealth = 240
 mySize = 3
 event_inherited()
+
 team = 7;
 canFly = true;
 meleedamage = 0
@@ -20,7 +21,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 10;
 wkick = 0
-actTime = 11;
+actTime = 12;
 
 acc = 2;
 maxSpeed = 4;
@@ -40,4 +41,10 @@ if instance_exists(Player) && Player.skill_got[29] {
 }
 maxAmmo = 3;
 loops = GetPlayerLoops();
+scrAddDrops(4);
 reachedHalfHealth = false;
+if loops < 1 && !scrIsHardMode()
+	with VenomTrap
+	{
+		instance_destroy();	
+	}

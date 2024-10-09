@@ -41,8 +41,8 @@
     "path":"sprites/sprGhostPitEnterance/sprGhostPitEnterance.yy",
   },
   "spriteMaskId":{
-    "name":"mskBigWepPickup",
-    "path":"sprites/mskBigWepPickup/mskBigWepPickup.yy",
+    "name":"mskGhostPitEnterance",
+    "path":"sprites/mskGhostPitEnterance/mskGhostPitEnterance.yy",
   },
   "visible":false,
 }

@@ -10,8 +10,16 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall || loops > 4{
-			alarm[2] = 5;
+        if !justAroundWall || loops > 4 {
+			if random(2) < 1
+			{
+				alarm[2] = 5;
+			}
+			else
+			{
+				alarm[5] = 5;
+				speed *= 0.5;
+			}
 			alarm[1] += actTime;
 			if loops < 1
 				justAroundWall = true;
@@ -25,7 +33,7 @@ if target != noone {
             direction = random(360);
             walk = actTime + random(actTime*2)
         }
-		//justAroundWall = false;
+		justAroundWall = false;
         if target.x < x
 			right = -1
         else if target.x > x
@@ -33,15 +41,16 @@ if target != noone {
     }
 	else
 	{
-		if dis < 300 && random(20) < 1
+		if dis < 300 && random(22) < 1
 		{
 			alarm[2] = 5;
 			alarm[1] += actTime * 3;
-			direction = point_direction(x, y, target.x, target.y);
+			motion_add(point_direction(target.x, target.y,x,y), acc);
+			walk = max(walk,actTime);
 		}
 		justAroundWall = true;
 		alarm[1] *= 0.5;
-		var ran = random(4)
+		var ran = random(5)
 		if ran < 1 {
 	        motion_add(random(360), acc)
 	        walk = actTime + random(actTime*2)
@@ -49,13 +58,18 @@ if target != noone {
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2 && (dis < 176 || dis > 450)
+	    }/* else if ran < 2 && (dis < 176 || dis > 450)
 		{
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);	
 			walk = actTime;
+		}*/
+		else if ran < 2 && dis < 300
+		{
+			motion_add(point_direction(target.x, target.y,x,y), acc);
+			walk = max(walk,actTime);
 		}
 	}
-	if instance_number(enemy) < 10 || random(10) < 1
+	if instance_number(enemy) < 10 || random(40) < 1
 		direction = point_direction(x,y,target.x,target.y);
 }
 else if random(10) < 1 {

@@ -4,6 +4,10 @@ if !instance_exists(Player)
 	alarm[2] = 20;
 	exit;
 }
+with TopCont
+{
+	darkness = 1;	
+}
 with Player
 {
 	var ang = random(360);

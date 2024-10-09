@@ -57,4 +57,4 @@ if loops > 0
 	homingSpeed = 2;
 }
 instance_create(x,y,DramaCamera);
-scrAddDrops(1);
+scrAddDrops(2);

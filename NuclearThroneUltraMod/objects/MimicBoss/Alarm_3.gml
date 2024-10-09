@@ -16,7 +16,8 @@ if target != noone && instance_exists(target)
 			image_angle = direction
 			team = other.team;
 			alarm[8] = 10;
-			maxSpeed = 3;
+			alarm[3] -= 30;
+			maxSpeed = 2.8;
 		}
 	}
 	else

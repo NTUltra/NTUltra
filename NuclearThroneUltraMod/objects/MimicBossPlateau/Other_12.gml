@@ -1,13 +1,17 @@
 /// @description DONE DONE GET YOUR REWARD HERE!\
 var a = 9;
+var s = 2;
 if instance_exists(PitNavigation)
-	a = 138;
+{
+	a = 127;//Goes to inv graveyard
+	s = 1;
+}
 with PlayerSpawn
 {
 	area = a;
 	subarea = 1;
-	lastarea = 9;
-	lastsubarea = 2;
+	lastarea = a;
+	lastsubarea = s;
 	if (!UberCont.voidChallengeGoing[4])
 		refundPoints = array_length(UberCont.skillDeposit);
 	getVision = true;
@@ -16,8 +20,8 @@ with Player
 {
 	area = a
 	subarea = 1
-	lastarea = 9;
-	lastsubarea = 2;
+	lastarea = a;
+	lastsubarea = s;
 	if skill_got[maxskill + 1]
 	{
 		area = 137;

@@ -12,7 +12,7 @@ if instance_exists(Player)
 	{
 		darkness = 1
 	}
-	else if Player.area == 115 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118 &&Player.area!=106
+	else if Player.area == 115 || Player.area == 139 || round(Player.area*0.5) = Player.area*0.5 && Player.area != 10 &&Player.area!=118 &&Player.area!=106
 	&& Player.area != 114 && !scrIsGamemode(25) && Player.area!=104&&Player.area!=8&&Player.area!=108&&Player.area!=122
 	&& Player.area != 128 && Player.area != 129 && Player.area != 130 && Player.area != 131 && Player.area != 132 && Player.area != 134
 	&&Player.area!=138 &&Player.area!=140

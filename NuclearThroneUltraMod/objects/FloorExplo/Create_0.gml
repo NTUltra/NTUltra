@@ -61,6 +61,8 @@ if (scrIsGamemode(25) && area != 7 && !instance_exists(Vlambeer))
 }
 else
 {
+	if instance_exists(PitNavigation) && area != 139 && area != 140
+		area = PitNavigation.currentArea;
 	scrFloorExploArea(area);	
 }
 

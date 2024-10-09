@@ -34,18 +34,10 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	}
 	else if ran < 2.4
 	{
-		snd_play(sndLightning1,0.1);
-	    with instance_create(x,y,Lightning)
-		{
-			image_angle = point_direction(x,y,Player.x,Player.y)+(random(14)-7)
-			team = other.team
-			ammo = 7
-			event_perform(ev_alarm,0)
-			with instance_create(x,y,LightningSpawn)
-			image_angle = other.image_angle
-		}
-		sprite_index = spr_fire
-		image_index = 0
+		gunangle = point_direction(x,y,target.x,target.y);
+		alarm[2] = 15;
+		alarm[1] += 15;
+		
 	}
 	else if ran < 4
 	{

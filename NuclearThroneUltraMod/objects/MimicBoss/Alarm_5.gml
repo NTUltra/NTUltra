@@ -48,6 +48,8 @@ if instance_exists(target) && target != noone
 		}
 		with instance_create(x+lengthdir_x(r,gunangle),y+lengthdir_y(r,gunangle),AssassinSlash)
 		{
+			image_xscale -= 0.15;
+			image_yscale = image_xscale;
 			bleedAngle = other.gunangle - (30 * sign(other.wepangle));
 			image_angle = other.gunangle
 			motion_add(other.gunangle+random(10)-5,other.smackSpeed)

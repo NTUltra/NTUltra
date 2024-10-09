@@ -122,11 +122,11 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				inverted = true;
 			break;
 			case 8://Wonderland
-				tx = ox + xstep * 5;
+				tx = ox + xstep * 4;
 				ty = oy + ystep;
 			break;
 			case 109://INV Wonderland
-				tx = ox + xstep * 5;
+				tx = ox + xstep * 4;
 				ty = oy + ystep;
 				inverted = true;
 			break;
@@ -192,6 +192,25 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 			case 134://Ultra Factory
 				tx = ox + xstep * 6;
 				ty = oy - (ystep * 2);
+			break;
+			case 138://Irradiated skies
+				tx = ox + xstep * 5;
+				ty = oy + ystep;
+			break;
+			case 140://INV Irradiated skies
+				tx = ox + xstep * 5;
+				ty = oy + ystep;
+				inverted = true;
+			break;
+			case 139://The pit
+				tx = ox;
+				ty = oy + ystep * 6;
+				inverted = true;
+			break;
+			case 141://Inverted gauntlet/storm
+				tx = ox + xstep * 6;
+				ty = oy + ystep;
+				inverted = true;
 			break;
 			case 135://HQ
 				if (!overwriteRouteColour)

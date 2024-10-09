@@ -1,4 +1,5 @@
-scrDrop(15,10)
+if instance_exists(Player) && Player.my_health < Player.maxhealth
+	scrDrop(80,0,false,0,3)//Only drops health
 morphMe = 6;
 event_inherited()
 with instance_create(x,y,GhostCorpse)

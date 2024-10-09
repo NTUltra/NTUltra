@@ -8,7 +8,14 @@ if candmg and other.team != team
 			var pierceDmg = actualDmg*0.75
 		else
 			var pierceDmg = actualDmg*0.5
-		
+		if other.object_index == Player
+		{
+			other.hitBy = sprite_index;
+			if !scrIsHardMode() && GetPlayerLoops() < 1 && other.my_health > 7//Dont instakill but set health to 1
+			{
+				dmg = min(20,other.my_health - 1);
+			}
+		}
 		if other.my_health >= pierceDmg
 		{
 			instance_destroy();
@@ -47,10 +54,6 @@ if candmg and other.team != team
 				motion_add(other.direction,other.knockback)
 			}
 			event_user(4);
-		}
-		if other.object_index == Player
-		{
-			other.hitBy = sprite_index;	
 		}
 	}
 }

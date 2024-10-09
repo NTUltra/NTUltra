@@ -13,8 +13,8 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"46633e2b-cfce-44ea-8e5c-96acd6e29b19","name":"46633e2b-cfce-44ea-8e5c-96acd6e29b19","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1e26e110-5f38-49cf-9780-35b4ed667d60","name":"1e26e110-5f38-49cf-9780-35b4ed667d60","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"2410d792-04b3-4c56-865e-74639ac3ed49","name":"2410d792-04b3-4c56-865e-74639ac3ed49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"59d154b7-0238-469d-b4f4-8d4998a27eba","name":"59d154b7-0238-469d-b4f4-8d4998a27eba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"bd873c81-325f-4f7f-aa3d-2a77c0de7ab9","name":"bd873c81-325f-4f7f-aa3d-2a77c0de7ab9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"076e7dc5-713a-4051-b865-c5612aa03867","name":"076e7dc5-713a-4051-b865-c5612aa03867","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"e9c66900-4248-4c16-be93-ba7cf000a0e0","name":"e9c66900-4248-4c16-be93-ba7cf000a0e0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -78,11 +78,11 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"46633e2b-cfce-44ea-8e5c-96acd6e29b19","path":"sprites/mskCrownGhostVerySmallExplodePlayer/mskCrownGhostVerySmallExplodePlayer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a0be1d10-57ea-4db2-8a72-e8e0e3f9576f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e26e110-5f38-49cf-9780-35b4ed667d60","path":"sprites/mskCrownGhostVerySmallExplodePlayer/mskCrownGhostVerySmallExplodePlayer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"43526834-02bd-48e2-9a35-a91bbee8e049","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2410d792-04b3-4c56-865e-74639ac3ed49","path":"sprites/mskCrownGhostVerySmallExplodePlayer/mskCrownGhostVerySmallExplodePlayer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2d49a952-8e38-47b9-9ca4-d7129fb01d9e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"2d49a952-8e38-47b9-9ca4-d7129fb01d9e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"59d154b7-0238-469d-b4f4-8d4998a27eba","path":"sprites/mskCrownGhostVerySmallExplodePlayer/mskCrownGhostVerySmallExplodePlayer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fc0ba489-2e20-48f1-87d1-7c32e8c2f22f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd873c81-325f-4f7f-aa3d-2a77c0de7ab9","path":"sprites/mskCrownGhostVerySmallExplodePlayer/mskCrownGhostVerySmallExplodePlayer.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ed871d4c-5f8e-4fc6-85e7-771605a35482","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

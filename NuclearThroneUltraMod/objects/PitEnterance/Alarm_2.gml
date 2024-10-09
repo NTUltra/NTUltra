@@ -1,7 +1,7 @@
 /// @description should delete?
 if instance_exists(GenCont) || instance_exists(SpiralCont)// || instance_exists(Spiral)
 {
-	alarm[2] = 2;	
+	alarm[2] = 2;
 }
 else
 {
@@ -17,6 +17,8 @@ else
 		} until (place_meeting(x,y,Wall) || dis >= 640)
 		if dis >= 640
 			instance_destroy();
+			
+		alarm[0] = 2;
 		scrForcePosition60fps();
 	}
 	mask_index = msk;

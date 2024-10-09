@@ -2,9 +2,8 @@
 
 // Inherit the parent event
 event_inherited();
-event_user(4);
 raddrop = 50
-maxhealth = 450
+maxhealth = 430
 EnemyHealthAdjustments();
 acc += 2;
 maxSpeed += 1.5;
@@ -24,3 +23,4 @@ laserAmount += 1;
 homingSpeed += 0.5;
 sneakTell -= 3;
 homingDurationAdjustment += 10;
+event_user(4);

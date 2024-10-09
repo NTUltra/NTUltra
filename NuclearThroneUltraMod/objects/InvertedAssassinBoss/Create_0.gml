@@ -3,10 +3,6 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 50
-maxhealth = 180;
-scrBossHealthBuff();
-EnemyHealthAdjustments();
-
 spr_sit = sprInvertedAssassinBossSit;
 spr_idle_actual = sprInvertedAssassinBossIdle;
 spr_idle = spr_sit
@@ -28,3 +24,15 @@ smackMoveSpeed = 2;
 smackRange += 3;
 smackSpeed += 2;
 actTime -= 1;
+maxhealth = 180;
+
+if instance_exists(PitNavigation)
+{
+	actTime += 4;
+	smackdelayReduction -= 6;
+	raddrop -= 25;
+	maxhealth -= 25;
+	smackRange -= 1;
+}
+scrBossHealthBuff();
+EnemyHealthAdjustments();

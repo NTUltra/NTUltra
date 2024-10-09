@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndUltraSledgehammer",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.039887,
+  "name":"sndUltraSledgehammer",
+  "parent":{
+    "name":"Ultra",
+    "path":"folders/Sounds/Weapons/Ultra.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndUltraSledgehammer.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -49,6 +49,7 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exists(WallCrawler)
 {
     ///
+	if (!instance_exists(PitNavigation) || (instance_exists(Player) && Player.area == 140))
     with MusCont
     {
 	    //audio_stop_all()
@@ -244,6 +245,12 @@ else if instance_exists(VoidMasterBoss)
 	name = "VOID MASTER";
 	if random(150)<1
 		name = choose("DUEL!","THE GOOD, THE BAD AND THE UGLY?");
+}
+else if instance_exists(PitNavigation)
+{
+	event_perform(ev_alarm,2);
+	instance_destroy();
+	exit;
 }
 else if instance_exists(UltraBigDog)
 {

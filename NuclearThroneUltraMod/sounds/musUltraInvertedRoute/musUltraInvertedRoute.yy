@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":3,
   "conversionMode":0,
-  "duration":195.22269,
+  "duration":207.46968,
   "name":"musUltraInvertedRoute",
   "parent":{
     "name":"Music & amb",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"musUltraInvertedRoute.ogg",
+  "soundFile":"musUltraInvertedRoute.wav",
   "type":1,
   "volume":1.0,
 }

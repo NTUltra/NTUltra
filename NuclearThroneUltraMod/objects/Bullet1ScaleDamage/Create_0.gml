@@ -10,7 +10,8 @@ dmg += BulletScaler.dmg;
 hasHit = 0;
 if dmg > 29
 {
-	dmg = 30;
+	if dmg > 35
+		dmg = 35;
 	sprite_index = sprBulletDamageScale4;
 	mask_index = mskHeavyBullet;
 }

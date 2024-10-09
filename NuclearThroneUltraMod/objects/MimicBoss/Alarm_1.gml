@@ -5,15 +5,59 @@ if firstTime
 	instance_create(x,y,DramaCamera);
 }
 alarm[1] = actTime + random(actTime)
+if !spawnedDuplicate && my_health < maxhealth * 0.5
+{
+	if instance_exists(Player) && Player.area != 139
+	{
+		spawnedDuplicate = true;
+		actTime *= 1.5;
+		if instance_exists(MimicBossPlateau)
+		{
+			with MimicBossPlateau
+				with instance_create(x,y,MimicBoss)
+				{
+					if instance_exists(Player)
+					{
+						var d = point_direction(Player.x,Player.y,x,y);
+						BackCont.viewx2 += lengthdir_x(80,d)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(80,d)*UberCont.opt_shake
+					}
+					else
+						BackCont.shake += 20;
+					my_health *= 0.5;
+					actTime *= 1.5;
+					targetSecondary = true;
+					spawnedDuplicate = true;
+					firstTime = false;
+					alarm[1] += 15;
+				}
+		}
+		else
+		{
+			with instance_create(x,y,MimicBoss)
+			{
+				my_health *= 0.5;
+				actTime *= 1.5;
+				targetSecondary = true;
+				spawnedDuplicate = true;
+				firstTime = false;
+			}
+		}
+	}
+}
 scrTarget();
 if instance_exists(Player)
 {
 	var prevWeaponType = weaponType;
-	if scrMeleeWeapons(Player.wep)
+	if targetSecondary
+		var w = Player.bwep;
+	else
+		var w = Player.wep;
+	if scrMeleeWeapons(w)
 	{
 		weaponType = 0;
 	} else {
-		weaponType = Player.wep_type[Player.wep];
+		weaponType = Player.wep_type[w];
 	}
 	if prevWeaponType != weaponType
 	{
@@ -81,7 +125,7 @@ if target != noone {
             event_user(0);
         }
         else {
-			if weaponType != 2
+			if weaponType != 2 && dis < 350
 				direction = point_direction(x, y, target.x, target.y) + 180 + random_range(100,-100)
 			else
 				direction = point_direction(x, y, target.x, target.y) + random_range(60,-60);

@@ -712,7 +712,7 @@ with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+ra
 instance_create(x+16,y+16,WeaponMod)
 
 }
-if (Player.area == 126 || Player.area == 127)
+if (!instance_exists(PitNavigation) && (Player.area == 126 || Player.area == 127))
 {
 	var f = instance_furthest(Player.x,Player.y,Floor);
 	with instance_nearest(f.x+(Player.x*0.5)+random(128)-64,f.y+(Player.y*0.5)+random(128)-64,Floor)

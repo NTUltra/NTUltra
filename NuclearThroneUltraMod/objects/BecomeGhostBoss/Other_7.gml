@@ -11,6 +11,10 @@ repeat(8)
 	}
 	ang += 45;
 }
+with TopCont
+{
+	darkness = 0;	
+}
 instance_create(x,y,DramaCamera);
 visible = false;
 image_speed = 0;

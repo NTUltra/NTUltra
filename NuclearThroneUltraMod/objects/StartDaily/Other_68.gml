@@ -321,6 +321,21 @@ if (type == network_type_data) {
 			{
 				UberCont.canMultiCrown = true;
 			}
+			if scrIsGamemode(48)
+			{
+				with Player
+				{
+					ammo[1] = 0;
+					ammo[2] = 0;
+					ammo[3] = 0;
+					ammo[4] = 0;
+					ammo[5] = 0;
+					isMarksMan = true;
+					wep = 701;
+					bwep = 702;
+					scrWeaponHold();
+				}
+			}
 			if scrIsGamemode(49)
 			{
 				with Player

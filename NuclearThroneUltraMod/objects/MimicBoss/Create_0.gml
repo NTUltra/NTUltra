@@ -4,10 +4,16 @@ if loops < 1
 	maxhealth = 350;
 else
 	maxhealth = 400;
+	
+if instance_exists(Player) && Player.area == 140
+	maxhealth -= 50;
 meleedamage = 0
 mySize = 2
 
 event_inherited()
+scrAddDrops(2);
+spawnedDuplicate = false;
+targetSecondary = false;
 team = 6;
 spr_idle = sprMutant1Idle
 spr_walk = sprMutant1Walk
@@ -23,7 +29,7 @@ gunangle = random(360)
 wkick = 0
 actTime = 7;
 
-acc = 0.8;
+acc = 0.9;
 maxSpeed = 4;
 wep = 0;
 bwep = 0;
@@ -36,7 +42,10 @@ wakeupTime = 15;
 race = 1;
 tellTime = 14;
 if loops < 1
-	tellTime += 2;
+{
+	tellTime += 3;
+	actTime += 1;
+}
 wepangle = choose(-140,140)
 wepflip = 1
 smackRange = 8;
@@ -55,6 +64,11 @@ if instance_exists(Player)
 	if Player.skill_got[29] {
 		wakeupTime += 60;
 		scrGiveSnooze();
+	}
+	if Player.area == 140
+	{
+		actTime += 1;
+		tellTime += 1;
 	}
 }
 else

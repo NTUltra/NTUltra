@@ -13,7 +13,7 @@ if target != noone {
         if !justAroundWall && dis > 45-loops || loops > 4 {
 			instance_create(x,y,Notice);
 			alarm[2] = 10;
-			alarm[1] += actTime;
+			alarm[1] += actTime*2;
 			if loops < 1
 				justAroundWall = true;
 			speed *= 0.5;
@@ -30,6 +30,8 @@ if target != noone {
             walk = actTime + random(actTime*2)
             gunangle = point_direction(x, y, target.x, target.y)
         }
+		if justAroundWall
+			alarm[1] -= actTime*0.5;
 		justAroundWall = false;
         if target.x < x
 			right = -1
@@ -40,26 +42,26 @@ if target != noone {
 	{
 		justAroundWall = true;
 		alarm[1] *= 0.5;
-		var ran = random(4)
-		if ran < 1 {
+		var ran = random(10)
+		if ran < 2 {
 	        motion_add(random(360), acc)
 	        walk = actTime + random(actTime*2)
 	        if hspeed > 0
 				right = 1
 	        else if hspeed < 0
 				right = -1
-	    } else if ran < 2 && (dis < 176 || dis > 450)
+	    } else if ran < 4 && (dis < 176 || dis > 450)
 		{
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);	
 			walk = actTime;
 		}
-		else if ran < 3 && instance_exists(ThePit)
+		else if ran < 6.5 && instance_exists(ThePit)
 		{
 			motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
 			walk = actTime;
 		}
 	}
-	if instance_number(enemy) < 10 || random(10) < 1
+	if instance_number(enemy) < 8 || random(40) < 1
 		direction = point_direction(x,y,target.x,target.y);
 }
 else if random(10) < 1 {

@@ -1,5 +1,5 @@
 /// @description xxx
 event_inherited();
 isGold = false;
-projectileSpeed = 9.25;
-randomAccuracy = 40;
+projectileSpeed = 9.75;
+randomAccuracy = 30;

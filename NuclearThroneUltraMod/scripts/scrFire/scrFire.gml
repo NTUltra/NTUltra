@@ -2276,7 +2276,11 @@ function scrFire(canDrown = true) {
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}
-
+	if !skill_got[2]
+	{
+		scrMoveContactSolid(aimDirection + 180,4);
+		motion_add(aimDirection+180,3)
+	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -2290,8 +2294,8 @@ function scrFire(canDrown = true) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,1);
-		motion_add(aimDirection+180,1)
+		scrMoveContactSolid(aimDirection + 180,16);
+		motion_add(aimDirection+180,8)
 	}
 	snd_play_fire(sndEraserNew)
 	snd_play_fire(sndEraser)
@@ -2619,10 +2623,10 @@ function scrFire(canDrown = true) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprHeavySlash;
-	dmg = 24//shovel is 8
+	dmg = 25//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3878,10 +3882,10 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndShotgun)
 	snd_play_fire(sndBloodHammer);
 
-	repeat(7)
+	repeat(8)
 	{
 	with instance_create(x,y,BloodBullet)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,13+random(6))
 	image_angle = direction
 	team = other.team}
 	}

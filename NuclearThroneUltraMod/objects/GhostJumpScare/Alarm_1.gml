@@ -18,4 +18,8 @@ with enemy
 		}	
 	}
 }
+with TopCont
+{
+	darkness = 0;	
+}
 instance_destroy();

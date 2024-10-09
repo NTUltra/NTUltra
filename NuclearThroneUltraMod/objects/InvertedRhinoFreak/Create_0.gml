@@ -1,5 +1,5 @@
 raddrop = 20
-maxhealth = 60//54
+maxhealth = 55//54
 mySize = 2
 
 event_inherited()
@@ -18,10 +18,10 @@ snd_melee = sndRhinoFreakMelee
 
 
 //behavior
-alarm[1] = 40+random(10)
+alarm[1] = 80+random(10)
 
 walk = 0
 
-sleeping = false;;
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

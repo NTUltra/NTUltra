@@ -4,7 +4,7 @@ if instance_exists(Player) && place_meeting(x,y,Player)
 {
 	with Player
 	{
-		if abs(vspeed) < maxSpeed - 0.5
+		if abs(vspeed) < maxSpeed
 		{
 			snd_play_2d(sndGhostTeleport,0.1,false,false,3,0.9);
 			var dis = 0;
@@ -32,6 +32,12 @@ if instance_exists(Player) && place_meeting(x,y,Player)
 			{
 				x += lengthdir_x(dis,direction);
 				y += lengthdir_y(dis,direction);
+				scrForcePosition60fps();
+			}
+			with YungCuzDupe
+			{
+				x = other.x;
+				y = other.y;
 				scrForcePosition60fps();
 			}
 			with PlayerGhostTeleporter

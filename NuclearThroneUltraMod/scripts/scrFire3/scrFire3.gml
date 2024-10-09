@@ -636,7 +636,8 @@ function scrFire3(hasTailNow){
 				speed += min(6,BulletScaler.dmg * 0.5);
 		image_angle = direction
 		team = other.team}
-		
+		if shake > 20
+			shake -= shake * 0.125;
 		BackCont.viewx2 += lengthdir_x(shake,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(shake,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += shake - 2;
@@ -2262,6 +2263,155 @@ function scrFire3(hasTailNow){
 		wkick = 8
 
 		break;
+		
+		//HOT NAIL GUN
+		case 861:
+		with instance_create(x,y,HotNail)
+		{
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,17)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,HotNailBurst)
+		{
+			totalAccuracy = 18;
+			creator = other.id
+			ammo = 3
+			time = 3
+			team = other.team
+			alarm[0] = 1;
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,2);
+			motion_add(aimDirection+180,2)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 3
+
+		break;
+		
+		//FLAME MACHINEGUN
+		case 862:
+
+		snd_play_fire(sndFlameMachinegun)
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
+
+		with instance_create(x,y,Bullet1Flame)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,14.5)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 2
+
+		break;
+		
+		//ICICLE HANDGUN
+		case 863:
+		with instance_create(x,y,FrostIcicle)
+		{
+			freezetime = 1;
+			motion_add(aimDirection,24);
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,IcicleBurst)
+		{
+			creator = other.id
+			ammo = 4//16
+			time = 3
+			team = other.team
+			event_perform(ev_alarm,0)
+			if instance_exists(Player) && other.object_index == Player && Player.skill_got[42] && Player.ultra_got[97] && !Player.altUltra
+				alarm[0] = 1;
+		}
+		BackCont.viewx2 += lengthdir_x(6,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		break;
+		
+		//ULTRA SLEDGEHAMMER
+		case 864:
+
+		snd_play_fire(sndUltraSledgehammer)
+
+		instance_create(x,y,Smoke)
+
+		with instance_create(x+lengthdir_x(2+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(2+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraSledgehammerSlash)
+		{
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			speed = 0;
+			if (!instance_exists(SpeedLockout))
+			{
+				with instance_create(x,y,SpeedLockout)
+				{
+					lockoutTime = 3;
+					alarm[0] = lockoutTime;
+					resetSpeed = other.maxSpeed;
+				}
+			}
+		}
+		BackCont.viewx2 += lengthdir_x(80,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(80,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 40
+		wkick = -5
+
+		break;
+		
+		//BLOOD SEWING NEEDLE
+		case 865:
+
+		snd_play_fire(sndBloodSewingNeedle)
+
+		instance_create(x,y,Dust)
+		with instance_create(x + lengthdir_x(16,aimDirection+180),y + lengthdir_y(16,aimDirection+180),BloodStreak)
+		{
+			motion_add(aimDirection + 180,1)
+			image_angle = direction;
+		}
+		with instance_create(x + lengthdir_x(16,aimDirection+180),y + lengthdir_y(16,aimDirection+180),SewingNeedle)
+		{
+			longarms += (Player.skill_got[13]+other.bettermelee)*2
+			if Player.skill_got[13]
+			{
+				needleRange += sprWdth;
+				if Player.ultra_got[97] && !Player.altUltra
+					needleRange += sprWdth * 2;
+			}
+			image_yscale += other.bettermelee * 2;
+			motion_add(aimDirection,longarms)
+			image_angle = direction
+			team = other.team
+			event_user(1);
+		}
+		if !skill_got[2]
+		{
+			//scrMoveContactSolid(aimDirection + 180,2);
+			motion_add(aimDirection+180,3)
+		}
+		wepangle = -wepangle
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = -7
+
+		break;
+		
 		
 	}
 }

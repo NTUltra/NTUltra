@@ -1,7 +1,7 @@
-scrDropNearby(40,15);
-scrDropNearby(7,0);
+if object_index == CloudShooter
+	scrDropNearby(40,15);
 if !sleeping
-	with instance_create(x,y,EnemyHomingTriangle)
+	with instance_create(xprevious,yprevious,EnemyHomingTriangle)
 	{
 		motion_add(other.gunangle+random(20)-10,1.5);
 		alarm[3] -= other.homingTimeAdjustment;

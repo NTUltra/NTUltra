@@ -68,4 +68,9 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 		}
 		alarm[1] = 1;
 	}
+	if instance_exists(PitNavigation)
+	{
+		with RegalNavigation
+			instance_destroy();
+	}
 }

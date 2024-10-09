@@ -2,17 +2,22 @@
 alarm[1] = actTime + random(actTime)
 if goToTarget
 	exit;
-if my_health < maxhealth && !reachedHalfHealth
+if my_health < maxhealth*0.5 && !reachedHalfHealth
 {
 	reachedHalfHealth = true;
 	instance_create(x,y,PortalOpenWallBreak);
+	scrDrop(40,0,true);
+	if instance_exists(Player) && Player.my_health < Player.maxhealth
+		scrDrop(80,0,false,0,3)//Only drops health
+	alarm[6] = 105;//Cant become vulnerable for a bit
+	event_user(0);
 }
 scrTarget()
 if target != noone {
 	var dis = point_distance(target.x, target.y, x, y);
 	if (dis > materializeRange || (dis > 96 && random(4) < 1))
 		event_user(0);
-	else
+	else if alarm[6] < 1
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		if random(3) < 1

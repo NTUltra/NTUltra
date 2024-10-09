@@ -4,32 +4,43 @@
 function scrNextLevelPitRoute() {
 	switch (area)
 	{
+		case 137:
+			if !instance_exists(RegalNavigation)
+			{
+				with UberCont
+				{
+					portalEssence += 4;
+					if voidChallengeGoing[0]
+						portalEssence += 4;
+				}
+				area = 141;
+				subarea = 1;
+				lastarea = 141;
+				lastsubarea = 1;
+				hard -= 1;
+				hard = max(hard,0);
+			}
+		break
 		case 139://THE PIT
 			inverted = true;
 			area = 140;//Get regal!
 			subarea = 1;
-		break;
-		case 140:
-			if subarea < 2
-				subarea += 1;
-			else
-			{
-				area = 107;
-				subarea = 1;
-			}
+			hard += 1;
 		break;
 		case 107:
-			area = 121;//Inv frozen city to Inv savanna
-		break;
-		case 138:
-			area = 106//cloud to inv scrap
-		break;
-		case 125:
 			//Jungle to palace and end
 			area = 9;//Palace
 			subarea = 1;
 			with PitNavigation
 				instance_destroy();
 		break;
+	}
+	if loops < 1
+	{
+		hard += 1;
+		if scrIsCrown(10)
+		{
+			hard += 1;
+		}
 	}
 }

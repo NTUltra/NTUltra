@@ -2,7 +2,7 @@ if !collision_point(x,y,Floor,false,false)
 {
 	spr_dead = spr_dead_mid_air;	
 }
-scrDropNearby(30,0);
+scrDropNearby(35,0);
 var dir = random(360);
 repeat(3)
 {

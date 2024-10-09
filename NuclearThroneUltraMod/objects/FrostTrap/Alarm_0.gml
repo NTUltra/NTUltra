@@ -3,6 +3,6 @@ side = 0
 else
 side = 1
 snd_play(sndFiretrap)
-fire = 45
+fire = 40
 alarm[0] = 90
 

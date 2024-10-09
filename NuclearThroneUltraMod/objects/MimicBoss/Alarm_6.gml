@@ -40,6 +40,6 @@ if instance_exists(target) && target != noone
 		}
 		alarm[1] = actTime * 2 + random(actTime);
 	}
-	gunangle = point_direction(x, y, target.x, target.y);
+	gunangle += angle_difference(point_direction(x, y, target.x, target.y),gunangle) * 0.5;
 }
 	

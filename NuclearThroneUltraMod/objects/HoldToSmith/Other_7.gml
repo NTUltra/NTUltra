@@ -10,14 +10,14 @@ with Player
 	if bwep!=0
 	{
 	    //var upgradechance = wep_area[wep]-wep_area[bwep];
-	    if string_copy(wep_name[wep],0,4) = "GOLD" && string_copy(wep_name[bwep],0,4) = "GOLD"
+	    if scrCheckGold(wep_name[wep]) && scrCheckGold(wep_name[bwep])
 	    scrUnlockBSkin(17,"FOR COMBINING TWO GOLDEN WEAPONS",0);
     
 	    //handling golden weapons
-	    if string_copy(wep_name[wep],0,4) = "GOLD"&&loops<1
-	    wep=9//minigun tier 6
-	    if string_copy(wep_name[bwep],0,4) = "GOLD"&&loops<1
-	    bwep=9//minigun tier 6
+	    if scrCheckGold(wep_name[wep])
+	    wep=20//laser rifle is tier 5
+	    if scrCheckGold(wep_name[bwep])
+	    bwep=20//laser rifle is tier 5
     
 	    //GO through array and check if there is a weapon of a higher tier first
 	    highesttier = max(wep_area[wep],wep_area[bwep]);

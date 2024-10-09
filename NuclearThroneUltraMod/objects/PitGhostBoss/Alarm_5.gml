@@ -54,6 +54,7 @@ else
 {
 	with instance_create(x, y, PitGhostLaser) {
 		raddrop = 0;
+		countKill = false;
 	    motion_add(other.gunangle + 5, 2)
 	    if hspeed > 0
 			right = 1;
@@ -66,6 +67,7 @@ else
 	}
 	with instance_create(x, y, PitGhostLaser) {
 		raddrop = 0;
+		countKill = false;
 	    motion_add(other.gunangle - 5, 2)
 	    if hspeed > 0
 			right = 1;

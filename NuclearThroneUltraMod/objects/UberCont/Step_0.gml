@@ -41,6 +41,19 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		}
 		with WeaponMod
 		{
+			if alarm[0] > 0
+			{
+				event_perform(ev_alarm,0);
+				with myWeaponPickup
+				{
+					persistent = true;
+					if instance_exists(Player)
+					{
+						x = Player.x;
+						y = Player.y;
+					}
+				}
+			}
 			instance_destroy(id,false);	
 		}
 		instance_activate_all();

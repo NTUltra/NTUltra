@@ -2,11 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
-
-raddrop = 14
-maxhealth = 26
+actTime += 1;
+raddrop = 10
+maxhealth = 18
 EnemyHealthAdjustments();
-actTime -= 2;
+actTime -= 1;
 spr_idle = sprInvertedCloudKnifer
 spr_walk = sprInvertedCloudKnifer
 spr_hurt = sprInvertedCloudKniferHurt

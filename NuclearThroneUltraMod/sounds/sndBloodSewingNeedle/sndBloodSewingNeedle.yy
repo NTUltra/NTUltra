@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndBloodSewingNeedle",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.135488,
+  "name":"sndBloodSewingNeedle",
+  "parent":{
+    "name":"Melee",
+    "path":"folders/Sounds/Weapons/Melee.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndBloodSewingNeedle.ogg",
+  "type":0,
+  "volume":1.0,
+}

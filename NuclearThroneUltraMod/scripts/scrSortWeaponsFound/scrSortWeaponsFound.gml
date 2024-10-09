@@ -35,8 +35,6 @@ function scrSortWeaponsFound(){
 					currentRow += 1;
 				}
 			}
-			debug("FINALIZED WEAPONS:");
-			debug(finalizedWeapons);
 		}
 	}
 }

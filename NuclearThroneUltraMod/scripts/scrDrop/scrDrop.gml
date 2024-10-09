@@ -1,4 +1,4 @@
-function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
+function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnlyDropHealth = 0) {
 	var pickup = noone;
 	var isHard = scrIsHardMode();
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
@@ -241,7 +241,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		need *= 0.75;
 		canHealth *= 0.5;
 	}
-	if (Player.ultra_got[1]==1)//FISH ULTRA A Confiscate
+	if (Player.ultra_got[1])//FISH ULTRA A Confiscate
 	{
 		var confDroprate = dropRateBuff
 		if Player.skill_got[23]//Open mind
@@ -333,9 +333,9 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0) {
 		}
 		else
 		{
-			if scrIsCrown(5)//Crown of guns roll again for healthdrop
+			if scrIsCrown(5) || canOnlyDropHealth > 0//Crown of guns roll again for healthdrop
 			{
-				if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
+				if random(mh + canOnlyDropHealth) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 				{
 					pickup = instance_create(x,y,HPPickup)
 					with WantHealth

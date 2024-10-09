@@ -6,8 +6,16 @@ function scrDropNearby(doprate, wepdroprate,amountOfDrops = 1){
 	var yy = y;
 	if collision_point(x,y,Floor,false,false)
 	{
-		repeat(amountOfDrops)
-			scrDrop(doprate,wepdroprate);
+		if instance_exists(Player) && Player.my_health < Player.maxhealth
+		{
+			var d = scrDrop(50,0,false,0,2)//Only drops health
+			if d != noone
+				amountOfDrops -= 1;
+		}
+		if amountOfDrops > 0
+			repeat(amountOfDrops)
+				scrDrop(doprate,wepdroprate);
+			
 		event_inherited();
 	}
 	else
@@ -28,10 +36,18 @@ function scrDropNearby(doprate, wepdroprate,amountOfDrops = 1){
 			{
 				x = n.x+o;
 				y = n.y+o;
-				repeat(amountOfDrops)
-					scrDrop(doprate,wepdroprate);
+				if instance_exists(Player) && Player.my_health < Player.maxhealth
+				{
+					var d = scrDrop(50,0,false,0,2)//Only drops health
+					if d != noone
+						amountOfDrops -= 1;
+				}
+				if amountOfDrops > 0
+					repeat(amountOfDrops)
+						scrDrop(doprate,wepdroprate);
 				if instance_exists(Wall)
 					instance_create(x,y,WallBreak);
+				
 				event_inherited()
 				x = xx;
 				y = yy;			

@@ -16,7 +16,7 @@ snd_dead = sndFreakDead
 snd_melee = sndFreakMelee
 
 //behavior
-alarm[1] = 20+random(40)
+alarm[1] = 70+random(40)
 
 walk = 0
 

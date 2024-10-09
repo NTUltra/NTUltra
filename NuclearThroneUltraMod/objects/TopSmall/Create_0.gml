@@ -19,6 +19,8 @@ if instance_exists(SurvivalWave)//(scrIsGamemode(25) && !instance_exists(Vlambee
 }
 else
 {
+	if instance_exists(PitNavigation) && area != 139 && area != 140
+		area = PitNavigation.currentArea;
 	scrTopArea(area);
 }
 

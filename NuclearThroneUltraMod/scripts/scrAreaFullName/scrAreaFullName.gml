@@ -101,6 +101,7 @@ function scrAreaFullName(area){
 			break;
 			case 139://THE PIT
 				txt = "THE PIT"
+				upsideDown = true;
 			break;
 			case 116://Survival Arena
 				txt = "SURVIVAL ARENA"
@@ -188,6 +189,10 @@ function scrAreaFullName(area){
 			break;
 			case 140: //Inverted Palace
 				txt = "IRRADIATED SKIES";
+				upsideDown = true;
+			break;
+			case 141: //Inverted storm
+				txt = "INVERSION GAUNTLET";
 				upsideDown = true;
 			break;
 		}

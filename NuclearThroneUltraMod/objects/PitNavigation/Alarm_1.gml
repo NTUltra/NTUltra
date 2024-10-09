@@ -1,93 +1,77 @@
 /// @description Next area
 if instance_exists(Player)
 {
-	var ar = Player.area
-	with Player
+	var ar = currentArea;
+	switch (ar)
 	{
-		alarm[3] = max(alarm[3],15);
-		subarea = 1;
-		switch (area)
-		{
-			case 124:
-				//INV mush to inv volc
-				area = 108;
-				with other { event_user(0); }
-			break;
-			case 108:
-			//Inv volc to inv Labs
-				area = 112;
-				with other { event_user(0); }
-			break;
-			case 112:
-			//Inv Labs to inv froz
-				area = 107
-				with other { event_user(0); }
-			break;
-			case 107:
-				with CorpseCollector
+		case 127:
+		//INV Graveyard to INV mansion
+			currentArea = 125;
+			event_user(0);
+		break;
+		case 125:
+		//INV mansion to inv scrapyard
+			currentArea = 106;
+			with Player
+			{
+				hard += 1;	
+			}
+			event_user(0);
+		break;
+		case 106:
+		//inv scrapyard to inv caves
+			currentArea = 111;
+			event_user(0);
+		break;
+		case 111:
+		//inv caves to inv mushroom
+			currentArea = 124;
+			event_user(0);
+		break;
+
+		case 124:
+			//INV mush to inv volc
+			currentArea = 108;
+			event_user(0);
+		break;
+		case 108:
+		//Inv volc to inv Labs
+			currentArea = 112;
+			event_user(0);
+		break;
+		case 112:
+		//Inv Labs to inv froz
+			currentArea = 107
+			with Player
+			{
+				hard += 1;	
+			}
+			event_user(0);
+		break;
+		case 107:
+			with CorpseCollector
+			{
+				with instance_nearest(px,py,Wall)
 				{
-					with instance_nearest(px,py,Wall)
-					{
-						other.x = x + 8;
-						other.y = y + 8;
-					}
-					with instance_create(x,y,Portal) {
-						typ = 1;
-						inverted = true;
-						byPassCheck = true;
-					}
-					
+					other.x = x + 8;
+					other.y = y + 8;
 				}
-			break;
-			
-			case 121://Inv savanna
-				area = 102;//Inv swer
-				with other { event_user(0); }
-			break;
-			case 102:
-				//Inv sewer to inv crystal caves
-				area = 111;
-				with other { event_user(0); }
-			break;
-			case 111:
-				area = 138;//Inv crystal to cloudlands
-				with other { event_user(0); }
-			break;
-			
-			case 106:
-				//Scrap to jungle
-				area = 123;
-				with other { event_user(0); }
-			break;
-			case 123:
-				//Jungle to YV
-				area = 125;
-				with other { event_user(0); }
-			break;
-			case 125:
-				//YV to Wonder
-				area = 109
-				with other { event_user(0); }
-			break;
-			case 109:
-				//Wonder to palace and end game
-				with CorpseCollector
-				{
-					with instance_nearest(px,py,Wall)
-					{
-						other.x = x + 8;
-						other.y = y + 8;
-					}
-					with instance_create(x,y,Portal) {
-						typ = 1;
-						inverted = true;
-						byPassCheck = true;
-					}
-					
+				with instance_create(x,y,Portal) {
+					typ = 1;
+					inverted = true;
+					byPassCheck = true;
 				}
-			break;
-			
-		}
+			}
+			with Player
+			{
+				inverted = false;
+				area = 9;
+				subarea = 1;
+				lastarea = 9;
+				lastsubarea = 1;
+			}
+			instance_destroy();
+		break;
 	}
 }
 else

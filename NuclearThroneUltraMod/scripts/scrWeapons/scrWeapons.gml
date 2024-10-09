@@ -237,7 +237,7 @@ function scrWeapons() {
 	wep_name[21] = "SLUGGER"
 	wep_type[21] = 2
 	wep_auto[21] = 0
-	wep_load[21] = 20
+	wep_load[21] = 19
 	wep_cost[21] = 1
 	wep_sprt[21] = sprSlugger
 	wep_area[21] = 1
@@ -1003,7 +1003,7 @@ function scrWeapons() {
 	wep_name[89] = "DIRECTOR SLUGGER"
 	wep_type[89] = 2
 	wep_auto[89] = 0
-	wep_load[89] = 22
+	wep_load[89] = 21
 	wep_cost[89] = 1
 	wep_sprt[89] = sprDirectorSlugger
 	wep_area[89] = 3
@@ -1832,7 +1832,7 @@ function scrWeapons() {
 	wep_name[164] = "BLOOD LINE"
 	wep_type[164] = 4
 	wep_auto[164] = 0
-	wep_load[164] = 20
+	wep_load[164] = 18
 	wep_cost[164] = 2.5
 	wep_sprt[164] = sprLineBloodNader
 	wep_area[164] = 9
@@ -1935,7 +1935,7 @@ function scrWeapons() {
 	wep_name[173] = "DIRECTOR RIFLE"
 	wep_type[173] = 1
 	wep_auto[173] = 2
-	wep_load[173] = 19
+	wep_load[173] = 16
 	wep_cost[173] = 5
 	wep_sprt[173] = sprDirectorRifle
 	wep_area[173] = 3
@@ -2182,10 +2182,10 @@ function scrWeapons() {
 	wep_name[194] = "KRAKEN GUN"
 	wep_type[194] = 4
 	wep_auto[194] = 0
-	wep_load[194] = 15//10
+	wep_load[194] = 20//10
 	wep_cost[194] = 2
 	wep_sprt[194] = sprKrakenGun
-	wep_area[194] = 4
+	wep_area[194] = 3
 	wep_text[194] = "sea monster"
 	wep_swap[194] = sndSwapDragon
 	wep_rad[194] = 0;
@@ -2193,8 +2193,8 @@ function scrWeapons() {
 	wep_name[195] = "BIG KRAKEN GUN"
 	wep_type[195] = 4
 	wep_auto[195] = 0
-	wep_load[195] = 21//10
-	wep_cost[195] = 2.5
+	wep_load[195] = 18//10
+	wep_cost[195] = 2
 	wep_sprt[195] = sprBigKrakenGun
 	wep_area[195] = 6
 	wep_text[195] = "sentai gun"
@@ -2374,7 +2374,7 @@ function scrWeapons() {
 	wep_load[211] = 6
 	wep_cost[211] = 1
 	wep_sprt[211] = sprMiniPlasmaRifle
-	wep_area[211] = 6
+	wep_area[211] = 5
 	wep_text[211] = "fast bubbles"
 	wep_swap[211] = sndSwapEnergy
 	wep_rad[211] = 0;
@@ -3764,7 +3764,7 @@ function scrWeapons() {
 	wep_load[335] = 3
 	wep_cost[335] = 2
 	wep_sprt[335] = sprFrostSMG
-	wep_area[335] = 5
+	wep_area[335] = 6
 	wep_text[335] = "cold sub"
 	wep_swap[335] = sndSwapPistol
 	wep_rad[335] = 0;
@@ -4334,7 +4334,7 @@ function scrWeapons() {
 	wep_name[384] = "MINI PLASMA GUN"
 	wep_type[384] = 5
 	wep_auto[384] = 1
-	wep_load[384] = 12
+	wep_load[384] = 10
 	wep_cost[384] = 1
 	wep_sprt[384] = sprMiniPlasmaGun
 	wep_area[384] = 1
@@ -4968,6 +4968,7 @@ function scrWeapons() {
 	wep_text[440] = "damage scales upon each pierce"
 	wep_swap[440] = sndSwapBow
 	wep_rad[440] = 0;
+	wep_popup[440] = "DAMAGE SCALES EACH PIERCE";
 	
 	wep_name[441] = "AUTO PENETRATOR"
 	wep_type[441] = 3
@@ -4975,7 +4976,7 @@ function scrWeapons() {
 	wep_load[441] = 11
 	wep_cost[441] = 2
 	wep_sprt[441] = sprAutoPenetrator
-	wep_area[441] = 14
+	wep_area[441] = 12
 	wep_text[441] = "infinite pierce"
 	wep_swap[441] = sndSwapBow
 	wep_rad[441] = 0;
@@ -5105,7 +5106,7 @@ function scrWeapons() {
 	wep_type[453] = 5
 	wep_auto[453] = 1
 	wep_load[453] = 6
-	wep_cost[453] = 2
+	wep_cost[453] = 1.5
 	wep_sprt[453] = sprDoubleMiniPlasmaRifle
 	wep_area[453] = 9
 	wep_text[453] = ""
@@ -5126,7 +5127,7 @@ function scrWeapons() {
 	wep_name[455] = "SCYTHE"
 	wep_type[455] = 0
 	wep_auto[455] = 1
-	wep_load[455] = 20
+	wep_load[455] = 16
 	wep_cost[455] = 0
 	wep_sprt[455] = sprScythe
 	wep_area[455] = 5
@@ -5137,7 +5138,7 @@ function scrWeapons() {
 	wep_name[456] = "SUPER SCYTHE"
 	wep_type[456] = 0
 	wep_auto[456] = 1
-	wep_load[456] = 35
+	wep_load[456] = 33
 	wep_cost[456] = 0
 	wep_sprt[456] = sprSuperScythe
 	wep_area[456] = 21
@@ -5807,7 +5808,7 @@ function scrWeapons() {
 	wep_load[516] = 33
 	wep_cost[516] = 7
 	wep_sprt[516] = sprSuperPenetrator
-	wep_area[516] = 14
+	wep_area[516] = 12
 	wep_text[516] = "really hard penetration!"
 	wep_swap[516] = sndSwapBow
 	wep_rad[516] = 0;
@@ -5815,7 +5816,7 @@ function scrWeapons() {
 	wep_name[517] = "CLUB"
 	wep_type[517] = 0
 	wep_auto[517] = 0
-	wep_load[517] = 23
+	wep_load[517] = 22
 	wep_cost[517] = 0
 	wep_sprt[517] = sprClub
 	wep_area[517] = 4
@@ -7595,7 +7596,7 @@ function scrWeapons() {
 	wep_name[678] = "STICKY GRENADE REVOLVER"
 	wep_type[678] = 4
 	wep_auto[678] = 2
-	wep_load[678] = 22
+	wep_load[678] = 20
 	wep_cost[678] = 2
 	wep_sprt[678] = sprStickyGrenadePistol
 	wep_area[678] = 3
@@ -7606,7 +7607,7 @@ function scrWeapons() {
 	wep_name[679] = "STICKY GRENADE RIFLE"
 	wep_type[679] = 4
 	wep_auto[679] = 2
-	wep_load[679] = 18
+	wep_load[679] = 16
 	wep_cost[679] = 2
 	wep_sprt[679] = sprStickyGrenadeRifle
 	wep_area[679] = 9
@@ -7640,7 +7641,7 @@ function scrWeapons() {
 	wep_name[682] = "ROPE KNIFE"
 	wep_type[682] = 0
 	wep_auto[682] = 1
-	wep_load[682] = 18
+	wep_load[682] = 17
 	wep_cost[682] = 0
 	wep_sprt[682] = sprRopeKnife
 	wep_area[682] = 6
@@ -8036,7 +8037,7 @@ function scrWeapons() {
 	wep_name[717] = "BLOOD ROCKET GUN"
 	wep_type[717] = 4
 	wep_auto[717] = 3
-	wep_load[717] = 8
+	wep_load[717] = 10
 	wep_cost[717] = 1.5
 	wep_sprt[717] = sprBoodRocketGun
 	wep_area[717] = 6
@@ -8316,7 +8317,7 @@ function scrWeapons() {
 	wep_sprt[742] = sprMaggotLauncher
 	wep_area[742] = 5
 	wep_text[742] = "fires maggots"
-	wep_swap[742] = sndSwapBow
+	wep_swap[742] = sndMaggotBite
 	wep_rad[742] = 0;
 	
 	wep_name[743] = "WOMBO COMBO SUCKER PUNCHER"
@@ -8501,7 +8502,7 @@ function scrWeapons() {
 	wep_name[759] = "TRIAGON"
 	wep_type[759] = 5
 	wep_auto[759] = 0
-	wep_load[759] = 13
+	wep_load[759] = 12
 	wep_cost[759] = 4
 	wep_sprt[759] = sprTriagon
 	wep_area[759] = 1
@@ -9634,7 +9635,7 @@ function scrWeapons() {
 	wep_name[859] = "ENERGY SNAIL CANNON"
 	wep_type[859] = 5
 	wep_auto[859] = 0
-	wep_load[859] = 43
+	wep_load[859] = 42
 	wep_cost[859] = 10
 	wep_sprt[859] = sprEnergySnailCannonGun
 	wep_area[859] = 21
@@ -9645,13 +9646,69 @@ function scrWeapons() {
 	wep_name[860] = "ENERGY SNAIL GUN"
 	wep_type[860] = 5
 	wep_auto[860] = 0
-	wep_load[860] = 43
+	wep_load[860] = 40
 	wep_cost[860] = 3
 	wep_sprt[860] = sprEnergySnailGun
 	wep_area[860] = 2
 	wep_text[860] = "slow"
 	wep_swap[860] = sndSwapEnergy
 	wep_rad[860] = 0;
+	
+	wep_name[861] = "HOT NAIL GUN"
+	wep_type[861] = 3
+	wep_auto[861] = 1
+	wep_load[861] = 12
+	wep_cost[861] = 4
+	wep_sprt[861] = sprHotNailGun
+	wep_area[861] = 3
+	wep_text[861] = ""
+	wep_swap[861] = sndSwapMotorized
+	wep_rad[861] = 0;
+	
+	wep_name[862] = "FLAME MACHINEGUN"
+	wep_type[862] = 1
+	wep_auto[862] = 1
+	wep_load[862] = 5
+	wep_cost[862] = 1.5
+	wep_sprt[862] = sprFlameMachinegun
+	wep_area[862] = 3
+	wep_text[862] = "flame bullets!"
+	wep_swap[862] = sndSwapMachinegun
+	wep_rad[862] = 0;
+	
+	wep_name[863] = "ICICLE HANDGUN"
+	wep_type[863] = 4
+	wep_auto[863] = 3
+	wep_load[863] = 18
+	wep_cost[863] = 1
+	wep_sprt[863] = sprIcicleHandGun
+	wep_area[863] = 3
+	wep_text[863] = ""
+	wep_swap[863] = sndSwapFrost
+	wep_rad[863] = 0;
+	
+	wep_name[864] = "ULTRA SLEDGEHAMMER"
+	wep_type[864] = 0
+	wep_auto[864] = 0
+	wep_load[864] = 65
+	wep_cost[864] = 0
+	wep_sprt[864] = sprUltraSledgehammer
+	wep_area[864] = 21
+	wep_text[864] = "CRITICAL HIT!"
+	wep_swap[864] = sndSwapHammer
+	wep_rad[864] = 25;
+	
+	wep_name[865] = "BLOOD SEWING NEEDLE"
+	wep_type[865] = 0
+	wep_auto[865] = 1
+	wep_load[865] = 23
+	wep_cost[865] = 0
+	wep_sprt[865] = sprBloodSewingNeedle
+	wep_area[865] = 8
+	wep_text[865] = "sewing tissue"
+	wep_swap[865] = sndSwapSword
+	wep_rad[865] = 0;
+	wep_popup[865] = "MISSING DOES NOT DAMAGE YOU!";
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

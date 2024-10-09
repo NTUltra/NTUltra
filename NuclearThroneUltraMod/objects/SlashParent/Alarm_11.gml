@@ -8,7 +8,7 @@ y = yprevious;
 if um == ultramods.bloodMelee
 {
 	var toSpawn = HeavyBloodBullet;
-	if (sprite_index == sprUltraSlash || sprite_index == sprUltraBigSlash)
+	if (sprite_index == sprUltraSlash || sprite_index == sprUltraBigSlash || sprite_index == sprUltraHeavySlash || sprite_index == sprUltraLightningSlash)
 	{
 		toSpawn = UltraBloodBullet;
 	}

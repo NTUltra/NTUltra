@@ -7,8 +7,8 @@ if weaponType == 0
 	instance_create(x,y,Notice);
 	instance_create(x+5,y,Notice);
 	instance_create(x-5,y,Notice);
-	alarm[5] = tellTime + 2;
-	alarm[1] += tellTime + 2 + actTime + random(actTime);
+	alarm[5] = tellTime + 6;
+	alarm[1] += tellTime + 6 + actTime + random(actTime);
 	if point_distance(x,y,target.x,target.y) < 70
 	{
 		alarm[5] += 3;

@@ -423,7 +423,8 @@ with InvertedGuardianBulletSpawn
 with MeleeParent
 {
 	if visible
-		draw_self();	
+		event_perform(ev_draw,0);
+		//draw_self();	
 }
 with SquareWave
 {

@@ -1,4 +1,7 @@
-scrDrop(15,20,1)
+if instance_number(WepPickup) == 3
+	scrDrop(0,100,false,2)
+else
+	scrDrop(15,15,false,0)
 morphMe = 6;
 event_inherited()
 snd_play(sndGhostFlyDieQuick,0.1);

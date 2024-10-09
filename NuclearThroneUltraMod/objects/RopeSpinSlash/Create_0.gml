@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 wallPierce *= 0.5;
-dmg = 11;
+dmg = 14;
 shanked = false;
 image_speed -= 0.1;
 alarm[2] = 4;

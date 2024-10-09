@@ -9,7 +9,7 @@ function scrApplyHandsInversion(){
 		{
 			var am = 2;
 			if ultra_got[106] || (ultra_got[107] && altUltra)
-				am = 4;
+				am = 3;
 			scrHeal(am,true);
 		}
 	}

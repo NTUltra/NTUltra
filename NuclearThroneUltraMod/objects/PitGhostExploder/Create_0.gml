@@ -1,5 +1,5 @@
-raddrop = 6
-maxhealth = 24
+raddrop = 5
+maxhealth = 19
 mySize = 1
 event_inherited()
 team = 7;
@@ -19,7 +19,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(60)
 wkick = 0
-actTime = 10;
+actTime = 11;
 
 acc = 2;
 maxSpeed = 4.25;

@@ -86,6 +86,11 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 				{
 					my_health = 0;	
 				}
+				with RogueAmmoChest
+				{
+					snd_play(sndAmmoChest)
+					instance_destroy();
+				}
 				with AmmoChest
 				{
 					event_user(0);

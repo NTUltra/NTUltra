@@ -17,7 +17,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = 0
 	team = 1
-	ammo = 7
+	ammo = 6
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle
@@ -26,7 +26,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = 90
 	team = 1
-	ammo = 7
+	ammo = 6
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle
@@ -35,7 +35,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = 180
 	team = 1
-	ammo = 7
+	ammo = 6
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle
@@ -44,7 +44,7 @@ with instance_create(x,y,Lightning)
 {
 	image_angle = 270
 	team = 1
-	ammo = 7
+	ammo = 6
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle

@@ -14,8 +14,8 @@
     "path":"folders/Objects/Enemies.yy",
   },
   "parentObjectId":{
-    "name":"NPC",
-    "path":"objects/NPC/NPC.yy",
+    "name":"Traps",
+    "path":"objects/Traps/Traps.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

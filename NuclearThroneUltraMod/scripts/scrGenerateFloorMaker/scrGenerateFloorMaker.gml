@@ -102,7 +102,7 @@ function scrGenerateFloorMaker(limiter) {
 			else if Player.area == 138
 				goal = 17;
 			else if Player.area == 140
-				goal = 22;
+				goal = 25;
 			else if Player.area == 139//The pit
 				goal = 200;//150
 			if scrIsGamemode(6)//small levels
@@ -215,7 +215,7 @@ function scrGenerateFloorMaker(limiter) {
 			event_user(0);
 		return limiter;
 	}
-	if !instance_exists(MushroomBoss) && point_distance(x,y,10016,10016) > 48
+	if !instance_exists(MushroomBoss) && !instance_exists(PitNavigation) && point_distance(x,y,10016,10016) > 48
 	{
 		if instance_exists(Player) && Player.area != 139{
 				/*

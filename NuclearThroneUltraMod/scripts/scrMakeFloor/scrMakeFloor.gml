@@ -670,7 +670,7 @@ function scrMakeFloor(limiter) {
 	}
 	
 	//Graveyard
-	if area = 126 || area == 127 {
+	if area = 126 || area == 127{
 		var r = random(4)
 		if r < 1
 		{
@@ -1005,7 +1005,7 @@ function scrMakeFloor(limiter) {
 				with instance_create(x,y,FloorMaker) { 
 					firstTry = false;
 					if other.area == 140
-						goal = 22;
+						goal = 25;
 					else
 						goal = 17;
 					styleb = other.styleb;

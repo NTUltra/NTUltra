@@ -56,7 +56,7 @@ if scrIsGamemode(8) && area != 0
 
 	var prevSong = song;
 	var prevAmb = amb;
-    if area = 0 {
+	if area = 0 {
 
 		if UberCont.playFullyCompleted
 			exit;
@@ -64,7 +64,7 @@ if scrIsGamemode(8) && area != 0
 		song = musThemeA;
         amb = amb0;
     }
-    if area = 1 {
+    else if area = 1 {
 
         if song == mus1b || (deaths > 50 and random(20) < 1)
 			song = mus1b;
@@ -73,26 +73,26 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb1;
     }
-    if area = 105 //inverted desert
+    else if area = 105 //inverted desert
     {
 
         song = mus1b;
 
         amb = amb1;
     }
-    if area = 2 {
+    else if area = 2 {
 
         song = mus2;
 
         amb = amb2;
     }
-    if area = 110 {
+    else if area = 110 {
 
         song = musUltraInvertedSewers;
 
         amb = amb102;
     }
-    if area = 3 {
+    else if area = 3 {
 
         if deaths > 50 and random(20) < 1
 			song = mus3b;
@@ -101,13 +101,13 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb3;
     }
-    if area = 4 {
+    else if area = 4 {
 
         song = mus4;
 
         amb = amb4;
     }
-    if area = 5 {
+    else if area = 5 {
 
         if deaths > 50 and random(20) < 1
         song = mus5b;
@@ -116,50 +116,50 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb5;
     }
-    if area = 6 {
+    else if area = 6 {
 
         song = mus6;
 
         amb = amb6;
     }
-    if area = 7 {
+    else if area = 7 {
 
         song = musUltraVulcano; //mus5b;
 
         amb = ambUltraVulcano;
     }
-    if area = 108 || area = 109 //inverted vulcano inverted wonderland
+    else if area = 108 || area = 109 //inverted vulcano inverted wonderland
     {
 
         song = mus5b;
 
         amb = amb5;
     }
-    if area = 8 {
+    else if area = 8 {
 
         song = mus102
 
         amb = amb100;
     }
-    if area == 9 {
+    else if area == 9 {
 
         song = mus7;
 
         amb = amb7;
     }
-	if area = 118 {//Inverted palace
+	else if area = 118 {//Inverted palace
 
         song = mus7b;
 
         amb = amb7;
     }
-    if area = 100 {
+    else if area = 100 {
 
         song = mus100;
 
         amb = amb100;
     }
-    if area = 102 {
+    else if area = 102 {
         if (random(100) < 1)
             song = sndChubbyEmuSong;
         else
@@ -167,96 +167,84 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb102;
     }
-    if area == 103 || area == 125
+    else if area == 103 || area == 125
 	{
 
         song = mus103;
 
         amb = amb100;
     }
-
-    if area == 104 {
+    else if area == 104 {
         song = mus107;
 
         amb = amb100;
     }
-
-    if area = 106 //inverted scrap
+    else if area = 106 //inverted scrap
     {
 
         song = mus3b;
 
         amb = amb3;
     }
-
-    if area = 107 //inverted frozen city
+    else if area = 107 //inverted frozen city
     {
 
         song = mus5b;
 
         amb = amb5;
     }
-
-    if area = 101 || area == 122//oasis
+    else if area = 101 || area == 122//oasis
     {
 
         song = mus101;
 
         amb = amb101;
     }
-
-    if area = 111 //inverted crystal caves
+    else if area = 111 //inverted crystal caves
     {
 
         song = mus104; //cursed caves
 
         amb = amb104; //cursed caves
     }
-
-    if area = 112 //inverted labs
+    else if area = 112 //inverted labs
     {
 
         song = mus106b; //popoland
 
         amb = amb106; //popoland
     }
-
-    if area = 113 //banditland
+    else if area = 113 //banditland
     {
         song = musThemeA
 
         amb = amb0b
     }
-
-    if area = 114 || area == 123//Jungle bugnle flungle drums yaya
+    else if area = 114 || area == 123//Jungle bugnle flungle drums yaya
     {
         song = mus105
 
         amb = amb105
     }
-	
-	if area == 10 || area == 121 //savanna
+	else if area == 10 || area == 121 //savanna
     {
         song = mus10
 
         amb = amb1
     }
-
-    if area = 115 //cheese caves
+    else if area = 115 //cheese caves
     {
         song = mus104
 
         amb = amb104
     }
-	
-	if area = 117 || area == 124//Mushroomland
+	else if area = 117 || area == 124//Mushroomland
     {
         song = musUltraMushroomland
 
         amb = amb102
     }
-	
-	if area == 126 {
+	else if area == 126 {
 
         song = musUltra126
 
@@ -327,16 +315,15 @@ if scrIsGamemode(8) && area != 0
         song = musUltraIrradiatedSkies
         amb = ambUltra138;
     }
-	/*else if area == 140 {
-
-        song = musUltraInvIrradiatedSkies
-        amb = ambUltra138;
-    }*/
 	else if area == 139 {
 
         song = musUltraThePit
         amb = ambUltra126;
     }
+	if instance_exists(PitNavigation) && area != 140
+	{
+		song = musUltraInvertedRoute;
+	}
 	if (confirmSound) {
         snd_play_2d(confirmSound);
         confirmSound = false;

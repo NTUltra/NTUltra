@@ -158,8 +158,16 @@ function scrAreaName(area,subarea,loops){
 			case 138: //Clouds
 				txt = "6C_"+string(subarea);
 			break;
+			case 139: //PIT
+				txt = "1D_"+string(subarea);
+				upsideDown = true;
+			break;
 			case 140: //Clouds
 				txt = "6C_"+string(subarea);
+				upsideDown = true;
+			break;
+			case 141: //Inversion gauntlet
+				txt = "2C?4B?5?"
 				upsideDown = true;
 			break;
 		}

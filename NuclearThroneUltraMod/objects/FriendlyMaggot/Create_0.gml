@@ -22,6 +22,6 @@ charge = false;
 maxSpeed = 3;
 actTime = 15;
 target = noone;
-dmg = 4;
+dmg = 5;
 hurt_pitch_variation = 0.05;
 scrInitDrops(1);

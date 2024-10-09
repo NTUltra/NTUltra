@@ -49,6 +49,14 @@ if audio_is_playing(sndChickenLoop)
 }
 if instance_exists(Player)
 {
+	if Player.area == 141
+	{
+		Player.area = 127;
+		with PitNavigation
+		{
+			currentArea = 127;	
+		}
+	}
 	if !UberCont.useSeed && Player.area == 100
 	{
 		UberCont.savedSeed = random_get_seed();
@@ -306,7 +314,7 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(178,149,124) )
 		else if Player.area == 126//Graveyard
 		__background_set_colour( make_color_rgb(0,0,0) )
-		else if Player.area == 127//Graveyard
+		else if Player.area == 127//Inverted Graveyard/start inversion gauntlet/storm
 		__background_set_colour( make_color_rgb(246, 198,255) )
 		else if Player.area == 128//Crown Courtyard
 			__background_set_colour( make_color_rgb(44, 43, 19) )
@@ -438,9 +446,9 @@ goal = 1;
 else if Player.area == 138//Cloudland || Player.are
 goal = 150 + s;
 else if Player.area == 140
-	goal = 190 + s;
+	goal = 200 + s;
 else if Player.area == 139//THE PIT
-goal = 190 + s;
+goal = 200 + s;
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;

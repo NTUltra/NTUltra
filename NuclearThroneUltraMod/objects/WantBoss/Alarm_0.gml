@@ -143,7 +143,7 @@ if target != noone && instance_exists(target)
 							instance_create(x+16,y+16,AssassinBoss);
 					}
 			    }
-			    else if other.area=106 && other.loops>0 && instance_exists(Floor)//inverted scrapyard
+			    else if other.area == 106 && (other.loops > 0 || instance_exists(PitNavigation)) && instance_exists(Floor)//inverted scrapyard
 			    {
 					with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor),instance_furthest(x+random(120)-60,y+random(120)-60,Floor),Floor)
 						instance_create(x+16,y+16,InvertedAssassinBoss);

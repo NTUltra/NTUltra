@@ -19,7 +19,6 @@ if instance_exists(target) && target != noone
 		snd_play(sndFlakCannon)
 		with instance_create(x,y,InvertedEnemyFlakBullet)
 		{
-			loops = 1;
 			motion_add(other.gunangle,13.5);
 			image_angle = direction
 			team = other.team
@@ -28,15 +27,15 @@ if instance_exists(target) && target != noone
 	else
 	{
 		snd_play(sndShotgun);
-		var ang = gunangle - 48;
-		repeat(8)
+		var ang = gunangle - 40;
+		repeat(6)
 		{
 			with instance_create(x, y, EnemyBullet3) {
-			    motion_add(ang, 12.8);
+			    motion_add(ang, 12.7);
 			    image_angle = direction
 			    team = other.team
 			}
-			ang += 12;
+			ang += 13.333333333333333333333333333333;
 		}
 	}
 }

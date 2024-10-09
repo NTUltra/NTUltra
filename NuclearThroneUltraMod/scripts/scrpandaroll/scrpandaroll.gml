@@ -17,7 +17,7 @@ function scrPandaRoll(){
 	//handling golden weapons
 	if scrCheckGold(wep_name[prevwep])
 	{
-		prevwep=9//minigun tier 6
+		prevwep=20//laser rifle is tier 5
 		scrUnlockBSkin(14,"FOR CONVERTING A GOLDEN WEAPON",0)
 	}
     else if prevwep > 0 && prevwep < array_length(wep_area) && wep_area[prevwep] == -1

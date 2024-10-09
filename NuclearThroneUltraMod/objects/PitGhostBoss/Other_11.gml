@@ -1,5 +1,5 @@
 /// @description Materialize
-if goToTarget
+if goToTarget || alarm[6] > 0
 	exit;
 image_alpha = 1;
 if mask_index == mskPickupThroughWall
