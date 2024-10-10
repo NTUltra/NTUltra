@@ -7,11 +7,13 @@ with other
 		DealDamage(other.dmg * 0.5, true);
 	else
 		DealDamage(other.dmg, true);
+		
+	if sprite_index != spr_hurt
+		snd_play(snd_hurt, hurt_pitch_variation,true)
 	sprite_index = spr_hurt
 	image_index = 0
 	motion_add(other.direction,2)
 }
-snd_play(other.snd_hurt, other.hurt_pitch_variation,true)
 
 }
 

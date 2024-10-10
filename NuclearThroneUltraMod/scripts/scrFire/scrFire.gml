@@ -369,7 +369,6 @@ function scrFire(canDrown = true) {
 	if !skill_got[2]
 	{
 		motion_add(aimDirection,5)
-		scrMoveContactSolid(aimDirection,1)
 	}
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
@@ -2623,7 +2622,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprHeavySlash;
-	dmg = 25//shovel is 8
+	dmg = 28//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3646,7 +3645,7 @@ function scrFire(canDrown = true) {
 	instance_create(x,y,Dust)
 	with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
 	{
-		dmg = 8
+		dmg = 12
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,4+longarms)

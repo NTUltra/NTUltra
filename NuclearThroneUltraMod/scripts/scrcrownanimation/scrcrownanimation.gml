@@ -197,6 +197,8 @@ function scrCrownAnimation(takenCrown){
 		case 43://Frog
 			spr_idle = sprCrownFrogIdle
 			spr_walk = sprCrownFrogWalk
+			if UberCont.canPickFrogCrown 
+				alarm[3] = 90;
 		break;
 	}
 }

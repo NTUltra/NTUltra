@@ -1126,7 +1126,7 @@ function scrWeapons() {
 	wep_name[100] = "SLEDGEHAMMER"
 	wep_type[100] = 0
 	wep_auto[100] = 0
-	wep_load[100] = 34
+	wep_load[100] = 35
 	wep_cost[100] = 0
 	wep_sprt[100] = sprHammer
 	wep_area[100] = 3
@@ -2591,7 +2591,7 @@ function scrWeapons() {
 	wep_name[231] = "GUITAR"
 	wep_type[231] = 0
 	wep_auto[231] = 0
-	wep_load[231] = 19
+	wep_load[231] = 18
 	wep_cost[231] = 0
 	wep_sprt[231] = sprGuitar
 	wep_area[231] = -1
@@ -3111,7 +3111,7 @@ function scrWeapons() {
 	wep_name[277] = "GOLDEN SLEDGEHAMMER"
 	wep_type[277] = 0
 	wep_auto[277] = 0
-	wep_load[277] = 32
+	wep_load[277] = 34
 	wep_cost[277] = 0
 	wep_sprt[277] = sprGoldHammer
 	wep_area[277] = 20
@@ -4101,9 +4101,9 @@ function scrWeapons() {
 	wep_type[365] = 3
 	wep_auto[365] = 0
 	wep_load[365] = 28
-	wep_cost[365] = 2
+	wep_cost[365] = 2.5
 	wep_sprt[365] = sprSplinterShotgun
-	wep_area[365] = 10
+	wep_area[365] = 11
 	wep_text[365] = "fractured wood"
 	wep_swap[365] = sndSwapBow
 	wep_rad[365] = 0;
@@ -5172,7 +5172,7 @@ function scrWeapons() {
 	wep_type[459] = 3
 	wep_auto[459] = 0
 	wep_load[459] = 18
-	wep_cost[459] = 3
+	wep_cost[459] = 4
 	wep_sprt[459] = sprSplinterCrash
 	wep_area[459] = 8
 	wep_text[459] = "crash test"
@@ -5374,7 +5374,7 @@ function scrWeapons() {
 	wep_name[477] = "HEAVY SLEDGEHAMMER"
 	wep_type[477] = 0
 	wep_auto[477] = 0
-	wep_load[477] = 55
+	wep_load[477] = 56
 	wep_cost[477] = 0
 	wep_sprt[477] = sprHeavySledgeHammer
 	wep_area[477] = 4
@@ -5606,7 +5606,7 @@ function scrWeapons() {
 	wep_name[498] = "DEVASTATOR"
 	wep_type[498] = 5
 	wep_auto[498] = 0
-	wep_load[498] = 53//60 normally
+	wep_load[498] = 50//60 normally
 	wep_cost[498] = 8
 	wep_sprt[498] = sprDevastator
 	wep_area[498] = 15
@@ -5617,7 +5617,7 @@ function scrWeapons() {
 	wep_name[499] = "ANNIHILATOR"
 	wep_type[499] = 4
 	wep_auto[499] = 0
-	wep_load[499] = 50//60 normally
+	wep_load[499] = 48//60 normally
 	wep_cost[499] = 6
 	wep_sprt[499] = sprAnnihilator
 	wep_area[499] = 13
@@ -6248,7 +6248,7 @@ function scrWeapons() {
 	wep_name[556] = "ELIMINATOR"
 	wep_type[556] = 3
 	wep_auto[556] = 0
-	wep_load[556] = 55
+	wep_load[556] = 50
 	wep_cost[556] = 8
 	wep_sprt[556] = sprEliminator
 	wep_area[556] = 16
@@ -6733,9 +6733,9 @@ function scrWeapons() {
 	wep_type[600] = 1
 	wep_auto[600] = 1
 	wep_load[600] = 2
-	wep_cost[600] = 4.75
+	wep_cost[600] = 4.5
 	wep_sprt[600] = sprSeptupleShortPopGun
-	wep_area[600] = 12
+	wep_area[600] = 13
 	wep_text[600] = "how to increase the range?"
 	wep_swap[600] = sndSwapMachinegun
 	wep_rad[600] = 0;
@@ -6964,7 +6964,7 @@ function scrWeapons() {
 	wep_name[621] = "BOUNCER CROSSBOW"
 	wep_type[621] = 3
 	wep_auto[621] = 0
-	wep_load[621] = 31
+	wep_load[621] = 29
 	wep_cost[621] = 1
 	wep_sprt[621] = sprBouncerCrossbow
 	wep_area[621] = 3
@@ -7968,7 +7968,7 @@ function scrWeapons() {
 	wep_name[711] = "METAL PIPE"
 	wep_type[711] = 0
 	wep_auto[711] = 0
-	wep_load[711] = 11
+	wep_load[711] = 20
 	wep_cost[711] = 0
 	wep_sprt[711] = sprMetalPipe
 	wep_area[711] = 0
@@ -8356,7 +8356,7 @@ function scrWeapons() {
 	wep_name[746] = "SUCK CANNON"
 	wep_type[746] = 5
 	wep_auto[746] = 3
-	wep_load[746] = 5
+	wep_load[746] = 7
 	wep_cost[746] = 2.5
 	wep_sprt[746] = sprSuckCannon
 	wep_area[746] = 8
@@ -8557,7 +8557,7 @@ function scrWeapons() {
 	wep_name[764] = "ULTRA SUCK CANNON"
 	wep_type[764] = 5
 	wep_auto[764] = 3
-	wep_load[764] = 4
+	wep_load[764] = 5
 	wep_cost[764] = 2.5
 	wep_sprt[764] = sprUltraSuckCannon
 	wep_area[764] = 21
@@ -9126,7 +9126,7 @@ function scrWeapons() {
 	wep_load[814] = 17
 	wep_cost[814] = 1
 	wep_sprt[814] = sprSnareBow
-	wep_area[814] = 5
+	wep_area[814] = 4
 	wep_text[814] = "the power of nature"
 	wep_swap[814] = sndSwapBow
 	wep_rad[814] = 0;
@@ -9714,7 +9714,7 @@ function scrWeapons() {
 	wep_name[866] = "TOXIC DENSE GUN"
 	wep_type[866] = 1
 	wep_auto[866] = 0
-	wep_load[866] = 18
+	wep_load[866] = 16
 	wep_cost[866] = 6
 	wep_sprt[866] = sprToxicDenseGun
 	wep_area[866] = 4
@@ -9738,7 +9738,7 @@ function scrWeapons() {
 	wep_auto[868] = 1
 	wep_load[868] = 1
 	wep_cost[868] = 1.5
-	wep_sprt[868] = sprMinigun
+	wep_sprt[868] = sprPlopMinigun
 	wep_area[868] = 7
 	wep_text[868] = "plop! plop! plop!"
 	wep_swap[868] = sndSwapMachinegun
@@ -9749,7 +9749,7 @@ function scrWeapons() {
 	wep_auto[869] = 1
 	wep_load[869] = 3
 	wep_cost[869] = 5
-	wep_sprt[869] = sprKrakenMachinegun
+	wep_sprt[869] = sprTripleKrakenMachinegun
 	wep_area[869] = 18
 	wep_text[869] = "much more ammo efficient compared to other kraken bullet weapons"
 	wep_swap[869] = sndSwapPistol
@@ -9760,11 +9760,46 @@ function scrWeapons() {
 	wep_auto[870] = 1
 	wep_load[870] = 35
 	wep_cost[870] = 3
-	wep_sprt[870] = sprKrakenMachinegun
+	wep_sprt[870] = sprTorpedoLauncher
 	wep_area[870] = 18
 	wep_text[870] = "Filled with kraken"
 	wep_swap[870] = sndSwapPistol
 	wep_rad[870] = 0;
+	
+	wep_name[871] = "GHOST GRENADE LAUNCHER"
+	wep_type[871] = 4
+	wep_auto[871] = 1
+	wep_load[871] = 24
+	wep_cost[871] = 2
+	wep_sprt[871] = sprGhostGrenadeLauncher
+	wep_area[871] = 23
+	wep_text[871] = "screams of the ghosts!"
+	wep_swap[871] = sndSwapExplosive
+	wep_rad[871] = 0;
+	wep_popup[871] = "WATCH OUT!#BIG EXPLOSION!";
+	
+	wep_name[872] = "CROWBAR"
+	wep_type[872] = 0
+	wep_auto[872] = 0
+	wep_load[872] = 16
+	wep_cost[872] = 0
+	wep_sprt[872] = sprCrowbar
+	wep_area[872] = 4
+	wep_text[872] = "a crowbar should be able to fix it"
+	wep_swap[872] = sndSwapSword
+	wep_rad[872] = 0;
+	
+	wep_name[873] = "CANE"
+	wep_type[873] = 0
+	wep_auto[873] = 0
+	wep_load[873] = 14
+	wep_cost[873] = 0
+	wep_sprt[873] = sprCane
+	wep_area[873] = 13
+	wep_text[873] = "only steals from other thieves"
+	wep_swap[873] = sndSwapHammer
+	wep_rad[873] = 0;
+	wep_popup[873] = "CAN STEAL AMMO";
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

@@ -3,7 +3,7 @@ friction = 0//0.6
 canBeMoved = false;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 candmg=true;
-dmg = 25;
+dmg = 27;
 chainType = Chain;
 particle = Smoke;
 hitEntities = [];

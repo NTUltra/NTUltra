@@ -1131,16 +1131,16 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index = sprHeavySlash;
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
-	dmg = 28
+	dmg = 29
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.7+longarms)
+	motion_add(aimDirection,3.5+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -1996,15 +1996,15 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
+	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
 	{
 	snd_wallhit=sndGuitarHitWall;
 	snd_hit=sndGuitarHit;
-	dmg = 24//26
+	dmg = 25//26
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,2.7+longarms)
+	motion_add(aimDirection,3.4+longarms)
 	image_angle = direction
 	team = other.team}
 
@@ -2430,7 +2430,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 	sprite_index=sprGoldenHeavySlash
-	dmg = 24//sledge is 16
+	dmg = 28//sledge is 16
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -4301,7 +4301,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),KrakenSlash)
 	{
-		dmg = 16//shovel is 12 is frostglove
+		dmg = 19//shovel is 12 is frostglove
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -5230,7 +5230,7 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team}
 	}
-	repeat(10)
+	repeat(9)
 	{
 	with instance_create(x,y,Splinter)
 	{motion_add(aimDirection+(random(70)-35)*other.accuracy,15+random(10))
@@ -8787,14 +8787,14 @@ function scrFire2(hasTailNow) {
 	//HEAVY SLEDGEHAMMER
 	case 477:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(sndHeavyHammer)
 
 	instance_create(x,y,Dust)
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 	sprite_index=sprVeryHeavySlash;
-	dmg = 50//shovel is 8
+	dmg = 55//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8805,9 +8805,9 @@ function scrFire2(hasTailNow) {
 	wepangle = -wepangle
 	if !skill_got[2]
 		motion_add(aimDirection,8)
-	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 5
+	BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 15
 	wkick = -4
 
 	break;
@@ -8821,7 +8821,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index=sprUltraSlash;
-		dmg = 20
+		dmg = 24
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8831,7 +8831,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraBigSlash)
 	{
-		dmg = 70//energy hammer is 50
+		dmg = 74//energy hammer is 50
 		longarms = 0
 	
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8895,7 +8895,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),ExplosionFlail)
 	{
 	longarms = 0
-	dmg = 16;
+	dmg = 17;
 	if Player.skill_got[42]
 	{
 		ammo = ceil(ammo*Player.betterTail);
@@ -12312,7 +12312,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),PlasmaFlail)
 	{
-		dmg = 13;
+		dmg = 14;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -15794,9 +15794,11 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),SmallSlash)
+	with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),MetalPipeSlash)
 	{
-		dmg = 9
+		snd_wallhit = sndCrowbarHitWall;
+		walled = 0;
+		dmg = 15
 		longarms = 0
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3.2+longarms)

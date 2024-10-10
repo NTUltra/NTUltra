@@ -8,6 +8,7 @@ wasResurrected = false;
 isSnooze = false;
 gettingKnocked = 0;
 morphMe = 0;
+totemImmune = false;
 maxSpeed = 0;
 right = 1;
 walk = 0;

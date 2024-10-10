@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndCrowbarHitWall",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.205021,
+  "name":"sndCrowbarHitWall",
+  "parent":{
+    "name":"HitWall",
+    "path":"folders/Sounds/HitWall.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCrowbarHitWall.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -10,5 +10,5 @@ if alarm[3] < 6
 	draw_sprite_ext(sprite_index,1,x-1,y,image_xscale,image_yscale,image_angle,col,1)
 	draw_sprite_ext(sprite_index,1,x+1,y-1,image_xscale,image_yscale,image_angle,col,1)
 	draw_sprite_ext(sprite_index,1,x-1,y+1,image_xscale,image_yscale,image_angle,col,1)
-	draw_sprite(sprite_index,image_index,x,y);
+	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1);
 }

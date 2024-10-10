@@ -1,5 +1,5 @@
 /// @description Sneak attack
-if instance_exists(Player)
+if instance_exists(Player) && !place_meeting(x,y,Tangle)
 {
 	image_alpha = 0;
 	with instance_create(x,y,AnimDestroy)

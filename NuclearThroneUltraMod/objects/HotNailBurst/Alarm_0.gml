@@ -7,7 +7,8 @@ if instance_exists(creator) && instance_exists(Player)
 {
 	x=creator.x;
 	y=creator.y;
-
+	with creator
+		wkick += 0.25;
 //FIRING
 //with instance_create(xx,yy,Shell)
 //motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(50)-25,2+random(2))

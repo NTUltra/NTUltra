@@ -1337,8 +1337,8 @@ if (!instance_exists(LevCont))
 		{
 			var t = wep_area[wep];
 			if t < 0
-				t = 19;
-			t *= 0.016;
+				t = 16;
+			t *= 0.017;
 			reload -= t;
 			
 		}

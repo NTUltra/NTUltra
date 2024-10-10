@@ -41,7 +41,7 @@ if target != noone
 			instance_create(x+5,y,Notice);
 			snd_play(sndWarning);
 			alarm[2] = tellTime;
-			alarm[1] = alarm[2] + 10;
+			alarm[1] += alarm[2] + actTime;
 		}
 		else if stuck
 		{

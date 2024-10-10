@@ -1841,14 +1841,27 @@ function scrDrawHUD() {
 		{
 			if !used && cAlpha > 0 && place_meeting(x,y,Player) && hasEnoughMuts
 			{
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+				if instance_exists(BigBadBat) || instance_exists(WantBoss)
+				{
+					var n = "DEFEAT BOSS FIRST!";
+					draw_set_color(c_black)
+					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(n)))
+					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(n)))
+					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(n)))
+					draw_set_color(c_white)
+					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(n)))
+				}
+				else
+				{
+					draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+					draw_set_color(c_black)
+					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
+					draw_set_color(c_white)
+					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
+				}
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}

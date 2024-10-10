@@ -549,9 +549,9 @@ maxtoxicamount = 120;
 toxicConsume = 0;
 toxicUltra = false;
 
-var am = 0.85;
+var am = 0.9;
 if race == 7
-	am = 1;
+	am = 1.05;
 else if UberCont.lastwishused
 {
 	am = 1.25;

@@ -258,115 +258,114 @@ if crown != 25
 	}
 }
 
-//CROWN OF REINCARNATION/FROG
+//CROWN OF REINCARNATION
 if crown == 11
 {
-	if Player.crownvisits > 0 && !UberCont.canPickFrogCrown
+	var hasReachedUltra = false;
+	var gotTheRegal = false;
+	with Player
 	{
-		var hasReachedUltra = false;
-		var gotTheRegal = false;
-		with Player
+		if skill_got[maxskill + 1]
 		{
-			if skill_got[maxskill + 1]
-			{
-				gotTheRegal = true;
-			}
-			skeletonlives=0;
-			reincarnate = true;
-			crownpoints = 0;
-			var boost = max(boostLevel, level);
-			var pw = wep;
-			var bw = bwep;
-			var cw = cwep;
-			//MODIFIERS!
-			var wp1 = wepmod1;
-			var wp2 = wepmod2;
-			var wp3 = wepmod3;
-			//BMODIFIERS!
-			var wb1 = bwepmod1;
-			var wb2 = bwepmod2;
-			var wb3 = bwepmod3;
-			//CMODIFIERS!
-			var wc1 = cwepmod1;
-			var wc2 = cwepmod2;
-			var wc3 = cwepmod3;
-			var wpu = weaponspickedup;
+			gotTheRegal = true;
+		}
+		skeletonlives=0;
+		reincarnate = true;
+		crownpoints = 0;
+		var boost = max(boostLevel, level);
+		var pw = wep;
+		var bw = bwep;
+		var cw = cwep;
+		//MODIFIERS!
+		var wp1 = wepmod1;
+		var wp2 = wepmod2;
+		var wp3 = wepmod3;
+		//BMODIFIERS!
+		var wb1 = bwepmod1;
+		var wb2 = bwepmod2;
+		var wb3 = bwepmod3;
+		//CMODIFIERS!
+		var wc1 = cwepmod1;
+		var wc2 = cwepmod2;
+		var wc3 = cwepmod3;
+		var wpu = weaponspickedup;
 			
-			var rngloop = rnglevelloop;
-			var disableAltU = disableAltUltra;
-			if level > 9
-				hasReachedUltra = true;
-			instance_destroy();
-		}
-		UberCont.canPickFrogCrown = false;
-		scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
-		with WepPickup
+		var rngloop = rnglevelloop;
+		var disableAltU = disableAltUltra;
+		if level > 9
+			hasReachedUltra = true;
 		instance_destroy();
-
-		with Corpse
-		instance_destroy();
-		with CorpseCollector
-		{
-			ds_list_clear(corpses);	
-		}
-
-		instance_create(x,y,Player);
-		with Player//Data to keep
-		{
-			if gotTheRegal
-				skill_got[maxskill + 1] = 1;
-			crownpoints = 0;
-			disableAltUltra = disableAltU;
-			rnglevelloop = rngloop;
-			weaponspickedup = wpu;
-			freeAmmoRound = 1;
-			ultimategamble = true;
-			race = other.race
-			crown = [11];
-			lastarea = other.lastarea;
-			lastwishused = false;
-			area = other.area//other.lastarea;
-			loops = other.loops;
-			hard = other.hard;
-			kills = other.kills;
-			subarea=other.subarea;
-			boostLevel = boost;
-	
-			wep = pw;
-			bwep = bw;
-			cwep = cw;
-	
-			wepmod1 = wp1;
-			wepmod2 = wp2;
-			wepmod3 = wp3;
-	
-			bwepmod1 = wb1;
-			bwepmod2 = wb2;
-			bwepmod3 = wb3;
-	
-			cwepmod1 = wc1;
-			cwepmod2 = wc2;
-			cwepmod3 = wc3;
-	
-			//give the ammos
-			ammo[1] = typ_amax[1];
-			ammo[2] = typ_amax[2];
-			ammo[3] = typ_amax[3];
-			ammo[4] = typ_amax[4];
-			ammo[5] = typ_amax[5];
-	
-			scrWeaponHold();
-			if !disableAltUltra
-				unlockAlternativeUltras = hasReachedUltra;
-			//event_perform(ev_other,ev_room_end);
-		}
-		/*with instance_create(x,y,GenCont)
-		{race = other.race
-		crown = other.crown}*/
-
 	}
-	else if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37) && UberCont.canPickFrogCrown
+	UberCont.canPickFrogCrown = false;
+	scrUnlockGameMode(25,"FOR GETTING RESURRECTED");
+	with WepPickup
+	instance_destroy();
+
+	with Corpse
+	instance_destroy();
+	with CorpseCollector
 	{
+		ds_list_clear(corpses);	
+	}
+
+	instance_create(x,y,Player);
+	with Player//Data to keep
+	{
+		if gotTheRegal
+			skill_got[maxskill + 1] = 1;
+		crownpoints = 0;
+		disableAltUltra = disableAltU;
+		rnglevelloop = rngloop;
+		weaponspickedup = wpu;
+		freeAmmoRound = 1;
+		ultimategamble = true;
+		race = other.race
+		crown = [11];
+		lastarea = other.lastarea;
+		lastwishused = false;
+		area = other.area//other.lastarea;
+		loops = other.loops;
+		hard = other.hard;
+		kills = other.kills;
+		subarea=other.subarea;
+		boostLevel = boost;
+	
+		wep = pw;
+		bwep = bw;
+		cwep = cw;
+	
+		wepmod1 = wp1;
+		wepmod2 = wp2;
+		wepmod3 = wp3;
+	
+		bwepmod1 = wb1;
+		bwepmod2 = wb2;
+		bwepmod3 = wb3;
+	
+		cwepmod1 = wc1;
+		cwepmod2 = wc2;
+		cwepmod3 = wc3;
+	
+		//give the ammos
+		ammo[1] = typ_amax[1];
+		ammo[2] = typ_amax[2];
+		ammo[3] = typ_amax[3];
+		ammo[4] = typ_amax[4];
+		ammo[5] = typ_amax[5];
+	
+		scrWeaponHold();
+		if !disableAltUltra
+			unlockAlternativeUltras = hasReachedUltra;
+		//event_perform(ev_other,ev_room_end);
+	}
+	/*with instance_create(x,y,GenCont)
+	{race = other.race
+	crown = other.crown}*/
+}
+if crown == 43//FROG
+{
+	//if !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37) && UberCont.canPickFrogCrown
+	//{
 		//FROG
 		with Player
 		{
@@ -377,14 +376,7 @@ if crown == 11
 			else
 				area = 2
 		}
-	}
-	else
-	{
-		with Player
-		{
-			freeAmmoRound = 1;	
-		}
-	}
+	//}	
 }
 
 //CROWN OF INVERSION

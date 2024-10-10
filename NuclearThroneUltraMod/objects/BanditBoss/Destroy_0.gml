@@ -1,14 +1,30 @@
 if oasis
 	raddrop = min(raddrop,5);
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BanditBoss) == 1 && (!instance_exists(Player) || (instance_exists(Player) && Player.area != 2))
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BanditBoss) == 1
 with MusCont
 {
 //optimise sound_discard(song)
 //optimise sound_discard(amb)
 
 audio_stop_sound(song);
-song = musBossWin
-snd_play_2d(song)
+if instance_exists(Player) && Player.area == 2
+{
+	song = mus2;
+	amb = amb2;
+	if !audio_is_playing(song)
+	{
+		snd_loop(song);
+	}
+	if !audio_is_playing(amb)
+	{
+		snd_loop(amb);
+	}
+}
+else
+{
+	song = musBossWin
+	snd_play_2d(song)
+}
 //snd_loop(amb)
 
 audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
@@ -68,7 +84,7 @@ event_inherited()
 
 if oasis && !instance_exists(SurvivalWave)
 {
-	if instance_exists(Player) && Player.oasis = false
+	if instance_exists(Player) && Player.oasis == false
 	{
 		instance_create(x,y,Portal);
 		with enemy
@@ -77,6 +93,6 @@ if oasis && !instance_exists(SurvivalWave)
 			prevhealth = 0;
 		}
 	}
-with Player
-oasis=true;
+	with Player
+		oasis=true;
 }

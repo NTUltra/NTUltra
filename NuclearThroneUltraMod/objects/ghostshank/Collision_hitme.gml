@@ -36,6 +36,7 @@ if other.team != team
 					}
 					with instance_create(xx,yy,SmallGhostExplosion)
 					{
+						team = -1;
 						dmg = 2
 						with myExplosionMask
 						{

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.84775,
+  "duration":1.604127,
   "name":"sndGhostBlade",
   "parent":{
     "name":"Melee",

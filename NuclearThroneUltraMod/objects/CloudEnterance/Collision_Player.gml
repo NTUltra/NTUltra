@@ -5,7 +5,7 @@ with GameRender
 }
 if used
 	isInteractableNow = false;	
-else if cAlpha > 0 && hasEnoughMuts
+else if cAlpha > 0 && hasEnoughMuts && !instance_exists(WantBoss) && !instance_exists(BigBadBat)
 {
 	with Player
 		isOnInteractable = true;
@@ -27,6 +27,10 @@ else if cAlpha > 0 && hasEnoughMuts
 		}
 		if array_length(gottenSkills) > 2
 		{
+			with Portal
+			{
+				instance_destroy();	
+			}
 			instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 			used = true;
 			isInteractableNow = false;

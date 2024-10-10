@@ -2289,7 +2289,7 @@ function scrFire3(hasTailNow){
 		BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 4
-		wkick = 3
+		wkick = 5
 
 		break;
 		
@@ -2576,9 +2576,102 @@ function scrFire3(hasTailNow){
 		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 4
-		wkick = 10
+		wkick = 8
 
 		break;
 		
+		//GHOST GRENADE LAUNCHER
+		case 871:
+
+		snd_play_fire(sndGhostGrenade)
+		repeat(4+irandom(3))
+		{
+			with instance_create(x,y,GhostEffect)
+				motion_add(aimDirection+(random(30)-15)*other.accuracy,3+random(4))
+		}
+		with instance_create(x,y,GhostGrenade)
+		{
+			sticky = 0
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,16)
+			image_angle = direction
+			team = other.team
+		}
+
+		BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 5
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,3)
+			scrMoveContactSolid(aimDirection + 180,4)
+		}
+		break;
+		
+		//CROWBAR
+		case 872:
+
+		snd_play_fire(sndCrowbar)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),WrenchSlash)
+		{
+			image_yscale *= sign(other.wepangle);
+			snd_wallhit = sndCrowbarHitWall;
+			dmg = 13
+			sprite_index = sprCrowbarSlash;
+			mask_index = mskCrowbarSlash;
+			canAlwaysDeflect = true;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,6)
+		}
+		BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = -6
+
+		break;
+		
+		//CANE
+		case 873:
+
+		snd_play_fire(sndCaneSlash)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),CaneSlash)
+		{
+			image_yscale *= sign(other.wepangle);
+			snd_wallhit = choose(sndMeleeSpearHit1,sndMeleeSpearHit2);;
+			dmg = 24
+			canAlwaysDeflect = true;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,2)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = -8
+
+		break;
 	}
 }

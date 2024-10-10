@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndGhostGrenade",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.498656,
+  "name":"sndGhostGrenade",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Sounds/Weapons.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndGhostGrenade.ogg",
+  "type":0,
+  "volume":1.0,
+}

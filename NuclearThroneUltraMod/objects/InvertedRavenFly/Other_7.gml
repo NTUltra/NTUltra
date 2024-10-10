@@ -28,7 +28,7 @@ motion_add(random(360),3+random(1))
 }
 
 scrTarget()
-if target != noone
+if target != noone && instance_exists(target)
 {
 	with InvertedRaven
 	{

@@ -2,7 +2,6 @@
 // /@description
 ///@param
 function scrChangeRaven(ravenType){
-	instance_destroy(id,false);
 	with instance_create(x,y,ravenType)
 	{
 		spr_hurt = other.spr_hurt;
@@ -28,4 +27,5 @@ function scrChangeRaven(ravenType){
 		alarm[5] = 0;
 		alarm[7] = 600;
 	}
+	instance_destroy(id,false);
 }

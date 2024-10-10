@@ -395,7 +395,6 @@ function scrNextLevel(skipping = false) {
 		        {
 					if ( oasis )
 					{
-						debug("GO TO OASISPLEEEASE");
 						area=101;
 						lastarea = 101;
 						subarea=1;

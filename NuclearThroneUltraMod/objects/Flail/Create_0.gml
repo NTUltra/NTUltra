@@ -3,5 +3,5 @@
 // Inherit the parent event
 event_inherited();
 hits ++;
-dmg = 12
+dmg = 13
 image_speed = 0.5;

@@ -1,3 +1,6 @@
 /// @description Toggle Stealth on
-targetAlpha = stealthAlpha;
-stalking = true;
+if !place_meeting(x,y,Tangle)
+{
+	targetAlpha = stealthAlpha;
+	stalking = true;
+}

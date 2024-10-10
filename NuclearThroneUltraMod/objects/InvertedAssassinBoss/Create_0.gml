@@ -29,10 +29,10 @@ maxhealth = 180;
 if instance_exists(PitNavigation)
 {
 	actTime += 4;
-	smackdelayReduction -= 6;
+	smackdelayReduction -= 8;
 	raddrop -= 25;
 	maxhealth -= 25;
-	smackRange -= 1;
+	smackRange -= 2;
 }
 scrBossHealthBuff();
 EnemyHealthAdjustments();
