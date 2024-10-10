@@ -3402,7 +3402,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
 	{
-	dmg = 13//shovel is 8
+	dmg = 20//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3411,7 +3411,7 @@ function scrFire(canDrown = true) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),LightningSlash)
 	{
-	dmg = 11//shovel is 8
+	dmg = 18//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3420,7 +3420,7 @@ function scrFire(canDrown = true) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),LightningSlash)
 	{
-	dmg = 11//shovel is 8
+	dmg = 18//shovel is 8
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3

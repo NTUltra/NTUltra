@@ -36,10 +36,10 @@ if array_length(hitEntities) > 0 && instance_exists(hitEntities[array_length(hit
 				{
 					image_speed -= 0.12;
 				}
-				repeat(2)
+				repeat(3)
 				with instance_create(x,y,CaveSparkle)
 				{
-					motion_add(random(360),2);
+					motion_add(random(360),3);
 					image_speed -= 0.09;
 				}
 			}

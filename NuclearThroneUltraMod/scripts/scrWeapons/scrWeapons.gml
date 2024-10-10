@@ -1403,7 +1403,7 @@ function scrWeapons() {
 	wep_name[125] = "LIGHTNING SHOVEL"
 	wep_type[125] = 0
 	wep_auto[125] = 1
-	wep_load[125] = 50
+	wep_load[125] = 40
 	wep_cost[125] = 0
 	wep_sprt[125] = sprLightningShovel
 	wep_area[125] = 19
@@ -2955,7 +2955,7 @@ function scrWeapons() {
 	wep_cost[263] = 0
 	wep_sprt[263] = sprElectricGuitar
 	wep_area[263] = -1
-	wep_text[263] = "let's rock"
+	wep_text[263] = "let's rock!"
 	wep_swap[263] = sndSwapGuitar
 	wep_rad[263] = 0;
 	wep_popup[263] = "LET'S ROCK!";
@@ -9781,7 +9781,7 @@ function scrWeapons() {
 	wep_name[872] = "CROWBAR"
 	wep_type[872] = 0
 	wep_auto[872] = 0
-	wep_load[872] = 16
+	wep_load[872] = 21
 	wep_cost[872] = 0
 	wep_sprt[872] = sprCrowbar
 	wep_area[872] = 4

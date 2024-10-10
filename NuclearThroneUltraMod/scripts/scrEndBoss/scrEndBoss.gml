@@ -160,11 +160,11 @@ function scrEndBoss() {
 		    else if besttime < cbst_time[Player.race]
 		    {
     
-			    cbst_time[Player.race]= besttime;
+			    cbst_time[Player.race] = besttime;
     
 			    with instance_create(x,y,UnlockPopup)
 			    {
-			    mytext="BEST TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
+					mytext="BEST TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
 			    }
     
 			    scrSave();

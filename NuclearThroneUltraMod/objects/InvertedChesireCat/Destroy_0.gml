@@ -20,7 +20,7 @@ Sleep(200)
 scrBossKill();
 instance_create(x,y,ChesireCatExplosion);
 if UberCont.area == 109
-scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
+scrDefeatedRequiredBoss(secretChallengeBosses.cheshireCat);
 scrDrop(100,0)
 scrDrop(100,40)
 scrDrop(100,100)

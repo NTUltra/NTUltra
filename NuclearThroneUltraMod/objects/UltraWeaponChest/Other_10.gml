@@ -1,7 +1,6 @@
 /// @description Drop gun
 if !instance_exists(GenCont)
 {
-	scrChestOpenMindReload(other);
 	scrRaddrop(30);
 	with instance_create(x+2,y,WepPickup)
 	{

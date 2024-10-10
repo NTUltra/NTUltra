@@ -156,7 +156,7 @@ enum secretChallengeBosses {
 	bigVulture,
 	bigFish,
 	bushBox,
-	chesireCat,
+	cheshireCat,
 	bigAssassin,
 	hyperCrystal
 }

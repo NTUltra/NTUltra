@@ -27,7 +27,7 @@ var i = 0;
 if !surface_exists(currentCrownsSurface)
 {
 	var al = totalCrowns - 1;
-	scrollHeight = (ystep*(al/perWidth)) - height;
+	scrollHeight = max(0,(ystep*(al/perWidth)) - height);
 	currentCrownsSurface = surface_create(width,height);
 }
 if mouse_wheel_up()

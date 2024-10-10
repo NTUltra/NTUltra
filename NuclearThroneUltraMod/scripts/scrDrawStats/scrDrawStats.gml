@@ -166,7 +166,7 @@ function scrDrawStats() {
 	else
 		raceTime = string(scrTime(raceTime,false));
 	txt0 = "#STATISTICS"
-	txt1 = "####TOTAL#TIME#KILLS#DEATHS#LOOPS#WALLS DESTROYED#WEAPON MODS APPLIED##BEST#TIME#KILLS#DIFFICULTY#LOOPS##"+string(race_name[Menu.race])+"##BEST KILLS#TOTAL KILLS#DEATHS#LOOPS#BEST TIME";
+	txt1 = "####TOTAL#TIME#KILLS#DEATHS#LOOPS#WALLS DESTROYED#WEAPON MODS APPLIED##BEST#TIME#KILLS#DIFFICULTY#LOOPS##"+string(race_name[Menu.race])+"#BEST KILLS#TOTAL KILLS#DEATHS#LOOPS#BEST TIME";
 	var txt1b = "#"+skillnames+"#MUTATIONS TAKEN###" + ultranames+"#ULTRAS TAKEN";
 	txt2 = "#####"+string(time)+"#"+string(kills)+"#"+string(deaths)+"#"+string(loops)+"#"+string(wallkill)+"#"+string(wepmods)+"###"+string(btime)+" "+string(race_name[rtime])+"#"+string(bkills)+" "+string(race_name[rkills])+"#"+string(bdiff)+
 	" "+string(race_name[rdiff])+"#"+string(bloop)+" "+string(race_name[rloop])
@@ -174,7 +174,7 @@ function scrDrawStats() {
 	var txt2b = "#"+skillstats+"#"+totSkills
 	+"##"+ultrastats + "#"+ totUltras;
 	stxt0 = "#STATISTICS"
-	stxt1 = "####TOTAL#######BEST######"+string(race_name[Menu.race])+ "######"
+	stxt1 = "####TOTAL########BEST######"+string(race_name[Menu.race])+ "######"
 	var stxt1b = "MUTATIONS TAKEN##"
 	+ whiteEnter
 	+ "##ULTRA MUTATIONS#"

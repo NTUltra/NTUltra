@@ -2619,7 +2619,7 @@ function scrFire3(hasTailNow){
 		{
 			image_yscale *= sign(other.wepangle);
 			snd_wallhit = sndCrowbarHitWall;
-			dmg = 13
+			dmg = 14
 			sprite_index = sprCrowbarSlash;
 			mask_index = mskCrowbarSlash;
 			canAlwaysDeflect = true;

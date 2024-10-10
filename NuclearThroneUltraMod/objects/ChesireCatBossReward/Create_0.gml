@@ -2,4 +2,4 @@
 
 // Inherit the parent event
 event_inherited();
-myBoss = secretChallengeBosses.chesireCat;
+myBoss = secretChallengeBosses.cheshireCat;

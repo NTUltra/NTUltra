@@ -68,7 +68,8 @@ fulltxt = txt2;
 txt2 = scrReplaceAllColourCodes(txt2);
 if hover
 {
-
+	if alarm[0] > 0
+		alarm[0] = 120;
 	drawx = x
 	if instance_exists(MultiCrownMenu)
 		drawx = l;
@@ -105,5 +106,4 @@ if hover
 	}
 	draw_set_color(c_white)
 	draw_text(drawx+string_width(string_hash_to_newline(txt2))/2,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(preTxt+string_hash_to_newline(crown_name[crown])),string_hash_to_newline(string(crown_name[crown])))
-
 }

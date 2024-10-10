@@ -107,10 +107,11 @@ else if um == ultramods.laserBullet
 else if um == ultramods.bulletPlasma
 {
 	instance_destroy(id,false);
+	if instance_exists(Player)
 	with instance_create(x,y,BloodPlasmaBurst)
 	{
 		ultramodded = true;
-		creator = other.id
+		creator = Player
 		ammo = 3;
 		maxAmmo = ammo;
 		time = 1

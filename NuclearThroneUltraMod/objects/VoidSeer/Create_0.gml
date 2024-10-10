@@ -1,6 +1,7 @@
 /// @description Init
 event_inherited();
 image_speed = 0;
+talkPopupY -= 12;
 spr_intro = sprVoidSeerIntro;
 spr_idle = sprVoidSeerIdle;
 spr_dead = sprVoidSeerDeath;

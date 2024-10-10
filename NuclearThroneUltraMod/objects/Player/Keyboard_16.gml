@@ -71,7 +71,7 @@ if UberCont.public = 0 {
 		scrDefeatedRequiredBoss(secretChallengeBosses.bigFish);
 		scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 		scrDefeatedRequiredBoss(secretChallengeBosses.bushBox);
-		scrDefeatedRequiredBoss(secretChallengeBosses.chesireCat);
+		scrDefeatedRequiredBoss(secretChallengeBosses.cheshireCat);
 		scrDefeatedRequiredBoss(secretChallengeBosses.hyperCrystal);
 	}
 }

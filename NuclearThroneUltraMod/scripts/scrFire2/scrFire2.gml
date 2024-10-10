@@ -1127,22 +1127,20 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	if !skill_got[2]	
-		scrMoveContactSolid(aimDirection,1)
+		motion_add(aimDirection,2);
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),GuitarSlash)
 	{
-		sprite_index = sprHeavySlash;
-	snd_wallhit=sndGuitarHitWall;
-	snd_hit=sndGuitarHit;
-	dmg = 29
-	longarms = 0
+		dmg = 29
+		longarms = 0
 	
-	longarms = (Player.skill_got[13]+other.bettermelee)*3
-	motion_add(aimDirection,3.5+longarms)
-	image_angle = direction
-	team = other.team}
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,3.5+longarms)
+		image_angle = direction
+		team = other.team
+	}
 
 	wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
@@ -1991,27 +1989,24 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndGuitar)
 
 	instance_create(x,y,Dust)
-	if !skill_got[2]
-		scrMoveContactSolid(aimDirection,1)
+	if !skill_got[2]	
+		motion_add(aimDirection,2);
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningSlash)
+	with instance_create(x+lengthdir_x(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(7+(Player.skill_got[13]+bettermelee)*20,aimDirection),LightningGuitarSlash)
 	{
-	snd_wallhit=sndGuitarHitWall;
-	snd_hit=sndGuitarHit;
 	dmg = 25//26
 	longarms = 0
-	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,3.4+longarms)
 	image_angle = direction
 	team = other.team}
 
 	wepangle = -wepangle
-	BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
-	BackCont.shake += 2
+	BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
+	BackCont.shake += 3
 	wkick = -8
 
 	break;

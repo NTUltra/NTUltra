@@ -21,7 +21,7 @@ function scrTips() {
 		"blood bullets are also bullets#and will be refunded with recycle gland",
 		"hover over HUD elements in the top of your screen#such as mutations and weapons#for a short explanation",
 		"you can speed up this loading screen#in the options menu","most ultra mutations can destroy squares",
-		"when you reach level 10 you get your ultra mutation!","destroy the generators to loop",
+		"when you reach level 10 you get your ultra mutation!","destroy the generators to loop","characters you looped with get a green border",
 		"just have fun", "don't get baited by items", "wield one strong slow firing weapon#and one quick firing weapon",
 		"crowns can be very beneficial in certain situations!","taking a crown unlocks crown start!","golden weapons can be unlocked as starting weapons");
 	}
@@ -30,6 +30,7 @@ function scrTips() {
 	//RANDOM
 	tip = choose(
 	"always move",
+	"characters you looped with show a green border",
 	"beware of the pit!",
 	"ghosts are real",
 	"popguns fire shells not bullets",

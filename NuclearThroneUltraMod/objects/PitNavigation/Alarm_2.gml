@@ -6,6 +6,10 @@ if !instance_exists(Player)
 }
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
+with TrapScorchMark
+{
+	instance_destroy();	
+}
 with WeaponMod
 {
 	instance_destroy(id,false);	

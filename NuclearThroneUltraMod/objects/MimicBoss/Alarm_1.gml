@@ -25,6 +25,7 @@ if !spawnedDuplicate && my_health < maxhealth * 0.5
 					else
 						BackCont.shake += 20;
 					my_health *= 0.5;
+					prevhealth = my_health;
 					actTime *= 1.5;
 					targetSecondary = true;
 					spawnedDuplicate = true;
@@ -37,6 +38,7 @@ if !spawnedDuplicate && my_health < maxhealth * 0.5
 			with instance_create(x,y,MimicBoss)
 			{
 				my_health *= 0.5;
+				prevhealth = my_health;
 				actTime *= 1.5;
 				targetSecondary = true;
 				spawnedDuplicate = true;
