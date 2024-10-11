@@ -1,4 +1,4 @@
-scrDrop(100,100)
+scrDrop(100,0)
 scrDrop(50,0)
 event_inherited()
 
@@ -12,3 +12,5 @@ with BecomeMushroomBossGrow
 {
 	instance_destroy(id,false);
 }
+scrBossKill();
+scrEndBossMusic();

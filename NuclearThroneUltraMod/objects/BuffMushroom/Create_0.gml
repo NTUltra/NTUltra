@@ -17,6 +17,7 @@ snd_dead = sndFrogExplode
 snd_melee = sndBigMaggotBite
 
 //behavior
+justBehindWall = false;
 walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)

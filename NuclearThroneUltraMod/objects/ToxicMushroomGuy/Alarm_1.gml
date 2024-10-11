@@ -4,7 +4,7 @@ alarm[1] = actTime + random(actTime)
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if random(3) < 1  && point_distance(x,y,target.x,target.y) < 200{
+        if !justBehindWall && random(3) < 1  && point_distance(x,y,target.x,target.y) < 200{
 			event_user(0);
         }
         else {
@@ -18,17 +18,21 @@ if target != noone {
 			right = -1
         else if target.x > x
 			right = 1
+		justBehindWall = false;
     }
-    else if random(4) < 1 {
-        motion_add(random(360), 0.4)
-        walk = 10 + random(10)
-        alarm[1] += walk;
-        gunangle = direction
-        if hspeed > 0
-        right = 1
-        else if hspeed < 0
-        right = -1
-    }
+    else {
+		justBehindWall = true;
+		if random(4) < 1 {
+	        motion_add(random(360), 0.4)
+	        walk = 10 + random(10)
+	        alarm[1] += walk;
+	        gunangle = direction
+	        if hspeed > 0
+	        right = 1
+	        else if hspeed < 0
+	        right = -1
+	    }
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

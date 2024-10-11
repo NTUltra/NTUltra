@@ -1278,10 +1278,13 @@ function scrPopEnemies() {
     if spawnarea = 117 {
 		if loops > 0
 		{
-		    if random(9) < 1
-		    instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, Necromancer, Ratking, BuffGator))
-		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,LaserBandit,LaserBandit,Wolf,Wolf))
+			if loops < 2 || instance_number(enemy) < 1 || random(2) < 1
+			{
+			    if random(9) < 1
+					instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, Necromancer, Ratking, BuffGator))
+			    else if random(2) < 1
+			        instance_create(x + 16, y + 16, choose(Gator, Rat, ToxicMushroomGuy, BuffMushroom, BuffMushroom, ToxicMushroomGuy, ToxicMushroomGuy, BanditSquare,Exploder,Ratking,Ratking,Rat,LaserBandit,LaserBandit,Wolf,Wolf))
+			}
 		}
 		else
 		{

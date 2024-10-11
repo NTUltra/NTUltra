@@ -24,7 +24,7 @@ if shotgunshouldered && speed > 2
 	if sprite_index == sprBullet12
 	{
 		sprite_index = sprBullet12HighDamage;
-		dmg = 4;
+		dmg = 5;
 		alarm[1] += 3;
 	}
 	else if sprite_index == sprBullet12Disappear

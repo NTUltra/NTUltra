@@ -1,5 +1,5 @@
 event_inherited();
 
-dmg = 4;
+dmg = 3;
 
 alarm[3] = 0;

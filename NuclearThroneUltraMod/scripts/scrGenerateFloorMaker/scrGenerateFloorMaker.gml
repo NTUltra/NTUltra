@@ -8,6 +8,14 @@ function scrGenerateFloorMaker(limiter) {
 	if firstTry
 	{
 		direction = choose(0,90,180,270)
+		if instance_exists(PitNavigation)
+		{
+			if PitNavigation.forceDirection
+			{
+				direction = choose(0,180)//Left or right for wide screening
+				PitNavigation.forceDirection = false;
+			}
+		}
 		styleb = choose(0,0,0,0,0,0,1)
 		goal = 100//110
 	
@@ -147,7 +155,6 @@ function scrGenerateFloorMaker(limiter) {
 	if instance_exists(MushroomBoss)
 	{
 		fc = 0;
-		debug("GO AHEAD");
 	}
 	while (fc <= globalGoal && myFloors < goal && limiter < maxLimit)//1000
 	{

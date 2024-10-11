@@ -3,7 +3,7 @@ if other.team != team and other.my_health > 0
 	instance_destroy()
 	with other
 	{
-		if other.object_index == Player {
+		if object_index == Player {
 			if (sprite_index != spr_hurt)
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)

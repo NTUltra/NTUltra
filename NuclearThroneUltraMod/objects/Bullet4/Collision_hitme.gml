@@ -25,8 +25,6 @@ if other.team != team and other.my_health > 0
 				image_index = 0
 				motion_add(other.direction,7)
 				scrForcePosition60fps();
-				if speed > maxSpeed+3
-					speed = maxSpeed+3;
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 			}
 		}

@@ -5,7 +5,7 @@ event_inherited();
 scrAddDrops(1);
 meleedamage = 0
 immuneToTypeDamage = 1;
-
+isInverted = false;
 spr_idle_earth = sprBigMushroomEarthIdle;
 spr_walk_earth = sprBigMushroomEarthIdle;
 spr_hurt_earth = sprBigMushroomEarthHurt;
@@ -33,7 +33,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(90)
 wkick = 0
-actTime = 15;
+actTime = 20;
 maxSpeed = 0;
 
 spr_idle = spr_idle_earth;

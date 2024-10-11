@@ -62,5 +62,6 @@ if target != noone && instance_exists(target)
 		sprite_index = spr_fire;
 		image_index = 0;
 	}
+	ds_list_destroy(floors);
 }
 alarm[1] += actTime * 3;

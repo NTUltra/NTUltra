@@ -72,7 +72,7 @@ if UberCont.opt_enemy_xray
 		gpu_set_alphatestenable(false);
 		with enemy
 		{
-			if visible && sprite_exists(sprite_index)
+			if visible && sprite_exists(sprite_index) && sprite_height < 47
 			{
 				var xrcol = collision_rectangle(bbox_left,y,bbox_right,bbox_bottom + 16,Wall,false,false)
 				if xrcol != noone

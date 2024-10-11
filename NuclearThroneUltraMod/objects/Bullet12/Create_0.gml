@@ -11,7 +11,7 @@ RecycleGlandType();
 ShotgunShouldersType();
 friction = 0.3;
 norecycle = false;
-dmg = 4;
+dmg = 5;
 alarm[11] = 1;
 bulletCost = 2;
 radCost = 0;
@@ -22,6 +22,7 @@ splashDamageRange = 12;
 minSpeed = 8;
 imageXscale = 1;
 imageYscale = 1;
+alarm[1] = 5;
 if instance_exists(Player)
 {
 	if Player.skill_got[15] = 1

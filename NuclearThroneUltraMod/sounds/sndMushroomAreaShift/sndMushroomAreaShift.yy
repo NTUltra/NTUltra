@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndMushroomAreaShift",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.876667,
+  "name":"sndMushroomAreaShift",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Sounds/Menu.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMushroomAreaShift.ogg",
+  "type":0,
+  "volume":1.0,
+}

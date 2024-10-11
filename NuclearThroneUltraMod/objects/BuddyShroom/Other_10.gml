@@ -20,6 +20,11 @@ with MushroomBoss
 		dir = point_direction(x,y,targetX,targetY);
 	}
 }
+with BecomeMushroomBoss
+{
+	instance_create(x,y - 8,HealFX);
+	my_health = min(maxhealth, my_health + other.healingAmount);
+}
 instance_create(x,y - 8,HealFX);
 snd_play(snd_melee);
 snd_play(sndBloodlustProc);

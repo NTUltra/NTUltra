@@ -4,7 +4,7 @@ if object_index == MiniPlasmaBall
 	with instance_create(x + hspeed,y + vspeed,MiniPlasmaImpact)
 	{
 		direction = other.direction;
-		speed = 2;
+		speed = 1;
 		scrCopyWeaponMod(other);
 	}
 }

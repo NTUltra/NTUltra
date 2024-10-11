@@ -12,7 +12,7 @@ if target != noone {
         else if target.x > x
 			right = 1
 	        if dis > 48  && dis < detectionRange{
-	            if random(3) < 1.5 {
+	            if !justBehindWall && random(3) < 1.5 {
 					ammo = maxAmmo;
 					snd_play(sndWaveGun);
 					event_user(0);
@@ -27,10 +27,12 @@ if target != noone {
 	                direction = point_direction(x, y, target.x, target.y) + random(180) - 90
 	                walk = 9 + random(9)
 	            }
+				justBehindWall = false;
 	        }
 			
 		}
         else if random(3) < 1 {
+			justBehindWall = true;
 			alarm[1] += 5;
             direction = point_direction(target.x, target.y, x, y) + random(20) - 10
             speed = 0.6
@@ -38,6 +40,7 @@ if target != noone {
             gunangle = point_direction(x, y, target.x, target.y)
 		}
 		else {
+			justBehindWall = true;
 			alarm[1] += 5;
             direction = random(360);
             speed = 0.3

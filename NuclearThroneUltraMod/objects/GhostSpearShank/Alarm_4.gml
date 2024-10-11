@@ -7,7 +7,7 @@ x+lengthdir_x(60+(longarms*5),direction),
 y+lengthdir_y(60+(longarms*5),direction),
 GhostShank)
 {
-	dmg = 9;
+	dmg = 7;
 longarms = other.longarms
 motion_add(other.direction,3.5+longarms)
 image_angle = direction

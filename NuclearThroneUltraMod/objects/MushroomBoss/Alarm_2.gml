@@ -12,7 +12,7 @@ if mode == 1
 	{
 		with instance_create(x + lengthdir_x(len,ang),y + lengthdir_y(len,ang),ToxicGas)
 		{
-			motion_add(ang,4);	
+			motion_add(ang,1);	
 		}
 		ang += angStep;
 	}

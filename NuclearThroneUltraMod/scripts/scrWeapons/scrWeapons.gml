@@ -878,7 +878,7 @@ function scrWeapons() {
 	wep_name[78] = "HYPER SLUGGER"
 	wep_type[78] = 2
 	wep_auto[78] = 0
-	wep_load[78] = 20
+	wep_load[78] = 12
 	wep_cost[78] = 2
 	wep_sprt[78] = sprHyperSlugger
 	wep_area[78] = 14
@@ -901,8 +901,8 @@ function scrWeapons() {
 	wep_name[80] = "HUNTER SNIPER"
 	wep_type[80] = 1
 	wep_auto[80] = 1
-	wep_load[80] = 15
-	wep_cost[80] = 2
+	wep_load[80] = 14
+	wep_cost[80] = 3
 	wep_sprt[80] = sprSniper
 	wep_area[80] = -1
 	wep_text[80] = "reliable sniper"
@@ -1994,7 +1994,7 @@ function scrWeapons() {
 	wep_name[178] = "HEAVY ASSAULT PISTOL"
 	wep_type[178] = 1
 	wep_auto[178] = 2
-	wep_load[178] = 10
+	wep_load[178] = 8
 	wep_cost[178] = 4
 	wep_sprt[178] = sprHeavyAPistol
 	wep_area[178] = 9
@@ -2917,10 +2917,10 @@ function scrWeapons() {
 	wep_name[260] = "HYPER HEAVY SLUGGER"
 	wep_type[260] = 2
 	wep_auto[260] = 0
-	wep_load[260] = 14
+	wep_load[260] = 12
 	wep_cost[260] = 3
 	wep_sprt[260] = sprHyperHeavySlugger
-	wep_area[260] = 18
+	wep_area[260] = 19
 	wep_text[260] = "heavy slugger with infinite range!"
 	wep_swap[260] = sndSwapShotgun
 	wep_rad[260] = 0;
@@ -3355,7 +3355,7 @@ function scrWeapons() {
 	wep_type[299] = 2
 	wep_auto[299] = 3
 	wep_load[299] = 15
-	wep_cost[299] = 3
+	wep_cost[299] = 2
 	wep_sprt[299] = sprUltraWaveGun
 	wep_area[299] = 20
 	wep_text[299] = "ultra wave fun"
@@ -4122,7 +4122,7 @@ function scrWeapons() {
 	wep_name[367] = "DIRECTOR GRENADE LAUNCHER"
 	wep_type[367] = 4
 	wep_auto[367] = 0
-	wep_load[367] = 25
+	wep_load[367] = 23
 	wep_cost[367] = 1
 	wep_sprt[367] = sprDirectorGrenadeLauncher
 	wep_area[367] = 3
@@ -7217,7 +7217,7 @@ function scrWeapons() {
 	wep_name[644] = "BLOOD PLASMA GUN"
 	wep_type[644] = 5
 	wep_auto[644] = 1
-	wep_load[644] = 16
+	wep_load[644] = 12
 	wep_cost[644] = 1
 	wep_sprt[644] = sprBloodPlasmaGun
 	wep_area[644] = 6

@@ -60,7 +60,7 @@ if !position_meeting(x+32,y+32,Floor) instance_create(x+32,y+32,Wall)
 
 with hitme
 {
-	if collision_point(x,y,Wall,false,false) || !collision_point(x,y,Floor,false,false) {
+	if collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false) {
 		var n = instance_nearest(x,y,Floor);
 		if n != noone {
 			var o = 16;
@@ -74,7 +74,7 @@ with hitme
 }
 with IDPDSpawn
 {
-	if collision_point(x,y,Wall,false,false) || !collision_point(x,y,Floor,false,false) {
+	if collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false) {
 		var n = instance_nearest(x,y,Floor);
 		if n != noone {
 			var o = 16;

@@ -16,6 +16,7 @@ acc = 2.5;
 discAmount += 6;
 if instance_exists(PitNavigation) && GetPlayerLoops() < 1
 {
+	raddrop = 30;
 	actTime += 8;
 	projectileSpeed -= 0.25;
 }

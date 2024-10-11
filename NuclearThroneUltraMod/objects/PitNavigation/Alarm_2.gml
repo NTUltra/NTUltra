@@ -58,6 +58,10 @@ with Friend
 {
 	alarm[4] = 1;
 }
+with projectile
+{
+	instance_destroy(id,false);	
+}
 with Traps
 {
 	instance_destroy(id,false);	
@@ -74,6 +78,7 @@ with Player
 	prevA = area;
 	area = other.currentArea;
 }
+forceDirection = true;
 with instance_create(tx,ty,FloorMaker)
 {
 	globalGoal = s;
@@ -106,8 +111,8 @@ with WepPickup
 		y = n.y + o;
 		scrForcePosition60fps();
 	}
-	if visible
-		alarm[2] = 2;
+	//if visible
+	//	alarm[2] = 2;
 }
 with CorpseCollector
 {
@@ -123,6 +128,11 @@ with BGFXLayer
 	surface_free(surf);
 	ds_list_clear(drawer);
 	alarm[2] = 0;
+}
+with Pickup
+{
+	if !collision_point(x,y,Floor,false,false)
+		instance_destroy(id,false);
 }
 BackCont.shake += 100;
 scrPopulate();

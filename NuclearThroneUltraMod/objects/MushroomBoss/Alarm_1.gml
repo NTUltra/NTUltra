@@ -15,9 +15,12 @@ if target != noone {
 		//Run to another prop (if there is one)
 		//Spam some projectiles for the fun
 		var dis = point_distance(target.x, target.y, x, y)
-        if dis < 64 && mode == 1
+        if dis < 96 && mode == 1
 		{
-			event_user(0);
+			if ran < 25
+				event_user(3)
+			else
+				event_user(0);
 		}
 		else
 		{

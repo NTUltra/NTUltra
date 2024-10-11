@@ -38,7 +38,8 @@ for (var i = 0; i < al; i++) {
 	}
 }
 ds_list_destroy(hits);
-instance_create(x,y,Dust);
+if speed > 3
+	instance_create(x,y,Dust);
 team = t;
 if dealtDamage
 {	

@@ -28,3 +28,4 @@ instance_create(x,y,BigWallBreak);
 timer = 0
 right = choose(1,-1);
 image_xscale = right;
+alarm[1] = 90;

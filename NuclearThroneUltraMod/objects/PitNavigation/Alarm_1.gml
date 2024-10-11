@@ -56,11 +56,12 @@ if instance_exists(Player)
 					other.x = x + 8;
 					other.y = y + 8;
 				}
-				with instance_create(x,y,Portal) {
-					typ = 1;
-					inverted = true;
-					byPassCheck = true;
-				}
+				if !instance_exists(Portal)
+					with instance_create(x,y,Portal) {
+						typ = 1;
+						inverted = false;
+						byPassCheck = true;
+					}
 			}
 			with Player
 			{
