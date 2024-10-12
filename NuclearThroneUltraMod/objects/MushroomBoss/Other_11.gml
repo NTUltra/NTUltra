@@ -2,7 +2,7 @@
 if target != noone && instance_exists(target)
 {
 	var floors = ds_list_create();
-	var al = collision_circle_list(target.x,target.y,96,Floor,false,false,floors,false);
+	var al = collision_circle_list(target.x,target.y,116,Floor,false,false,floors,false);
 	if mode == 1
 	{
 		for (var i = 0; i < al; i++)

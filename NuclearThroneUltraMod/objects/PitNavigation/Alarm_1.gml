@@ -7,13 +7,21 @@ if instance_exists(Player)
 		case 127:
 			//INV Graveyard to INV mansion
 			alarm[3] = 75;
+			with Player
+			{
+				if scrIsCrown(10)
+				{
+					hard += 1;	
+				}	
+			}
 		break;
 		case 125:
 		//INV mansion to inv scrapyard
 			currentArea = 106;
 			with Player
 			{
-				hard += 1;	
+				hard += 1;
+				
 			}
 			event_user(0);
 		break;
@@ -25,6 +33,13 @@ if instance_exists(Player)
 		case 111:
 		//inv caves to inv mushroom
 			currentArea = 124;
+			with Player
+			{
+				if scrIsCrown(10)
+				{
+					hard += 1;	
+				}
+			}
 			event_user(0);
 		break;
 
@@ -36,15 +51,15 @@ if instance_exists(Player)
 		case 108:
 		//Inv volc to inv Labs
 			currentArea = 112;
+			with Player
+			{
+				hard += 1;	
+			}
 			event_user(0);
 		break;
 		case 112:
 		//Inv Labs to inv froz
 			currentArea = 107
-			with Player
-			{
-				hard += 1;	
-			}
 			event_user(0);
 		break;
 		case 107:

@@ -508,7 +508,7 @@ function scrSecondaryPowers() {
 							}
 						}
 					}
-					else if ultra_got[43] && altUltra
+					else// if ultra_got[43] && altUltra
 					{
 						var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 						BackCont.viewx2 += lengthdir_x(15,a + 180)*UberCont.opt_shake

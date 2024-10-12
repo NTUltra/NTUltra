@@ -14,8 +14,9 @@ if !spawnedDuplicate && my_health < maxhealth * 0.5
 		if instance_exists(MimicBossPlateau)
 		{
 			with MimicBossPlateau
-				with instance_create(x,y,MimicBoss)
-				{
+				myMimicFriend = instance_create(x,y,MimicBoss)
+				with myMimicFriend {
+					myMimicFriend = other.id;
 					BackCont.shake += 20;
 					if instance_exists(Player)
 					{

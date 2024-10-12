@@ -17,10 +17,10 @@ function scrDecideCurse(){
 		instance_destroy(id,false);
 		instance_create(x,y,BigWeaponChest);
 		}
-		else if object_index == WeaponChest && (Player.area == 127 || random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.hard>2){//8
-		curse = 0
-		instance_destroy(id,false);
-		instance_create(x,y,EliteWeaponChest);
+		else if object_index == WeaponChest && (random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.hard>2){//8
+			curse = 0
+			instance_destroy(id,false);
+			instance_create(x,y,EliteWeaponChest);
 		}
 		else if ( instance_exists(Crown)||Player.wepmod1!=0||Player.bwepmod1!=0 ) and random(7) < 1
 			curse = 1

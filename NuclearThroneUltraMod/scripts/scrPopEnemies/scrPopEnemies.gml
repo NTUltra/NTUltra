@@ -510,7 +510,7 @@ function scrPopEnemies() {
 		var n = instance_nearest(x,y,enemy);
 		if loops > 0 {
 			if random(30) < 1
-				instance_create(x + 16, y + 16, choose(InvertedGraveyardSniper, InvertedRaven, InvertedMeleeBandit,InvertedBuffGator,InvertedGator))
+				instance_create(x + 16, y + 16, choose(InvertedCardGuy, InvertedRaven, InvertedMeleeBandit,InvertedBuffGator,InvertedGator))
 	        else 
 				instance_create(x + 16, y + 16, choose(PitGhost,PitGhostLaser,PitGhostLaser,PitGhostSpawner, PitGhostExploder))
 		} else if n == noone || (point_distance(x,y,n.x,n.y) > 50 || random(4) < 1){
@@ -715,7 +715,11 @@ function scrPopEnemies() {
 
     //INVERTED LABS
     if spawnarea = 112 {
+		var r = 5;
+		if instance_exists(PitNavigation)
+			r -= 2;
 		if loops > 0 {
+			r += 1;
 	        if subarea = 2 {
 	            if random(22) < 1
 	            instance_create(x + 16, y + 16, choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedTurret, InvertedRhinoFreak,InvertedCubeGuardian,InvertedRatking));
@@ -723,7 +727,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 	            if ran > 80 {
-	                repeat(6)//10
+	                repeat(r)//10
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, 
 					InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedExploFreak, InvertedRhinoFreak, InvertedFreak, InvertedFreak, InvertedFreak))
 	            }
@@ -754,7 +758,7 @@ function scrPopEnemies() {
 	        else {
 	            var ran = random(100);
 	            if ran > 80 {
-	                repeat(5)
+	                repeat(r)
 	                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak,
 	                    InvertedFreak, InvertedFreak, InvertedFreak, InvertedFreak, InvertedExploFreak, InvertedExploFreak, InvertedRhinoFreak, InvertedFreak, InvertedFreak, InvertedFreak))
 	            }
@@ -1373,7 +1377,7 @@ function scrPopEnemies() {
 		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider))
 			}
 		}
-		else if !instance_exists(PitNavigation) || instance_number(enemy) < 2 || random(2) < 1
+		else if !instance_exists(PitNavigation) || instance_number(enemy) < 2 || random(5) < 3
 		{
 			var r = random(10);
 			if r > 7

@@ -30,7 +30,7 @@ function scrCallculateFinalDamage(inputDamage){
 						if hitTarget == target.id
 						{
 							// other.my_health -= dmgDeal*0.3;
-							resultdmgDeal += (dmgDeal*0.3);
+							resultdmgDeal += (dmgDeal*0.35);
 						}
 					}
         
@@ -44,11 +44,11 @@ function scrCallculateFinalDamage(inputDamage){
 			var damageDeal = 0;
 			if(point_distance(x,y,Player.x,Player.y) < 100)
 			{
-				damageDeal = dmgTaken * min(0.2,point_distance(x,y,Player.x,Player.y)*0.0005);
+				damageDeal = dmgDeal * min(0.2,point_distance(x,y,Player.x,Player.y)*0.0005);
 			}
 			else
 			{
-				damageDeal = dmgTaken * min(0.4,point_distance(x,y,Player.x,Player.y)*0.0015);
+				damageDeal = dmgDeal * min(0.4,point_distance(x,y,Player.x,Player.y)*0.0015);
 			}
 			dmgDeal += damageDeal;
 		}

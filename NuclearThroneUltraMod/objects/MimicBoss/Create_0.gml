@@ -11,6 +11,7 @@ meleedamage = 0
 mySize = 2
 
 event_inherited()
+myMimicFriend = noone;
 scrAddDrops(2);
 spawnedDuplicate = false;
 targetSecondary = false;

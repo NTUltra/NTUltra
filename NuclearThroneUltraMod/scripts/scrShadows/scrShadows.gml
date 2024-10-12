@@ -95,7 +95,7 @@ function scrShadows() {
 	with MushroomBoss
 	draw_sprite(shd32,0,x-vx,y-vy + 8)
 	with BuddyShroom
-		draw_sprite(shd24,0,x-vx,y-vy)
+		draw_sprite(shd24,0,x-vx,y-vy - 2)
 	with BecomeMushroomBoss
 		draw_sprite(shd24,0,x-vx,y-vy + 10)
 	with BecomeMushroomBossGrow

@@ -16,7 +16,10 @@ if hasHit == 0
 {
 	with BulletScaler
 	{
-		dmg = max(0,dmg - 3);
+		if dmg > 29
+			dmg -= 4
+		else
+			dmg = max(0,dmg - 3);
 	}
 }
 else if hasHit == 1

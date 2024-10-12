@@ -262,10 +262,10 @@ function scrRaces() {
 	race_name[11] = "HUNTER"
 	race_pass[11] = "HIGHER PROJECTILE <w>VELOCITY<w>#BETTER <w>ACCURACY<w>"
 	race_acti[11] = "MARK ENEMIES"
-	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE 30% MORE <w>DAMAGE<w>"
+	race_butt[11] = "<w>MARKED<w> ENEMIES#TAKE <w>35%<w> MORE <w>DAMAGE<w>"
 	race_butt_detail[11] = race_butt[11];
-	race_vision[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TEMPORARILY DISABLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY##<w>PROJECTILES<w> SHOT THROUGH <w>DISABLED WALLS<w>#GET A <w>DAMAGE BOOST<w>";
-	race_vision_detail[11] = "PRESS <w>[E]<w> WHILE AN ENEMY IS <w>MARKED<w> TO:#TOGGLE <w>WALLS<w> BETWEEN YOU#AND THE ENEMY, FOR <w>2<w> SECONDS##<w>PROJECTILES<w> SHOT THROUGH <w>DISABLED WALLS<w>#GET A <w>25% DAMAGE BOOST<w>";
+	race_vision[11] = "PRESS <w>[E]<w> TO:#TEMPORARILY DISABLE <w>WALLS<w>#TOWARD YOUR <w>AIM<w>##<w>PROJECTILES<w> SHOT THROUGH <w>DISABLED WALLS<w>#GET A <w>DAMAGE BOOST<w>";
+	race_vision_detail[11] = "PRESS <w>[E]<w> TO:#DISABLE <w>WALLS<w> FOR <w>2<w> SECONDS#TOWARD YOUR <w>AIM<w>##<w>PROJECTILES<w> SHOT THROUGH <w>DISABLED WALLS<w>#GET A <w>25% DAMAGE BOOST<w>";
 	if isUnique
 	{
 		race_vision[11] = string_replace_all(race_vision[11],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");

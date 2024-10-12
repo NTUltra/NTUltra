@@ -30,7 +30,7 @@ if loops > 4
 
 if instance_exists(PitNavigation)
 {
-	raddrop -= 5;
+	raddrop -= 10;
 	maxSpeed -= 0.1;
 	existTime -= 10;
 }

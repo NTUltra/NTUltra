@@ -27,3 +27,12 @@ with projectile
 	}
 }
 shader_reset();
+shader_set(shdDrawAqua);
+with projectile
+{
+	if damageBoosted == 1
+	{
+		draw_sprite_ext(sprite_index,image_index,x,y,1.25,1.25,image_angle,c_white,1);
+	}
+}
+shader_reset();

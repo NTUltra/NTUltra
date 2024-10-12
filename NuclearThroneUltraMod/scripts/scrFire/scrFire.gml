@@ -526,7 +526,7 @@ function scrFire(canDrown = true) {
 	snd_play_fire(sndCrossbow)
 
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection+(random(16)-8)*other.accuracy,24)
+	{motion_add(aimDirection+(random(14)-7)*other.accuracy,24)
 	image_angle = direction
 	team = other.team}
 
@@ -2133,17 +2133,21 @@ function scrFire(canDrown = true) {
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection-1*other.accuracy,16)
+	{motion_add(aimDirection-2*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+1*other.accuracy,16)
+	{motion_add(aimDirection+2*other.accuracy,16)
+	image_angle = direction
+	team = other.team}
+	with instance_create(x,y,Bullet1)
+	{motion_add(aimDirection,16)
 	image_angle = direction
 	team = other.team}
 
 
-	BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = 3
 

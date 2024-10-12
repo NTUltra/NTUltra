@@ -2,7 +2,7 @@
 alarm[1] = actTime + random(actTime)
 if goToTarget
 	exit;
-if my_health < maxhealth*0.5 && !reachedHalfHealth
+if my_health < maxhealth*0.6 && !reachedHalfHealth
 {
 	reachedHalfHealth = true;
 	instance_create(x,y,WallBreakWallOnlyBigCircle);

@@ -2,6 +2,10 @@
 if currentArea == 107
 {
 	UberCont.hadBossIntro = false;
+	with Player
+	{
+		instance_create(x,y,IDPDSpawn);	
+	}
 	scrSpawnBoss(InvertedBigDisc);
 	if (loops > 5)
 		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((loops-4)*0.25),1,2));

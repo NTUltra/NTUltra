@@ -902,7 +902,7 @@ function scrWeapons() {
 	wep_type[80] = 1
 	wep_auto[80] = 1
 	wep_load[80] = 13
-	wep_cost[80] = 3
+	wep_cost[80] = 3.5
 	wep_sprt[80] = sprSniper
 	wep_area[80] = -1
 	wep_text[80] = "reliable sniper"
@@ -5894,7 +5894,7 @@ function scrWeapons() {
 	wep_type[524] = 5
 	wep_auto[524] = 3
 	wep_load[524] = 32
-	wep_cost[524] = 7
+	wep_cost[524] = 7.5
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 24
 	wep_text[524] = "green green green green"

@@ -19,3 +19,11 @@ if instance_number(MimicBoss) < 2
 	{
 		event_user(0);	
 	}
+if myMimicFriend != noone
+{
+	with myMimicFriend
+	{
+		tellTime -= 1;
+		actTime /= 1.5; 	
+	}
+}

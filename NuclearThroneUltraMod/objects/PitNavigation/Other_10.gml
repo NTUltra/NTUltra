@@ -18,4 +18,4 @@ with MusCont
 	p = 1 + other.volumeShift*0.75;
     audio_sound_gain(song, max(0, UberCont.opt_musvol * p), 0);
 }
-volumeShift += 0.05;
+volumeShift += 0.06;

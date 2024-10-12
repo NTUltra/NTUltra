@@ -20,7 +20,10 @@ if target != noone && instance_exists(target) {
 		}
 		var dis = point_distance(x,y,target.x,target.y)
 		if dis < 96
-			mp_potential_step(target.x,target.y,maxSpeed,false);
+		{
+			mp_potential_step(target.x,target.y,maxSpeed,false)
+			motion_add(point_direction(x,y,target.x,target.y), acc)
+		}
 		if target.object_index != Player && dis < 32
 		{
 			event_user(0);
