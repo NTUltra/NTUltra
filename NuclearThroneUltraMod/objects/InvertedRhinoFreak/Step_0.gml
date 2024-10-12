@@ -13,32 +13,8 @@ motion_add(direction,0.8)
 }
 
 
-if instance_exists(Player)
-{
-    if Player.loops>0
-    {
-		if Player.loops>4
-		{
-			if speed > 2.5
-				speed = 2.5
-		}
-		else
-		{
-		    if speed > 1.9
-		    speed = 1.9
-		}
-    }
-    else
-    {
-    if speed > 1.5
-    speed = 1.5
-    }
-}
-else
-{
-if speed > 1.5
-speed = 1.5
-}
+if speed > maxSpeed
+	speed = maxSpeed
 
 
 if !sleeping && target != noone && existTime > 40

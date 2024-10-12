@@ -6,12 +6,9 @@ if other.team != team and other.my_health > 0 && image_yscale > 0.15
 		{
 			if object_index == Player
 			{
-				if alarm[3] > 0 || other.alarm[3] > 0//When immune dont deal damage and dont trigger blast armour
+				if alarm[3] > 0 || other.alarm[3] > 0 || hurtTime > 0//When immune dont deal damage and dont trigger blast armour
 					exit;
 				hitBy = sprEnemyLaserRepresent;
-				other.alarm[3] = 15;
-				if other.alarm[2] > 1
-					other.alarm[2] = 1;
 			}
 			DealDamage(other.dmg)
 			sprite_index = spr_hurt

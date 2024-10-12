@@ -1,0 +1,1 @@
+/// @description Heal cooldown

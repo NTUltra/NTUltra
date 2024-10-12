@@ -2,6 +2,8 @@
 // /@description
 ///@param area
 function scrAddArea(theArea){
+	if theArea == 127 && instance_exists(PitNavigation)
+		theArea = 141;
 	with UberCont
 	{
 		if theArea == 3 || theArea == 106

@@ -21,7 +21,19 @@ snd_melee = sndRhinoFreakMelee
 alarm[1] = 80+random(10)
 
 walk = 0
+maxSpeed = 1.5;
+loops = GetPlayerLoops();
+if loops > 0
+	maxSpeed = 1.9;
+if loops > 4
+	maxSpeed = 2.4;
 
+if instance_exists(PitNavigation)
+{
+	raddrop -= 5;
+	maxSpeed -= 0.1;
+	existTime -= 10;
+}
 sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;

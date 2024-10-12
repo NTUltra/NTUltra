@@ -10,7 +10,7 @@ function scrEndBossMusic(){
 
 	audio_stop_sound(song);
 	song = musBossWin
-	snd_play_2d(song)
+	audio_play_sound(song,1,false)
 	//snd_loop(amb)
 
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

@@ -11,6 +11,7 @@ if other.team != team
 			image_index = 0
 			motion_add(other.direction,4)
 			BackCont.shake += 2
+			other.dmg = max(other.dmg - 1,9)
 		}
 		else
 		{

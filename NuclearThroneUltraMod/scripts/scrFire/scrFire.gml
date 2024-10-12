@@ -3866,7 +3866,7 @@ function scrFire(canDrown = true) {
 
 	snd_play_fire(sndShotgun)
 
-	repeat(7)
+	repeat(8)
 	{
 	with instance_create(x,y,Bullet1)
 	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))

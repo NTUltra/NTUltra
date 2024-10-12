@@ -1278,7 +1278,7 @@ function scrPopEnemies() {
     if spawnarea = 117 {
 		if loops > 0
 		{
-			if loops < 2 || instance_number(enemy) < 1 || random(2) < 1
+			if loops < 2 || instance_number(enemy) < 1 || random(3) < 2
 			{
 			    if random(9) < 1
 					instance_create(x + 16, y + 16, choose(Exploder, BuffMushroom, ToxicMushroomGuy, BuffMushroom, Gator, ToxicMushroomGuy, Necromancer, Ratking, BuffGator))
@@ -1298,11 +1298,14 @@ function scrPopEnemies() {
 	if spawnarea = 124 {
 		if loops > 0
 		{
-			//TODO replace exploders with something else since they dont make all that much sense in non toxic enviroment here
-		    if random(9) < 1
-		    instance_create(x + 16, y + 16, choose(InvertedRat, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedRatking, InvertedToxicMushroomGuy, InvertedBanditSquare,InvertedNecromancer, InvertedBuffGator))
-		    else if random(2) < 1
-		        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedSquareBat, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, InvertedBanditSquare,InvertedRat,InvertedNecromancer,InvertedFireBat,LightningCrystal,EraserBandit))
+			if loops < 2 || instance_number(enemy) < 1 || random(3) < 2
+			{
+				//TODO replace exploders with something else since they dont make all that much sense in non toxic enviroment here
+			    if random(9) < 1
+			    instance_create(x + 16, y + 16, choose(InvertedRat, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedRatking, InvertedToxicMushroomGuy, InvertedBanditSquare,InvertedNecromancer, InvertedBuffGator))
+			    else if random(2) < 1
+			        instance_create(x + 16, y + 16, choose(InvertedRatking, InvertedSquareBat, InvertedToxicMushroomGuy, InvertedBuffMushroom, InvertedBuffMushroom, InvertedToxicMushroomGuy, InvertedToxicMushroomGuy, InvertedBanditSquare,InvertedRat,InvertedNecromancer,InvertedFireBat,LightningCrystal,EraserBandit))
+			}
 		}
 		else
 		{

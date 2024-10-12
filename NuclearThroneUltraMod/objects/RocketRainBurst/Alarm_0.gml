@@ -8,7 +8,7 @@ if instance_exists(creator)
 	x = creator.x
 	y = creator.y
 	//FIRING
-	snd_play(sndMissileRain,0.2);
+	snd_play(sndMissileRain,0.2,true);
 	var t = clamp((maxAmmo - ammo) / (3*accuracy),0,1);
 	var xx = lerp(x,UberCont.mouse__x,t);
 	var yy = lerp(y,UberCont.mouse__y,t);
@@ -38,8 +38,7 @@ if instance_exists(creator)
 		if !skill_got[2]
 		{
 			var aimDirection = point_direction(x,y,xx,yy);
-			scrMoveContactSolid(aimDirection + 135,1);
-			motion_add(aimDirection+135,1)
+			motion_add(aimDirection+135,1.25)
 		}
 
 	}

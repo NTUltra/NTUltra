@@ -3,3 +3,4 @@ if !instance_exists(MushroomBoss) && !instance_exists(BecomeMushroomBossGrow)
 		instance_create(x,y,DramaCamera);
 		image_xscale = other.image_xscale;	
 	}
+scrDrop(100,0);

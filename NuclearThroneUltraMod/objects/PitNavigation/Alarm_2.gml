@@ -6,6 +6,10 @@ if !instance_exists(Player)
 }
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
+with Debris
+{
+	instance_destroy();	
+}
 with TrapScorchMark
 {
 	instance_destroy();	
@@ -66,8 +70,8 @@ with Traps
 {
 	instance_destroy(id,false);	
 }
-var s = 170;
-var ss = 130;
+var s = 150;
+var ss = 120;
 if currentArea == 125//Make inv mansion a little bigger
 	ss += 30;
 var prevA = 141;
@@ -99,20 +103,7 @@ instance_create(x,y,AreaResetter);
 snd_play_2d(sndLastEnemy);
 with WepPickup
 {
-	var n = instance_nearest(x,y,Floor);
-	if n != noone
-	{
-		var o = 16;
-		if n.object_index == FloorExplo
-		{
-			o = 8;
-		}
-		x = n.x + o;
-		y = n.y + o;
-		scrForcePosition60fps();
-	}
-	//if visible
-	//	alarm[2] = 2;
+	scrTeleportToFloor();
 }
 with CorpseCollector
 {
@@ -136,6 +127,10 @@ with Pickup
 }
 BackCont.shake += 100;
 scrPopulate();
+with Bones
+{
+	depth = y*-1;
+}
 //Backgrounding
 if scrIsCrown(25)
 {
@@ -194,5 +189,9 @@ else
 event_user(1);
 with Player
 {
+	if place_meeting(x,y,WallHitMe)
+	{
+		scrTeleportToFloor();
+	}
 	area = prevA;
 }

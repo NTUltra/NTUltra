@@ -1,9 +1,19 @@
 /// @description BIG SHIFT
 if mode == 0 && instance_exists(Player)
 {
+	didTheThing += 1;
+	if !reachedHalfHealth && my_health < maxhealth*0.6
+	{
+		reachedHalfHealth = true;
+	}
+	scrDrop(100,0);
 	snd_play_2d(sndMushroomAreaShift);
 	var tx = round(Player.x/32)*32;
 	var ty = round(Player.y/32)*32;
+	with Debris
+	{
+		instance_destroy();	
+	}
 	with TrapScorchMark
 	{
 		instance_destroy();	
@@ -101,71 +111,30 @@ if mode == 0 && instance_exists(Player)
 	}
 	with WepPickup
 	{
-		var n = instance_nearest(x,y,Floor);
-		if n != noone
-		{
-			var o = 16;
-			if n.object_index == FloorExplo
-			{
-				o = 8;
-			}
-			x = n.x + o;
-			y = n.y + o;
-			scrForcePosition60fps();
-		}
-		//if visible
-		//	alarm[2] = 2;
+		scrTeleportToFloor();
 	}
-	with enemy
+	alarm[6] = 1;
+	with instance_furthest(x,y,BecomeMushroomBoss)
 	{
-		if id != other.id
-		{
-			if team != 2
-			{
-				alarm[1] += 30;
-				speed = 0;
-				walk = 0;
-			}
-			if point_distance(x,y,Player.x,Player.y) < 128
-			{
-				with Floor
-				{
-					if object_index != FloorExplo && point_distance(x + 16,y + 16,Player.x,Player.y) > 128
-					{
-						other.x = x + 16;
-						other.y = y + 16;
-						with other
-						{
-							scrForcePosition60fps();
-						}	
-					}
-				}
-			}
-			else
-			{
-				var n = instance_nearest(x,y,Floor);
-				if n != noone
-				{
-					x = n.x + 16;
-					y = n.y + 16;
-					scrForcePosition60fps();
-				}
-			}
-		}
+		var msk = mask_index;
+		mask_index = mskPickupThroughWall;
+		x = other.xprevious;
+		y = other.yprevious;
+		scrForcePosition60fps();
+		mask_index = msk;
 	}
 	with prop
 	{
-		var n = instance_nearest(x,y,Floor);
-		if n != noone
-		{
-			x = n.x + 16;
-			y = n.y + 16;
-			scrForcePosition60fps();
-		}	
+		instance_destroy(id,false);
 	}
 	with Floor
 	{
-		GenBones();	
+		GenBones();
+		TopDecals();
+	}
+	with Bones
+	{
+		depth = y*-1;
 	}
 	BackCont.shake += 100;
 	x = endX;
@@ -177,6 +146,7 @@ if mode == 0 && instance_exists(Player)
 		right = -1;
 	else
 		right = 1;
+	mask_index = mskBigMushroom;
 }
 else
 {

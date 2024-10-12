@@ -23,11 +23,17 @@ walk = 0
 
 loops = GetPlayerLoops();
 acc = 0.5;
-maxSpeed = 3.9;
+maxSpeed = 3.8;
 if loops > 0
 {
-	maxSpeed = 4.7;
+	maxSpeed = 4.6;
 	acc = 0.6;
+}
+if instance_exists(PitNavigation)
+{
+	maxSpeed -= 0.2;
+	acc -= 0.05;
+	alarm[1] += 30;
 }
 fuseAmount = 0;
 shadowY = 0;

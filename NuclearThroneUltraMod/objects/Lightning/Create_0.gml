@@ -25,3 +25,4 @@ canBeMoved = false;
 isLaser = false;
 UberCont.recursionCheck ++;
 lightningList = [];
+enemyAccuracy = 24;

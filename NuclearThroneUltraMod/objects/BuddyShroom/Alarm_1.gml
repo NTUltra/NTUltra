@@ -1,9 +1,9 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
 target = instance_nearest(x,y,hitme);
-if target != noone && target.team == team
+if target != noone && instance_exists(target)  && target.team == team
 	scrTarget();
-if target != noone {
+if target != noone && instance_exists(target) {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) {
 		mp_potential_step(target.x,target.y,maxSpeed,false);
 		justBehindWall = 2;
@@ -21,13 +21,7 @@ if target != noone {
 		var dis = point_distance(x,y,target.x,target.y)
 		if dis < 96
 			mp_potential_step(target.x,target.y,maxSpeed,false);
-		if target.object_index == Player 
-		{
-			if place_meeting(x,y,Player)
-			{
-				event_user(0);
-			}
-		} else if dis < 32
+		if target.object_index != Player && dis < 32
 		{
 			event_user(0);
 			with target

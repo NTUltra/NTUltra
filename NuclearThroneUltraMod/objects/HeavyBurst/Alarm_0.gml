@@ -29,8 +29,7 @@ with creator
 	wkick = 6
 	if object_index != Player || !skill_got[2]
 	{
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,0.5)
-		scrMoveContactSolid(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180, 0.5);
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180,0.65)
 	}
 }
 }

@@ -204,12 +204,12 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 			break;
 			case 139://The pit
 				tx = ox;
-				ty = oy + ystep * 6;
+				ty = oy + ystep * 2;
 				inverted = true;
 			break;
 			case 141://Inverted gauntlet/storm
-				tx = ox + xstep * 6;
-				ty = oy + ystep;
+				tx = ox + xstep * 2;
+				ty = oy + ystep * 2;
 				inverted = true;
 			break;
 			case 135://HQ
@@ -323,7 +323,7 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				ty = oy - ystep;
 			break;
 			case 113://Bandit land
-				tx = ox + xstep * 5;
+				tx = ox + xstep * 4;
 				ty = oy + ystep * 2;
 			break;
 		}
@@ -331,7 +331,8 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 		{
 			if (inverted)
 			{
-				tx += size * 3;
+				if areaNumber != 139 && areaNumber != 140 && areaNumber != 141
+					tx += size * 3;
 				if overwriteRouteColour
 				{
 					col = make_colour_rgb(0,52,52);
@@ -354,7 +355,8 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 			} else {
 				if (inverted)
 				{
-					tx += size * 3;
+					if areaNumber != 139 && areaNumber != 140 && areaNumber != 141
+						tx += size * 3;
 					if overwriteRouteColour
 					{
 						col = make_colour_rgb(0,18,18);

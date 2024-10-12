@@ -6,6 +6,11 @@ repeat(6)
 {
 	with instance_create(ghostLocations[i][0],ghostLocations[i][1], ghosts[i])
 	{
+		with instance_place(x,y,WallHitMe)
+		{
+			instance_destroy();
+			instance_create(x,y,FloorExplo);
+		}
 		alarm[1] *= 0.5;
 		if instance_exists(Player)
 		{

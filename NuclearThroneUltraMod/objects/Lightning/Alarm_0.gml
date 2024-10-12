@@ -7,7 +7,7 @@ if team != 2
 {
 	defaultYscale = 1;
 	imageSpeed = 0.4
-	accuracy=18;
+	accuracy = enemyAccuracy;
 	branch = 20;
 }
 image_speed = imageSpeed;

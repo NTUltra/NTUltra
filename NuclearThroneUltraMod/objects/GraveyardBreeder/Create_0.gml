@@ -27,7 +27,7 @@ maxSpeed = 2;
 ammo = maxAmmo;
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 50+random(90)
 if loops > 0
 {
 	vomitSpeed = 0.6;

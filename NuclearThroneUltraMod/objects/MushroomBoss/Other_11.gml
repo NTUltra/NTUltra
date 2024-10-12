@@ -7,23 +7,14 @@ if target != noone && instance_exists(target)
 	{
 		for (var i = 0; i < al; i++)
 		{
-			with floors[| i] {
-				var o = 16;
-				if object_index != FloorExplo
-				{
-					/*
-					o = 8;
-					with instance_create(x + o,y + o,AboutToGas)
+			if choose(true,true,false)
+				with floors[| i] {
+					var o = 16;
+					if object_index != FloorExplo
 					{
-						image_xscale = 0.75;
-						image_yscale = image_xscale;
+						instance_create(x + o,y + o,AboutToGas)
 					}
 				}
-				else
-				{*/
-					instance_create(x + o,y + o,AboutToGas)
-				}
-			}
 		}
 		snd_play_2d(sndAboutToGas);
 		BackCont.shake += 5;
@@ -36,26 +27,17 @@ if target != noone && instance_exists(target)
 		var t = team;
 		for (var i = 0; i < al; i++)
 		{
-			with floors[| i] {
+			if choose(true,true,false)
+				with floors[| i] {
 				
-				if object_index != FloorExplo
-				{
-					/*
-					with instance_create(x,y,AboutToEarthQuackeSmall)
+					if object_index != FloorExplo
 					{
-						team = t;
-					}
-				}
-				else
-				{
-					if !place_meeting(x,y,Floor)
-					*/
 						with instance_create(x,y,AboutToEarthQuacke)
 						{
 							team = t;
 						}
+					}
 				}
-			}
 		}
 		BackCont.shake += 10;
 		forceAnimation = spr_fire;

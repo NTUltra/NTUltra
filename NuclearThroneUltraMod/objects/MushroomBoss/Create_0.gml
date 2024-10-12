@@ -2,7 +2,7 @@ raddrop = 60;
 maxhealth = 1000
 mySize = 3
 event_inherited();
-scrAddDrops(1);
+scrAddDrops(5);
 meleedamage = 0
 immuneToTypeDamage = 1;
 isInverted = false;
@@ -31,7 +31,7 @@ snd_dead = sndFrogExplode
 mode = 0;//EARTH / TOXIC
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 60;
 wkick = 0
 actTime = 20;
 maxSpeed = 0;
@@ -46,3 +46,4 @@ forceAnimation = spr_idle;
 animationDuration = sprite_get_number(forceAnimation);
 forceImageIndex = 0;
 buddyAmount = 3;
+didTheThing = 0;

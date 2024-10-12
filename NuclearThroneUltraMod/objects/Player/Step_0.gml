@@ -530,6 +530,8 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
+			if !instance_exists(Acid)
+				instance_create(x,y,Acid);
 			Sleep(100);
 			getVision = true;
 			isPermanent = true;

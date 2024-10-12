@@ -12,5 +12,9 @@ with BecomeMushroomBossGrow
 {
 	instance_destroy(id,false);
 }
+with InvertedMushroomBossVine
+{
+	my_health = 0;
+}
 scrBossKill();
 scrEndBossMusic();

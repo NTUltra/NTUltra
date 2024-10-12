@@ -5,9 +5,7 @@ event_inherited()
 
 if wep!=0
 {//give back weapon
-
-
-    with instance_create(x,y,WepPickup)
+    with instance_create(x,y,WepPickupForOneWepOnly)
     {
 	    depth=-9;
 	    image_angle=random(360);

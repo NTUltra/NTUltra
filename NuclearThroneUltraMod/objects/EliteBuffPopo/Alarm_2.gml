@@ -16,7 +16,8 @@ if target != noone && instance_exists(target)
 	far = point_distance(x,y,target.x,target.y) > 350;
 	if far
 		walk += 1;
-	gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
+	if random(3) < 1
+		gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
 	if target.x < x
 	    right = -1
 	else if target.x > x

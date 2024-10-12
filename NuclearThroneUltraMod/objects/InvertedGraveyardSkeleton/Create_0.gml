@@ -22,7 +22,7 @@ spr_dead = sprInvertedGraveyardSkeletonDead
 alarm[3] = 0; //Not cursed
 //behavior
 walk = 0
-alarm[1] = 30+random(90)
+alarm[1] = 35+random(90)
 maxSpeed = 4.1;
 actTime = 10;
 if loops > 1

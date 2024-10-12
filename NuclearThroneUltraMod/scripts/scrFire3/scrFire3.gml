@@ -746,16 +746,16 @@ function scrFire3(hasTailNow){
 			ammo = maxAmmo
 			time = 2
 			team = other.team
-			event_perform(ev_alarm,0)
+			alarm[0] = 1;
 		}
 		with instance_create(x,y,RocketRainBurst)
 		{
 			creator = other.id
-			maxAmmo = 4;
+			maxAmmo = 3;
 			ammo = maxAmmo
-			time = 2
+			time = 3
 			team = other.team
-			alarm[0] = 1;
+			event_perform(ev_alarm,0)
 		}
 
 		break;
@@ -2479,7 +2479,7 @@ function scrFire3(hasTailNow){
 		//PLOP MINIGUN
 		case 868:
 
-		snd_play(sndPlopMinigun,0.08)
+		snd_play_fire(sndPlopMinigun)
 		with instance_create(x,y,Shell)
 		motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
 

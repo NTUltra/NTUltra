@@ -3,6 +3,7 @@ maxhealth = 15
 mySize = 1
 event_inherited()
 meleedamage = 2;
+countKill = false;
 spr_idle = sprBigMushroomBuddyIdle
 spr_walk = sprBigMushroomBuddyWalk
 spr_hurt = sprBigMushroomBuddyHurt
@@ -14,7 +15,8 @@ snd_dead = sndFrogExplode
 snd_melee = sndMaggotBite;
 //behavior
 walk = 0
-alarm[1] = 5;
+alarm[1] = 7;
+alarm[3] = 10;
 wkick = 0
 actTime = 7;
 

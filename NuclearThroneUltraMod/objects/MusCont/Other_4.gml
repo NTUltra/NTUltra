@@ -322,7 +322,8 @@ if scrIsGamemode(8) && area != 0
     }
 	if instance_exists(PitNavigation) && area != 140
 	{
-		song = musUltraInvertedRoute;
+		song = musUltra127;
+		amb = ambUltra126;//musUltraInvertedRoute;
 	}
 	if (confirmSound) {
         snd_play_2d(confirmSound);

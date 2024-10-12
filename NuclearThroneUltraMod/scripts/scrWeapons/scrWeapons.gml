@@ -878,7 +878,7 @@ function scrWeapons() {
 	wep_name[78] = "HYPER SLUGGER"
 	wep_type[78] = 2
 	wep_auto[78] = 0
-	wep_load[78] = 12
+	wep_load[78] = 11
 	wep_cost[78] = 2
 	wep_sprt[78] = sprHyperSlugger
 	wep_area[78] = 14
@@ -1580,7 +1580,7 @@ function scrWeapons() {
 	wep_type[141] = 1
 	wep_auto[141] = 0
 	wep_load[141] = 19
-	wep_cost[141] = 6
+	wep_cost[141] = 6.5
 	wep_sprt[141] = sprBulletShotgun
 	wep_area[141] = 3
 	wep_text[141] = "shotfun"
@@ -3607,7 +3607,7 @@ function scrWeapons() {
 	wep_name[321] = "LIGHTNING SCREWDRIVER"
 	wep_type[321] = 0
 	wep_auto[321] = 1
-	wep_load[321] = 10
+	wep_load[321] = 8
 	wep_cost[321] = 0
 	wep_sprt[321] = sprLightningScrewDriver
 	wep_area[321] = 7
@@ -6292,7 +6292,7 @@ function scrWeapons() {
 	wep_name[560] = "SPEAR LAUNCHER"
 	wep_type[560] = 3
 	wep_auto[560] = 0
-	wep_load[560] = 33
+	wep_load[560] = 29
 	wep_cost[560] = 1.5
 	wep_sprt[560] = sprSpearLauncher
 	wep_area[560] = 2
@@ -6600,7 +6600,7 @@ function scrWeapons() {
 	wep_name[588] = "SHOTGUN LANCE"
 	wep_type[588] = 2
 	wep_auto[588] = 0
-	wep_load[588] = 18
+	wep_load[588] = 17
 	wep_cost[588] = 1.5
 	wep_sprt[588] = sprShotgunLance
 	wep_area[588] = 7
@@ -6765,7 +6765,7 @@ function scrWeapons() {
 	wep_name[603] = "SPLINTER SHOVEL"
 	wep_type[603] = 3
 	wep_auto[603] = 0
-	wep_load[603] = 27
+	wep_load[603] = 25
 	wep_cost[603] = 2
 	wep_sprt[603] = sprSplinterShovel
 	wep_area[603] = 15
@@ -6820,7 +6820,7 @@ function scrWeapons() {
 	wep_name[608] = "SHANKER"
 	wep_type[608] = 0
 	wep_auto[608] = 0
-	wep_load[608] = 12
+	wep_load[608] = 11
 	wep_cost[608] = 0
 	wep_sprt[608] = sprShanker
 	wep_area[608] = 9
@@ -8659,7 +8659,7 @@ function scrWeapons() {
 	wep_name[773] = "WUNDER STRASSE"
 	wep_type[773] = 5
 	wep_auto[773] = 1
-	wep_load[773] = 23
+	wep_load[773] = 24
 	wep_cost[773] = 7
 	wep_sprt[773] = sprWunderStrasseGun
 	wep_area[773] = 18
@@ -8894,7 +8894,7 @@ function scrWeapons() {
 	wep_name[794] = "DIRECTOR RETRACTOR"
 	wep_type[794] = 3
 	wep_auto[794] = 0
-	wep_load[794] = 22
+	wep_load[794] = 21
 	wep_cost[794] = 1.5
 	wep_sprt[794] = sprDirectorRetractor
 	wep_area[794] = 3
@@ -9134,7 +9134,7 @@ function scrWeapons() {
 	wep_name[815] = "MISSILE RAIN"
 	wep_type[815] = 5
 	wep_auto[815] = 2
-	wep_load[815] = 28
+	wep_load[815] = 31
 	wep_cost[815] = 5
 	wep_sprt[815] = sprMissileRain
 	wep_area[815] = 9
@@ -9679,7 +9679,7 @@ function scrWeapons() {
 	wep_name[863] = "ICICLE HANDGUN"
 	wep_type[863] = 4
 	wep_auto[863] = 3
-	wep_load[863] = 18
+	wep_load[863] = 16
 	wep_cost[863] = 1
 	wep_sprt[863] = sprIcicleHandGun
 	wep_area[863] = 3

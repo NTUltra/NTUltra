@@ -39,7 +39,7 @@ with myCorpse
 	alarm[0] += 60;//Wait a little longer with spawning a portal	
 }
 scrBossKill();
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(GraveyardFish) == 1 && !instance_exists(PitNavigation)
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(GraveyardFish) == 1
 with MusCont
 {
 //optimise sound_discard(song)

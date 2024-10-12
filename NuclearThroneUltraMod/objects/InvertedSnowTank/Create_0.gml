@@ -18,7 +18,7 @@ snd_dead = sndSnowTankPreExplo
 
 
 //behavior
-alarm[1] = 40+random(10)
+alarm[1] = 80+random(40)
 ammo = 0
 gunangle = random(360)
 rest = 0

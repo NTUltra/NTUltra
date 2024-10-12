@@ -7,7 +7,7 @@ else if instance_number(WepPickup) == 2
 else if instance_number(WepPickup) == 3
 	scrDrop(0,100,false,2)
 else
-	scrDrop(25,30,false,1)
+	scrDrop(20,30,false,1)
 morphMe = 6;
 event_inherited()
 with instance_create(x,y,GhostCorpse)

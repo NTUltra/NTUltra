@@ -198,7 +198,7 @@ function scrPopulate() {
         }
 		else if spawnarea = 124 //Mushroom
         {
-            GenBones();
+            //GenBones();
             TopDecals();
             with TopDecal {
                 sprite_index = sprInvertedMushroomTopDecal;

@@ -1,3 +1,3 @@
 event_inherited();
-friction -= 0.1;
+friction -= 0.15;
 dmg = 4;

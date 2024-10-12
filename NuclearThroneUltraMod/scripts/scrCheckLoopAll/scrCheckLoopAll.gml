@@ -6,14 +6,8 @@ function scrCheckLoopAll() {
 		var thisonelooped=0;
 		repeat(racemax)
 		{
-
 			if ctot_loop[dir]>0
 				thisonelooped++;
-			else
-			{
-				debug("BITCH IS NOT LOOPED ",dir);	
-			}
-
 			dir++;
 		}
 

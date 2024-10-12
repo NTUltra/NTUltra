@@ -1,6 +1,7 @@
 /// @description Additional area population
 if currentArea == 107
 {
+	UberCont.hadBossIntro = false;
 	scrSpawnBoss(InvertedBigDisc);
 	if (loops > 5)
 		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((loops-4)*0.25),1,2));
@@ -27,8 +28,15 @@ else if currentArea == 125
 		instance_destroy(id,false);
 	}
 }
-if currentArea == 109 && !instance_exists(InvertedChesireCat)
+else if currentArea == 124 && loops > 1
 {
+	UberCont.hadBossIntro = false;
+	scrSpawnBoss(BecomeInvertedMushroomBoss)
+	scrSpawnMoreBosses(BecomeInvertedMushroomBoss,2);
+}
+else if currentArea == 109 && !instance_exists(InvertedChesireCat)
+{
+	UberCont.hadBossIntro = false;
 	scrSpawnBoss(InvertedChesireCat);
 }
 var hyperSomnia = false;

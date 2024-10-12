@@ -17,7 +17,7 @@ else
 	if forceImageIndex >= animationDuration
 	{
 		forceAnimation = spr_idle;
-		event_user(15);
+		event_user(14);
 	}
 }
 speed = 0;

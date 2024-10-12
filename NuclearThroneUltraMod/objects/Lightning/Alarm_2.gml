@@ -10,7 +10,7 @@ var t = team;
 if al > 0 && alarm[0] < 1
 {
 	for (var i = 0; i < al; i++) {
-		if (i > 0 && i % 2 == 0)//Only half of the lightning has collision to optimize
+		if (i == 0 || (i % 2 == 0))//Only half of the lightning has collision to optimize
 		{
 			var xx = lightningList[i].xx;
 			var yy = lightningList[i].yy;
@@ -77,22 +77,24 @@ if al > 0 && alarm[0] < 1
 								}
 							}
 						}
-						else
+						else if al < 3 || i + 1 < al//Very last piece does not hit
 						{
+							var canHit = true;
 							if object_index == Player
 							{
 								hitBy = sprLightningEnemyRepresent;
+								if alarm[3] > 0 || hurtTime > 0
+									canHit = false;
 							}
-							if sprite_index != spr_hurt
+							if sprite_index != spr_hurt && canHit
 							{
 								DealDamage(3)
 								sprite_index = spr_hurt
 								image_index = 0
 								snd_play(snd_hurt, hurt_pitch_variation,true)
 								motion_add(other.image_angle,4)
+								instance_create(xx,yy,Smoke);
 							}
-							Sleep(4);
-							instance_create(xx,yy,Smoke);
 						}
 					}
 				}

@@ -214,8 +214,8 @@ function scrRaces() {
 	race_acti[9] = "HOLD FOR <w>SLOW MOTION<w>"
 	race_butt[9] = "NORMAL <w>MOVEMENT SPEED<w>#AND NORMAL <w>RELOAD SPEED<w>#DURING <w>SLOWMOTION<w>"//"NORMAL RATE OF FIRE#DURING SLOW MOTION"
 	race_butt_detail[9] = race_butt[9];
-	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN#WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w>#AND <r>HEALTH<r> (IF IT WAS HIGHER)#BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
-	race_vision_detail[9] = "<p>FOCUS<p> DOES NOT DRAIN#WHILE STATIONARY##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> BACK TO THE <w>START<w> OF SLOW MOTION";
+	race_vision[9] = "<p>FOCUS<p> DOES NOT DRAIN#WHILE <w>STATIONARY<w>##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> YOUR <w>POSITION<w>#AND <r>HEALTH<r> (IF IT WAS HIGHER)#BACK TO#THE <w>START<w> OF SLOW MOTION#TRIGGERS WHEN SLOW MOTION <w>ENDS<w>";
+	race_vision_detail[9] = "<p>FOCUS<p> DOES NOT DRAIN#WHILE <w>STATIONARY<w>##PRESS <w>[E]<w> DURING <w>SLOW MOTION<w> TO:#<w>REWIND<w> BACK TO THE <w>START<w> OF SLOW MOTION";
 	if isUnique
 	{
 		race_vision[9] = string_replace_all(race_vision[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");

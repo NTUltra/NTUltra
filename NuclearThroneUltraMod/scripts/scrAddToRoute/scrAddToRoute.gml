@@ -13,9 +13,11 @@ function scrAddToRoute(area){
 	*/
 	with UberCont
 	{
+		if area == 127 && instance_exists(PitNavigation)
+			area = 141;
 		if area != previousRoute
 		{
-			if (!scrIsGamemode(10))
+			if (!scrIsGamemode(10) && !scrIsGamemode(17))
 			{
 				var routeComboString = string(previousRoute) + ">" + string(area);
 				if (!array_contains(foundRoutes,routeComboString))

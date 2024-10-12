@@ -15,7 +15,7 @@ function scrHasFoundAllSecretUltrasFor(theRace){
 			case 4://MELTING
 				return ctot_secret_ultra_found[4] > 0
 			case 5://PLANT
-				return ctot_secret_ultra_found[5] > 0 && ctot_secret_ultra_found[33] > 0
+				return ctot_secret_ultra_found[5] > 0 && ctot_secret_ultra_found[33] > 0 && ctot_secret_ultra_found[38] > 0
 			case 6://YV
 				return ctot_secret_ultra_found[6] > 0 && ctot_secret_ultra_found[35] > 0 && ctot_secret_ultra_found[36] > 0
 			case 7://STEROIDS

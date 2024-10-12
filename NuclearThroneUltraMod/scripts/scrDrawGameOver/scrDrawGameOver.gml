@@ -183,7 +183,7 @@ function scrDrawGameOver() {
 		{
 			draw_set_color(c_black)
 			var usx = sxx + string_width(txt);
-			var usy = syy + string_height(txt)*0.5
+			var usy = syy + (string_height(txt)*0.5) + 2
 			draw_text_transformed(usx,usy + 1,string_hash_to_newline(txt),-1,-1,0)
 			draw_text_transformed(usx+1,usy + 1,string_hash_to_newline(txt),-1,-1,0)
 			draw_text_transformed(usx+1,usy,string_hash_to_newline(txt),-1,-1,0)

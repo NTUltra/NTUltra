@@ -49,7 +49,7 @@ if instance_exists(InvaderBossSpawnPortal) || instance_exists(BossInvasionNoName
 if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exists(WallCrawler)
 {
     ///
-	if (!instance_exists(PitNavigation) || (instance_exists(Player) && Player.area == 140))
+	if (!instance_exists(PitNavigation) || (instance_exists(Player) && Player.area == 140) || instance_exists(InvertedGraveyardFish))
     with MusCont
     {
 	    //audio_stop_all()
@@ -58,7 +58,11 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
     
 	    //sound_discard(song)
 	    //sound_discard(amb)
-		if instance_exists(IDPDCaptain)
+		if instance_exists(PitNavigation) && instance_exists(InvertedGraveyardFish)
+		{
+			song = musUltraInvGraveyardFish;
+		}
+		else if instance_exists(IDPDCaptain)
 		{
 			song = musBoss8;
 		}
@@ -153,12 +157,8 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 				song = musUltraBossBot;
 		}
 	    snd_loop(song)
-	    // snd_loop(amb)
-	    //audio_group_set_gain(agsfx,max(0, sqrt(UberCont.opt_sfxvol)),0);
 		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-    
 	    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
-    
 	    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
     
 	    //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
@@ -204,6 +204,11 @@ else if instance_exists(CloudBoss)
 	name = "THE VISIONARY";
 	//image_index = 18;
 }
+else if instance_exists(BecomeInvertedMushroomBossGrow)
+{
+	name = "INVERTED MYCELIUM MONSTER";
+	//image_index = 18;
+}
 else if instance_exists(BecomeMushroomBossGrow)
 {
 	name = "MYCELIUM MONSTER";
@@ -246,12 +251,6 @@ else if instance_exists(VoidMasterBoss)
 	if random(150)<1
 		name = choose("DUEL!","THE GOOD, THE BAD AND THE UGLY?");
 }
-else if instance_exists(PitNavigation)
-{
-	event_perform(ev_alarm,2);
-	instance_destroy();
-	exit;
-}
 else if instance_exists(UltraBigDog)
 {
 	if random(100)<1
@@ -266,6 +265,12 @@ else if instance_exists(BallBoss)
 	{
 		name = choose("BIG BALL","THE BALL BOSS","PROTO BALL","CIRCLE");	
 	}
+}
+else if instance_exists(InvertedBigDisc) && instance_exists(PitNavigation)
+{
+	name = "INVERTED BIG DISC";
+	if random(600)<1
+		name= choose("BROWN DISC","BIG OOPS");	
 }
 else
 {
@@ -284,7 +289,8 @@ else
 	else if area = 105
 	{
 	//with instance_create(x,y,Drama)
-	name = "INVERTED BIG BANDIT"
+		name = "INVERTED BIG BANDIT"
+		image_index = 24;
 		if random(1000)< 1
 		{
 			name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");

@@ -42,3 +42,4 @@ if mouse_x > tx - w && mouse_x < tx + w
 		room_goto(romGame);
 	}
 }
+draw_set_font(fntM);

@@ -51,21 +51,18 @@ if !openedShop
 	}
 	if (isValidGamemodeToUnlock())
 	{
-		if scrHasAnySecretUltraUnlockRequirementsLeft()
+		if !UberCont.canMultiCrown && scrHasAnySecretUltraUnlockRequirementsLeft()
 		{
-			with instance_create(x - 64,yy + 94,VoidShopItemUnlockSecretUltraRequirement)
+			with instance_create(x - 96,yy + 94,VoidShopItemUnlockSecretUltraRequirement)
 			{
 				image_index = 2;
 				image_speed = 0.45;
 			}
 		}
-		else
+		with instance_create(x - 64,yy + 94,VoidShopWeaponShifter)
 		{
-			with instance_create(x - 64,yy + 94,VoidShopWeaponShifter)
-			{
-				image_index = 2;
-				image_speed = 0.45;
-			}
+			image_index = 2;
+			image_speed = 0.45;
 		}
 		if instance_exists(Player) && !UberCont.secondary_start_wep[Player.race]
 		{

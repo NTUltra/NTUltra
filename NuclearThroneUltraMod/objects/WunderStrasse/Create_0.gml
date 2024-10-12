@@ -1,5 +1,5 @@
 event_inherited();
-alarm[2] = 25;
+alarm[2] = 24;
 image_yscale += 2;
 dmg += 1.5;
 depth = 6;

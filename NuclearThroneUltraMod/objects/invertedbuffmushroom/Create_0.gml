@@ -1,5 +1,7 @@
 event_inherited()
 raddrop = 22;
+if instance_exists(PitNavigation)
+	raddrop = 12;
 maxhealth = 35;
 EnemyHealthAdjustments();
 meleedamage = 5

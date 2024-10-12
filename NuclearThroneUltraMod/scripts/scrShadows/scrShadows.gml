@@ -92,8 +92,14 @@ function scrShadows() {
 	draw_sprite(shd16,0,x-vx,y-vy+10)
 	with SquareBat
 	draw_sprite(shd32,0,x-vx,y-vy+6)
-	with BigMushroom
-	draw_sprite(shd32,0,x-vx,y-vy)
+	with MushroomBoss
+	draw_sprite(shd32,0,x-vx,y-vy + 8)
+	with BuddyShroom
+		draw_sprite(shd24,0,x-vx,y-vy)
+	with BecomeMushroomBoss
+		draw_sprite(shd24,0,x-vx,y-vy + 10)
+	with BecomeMushroomBossGrow
+		draw_sprite(shd24,0,x-vx,y-vy + 10)
 	with VoidMasterBoss
 	{
 		if sprite_index == spr_idle || sprite_index == spr_walk || sprite_index == spr_hurt
@@ -450,7 +456,7 @@ function scrShadows() {
 	with TinyJellyFish
 		draw_sprite(shdTinyJellyFish,0,x-vx,y-vy+3)
 	with ToxicMushroomGuy
-		draw_sprite(shd24,0,x-vx,y-vy)
+		draw_sprite(shd24,0,x-vx,y-vy + 2)
 	with SavannaBandit
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with Vulture

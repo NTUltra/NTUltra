@@ -1,4 +1,9 @@
 /// @description Draw game
+if instance_exists(Acid) && UberCont.isPaused == 0
+{
+	shader_set(shdAcid);
+	shader_set_uniform_f(Acid.hueShift,Acid.hue);
+}
 if !instance_exists(FreezeFrame)
 	gpu_set_blendenable(false);
 var w = (camera_get_view_width(view_camera[0]) * UberCont.opt_resolution_scale)
@@ -194,3 +199,4 @@ if instance_exists(FadeToBlackToCredits)
 	draw_rectangle_colour(l,t,r,b,c_black,c_black,c_black,c_black,false);
 	draw_set_alpha(1);
 }
+shader_reset();

@@ -1,4 +1,4 @@
-alarm[1] = 5+random(10)
+alarm[1] = 7+random(10)
 if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 rest = 0
 scrTarget()

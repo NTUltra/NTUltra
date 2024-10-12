@@ -251,6 +251,10 @@ with BecomeGhostExplosion
 {
 	draw_self();	
 }
+with AboutToLightningWall
+{
+	draw_self();	
+}
 with GhostExplosion
 {
 	draw_self();	
