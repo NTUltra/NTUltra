@@ -15,5 +15,6 @@ if alarm[1] < 1 && !instance_exists(GenCont) && !instance_exists(LevCont) && !in
 		alarm[1] = 15;
 		alarm[0] = 0;
 		snd_play_2d(sndLastEnemy);
+		BackCont.shake += 5;
 	}
 }

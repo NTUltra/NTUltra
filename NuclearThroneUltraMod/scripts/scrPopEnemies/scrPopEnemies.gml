@@ -1365,15 +1365,15 @@ function scrPopEnemies() {
 			}
 			if r > 4
 			{
-				repeat(2)
-				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton))
+				//repeat(2)
+				instance_create(x + 16, y + 16, choose(InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardBreeder,InvertedGraveyardSniper))
 			}
 		    else
 			{
 		        instance_create(x + 16, y + 16, choose(theBandit,theBandit,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedGraveyardSkeleton,InvertedSpider, InvertedBuffMushroom, InvertedSpider, InvertedSpider))
 			}
 		}
-		else
+		else if !instance_exists(PitNavigation) || instance_number(enemy) < 2 || random(2) < 1
 		{
 			var r = random(10);
 			if r > 7

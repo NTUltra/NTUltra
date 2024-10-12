@@ -2,8 +2,13 @@ event_inherited()
 
 motion_add(targetDirection,acc);
 
+//Our screen is not as high but it is wide!
+if abs(vspeed) > maxSpeed - 0.2
+	vspeed = (maxSpeed - 0.2) * sign(vspeed)
 if speed > maxSpeed
-speed = maxSpeed
+{
+	speed = maxSpeed
+}
 
 image_angle += rotation;
 

@@ -652,6 +652,7 @@
     {"name":"Decoy","order":34,"path":"objects/Decoy/Decoy.yy",},
     {"name":"Deflect","order":150,"path":"objects/Deflect/Deflect.yy",},
     {"name":"DeflectMelee","order":15,"path":"objects/DeflectMelee/DeflectMelee.yy",},
+    {"name":"DelayBossIntro","order":14,"path":"objects/DelayBossIntro/DelayBossIntro.yy",},
     {"name":"DelayedIntestines","order":74,"path":"objects/DelayedIntestines/DelayedIntestines.yy",},
     {"name":"DelayEnemyKill","order":47,"path":"objects/DelayEnemyKill/DelayEnemyKill.yy",},
     {"name":"DelayVoidCreation","order":45,"path":"objects/DelayVoidCreation/DelayVoidCreation.yy",},

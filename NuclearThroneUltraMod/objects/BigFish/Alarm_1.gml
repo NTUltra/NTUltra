@@ -97,7 +97,7 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 					
 				maxfish += loops*5
 				
-		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) {
+		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) && currentFish < currentShoot{
 		            image_index = 0
 		            sprite_index = spr_startfire
 		            alarm[3] = actTime;

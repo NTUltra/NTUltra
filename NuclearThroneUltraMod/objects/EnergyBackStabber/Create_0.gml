@@ -5,4 +5,4 @@ image_yscale = 0.2
 gotLongarms = false;
 gotEnergyBrain = false;
 bettermelee = 0;
-dmg = 4;
+dmg = 5;

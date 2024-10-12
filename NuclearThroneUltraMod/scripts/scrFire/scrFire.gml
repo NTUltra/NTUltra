@@ -2805,7 +2805,7 @@ function scrFire(canDrown = true) {
 	var hitWall = false;
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-		dmg = 8
+		dmg = 9
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2821,7 +2821,7 @@ function scrFire(canDrown = true) {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
-				dmg = 8
+				dmg = 9
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)
@@ -4774,7 +4774,7 @@ function scrFire(canDrown = true) {
 		ammo = 2+(gotEnergyBrain+Player.betterlaserbrain)
 		time = 4
 		team = other.team
-		alarm[0] = 15
+		alarm[0] = 10
 		alarm[1] = alarm[0] + ammo*time;
 			if Player.skill_got[42]
 			{

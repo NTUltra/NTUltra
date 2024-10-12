@@ -8,6 +8,7 @@ if currentArea == 107
 }
 else if currentArea == 106 && !instance_exists(WantBoss)
 {
+	UberCont.hadBossIntro = false;
 	instance_create(x, y, WantBoss);
 }
 else if currentArea == 125

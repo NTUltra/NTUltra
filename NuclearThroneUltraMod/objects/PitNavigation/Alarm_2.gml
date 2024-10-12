@@ -6,13 +6,14 @@ if !instance_exists(Player)
 }
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
-with Debris
-{
-	instance_destroy();	
-}
+
 with TrapScorchMark
 {
 	instance_destroy();	
+}
+with FX
+{
+	instance_destroy(id,false);	
 }
 with WeaponMod
 {
@@ -71,9 +72,10 @@ with Traps
 	instance_destroy(id,false);	
 }
 var s = 150;
-var ss = 120;
 if currentArea == 125//Make inv mansion a little bigger
-	ss += 30;
+	s += 10;
+if currentArea == 107//Final area is  bigger
+	s += 20;
 var prevA = 141;
 with Player
 {
@@ -89,16 +91,6 @@ with instance_create(tx,ty,FloorMaker)
 	goal = s;
 	event_perform(ev_alarm,0);
 }
-/*
-var n = instance_nearest(tx + 900,ty + 900,Floor)
-if n != noone
-	with instance_create(n.x,n.y,FloorMaker)
-	{
-		globalGoal = s + ss;
-		goal = ss;
-		event_perform(ev_alarm,0);
-	}
-*/
 instance_create(x,y,AreaResetter);
 snd_play_2d(sndLastEnemy);
 with WepPickup

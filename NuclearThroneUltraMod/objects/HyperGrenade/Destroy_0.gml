@@ -6,7 +6,7 @@ with instance_create(x,y,Explosion)
 var ang = direction;
 repeat(3)
 {
-	with instance_create(x + lengthdir_x(24,ang),y + lengthdir_y(24,ang),Explosion)
+	with instance_create(x + lengthdir_x(24,ang),y + lengthdir_y(24,ang),SmallExplosion)
 	{
 		scrCopyWeaponMod(other)
 	}

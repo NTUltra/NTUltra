@@ -13,7 +13,7 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"471e9c05-b443-4fcb-a0c5-667d82d8cdc8","name":"471e9c05-b443-4fcb-a0c5-667d82d8cdc8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4614df6d-cc97-415f-ac3e-63922f6de540","name":"4614df6d-cc97-415f-ac3e-63922f6de540","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"058be04b-385a-440f-a1ae-a11b699d8afc","name":"058be04b-385a-440f-a1ae-a11b699d8afc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"e0ba262e-b6dd-45ec-8485-08092ef6ff03","name":"e0ba262e-b6dd-45ec-8485-08092ef6ff03","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -74,8 +74,8 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"471e9c05-b443-4fcb-a0c5-667d82d8cdc8","path":"sprites/mskMorphSlash/mskMorphSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"aca0fec9-1a1a-484f-b956-fd1c8404247d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4614df6d-cc97-415f-ac3e-63922f6de540","path":"sprites/mskMorphSlash/mskMorphSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2cb6f990-695c-4b61-89ee-1f77a433acf5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"058be04b-385a-440f-a1ae-a11b699d8afc","path":"sprites/mskMorphSlash/mskMorphSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"26363b41-a7dc-4c8b-8260-c75f9b269d98","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e0ba262e-b6dd-45ec-8485-08092ef6ff03","path":"sprites/mskMorphSlash/mskMorphSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0d137367-a471-4f23-9e58-ba81414569be","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

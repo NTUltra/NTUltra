@@ -848,6 +848,7 @@
     {"id":{"name":"Decoy","path":"objects/Decoy/Decoy.yy",},},
     {"id":{"name":"Deflect","path":"objects/Deflect/Deflect.yy",},},
     {"id":{"name":"DeflectMelee","path":"objects/DeflectMelee/DeflectMelee.yy",},},
+    {"id":{"name":"DelayBossIntro","path":"objects/DelayBossIntro/DelayBossIntro.yy",},},
     {"id":{"name":"DelayedIntestines","path":"objects/DelayedIntestines/DelayedIntestines.yy",},},
     {"id":{"name":"DelayEnemyKill","path":"objects/DelayEnemyKill/DelayEnemyKill.yy",},},
     {"id":{"name":"DelayVoidCreation","path":"objects/DelayVoidCreation/DelayVoidCreation.yy",},},

@@ -8,6 +8,6 @@ spr_hurt = sprInvertedBanditSquareHurt
 spr_dead = sprInvertedBanditSquareDead
 maxSpeed = 4;
 maxDetectRange += 20;
-actTime -= 5;
+actTime -= 4;
 maxSpeed = 4;
 pSpeed += 0.5;

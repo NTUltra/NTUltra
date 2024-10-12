@@ -31,7 +31,6 @@ if instance_exists(PitNavigation)
 	actTime += 4;
 	smackdelayReduction -= 8;
 	raddrop -= 25;
-	maxhealth -= 25;
 	smackRange -= 2;
 }
 scrBossHealthBuff();

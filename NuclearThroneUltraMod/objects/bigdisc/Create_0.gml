@@ -13,12 +13,14 @@ spr_dead = sprBigScorchMark
 snd_melee = sndDiscDie;
 snd_hurt = sndDiscHit;
 snd_dead = sndExplosionCar;
-
+loops = GetPlayerLoops();
 //behavior
 alarm[1] = 50;
 direction = random(360);
 targetDirection = direction;
 maxSpeed = 5;
+if loops < 1
+	maxSpeed -= 1;
 acc = 2;
 actTime = 30;
 rotation = 10;

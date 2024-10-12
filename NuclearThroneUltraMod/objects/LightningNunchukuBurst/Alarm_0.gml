@@ -24,11 +24,13 @@ if instance_exists(creator)
 		var spr = sprLightningSlash;
 		var msk = mskSlash;
 		var wantDmg = 14;
+		var extra = 6;
 		if ammo % 2 == 1
 		{
 			aimDir -= 5*accuracy;
 			spr = sprSmallSlashLightning;
 			msk = mskSmallSlash;
+			extra += 4;
 			wantDmg = 10;
 			if creator.skill_got[17]
 				snd_play_fire(sndLightningHammer);
@@ -44,14 +46,14 @@ if instance_exists(creator)
 		}
 		Player.wepangle = -Player.wepangle
 		
-	    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*20,aimDir),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*20,aimDir),LightningSlash)
+	    with instance_create(x+lengthdir_x(extra+(Player.skill_got[13]+Player.bettermelee)*20,aimDir),y+lengthdir_y(extra+(Player.skill_got[13]+Player.bettermelee)*20,aimDir),LightningSlash)
 	    {
 			dmg = wantDmg;
 			sprite_index = spr;
 			mask_index = msk;
 		    Player.longarms = 0
 		    Player.longarms = (Player.skill_got[13]+Player.bettermelee)*3
-		    motion_add(aimDir,2.5+Player.longarms);
+		    motion_add(aimDir,3+Player.longarms);
 			image_angle = direction
 			scrCopyWeaponMod(other);
 			team = other.team

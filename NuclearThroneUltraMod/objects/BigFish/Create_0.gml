@@ -52,8 +52,11 @@ inverted = false;
 suckRange = 100;
 cam=true
 loops = GetPlayerLoops();
+maxShoot = 10;
+currentShoot = 0;
 if loops > 0
 {
+	maxShoot = 99999;
 	fishTime = 10;
 	fishFireRate = 4;
 }

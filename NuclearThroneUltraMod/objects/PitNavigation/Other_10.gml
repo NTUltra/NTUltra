@@ -1,7 +1,8 @@
 /// @description Reshape the world
 alarm[2] = 90;
+alarm[6] = 2;
 snd_play_2d(sndChangingArea);
-BackCont.shake += 30;
+BackCont.shake += 10;
 if currentArea != 125
 	with Acid
 	{

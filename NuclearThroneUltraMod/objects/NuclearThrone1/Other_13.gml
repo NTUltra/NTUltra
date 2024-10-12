@@ -72,3 +72,4 @@ if scrIsHardMode()
 {
 	alarm[8] = alarm[1] + 120;
 }
+instance_create(x,y,DelayBossIntro);

@@ -2629,7 +2629,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 
-	//GOLDEN GLOVE
+	//GOLDEN DEAD GLOVE
 	case 286:
 
 	snd_play_fire(sndHammer)
@@ -2641,7 +2641,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index=sprGoldenSlash
-		dmg = 8
+		dmg = 9
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2658,7 +2658,7 @@ function scrFire2(hasTailNow) {
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
 				sprite_index=sprGoldenSlash
-				dmg = 8
+				dmg = 9
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)
@@ -17482,7 +17482,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,DirectorPenetratorBolt)
 	{
-		motion_add(aimDirection+(random(4)-2)*other.accuracy,14)
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,15)
 		image_angle = direction
 		team = other.team
 	}

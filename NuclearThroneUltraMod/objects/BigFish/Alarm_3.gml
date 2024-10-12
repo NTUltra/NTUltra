@@ -1,7 +1,8 @@
 /// @description shoot fishies
-
-alarm[3] = fishFireRate;
-
+if currentShoot < maxShoot
+	alarm[3] = fishFireRate;
+currentFish += 1;
+alarm[8] = 30;
 if instance_exists(Player) {
 	with instance_create(x,y,BoneFish) {
 		var angle = point_direction(x, y, Player.x, Player.y) + (random(2) - 1) * 10

@@ -3,8 +3,8 @@ version = 000
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "31.00"
-subUpdateVersion = ".00";
+updateVersion = "31.PRE-R"
+subUpdateVersion = ".01";
 notUpdated = "";
 currentSave = 0;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")

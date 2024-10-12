@@ -15,7 +15,7 @@ spr_fire = sprInvertedGraveyardBreederFire
 
 //behavior
 vomitSpeed = 1;
-actTime = 18;
+actTime = 19;
 maxSpeed = 3;
 maxAmmo = 5;
 ammo = maxAmmo;

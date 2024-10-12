@@ -16,14 +16,14 @@ if !spawnedDuplicate && my_health < maxhealth * 0.5
 			with MimicBossPlateau
 				with instance_create(x,y,MimicBoss)
 				{
+					BackCont.shake += 20;
 					if instance_exists(Player)
 					{
 						var d = point_direction(Player.x,Player.y,x,y);
-						BackCont.viewx2 += lengthdir_x(80,d)*UberCont.opt_shake
-						BackCont.viewy2 += lengthdir_y(80,d)*UberCont.opt_shake
+						BackCont.viewx2 += lengthdir_x(50,d)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(50,d)*UberCont.opt_shake
 					}
-					else
-						BackCont.shake += 20;
+					snd_play(sndExplosionS);
 					my_health *= 0.5;
 					prevhealth = my_health;
 					actTime *= 1.5;

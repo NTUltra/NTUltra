@@ -649,7 +649,7 @@ function scrWeapons() {
 	wep_name[58] = "LIGHTNING RIFLE"
 	wep_type[58] = 5
 	wep_auto[58] = 1
-	wep_load[58] = 21
+	wep_load[58] = 20
 	wep_cost[58] = 2
 	wep_sprt[58] = sprLightningRifle
 	wep_area[58] = 9
@@ -901,7 +901,7 @@ function scrWeapons() {
 	wep_name[80] = "HUNTER SNIPER"
 	wep_type[80] = 1
 	wep_auto[80] = 1
-	wep_load[80] = 14
+	wep_load[80] = 13
 	wep_cost[80] = 3
 	wep_sprt[80] = sprSniper
 	wep_area[80] = -1
@@ -1612,7 +1612,7 @@ function scrWeapons() {
 	wep_name[144] = "HYPER LIGHTNING LAUNCHER"
 	wep_type[144] = 5
 	wep_auto[144] = 1
-	wep_load[144] = 21
+	wep_load[144] = 20
 	wep_cost[144] = 3
 	wep_sprt[144] = sprLightningHyperRifle
 	wep_area[144] = 18
@@ -2226,7 +2226,7 @@ function scrWeapons() {
 	wep_name[198] = "MORPH HAMMER"
 	wep_type[198] = 5
 	wep_auto[198] = 0
-	wep_load[198] = 22
+	wep_load[198] = 25
 	wep_cost[198] = 1
 	wep_sprt[198] = sprMorphHammer
 	wep_area[198] = 10
@@ -4650,7 +4650,7 @@ function scrWeapons() {
 	wep_name[412] = "LANCE"
 	wep_type[412] = 0
 	wep_auto[412] = 0
-	wep_load[412] = 17
+	wep_load[412] = 16
 	wep_cost[412] = 0
 	wep_sprt[412] = sprLance
 	wep_area[412] = 3
@@ -5882,7 +5882,7 @@ function scrWeapons() {
 	wep_name[523] = "LIGHTNING STRIKER"
 	wep_type[523] = 5
 	wep_auto[523] = 3
-	wep_load[523] = 34
+	wep_load[523] = 32
 	wep_cost[523] = 4
 	wep_sprt[523] = sprLightningStriker
 	wep_area[523] = 11
@@ -5893,8 +5893,8 @@ function scrWeapons() {
 	wep_name[524] = "ULTRA LIGHTNING STRIKER"
 	wep_type[524] = 5
 	wep_auto[524] = 3
-	wep_load[524] = 35
-	wep_cost[524] = 8
+	wep_load[524] = 32
+	wep_cost[524] = 7
 	wep_sprt[524] = sprUltraLightningStriker
 	wep_area[524] = 24
 	wep_text[524] = "green green green green"
@@ -7294,7 +7294,7 @@ function scrWeapons() {
 	wep_name[651] = "GOLDEN LANCE"
 	wep_type[651] = 0
 	wep_auto[651] = 0
-	wep_load[651] = 16
+	wep_load[651] = 15
 	wep_cost[651] = 0
 	wep_sprt[651] = sprGoldenLance
 	wep_area[651] = 19
@@ -8301,7 +8301,7 @@ function scrWeapons() {
 	wep_name[741] = "PAPER CRAFT GUN"
 	wep_type[741] = 3
 	wep_auto[741] = 0
-	wep_load[741] = 22
+	wep_load[741] = 20
 	wep_cost[741] = 2.5
 	wep_sprt[741] = sprPaperGun
 	wep_area[741] = 7

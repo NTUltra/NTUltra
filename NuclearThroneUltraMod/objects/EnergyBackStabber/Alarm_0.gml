@@ -17,7 +17,7 @@ if instance_exists(creator)
 	{
 		longarms = 0
 		longarms = (other.gotLongarms+other.bettermelee)*3
-		motion_add(aimDirection,3.5+longarms)
+		motion_add(aimDirection,3.75+longarms)
 		image_angle = direction
 		team = other.team
 	}
