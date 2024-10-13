@@ -66,4 +66,8 @@ with enemy
 		alarm[1] += t;
 	}
 }
+with RadChest
+{
+	raddrop -= 8;
+}
 alarm[0] = 120;

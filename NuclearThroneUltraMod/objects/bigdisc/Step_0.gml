@@ -20,6 +20,11 @@ if instance_exists(Player)
 		instance_create(x,y,DramaCamera);
 		active = true;
 	}
+	//Get close slow down for fairness
+	if dis < discSlowRange && speed >= maxSpeed - discSlowAmount
+	{
+		speed = maxSpeed - discSlowAmount;
+	}
 }
 if !firstEntry
 	speed = 0;

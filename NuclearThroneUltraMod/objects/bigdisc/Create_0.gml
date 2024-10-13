@@ -24,6 +24,8 @@ if loops < 1
 acc = 2;
 actTime = 30;
 rotation = 10;
+discSlowRange = 128;
+discSlowAmount = 1;
 image_angle = random(360);
 projectileSpeed = 3;
 if !(instance_exists(Player) && (Player.area == 6 || Player.area == 107))

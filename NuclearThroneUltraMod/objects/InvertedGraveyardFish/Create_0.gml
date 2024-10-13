@@ -23,3 +23,7 @@ dashDuration += 2;
 acc ++;
 maxSpeed ++;
 homeProjectileSpeed = 1.5;
+if instance_exists(PitNavigation) && loops < 1
+{
+	raddrop -= 30;
+}

@@ -862,7 +862,7 @@ function scrPopEnemies() {
 		        } else //a style
 		        {
 		            if random(5) < 1 {
-		                repeat(1 + random(1))
+		                //repeat(1 + random(1))
 		                instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireBat, InvertedLavaBallEnemy, 
 						InvertedLavaBallEnemy, BanditInverted, InvertedBanditSquare, InvertedFireWorm))
 		            }
@@ -874,7 +874,7 @@ function scrPopEnemies() {
 					}
 		        }
 			}
-			else
+			else if !instance_exists(PitNavigation) || random(5) < 3
 			{
 		        if styleb = 1 //b style
 		        {
@@ -890,7 +890,7 @@ function scrPopEnemies() {
 		        } else //a style
 		        {
 		            if random(5) < 1 {
-		                repeat(1+irandom(1))
+		                //repeat(1+irandom(1))
 		                    instance_create(x + 12 + random(8), y + 12 + random(8), choose(InvertedFireBat, InvertedLavaBallEnemy, InvertedLavaBallEnemy, InvertedFireWorm, InvertedFireBat, InvertedSalamander, BanditInverted, InvertedBanditSquare))
 		            }
 		            else if random(2) < 1
