@@ -33,8 +33,8 @@ else if target != noone && target>0 && instance_exists(target) && point_distance
 
     if (Player.reload>0)//my partner is shooting
     {
-    alarm[4]=10;
-    protect=4;
+		alarm[4]=10;
+		protect=4;
     }
 
 
@@ -42,34 +42,46 @@ else if target != noone && target>0 && instance_exists(target) && point_distance
 if speed > 4.5
 speed = 4.5
 
-if alarm[2]>0 &&reload<1 && target>0 && instance_exists(target)
+if alarm[2]>0 && reload < 1 && target>0 && instance_exists(target)
 {
 
-with target
-{
-	if place_meeting(x,y,PopoShield)
+	with target
 	{
-	with other
-	exit;
+		if place_meeting(x,y,PopoShield)
+		{
+			with other
+				exit;
+		}
+		else if (object_index=CrownGuardian && canfire!=0)
+		{
+			with other
+			exit;
+		}
 	}
-	else if (object_index=CrownGuardian && canfire!=0)
+	if !collision_line(x,y,target.x,target.y,BallBossShield,false,false)
 	{
-	with other
-	exit;
-	}
-	}
+		snd_play(sndPartnerFire,0.05,true);
+		gunangle = point_direction(x,y,target.x,target.y)
+		wkick = 4
 
-	snd_play(sndPartnerFire,0.05,true);
-	gunangle = point_direction(x,y,target.x,target.y)
-	wkick = 4
-
-	with instance_create(x,y,PartnerBullet)
-	{
-	motion_add(other.gunangle+(random(22)-11)*Player.accuracy,12)
-	image_angle = direction
-	team = other.team
+		with instance_create(x,y,PartnerBullet)
+		{
+		motion_add(other.gunangle+(random(22)-11)*Player.accuracy,12)
+		image_angle = direction
+		team = other.team
+		}
 	}
-	reload+=3;
+	reload += 3;
+	if shootTime == 0
+		reload = 2;
+	if shootTime == shootCooldown - 2
+		reload = 1;
+	shootTime += 1;
+	if shootTime > shootCooldown
+	{
+		shootTime = 0;
+		reload += 4;
+	}
 }
 if reload>0
 {

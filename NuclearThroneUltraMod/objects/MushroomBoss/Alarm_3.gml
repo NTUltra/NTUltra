@@ -1,6 +1,10 @@
 /// @description BIG SHIFT
 if mode == 0 && instance_exists(Player)
 {
+	with PortalEnviromentReplacer
+	{
+		instance_destroy();	
+	}
 	didTheThing += 1;
 	if !reachedHalfHealth && my_health < maxhealth*0.6
 	{
@@ -113,6 +117,31 @@ if mode == 0 && instance_exists(Player)
 	{
 		scrTeleportToFloor();
 	}
+	with enemy
+	{
+		if team != 2 && id != other.id
+		{
+			var msk = mask_index;
+			var d = point_direction(x,y,endX,endY);
+			var l = 128 + random(500);
+			x += lengthdir_x(l,d);
+			y += lengthdir_y(l,d);
+			scrTeleportToFloor();
+			mask_index = msk;
+		}
+	}
+	/*
+	with instance_place(x,y,BecomeMushroomBoss)
+	{
+		var msk = mask_index;
+		while place_meeting(x,y,other.id)
+		{
+			x += choose(300,-300);
+			y += choose(300,-300);
+		}
+		scrTeleportToFloor();
+		mask_index = msk;
+	}*/
 	alarm[6] = 1;
 	with instance_furthest(x,y,BecomeMushroomBoss)
 	{
@@ -122,6 +151,7 @@ if mode == 0 && instance_exists(Player)
 		y = other.yprevious;
 		scrForcePosition60fps();
 		mask_index = msk;
+		instance_create(x,y,WallBreakWallOnlyBigCircle);
 	}
 	with prop
 	{

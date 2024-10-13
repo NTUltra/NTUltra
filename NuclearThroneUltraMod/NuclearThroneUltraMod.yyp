@@ -1673,6 +1673,7 @@
     {"id":{"name":"MusCont","path":"objects/MusCont/MusCont.yy",},},
     {"id":{"name":"Mushroom","path":"objects/Mushroom/Mushroom.yy",},},
     {"id":{"name":"MushroomBoss","path":"objects/MushroomBoss/MushroomBoss.yy",},},
+    {"id":{"name":"MushroomBossShift","path":"objects/MushroomBossShift/MushroomBossShift.yy",},},
     {"id":{"name":"MushroomHeal","path":"objects/MushroomHeal/MushroomHeal.yy",},},
     {"id":{"name":"MushroomLandEntrance","path":"objects/MushroomLandEntrance/MushroomLandEntrance.yy",},},
     {"id":{"name":"MushroomLandEntranceLabs","path":"objects/MushroomLandEntranceLabs/MushroomLandEntranceLabs.yy",},},

@@ -1,4 +1,5 @@
 /// @description TP ENEMS
+exit;
 with enemy
 {
 	if id != other.id

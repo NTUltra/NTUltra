@@ -2,7 +2,6 @@ raddrop = 60;
 maxhealth = 1000
 mySize = 3
 event_inherited();
-immuneToTypeDamage = 0;
 isInverted = true;
 spr_idle_earth = sprInvertedBigMushroomEarthIdle;
 spr_walk_earth = sprInvertedBigMushroomEarthIdle;

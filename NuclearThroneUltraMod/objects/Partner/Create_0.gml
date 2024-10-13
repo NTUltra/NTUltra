@@ -25,6 +25,8 @@ alarm[1] = 10
 wkick = 0
 protect=0;
 Direction=random(360);
+shootCooldown = 16;
+shootTime = 0;
 xx=Player.x+lengthdir_x(irandom_range(6,16),Direction);
 yy=Player.y+lengthdir_y(irandom_range(6,16),Direction);
 

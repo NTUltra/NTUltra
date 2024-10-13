@@ -2951,7 +2951,7 @@ function scrWeapons() {
 	wep_name[263] = "ELECTRIC GUITAR"
 	wep_type[263] = 0
 	wep_auto[263] = 0
-	wep_load[263] = 15
+	wep_load[263] = 17
 	wep_cost[263] = 0
 	wep_sprt[263] = sprElectricGuitar
 	wep_area[263] = -1
@@ -3054,7 +3054,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 0
 	wep_auto[272] = 0
-	wep_load[272] = 40
+	wep_load[272] = 41
 	wep_cost[272] = 0
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 16
@@ -3088,7 +3088,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 0
 	wep_auto[275] = 0
-	wep_load[275] = 75
+	wep_load[275] = 76
 	wep_cost[275] = 0
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 19
@@ -5451,7 +5451,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 0
 	wep_auto[484] = 0
-	wep_load[484] = 20
+	wep_load[484] = 21
 	wep_cost[484] = 0
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 15
@@ -8003,7 +8003,7 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 0
 	wep_auto[714] = 0
-	wep_load[714] = 34
+	wep_load[714] = 36
 	wep_cost[714] = 0
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 16
@@ -9464,7 +9464,7 @@ function scrWeapons() {
 	wep_type[844] = 1
 	wep_auto[844] = 1
 	wep_load[844] = 3
-	wep_cost[844] = 6//14
+	wep_cost[844] = 5//14
 	wep_sprt[844] = sprSuperPlopMachinegun
 	wep_area[844] = 21
 	wep_text[844] = "7 PLOPS AT A TIME"

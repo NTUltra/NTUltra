@@ -1462,6 +1462,7 @@
     {"name":"MusCont","order":6,"path":"objects/MusCont/MusCont.yy",},
     {"name":"Mushroom","order":22,"path":"objects/Mushroom/Mushroom.yy",},
     {"name":"MushroomBoss","order":4,"path":"objects/MushroomBoss/MushroomBoss.yy",},
+    {"name":"MushroomBossShift","order":6,"path":"objects/MushroomBossShift/MushroomBossShift.yy",},
     {"name":"MushroomHeal","order":6,"path":"objects/MushroomHeal/MushroomHeal.yy",},
     {"name":"MushroomLandEntrance","order":36,"path":"objects/MushroomLandEntrance/MushroomLandEntrance.yy",},
     {"name":"MushroomLandEntranceLabs","order":37,"path":"objects/MushroomLandEntranceLabs/MushroomLandEntranceLabs.yy",},

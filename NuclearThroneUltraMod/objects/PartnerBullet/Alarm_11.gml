@@ -54,9 +54,9 @@ else if um == ultramods.bulletPlasma
 	with Player
 	{
 		if skill_got[17] = 1
-			snd_play_fire(sndPlasmaMinigunUpg)
+			snd_play(sndPlasmaMinigunUpg,0.02)
 		else
-			snd_play_fire(sndPlasmaMinigun)	
+			snd_play(sndPlasmaMinigun,0.02)	
 	}
 	with instance_create(x,y,MiniPlasmaBall)
 	{

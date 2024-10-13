@@ -8,7 +8,6 @@ if mode == 0
 	spr_hurt = spr_hurt_toxic;
 	spr_dead = spr_dead_toxic;
 	spr_fire = spr_fire_toxic;
-	immuneToTypeDamage = 1;
 	venomous = true;
 	meleedamage = 4;
 	forceAnimation = spr_idle;
@@ -25,7 +24,6 @@ else
 	spr_fire = spr_fire_earth;
 	venomous = false;
 	meleedamage = 0;
-	immuneToTypeDamage = 0;
 	forceAnimation = spr_idle;
 	event_user(14);
 }
