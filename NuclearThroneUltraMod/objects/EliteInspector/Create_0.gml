@@ -1,5 +1,5 @@
 raddrop = 0
-maxhealth = 38
+maxhealth = 40
 meleedamage = 0
 mySize = 1
 scrCrownOfPopoRad(6);
@@ -48,3 +48,15 @@ wepflip = 1
 dodge=0;
 canDodge = false;
 alarm[3] = 2;
+actTime = 10;
+loops = GetPlayerLoops();
+maxSpeed = 3;
+range = 70;
+tellTime = 8;
+if loops > 2
+{
+	actTime = 8;
+	maxSpeed = 3.2;
+	range += 16;
+	tellTime -= 1;
+}

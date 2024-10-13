@@ -44,12 +44,11 @@ if target==Player
     //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
     if random(3) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
     {
-    //FIRE
+		//FIRE
+		alarm[2]=3;
+		ammo = 4;
     
-    alarm[2]=3;
-    ammo=3;
-    
-    alarm[1] = 5+random(10)
+		alarm[1] = 5+random(10)
     }
     else if random(3)<1
     {
@@ -141,14 +140,12 @@ lasty = target.y
 
 if random(8) < 1 and freeze > 40
 {
-//FIRE
+	//FIRE
+	alarm[2] = 3;
+	ammo = 4;
 
 
-alarm[2]=2;
-ammo=3;
-
-
-alarm[1] = 10+random(15)
+	alarm[1] = 10+random(15)
 }
 else if random(4) < 1 and freeze > 40
     {

@@ -19,3 +19,6 @@ team = 2;
 atMax = false;
 duration = 50;
 alarm[1] = 1;
+alarm[2] = 10;
+hitRate = 2;
+alarm[3] = 10;

@@ -1509,8 +1509,7 @@ function scrFire3(hasTailNow){
 		}
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.5);
-			motion_add(aimDirection+180,2)
+			motion_add(aimDirection+180,2.5)
 		}
 		BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
@@ -1742,8 +1741,7 @@ function scrFire3(hasTailNow){
 		}
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.75);
-			motion_add(aimDirection+180,2)
+			motion_add(aimDirection+180,2.5)
 		}
 		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
@@ -1814,7 +1812,6 @@ function scrFire3(hasTailNow){
 		}
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.5);
 			motion_add(aimDirection+180,2)
 		}
 		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake

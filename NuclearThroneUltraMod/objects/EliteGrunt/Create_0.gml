@@ -27,11 +27,15 @@ alarm[1] = 10+random(15)
 wkick = 0
 roll = 1
 
-ammo=3;
+ammo = 4;
 rolltime=15+random(40);
 freeze = 0
 wasBehindWall = false;
 scrTarget();
+projectileSpeed = 7.8;
+loops = GetPlayerLoops();
+if loops > 2
+	projectileSpeed = 8;
 if target != noone && instance_exists(target)
 {
 lastx = target.x

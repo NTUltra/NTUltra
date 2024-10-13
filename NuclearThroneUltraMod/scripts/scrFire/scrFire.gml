@@ -1069,8 +1069,7 @@ function scrFire(canDrown = true) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.7);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake

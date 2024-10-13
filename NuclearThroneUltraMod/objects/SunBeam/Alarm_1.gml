@@ -11,4 +11,4 @@ for (var i = 0; i < al; i++)
 		}
 	}
 }
-alarm[1] = 1;
+alarm[1] = hitRate;

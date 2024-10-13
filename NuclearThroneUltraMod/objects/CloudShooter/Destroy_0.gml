@@ -12,7 +12,7 @@ if !sleeping
 var dir = random(360);
 repeat(6)
 {
-	with instance_create(x,y,AcidStreak)
+	with instance_create(xprevious,yprevious,AcidStreak)
 	{
 		motion_add(dir,12)
 		image_angle = direction

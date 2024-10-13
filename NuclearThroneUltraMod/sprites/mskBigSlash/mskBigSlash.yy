@@ -13,7 +13,7 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"21d904d3-eb3f-4c24-b09a-4262e4383b85","name":"21d904d3-eb3f-4c24-b09a-4262e4383b85","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"900fcde8-4d69-4214-b32b-3fcd43171c0f","name":"900fcde8-4d69-4214-b32b-3fcd43171c0f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"27a697f9-bf5c-4a6a-8d4a-fcdc940627ed","name":"27a697f9-bf5c-4a6a-8d4a-fcdc940627ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"19728b9c-0d5a-40ff-81a6-9530e53fad6d","name":"19728b9c-0d5a-40ff-81a6-9530e53fad6d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -93,8 +93,8 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"21d904d3-eb3f-4c24-b09a-4262e4383b85","path":"sprites/mskBigSlash/mskBigSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9aad2a28-3917-4634-bd6d-bc6ef953673b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"900fcde8-4d69-4214-b32b-3fcd43171c0f","path":"sprites/mskBigSlash/mskBigSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9af9d472-bf42-4c3d-ba4c-eb7761349688","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"27a697f9-bf5c-4a6a-8d4a-fcdc940627ed","path":"sprites/mskBigSlash/mskBigSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8e3024eb-251a-4820-b205-98a7b5d91a94","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"19728b9c-0d5a-40ff-81a6-9530e53fad6d","path":"sprites/mskBigSlash/mskBigSlash.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"70bb767e-0f8d-42e5-96f2-1d0479e839e7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

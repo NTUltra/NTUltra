@@ -1,4 +1,4 @@
-alarm[1] = 12+random(5)
+alarm[1] = actTime+random(5)
 Shielding=false;
 
 if team=2
@@ -28,7 +28,7 @@ if random(2) < 1 and freeze > 40
 {
 //FIRE
 alarm[2] = 4
-ammo = 6+irandom(2)
+ammo = maxAmmo+irandom(2)
 
 alarm[1] = 32
 }

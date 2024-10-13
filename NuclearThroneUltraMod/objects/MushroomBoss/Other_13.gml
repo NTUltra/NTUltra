@@ -1,7 +1,7 @@
 /// @description BIG EARTHQUACKE SHIFT!
 if mode == 0
 {
-	if instance_exists(Player)
+	if instance_exists(Player) && !place_meeting(x,y,Tangle)
 	{
 		forceAnimation = spr_shrink;
 		event_user(14);

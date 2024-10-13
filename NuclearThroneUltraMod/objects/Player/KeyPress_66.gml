@@ -6,6 +6,7 @@ audio_stop_sound(sndVenuz)
 snd_play(sndVenuz)
 
 }
+/*
 if area < 100
 {
 	//TOREMOVE
@@ -33,6 +34,7 @@ if area < 100
 	loops = 2;
 	with instance_create(x, y, Portal) type = 1
 }
+*/
 //wepmod2++;
 
 //automatic screenshot taking

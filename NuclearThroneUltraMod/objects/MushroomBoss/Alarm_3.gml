@@ -14,6 +14,10 @@ if mode == 0 && instance_exists(Player)
 	snd_play_2d(sndMushroomAreaShift);
 	var tx = round(Player.x/32)*32;
 	var ty = round(Player.y/32)*32;
+	with Tangle
+	{
+		instance_destroy();	
+	}
 	with FX
 	{
 		instance_destroy(id,false);	

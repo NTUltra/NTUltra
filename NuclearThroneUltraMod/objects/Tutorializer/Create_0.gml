@@ -14,3 +14,7 @@ tutorial = [
 	["MOST <w>AREAS<w> WILL HAVE A CHANCE#TO SPAWN <aq>INVERTED PORTALS<aq>",170],
 	["",15],
 ]
+with IDPDSpawn
+{
+	instance_destroy(id,false);	
+}

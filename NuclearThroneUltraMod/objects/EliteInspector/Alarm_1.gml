@@ -1,4 +1,4 @@
-alarm[1] = 10+random(10)//20 20
+alarm[1] = actTime+random(actTime)//20 20
 canDodge = true;
 if random(3)<1
 control = 0
@@ -40,15 +40,15 @@ if wasBehindWall
 	exit;
 }
 //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-if random(2) < 1 and freeze > 40 and point_distance(x,y,target.x,target.y) < 70
+if random(2) < 1 and freeze > 40 and point_distance(x,y,target.x,target.y) < range
 {
 ///SLASH
 instance_create(x-5,y,Notice);
 instance_create(x,y,Notice);
 instance_create(x+5,y,Notice);
 snd_play(sndEliteInspectorAlarmed);
-alarm[2] = 8;
-alarm[1] = 20+random(10)
+alarm[2] = tellTime;
+alarm[1] = actTime*2+random(actTime)
 walk+=10;
 direction = point_direction(x,y,target.x,target.y);
 }

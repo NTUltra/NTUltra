@@ -521,8 +521,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -999,8 +998,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.7);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -1519,8 +1517,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.25);
-		motion_add(aimDirection+180,0.25)
+		motion_add(aimDirection+180,0.5)
 	}
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(26)-13)*other.accuracy
@@ -2048,8 +2045,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.6);
-		motion_add(aimDirection+180,1)
+		motion_add(aimDirection+180,1.2)
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
@@ -4498,8 +4494,7 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.6);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -4531,8 +4526,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -5917,8 +5911,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.7);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
@@ -5942,8 +5935,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.6);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
@@ -6571,8 +6563,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.7);
-		motion_add(aimDirection+180,0.8)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(3,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(3,aimDirection+180)*UberCont.opt_shake
@@ -7678,8 +7669,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
@@ -8771,8 +8761,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.4);
-		motion_add(aimDirection+180,0.6)
+		motion_add(aimDirection+180,0.8)
 	}
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
@@ -10008,8 +9997,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.3);
-		motion_add(aimDirection+180,0.3)
+		motion_add(aimDirection+180,0.6)
 	}
 	BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
@@ -10834,8 +10822,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.8);
-		motion_add(aimDirection+180,0.6)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
@@ -11273,8 +11260,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.4);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,0.8)
 	}
 	BackCont.viewx2 += lengthdir_x(6.5,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6.5,aimDirection+180)*UberCont.opt_shake
@@ -12050,6 +12036,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(5+((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 	{
+		sprite_index = sprShotgunLanceSlash;
 	longarms = 0
 	dmg = 10;
 	
@@ -12444,8 +12431,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndTripleMachinegun)
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.6);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	repeat(5)
 	{
@@ -13156,7 +13142,7 @@ function scrFire2(hasTailNow) {
 	var aimDir = aimDirection+180;
 	with instance_create(x,y,BouncerBoltBurst)
 	{
-		accuracy = 30*other.accuracy;
+		accuracy = 40*other.accuracy;
 		mox=UberCont.mouse__x;
 		moy=UberCont.mouse__y;
 		creator = other.id
@@ -16710,8 +16696,7 @@ function scrFire2(hasTailNow) {
 	
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.25);
-		motion_add(aimDirection+180,0.25)
+		motion_add(aimDirection+180,0.5)
 	}
 	
 	break;
@@ -16759,8 +16744,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.3);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,0.7)
 	}
 
 	break;
@@ -16827,8 +16811,7 @@ function scrFire2(hasTailNow) {
 	
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.2);
-		motion_add(aimDirection+180,0.4)
+		motion_add(aimDirection+180,0.6)
 	}
 
 	break;
@@ -16945,8 +16928,7 @@ function scrFire2(hasTailNow) {
 
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.2);
-		motion_add(aimDirection+180,0.4)
+		motion_add(aimDirection+180,0.6)
 	}
 	
 	snd_play_fire(sndCuber);
@@ -17222,8 +17204,7 @@ function scrFire2(hasTailNow) {
 	
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.25);
-		motion_add(aimDirection+180,0.25)
+		motion_add(aimDirection+180,0.5)
 	}
 	
 	BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
@@ -17276,8 +17257,7 @@ function scrFire2(hasTailNow) {
 	event_perform(ev_alarm,0)}
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(2,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(2,aimDirection+180)*UberCont.opt_shake

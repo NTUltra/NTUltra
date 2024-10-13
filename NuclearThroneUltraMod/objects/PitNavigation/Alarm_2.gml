@@ -6,7 +6,10 @@ if !instance_exists(Player)
 }
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
-
+with Tangle
+{
+	instance_destroy();	
+}
 with TrapScorchMark
 {
 	instance_destroy();	

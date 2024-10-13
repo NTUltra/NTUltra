@@ -21,6 +21,7 @@ if ammo>0
 
 
 	alarm[2] = 4
+	alarm[1] += 1;
 	ammo -= 1
 }
 

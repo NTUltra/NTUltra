@@ -1,5 +1,5 @@
 raddrop = 0
-maxhealth = 95
+maxhealth = 100;
 meleedamage = 0
 mySize = 1
 scrCrownOfPopoRad(8);
@@ -34,3 +34,11 @@ xx=x;
 yy=y;
 freeze = 20
 
+actTime = 12;
+loops = GetPlayerLoops();
+maxAmmo = 6;
+if loops > 2
+{
+	actTime = 10;
+	maxAmmo += 2;
+}

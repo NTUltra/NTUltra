@@ -30,8 +30,7 @@ with creator
 {
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection + 180,0.5);
-		motion_add(aimDirection+180,0.5)
+		motion_add(aimDirection+180,1)
 	}
 	wkick = 8
 }

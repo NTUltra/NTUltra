@@ -5,8 +5,15 @@ if loops < 1
 else
 	maxhealth = 400;
 	
-if instance_exists(Player) && Player.area == 140 && loops < 1
-	maxhealth -= 70;
+if instance_exists(Player)
+{
+	if Player.area == 140 && loops < 1
+		maxhealth -= 75;
+	else if Player.area == 137
+	{
+		maxhealth += 100;	
+	}
+}
 meleedamage = 0
 mySize = 2
 

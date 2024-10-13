@@ -60,8 +60,8 @@ gunangle = direction
 
 
 
-if speed > 3 && my_health > 0
-speed = 3
+if speed > maxSpeed && my_health > 0
+speed = maxSpeed
 
 if instance_exists(Player)
 {

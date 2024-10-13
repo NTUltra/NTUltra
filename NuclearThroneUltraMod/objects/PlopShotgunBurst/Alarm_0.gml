@@ -34,8 +34,7 @@ if instance_exists(creator)
 		}
 		if object_index != Player || !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,0.6);
-			motion_add(aimDirection+180,0.6)
+			motion_add(aimDirection+180,1.2)
 		}	
 		wkick = 8
 	}

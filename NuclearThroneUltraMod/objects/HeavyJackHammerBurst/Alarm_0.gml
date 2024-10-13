@@ -29,8 +29,7 @@ if instance_exists(creator)
 		if !skill_got[2]
 		{
 			var a = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + 180;
-			scrMoveContactSolid(a,0.1);
-			motion_add(a,0.1)
+			motion_add(a,0.15)
 		}	
 	}
 }

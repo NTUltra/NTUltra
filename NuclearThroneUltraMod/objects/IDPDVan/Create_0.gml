@@ -29,6 +29,10 @@ acc = 9 + min(8,loops);
 maxSpeed = 12 + min (4, loops - 1);
 dropFreaks = false;
 myMovementDirection = 0;
+if loops > 2
+{
+	alarm[2] = 2;	
+}
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical
 {

@@ -5,46 +5,43 @@ if firstTime
 	instance_create(x,y,DramaCamera);
 }
 alarm[1] = actTime + random(actTime)
-if !spawnedDuplicate && my_health < maxhealth * 0.5
+if !spawnedDuplicate && my_health < maxhealth * 0.6
 {
-	if instance_exists(Player) && Player.area != 139
+	spawnedDuplicate = true;
+	actTime *= 1.5;
+	var tx = x;
+	var ty = y;
+	if instance_exists(MimicBossPlateau)
 	{
-		spawnedDuplicate = true;
-		actTime *= 1.5;
-		if instance_exists(MimicBossPlateau)
+		tx = MimicBossPlateau.x;
+		ty = MimicBossPlateau.y;
+	}
+	myMimicFriend = instance_create(tx,ty,MimicBoss)
+	with myMimicFriend {
+		with instance_create_depth(x,y,depth - 1,AnimDestroyTop)
 		{
-			with MimicBossPlateau
-				myMimicFriend = instance_create(x,y,MimicBoss)
-				with myMimicFriend {
-					myMimicFriend = other.id;
-					BackCont.shake += 20;
-					if instance_exists(Player)
-					{
-						var d = point_direction(Player.x,Player.y,x,y);
-						BackCont.viewx2 += lengthdir_x(50,d)*UberCont.opt_shake
-						BackCont.viewy2 += lengthdir_y(50,d)*UberCont.opt_shake
-					}
-					snd_play(sndExplosionS);
-					my_health *= 0.5;
-					prevhealth = my_health;
-					actTime *= 1.5;
-					targetSecondary = true;
-					spawnedDuplicate = true;
-					firstTime = false;
-					alarm[1] += 15;
-				}
+			sprite_index = sprMimicSpawn;
+			image_speed = 0.6;
 		}
-		else
+		myMimicFriend = other.id;
+		BackCont.shake += 20;
+		if instance_exists(Player)
 		{
-			with instance_create(x,y,MimicBoss)
-			{
-				my_health *= 0.5;
-				prevhealth = my_health;
-				actTime *= 1.5;
-				targetSecondary = true;
-				spawnedDuplicate = true;
-				firstTime = false;
-			}
+			var d = point_direction(Player.x,Player.y,x,y);
+			BackCont.viewx2 += lengthdir_x(50,d)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(50,d)*UberCont.opt_shake
+		}
+		snd_play(sndExplosionS);
+		my_health *= 0.5;
+		prevhealth = my_health;
+		actTime *= 1.5;
+		targetSecondary = true;
+		spawnedDuplicate = true;
+		firstTime = false;
+		alarm[1] += 18;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] += 30;
+			scrGiveSnooze();
 		}
 	}
 }

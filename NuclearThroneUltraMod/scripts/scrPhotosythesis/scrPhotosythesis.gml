@@ -25,7 +25,7 @@ function scrPhotosythesis(healAmount){
 					duration += duration * scaling;
 					duration = min(duration,120);
 					dmg += scaling * 0.5;
-					dmg = min(dmg,4);
+					dmg = min(dmg,3);
 					targetLightWidth = targetRadius * 0.75;
 					targetLightWidthTop = targetRadius * 0.75;
 				}
