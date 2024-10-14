@@ -91,13 +91,13 @@ if target != noone && alarm[6] < 1 && alarm[7] < 1 {
 					}
 				}
 				
-				var maxfish = 2
+				var maxfish = 3
 				if (inverted)
 					maxfish += 4;
 					
 				maxfish += loops*5
 				
-		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) && currentFish < currentShoot{
+		        if fish < maxfish && (point_distance(x, y, Player.x, Player.y) > 60) && currentShoot < maxShoot {
 		            image_index = 0
 		            sprite_index = spr_startfire
 		            alarm[3] = actTime;

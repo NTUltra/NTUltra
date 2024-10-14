@@ -4684,10 +4684,10 @@ function scrWeapons() {
 	wep_name[415] = "BLOOD BUBBLER"
 	wep_type[415] = 4
 	wep_auto[415] = 0
-	wep_load[415] = 14
+	wep_load[415] = 15
 	wep_cost[415] = 2
 	wep_sprt[415] = sprBloodBubbler
-	wep_area[415] = 8
+	wep_area[415] = 9
 	wep_text[415] = "boiling blood"
 	wep_swap[415] = sndSwapExplosive
 	wep_rad[415] = 0;
@@ -9267,7 +9267,7 @@ function scrWeapons() {
 	wep_name[827] = "THUNDER STRIKE"
 	wep_type[827] = 5
 	wep_auto[827] = 1
-	wep_load[827] = 47
+	wep_load[827] = 48
 	wep_cost[827] = 5
 	wep_sprt[827] = sprThunderStrike
 	wep_area[827] = 2
@@ -9800,6 +9800,41 @@ function scrWeapons() {
 	wep_swap[873] = sndSwapHammer
 	wep_rad[873] = 0;
 	wep_popup[873] = "CAN STEAL AMMO";
+	
+	wep_name[874] = "BUBBLE GUN"
+	wep_type[874] = 4
+	wep_auto[874] = 1
+	wep_load[874] = 18
+	wep_cost[874] = 1
+	wep_sprt[874] = sprTorpedoLauncher
+	wep_area[874] = 3
+	wep_text[874] = "BUBBLEGUM"
+	wep_swap[874] = sndSwapPistol
+	wep_rad[874] = 0;
+	
+	wep_name[875] = "RED BUBBLE GUN"
+	wep_type[875] = 4
+	wep_auto[875] = 1
+	wep_load[875] = 17
+	wep_cost[875] = 1
+	wep_sprt[875] = sprTorpedoLauncher
+	wep_area[875] = 4
+	wep_text[875] = "tastes like blood?"
+	wep_swap[875] = sndSwapPistol
+	wep_rad[875] = 0;
+	
+	wep_name[876] = "BOLT CUTTER"
+	wep_type[876] = 0
+	wep_auto[876] = 0
+	wep_load[876] = 26
+	wep_cost[876] = 0
+	wep_sprt[876] = sprBoltCutter
+	wep_area[876] = 4
+	wep_text[876] = "deals more damage at the snap!"
+	wep_swap[876] = sndSwapSword
+	wep_rad[876] = 0;
+	wep_popup[876] = "DEALS MORE DAMAGE AT THE CUT";
+
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

@@ -6,7 +6,7 @@ if instance_exists(GenCont) || instance_exists(SpiralCont)// || instance_exists(
 else
 {
 	var msk = mask_index;
-	mask_index = sprGhostTeleport;
+	mask_index = mskPitEnteranceWallHug;
 	if !place_meeting(x,y,Wall)
 	{
 		var dis = point_distance(x,y,xstart,ystart);

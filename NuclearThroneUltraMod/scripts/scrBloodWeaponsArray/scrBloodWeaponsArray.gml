@@ -15,7 +15,7 @@ function scrBloodWeaponsArray(loops, meleesOnly = false){
 		612, 499, 626, 643, 644,
 		645 ,658, 717, 718, 413, 274, 304, 313,
 		774, 749, 763, 774, 775, 776, 777, 778,
-		808,831];
+		808,831,875];
 	}
 	if meleesOnly
 		return [109, 548];
@@ -26,5 +26,5 @@ function scrBloodWeaponsArray(loops, meleesOnly = false){
 		548, 548,
 		612, 626, 643, 644,
 		645, 717, 718, 274,
-		763,831];
+		763,831,875];
 }

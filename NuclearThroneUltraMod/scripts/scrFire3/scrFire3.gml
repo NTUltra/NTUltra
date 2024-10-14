@@ -2670,5 +2670,130 @@ function scrFire3(hasTailNow){
 		wkick = -8
 
 		break;
+		
+		//BUBBLE GUN
+		case 874:
+			snd_play(sndClusterLauncher);
+			BackCont.shake += 5;
+			snd_play(choose(sndWater1,sndWater2),0.1,true);
+			var ang = random(360);
+			repeat(5)
+			{
+				with instance_create(x,y,Dust)
+				{
+					sprite_index = sprBubble;
+					motion_add(ang,2);
+					motion_add(aimDirection,2);
+				}
+				ang += 72;
+			}
+			var len = 40;
+			var aimDir = aimDirection + (random_range(12,-12)*accuracy);
+			var xx = x + lengthdir_x(len,aimDir);
+			var yy = y + lengthdir_y(len,aimDir);
+			with instance_create(xx,yy,BigBubble)
+			{
+				motion_add(aimDir,7);
+				var ang = random(360);
+				image_angle = direction;
+				repeat(6)
+				{
+					with instance_create(x,y,Dust)
+					{
+						image_xscale += 0.5;
+						image_yscale += 0.5;
+						sprite_index = sprBubble;
+						direction = other.direction;
+						speed = other.speed;
+						motion_add(ang,4);
+					}
+					ang += 60;
+				}
+			}
+			BackCont.viewx2 += lengthdir_x(15,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(15,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 4
+			wkick = 4
+
+		break;
+		
+		//RED BUBBLE GUN
+		case 875:
+			snd_play(sndBloodLauncher);
+			BackCont.shake += 5;
+			snd_play(choose(sndWater1,sndWater2),0.1,true);
+			var ang = random(360);
+			repeat(5)
+			{
+				with instance_create(x,y,Dust)
+				{
+					sprite_index = sprRedBubble;
+					motion_add(ang,2);
+					motion_add(aimDirection,3);
+				}
+				ang += 72;
+			}
+			with instance_create(x,y,BloodStreak)
+			{
+				motion_add(aimDirection,7)
+				image_angle = direction;
+			}
+			var len = 24;
+			var aimDir = aimDirection + (random_range(12,-12)*accuracy);
+			var xx = x + lengthdir_x(len,aimDir);
+			var yy = y + lengthdir_y(len,aimDir);
+			with instance_create(xx,yy,BigBloodBubble)
+			{
+				motion_add(aimDir,9);
+				image_angle = direction;
+				var ang = random(360);
+				repeat(6)
+				{
+					with instance_create(x,y,Dust)
+					{
+						image_xscale += 0.5;
+						image_yscale += 0.5;
+						sprite_index = sprRedBubble;
+						direction = other.direction;
+						speed = other.speed;
+						motion_add(ang,4);
+					}
+					ang += 60;
+				}
+			}
+			BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 4
+			wkick = 4
+
+		break;
+		
+		//BOLT CUTTER
+		case 876:
+
+		snd_play_fire(sndBoltCutter)
+
+		instance_create(x,y,Dust)
+		wep_sprt[876] = sprBoltCutterCutting;
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BoltCutterShank)
+		{
+			owner = other.id;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,8)
+		}
+		BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = -10
+
+		break;
 	}
 }
