@@ -9,6 +9,12 @@ if currentArea == 107
 	scrSpawnBoss(InvertedBigDisc);
 	if (loops > 5)
 		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((loops-4)*0.25),1,2));
+	
+	if (instance_exists(Player) && (Player.skill_got[18] || Player.skeletonlives > 0))
+	{
+		with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
+			instance_create(x+16,y+16,JungleFrozenPlant)
+	}
 }
 else if currentArea == 106 && !instance_exists(WantBoss)
 {

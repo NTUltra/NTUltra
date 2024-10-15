@@ -3,10 +3,10 @@
   "%Name":"JungleFrozenPlant",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"prop","path":"objects/prop/prop.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"JungleFrozenPlant",
@@ -16,8 +16,8 @@
     "path":"folders/Objects/props.yy",
   },
   "parentObjectId":{
-    "name":"prop",
-    "path":"objects/prop/prop.yy",
+    "name":"InteractableProp",
+    "path":"objects/InteractableProp/InteractableProp.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -40,6 +40,9 @@
     "name":"sprIceFlowerIdle",
     "path":"sprites/sprIceFlowerIdle/sprIceFlowerIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBandit",
+    "path":"sprites/mskBandit/mskBandit.yy",
+  },
   "visible":true,
 }

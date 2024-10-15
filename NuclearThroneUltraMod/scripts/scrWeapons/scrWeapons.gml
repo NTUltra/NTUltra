@@ -8860,7 +8860,7 @@ function scrWeapons() {
 	wep_name[791] = "RAPIER"
 	wep_type[791] = 0
 	wep_auto[791] = 0
-	wep_load[791] = 13
+	wep_load[791] = 12
 	wep_cost[791] = 0
 	wep_sprt[791] = sprRapier
 	wep_area[791] = 8

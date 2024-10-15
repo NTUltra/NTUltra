@@ -617,7 +617,25 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		enem = ScrapBoss;
 		sBuff = 1.2;	
 	}
-	
+	else if area == 138 //Sky
+	{
+		if subarea == 1
+		{
+			enem = CloudShooter;
+		}
+		else if subarea == 2
+		{
+			enem = CloudFlyer;
+		}
+	}
+	else if area == 139 //The Pit
+	{
+		enem = PitGhostSpawner;
+	}
+	else if area == 140 //Inv Sky
+	{
+		enem = InvertedCloudShooter;
+	}
 	if enem != noone
 		scrSpawnBoss(enem);
 	with enemy

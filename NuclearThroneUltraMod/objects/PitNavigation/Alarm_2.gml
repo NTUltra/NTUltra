@@ -4,6 +4,7 @@ if !instance_exists(Player)
 	alarm[2] = 5;
 	exit;
 }
+SetSeed();
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
 with Tangle
@@ -122,6 +123,8 @@ with Pickup
 }
 BackCont.shake += 100;
 scrPopulate();
+if scrIsGamemode(40)
+	scrPopEnemies1vs1(Player.area, Player.subarea, Player.loops);
 with Bones
 {
 	depth = y*-1;

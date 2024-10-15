@@ -1781,7 +1781,7 @@ function scrDrawHUD() {
 		{
 			if isInteractableNow
 			{
-				if (instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer))
+				if (name == "DEFEAT BOSS FIRST" || instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer))
 				{
 					var txt = "DEFEAT BOSS FIRST";
 					draw_set_color(c_black)
@@ -2288,24 +2288,6 @@ function scrDrawHUD() {
 				draw_set_color(c_white)
 				draw_text(x-ox,y-oy-43,string_hash_to_newline(string(name)))
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
-		with JungleFrozenPlant
-		{
-			if place_meeting(x,y,Player)
-			{
-				var txt = name;
-				if instance_exists(WantBoss) || instance_exists(JungleBoss) || instance_exists(BecomeJungleBoss) || instance_exists(LilHunter) || instance_exists(LilHunterFly) || instance_exists(InvertedLilHunter) || instance_exists(InvertedLilHunterFly)
-					txt = "DEFEAT BOSS FIRST";
-				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-				draw_set_color(c_black)
-				draw_text(x-ox,y-oy-30,string_hash_to_newline(string(txt)))
-				draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(txt)))
-				draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(txt)))
-				draw_set_color(c_white)
-				draw_text(x-ox,y-oy-31,string_hash_to_newline(string(txt)))
-			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
 		with UltraChest

@@ -34,11 +34,15 @@ if (instance_exists(Player))
 	{
 		bloodNeeded = 3;
 	}
+	bloodNeeded = min(bloodNeeded,Player.maxhealth);
+	if bloodNeeded == 1
+		bloodNeeded = 0;
 	if scrIsGamemode(32) || UberCont.voidChallengeGoing[5] || Player.ultra_got[109]
 	{
 		bloodNeeded = 0;	
 	}
 }
+constantName = name;
 instance_create(x,y,WallBreak);
 alarm[0] = 300;
 used = false;
