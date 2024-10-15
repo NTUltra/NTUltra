@@ -7,7 +7,7 @@ if speed > 3
 		sprite_index = sprIDPDSquareBullet;
 		onlyHitPlayerTeam = true;
 		image_index = 0;
-		motion_add(4,other.direction + 110);
+		motion_add(other.direction + 110,4);
 		image_angle = direction
 		team = other.team
 		if other.dropFreaks
@@ -18,7 +18,7 @@ if speed > 3
 		sprite_index = sprIDPDSquareBullet;
 		onlyHitPlayerTeam = true;
 		image_index = 0;
-		motion_add(4,other.direction - 110);
+		motion_add(other.direction - 110,4);
 		image_angle = direction
 		team = other.team
 		if other.dropFreaks

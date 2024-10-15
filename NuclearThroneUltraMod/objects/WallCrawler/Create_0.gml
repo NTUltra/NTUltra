@@ -34,6 +34,23 @@ maxSpeed = 3.8;
 myWall = noone;
 firstHit = false;
 range = 80;
+loops = GetPlayerLoops();
+if loops > 3
+{
+	range += 8;
+	actTime -= 1;
+}
+if loops > 4
+{
+	range += 8;
+	actTime -= 1;
+}
+if loops > 5
+{
+	range += 16;
+	actTime -= 2;
+	//Die already!
+}
 if instance_exists(Wall)
 {
 	var n = noone;

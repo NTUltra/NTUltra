@@ -1,4 +1,11 @@
 /// @description Additional area population
+if loops > 2
+{
+	with Player
+	{
+		instance_create(x,y,IDPDSpawn);	
+	}	
+}
 if currentArea == 107
 {
 	UberCont.hadBossIntro = false;
@@ -15,6 +22,10 @@ if currentArea == 107
 		with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
 			instance_create(x+16,y+16,JungleFrozenPlant)
 	}
+}
+else if currentArea == 111//Inv caves can have invasion
+{
+	scrDecideInvader();	
 }
 else if currentArea == 106 && !instance_exists(WantBoss)
 {

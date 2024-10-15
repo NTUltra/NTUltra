@@ -448,7 +448,11 @@ goal = 150 + s;
 else if Player.area == 140
 	goal = 200 + s;
 else if Player.area == 139//THE PIT
-goal = 200 + s;
+{
+	goal = 200;//DONT INCREASE EACH LOOP THIS IS ALREADY BIG
+	if Player.loops > 0
+		goal -= 10;
+}
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;

@@ -10,7 +10,9 @@ if instance_exists(Player) && alarm[1] < 1
 			if team != 2
 				numEn ++;
 		}
-		if numEn < 2 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+		if instance_exists(IDPDVan)
+			numEn -= instance_number(IDPDVan);
+		if numEn < enoughEnemies
 		{
 			alarm[1] = 60;
 		}

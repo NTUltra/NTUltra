@@ -11,7 +11,9 @@ function scrSpawnEndLevelPortal(){
 		if team != 2
 			numEn ++;
 	}
-	if numEn == 0 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+	if instance_exists(IDPDVan)
+		numEn -= instance_number(IDPDVan);
+	if numEn == 0// || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
 		if (!instance_exists(becomenemy) and 
 		!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))

@@ -278,6 +278,30 @@ function scrDecideInvader(){
 					fb = sprFloor102B;
 					fe = sprFloor102Explo;
 				break;
+				case 138://Cloudlands
+					array_push(spawns,InvertedCloudShooter, InvertedCloudKnifer, InvertedCloudFlyer, InvertedCloudShooter, InvertedCloudKnifer, InvertedCloudFlyer);
+					fa = sprFloor140;
+					fb = sprFloor140;
+					fe = sprFloor140Explo;
+				break
+				case 140://Inverted Cloudlands
+					array_push(spawns,CloudShooter, CloudKnifer, CloudFlyer, CloudShooter, CloudKnifer, CloudFlyer);
+					fa = sprFloor138;
+					fb = sprFloor138;
+					fe = sprFloor138Explo;
+				break
+				case 139://The Pit
+					array_push(spawns,CourtyardGuardian, CourtyardTank, Raven, Raven, CourtyardGuardian, CourtyardTank);
+					fa = sprFloor128;
+					fb = sprFloor128B;
+					fe = sprFloor128Explo;
+				break;
+				case 141://Inversion gauntlet
+					array_push(spawns,InvertedCourtyardGuardian, InvertedCourtyardTank, InvertedRaven, InvertedRaven, InvertedCourtyardGuardian, InvertedCourtyardTank);
+					fa = sprFloor129;
+					fb = sprFloor129B;
+					fe = sprFloor129Explo;
+				break;
 			}
 			
 			if array_length(spawns) > 0
@@ -310,14 +334,14 @@ function scrDecideInvader(){
 				else
 					scrSpawnInvaderBoss(1,InvertedBigBadBat,sprFloor111,sprFloor111,sprFloor111Explo);//EVEN
 					*/
-			}
+			}/*
 			else if (area == 117 || area == 124)//Mushroomland 4B -1
 			{
 				if (loops % 2 == 0)
 					scrSpawnInvaderBoss(clamp(loops - 3,1,2),BigDisc,sprFloor3,sprFloor3B,sprFloor3Explo);//ODD
 				else
 					scrSpawnInvaderBoss(clamp(loops - 3,1,2),InvertedBigDisc,sprFloor106,sprFloor106B,sprFloor106Explo);//EVEN
-			}
+			}*/
 			else if (area == 114 || area == 123) && subarea == 1//Jungle 5B - 1
 			{
 				if (loops % 2 == 0)
@@ -352,6 +376,13 @@ function scrDecideInvader(){
 					scrSpawnInvaderBoss(1,JungleBoss,sprFloor114,sprFloor114B,sprFloor114Explo);//EVEN
 				else
 					scrSpawnInvaderBoss(1,InvertedJungleBoss,sprFloor123,sprFloor123B,sprFloor123Explo);//EVEN
+			}
+			else if (area == 139)//THE PIT
+			{
+				if (loops % 2 == 0)
+					scrSpawnInvaderBoss(1,LilHunter,sprFloor5,sprFloor5B,sprFloor5Explo);//EVEN
+				else
+					scrSpawnInvaderBoss(1,InvertedLilHunter,sprFloor107,sprFloor107B,sprFloor107Explo);//EVEN
 			}
 			else if (area == 8 || area == 109) && subarea == 1//Wonderland 5C - 1
 			{

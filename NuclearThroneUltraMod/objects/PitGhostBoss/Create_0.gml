@@ -1,5 +1,8 @@
 raddrop = 40;
 maxhealth = 245
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 55;
 mySize = 3
 event_inherited()
 
@@ -40,7 +43,6 @@ if instance_exists(Player) && Player.skill_got[29] {
 	scrGiveSnooze();
 }
 maxAmmo = 3;
-loops = GetPlayerLoops();
 scrAddDrops(4);
 reachedHalfHealth = false;
 if loops < 1 && !scrIsHardMode()
