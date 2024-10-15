@@ -1,5 +1,11 @@
 ///@description AI
-alarm[1] = actTime;
+alarm[1] = max(24,actTime);
+if alarm[2] > 0
+{
+	alarm[1] = 1;
+	exit;
+}
+alarm[2] = alarm[1];
 scrTarget()
 if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 if target != noone && instance_exists(target) {

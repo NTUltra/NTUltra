@@ -5,3 +5,4 @@ alarm[0] = 55;
 alarm[1] = 4
 tx = x;
 ty = y;
+hasRevived = false;

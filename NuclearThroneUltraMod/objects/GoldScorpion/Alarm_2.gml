@@ -12,7 +12,7 @@ team = other.team
 }
 with instance_create(x,y,EnemyBullet2)
 {
-motion_add(other.gunangle+random(80)-40,1.8+random(0.5))
+motion_add(other.gunangle+random(80)-40,2+random(1))
 image_angle = direction
 team = other.team
 }

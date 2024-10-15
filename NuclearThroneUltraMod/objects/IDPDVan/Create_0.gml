@@ -29,9 +29,19 @@ acc = 9 + min(8,loops);
 maxSpeed = 12 + min (4, loops - 1);
 dropFreaks = false;
 myMovementDirection = 0;
+spamRate = 12;
+spamProjectileVelocity = 3;
 if loops > 2
 {
-	alarm[2] = 2;	
+	alarm[2] = 2;
+	spamRate -= min(loops,3);
+	spamProjectileVelocity += min(loops*0.25,5);
+	if loops > 9
+	{
+		spamRate = 2;
+		spamProjectileVelocity += 1;
+		//FKIN DIE!
+	}
 }
 /*
 if instance_exists(Player) && object_index != IDPDVanVertical

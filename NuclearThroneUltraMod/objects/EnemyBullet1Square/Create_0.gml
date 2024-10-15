@@ -10,3 +10,4 @@ depth = -2;
 alarm[3] = 240;
 blinkTime = 5;
 draw = true;
+addSpeed = 0;

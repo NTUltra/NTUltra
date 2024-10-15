@@ -17,3 +17,4 @@ alarm[3] = 15;
 lineScale = 1;
 isHost = true;
 speed = 0;
+scrInitDrops(1);

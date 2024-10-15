@@ -7,7 +7,7 @@ if target != noone
 	snd_play(sndSandWormCannonFire);
 	var ang = point_direction(x+(xOffset*image_xscale),y-yOffset,target.x,target.y);
 	with instance_create(x+(xOffset*image_xscale),y-yOffset, EnemyBullet2Cannon) {
-	    motion_add(ang, 5);
+	    motion_add(ang, 4.5);
 	    image_angle = direction;
 	    team = other.team;
 	}

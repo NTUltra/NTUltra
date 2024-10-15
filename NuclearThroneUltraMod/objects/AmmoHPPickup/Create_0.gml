@@ -19,8 +19,9 @@ else
 	speed = 2;
 }
 blink = 30
-alarm[0] = 200+random(30)
-
+alarm[0] = 220+random(30)
+if object_index == HPPickup
+	alarm[0] -= 30;
 atomUltraD = false;
 
 if scrIsGamemode(9) //CASUAL MODE
@@ -38,6 +39,8 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
+	if Player.skill_got[9]
+		alarm[0] += 50;
 	//RUSH CROWN
 	if scrIsCrown(4) { alarm[0] *= 0.4}
 
@@ -71,7 +74,7 @@ if instance_exists(Player){
 			speed *= 0.9
 		}
 	}
-	alarm[0] *= 1 - min(0.3,loops*0.1);
+	alarm[0] *= 1 - min(0.25,loops*0.125);
 	alarm[0] = max(alarm[0],1);
 }
 

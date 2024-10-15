@@ -177,12 +177,12 @@ function scrSkills() {
 
 	
 	skill_name[9] = "SECOND STOMACH"
-	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>"
+	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>#<w>HP DROPS<w> LAST <w>ALMOST 2 SECONDS<w> LONGER"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{
-		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>";
-		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS<r>OVERHEAL<r> <w>1<w>"
+		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>#<w>HP DROPS<w> LAST <w>ALMOST 2 SECONDS<w> LONGER"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand

@@ -15,7 +15,10 @@ if target != noone && instance_exists(target)
 {
 	far = point_distance(x,y,target.x,target.y) > 350;
 	if far
+	{
 		walk += 1;
+		fireRate = max(fireRate, minFireRate);
+	}
 	if random(3) < 1
 		gunangle = point_direction(x,y,target.x-(target.hspeed*0.25),target.y-(target.vspeed*0.25));
 	if target.x < x
@@ -46,7 +49,7 @@ if team == 2
 }
 else
 {
-	var range = max(1,23 - fireRate * 1.5);
+	var range = max(1,22 - fireRate * 1.5);
 	var ps = 7 - (fireRate*0.5)//4.9 start
 	if far ps -= 0.5;
 	with instance_create(x,y,PopoBouncerBullet){
@@ -71,7 +74,7 @@ if ammo < 1
 		{
 			alarm[2] = 0;
 			alarm[1] += actTime;
-			fireRate = minFireRate;
+			fireRate = minFireRate + 1;
 		}
 	}
 	else
@@ -85,7 +88,7 @@ else if collision_line(x,y,target.x,target.y,Wall,false,false)
 	alarm[1] += 1;
 	if fireRate < minFireRate
 	{
-		fireRate += 1;	
+		fireRate += 2;	
 	}
 	ammo -= 1;
 }
