@@ -2774,12 +2774,12 @@ function scrFire3(hasTailNow){
 		snd_play_fire(sndBoltCutter)
 
 		instance_create(x,y,Dust)
-		wep_sprt[876] = sprBoltCutterCutting;
-		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BoltCutterShank)
+		//wep_sprt[876] = sprBoltCutterCutting;
+		with instance_create(x+lengthdir_x((-3+(Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y((-3+(Player.skill_got[13]+bettermelee)*20),aimDirection),BoltCutterShank)
 		{
 			owner = other.id;
 			longarms = 0
-			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			longarms = (Player.skill_got[13]+other.bettermelee)*2
 			motion_add(aimDirection,2+longarms)
 			image_angle = direction
 			team = other.team
@@ -2792,7 +2792,7 @@ function scrFire3(hasTailNow){
 		BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 3
-		wkick = -10
+		wkick = -8
 
 		break;
 	}

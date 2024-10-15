@@ -1,20 +1,19 @@
 /// @description CUT
 with owner
 {
-	wkick -= 4;
-	wep_sprt[876] = sprBoltCutter;
+	wkick += 2;
 }
 BackCont.shake += 15;
 didCut = true;
 snd_play(sndBoltCutterCut,0.05);
-with instance_create(x,y,Shank)
+Sleep(20);
+with instance_create(x,y,BoltCutterCutShank)
 {
-	dmg = 14;
+	owner = other.owner;
+	dmg = 12;
 	direction = other.direction;
 	image_angle = other.image_angle;
 	speed = other.speed;
 	team = other.team;
 	scrCopyWeaponMod(other);
-	sprite_index = sprBoltCutterCut;
-	mask_index = mskBoltCutterCut;
 }

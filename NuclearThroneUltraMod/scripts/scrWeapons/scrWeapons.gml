@@ -9781,7 +9781,7 @@ function scrWeapons() {
 	wep_name[872] = "CROWBAR"
 	wep_type[872] = 0
 	wep_auto[872] = 0
-	wep_load[872] = 21
+	wep_load[872] = 22
 	wep_cost[872] = 0
 	wep_sprt[872] = sprCrowbar
 	wep_area[872] = 4
@@ -9806,7 +9806,7 @@ function scrWeapons() {
 	wep_auto[874] = 1
 	wep_load[874] = 18
 	wep_cost[874] = 1
-	wep_sprt[874] = sprTorpedoLauncher
+	wep_sprt[874] = sprBubbleGun
 	wep_area[874] = 3
 	wep_text[874] = "BUBBLEGUM"
 	wep_swap[874] = sndSwapPistol
@@ -9817,7 +9817,7 @@ function scrWeapons() {
 	wep_auto[875] = 1
 	wep_load[875] = 17
 	wep_cost[875] = 1
-	wep_sprt[875] = sprTorpedoLauncher
+	wep_sprt[875] = sprRedBubbleGun
 	wep_area[875] = 4
 	wep_text[875] = "tastes like blood?"
 	wep_swap[875] = sndSwapPistol
@@ -9826,7 +9826,7 @@ function scrWeapons() {
 	wep_name[876] = "BOLT CUTTER"
 	wep_type[876] = 0
 	wep_auto[876] = 0
-	wep_load[876] = 26
+	wep_load[876] = 27
 	wep_cost[876] = 0
 	wep_sprt[876] = sprBoltCutter
 	wep_area[876] = 4

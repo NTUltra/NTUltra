@@ -2,8 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-didCut = false;
-dmg = 9;
-alarm[2] = 6;
-alarm[4] = 3;
+dmg = 12;
 owner = noone;
+alarm[2] = 2;

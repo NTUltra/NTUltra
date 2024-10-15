@@ -1,14 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"BoltCutterShank",
+  "%Name":"BoltCutterCutShank",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"BoltCutterShank",
+  "name":"BoltCutterCutShank",
   "overriddenProperties":[],
   "parent":{
     "name":"Melee",
@@ -36,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBoltCutterShank",
-    "path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",
+    "name":"sprBoltCutterCut",
+    "path":"sprites/sprBoltCutterCut/sprBoltCutterCut.yy",
   },
   "spriteMaskId":{
-    "name":"mskBoltCutterShank",
-    "path":"sprites/mskBoltCutterShank/mskBoltCutterShank.yy",
+    "name":"mskBoltCutterCut",
+    "path":"sprites/mskBoltCutterCut/mskBoltCutterCut.yy",
   },
   "visible":true,
 }

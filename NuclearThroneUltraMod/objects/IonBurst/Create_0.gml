@@ -1,4 +1,5 @@
 event_inherited();
+depth = -11;
 dir=random(360);
 image_speed = 0.4;
 maxTime = 10;

@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 22;
+dmg = 21;
 walled = 0;
 minRange = 6;
 maxRange = 30;
