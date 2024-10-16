@@ -4,7 +4,6 @@
 event_inherited();
 spr_item = sprVoidItemBoltChest;
 name = "BOLT WEAPON CHEST";
-cost = 5;
 wep = [];
 //BOLT SPECIFIC
 scrWeapons();

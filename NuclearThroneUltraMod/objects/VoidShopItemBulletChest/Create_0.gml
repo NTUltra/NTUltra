@@ -4,7 +4,6 @@
 event_inherited();
 spr_item = sprVoidItemBulletChest;
 name = "BULLET WEAPON CHEST";
-cost = 5;
 spawnLocationY = y - 32;
 wep = [];
 scrWeapons();

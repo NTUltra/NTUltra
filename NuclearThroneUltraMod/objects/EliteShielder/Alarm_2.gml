@@ -2,9 +2,11 @@ if ammo>0
 {
 	if team == 2
 		scrRogueTarget();
+	var dis = 500;
 	if random(2)<1 && target != noone && instance_exists(target)
 	{
 		gunangle = point_direction(x,y,target.x,target.y);
+		dis = point_distance(x,y,target.x,target.y);
 	}
 
 	snd_play(sndEliteShielderFire)
@@ -19,8 +21,13 @@ if ammo>0
 		sprite_index = sprPlasmaBall;}
 
 
-
-	alarm[2] = 4
+	if team != 2 && dis > 400
+	{
+		alarm[2] = 8;
+		alarm[1] += 7;
+	}
+	else
+		alarm[2] = 4
 	alarm[1] += 1;
 	ammo -= 1
 }

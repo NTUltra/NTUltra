@@ -7,6 +7,7 @@ if target != noone && instance_exists(target)
 	var ty = target.y;
 	if mode == 1
 	{
+		snd_play(sndBigMushroomBossGrid,0.05);
 		var tt = target;
 		var walls = ds_list_create();
 		var al = collision_circle_list(tx,ty,96,WallHitMe,false,false,walls,false);
@@ -30,6 +31,7 @@ if target != noone && instance_exists(target)
 	}
 	else if mode == 0
 	{
+		snd_play(sndBigMushroomBossSummon,0.05);
 		var ang = target.direction
 		var angStep = 360/buddyAmount;
 		var vineDistance = 72;

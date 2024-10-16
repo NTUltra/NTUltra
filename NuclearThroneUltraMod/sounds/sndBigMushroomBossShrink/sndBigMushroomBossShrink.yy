@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndBigMushroomBossShrink",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.620187,
+  "name":"sndBigMushroomBossShrink",
+  "parent":{
+    "name":"BigMushroomBoss",
+    "path":"folders/Sounds/Enemies/Boss/BigMushroomBoss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndBigMushroomBossShrink.wav",
+  "type":0,
+  "volume":1.0,
+}

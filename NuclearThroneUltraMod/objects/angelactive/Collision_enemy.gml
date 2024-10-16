@@ -17,8 +17,6 @@ with other
 	}
 	if contactDmg > 0
 	{
-		if !audio_is_playing(snd_hurt)
-			snd_play(snd_hurt,0,false);
 		if my_health - contactDmg <= 0 
 		{
 			DealDamage(contactDmg, true);
@@ -32,6 +30,8 @@ with other
 				contactDmg *= 0.5;
 			DealDamage(contactDmg, true);
 		}
+		if sprite_index != spr_hurt
+			snd_play(snd_hurt,hurt_pitch_variation,true);
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),3)

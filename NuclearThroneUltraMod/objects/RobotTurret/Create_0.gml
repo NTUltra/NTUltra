@@ -57,7 +57,7 @@ cqueueshot = 0;
 
 bettermelee = 0;
 betterlaserbrain = 0;
-betterpluto = 39;
+betterpluto = 32;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;

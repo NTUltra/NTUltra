@@ -4,7 +4,7 @@ hasPluto = false;
 suckDirection = 0;
 suckOffset = 0;
 col = make_colour_rgb(190,255,8);
-defaultRange = 40;//38
+defaultRange = 46;//38
 if instance_exists(Player)
 {
 	if Player.skill_got[3]

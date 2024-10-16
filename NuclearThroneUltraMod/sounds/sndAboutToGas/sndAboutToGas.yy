@@ -12,8 +12,8 @@
   "duration":0.493401,
   "name":"sndAboutToGas",
   "parent":{
-    "name":"Weapons",
-    "path":"folders/Sounds/Weapons.yy",
+    "name":"BigMushroomBoss",
+    "path":"folders/Sounds/Enemies/Boss/BigMushroomBoss.yy",
   },
   "preload":true,
   "resourceType":"GMSound",

@@ -28,8 +28,8 @@ maxhealth = 180;
 
 if instance_exists(PitNavigation)
 {
-	actTime += 4;
-	smackdelayReduction -= 8;
+	actTime += 3;
+	smackdelayReduction -= 4;
 	raddrop -= 25;
 	smackRange -= 2;
 }

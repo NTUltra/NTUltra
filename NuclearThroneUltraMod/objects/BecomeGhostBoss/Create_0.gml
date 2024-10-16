@@ -2,5 +2,5 @@
 image_speed = 0.4;
 snd_play_2d(sndIncomingGhostBoss);
 BackCont.shake += 10;
-alarm[2] = 1;
-ammo = 4 + min(20,GetPlayerLoops() * 2);
+alarm[2] = 3;
+ammo = 8 + min(20,GetPlayerLoops() * 2);

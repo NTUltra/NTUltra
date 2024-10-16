@@ -1,9 +1,11 @@
-raddrop = 2
+maxhealth = 10;
 mySize = 1
+raddrop = 2
+event_inherited();
 target = -1
 right = choose(1,-1)
 image_speed = 0.4;
-snd_play(sndGhostFire,0.1,true);
+snd_play(sndGhostSpawn,0.1,true);
 ghostType = 0;
 //behavior
 walk = 0

@@ -475,12 +475,12 @@ function scrPopulate() {
 	    if Player.area = 1 and Player.subarea = 3 {
 			if scrIsHardMode()
 			{
-				repeat(clamp(Player.loops + 1,1,6) + 1)
+				repeat(clamp(Player.loops + 1,1,10) + 1)
 					instance_create(x, y, WantBoss)
 			}else
 			{
-	        repeat(clamp(Player.loops + 1,1,6))
-	        instance_create(x, y, WantBoss)
+				repeat(clamp(Player.loops + 1,1,10))
+				instance_create(x, y, WantBoss)
 			}
 	    }
 	

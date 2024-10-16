@@ -27,3 +27,6 @@ wkick = 0
 friction = 6;
 instance_create(x,y,WallBreakWallOnly);
 depth = -2;
+projectileSpeed = 1.8;
+loops = GetPlayerLoops();
+projectileSpeed += min(0.5,projectileSpeed * 0.1);

@@ -15,7 +15,7 @@ if target != noone {
 		speed *= 0.5;
 	}
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall && dis > 48 - loops && random(2) < 1 || loops > 4{
+        if !justAroundWall && dis > max(0,32 - loops) && random(2) < 1 || loops > 4{
 			alarm[2] = 12;
 			alarm[1] += 12 + actTime + 10;
 			if loops < 1
@@ -28,6 +28,8 @@ if target != noone {
 			instance_create(x+5,y,Notice);
         }
         else {
+			if justAroundWall
+				alarm[1] = actTime;
 			if target.object_index == Player && (Player.skill_got[8] || Player.race == 15)
 				direction = point_direction(x,y,target.x, target.y);
 			else
@@ -54,7 +56,7 @@ if target != noone {
 	        else if hspeed < 0
 				right = -1
 	    }
-		else if (dis > 48 && (dis < 176 || dis > 450)) && (instance_number(enemy) < 5 || random(10) < 1)
+		else if (dis > 48 && (dis < 176 || dis > 400)) && (instance_number(enemy) < 5 || random(10) < 1)
 		{
 			direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
 			if random(2) < 1

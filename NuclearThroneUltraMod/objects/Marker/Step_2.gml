@@ -10,7 +10,20 @@ if instance_exists(target)
 }
 else
 {
-	instance_destroy();
+	var n = instance_nearest(x,y,enemy);
+	var r = 48;
+	if instance_exists(Player) && Player.ultra_got[44]
+	{
+		r *= 2;	
+	}
+	if n != noone && instance_exists(n) && n.team != 2 && point_distance(x,y,n.x,n.y) < r
+	{
+		target = n;		
+	}
+	else
+	{
+		instance_destroy();
+	}
 }
 
 if !window_has_focus()

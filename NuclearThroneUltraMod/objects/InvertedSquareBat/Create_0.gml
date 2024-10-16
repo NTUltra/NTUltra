@@ -12,7 +12,7 @@ my_health = maxhealth;
 EnemyHealthAdjustments();
 actTime -= 4;
 maxSpeed = 5;
-circleDistance = 70;
+circleDistance = 72;
 projectileSpeed = 4.1;
 projectileSpeedCircle = 3.1;
 rotationSpeed = choose(4,-4);

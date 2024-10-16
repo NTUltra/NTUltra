@@ -8,8 +8,11 @@ var angstep = 360/6;
 repeat(6)
 {
 	with instance_create(xprevious,yprevious,ToxicCannonBall)
-	{motion_add(other.ang,4)
-	image_angle = direction
-	team = other.team}
+	{
+		motion_add(ang,4)
+		motion_add(other.direction,2);
+		image_angle = direction
+		team = other.team
+	}
 	ang += angstep
 }

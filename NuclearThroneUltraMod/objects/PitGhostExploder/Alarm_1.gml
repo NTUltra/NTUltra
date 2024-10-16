@@ -30,6 +30,8 @@ if target != noone {
 			}
         }
         else {
+			if justAroundWall
+				alarm[1] = actTime;
             direction = random(360);
             walk = actTime + random(actTime*2)
         }

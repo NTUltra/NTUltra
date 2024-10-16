@@ -1,7 +1,8 @@
 /// @description Spawn more enemies
 if ammo > 0
 {
-	alarm[5] = 10;
+	alarm[5] = 18;
+	snd_play(sndGhostSpawn,0.1,true);
 	with instance_create(x + random_range(32,-32),y + random_range(32, - 32), PitGhostExploder)
 	{
 		motion_add(random(360),6);

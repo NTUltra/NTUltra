@@ -10,7 +10,7 @@ if target != noone {
 	else
 		event_user(1);
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justAroundWall && dis > 45-loops || loops > 4 {
+        if !justAroundWall && dis > max(0,32 - loops) || loops > 4 {
 			instance_create(x,y,Notice);
 			alarm[2] = 10;
 			alarm[1] += actTime*2;
@@ -23,6 +23,8 @@ if target != noone {
 				direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
         }
         else {
+			if justAroundWall
+				alarm[1] = actTime;
 			if target.object_index == Player && (Player.skill_got[8] || Player.race == 15)
 				direction = point_direction(x,y,target.x, target.y);
 			else

@@ -1,6 +1,10 @@
 /// @description Get sound
 with BanditBoss
 {
+	other.bossIntroSound = sndBigMushroomBossIntro
+}
+with BanditBoss
+{
 	other.bossIntroSound = sndBigBanditIntro
 }
 with InvertedBanditBoss

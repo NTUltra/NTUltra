@@ -303,7 +303,7 @@ function scrWeapons() {
 	wep_name[27] = "SCREWDRIVER"
 	wep_type[27] = 0
 	wep_auto[27] = 0
-	wep_load[27] = 9
+	wep_load[27] = 8
 	wep_cost[27] = 0
 	wep_sprt[27] = sprScrewDriver
 	wep_area[27] = 1
@@ -5351,10 +5351,10 @@ function scrWeapons() {
 	wep_name[475] = "ACCELERATOR"
 	wep_type[475] = 1
 	wep_auto[475] = 1
-	wep_load[475] = 7
+	wep_load[475] = 8
 	wep_cost[475] = 2
 	wep_sprt[475] = sprAccelerator
-	wep_area[475] = 7
+	wep_area[475] = 6
 	wep_text[475] = "damage increases as bullet exists longer"
 	wep_swap[475] = sndSwapPistol
 	wep_rad[475] = 0;
@@ -7968,7 +7968,7 @@ function scrWeapons() {
 	wep_name[711] = "METAL PIPE"
 	wep_type[711] = 0
 	wep_auto[711] = 0
-	wep_load[711] = 20
+	wep_load[711] = 21
 	wep_cost[711] = 0
 	wep_sprt[711] = sprMetalPipe
 	wep_area[711] = 0
@@ -9725,7 +9725,7 @@ function scrWeapons() {
 	wep_name[867] = "TOXIC HAND CANNON"
 	wep_type[867] = 1
 	wep_auto[867] = 0
-	wep_load[867] = 30
+	wep_load[867] = 25
 	wep_cost[867] = 1.5
 	wep_sprt[867] = sprToxicHandCannon
 	wep_area[867] = 4

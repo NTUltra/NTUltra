@@ -2,9 +2,10 @@
 alarm[1] += alarm[2];
 forceAnimation = spr_idle;
 event_user(14);
+scrDrop(10,0);
 if mode == 1
 {
-	snd_play(sndToxicBoltGas);
+	snd_play(sndToxicBoltGas,0.05);
 	var angStep = 12;
 	var ang = random(360);
 	var len = 8;
@@ -67,6 +68,7 @@ if mode == 1
 }
 else if instance_number(BuddyShroom) < 6
 {
+	snd_play(sndBigMushroomBossSummon,0.05);
 	var ran = random(360);
 	var ranStep = 360/buddyAmount;
 	repeat(buddyAmount)

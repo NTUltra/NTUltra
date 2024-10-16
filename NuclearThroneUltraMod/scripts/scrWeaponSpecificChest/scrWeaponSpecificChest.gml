@@ -24,7 +24,7 @@ function scrWeaponSpecificChest(){
 		var newWep = 0;
 		do {
 			tries -= 1;
-			newWep = scrDecideWep(0,40,0,0,true);
+			newWep = scrDecideWep(1,40,0,0,true);
 		} until (tries < 0 || !array_contains(wantWep, newWep));
 		if newWep != 0
 		{

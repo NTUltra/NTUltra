@@ -1099,9 +1099,10 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 
-	with instance_create(x+lengthdir_x(8+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(8+(Player.skill_got[13]+bettermelee)*10,aimDirection),Shank)
+	with instance_create(x+lengthdir_x(10+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(10+(Player.skill_got[13]+bettermelee)*10,aimDirection),Shank)
 	{
 		sprite_index = sprGoldenShank;
+		mask_index = mskShankGolden;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3905,8 +3906,8 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,ToxicCannonBall)
 	{
-	image_angle=aimDirection;
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
+		image_angle=aimDirection;
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,3)
 	}
 	if !skill_got[2]
 	{
@@ -9205,11 +9206,14 @@ function scrFire2(hasTailNow) {
 	case 496:
 
 	snd_play_fire(sndSuperSlugger)
-
+	with instance_create(x,y,Bullet2Heavy)
+	{motion_add(aimDirection,13+random(5))
+	image_angle = direction
+	team = other.team}
 	repeat(5)
 	{
 	with instance_create(x,y,Bullet2Heavy)
-	{motion_add(aimDirection+(random(30)-15)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(30)-15)*other.accuracy,13+random(5))
 	image_angle = direction
 	team = other.team}
 	}

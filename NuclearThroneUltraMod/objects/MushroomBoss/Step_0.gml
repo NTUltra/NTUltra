@@ -21,3 +21,16 @@ else
 	}
 }
 speed = 0;
+
+if !instance_exists(Player) && sndtaunt = 0
+{
+	if UberCont.normalGameSpeed == 60
+		tauntdelay += 0.5;
+	else
+		tauntdelay += 1
+	if tauntdelay > 50
+	{
+		snd_play_2d(sndBigMushroomBossTaunt);
+		sndtaunt = 1
+	}
+}

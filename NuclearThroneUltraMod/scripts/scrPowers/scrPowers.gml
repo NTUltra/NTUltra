@@ -2299,94 +2299,103 @@ function scrPowers(raceOverwrite = -1) {
 
 		
 		//ANGEL
-		if race == 18 && !instance_exists(AngelActive) && !instance_exists(AngelActiveDelay)//ANGEL
+		if race == 18 && !instance_exists(AngelActive) //ANGEL
 		{
-			KeyCont.key_spec[p] = 2;
-			var takePercentage = 0.4;
-			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-			if wepType != 0 || scrIsCrown(40)
+			if instance_exists(AngelActiveDelay)
 			{
-				if wepType != wep_type[bwep] && wepType != wep_type[wep]
-					takePercentage *= 3;
-				var cost = typ_ammo[wepType]*takePercentage;
-				if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
+				if KeyCont.key_spec[p] == 1
+					snd_play_2d(sndAngelActiveCant,0.05);
+			}
+			else
+			{
+				KeyCont.key_spec[p] = 2;
+				var takePercentage = 0.45;
+				var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+				if wepType != 0 || scrIsCrown(40)
 				{
-					snd_hurt = sndDamageNegate;
-					instance_create(x,y,AngelActive);
-					if ultra_got[72] {
-						snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
-						if altUltra {//Angel mirror
-							instance_create(x,y,AngelActiveMouse);	
-						}
-					} else {
-						snd_play_2d(sndAngelActive,0.1,false,false,2,1);
-					}
-					ammo[wepType]-= cost//2.5?
-					var heal = 0;
-					if  ammo[wepType] <= 0
+					if wepType != wep_type[bwep] && wepType != wep_type[wep]
+						takePercentage *= 3;
+					var cost = typ_ammo[wepType]*takePercentage;
+					if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
 					{
-						if scrIsCrown(13)
+						snd_hurt = sndDamageNegate;
+						instance_create(x,y,AngelActive);
+						if ultra_got[72] {
+							snd_play_2d(sndAngelActiveUpg,0.1,false,false,2,1);
+							if altUltra {//Angel mirror
+								instance_create(x,y,AngelActiveMouse);	
+							}
+						} else {
+							snd_play_2d(sndAngelActive,0.1,false,false,2,1);
+						}
+						ammo[wepType]-= cost//2.5?
+						var heal = 0;
+						if  ammo[wepType] <= 0
 						{
-							with Crown {
-								event_user(0);	
+							if scrIsCrown(13)
+							{
+								with Crown {
+									event_user(0);	
+								}
+							}
+							if ultra_got[70]
+								heal += 2;
+						}
+						if UberCont.opt_ammoicon
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.sprt = sprAmmoIconsPickup
+							dir.ii = wepType;
+							dir.theColour = c_red;
+							dir.mytext = "-"+string(round(cost));
+						}
+						else
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.theColour = c_red;
+							dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wepType])
+						}
+						//HEAL
+						if (skill_got[5])
+						{
+							angelHeal = !angelHeal;
+							if (angelHeal)
+							{
+								heal ++;
 							}
 						}
-						if ultra_got[70]
-							heal += 2;
-					}
-					if UberCont.opt_ammoicon
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.sprt = sprAmmoIconsPickup
-						dir.ii = wepType;
-						dir.theColour = c_red;
-						dir.mytext = "-"+string(round(cost));
+						if heal > 0
+						{
+							if heal > 2
+								snd_play_2d(sndHealthPickupUpg)
+							scrHeal(heal);
+						}
+						Sleep(40);
 					}
 					else
 					{
-						dir = instance_create(x,y,PopupText)
-						dir.theColour = c_red;
-						dir.mytext = "-"+string(round(cost))+" "+string(other.typ_name[wepType])
-					}
-					//HEAL
-					if (skill_got[5])
-					{
-						angelHeal = !angelHeal;
-						if (angelHeal)
+						if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
 						{
-							heal ++;
+							snd_play_2d(sndAngelActiveCant,0.05);
+							snd_play_2d(sndEmpty);
+							dir = instance_create(x,y,PopupTextLockoutPlayer);
+							dir.theColour = c_red;
+							dir.mytext = "NOT ENOUGH AMMO";
 						}
 					}
-					if heal > 0
-					{
-						if heal > 2
-							snd_play_2d(sndHealthPickupUpg)
-						scrHeal(heal);
-					}
-					Sleep(40);
 				}
 				else
 				{
 					if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
 					{
+						snd_play_2d(sndAngelActiveCant,0.05);
 						snd_play_2d(sndEmpty);
 						dir = instance_create(x,y,PopupTextLockoutPlayer);
 						dir.theColour = c_red;
-						dir.mytext = "NOT ENOUGH AMMO";
+						dir.mytext = "THIS DOESN'T USE AMMO";
 					}
 				}
 			}
-			else
-			{
-				if KeyCont.key_spec[p] = 1 || !instance_exists(PopupTextLockoutPlayer)
-				{
-					snd_play_2d(sndEmpty);
-					dir = instance_create(x,y,PopupTextLockoutPlayer);
-					dir.theColour = c_red;
-					dir.mytext = "THIS DOESN'T USE AMMO";
-				}
-			}
-
 		}
 		
 		//Good O'l Humphry

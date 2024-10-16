@@ -16,6 +16,7 @@ if target != noone && instance_exists(target)
 					}
 				}
 		}
+		snd_play(sndBigMushroomBossToxic);
 		snd_play_2d(sndAboutToGas);
 		BackCont.shake += 5;
 		forceAnimation = spr_fire_toxic;
@@ -24,6 +25,7 @@ if target != noone && instance_exists(target)
 	}
 	else if mode == 0
 	{
+		snd_play(sndBigMushroomBossGrid);
 		var t = team;
 		for (var i = 0; i < al; i++)
 		{

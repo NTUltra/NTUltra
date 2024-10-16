@@ -31,6 +31,8 @@ function scrCrownOfFright(){
 						sprite_index = sprCrownGhostMedium;
 						myShadow = shd16;
 						myShadowOffset = 2;
+						maxhealth = 20;
+						my_health = maxhealth;
 					}
 				}
 				else
@@ -43,6 +45,8 @@ function scrCrownOfFright(){
 						sprite_index = sprCrownGhostBig;
 						myShadow = shd24;
 						myShadowOffset = 8;
+						maxhealth = 35;
+						my_health = maxhealth;
 					}
 				}
 			}

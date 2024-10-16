@@ -12,12 +12,12 @@ if instance_exists(target) && target != noone
 	repeat(3)
 	{
 		var ranDir = random(360);
-		var len = 64 + random(64);
+		var len = 64 + random(48);
 		with instance_create(tx + lengthdir_x(len,ranDir),ty + lengthdir_y(len,ranDir),BecomeGhostExplosion)
 		{
 			team = other.team;
 			direction = point_direction(x,y,Player.x,Player.y);
-			speed = 0.5;
+			speed = 0.6;
 		}
 	}
 }

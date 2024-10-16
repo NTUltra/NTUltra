@@ -362,7 +362,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 	
 	ultra_name[44] = "CRACK SHOT"
-	ultra_text[44] = "PLACE <w>MULTIPLE MARKERS<w>#FIRE AT ALL MARKERS#WITH REDUCED <w>RELOAD TIME<w>"
+	ultra_text[44] = "PLACE <w>MULTIPLE MARKERS<w>#FIRE AT ALL MARKERS#WITH REDUCED <w>RELOAD TIME<w>#INCREASE <w>RETARGETING RANGE<w>"
 	ultra_tips[44] = "gunslinger"
 
 	    //YUNG CUZ 

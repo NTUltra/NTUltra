@@ -15,7 +15,8 @@ if instance_exists(Player) {
 else
 	exit;
 var levelEnded = false;
-if !supercursed || gotPluto {
+if !supercursed || gotPluto 
+{
 	with Portal
 	{
 		if !inverted && alarm[1] < 1
@@ -40,47 +41,66 @@ if !supercursed || gotPluto {
 	{
 		sped += 2;
 	}
-	repeat(sped)
-	{
-		if point_distance(x, y, Player.x, Player.y) < range or levelEnded {
+	
+	if point_distance(x, y, Player.x, Player.y) < range or levelEnded {
+		repeat(sped)
+		{
 			suckDirection = point_direction(x, y, Player.x, Player.y)
 			if levelEnded || !collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
 				x += lengthdir_x(as, suckDirection)
 			if levelEnded || !collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
 				y += lengthdir_y(as, suckDirection)
-		    isGettingSucked = true;
+			isGettingSucked = true;
 			if place_meeting(x,y,Player)
 			{
-				event_user(0);	
+				event_user(0);
+				continue;
 			}
 		}
-		else
-		    isGettingSucked = false;
-
+	}
+	else
+	{
+		isGettingSucked = false;
+		if point_distance(x, y, Player.x, Player.y) < range + 36 {
+			var slowSuck = as*0.0625;
+			suckDirection = point_direction(x, y, Player.x, Player.y)
+			if levelEnded || !collision_line(x,y,x + lengthdir_x(slowSuck, suckDirection),y,Wall,false,false)
+				x += lengthdir_x(slowSuck, suckDirection)
+			if levelEnded || !collision_line(x,y,x,y + lengthdir_y(slowSuck, suckDirection),Wall,false,false)
+				y += lengthdir_y(slowSuck, suckDirection)
+		}
 		if instance_exists(Implosion) {
-		    if point_distance(x, y, Implosion.x, Implosion.y) < range or instance_exists(Implosion) {
-				suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
-		        if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
-					x += lengthdir_x(as, suckDirection)
-		        if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
-					y += lengthdir_y(as, suckDirection)
-				
-				if place_meeting(x,y,Implosion)
+			if point_distance(x, y, Implosion.x, Implosion.y) < range {
+				repeat(sped)
 				{
-					event_user(0);	
+					suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
+				    if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+						x += lengthdir_x(as, suckDirection)
+				    if levelEnded || Player.ultra_got[12] == 1 || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false) || ((Player.ultra_got[12] == 1) && (KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2))
+						y += lengthdir_y(as, suckDirection)
+				
+					if place_meeting(x,y,Implosion)
+					{
+						event_user(0);
+						continue;
+					}
 				}
-		    }
+			}
 		}
 		else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < range)
 		{
-			suckDirection = point_direction(x, y, Hand.x, Hand.y);
-			if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
-				x += lengthdir_x(as, suckDirection)
-	        if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
-				y += lengthdir_y(as, suckDirection)
-			if place_meeting(x,y,Hand)
+			repeat(sped)
 			{
-				event_user(0);
+				suckDirection = point_direction(x, y, Hand.x, Hand.y);
+				if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
+					x += lengthdir_x(as, suckDirection)
+			    if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
+					y += lengthdir_y(as, suckDirection)
+				if place_meeting(x,y,Hand)
+				{
+					event_user(0);
+					continue;
+				}
 			}
 		}
 		else if instance_exists(YungCuzDupe)
@@ -88,19 +108,24 @@ if !supercursed || gotPluto {
 			var n = instance_nearest(x,y,YungCuzDupe);
 			if point_distance(x, y, n.x, n.y) < range
 			{
-				suckDirection = point_direction(x, y, n.x, n.y);
-				if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
-					x += lengthdir_x(as, suckDirection)
-			    if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
-					y += lengthdir_y(as, suckDirection)
-				if place_meeting(x,y,YungCuzDupe)
+				repeat(sped)
 				{
-					event_user(0);
+					suckDirection = point_direction(x, y, n.x, n.y);
+					if levelEnded || collision_line(x,y,x + lengthdir_x(as, suckDirection),y,Wall,false,false)
+						x += lengthdir_x(as, suckDirection)
+					if levelEnded || collision_line(x,y,x,y + lengthdir_y(as, suckDirection),Wall,false,false)
+						y += lengthdir_y(as, suckDirection)
+					if place_meeting(x,y,YungCuzDupe)
+					{
+						event_user(0);
+						continue;
+					}
 				}
 			}
 		}
 	}
 } else {
+	//Curse run away
 	if instance_exists(Player) {
 		suckDirection = point_direction(x, y, Player.x, Player.y)
 		var dis = point_distance(x, y, Player.x, Player.y);
@@ -112,12 +137,22 @@ if !supercursed || gotPluto {
 		}
 		if place_meeting(x,y,Player)
 		{
-			event_user(0);	
+			event_user(0);
 		}
 	}
 }
-if !levelEnded && place_meeting(x,y,Wall)
+if !levelEnded && speed > 0
 {
-	move_bounce_solid(false);
-	move_outside_solid(direction,8);
+	if mask_index != mskPickupThroughWall
+	{
+		var msk = mask_index;
+		mask_index = mskPickup;
+		if place_meeting(x,y,Wall)
+		{
+			move_bounce_solid(false);
+			move_outside_solid(direction,8);
+			speed *= 0.75;
+		}
+		mask_index = msk;
+	}
 }

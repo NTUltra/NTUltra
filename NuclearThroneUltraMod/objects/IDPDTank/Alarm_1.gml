@@ -13,7 +13,7 @@ if !reachedHalfHealth  && my_health < maxhealth*0.5
 		crazyWaveSpeed += 6;
 		crazyWaveSpeed += 6;
 		crazyGap -= 6;
-		crazyProjectileSpeed += 1;
+		crazyProjectileSpeed += 0.5;
 		crazyDelay -= 1;
 		laserDelay -= 10;
 		crazyStep -= 4;
@@ -113,7 +113,17 @@ if target != noone {
 		var yyy = y;
 		x = xx;
 		y = yy;
-		scrDrop(14,0);
+		scrDrop(20,0);
+		x = xxx;
+		y = yyy;
+	}
+	else if ran < 6
+	{
+		var xxx = x;
+		var yyy = y;
+		x = xx;
+		y = yy;
+		scrDrop(40,0,true);
 		x = xxx;
 		y = yyy;
 	}

@@ -12,9 +12,9 @@ spr_walk = sprInvertedBigMushroomVineSpawn;
 spr_hurt = sprInvertedBigMushroomVineHurt;
 spr_dead = sprInvertedBigMushroomVineDead;
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
-snd_melee = sndMaggotBite;
+snd_hurt = sndMushroomBuddyHurt
+snd_dead = sndMushroomBuddyDead
+snd_melee = sndMushroomBuddyBite;
 //behavior
 walk = 0
 alarm[1] = 60;

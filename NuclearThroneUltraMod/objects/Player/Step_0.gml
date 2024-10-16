@@ -2713,11 +2713,16 @@ if hammerheadcounter > 0
 						ang += angStep;
 					}
 				}
-				hammerheadDig = 30;
 				if race=25
-					alarm[3] = max(alarm[3],37);
+				{
+					hammerheadDig = 49;
+					alarm[3] = max(alarm[3],51);
+				}
 				else
-					alarm[3] = max(alarm[3],31);
+				{
+					hammerheadDig = 40;
+					alarm[3] = max(alarm[3],41);
+				}
 				var debrisAmount = 2;
 				var debrisMultiply = 1.5;
 				if (hammerheadcounter > 0)

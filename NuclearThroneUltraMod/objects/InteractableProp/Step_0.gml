@@ -9,12 +9,19 @@ if mask_index != mskPickupThroughWall
 	mask_index = mskBigWepPickup;
 	if place_meeting(x,y,Player)
 	{
+		var canDo = true;
 		with Player
 		{
-			isOnInteractable = true;
+			if !visible || lockout
+				canDo = false
+			else
+				isOnInteractable = true;
 		}
-		isInteractableNow = true;
-		event_user(0);
+		if canDo
+		{
+			isInteractableNow = true;
+			event_user(0);
+		}
 	}
 	mask_index = msk;
 }

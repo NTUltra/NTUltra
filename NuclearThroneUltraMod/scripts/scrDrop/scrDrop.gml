@@ -28,8 +28,6 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	var rabbit = 0;
 	if instance_exists(Player)
 	{
-		if instance_number(enemy) < 3
-			itemdrop *= 1.1;
 		if Player.loops < 1
 		{
 			itemdrop *= 1.07;	

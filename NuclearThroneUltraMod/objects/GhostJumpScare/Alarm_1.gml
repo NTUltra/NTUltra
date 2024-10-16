@@ -1,5 +1,6 @@
 /// @description Activate all enemies
 BackCont.shake += 20;
+snd_play_2d(sndGhostSpawn);
 with UberCont
 {
 	ds_list_clear(keepDeactive);	

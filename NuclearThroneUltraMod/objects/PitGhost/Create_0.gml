@@ -19,7 +19,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(60)
 wkick = 0
-actTime = 15;
+actTime = 13;
 
 acc = 1;
 maxSpeed = 3.5;

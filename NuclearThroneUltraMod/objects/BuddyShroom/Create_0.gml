@@ -10,9 +10,9 @@ spr_hurt = sprBigMushroomBuddyHurt
 spr_dead = sprBigMushroomBuddyDead
 spr_fire = sprBigMushroomBuddyOmnom
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
-snd_melee = sndMaggotBite;
+snd_hurt = sndMushroomBuddyHurt
+snd_dead = sndMushroomBuddyDead
+snd_melee = sndMushroomBuddyHurt;
 //behavior
 walk = 0
 alarm[1] = 7;

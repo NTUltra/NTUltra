@@ -1,22 +1,19 @@
 /// @description Fire
 if goToTarget
 	exit;
-if !instance_exists(Player) || point_distance(x,y,Player.x,Player.y) > 42-loops
-{
-	sprite_index = spr_fire;
-	image_index = 0;
-	alarm[3] = image_number/image_speed;
-	snd_play(sndGhostFire,0.1)
-	with instance_create(x, y, EnemyBullet1Small) {
-	    motion_add(other.gunangle + 4, 1)
-	    image_angle = direction
-	    team = other.team
-	}
-	with instance_create(x, y, EnemyBullet1Small) {
-	    motion_add(other.gunangle - 4, 1)
-	    image_angle = direction
-	    team = other.team
-	}
+sprite_index = spr_fire;
+image_index = 0;
+alarm[3] = image_number/image_speed;
+snd_play(sndGhostFire,0.1)
+with instance_create(x, y, EnemyBullet1Small) {
+	motion_add(other.gunangle + 4, 1)
+	image_angle = direction
+	team = other.team
+}
+with instance_create(x, y, EnemyBullet1Small) {
+	motion_add(other.gunangle - 4, 1)
+	image_angle = direction
+	team = other.team
 }
 if target != noone && instance_exists(target)
 {

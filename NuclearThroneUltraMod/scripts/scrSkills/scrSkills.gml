@@ -549,10 +549,10 @@ function scrSkills() {
 	
 	skill_name[40] = "BOUNCY FAT"
 	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE <y>AMMO<y> INSTEAD";
-	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#70% OF BASE TOTAL <y>AMMO<y>#20% LESS FOR TYPES YOU'RE HOLDING"
+	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#<w>75%<w> OF BASE TOTAL <y>AMMO<y>#<w>20%<w> LESS FOR TYPES YOU'RE HOLDING"
 	skill_tips[40] = "layer of fat"
 	skill_msnd[40] =  sndMutBouncyFat;
-	skill_bons[40] = "-25% AMMO COST (TOTAL: 53%)"
+	skill_bons[40] = "-27% AMMO COST (TOTAL: 55%)"
 	
 	skill_name[41] = "NERVES OF STEEL"
 	//skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#SLIGHTLY INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";

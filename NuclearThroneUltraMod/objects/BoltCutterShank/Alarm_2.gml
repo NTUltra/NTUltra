@@ -3,7 +3,9 @@ with owner
 {
 	wkick += 2;
 }
-BackCont.shake += 15;
+BackCont.shake += 10;
+BackCont.viewx2 += lengthdir_x(30,direction)*UberCont.opt_shake
+BackCont.viewy2 += lengthdir_y(30,direction)*UberCont.opt_shake
 didCut = true;
 snd_play(sndBoltCutterCut,0.05);
 Sleep(20);

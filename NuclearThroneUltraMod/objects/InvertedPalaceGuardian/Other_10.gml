@@ -7,6 +7,7 @@ gunangle = point_direction(x,y,target.x,target.y)
 var angle = -60;
 var dir = point_direction(x,y,target.x,target.y);
 var motiondiff = 0;
+var spd = projectileSpeed;
 snd_play(sndGuardianFire, 0.15);
 repeat(3)
 {
@@ -21,7 +22,7 @@ with instance_create(x,y,InvertedGuardianBulletSpawn)
 	owner = other.id;
 	x += lengthdir_x(-8*(motiondiff % 2), dir);
 	y += lengthdir_y(-8*(motiondiff % 2), dir);
-	motion_add(dir+angle,1.8 - (motiondiff % 2));
+	motion_add(dir+angle,spd - (motiondiff % 2));
 }
 motiondiff++;
 angle += 60;

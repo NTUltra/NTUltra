@@ -53,7 +53,7 @@ function scrLoseSkill(skillIndex, disableInstead = false) {
 				maxSpeed -= 0.5;
 		break;
 		case 3: //PLUTONIUM HUNGER
-			betterpluto = 39;
+			betterpluto = 32;
 		break;
 		case 4: //RABBIT PAW
 			betterrabbitpaw = 0;

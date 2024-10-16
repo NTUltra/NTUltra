@@ -9,5 +9,5 @@ event_inherited()
 snd_hurt = sndStatueHurt
 team = 1;
 breakY = y - 16;
-loops = min(10,1 + GetPlayerLoops());
+loops = min(3,1 + GetPlayerLoops());
 alarm[1] = 30 + irandom(30);

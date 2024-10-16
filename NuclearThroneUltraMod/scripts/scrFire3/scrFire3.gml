@@ -2789,8 +2789,8 @@ function scrFire3(hasTailNow){
 		{
 			motion_add(aimDirection,8)
 		}
-		BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 3
 		wkick = -8
 

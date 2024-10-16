@@ -2,6 +2,7 @@
 alarm[1] += alarm[2];
 forceAnimation = spr_idle;
 event_user(14);
+scrDrop(10,0);
 if mode == 1
 {
 	var l = 10;

@@ -4,7 +4,6 @@
 event_inherited();
 spr_item = sprVoidItemExplosiveChest;
 name = "EXPLOSIVE WEAPON CHEST";
-cost = 5;
 wep = [];
 scrWeapons();
 for (var wi = 0; wi < maxwep; wi++) {

@@ -2,6 +2,8 @@ raddrop = 60;
 maxhealth = 1000
 mySize = 3
 event_inherited();
+sndtaunt = 0;
+tauntdelay = 0;
 scrAddDrops(5);
 meleedamage = 0
 immuneToTypeDamage = 1;
@@ -24,8 +26,8 @@ spr_shrink = sprBigMushroomShrink;
 
 reachedHalfHealth = false;
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
+snd_hurt = sndBigMushroomBossHurt
+snd_dead = sndBigMushroomBossDead
 
 //behavior
 mode = 0;//EARTH / TOXIC
