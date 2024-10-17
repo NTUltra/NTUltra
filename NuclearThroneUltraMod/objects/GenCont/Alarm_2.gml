@@ -672,7 +672,7 @@ else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!
 		}
 		else
 		{
-			instance_create(x+16,y+16,ProtoStatue)
+			instance_create(x+16,y+16,BecomeProtoStatue)
 		} 
 	}
 }
@@ -700,7 +700,7 @@ if Player.area == 9 && Player.subarea == 1
 }
 if ((Player.area == 3 || Player.area == 106) && Player.subarea == 2)
 {
-	if instance_exists(ProtoStatue)
+	if instance_exists(BecomeProtoStatue)
 		with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
 			instance_create(x+16,y+16,UltraScrapyardEntrance)
 }

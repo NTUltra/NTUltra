@@ -1,6 +1,7 @@
 /// @description Revive
 var revved = false;
 var necro = id;
+var t = team;
 if instance_exists(Corpse)
 {
 	crp = instance_nearest(x,y,Corpse)
@@ -17,6 +18,7 @@ if instance_exists(Corpse)
 			var nearestFloor = instance_nearest(x,y,Floor);
 			with instance_create(nearestFloor.x+16+random(16)-8,nearestFloor.y+16+random(16)-8,other.reviveArea)
 			{
+				team = t;
 				owner = necro
 			}
 		}

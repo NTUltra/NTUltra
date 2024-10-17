@@ -1,5 +1,5 @@
 event_inherited()
-if place_meeting(x,y,Player)
+if alarm[3] < 1 && place_meeting(x,y,Player)
 {
 	event_user(0);
 }

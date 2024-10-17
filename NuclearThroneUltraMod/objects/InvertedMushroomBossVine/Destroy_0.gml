@@ -6,7 +6,7 @@ repeat(6)
 {
 	with instance_create(x,y,EnemyIceFlame)
 	{
-		motion_add(ang,2.4);
+		motion_add(ang,2.2);
 		image_angle = direction
 		team = other.team
 	}
@@ -17,7 +17,7 @@ repeat(6)
 {
 	with instance_create(x,y,EnemyIceFlame)
 	{
-		motion_add(ang,3);
+		motion_add(ang,2.7);
 		image_angle = direction
 		team = other.team
 	}

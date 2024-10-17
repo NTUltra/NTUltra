@@ -2,6 +2,7 @@ maxhealth = 10;
 mySize = 1
 raddrop = 2
 event_inherited();
+team = 0;
 target = -1
 right = choose(1,-1)
 image_speed = 0.4;

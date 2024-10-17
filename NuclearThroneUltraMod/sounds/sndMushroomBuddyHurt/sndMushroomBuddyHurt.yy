@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.841354,
+  "duration":0.375,
   "name":"sndMushroomBuddyHurt",
   "parent":{
     "name":"BigMushroomBoss",

@@ -2548,7 +2548,6 @@ if race==18
 	}
 }
 
-
 ///moddelay
 if moddelay > -30*modQueue
 {

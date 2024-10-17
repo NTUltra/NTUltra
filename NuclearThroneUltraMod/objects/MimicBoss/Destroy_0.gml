@@ -1,6 +1,16 @@
-if instance_exists(Player) && Player.my_health < Player.maxhealth
+if instance_exists(Player)
 {
-	scrDrop(100,0,false,0,5)//Only drops health
+	if Player.skill_got[Player.maxskill + 1]
+	{
+		with MimicBossPlateau
+		{
+			alarm[1] = 2;	
+		}
+	}
+	if Player.my_health < Player.maxhealth
+	{
+		scrDrop(100,0,false,0,5)//Only drops health
+	}
 }
 scrDrop(100,0);
 scrDrop(100,0);

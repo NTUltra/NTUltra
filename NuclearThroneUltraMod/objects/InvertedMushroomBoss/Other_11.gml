@@ -7,7 +7,7 @@ if target != noone && instance_exists(target)
 	var ty = target.y;
 	if mode == 1
 	{
-		snd_play(sndBigMushroomBossGrid,0.05);
+		snd_play(sndBigMushroomBossLightning,0.05);
 		var tt = target;
 		var walls = ds_list_create();
 		var al = collision_circle_list(tx,ty,96,WallHitMe,false,false,walls,false);
@@ -31,7 +31,7 @@ if target != noone && instance_exists(target)
 	}
 	else if mode == 0
 	{
-		snd_play(sndBigMushroomBossSummon,0.05);
+		snd_play(sndBigMushroomBossFrost,0.05);
 		var ang = target.direction
 		var angStep = 360/buddyAmount;
 		var vineDistance = 72;
@@ -50,6 +50,13 @@ if target != noone && instance_exists(target)
 								with instance_create(x+o,y+o,InvertedMushroomBossVine)
 								{
 									team = t;
+									if instance_exists(Player) && Player.skill_got[29] {
+										walk = 0;
+										speed = 1;
+										alarm[1] = 50
+										alarm[3] = 50;
+										scrGiveSnooze();
+									}
 								}
 						}
 					}
@@ -71,6 +78,13 @@ if target != noone && instance_exists(target)
 									with instance_create(x+o,y+o,InvertedMushroomBossVine)
 									{
 										team = t;
+										if instance_exists(Player) && Player.skill_got[29] {
+											walk = 0;
+											speed = 1;
+											alarm[1] = 50
+											alarm[3] = 50;
+											scrGiveSnooze();
+										}
 									}
 							}
 						}

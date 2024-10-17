@@ -1,24 +1,19 @@
-if rad > 25 and spr_idle = sprProtoStatueCharge
+if !isCharged && rad > radRequired
 {
-snd_play(sndStatueCharge,0.1,true)
-var numEn = 0;
-with enemy
-{
-	if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
+	isCharged = true;
+	snd_play(sndStatueCharge,0.1,true)
+	var numEn = 0;
+	with enemy
 	{
-		numEn ++;
+		if team != 2
+		{
+			numEn ++;
+		}
 	}
-}
-if numEn > 2
-	repeat(2)
-		instance_create(x,y,IDPDSpawn)
-spr_hurt = sprProtoStatueDoneHurt
-image_index = 0
-spr_idle = sprProtoStatueDone
-sprite_index = spr_idle
-	my_health = max(1,my_health-24);
-}
-else if rad > 0 and spr_idle != sprProtoStatueDone and spr_idle != sprProtoStatueDoneIdle
-{
-spr_idle = sprProtoStatueCharge
+	if instance_exists(IDPDVan)
+		numEn -= instance_number(IDPDVan);
+	if numEn > 2
+		repeat(2)
+			instance_create(x,y,IDPDSpawn)
+	my_health = max(20,my_health-20);
 }

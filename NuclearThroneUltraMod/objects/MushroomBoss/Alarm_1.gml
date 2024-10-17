@@ -22,7 +22,7 @@ if target != noone {
 		var dis = point_distance(target.x, target.y, x, y)
 		if dis < 250
 			alarm[1] -= actTime * 0.5;
-        if dis < 128 - (didTheThing * 16) && mode == 1
+        if dis < 128 - (didTheThing * 32) && mode == 1
 		{
 			if ran < 25 && my_health > maxhealth * 0.2 && didTheThing < 3
 				event_user(3)
@@ -40,7 +40,7 @@ if target != noone {
 			{
 				event_user(2);
 			}
-			else if ran > 25
+			else if ran > 25 && didTheThing < 2
 			{
 				event_user(3);
 			}

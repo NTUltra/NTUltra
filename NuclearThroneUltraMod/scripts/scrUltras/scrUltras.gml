@@ -115,7 +115,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[14] = "three is not enough"
     
 	    ultra_name[15] = "POWER OVERWHELMING"
-	    ultra_text[15] = "INCREASE MAX <g>LEVEL<g> BY 1#EVEN MORE <g>RADS<g>#HALF <y>AMMO<y> COST FOR ALL WEAPONS#ALL WEAPONS COST A SMALL AMOUNT OF <g>RADS<g>"
+	    ultra_text[15] = "INCREASE MAX <g>LEVEL<g> BY <w>1<w>#EVEN MORE <g>RADS<g>#HALF <y>AMMO<y> COST FOR ALL WEAPONS#ALL WEAPONS COST A SMALL AMOUNT OF <g>RADS<g>"
 	    ultra_tips[15] = "ultra ultra ultra ultra"
     
 	    ultra_name[16] = "DOOMED"

@@ -1821,7 +1821,7 @@ function scrDrawHUD() {
 							draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
 						}
 					}
-					else
+					else if name != ""
 					{
 						draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 						draw_set_color(c_black)
@@ -2432,23 +2432,6 @@ function scrDrawHUD() {
 			{
 				holdExplainTimer = 0;	
 			}
-		}
-
-		with ProtoStatue
-		{
-		if place_meeting(x,y,Player)
-		{
-		draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox+8,y-oy)
-
-
-		draw_set_color(c_black)
-		draw_text(x-ox+16,y-oy,string_hash_to_newline("CLOSE CROWNVAULT"))
-		draw_text(x-ox+17,y-oy,string_hash_to_newline("CLOSE CROWNVAULT"))
-		draw_text(x-ox+17,y-oy-1,string_hash_to_newline("CLOSE CROWNVAULT"))
-		draw_set_color(c_white)
-		draw_text(x-ox+16,y-oy-1,string_hash_to_newline("CLOSE CROWNVAULT"))
-		//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-		}
 		}
 	}
 

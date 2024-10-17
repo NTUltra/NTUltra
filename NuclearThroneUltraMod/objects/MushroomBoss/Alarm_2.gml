@@ -77,6 +77,12 @@ else if instance_number(BuddyShroom) < 6
 		{
 			motion_add(ran,2);
 			walk = 5;
+			if instance_exists(Player) && Player.skill_got[29] {
+				walk = 0;
+				speed = 1;
+				alarm[1] = 60
+				scrGiveSnooze();
+			}
 		}
 		ran += ranStep;
 	}

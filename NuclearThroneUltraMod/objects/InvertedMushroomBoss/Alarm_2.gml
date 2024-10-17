@@ -6,7 +6,7 @@ scrDrop(10,0);
 if mode == 1
 {
 	var l = 10;
-	snd_play(sndLightning1,0.1)
+	snd_play(sndBigMushroomBossLightning,0.1)
 	repeat(4)
 		with instance_create(x,y,Lightning)
 		{
@@ -57,7 +57,7 @@ if mode == 1
 	}
 }
 else {
-	snd_play(sndBreakIce,0.1);
+	snd_play(sndBigMushroomBossFrost,0.1);
 	var ang = random(360);
 	repeat(6)
 	{

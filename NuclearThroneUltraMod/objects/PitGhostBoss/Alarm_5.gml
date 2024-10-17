@@ -64,6 +64,10 @@ else
 		walk = actTime;
 		alarm[1] = actTime;
 		existTime = 30;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] = 60
+			scrGiveSnooze();
+		}
 	}
 	with instance_create(x, y, PitGhostLaser) {
 		raddrop = 0;
@@ -77,6 +81,10 @@ else
 		walk = actTime;
 		alarm[1] = actTime;
 		existTime = 30;
+		if instance_exists(Player) && Player.skill_got[29] {
+			alarm[1] = 60
+			scrGiveSnooze();
+		}
 	}
 	motion_add(gunangle,acc);
 }

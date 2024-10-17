@@ -301,7 +301,7 @@ function scrTips() {
 	if Player.area = 1
 	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area","today is the day","try destroying the skulls","many routes to take","here we go again","1-1 but sand")
 	if Player.area = 2
-	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge")
+	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge","the sewers has very little item drops","very few ammo and health drops here")
 	if Player.area = 3
 	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
 	if Player.area = 4

@@ -40,6 +40,9 @@
     "name":"sprIDPDPortalStart",
     "path":"sprites/sprIDPDPortalStart/sprIDPDPortalStart.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskPickupThroughWall",
+    "path":"sprites/mskPickupThroughWall/mskPickupThroughWall.yy",
+  },
   "visible":true,
 }

@@ -1,5 +1,7 @@
 function scrMoveContactSolid(ang, mdis) {
 	var mask = mask_index;
+	if mask == mskPickupThroughWall
+		mask_index = mskPlayer;
 	/*
 	if mask == mskPanda
 		mask_index = mskPanda

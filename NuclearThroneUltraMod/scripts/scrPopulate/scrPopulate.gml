@@ -114,7 +114,7 @@ function scrPopulate() {
 			}
 			mask_index = msk;
 		}
-		else if spawnarea == 138
+		else if spawnarea == 139
 		{
 			var msk = mask_index;
 			mask_index = sprInvertedCloud;

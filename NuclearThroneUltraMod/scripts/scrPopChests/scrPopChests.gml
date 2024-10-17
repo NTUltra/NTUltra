@@ -286,7 +286,7 @@ function scrPopChests() {
 					var yy = y + o;
 					var n = instance_nearest(x,y,chestprop);
 					var n2 = instance_nearest(x,y,WeaponMod);
-					var n3 = instance_nearest(x,y,ProtoStatue);
+					var n3 = instance_nearest(x,y,BecomeProtoStatue);
 					var n4 = instance_nearest(x,y,RadChest);
 					if !instance_exists(InversionShard) && point_distance(xx,yy,Player.x,Player.y) > mindis
 					&& (!instance_exists(n) || n == noone || point_distance(xx,yy,n.x,n.y) > mindis)

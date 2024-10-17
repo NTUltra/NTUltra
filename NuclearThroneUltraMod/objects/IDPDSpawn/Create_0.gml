@@ -7,50 +7,53 @@ if instance_exists(UberCont) && !UberCont.unlocked_alt_routes && !instance_exist
 if instance_exists(Player) && instance_exists(Floor)
 {
 
-if !instance_exists(IDPDTank) &&
-Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
-{
-	instance_destroy()
-	exit;
-}
-SetSeedPopoSpawn();
-var tries = 200;
-do {
-	x = Player.x
-	y = Player.y
-	if tries < 50 || instance_number(IDPDSpawn) > 3
-		ang = random(360);
-	else
+	if !instance_exists(IDPDTank) &&
+	Player.area != 119 && (Player.area=100 || (Player.area == 9 && Player.subarea == 3))
 	{
-		var n = instance_nearest(Player.x,Player.y,enemy)
-		if n != noone
-		{
-			var nd = point_direction(Player.x,Player.y,n.x,n.y)
-			ang = nd + 
-			(angle_difference(Player.direction,nd)*0.5) +
-			(angle_difference(nd,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5) +
-			random_range(150,-150);//random(360);
-		}
+		instance_destroy()
+		exit;
+	}
+	SetSeedPopoSpawn();
+	var tries = 200;
+	do {
+		x = Player.x
+		y = Player.y
+		if tries < 50 || instance_number(IDPDSpawn) > 3
+			ang = random(360);
 		else
-			ang = Player.direction + 
-			angle_difference(Player.direction,point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y))*0.5 +
-			random_range(150,-150);//random(360);
-	}
-	x = Player.x+lengthdir_x(96+random(128),ang);
-	y = Player.y+lengthdir_y(96+random(128),ang);
-	dir = instance_nearest_not_one_of_these(x,y,Floor,[FloorExplo]);
-	if dir != noone {
-		var o = 16;
-		if dir.object_index == FloorExplo {
-			o = 8;
+		{
+			var n = instance_nearest(Player.x,Player.y,enemy)
+			var aim = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y)
+			if n != noone
+			{
+				var nd = point_direction(Player.x,Player.y,n.x,n.y)
+				ang = nd + 
+				(angle_difference(Player.direction,nd)*0.5) +
+				(angle_difference(nd,aim)*0.5) +
+				random_range(40,-40);//random(360);
+			}
+			else
+			{
+				ang = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y) + 
+				angle_difference(Player.direction,aim)*0.5 +
+				random_range(40,-40);//random(360);
+			}
 		}
-		x = dir.x + o;
-		y = dir.y + o;
+		x = Player.x+lengthdir_x(96+random(128),ang);
+		y = Player.y+lengthdir_y(96+random(128),ang);
+		var dir = instance_nearest(x,y,Floor);
+		if dir != noone {
+			var o = 16;
+			if dir.object_index == FloorExplo {
+				o = 8;
+			}
+			x = dir.x + o;
+			y = dir.y + o;
+		}
+		tries--;
 	}
-	tries--;
-}
-until point_distance(x,y,Player.x,Player.y) > 64 and place_free(x,y) or tries < 0
-
+	until point_distance(x,y,Player.x,Player.y) > 64 or tries < 0
+	scrForcePosition60fps();
 }
 
 image_speed = 0.4
@@ -58,7 +61,7 @@ depth = 1;
 //if Player.loops>=1
 alarm[0] = 40
 popoSpawnType = 0;
-loops = UberCont.loops
+loops = GetPlayerLoops();
 	if scrIsHardMode()  && Player.area > 1 && Player.loops != 1// HARD MODE
 		loops += 2;
 

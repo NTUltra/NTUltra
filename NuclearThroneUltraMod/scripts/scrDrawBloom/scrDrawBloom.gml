@@ -434,6 +434,16 @@ function scrDrawBloom() {
 	{
 		event_user(0);
 	}
+	with ProtoStatue
+	{
+		lightScale += 0.125;
+		vxO = vx;
+		vyO = vy;
+		event_user(2);
+		vxO = 0;
+		vyO = 0;
+		lightScale -= 0.125;
+	}
 	with IonBurst
 	{
 		scale += 1;

@@ -1,0 +1,1 @@
+/// @description Hypersomnia attack cooldown

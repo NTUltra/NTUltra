@@ -6,3 +6,4 @@ alarm[1] = 4
 tx = x;
 ty = y;
 hasRevived = false;
+team = 1;
