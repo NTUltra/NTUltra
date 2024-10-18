@@ -2795,5 +2795,96 @@ function scrFire3(hasTailNow){
 		wkick = -8
 
 		break;
+		
+		//ULTRA STAFF
+		case 877:
+
+		snd_play_fire(sndUltraStaff)
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+		{
+			walled = 1;
+			sprite_index=sprUltraSlash;
+			longarms = 0
+			dmg = 16;
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.5+longarms)
+			image_angle = direction
+			team = other.team
+		}
+	
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*8),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*8),aimDirection),StaffShank)
+		{
+			wallPierce = max(0,wallPierce - 0.05);
+			motion_add(aimDirection+(random(12)-6)*other.accuracy,15 + other.bettermelee);
+			image_angle = direction
+			team = other.team
+			sprite_index = sprUltraStaffShank;
+			mask_index = mskUltraStaffShank;
+			dmg = 20;
+		}
+
+		wepangle = -wepangle
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -7
+
+		break;
+		
+		//ULTRA PLASMA CANNON
+		case 878:
+
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndPlasmaBigUpg)
+		else
+			snd_play_fire(sndPlasmaBig)
+
+		with instance_create(x+lengthdir_x(4,aimDirection),y+lengthdir_y(4,aimDirection),PlasmaUltra)
+		{
+			motion_add(aimDirection+(random(4)-2)*other.accuracy,8)
+			image_angle = direction
+			team = other.team
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,12);
+			motion_add(aimDirection+180,6)
+		}
+		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 10
+
+		break;
+		
+		//ULRA LASER MINIGUN
+		case 879:
+
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndUltraLaserMinigunUpg)
+		else
+			snd_play_fire(sndUltraLaserMinigun)
+		with instance_create(x,y,Laser)
+		{
+			sprite_index = sprUltraLaser;
+			image_yscale += 0.25;
+			isUltra = true;
+			defaultPierce *= 2;
+			image_angle = aimDirection+(random(18)-9)*other.accuracy
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 1.5
+		wkick = 6
+
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,0.4)
+		}
+
+		break;
 	}
 }

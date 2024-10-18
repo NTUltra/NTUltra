@@ -18,6 +18,19 @@ if (KeyCont.key_spec[p] == 1 && !instance_exists(UnlockingSecondRow) && (crown =
 	}
 	
 }
+if KeyCont.key_swap[p] == 1
+{
+	if crown == 19 && scrMeleeWeapons(Player.wep)
+	{
+		crown = 40;//CROWN OF THOUSAND CUTS
+		image_index = 40;
+	}
+	else if crown == 40 && !scrMeleeWeapons(Player.wep)
+	{
+		crown = 19;
+		image_index = 19;
+	}
+}
 if crown == 18 || crown == 38 || crown == 42
 {
 	if (Player.ammo[Player.wep_type[Player.wep]] >= Player.typ_amax[Player.wep_type[Player.wep]] * 0.9)

@@ -121,7 +121,14 @@ function scrMeleeAmmoCost(myCost = 1){
 		}
 		else if hasEnoughAmmo
 		{
-			hasCosted += 1;
+			with MeleeParent
+			{
+				hasCosted += 1;
+			}
+			with BurstWeapons
+			{
+				hasCosted += 1;	
+			}
 			with Player
 			{
 				ammo[targetAmmo] -= myCost;

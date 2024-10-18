@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndGhostTeleport",
+  "%Name":"sndIncomingGhostBossOld",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.847528,
-  "name":"sndGhostTeleport",
+  "duration":3.948005,
+  "name":"sndIncomingGhostBossOld",
   "parent":{
     "name":"ThePit",
     "path":"folders/Sounds/Enemies/ThePit.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndGhostTeleport.ogg",
+  "soundFile":"sndIncomingGhostBossOld.ogg",
   "type":0,
   "volume":1.0,
 }

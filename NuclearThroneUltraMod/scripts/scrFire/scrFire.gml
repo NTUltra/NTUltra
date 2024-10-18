@@ -108,20 +108,31 @@ function scrFire(canDrown = true) {
 			}
 			if ultra_got[70]
 			{
-				var ammoPercentage = 0;
-				ammoPercentage += ammo[wep_type[wep]] / typ_amax[wep_type[wep]];
-				//if skill_got[10] //BACK MUSCLE
-				//	ammoPercentage *= 1.4;
-				reload -= wep_load[wep] - (wep_load[wep]*clamp(ammoPercentage,0,1));
-				if ammo[wep_type[wep]] <= typ_amax[wep_type[wep]] * 0.6
+				if wep_type[wep] != 0 || scrIsCrown(40)
 				{
-					//Additional boost when half ammo
-					reload -= wep_load[wep] * 0.1;
-				}
-				if ammo[wep_type[wep]] <= 0
-				{
-					snd_play_2d(sndHealthPickup);
-					scrHeal(2);	
+					var ammoPercentage = 0;
+					ammoPercentage += max(0.1,max(0,ammo[wep_type[wep]]) / typ_amax[wep_type[wep]]);
+					
+					//if skill_got[10] //BACK MUSCLE
+					//	ammoPercentage *= 1.4;
+					reload -= wep_load[wep] - (wep_load[wep]*clamp(ammoPercentage,0.35,1));
+					if ammo[wep_type[wep]] <= typ_amax[wep_type[wep]] * 0.6
+					{
+						//Additional boost when half ammo
+						if wep_cost[wep] > 0
+						{
+							reload -= wep_load[wep] * 0.1;
+						}
+						else
+						{
+							reload -= wep_load[wep] * 0.05;
+						}
+					}
+					if ammo[wep_type[wep]] <= 0
+					{
+						snd_play_2d(sndHealthPickup);
+						scrHeal(2);	
+					}
 				}
 			}
 		}
@@ -3087,6 +3098,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
+		sprite_index = sprUltraLaser;
 	team = other.team
 	defaultPierce *= 2;
 	image_yscale+=0.25;
@@ -3095,6 +3107,7 @@ function scrFire(canDrown = true) {
 	}
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)+7*other.accuracy
+		sprite_index = sprUltraLaser;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3103,6 +3116,7 @@ function scrFire(canDrown = true) {
 	}
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)+14*other.accuracy
+		sprite_index = sprUltraLaser;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3111,6 +3125,7 @@ function scrFire(canDrown = true) {
 	}
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)-7*other.accuracy
+		sprite_index = sprUltraLaser;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3119,6 +3134,7 @@ function scrFire(canDrown = true) {
 	}
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)-14*other.accuracy
+		sprite_index = sprUltraLaser;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;

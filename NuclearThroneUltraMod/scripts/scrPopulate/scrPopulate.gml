@@ -114,7 +114,7 @@ function scrPopulate() {
 			}
 			mask_index = msk;
 		}
-		else if spawnarea == 139
+		else if spawnarea == 140
 		{
 			var msk = mask_index;
 			mask_index = sprInvertedCloud;
@@ -133,12 +133,12 @@ function scrPopulate() {
 			if !place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),Floor)
 			&& !place_meeting(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),TopDecal)
 			{
-				with instance_create(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),CloudTopDecal)
-				{
-					sprite_index = sprInvertedCloud;
-				}
+				instance_create(x + lengthdir_x(randis,randir),y + lengthdir_y(randis,randir),CloudTopDecal)
 			}
 			mask_index = msk;
+			with CloudTopDecal {
+				sprite_index = sprInvertedCloud;
+			}
 		}
         else if spawnarea = 9 {
             if instance_exists(GenCont) {

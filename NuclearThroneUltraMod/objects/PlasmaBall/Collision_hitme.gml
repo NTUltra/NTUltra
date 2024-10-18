@@ -16,11 +16,12 @@ if other.team != team and other.my_health > 0
 			if object_index == Player
 				hitBy = other.sprite_index;
 		}
+		event_user(4);
 	}
-	else
+	else if alarm[6] < 1
 	{
 		with other
-			scrIframeSkipper(0.2);
+			scrIframeSkipper(other.iframeSkip);
 		scrPlasmaStick();
 	}
 }

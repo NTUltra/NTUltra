@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.660227,
+  "duration":1.259625,
   "name":"sndGhostSpawn",
   "parent":{
     "name":"ThePit",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndGhostSpawn.ogg",
+  "soundFile":"sndGhostSpawn.wav",
   "type":0,
   "volume":1.0,
 }

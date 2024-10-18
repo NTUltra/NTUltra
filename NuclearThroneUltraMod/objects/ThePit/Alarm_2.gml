@@ -12,7 +12,7 @@ with Player
 {
 	var ang = random(360);
 	var angStep = 72;
-	snd_play(sndGhostTeleport);
+	snd_play(sndGhostTeleport2);
 	var i = 0;
 	BackCont.shake += 10;
 	var ghosts = [sprPitGhost,sprPitGhostLaserGuy,sprPitGhostExploder,sprPitGhostSpawner,sprPitGhost,sprPitGhostSpawner];

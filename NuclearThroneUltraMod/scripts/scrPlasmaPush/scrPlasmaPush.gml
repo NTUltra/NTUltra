@@ -7,10 +7,13 @@ function scrPlasmaPush(){
 	//x +=  (other.x - x) * 0.25;
 	//y +=  (other.y - y) * 0.25;
 	instance_create(x + (other.x - x) * 0.5,y + (other.y - y) * 0.5,Smoke)
-	image_xscale -= hitShrink;
-	image_yscale -= hitShrink;
-	BackCont.shake += 2;
-	speed *= 0.8;
-	speed -= acc * 2;
+	if alarm[6] < 1
+	{
+		image_xscale -= hitShrink;
+		image_yscale -= hitShrink;
+		BackCont.shake += 1;
+		speed *= 0.8;
+		speed -= acc * 2;
+	}
 	scrForcePosition60fps();
 }

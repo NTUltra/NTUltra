@@ -13,6 +13,7 @@ team = 0;
 boosted = false;
 ammo = 0;
 time = 1;
+hasCosted = 0;
 scrInitDrops(0);
 if instance_exists(Player)
 {

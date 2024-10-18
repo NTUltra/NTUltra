@@ -21,6 +21,16 @@ with enemy
 }
 with TopCont
 {
-	darkness = 0;	
+	with TopCont
+	{
+		if !scrIsCrown(19)
+		{
+			darkness = 2;
+			if ((instance_exists(Player) && Player.race == 3) || (instance_exists(PlayerSpawn) && PlayerSpawn.race == 3))
+			{
+				darkness = 0;	
+			}
+		}
+	}	
 }
 instance_destroy();

@@ -44,6 +44,7 @@ if instance_exists(creator)
 		}
 	    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*20,aimDir),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*20,aimDir),Slash)
 	    {
+			hasCosted = other.hasCosted;
 			dmg = wantDmg;
 			sprite_index = spr;
 		    Player.longarms = 0

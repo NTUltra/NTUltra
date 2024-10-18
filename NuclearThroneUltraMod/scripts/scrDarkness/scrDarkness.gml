@@ -1,5 +1,5 @@
 function scrDarkness() {
-	if darkness = 1 && !instance_exists(GenCont)
+	if darkness > 0 && !instance_exists(GenCont)
 	{
 
 	if !(surface_exists(dark) ){
@@ -11,7 +11,7 @@ function scrDarkness() {
 
 	draw_clear(c_white)
 	if instance_exists(Player){
-	if Player.race = 3
+	if darkness == 2 || Player.race = 3
 	draw_clear(c_gray)}else draw_clear(c_gray)
 
 	draw_set_color(c_gray)

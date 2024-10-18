@@ -51,7 +51,7 @@ else
 				goToTarget = true;
 				alarm[1] = max(alarm[1],actTime*2);
 				alarm[4] = 2;
-				snd_play(sndGhostTeleport,0.1,false,true,3,false,false,0.6,false,id,0,70,30,250);
+				snd_play(sndGhostTeleport1,0.1,false,true,3,false,false,0.6,false,id,0,70,30,250);
 			}
 			else
 			{

@@ -6,7 +6,7 @@ if instance_exists(Player) && place_meeting(x,y,Player)
 	{
 		if abs(vspeed) < maxSpeed
 		{
-			snd_play_2d(sndGhostTeleport,0.1,false,false,3,0.9);
+			snd_play_2d(sndGhostTeleport1,0.1,false,false,3,0.9);
 			var dis = 0;
 			var xxx = x;
 			var yyy = y;

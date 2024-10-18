@@ -225,7 +225,7 @@ if Player.crownpoints > 0
 				{
 					crown = 37;//CROWN OF FRIGHT
 				}
-				else if crown == 19 && (scrMeleeWeapons(Player.wep) || scrMeleeWeapons(Player.bwep) || scrMeleeWeapons(Player.cwep))
+				else if crown == 19 && (scrMeleeWeapons(Player.wep))
 				{
 					crown = 40;//CROWN OF THOUSAND CUTS	
 				}

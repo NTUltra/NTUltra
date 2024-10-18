@@ -11,6 +11,7 @@ if instance_exists(creator)
 	if instance_exists(Player){
 	    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HeavyShank)
 	    {
+			hasCosted = other.hasCosted;
 			dmg = 3;
 		    longarms = 0
 		    longarms = (Player.skill_got[13]+Player.bettermelee)*3

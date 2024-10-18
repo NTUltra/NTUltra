@@ -663,6 +663,8 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				if darkness = 1
 					darkness = 0;
+				else if darkness == 0
+					darkness = 2;
 				else
 					darkness = 1;
 			}

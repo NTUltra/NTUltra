@@ -8,6 +8,7 @@ if ammo > 0
 	{
 		motion_add(random(360),6);
 		walk += 2;
+		actTime += 2;
 		alarm[1] *= 0.5;
 		if instance_exists(Player) && Player.skill_got[29] {
 			alarm[1] += 50;

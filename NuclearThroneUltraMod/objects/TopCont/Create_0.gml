@@ -20,7 +20,7 @@ if instance_exists(Player)
 	if Player.ultra_got[11]//BRAIN STYLE
 		darkness = 0;
 }
-if darkness = 1
+if darkness > 0
 {
 	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 		dark = surface_create(427,__view_get( e__VW.HView, 0 ))

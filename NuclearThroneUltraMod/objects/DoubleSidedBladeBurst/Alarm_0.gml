@@ -22,6 +22,7 @@ if instance_exists(creator)
 				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
 				,Slash)
 				{
+					hasCosted = other.hasCosted;
 					dmg = 14
 					longarms = 0
 					mask_index = mskExcaliburHammerSlash;
@@ -45,6 +46,7 @@ if instance_exists(creator)
 				x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
 				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir),Slash)
 				{
+					hasCosted = other.hasCosted;
 					dmg = 14
 					longarms = 0
 					mask_index = mskExcaliburSlash;

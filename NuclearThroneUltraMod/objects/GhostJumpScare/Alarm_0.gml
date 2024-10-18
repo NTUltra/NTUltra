@@ -1,5 +1,5 @@
 instance_activate_object(enemy)
-snd_play_2d(sndGhostTeleport);
+snd_play_2d(sndGhostTeleport2);
 BackCont.shake += 10;
 with enemy
 {

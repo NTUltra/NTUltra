@@ -118,7 +118,10 @@ if (hasNoMenuOpen())
 
 		if mouse_check_button_pressed(mb_left)
 		{
-			snd_play_2d(choose(sndMenuASkin,sndMenuBSkin));
+			if !ultraOpen
+				snd_play_2d(sndClick);
+			else
+				snd_play_2d(sndClickBack);
 			ultraOpen = !ultraOpen;
 		}
 

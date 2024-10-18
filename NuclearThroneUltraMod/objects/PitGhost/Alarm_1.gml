@@ -24,7 +24,7 @@ if target != noone {
         }
         else {
 			if justAroundWall
-				alarm[1] = actTime;
+				alarm[1] = actTime + 2;
 			if target.object_index == Player && (Player.skill_got[8] || Player.race == 15)
 				direction = point_direction(x,y,target.x, target.y);
 			else

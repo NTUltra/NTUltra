@@ -31,6 +31,7 @@ if instance_exists(creator)
 			{
 				with instance_create(x+lengthdir_x(l+(Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y(l+(Player.skill_got[13]+bettermelee)*20,ang),Slash)
 				{
+					hasCosted = other.hasCosted;
 					dmg = 26;
 					wallPierce *= 0.5;
 					sprite_index=sprUltraSlash;

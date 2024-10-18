@@ -163,10 +163,10 @@ function scrFire2(hasTailNow) {
 		mask_index = mskMorphSlash;
 		if Player.skill_got[17] = 1//laserbrain
 		{
-		dmg=17+(other.betterlaserbrain)
+		dmg=19+(other.betterlaserbrain)
 		}
 		else
-		dmg = 14//rench4//sledge16
+		dmg = 16//rench4//sledge16
 		longarms = 0
 	
 		longarms = (Player.skill_got[13]+other.bettermelee)*3

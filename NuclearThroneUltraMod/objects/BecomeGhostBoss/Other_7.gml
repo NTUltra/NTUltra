@@ -2,7 +2,7 @@
 if !instance_exists(PitGhostBoss)
 	instance_create(x,y + 32,PitGhostBoss);
 var ang = random(360);
-snd_play(sndGhostTeleport);
+snd_play(sndGhostTeleport2);
 repeat(8)
 {
 	with instance_create(x,y,Smoke)
@@ -13,7 +13,14 @@ repeat(8)
 }
 with TopCont
 {
-	darkness = 0;	
+	if !scrIsCrown(19)
+	{
+		darkness = 2;
+		if ((instance_exists(Player) && Player.race == 3) || (instance_exists(PlayerSpawn) && PlayerSpawn.race == 3))
+		{
+			darkness = 0;	
+		}
+	}
 }
 instance_create(x,y,DramaCamera);
 visible = false;

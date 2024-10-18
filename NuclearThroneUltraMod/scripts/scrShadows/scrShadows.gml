@@ -609,10 +609,12 @@ function scrShadows() {
 	draw_sprite(shd24,0,x-vx,y-vy)
 	with InvertedWolf
 	draw_sprite(shd24,0,x-vx,y-vy)
-	with ProtoStatue
-	draw_sprite(shd64,0,x-vx,y-vy + 8)
-	with BecomeProtoStatue
-	draw_sprite(shd64,0,x-vx,y-vy + 8)
+	/*
+		with ProtoStatue
+			draw_sprite(shd64,0,x-vx,y-vy + 8)
+		with BecomeProtoStatue
+			draw_sprite(shd64,0,x-vx,y-vy + 8)
+	*/
 	with Sheep
 	draw_sprite(shd26,0,x-vx,y-vy)
 	with FrightningCrownGhost

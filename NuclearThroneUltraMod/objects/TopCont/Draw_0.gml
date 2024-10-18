@@ -287,8 +287,8 @@ if instance_exists(Player){
 if Player.area = 2 || Player.area=8 || Player.area == 126 || Player.area == 127
 {
 var fvx = __view_get( e__VW.XView, 0 );
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
-	fvx += 54
+//if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+//	fvx += 54
 draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
@@ -302,8 +302,8 @@ draw_sprite_ext(sprFog2,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__
 else if Player.area = 102
 {
 var fvx = __view_get( e__VW.XView, 0 );
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
-	fvx += 54
+//if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+//	fvx += 54
 draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll-480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
 draw_sprite_ext(sprFog102,0,round(fvx/480)*480-fogscroll+480,round(__view_get( e__VW.YView, 0 )/360)*360,1,1,0,c_white,0.1)
@@ -776,7 +776,7 @@ with UltraRaven
 if bloom
 	scrDrawBloom()
 scrDarkness()
-if darkness = 1 && surface_exists(dark)
+if darkness > 0 && surface_exists(dark)
 {
 	var drawDark = true;
 	with UberCont

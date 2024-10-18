@@ -5042,7 +5042,7 @@ function scrWeapons() {
 	wep_load[447] = 10
 	wep_cost[447] = 4
 	wep_sprt[447] = sprAutoMissileLauncher
-	wep_area[447] = 27
+	wep_area[447] = 28
 	wep_text[447] = "THIS IS METAL"
 	wep_swap[447] = sndSwapExplosive
 	wep_rad[447] = 0;
@@ -5698,7 +5698,7 @@ function scrWeapons() {
 	wep_load[506] = 15
 	wep_cost[506] = 4
 	wep_sprt[506] = sprUltraSwordGun
-	wep_area[506] = 27
+	wep_area[506] = 28
 	wep_text[506] = "we have gone too far!"
 	wep_swap[506] = sndSwapSword
 	wep_rad[506] = 16;
@@ -6449,7 +6449,7 @@ function scrWeapons() {
 	wep_load[574] = 43
 	wep_cost[574] = 8
 	wep_sprt[574] = sprLineEverything
-	wep_area[574] = 28
+	wep_area[574] = 25
 	wep_text[574] = "don't get in the line of fire"
 	wep_swap[574] = sndSwapFlame
 	wep_rad[574] = 0;
@@ -8841,7 +8841,7 @@ function scrWeapons() {
 	wep_load[789] = 9
 	wep_cost[789] = 4
 	wep_sprt[789] = sprWuperWazerWaveWun
-	wep_area[789] = 33
+	wep_area[789] = 32
 	wep_text[789] = "wow what wicked weapon!"
 	wep_swap[789] = sndSwapEnergy
 	wep_rad[789] = 0;
@@ -9834,6 +9834,39 @@ function scrWeapons() {
 	wep_swap[876] = sndSwapSword
 	wep_rad[876] = 0;
 	wep_popup[876] = "DEALS MORE DAMAGE AT THE CUT";
+	
+	wep_name[877] = "ULTRA STAFF"
+	wep_type[877] = 0
+	wep_auto[877] = 1
+	wep_load[877] = 9
+	wep_cost[877] = 0
+	wep_sprt[877] = sprUltraStaff
+	wep_area[877] = 25
+	wep_text[877] = "a magician fires projectiles without ammo!?"
+	wep_swap[877] = sndSwapHammer
+	wep_rad[877] = 6;
+	
+	wep_name[878] = "ULTRA PLASMA CANNON"
+	wep_type[878] = 5
+	wep_auto[878] = 0
+	wep_load[878] = 40
+	wep_cost[878] = 7
+	wep_sprt[878] = sprUltraPlasmaCannon
+	wep_area[878] = 33
+	wep_text[878] = "ultra plasma cannon snaps towards targets!"
+	wep_swap[878] = sndSwapEnergy
+	wep_rad[878] = 25;
+	
+	wep_name[879] = "ULTRA LASER MINIGUN"
+	wep_type[879] = 5
+	wep_auto[879] = 1
+	wep_load[879] = 2
+	wep_cost[879] = 0
+	wep_sprt[879] = sprUltraLaserMinigun
+	wep_area[879] = 8
+	wep_text[879] = "fueled purely by radiation"
+	wep_swap[879] = sndSwapEnergy
+	wep_rad[879] = 2;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

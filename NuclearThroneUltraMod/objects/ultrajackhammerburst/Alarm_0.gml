@@ -11,6 +11,7 @@ snd_play_fire(sndJackHammer)
 if instance_exists(Player){
     with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),UltraLanceShank)
     {
+		hasCosted = other.hasCosted;
     dmg = 7;
 	knockback = 3;
     if instance_exists(Player){
