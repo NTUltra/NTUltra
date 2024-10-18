@@ -96,5 +96,7 @@ if alarm[1] < 1
 		{
 			image_index = 1;	
 		}
+		with StartingGameLockout
+			instance_destroy();
 	}
 }

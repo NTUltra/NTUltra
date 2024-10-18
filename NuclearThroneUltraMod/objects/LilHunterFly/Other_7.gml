@@ -1,3 +1,3 @@
 if sprite_index = sprLilHunterLiftStart
-sprite_index = sprLilHunterLift
+	sprite_index = sprLilHunterLift
 

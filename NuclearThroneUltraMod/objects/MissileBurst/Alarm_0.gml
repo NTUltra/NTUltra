@@ -14,34 +14,46 @@ snd_play_fire(sndRocket)
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)-15*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)+15*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)-30*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)+30*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)-45*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 with instance_create(x,y,Missile)
 {motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(12)-6)+45*other.creator.accuracy,2+random(3))
 image_angle = direction
+if other.ultraModded
+	alarm[11] = 0;
 scrCopyWeaponMod(other);
 team = other.team}
 

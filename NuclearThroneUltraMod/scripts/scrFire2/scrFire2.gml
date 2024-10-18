@@ -3044,9 +3044,9 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	instance_create(x,y,Smoke)
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
+	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-		dmg = 24;
+		dmg = 19;
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
@@ -3057,15 +3057,14 @@ function scrFire2(hasTailNow) {
 		team = other.team
 	}
 	instance_create(x,y,BigWallBreak);
-	repeat(2+Player.skill_got[13])
+	repeat(3+Player.skill_got[13])
 	{
-		x += lengthdir_x(32,aimDirection);
-		y += lengthdir_y(32,aimDirection);
+		scrMoveContactSolid(aimDirection,32)
 		instance_create(x,y,Dust)
 		instance_create(x,y,Smoke)
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
-			dmg = 24;
+			dmg = 19;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
 			longarms = 0
@@ -3077,7 +3076,8 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-		scrForcePosition60fps();
+		x += lengthdir_x(2,aimDirection+180)
+		y += lengthdir_y(2,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
 	}

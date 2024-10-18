@@ -24,7 +24,15 @@ if canFly && (random(35) < 1 or (dis < 64 and random(5) < 1) or (dis > 160 and r
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
-	instance_destroy();
+{
+	if target == other.id
+		instance_destroy();
+}
+with Leach
+{
+	if owner == other.id
+		instance_destroy();
+}
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 	if random(6) < 1
@@ -155,7 +163,15 @@ else if canFly && random(30)<1
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
-	instance_destroy();
+{
+	if target == other.id
+		instance_destroy();
+}
+with Leach
+{
+	if owner == other.id
+		instance_destroy();
+}
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
 

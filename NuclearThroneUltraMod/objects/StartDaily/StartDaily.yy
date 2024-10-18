@@ -24,8 +24,8 @@
     "path":"folders/Objects/Menu.yy",
   },
   "parentObjectId":{
-    "name":"All",
-    "path":"objects/All/All.yy",
+    "name":"StartingGameLockout",
+    "path":"objects/StartingGameLockout/StartingGameLockout.yy",
   },
   "persistent":true,
   "physicsAngularDamping":0.1,
@@ -49,5 +49,5 @@
     "path":"sprites/sprLoading/sprLoading.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

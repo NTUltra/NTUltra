@@ -773,6 +773,7 @@ if (selected && visible &&
 		    with Player {
 				disableAltUltra = true;
 				maxarmour = max(maxarmour + 3, 3);
+				scrUnlockCharacter(16,"FOR GAINING ARMOUR#ARMOUR PREVENTS#ONE FULL HIT OF DAMAGE!")
 				armour = clamp(armour + 3, 3, maxarmour);
 				/*if gotMinimumArmour
 				{
@@ -806,6 +807,7 @@ if (selected && visible &&
 				maxarmour -= 1;
 			}*/
 			maxarmour = max(maxarmour + 2, 2);
+			scrUnlockCharacter(16,"FOR GAINING ARMOUR#ARMOUR PREVENTS#ONE FULL HIT OF DAMAGE!")
 			armour = max(armour,0);
 	    }
 	}

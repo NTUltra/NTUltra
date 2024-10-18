@@ -10,6 +10,16 @@ if instance_exists(Player)
 		with BoltStick
 			instance_destroy();
 		my_health = min(maxhealth, my_health);
+		with BoltStick
+		{
+			if target == other.id
+				instance_destroy();
+		}
+		with Leach
+		{
+			if owner == other.id
+				instance_destroy();
+		}
 		instance_change(LilHunterFly,false)
 		snd_play_2d(sndLilHunterLaunch)
 	}
@@ -18,7 +28,15 @@ if instance_exists(Player)
 	sprite_index = sprLilHunterLiftStart
 	image_index = 0
 	with BoltStick
-		instance_destroy();
+	{
+		if target == other.id
+			instance_destroy();
+	}
+	with Leach
+	{
+		if owner == other.id
+			instance_destroy();
+	}
 	my_health = min(maxhealth, my_health);
 	instance_change(LilHunterFly,false)
 	snd_play_2d(sndLilHunterLaunch)

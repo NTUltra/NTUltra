@@ -2079,6 +2079,7 @@
     {"id":{"name":"StartAreaBuffer","path":"objects/StartAreaBuffer/StartAreaBuffer.yy",},},
     {"id":{"name":"StartCaptainFight","path":"objects/StartCaptainFight/StartCaptainFight.yy",},},
     {"id":{"name":"StartDaily","path":"objects/StartDaily/StartDaily.yy",},},
+    {"id":{"name":"StartingGameLockout","path":"objects/StartingGameLockout/StartingGameLockout.yy",},},
     {"id":{"name":"StartingWeaponUpDown","path":"objects/StartingWeaponUpDown/StartingWeaponUpDown.yy",},},
     {"id":{"name":"StatsSelect","path":"objects/StatsSelect/StatsSelect.yy",},},
     {"id":{"name":"Statue","path":"objects/Statue/Statue.yy",},},

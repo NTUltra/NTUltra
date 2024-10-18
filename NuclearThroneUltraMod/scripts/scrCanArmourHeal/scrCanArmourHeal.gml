@@ -21,29 +21,35 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 			return true;
 		}
 	*/
-	var takePercentage = 4.75;//450%
+	var takePercentage = 5;//4.75;//450%
 	var doAgain = false; 
-	var wepType = TargetWepTypeForAmmoConsumption(takePercentage, 1);
+	var wepType = TargetWepTypeForAmmoConsumption(takePercentage, 3, true);
 	var cost = typ_ammo[wepType]*takePercentage;
 	var bWepType;
 	var bCost;
+	var cWepType;
+	var cCost;
 	if wepType != wep_type[bwep] && wepType != wep_type[wep]
 	{
 		doAgain = true;
-		var keepAmmo = ammo[wepType];
-		ammo[wepType] = ammo[wepType] - cost;
-		bWepType = TargetWepTypeForAmmoConsumption(takePercentage, 1);
+		//var keepAmmo = ammo[wepType];
+		//ammo[wepType] = ammo[wepType] - cost;
+		bWepType = TargetWepTypeForAmmoConsumption(takePercentage, 3, true);
 		bCost = typ_ammo[bWepType]*takePercentage;
-		ammo[wepType] = keepAmmo;
+		//ammo[wepType] = keepAmmo;
+		
+		cWepType = TargetWepTypeForAmmoConsumption(takePercentage, 3, true);
+		cCost = typ_ammo[cWepType]*takePercentage;
 	}
-	if (wepType != 0 && ammo[wepType] - cost > 0
-	&& (!doAgain || (bWepType != 0 && ammo[bWepType] - bCost > 0)))
+	if (ammo[wepType] - cost > 0 || (wepType != wep_type[wep] && ammo[wepType] > 0)
+	&& (!doAgain || (ammo[bWepType] - bCost > 0 || (bWepType != wep_type[bwep] && ammo[bWepType] > 0))))
 	{
 		if (shouldTakeAmmo)
 		{
 			ammo[wepType] = ammo[wepType] - cost;
 			if (ammo[wepType] <= 0)
 			{
+				ammo[wepType] -= cost * 0.5;
 				if scrIsCrown(13)
 				{
 					with Crown {
@@ -56,6 +62,18 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 				ammo[bWepType] = ammo[bWepType] - bCost;
 				if (ammo[bWepType] <= 0)
 				{
+					ammo[bWepType] -= bCost * 0.5;
+					if scrIsCrown(13)
+					{
+						with Crown {
+							event_user(0);	
+						}
+					}
+				}
+				ammo[cWepType] = ammo[cWepType] - cCost;
+				if (ammo[cWepType] <= 0)
+				{
+					ammo[cWepType] -= cCost * 0.5;
 					if scrIsCrown(13)
 					{
 						with Crown {

@@ -115,8 +115,8 @@ function scrRaces() {
 	race_name[5] = "PLANT"
 	race_pass[5] = "IS <w>FASTER<w>"
 	race_acti[5] = "<w>SNARE<w> ENEMIES"
-	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#<w>SNARE<w> IS SLIGHTLY BIGGER"
-	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 36% <r>HP<r>#SNARE IS 25% BIGGER";
+	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 35% <r>HP<r>##<w>SNARE<w> IS SLIGHTLY BIGGER"
+	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 35% <r>HP<r>#(THRESHOLD CAN BE INCREASED WITH DAMAGE BOOSTS)##SNARE IS 25% BIGGER";
 	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>#<w>TRAPPED<w> <r>ENEMIES<r> DEAL <w>NO<w> CONTACT DAMAGE";
 	race_vision_detail[5] = race_vision[5];
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"

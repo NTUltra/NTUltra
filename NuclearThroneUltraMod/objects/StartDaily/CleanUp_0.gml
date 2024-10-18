@@ -12,6 +12,7 @@ if serverSocket != -1
 		    }
 		    until(wepmod1 != 14) //radiation mod
 
-		}	
+		}
 	}
 }
+instance_create(x,y,StartingGameLockout);

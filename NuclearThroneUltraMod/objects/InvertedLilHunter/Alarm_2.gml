@@ -6,7 +6,15 @@ else
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
-	instance_destroy();
+{
+	if target == other.id
+		instance_destroy();
+}
+with Leach
+{
+	if owner == other.id
+		instance_destroy();
+}
 my_health = min(maxhealth, my_health);
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
@@ -16,7 +24,15 @@ snd_play_2d(sndLilHunterLaunch)
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
-	instance_destroy();
+{
+	if target == other.id
+		instance_destroy();
+}
+with Leach
+{
+	if owner == other.id
+		instance_destroy();
+}
 my_health = min(maxhealth, my_health);
 instance_change(InvertedLilHunterFly,false)
 

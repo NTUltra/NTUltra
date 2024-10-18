@@ -13,8 +13,8 @@
     "path":"folders/Objects/Player/Ability.yy",
   },
   "parentObjectId":{
-    "name":"FX",
-    "path":"objects/FX/FX.yy",
+    "name":"AnimDestroyTop",
+    "path":"objects/AnimDestroyTop/AnimDestroyTop.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

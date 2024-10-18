@@ -1,9 +1,9 @@
 /// @description main
-
-if instance_exists(GenCont) || instance_exists(StartDaily) || instance_exists(LevCont)
+if instance_exists(GenCont) || instance_exists(LevCont) || instance_exists(StartingGameLockout)
 {
 	if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 		scrSwapWeps();
+	speed = 0;
 	exit;
 }
 var canMeleeAmmo = scrIsCrown(40);

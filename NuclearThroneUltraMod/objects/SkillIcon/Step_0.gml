@@ -430,6 +430,7 @@ if selected && visible
 						Player.my_health -= 2;
 				}
 				Player.prevhealth = Player.my_health;
+				scrUnlockCharacter(16,"FOR GAINING ARMOUR#ARMOUR PREVENTS#ONE FULL HIT OF DAMAGE!")
 			}
 			Player.exception = true;
 			//Dont die on me friend?

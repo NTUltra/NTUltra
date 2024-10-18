@@ -6170,7 +6170,7 @@ function scrWeapons() {
 	wep_name[549] = "HEAVY BLOOD HAMMER"
 	wep_type[549] = 0
 	wep_auto[549] = 0
-	wep_load[549] = 19
+	wep_load[549] = 22
 	wep_cost[549] = 0
 	wep_sprt[549] = sprHeavyBloodHammer
 	wep_area[549] = 24
@@ -9053,7 +9053,7 @@ function scrWeapons() {
 	wep_name[808] = "CRIMSON DELUGE"
 	wep_type[808] = 0
 	wep_auto[808] = 0
-	wep_load[808] = 40
+	wep_load[808] = 42
 	wep_cost[808] = 0
 	wep_sprt[808] = sprSuperBloodLance
 	wep_area[808] = 29
