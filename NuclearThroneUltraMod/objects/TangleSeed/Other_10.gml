@@ -44,7 +44,7 @@ if instance_exists(Player){
 	if (Player.ultra_got[17])
 	{
 
-		with instance_create(x,y,Tangle) {
+		with instance_create(x,y,CameraTangle) {
 			tangleNumber = other.tangleNumber;	
 		}
 		var am = 4;
@@ -86,7 +86,7 @@ if instance_exists(Player){
 		}
 	}
 	else {
-		with instance_create(x,y,Tangle) {
+		with instance_create(x,y,CameraTangle) {
 			tangleNumber = other.tangleNumber;	
 		}
 	}

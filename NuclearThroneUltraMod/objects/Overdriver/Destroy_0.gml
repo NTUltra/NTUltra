@@ -17,9 +17,12 @@ if instance_exists(Player) && instance_exists(creator) && rate > 2
 		ammo = other.rate
 		time = 2;
 		if instance_exists(Player) && Player.skill_got[42]
+		{
 			time = 1;
+			ammo += 2;
+		}
 		team = other.team
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + ((random(12)-6)*other.accuracy),6);
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + ((random(12)-6)*other.accuracy),8);
 		image_angle = direction;
 		event_perform(ev_alarm,0) 
 	}

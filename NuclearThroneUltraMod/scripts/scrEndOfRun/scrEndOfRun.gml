@@ -91,6 +91,7 @@ function scrEndOfRun(){
 		nextGunGameWepB = 0;
 		canSpawnInversionShards = false;
 		collectedInversionShards = 0;
+		collectedNewInversionShard = false;
 		collectedInversionShardReward = false;
 		killedInvertedThrone2 = false;
 		extraVan = 0;

@@ -182,7 +182,8 @@ if instance_exists(Player)
 			{
 				with ForceInversion
 				{
-					instance_destroy();	
+					instance_destroy();
+					instance_create(x,y,WantInversionPan);
 				}
 			}
 		}
@@ -228,7 +229,7 @@ if instance_exists(Player)
 
 	    if ultra_got[48]//Yung Cuz Ultra D
 	    {
-	    lag=2;
+			lag=2;
 	    }
 		if ultra_got[46]
 		{
@@ -264,10 +265,21 @@ if instance_exists(Player)
 			}
 	    }
 	    if race == 13
-	    {justAsheep = true;
+	    {
+			justAsheep = true;
 			with PlayerAlarms2
 			{
 				alarm[0] = 60;	
+			}
+		}
+		if race == 12 && skill_got[5]
+		{
+			//FREE DUPLICATE
+			with instance_create(x,y,YungCuzDupe) {
+				isYungerCuz = true;
+				maxhealth += 2;
+				my_health = maxhealth
+				prevhealth = maxhealth//lasthealth
 			}
 		}
 	    BackCont.enemiesInStartLevel=instance_number(enemy);

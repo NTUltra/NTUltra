@@ -25,5 +25,6 @@ else if KeyCont.key_pick[other.p] = 1
 	}
 }
 with SurvivalArenaSkipper {
-	overwritten = true;	
+	overwritten = true;
+	alarm[0] = 2;
 }

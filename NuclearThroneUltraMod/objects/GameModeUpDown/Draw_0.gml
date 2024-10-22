@@ -39,6 +39,10 @@ repeat(3)
 		{
 			draw_sprite(sprIsValidGamemode,0,xx-10,yy);
 		}
+		if array_contains(UberCont.opt_favourite_gamemode,gamemodeOrder[i])
+		{
+			draw_sprite(sprFavouriteGamemode,0,xx + 21,yy);
+		}
 		if ((hoverOverGamemode && UberCont.mouse__y-y > yy && UberCont.mouse__y-y < yy + h) || (gamemodenr == i
 		&& (instance_exists(HoldToAddRemoveGamemode) || instance_exists(HoldToReplaceGamemode))))
 		{

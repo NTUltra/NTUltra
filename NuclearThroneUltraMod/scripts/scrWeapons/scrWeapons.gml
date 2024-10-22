@@ -1226,7 +1226,7 @@ function scrWeapons() {
 	wep_name[109] = "BLOOD GLOVE"
 	wep_type[109] = 4
 	wep_auto[109] = 0
-	wep_load[109] = 16
+	wep_load[109] = 17
 	wep_cost[109] = 2
 	wep_sprt[109] = sprBloodGlove
 	wep_area[109] = 6
@@ -3052,10 +3052,10 @@ function scrWeapons() {
 	wep_rad[271] = 0;
 
 	wep_name[272] = "GHOST BLADE"
-	wep_type[272] = 0
+	wep_type[272] = 4
 	wep_auto[272] = 0
 	wep_load[272] = 41
-	wep_cost[272] = 0
+	wep_cost[272] = 1.5
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 16
 	wep_text[272] = "spooky"
@@ -3086,10 +3086,10 @@ function scrWeapons() {
 	wep_rad[274] = 0;
 
 	wep_name[275] = "GHOST SHOVEL"
-	wep_type[275] = 0
+	wep_type[275] = 4
 	wep_auto[275] = 0
 	wep_load[275] = 76
-	wep_cost[275] = 0
+	wep_cost[275] = 2
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 19
 	wep_text[275] = "digging up graves"
@@ -5449,10 +5449,10 @@ function scrWeapons() {
 	wep_rad[483] = 0;
 	
 	wep_name[484] = "GHOST DAGGER"
-	wep_type[484] = 0
+	wep_type[484] = 4
 	wep_auto[484] = 0
 	wep_load[484] = 21
-	wep_cost[484] = 0
+	wep_cost[484] = 1
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 15
 	wep_text[484] = "ghastly"
@@ -5519,7 +5519,7 @@ function scrWeapons() {
 	wep_type[490] = 1
 	wep_auto[490] = 1
 	wep_load[490] = 2
-	wep_cost[490] = 2
+	wep_cost[490] = 1.5
 	wep_sprt[490] = sprHeavyPopGun
 	wep_area[490] = 9
 	wep_text[490] = "bounces increase speed"
@@ -8001,10 +8001,10 @@ function scrWeapons() {
 	wep_popup[713] = "TRAP BETWEEN FIRE STICKS";
 	
 	wep_name[714] = "GHOST SPEAR"
-	wep_type[714] = 0
+	wep_type[714] = 4
 	wep_auto[714] = 0
-	wep_load[714] = 36
-	wep_cost[714] = 0
+	wep_load[714] = 40
+	wep_cost[714] = 2
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 16
 	wep_text[714] = "piercing ghast"

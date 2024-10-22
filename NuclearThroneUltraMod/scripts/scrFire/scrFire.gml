@@ -55,11 +55,11 @@ function scrFire(canDrown = true) {
 					reload -= 100;
 				if race == 25
 				{
-					reload -= wep_load[wep]*0.338;
+					reload -= wep_load[wep]*0.33;
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.38;
+					reload -= wep_load[wep]*0.35;
 				}
 			}
 			else if armour == maxarmour
@@ -74,7 +74,7 @@ function scrFire(canDrown = true) {
 				}
 				else
 				{
-					reload -= wep_load[wep]*0.16;
+					reload -= wep_load[wep]*0.15;
 				}
 			}
 		}
@@ -2893,7 +2893,7 @@ function scrFire(canDrown = true) {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 			{
-				dmg = 6
+				dmg = 5
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)

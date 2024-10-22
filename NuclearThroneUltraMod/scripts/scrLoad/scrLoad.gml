@@ -24,7 +24,6 @@ function scrLoad() {
 	saveFileString="ntultra"+string(currentSave)+".sav";
 	if (!instance_exists(CanLoadRetailSave) && !file_exists(saveFileString))
 	{
-		debug("CAN DO IT!");
 		instance_create(x,y,CanLoadRetailSave);
 	}
 	ini_open(saveFileString);

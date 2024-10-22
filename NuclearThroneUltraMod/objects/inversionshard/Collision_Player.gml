@@ -3,6 +3,7 @@ if !collected && KeyCont.key_pick[other.p] = 1
 {
 	KeyCont.key_pick[other.p] = 2;
 	UberCont.collectedInversionShards ++;
+	UberCont.collectedNewInversionShard = true;
 	BackCont.shake += 10;
 	snd_play(sndCollectShard);
 	collected = true;

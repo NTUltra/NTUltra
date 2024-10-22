@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"sprIDPDBullet",
   "bboxMode":1,
-  "bbox_bottom":15,
+  "bbox_bottom":17,
   "bbox_left":0,
-  "bbox_right":15,
+  "bbox_right":17,
   "bbox_top":0,
   "collisionKind":4,
   "collisionTolerance":0,
@@ -17,7 +17,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":16,
+  "height":18,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"9bc17bc9-daa0-43b1-9bcf-c6f97b0a92b4","blendMode":0,"displayName":"default","isLocked":false,"name":"9bc17bc9-daa0-43b1-9bcf-c6f97b0a92b4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -90,5 +90,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":16,
+  "width":18,
 }

@@ -46,5 +46,9 @@ with instance_create(x,y,MovingCorpse)
 }
 var d = 4;
 var w = 0;
+if isYungerCuz
+{
+	d = 100;
+}
 scrDrop(d,w)
 scrRaddrop();

@@ -126,7 +126,7 @@ bwepright = bwepflip
 else
 bwepright = right
 
-if bwep != 0 and race != 7
+if bwep != 0 and race != 7 && !instance_exists(PandaSleep)
 	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,yy,image_yscale,bwepright,90+15*right,c_silver,1)
 
 if scrEnableLaserSight()
@@ -253,7 +253,7 @@ if ultra_got[27]=1 && !altUltra//copy primary
 bwep=twep;//and return weapon
 }
 //DRAW DA GUNZ
-if back = 1 and (!(IsShielding)||(ultra_got[7]==1)){
+if back = 1 and (!(IsShielding)||(ultra_got[7]==1)) && !instance_exists(PandaSleep){
 draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
@@ -333,7 +333,7 @@ triggerfinger+=1;
 if triggerfinger>7 
 triggerfinger=0;
 
-if back = -1 and !(IsShielding){
+if back = -1 and !(IsShielding) && !instance_exists(PandaSleep){
 draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,1)
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {

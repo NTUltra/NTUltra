@@ -2,7 +2,7 @@
 //Surprise attack
 with Player
 	isOnInteractable = true;
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[other.p] = 1 && !overwritten
 {
 	KeyCont.key_pick[Player.p] = 2;
 	mask_index = mskPickupThroughWall;
@@ -12,7 +12,7 @@ if KeyCont.key_pick[other.p] = 1
 	{
 		mask_index = mskPickupThroughWall;
 		instance_destroy();
-		scrRaddrop(20);
+		scrRaddrop(30);
 		with Player {
 			tookDamageThisArea = true;
 		}

@@ -11,6 +11,7 @@ if instance_exists(creator)
 	if instance_exists(Player) {
 		var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		var l = (maxAmmo - ammo) * 24;
+		var hc = hasCosted;
 		with creator
 		{
 			snd_play_fire(sndUltraShovelCrash)
@@ -31,7 +32,7 @@ if instance_exists(creator)
 			{
 				with instance_create(x+lengthdir_x(l+(Player.skill_got[13]+bettermelee)*20,ang),y+lengthdir_y(l+(Player.skill_got[13]+bettermelee)*20,ang),Slash)
 				{
-					hasCosted = other.hasCosted;
+					hasCosted = hc;
 					dmg = 26;
 					wallPierce *= 0.5;
 					sprite_index=sprUltraSlash;

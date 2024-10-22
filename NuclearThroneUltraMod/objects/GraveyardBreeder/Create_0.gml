@@ -3,7 +3,7 @@ maxhealth = 28
 mySize = 2
 loops = GetPlayerLoops();
 if loops > 0
-	raddrop = 12;
+	raddrop = 6;
 
 
 event_inherited()

@@ -9075,13 +9075,13 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 
 	with instance_create(x,y,Bullet2Heavy)
-	{motion_add(aimDirection+(random(16)-8)*other.accuracy,16+random(2))
+	{motion_add(aimDirection+(random(16)-8)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 
 	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 4
+	BackCont.shake += 3
 	wkick = 3
 
 	break;
@@ -17875,7 +17875,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,BulletMarksMan)
 		{
 			dmg = 4;
-			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),10)
+			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),12)
 			image_angle = direction
 			team = other.team
 		}
@@ -17886,7 +17886,7 @@ function scrFire2(hasTailNow) {
 		with instance_create(x,y,Bullet2MarksMan)
 		{
 			dmg = 4;
-			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),14)
+			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),15)
 			image_angle = direction
 			team = other.team
 		}
@@ -17932,9 +17932,9 @@ function scrFire2(hasTailNow) {
 		}
 	}
 	
-	BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 4
+	BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 3
 	wkick = 5
 
 	break;

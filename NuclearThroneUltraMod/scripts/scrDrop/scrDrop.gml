@@ -38,8 +38,8 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 		{
 			mh = Player.maxarmour
 			h = Player.armour;
-			itemdrop *= 0.93;
-			canHealth *= 0.24;
+			itemdrop *= 0.88;
+			canHealth *= 0.25;
 		}
 		if itemdrop > 1
 		{

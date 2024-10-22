@@ -64,8 +64,8 @@ switch(array_length(UberCont.collectedRewards))
 		UberCont.enableReroll = true;
 		with InactiveRerollStation
 		{
-			instance_destroy();
-			instance_create(x,y,RerollStation);
+			alarm[1] = 80;
+			instance_create(x,y,CameraLerp);
 		}
 		snd_play(other.snd_crwn);
 		with instance_create(other.x,other.y,PopupText)

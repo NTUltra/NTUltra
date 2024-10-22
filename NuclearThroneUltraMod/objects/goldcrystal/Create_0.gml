@@ -5,6 +5,8 @@ event_inherited();
 alarm[0] = 0;
 meleedamage = 40
 raddrop = 40
+if instance_exists(SurvivalWave)
+	raddrop = 30;
 maxhealth = 190//65
 EnemyHealthAdjustments();
 spr_idle = sprGoldCrystalIdle

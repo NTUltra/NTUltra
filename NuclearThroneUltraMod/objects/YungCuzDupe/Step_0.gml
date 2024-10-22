@@ -106,3 +106,26 @@ if hammerheadcounter > 0
 	
 	mask_index = msk;
 }
+if UberCont.normalGameSpeed == 60
+	isWalking -= 0.5;
+else
+	isWalking -= 1;
+if isWalking <= 0 && instance_exists(Player)
+{
+	if collision_line(x,y,Player.x,Player.y,WallHitMe,false,false)
+	{
+		if UberCont.normalGameSpeed == 60
+			mp_potential_step(Player.x,Player.y,2,false);
+		else
+			mp_potential_step(Player.x,Player.y,4,false);
+	}
+}
+if place_meeting(x + hspeed,y + vspeed,WallHitMe)
+{
+	move_contact_solid(direction,max(1,min(Player.maxSpeed,speed)))
+	if place_meeting(x+hspeed,y,WallHitMe){hspeed *= 0.5
+	if place_meeting(x+hspeed,y,WallHitMe) hspeed = 0}
+	if place_meeting(x,y+vspeed,WallHitMe){vspeed *= 0.5
+	if place_meeting(x,y+vspeed,WallHitMe)vspeed = 0}
+	mp_potential_step(Player.x,Player.y,1,false);
+}

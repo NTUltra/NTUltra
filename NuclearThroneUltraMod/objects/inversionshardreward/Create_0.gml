@@ -5,6 +5,10 @@ if UberCont.collectedInversionShards > 2
 	name = "INCREASE YOUR MAX LEVEL BY ONE";
 else
 	name = "UNAVAILABLE";
-
+if UberCont.collectedNewInversionShard
+{
+	UberCont.collectedNewInversionShard = false;
+	instance_create(x,y,CameraLerp);
+}
 image_index = irandom(image_number-1);
 image_speed = 0;

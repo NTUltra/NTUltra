@@ -2,6 +2,11 @@
 var obj = wave[spawnI].obj;
 var xx = wave[spawnI].xx;
 var yy = wave[spawnI].yy;
+var healthBoost = 1;
+if waveNumber > 10
+{
+	healthBoost = 1.2;
+}
 with instance_create(xx,yy,obj)
 {
 	#region hypersomnia
@@ -11,7 +16,7 @@ with instance_create(xx,yy,obj)
 		{
 			if alarm[1]>0
 			{
-				alarm[1]+=25;
+				alarm[1]+=20;
 	
 				scrGiveSnooze();
 			}
@@ -20,11 +25,12 @@ with instance_create(xx,yy,obj)
 		{
 			if alarm[1]>0
 			{
-				alarm[1]+=20;
+				alarm[1]+=15;
 				scrGiveSnooze();
 			}
 		}
 	}
+	my_health *= healthBoost;
 	#endregion
 }
 spawnI ++;

@@ -35,8 +35,8 @@
     "path":"sprites/sprIDPDBulletSmall/sprIDPDBulletSmall.yy",
   },
   "spriteMaskId":{
-    "name":"mskEnemyBullet1",
-    "path":"sprites/mskEnemyBullet1/mskEnemyBullet1.yy",
+    "name":"mskIDPDBulletSmall",
+    "path":"sprites/mskIDPDBulletSmall/mskIDPDBulletSmall.yy",
   },
   "visible":true,
 }

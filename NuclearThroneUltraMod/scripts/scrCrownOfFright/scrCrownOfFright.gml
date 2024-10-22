@@ -29,6 +29,9 @@ function scrCrownOfFright(){
 						ghostType = 1;
 						dmg = floor(max(1,ghostDamage * 0.5));
 						sprite_index = sprCrownGhostMedium;
+						spr_walk = sprCrownGhostMedium;
+						spr_idle = sprCrownGhostMedium;
+						spr_hurt = sprCrownGhostMediumHurt;
 						myShadow = shd16;
 						myShadowOffset = 2;
 						maxhealth = 20;
@@ -43,6 +46,9 @@ function scrCrownOfFright(){
 						ghostType = 2;
 						dmg = floor(max(1,ghostDamage * 0.5));
 						sprite_index = sprCrownGhostBig;
+						spr_walk = sprCrownGhostBig;
+						spr_idle = sprCrownGhostBig;
+						spr_hurt = sprCrownGhostBigHurt;
 						myShadow = shd24;
 						myShadowOffset = 8;
 						maxhealth = 35;

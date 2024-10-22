@@ -174,3 +174,7 @@ wkick += 1
 
 if nearWall
 	draw_sprite(sprHammerHeadNear,wave,x,y-16);
+if isYungerCuz
+{
+	draw_sprite_ext(sprYungerCuz,image_index,x,y,right,1,0,c_white,1);	
+}

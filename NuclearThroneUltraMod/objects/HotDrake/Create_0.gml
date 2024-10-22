@@ -1,4 +1,8 @@
-raddrop = 75
+raddrop = 70
+if instance_exists(SurvivalWave)
+{
+	raddrop = 10;	
+}
 maxhealth = 600
 scrBossHealthBuff();
 loops = GetPlayerLoops();

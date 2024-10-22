@@ -15,6 +15,19 @@ with Player
 	}
 	else 
 		canFire = true;
+	if canFire
+	{
+		if other.isYungerCuz
+		{
+			reload += reload * 0.225;
+			ammo[wep_type[wep]] += wep_cost[wep] * 0.25;
+			rad += wep_rad[wep] * 0.25;
+		}
+		else
+		{
+			reload += reload * 0.3;
+		}
+	}
 }
 if instance_exists(Player)
 {

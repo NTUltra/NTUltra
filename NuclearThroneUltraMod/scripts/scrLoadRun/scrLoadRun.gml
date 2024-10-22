@@ -183,7 +183,7 @@ function scrLoadRun(selectedRunIndex){
 			if variable_struct_exists(encryptedRun, "voidChallengeGoing")
 				UberCont.voidChallengeGoing = encryptedRun.voidChallengeGoing;
 			if variable_struct_exists(encryptedRun, "voidChallengeCompleted")
-				UberCont.voidChallengeGoing = encryptedRun.voidChallengeCompleted;
+				UberCont.voidChallengeCompleted = encryptedRun.voidChallengeCompleted;
 			if variable_struct_exists(encryptedRun, "voidShopHealthUpgrade")
 				UberCont.voidShopHealthUpgrade = encryptedRun.voidShopHealthUpgrade;
 			if UberCont.voidShopHealthUpgrade < 20
@@ -287,6 +287,8 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.canSpawnInversionShards = encryptedRun.canSpawnInversionShards;
 			if variable_struct_exists(encryptedRun, "collectedInversionShards")
 				UberCont.collectedInversionShards = encryptedRun.collectedInversionShards;
+			if variable_struct_exists(encryptedRun, "collectedNewInversionShard")
+				UberCont.collectedNewInversionShard = encryptedRun.collectedNewInversionShard;
 			if variable_struct_exists(encryptedRun, "collectedInversionShardReward")
 				UberCont.collectedInversionShardReward = encryptedRun.collectedInversionShardReward;
 			if variable_struct_exists(encryptedRun, "cash")

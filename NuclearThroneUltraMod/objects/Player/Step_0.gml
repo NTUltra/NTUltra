@@ -1056,8 +1056,6 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			else
 			{
-				with YungCuzDupe
-					event_user(0);
 				var shootIt = true;
 				if jump > 0
 				{
@@ -1079,6 +1077,8 @@ if !instance_exists(LevCont) and visible = 1
 				{
 					scrFire();
 				}
+				with YungCuzDupe
+					event_user(0);
 			}
 			if reload > 0
 				can_shoot = 0;
@@ -1093,8 +1093,6 @@ if !instance_exists(LevCont) and visible = 1
 			}
 			else
 			{
-				with YungCuzDupe
-					event_user(0);
 				if jump > 0
 				{
 					y -= jumpY;
@@ -1116,6 +1114,8 @@ if !instance_exists(LevCont) and visible = 1
 				{
 					scrFire();
 				}
+				with YungCuzDupe
+					event_user(0);
 			}
 		}
 	}
@@ -1531,18 +1531,18 @@ if (!instance_exists(LevCont))
 			if armour < maxarmour
 			{
 				if race == 25
-					reload -= 0.17;
+					reload -= 0.16;
 				else
-					reload -= 0.2;
-				reload *= 0.99;
+					reload -= 0.19;
+				reload *= 0.999;
 			}
 			else
 			{
 				if race == 25
 					reload -= 0.07;
 				else
-					reload -= 0.1;
-				reload *= 0.9999;
+					reload -= 0.09;
+				reload *= 0.99999;
 			}
 		}
 		if skill_got[22]
@@ -1750,8 +1750,6 @@ if (!instance_exists(LevCont))
 			}
 			else
 			{
-				with YungCuzDupe
-					event_user(0);
 				if jump > 0
 				{
 					y -= jumpY;
@@ -1772,6 +1770,8 @@ if (!instance_exists(LevCont))
 				{
 					scrFire();
 				}
+				with YungCuzDupe
+					event_user(0);
 			}
 			if reload > 0 && !canInfiniteFire
 				can_shoot = 0;
@@ -2409,6 +2409,14 @@ microseconds=0;
 				isPink = false;
 				sprite_index = sprPortalSpawn;
 				depth=0;
+				if instance_exists(WantInversionPan)
+				{
+					instance_create(x,y,CameraLerp);
+					with WantInversionPan
+					{
+						instance_destroy();	
+					}
+				}
 				event_user(0);
 		    }
     

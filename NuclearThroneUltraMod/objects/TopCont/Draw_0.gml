@@ -108,6 +108,17 @@ if UberCont.opt_enemy_xray
 				}
 			}
 		}
+		with YungCuzDupe
+		{
+			if visible && sprite_exists(sprite_index)
+			{
+				var xrcol = collision_rectangle(bbox_left,y,bbox_right,bbox_bottom + 16,Wall,false,false)
+				if xrcol != noone
+				{
+					draw_sprite_ext(sprite_index,image_index,x,y,right,image_yscale,image_angle,c_white,image_alpha);
+				}
+			}
+		}
 		shader_reset();
 		gpu_set_alphatestenable(alph);
 }

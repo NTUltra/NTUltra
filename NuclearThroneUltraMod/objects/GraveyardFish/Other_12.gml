@@ -14,7 +14,7 @@ with Floor {
 	var o = 16;
 	if object_index == FloorExplo
 		o = 8;
-	if point_distance(x+o,y+o,px,py) > 96
+	if point_distance(x+o,y+o,px,py) > 108
 	{
 		allFloors[i] = [x+o,y+o];
 		i ++;

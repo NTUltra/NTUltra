@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 target = noone;
-dmg = 50;
+dmg = 60;
 image_speed = 0.6;
 alarm[4] = 1;
 with instance_create(x,y,DarkOverlay)

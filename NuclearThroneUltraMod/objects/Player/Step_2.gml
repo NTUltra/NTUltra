@@ -700,6 +700,8 @@ if armour > 0
 		{
 			rageWasHit = true;
 			rage = max(floor(rage-rageHit),0);
+			if loops > 0
+				rage -= 2;
 		}
 		scrBlankArmour();
 		if ultra_got[64]

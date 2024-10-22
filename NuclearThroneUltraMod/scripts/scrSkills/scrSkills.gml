@@ -566,7 +566,7 @@ function scrSkills() {
 	}
 	skill_tips[41] = "conduit of power"
 	skill_msnd[41] =  sndMutNervesOfSteel;
-	skill_bons[41] = "REPLACE ONLY 1 HEALTH#SLIGHTLY LESS RELOAD SPEED BOOST#(34%, 14% AND 18% RELOAD SPEED)"
+	skill_bons[41] = "REPLACE ONLY 1 HEALTH#SLIGHTLY LESS RELOAD SPEED BOOST"
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"
@@ -609,7 +609,7 @@ function scrSkills() {
 	
 	skill_name[maxskill + 1] = "REGAL VISION"
 	skill_text[maxskill + 1] = "UPGRADES YOUR SPECIAL ABILITY"
-	skill_detail[maxskill + 1] = skill_text[5];
+	skill_detail[maxskill + 1] = skill_text[maxskill + 1];
 	if instance_exists(Player)
 		skill_text[maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_vision[Player.race])
 	if instance_exists(Player)

@@ -25,7 +25,8 @@ heavyrain = false;
 rain = false;
 snow = false;
 cave = false;
-
+viewdist = 8;
+viewdistTarget = viewdist;
 
 shad = noone;//surface_create(view_wview,view_hview)
 

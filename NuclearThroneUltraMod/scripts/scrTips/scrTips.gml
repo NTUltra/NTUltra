@@ -420,25 +420,31 @@ function scrTips() {
 
 	if Player.race = 0
 	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares","random..."
-	,"roll extends gamma guts range")
+	,"roll extends gamma guts range","decided through the inbetween")
 
 	if Player.race = 1
-	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar")
+	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar"
+	,"fish can dodge roll","fish can roll","waterboost boosts moves almost anything","roll has a few immunity frames#though the timing is tight!")
 
 	if Player.race = 2
-	tip = choose("crystal can handle this","family","this is no problem","crystal is hard","crystal is tough","crystal rocks")
+	tip = choose("crystal can handle this","family","this is no problem","crystal is hard","crystal is tough","crystal rocks","crystal has this under control",
+	"shield does not block square projectiles!","be aware of the square","Shield does not block toxic gas", "shield does not block fire","shield does not block lasers"
+	,"shield can block a lot","cursed")
 
 	if Player.race = 3
-	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies","look into me eyes!"
-	,"watch where you're going")
+	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies","look into my eyes!"
+	,"watch where you're going","eyes can see the inbetween","stare into the void","it will stare back","watch out when using telekinesis close to enemies","euphoria can be quite good with telekinesis",
+	"control the battlefield","we have a vision!")
 
 	if Player.race = 4
-	tip = choose("it's so cold out here","melting is tired","everything hurts","cough","fragile but strong")
+	tip = choose("it's so cold out here","melting is tired","everything hurts","cough","fragile but strong","your active can be held down","share the pain","connected through pain",
+	"the body is weak but the mind is strong","want rest","remember who you are")
 
 	if Player.race = 5
 	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
 	"eat eat eat","the apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
 	,"trap the enemy", "use active again#while seed is in mid-air#to instantly pop it","carnage","consume consume consume", "destroy destroy destroy",
+	"snare can prevent enemies from teleporting","most enemies cannot escape your snare","pur bloodlust",
 	"annihilate annihalte annihilate", "obliterate obliterate obliterate","snare prevents enemies from teleporting!")
 
 	if Player.race = 6
@@ -465,71 +471,78 @@ function scrTips() {
 
 	if Player.race = 7
 	tip = choose("time to flex","steroids could do pushups forever","steroids used to be a scientist","appreciate revolvers","get shots","get strong"
-	,"eat 14 eggs in the morning")
+	,"eat 14 eggs in the morning","steroids knew","read a book","wield two guns!")
 
 	if Player.race = 8
-	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that","don't forget to eat weapons","eating a weapon instantly reloads your other weapon",
+	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that",
+	"don't forget to eat weapons","eating a weapon instantly reloads your other weapon","auto eat weapons left in the area",
 	"robot can eat cursed weapons without taking damage while having thronebutt","thronebutt allows you to eat cursed weapons")
 
 	if Player.race = 9
-	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows","slow down time","hyper fast reactions","chicken used to slow down time#in retail","can't throw weapons")
+	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows",
+	"slow down time","hyper fast reactions","chicken used to slow down time#in the vanilla game","can't throw weapons",
+	"fan of action movies","we do it for real now","don't ever die!","never give up!","focus allows you to take risks")
 
 	if Player.race = 10//Rebel
 	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?"
-	,"allies gain +1 health each loop","your ally's bullets trigger recycle gland","try ultra modding your ally's bullets")
+	,"allies gain health each loop","your ally's bullets trigger recycle gland","try ultra modding your ally's bullets","you can throw you allies","use your allies as shields","something speaks to you","how are you holding all these allies?",
+	"allies can wander of and kill stuff")
 
 	if Player.race = 11//hunter
 	tip = choose("never miss",
 	"ranged assassin",
 	"never see you coming",
-	"robot's best buddy",
 	"can't escape",
 	"want out",
-	"miss life","after marking#you can unmark#by right clicking again",
+	"miss life",
+	"after marking#you can unmark#by right clicking again",
 	"pellets move faster with hunter",
 	"shotguns shoot further as hunter",
-	"paranoid android",
-	"marking someone significantly increses your accuracy",
+	"marking someone significantly increases your accuracy",
+	"the big hunt",
+	"always on the hunt","next target","bigger target","when a marked target dies the marker snaps to a nearby enemy"
 	)
 
 	if Player.race = 12//yung cuz
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
-	"not immortal","how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
+	,"how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
 	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
 	"you have to get good","duplicates get your mutations","yc is a god gamer","I'm number 1","clones","duplicate!","ctrl + C#ctrl + V",
-	"your duplicates copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version")
+	"your duplicates copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version","gamers")
 
 	if Player.race = 13//sheep
-	tip = choose("BAAHHH","farmville","don't mess with me"
+	tip = choose("BAAHHH","don't mess with me"
 	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful","embrace the chaos",
-	,"shaun the sheep","sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
+	,"sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
 	"charge increases damage#the longer you charge it","while charging#at high speed#you don't take#contact damage","you are immune#while charging#at high speed",
 	"extra feet and gamma guts#buff your charge","eat grass","popo won't come for you#while passive is active","you don't take contact damage#while passive is active"
 	,"hypersomnia goes in effect#after your passive","pink lines indicate line of sight","when enemies see you kill they will attack you","when enemies see you deal damage they will attack"
-	,"sheep can tackle vans!","sheep is very good at taking out idpd vans"
+	,"sheep can tackle vans!","sheep is very good at taking out idpd vans","is it a disguise?","from the 4th universe"
 	)
 
 	if Player.race = 14//panda
 	tip = choose("never let go of your bamboo","rng","portal magic","what is a panda doing here",
-	"don't want to be here","help me","if only hotline miami had a panda","panda used to be a pacifist",
+	"don't want to be here","help me","panda used to be a pacifist",
 	"throw weapons to#conserve ammo","throw damage scales#with your level","your thrown weapons will return to you",
-	,"fight to survive","manage your weapons!","killing is no fun","panda is unpredictable with weapons"
-	/*,"you can see your new weapon#while a level is generating","throw weapons#in a portal to keep them",
-	"if you like a weapon#you can throw it into a portal#to keep it"*/
+	,"fight to survive","manage your weapons!","panda is unpredictable with weapons",
+	"panda enjoys a good nap","resting is not being lazy","sleepy","don't care","it's not lazy its just energy efficient"
+	,"throw weapons in portals to re-roll them","thrown weapons teleport back to you","sometimes throwing a weapon might be quicker than reloading it!"
+	,"your active can be held down"
 	)
 
 	if Player.race = 15//Atom
 	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe","telefrag",
-	"lava does not burn you because you fly","cobwebs dont slow you because you fly",
-	,"from the other side","inverted mutant","higher chance for inverted worlds","purple balls","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
+	"lava does not burn you because you fly","cobwebs dont slow you because you fly","primal force","primival essence","return to the beginning","dematerialize","explode",
+	,"from the other side","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
 	if Player.race = 16//Viking
 	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!","weapon smith made viking's armour","serpent queen","venomous"
-	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030")
+	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030"
+	,"don't look in her eyes","the serpents have their own will","keep the serpents under control","armour blocks a full instance of damage!")
 
 	if Player.race = 17//WEAPONSMITH
-	tip = choose("anvil","you keep the weapon mods#when upgrading","you upgrade one of your#two weapons at random","weapon smith forges weapons for the other mutants",
-	"weapon smith made viking's axe its one of his best works",
+	tip = choose("anvil","you keep your weapon mods#when upgrading","you upgrade one of your#two weapons at random","weapon smith forges weapons for the other mutants",
+	"weapon smith made viking's axe#its one of his best works",
 	"the weapon that gets upgraded#is chosen randomly","weaponsmith used to be a smoker","hide your face","made of stone","no trousers","weaponsmith is a metalhead")
 
 	if Player.race = 18//ANGEL
@@ -540,12 +553,12 @@ function scrTips() {
 	"angel can deflect contact damage")
 
 	if Player.race = 19//SKELETON
-	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up","keep going","the body has 69 bones")
+	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up","keep going","the body has 69 bones","forget who you were","continue","become strong")
 
 	if Player.race = 20//BUSINESS HOG
 	tip = choose("post apocalyptic capitalism","delusional capitalist","mutated money","Making Nuclear Throne great again"
 	,"Gad dang hippies","dollar dollar bill y'all","pay to win","games as a service","NFT (nuclear fucking throne)","please provide your creditcard information"
-	,"your guns are stored#in the blockchain","stealing","scheming","cash explosion works with recycle gland and tail's end!")
+	,"your guns are stored#in the blockchain","stealing","scheming","cash explosion works with recycle gland and tail's end!","hog steals from anyone#even gods")
 
 	if Player.race = 21//HORROR
 	tip = choose("Enemies absorb the beam's rads","horrifying","pure energy",
@@ -556,30 +569,34 @@ function scrTips() {
 	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost","gone rogue","you can cancel portalstrike with e (use key)")
 
 	if Player.race = 23//FROG
-	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing")
+	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing","strangely attractive?")
 
 	if Player.race = 24//ELEMENTOR
-	tip = choose("The elements will destroy you","The avatar","meditating","Floaty","Very down to earth","SOLID! play!",
-	"Floating guns","No hands required","Walls can get destroyed#when enemies get very close",
-	"Mushroom power","the elements")//"You can only place walls#against other walls","Create walls from other walls",
+	tip = choose("mushroom of all the elements!","toxic is not! one of the elements","fire burns away toxic","frost freezes fire",
+	"you can walk through your own walls","you can terraform away existing walls to create tunnels!","terraform costs secondary ammo",
+	"use your defenses!","lets get that moodswing","lightning is stronger!","kraken is stronger!",
+	"fire is stronger!","frost is stronger!","though elements are a little stronger you can still have a good build without them",
+	"Mushroom power","the elements","your walls block projectiles","fire, frost, kraken and lightning are all stronger!")//"You can only place walls#against other walls","Create walls from other walls",
 
 	if Player.race = 25//DOCTOR
 	tip = choose("Efficient rad intake","Underleveled?","Second opinion","Trust me,#I'm a doctor","You can use that extra limb#to walk faster","That mutation seems good to me",
-	"Try to stay close to radiation","don't do drugs kids","Doctor used to work in the labs","nasty experiments","The mutation doctor","every single mutation is better!","get vaccinated")
+	"Try to stay close to radiation","don't do drugs kids","Doctor used to work in the labs","nasty experiments","The mutation doctor","every single mutation is better!","get vaccinated"
+	,"proper self care","what kind of doctor?")
 
 	if Player.race = 26//GOOD OL' HUMPHRY
-	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","Old and experienced","fallout shelter"
-	,"Any projectile in one shot#counts as one hit","When one of multiple projectiles#fire in one shot/burst#hits an enemy it counts as a hit"
-	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles","active costs unequipped weapon type ammo",
-	"with years of experience#humphry has mastered the art#of shrinking bullets","good o'l humphry was the first mutant","one and only mutant#without side effects","super soldier"
-	,"immortal soldier","overkill","S S S#Slow Shrink Stun","active costs an additional 1% skill on loop","your active costs more skill on loop")
+	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","experienced","fallout shelter"
+	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles", "radiation aged him",
+	"humphry has mastered the art#of shrinking bullets","super soldier","he knew","paranoia","prepare for anything#even if it's not real?",
+	"skill increases all damage you deal","damage buffs are multiplicative!"
+	,"immortal soldier","overkill","S S S#Slow Shrink Stun","active costs additional skill on loop","your active costs more skill on loop")
 	
 	if Player.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
 	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
 	"you can grab through walls","your hand break walls","you can grab chests","some enemies are too heavy#to grab","your active gets +1 damage#when you reach level ultra"
 	,"you can hold your active to instantly target things with your hand","tap active again to let go",
-	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",)
+	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",
+	,"your active can be held down")
 	
 	}
 	else if tiptype = 3 //WEAPONS

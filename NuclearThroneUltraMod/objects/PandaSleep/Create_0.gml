@@ -8,9 +8,6 @@ snd_loop(choose(sndPandaSleep1,sndPandaSleep2));
 originalIdle = Player.spr_idle;
 originalWalk = Player.spr_walk;
 originalHurt = Player.spr_hurt;
-originalWepA = Player.wep_sprt[Player.wep];
-originalWepB = Player.wep_sprt[Player.bwep];
-originalWepC = Player.wep_sprt[Player.cwep];
 wep = noone;
 bwep = noone;
 cwep = noone;
@@ -66,9 +63,6 @@ with Player
 		}
 		other.cwep = cw;
 	}
-	wep_sprt[wep] = sprNoGun;
-	wep_sprt[bwep] = sprNoGun;
-	wep_sprt[cwep] = sprNoGun;
 }
 alarm[2] = 1;
 sleepHits = 0;

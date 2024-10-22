@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprTrapFire",
-    "path":"sprites/sprTrapFire/sprTrapFire.yy",
+    "name":"sprTrapFireEnemy",
+    "path":"sprites/sprTrapFireEnemy/sprTrapFireEnemy.yy",
   },
   "spriteMaskId":{
     "name":"mskTrapFireEnemy",

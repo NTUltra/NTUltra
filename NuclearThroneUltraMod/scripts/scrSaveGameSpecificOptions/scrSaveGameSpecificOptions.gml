@@ -13,6 +13,15 @@ function scrSaveGameSpecificOptions() {
 			ini_write_real("OPTIONS","gamemode"+string(i),opt_gamemode[i]);
 		}
 	}
+	if is_array(opt_favourite_gamemode)
+	{
+		var al = array_length(opt_favourite_gamemode);
+		ini_write_real("OPTIONS","opt_favourite_gamemode",al);
+		for (var i = 0; i < al; i++)
+		{
+			ini_write_real("OPTIONS","opt_favourite_gamemode"+string(i),opt_favourite_gamemode[i]);
+		}
+	}
 	ini_write_string("OPTIONS","customsurvival",opt_custom_survival);
 	ini_write_real("OPTIONS","opt_gm1wep",opt_gm1wep);
 	//ini_write_real("OPTIONS","opt_gm_char",opt_gm_char);

@@ -3,7 +3,7 @@ mySize = 1
 
 event_inherited()
 
-raddrop = 5
+raddrop = 2
 maxhealth = 1
 if loops > 0
 	maxhealth = 3;

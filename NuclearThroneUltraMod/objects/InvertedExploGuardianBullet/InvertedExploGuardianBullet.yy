@@ -41,8 +41,8 @@
     "path":"sprites/sprInvertedExploGuardianBullet/sprInvertedExploGuardianBullet.yy",
   },
   "spriteMaskId":{
-    "name":"mskBullet2",
-    "path":"sprites/mskBullet2/mskBullet2.yy",
+    "name":"mskEnemyBullet1",
+    "path":"sprites/mskEnemyBullet1/mskEnemyBullet1.yy",
   },
   "visible":true,
 }

@@ -1,6 +1,7 @@
 event_inherited();
 friction = 0.45
 image_speed = 0.4
+isWalking = 0;
 IsShielding = 0;
 hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
@@ -15,6 +16,7 @@ peaceBarrierTime = 0;
 peaceBarrierDuration = 55;
 peaceBarriers = 0;
 peaceBarriersMax = 2;
+isYungerCuz = false;
 if skill_got[26]//HAMMER HEAD
 {
 	hammerheadcounter = 20;

@@ -5,3 +5,4 @@ timer = 0
 target = noone;
 team = 3;
 alarm[0] = 30;
+instance_create(x,y,CameraLerp);

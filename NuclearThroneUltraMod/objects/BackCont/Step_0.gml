@@ -20,30 +20,65 @@ if !instance_exists(GenCont)
 		mx = Player.x;
 		my = Player.y;
 	}
-	viewdist = 9
+	viewdistTarget = 7
 
 	if Player.wep_type[Player.wep] = 0 or Player.wep_type[Player.wep] = 2
-	viewdist = 9
+	{
+		viewdistTarget = 9
+	}
 
 	if Player.wep_type[Player.wep] = 3
-	viewdist = 8
+	viewdistTarget = 5
 
-	if(Player.skill_got[19]){//EAGLE EYES
-	viewdist-=5;}
+	if(Player.skill_got[19]) {//EAGLE EYES
+		viewdistTarget = 4;
+	}
+	if instance_exists(CameraLerp)
+	{
+		viewdistTarget = 10;	
+	}
+	if viewdist < viewdistTarget - 0.5
+	{
+		if UberCont.normalGameSpeed == 60
+			viewdist += 0.25;
+		else
+			viewdist += 0.5;
+	}
+	else if viewdist > viewdistTarget + 0.5
+	{
+		if UberCont.normalGameSpeed == 60
+			viewdist -= 0.25;
+		else
+			viewdist -= 0.5;
+	}
+	else
+	{
+		viewdist = 	viewdistTarget;
+	}
 
 	//if Player.my_health > 0
 	//{
 	viewx = ((Player.x-vw)*(viewdist-1)+(mx-vw))/viewdist
 	viewy = ((Player.y-vh)*(viewdist-1)+(my-vh))/viewdist
 	//}
-	if instance_exists(Tangle) and KeyCont.key_spec[Player.p] = 2 && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
+	if instance_exists(CameraTangle) and KeyCont.key_spec[Player.p] = 2 && Player.ultra_got[20]=0 && !Player.altUltra//stereo snares confusion
 	{
-		if Tangle.image_index > 2
+		if CameraTangle.image_index > 1
 		{
-			viewx = (((Tangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(mx-vw))/viewdist
-			viewy = (((Tangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(my-vh))/viewdist
+			viewx = (((CameraTangle.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(mx-vw))/viewdist
+			viewy = (((CameraTangle.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(my-vh))/viewdist
 		}
 	}
+	/*
+	if instance_exists(YungCuzDupe) && UberCont.opt_camera_follow
+	{
+		var n = instance_furthest(Player.x,Player.y,YungCuzDupe);
+		if point_distance(Player.x,Player.y,n.x,n.y) > 32
+		{
+			viewx = (((n.x+Player.x*1.5)/2.5-vw)*(viewdist-1)+(mx-vw))/viewdist
+			viewy = (((n.y+Player.y*1.5)/2.5-vh)*(viewdist-1)+(my-vh))/viewdist
+		}
+	}*/
 	if instance_exists(NuclearThrone1)
 	{
 		viewy -= 24;
@@ -108,6 +143,17 @@ if !instance_exists(Menu)
 	var normalizationSpeed = min(0.98,0.4 + (instance_number(YungCuzDupe)+instance_number(Friend)*0.1));
 	viewx2 = viewx2-(viewx2-viewx)*normalizationSpeed;
 	viewy2 = viewy2-(viewy2-viewy)*normalizationSpeed;
+}
+if instance_exists(CameraLerp)
+{
+	var clt = noone;
+	with CameraLerp
+	{
+		if active
+			clt = id;
+	}
+	viewx2 = lerp(viewx2,clt.x - vw,clt.lerpTime);
+	viewy2 = lerp(viewy2,clt.y - vh,clt.lerpTime);
 }
 var xx = viewx2+(random(shake)-shake*0.5)*UberCont.opt_shake;
 var yy = viewy2+(random(shake)-shake*0.5)*UberCont.opt_shake;

@@ -15,3 +15,4 @@ if target != noone && instance_exists(target)
 		right = -1
 }
 ammo = 0;
+scrDrop(20,0,true);

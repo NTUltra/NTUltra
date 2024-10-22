@@ -1,12 +1,24 @@
 if !instance_exists(Player){instance_destroy();exit;}
 if KeyCont.key_west[Player.p] = 2 or KeyCont.key_west[Player.p] = 1
-hspeed -= 3
+{
+	hspeed -= 3
+	isWalking = 3;
+}
 if KeyCont.key_east[Player.p] = 2 or KeyCont.key_east[Player.p] = 1
-hspeed += 3
+{
+	hspeed += 3
+	isWalking = 3;
+}
 if KeyCont.key_nort[Player.p] = 2 or KeyCont.key_nort[Player.p] = 1
-vspeed -= 3
+{
+	vspeed -= 3
+	isWalking = 3;
+}
 if KeyCont.key_sout[Player.p] = 2 or KeyCont.key_sout[Player.p] = 1
-vspeed += 3
+{
+	vspeed += 3
+	isWalking = 3;
+}
 
 if speed = 0// && returntoplayer<1 && returntoplayerfast<1
 {if sprite_index != spr_hurt
@@ -57,7 +69,7 @@ if Player.outOfCombat
 		speed = Player.maxSpeed + 1
 }
 else if speed > Player.maxSpeed
-speed = Player.maxSpeed
+	speed = Player.maxSpeed
 
 /* */
 ///tough shell
@@ -207,52 +219,91 @@ if(my_health<=0)
 }
 
 var dis = point_distance(x,y,Player.x,Player.y)
-if dis >= 300
+if isWalking <= 1
 {
-	x = Player.x;
-	y = Player.y;
-}
-else
-{
-	if dis > 100
+	if dis >= 300 || (dis > 16 && isWalking <= -20)
 	{
-		returntoplayer=30;
-		returntoplayerfast=0;
+		isWalking = 0;
+		instance_create(x,y,Dust);
+		x = Player.x;
+		y = Player.y;
+		scrForcePosition60fps();
 	}
-
-	if (Player.speed=0)&&dis>16//&&random(10)<1
+	else
 	{
-		returntoplayerfast=20;
-		returntoplayer=0;
-	}
-
-	if (dis < 16)
-		returntoplayerfast = 0;
-	else if dis < 32
-	{
-		var n = instance_nearest_notme(x,y,YungCuzDupe);
-		if n != noone
+		if dis > 100
 		{
-			if point_distance(n.x,n.y,Player.x,Player.y) < 16
+			returntoplayer = 30;
+			if isWalking > 0
+				returntoplayerfast = 0;
+		}
+
+		if (isWalking <= 0) && dis>16//&&random(10)<1
+		{
+			returntoplayerfast = 20;
+			returntoplayer = 0;
+		}
+
+		if (dis < 16)
+			returntoplayerfast = 0;
+		else if dis < 32
+		{
+			var n = instance_nearest_notme(x,y,YungCuzDupe);
+			if n != noone
 			{
-				var ndis = point_distance(x,y,n.x,n.y);
-				if ndis < 16
-					returntoplayerfast = 0;
+				if point_distance(n.x,n.y,Player.x,Player.y) < 16
+				{
+					var ndis = point_distance(x,y,n.x,n.y);
+					if ndis < 16
+						returntoplayerfast = 0;
+				}
 			}
 		}
-	}
+		var is60fps = UberCont.normalGameSpeed == 60
+		if returntoplayer>0
+		{//motion_add(point_direction(x,y,Player.x,Player.y),3);
+			if is60fps
+			{
+				mp_potential_step(Player.x,Player.y,0.5,false)
+				returntoplayer -= 0.5;
+			}
+			else
+			{
+				mp_potential_step(Player.x,Player.y,1,false)
+				returntoplayer--;
+				//motion_add(direction,0.8);
+			}
+		}
 
-	if returntoplayer>0
-	{//motion_add(point_direction(x,y,Player.x,Player.y),3);
-	mp_potential_step(Player.x,Player.y,1,false)
-	returntoplayer--;
-	motion_add(direction,0.8);
-	}
-
-	if returntoplayerfast>0
-	{//motion_add(point_direction(x,y,Player.x,Player.y),3);
-	mp_potential_step(Player.x,Player.y,3,false)
-	returntoplayerfast--;
-	motion_add(direction,0.8);
+		if returntoplayerfast>0
+		{//motion_add(point_direction(x,y,Player.x,Player.y),3);
+			if is60fps
+			{
+				if isWalking < 0
+				{
+					mp_potential_step(Player.x,Player.y,3,false)
+					returntoplayerfast -= 0.5;	
+				}
+				else
+				{
+					mp_potential_step(Player.x,Player.y,1.5,false)
+					returntoplayerfast -= 0.5;	
+				}
+			}
+			else
+			{
+				if isWalking < 0
+				{
+					mp_potential_step(Player.x,Player.y,6,false)
+					returntoplayerfast--;
+				}
+				else
+				{
+					mp_potential_step(Player.x,Player.y,3,false)
+					returntoplayerfast--;
+				}
+			}
+		//motion_add(direction,0.8);
+		}
 	}
 }

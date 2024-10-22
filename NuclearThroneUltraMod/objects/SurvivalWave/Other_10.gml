@@ -128,6 +128,10 @@ switch (waveNumber)
 		with ThroneIISpiral {
 			instance_destroy();	
 		}
+		with Spiral
+		{
+			speedUp = true;
+		}
 		with WallHitMe
 		{
 			instance_destroy();
@@ -430,7 +434,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 					obj: Barrel,
-					time: 120,
+					time: 90,
 					xx: cx,
 					yy: centerY
 			};
@@ -445,7 +449,7 @@ repeat(1+loops)
 			}
 			wave[i] = {
 				obj: Scorpion,
-				time: 140,
+				time: 135,
 			};
 			i++;
 			repeat(3)
@@ -478,7 +482,7 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: AmmoChest,
-				time: 200,
+				time: 190,
 				xx: centerX,
 				yy: centerY-32
 			};
@@ -499,17 +503,17 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 					obj: BigMaggot,
-					time: 50,
+					time: 51,
 				};
 			i++;
 			wave[i] = {
 					obj: Scorpion,
-					time: 20,
+					time: 21,
 				};
 			i++;
 			wave[i] = {
 					obj: Scorpion,
-					time: 20,
+					time: 21,
 				};
 			i++;
 			wave[i] = {
@@ -1026,20 +1030,15 @@ repeat(1+loops)
 			{
 				wave[i] = {
 					obj: LaserCrystal,
-					time: 22
+					time: 25
 				};
 				i++;
 			}
-			wave[i] = {
-				obj: GoldCrystal,
-				time: 60
-			};
-			i++;
 			repeat(6)
 			{
 				wave[i] = {
 					obj: Spider,
-					time: 7
+					time: 8
 				};
 				i++;
 			}
@@ -1454,19 +1453,12 @@ repeat(1+loops)
 			i++;
 			wave[i] = {
 				obj: EliteWeaponChest,
-				time: 5,
+				time: 180,
 				xx: centerX,
 				yy: centerY+24
 			};
 			i++;
-			wave[i] = {
-				obj: RhinoFreak,
-				time: 180,
-				xx: centerX,
-				yy: centerY
-			};
 			//Big machine
-			i++;
 			wave[i] = {
 				obj: WallBreak,
 				time: 1,
@@ -1817,14 +1809,14 @@ repeat(1+loops)
 		case 8:
 			wave[i] = {
 				obj: Sheep,
-				time: 80,
+				time: 60,
 				xx: centerX,
 				yy: centerY-16
 			};
 			i++;
 			wave[i] = {
 				obj: ExplosiveSheep,
-				time: 50,
+				time: 40,
 				xx: centerX,
 				yy: centerY+16
 			};
@@ -1889,7 +1881,7 @@ repeat(1+loops)
 				yy: centerY+32
 			};
 			i++;
-			repeat(8)
+			repeat(6)
 			{
 				wave[i] = {
 					obj: CardGuy2,
@@ -1930,7 +1922,7 @@ repeat(1+loops)
 				yy: centerY-32
 			};
 			i++;
-			repeat(3)
+			repeat(2)
 			{
 				wave[i] = {
 					obj: TeaPot,
@@ -1948,7 +1940,7 @@ repeat(1+loops)
 					time: 40
 				};
 				i++;
-			repeat(4)
+			repeat(3)
 			{
 				wave[i] = {
 					obj: CardGuy2,
@@ -4678,7 +4670,7 @@ repeat(1+loops)
 		break;
 		#endregion
 		/*
-		#region wave 21 Pizza sewers
+		#region wave 21 Pizza sewers & Banditland?
 		//Probably add technomancer here maybe
 		case 21:
 		break;

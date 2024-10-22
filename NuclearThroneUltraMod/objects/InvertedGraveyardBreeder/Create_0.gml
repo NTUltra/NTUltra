@@ -1,5 +1,5 @@
 event_inherited()
-raddrop = 14
+raddrop = 8
 if loops < 1
 	raddrop = 4;
 maxhealth = 20

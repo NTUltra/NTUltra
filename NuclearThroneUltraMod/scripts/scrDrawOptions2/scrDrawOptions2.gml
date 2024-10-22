@@ -21,7 +21,7 @@ function scrDrawOptions2() {
 	{
 		canUnlock = "-DISABLED-";
 	}
-	txt0 = "#GAMEMODE CONCOCTIONS########################UNLOCKABLES ARE#"+canUnlock+"##HOLD [LEFT CLICK] TO ADD/REMOVE GAMEMODE#PRESS [RIGHT CLICK] TO RETURN";
+	txt0 = "#GAMEMODE CONCOCTIONS########################UNLOCKABLES ARE#"+canUnlock+"##[HOLD LEFT CLICK] TO ADD/REMOVE GAMEMODE#PRESS [RIGHT CLICK] TO RETURN";
 	var gamemodeScrollString = "";
 	var al = array_length(UberCont.opt_gamemode)
 	if al < 1
@@ -32,11 +32,11 @@ function scrDrawOptions2() {
 		if i != al - 1
 			gamemodeScrollString += " + ";
 	}
-	txt1 = "###RESET########"
+	txt1 = "###########"
 	txt2 = "##### "+string(gamemodename)+"######";
 
-	stxt0 = "#GAMEMODE CONCOCTIONS#########################" + canUnlock //+ "##HOLD                                    ";
-	stxt1 = "###RESET##### ####### #### ####"
+	stxt0 = "#GAMEMODE CONCOCTIONS#########################" + canUnlock + "##[HOLD LEFT CLICK]                       #      [RIGHT CLICK]          ";
+	stxt1 = "######## ####### #### ####"
 	stxt2 = txt2
 
 

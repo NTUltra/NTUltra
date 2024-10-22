@@ -9,7 +9,7 @@ if instance_exists(Ally) && instance_number(Ally) > 1
 		{
 			var xxx = x //+ lengthdir_x(18,image_angle+180);
 			var yyy = y //+ lengthdir_y(18,image_angle+180);
-			if collision_line(xx,yy,xxx,yyy,Wall,false,false) == noone
+			if !collision_line(xx,yy,xxx,yyy,Wall,false,false)
 			{
 				var dir = point_direction(xx,yy,xxx,yyy);
 				if instance_exists(Player) && Player.skill_got[17] == 1
@@ -17,20 +17,17 @@ if instance_exists(Ally) && instance_number(Ally) > 1
 				else
 					snd_play(sndLaser,0.1,true)
 
-				if instance_exists(Player)
-					dir = dir + (random(4)-2)*Player.accuracy
-				else
-					dir = dir + (random(4)-2)
 				with instance_create(xx,yy,Laser)
 				{
 					canSmoke = false;
 					image_angle = dir
 					team = other.team
+					alarm[2] = max(1,alarm[2] - 1);
 					event_perform(ev_alarm,0)
 				}
 			}
 		}
-		alarm[3] = min(alarm[3] + 1, 90);
+		alarm[3] += 1;
 	}
 }
-alarm[3] = 35;
+alarm[3] = 35 + (instance_number(Ally)*2);

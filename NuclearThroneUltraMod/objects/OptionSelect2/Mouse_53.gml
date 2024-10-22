@@ -17,9 +17,12 @@ instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )-__view
 //instance_create(view_xview+view_wview/2,view_yview+96,GameModeUpDown)
 var yy = 28;
 instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+yy,GameModeUpDown)
-with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+yy-8,GameModeReset)
+with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2 - 112,__view_get( e__VW.YView, 0 )+yy-10,GameModeReset)
 	depth = GameModeUpDown.depth;
-
+with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2 - 48,__view_get( e__VW.YView, 0 )+yy-10,GameModeFavouriteNew)
+	depth = GameModeUpDown.depth;
+with instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2 + 16,__view_get( e__VW.YView, 0 )+yy-10,GameModeFavouriteUse)
+	depth = GameModeUpDown.depth;
 
 }
 else if StatsSelect.selected = 1 or CreditsSelect.selected = 1 or OptionSelect.selected = 1 or UpdateChecker.selected = 1

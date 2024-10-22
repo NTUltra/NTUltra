@@ -838,6 +838,8 @@ function scrDrawHUD() {
 	{
 	var spr, col, wid;
 	spr = dataRef.wep_sprt[dataRef.cwep]
+	if instance_exists(PandaSleep)
+		spr = sprNoGun;
 	wid = 16
 	var odi = 0;
 	if dataRef.wep_type[dataRef.cwep] = 0
@@ -970,6 +972,8 @@ function scrDrawHUD() {
 	{
 	var spr, col, wid;
 	spr = dataRef.wep_sprt[dataRef.bwep]
+	if instance_exists(PandaSleep)
+		spr = sprNoGun;
 	wid = 16
 	var odi = 0;
 	if dataRef.wep_type[dataRef.bwep] = 0
@@ -1108,6 +1112,8 @@ function scrDrawHUD() {
 	//PRIMARY WEAPON
 	var spr, wid;
 	spr = dataRef.wep_sprt[dataRef.wep]
+	if instance_exists(PandaSleep)
+		spr = sprNoGun;
 	wid = 16
 	var odi = 0;
 	if dataRef.wep_type[dataRef.wep] = 0
@@ -2204,15 +2210,30 @@ function scrDrawHUD() {
 		{
 			if place_meeting(x,y,Player)
 			{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 
-			draw_set_color(c_black)
-			draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
-			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+				draw_set_color(c_black)
+				draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
+				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+			}
+		}
+		with SurvivalArenaSkipper
+		{
+			if !overwritten && place_meeting(x,y,Player)
+			{
+				draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
+
+				draw_set_color(c_black)
+				draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
+				draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
+				draw_set_color(c_white)
+				draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
+				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
 		with PitEnterance
@@ -2230,21 +2251,7 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
-		with SurvivalArenaSkipper
-		{
-			if !overwritten && place_meeting(x,y,Player)
-			{
-			draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
-
-			draw_set_color(c_black)
-			draw_text(x-ox,y-oy-48,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-48,string_hash_to_newline(string(name)))
-			draw_text(x-ox+1,y-oy-49,string_hash_to_newline(string(name)))
-			draw_set_color(c_white)
-			draw_text(x-ox,y-oy-49,string_hash_to_newline(string(name)))
-			//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
-			}
-		}
+		
 		with BossReward
 		{
 			if active && place_meeting(x,y,Player)

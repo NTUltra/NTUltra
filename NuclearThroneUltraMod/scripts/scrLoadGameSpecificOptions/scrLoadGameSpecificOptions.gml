@@ -8,6 +8,14 @@ function scrLoadGameSpecificOptions() {
 	{
 		opt_gamemode[i] = ini_read_real("OPTIONS","gamemode"+string(i),0);
 	}
+	opt_favourite_gamemode = [0];
+	var al = ini_read_real("OPTIONS","opt_favourite_gamemode",1);
+	if al < 1
+		opt_favourite_gamemode = [0];
+	for (var i = 0; i < al; i ++)
+	{
+		opt_favourite_gamemode[i] = ini_read_real("OPTIONS","opt_favourite_gamemode"+string(i),0);
+	}
 	if scrIsGamemode(38)
 	{
 		useSeed = true;

@@ -2,6 +2,10 @@ maxhealth = 10;
 mySize = 1
 raddrop = 2
 event_inherited();
+spr_walk = sprCrownGhostSmall;
+spr_idle = sprCrownGhostSmall;
+spr_hurt = sprCrownGhostSmallHurt;
+spr_dead = mskPickupThroughWall;
 team = 0;
 target = -1
 right = choose(1,-1)

@@ -47,6 +47,14 @@ if audio_is_playing(sndChickenLoop)
 {
 	audio_stop_sound(sndChickenLoop);
 }
+if audio_is_playing(sndEyesLoop)
+{
+	audio_stop_sound(sndEyesLoop);
+}
+if audio_is_playing(sndEyesLoopUpg)
+{
+	audio_stop_sound(sndEyesLoopUpg);
+}
 if instance_exists(Player)
 {
 	if Player.area == 141

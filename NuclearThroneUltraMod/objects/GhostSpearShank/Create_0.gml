@@ -8,6 +8,6 @@ canSound = true;
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
 longarms = 0;
-dmg = 6;
+dmg = 5;
 wallPierce = 0;
 alarm[4] = 6;

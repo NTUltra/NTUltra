@@ -1,4 +1,4 @@
-raddrop = 7
+raddrop = 6
 maxhealth = 28//18
 mySize = 1
 
