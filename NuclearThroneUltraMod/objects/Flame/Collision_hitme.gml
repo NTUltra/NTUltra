@@ -16,6 +16,8 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			{
 				DealDamage(other.dmg);
 			}
+			if sprite_index != spr_hurt
+				snd_play(snd_hurt, hurt_pitch_variation,true);
 			sprite_index = spr_hurt
 			image_index = 0;
 			motion_add(other.direction,0.4 + (other.speed*0.1))
@@ -28,7 +30,6 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 						scrUnlockBSkin(24,"FOR BURNING AN ENEMY#THAT IS FROZEN AS ELEMENTOR",0);
 				}
 			}
-			snd_play(snd_hurt, hurt_pitch_variation,true);
 			if (other.object_index != MoodFlame && instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
 			{
 				scrMoodSwingStun(5);

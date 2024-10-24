@@ -219,6 +219,10 @@ function scrLoadRun(selectedRunIndex){
 			UberCont.time_minutes = encryptedRun.time_minutes;
 			UberCont.time_hours = encryptedRun.time_hours;
 			Player.race = encryptedRun.race;
+			Player.skill_text[Player.maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_vision[Player.race])
+			Player.skill_detail[Player.maxskill + 1] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_vision_detail[Player.race])
+			Player.skill_text[5] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_butt[Player.race])
+			Player.skill_detail[5] = "[<w>"+string(Player.race_name[Player.race])+"<w>]#"+string(Player.race_butt_detail[Player.race])
 			UberCont.race = encryptedRun.race;
 			GenCont.race = encryptedRun.race;
 			Player.ultimategamble = encryptedRun.ultimategamble;

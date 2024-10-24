@@ -9035,12 +9035,20 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndSuperSlugger)
 
+	with instance_create(x,y,Slug)
+	{
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,18)
+		image_angle = direction
+		team = other.team
+	}
 	repeat(5)//7
 	{
-	with instance_create(x,y,Slug)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
-	image_angle = direction
-	team = other.team}
+		with instance_create(x,y,Slug)
+		{
+			motion_add(aimDirection+(random(40)-20)*other.accuracy,13+random(6))
+			image_angle = direction
+			team = other.team
+		}
 	}
 
 	BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake

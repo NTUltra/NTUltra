@@ -52,6 +52,7 @@ function scrEndOfRun(){
 		{
 			scrUnlockGameMode(41,"FOR PLAYING TWO GAMEMODES");
 		}
+		dropLimit = 0;
 		areasVisited = 0;
 		lastwishused=false;
 		hasLeveledUp = false;

@@ -1,3 +1,5 @@
+if !instance_exists(Player)
+	exit;
 if (deflectDurability < maxDeflect || alarm[1] > 0)
 {
 	var deflected = false;

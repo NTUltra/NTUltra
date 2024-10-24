@@ -1,5 +1,7 @@
 function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnlyDropHealth = 0) {
 	var pickup = noone;
+	if UberCont.dropLimit > 400
+		return noone;
 	var isHard = scrIsHardMode();
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
 	{
@@ -311,6 +313,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 					}
 				}
 			}
+			UberCont.dropLimit += 1;
 			return pickup;
 		}
 		else if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
@@ -329,6 +332,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 					}
 				}
 			}
+			UberCont.dropLimit += 1;
 			return pickup;
 		}
 		else
@@ -351,6 +355,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 							}
 						}
 					}
+					UberCont.dropLimit += 1;
 					return pickup;
 				}
 			}
@@ -365,7 +370,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 					with WantHealth
 						instance_destroy();
 				}
-				pickup = instance_create(x,y,AmmoPickup) 
+				pickup = instance_create(x,y,AmmoPickup)
 				with pickup {
 					if (rabbit > 0 && random(1) < rabbit+0.1)
 					{
@@ -377,6 +382,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 						}
 					}
 				}
+				UberCont.dropLimit += 1;
 				return pickup;
 			}
 		}
@@ -422,6 +428,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 				}
 			}
 		}
+		UberCont.dropLimit += 1;
 		return pickup;
 	}
 	weaponDropChanceIndex --;

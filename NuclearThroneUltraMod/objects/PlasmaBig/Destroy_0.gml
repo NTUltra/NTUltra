@@ -14,7 +14,10 @@ repeat(balls)
 	{motion_add(ang,2)
 	image_angle = direction
 	scrCopyWeaponMod(other);
-	team = other.team}
+	team = other.team
+	if team != 2
+		sprite_index = sprPlasmaBallEnemy;
+	}
 	ang += angstep;
 }
 

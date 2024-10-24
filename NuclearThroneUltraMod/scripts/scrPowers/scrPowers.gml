@@ -1302,6 +1302,7 @@ function scrPowers(raceOverwrite = -1) {
 			if !justAsheep
 			{
 				justAsheep = true;
+				alarm[3] = max(alarm[3],20);
 				var marginDuration = 120;
 				with PlayerAlarms2
 				{

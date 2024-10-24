@@ -2886,5 +2886,27 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
+		
+		//ULTRA BLOB CANNON
+		case 880:
+
+		snd_play_fire(sndUltraBlobFire);
+
+		with instance_create(x,y,UltraBlobCannonBallSuper)
+		{
+			motion_add(aimDirection+(random(8)-4)*other.accuracy,14)
+			team = other.team
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,32);
+			motion_add(aimDirection+180,8)
+		}
+		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 9
+
+		break;
 	}
 }

@@ -1,5 +1,7 @@
 /// @description Create the walls around it
-if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/ || instance_exists(WallRemover)
+if instance_exists(WallRemover)
+	exit;
+if instance_exists(ThroneIISpiral)/* || scrIsCrown(25)*/
 {
 	wantWall = WallHitMe;
 	if (instance_exists(ThroneIISpiral))

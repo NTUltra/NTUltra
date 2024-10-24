@@ -530,11 +530,14 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
-			if !instance_exists(Acid)
-				instance_create(x,y,Acid);
 			Sleep(100);
 			getVision = true;
-			isPermanent = true;
+			with MusCont
+			{
+				audio_stop_sound(song);	
+			}
+			//instance_create(x,y,MusMimicBoss);
+			//isPermanent = true;
 			//piggyBank = 100;
 			//peaceBarriers += 1;
 			with instance_create_depth(x,y,depth + 1, GainBarrier)

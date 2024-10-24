@@ -18,7 +18,7 @@ function scrTips() {
 		"you can loop the game by destroying the big generators!","when you have an light blue outline you are immune to damage!",
 		"shells are the shotgun projectiles that bounce#they don't necessarily use shotgun ammo!",
 		"most weapon specific mutations are based on your projectile type#not on your ammo type",
-		"blood bullets are also bullets#and will be refunded with recycle gland",
+		"blood bullets are also bullets#and will be refunded with recycle gland","picking up a weapon reloads your weapons",
 		"hover over HUD elements in the top of your screen#such as mutations and weapons#for a short explanation",
 		"you can speed up this loading screen#in the options menu","most ultra mutations can destroy squares",
 		"when you reach level 10 you get your ultra mutation!","destroy the generators to loop","characters you looped with get a green border",
@@ -29,6 +29,7 @@ function scrTips() {
 	{
 	//RANDOM
 	tip = choose(
+	"picking up a weapon reloads your weapons",
 	"always move",
 	"characters you looped with show a green border",
 	"beware of the pit!",
@@ -157,7 +158,7 @@ function scrTips() {
 	"scarier face has been changed",
 	"don't get complacent",
 	"there are a ton of gamemodes to unlock and try",
-	"there are more than 700 weapons",
+	"there are more than 850 weapons",
 	"director weapons can pierce shields/deflects",
 	"damn squares",
 	"you can toggle mutation details using#[Right Mouse Button]",

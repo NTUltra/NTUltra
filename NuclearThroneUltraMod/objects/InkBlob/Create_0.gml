@@ -19,8 +19,9 @@ xPrev = x;
 yPrev = y;
 dmg = 3;
 oScale = 1;
+inkSplat = sprInkBlobSplat;
 alarm[0] = 1;
-alarm[1] = 75;
+alarm[1] = 70;
 alarm[2] = 2;
 if !instance_exists(BlobDrawer)
 	instance_create(x,y,BlobDrawer);

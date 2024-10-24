@@ -13,6 +13,7 @@ morphType = 1;
 canBeMoved = false;
 canBeAngled = false;
 isLaser = false;
+infiniteRange = false;
 direction=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 x=Player.x+lengthdir_x(16,direction);
 y=Player.y+lengthdir_y(16,direction);

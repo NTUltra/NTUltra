@@ -8,6 +8,7 @@ repeat(am)
 	{
 		motion_add(ang,1.5+random(1))
 		team = other.team
+		infiniteRange = true;
 	}
 	ang += angStep;
 }

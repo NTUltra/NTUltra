@@ -12,15 +12,18 @@ with instance_create(x,y,proj)
 {motion_add(other.gunangle+angStep,16)
 team = other.team
 image_angle = direction
+alarm[3] = 100;
 firedbysniper=true;}
 with instance_create(x,y,proj)
 {motion_add(other.gunangle-angStep,16)
 team = other.team
 image_angle = direction
+alarm[3] = 100;
 firedbysniper=true;}
 with instance_create(x,y,proj)
 {motion_add(other.gunangle,16)
 team = other.team
+alarm[3] = 100;
 image_angle = direction
 firedbysniper=true;}
 if target != noone && instance_exists(target)

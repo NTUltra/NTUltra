@@ -86,12 +86,12 @@ for(var i = 0; i < al; i ++)
 					image_xscale = point_distance(x,y,xstart,ystart)*0.5
 					alarm[0] ++;
 				}
-				else
+				else if typ != 4
 				{
 					instance_destroy()
 				}
 			}
-			else
+			else if typ != 4
 			{
 				instance_destroy();
 			}

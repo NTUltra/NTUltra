@@ -13,6 +13,7 @@ team = 2;
 canBeMoved = true;
 canBeAngled = true;
 isLaser = false;
+infiniteRange = false;
 isGrenade = false;
 typ = 0;
 wepFire = 0;

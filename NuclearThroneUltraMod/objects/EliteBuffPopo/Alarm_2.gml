@@ -53,6 +53,7 @@ else
 	var ps = 7 - (fireRate*0.5)//4.9 start
 	if far ps -= 0.5;
 	with instance_create(x,y,PopoBouncerBullet){
+		infiniteRange = true;
 		motion_add(other.gunangle+random_range(range,-range),ps)
 		image_angle = direction
 		team = other.team

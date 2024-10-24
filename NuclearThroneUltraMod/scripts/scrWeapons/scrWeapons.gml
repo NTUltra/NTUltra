@@ -2506,7 +2506,7 @@ function scrWeapons() {
 	wep_load[223] = 12
 	wep_cost[223] = 5
 	wep_sprt[223] = sprBulletSword
-	wep_area[223] = 12
+	wep_area[223] = 11
 	wep_text[223] = "bullet bullet bullet bullet sword sword sword sword"
 	wep_swap[223] = sndSwapSword
 	wep_rad[223] = 0;
@@ -5496,7 +5496,7 @@ function scrWeapons() {
 	wep_name[488] = "SHLOGGER"
 	wep_type[488] = 2
 	wep_auto[488] = 0
-	wep_load[488] = 30
+	wep_load[488] = 32
 	wep_cost[488] = 5
 	wep_sprt[488] = sprShlogger
 	wep_area[488] = 11
@@ -6183,7 +6183,7 @@ function scrWeapons() {
 	wep_type[550] = 1
 	wep_auto[550] = 1
 	wep_load[550] = 1
-	wep_cost[550] = 2
+	wep_cost[550] = 1.5
 	wep_sprt[550] = sprExplosiveMinigun
 	wep_area[550] = 24
 	wep_text[550] = "drilling and grilling"
@@ -9223,7 +9223,7 @@ function scrWeapons() {
 	wep_name[823] = "LASER SHOTGUN"
 	wep_type[823] = 5
 	wep_auto[823] = 4
-	wep_load[823] = 17
+	wep_load[823] = 16
 	wep_cost[823] = 2
 	wep_sprt[823] = sprLaserShotgun
 	wep_area[823] = 10
@@ -9863,10 +9863,21 @@ function scrWeapons() {
 	wep_load[879] = 2
 	wep_cost[879] = 0
 	wep_sprt[879] = sprUltraLaserMinigun
-	wep_area[879] = 8
+	wep_area[879] = 33
 	wep_text[879] = "fueled purely by radiation"
 	wep_swap[879] = sndSwapEnergy
 	wep_rad[879] = 2;
+	
+	wep_name[880] = "ULTRA BLOB CANNON"
+	wep_type[880] = 4
+	wep_auto[880] = 0
+	wep_load[880] = 35
+	wep_cost[880] = 6
+	wep_sprt[880] = sprUltraBlobCannon
+	wep_area[880] = 25
+	wep_text[880] = "do the potato flip!"
+	wep_swap[880] = sndSwapExplosive
+	wep_rad[880] = 25;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

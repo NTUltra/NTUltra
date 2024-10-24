@@ -10,10 +10,11 @@ do {
 		motion_add(other.direction, max(6,spd));
 		image_angle = direction;
 		team = other.team
+		infiniteRange = true;
 	}
 	spd -= 0.25;
-	x += lengthdir_x(24,direction);
-	y += lengthdir_y(24,direction);
+	x += lengthdir_x(26,direction);
+	y += lengthdir_y(26,direction);
 }
 until dir > maxRange or place_meeting(x,y,Wall)
 

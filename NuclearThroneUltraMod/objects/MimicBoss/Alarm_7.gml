@@ -13,7 +13,7 @@ if instance_exists(target) && target != noone && ammo > 0
 		}
 		ammo = 0;
 	}
-	else if point_distance(x,y,target.x,target.y) > 96
+	else if point_distance(x,y,target.x,target.y) > 32
 	{
 		BackCont.shake += 1;
 		ammo -= 1;

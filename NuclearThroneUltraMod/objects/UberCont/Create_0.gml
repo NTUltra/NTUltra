@@ -21,6 +21,7 @@ everything=69;
 unlocked=69;
 ultraMenuOpen = false;
 
+dropLimit = 0;
 jokeIntro = false;
 isHalloween = false;
 if date_compare_date(date_create_datetime(current_year, 10, 31, 0, 0, 0), date_current_datetime()) == 0

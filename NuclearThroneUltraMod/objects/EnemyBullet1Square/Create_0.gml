@@ -8,6 +8,7 @@ if scrIsHardMode()//HARD MODE
 	dmg = 4;
 depth = -2;
 alarm[3] = 240;
+infiniteRange = true;
 blinkTime = 5;
 draw = true;
 addSpeed = 0;

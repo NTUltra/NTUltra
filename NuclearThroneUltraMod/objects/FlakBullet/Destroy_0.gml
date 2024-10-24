@@ -1,3 +1,9 @@
+if shotgunshouldered
+{
+	scrSplashDamage(6,48);
+	with instance_create(x,y,BulletHit)
+		sprite_index = sprSlugHitUpg
+}
 repeat(bullets)
 {
 	with instance_create(x,y,Bullet2)
@@ -5,6 +11,7 @@ repeat(bullets)
 		motion_add(random(360),other.pSpeed+random(8))
 		image_angle = direction
 		team = other.team
+		scrCopyWeaponMod(other);
 	}
 }
 Sleep(20)

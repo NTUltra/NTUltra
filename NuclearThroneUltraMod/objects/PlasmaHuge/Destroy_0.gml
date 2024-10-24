@@ -14,7 +14,9 @@ with instance_create(xprevious,yprevious,PlasmaBig)
 {motion_add(other.ang,2)
 image_angle = direction
 team = other.team
-scrCopyWeaponMod(other);}
+scrCopyWeaponMod(other);
+if team != 2
+	sprite_index = sprPlasmaBallBigEnemy;}
 ang += angstep;
 }
 

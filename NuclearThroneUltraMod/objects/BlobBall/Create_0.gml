@@ -5,6 +5,7 @@ damagers have a DAMAGE
 their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
+inkSprite = sprInkBlobSplat;
 friction = 0.1;
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 team = 2;
@@ -14,6 +15,7 @@ xScale = 1;
 yScale = 1;
 dmg = 13;
 dmgAdd = 6;
+blobSpeed = 2;
 time = 0;
 timeScale = 0.1;
 rotation = random_range(20,40) * choose(1,-1);

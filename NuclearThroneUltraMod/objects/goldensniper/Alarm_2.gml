@@ -3,6 +3,7 @@ snd_play(sndGoldSniperFire)
 wkick = 7;
 with instance_create(x,y,EnemyBulletBigDiamond)
 {
+	alarm[3] = 100;
 	motion_add(other.gunangle,24);
 	team = other.team
 	image_angle = direction
@@ -10,6 +11,7 @@ with instance_create(x,y,EnemyBulletBigDiamond)
 }
 with instance_create(x,y,EnemyBulletBigDiamond)
 {
+	alarm[3] = 100;
 	motion_add(other.gunangle,26);
 	team = other.team
 	image_angle = direction

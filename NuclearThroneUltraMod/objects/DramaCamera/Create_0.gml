@@ -75,6 +75,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		else if instance_exists(MimicBoss)
 		{
 			song = musUltraMimicBoss;
+			//instance_create(x,y,MusMimicBoss);
 		}
 		else if instance_exists(BecomeMushroomBossGrow)
 		{
@@ -158,10 +159,18 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			else if area == 130 || area == 131 || area == 132 || area == 133 || area == 134
 				song = musUltraBossBot;
 		}
-	    snd_loop(song)
-		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-	    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
-	    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
+		/*if instance_exists(MimicBoss)
+		{
+			if audio_is_playing(song)
+				audio_stop_sound(song);
+		}
+		else
+		{*/
+		    snd_loop(song)
+			audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+		    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+		    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
+		//}
     
 	    //audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
     }

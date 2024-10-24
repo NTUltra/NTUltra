@@ -10,6 +10,7 @@ if ammo > 0
 		motion_add(other.gunangle,other.pspeed);
 		image_angle = direction
 		team = other.team
+		infiniteRange = true;
 	}
 }
 else

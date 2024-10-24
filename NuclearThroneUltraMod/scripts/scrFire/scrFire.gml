@@ -38,7 +38,7 @@ function scrFire(canDrown = true) {
 		}
 		if wep_load[wep] > 4 && reload < 0
 		{
-			canPuffyCheek = 3;
+			canPuffyCheek = 4;
 		}
 		//Nerves of steel
 		if ultra_got[2]&& alarm[2] > 0

@@ -6,7 +6,7 @@ audio_stop_sound(sndVenuz)
 snd_play(sndVenuz)
 
 }
-//*
+/*
 if area < 100
 {
 	//TOREMOVE

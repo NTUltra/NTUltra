@@ -223,12 +223,13 @@ if crown == 30
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
 	{
 		Player.maxarmour += 1;
-		Player.armour += 1;
+		Player.armour += 1;	
 	}
 	else
 	{
 		Player.maxhealth += 1
-		Player.my_health += 1;
+		if Player.my_health < Player.maxhealth
+			Player.my_health += 1;
 		UberCont.maxHpIncrease += 1;
 	}
 }
