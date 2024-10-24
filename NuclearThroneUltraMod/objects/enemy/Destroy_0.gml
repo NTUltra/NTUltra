@@ -12,24 +12,18 @@ else if morphMe != 6
 			mySize = other.mySize;
 			corpseBoost = other.corpseBoost;
 		}
-	    //Unlock sheep
-	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");
 	} else if morphMe == 3
 	{
 		with instance_create(x,y,UltraSheep) {
 			mySize = other.mySize;
 			corpseBoost = other.corpseBoost;
 		}
-	    //Unlock sheep
-	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} else if morphMe == 4
 	{
 		with instance_create(x,y,GoldSheep) {
 			mySize = other.mySize;
 			corpseBoost = other.corpseBoost;
 		}
-	    //Unlock sheep
-	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	}
 	else 
 	{
@@ -37,8 +31,6 @@ else if morphMe != 6
 			mySize = other.mySize;
 			corpseBoost = other.corpseBoost;
 		}
-	    //Unlock sheep
-	    scrUnlockCharacter(13,"FOR MORPHING AN ENEMY");	
 	} 
 }
 

@@ -13,5 +13,6 @@ with Player
 	subarea = 1;
 	lastarea = 9;
 	lastsubarea = 1;
+	scrUnlockGameMode(51,"FOR COMPLETING#THE INVERSION GAUNTLET",0)
 }
 instance_destroy();

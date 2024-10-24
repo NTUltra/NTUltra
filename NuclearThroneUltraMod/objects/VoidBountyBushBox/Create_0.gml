@@ -4,4 +4,4 @@
 event_inherited();
 name = "COMPLETE [BUSH BOX] BOSS BOUNTY";
 bountyNumber = secretChallengeBosses.bushBox;
-image_index = bountyNumber;
+item_index = bountyNumber;

@@ -252,7 +252,7 @@ if (KeyCont.key_paus[0] = 1) ||
 			confirmState = 0;
 			if (UberCont.isLeaderboardGamemode)
 			{
-				UberCont.opt_gamemode = [0];	
+				UberCont.opt_gamemode = [opt_default_gm];	
 			}
 			scrSave();
 			steam_shutdown();
@@ -279,7 +279,7 @@ else
 		{
 			if isLeaderboardGamemode
 			{
-				opt_gamemode = [0];
+				opt_gamemode = [opt_default_gm];
 			}
 			if !instance_exists(OptionSelect)
 			{

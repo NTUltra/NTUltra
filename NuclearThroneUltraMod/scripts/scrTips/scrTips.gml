@@ -29,6 +29,7 @@ function scrTips() {
 	{
 	//RANDOM
 	tip = choose(
+	"you can turn off flashy effects by turning down screenshake and artificial lag to 0",
 	"picking up a weapon reloads your weapons",
 	"always move",
 	"characters you looped with show a green border",

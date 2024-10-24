@@ -201,11 +201,11 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
 
 			//SKINS
-			if targetPickup.wep == 328 || targetPickup.wep == 633//BLACK SWORD
-			scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
+			//if targetPickup.wep == 328 || targetPickup.wep == 633//BLACK SWORD
+			//scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
 
-			if targetPickup.wep == 329 || targetPickup.wep == 634//Dark sword
-			scrUnlockCSkin(9,"FOR TOUCHING DEATH ITSELF",0);
+			if race == 9 && (targetPickup.wep == 329 || targetPickup.wep == 634)//Dark sword
+				scrUnlockCSkin(9,"FOR PICKING UP THE DARK SWORD AS CHICKEN",0);
 			if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
 			{
 			toxicweaponsfound++;

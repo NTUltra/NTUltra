@@ -1,9 +1,9 @@
 function scrGameModes() {
-	gamemode[0] = "NORMAL";//
+	gamemode[0] = "CLASSIC";//
 	gamemode_unlock[0] = "UNLOCKED FROM START";
 	gamemode_have[0] = 1;
 	gamemode_tip[0] = "";
-	gamemode_description[0] = "";
+	gamemode_description[0] = "CLASSIC\nTOUGH AS NAILS NUCLEAR THRONE";
 	gamemode_nocombo[0] = [];
 
 	gamemode[1] = "ONE WEAPON ONLY";//
@@ -62,11 +62,11 @@ function scrGameModes() {
 	gamemode_description[8] = "SURVIVE AGAINST AN ONSLAUGHT OF VANS, PUSH INCOMING VANS AWAY WITH YOUR FAN (WARNING FLASHING LIGHTS)";
 	gamemode_nocombo[8] = [1,2,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48];
 
-	gamemode[9] = "CASUAL MODE";//
+	gamemode[9] = "NORMAL";//
 	gamemode_unlock[9] = "DIE ON 1-1";
-	gamemode_have[9] = 0;
+	gamemode_have[9] = 1;
 	gamemode_tip[9] = "";
-	gamemode_description[9] = "YOU HAVE MORE HP, ENEMIES HAVE LESS HP, EXPLOSIONS DEAL LESS DAMAGE TO YOU, LOWER REQUIREMENT TO LEVEL UP, LESS ENEMIES SPAWN, PICKUPS LAST LONGER";
+	gamemode_description[9] = "VANILLA NUCLEAR THRONE IS PRETTY TOUGH THIS CHANGES A FEW THINGS: \n\nYOU HAVE MORE HP, ENEMIES HAVE LESS HP, EXPLOSIONS DEAL LESS DAMAGE TO YOU, LOWER REQUIREMENT TO LEVEL UP, LESS ENEMIES SPAWN, PICKUPS LAST LONGER";
 	gamemode_nocombo[9] = [0,26,27,34,37,8];
 
 	gamemode[10] = "RANDOM AREAS";//
@@ -84,7 +84,7 @@ function scrGameModes() {
 	gamemode_nocombo[11] = [13,14,26,27,31,37,8,48];
 
 	gamemode[12] = "ZOMBIES";//
-	gamemode_unlock[12] = "DISCOVER THE G??V?Y?R?";
+	gamemode_unlock[12] = "KILL A GOLDEN NECROMANCER";
 	gamemode_have[12] = 0;
 	gamemode_tip[12] = "THEY KEEP ON COMING";
 	gamemode_description[12] = "WHEN AN ENEMY DIES THEY SPAWN ANOTHER ENEMY";
@@ -197,14 +197,14 @@ function scrGameModes() {
 	gamemode_have[26] = 1;
 	gamemode_tip[26] = "GOTTA GO FAST";
 	gamemode_description[26] = "ON ODD DAYS RACE COMPETE FOR THE FASTEST TIME IN THE LEADERBOARD, TIME ENDS WHEN YOU KILL THRONE II##ON EVEN DAYS PLAY ANOTHER GAMEMODE";
-	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
+	gamemode_nocombo[26] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,0,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51];
 	
 	gamemode[27] = "DAILY SCORE";
 	gamemode_unlock[27] = "";
 	gamemode_have[27] = 1;
 	gamemode_tip[27] = "SWEATING";
 	gamemode_description[27] = "COMPETE FOR SCORE IN THE LEADERBOARD";
-	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
+	gamemode_nocombo[27] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,0,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51];
 	
 	gamemode[28] = "ALL MUTATION#CHOICES";
 	gamemode_unlock[28] = "TAKE EVERY REGULAR MUTATION#ATLEAST ONCE";
@@ -275,7 +275,7 @@ function scrGameModes() {
 	gamemode_have[37] = 1;
 	gamemode_tip[37] = "WHAT A WEEK";
 	gamemode_description[37] = "EACH WEEK OFFERS A DIFFERENT GAMEMODE. YOU CAN REPLAY THE WEEKLY THROUGHOUT THE WEEK TO IMPROVE YOUR SCORE";
-	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48,49,50];
+	gamemode_nocombo[37] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,42,26,27,28,29,30,31,32,33,34,35,36,0,38,39,40,41,43,46,47,48,49,50,51];
 	
 	gamemode[38] = "SEEDED";
 	gamemode_unlock[38] = "USE PLANT'S SNARE#VERY RAPIDLY";
@@ -378,6 +378,13 @@ function scrGameModes() {
 	gamemode_description[50] = "DISABLES THE GENERATORS\nON THE THRONE FIGHT\n(YOU CAN NO LONGER SIT ON THE THRONE)";
 	gamemode_nocombo[50] = [26,27,37];
 	
+	gamemode[51] = "RAINBOW";
+	gamemode_unlock[51] = "COMPLETE THE ??VE?SI?? ?A?N??ET";
+	gamemode_have[51] = 0;
+	gamemode_tip[51] = "ACID";
+	gamemode_description[51] = "GET DREAMY";
+	gamemode_nocombo[51] = [26,27,37,8];
+	
 	var i = 0;
 	gamemodeOrder[i] = 0;
 	i++; gamemodeOrder[i] = 9;//Casual
@@ -388,6 +395,7 @@ function scrGameModes() {
 	i++; gamemodeOrder[i] = 50;//No generators
 	i++; gamemodeOrder[i] = 3;//No HUD
 	i++; gamemodeOrder[i] = 39;//Gore galore
+	i++; gamemodeOrder[i] = 51;//Acid
 	i++; gamemodeOrder[i] = 1;//One wep only
 	i++; gamemodeOrder[i] = 46;//Any weapon
 	i++; gamemodeOrder[i] = 31;//Melee only

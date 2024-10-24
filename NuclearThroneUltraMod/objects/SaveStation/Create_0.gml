@@ -5,7 +5,7 @@ active = false;
 name = "SAVE RUN";
 if scrIsGamemode(26) || scrIsGamemode(27)
 {
-	name += "#DAILIES WILL BE LOADED AS NORMAL MODE RUNS"
+	name += "#DAILIES WILL BE LOADED AS CLASSIC MODE RUNS"
 }
 if (instance_exists(Player) && UberCont.lastSaveLoop == Player.loops)
 {

@@ -25,6 +25,7 @@ scrDrop(100,0)
 
 scrDrop(0,60)
 scrBossKill();
+scrUnlockCharacter(10,"FOR KILLING INVERTED BIG BANDIT");
 //drop golden oopsgun?
 if instance_exists(Player)
 {

@@ -55,8 +55,8 @@ if !scrIsCrown(34) || rewinds <= 0
 	if ( firedthislevel=false && (race == 13) && area <100 && area != 10 && ( area>3 || loops>0 )  )
 	scrUnlockCSkin(13,"FOR COMPLETING A MAIN AREA# AFTER THE SCRAPYARD#WITHOUT FIRING AS SHEEP",0);
 
-	if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
-	scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
+	//if ( firedthislevel=false && race = 15 && area <100 && area != 10 && ( area > 2 || loops>0 )  )
+	//scrUnlockBSkin(15,"FOR COMPLETING A MAIN AREA# AFTER THE SEWERS#WITHOUT FIRING AS ATOM",0);
 
 	if ( firedthislevel=false && race = 21 && loops>0 && area <100 && area != 10)
 	scrUnlockCSkin(21,"FOR COMPLETING A MAIN AREA ON#USING ONLY THE BEAM",0);
@@ -840,7 +840,7 @@ if scrIsCrown(4) && area !=100 && race = 15 && area != 137
 rushcrownlevels++;
 
 if rushcrownlevels=5
-scrUnlockCSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM",0);
+scrUnlockBSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM",0);
 
 	StartHogInvestment();
 

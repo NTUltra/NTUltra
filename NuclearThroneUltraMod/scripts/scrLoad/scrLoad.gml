@@ -14,8 +14,8 @@ function scrLoad() {
 		saveFileString = "ntultra"+string(version)+".sav";
 		if (!file_exists(saveFileString))
 		{
-			debug("CAN DO IT!");
 			instance_create(x,y,CanLoadRetailSave);
+			is_vanilla_player = 0;
 		}
 		ini_open(saveFileString);
 		scrLoadOptions();

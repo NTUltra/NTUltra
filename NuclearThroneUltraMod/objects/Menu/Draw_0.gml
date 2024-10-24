@@ -146,7 +146,7 @@ else
 		var al = array_length(UberCont.opt_gamemode)
 		for (var i = 0; i < al; i++)
 		{
-			if (UberCont.opt_gamemode[i] != 0)
+			if (UberCont.opt_gamemode[i] != UberCont.opt_default_gm)
 			{
 				gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
 				if i != al - 1

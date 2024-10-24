@@ -24,6 +24,7 @@ function scrSaveGameSpecificOptions() {
 	}
 	ini_write_string("OPTIONS","customsurvival",opt_custom_survival);
 	ini_write_real("OPTIONS","opt_gm1wep",opt_gm1wep);
+	ini_write_real("OPTIONS","opt_default_gm",opt_default_gm);
 	//ini_write_real("OPTIONS","opt_gm_char",opt_gm_char);
 	ini_write_real("OPTIONS","opt_gm_char_active",opt_gm_char_active);
 }

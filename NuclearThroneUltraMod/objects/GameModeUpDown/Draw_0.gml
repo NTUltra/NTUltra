@@ -23,14 +23,14 @@ var yy = scroll - totalHeight;
 var selectedModeCol = make_colour_rgb(100,42,140);
 repeat(3)
 {
-	i = 1;//Normal mode does not matter
+	i = 0;
 	repeat(maxgamemode)
 	{
 		var pre = "";
-		if i < 10
-			var pre = "0"+string(i); 
+		if i + 1 < 10
+			var pre = "0"+string(i+1); 
 		else
-			pre = string(i);
+			pre = string(i + 1);
 		var strin = pre + ". "+string_hash_to_newline(gamemode[gamemodeOrder[i]]);
 		if i == gamemodenr
 			strin += " *";

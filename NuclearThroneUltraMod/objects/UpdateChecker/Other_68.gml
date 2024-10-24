@@ -94,7 +94,7 @@ if (type == network_type_data) {
 							sprite_index = sprDailyChallengeOffGM;
 							if scrIsGamemode(26)
 							{
-								UberCont.opt_gamemode = [0];
+								UberCont.opt_gamemode = [UberCont.opt_default_gm];
 							}
 						}
 						else

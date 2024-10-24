@@ -39,11 +39,6 @@ for (var i = 0; i < al; i++)
 							sprite_index=sprGuardianDeflect;
 						}
 					}
-				if instance_exists(CrownGuardian)
-				{
-					scrUnlockCSkin(18,"FOR DEFLECTING A PROJECTILE#THAT IS DEFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
-				}
-
 			}
 			else
 			{

@@ -23,7 +23,7 @@ function scrLoadRun(selectedRunIndex){
 			isLeaderboardGamemode = false;
 			viewDailyGamemode = false;
 			seedText = "";
-			opt_gamemode = [0];
+			opt_gamemode = [opt_default_gm];
 		}
 		var encryptedRun = scrDecodeSavedRun(fileString);
 		if is_struct(encryptedRun)
@@ -153,7 +153,7 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.opt_gamemode = [UberCont.opt_gamemode]
 			if scrIsGamemode(26) || scrIsGamemode(27)
 			{
-				UberCont.opt_gamemode = [0];
+				UberCont.opt_gamemode = [UberCont.opt_default_gm];
 				debug("GAMEMODE RESET");
 			}
 			else if scrIsGamemode(37) {

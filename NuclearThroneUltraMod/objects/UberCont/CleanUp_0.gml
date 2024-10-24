@@ -1,7 +1,7 @@
 /// @description Clean up maps and lists
 if isLeaderboardGamemode
 {
-	opt_gamemode = [0];	
+	opt_gamemode = [opt_default_gm];	
 }
 if canSave
 	scrSave();

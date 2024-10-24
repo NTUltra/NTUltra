@@ -4,4 +4,4 @@
 event_inherited();
 name = "COMPLETE [CHESHIRE CAT] BOSS BOUNTY";
 bountyNumber = secretChallengeBosses.cheshireCat;
-image_index = bountyNumber;
+item_index = bountyNumber;

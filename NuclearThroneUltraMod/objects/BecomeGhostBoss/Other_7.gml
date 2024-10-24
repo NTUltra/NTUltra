@@ -1,6 +1,6 @@
 /// @description GhostBoss
 if !instance_exists(PitGhostBoss)
-	instance_create(x,y + 32,PitGhostBoss);
+	instance_create(x,y - 8,PitGhostBoss);
 var ang = random(360);
 snd_play(sndGhostTeleport2);
 repeat(8)

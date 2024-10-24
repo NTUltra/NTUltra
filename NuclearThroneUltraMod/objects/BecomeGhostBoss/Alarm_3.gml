@@ -23,5 +23,9 @@ if ammo > 0
 }
 else
 {
-	instance_destroy();	
+	instance_destroy();
+	with instance_create_depth(x,y,depth,AnimDestroy)
+	{
+		sprite_index = sprGhostBossOutro;
+	}
 }

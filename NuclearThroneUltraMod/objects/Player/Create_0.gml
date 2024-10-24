@@ -11,6 +11,12 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 	instance_create(x,yimm,FPSHACK);p
 }*/
 event_inherited();
+if scrIsGamemode(51) && !instance_exists(Acid)
+{
+	with instance_create(x,y,Acid) {
+		persistent = true;
+	}
+}
 alarm[0] = 120;
 justLoadedRun = false;
 isOnInteractable = false;
@@ -272,7 +278,7 @@ with UberCont {
 	if !instance_exists(PlayerSpawn) && instance_number(Player) == 1 && !instance_exists(CrownIcon)  && !instance_exists(UltraIcon)
 	{
 		if isLeaderboardGamemode {
-			UberCont.opt_gamemode = [0];
+			UberCont.opt_gamemode = [UberCont.opt_default_gm];
 			instance_create(0,0,StartDaily);
 			canRestart = false;
 		}

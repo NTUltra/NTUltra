@@ -10,6 +10,7 @@ with PlayerAlarms
 	event_user(0);	
 }
 */
+/*
 with Player
 {
 	//Unlock Angel
@@ -41,3 +42,4 @@ with Player
 	if survivalSkills > 2
 	scrUnlockCharacter(18,"FOR TAKING#THREE SURVIVAL MUTATIONS")	
 }
+*/

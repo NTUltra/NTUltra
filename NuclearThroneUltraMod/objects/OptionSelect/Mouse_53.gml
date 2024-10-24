@@ -28,6 +28,8 @@ if image_index == 1
 	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+214,FPSToggle);
 	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+222,DeleteSave);
 	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+230,ToggleRemapper);
+	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5+10+string_width(string_hash_to_newline("OFF")),__view_get( e__VW.YView, 0 )+238,DefaultGamemode);
+
 	var yy = 0;
 	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+40,KeyUp)
 	instance_create(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+yy+48,KeyDown)

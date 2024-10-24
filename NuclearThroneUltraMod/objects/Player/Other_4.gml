@@ -66,14 +66,11 @@ scrUnlockCharacter(6,"FOR ENTERING THE MANSION");
 if area = 6//UNLOCK ROIDS
 scrUnlockCharacter(7,"FOR REACHING THE LABS");
 
-if area = 3//UNLOCK ROBOT
-scrUnlockCharacter(8,"FOR REACHING THE SCRAPYARD");
+if area = 5//UNLOCK ROBOT
+scrUnlockCharacter(8,"FOR REACHING THE FROZEN CITY");
 
-if area = 5//UNLOCK REBEL
-scrUnlockCharacter(10,"FOR REACHING THE FROZEN CITY");
-
-if area = 8//UNLOCK HORROR
-scrUnlockCharacter(21,"FOR REACHING WONDERLAND");
+if area = 8 || area == 109//UNLOCK SHEEP
+scrUnlockCharacter(13,"FOR REACHING WONDERLAND");
 
 if area == 117//UNLOCK ELEMENTOR
 scrUnlockCharacter(24,"FOR REACHING MUSHROOM LAND")
@@ -96,17 +93,19 @@ scrUnlockCSkin(2,"FOR REACHING INVERTED CRYSTAL CAVES#AS CRYSTAL",0);
 if area = 102 && race = 3
 scrUnlockBSkin(3,"FOR REACHING PIZZA SEWERS#AS EYES",0);
 
-if area =8 && race = 5 && UberCont.time_minutes<8
+if area == 8 && race = 5 && UberCont.time_minutes<8
 scrUnlockBSkin(5,"FOR REACHING WONDERLAND AS PLANT#IN UNDER 8 MINUTES",0);
 
 if area = 104
-scrUnlockBSkin(12,"FOR GOING INTO DA CRIB",0);
+{
+	scrUnlockCharacter(12,"FOR GOING TO DA CRIB")
+}
 
 if area = 113
 scrUnlockCSkin(10,"FOR DISCOVERING BANDITLAND",0);
 
-if area == 126 || area == 127
-scrUnlockGameMode(12,"FOR DISCOVERING#THE GRAVEYARD",0)
+if race == 4 && (area == 126 || area == 127)
+	scrUnlockCharacter(19,"FOR REACHING#THE GRAVEYARD#AS MELTING");
 
 if armour >= 4 && maxarmour >= 5 && race == 16
 	scrUnlockBSkin(16,"FOR GETTING 5 OR MORE#ARMOUR AS VIKING",0);

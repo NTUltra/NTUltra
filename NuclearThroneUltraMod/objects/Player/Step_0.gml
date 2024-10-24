@@ -532,10 +532,6 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			getVision = true;
-			with MusCont
-			{
-				audio_stop_sound(song);	
-			}
 			//instance_create(x,y,MusMimicBoss);
 			//isPermanent = true;
 			//piggyBank = 100;

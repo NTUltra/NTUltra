@@ -35,5 +35,6 @@ with other
 		sprite_index = spr_hurt
 		image_index = 0
 		motion_add(point_direction(other.x,other.y,x,y),3)
+		scrUnlockBSkin(18,"FOR DEFLECTING ENEMY CONTRACT DAMAGE");
 	}
 }

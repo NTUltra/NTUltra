@@ -79,12 +79,13 @@ function scrRemoveCrown(oldcrown){
 			wantVanAmount --;	
 		}
 	}
+	/*
 	if scrUsedEveryCrown()
 	{
 	with Player
 		scrUnlockBSkin(18,"FOR TRYING EVERY CROWN",0);
 	}
-
+	*/
 	if oldcrown == 23
 	{
 		//Crown of speed

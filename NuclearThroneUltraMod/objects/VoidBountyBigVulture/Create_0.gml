@@ -4,4 +4,4 @@
 event_inherited();
 name = "COMPLETE [BIG VULTURE] BOSS BOUNTY";
 bountyNumber = secretChallengeBosses.bigVulture;
-image_index = bountyNumber;
+item_index = bountyNumber;

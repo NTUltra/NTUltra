@@ -20,4 +20,4 @@ instance_destroy();
 with RegalVisionGamemodeTracker
 	instance_destroy();
 if array_length(UberCont.opt_gamemode) < 1
-	UberCont.opt_gamemode = [0];
+	UberCont.opt_gamemode = [UberCont.opt_default_gm];

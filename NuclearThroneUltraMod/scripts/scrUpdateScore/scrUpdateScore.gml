@@ -12,7 +12,7 @@ function scrUpdateScore(theOther, isPerliminary = false){
 				array_length(encrypted_data.ctot_dailies_score_score)-1] = theOther.kills;
 				scrSaveEncrypted();
 				useSeed = false;
-				opt_gamemode = [0];
+				opt_gamemode = [opt_default_gm];
 				leaderboardType = LEADERBOARD.SCORE;
 				goToLeaderboard = true;
 			}

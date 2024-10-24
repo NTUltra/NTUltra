@@ -45,7 +45,7 @@ function scrDrawGameOver() {
 	else if !normalMode
 		gmt += "GAME MODE :";
 	else
-		gmt += "NORMAL MODE";
+		gmt += UberCont.gamemode[UberCont.opt_default_gm] + " MODE";
 	
 	if (scrIsGamemode(8))
 	{
@@ -142,7 +142,7 @@ function scrDrawGameOver() {
 		{
 			if scrIsGamemode(26) || scrIsGamemode(27)
 			{
-				opt_gamemode = [0];	
+				opt_gamemode = [opt_default_gm];	
 			}
 		}
 	//BACK TO MENU
@@ -402,7 +402,7 @@ function scrDrawGameOver() {
 			var al = array_length(UberCont.opt_gamemode)
 			for (var i = 0; i < al; i++)
 			{
-				if (UberCont.opt_gamemode[i] != 0)
+				if (UberCont.opt_gamemode[i] != UberCont.opt_default_gm)
 				{
 					gamemodeScrollString += string_replace_all(UberCont.gamemode[UberCont.opt_gamemode[i]],"#"," ");
 					if i != al - 1 && UberCont.opt_gamemode[i + 1] != 0

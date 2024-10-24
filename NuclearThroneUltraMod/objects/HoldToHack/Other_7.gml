@@ -3,6 +3,7 @@ with Player
 {
 	if instance_exists(YungCuzDupe)
 	{
+		scrUnlockBSkin(12,"FOR HACKING THE GAME",0);
 		snd_play_2d(sndYungCuzStartHack,0.1);
 		var nums = instance_number(YungCuzDupe)
 		var duration =  140;

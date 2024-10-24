@@ -33,16 +33,16 @@ function scrDrawOptions() {
 	}
 	else if !openRemapper
 	{
-		txt0 = "#OPTIONS###########################PRESS [RIGHT CLICK] TO RETURN"
-		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#DYNAMIC HUD#HUD DESCRIPTION#OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS#SAVE/LOAD GAME#REMAP CONTROLS"
+		txt0 = "#OPTIONS############################PRESS [RIGHT CLICK] TO RETURN"
+		txt1 = "###AUDIO#MUSIC VOLUME#SFX VOLUME#AMBIENT VOLUME#VISUALS#FULL SCREEN#X-RAY#CROSSHAIR#SIDE-ART/WIDESCREEN#RESOLUTION SCALE#DAMAGE INDICATORS#CAMERA FOLLOW AIM#DYNAMIC HUD#HUD DESCRIPTION#OTHER#SCREEN SHAKE#ARTIFICIAL LAG#LOADING SPEED#CAPTURE MOUSE#BOSS INTROS#TIMER#60 FPS#SAVE/LOAD GAME#REMAP CONTROLS#DEFAULT GAMEMODE"
 		txt2 = "####"+string(scrAddZero(round(UberCont.opt_musvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_sfxvol*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_ambvol*100),2))
 		+"%##"+string(scrOnOff(UberCont.opt_fulscrn))+"#"+string(scrOnOff(UberCont.opt_enemy_xray))+"#"+string(UberCont.opt_crosshair+1)+"#"+sideAspect +"#"+
 		string(UberCont.opt_resolution_scale) + "X#" +
 		string(scrOnOff(UberCont.opt_dmgindicator))+"#"+string(scrOnOff(UberCont.opt_camera_follow))+"#"//
 		+string(scrOnOff(UberCont.opt_hud_dynamic))+"#"+string(scrOnOff(UberCont.opt_hud_des))+
-		"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode+"#OPEN#OPEN"
+		"##"+string(scrAddZero(round(UberCont.opt_shake*100),2))+"%#"+string(scrAddZero(round(UberCont.opt_freeze*100),2))+"%#"+loadspeed+string(scrOnOff(UberCont.opt_mousecp))+"#"+string(bossintro)+"#"+string(timer)+fpsMode+"#OPEN#OPEN#"+UberCont.gamemode[UberCont.opt_default_gm]+" MODE";
 		
-		stxt0 = "#OPTIONS"
+		stxt0 = "#OPTIONS############################      [RIGHT CLICK]          "
 		stxt1 = "###AUDIO####VISUALS##########OTHER####"
 		stxt2 = txt2
 
@@ -92,6 +92,8 @@ function scrDrawOptions() {
 		event_perform(ev_draw,0)
 		with ToggleRemapper
 		event_perform(ev_draw,0)
+		with DefaultGamemode
+		event_perform(ev_draw,0)
 		with FPSToggle
 		event_perform(ev_draw,0)
 	}
@@ -113,12 +115,12 @@ function scrDrawOptions() {
 		pickup=scrAsciiChar(UberCont.opt_pickup);
 		regal=scrAsciiChar(UberCont.opt_regal);
 		
-		txt0 = "#REMAP OPTIONS#CLICK WITH LMB ON SQUARE THEN PRESS KEY##########################PRESS [RIGHT CLICK] TO RETURN";
+		txt0 = "#REMAP OPTIONS#CLICK WITH LMB ON SQUARE THEN PRESS KEY###########################PRESS [RIGHT CLICK] TO RETURN";
 		txt1 = "####CUSTOMIZE CONTROLS#UP#DOWN#LEFT#RIGHT#SWAP WEAPONS#PICKUP#REGAL VISION##RESET#############REMAP CONTROLS"
 		txt2 = "#####"+up+"#"+down+"#"+left
 		+"#"+right+"#"+swap+"#"+pickup+"#"+regal+"###############CLOSE";
 
-		stxt0 = "#REMAP OPTIONS##########################";
+		stxt0 = "#REMAP OPTIONS############################      [RIGHT CLICK]          ";
 		stxt1 = "####CUSTOMIZE CONTROLS##### ####### #### ####"
 		stxt2 = txt2
 		

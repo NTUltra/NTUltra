@@ -39,4 +39,5 @@ function scrLoadInRetailSave(){
 		race_have[22] = retailData.stats.charData_12.cgot;
 		race_bskin[22] = retailData.stats.charData_12.cbgt;
 	}
+	opt_default_gm = 0;
 }

@@ -10,7 +10,7 @@ else if (wepmod2==0)
 else if (wepmod3==0)
 {wepmod3=wepmod;
 	modTarget = 3;}
-else if instance_exists(Player) && Player.skill_got[30] && wepmod4==0//power craving
+else if instance_exists(Player) && Player.skill_got[30] && Player.race == 17 && wepmod4==0//power craving
 {
     wepmod4=wepmod;
 	modTarget = 4;

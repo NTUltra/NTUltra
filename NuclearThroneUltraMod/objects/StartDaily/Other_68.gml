@@ -20,7 +20,7 @@ if (type == network_type_data) {
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
 			if !gotSteam || (latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion)
 			{
-				UberCont.opt_gamemode = [0];
+				UberCont.opt_gamemode = [opt_default_gm];
 				UberCont.isLeaderboardGamemode = false;
 				alarm[0] = min(alarm[0],1);
 				break;
@@ -341,6 +341,12 @@ if (type == network_type_data) {
 				with Player
 				{
 					getVision = true;	
+				}
+			}
+			if scrIsGamemode(51) && !instance_exists(Acid)
+			{
+				with instance_create(x,y,Acid) {
+					persistent = true;
 				}
 			}
 			#endregion

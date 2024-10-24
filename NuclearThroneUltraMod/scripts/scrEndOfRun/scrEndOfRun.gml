@@ -3,6 +3,10 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	with Acid
+	{
+		instance_destroy();	
+	}
 	with Marker
 	{
 		instance_destroy();	

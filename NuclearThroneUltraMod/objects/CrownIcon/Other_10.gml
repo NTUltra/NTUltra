@@ -55,6 +55,10 @@ if (UberCont.canMultiCrown)
 	else {
 		//Add
 		Player.crown[array_length(Player.crown)] = crown;
+		if Player.race == 18 && array_length(Player.crown) > 2
+		{
+			scrUnlockCSkin(18,"FOR EQUIPPING THREE CROWNS AS ONCE#AS ANGEL");
+		}
 		if !canReAdd
 			Player.crownpoints -= 1
 	}
@@ -140,6 +144,7 @@ if crown == 40
 	with Player
 	{
 		ammo[0] = round(max(ammo[0],round(typ_ammo[0]*2)));
+		scrUnlockCharacter(9,"USING THE SECRET CROWN OF A THOUSAND CUTS")
 	}
 }
 if crown == 34

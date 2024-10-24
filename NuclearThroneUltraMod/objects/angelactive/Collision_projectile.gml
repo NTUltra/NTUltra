@@ -33,11 +33,6 @@ else if team != other.team && instance_exists(Player)
 			snd_play(sndRicochet,0.1,true);
 			event_user(15);
 		}
-		
-		if instance_exists(CrownGuardian)
-		{
-			scrUnlockCSkin(18,"FOR DEFLECTING A PROJECTILE#THAT IS DEFLECTED BY A CROWN GUARDIAN#AS ANGEL",0);
-		}
 	}
 	else if other.typ != 4
 	{

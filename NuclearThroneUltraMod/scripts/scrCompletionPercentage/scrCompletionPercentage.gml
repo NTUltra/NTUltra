@@ -9,7 +9,7 @@ function scrCompletionPercentage() {
 
 	//gamemodes
 	everything+=(maxgamemode)*6//21
-	everything -= 18;//Final 100% unlock does not count Weekly daily daily
+	everything -= 24;//Final 100% unlock does not count Weekly daily daily & casual
 
 	//characters
 	everything+=racemax*36;//characters are priority (also includes crownstart (3) & secondary weapon start (3))
@@ -36,7 +36,7 @@ function scrCompletionPercentage() {
 
 		countgamemode++;
 	}
-	unlocked -= 12;//Weekly daily daily
+	unlocked -= 18;//Weekly daily daily
 
 	//characters
 	var countrace=1;

@@ -196,7 +196,7 @@ function scrRaces() {
 		race_vision[8] = string_replace_all(race_vision[8],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[8] = string_replace_all(race_vision_detail[8],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[8] = "REACH SCRAPYARD TO UNLOCK"
+	race_lock[8] = "REACH FROZEN CITY TO UNLOCK"
 	race_have[8] = 0
 	race_swep[8] = 1
 	race_bskin[8] = 0
@@ -221,7 +221,7 @@ function scrRaces() {
 		race_vision[9] = string_replace_all(race_vision[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[9] = string_replace_all(race_vision_detail[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[9] = "OPEN A BIG HP CHEST"
+	race_lock[9] = "FIND AND USE THE SECRET#CROWN OF A THOUSAND CUTS"
 	race_have[9] = 0
 	race_swep[9] = 46
 	race_bskin[9] = 0
@@ -230,7 +230,7 @@ function scrRaces() {
 	race_eskin[9] = 0
 	race_fskin[9] = 0
 	race_gskin[9] = 0
-	race_bskin_lock[9] = "ACQUIRE#THE BLACK SWORD"
+	race_bskin_lock[9] = "RESTORING 6 HEALTH#USING CHICKEN'S REGAL VISION"
 	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
 
 
@@ -246,7 +246,7 @@ function scrRaces() {
 		race_vision[10] = string_replace_all(race_vision[10],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[10] = string_replace_all(race_vision_detail[10],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[10] = "REACH FROZEN CITY TO UNLOCK"
+	race_lock[10] = "KILL 'INVERTED' BIG BANDIT"
 	race_have[10] = 0
 	race_swep[10] = 1
 	race_bskin[10] = 0
@@ -298,7 +298,7 @@ function scrRaces() {
 		race_vision[12] = string_replace_all(race_vision[12],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[12] = string_replace_all(race_vision_detail[12],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[12] = "KILL A MIMIC TO UNLOCK"
+	race_lock[12] = "REACH Y.V.'S CRIB"
 	race_have[12] = 0
 	race_swep[12] = 39//golden revolver
 	race_bskin[12] = 0
@@ -307,7 +307,7 @@ function scrRaces() {
 	race_eskin[12] = 0
 	race_fskin[12] = 0
 	race_gskin[12] = 0
-	race_bskin_lock[12] = "GO TO THE CRIB"
+	race_bskin_lock[12] = "HACK THE GAME#USING Y.C.'S REGAL VISION"
 	race_cskin_lock[12] = "AS YUNG CUZ#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
 
 
@@ -325,7 +325,7 @@ function scrRaces() {
 		race_vision[13] = string_replace_all(race_vision[13],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[13] = string_replace_all(race_vision_detail[13],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[13] = "MORPH AN ENEMY TO UNLOCK"
+	race_lock[13] = "REACH WONDERLAND"
 	race_have[13] = 0
 	race_swep[13] = 0//nothing
 	race_bskin[13] = 0
@@ -383,8 +383,8 @@ function scrRaces() {
 	race_eskin[15] = 0
 	race_fskin[15] = 0
 	race_gskin[15] = 0
-	race_bskin_lock[15] = "COMPLETE A#MAIN AREA#AFTER THE SEWERS#WITHOUT FIRING#AS ATOM"
-	race_cskin_lock[15] = "COMPLETE FIVE#AREAS IN A ROW#USING CROWN OF HASTE#AS ATOM"
+	race_bskin_lock[15] = "COMPLETE FIVE#AREAS IN A ROW#USING CROWN OF HASTE#AS ATOM"//"COMPLETE A#MAIN AREA#AFTER THE SEWERS#WITHOUT FIRING#AS ATOM"
+	race_cskin_lock[15] = "KILL ATOM#AS ATOM"
 
 
 	race_name[16] = "VIKING"
@@ -399,7 +399,7 @@ function scrRaces() {
 		race_vision[16] = string_replace_all(race_vision[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[16] = string_replace_all(race_vision_detail[16],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[16] = "GAIN ARMOUR!?"//"REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
+	race_lock[16] = "GAIN ARMOUR"//"REGAIN STRONG SPIRIT 3 TIMES IN ONE RUN TO UNLOCK"//"BREAK X AMOUNT OF WALLS"
 	race_have[16] = 0
 	race_swep[16] = 215//MDRFKIN AXE BITCHES
 	race_bskin[16] = 0
@@ -434,7 +434,7 @@ function scrRaces() {
 	race_fskin[17] = 0
 	race_gskin[17] = 0
 	race_bskin_lock[17] = "HOLD TO COMBINE TWO#GOLDEN WEAPONS"
-	race_cskin_lock[17] = "ADD FOUR MODS#TO ONE WEAPON"
+	race_cskin_lock[17] = "ADD FOUR MODS#TO ONE WEAPON#AS WEAPONSMITH"
 
 
 	race_name[18] = "ANGEL"
@@ -449,7 +449,7 @@ function scrRaces() {
 		race_vision[18] = string_replace_all(race_vision[18],"PRESS <w>[E]","PRESS <w>[ACTIVE]");
 		race_vision_detail[18] = string_replace_all(race_vision_detail[18],"PRESS <w>[E]","PRESS <w>[ACTIVE]");
 	}
-	race_lock[18] = "HAVE A SINGLE RUN WITH ATLEAST THREE\nSURVIVAL MUTATIONS\nTO UNLOCK"
+	race_lock[18] = "DESTROY THE CROWN GLUTTON"
 	race_have[18] = 0
 	race_swep[18] = 56
 	race_bskin[18] = 0
@@ -458,8 +458,8 @@ function scrRaces() {
 	race_eskin[18] = 0
 	race_fskin[18] = 0
 	race_gskin[18] = 0
-	race_bskin_lock[18] = "TRY 10 DIFFERENT CROWNS#AT LEAST ONCE#(WITH ANY CHARACTER)"
-	race_cskin_lock[18] = "DEFLECT A PROJECTILE#THAT IS DEFLECTED#BY A CROWN GUARDIANS#WITHOUT USING MELEE#AS ANGEL"
+	race_bskin_lock[18] = "DEFLECT ENEMY CONTACT DAMAGE#AS ANGEL"
+	race_cskin_lock[18] = "EQUIP THREE CROWNS AT ONCE#AS ANGEL"
 
 
 	race_name[19] = "SKELETON"
@@ -474,7 +474,7 @@ function scrRaces() {
 		race_vision[19] = string_replace_all(race_vision[19],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[19] = string_replace_all(race_vision_detail[19],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[19] = "DIE IN THE LABS AS MELTING TO UNLOCK"
+	race_lock[19] = "REACH THE G??V?Y?R? AS MELTING"
 	race_have[19] = 0
 	race_swep[19] = 56//allright we'll do a character with a rusty revolver
 	race_bskin[19] = 0
@@ -519,7 +519,7 @@ function scrRaces() {
 		race_vision[21] = string_replace_all(race_vision[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[21] = string_replace_all(race_vision_detail[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[21] = "REACH WONDERLAND TO UNLOCK"//"REACH PALACE"
+	race_lock[21] = "GO GO GHOST BUSTING!"
 	race_have[21] = 0
 	race_swep[21] = 1
 	race_bskin[21] = 0
@@ -688,7 +688,7 @@ function scrRaces() {
 	race_butt_detail[28] = "BIGGER VOID CONSUMPTION"
 	race_inpsiration[28] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
 	race_inpsiration_detail[28] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
-	race_lock[28] = "BUY ME IN THE VOID"
+	race_lock[28] = "DEFEAT THE VOID MASTER"
 	race_have[28] = 0
 	race_swep[28] = 443//VOID DAGGER
 	race_bskin[28] = 0

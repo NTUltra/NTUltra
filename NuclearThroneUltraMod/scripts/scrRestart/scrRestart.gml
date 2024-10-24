@@ -26,7 +26,7 @@ function scrRestart() {
 		/*
 		with UberCont
 		{
-			opt_gamemode = [0];
+			opt_gamemode = [opt_default_gm];
 		}*/
 		audio_stop_all();
 		with MusCont {

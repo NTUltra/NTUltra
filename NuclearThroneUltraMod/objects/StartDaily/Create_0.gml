@@ -62,7 +62,7 @@ var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));
 if (res < 0) {
 	//FAIL
 	debug("CONNECTION FAIL");
-	UberCont.opt_gamemode = [0];
+	UberCont.opt_gamemode = [UberCont.opt_default_gm];
 	UberCont.isLeaderboardGamemode = false;
 	UberCont.viewDailyGamemode = false;
 } else

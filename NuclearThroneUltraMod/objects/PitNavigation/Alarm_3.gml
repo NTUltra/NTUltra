@@ -17,5 +17,6 @@ with MusCont
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 }
-instance_create(x,y,Acid);
+if !instance_exists(Acid)
+	instance_create(x,y,Acid);
 alarm[4] = 20;
