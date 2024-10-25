@@ -70,7 +70,7 @@ function scrGameModes() {
 	gamemode_nocombo[9] = [0,26,27,34,37,8];
 
 	gamemode[10] = "RANDOM AREAS";//
-	gamemode_unlock[10] = "GO TO THREE SECRET AREAS IN ONE RUN";
+	gamemode_unlock[10] = "GO TO FIVE ALTERNATIVE AREAS IN ONE RUN";
 	gamemode_have[10] = 0;
 	gamemode_tip[10] = "WHERE WILL WE GO NEXT?";
 	gamemode_description[10] = "AREAS ARE IN RANDOMIZED ORDER";
@@ -313,7 +313,7 @@ function scrGameModes() {
 	gamemode_nocombo[43] = [25,42,26,27,37,8];
 	
 	gamemode[44] = "ALT SPAWNS";//
-	gamemode_unlock[44] = "DISCOVER 10 SECRET AREAS";
+	gamemode_unlock[44] = "DISCOVER 12 ALTERNATIVE AREAS";
 	gamemode_have[44] = 0;
 	gamemode_tip[44] = "ALTERNATE TIMELINE";
 	gamemode_description[44] = "AREAS SPAWN DIFFERENT ENEMIES";

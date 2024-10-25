@@ -20,10 +20,10 @@ function scrChickenRegen(healAmount){
 				targetHealth = max(1,targetHealth-2);
 			if skill_got[41]//nerves of steel
 				targetHealth = max(1,targetHealth-2);
-			if scrIsCrown(3)//Crown of death
-				targetHealth = max(1,targetHealth-1);
-			if scrIsCrown(20)//Crown of protection
-				targetHealth = max(1,targetHealth-1);
+			//if scrIsCrown(3)//Crown of death
+			//	targetHealth = max(1,targetHealth-1);
+			//if scrIsCrown(20)//Crown of protection
+			//	targetHealth = max(1,targetHealth-1);
 			
 	        if maxhealth < targetHealth
 	        {

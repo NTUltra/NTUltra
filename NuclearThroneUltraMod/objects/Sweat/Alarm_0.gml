@@ -1,4 +1,5 @@
 /// @description Before sweat fades
+alarm[0] = 1;
 vspeed += 0.3;//Gravity
 image_alpha -= 0.1;
 if image_alpha < 0.2

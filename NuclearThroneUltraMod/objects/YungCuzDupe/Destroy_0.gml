@@ -44,7 +44,7 @@ with instance_create(x,y,MovingCorpse)
 	else if mySize > 0
 		speed /= mySize*0.82
 }
-var d = 4;
+var d = 10;
 var w = 0;
 if isYungerCuz
 {

@@ -57,7 +57,7 @@ if target != noone && instance_exists(target)
 		motion_add(random(360),0.4)
 		walk = 5+random(10)
 		alarm[1] = walk+random(7)
-		gunangle = direction
+		//gunangle = direction
 
 		if hspeed > 0
 		right = 1

@@ -13,8 +13,8 @@
     "path":"folders/Objects/Enemies/Labs.yy",
   },
   "parentObjectId":{
-    "name":"FX",
-    "path":"objects/FX/FX.yy",
+    "name":"AnimDestroy",
+    "path":"objects/AnimDestroy/AnimDestroy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

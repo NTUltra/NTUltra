@@ -375,7 +375,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[46] = "teamwork"
 		
 	    ultra_name[47] = "SPAM"
-	    ultra_text[47] = "DUPES COST 2 <r>HP<r>#INSTEAD OF MAX <r>HP#PORTALS <r>HEAL<r>"
+	    ultra_text[47] = "DUPES COST 2 <r>HP<r>#INSTEAD OF MAX <r>HP#ALL DUPLICATES TAKE <w>25%<w> LESS <w>RELOAD TIME<w>"
 	    ultra_tips[47] = "annoying"
 		
 		//Pluto and no rhino skin?

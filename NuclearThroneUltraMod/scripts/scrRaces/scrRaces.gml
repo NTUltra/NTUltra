@@ -221,7 +221,7 @@ function scrRaces() {
 		race_vision[9] = string_replace_all(race_vision[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[9] = string_replace_all(race_vision_detail[9],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[9] = "FIND AND USE THE SECRET#CROWN OF A THOUSAND CUTS"
+	race_lock[9] = "FIND AND USE\nTHE SECRET CROWN OF A THOUSAND CUTS"
 	race_have[9] = 0
 	race_swep[9] = 46
 	race_bskin[9] = 0
@@ -595,7 +595,7 @@ function scrRaces() {
 		race_vision[24] = string_replace_all(race_vision[24],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[24] = string_replace_all(race_vision_detail[24],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[24] = "REACH MUSHROOM LAND TO UNLOCK"//TAKE HEAVY HEART
+	race_lock[24] = "REACH THE MUSHROOM SWAMP TO UNLOCK"//TAKE HEAVY HEART
 	race_have[24] = 0
 	race_swep[24] = 337//MINI LIGHTNING PISTOL//102//FROST PISTOL
 	race_bskin[24] = 0

@@ -9,8 +9,9 @@ with myCorpse
 }
 with LastCampfire
 {
-	with instance_create_depth(x,y - 4,depth - 2,GameEnd)
-	{
-		endingType = 1;	
-	}
+	if false && !scrIsGamemode(10)
+		with instance_create_depth(x,y - 4,depth - 2,GameEnd)
+		{
+			endingType = 1;	
+		}
 }

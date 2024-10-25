@@ -191,14 +191,7 @@ if race == 10 && canHeal//Rebel pasive
 			my_health += 1;
 	}
 }
-if (ultra_got[47] && !altUltra) {
-	repeat(4)
-	{
-		if my_health < maxhealth
-			my_health += 1;
-	}
-}
-else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
+if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 {
 	if maxhealth < 2
 	{
@@ -209,7 +202,6 @@ else if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 		yungCuzCskin = 0;	
 	}
 	maxhealth = scrGetMaxPossibleHealth();
-	
 }
 
 if ((ultra_got[40] = 1) && canHeal)
@@ -332,18 +324,39 @@ if race == 14//PANDA
 
 if scrIsGamemode(10)//random areas
 {
-	UberCont.areasVisited += 1;
-	if UberCont.useSeed
+	if instance_exists(RegalNavigation)
 	{
-		var a = loops * 14;
-		a += UberCont.areasVisited*1414;
-		random_set_seed(UberCont.seed+a)
+		area = 137;
 	}
-	area = scrGetRandomArea();
+	else
+	{
+		UberCont.areasVisited += 1;
+		if UberCont.useSeed
+		{
+			var a = loops * 14;
+			a += UberCont.areasVisited*1414;
+			random_set_seed(UberCont.seed+a)
+		}
+		area = scrGetRandomArea();
+	}
+	if instance_exists(PitNavigation)
+	{
+		with PitNavigation
+		{
+			instance_destroy();	
+		}
+	}
+	if area == 141 && !instance_exists(PitNavigation)
+	{
+		instance_create(x,y,PitNavigation);
+	}
 	if rnglevelloop==18
 	{
 		loops += 1;
+		looping = true;
 		rnglevelloop = 0;
+		with instance_create(x,y,UnlockPopup)
+			mytext="LOOPING!";
 	}
 	rnglevelloop+=1;
 	subarea=choose(1,2,3);

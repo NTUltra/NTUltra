@@ -13,7 +13,11 @@ team=1;
 name = "";
 snd_hurt = sndStatueHurt
 snd_dead = sndBecomeProtoStatueDead
-
+if scrIsGamemode(10)
+{
+	instance_destroy(id,false);
+	exit;
+}
 instance_create(x-16,y-16-32,Floor)
 instance_create(x-16,y-16+32,Floor)
 instance_create(x-16-32,y-16,Floor)

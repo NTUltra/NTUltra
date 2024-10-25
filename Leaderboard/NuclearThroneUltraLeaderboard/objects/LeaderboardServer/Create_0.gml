@@ -1,12 +1,12 @@
 /// @description Init
-updateVersion = "30.21.00";
-betaVersion = "31.BETA.42"
+updateVersion = "31.PRE-R.06";
+betaVersion = "31.PRE-R.06"
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;
 if disableDebug
 	visible = false;
-maxwep = 860;
+maxwep = 881;
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
 	show_debug_message("FAILED TO HOST GAME\nTRY AGAIN LATER");	

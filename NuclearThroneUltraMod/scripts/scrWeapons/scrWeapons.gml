@@ -5540,7 +5540,7 @@ function scrWeapons() {
 	wep_name[492] = "SPLINTER MACE"
 	wep_type[492] = 3
 	wep_auto[492] = 0
-	wep_load[492] = 22
+	wep_load[492] = 20
 	wep_cost[492] = 1
 	wep_sprt[492] = sprSpikeMace
 	wep_area[492] = 6
@@ -9878,6 +9878,18 @@ function scrWeapons() {
 	wep_text[880] = "do the potato flip!"
 	wep_swap[880] = sndSwapExplosive
 	wep_rad[880] = 25;
+	
+	wep_name[881] = "SIX SHOOTER"
+	wep_type[881] = 1
+	wep_auto[881] = 2
+	wep_load[881] = 3//OVERWRITTEN IN FIRE EVENT
+	wep_cost[881] = 2
+	wep_sprt[881] = sprSixShooter
+	wep_area[881] = 10
+	wep_text[881] = "fires nearly as fast as you can pull the trigger"
+	wep_swap[881] = sndSwapPistol
+	wep_rad[881] = 0;
+	wep_popup[881] = "LONGER RELOAD AFTER SIX SHOTS#SYNERGIZES WITH TAIL'S END";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
@@ -9945,6 +9957,7 @@ function scrWeapons() {
 		wep_cost_base[i] = wep_cost[i];
 		wep_rad_base[i] = wep_rad[i];
 		wep_type_base[i] = wep_type[i];
+		wep_load_base[i] = wep_load[i];
 		if wep_area[i] > highest_wep_tier
 		{
 			highest_wep_tier = wep_area[i];
@@ -9953,5 +9966,5 @@ function scrWeapons() {
 	}
 	
 	//Debug how many weapons there are of each tier
-	//scrExportWeapons();
+	scrExportWeapons();
 }

@@ -212,6 +212,7 @@ if crown == 20
 		//	gotMinimumArmour = true;
 		canCrownOfProtection = 0;
 		//not Living armour
+		UberCont.maxHpIncrease --;
 		if !(instance_exists(Player) && Player.ultra_got[62] && Player.altUltra)
 		{
 			maxarmour += 1;//max(maxarmour, 1);

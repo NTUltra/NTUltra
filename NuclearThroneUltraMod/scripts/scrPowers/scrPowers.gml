@@ -82,391 +82,496 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		
 	
-	if race == 23 //Frog
-	{
-	if skill_got[5]=1
-	{
-	snd_play_2d(sndFrogStartButt);
-	snd_loop(sndFrogLoopButt);
-	}
-	else
-	{
-	snd_play_2d(sndFrogStart);
-	snd_loop(sndFrogLoop);
-	}
-	}
-
-	if race == 25//Mutation doctor
-	{
-
-		if ultra_got[99]
-		{//necro doctor
-    
-			//snd_play_2d(sndNecromancerRevive)
-			        //audio_stop_sound(sndBouncerHitWall)
-			var markedForRev = false;
-		    var numberOfEnems = 0;
-			if instance_exists(IDPDVan)
-				numberOfEnems = instance_number(IDPDVan);
-			if (instance_number(enemy) > numberOfEnems)
-			{
-				with CorpseCollector
-				{
-					var al = ds_list_size(corpses)
-					var markForDelete = [];
-					var j = 0;
-					for (var i = 0; i < al; i++)
-					{
-						var corpse = corpses[| i];
-						var xx = corpse.xx;
-						var yy = corpse.yy;
-						if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-						{
-							with instance_create(xx,yy,BloodStreak)
-							{
-								motion_add(point_direction(Player.x,Player.y,x,y),8)
-								image_angle = direction
-							}
-							if corpse.mySize > 2
-								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							else
-								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-							instance_create(xx,yy,AllyFreak);
-							markedForRev = true;
-							markForDelete[j] = i;
-							j ++;
-						}
-					}
-					for (var i = 0; i < j; i++)
-					{
-						ds_list_delete(corpses,markForDelete[i]);
-					}
-				}
-				with Corpse
-				{
-					if (image_speed == 0 || alarm[6] < 1) //and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-						&& point_distance(x,y,other.x,other.y) < 250
-					{
-					    instance_destroy()
-					    with instance_create(x,y,BloodStreak)
-					    {
-							motion_add(point_direction(Player.x,Player.y,x,y),8)
-							image_angle = direction
-					    }
-					    if mySize > 2
-							scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-						else
-							scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-					    instance_create(x,y,AllyFreak);
-						markedForRev = true;
-				    }
-				}
-				if markedForRev
-				{
-					snd_play(sndNecromancerRevive);
-					scrDoctorThroneButt(4,2);
-				}
-			}
-
-		}
-		else if ultra_got[98]
+		if race == 23 //Frog
 		{
-			if rad > 15
+			if skill_got[5]=1
 			{
-				audio_stop_sound(sndMutant0Slct)
-				audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
-				audio_play_sound(sndMutant0Slct,90,0)
-				instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-				rad -= 15;
-				scrDoctorThroneButt();
+				snd_play_2d(sndFrogStartButt);
+				snd_loop(sndFrogLoopButt);
 			}
 			else
-				scrEmptyRad();
-
-		}
-		else if my_health > 1 || !scrIsGamemode(9)
-		{
-			//Regular active 
-			if !scrIsCrown(41) || my_health > 2
 			{
-				if my_health == 1 && skill_got[32] && isAlkaline
+				snd_play_2d(sndFrogStart);
+				snd_loop(sndFrogLoop);
+			}
+		}
+
+		if race == 25//Mutation doctor
+		{
+			if ultra_got[99]
+			{//necro doctor
+    
+				//snd_play_2d(sndNecromancerRevive)
+				        //audio_stop_sound(sndBouncerHitWall)
+				var markedForRev = false;
+			    var numberOfEnems = 0;
+				if instance_exists(IDPDVan)
+					numberOfEnems = instance_number(IDPDVan);
+				if (instance_number(enemy) > numberOfEnems)
 				{
-					isAlkaline = false;
-					var h = 4;
-					my_health = min(h,maxhealth);
-				
-					with instance_create(x,y,SharpTeeth)
-						owner=other.id;
-					snd_play(sndAlkalineProc,0,true)
-					var pt = instance_create(x,y,PopupText)
-					if UberCont.opt_ammoicon
+					with CorpseCollector
 					{
-						if my_health = maxhealth
-							pt.mytext = "MAX";
-						else
-							pt.mytext = "+"+string(h-1);
-				
-						pt.sprt = sprHPIconPickup;
+						var al = ds_list_size(corpses)
+						var markForDelete = [];
+						var j = 0;
+						for (var i = 0; i < al; i++)
+						{
+							var corpse = corpses[| i];
+							var xx = corpse.xx;
+							var yy = corpse.yy;
+							if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+							{
+								with instance_create(xx,yy,BloodStreak)
+								{
+									motion_add(point_direction(Player.x,Player.y,x,y),8)
+									image_angle = direction
+								}
+								if corpse.mySize > 2
+									scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								else
+									scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								instance_create(xx,yy,AllyFreak);
+								markedForRev = true;
+								markForDelete[j] = i;
+								j ++;
+							}
+						}
+						for (var i = 0; i < j; i++)
+						{
+							ds_list_delete(corpses,markForDelete[i]);
+						}
 					}
-					else
+					with Corpse
 					{
-						if my_health = maxhealth
-							pt.mytext = "MAX HP";
-						else
-							pt.mytext = "+"+string(h-1)+" HP";
+						if (image_speed == 0 || alarm[6] < 1) //and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+							&& point_distance(x,y,other.x,other.y) < 250
+						{
+						    instance_destroy()
+						    with instance_create(x,y,BloodStreak)
+						    {
+								motion_add(point_direction(Player.x,Player.y,x,y),8)
+								image_angle = direction
+						    }
+						    if mySize > 2
+								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							else
+								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+						    instance_create(x,y,AllyFreak);
+							markedForRev = true;
+					    }
 					}
-					Sleep(50);
+					if markedForRev
+					{
+						snd_play(sndNecromancerRevive);
+						scrDoctorThroneButt(4,2);
+					}
+				}
+
+			}
+			else if ultra_got[98]
+			{
+				if rad > 15
+				{
+					audio_stop_sound(sndMutant0Slct)
+					audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
+					audio_play_sound(sndMutant0Slct,90,0)
+					instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
+					rad -= 15;
+					scrDoctorThroneButt();
 				}
 				else
+					scrEmptyRad();
+
+			}
+			else if my_health > 1 || !scrIsGamemode(9)
+			{
+				//Regular active 
+				if !scrIsCrown(41) || my_health > 2
 				{
-					if armour > 0
-						armour -= 1;
+					if my_health == 1 && skill_got[32] && isAlkaline
+					{
+						isAlkaline = false;
+						var h = 4;
+						my_health = min(h,maxhealth);
+				
+						with instance_create(x,y,SharpTeeth)
+							owner=other.id;
+						snd_play(sndAlkalineProc,0,true)
+						var pt = instance_create(x,y,PopupText)
+						if UberCont.opt_ammoicon
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX";
+							else
+								pt.mytext = "+"+string(h-1);
+				
+							pt.sprt = sprHPIconPickup;
+						}
+						else
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX HP";
+							else
+								pt.mytext = "+"+string(h-1)+" HP";
+						}
+						Sleep(50);
+					}
 					else
-						DealDamage(1,false,false,false);
-					hitBy = sprite_index;
-					exception = true;
-				    if my_health<=0 //KILL YOSELF USING ACTIVE
-				    {
-					    if skill_got[25]//strong spirit
+					{
+						if armour > 0
+							armour -= 1;
+						else
+							DealDamage(1,false,false,false);
+						hitBy = sprite_index;
+						exception = true;
+					    if my_health<=0 //KILL YOSELF USING ACTIVE
 					    {
-						    if strongspirit==true&&strongspiritused==false
+						    if skill_got[25]//strong spirit
 						    {
-							    snd_play_2d(sndStrongSpiritLost);
-							    my_health=1;
-								Sleep(50);
-							    alarm[1]=20;//invincibility 
-							    strongspiritused=true;
-							    strongspirit=false;
+							    if strongspirit==true&&strongspiritused==false
+							    {
+								    snd_play_2d(sndStrongSpiritLost);
+								    my_health=1;
+									Sleep(50);
+								    alarm[1]=20;//invincibility 
+								    strongspiritused=true;
+								    strongspirit=false;
+							    }
+							    else
+									scrUnlockCSkin(25,"HAHAHAHAHA!",0);
 						    }
 						    else
 								scrUnlockCSkin(25,"HAHAHAHAHA!",0);
 					    }
-					    else
-							scrUnlockCSkin(25,"HAHAHAHAHA!",0);
-				    }
-				}
-			    //if my_health<1&&strongspirit
-			    image_index=0;
-			    sprite_index=spr_hurt;
-			    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
-			    repeat(14)
-			    {
-				    with instance_create(x,y,Rad)
-				    {
-						motion_add(other.direction,other.speed)
-					    motion_add(random(360),random(5)+3)
-					    repeat(speed)
-					    speed *= 0.9
 					}
+				    //if my_health<1&&strongspirit
+				    image_index=0;
+				    sprite_index=spr_hurt;
+				    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+				    repeat(14)
+				    {
+					    with instance_create(x,y,Rad)
+					    {
+							motion_add(other.direction,other.speed)
+						    motion_add(random(360),random(5)+3)
+						    repeat(speed)
+						    speed *= 0.9
+						}
+				    }
+					scrDoctorThroneButt();
+				}
+			}
+		}
+
+		if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
+		{
+			if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
+			{
+				snd_play(sndNoArmour,0.1);
+				BackCont.shake += 10;
+			}
+			else
+			{
+				if freeArmourStrike
+				{
+					freeArmourStrike = false;
+					if skill_got[38] && metabolism < 3
+					{
+						triggerMetabolism = true;
+					}
+				}
+			    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra && !scrIsCrown(41)))
+				{
+					if metabolism < 3
+						armour--;
+					if skill_got[38]
+					{
+						triggerMetabolism = true;
+					}
+				}
+			    else if ultra_got[63] && !(ultra_got[62] && altUltra)
+			    {
+			        DealDamage(2,false,false,false);
+					hitBy = sprite_index;
+			        exception = true
 			    }
-				scrDoctorThroneButt();
+				scrBlankArmour();
+				scrSerpentArmourStrike();
 			}
 		}
-	}
 
-	if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
-	{
-		if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
+
+		if race == 22 && !altUltra //Rogue
 		{
-			snd_play(sndNoArmour,0.1);
-			BackCont.shake += 10;
-		}
-		else
+			var radcost = 120;//Cost is also in portal
+			var useRad = ultra_got[88] == 1
+		if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
 		{
-			if freeArmourStrike
-			{
-				freeArmourStrike = false;
-				if skill_got[38] && metabolism < 3
-				{
-					triggerMetabolism = true;
-				}
-			}
-		    else if armour > 0 && (!ultra_got[63] || (ultra_got[62] && altUltra && !scrIsCrown(41)))
-			{
-				if metabolism < 3
-					armour--;
-				if skill_got[38]
-				{
-					triggerMetabolism = true;
-				}
-			}
-		    else if ultra_got[63] && !(ultra_got[62] && altUltra)
-		    {
-		        DealDamage(2,false,false,false);
-				hitBy = sprite_index;
-		        exception = true
-		    }
-			scrBlankArmour();
-			scrSerpentArmourStrike();
-		}
-	}
-
-
-	if race == 22 && !altUltra //Rogue
-	{
-		var radcost = 120;//Cost is also in portal
-		var useRad = ultra_got[88] == 1
-	if rogueammo > instance_number(PortalStrike) || (useRad && rad >= radcost*(1+instance_number(PortalStrike)))
-	{
-		//if useRad Ammo taken in portalstrike destroy
-		//	rad -= radcost;
+			//if useRad Ammo taken in portalstrike destroy
+			//	rad -= radcost;
 		
 
-		with instance_create(UberCont.mouse__x,UberCont.mouse__y,PortalStrike)
-		{
-		if other.bskin=2
-		sprite_index=sprRogueCStrike
-		if other.skill_got[5]
-		{
-		upgraded=true;
-		if other.bskin=2
-		sprite_index=sprRogueCStrikeTB;
-		else
-		sprite_index=sprRogueStrikeTB;
-		}
-
-		}
-		snd_play_2d(sndRogueAim);
-	}
-	else
-	{
-		snd_play_2d(sndPortalStrikeEmpty);
-		if useRad
-		{
-			snd_play_2d(sndUltraEmpty);	
-			with instance_create(x,y,PopupText)
-			{mytext = "NOT ENOUGH#RADS"
-			theColour=c_red;}
-		}
-		else
-		{
-			with instance_create(x,y,PopupText)
-			{mytext = "NOT ENOUGH#PORTAL STRIKE AMMO"
-			theColour=c_red;}
-		}
-	}
-
-
-	}
-
-	if race == 21//horror
-	{
-		horrordelay = false;
-		if UberCont.normalGameSpeed == 60
-			horrordelay = true;
-		if ultra_got[0] && altUltra
-		{
-			if cash <= 0 && inDebt
+			with instance_create(UberCont.mouse__x,UberCont.mouse__y,PortalStrike)
 			{
-				snd_play_2d(sndHorrorEmpty);
+			if other.bskin=2
+			sprite_index=sprRogueCStrike
+			if other.skill_got[5]
+			{
+			upgraded=true;
+			if other.bskin=2
+			sprite_index=sprRogueCStrikeTB;
+			else
+			sprite_index=sprRogueStrikeTB;
+			}
+
+			}
+			snd_play_2d(sndRogueAim);
+		}
+		else
+		{
+			snd_play_2d(sndPortalStrikeEmpty);
+			if useRad
+			{
+				snd_play_2d(sndUltraEmpty);	
 				with instance_create(x,y,PopupText)
-				{
-					mytext = "NOT ENOUGH CASH"
-					theColour=c_red;
-				}
-				BackCont.shake += 5;
+				{mytext = "NOT ENOUGH#RADS"
+				theColour=c_red;}
 			}
 			else
 			{
-				snd_play_2d(sndHorrorCashFlowStart);
+				with instance_create(x,y,PopupText)
+				{mytext = "NOT ENOUGH#PORTAL STRIKE AMMO"
+				theColour=c_red;}
 			}
 		}
-		else
+
+
+		}
+
+		if race == 21//horror
 		{
-			if rad<=0
+			horrordelay = false;
+			if UberCont.normalGameSpeed == 60
+				horrordelay = true;
+			if ultra_got[0] && altUltra
 			{
-				snd_play_2d(sndHorrorEmpty);
-				scrEmptyRad();
-			}
-			else
-			{
-				if !instance_exists(HorrorSuckDelay)
-					instance_create(x,y,HorrorSuckDelay);
-				else
-					with HorrorSuckDelay
+				if cash <= 0 && inDebt
+				{
+					snd_play_2d(sndHorrorEmpty);
+					with instance_create(x,y,PopupText)
 					{
-						alarm[0] = suckDelay;	
+						mytext = "NOT ENOUGH CASH"
+						theColour=c_red;
 					}
-				//First rad for game feel
-				var cost = 1.06;
-				if ultra_got[83]
-					cost = 0.95;
-				if  UberCont.normalGameSpeed == 60
-				{
-					cost *= 0.5;
-					horrordelay = !horrordelay;
+					BackCont.shake += 5;
 				}
-				rad -= cost;
-
-			    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-			    {
-				    bskin=other.bskin
-    
-				    if bskin = 1
-						sprite_index=sprHorrorBeamB;
-				    else if bskin = 2
-						sprite_index=sprHorrorBeamC;
-    
-				    originnr=instance_number(HorrorBeam);
-    
-				    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-				    team = other.team
-				    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-				    ammo=50
-				    charge=other.horrorcharge;
-				    event_perform(ev_alarm,0)
-				    rad=1;
-			        with instance_create(x,y,LightningSpawn)
-			        {
-				        if other.bskin=1
-							sprite_index=sprHorrorBeamSpawnB
-				        else if other.bskin=2
-							sprite_index=sprHorrorBeamSpawnC
-				        else
-							sprite_index=sprHorrorBeamSpawn
-						image_angle = other.image_angle
-			        }
-			    }
-				rad = max(rad,0);
+				else
+				{
+					snd_play_2d(sndHorrorCashFlowStart);
+				}
 			}
+			else
+			{
+				if rad<=0
+				{
+					snd_play_2d(sndHorrorEmpty);
+					scrEmptyRad();
+				}
+				else
+				{
+					if !instance_exists(HorrorSuckDelay)
+						instance_create(x,y,HorrorSuckDelay);
+					else
+						with HorrorSuckDelay
+						{
+							alarm[0] = suckDelay;	
+						}
+					//First rad for game feel
+					var cost = 1.06;
+					if ultra_got[83]
+						cost = 0.95;
+					if  UberCont.normalGameSpeed == 60
+					{
+						cost *= 0.5;
+						horrordelay = !horrordelay;
+					}
+					rad -= cost;
+
+				    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+				    {
+					    bskin=other.bskin
+    
+					    if bskin = 1
+							sprite_index=sprHorrorBeamB;
+					    else if bskin = 2
+							sprite_index=sprHorrorBeamC;
+    
+					    originnr=instance_number(HorrorBeam);
+    
+					    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+					    team = other.team
+					    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+					    ammo=50
+					    charge=other.horrorcharge;
+					    event_perform(ev_alarm,0)
+					    rad=1;
+				        with instance_create(x,y,LightningSpawn)
+				        {
+					        if other.bskin=1
+								sprite_index=sprHorrorBeamSpawnB
+					        else if other.bskin=2
+								sprite_index=sprHorrorBeamSpawnC
+					        else
+								sprite_index=sprHorrorBeamSpawn
+							image_angle = other.image_angle
+				        }
+				    }
+					rad = max(rad,0);
+				}
+			}
+
 		}
 
-	}
 
-
-	if race == 20 //business hog
-	{
-		if !instance_exists(ShopWheel)
-			instance_create(x,y,ShopWheel);
-	}
-
-	if race == 19 && !instance_exists(SkeletonGambleCooldown)//Skeleton
-	{
-		if ultra_got[74] && altUltra//Skeleton alt ultra
+		if race == 20 //business hog
 		{
-			var corpseExist = false;
-			var upTo = 2;
-			var numberOfEnems = 0;
-			if instance_exists(IDPDVan)
-				numberOfEnems = instance_number(IDPDVan);
-			if  (instance_number(enemy) > numberOfEnems)
+			if !instance_exists(ShopWheel)
+				instance_create(x,y,ShopWheel);
+		}
+
+		if race == 19 && !instance_exists(SkeletonGambleCooldown)//Skeleton
+		{
+			if ultra_got[74] && altUltra//Skeleton alt ultra
 			{
-				with CorpseCollector
+				var corpseExist = false;
+				var upTo = 2;
+				var numberOfEnems = 0;
+				if instance_exists(IDPDVan)
+					numberOfEnems = instance_number(IDPDVan);
+				if  (instance_number(enemy) > numberOfEnems)
 				{
-					var al = ds_list_size(corpses)
-					var markForDelete = [];
-					var j = 0;
-					for (var i = 0; i < al; i++)
+					with CorpseCollector
 					{
-						var corpse = corpses[| i];
-						var xx = corpse.xx;
-						var yy = corpse.yy;
-						if point_distance(xx,yy,other.x,other.y) < 250
+						var al = ds_list_size(corpses)
+						var markForDelete = [];
+						var j = 0;
+						for (var i = 0; i < al; i++)
+						{
+							var corpse = corpses[| i];
+							var xx = corpse.xx;
+							var yy = corpse.yy;
+							if point_distance(xx,yy,other.x,other.y) < 250
+							{
+								corpseExist = true;
+								BackCont.shake += 2;
+								var splatDir = point_direction(other.x,other.y,xx,yy);
+								with instance_create(xx,yy,BloodStreak)
+								{
+									motion_add(splatDir,8)
+									image_angle = direction
+								}
+								scrAddToBGFXLayer(
+									sprBloodSplat,
+									irandom(sprite_get_number(sprBloodSplat)),
+									xx + lengthdir_x(random_range(6,12),splatDir),
+									yy + lengthdir_y(random_range(6,12),splatDir),
+									random_range(0.8,1),
+									random_range(0.8,1),
+									splatDir,
+									c_white,
+									1
+								);
+								instance_create(xx,yy,Smoke);
+								var d = point_direction(other.x,other.y,xx,yy);
+								if other.skill_got[5]
+								{
+									BackCont.shake += 1;
+									if upTo > -1
+									snd_play(sndExplosionS);
+							
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d+8,17)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d-8,17)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d+16,15)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d-16,15)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(other.x,other.y,HeavyBloodBullet)
+									{
+						
+										motion_add(d+180,17)
+										image_angle = direction;
+										team = 2
+									}
+								}
+								else
+								{
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d+8,17)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(other.x,other.y,BloodBullet)
+									{
+										motion_add(d-8,17)
+										image_angle = direction;
+										team = 2
+									}
+									with instance_create(xx,yy,BloodBullet)
+									{
+										motion_add(d+180,17)
+										image_angle = direction;
+										team = 2
+									}
+								}
+								if upTo > 0
+								{
+									snd_play(sndCorpseExplo);	
+								}
+					
+								with instance_create(other.x,other.y,HeavyBloodBullet)
+								{
+									dmg += 1;
+									motion_add(d,19)
+									image_angle = direction;
+									team = 2
+								}
+								upTo--;
+								markForDelete[j] = i;
+								j ++;
+							}
+						}
+						for (var i = 0; i < j; i++)
+						{
+							ds_list_delete(corpses,markForDelete[i]);
+						}
+					}
+					with Corpse
+					{
+						if (image_speed == 0 || alarm[6] < 1) && point_distance(x,y,other.x,other.y) < 250
 						{
 							corpseExist = true;
 							BackCont.shake += 2;
-							var splatDir = point_direction(other.x,other.y,xx,yy);
-							with instance_create(xx,yy,BloodStreak)
+							var splatDir = point_direction(Player.x,Player.y,x,y);
+							with instance_create(x,y,BloodStreak)
 							{
 								motion_add(splatDir,8)
 								image_angle = direction
@@ -474,21 +579,23 @@ function scrPowers(raceOverwrite = -1) {
 							scrAddToBGFXLayer(
 								sprBloodSplat,
 								irandom(sprite_get_number(sprBloodSplat)),
-								xx + lengthdir_x(random_range(6,12),splatDir),
-								yy + lengthdir_y(random_range(6,12),splatDir),
+								x + lengthdir_x(random_range(6,12),splatDir),
+								y + lengthdir_y(random_range(6,12),splatDir),
 								random_range(0.8,1),
 								random_range(0.8,1),
 								splatDir,
 								c_white,
 								1
 							);
-							instance_create(xx,yy,Smoke);
-							var d = point_direction(other.x,other.y,xx,yy);
+							instance_create(x,y,MeltSplat);
+							instance_destroy();
+							instance_create(x,y,Smoke);
+							var d = point_direction(other.x,other.y,x,y);
 							if other.skill_got[5]
 							{
 								BackCont.shake += 1;
 								if upTo > -1
-								snd_play(sndExplosionS);
+									snd_play(sndExplosionS);
 							
 								with instance_create(other.x,other.y,BloodBullet)
 								{
@@ -517,7 +624,7 @@ function scrPowers(raceOverwrite = -1) {
 								with instance_create(other.x,other.y,HeavyBloodBullet)
 								{
 						
-									motion_add(d+180,17)
+									motion_add(d+180,16)
 									image_angle = direction;
 									team = 2
 								}
@@ -536,7 +643,7 @@ function scrPowers(raceOverwrite = -1) {
 									image_angle = direction;
 									team = 2
 								}
-								with instance_create(xx,yy,BloodBullet)
+								with instance_create(x,y,BloodBullet)
 								{
 									motion_add(d+180,17)
 									image_angle = direction;
@@ -556,710 +663,554 @@ function scrPowers(raceOverwrite = -1) {
 								team = 2
 							}
 							upTo--;
-							markForDelete[j] = i;
-							j ++;
 						}
-					}
-					for (var i = 0; i < j; i++)
-					{
-						ds_list_delete(corpses,markForDelete[i]);
 					}
 				}
-				with Corpse
+				if corpseExist
 				{
-					if (image_speed == 0 || alarm[6] < 1) && point_distance(x,y,other.x,other.y) < 250
+					BackCont.shake += 5;
+					snd_play_2d(sndBloodGamble);
+					snd_play_fire(sndHeavyBloodPistol);
+				}
+			}
+			else if (scrIsCrown(40) || wep_type[wep] != 0) && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
+			{
+			    //gamble some blood
+				var failedGamble = false;
+				var wepCost = max(0.5,wep_cost[wep]);
+				var cancelBloodGamble = false;
+				if wep_type[wep] == 0
+				{
+					wepCost = 2;
+				}
+			    if (max(0.1,wepCost/typ_ammo[wep_type[wep]]) > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
+			    {//thronebutt adds 1/3 chance of not taking damage
+					if !scrIsCrown(41) || my_health > 2
 					{
-						corpseExist = true;
-						BackCont.shake += 2;
-						var splatDir = point_direction(Player.x,Player.y,x,y);
-						with instance_create(x,y,BloodStreak)
+						consecutiveGoodBloodGambles = 0;
+						failedGamble = true;
+						//Damnation
+						if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
 						{
-							motion_add(splatDir,8)
-							image_angle = direction
-						}
-						scrAddToBGFXLayer(
-							sprBloodSplat,
-							irandom(sprite_get_number(sprBloodSplat)),
-							x + lengthdir_x(random_range(6,12),splatDir),
-							y + lengthdir_y(random_range(6,12),splatDir),
-							random_range(0.8,1),
-							random_range(0.8,1),
-							splatDir,
-							c_white,
-							1
-						);
-						instance_create(x,y,MeltSplat);
-						instance_destroy();
-						instance_create(x,y,Smoke);
-						var d = point_direction(other.x,other.y,x,y);
-						if other.skill_got[5]
-						{
-							BackCont.shake += 1;
-							if upTo > -1
-								snd_play(sndExplosionS);
-							
-							with instance_create(other.x,other.y,BloodBullet)
-							{
-								motion_add(d+8,17)
-								image_angle = direction;
-								team = 2
-							}
-							with instance_create(other.x,other.y,BloodBullet)
-							{
-								motion_add(d-8,17)
-								image_angle = direction;
-								team = 2
-							}
-							with instance_create(other.x,other.y,BloodBullet)
-							{
-								motion_add(d+16,15)
-								image_angle = direction;
-								team = 2
-							}
-							with instance_create(other.x,other.y,BloodBullet)
-							{
-								motion_add(d-16,15)
-								image_angle = direction;
-								team = 2
-							}
-							with instance_create(other.x,other.y,HeavyBloodBullet)
-							{
-						
-								motion_add(d+180,16)
-								image_angle = direction;
-								team = 2
-							}
+							var punishment = 6;
+							ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
+							rad = max(0,rad - wep_rad[wep] * punishment);
 						}
 						else
 						{
-							with instance_create(other.x,other.y,BloodBullet)
+							if skeletonGambleBongas == 4
 							{
-								motion_add(d+8,17)
-								image_angle = direction;
-								team = 2
+								scrHeal(1);
+								snd_play(sndBloodlustProc,0.1);
+								instance_create(x,y - 8,HealFX);
+								skeletonGambleBongas = 0;
 							}
-							with instance_create(other.x,other.y,BloodBullet)
-							{
-								motion_add(d-8,17)
-								image_angle = direction;
-								team = 2
-							}
-							with instance_create(x,y,BloodBullet)
-							{
-								motion_add(d+180,17)
-								image_angle = direction;
-								team = 2
-							}
-						}
-						if upTo > 0
-						{
-							snd_play(sndCorpseExplo);	
-						}
-					
-						with instance_create(other.x,other.y,HeavyBloodBullet)
-						{
-							dmg += 1;
-							motion_add(d,19)
-							image_angle = direction;
-							team = 2
-						}
-						upTo--;
-					}
-				}
-			}
-			if corpseExist
-			{
-				BackCont.shake += 5;
-				snd_play_2d(sndBloodGamble);
-				snd_play_fire(sndHeavyBloodPistol);
-			}
-		}
-		else if (scrIsCrown(40) || wep_type[wep] != 0) && (can_shoot == 1 || ultra_got[74])//&& my_health > 1//SKELETON
-		{
-		    //gamble some blood
-			var failedGamble = false;
-			var wepCost = max(0.5,wep_cost[wep]);
-			var cancelBloodGamble = false;
-			if wep_type[wep] == 0
-			{
-				wepCost = 2;
-			}
-		    if (max(0.1,wepCost/typ_ammo[wep_type[wep]]) > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
-		    {//thronebutt adds 1/3 chance of not taking damage
-				if !scrIsCrown(41) || my_health > 2
-				{
-					consecutiveGoodBloodGambles = 0;
-					failedGamble = true;
-					//Damnation
-					if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
-					{
-						var punishment = 6;
-						ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
-						rad = max(0,rad - wep_rad[wep] * punishment);
-					}
-					else
-					{
-						if skeletonGambleBongas == 4
-						{
-							scrHeal(1);
-							snd_play(sndBloodlustProc,0.1);
-							instance_create(x,y - 8,HealFX);
-							skeletonGambleBongas = 0;
-						}
-						else
-						{
-							if skill_got[5]
-								skeletonGambleBongas += 1;
-							if armour > 0
-								armour -= 1;
 							else
-								DealDamage(1,false,false,false);
-							hitBy = sprite_index;
-							exception = true;
-							image_index = 0;
-							sprite_index = spr_hurt;
-							snd_play_2d(snd_hurt, hurt_pitch_variation);
+							{
+								if skill_got[5]
+									skeletonGambleBongas += 1;
+								if armour > 0
+									armour -= 1;
+								else
+									DealDamage(1,false,false,false);
+								hitBy = sprite_index;
+								exception = true;
+								image_index = 0;
+								sprite_index = spr_hurt;
+								snd_play_2d(snd_hurt, hurt_pitch_variation);
+							}
+							var splatDir = random(360);
+							var rpt = 3;
+							var angStep = 360 / rpt;
+							repeat(rpt)
+							{
+								with instance_create(x,y,BloodStreak)
+								{
+									motion_add(splatDir,10);
+									image_angle = direction
+								}
+								scrAddToBGFXLayer(
+									sprBloodSplat,
+									irandom(sprite_get_number(sprBloodSplat)),
+									x + lengthdir_x(random_range(8,14),splatDir),
+									y + lengthdir_y(random_range(8,14),splatDir),
+									random_range(0.8,1),
+									random_range(0.8,1),
+									splatDir,
+									c_white,
+									1
+								);
+								splatDir += angStep;
+							}
+							if my_health == 0
+							{
+								if skill_got[32] && isAlkaline
+								{
+									isAlkaline = false;
+									var h = 2;
+									with instance_create(x,y,HealFX)
+									{
+										depth = other.depth - 1;	
+									}
+									my_health = min(h,maxhealth);
+									with instance_create(x,y,SharpTeeth)
+										owner=other.id;
+									snd_play(sndAlkalineProc,0,true)
+									var pt = instance_create(x,y,PopupText)
+									if UberCont.opt_ammoicon
+									{
+										if my_health = maxhealth
+											pt.mytext = "MAX";
+										else
+											pt.mytext = "+"+string(h-1);
+				
+										pt.sprt = sprHPIconPickup;
+									}
+									else
+									{
+										if my_health = maxhealth
+											pt.mytext = "MAX HP";
+										else
+											pt.mytext = "+"+string(h-1)+" HP";
+									}
+									Sleep(50);
+								}
+								else if skill_got[25] && strongspirit == true && strongspiritused == false
+								{
+									snd_play(sndStrongSpiritLost);
+								    my_health=1;
+									Sleep(50);
+								    alarm[1]=20;//invincibility 
+								    strongspiritused=true;
+								    strongspirit=false;
+								}
+							}
 						}
-						var splatDir = random(360);
-						var rpt = 3;
-						var angStep = 360 / rpt;
-						repeat(rpt)
+    
+						repeat(3)
 						{
 							with instance_create(x,y,BloodStreak)
 							{
-								motion_add(splatDir,10);
+								motion_add(random(360),8)
 								image_angle = direction
 							}
-							scrAddToBGFXLayer(
-								sprBloodSplat,
-								irandom(sprite_get_number(sprBloodSplat)),
-								x + lengthdir_x(random_range(8,14),splatDir),
-								y + lengthdir_y(random_range(8,14),splatDir),
-								random_range(0.8,1),
-								random_range(0.8,1),
-								splatDir,
-								c_white,
-								1
-							);
-							splatDir += angStep;
 						}
-						if my_health == 0
+						if ultra_got[75]
 						{
-							if skill_got[32] && isAlkaline
+							BackCont.shake += 2;
+							snd_play(sndExplosionL,0.01,true);
+							var len = 38;
+							var am = 6;
+							var aimDir = random(360);
+							var xx = x + lengthdir_x(len,aimDir);
+							var yy = y + lengthdir_y(len,aimDir);
+							var angstp = 360/am;
+							repeat(am)
 							{
-								isAlkaline = false;
-								var h = 2;
-								with instance_create(x,y,HealFX)
-								{
-									depth = other.depth - 1;	
-								}
-								my_health = min(h,maxhealth);
-								with instance_create(x,y,SharpTeeth)
-									owner=other.id;
-								snd_play(sndAlkalineProc,0,true)
-								var pt = instance_create(x,y,PopupText)
-								if UberCont.opt_ammoicon
-								{
-									if my_health = maxhealth
-										pt.mytext = "MAX";
-									else
-										pt.mytext = "+"+string(h-1);
-				
-									pt.sprt = sprHPIconPickup;
-								}
-								else
-								{
-									if my_health = maxhealth
-										pt.mytext = "MAX HP";
-									else
-										pt.mytext = "+"+string(h-1)+" HP";
-								}
-								Sleep(50);
-							}
-							else if skill_got[25] && strongspirit == true && strongspiritused == false
-							{
-								snd_play(sndStrongSpiritLost);
-							    my_health=1;
-								Sleep(50);
-							    alarm[1]=20;//invincibility 
-							    strongspiritused=true;
-							    strongspirit=false;
+								instance_create(xx,yy,MeatExplosion)
+								aimDir += angstp;
+								xx = x + lengthdir_x(len,aimDir);
+								yy = y + lengthdir_y(len,aimDir);
 							}
 						}
 					}
-    
-					repeat(3)
+					else
 					{
-						with instance_create(x,y,BloodStreak)
-						{
-							motion_add(random(360),8)
-							image_angle = direction
-						}
+						snd_play(sndSkeletonGambleCancel);
+						instance_create(x,y,Smoke);
+						instance_create(x,y,SkeletonGambleCooldown);
+						BackCont.shake += 10;
+						cancelBloodGamble = true;
 					}
+				}
+				else
+				{
+					//if skill_got[5]
+					//	consecutiveGoodBloodGambles += wep_load[wep]*0.0005;
+					//else
+					consecutiveGoodBloodGambles += wep_load[wep]*0.001;
+					//reload -= wep_load[wep]*0.8//*0.25;
 					if ultra_got[75]
 					{
-						BackCont.shake += 2;
-						snd_play(sndExplosionL,0.01,true);
-						var len = 38;
-						var am = 6;
-						var aimDir = random(360);
-						var xx = x + lengthdir_x(len,aimDir);
-						var yy = y + lengthdir_y(len,aimDir);
-						var angstp = 360/am;
-						repeat(am)
+						alarm[3] = max(min(wep_load[wep],8),alarm[3],1);
+						if myShield == -1 || !instance_exists(myShield)
 						{
-							instance_create(xx,yy,MeatExplosion)
-							aimDir += angstp;
-							xx = x + lengthdir_x(len,aimDir);
-							yy = y + lengthdir_y(len,aimDir);
+							myShield = instance_create(x,y,EuphoriaShield);
+							with myShield
+							{
+								owner = other.id;
+							}
 						}
 					}
 				}
-				else
+				if !cancelBloodGamble
 				{
-					snd_play(sndSkeletonGambleCancel);
-					instance_create(x,y,Smoke);
-					instance_create(x,y,SkeletonGambleCooldown);
-					BackCont.shake += 10;
-					cancelBloodGamble = true;
+					snd_play_2d(sndBloodGamble);
+					var t = wep_type[wep];
+					var wantRad = rad;
+					var wantAmmo = ammo[t]
+					scrFire(failedGamble);
+					reload -= wep_load[wep]*0.75//*0.25;
+					ammo[t] = wantAmmo;
+					//ammo[t] += wep_cost[wep]//return ammo
+					rad = max(rad,wantRad);
+					can_shoot = 0;
 				}
 			}
-			else
+		}
+
+
+		if race == 17
+		{
+			var isRerollingInstead = false;
+			if skill_got[5] && place_meeting(x,y,WeaponMod) && !instance_exists(HoldToRerollWeaponMod)
 			{
-				//if skill_got[5]
-				//	consecutiveGoodBloodGambles += wep_load[wep]*0.0005;
-				//else
-				consecutiveGoodBloodGambles += wep_load[wep]*0.001;
-				//reload -= wep_load[wep]*0.8//*0.25;
-				if ultra_got[75]
+				var wm = instance_place(x,y,WeaponMod);
+				if wm != noone 
 				{
-					alarm[3] = max(min(wep_load[wep],8),alarm[3],1);
-					if myShield == -1 || !instance_exists(myShield)
+					if !wm.hasBeenRerolled
 					{
-						myShield = instance_create(x,y,EuphoriaShield);
-						with myShield
+						isRerollingInstead = true;
+						with instance_create(x,y,HoldToRerollWeaponMod)
 						{
-							owner = other.id;
+							target = wm;
 						}
 					}
-				}
-			}
-			if !cancelBloodGamble
-			{
-				snd_play_2d(sndBloodGamble);
-				var t = wep_type[wep];
-				var wantRad = rad;
-				var wantAmmo = ammo[t]
-				scrFire(failedGamble);
-				reload -= wep_load[wep]*0.75//*0.25;
-				ammo[t] = wantAmmo;
-				//ammo[t] += wep_cost[wep]//return ammo
-				rad = max(rad,wantRad);
-				can_shoot = 0;
-			}
-		}
-	}
-
-
-	if race == 17
-	{
-		var isRerollingInstead = false;
-		if skill_got[5] && place_meeting(x,y,WeaponMod) && !instance_exists(HoldToRerollWeaponMod)
-		{
-			var wm = instance_place(x,y,WeaponMod);
-			if wm != noone 
-			{
-				if !wm.hasBeenRerolled
-				{
-					isRerollingInstead = true;
-					with instance_create(x,y,HoldToRerollWeaponMod)
+					else
 					{
-						target = wm;
+						with instance_create(x,y,PopupText)
+						{
+							mytext = "ALREADY RE-ROLLED"
+							theColour=c_red;
+						}
+						BackCont.shake += 5;
 					}
 				}
-				else
-				{
-					with instance_create(x,y,PopupText)
-					{
-						mytext = "ALREADY RE-ROLLED"
-						theColour=c_red;
-					}
-					BackCont.shake += 5;
-				}
 			}
-		}
-		if (ultra_got[68] && altUltra)
-		{
-			//Weapon smith enginuity ultra
-			snd_play(sndMorphStart);
-			instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
-			var len = 20;
-			var dirr = random(360);
-			repeat(3)
+			if (ultra_got[68] && altUltra)
 			{
-				instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
-				dirr += 120;
-			}
-			if skill_got[5]
-			{
-				var len = 40;
-				dirr += 60;
+				//Weapon smith enginuity ultra
+				snd_play(sndMorphStart);
+				instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+				var len = 20;
+				var dirr = random(360);
 				repeat(3)
 				{
 					instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
 					dirr += 120;
 				}
-			}
-			if !isRerollingInstead
-			{
-				var wantTier = wep_area[wep];
-				wep ++;
-				if wep > maxwep
-					wep = 1;
-				while (wep_area[wep] != wantTier)
+				if skill_got[5]
 				{
+					var len = 40;
+					dirr += 60;
+					repeat(3)
+					{
+						instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+						dirr += 120;
+					}
+				}
+				if !isRerollingInstead
+				{
+					var wantTier = wep_area[wep];
 					wep ++;
 					if wep > maxwep
 						wep = 1;
-				}
-				scrAddNewWeaponDrop(wep, true);
-				with instance_create(x,y,PopupText) {
-					mytext = other.wep_name[other.wep];
-				}
-				scrWeaponHold();
-			}
-		}
-	    else if !isRerollingInstead && bwep != 0
-		{
-			instance_create(x,y,HoldToSmith);
-		}
-	}
-
-	if race==15//Atom
-	{
-		if instance_exists(PlayerAlarms)
-		{
-			if PlayerAlarms.alarm[8] > 0
-			{
-				PlayerAlarms.hasTriedToTeleport = true;
-				race = keepRace;
-				return;	
-			}
-			PlayerAlarms.alarm[8] = 6;
-		}
-		var prevX = x;
-		var prevY = y;
-		if ultra_got[60] && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<300//Ultra D
-		{
-		var d = 99999;
-		var mx = UberCont.mouse__x;
-		var my = UberCont.mouse__y;
-		//if !scrIsCrown(25)
-			with Floor
-			{
-				if object_index != FloorExplo
-				{
-					var nd = point_distance(x,y,mx,my)
-					if nd < d
-						d = nd
-				}
-			}
-			if (d < 300)
-			{
-		
-			    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
-			    {
-				    if alarm[3]<2
-						alarm[3]=2;//imunity
-				    instance_create(x,y,Teleport);
-				    if skill_got[5]
-						snd_play_2d(sndAtomTeleportUpg,0.2,true);
-					else
-						snd_play_2d(sndAtomTeleport,0.2,true);
-				    repeat(5){
-					    with instance_create(x,y,Smoke)
-					    motion_add(random(360),1+random(3))
+					while (wep_area[wep] != wantTier)
+					{
+						wep ++;
+						if wep > maxwep
+							wep = 1;
 					}
-					instance_create(UberCont.mouse__x,UberCont.mouse__y,WallBreak);
-					var msk = mask_index;
-					mask_index = mskPickupThroughWall;
-					BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-				    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-				    BackCont.shake += 2
-				    x = UberCont.mouse__x;
-				    y = UberCont.mouse__y;
-					scrForcePosition60fps();
-					mask_index = msk;
+					scrAddNewWeaponDrop(wep, true);
+					with instance_create(x,y,PopupText) {
+						mytext = other.wep_name[other.wep];
+					}
+					scrWeaponHold();
+				}
+			}
+		    else if !isRerollingInstead && bwep != 0
+			{
+				instance_create(x,y,HoldToSmith);
+			}
+		}
+
+		if race==15//Atom
+		{
+			if instance_exists(PlayerAlarms)
+			{
+				if PlayerAlarms.alarm[8] > 0
+				{
+					PlayerAlarms.hasTriedToTeleport = true;
+					race = keepRace;
+					return;	
+				}
+				PlayerAlarms.alarm[8] = 6;
+			}
+			var prevX = x;
+			var prevY = y;
+			if ultra_got[60] && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y)<300//Ultra D
+			{
+			var d = 99999;
+			var mx = UberCont.mouse__x;
+			var my = UberCont.mouse__y;
+			//if !scrIsCrown(25)
+				with Floor
+				{
+					if object_index != FloorExplo
+					{
+						var nd = point_distance(x,y,mx,my)
+						if nd < d
+							d = nd
+					}
+				}
+				if (d < 300)
+				{
+		
+				    if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor)
+				    {
+					    if alarm[3]<2
+							alarm[3]=2;//imunity
+					    instance_create(x,y,Teleport);
+					    if skill_got[5]
+							snd_play_2d(sndAtomTeleportUpg,0.2,true);
+						else
+							snd_play_2d(sndAtomTeleport,0.2,true);
+					    repeat(5){
+						    with instance_create(x,y,Smoke)
+						    motion_add(random(360),1+random(3))
+						}
+						instance_create(UberCont.mouse__x,UberCont.mouse__y,WallBreak);
+						var msk = mask_index;
+						mask_index = mskPickupThroughWall;
+						BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+					    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+					    BackCont.shake += 2
+					    x = UberCont.mouse__x;
+					    y = UberCont.mouse__y;
+						scrForcePosition60fps();
+						mask_index = msk;
 				   
     
+					    if skill_got[5]//thronebutt
+					    {
+							scrAtomTB(prevX,prevY);
+					    }
+    
+					    repeat(5) {
+						    with instance_create(x,y,Smoke)
+						    motion_add(random(360),1+random(3))
+						}
+				    }
+				    else
+				    {
+					    if alarm[3]<1
+					    alarm[3]=2;//imunity
+			
+					    instance_create(x,y,Teleport);
+						if skill_got[5]
+							snd_play_2d(sndAtomTeleportUpg,0.2,true);
+						else
+							snd_play_2d(sndAtomTeleport,0.2,true);
+					    repeat(5){
+					    with instance_create(x,y,Smoke)
+					    motion_add(random(360),1+random(3))}
+    
+					    var xx;
+					    var yy;
+    
+					    xx=32*(UberCont.mouse__x div 32);
+					    yy=32*(UberCont.mouse__y div 32);
+    
+    
+					    instance_create(xx,yy,FloorExplo)
+					    instance_create(xx,yy,WallBreak);
+    
+    
+					    mask_index=mskPickupThroughWall;
+    
+					    alarm[8]=2;
+						BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,xx,yy)+180)*UberCont.opt_shake
+					    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,xx,yy)+180)*UberCont.opt_shake
+					    BackCont.shake += 2
+					    x = xx;
+					    y = yy;
+						scrForcePosition60fps();
+    
+					    if skill_got[5]//thronebutt
+					    {
+						    scrAtomTB(prevX,prevY);
+					    }
+    
+					    repeat(5){
+					    with instance_create(x,y,Smoke)
+					    motion_add(random(360),1+random(3))}
+				    }
+				}
+			}
+			else// if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and !place_meeting(UberCont.mouse__x,UberCont.mouse__y,Wall)//REGULAR
+			{
+				var mx = UberCont.mouse__x;
+				var my = UberCont.mouse__y;
+				//if !scrIsCrown(25)
+				if place_meeting(x,y,Floor)
+				{
+					var triedFloors = [];
+					var i = 0;
+					var n = noone;
+					while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,WallHitMe))
+					|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,WallHitMe))
+					|| i > 50)
+					{
+						n = instance_nearest_not_one_of_these(mx,my,Floor,triedFloors);
+						triedFloors[i] = n;
+						i ++;
+						var o = 16;
+						if n != noone
+						{
+							if n.object_index == FloorExplo
+								o = 8;
+							mx = n.x+o;
+							my = n.y+o;
+						}
+					}
+					//Safety but will probably never reach
+					if i >= 50
+					{
+						mx = x;
+						my = y;
+					}
+				}
+				if alarm[3]<1
+					alarm[3]=max(4,alarm[3]);//imunity
+	
+				instance_create(x,y,Teleport);
+				if skill_got[5]
+					snd_play_2d(sndAtomTeleportUpg,0.2,true);
+				else
+					snd_play_2d(sndAtomTeleport,0.2,true);
+				repeat(5){
+				with instance_create(x,y,Smoke)
+				motion_add(random(360),1+random(3))}
+				var noWalls = !instance_exists(Wall)
+				if ultra_got[59] && altUltra
+				{
+					var step = 24;
+					var reps = 1 + (point_distance(x,y,mx,my)/step);
+					var pd = point_direction(x,y,mx,my);
+					var xx = x;
+					var yy = y;
+					var lx = lengthdir_x(step,pd);
+					var ly = lengthdir_y(step,pd);
+					repeat(reps)
+					{
+						xx += lx;
+						yy += ly;
+						var rd = random(360);
+						if noWalls || collision_point(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Floor,false,false)
+						{
+							with instance_create(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Corrosion)
+							{
+								direction = random(360);
+								speed = 0.5;
+							}
+						}
+					}
+				}
+			
+				BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
+				BackCont.shake += 2  
+				x = mx
+				y = my
+				scrForcePosition60fps();
 				    if skill_got[5]//thronebutt
 				    {
 						scrAtomTB(prevX,prevY);
 				    }
-    
-				    repeat(5) {
-					    with instance_create(x,y,Smoke)
-					    motion_add(random(360),1+random(3))
-					}
-			    }
-			    else
-			    {
-				    if alarm[3]<1
-				    alarm[3]=2;//imunity
-			
-				    instance_create(x,y,Teleport);
-					if skill_got[5]
-						snd_play_2d(sndAtomTeleportUpg,0.2,true);
-					else
-						snd_play_2d(sndAtomTeleport,0.2,true);
-				    repeat(5){
-				    with instance_create(x,y,Smoke)
-				    motion_add(random(360),1+random(3))}
-    
-				    var xx;
-				    var yy;
-    
-				    xx=32*(UberCont.mouse__x div 32);
-				    yy=32*(UberCont.mouse__y div 32);
-    
-    
-				    instance_create(xx,yy,FloorExplo)
-				    instance_create(xx,yy,WallBreak);
-    
-    
-				    mask_index=mskPickupThroughWall;
-    
-				    alarm[8]=2;
-					BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,xx,yy)+180)*UberCont.opt_shake
-				    BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,xx,yy)+180)*UberCont.opt_shake
-				    BackCont.shake += 2
-				    x = xx;
-				    y = yy;
-					scrForcePosition60fps();
-    
-				    if skill_got[5]//thronebutt
-				    {
-					    scrAtomTB(prevX,prevY);
-				    }
-    
-				    repeat(5){
-				    with instance_create(x,y,Smoke)
-				    motion_add(random(360),1+random(3))}
-			    }
+				repeat(5){
+				with instance_create(x,y,Smoke)
+				motion_add(random(360),1+random(3))}
 			}
 		}
-		else// if place_meeting(UberCont.mouse__x,UberCont.mouse__y,Floor) and !place_meeting(UberCont.mouse__x,UberCont.mouse__y,Wall)//REGULAR
-		{
-			var mx = UberCont.mouse__x;
-			var my = UberCont.mouse__y;
-			//if !scrIsCrown(25)
-			if place_meeting(x,y,Floor)
-			{
-				var triedFloors = [];
-				var i = 0;
-				var n = noone;
-				while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,WallHitMe))
-				|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,WallHitMe))
-				|| i > 50)
-				{
-					n = instance_nearest_not_one_of_these(mx,my,Floor,triedFloors);
-					triedFloors[i] = n;
-					i ++;
-					var o = 16;
-					if n != noone
-					{
-						if n.object_index == FloorExplo
-							o = 8;
-						mx = n.x+o;
-						my = n.y+o;
-					}
-				}
-				//Safety but will probably never reach
-				if i >= 50
-				{
-					mx = x;
-					my = y;
-				}
-			}
-			if alarm[3]<1
-				alarm[3]=max(4,alarm[3]);//imunity
-	
-			instance_create(x,y,Teleport);
-			if skill_got[5]
-				snd_play_2d(sndAtomTeleportUpg,0.2,true);
-			else
-				snd_play_2d(sndAtomTeleport,0.2,true);
-			repeat(5){
-			with instance_create(x,y,Smoke)
-			motion_add(random(360),1+random(3))}
-			var noWalls = !instance_exists(Wall)
-			if ultra_got[59] && altUltra
-			{
-				var step = 24;
-				var reps = 1 + (point_distance(x,y,mx,my)/step);
-				var pd = point_direction(x,y,mx,my);
-				var xx = x;
-				var yy = y;
-				var lx = lengthdir_x(step,pd);
-				var ly = lengthdir_y(step,pd);
-				repeat(reps)
-				{
-					xx += lx;
-					yy += ly;
-					var rd = random(360);
-					if noWalls || collision_point(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Floor,false,false)
-					{
-						with instance_create(xx + lengthdir_x(8,rd),yy + lengthdir_y(8,rd),Corrosion)
-						{
-							direction = random(360);
-							speed = 0.5;
-						}
-					}
-				}
-			}
-			
-			BackCont.viewx2 += lengthdir_x(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(20,point_direction(x,y,mx,my)+180)*UberCont.opt_shake
-			BackCont.shake += 2  
-			x = mx
-			y = my
-			scrForcePosition60fps();
-			    if skill_got[5]//thronebutt
-			    {
-					scrAtomTB(prevX,prevY);
-			    }
-			repeat(5){
-			with instance_create(x,y,Smoke)
-			motion_add(random(360),1+random(3))}
-		}
-	}
 
-	if race == 14//PANDA
-	{
-		if ultra_got[55] && altUltra
+		if race == 14//PANDA
 		{
-			//CHECK HOLD LOGIC
-		}	
-		else
-		{
-			scrPandaThrow();
-		}
-	}
-
-	if ultra_got[36] && !instance_exists(Decoy)//CHICKEN VANISH
-	{
-		var ang = direction;
-		var angstep = 45;
-		repeat(8)
-		{
-			with instance_create(x,y,Smoke)
+			if ultra_got[55] && altUltra
 			{
-				motion_add(ang,3);
-			}
-			ang += angstep;
-		}
-		with instance_create(x,y,Decoy)
-		{
-			motion_add(other.direction + 180,6);
-			image_xscale = other.right;
-			alarm[0] = 120;
-		}
-	}
-
-	//YUNG CUZ
-	if race==12
-	{
-		var canSpawn = true;
-		var radCost = 120;
-		if ultra_got[47]
-		{
-			if !altUltra
-			{
-				canSpawn = my_health - 2 > 0;
-			}
+				//CHECK HOLD LOGIC
+			}	
 			else
 			{
-				canSpawn = 	rad > radCost;
+				scrPandaThrow();
 			}
 		}
-		else if ultra_got[46] == 0
+
+		if ultra_got[36] && !instance_exists(Decoy)//CHICKEN VANISH
 		{
-			var targetHealth = scrCalculatePlayerBaseMaxHealth()
-			canSpawn = (targetHealth*0.75 >= 1);
-			
+			var ang = direction;
+			var angstep = 45;
+			repeat(8)
+			{
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(ang,3);
+				}
+				ang += angstep;
+			}
+			with instance_create(x,y,Decoy)
+			{
+				motion_add(other.direction + 180,6);
+				image_xscale = other.right;
+				alarm[0] = 120;
+			}
 		}
-		if canSpawn {
-		var xran;
-		var yran;
-		xran=random(22)-11;
-		yran=random(22)-11;
-		    if !place_meeting(x+xran,y+yran,Wall)
-		    {//SPAWN BUDDY
-		        if ultra_got[46] {
-					if (totalDupesSpawned < 4)
-					{
-						totalDupesSpawned += 1;
-				        instance_create(x+xran,y+yran,YungCuzDupe);
-				        snd_play_2d(sndMutant12Wrld)
-				        Sleep(40)
-					}
-		        }
-		        else if ultra_got[46]==0 {
-		        instance_create(x+xran,y+yran,YungCuzDupe);
-    
-			    //for rage and euphoria
-			    exception = true;
-    
-			        if ultra_got[47] {
-						if !altUltra
-						{
-							if armour > 0
-								armour -= 1;
-							else
-								DealDamage(2,false,false,false)//1/8--->0.875
-							hitBy = sprite_index;
-						}
-						else
-						{
-							rad = max(rad - radCost, 0);	
-						}
-			        }
-			        else {
-						var baseHealth = scrCalculatePlayerBaseMaxHealth();
-						var bonusHealth = maxhealth - baseHealth;
-						var percMax = floor(baseHealth*0.75);
-						var lostHp = baseHealth - percMax;
-						maxhealth = percMax;//0.5
-						if my_health > maxhealth
-							my_health = max(1,my_health-lostHp,maxhealth);
-						if scrIsCrown(35)
-							my_health = max(my_health - 1, 1);
-						maxhealth += bonusHealth;
-						hitBy = sprite_index;
-			        }
-        
-			        sprite_index = spr_hurt
-			        image_index = 0
-			        snd_play_2d(snd_hurt, hurt_pitch_variation)
-			        Sleep(40)
-		        }
-		    }
-		    else{//no place
-		    //snd_play_2d(sndMutant12Slct)
-    
-		    //SPAWN BUDDY
-		        if ultra_got[46] && instance_number(YungCuzDupe)<3{
-					instance_create(x,y,YungCuzDupe)
-			        snd_play_2d(sndMutant12Wrld)
-			        Sleep(40)
-		        }
-		        else if ultra_got[46]==0{
-		        instance_create(x,y,YungCuzDupe);
-    
-		    //for rage and euphoria
-		    exception = true;
-    
-		        if ultra_got[47] {
+
+		//YUNG CUZ
+		if race == 12
+		{
+			var canSpawn = true;
+			var radCost = 120;
+			var cost = 2;
+			if ultra_got[46]
+			{
+				if totalDupesSpawned < 4
+				{
+					canSpawn = true;	
+				}
+			} else if ultra_got[47]
+			{
+				if !altUltra
+				{
+					canSpawn = my_health - 2 > 0;
+				}
+				else
+				{
+					canSpawn = 	rad > radCost;
+				}
+			}
+			else if !ultra_got[46]
+			{
+				var targetHealth = scrCalculatePlayerBaseMaxHealth();
+				cost = max(round(targetHealth*0.3),1);
+				canSpawn = (maxhealth - cost >= 1);
+			
+			}
+			if canSpawn {
+				var xran;
+				var yran;
+				xran=random(22)-11;
+				yran=random(22)-11;
+				totalDupesSpawned += 1;
+			    if !place_meeting(x+xran,y+yran,Wall)
+			    {
+					//SPAWN BUDDY
+					instance_create(x+xran,y+yran,YungCuzDupe);
+				}
+				else
+				{
+					instance_create(x,y,YungCuzDupe);
+				}
+				if ultra_got[47] {
 					if !altUltra
 					{
 						if armour > 0
@@ -1270,573 +1221,570 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
-						rad = max(rad - radCost, 0);	
+						rad = max(rad - radCost, 0);
 					}
-		        }
-		        else{
-					var percMax = floor(maxhealth*0.75);
-					var lostHp = maxhealth - percMax;
-					maxhealth=percMax;//0.5
+				}
+				else if !ultra_got[46] {
+					var baseHealth = scrCalculatePlayerBaseMaxHealth();
+					var bonusHealth = maxhealth - baseHealth;
+					var lostHp = 3;
+					maxhealth = max(1,maxhealth - cost);//0.5
 					if my_health > maxhealth
-						my_health = max(1,my_health-lostHp,maxhealth);
+						my_health = max(1,my_health - cost,maxhealth);
 					if scrIsCrown(35)
 						my_health = max(my_health - 1, 1);
+					maxhealth += bonusHealth;
 					hitBy = sprite_index;
-		        }
-        
-		        sprite_index = spr_hurt
-		        image_index = 0
-		        snd_play_2d(snd_hurt, hurt_pitch_variation)
-		        Sleep(40)
-		        }
-    
-		    }
-		}
-	}
-
-	// SHEEP
-	if race==13 && !instance_exists(SheepSuperCharge)
-	{
-		if (ultra_got[51] && altUltra && sheepFakeouts > 0)
-		{
-			if !justAsheep
-			{
-				justAsheep = true;
-				alarm[3] = max(alarm[3],20);
-				var marginDuration = 120;
-				with PlayerAlarms2
-				{
-					alarm[0] += marginDuration;
 				}
-				//Stun
-				with enemy
-				{
-					speed = 0;
-					if alarm[1] > 0
-					{
-						alarm[11] += marginDuration
-						alarm[1] += marginDuration;
-					}	
-				}
-				sheepFakeouts --;
-				snd_play_2d(sndMorphStop);
-				instance_create(x,y,Hypnosis);
+        		exception = true;
+				sprite_index = spr_hurt
+				image_index = 0
+				snd_play_2d(snd_hurt, hurt_pitch_variation)
+				Sleep(40)
 			}
 		}
-		else
+		// SHEEP
+		if race==13 && !instance_exists(SheepSuperCharge)
 		{
-			if (ultra_got[49] && !instance_exists(SheepHyperDash))
+			if (ultra_got[51] && altUltra && sheepFakeouts > 0)
 			{
-				var takePercentage = 0.1;//10%
-				//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-				//var cost = typ_amax[wepType]*takePercentage;
-				var cost = 35;//33 5% on level 10
+				if !justAsheep
+				{
+					justAsheep = true;
+					alarm[3] = max(alarm[3],20);
+					var marginDuration = 120;
+					with PlayerAlarms2
+					{
+						alarm[0] += marginDuration;
+					}
+					//Stun
+					with enemy
+					{
+						speed = 0;
+						if alarm[1] > 0
+						{
+							alarm[11] += marginDuration
+							alarm[1] += marginDuration;
+						}	
+					}
+					sheepFakeouts --;
+					snd_play_2d(sndMorphStop);
+					instance_create(x,y,Hypnosis);
+				}
+			}
+			else
+			{
+				if (ultra_got[49] && !instance_exists(SheepHyperDash))
+				{
+					var takePercentage = 0.1;//10%
+					//var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+					//var cost = typ_amax[wepType]*takePercentage;
+					var cost = 35;//33 5% on level 10
+					if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
+					{
+						//ammo[wepType] =  ammo[wepType] - cost;
+						rad -= cost;
+						var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
+						BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
+						BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
+						BackCont.shake += 10;
+						snd_play_2d(sndSheepHyperDash);
+						instance_create(x,y,SheepHyperDash);
+						Sleep(10);
+					}
+					else
+					{
+						//snd_play_2d(snd_lowa,0,true,false,10);
+						if !audio_is_playing(sndUltraEmpty)
+								snd_play(sndUltraEmpty)
+						with instance_create(x,y,PopupText)
+						{
+							mytext = "NOT ENOUGH RADS"
+							theColour=c_red;
+						}
+						BackCont.shake += 5;
+					}
+				}
+				else
+				{
+					if !instance_exists(SheepStorm)
+					{
+						with instance_create(x,y,SheepStorm)
+						{
+							if other.skill_got[other.maxskill+1]
+								gotVision = true;
+							team=other.team;
+						}
+					}
+					if skill_got[2]==1//extra feet
+					{
+					maxSpeed=7;
+					}
+					else
+					{
+					maxSpeed=6;
+					}
+				}
+			}
+		}
+
+		//ROBOT
+		if race == 8
+		{
+			if ultra_got[32]
+			{
+				//Force shot
+				var cost = wep_cost[wep]*(4-skill_got[5])
+				if wep_cost[wep] == 0
+				{
+					cost = clamp(round(wep_area[wep] * 1.5),6,40);	
+				}
 				if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
 				{
-					//ammo[wepType] =  ammo[wepType] - cost;
 					rad -= cost;
-					var aimDir = point_direction(UberCont.mouse__x,UberCont.mouse__y,x,y);//Opposite of aimdir
-					BackCont.viewx2 += lengthdir_x(32,aimDir)*UberCont.opt_shake;
-					BackCont.viewy2 += lengthdir_y(32,aimDir)*UberCont.opt_shake;
-					BackCont.shake += 10;
-					snd_play_2d(sndSheepHyperDash);
-					instance_create(x,y,SheepHyperDash);
-					Sleep(10);
+					ammo[wep_type[wep]] += wep_cost[wep];
+					scrFire();
 				}
 				else
 				{
 					//snd_play_2d(snd_lowa,0,true,false,10);
 					if !audio_is_playing(sndUltraEmpty)
-							snd_play(sndUltraEmpty)
+						snd_play_2d(sndUltraEmpty)
 					with instance_create(x,y,PopupText)
 					{
 						mytext = "NOT ENOUGH RADS"
 						theColour=c_red;
 					}
+				
+				}
+			}
+			if !ultra_got[32] || ultra_got[31]
+			{
+				if instance_exists(HoldToEat)
+				{
+					with HoldToEat
+					{
+						instance_destroy();
+						snd_play(sndRobotEatFail);
+					}
+				}
+				if !hasBeenEaten || isPermanent
+				{
+					if bwep != 0
+						instance_create(x,y,HoldToEat);
+				} else
+				{
+					if !audio_is_playing(sndPortalStrikeEmpty)
+						snd_play_2d(sndPortalStrikeEmpty);
+					with instance_create(x,y,PopupText)
+					{
+						mytext = "ALREADY EATEN"
+						theColour=c_red;
+					}
 					BackCont.shake += 5;
 				}
 			}
-			else
-			{
-				if !instance_exists(SheepStorm)
-				{
-					with instance_create(x,y,SheepStorm)
-					{
-						if other.skill_got[other.maxskill+1]
-							gotVision = true;
-						team=other.team;
-					}
-				}
-				if skill_got[2]==1//extra feet
-				{
-				maxSpeed=7;
-				}
-				else
-				{
-				maxSpeed=6;
-				}
-			}
 		}
-	}
 
-	//ROBOT
-	if race == 8
-	{
-		if ultra_got[32]
+		//FISH
+		if race == 1
 		{
-			//Force shot
-			var cost = wep_cost[wep]*(4-skill_got[5])
-			if wep_cost[wep] == 0
-			{
-				cost = clamp(round(wep_area[wep] * 1.5),6,40);	
-			}
-			if (rad >= cost)//(wepType != 0 && ammo[wepType] - cost > 0)
-			{
-				rad -= cost;
-				ammo[wep_type[wep]] += wep_cost[wep];
-				scrFire();
-			}
-			else
-			{
-				//snd_play_2d(snd_lowa,0,true,false,10);
-				if !audio_is_playing(sndUltraEmpty)
-					snd_play_2d(sndUltraEmpty)
-				with instance_create(x,y,PopupText)
+			if skill_got[maxskill + 1] {
+				if (!didJumpRoll)
 				{
-					mytext = "NOT ENOUGH RADS"
-					theColour=c_red;
-				}
-				
-			}
-		}
-		if !ultra_got[32] || ultra_got[31]
-		{
-			if instance_exists(HoldToEat)
-			{
-				with HoldToEat
-				{
-					instance_destroy();
-					snd_play(sndRobotEatFail);
-				}
-			}
-			if !hasBeenEaten || isPermanent
-			{
-				if bwep != 0
-					instance_create(x,y,HoldToEat);
-			} else
-			{
-				if !audio_is_playing(sndPortalStrikeEmpty)
-					snd_play_2d(sndPortalStrikeEmpty);
-				with instance_create(x,y,PopupText)
-				{
-					mytext = "ALREADY EATEN"
-					theColour=c_red;
-				}
-				BackCont.shake += 5;
-			}
-		}
-	}
-
-	//FISH
-	if race == 1
-	{
-		if skill_got[maxskill + 1] {
-			if (!didJumpRoll)
-			{
-				if jump > jumpVulnerabilityWindow
-				{
-					scrFishRoll();
-					didJumpRoll = true;
-					with instance_create_depth(x,y - jumpY,depth + 1,AnimDestroyTop)
+					if jump > jumpVulnerabilityWindow
 					{
-						image_speed = 0.4;
-						sprite_index = sprAirRoll;
-						image_angle = other.direction;
-						direction = image_angle + 180;
-						speed = 2;
-					}
-				}
-				else if jump <= 0
-				{
-					jump = maxJump;
-					scrFishRoll();
-					alarm[3] -= rollIframe;
-					rollIframe = 0;
-					var dang = direction;
-					/*
-					repeat(3)
-					{
-						with instance_create_depth(x+random(6)-3,y+random(6),depth + 2,Dust)
+						scrFishRoll();
+						didJumpRoll = true;
+						with instance_create_depth(x,y - jumpY,depth + 1,AnimDestroyTop)
 						{
-							motion_add(dang,2);	
+							image_speed = 0.4;
+							sprite_index = sprAirRoll;
+							image_angle = other.direction;
+							direction = image_angle + 180;
+							speed = 2;
 						}
-						dang += 120;
-					}*/
-					with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
-					{
-						image_speed = 0.4;
-						sprite_index = sprJump;
-						image_xscale = choose(1,-1);
 					}
-					with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+					else if jump <= 0
 					{
-						image_speed = 0.4;
-						sprite_index = sprJumpUp;
-						image_xscale = choose(1,-1);
-						image_angle = other.hspeed * -10;
+						jump = maxJump;
+						scrFishRoll();
+						alarm[3] -= rollIframe;
+						rollIframe = 0;
+						var dang = direction;
+						/*
+						repeat(3)
+						{
+							with instance_create_depth(x+random(6)-3,y+random(6),depth + 2,Dust)
+							{
+								motion_add(dang,2);	
+							}
+							dang += 120;
+						}*/
+						with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+						{
+							image_speed = 0.4;
+							sprite_index = sprJump;
+							image_xscale = choose(1,-1);
+						}
+						with instance_create_depth(x,y,depth + 1,AnimDestroyTop)
+						{
+							image_speed = 0.4;
+							sprite_index = sprJumpUp;
+							image_xscale = choose(1,-1);
+							image_angle = other.hspeed * -10;
+						}
 					}
 				}
 			}
+			else
+			{
+				scrFishRoll();
+			}
 		}
-		else
-		{
-			scrFishRoll();
-		}
-	}
 	
-	//HANDS
-	if race == 27
-	{
-		//Lose target
-		with Hand
+		//HANDS
+		if race == 27
 		{
-			if !push && !grabAnItem
+			//Lose target
+			with Hand
 			{
-				if alarm[1] > 0
-					loseTarget = true;
+				if !push && !grabAnItem
+				{
+					if alarm[1] > 0
+						loseTarget = true;
+					else
+						target = noone;
+				}
+			}
+		}
+		//REBEL
+		var ammoRebel = false;
+		var canSpawn = true;
+		var useWep = bwep;
+		if altUltra && ultra_got[39]
+		{
+			var takePercentage = 0.75;
+			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			if wepType != wep_type[bwep] && wepType != wep_type[wep]
+				takePercentage *= 3;
+			if wepType != 0 && !scrIsCrown(40)
+			{
+				ammoRebel = true;
+				if wepType == 0 {
+					snd_play(sndEmpty)
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "THIS DOESN'T USE AMMO";
+					dir.theColour=c_red;
+					drawempty = 30
+					BackCont.shake += 5;
+					canSpawn = false;
+					ammoRebel = false;
+				}
+				else if ammo[wepType] >= typ_ammo[wepType]*takePercentage
+				{
+					canSpawn = true;
+				}
 				else
-					target = noone;
+				{
+					snd_play(sndEmpty)
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "NOT ENOUGH AMMO";
+					dir.theColour=c_red;
+					drawempty = 30
+					BackCont.shake += 5;
+					canSpawn = false;
+				}
 			}
 		}
-	}
-	//REBEL
-	var ammoRebel = false;
-	var canSpawn = true;
-	var useWep = bwep;
-	if altUltra && ultra_got[39]
-	{
-		var takePercentage = 0.75;
-		var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
-		if wepType != wep_type[bwep] && wepType != wep_type[wep]
-			takePercentage *= 3;
-		if wepType != 0 && !scrIsCrown(40)
+		if race == 10 && canSpawn && ((!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || ammoRebel)
 		{
-			ammoRebel = true;
-			if wepType == 0 {
-				snd_play(sndEmpty)
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "THIS DOESN'T USE AMMO";
-				dir.theColour=c_red;
-				drawempty = 30
-				BackCont.shake += 5;
-				canSpawn = false;
-				ammoRebel = false;
-			}
-			else if ammo[wepType] >= typ_ammo[wepType]*takePercentage
+			if my_health > 2 || !scrIsCrown(41) || ammoRebel
 			{
-				canSpawn = true;
-			}
-			else
-			{
-				snd_play(sndEmpty)
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = "NOT ENOUGH AMMO";
-				dir.theColour=c_red;
-				drawempty = 30
-				BackCont.shake += 5;
-				canSpawn = false;
-			}
-		}
-	}
-	if race == 10 && canSpawn && ((!ammoRebel && (my_health > 2 || (race == 10 && !(instance_exists(Ally)) && my_health > 1) && alarm[3]<1)) || ammoRebel)
-	{
-		if my_health > 2 || !scrIsCrown(41) || ammoRebel
-		{
-			if ammoRebel
-			{
-				ammo[wepType] -= typ_ammo[wepType]*takePercentage
-				if ammo[wepType] <= 0
+				if ammoRebel
 				{
-					with Crown {
-						event_user(0);	
-					}
-				}
-			}
-			else
-			{
-				if !(instance_exists(Ally))
-				{
-					if armour > 0
-						armour -= 1;
-					else
-						DealDamage(1,false,false,false);
-					hitBy = sprite_index;
-				}
-				else{
-					if armour > 0
-						armour -= 1;
-					else
-						DealDamage(2,false,false,false);
-					hitBy = sprite_index;
-				}
-				exception = true;
-			
-				sprite_index = spr_hurt
-				image_index = 0
-			
-				snd_play_2d(snd_hurt, hurt_pitch_variation)
-			}
-
-			if skill_got[5] = 1
-			snd_play_2d(sndSpawnSuperAlly)
-			else
-			snd_play_2d(sndSpawnAlly)
-			with Ally
-			{
-				instance_create(x,y,HealFX)
-				alarm[2] = 120;
-				with Portal
-				{
-					if (type == 1 || type == 4) && !inverted
+					ammo[wepType] -= typ_ammo[wepType]*takePercentage
+					if ammo[wepType] <= 0
 					{
-						other.alarm[2] = 1;
+						with Crown {
+							event_user(0);	
+						}
 					}
 				}
-
-				if instance_exists(Player)
-				{
-				if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
-				maxhealth=30;
 				else
-				maxhealth = 12;
+				{
+					if !(instance_exists(Ally))
+					{
+						if armour > 0
+							armour -= 1;
+						else
+							DealDamage(1,false,false,false);
+						hitBy = sprite_index;
+					}
+					else{
+						if armour > 0
+							armour -= 1;
+						else
+							DealDamage(2,false,false,false);
+						hitBy = sprite_index;
+					}
+					exception = true;
+			
+					sprite_index = spr_hurt
+					image_index = 0
+			
+					snd_play_2d(snd_hurt, hurt_pitch_variation)
 				}
-			}
-			var tossAngle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-			if Player.ultra_got[38]//Rebel Ultra B Riot
-			{
+
+				if skill_got[5] = 1
+				snd_play_2d(sndSpawnSuperAlly)
+				else
+				snd_play_2d(sndSpawnAlly)
+				with Ally
+				{
+					instance_create(x,y,HealFX)
+					alarm[2] = 120;
+					with Portal
+					{
+						if (type == 1 || type == 4) && !inverted
+						{
+							other.alarm[2] = 1;
+						}
+					}
+
+					if instance_exists(Player)
+					{
+					if Player.ultra_got[37]==1//Rebel Ultra A Personal Guard
+					maxhealth=30;
+					else
+					maxhealth = 12;
+					}
+				}
+				var tossAngle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+				if Player.ultra_got[38]//Rebel Ultra B Riot
+				{
+					with instance_create(x,y,Ally) {
+						throwDirection = tossAngle;
+						motion_add(throwDirection,throwSpeed);
+					}
+				}
 				with instance_create(x,y,Ally) {
 					throwDirection = tossAngle;
 					motion_add(throwDirection,throwSpeed);
 				}
-			}
-			with instance_create(x,y,Ally) {
-				throwDirection = tossAngle;
-				motion_add(throwDirection,throwSpeed);
-			}
 
-			Sleep(40)
-			instance_create(x,y,Dust)
+				Sleep(40)
+				instance_create(x,y,Dust)
+			}
 		}
-	}
 
-	//PLANT
-	if race == 5
-	{
-		if !ultra_got[19] || canKillKillKill <= 0
+		//PLANT
+		if race == 5
 		{
-			var poppedSeed = false;
-			var tangles = 0;
-		    if ultra_got[20] && !Player.altUltra
-			{//STEREO SNARES
-				if !instance_exists(TangleSeed)
-				{
-					var oldestTangle = 99999;
-					with Tangle
+			if !ultra_got[19] || canKillKillKill <= 0
+			{
+				var poppedSeed = false;
+				var tangles = 0;
+			    if ultra_got[20] && !Player.altUltra
+				{//STEREO SNARES
+					if !instance_exists(TangleSeed)
 					{
-						if mask_index != sprTangleVine
+						var oldestTangle = 99999;
+						with Tangle
 						{
-							tangles += 1;
-							oldestTangle = min(tangleNumber,oldestTangle);
-						}
-					}
-					var killedIt = false;
-					with Tangle
-					{
-						if tangles > 1 
-						{
-							if tangleNumber == oldestTangle
+							if mask_index != sprTangleVine
 							{
-								instance_destroy();
-								killedIt = true;
-							}
-							else
-							{
-								tangleNumber -= 1;	
+								tangles += 1;
+								oldestTangle = min(tangleNumber,oldestTangle);
 							}
 						}
+						var killedIt = false;
+						with Tangle
+						{
+							if tangles > 1 
+							{
+								if tangleNumber == oldestTangle
+								{
+									instance_destroy();
+									killedIt = true;
+								}
+								else
+								{
+									tangleNumber -= 1;	
+								}
+							}
+						}
+						if killedIt
+							tangles -= 1;
 					}
-					if killedIt
-						tangles -= 1;
-				}
-			    with TangleSeed
-			    {
-					snd_play(sndPlantPopOpen);
-					poppedSeed = true;
-					instance_destroy();
-				}
-		    }
-			else {
-				if !instance_exists(TangleSeed)
-					with Tangle
+				    with TangleSeed
+				    {
+						snd_play(sndPlantPopOpen);
+						poppedSeed = true;
 						instance_destroy();
-				with TangleSeed
-				{
-					snd_play(sndPlantPopOpen);
-					poppedSeed = true;
-					instance_destroy();
+					}
+			    }
+				else {
+					if !instance_exists(TangleSeed)
+						with Tangle
+							instance_destroy();
+					with TangleSeed
+					{
+						snd_play(sndPlantPopOpen);
+						poppedSeed = true;
+						instance_destroy();
+					}
 				}
-			}
-			if !poppedSeed
-			{
-				if skill_got[5]
-					snd_play_2d(sndPlantFireTB);
-				else
-					snd_play_2d(sndPlantFire);
+				if !poppedSeed
+				{
+					if skill_got[5]
+						snd_play_2d(sndPlantFireTB);
+					else
+						snd_play_2d(sndPlantFire);
 
-				with instance_create(x,y,TangleSeed)
-				{
-					if other.skill_got[other.maxskill + 1]
+					with instance_create(x,y,TangleSeed)
 					{
-						alarm[1] = 1;
+						if other.skill_got[other.maxskill + 1]
+						{
+							alarm[1] = 1;
+						}
+						motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
+						image_angle = direction
+						tangleNumber = tangles + 1;
+						team = other.team
 					}
-					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),7)
-					image_angle = direction
-					tangleNumber = tangles + 1;
-					team = other.team
 				}
 			}
-		}
-		else if altUltra  && canKillKillKill > 0 && !instance_exists(KillKill) {
-			BackCont.shake += 10;
-			with instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy)
-			{
-				if team != 2 && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 48
+			else if altUltra  && canKillKillKill > 0 && !instance_exists(KillKill) {
+				BackCont.shake += 10;
+				with instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy)
 				{
-					other.canKillKillKill -= 1;
-					snd_play_2d(sndPlantKillKillKill,0,false,false,1);
-					with instance_create(x,y,KillKill) {
-						owner = other.id;
-						target = other.object_index;
-					}
-					Sleep(50);
-					BackCont.shake += 10;
-					with other
+					if team != 2 && point_distance(x,y,UberCont.mouse__x,UberCont.mouse__y) < 48
 					{
-						if skill_got[5]
+						other.canKillKillKill -= 1;
+						snd_play_2d(sndPlantKillKillKill,0,false,false,1);
+						with instance_create(x,y,KillKill) {
+							owner = other.id;
+							target = other.object_index;
+						}
+						Sleep(50);
+						BackCont.shake += 10;
+						with other
 						{
-							scrHeal(2)
-							snd_play(sndHealthPickup);
+							if skill_got[5]
+							{
+								scrHeal(2)
+								snd_play(sndHealthPickup);
+							}
 						}
 					}
 				}
-			}
 			
+			}
 		}
-	}
 
-	scrYVPower();
+		scrYVPower();
 	
 
-	//HUNTER
-	if (race == 11)
-	{
-		if ultra_got[43] && altUltra
+		//HUNTER
+		if (race == 11)
 		{
-			if !instance_exists(HunterSniperEye)
+			if ultra_got[43] && altUltra
 			{
-				if hunterEye > hunterEyeMax*0.7
-					snd_play_fire(sndSniperEyeUpg);
-				else
-					snd_play_fire(sndSniperEye);
-				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-				with instance_create(x+(right*2),y+0.5,RedirectFX)
+				if !instance_exists(HunterSniperEye)
 				{
-					if other.bskin == 1
-						sprite_index = sprHunterEyeSniperB;
-					else if other.bskin == 2
-						sprite_index = sprHunterEyeSniperC;
+					if hunterEye > hunterEyeMax*0.7
+						snd_play_fire(sndSniperEyeUpg);
 					else
-						sprite_index = sprHunterEyeSniperA;
-					image_angle = aimDirection;
-				}
-				var he = round(hunterEye)
-				with instance_create(x+(right*2),y+0.5,HunterSniperEye)
-				{
-					image_angle = aimDirection;
-					dmg = clamp(round(he*0.3),4,60);
-					image_yscale = clamp(he*0.015,0.5,2.5);
-					confuseTime = clamp(he*0.2,4,40);
-					var addTime = clamp(floor(he*0.025),0,5);
-					alarm[1] += addTime;
-					alarm[2] += addTime;
-					team = other.team;
-					if other.bskin == 1
-						sprite_index = sprHunterSniperB;
-					else if other.bskin == 2
-						sprite_index = sprHunterSniperC;
-					else
-						sprite_index = sprHunterSniperA;
-					if other.hunterEye >= other.hunterEyeMax
+						snd_play_fire(sndSniperEye);
+					var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+					with instance_create(x+(right*2),y+0.5,RedirectFX)
 					{
-						alarm[0] = 1;	
+						if other.bskin == 1
+							sprite_index = sprHunterEyeSniperB;
+						else if other.bskin == 2
+							sprite_index = sprHunterEyeSniperC;
+						else
+							sprite_index = sprHunterEyeSniperA;
+						image_angle = aimDirection;
 					}
-					event_user(0);
-				}
-
-				BackCont.viewx2 += lengthdir_x(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
-				BackCont.viewy2 += lengthdir_y(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
-				BackCont.shake += clamp(hunterEye*0.05,3,10);
-				//Max = 200;
-				hunterEye = 0;
-			}
-		}
-		else if ultra_got[44]{//Hunter Ultra D CRACKSHOT
-			if(instance_exists(enemy)){
-				var n = instance_nearest(mouse_x,mouse_y,enemy)
-				if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0) {
-					snd_play_2d(sndSniperTarget);
-
-				    with instance_create(mouse_x,mouse_y,Marker) {
-						target=instance_nearest(x,y,enemy);
-						image_angle=30*(MarkerNr-1);
-			        }
-        
-			        if instance_number(Marker)>3{//Override markers
-						with Marker {
-					        if (MarkerNr==1) {
-								instance_destroy();
-							}
-					        MarkerNr-=1;
-					        image_angle=30*MarkerNr;
+					var he = round(hunterEye)
+					with instance_create(x+(right*2),y+0.5,HunterSniperEye)
+					{
+						image_angle = aimDirection;
+						dmg = clamp(round(he*0.3),4,60);
+						image_yscale = clamp(he*0.015,0.5,2.5);
+						confuseTime = clamp(he*0.2,4,40);
+						var addTime = clamp(floor(he*0.025),0,5);
+						alarm[1] += addTime;
+						alarm[2] += addTime;
+						team = other.team;
+						if other.bskin == 1
+							sprite_index = sprHunterSniperB;
+						else if other.bskin == 2
+							sprite_index = sprHunterSniperC;
+						else
+							sprite_index = sprHunterSniperA;
+						if other.hunterEye >= other.hunterEyeMax
+						{
+							alarm[0] = 1;	
 						}
-			        }
+						event_user(0);
+					}
+
+					BackCont.viewx2 += lengthdir_x(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(clamp(hunterEye*0.25,5,30),aimDirection+180)*UberCont.opt_shake
+					BackCont.shake += clamp(hunterEye*0.05,3,10);
+					//Max = 200;
+					hunterEye = 0;
+				}
+			}
+			else if ultra_got[44]{//Hunter Ultra D CRACKSHOT
+				if(instance_exists(enemy)){
+					var n = instance_nearest(mouse_x,mouse_y,enemy)
+					if (point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0) {
+						snd_play_2d(sndSniperTarget);
+
+					    with instance_create(mouse_x,mouse_y,Marker) {
+							target=instance_nearest(x,y,enemy);
+							image_angle=30*(MarkerNr-1);
+				        }
+        
+				        if instance_number(Marker)>3{//Override markers
+							with Marker {
+						        if (MarkerNr==1) {
+									instance_destroy();
+								}
+						        MarkerNr-=1;
+						        image_angle=30*MarkerNr;
+							}
+				        }
+				    }
+				    else {
+						with Marker//if you place a marker not near an enemy all markers dissapear?
+							instance_destroy();
+					}
 			    }
-			    else {
-					with Marker//if you place a marker not near an enemy all markers dissapear?
+			}
+			else
+			{// marker ability
+				if (instance_exists(Marker)){
+					with Marker
 						instance_destroy();
 				}
-		    }
-		}
-		else
-		{// marker ability
-			if (instance_exists(Marker)){
-				with Marker
-					instance_destroy();
-			}
-			if (instance_exists(enemy)){
+				if (instance_exists(enemy)){
 			
-				var n = instance_nearest(mouse_x,mouse_y,enemy)
-				if(point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0)
-				{
-				    snd_play_2d(sndSniperTarget);
-				    with instance_create(mouse_x,mouse_y,Marker) {
-						target=instance_nearest(x,y,enemy);
+					var n = instance_nearest(mouse_x,mouse_y,enemy)
+					if(point_distance(mouse_x,mouse_y,n.x,n.y) < 48 && n.team != team && n.my_health > 0)
+					{
+					    snd_play_2d(sndSniperTarget);
+					    with instance_create(mouse_x,mouse_y,Marker) {
+							target=instance_nearest(x,y,enemy);
+					    }
 				    }
-			    }
+				}
 			}
 		}
-	}
-
 	}
 	////////KEY RELEASE////////
 	if KeyCont.key_spec[p] == 3

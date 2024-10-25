@@ -69,7 +69,7 @@ function scrEndBoss() {
     
 			    with instance_create(x,y,UnlockPopup)
 			    {
-					mytext="BEST CASUAL MODE TIME ALL CHARACTERS!!!#"+other.race_name[Player.race]+"#"+other.txttime
+					mytext="BEST NORMAL MODE TIME ALL CHARACTERS!!!#"+other.race_name[Player.race]+"#"+other.txttime
 			    }
     
 			    scrSave();
@@ -81,7 +81,7 @@ function scrEndBoss() {
     
 			    with instance_create(x,y,UnlockPopup)
 			    {
-			    mytext="BEST CASUAL MODE TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
+			    mytext="BEST NORMAL MODE TIME FOR "+other.race_name[Player.race]+"#"+other.txttime
 			    }
     
 			    scrSave();

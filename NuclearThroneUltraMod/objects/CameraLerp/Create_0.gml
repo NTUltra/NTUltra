@@ -16,6 +16,13 @@ with projectile
 {
 	instance_destroy(id,false);
 }
+with BackCont
+{
+	if alarm[1] > 0
+		alarm[1] += 130;
+	if alarm[2] > 0
+		alarm[2] += 130;
+}
 lerpTime = 0;
 goTo = true;
 timeIncrease = 0.03333333333333333333333333333333;

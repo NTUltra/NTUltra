@@ -9,6 +9,38 @@ function scrFire(canDrown = true) {
 	}
 	if wep==0{
 		exit;}
+	if instance_exists(ReloadableGun)
+	{
+		with ReloadableGun
+		{
+			if owner == other.id
+			{
+				if ammo > maxAmmo
+				{
+					overload = max(overload, ammo - maxAmmo);
+				}
+				if ammo <= 0
+				{
+					other.wep_load[other.wep] = other.wep_load_base[other.wep];
+					instance_destroy();	
+				}
+				else
+				{
+					ammo -= 1;
+					if ammo <= overload
+					{
+						if ammo <= 0
+							other.wep_load[other.wep] = other.wep_load_base[other.wep] * extraLoad;
+						finalShot = true;
+					}
+					else
+					{
+						other.wep_load[other.wep] = other.wep_load_base[other.wep];
+					}
+				}
+			}
+		}
+	}
 	reload = min(reload + wep_load[wep],wep_load[wep]);
 	if (object_index == Player || object_index == CloneShooter)
 	{

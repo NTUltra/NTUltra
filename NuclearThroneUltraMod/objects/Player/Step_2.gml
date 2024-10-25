@@ -1009,7 +1009,7 @@ if(my_health <= 0 && maxhealth > 0)
 		var lostAmmo = 0;
 		for (var i = 1; i < al; i++) {
 			if (ammo[i] < 0) {
-				takePercentage += 0.03;
+				takePercentage += 0.05;
 			}
 		}
 		var startI = 1;

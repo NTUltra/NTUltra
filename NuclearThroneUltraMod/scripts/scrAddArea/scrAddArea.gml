@@ -29,9 +29,9 @@ function scrAddArea(theArea){
 					counter++;	
 				}
 			}
-			if counter > 9
+			if counter > 11
 			{
-				scrUnlockGameMode(44,"FOR FINDING 10 SECRET AREAS")	
+				scrUnlockGameMode(44,"FOR FINDING 12 ALTERNATIVE AREAS")	
 			}
 		}
 	}

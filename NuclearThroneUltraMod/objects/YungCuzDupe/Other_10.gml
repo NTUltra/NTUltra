@@ -17,15 +17,34 @@ with Player
 		canFire = true;
 	if canFire
 	{
+		/*
+			20 * 1.3 = 26;
+			26 * 1.25 = 32.5;
+			32.5 * 1.2 = 39;
+			39 * 1.15 = 44.85;
+			44.85 * 1.1 = 49.335
+			If it was based purely on weapon reload time (no potential nerves of steel like buffs)
+			6 is first shot reload addition so based on base weapon reload time
+			20 + (6*5) = 44
+			20 + (6*5) = 50
+			
+		*/
+		var reloadStacking = min(0.2,(instance_number(YungCuzDupe) - 1 * 0.05));
 		if other.isYungerCuz
 		{
-			reload += reload * 0.225;
+			if ultra_got[47] && !altUltra
+				reload += reload * (0.16 - reloadStacking);//kinda inbetween multiplicative and additive
+			else
+				reload += reload * (0.225 - reloadStacking);
 			ammo[wep_type[wep]] += wep_cost[wep] * 0.25;
-			rad += wep_rad[wep] * 0.25;
+			rad += wep_rad[wep] * (0.25 - reloadStacking);
 		}
 		else
 		{
-			reload += reload * 0.3;
+			if ultra_got[47] && !altUltra
+				reload += reload * (0.23 - reloadStacking);//Rounded up
+			else
+				reload += reload * (0.3 - reloadStacking);
 		}
 	}
 }

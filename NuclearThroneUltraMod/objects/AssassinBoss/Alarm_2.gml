@@ -4,6 +4,7 @@ alarm[5] = 1;
 snd_play(sndAssassinAttack)
 wepangle = -wepangle
 motion_add(gunangle,6)
+scrDrop(22,0);
 with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle),AssassinSlash)
 {
 	if instance_exists(PitNavigation)

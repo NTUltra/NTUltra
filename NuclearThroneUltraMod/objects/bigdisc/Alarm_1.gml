@@ -40,7 +40,7 @@ if active && target != noone && instance_exists(target) && point_distance(x,y,ta
 			alarm[1] = 0;
 		}
 		scrAddDrops(1);
-		scrDrop(10,0);
+		scrDrop(14,0,true);
 	}
 }
 if !lowHealth && my_health < 0.4

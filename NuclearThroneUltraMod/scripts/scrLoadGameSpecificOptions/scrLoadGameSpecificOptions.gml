@@ -1,7 +1,7 @@
 function scrLoadGameSpecificOptions() {
 	//Read array!??
 	var al = ini_read_real("OPTIONS","gamemodes",1);
-	opt_default_gm = ini_read_real("OPTIONS","opt_default_gm",9);
+	opt_default_gm = ini_read_real("OPTIONS","opt_default_gm",0);
 	opt_gamemode = [opt_default_gm];
 	if al < 1
 		opt_gamemode = [opt_default_gm];

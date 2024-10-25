@@ -13,7 +13,7 @@ with hitGuy
 			motion_add(ang,20+random(4))
 			image_angle = direction
 			team = 2;
-			alarm[2] = 2;
+			alarm[2] = 3;
 		}
 		ang += angStep;
 	}

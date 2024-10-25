@@ -5,12 +5,13 @@ event_inherited()
 if speed<0.8 && idle
 {
 	idle=false;
-if team != 2
-	team = 0;
-image_index=0;
-snd_play(sndVanOpen);
-meleedamage=0;
-friction = 8;
+	if team != 2
+		team = 0;
+	image_index=0;
+	snd_play(sndVanOpen);
+	meleedamage=0;
+	friction = 8;
+	alarm[1] = sprVanOpen/image_speed;
 }
 /*
 if (team == 0)

@@ -2908,5 +2908,79 @@ function scrFire3(hasTailNow){
 		wkick = 9
 
 		break;
+		
+		//SIX SHOOTER
+		case 881:
+
+		
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		var currentShot = 6;
+		var isFinalShot = false;
+		var move = 5;
+		var shakey = 5;
+		if !instance_exists(SixShooter)
+		{
+			with instance_create(x,y,SixShooter) {
+				// alarm[0] = other.wep_load[other.wep] = other.wep_load_base[other.wep] * extraLoad;
+				owner = other.id;	
+			}
+		}
+		else
+		{
+			with SixShooter {
+				isFinalShot = finalShot;
+				currentShot = ammo;
+			}
+		}
+		wkick = 4
+		with instance_create(x,y,Dust)
+				motion_add(aimDirection+(random(8)-4)*other.accuracy,2+random(3))
+		if isFinalShot
+		{
+			move += 1;
+			shakey += 5;
+			wkick = 6;
+			snd_play_fire(sndSixShooterFinal);
+			if currentShot <= 0
+				snd_play_fire(sndSixShooterCooldown);
+			with instance_create(x,y,Dust)
+				motion_add(aimDirection+((random(8)-4) + 12)*other.accuracy,3+random(3))
+			with instance_create(x,y,Dust)
+				motion_add(aimDirection+((random(8)-4) - 12)*other.accuracy,3+random(3))
+			with instance_create(x,y,Smoke)
+				motion_add(aimDirection+(random(8)-4)*other.accuracy,4+random(3))
+		}
+		else
+		{
+			snd_play_fire(sndSixShooter);
+		}
+		if Player.skill_got[42]
+			scrActivateTail(hasTailNow);
+		with instance_create(x,y,HeavyBullet)
+		{
+			alarm[11] = 0;
+			sprite_index = sprBulletDamageScale2;
+			dmg = 22;
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
+			if isFinalShot
+			{
+				sprite_index = sprBulletDamageScale3;
+				dmg += 10;
+				speed += 3;
+			}
+			image_angle = direction
+			team = other.team
+		}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,move);
+			motion_add(aimDirection+180,move)
+		}
+		BackCont.viewx2 += lengthdir_x(6 + shakey,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6 + shakey,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += shakey
+
+		break;
 	}
 }

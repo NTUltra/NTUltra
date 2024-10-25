@@ -6,6 +6,7 @@ mySize = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(15);
 event_inherited()
+didOpen = false;
 meleedamage = 20
 myGateway = noone;
 ignoreOverlap = true;

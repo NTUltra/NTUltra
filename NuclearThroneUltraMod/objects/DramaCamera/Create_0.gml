@@ -93,7 +93,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		{
 		    var area = instance_exists(Player) ? Player.area : UberCont.area;
 			var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
-		    if area = 1 || area = 105
+		    if area = 1 || area = 105 || (area == 100 && instance_exists(InvertedBanditBoss))
 			{
 				song = musBoss1;
 			}
@@ -150,9 +150,9 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 				song = musUltraInvGraveyardFish;
 			else if area == 128
 			{
-				song = musUltraCrownGluttonBoss;
-				if instance_exists(InvertedCrownGlutton)
-					song = musUltraInvCrownGluttonBoss;
+				song = musUltraInvCrownGluttonBoss;
+				if instance_exists(CrownGlutton)
+					song = musUltraCrownGluttonBoss;
 			}
 			else if area == 129
 				song = musUltraInvCrownGluttonBoss;
@@ -330,7 +330,7 @@ else
 			name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
 		}
 	}
-	else if area = 105
+	else if area = 105 || (area == 100 && instance_exists(InvertedBanditBoss))
 	{
 	//with instance_create(x,y,Drama)
 		name = "INVERTED BIG BANDIT"

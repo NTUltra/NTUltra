@@ -1,5 +1,6 @@
 if sprite_index=sprVanOpen
 {
+	didOpen = true;
 	spr_idle=sprVanOpenIdle;
 	spr_walk=sprVanOpenIdle;
 	spr_hurt=sprVanDeactivatedHurt;

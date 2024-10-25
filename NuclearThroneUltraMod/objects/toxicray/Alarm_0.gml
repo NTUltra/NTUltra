@@ -16,6 +16,7 @@ if instance_exists(creator)
 	{
 		motion_add(random(360),0.2);
 		snd_play(sndToxicBoltGas,0.5);
+		scrSplashDamage(2,32,false);
 	}
 	with instance_create(xx,yy,ToxicThrowerGas)
 	{
