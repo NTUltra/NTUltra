@@ -21,6 +21,7 @@ ignoreOverlap = false;
 gettingKnocked = 0;
 fireProof = false;
 canBeBuffedHealed = true;
+hurt_pitch_variation = 0.05;
 
 snd_hurt = sndHitFlesh
 snd_dead = sndEnemyDie

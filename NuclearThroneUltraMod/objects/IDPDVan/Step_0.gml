@@ -11,7 +11,8 @@ if speed<0.8 && idle
 	snd_play(sndVanOpen);
 	meleedamage=0;
 	friction = 8;
-	alarm[1] = sprVanOpen/image_speed;
+	if !didOpen && alarm[1] < 1
+		alarm[1] = 12;
 }
 /*
 if (team == 0)

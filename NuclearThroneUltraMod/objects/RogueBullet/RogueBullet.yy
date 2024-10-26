@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprIDPDBullet",
-    "path":"sprites/sprIDPDBullet/sprIDPDBullet.yy",
+    "name":"sprRogueBullet",
+    "path":"sprites/sprRogueBullet/sprRogueBullet.yy",
   },
   "spriteMaskId":{
     "name":"mskRogueBullet",

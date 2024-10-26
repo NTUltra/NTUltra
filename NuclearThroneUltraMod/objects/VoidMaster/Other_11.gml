@@ -43,7 +43,13 @@ else
 		{
 			text = "I HAVE NO CHALLENGES FOR YOU RIGHT NOW";
 		}
-		debug("dialogueStep ", dialogueStep);
 		alarm[2] = 5;
+	}
+	else
+	{
+		with TextHandler
+		{
+			text = "";
+		}
 	}
 }

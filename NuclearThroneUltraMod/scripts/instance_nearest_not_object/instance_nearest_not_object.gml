@@ -1,4 +1,4 @@
-function instance_nearest_notme(xxx, yyy, instance) {
+function instance_nearest_not_object(xxx, yyy, instance, excludeObject) {
 	//instance_nearest_notme(x, y, obj)
 	var xx, yy, obj, nearest;
 	xx = xxx;
@@ -10,7 +10,7 @@ function instance_nearest_notme(xxx, yyy, instance) {
 	    var o, d;
 	    o = instance_find(obj, ii);
 	    d = point_distance(xx, yy, o.x, o.y);
-	    if (o != id) { if (nearest == noone || d < dist) { nearest = o; dist = d; } }
+	    if (o.object_index != excludeObject) { if (nearest == noone || d < dist) { nearest = o; dist = d; } }
 	    }
 	return nearest;
 }

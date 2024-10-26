@@ -243,6 +243,12 @@ else
 					break;
 				}
 			}
+			else
+			{
+				with TextHandler {
+					text = "";
+				}	
+			}
 		}
 	}
 }

@@ -9966,5 +9966,5 @@ function scrWeapons() {
 	}
 	
 	//Debug how many weapons there are of each tier
-	scrExportWeapons();
+	//scrExportWeapons();
 }

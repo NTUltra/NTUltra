@@ -1980,8 +1980,8 @@ function scrFire3(hasTailNow){
 			team = other.team}
 		}
 
-		BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 16
 		wkick = 9
 		if !skill_got[2]
@@ -2961,6 +2961,7 @@ function scrFire3(hasTailNow){
 		{
 			alarm[11] = 0;
 			sprite_index = sprBulletDamageScale2;
+			mask_index = mskRogueBullet;
 			dmg = 22;
 			motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
 			if isFinalShot

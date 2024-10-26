@@ -1,6 +1,6 @@
 /// @description init
 event_inherited();
 wep = 881;
-extraLoad = 9;//Multiply value
+extraLoad = 8;//Multiply value
 maxAmmo = 5;
 ammo = maxAmmo;

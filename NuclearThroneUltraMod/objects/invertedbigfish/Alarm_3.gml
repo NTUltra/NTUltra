@@ -1,7 +1,7 @@
 /// @description shoot fishies
 if currentShoot < maxShoot
 	alarm[3] = 2;
-currentFish += 1;
+currentShoot += 1;
 alarm[8] = 30;
 if instance_exists(Player) {
 	with instance_create(x,y,InvertedBoneFish) {

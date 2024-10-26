@@ -8,6 +8,7 @@ lightScale = 1;
 lightAnimation = 0;
 vxO = 0;
 vyO = 0;
+alarm[1] = 30;
 if instance_exists(Player)
 {
 	///crown of naturalarmal selection no rads more items
