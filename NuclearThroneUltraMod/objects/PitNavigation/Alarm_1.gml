@@ -7,6 +7,7 @@ if instance_exists(Player)
 	{
 		case 127:
 			//INV Graveyard to INV mansion
+			persistent = false;
 			alarm[3] = 75;
 			with Player
 			{

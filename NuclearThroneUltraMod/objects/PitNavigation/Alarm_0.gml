@@ -1,6 +1,6 @@
 /// @description enems
 alarm[0] = 60;
-if alarm[1] < 1 && !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(Portal) && !instance_exists(MimicBossPlateau)
+if alarm[1] < 1 && !instance_exists(GenCont) && !instance_exists(InvertedRavenFly) && !instance_exists(EnteringClouds) && !instance_exists(LevCont) && !instance_exists(Portal) && !instance_exists(MimicBossPlateau)
 {
 	var numEn = 0;
 	with enemy

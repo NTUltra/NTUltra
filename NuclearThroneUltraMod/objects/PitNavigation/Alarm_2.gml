@@ -21,6 +21,8 @@ with FX
 }
 with WeaponMod
 {
+	if alarm[0] > 0
+		event_perform(ev_alarm,0);
 	instance_destroy(id,false);	
 }
 with WallHitMe

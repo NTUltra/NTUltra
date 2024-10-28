@@ -60,6 +60,10 @@ if loseSkills < 1
 		area = 138;
 		subarea = 0;
 		inverted = false;
+		with PitNavigation
+		{
+			instance_destroy();	
+		}
 	}
 	with instance_create(x,y,Portal)
 	{

@@ -1,5 +1,5 @@
 /// @description ACID SHADER
-if UberCont.opt_freeze == 0 && UberCont.opt_shake == 0
+if UberCont.opt_freeze == 0 && UberCont.opt_shake == 0 && !scrIsGamemode(51)
 	instance_destroy();
 hueShift = shader_get_uniform(shdAcid,"hueShift");
 hue = 0;

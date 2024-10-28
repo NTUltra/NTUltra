@@ -3,8 +3,8 @@ instance_create(x,y,WallBreakWallOnly)
 move_bounce_solid(false);
 if !shotgunShoulders
 {
-	speed -= 0.5;
-	speed *= 0.9;
+	speed -= 0.4;
+	speed *= 0.95;
 }
 else
 {

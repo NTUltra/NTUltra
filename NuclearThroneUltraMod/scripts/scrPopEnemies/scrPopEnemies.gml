@@ -1489,9 +1489,9 @@ function scrPopEnemies() {
 	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian,ExploGuardian))
 	        } else {
 	            var ran = random(100);
-	            if ran > 75 {
+	            if ran > 55 {
 	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer,CloudShooter))
-	            } else if ran > 55 {
+	            } else if ran > 30 {
 					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
 				}
 				else if instance_number(enemy) < 1
@@ -1505,7 +1505,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 
-	            if ran > 75 {
+	            if ran > 55 {
 	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, GhostGuardian, GuardianDog))
 	            }
 				else if instance_number(enemy) < 1
@@ -1521,10 +1521,10 @@ function scrPopEnemies() {
 	            instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedGhostGuardian,InvertedPalaceGuardian))
 	        } else {
 	            var ran = random(100);
-	            if ran > 70 {
+	            if ran > 55 {
 	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedGhostGuardian, InvertedGuardianDog, InvertedCubeGuardian,InvertedCloudKnifer,InvertedCloudShooter))
-	            } else if ran > 50 {
-					instance_create(x + 16, y + 16, choose(InvertedExploFreak, InvertedBuffMushroom, InvertedJungleBandit))
+	            } else if ran > 30 {
+					instance_create(x + 16, y + 16, choose(InvertedExploFreak, InvertedSniper, InvertedJungleBandit))
 				}
 				else if instance_number(enemy) < 1
 				{
@@ -1537,7 +1537,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 
-	            if ran > 70 {
+	            if ran > 55 {
 	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedCubeGuardian, InvertedGhostGuardian, InvertedGuardianDog))
 	            }
 				else if instance_number(enemy) < 1

@@ -42,7 +42,7 @@ maxSpeed = 4;
 wep = 0;
 bwep = 0;
 cwep = 0;
-weaponType = 0;
+weaponType = -1;
 maxAmmo = 6;
 ammo = 6;
 fireRate = 2;
@@ -59,7 +59,7 @@ wepflip = 1
 smackRange = 8;
 smackSpeed = 3
 firstTime = true;
-gunSprite = sprRevolver;
+gunSprite = sprNoGun;
 if instance_exists(Player)
 {
 	spr_idle = Player.spr_idle;

@@ -2,7 +2,7 @@ event_inherited();
 snd_play(sndExplosion)
 snd_play(sndFrostShot1)
 var ang = random(360);
-repeat(16)
+repeat(20)
 {
 
 with instance_create(x,y,FreezeBullet)
@@ -12,7 +12,7 @@ team = other.team}
 with instance_create(x,y,IceFlame)
 {motion_add(ang,2+random(6))
 team = other.team}
-	ang+=22.5;
+	ang+=18;
 }
 
 BackCont.shake += 10;

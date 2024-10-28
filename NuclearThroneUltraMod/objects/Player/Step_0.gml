@@ -531,7 +531,7 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			// newMovement = !newMovement;
 			Sleep(100);
-			getVision = true;
+			//getVision = true;
 			//instance_create(x,y,MusMimicBoss);
 			//isPermanent = true;
 			//piggyBank = 100;

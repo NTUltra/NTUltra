@@ -2,9 +2,9 @@
 instance_create(x,y,ShowVoidEssenceTemporarily);
 with UberCont
 {
-	portalEssence += 1
+	portalEssence += 2
 	if voidChallengeGoing[0]
-		portalEssence += 1;
+		portalEssence += 2;
 }
 
 if loops > 2
@@ -83,6 +83,36 @@ if currentArea == 125
 }
 else if currentArea == 111//Inv caves can have invasion
 {
+	if instance_exists(WeaponChest)
+	{
+		with Floor
+		{
+			if instance_exists(CloudEnterance)
+				continue;
+			var xx = x+16;
+			var yy = y+16;
+			var t = instance_nearest(xx,yy,WeaponChest)
+			var d = point_distance(xx,yy,t.x,t.y)
+			if d < 160 && d > 32
+				instance_create(x+16,y+8,CloudEnterance)
+		}
+	}
+	else
+	{
+		var tar = Player;
+		if instance_exists(WeaponChest)
+		{
+			tar = WeaponChest;
+		}
+		var furthest = instance_furthest(tar.x,tar.y,Floor);
+		var dir = point_direction(x,y,furthest.x,furthest.y)+random_range(120,-120);
+		var len = 128+random(32);
+		var nearestFloor = instance_nearest(tar.x+lengthdir_x(len,dir),tar.y+lengthdir_y(len,dir),Floor)
+		with nearestFloor
+		{
+			instance_create(x+16,y+8,CloudEnterance)
+		}
+	}
 	scrDecideInvader();
 }
 else if currentArea == 112 //INV LABS

@@ -68,7 +68,7 @@ if target != noone && instance_exists(target)
 					}
 				}
 			}
-			else if other.area == 121
+			else if other.area == 121 || (other.area == 100 && instance_exists(BigVultureSkull))
 			{
 				instance_create(x,y,InvertedBigVulture);
 			}
@@ -76,7 +76,7 @@ if target != noone && instance_exists(target)
 			{
 				instance_create(x,y,InvertedBanditBoss)
 			}
-			else if other.area=105
+			else if other.area=105 || (other.oasis && instance_exists(BigFishSkull) && other.area == 100)
 			{
 				if other.oasis
 				{

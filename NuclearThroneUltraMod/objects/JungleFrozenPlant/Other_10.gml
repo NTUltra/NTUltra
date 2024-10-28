@@ -31,6 +31,10 @@ else
 			KeyCont.key_pick[Player.p] = 2;
 			with Player
 			{
+				with PitNavigation
+				{
+					instance_destroy();	
+				}
 				if array_length(snd_good) > 0
 					snd_play(snd_good[irandom(array_length(snd_good)-1)]);
 				else

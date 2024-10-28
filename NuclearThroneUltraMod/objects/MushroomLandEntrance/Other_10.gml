@@ -27,6 +27,10 @@ if Player.wepmod1 != 0
 				inverted = false;
 				area = 117
 				subarea = 0
+				with PitNavigation
+				{
+					instance_destroy();	
+				}
 			}
 			snd_play(sndUltraGrenadeSuck);
 			with instance_create(x,y,Portal)

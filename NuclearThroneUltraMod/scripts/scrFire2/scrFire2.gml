@@ -2315,7 +2315,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*19,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*19,aimDirection),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 7;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2331,7 +2331,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 6;
+		dmg = 5;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2347,7 +2347,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 6;
+		dmg = 5;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2359,7 +2359,7 @@ function scrFire2(hasTailNow) {
 	var l = 32;
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*19+l,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*19+l,aimDirection),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 6;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2368,7 +2368,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection+50*Player.accuracy),GhostSlash)
 	{
-		dmg = 6;
+		dmg = 5;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -2377,7 +2377,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*14+l,aimDirection-50*Player.accuracy),GhostSlash)
 	{
-		dmg = 8;
+		dmg = 5;
 	longarms = 0
 	
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -3866,7 +3866,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,IceCannonBall)
 	{
 	image_angle=random(360);
-	motion_add(aimDirection+(random(8)-4)*other.accuracy,8)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,9)
 	team = other.team}
 	if !skill_got[2]
 	{

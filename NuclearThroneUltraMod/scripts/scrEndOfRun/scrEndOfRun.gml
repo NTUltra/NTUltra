@@ -7,6 +7,10 @@ function scrEndOfRun(){
 	{
 		instance_destroy();	
 	}
+	with PitNavigation
+	{
+		instance_destroy();	
+	}
 	with Marker
 	{
 		instance_destroy();	
