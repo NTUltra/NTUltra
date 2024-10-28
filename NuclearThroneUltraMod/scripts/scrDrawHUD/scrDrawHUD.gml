@@ -1787,7 +1787,7 @@ function scrDrawHUD() {
 		{
 			if isInteractableNow
 			{
-				if (name == "DEFEAT BOSS FIRST" || instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer))
+				if (name == "DEFEAT BOSS FIRST" || instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer) || instance_exists(BallMom))
 				{
 					var txt = "DEFEAT BOSS FIRST";
 					draw_set_color(c_black)
@@ -2589,7 +2589,7 @@ function scrDrawHUD() {
             scrDrawSecretFinder(ox,oy);
         }
 	}
-	if (UberCont.ctot_void_entered > 0 && (instance_exists(TextHandler) || instance_exists(LevCont) || instance_exists(GenCont)))
+	if (UberCont.ctot_void_entered > 0 && (instance_exists(ShowVoidEssenceTemporarily) || instance_exists(TextHandler) || instance_exists(LevCont) || instance_exists(GenCont)))
 	{
 		var vw = camera_get_view_width(view_camera[0]);
 		draw_set_halign(fa_left)
@@ -2598,10 +2598,36 @@ function scrDrawHUD() {
 		var m = round(vx + vw * 0.5)
 		draw_sprite(sprPortalEssenceHUD,0,m - 2, ty);
 		var tx = m + 2;
-		var pe = UberCont.portalEssence
+		var pe = UberCont.portalEssence;
+		var bolded = false;
+		if instance_exists(ShowVoidEssenceTemporarily)
+		{
+			pe = ShowVoidEssenceTemporarily.currentEssence;
+			bolded = ShowVoidEssenceTemporarily.bolded;
+		}
 		draw_text_colour(tx, ty + 1,pe,c_black,c_black,c_black,c_black,1);
 		draw_text_colour(tx + 1, ty + 1,pe,c_black,c_black,c_black,c_black,1);
 		draw_text_colour(tx + 1, ty,pe,c_black,c_black,c_black,c_black,1);
+		if bolded
+		{
+			draw_text_colour(tx, ty + 2,pe,c_black,c_black,c_black,c_black,1);
+			draw_text_colour(tx + 1, ty + 2,pe,c_black,c_black,c_black,c_black,1);
+			draw_text_colour(tx + 2, ty + 1,pe,c_black,c_black,c_black,c_black,1);
+			draw_text_colour(tx + 2, ty + 2,pe,c_black,c_black,c_black,c_black,1);
+			draw_text_colour(tx + 2, ty,pe,c_black,c_black,c_black,c_black,1);
+			
+			
+			draw_text_colour(tx, ty - 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+			draw_text_colour(tx - 1, ty,pe,c_lime,c_lime,c_lime,c_lime,1);
+			draw_text_colour(tx - 1, ty - 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+			
+			draw_text_colour(tx, ty + 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+			draw_text_colour(tx + 1, ty,pe,c_lime,c_lime,c_lime,c_lime,1);
+			draw_text_colour(tx + 1, ty + 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+			
+			draw_text_colour(tx - 1, ty + 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+			draw_text_colour(tx + 1, ty - 1,pe,c_lime,c_lime,c_lime,c_lime,1);
+		}
 		draw_text(tx, ty,pe);
 		draw_set_valign(fa_top)
 	}

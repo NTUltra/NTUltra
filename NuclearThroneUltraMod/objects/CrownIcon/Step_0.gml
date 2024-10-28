@@ -20,12 +20,12 @@ if (KeyCont.key_spec[p] == 1 && !instance_exists(UnlockingSecondRow) && (crown =
 }
 if KeyCont.key_swap[p] == 1
 {
-	if crown == 19 && scrMeleeWeapons(Player.wep)
+	if crown == 19 && scrMeleeWeapons(Player.bwep)
 	{
 		crown = 40;//CROWN OF THOUSAND CUTS
 		image_index = 40;
 	}
-	else if crown == 40 && !scrMeleeWeapons(Player.wep)
+	else if crown == 40 && !scrMeleeWeapons(Player.bwep)
 	{
 		crown = 19;
 		image_index = 19;

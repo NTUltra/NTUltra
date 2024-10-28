@@ -3,29 +3,16 @@ draw_set_colour(c_black);
 draw_rectangle(x - 14, yy - 18, x + 14, yy + 18,false);
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,y-16,x+12,y+16,0)
-var candrawoutline = skill < array_length(UberCont.ctot_skill_taken)-1
+var candrawoutline = showNew && skill < array_length(UberCont.ctot_skill_taken)-1
 if selected
 {
 	draw_sprite(sprSkillSelected,-1,x,yy)
 	draw_sprite(sprite_index,skill,x+2,yy-2)
-	if candrawoutline && UberCont.ctot_skill_taken[skill] > 0 && !UberCont.gamemode_have[28]
-	{
-		var col = make_color_rgb(72,156,8);
-		draw_rectangle_color(x-12,y-17,x+12,y+15,col,col,col,col,true);	
-	}
-
 }
 else
 {
 	draw_sprite(sprite_index,skill,x,yy)
 	draw_sprite_ext(sprite_index,skill,x,yy,1,1,0,c_black,0.05)
-	/*
-	if candrawoutline && UberCont.ctot_skill_taken[skill] > 0
-	{
-		var col = make_color_rgb(72,156,8);
-		draw_rectangle_color(x-12,y-16,x+11,y+15,col,col,col,col,true);	
-	}
-	*/
 }
 
 draw_set_valign(fa_bottom)
@@ -148,4 +135,23 @@ if hover && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
 		draw_text_colour(xx + 8,yy,"RMB TO HIDE DETAILS",c_gray,c_gray,c_gray,c_gray,1);
 	else
 		draw_text_colour(xx + 8,yy,"RMB TO SHOW DETAILS",c_gray,c_gray,c_gray,c_gray,1);
+}
+if candrawoutline && UberCont.ctot_skill_taken[skill] == 0 && showNew
+{
+	var col = c_white;
+	if showTimer < 8
+	{
+		col = c_silver;
+		if showTimer < 5
+			col = c_gray;
+	}
+	if showTimer > 5 || showTimer % 2 == 0
+		draw_sprite_ext(sprNew,0,x - 12, y - 14,1,1,0,col,1);
+	if selected
+	{
+		if alarm[5] < 1
+			alarm[5] = 45;
+		if showTimer > 5 || showTimer % 2 == 1
+			scrDrawTextBackgrounded(x - 12 - 32,y + 28,"NEVER TAKEN!",col);
+	}
 }

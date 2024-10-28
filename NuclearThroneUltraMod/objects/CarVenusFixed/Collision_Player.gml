@@ -3,7 +3,7 @@ with Player
 	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1
 {
-	if !instance_exists(WantBoss) && !instance_exists(BigFish)
+	if !instance_exists(WantBoss) && !instance_exists(BigFish) && !instance_exists(AssassinBoss)
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
@@ -12,6 +12,7 @@ if KeyCont.key_pick[other.p] = 1
 			if area !=104
 			{
 				area = 103
+				inverted = false;
 				subarea = 0
 			}
 		}

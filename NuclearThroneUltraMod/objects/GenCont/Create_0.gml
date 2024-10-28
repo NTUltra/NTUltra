@@ -358,7 +358,10 @@ else
 dir = 1
 deaths = 0
 repeat(UberCont.racemax)
-deaths += UberCont.ctot_dead[dir]
+{
+	deaths += UberCont.ctot_dead[dir]
+	dir += 1;
+}
 
 scrTips()
 

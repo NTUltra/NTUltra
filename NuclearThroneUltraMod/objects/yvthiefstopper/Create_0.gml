@@ -12,6 +12,7 @@ image_speed = 0.4
 friction = 0.4
 
 event_inherited()
+hurt_pitch_variation = 0;
 EnemyHealthAdjustments();
 hurt_pitch_variation = 0.05;
 spr_idle = sprMutant6Idle

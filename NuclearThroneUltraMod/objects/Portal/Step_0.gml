@@ -193,9 +193,9 @@ if type = 4
 }
 }
 if UberCont.normalGameSpeed == 60
-	pullstrength += 0.02;
+	pullstrength += 0.015;
 else
-	pullstrength += 0.04;
+	pullstrength += 0.03;
 if inverted
 {
 	if pullstrength>2.25 && type != 4

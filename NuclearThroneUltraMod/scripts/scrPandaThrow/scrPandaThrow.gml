@@ -15,10 +15,12 @@ function scrPandaThrow(){
 		thrownWep = instance_create(x,y,ThrowWep);
 		with thrownWep
 		{
+			reload = other.reload;
+			debug(reload);
 			alarm[0] = 70;
 			if other.skill_got[5] =1//thronebutt
 				alarm[0]=50;//return to hand
-			alarm[0] += floor(other.wep_load[other.wep] * 0.125);
+			//alarm[0] += floor(other.wep_load[other.wep] * 0.125);
 			team=other.team;
 			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),16);
 			if other.skill_got[20]

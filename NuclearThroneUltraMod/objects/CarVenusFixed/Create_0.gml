@@ -1,5 +1,5 @@
 var loops = GetPlayerLoops();
-maxhealth = 60 * clamp(loops+1,1,4)
+maxhealth = 200 * clamp(loops+1,1,4)
 spr_idle = sprVenusCarFix
 spr_hurt = sprVenusCarFixedHurt
 spr_dead = sprScorchmark

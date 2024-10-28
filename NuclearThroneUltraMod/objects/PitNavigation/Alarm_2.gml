@@ -75,6 +75,12 @@ with Traps
 {
 	instance_destroy(id,false);	
 }
+with Crown
+{
+	x = Player.x;
+	y = Player.y;
+	scrForcePosition60fps();
+}
 var s = 150;
 if currentArea == 125//Make inv mansion a little bigger
 	s += 10;
@@ -129,6 +135,7 @@ with Bones
 {
 	depth = y*-1;
 }
+
 //Backgrounding
 if scrIsCrown(25)
 {

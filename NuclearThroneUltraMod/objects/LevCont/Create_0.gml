@@ -110,7 +110,7 @@ if Player.crownpoints > 0
 	var unlockingSecondRow = false;
 	if !UberCont.unlocked_more_crowns && isValidGamemodeToUnlock()
 	{
-		if scrIsInInvertedArea()
+		if (scrIsInInvertedArea() || Player.lastarea == 126)
 		{
 			with UberCont
 			{
@@ -221,7 +221,7 @@ if Player.crownpoints > 0
 			{
 				crown = other.dir;
 				rowPosition = other.dir;
-				if crown == 12 && scrIsInInvertedArea()
+				if crown == 12 && (scrIsInInvertedArea() || Player.lastarea == 126)
 				{
 					crown = 37;//CROWN OF FRIGHT
 				}

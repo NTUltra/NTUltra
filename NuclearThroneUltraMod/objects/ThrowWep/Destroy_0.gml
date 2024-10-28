@@ -20,7 +20,8 @@ with Player
 		
 	    //hold it properly now
 	    scrWeaponHold();
-    
+		if other.reload > 0
+			scrFlexibleElbowReload(wep);
 	    exit;
     }
     else if bwep == 0 &&other.dontteleport==false
@@ -40,6 +41,8 @@ with Player
 			if ( ammo[wep_type[bwep]] < typ_ammo[wep_type[bwep]]*2 )//if ammo below three times an ammo drop
 			{ammo[wep_type[bwep]]=typ_ammo[wep_type[bwep]]*2;}
 		}
+		if other.reload > 0
+			scrFlexibleElbowReload(bwep);
 	    exit;
     }
 }

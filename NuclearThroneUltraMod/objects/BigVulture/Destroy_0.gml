@@ -10,12 +10,18 @@ with GraveyardEntrance
 	}
 	with Player
 	{
-		area = 126;
-		subarea = 0;	
+		if area != 100
+			area = 126;
+		inverted = false;
+		lastarea = 126;
+		subarea = 0;
 	}
 	with PlayerSpawn
 	{
-		area = 126;
+		if area != 100
+			area = 126;
+		inverted = false;
+		lastarea = 126;
 		subarea = 0;
 	}
 	with enemy

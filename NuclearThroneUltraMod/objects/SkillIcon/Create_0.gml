@@ -11,3 +11,16 @@ selected = false;
 time = 0;
 alarm[3] = 60;
 alarm[4] = 2;
+showNew = false;
+if !UberCont.gamemode_have[28] && isValidGamemodeToUnlock()
+{
+	var dir = 1
+    var deaths = 0
+    repeat(UberCont.racemax)
+	{
+		deaths += UberCont.ctot_dead[dir]
+		dir += 1;
+	}
+	showNew = deaths > 10;
+}
+showTimer = 10;

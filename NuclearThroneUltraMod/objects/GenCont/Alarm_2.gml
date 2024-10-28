@@ -113,11 +113,17 @@ if ((Player.area == 101 || Player.area == 122) and Player.subarea == 3)
 }
 if Player.area = 106 and Player.subarea = 3 && !scrIsGamemode(40)
 {
-	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,BecomeInvertedScrapBoss)
+	var n = instance_furthest(Player.x,Player.y,Floor)
+	instance_create(n.x+16, n.y+16,BecomeInvertedScrapBoss)
 	if Player.loops > 4
 	{
 		scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
 	}
+	var f = instance_furthest(n.x,n.y,Floor);
+	var d = point_direction(n.x,n.y,f.x,f.y);
+	var ds = point_distance(n.x,n.y,f.x,f.y)*0.6;
+	var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
+	instance_create(nn.x+16,nn.y+16,DragonSkull);
 }
 
 if Player.area = 114 and Player.subarea = 2 && !scrIsGamemode(40)
@@ -658,12 +664,12 @@ if Player.area = 100
 		}
 	}
 }
-else if Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
+else if (Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area != 123 && Player.area != 124 && Player.area != 117
-&& Player.area < 128
+&& (Player.area < 128)
 && Player.area!=115 && Player.area!=116 && !scrIsGamemode(25)
-&& !(Player.area == 9 && Player.loops > 9) && !(Player.area == 118 && Player.loops > 9)
+&& !(Player.area == 9 && Player.loops > 9) && !(Player.area == 118 && Player.loops > 9))
 {
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor){
 		if Player.area=104 {
@@ -709,7 +715,7 @@ if (scrIsInInvertedArea() || Player.area == 128) && Player.area != 120 && !(Play
 {
 var f = instance_furthest(Player.x,Player.y,Floor);
 with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+random(128)-64+32,Floor)
-instance_create(x+16,y+16,WeaponMod)
+	instance_create(x+16,y+16,WeaponMod)
 
 }
 if (!instance_exists(PitNavigation) && (Player.area == 126 || Player.area == 127))
@@ -758,20 +764,20 @@ if (Player.area == 134)
 }
 
 
-if Player.area == 8 && Player.subarea == 1
+if (Player.area == 8 || Player.area == 109) && Player.subarea == 1
 {
 	//Mushroomland
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,MushroomLandEntranceWonderland)
 }
-else if Player.area = 8 && Player.subarea < 3 && Player.banditland=true
+else if (Player.area == 8 || Player.area == 109) && Player.subarea < 3 && Player.banditland
 {
 	//MUSHROOM WONDERLAND BANDITLAND
-Player.banditland=false;
-with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
-instance_create(x+16,y+16,BigMushroom)
+	Player.banditland = false;
+	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
+		instance_create(x+16,y+16,BigMushroom)
 }
-if Player.area == 103
+if Player.area == 103 || Player.area == 125
 {
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,MushroomLandEntrance)

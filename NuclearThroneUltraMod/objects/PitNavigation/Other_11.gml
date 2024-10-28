@@ -1,4 +1,12 @@
 /// @description Additional area population
+instance_create(x,y,ShowVoidEssenceTemporarily);
+with UberCont
+{
+	portalEssence += 1
+	if voidChallengeGoing[0]
+		portalEssence += 1;
+}
+
 if loops > 2
 {
 	with Player
@@ -6,7 +14,57 @@ if loops > 2
 		instance_create(x,y,IDPDSpawn);	
 	}	
 }
-if currentArea == 107
+if currentArea == 107 || currentArea == 111 || currentArea == 108
+{
+	var f = instance_furthest(Player.x,Player.y,Floor);
+	with instance_nearest((f.x*3+Player.x)/4+random(128)-64+32,(f.y*3+Player.y)/4+random(128)-64+32,Floor)
+		instance_create(x+16,y+16,WeaponMod)	
+}
+if currentArea == 125
+{
+	var px = x;
+	var py = y;
+	if instance_exists(Player)
+	{
+		px = Player.x;
+		py = Player.y;
+	}
+	else if instance_exists(PlayerSpawn)
+	{
+		px = PlayerSpawn.x;
+		py = PlayerSpawn.y;
+	}
+	with instance_nearest((instance_furthest(px,py,Floor).x*2+px)/4+random(128)-64+32,(instance_furthest(px,py,Floor).y*2+py)/4+random(128)-64+32,Floor)
+			instance_create(x+16,y+16,MushroomLandEntrance)
+	if loops > 0
+	{
+		var lowestFloorY = -9999;
+		var lowestFloor = noone;
+		with Floor {
+			if object_index != FloorExplo &&  y > lowestFloorY
+			{
+				lowestFloorY = y;
+				lowestFloor = id;
+			}
+		}
+		with lowestFloor
+		{
+			instance_create(x,y + 32,Floor);
+			instance_create(x,y + 64,Floor);
+			instance_create(x,y + 96,Floor);
+			instance_create(x,y + 128,Floor);
+			instance_create(x,y + 160,Floor);
+			instance_create(x + 32,y + 96,Floor);
+			instance_create(x + 32,y + 128,Floor);
+			instance_create(x + 32,y + 160,Floor);
+			instance_create(x - 32,y + 96,Floor);
+			instance_create(x - 32,y + 128,Floor);
+			instance_create(x - 32,y + 160,Floor);
+			instance_create(x,y + 128,Blasphemia);
+			instance_create(x,y + 128,NOWALLSHEREPLEASE);
+		}
+	}
+} else if currentArea == 107
 {
 	UberCont.hadBossIntro = false;
 	with Player
@@ -25,12 +83,45 @@ if currentArea == 107
 }
 else if currentArea == 111//Inv caves can have invasion
 {
-	scrDecideInvader();	
+	scrDecideInvader();
+}
+else if currentArea == 112 //INV LABS
+{
+	with instance_furthest(10016, 10016, Server) {
+        instance_create(x, y, MushroomLandEntranceLabs)
+        instance_change(Wind, false)
+    }
+	if !instance_exists(MushroomLandEntranceLabs)
+	{
+		with instance_furthest(10016, 10016,Floor)
+		{
+			instance_create(x+16, y+16, MushroomLandEntranceLabs)
+		}
+	}	
 }
 else if currentArea == 106 && !instance_exists(WantBoss)
 {
 	UberCont.hadBossIntro = false;
 	instance_create(x, y, WantBoss);
+	//venuz car
+    with instance_furthest(10016, 10016, Car) {
+        instance_create(x, y, CarVenus)
+        instance_change(Wind, false)
+    }
+	if !instance_exists(CarVenus)
+	{
+		with instance_furthest(10016, 10016,Floor)
+		{
+			instance_create(x+16, y+16, CarVenus)
+		}
+	}
+}
+else if (currentArea == 109) && Player.banditland
+{
+	//MUSHROOM WONDERLAND BANDITLAND
+	Player.banditland=false;
+	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)
+		instance_create(x+16,y+16,BigMushroom)
 }
 else if currentArea == 125
 {

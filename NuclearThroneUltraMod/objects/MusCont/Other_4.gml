@@ -49,10 +49,13 @@ if scrIsGamemode(8) && area != 0
 
 //if scrIsGamemode(10) || area == 0 or !audio_is_playing(song) or audio_is_playing(musBoss1) or !audio_exists(song) || song == musBossWin || song == musBoss10 || song == musBoss1 {
 
-    dir = 1
-    deaths = 0
+    var dir = 1
+    var deaths = 0
     repeat(UberCont.racemax)
-    deaths += UberCont.ctot_dead[dir]
+	{
+		deaths += UberCont.ctot_dead[dir]
+		dir += 1;
+	}
 
 	var prevSong = song;
 	var prevAmb = amb;

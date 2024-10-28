@@ -25,7 +25,21 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	}
 	var canHealth = 1;
 	if onlyAmmo
+	{
 		canHealth = 0;
+	}
+	else 
+	{
+		var hps = instance_number(HPPickup)
+		if hps > 1
+		{
+			canHealth *= 0.5;
+		}
+		if hps > 3
+		{
+			canHealth = 0;
+		}
+	}
 	var dropRateBuff = 0;
 	var rabbit = 0;
 	if instance_exists(Player)

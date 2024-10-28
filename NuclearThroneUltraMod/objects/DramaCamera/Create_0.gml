@@ -138,7 +138,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 				song = choose(musBoss6,musBoss6B);
 		    else if area = 101 || area == 122
 				song = musUltraOasisBoss;
-			else if area == 10 || area == 121
+			else if area == 10 || area == 121 || (area == 100 && instance_exists(InvertedBigVulture))
 				song = musBoss10
 			else if area == 114 || area == 123
 				song = musUltraBushBoxBoss;
@@ -632,9 +632,9 @@ else
 		}
 	
 	}
-	else if area == 121
+	else if area == 121 || (area == 100 && instance_exists(InvertedBigVulture))
 	{
-		if subarea == 3
+		if subarea == 3 || instance_exists(InvertedBigVulture)
 		{
 			name = "INVERTED BIG VULTURE";
 			if canFunny && random(200) < 1

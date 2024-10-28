@@ -8,21 +8,18 @@ if other.team != 2 and other.my_health > 0
 				alarm[9]=6;
 			else//its already infected well then deal some more damage
 			{
-				if UberCont.normalGameSpeed == 60
-					DealDamage(5,true);
-				else
-					DealDamage(10,true);
+				DealDamage(20,true);
 			}
 
-			DealDamage(4)
+			DealDamage(10)
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,2)
 			snd_play(snd_hurt, hurt_pitch_variation)
 
 			repeat(8)
-			instance_create(x+lengthdir_x(10,random(360))+random(6)-3,
-			y+lengthdir_y(10,random(360))+random(6)-3,Curse)
+				instance_create(x+lengthdir_x(10,random(360))+random(6)-3,
+				y+lengthdir_y(10,random(360))+random(6)-3,Curse)
 
 		}
 	}

@@ -24,6 +24,7 @@ if Player.wepmod1 != 0
 				wepmod2 = wepmod3;
 				wepmod3 = wepmod4;
 				wepmod4 = 0;
+				inverted = false;
 				area = 117
 				subarea = 0
 			}

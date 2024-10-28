@@ -1,4 +1,5 @@
 /// @description Next area
+
 if instance_exists(Player)
 {
 	var ar = currentArea;

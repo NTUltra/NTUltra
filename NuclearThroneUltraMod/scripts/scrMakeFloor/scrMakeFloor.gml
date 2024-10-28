@@ -508,6 +508,7 @@ function scrMakeFloor(limiter) {
 	}
 	//THE PIT
 	if area == 139 {
+		var bigger = choose(false,false,true);
 		instance_create(x,y,Floor);
 		instance_create(x,y+32,Floor)
 		with instance_create(x+30,y,PlayerGhostTeleporter)
@@ -521,6 +522,11 @@ function scrMakeFloor(limiter) {
 		instance_create(x+96,y+96,Floor)
 		instance_create(x+96,y+128,Floor)
 		instance_create(x+128,y+128,Floor)
+		if bigger
+		{	
+			instance_create(x+96,y+64,Floor)
+			instance_create(x+128,y+64,Floor)
+		}
 		/*
 		with instance_create(x+128,y+128,PlayerGhostTeleporter)
 		{
@@ -546,6 +552,11 @@ function scrMakeFloor(limiter) {
 		instance_create(x+96,y-96,Floor)
 		instance_create(x+96,y-128,Floor)
 		instance_create(x+128,y-128,Floor)
+		if bigger
+		{
+			instance_create(x+96,y-64,Floor)
+			instance_create(x+128,y-64,Floor)
+		}
 		/*
 		with instance_create(x+128,y-128,PlayerGhostTeleporter)
 		{

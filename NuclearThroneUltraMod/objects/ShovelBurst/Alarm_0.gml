@@ -42,14 +42,14 @@ if instance_exists(creator)
 				aimDir += 50*Player.accuracy;
 				break;
 		}
-	    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*20,aimDir),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*20,aimDir),Slash)
+	    with instance_create(x+lengthdir_x(8+(Player.skill_got[13]+Player.bettermelee)*20,aimDir),y+lengthdir_y(8+(Player.skill_got[13]+Player.bettermelee)*20,aimDir),Slash)
 	    {
 			hasCosted = other.hasCosted;
 			dmg = wantDmg;
 			sprite_index = spr;
 		    Player.longarms = 0
 		    Player.longarms = (Player.skill_got[13]+Player.bettermelee)*3
-		    motion_add(aimDir,2.5+Player.longarms);
+		    motion_add(aimDir,3+Player.longarms);
 			image_angle = direction
 			scrCopyWeaponMod(other);
 			team = other.team

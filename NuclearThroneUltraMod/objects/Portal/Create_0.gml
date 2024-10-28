@@ -64,7 +64,7 @@ if ( (scrIsInInvertedArea()) && currentsubarea < 2 && random(5) < chance )//inve
 	with Corpse
 		canspawnportal=false;
 }*/
-pullstrength=1;
+pullstrength = 0;
 pullRange = 96
 isPink = false;
 isHQ = false;

@@ -451,7 +451,7 @@ if instance_exists(Player)
 			}
 		}
 	}
-	if (Player.area == 10 && Player.subarea == 1)
+	if (Player.area == 10 && Player.subarea == 1 || Player.area == 121 && Player.subarea < 3)
 	{
 		if instance_exists(WeaponChest)
 		{

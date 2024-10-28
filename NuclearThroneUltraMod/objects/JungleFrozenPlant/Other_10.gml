@@ -63,10 +63,6 @@ else
 						subarea = 1;*/
 				}
 			}
-			with PitNavigation
-			{
-				event_user(2);		
-			}
 			with instance_create(x,y,Portal)
 			{
 				type = 1;

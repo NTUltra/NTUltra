@@ -7,6 +7,7 @@ if instance_exists(creator)
 	x = creator.x
 	y = creator.y
 	//FIRING
+	var hc = hasCosted;
 	if instance_exists(Player) {
 		var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		with creator
@@ -14,7 +15,7 @@ if instance_exists(creator)
 			if other.ammo % 2 == 0
 			{
 				var oDir = aimDir + 90 * accuracy;
-				aimDir += 15 * accuracy;
+				aimDir += 10 * accuracy;
 				snd_play_fire(sndSword1)
 				instance_create(x,y,Dust)
 				with instance_create(
@@ -22,12 +23,12 @@ if instance_exists(creator)
 				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
 				,Slash)
 				{
-					hasCosted = other.hasCosted;
+					hasCosted = hc
 					dmg = 14
 					longarms = 0
 					mask_index = mskExcaliburHammerSlash;
 					sprite_index = sprSlapperSlash;
-					image_yscale = -1;
+					image_yscale = 1;
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDir,2+longarms)
 					motion_add(oDir,1);
@@ -39,18 +40,19 @@ if instance_exists(creator)
 			else
 			{
 				var oDir = aimDir + 90 * accuracy;
-				aimDir -= 15 * accuracy;
+				aimDir -= 10 * accuracy;
 				snd_play_fire(sndSword2)
 				instance_create(x,y,Dust)
 				with instance_create(
 				x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDir)
 				,y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDir),Slash)
 				{
-					hasCosted = other.hasCosted;
+					hasCosted = hc;
 					dmg = 14
 					longarms = 0
-					mask_index = mskExcaliburSlash;
+					mask_index = mskExcaliburHammerSlash;
 					sprite_index = sprSlapperSlash;
+					image_yscale = -1;
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDir-15*other.accuracy,2+longarms)
 					motion_add(oDir,1);

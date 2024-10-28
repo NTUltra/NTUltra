@@ -1,10 +1,11 @@
 /// @description Go to Graveyard
 if isActivated
 	isInteractableNow = false;
-if my_health > 0 && isInteractableNow
+if my_health > 0 && isInteractableNow && !instance_exists(BallMom)
 {
 	if KeyCont.key_pick[Player.p] = 1
 	{
+		UberCont.hadBossIntro = false;
 		isActivated = true;
 		with Player
 		{
@@ -62,11 +63,15 @@ if my_health > 0 && isInteractableNow
 				motion_add(random(360),1 + random(2));	
 			}
 		}
-		
+		var prevA = 10;
+		if instance_exists(Player)
+			preva = Player.area;
+		else if instance_exists(PlayerSpawn)
+			prevA = PlayerSpawn.area;
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 126;
-			prevArea = 10;
+			prevArea = prevA;
 		}
 	}
 }

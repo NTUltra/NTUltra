@@ -8,7 +8,8 @@ spr_hurt = sprTinyKrakenHurt;
 spr_dead = sprTinyKrakenDead;
 meleedamage = 0
 mySize = 1
-
+maxhealth = 15;
+my_health = maxhealth
 event_inherited();
 depth = -2;
 maxSpeed = 4.5;
@@ -16,13 +17,9 @@ image_speed = 0.4
 friction = 0.4
 right = choose(1,-1)
  loops = GetPlayerLoops();
-maxhealth = 8;
-my_health = maxhealth
 actTime = 10;
 rate = 9;
 raddrop += 1;
-maxhealth = 15;
-my_health = maxhealth
 if instance_number(TinyKraken) > 1
 {
 	maxhealth = 12;

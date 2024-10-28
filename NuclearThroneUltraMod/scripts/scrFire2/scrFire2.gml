@@ -486,7 +486,7 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndPlasma)
 	
-	var ang = -40;
+	var ang = -20;
 	repeat(5)
 	{
 	with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),MiniPlasmaBall)
@@ -495,7 +495,7 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team
 	}
-	ang += 20;
+	ang += 8;
 	}
 
 	BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
@@ -9221,7 +9221,7 @@ function scrFire2(hasTailNow) {
 	repeat(5)
 	{
 	with instance_create(x,y,Bullet2Heavy)
-	{motion_add(aimDirection+(random(30)-15)*other.accuracy,13+random(5))
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,14+random(4))
 	image_angle = direction
 	team = other.team}
 	}

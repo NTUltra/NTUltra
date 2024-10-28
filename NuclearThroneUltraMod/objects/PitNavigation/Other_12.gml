@@ -1,11 +1,5 @@
 /// @description End gauntlet!
 scrEndBossMusic();
-with UberCont
-{
-	portalEssence += 3
-	if voidChallengeGoing[0]
-		portalEssence += 3;
-}
 with Player
 {
 	inverted = false;

@@ -50,7 +50,6 @@ function scrTips() {
 	"after getting 100% you can get 200% completion!",
 	"for 200% completion you have to#find all alternative ultras#get all golden weapons#and loop on all characters",
 	"you can swap cursed weapons#with other cursed weapons",
-	"green outline on mutations means#you have taken them before",
 	"try every mutation it will also unlock a gamemode",
 	"you can combine multiple gamemodes!",
 	"some enemies shoot through walls!",

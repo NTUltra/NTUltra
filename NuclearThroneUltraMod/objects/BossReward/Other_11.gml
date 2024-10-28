@@ -32,6 +32,7 @@ switch(array_length(UberCont.collectedRewards))
 	break;
 	case 2:
 		with UberCont {
+			instance_create(x,y,ShowVoidEssenceTemporarily);
 			portalEssence += 10;
 			if (voidChallengeGoing[0])
 			{

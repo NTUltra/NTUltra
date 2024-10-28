@@ -23,7 +23,16 @@ if KeyCont.key_pick[Player.p] = 1 && my_health > 0
 		x = other.x;
 		y = other.y;
 		scrForcePosition60fps();
+		pullstrength = 3;
+		alarm[1] = 1;
 		type = 1
+		with Player
+		{
+			lockout = true;
+			x = other.x;
+			y = other.y;
+			scrForcePosition60fps();
+		}
 	}
 
 	my_health = 0;

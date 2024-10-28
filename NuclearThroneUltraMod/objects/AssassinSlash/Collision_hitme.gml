@@ -1,4 +1,4 @@
-if other.team != team && !hit && other.sprite_index != other.spr_hurt
+if other.team != team && !hit && other.sprite_index != other.spr_hurt && team != 0
 {
 	with other
 	{

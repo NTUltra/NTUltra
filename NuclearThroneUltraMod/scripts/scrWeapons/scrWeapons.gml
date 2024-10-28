@@ -2339,7 +2339,7 @@ function scrWeapons() {
 	wep_type[208] = 5
 	wep_auto[208] = 1
 	wep_load[208] = 20
-	wep_cost[208] = 4
+	wep_cost[208] = 3
 	wep_sprt[208] = sprMiniPlasmaShotgun
 	wep_area[208] = 6
 	wep_text[208] = "as requested"
@@ -7911,7 +7911,7 @@ function scrWeapons() {
 	wep_name[706] = "DENSE GUN"
 	wep_type[706] = 1
 	wep_auto[706] = 0
-	wep_load[706] = 21
+	wep_load[706] = 17
 	wep_cost[706] = 7.5
 	wep_sprt[706] = sprDenseGun
 	wep_area[706] = 1
@@ -8081,7 +8081,7 @@ function scrWeapons() {
 	wep_name[721] = "SPADER"
 	wep_type[721] = 0
 	wep_auto[721] = 2
-	wep_load[721] = 48
+	wep_load[721] = 45
 	wep_cost[721] = 0
 	wep_sprt[721] = sprSpader
 	wep_area[721] = 11
@@ -8323,8 +8323,8 @@ function scrWeapons() {
 	wep_name[743] = "WOMBO COMBO SUCKER PUNCHER"
 	wep_type[743] = 2
 	wep_auto[743] = 3
-	wep_load[743] = 28
-	wep_cost[743] = 5
+	wep_load[743] = 26
+	wep_cost[743] = 4
 	wep_sprt[743] = sprWomboComboSuckerPuncher
 	wep_area[743] = 15
 	wep_text[743] = "consecutive normal punches"
@@ -8580,7 +8580,7 @@ function scrWeapons() {
 	wep_name[766] = "HEAVY DENSE GUN"
 	wep_type[766] = 1
 	wep_auto[766] = 0
-	wep_load[766] = 23
+	wep_load[766] = 18
 	wep_cost[766] = 14.5
 	wep_sprt[766] = sprHeavyDenseGun
 	wep_area[766] = 5
@@ -9714,7 +9714,7 @@ function scrWeapons() {
 	wep_name[866] = "TOXIC DENSE GUN"
 	wep_type[866] = 1
 	wep_auto[866] = 0
-	wep_load[866] = 16
+	wep_load[866] = 14
 	wep_cost[866] = 6
 	wep_sprt[866] = sprToxicDenseGun
 	wep_area[866] = 4

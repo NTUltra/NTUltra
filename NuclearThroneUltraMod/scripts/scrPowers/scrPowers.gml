@@ -1177,6 +1177,10 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					canSpawn = true;	
 				}
+				else
+				{
+					canSpawn = false;	
+				}
 			} else if ultra_got[47]
 			{
 				if !altUltra

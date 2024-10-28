@@ -1,4 +1,4 @@
-if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant || alarm[4] > 0
+if sprite_index == sprProtoPortalDormant || sprite_index == sprInvertedPortalDormant || alarm[4] > 0 || pullstrength < 1.9
 	exit;
 
 if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprite_index != sprPopoPortalStart
@@ -7,9 +7,9 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 	{
 		other.visible = false;
 		instance_create(x,y,PortalShock);
-		if Player.area == 8 && Player.subarea < 2 && ( instance_exists(Sheep))
+		if (Player.area == 8 || Player.area == 109) && Player.subarea < 2 && ( instance_exists(Sheep) || Player.race == 13)
 		{
-			Player.banditland=true;
+			Player.banditland = true;
 		}
 		with instance_create(x,y,PlayerInPortal)
 		{

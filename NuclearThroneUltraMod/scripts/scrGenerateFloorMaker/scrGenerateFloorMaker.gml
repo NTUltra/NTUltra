@@ -137,11 +137,11 @@ function scrGenerateFloorMaker(limiter) {
 	firstTry = false;
 	if scrIsGamemode(25) //Survival arena
 	{
-		goal = 1;
+		goal = 2;
 	}
-	if instance_exists(MenuGen)
+	else if instance_exists(MenuGen)
 		goal = 80//60
-	if instance_exists(InvertedBigMachine) || instance_exists(BigMachine)
+	else if instance_exists(InvertedBigMachine) || instance_exists(BigMachine)
 		goal = 0
 	endPieceSpawned = false;
 

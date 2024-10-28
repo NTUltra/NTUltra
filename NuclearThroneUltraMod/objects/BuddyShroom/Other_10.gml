@@ -33,5 +33,4 @@ if alarm[3] < 1
 	instance_create(x,y - 8,HealFX);
 	snd_play(snd_melee);
 	snd_play(sndBloodlustProc);
-	my_health = min(maxhealth, my_health + other.healingAmount);
 }

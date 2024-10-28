@@ -2,17 +2,18 @@
 // /@description
 ///@param
 function scrApplyEnemyVenom(applierTeam, target) {
-	with instance_create(x,y,EnemyVenom)
-	{
-		team = applierTeam;
-		owner = target;
-		if owner.object_index == Player
+	if target.team != 0
+		with instance_create(x,y,EnemyVenom)
 		{
-			with GameRender
+			team = applierTeam;
+			owner = target;
+			if owner.object_index == Player
 			{
-				venomized = true;	
+				with GameRender
+				{
+					venomized = true;	
+				}
+				venomized = true;
 			}
-			venomized = true;
 		}
-	}
 }

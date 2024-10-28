@@ -14,6 +14,7 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 			else
 				snd_play(snd_thrn);
 			area = 7
+			inverted = false;
 			subarea = 0
 		}
 		spr_idle = sprHotDrakeSkullIdleClosed;
@@ -39,10 +40,13 @@ if spr_idle == sprHotDrakeSkullIdleOpen
 			}
 			alarm[1] = 1;
 		}
+		var prevA = 3;
+		if instance_exists(Player)
+			prevA = Player.area;
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 7;
-			prevArea = 3;
+			prevArea = prevA;
 		}
 	}
 }

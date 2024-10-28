@@ -15,6 +15,13 @@ with enemy
 }
 with ThePit
 {
+	instance_create(x,y,ShowVoidEssenceTemporarily);
+	with UberCont
+	{
+		portalEssence += 5
+		if voidChallengeGoing[0]
+			portalEssence += 5;
+	}
 	with instance_create(x,y,Portal) {
 		x = other.x;
 		y = other.y;

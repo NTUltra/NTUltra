@@ -30,7 +30,8 @@ with instance_create(xx,yy,obj)
 			}
 		}
 	}
-	my_health *= healthBoost;
+	if variable_instance_exists(id,"my_health")
+		my_health *= healthBoost;
 	#endregion
 }
 spawnI ++;
