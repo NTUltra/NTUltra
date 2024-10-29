@@ -174,6 +174,8 @@ function scrNextLevel(skipping = false) {
 				hard -= 1;
 				hard = max(hard,0);
 			}
+			scrAddArea(area);
+			scrAddToRoute(area);
 			exit;
 		}
 		if area < 100
@@ -194,6 +196,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 121;
 		        subarea=3;
 		        inverted=true;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else
@@ -209,6 +213,9 @@ function scrNextLevel(skipping = false) {
 				*/
 				if !skipping
 					hard += 1;
+					
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		    }
@@ -219,6 +226,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 114;
 				subarea = 1;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			if area == 127//Inv Graveyard
@@ -228,6 +237,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 106;
 				subarea = 2;
 				inverted = true;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			if area == 125//Inv Mansion
@@ -237,6 +248,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 6;
 				subarea = 1;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			//Inverted Oasis
@@ -250,6 +263,8 @@ function scrNextLevel(skipping = false) {
 		        subarea=3;
 				lastarea = 122;
 		        inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else
@@ -258,6 +273,8 @@ function scrNextLevel(skipping = false) {
 		        subarea = 2
 				lastarea = 7;
 				inverted = false
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		    }
@@ -271,6 +288,8 @@ function scrNextLevel(skipping = false) {
 			        area = 123
 			        subarea=2;
 			        inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
 			        exit;
 		        }
 		        else
@@ -280,6 +299,8 @@ function scrNextLevel(skipping = false) {
 					lastarea = 4;
 			        subarea = 1
 					inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
 			        exit;
 		        }
 		    }
@@ -291,12 +312,16 @@ function scrNextLevel(skipping = false) {
 			        area = 118
 			        subarea = 3;
 					lastarea = 118;
+					scrAddArea(area);
+					scrAddToRoute(area);
 			        exit;
 		        }
 		        else//inv palace to throne 2
 		        {
 					area=120;
 			        subarea=0;
+					scrAddArea(area);
+					scrAddToRoute(area);
 					exit;
 					/*
 					//LOOP
@@ -313,6 +338,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 8;
 		        subarea=3;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		    }
 			//Jungle
@@ -332,6 +359,8 @@ function scrNextLevel(skipping = false) {
 					subarea = 1;
 					inverted = false;
 				}
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			//Courtyard
@@ -339,6 +368,8 @@ function scrNextLevel(skipping = false) {
 			{
 				// Back to vault
 				area = 100;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			//Graveyard
@@ -349,6 +380,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 3;
 				subarea = 1;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			//Factory
@@ -359,6 +392,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 118;
 				subarea = 2;
 				inverted = true;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			//Ultra scrapyard
@@ -369,6 +404,8 @@ function scrNextLevel(skipping = false) {
 				lastarea = 124;
 				subarea = 0;
 				inverted = true;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			if area == 117 && subarea > 0 && !inverted//Mushroom
@@ -407,13 +444,17 @@ function scrNextLevel(skipping = false) {
 					    subarea=3;
 					    inverted = false;
 					}
-		        exit;
+					scrAddArea(area);
+					scrAddToRoute(area);
+					exit;
 		        }
 		        else
 		        {
 		        area = 3
 		        subarea = 1
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		    }
@@ -427,6 +468,8 @@ function scrNextLevel(skipping = false) {
 		        area = 106
 		        subarea = 3;
 		        inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else//inv scrap to vulcano
@@ -435,6 +478,8 @@ function scrNextLevel(skipping = false) {
 		        subarea=1;
 				lastarea = 7;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
     
@@ -449,6 +494,8 @@ function scrNextLevel(skipping = false) {
 		        area = 107
 		        subarea = 3;
 		        inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else//Inv frozen city to wonderland
@@ -458,6 +505,8 @@ function scrNextLevel(skipping = false) {
 				lastsubarea = 2;
 		        subarea=2;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
     
@@ -472,6 +521,8 @@ function scrNextLevel(skipping = false) {
 		        area = 108
 		        subarea = 3;
 		        inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else//Inverted vulcano bring to frozen city
@@ -480,6 +531,8 @@ function scrNextLevel(skipping = false) {
 		        subarea = 2;
 				lastarea = 5;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
     
@@ -493,6 +546,8 @@ function scrNextLevel(skipping = false) {
 		        area = 109
 		        subarea = 3;
 		        inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		        exit;
 		        }
 		        else//go to crystal caves
@@ -520,6 +575,8 @@ function scrNextLevel(skipping = false) {
 			    subarea=1;
 			    lastarea=3;
 			    inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 		    exit;
 		    }
     
@@ -538,6 +595,8 @@ function scrNextLevel(skipping = false) {
 					subarea = 2;
 					inverted = false;
 				}
+				scrAddArea(area);
+				scrAddToRoute(area);
 		    exit;
 		    }
     
@@ -549,6 +608,8 @@ function scrNextLevel(skipping = false) {
 			        area = 112
 			        subarea = 2;
 			        inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
 			        exit;
 		        }
 		        else//Inv labs to wonderlands 1
@@ -557,19 +618,23 @@ function scrNextLevel(skipping = false) {
 					lastarea = 8;
 					subarea=1;
 					inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
 					exit;
 		        }
     
 		    }
 
-		    if area=101 && subarea=3
+		    if area=101 && subarea == 3
 		    {
 				//Oasis to vulcano
-			    area=7
-			    subarea=1
-			    oasis=false
+			    area = 7
+			    subarea = 1
+			    oasis = false
 				inverted = false;
-		    exit;
+				scrAddArea(area);
+				scrAddToRoute(area);
+				exit;
 		    }
 			//Cursed caves to caves 2
 			if area == 115
@@ -577,6 +642,8 @@ function scrNextLevel(skipping = false) {
 				area = 4;
 				subarea = 2;
 				inverted = false;
+				scrAddArea(area);
+				scrAddToRoute(area);
 				exit;
 			}
 			/*

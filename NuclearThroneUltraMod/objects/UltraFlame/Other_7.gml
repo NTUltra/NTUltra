@@ -1,6 +1,6 @@
 /// @description Spawn more fire
 instance_destroy();
-with instance_create(x,y,Flame) {
+with instance_create(x,y,HeavyFlame) {
 	team = other.team;
 	image_index = 1;
 	direction = other.direction;

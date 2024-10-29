@@ -2918,10 +2918,20 @@ function scrPowers(raceOverwrite = -1) {
 						var g = ToxicThrowerGas;
 						if toxicUltra
 							g = UltraToxicThrowerGas;
-						with instance_create(x,y,g)
+						if toxicamount % 6 == 0
 						{
-							motion_add(random(360),1+random(1.8)+(other.skill_got[5]));
-							//dmg += 1;
+							with instance_create(x,y,g)
+							{
+								motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(20,-20),1.4+random(1.4)+(other.skill_got[5] * 1.2));
+							}
+						}
+						else
+						{
+							with instance_create(x,y,g)
+							{
+								motion_add(random(360),1+random(1.8)+(other.skill_got[5] * 1.2));
+								//dmg += 1;
+							}
 						}
 					}
 				}

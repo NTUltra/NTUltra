@@ -3907,7 +3907,7 @@ function scrWeapons() {
 
 	wep_name[348] = "FROG PISTOL"
 	wep_type[348] = 1
-	wep_auto[348] = 0
+	wep_auto[348] = 1
 	wep_load[348] = 5
 	wep_cost[348] = 2
 	wep_sprt[348] = sprFrogBlaster
@@ -8868,7 +8868,7 @@ function scrWeapons() {
 	wep_swap[791] = sndSwapSword
 	wep_rad[791] = 0;
 	
-	wep_name[792] = "LIGHTNING NUNCHACKU"
+	wep_name[792] = "LIGHTNING NUNCHAKU"
 	wep_type[792] = 0
 	wep_auto[792] = 3
 	wep_load[792] = 20
@@ -9581,7 +9581,7 @@ function scrWeapons() {
 	wep_load[854] = 7
 	wep_cost[854] = 2
 	wep_sprt[854] = sprDoubleRevolver
-	wep_area[854] = -1
+	wep_area[854] = 1
 	wep_text[854] = "two for the price of... still two"
 	wep_swap[854] = sndSwapPistol
 	wep_rad[854] = 0;

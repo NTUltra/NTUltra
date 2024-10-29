@@ -27,6 +27,7 @@ serverSocket = network_create_socket(network_socket_tcp);
 serverIp =  UberCont.serverIp;
 serverPort = UberCont.serverPort;
 latestVersion = UberCont.updateVersion;
+debug(latestVersion);
 notUpdated = "";
 myClientId = -1;
 var res = network_connect_async(serverSocket,string(serverIp),real(serverPort));

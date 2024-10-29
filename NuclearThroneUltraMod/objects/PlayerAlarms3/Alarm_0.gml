@@ -61,7 +61,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 				{
 					if peaceBarriers < peaceBarriersMax
 					{
-						peaceBarrierTime += 1/max(1,(peaceBarriers * 0.88));
+						peaceBarrierTime += 1/max(1,((peaceBarriers*0.87) + 1));
 						if peaceBarrierTime > peaceBarrierDuration
 						{
 							peaceBarrierTime = 0;

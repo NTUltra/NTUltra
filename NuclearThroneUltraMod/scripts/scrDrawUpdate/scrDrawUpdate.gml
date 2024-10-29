@@ -17,13 +17,13 @@ function scrDrawUpdate() {
 		{
 			url_open("https://discord.gg/kmp5t2TK6j");
 		}
-		if keyboard_check_pressed(ord("T"))
+		if keyboard_check_pressed(ord("B"))
 		{
-			url_open("https://twitter.com/Erdeppol");
+			url_open("https://bsky.app/profile/erdeppol.bsky.social");
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/716030/302100");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/824529/310000");
 		}
 	var txt0 = @"#UPDATE [31.00.00]
 	
@@ -33,8 +33,8 @@ function scrDrawUpdate() {
 	* NEW MUTATION INNER PEACE
 	* ANOTHER HIDDEN NEW MUTATION!
 	* LOADS OF NEW WEAPONS!
+	* NEW AREAS AND BOSSES
 	* ADDED SOME OTHER SIGNIFICANT FEATURES
-	THAT I WONT SPOIL HERE
 
 	* REBALANCED AMMO
 	* MORE WEAPON DROPS!
@@ -49,7 +49,7 @@ function scrDrawUpdate() {
 	
 	* ADDED OUTLINE WHEN YOU ARE IMMUNE
 		
-	PRESS [T] FOR UPDATES ON TWITTER
+	PRESS [B] FOR UPDATES ON BLUESKY
 	PRESS [D] TO JOIN THE DISCORD
 	PRESS [C] FOR FULL CHANGELOG
 	
@@ -61,13 +61,13 @@ function scrDrawUpdate() {
 		{
 			url_open("https://discord.gg/kmp5t2TK6j");
 		}
-		if keyboard_check_pressed(ord("T"))
+		if keyboard_check_pressed(ord("B"))
 		{
-			url_open("https://twitter.com/Erdeppol");
+			url_open("https://bsky.app/profile/erdeppol.bsky.social");
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/714542/302000");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/824529/310000");
 		}
 	var txt0=@"#UPDATE [31.00.00]
 	
@@ -93,7 +93,7 @@ function scrDrawUpdate() {
 	* LOTS OF BALANCE CHANGES
 	* LOTS OF BUGFIXES
 	
-	PRESS [T] FOR UPDATES ON TWITTER
+	PRESS [B] FOR UPDATES ON BLUESKY
 	PRESS [D] TO JOIN THE DISCORD
 	PRESS [C] FOR FULL CHANGELOG
 	

@@ -24,16 +24,22 @@ for (var i = 0; i < al; i++) {
 	{
 		if team != other.team && my_health > 0
 		{
-			dealtDamage = true;
-			tx = x;
-			ty = y;
-			DealDamage(other.dmg)
-			if sprite_index != spr_hurt
-				snd_play(snd_hurt, hurt_pitch_variation,true)
-			sprite_index = spr_hurt
-			image_index = 0
-			motion_add(other.direction,4);
-			direction = other.direction;
+			if (object_index == Ram || object_index == ExplosionSheep) && alarm[4] > 0
+			{
+			}
+			else
+			{
+				dealtDamage = true;
+				tx = x;
+				ty = y;
+				DealDamage(other.dmg)
+				if sprite_index != spr_hurt
+					snd_play(snd_hurt, hurt_pitch_variation,true)
+				sprite_index = spr_hurt
+				image_index = 0
+				motion_add(other.direction,4);
+				direction = other.direction;
+			}
 		}
 	}
 }

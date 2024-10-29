@@ -18,7 +18,7 @@ if (notUpdated == "*")
 else
 {
 	var hover = 0;
-	var wx = 92;
+	var wx = 64;
 	if (mouse_x < x - wx + 1 && mouse_x > x - wx - 14
 	&& mouse_y < y + 2 && mouse_y > y - 12)
 	{

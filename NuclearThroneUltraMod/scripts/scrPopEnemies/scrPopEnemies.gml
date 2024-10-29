@@ -14,7 +14,7 @@ function scrPopEnemies() {
 		scrPopEnemiesAlt();
 		return;	
 	}
-	if scrIsGamemode(45) && random(3) < 1
+	if scrIsGamemode(45) && random(3) < 1.25
 	{
 		if spawnarea != 100 || random(5) < 1
 			spawnarea = scrGetRandomArea();

@@ -2046,7 +2046,7 @@ function scrFire2(hasTailNow) {
 	team = other.team}
 	if !skill_got[2]
 	{
-		motion_add(aimDirection+180,1.2)
+		motion_add(aimDirection+180,1.1)
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
@@ -9217,13 +9217,13 @@ function scrFire2(hasTailNow) {
 
 	snd_play_fire(sndSuperSlugger)
 	with instance_create(x,y,Bullet2Heavy)
-	{motion_add(aimDirection,13+random(5))
+	{motion_add(aimDirection,14+random(5))
 	image_angle = direction
 	team = other.team}
 	repeat(5)
 	{
 	with instance_create(x,y,Bullet2Heavy)
-	{motion_add(aimDirection+(random(26)-13)*other.accuracy,14+random(4))
+	{motion_add(aimDirection+(random(26)-13)*other.accuracy,15+random(4))
 	image_angle = direction
 	team = other.team}
 	}

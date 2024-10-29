@@ -1357,7 +1357,7 @@ if (!instance_exists(LevCont))
 		{
 			if scrMeleeWeapons(wep)
 			{
-				reload -=0.44;
+				reload -=0.445;
 			}
 		}
 		//Weaponsmith one with the gun fire rate
@@ -1650,7 +1650,7 @@ if (!instance_exists(LevCont))
 		{
 			//rage
 			var rageAccuracy;
-			var reduction = rage*0.003;//With 500 max this caps at 150% reload speed
+			var reduction = rage*0.0027;//With 500 max this caps at 135% reload speed
 			reload -= reduction
 			breload -= reduction*0.4;
 			creload -= reduction*0.4;
@@ -1855,7 +1855,7 @@ else */if race == 23 && ultra_got[92] == 0
 	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
 	if toxicamount > 0
 	{
-		speed *= 0.34;
+		speed *= 0.35;
 	}
 	else
 	{

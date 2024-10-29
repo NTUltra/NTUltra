@@ -1904,7 +1904,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Grenade)
 	{
 	sticky = 0
-	motion_add(aimDirection+(random(10)-3)*other.accuracy,13)
+	motion_add(aimDirection+(random(8)-4)*other.accuracy,15)
 	image_angle = direction
 	team = other.team}
 
