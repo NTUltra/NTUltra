@@ -1,7 +1,7 @@
-maxhealth = 20//80
+maxhealth = 12//80
 mySize = 2
 if GetPlayerLoops() > 0
-	maxhealth += 20;
+	maxhealth += 15;
 spr_idle = sprPStat1Idle
 spr_hurt = sprPStat1Hurt
 spr_dead = sprPStatDead

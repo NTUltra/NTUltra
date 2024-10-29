@@ -2,26 +2,26 @@ maxhealth = 100//80
 mySize = 2
 rad = 0;
 close = false;
-radRequired = 30;
+radRequired = 25;
+loops = GetPlayerLoops();
+if loops > 0
+{
+	radRequired = 40;
+	maxhealth += 40;
+}
+if loops > 3
+{
+	radRequired = 60;
+	maxhealth += 10;
+}
 isCharged = false;
 lightScale = 1;
 lightAnimation = 0;
 vxO = 0;
 vyO = 0;
 alarm[1] = 30;
-if instance_exists(Player)
-{
-	///crown of naturalarmal selection no rads more items
-	//if scrIsCrown(13)
-	//	rad=40;
-	if scrIsCrown(28)
-		rad = 20;
-	if Player.loops > 0
-	{
-		maxhealth += 40;
-		radRequired = 40;
-	}
-}
+if scrIsCrown(28)
+	rad = 20;
 spr_idle = sprPStat2Idle
 spr_hurt = sprPStat2Hurt
 spr_dead = sprPStatDead

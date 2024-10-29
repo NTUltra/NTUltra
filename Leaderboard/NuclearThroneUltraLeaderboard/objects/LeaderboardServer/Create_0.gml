@@ -1,6 +1,6 @@
 /// @description Init
-updateVersion = "31.PRE-R.10";
-betaVersion = "31.PRE-R.10"
+updateVersion = "31.PRE-R.11";
+betaVersion = "31.PRE-R.11"
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;

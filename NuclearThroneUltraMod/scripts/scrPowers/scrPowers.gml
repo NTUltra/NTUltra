@@ -1322,11 +1322,11 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if skill_got[2]==1//extra feet
 					{
-					maxSpeed=7;
+						maxSpeed=7;
 					}
 					else
 					{
-					maxSpeed=6;
+						maxSpeed=6;
 					}
 				}
 			}
@@ -3699,8 +3699,36 @@ function scrPowers(raceOverwrite = -1) {
 	}
 
 	//SHEEP
-	if race==13 && instance_exists(SheepStorm) && !ultra_got[49]
+	if race==13 && !ultra_got[49]
 	{
+		if !instance_exists(SheepStorm)
+		{
+			if (ultra_got[51] && altUltra && sheepFakeouts > 0)
+			{
+				//Its hypnosis in click event
+			}
+			else
+			{
+				if !instance_exists(SheepStorm)
+				{
+					with instance_create(x,y,SheepStorm)
+					{
+						if other.skill_got[other.maxskill+1]
+							gotVision = true;
+						team=other.team;
+					}
+					if skill_got[2]==1//extra feet
+					{
+						maxSpeed=7;
+					}
+					else
+					{
+						maxSpeed=6;
+					}
+				}
+				
+			}	
+		}
 		var is60fps = UberCont.normalGameSpeed == 60;
 		if !instance_exists(SheepBreak)
 		{

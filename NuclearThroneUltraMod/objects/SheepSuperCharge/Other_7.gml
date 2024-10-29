@@ -20,6 +20,7 @@ if sprite_index == sprSheepSuperChargeEnd
 				scrForcePosition60fps();
 			}
 		}
+		instance_create(x,y,SmallWallBreak);
 	}
 	instance_destroy();
 }

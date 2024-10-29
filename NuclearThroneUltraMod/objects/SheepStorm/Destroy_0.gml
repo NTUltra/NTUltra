@@ -5,7 +5,6 @@ repeat(12)
 		motion_add(random(360),random(3));
 
 }
-debug(maxReach);
 if maxReach > 1
 {
 	var ii = imageIndex;
@@ -21,7 +20,6 @@ if maxReach > 1
 		speed = clamp(dmg*2.5,3,14);
 		sprite_index = other.sprite_index;
 		mask_index = other.mask_index;
-		debug(dmg);
 		alarm[0] = max(10,6+ceil(dmg*2));
 		maxAlarm = max(1,alarm[0]);
 		imageIndex = ii;

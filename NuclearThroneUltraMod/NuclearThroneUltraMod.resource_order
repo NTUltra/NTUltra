@@ -9498,6 +9498,7 @@
     {"name":"sprScorpionBullet","order":16,"path":"sprites/sprScorpionBullet/sprScorpionBullet.yy",},
     {"name":"sprScorpionBulletCannon","order":463,"path":"sprites/sprScorpionBulletCannon/sprScorpionBulletCannon.yy",},
     {"name":"sprScorpionBulletHit","order":3,"path":"sprites/sprScorpionBulletHit/sprScorpionBulletHit.yy",},
+    {"name":"sprScorpionBulletPlayer","order":698,"path":"sprites/sprScorpionBulletPlayer/sprScorpionBulletPlayer.yy",},
     {"name":"sprScorpionDead","order":1,"path":"sprites/sprScorpionDead/sprScorpionDead.yy",},
     {"name":"sprScorpionFire","order":7,"path":"sprites/sprScorpionFire/sprScorpionFire.yy",},
     {"name":"sprScorpionHurt","order":9,"path":"sprites/sprScorpionHurt/sprScorpionHurt.yy",},

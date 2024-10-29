@@ -18,9 +18,9 @@ with ThePit
 	instance_create(x,y,ShowVoidEssenceTemporarily);
 	with UberCont
 	{
-		portalEssence += 5
+		portalEssence += 6
 		if voidChallengeGoing[0]
-			portalEssence += 5;
+			portalEssence += 6;
 	}
 	with instance_create(x,y,Portal) {
 		x = other.x;

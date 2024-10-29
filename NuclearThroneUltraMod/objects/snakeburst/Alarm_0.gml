@@ -13,6 +13,7 @@ snd_play_fire(sndScorpionFire)
 with instance_create(x,y,BulletSnake)
 {
 	offset*= other.creator.accuracy;
+	sprite_index = sprScorpionBulletPlayer;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(6)-3,11)
 	scrCopyWeaponMod(other);
 	image_angle = direction

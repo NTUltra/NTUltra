@@ -9904,6 +9904,7 @@
     {"id":{"name":"sprScorpionBullet","path":"sprites/sprScorpionBullet/sprScorpionBullet.yy",},},
     {"id":{"name":"sprScorpionBulletCannon","path":"sprites/sprScorpionBulletCannon/sprScorpionBulletCannon.yy",},},
     {"id":{"name":"sprScorpionBulletHit","path":"sprites/sprScorpionBulletHit/sprScorpionBulletHit.yy",},},
+    {"id":{"name":"sprScorpionBulletPlayer","path":"sprites/sprScorpionBulletPlayer/sprScorpionBulletPlayer.yy",},},
     {"id":{"name":"sprScorpionDead","path":"sprites/sprScorpionDead/sprScorpionDead.yy",},},
     {"id":{"name":"sprScorpionFire","path":"sprites/sprScorpionFire/sprScorpionFire.yy",},},
     {"id":{"name":"sprScorpionHurt","path":"sprites/sprScorpionHurt/sprScorpionHurt.yy",},},

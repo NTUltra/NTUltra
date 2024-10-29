@@ -7,6 +7,10 @@ if !instance_exists(Player)
 SetSeed();
 var tx = round(Player.x/32)*32;
 var ty = round(Player.y/32)*32;
+with CloudEnterance
+{
+	instance_destroy();	
+}
 with Tangle
 {
 	instance_destroy();	
