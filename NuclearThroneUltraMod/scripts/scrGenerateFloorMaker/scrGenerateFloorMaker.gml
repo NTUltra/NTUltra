@@ -113,7 +113,7 @@ function scrGenerateFloorMaker(limiter) {
 				goal = 25;
 			else if Player.area == 139//The pit
 			{
-				goal = 200;//150
+				goal = 190;//150
 				if Player.loops > 0
 					goal -= 10;
 			}

@@ -7,6 +7,7 @@ scrWeaponModInit();
 gunangle = random(360)
 //alarm[0] = 20
 wkick = 0
+maxSpeed = 3;
 maxhealth = 10;
 my_health = maxhealth;
 snd_hurt = sndHitMetal;

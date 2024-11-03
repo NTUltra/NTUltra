@@ -40,13 +40,15 @@ if instance_exists(Player)
 					instance_create(x,y,HealAbsorbingPores);
 					snd_play(sndHealthPickup);
 					var num = 1;
+					scrPhotosythesis(num);
+					/*
 					if skill_got[9]
 					{
 						num = 2;
 						snd_play(sndAbsorbingPoresHealUpg);
 					}
-					else
-						snd_play(sndAbsorbingPoresHeal);
+					else*/
+					snd_play(sndAbsorbingPoresHeal);
 					if UberCont.opt_ammoicon
 					{
 						dir = instance_create(x,y,PopupText)

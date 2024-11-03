@@ -11,7 +11,7 @@ if instance_exists(Player)
 	{
 		scrDrop(100,0,false,0,5)//Only drops health
 	}
-	if Player.race == 5
+	if Player.race == 15
 		scrUnlockCSkin(15,"FOR KILLING ATOM AS ATOM",0);
 }
 scrDrop(100,0);

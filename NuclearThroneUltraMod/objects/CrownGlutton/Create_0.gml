@@ -1,7 +1,7 @@
 event_inherited();
 crowns = [];
 raddrop = 28
-maxhealth = 550
+maxhealth = 560
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 alarm[10] = 0;

@@ -37,6 +37,7 @@ if instance_exists(Player)
 					radPickedUp -= mr;
 					instance_create(x,y,HealAbsorbingPores);
 					var num = 1;
+					/*
 					if skill_got[9]
 					{
 						num = 2;
@@ -44,7 +45,8 @@ if instance_exists(Player)
 					}
 					else
 						snd_play(sndAbsorbingPoresHeal);
-				
+					*/
+					scrPhotosythesis(num);
 					if UberCont.opt_ammoicon
 					{
 						dir = instance_create(x,y,PopupText)

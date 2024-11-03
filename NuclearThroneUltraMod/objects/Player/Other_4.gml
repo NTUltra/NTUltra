@@ -121,7 +121,7 @@ scrUnlockCSkin(19,"FOR REACHING THE VULCANO#ON 400% SCREENSHAKE#AS SKELETON",0);
 if area > 100 && area != lastarea
 	secretlevelcount++
 
-if secretlevelcount == 5
+if secretlevelcount == 5 && !scrIsGamemode(25)
 {
 	//UNLOCK RANDOM LEVELS GAMEMODE
 	scrUnlockGameMode(10,"FOR GOING TO FIVE SECRET AREAS")

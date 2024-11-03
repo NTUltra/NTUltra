@@ -7,4 +7,13 @@ var al = instance_place_list(x,y,chestprop,chests,false);
 		}
 	}
 ds_list_destroy(chests);
+
+var props = ds_list_create();
+var al = instance_place_list(x,y,prop,props,false);
+	for (var i = 0; i < al; i++) {
+		with props[| i] {
+			motion_add(point_direction(other.x,other.y,x,y),2);	
+		}
+	}
+ds_list_destroy(props);
 alarm[5] = 5;

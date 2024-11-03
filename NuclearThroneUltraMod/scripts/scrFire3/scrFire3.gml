@@ -2359,7 +2359,8 @@ function scrFire3(hasTailNow){
 				{
 					lockoutTime = 3;
 					alarm[0] = lockoutTime;
-					resetSpeed = other.maxSpeed;
+					if instance_exists(Player)
+						resetSpeed = Player.maxSpeed;
 				}
 			}
 		}

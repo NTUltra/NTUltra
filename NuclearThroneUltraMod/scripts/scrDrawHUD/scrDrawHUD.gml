@@ -2458,7 +2458,7 @@ function scrDrawHUD() {
 			if instance_exists(becomenemy) && becomenemy.object_index != WantBoss
 			{
 				t = becomenemy;
-				if t.object_index == PitNavigation
+				if t.object_index == PitNavigation || t.object_index == InversionActivator
 					t = undefined;
 			} else if instance_exists(CanSpawnBoss)
 			{

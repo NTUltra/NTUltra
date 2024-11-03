@@ -183,7 +183,7 @@ function scrPowers(raceOverwrite = -1) {
 					scrEmptyRad();
 
 			}
-			else if my_health > 1 || !scrIsGamemode(9)
+			else// if my_health > 1 || !scrIsGamemode(9)
 			{
 				//Regular active 
 				if !scrIsCrown(41) || my_health > 2
@@ -3289,9 +3289,9 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				takePercentage = 0.04;//0.05%
 			}
-			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
+			var wepType = TargetWepTypeForAmmoConsumption(takePercentage, 5);
 			if wepType != wep_type[bwep] && wepType != wep_type[wep]
-				takePercentage *= 3;
+				takePercentage *= 5;
 			var cost = typ_ammo[wepType]*takePercentage;
 			if (wepType != 0 && ammo[wepType] - cost > 0)
 			{
