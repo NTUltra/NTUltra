@@ -5,6 +5,59 @@ if goToTarget
 if my_health < maxhealth*0.6 && !reachedHalfHealth
 {
 	reachedHalfHealth = true;
+	with ThePit
+	{
+		snd_play(sndGhostSpawn,0.1,true);
+		repeat(min(20,loops + 1))
+		{
+			with instance_create(x + random_range(32,-32),y + random_range(32, - 32), PitGhost)
+			{
+				motion_add(random(360),6);
+				walk += 2;
+				actTime += 2;
+				alarm[1] *= 0.5;
+				if instance_exists(Player) && Player.skill_got[29] {
+					alarm[1] += 50;
+					scrGiveSnooze();
+				}
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(other.direction,1);	
+				}
+			}
+		
+			with instance_create(x + random_range(32,-32),y + random_range(32, - 32), PitGhostExploder)
+			{
+				motion_add(random(360),6);
+				walk += 2;
+				actTime += 2;
+				alarm[1] *= 0.5;
+				if instance_exists(Player) && Player.skill_got[29] {
+					alarm[1] += 50;
+					scrGiveSnooze();
+				}
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(other.direction,1);	
+				}
+			}
+			with instance_create(x + random_range(32,-32),y + random_range(32, - 32), PitGhostLaser)
+			{
+				motion_add(random(360),6);
+				walk += 2;
+				actTime += 2;
+				alarm[1] *= 0.5;
+				if instance_exists(Player) && Player.skill_got[29] {
+					alarm[1] += 50;
+					scrGiveSnooze();
+				}
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(other.direction,1);	
+				}
+			}
+		}
+	}
 	instance_create(x,y,WallBreakWallOnlyBigCircle);
 	scrDrop(40,0,true);
 	if instance_exists(Player) && Player.my_health < Player.maxhealth
@@ -69,7 +122,7 @@ if target != noone {
 		{
 			event_user(2);
 		}
-		motion_add(point_direction(x,y,target.x, target.y) + random_range(80,-80),acc);
+		motion_add(point_direction(x,y,target.x, target.y) + random_range(60,-60),acc);
 		if random(4) < 1 {
 	        direction = random(360);
 	        walk = actTime + random(actTime*2)
@@ -80,12 +133,16 @@ if target != noone {
 	    }
 		else
 		{
-			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);
+			motion_add(point_direction(x,y,target.x, target.y) + random_range(20,-20),acc);
 			walk = alarm[1];
 			if hspeed > 0
 				right = 1
 	        else if hspeed < 0
 				right = -1
+		}
+		if dis > 400
+		{
+			direction = point_direction(x,y,target.x,target.y);	
 		}
 	}
 }

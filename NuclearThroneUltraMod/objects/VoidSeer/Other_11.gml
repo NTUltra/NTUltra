@@ -7,7 +7,7 @@ if UberCont.char_void_entered[race] == 1
 else if specialConditionMet > -1
 {
 	//HERE SPECIAL LORE!
-	t = scrText(race, 4, specialConditionMet);
+	t = scrText(race - 1, 4, specialConditionMet);
 }
 else if loops < 2
 {

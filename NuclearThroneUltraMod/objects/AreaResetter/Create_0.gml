@@ -72,6 +72,14 @@ with hitme
 		}
 	}
 }
+with Player
+{
+	with instance_place(x,y,WallHitMe)
+	{
+		instance_destroy();
+		instance_create(x,y,FloorExplo);
+	}
+}
 with IDPDSpawn
 {
 	if collision_point(x,y,WallHitMe,false,false) || !collision_point(x,y,Floor,false,false) {

@@ -14,8 +14,8 @@ spr_idle=sprInvertedBigMachineLaser
 spr_fire=sprInvertedBigMachineLaserFire
 
 loops = GetPlayerLoops();
-maxSpeed = 2;
-maxSpeed += min(1,loops*0.1);
+maxSpeed = 2.25;
+maxSpeed += min(1.75,loops*0.25);
 maxAmmo = 4;
 fireRate = 2;
 laserDelay = 60;
@@ -23,5 +23,5 @@ if loops > 0
 {
 	maxAmmo = 8 + min(10,loops);
 	fireRate = 1;
-	laserDelay = 50 - min(20,loops*2);
+	laserDelay = 50 - min(30,loops*5);
 }

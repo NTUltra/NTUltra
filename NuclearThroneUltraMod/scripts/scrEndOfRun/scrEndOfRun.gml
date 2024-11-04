@@ -140,6 +140,7 @@ function scrEndOfRun(){
 		voidExtremeChallenges = false;
 		voidMutationDeposit = [];
 		voidWeaponDeposit = [];
+		voidSpecialConditions = [];
 		gotRegalThisRun = false;
 		visitedScrap = false;
 		visitedOasis = false;

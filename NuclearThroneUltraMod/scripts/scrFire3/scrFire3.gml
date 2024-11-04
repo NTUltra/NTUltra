@@ -965,8 +965,7 @@ function scrFire3(hasTailNow){
 
 		if !skill_got[2]
 		{
-			scrMoveContactSolid(aimDirection + 180,1);
-			motion_add(aimDirection+180,1)
+			motion_add(aimDirection + 180,3)
 		}
 		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake

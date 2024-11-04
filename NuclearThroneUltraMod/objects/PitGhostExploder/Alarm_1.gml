@@ -73,6 +73,11 @@ if target != noone {
 	}
 	if instance_number(enemy) < 10 || random(40) < 1
 		direction = point_direction(x,y,target.x,target.y);
+	else if instance_exists(ThePit) && instance_number(enemy) < 30
+	{
+		motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
+		walk = actTime;
+	}
 }
 else if random(10) < 1 {
     motion_add(random(360), 0.4)

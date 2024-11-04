@@ -1,4 +1,4 @@
-/// @description EAT
+/// @description ARMOUR
 with Player
 {
 	if scrCanArmourHeal(true)

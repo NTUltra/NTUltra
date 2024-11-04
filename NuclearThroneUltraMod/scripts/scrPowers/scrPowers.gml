@@ -1412,6 +1412,7 @@ function scrPowers(raceOverwrite = -1) {
 					else if jump <= 0
 					{
 						jump = maxJump;
+						friction = myFriction
 						scrFishRoll();
 						alarm[3] -= rollIframe;
 						rollIframe = 0;
@@ -3293,7 +3294,7 @@ function scrPowers(raceOverwrite = -1) {
 			if wepType != wep_type[bwep] && wepType != wep_type[wep]
 				takePercentage *= 5;
 			var cost = typ_ammo[wepType]*takePercentage;
-			if (wepType != 0 && ammo[wepType] - cost > 0)
+			if ((wepType != 0  && !scrIsCrown(40)) && ammo[wepType] - cost > 0)
 			{
 				var myMask = mask_index;
 				mask_index=mskWall;

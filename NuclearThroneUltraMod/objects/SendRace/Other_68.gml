@@ -1,24 +1,19 @@
 /// @description Networking
 var type = async_load[? "type"];
 //Connection to server
-debug("network async client");
 if (type == network_type_data) {
-	debug("WOW GOT A CONNECTION");
 	var buffer = async_load[? "buffer"];
 	buffer_seek(buffer, buffer_seek_start, 0);
 	var data = buffer_read(buffer, buffer_u8);
-	debug("data received: ",data);
 	switch(data)
 	{
 		case NETDATA.CLIENT_ID:
 			myClientId = buffer_read(buffer, buffer_u16);
 			if array_length(UberCont.runRace) > 1
 			{
-				debug("send race: ",string(UberCont.runRace));
 				var sendBuffer = buffer_create(27,buffer_grow,1);
 				buffer_write(sendBuffer,buffer_u8,NETDATA.RACE);
 				buffer_write(sendBuffer,buffer_u16,myClientId);
-				debug("send day: ", UberCont.dailyDay);
 				buffer_write(sendBuffer,buffer_u16,UberCont.dailyDay);//This is the day I started my run
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[0]);//Time
 				buffer_write(sendBuffer,buffer_u64,UberCont.runRace[1]);//User Id

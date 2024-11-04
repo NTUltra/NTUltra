@@ -31,8 +31,8 @@ if alarm[1] > 0 && spr_idle == spr_actual_idle && sprite_index != spr_hurt
 if my_health < maxhealth*0.6 and sndhalfhp = 0
 {
 	event_user(2);
-snd_play(sndBigDogTaunt)
-sndhalfhp = 1
+	snd_play(sndBigDogTaunt)
+	sndhalfhp = 1
 }
 
 if !instance_exists(Player) and sndtaunt = 0

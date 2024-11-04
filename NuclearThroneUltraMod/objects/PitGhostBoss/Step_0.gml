@@ -27,7 +27,11 @@ else
 		walk -= 1
 		motion_add(direction,acc)
 	}
-
+	if instance_exists(ThePit) && point_distance(x,y,ThePit.x,ThePit.y) > 400
+	{
+		motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc*2);
+		walk = max(walk,2);
+	}
 	if sprite_index == spr_hurt && speed > maxSpeed * 0.5
 		speed = maxSpeed * 0.5;
 	else if speed > maxSpeed

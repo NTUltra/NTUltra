@@ -16,9 +16,7 @@ if dodge > -4
 		dodge -= 0.5
 		if dodge > 0
 		{
-			if round(dodge) == dodge
-				sprite_index=spr_walk;
-			move_contact_solid(direction,3)
+			move_contact_solid(direction,4)
 		}
 	}
 	else
@@ -26,10 +24,10 @@ if dodge > -4
 		dodge -= 1;
 		if dodge > 0
 		{
-			sprite_index=spr_walk;
-			move_contact_solid(direction,6)
+			move_contact_solid(direction,8)
 		}
 	}
+	motion_add(direction,1);
 }
 else if  !instance_exists(Marker) && canDodge && target != noone && instance_exists(target) && instance_exists(Player) && Player.fired
 {

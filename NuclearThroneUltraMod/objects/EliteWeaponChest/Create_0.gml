@@ -46,6 +46,6 @@ if instance_exists(Player) && Player.skill_got[0]
 {
 	heavyHeart = true
 	ammoGet = 30;
-	wep[1] = scrDecideWep(2, 4000, curse);
+	wep[1] = scrDecideWep(2, 2000, curse);
 }
 SetSeed();

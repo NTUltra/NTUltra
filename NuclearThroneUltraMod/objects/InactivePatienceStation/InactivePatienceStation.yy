@@ -12,7 +12,10 @@
     "name":"CrownVault",
     "path":"folders/Objects/CrownVault.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Interactable",
+    "path":"objects/Interactable/Interactable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

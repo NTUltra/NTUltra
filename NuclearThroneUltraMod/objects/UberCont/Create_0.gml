@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "31.00"
-subUpdateVersion = ".00";
+subUpdateVersion = ".01";
 notUpdated = "";
 serverIp = "00.00.000.000"serverPort = 0000;
 currentSave = 0;
@@ -181,6 +181,7 @@ voidShopMutationUpgrade = 40;
 voidExtremeChallenges = false;
 voidMutationDeposit = [];
 voidWeaponDeposit = [];
+voidSpecialConditions = [];
 gotRegalThisRun = false;
 savedSeed = 0;
 canSave = false;

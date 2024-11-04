@@ -8,7 +8,7 @@ with enemy
 		alarm[1] -= 0.5;
 	}
 	speed *= other.speedBuff;
-	if speed > 1
+	if speed > 1 && walk > 0
 		speed += 0.8;
 }
 with projectile

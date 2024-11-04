@@ -61,8 +61,8 @@ if time < 1
 			wepangle = -wepangle
 			if !skill_got[2]
 			{
-				motion_add(d,5)
-				scrMoveContactSolid(d,8)
+				//motion_add(d,5)
+				scrMoveContactSolid(d,13)
 			}
 			BackCont.viewx2 += lengthdir_x(30,d)*UberCont.opt_shake
 			BackCont.viewy2 += lengthdir_y(30,d)*UberCont.opt_shake

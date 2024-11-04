@@ -1,7 +1,7 @@
 spawned = 0
 image_speed = 0.4
-alarm[0] = 2
 
+alarm[0] = 2;
 
 dir = random(360)
 repeat(6)
@@ -20,4 +20,3 @@ image_angle = direction
 }
 dir += 120
 }
-

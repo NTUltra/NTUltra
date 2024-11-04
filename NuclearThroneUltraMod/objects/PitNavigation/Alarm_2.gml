@@ -107,6 +107,34 @@ with instance_create(tx,ty,FloorMaker)
 	goal = s;
 	event_perform(ev_alarm,0);
 }
+if currentArea == 125 && loops > 0
+{
+	var lowestFloorY = -9999;
+	var lowestFloor = noone;
+	with Floor {
+		if object_index != FloorExplo &&  y > lowestFloorY
+		{
+			lowestFloorY = y;
+			lowestFloor = id;
+		}
+	}
+	with lowestFloor
+	{
+		instance_create(x,y + 32,Floor);
+		instance_create(x,y + 64,Floor);
+		instance_create(x,y + 96,Floor);
+		instance_create(x,y + 128,Floor);
+		instance_create(x,y + 160,Floor);
+		instance_create(x + 32,y + 96,Floor);
+		instance_create(x + 32,y + 128,Floor);
+		instance_create(x + 32,y + 160,Floor);
+		instance_create(x - 32,y + 96,Floor);
+		instance_create(x - 32,y + 128,Floor);
+		instance_create(x - 32,y + 160,Floor);
+		instance_create(x,y + 128,Blasphemia);
+		instance_create(x,y + 128,NOWALLSHEREPLEASE);
+	}
+}
 instance_create(x,y,AreaResetter);
 snd_play_2d(sndLastEnemy);
 with WepPickup

@@ -57,7 +57,7 @@ if target != noone {
 			motion_add(point_direction(x,y,target.x, target.y) + random_range(30,-30),acc);	
 			walk = actTime;
 		}
-		else if ran < 6.5 && instance_exists(ThePit)
+		else if (ran < 6.5 || instance_number(enemy) < 30) && instance_exists(ThePit)
 		{
 			motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
 			walk = actTime;

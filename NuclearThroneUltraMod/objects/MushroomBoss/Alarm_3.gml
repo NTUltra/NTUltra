@@ -121,6 +121,10 @@ if mode == 0 && instance_exists(Player)
 	{
 		scrTeleportToFloor();
 	}
+	with Portal
+	{
+		scrTeleportToFloor();
+	}
 	with enemy
 	{
 		if team != 2 && id != other.id

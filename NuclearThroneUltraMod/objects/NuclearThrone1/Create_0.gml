@@ -15,11 +15,6 @@ y += 64;
 yStart = y;
 maxhealth = 1700//retail has 1500 but the parts take 100 health each away upon destruction
 scrBossHealthBuff();
-if scrIsGamemode(5)//1HP gamemode
-{
-	my_health += 9;
-	maxhealth += 9;
-}
 isInverted = false;
 mySize = 8;
 friction = 6;
@@ -58,6 +53,11 @@ cantrishot = true;
 riseStep = false;
 
 event_inherited()
+if scrIsGamemode(5)//1HP gamemode
+{
+	my_health += 9;
+	maxhealth += 9;
+}
 canBeEaten = false;
 walk = 0;
 alarm[1] = 0;

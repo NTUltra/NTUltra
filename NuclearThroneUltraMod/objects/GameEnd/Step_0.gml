@@ -38,10 +38,11 @@ if instance_exists(PlayerInEnding)
 		}
 	}
 }
-else if instance_exists(Player) && !instance_exists(PlayerInEnding)
+else if instance_exists(Player) && !instance_exists(PlayerInEnding) && alarm[0] < 1
 {
 	if point_distance(x,y,Player.x,Player.y) < 64 || alarm[1] < 1
 	{
+		
 		alarm[0] = 300;
 		var et = endingType;
 		with Player

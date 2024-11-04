@@ -1,4 +1,6 @@
 /// @description START BEAM
+if instance_exists(ThroneBeam)
+	exit;
 alarm[6] = 70;//Beam duration
 snd_play_2d(sndNothingBeamStart);
 snd_loop(sndNothingBeamLoop);

@@ -26,7 +26,9 @@ function scrSaveStats() {
 		ini_write_real("STATS","cbstloop"+string(dir),cbst_loop[dir]);
 		
 		ini_write_real("STATS","got_regal"+string(dir),got_regal[dir]);
-	
+		ini_write_real("STATS","ctot_regal_taken" + string(dir),ctot_regal_taken[dir]);
+		ini_write_real("STATS","ctot_thronebutt_taken" + string(dir),ctot_thronebutt_taken[dir]);
+		
 		var cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
 		repeat(crownmax + secretcrownmax)
@@ -68,7 +70,6 @@ function scrSaveStats() {
 		ini_write_real("STATS","ctotskilltaken" + string(dir),ctot_skill_taken[dir]);
 		dir ++;
 	}
-	ini_write_real("STATS","ctot_regal_taken" + string(dir),ctot_regal_taken);
 	dir = 0;
 	repeat(maxultra+2)
 	{

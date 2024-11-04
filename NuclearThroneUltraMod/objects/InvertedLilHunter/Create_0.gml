@@ -1,11 +1,13 @@
-raddrop = 60
-maxhealth = 140;
+raddrop = 50
+maxhealth = 180;
 meleedamage = 1
 mySize = 1
 scrBossHealthBuff();
 
 
 event_inherited()
+actTime = 10;
+reachedHalfHealth = false;
 team = 3;
 loop=false;
 
@@ -14,7 +16,8 @@ if instance_exists(Player){
 	loop=true;
 
 }
-
+if loop 
+	actTime -= 2;
 spr_idle = sprInvertedLilHunter
 spr_walk = sprInvertedLilHunterWalk
 spr_hurt = sprInvertedLilHunterHurt
@@ -51,4 +54,4 @@ shadowdrawx=x;
 shadowdrawy=y;
 
 canDodge = false;
-scrAddDrops(1);
+scrAddDrops(3);

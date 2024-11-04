@@ -13,6 +13,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		dataRef = DataRef;
 	else
 		return 0;
+	if dataRef.hard > 13
+	{
+		maxTriesParam *= 0.5;
+	}
 	if scrIsGamemode(2) {
 		//Favourable build
 		if dataRef.loops > 0

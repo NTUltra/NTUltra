@@ -484,14 +484,18 @@ if selected && visible
 			if other.skill < other.maxskill + 1
 			{
 				ctot_skill_taken[other.skill] += 1;
+				if other.skill == 5
+				{
+					ctot_thronebutt_taken[Player.race] += 1;	
+				}
 				if other.skill == 22 && ctot_skill_taken[other.skill] >= 10
 				{
 					scrUnlockGameMode(24,"FOR TAKING STRESS 10 TIMES");
 				}
 			}
-			else
+			else if instance_exists(Player)
 			{
-				ctot_regal_taken += 1;	
+				ctot_regal_taken[Player.race] += 1;
 			}
 			var gotEmAll = true;
 			var dir = 0;

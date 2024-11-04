@@ -1,5 +1,5 @@
 raddrop = 28
-maxhealth = 500;
+maxhealth = 720;
 loops = GetPlayerLoops();
 if loops > 0
 	maxhealth += 300;
@@ -28,7 +28,7 @@ snd_dead = sndBigMachineDead
 //behavior
 gunangle = 0;
 
-alarm[1] = 900;
+alarm[1] = 1200;
 if instance_exists(GenCont)
 	alarm[7] = GenCont.alarm[0] + 30;
 else

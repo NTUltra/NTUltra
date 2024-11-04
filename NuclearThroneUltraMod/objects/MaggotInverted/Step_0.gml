@@ -1,7 +1,7 @@
 event_inherited()
 
 if sprite_index != spr_hurt
-motion_add(direction,1.2)
+	motion_add(direction,1.2)
 
 
 if hspeed > 0

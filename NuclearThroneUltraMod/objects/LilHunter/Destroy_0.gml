@@ -19,7 +19,7 @@ scrBossKill();
 scrDrop(200,0)
 scrDrop(20,40)
 instance_create(x,y,Explosion)
-if !place_meeting(x,y,Morph)
+if morphMe == 0
 with instance_create(x,y,LilHunterDie)
 team = other.team
 if instance_exists(Player)

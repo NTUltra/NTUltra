@@ -5369,12 +5369,12 @@ function scrFire2(hasTailNow) {
 	{
 		maxhealth += 4;
 	}
-	if race == 7
+	if object_index == Player && race == 7
 	{
 		//wep = 0;
 		clicked = 0;
 		// can_shoot = 0;
-		if object_index == Player && ultra_got[27] && !altUltra
+		if ultra_got[27] && !altUltra
 		{
 			if bwep == wep
 				bwep = 0;
@@ -17871,7 +17871,7 @@ function scrFire2(hasTailNow) {
 
 	break;
 	
-	//verVER
+	//CHARGE OVERDRIVER
 	case 783:
 
 	with instance_create(x,y,Shell)
@@ -17929,12 +17929,12 @@ function scrFire2(hasTailNow) {
 			accuracy = other.accuracy;
 			if Player.skill_got[42]
 			{
-				chargetime *= 1.5;
+				chargetime *= 1.4;
 				rate *= 2;
 				if Player.ultra_got[97] && !Player.altUltra
 				{
 					rate *= 2;
-					chargetime *= 1.5;
+					chargetime *= 1.4;
 				}
 				maxcharge *= Player.betterTail;
 				scrActivateTail(hasTailNow);

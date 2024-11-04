@@ -36,11 +36,16 @@ if target != noone {
 		motion_add(point_direction(x,y,target.x, target.y) + random_range(60,-60),acc);	
 		walk = actTime;
 	}
-	else if dis > 96 && instance_number(enemy) < 3
+	else if dis > 96 && instance_number(enemy) < 10
 	{
 		motion_add(point_direction(x,y,target.x, target.y),acc);
 		if dis > 300
 			mp_potential_step(target.x,target.y,maxSpeed,false);
+		walk = actTime;
+	}
+	else if instance_exists(ThePit) && instance_number(enemy) < 30
+	{
+		motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
 		walk = actTime;
 	}
 }

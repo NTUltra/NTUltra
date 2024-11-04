@@ -19,3 +19,4 @@ repeat(am)
 	}
 	ang += angStep;
 }
+event_inherited();

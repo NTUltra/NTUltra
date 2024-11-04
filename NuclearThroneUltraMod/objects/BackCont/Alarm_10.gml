@@ -16,4 +16,24 @@ if instance_exists(Player)
 			}
 		}
 	}
+	if !instance_exists(WallRemover) && instance_exists(WallHitMe)
+	{
+		with Player
+		{
+			if place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor)
+			{
+				if other.playerOutOfPlace
+				{
+					instance_create(x,y,SmallWallBreak);
+					alarm[3] = max(10,alarm[3]);
+					scrTeleportToFloor();	
+				}
+				other.playerOutOfPlace = true;
+			}
+			else
+			{
+				other.playerOutOfPlace = false;	
+			}
+		}
+	}
 }

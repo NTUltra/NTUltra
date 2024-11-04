@@ -46,6 +46,8 @@ function scrLoadStats() {
 		cbst_loop[dir] = ini_read_real("STATS","cbstloop"+string(dir),0);
 		
 		got_regal[dir] = ini_read_real("STATS","got_regal"+string(dir),0);
+		ctot_regal_taken[dir] = ini_read_real("STATS","ctot_regal_taken" + string(dir),0);
+		ctot_thronebutt_taken[dir] = ini_read_real("STATS","ctot_thronebutt_taken" + string(dir),0);
 		
 		cir = 0;
 		ctot_all_crowns_taken[dir] = 0;
@@ -86,10 +88,6 @@ function scrLoadStats() {
 		dir ++;
 	}
 	dir += 1;
-	if ini_key_exists("STATS","ctotskilltaken" + string(dir))
-		ctot_regal_taken = ini_read_real("STATS","ctotskilltaken" + string(dir),0);
-	else
-		ctot_regal_taken = ini_read_real("STATS","ctotregaltaken",0);
 	//TODO FUTURE MUTATION
 	dir = 0;
 	repeat(maxultra+2)

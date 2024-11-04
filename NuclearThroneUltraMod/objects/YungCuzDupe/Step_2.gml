@@ -221,6 +221,7 @@ if(my_health<=0)
 var dis = point_distance(x,y,Player.x,Player.y)
 if isWalking <= 1
 {
+	dis = max(0, dis - (8 * (instance_number(YungCuzDupe) - 1)));
 	if dis >= 300 || (dis > 16 && isWalking <= -20)
 	{
 		isWalking = 0;
@@ -238,7 +239,7 @@ if isWalking <= 1
 				returntoplayerfast = 0;
 		}
 
-		if (isWalking <= 0) && dis>16//&&random(10)<1
+		if (isWalking <= 0) && dis > 16//&&random(10)<1
 		{
 			returntoplayerfast = 20;
 			returntoplayer = 0;

@@ -44,7 +44,7 @@ scrWeapons()
 SetSeedWeapon();
 wep[0] = scrDecideWep(0, 30, curse);
 if heavyHeart
-	wep[1] = scrDecideWep(0, 30, curse);
+	wep[1] = scrDecideWep(0, 10, curse);
 SetSeed();
 
 if (mediumchest==1)

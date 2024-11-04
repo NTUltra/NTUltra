@@ -115,6 +115,8 @@ function scrNextLevel(skipping = false) {
 	{
 		if area == 137
 		{
+			lastarea = area;
+			lastsubarea = subarea;
 			if instance_exists(RegalNavigation)
 			{
 				if subarea < 1
@@ -281,6 +283,8 @@ function scrNextLevel(skipping = false) {
 			//Inverted Jungle
 			if area = 123
 		    {
+				lastarea = area;
+				lastsubarea = subarea;
 				//TODO
 		        if inverted && area == 123 &&subarea<2
 		        {
@@ -306,6 +310,8 @@ function scrNextLevel(skipping = false) {
 		    }
 			if area == 118
 			{
+				lastarea = area;
+				lastsubarea = subarea;
 				if inverted && subarea<3
 		        {
 			        //inverted chesire
@@ -543,11 +549,12 @@ function scrNextLevel(skipping = false) {
 				//TODO
 		        if inverted && subarea<3
 		        {
-		        area = 109
-		        subarea = 3;
-		        inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
+			        area = 109
+					lastarea = 109;
+			        subarea = 3;
+			        inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
 		        exit;
 		        }
 		        else//go to crystal caves
@@ -585,6 +592,7 @@ function scrNextLevel(skipping = false) {
 				if inverted && subarea<2
 				{
 					area = 111;
+					lastarea = 111;
 					subarea = 2;
 					inverted = false;
 				}
@@ -628,6 +636,8 @@ function scrNextLevel(skipping = false) {
 		    if area=101 && subarea == 3
 		    {
 				//Oasis to vulcano
+				lastarea = area;
+				lastsubarea = subarea;
 			    area = 7
 			    subarea = 1
 			    oasis = false
@@ -639,6 +649,8 @@ function scrNextLevel(skipping = false) {
 			//Cursed caves to caves 2
 			if area == 115
 			{
+				lastarea = area;
+				lastsubarea = subarea;
 				area = 4;
 				subarea = 2;
 				inverted = false;

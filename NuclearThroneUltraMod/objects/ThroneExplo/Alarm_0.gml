@@ -17,11 +17,11 @@ if instance_exists(Player)
 	yy = y + lengthdir_y(128,dir);
 }
 
-repeat(38)
+repeat(24)
 	with instance_create(xx+random(160-rr)-80-(rr*0.5),yy+random(160-rr)-80-(rr*0.5),explo)
 		motion_add(dir,spd);
 
-repeat(28)
+repeat(14)
 	with instance_create(xx+random(200-rr)-100-(rr*0.5),yy+random(200-rr)-100-(rr*0.5),explo)
 		motion_add(dir,spd);
 

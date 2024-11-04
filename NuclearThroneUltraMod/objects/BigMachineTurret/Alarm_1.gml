@@ -17,7 +17,7 @@ wkick = 4
 sprite_index=spr_fire
 with instance_create(x,y,proj)
 {
-motion_add(other.image_angle+random(20)-10,3)
+motion_add(other.image_angle+random(20)-10,3.25)
 image_angle = direction
 team = 1;
 }
@@ -31,19 +31,19 @@ else if random(3)<1//shotgunlike
 wkick = 8
 	with instance_create(x,y,proj)
 	{
-		motion_add(other.image_angle-30,2)
+		motion_add(other.image_angle-30,2.25)
 		image_angle = direction
 		team = 1;
 	}
 	with instance_create(x,y,proj)
 	{
-		motion_add(other.image_angle,2)
+		motion_add(other.image_angle,2.25)
 		image_angle = direction
 		team = 1;
 	}
 	with instance_create(x,y,proj)
 	{
-		motion_add(other.image_angle+30,2)
+		motion_add(other.image_angle+30,2.25)
 		image_angle = direction
 		team = 1;
 	}

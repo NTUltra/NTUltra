@@ -24,17 +24,8 @@ if (hundredPercentI) >= array_length(hundredPercent)
 			secondary_start_wep[dir] = 1;
 			got_regal[dir] = 1;
 			//Crownstart unlock
-			var cir = 0;
-			ctot_all_crowns_taken[dir] = 0;
-			repeat(crownmax + secretcrownmax)
-			{
-				ctot_crown_taken[dir,cir] = 1;
-				if (cir > 1)
-				{
-					ctot_all_crowns_taken[dir] += ctot_crown_taken[dir,cir];
-				}
-				cir ++;
-			}
+			//ctot_all_crowns_taken[dir,1] = 1;
+			ctot_crown_taken[dir,0] = 1;
 			dir++
 		}
 

@@ -47,7 +47,9 @@ motion_add(random(360),3+random(1))
 }
 
 z = 0
-alarm[1] = 20+random(10);
+alarm[1] = 30;
+if my_health < maxhealth * 0.5
+	alarm[1] = 10;
 var bonk = true;
 if intro = 0
 {
@@ -55,7 +57,7 @@ if intro = 0
 	instance_create(x,y,DramaCamera)
 	intro = 1
 	if instance_exists(Player) && Player.skill_got[29] {
-		alarm[1] += 60;
+		alarm[1] += 35;
 		alarm[5] = 0;
 		scrGiveSnooze();
 		bonk = false;
@@ -80,30 +82,32 @@ if bonk
 	ang += angstep;
 	}
 	var ang = random(360);
-	repeat(5)
+	repeat(6)
 	{
 		with instance_create(x,y,EnemyBouncerBullet)
 		{
-		motion_add(ang,2)
-		image_angle = direction;
-		team = other.team
+			motion_add(ang,3)
+			image_angle = direction;
+			team = other.team
 		}
-		ang += 72;
+		ang += 60;
 	}
 	var lps = GetPlayerLoops()
-	if lps > 3
+	if lps > 1
 	{
 		var am = 4;
 		ang = 0;
-		if lps > 4
+		if lps > 2
+			am = 6;
+		if lps > 3
 			am = 8;
 		var angStep = 360/am;
 		var ps = 3;
-		if lps > 7
+		if lps > 4
 			ps = 3.5;
-		if lps > 8
+		if lps > 5
 			ps = 4;
-		if lps > 9
+		if lps > 6
 			ps = 4.5;
 		repeat(am)
 		{

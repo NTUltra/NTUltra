@@ -1,5 +1,5 @@
 raddrop = 600
-maxhealth = 3450//2500
+maxhealth = 3500//2500
 if instance_exists(InvaderBossSpawnPortal)
 {
 	maxhealth = 900;

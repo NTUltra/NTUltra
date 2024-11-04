@@ -1,12 +1,12 @@
 /// @description intro delay
 
-alarm[1]=60;
+alarm[1]=10;
 ammo=4;//10;
 
 if image_xscale=-1
 {
 gunangle=180;
-alarm[1]=40;
+alarm[1]=30;
 }
 else if horizontal
 {

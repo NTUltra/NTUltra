@@ -3,6 +3,10 @@ with BanditBoss
 {
 	other.bossIntroSound = sndBigMushroomBossIntro
 }
+with BigMachine
+{
+	other.bossIntroSound = sndBigMachineActivate
+}
 with BanditBoss
 {
 	other.bossIntroSound = sndBigBanditIntro

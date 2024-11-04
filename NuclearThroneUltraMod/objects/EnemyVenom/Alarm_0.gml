@@ -6,7 +6,7 @@ if instance_exists(owner)
 {
 	if owner.object_index == Player
 	{
-		if scrIsCrown(18)
+		if scrIsCrown(18) || scrIsCrown(41)
 			breakPoint += 1;
 		if UberCont.voidChallengeGoing[1]
 			breakPoint += 1;

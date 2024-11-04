@@ -1,7 +1,7 @@
-alarm[1] = 10+random(8)
+alarm[1] = 10+random(4)
 canDodge = true;
 if loop
-	alarm[1] -= 7;
+	alarm[1] -= 6;
 scrTarget()
 if target != noone
 {
@@ -17,10 +17,12 @@ if target != noone
 motion_add(point_direction(x,y,target.x,target.y),3);
 //HAS A TARGET
 var dis = point_distance(x,y,target.x,target.y)
-if canFly && (random(35) < 1 or (dis < 64 and random(5) < 1) or (dis > 160 and random(16) < 1))
+var wantToFly = !reachedHalfHealth && my_health < maxhealth * 0.5
+if canFly && (wantToFly || random(35) < 1 or (dis < 64 and random(5) < 1) or (dis > 160 and random(16) < 1))
 {
 //FLY
-
+if wantToFly
+	reachedHalfHealth = true;
 sprite_index = sprInvertedLilHunterLiftStart
 image_index = 0
 with BoltStick
@@ -34,8 +36,9 @@ with Leach
 		instance_destroy();
 }
 instance_change(InvertedLilHunterFly,false)
+scrDrop(20,0);
 snd_play_2d(sndLilHunterLaunch)
-	if random(6) < 1
+	if random(6) < 2
 	{
 		snd_play_2d(sndLilHunterSummon)
 		with Player
@@ -51,14 +54,12 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 || (dis < 250 && random(10
 {
 //CAN SEE
 
-if random(2) < 1
-{
 //FIRE
 
 if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 {
 	//CLOSE RANGE
-	gunangle = point_direction(x,y,target.x,target.y)+random(60)-30
+	gunangle = point_direction(x,y,target.x,target.y)+random(20)-10
 
 	snd_play(sndEnemyFire)
 	wkick = 8
@@ -69,7 +70,7 @@ if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 	{
 		with instance_create(x,y,EnemyBullet1)
 		{
-			motion_add(other.ang,3)
+			motion_add(other.ang,4)
 			image_angle = direction
 			team = other.team
 		}
@@ -79,14 +80,14 @@ if point_distance(x,y,target.x,target.y) < 96 && random(2)<1
 else if random(4)<1
 {
     //BOUNCER BULLETS circle
-    gunangle = point_direction(x,y,target.x,target.y)+random(14)-7+30
+    gunangle = point_direction(x,y,target.x,target.y)+random(14)-7
     
     snd_play(sndBouncerShotgun)
     wkick = 8
 	ang = gunangle - 80;
-	var r = irandom(min(5,loop))
-	var angStep = 160/(5+r);
-	repeat(5+r)
+	var r = 6 + irandom(min(5,loop))
+	var angStep = 160/(r);
+	repeat(r)
 	{
 		with instance_create(x,y,EnemyBouncerBullet)
 		{
@@ -124,7 +125,7 @@ else
 	snd_play(sndEraser);
 	wkick = 8
 	var s = 5.5;
-	repeat(10+irandom(min(loop,3)))
+	repeat(10+(min(loop,6)))
 	{
 		with instance_create(x,y,EnemyBullet5)
 		{
@@ -134,20 +135,12 @@ else
 		}
 		s+= 0.5;
 	}
+	alarm[1] += 3;
 }
 
 
 }
-else
-{
-//WALK
-direction = point_direction(x,y,target.x,target.y)+random(20)-10
-speed = 0.4
-walk = 8+random(4)
-gunangle = point_direction(x,y,target.x,target.y)
-}
-}
-else if ((random(10) < 2 && !instance_exists(IDPDSpawn)) || (random(20) < 1))
+else if ((random(10) < 2 && !instance_exists(IDPDSpawn)) || (random(20) < 2))
 {
 	snd_play_2d(sndLilHunterSummon)
 	with Player
@@ -174,15 +167,16 @@ with Leach
 }
 instance_change(InvertedLilHunterFly,false)
 snd_play_2d(sndLilHunterLaunch)
+scrDrop(20,0);
 
 }
 else
 {
-//HAS NO TARGET
 direction = point_direction(target.x,target.y,x,y)+random(20)-10
 speed = 0.4
 walk = 40+random(10)
 gunangle = point_direction(x,y,target.x,target.y)
+alarm[1] += 3;
 }
 
 if target.x < x

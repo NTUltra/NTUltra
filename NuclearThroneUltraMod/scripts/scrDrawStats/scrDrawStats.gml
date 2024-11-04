@@ -71,17 +71,29 @@ function scrDrawStats() {
 	var totSkills = 0;
 	repeat(maxSkill)
 	{
-		skillstats += string(UberCont.ctot_skill_taken[dir])+"#";
 		totSkills += UberCont.ctot_skill_taken[dir];
-		skillnames+=UberCont.skill_name[dir]+"#";
-		whiteEnter+="#";
+		if dir != 5
+		{
+			skillnames += UberCont.skill_name[dir]+"#";
+			skillstats += string(UberCont.ctot_skill_taken[dir])+"#";
+			whiteEnter+="#";
+		}
 		dir ++;
 	}
+	//And thronebutt
+	skillnames += UberCont.skill_name[5]+"#";
+	skillstats += string(UberCont.ctot_skill_taken[5])+"#";
+	skillnames += UberCont.race_name[Menu.race] + " " + UberCont.skill_name[5] + "#";
+	skillstats += string(UberCont.ctot_thronebutt_taken[Menu.race])+"#";
+	whiteEnter+="##";
 	//AND REGAL VISIONS
-	skillstats += string(UberCont.ctot_regal_taken)+"#";
-	totSkills += UberCont.ctot_regal_taken;
-	skillnames += UberCont.skill_name[dir]+"#";
-	whiteEnter+="#";
+	var totalRegal = scrGetAllRegals();
+	skillstats += string(totalRegal)+"#";
+	totSkills += totalRegal;
+	skillnames += UberCont.skill_name[dir] + "#";
+	skillnames += UberCont.race_name[Menu.race] + " " + UberCont.skill_name[dir]+"#";
+	skillstats += string(UberCont.ctot_regal_taken[Menu.race])+"#";
+	whiteEnter+="##";
 	if totSkills > 999
 	{
 		totSkills = string(totSkills);

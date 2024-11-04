@@ -15,16 +15,18 @@ if instance_exists(BigMachine)
 	if BigMachine.x < x
 		image_xscale = -1;
 }
-maxSpeed = 2;
+maxSpeed = 2.5;
 maxAmmo = 5;
-fireRate = 5;
-laserDelay = 75;
+fireRate = 4;
+laserDelay = 70;
 loops = GetPlayerLoops();
-maxSpeed += min(2,loops*0.25);
+maxSpeed += min(2.5,loops*0.25);
 if loops > 0
 {
 	maxAmmo = 10 + min(10,loops);
 	fireRate = 2;
-	laserDelay = 60 - min(20,loops*2);
+	laserDelay = 55 - min(30,loops*5);
+	if loops > 1
+		fireRate = 1;
 }
 	

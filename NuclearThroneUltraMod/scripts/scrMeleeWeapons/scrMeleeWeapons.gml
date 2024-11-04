@@ -9,7 +9,7 @@ function scrMeleeWeapons(wep) {
 		|| wep == 674 || wep == 67 || wep == 253 || wep == 254 || wep == 255 || wep == 256 || wep == 479 || wep == 480
 		|| wep == 81 || wep == 605 || wep == 719 || wep == 752 || wep == 809 || wep == 812 || wep == 821 || wep == 825
 		|| wep == 822 || wep == 272 || wep == 275 || wep == 484 || wep == 714
-		) && (string_copy(wep_name[wep],0,8) != "INFINITY" || wep == 526))
+		))
 		{
 			return true;
 		}

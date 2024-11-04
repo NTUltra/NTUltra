@@ -1,8 +1,8 @@
 raddrop = 85
-maxhealth = 320//300
+maxhealth = 550//300
 loops = GetPlayerLoops()
 if loops > 0
-	maxhealth = 430;
+	maxhealth = 700;
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 meleedamage = 0
@@ -82,6 +82,7 @@ missileType = ScrapBossMissile;
 missileAmount = 2;
 fireRate = 6;
 turnSpeed = 4;
+projectileSpeed = 2;
 if loops > 0
 {
 	actTime = 9;
@@ -89,6 +90,7 @@ if loops > 0
 }
 if loops > 1
 {
+	projectileSpeed += 1;
 	fireRate = 5;
 	turnSpeed = 6;
 	maxSpinSpeed += 0.2;

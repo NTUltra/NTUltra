@@ -36,34 +36,6 @@ if currentArea == 125
 	}
 	with instance_nearest((instance_furthest(px,py,Floor).x*2+px)/4+random(128)-64+32,(instance_furthest(px,py,Floor).y*2+py)/4+random(128)-64+32,Floor)
 			instance_create(x+16,y+16,MushroomLandEntrance)
-	if loops > 0
-	{
-		var lowestFloorY = -9999;
-		var lowestFloor = noone;
-		with Floor {
-			if object_index != FloorExplo &&  y > lowestFloorY
-			{
-				lowestFloorY = y;
-				lowestFloor = id;
-			}
-		}
-		with lowestFloor
-		{
-			instance_create(x,y + 32,Floor);
-			instance_create(x,y + 64,Floor);
-			instance_create(x,y + 96,Floor);
-			instance_create(x,y + 128,Floor);
-			instance_create(x,y + 160,Floor);
-			instance_create(x + 32,y + 96,Floor);
-			instance_create(x + 32,y + 128,Floor);
-			instance_create(x + 32,y + 160,Floor);
-			instance_create(x - 32,y + 96,Floor);
-			instance_create(x - 32,y + 128,Floor);
-			instance_create(x - 32,y + 160,Floor);
-			instance_create(x,y + 128,Blasphemia);
-			instance_create(x,y + 128,NOWALLSHEREPLEASE);
-		}
-	}
 } else if currentArea == 107
 {
 	UberCont.hadBossIntro = false;

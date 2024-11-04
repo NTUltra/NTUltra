@@ -46,6 +46,7 @@ vanDelay = 200;
 vanDelayRandom = 60;
 verticalVans = false;
 spawnedFriendlyPopo = false;
+playerOutOfPlace = false;
 ///@description deside how manny vans
 if instance_exists(Player)
 {

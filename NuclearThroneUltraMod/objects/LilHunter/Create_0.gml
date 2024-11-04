@@ -1,5 +1,5 @@
 raddrop = 20
-maxhealth = 155
+maxhealth = 200
 scrBossHealthBuff();
 
 meleedamage = 0
@@ -8,14 +8,16 @@ mySize = 1
 event_inherited()
 team = 3;
 loop=false;
-
+reachedHalfHealth = false;
+actTime = 14;
 if instance_exists(Player){
 
 if Player.loops>0
 loop=true;
 
 }
-
+if loop
+	actTime -= 2;
 spr_idle = sprLilHunter
 spr_walk = sprLilHunterWalk
 spr_hurt = sprLilHunterHurt
@@ -52,5 +54,5 @@ shadowdraw=false;
 shadowdrawx=x;
 shadowdrawy=y;
 
-scrAddDrops(1);
+scrAddDrops(3);
 canDodge = false;

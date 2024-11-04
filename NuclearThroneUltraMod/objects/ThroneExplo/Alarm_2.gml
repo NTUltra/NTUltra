@@ -15,19 +15,13 @@ with instance_create(x+random(128-(rr*0.25))-64-(rr*0.125),y+random(128-(rr*0.25
 	motion_add(dir,spd);
 
 if alarm[0] < 90
-if random(2) < 1
-{
 	with instance_create(x+random(128-(rr*0.25))-64-(rr*0.125),y+random(128-(rr*0.25))-64-(rr*0.125),explo)
 		motion_add(dir,spd);
-}
 if alarm[0] < 70
 {
-	if random(2) < 1
-	{
 		with instance_create(x+random(160-(rr*0.25))-80-(rr*0.125),y+random(200-(rr*0.25))-100-(rr*0.125),explo)
 			motion_add(dir,spd);
-	}
 		with instance_create(x+random(160-(rr*0.25))-80-(rr*0.125),y+random(200-(rr*0.25))-100-(rr*0.125),explo)
 			motion_add(dir,spd);
 }
-alarm[2] = 1;
+alarm[2] = 1 + irandom(2);

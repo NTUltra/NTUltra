@@ -6,12 +6,14 @@ if instance_exists(enemy)
 {
 //if ee//eagle eyes
 //{
-if collision_line(x,y,instance_nearest(x,y,enemy).x,instance_nearest(x,y,enemy).y,Wall,0,0) < 0 && ( alarm[0]<1 || ee || bm )
+var n = instance_nearest(x,y,enemy);
+
+if n != noone && instance_exists(n) && collision_line(x,y,n.x,n.y,Wall,0,0) < 0 && ( alarm[0]<1 || ee || bm )
 	target=instance_nearest(x,y,enemy);
 else
 {
-target=0
-if instance_exists(Wall)
+	target=0
+	if instance_exists(Wall)
 	{
 		var WALL;
 		WALL=instance_nearest(x,y,Wall);

@@ -1203,7 +1203,7 @@ function scrWeapons() {
 	wep_name[107] = "SHORTGUN"
 	wep_type[107] = 2
 	wep_auto[107] = 0
-	wep_load[107] = 14
+	wep_load[107] = 13
 	wep_cost[107] = 2
 	wep_sprt[107] = sprShortgun
 	wep_area[107] = 0
@@ -3156,7 +3156,7 @@ function scrWeapons() {
 	wep_name[281] = "GOLDEN SHORTGUN"
 	wep_type[281] = 2
 	wep_auto[281] = 0
-	wep_load[281] = 13
+	wep_load[281] = 12
 	wep_cost[281] = 2
 	wep_sprt[281] = sprGoldenShortgun
 	wep_area[281] = 17
@@ -4464,7 +4464,7 @@ function scrWeapons() {
 	wep_swap[395] = sndSwapEnergy
 	wep_rad[395] = 0;
 	
-	wep_name[396] = "DISCO GUN"//fIRES A DISCO	BALL that emites lightning and THAT EXPLOSED INTO A LASER SHOW
+	wep_name[396] = "DISCO GUN"
 	wep_type[396] = 5
 	wep_auto[396] = 0
 	wep_load[396] = 180
@@ -4487,7 +4487,7 @@ function scrWeapons() {
 	wep_swap[397] = sndSwapBow
 	wep_rad[397] = 0;
 	
-	wep_name[398] = "LIGHTNING LASER"//Tiny balls that explode into lightning on impact move fast fire fast
+	wep_name[398] = "LIGHTNING LASER"
 	wep_type[398] = 5
 	wep_auto[398] = 1
 	wep_load[398] = 14
@@ -7785,7 +7785,7 @@ function scrWeapons() {
 	wep_name[695] = "FROST SHOTGUN"
 	wep_type[695] = 2
 	wep_auto[695] = 2
-	wep_load[695] = 26
+	wep_load[695] = 25
 	wep_cost[695] = 2
 	wep_sprt[695] = sprFrostShotgun
 	wep_area[695] = 6
@@ -9132,7 +9132,7 @@ function scrWeapons() {
 	wep_rad[814] = 0;
 	
 	wep_name[815] = "MISSILE RAIN"
-	wep_type[815] = 5
+	wep_type[815] = 4
 	wep_auto[815] = 2
 	wep_load[815] = 31
 	wep_cost[815] = 5

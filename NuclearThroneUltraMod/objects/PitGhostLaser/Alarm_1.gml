@@ -56,7 +56,7 @@ if target != noone {
 	        else if hspeed < 0
 				right = -1
 	    }
-		else if (dis > 48 && (dis < 176 || dis > 400)) && (instance_number(enemy) < 5 || random(10) < 1)
+		else if (dis > 48 && (dis < 176 || dis > 400)) && (instance_number(enemy) < 10 || random(10) < 1)
 		{
 			direction = point_direction(x,y,target.x, target.y) + random_range(30,-30);
 			if random(2) < 1
@@ -64,6 +64,11 @@ if target != noone {
 				walk = actTime;
 				mp_potential_step(target.x,target.y,maxSpeed,false);
 			}
+		}
+		else if instance_exists(ThePit) && instance_number(enemy) < 30
+		{
+			motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
+			walk = actTime;
 		}
 	}
 }

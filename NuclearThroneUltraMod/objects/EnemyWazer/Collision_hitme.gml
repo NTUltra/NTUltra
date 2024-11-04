@@ -5,6 +5,12 @@ if other.team != team and other.my_health > 0 && !ending
 	{
 		if sprite_index != spr_hurt
 		{
+			if object_index == Player
+			{
+				if alarm[3] > 0 || other.alarm[3] > 0 || hurtTime > 0//When immune dont deal damage and dont trigger blast armour
+					exit;
+				hitBy = sprEnemyLaserRepresent;
+			}
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 			DealDamage(other.dmg)
 			sprite_index = spr_hurt

@@ -10,7 +10,7 @@ scrTarget()
 if target != noone
 	motion_add(point_direction(x,y,target.x,target.y)+turn*80,0.3)
 
-
+var ps = projectileSpeed;
 if loops>0
 {
 	var angStep = 360/4;
@@ -19,7 +19,7 @@ if loops>0
 		if choose(true,true,false)
 			with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1)
 			{
-				motion_add(other.gunangle,2+random(0.5))
+				motion_add(other.gunangle,ps+random(0.5))
 				image_angle = direction
 				team = other.team
 			}
@@ -33,7 +33,7 @@ if loops>0
 			if choose(true,true,false)
 				with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1)
 				{
-					motion_add(other.gunangle,3.1+random(0.5))
+					motion_add(other.gunangle,ps + 1.1+random(0.5))
 					image_angle = direction
 					team = other.team
 				}
@@ -49,7 +49,7 @@ if loops>0
 			if choose(true,true,false)
 			with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1Square)
 			{
-				motion_add(other.gunangle,3+random(1))
+				motion_add(other.gunangle,ps + 1+random(1))
 				image_angle = direction
 				team = other.team
 			}
@@ -65,7 +65,7 @@ else
 	{
 		with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1)
 		{
-			motion_add(other.gunangle,2)
+			motion_add(other.gunangle,ps)
 			image_angle = direction
 			team = other.team
 		}

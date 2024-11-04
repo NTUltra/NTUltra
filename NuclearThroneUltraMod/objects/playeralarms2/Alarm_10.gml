@@ -1,5 +1,7 @@
 /// @description Spawn flames on projectiles
 var fireSpawned = 0;
+var maxFire = 30;
+alarm[10] = maxFire;
 with Lightning
 {
 	if team == 2 && wepFire != -1
@@ -13,7 +15,6 @@ with Lightning
 					with instance_create(x,y,Flame)
 					{
 						wepFire = -1;
-						dmg --;
 						image_xscale -= 0.2;
 						image_yscale -= 0.2;
 						image_speed += 0.35;
@@ -22,6 +23,9 @@ with Lightning
 						speed = other.speed * 0.5;
 						team = other.team
 					}
+					fireSpawned += 1;
+					if fireSpawned > maxFire
+						exit;
 				}
 			}
 		}
@@ -39,7 +43,6 @@ with Laser
 			with instance_create(xx,yy,Flame)
 			{
 				wepFire = -1;
-				dmg --;
 				image_xscale -= 0.2;
 				image_yscale -= 0.2;
 				image_speed += 0.35;
@@ -50,6 +53,9 @@ with Laser
 			}
 			xx += lengthdir_x(24,image_angle+180);
 			yy += lengthdir_y(24,image_angle+180);
+			fireSpawned++;
+			if fireSpawned > maxFire
+				exit;
 		}
 	}
 }
@@ -60,7 +66,6 @@ with projectile
 		with instance_create(x,y,Flame)
 		{
 			wepFire = -1;
-			dmg --;
 			image_xscale -= 0.2;
 			image_yscale -= 0.2;
 			image_speed += 0.35;
@@ -70,7 +75,9 @@ with projectile
 			team = other.team
 		}
 		fireSpawned++;
+		if fireSpawned > maxFire
+			exit;
 	}
 }
 //LASER AND LIGHTNING
-alarm[10] = clamp(fireSpawned,1,15);
+alarm[10] = clamp(fireSpawned,4,maxFire);

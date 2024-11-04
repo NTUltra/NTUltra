@@ -3,9 +3,10 @@ alarm[0] = 10;
 var isInCombat = false;
 if enemyHealthWasChanged || playerHealthWasChanged
 	with Player {
+		var n = noone;
 		if !outOfCombat
 		{
-			var n = instance_nearest(x,y,enemy)
+			n = instance_nearest(x,y,enemy)
 			if n != noone && n.team != 2 && n.object_index != IDPDVan && n.object_index != IDPDVanVertical /*&& point_distance(x,y,n.x,n.y) < 270 && (!instance_exists(Wall) || !collision_line(x,y,n.x,n.y,Wall,false,false))*/
 			{
 				isInCombat = true;
@@ -17,7 +18,6 @@ if enemyHealthWasChanged || playerHealthWasChanged
 			var canAdrenalineHeal = false;
 			if skill_got[45]
 			{
-				var n = instance_nearest(x,y,enemy);
 				if n != noone && n.team != 2 && point_distance(x,y,n.x,n.y) < 250
 				{
 					with other

@@ -11,13 +11,14 @@ draw_set_alpha(1);
 draw_set_blend_mode(bm_normal);
 var al = ds_list_size(sheep);
 for (var i = 0; i < al; i++) {
-	draw_sprite_ext(sheep[| i].spr,
-		wave*0.4,
-		l+sheep[| i].xx,
-		t+sheep[| i].yy,
-		sheep[| i].xscl+(sin(wave*0.4)*0.1),
-		sheep[| i].yscl+(sin(wave*0.4)*0.1),
-		sheep[| i].rot,
-		c_white,
-		sheep[| i].alpha);
+	if sprite_exists(sheep[| i].spr)
+		draw_sprite_ext(sheep[| i].spr,
+			wave*0.4,
+			l+sheep[| i].xx,
+			t+sheep[| i].yy,
+			sheep[| i].xscl+(sin(wave*0.4)*0.1),
+			sheep[| i].yscl+(sin(wave*0.4)*0.1),
+			sheep[| i].rot,
+			c_white,
+			sheep[| i].alpha);
 }

@@ -37,16 +37,23 @@ if !instance_exists(InvaderBossSpawnPortal) && instance_number(object_index) == 
 {
 	x = round(dir.x/32)*32-16
 	y = round(dir.y/32)*32-16
-repeat(7)
-{
-repeat(7)
-{
-	instance_create(x-64+dix*32,y-64+diy*32,Floor)
-		dix += 1
-}
-dix = 0
-diy += 1
-}
+	repeat(7)
+	{
+		repeat(7)
+		{
+			instance_create(x-64+dix*32,y-64+diy*32,Floor)
+				dix += 1
+		}
+		dix = 0
+		diy += 1
+	}
+	var sniper = Sniper;
+	if object_index == BecomeInvertedScrapBoss
+		sniper = InvertedSniper;
+	else if object_index == BecomeUltraBigDog
+		sniper = SmallUltraSniper;
+	instance_create(x-64+3*32,y-64+3*32,sniper)
+	instance_create(x-64,y-64+5*32,sniper)
 }
 friction = 100;
 with Wall
