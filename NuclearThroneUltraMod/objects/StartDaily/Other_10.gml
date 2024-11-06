@@ -1,5 +1,8 @@
 /// @description Return to menu
 instance_activate_all()
+UberCont.opt_gamemode = [UberCont.opt_default_gm];
+UberCont.isLeaderboardGamemode = false;
+UberCont.viewDailyGamemode = false;
 isPaused = 0
 //audio_stop_all();
 if instance_exists(Player)

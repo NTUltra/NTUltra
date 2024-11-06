@@ -9,7 +9,7 @@ isInverted = true;
 if instance_exists(Player)
 {
 	if Player.area == 140 && loops < 1
-		maxhealth -= 75;
+		maxhealth -= 76;
 	else if Player.area == 137
 	{
 		maxhealth += 100;

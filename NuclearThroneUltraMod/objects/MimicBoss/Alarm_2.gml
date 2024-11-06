@@ -3,9 +3,9 @@ BackCont.shake += 1;
 scrTarget()
 if target != noone && instance_exists(target)
 {
-	var ps = 4.8;
+	var ps = 4.6;
 	if point_distance(x,y,target.x,target.y) > 200
-		ps += 1;
+		ps += 0.8;
 	if ammo == 1
 	{
 		ps += 2;
@@ -23,7 +23,7 @@ if target != noone && instance_exists(target)
 		wkick = 3;
 		snd_play(sndEnemyFire);
 		with instance_create(x, y, EnemyBullet1) {
-		    motion_add(other.gunangle + random(18) - 9, ps + (other.maxAmmo - other.ammo))
+		    motion_add(other.gunangle + random(16) - 8, ps + (other.maxAmmo - other.ammo))
 		    image_angle = direction
 		    team = other.team
 		}

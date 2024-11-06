@@ -35,8 +35,7 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 	if alarm[11] < 60
 		alarm[11] += stunTime + 5;
 	if (alarm[1] > 3 && alarm[1] < (stunTime + 3) && alarm[11] < 20)
-			alarm[1] += stunTime;
-			
+		alarm[1] += stunTime;	
 		if mySize < 8
 		{
 			speed = 0;

@@ -6948,6 +6948,7 @@
     {"id":{"name":"sprGameSlot","path":"sprites/sprGameSlot/sprGameSlot.yy",},},
     {"id":{"name":"sprGammaGuts","path":"sprites/sprGammaGuts/sprGammaGuts.yy",},},
     {"id":{"name":"sprGammaGutsBlast","path":"sprites/sprGammaGutsBlast/sprGammaGutsBlast.yy",},},
+    {"id":{"name":"sprGammaGutsBlock","path":"sprites/sprGammaGutsBlock/sprGammaGutsBlock.yy",},},
     {"id":{"name":"sprGatlingBazooka","path":"sprites/sprGatlingBazooka/sprGatlingBazooka.yy",},},
     {"id":{"name":"sprGatlingFlameBazooka","path":"sprites/sprGatlingFlameBazooka/sprGatlingFlameBazooka.yy",},},
     {"id":{"name":"sprGatlingFlugger","path":"sprites/sprGatlingFlugger/sprGatlingFlugger.yy",},},

@@ -13,6 +13,6 @@ if other.team != team
 		motion_add(other.direction,4)
 		
 	}
-	BackCont.shake += 2
+	BackCont.shake += 1
 }
 

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 50
-maxhealth = 430
+maxhealth = 420
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 acc += 2;
@@ -14,7 +14,9 @@ spr_hurt = sprInvertedCloudBossHurt;
 spr_dead = sprInvertedCloudBossDead;
 spr_fire = sprInvertedCloudBossFire;
 spr_disappear = sprInvertedCloudBossDisappear;
-actTime -= 3;
+actTime -= 2;
+if loops > 0
+	actTime -= 1;
 squareOffset += 3;
 squareProjectileSpeed -= 0.1;
 squareProjectileSpeedOff -= 2;

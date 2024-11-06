@@ -16,6 +16,13 @@ if target != noone && instance_exists(target) {
         if ran < 3.6 {
 			gunangle = point_direction(x, y, target.x, target.y);
 			snd_play(sndScorpionFire);
+			repeat(4)
+			{
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(other.gunangle,3);	
+				}
+			}
 			alarm[2] = tellTime;
 			alarm[1] += tellTime;
 			sprite_index = spr_fire;

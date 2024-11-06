@@ -298,14 +298,11 @@ function scrDrawBloom() {
 		}
 		if skill_got[8]//gamma guts
 		{
-			if rollIframe > 0
+			if roll != 0
 			{
-				draw_sprite_ext(sprGammaGuts,wave,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba);
+				draw_sprite_ext(sprGammaGuts,wave,x - vx,y - vy,2,2,image_angle,c_white,ba + 0.04);
 			}
-			else
-			{
-				draw_sprite_ext(sprGammaGuts,wave,x - vx,y - vy,1.1,1.1,image_angle,c_white,ba);
-			}
+			draw_sprite_ext(sprGammaGuts,wave,x - vx,y - vy,1.1,1.1,image_angle,c_white,ba);
 			with CrystalShield
 			{
 				draw_sprite_ext(sprGammaGuts,other.wave,x - vx,y - vy,2.3,2.6,image_angle,c_white,ba+0.02)

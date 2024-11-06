@@ -12,7 +12,7 @@ if explosionSize == 3
 			dmg = 5
 		}
 		direction = other.direction + 180;
-		speed = 0.5;
+		speed = 0.75;
 		if instance_exists(Player)
 		{
 			direction = point_direction(Player.x,Player.y,x,y);	
@@ -31,7 +31,7 @@ else if explosionSize == 2
 			dmg = 4
 		}
 		direction = other.direction + 180;
-		speed = 0.5;
+		speed = 0.75;
 		if instance_exists(Player)
 		{
 			direction = point_direction(Player.x,Player.y,x,y);	
@@ -50,7 +50,7 @@ else
 			dmg = 3
 		}
 		direction = other.direction + 180;
-		speed = 0.5;
+		speed = 0.75;
 		if instance_exists(Player)
 		{
 			direction = point_direction(Player.x,Player.y,x,y);	

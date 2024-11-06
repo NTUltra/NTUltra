@@ -6601,6 +6601,7 @@
     {"name":"sprGameSlot","order":5,"path":"sprites/sprGameSlot/sprGameSlot.yy",},
     {"name":"sprGammaGuts","order":12,"path":"sprites/sprGammaGuts/sprGammaGuts.yy",},
     {"name":"sprGammaGutsBlast","order":22,"path":"sprites/sprGammaGutsBlast/sprGammaGutsBlast.yy",},
+    {"name":"sprGammaGutsBlock","order":45,"path":"sprites/sprGammaGutsBlock/sprGammaGutsBlock.yy",},
     {"name":"sprGatlingBazooka","order":6,"path":"sprites/sprGatlingBazooka/sprGatlingBazooka.yy",},
     {"name":"sprGatlingFlameBazooka","order":709,"path":"sprites/sprGatlingFlameBazooka/sprGatlingFlameBazooka.yy",},
     {"name":"sprGatlingFlugger","order":328,"path":"sprites/sprGatlingFlugger/sprGatlingFlugger.yy",},

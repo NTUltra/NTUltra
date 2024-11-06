@@ -77,6 +77,7 @@ if target != noone {
 		{
 			motion_add(random(360),acc * 2);
 			walk = alarm[1];
+			scrDrop(10,0);
 		}
         if !justAroundWall && dis > 32 || loops > 4{
 			instance_create(x,y,Notice);

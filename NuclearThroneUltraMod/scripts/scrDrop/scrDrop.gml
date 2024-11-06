@@ -3,10 +3,15 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	if UberCont.dropLimit > 400
 		return noone;
 	var isHard = scrIsHardMode();
+	var nsb = 0;
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
 	{
 		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.1));
 		itemdrop *= reductions;
+	}
+	else
+	{
+		nsb = 1;	
 	}
 	if weapondrop > 0// && weapondrop < 100
 	{
@@ -310,7 +315,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
-		if (!instance_exists(HPPickup) && instance_exists(Player) && Player.skill_got[41] && random(100) < max(2,(5 - (Player.armour * 0.5))) ) {
+		if (!instance_exists(HPPickup) && instance_exists(Player) && Player.skill_got[41] && random(100) < max(2,(5 - (Player.armour * 0.5))) + nsb ) {
 			pickup = instance_create(x,y,HPPickup)
 			with WantHealth
 				instance_destroy();

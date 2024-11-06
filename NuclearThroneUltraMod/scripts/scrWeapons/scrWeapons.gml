@@ -9682,7 +9682,7 @@ function scrWeapons() {
 	wep_load[863] = 16
 	wep_cost[863] = 1
 	wep_sprt[863] = sprIcicleHandGun
-	wep_area[863] = 3
+	wep_area[863] = 4
 	wep_text[863] = ""
 	wep_swap[863] = sndSwapFrost
 	wep_rad[863] = 0;

@@ -2917,10 +2917,17 @@ if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 
 }
 if skill_got[8] {
 	var gutsRange = ds_list_create();
-	var al = collision_circle_list(x,y,14 + (ultra_got[58] * 2),enemy,false,false,gutsRange,false);
-	var gutsDmg = 1;
+	var gammaRange = 18 + (ultra_got[58] * 4)
+	var gutsDmg = 1.5;
 	if is60fps
-		gutsDmg = 0.5;
+		gutsDmg = 0.75;
+	if roll != 0
+	{
+		gammaRange += 4;
+		gutsDmg *= 3;//2.5 no longer lets you tackle scorpions...
+	}
+	var al = collision_circle_list(x,y,gammaRange,enemy,false,false,gutsRange,false);
+	
 	if al > 0
 		snd_play(sndGammaGutsSmall,0,true);
 	for (var i = 0; i < al; i ++)
@@ -2929,6 +2936,10 @@ if skill_got[8] {
 			if team != other.team
 			{
 				DealDamage(gutsDmg,true,true,false);
+				if !sprite_index == spr_hurt
+				{
+					snd_play(snd_hurt,hurt_pitch_variation,true);	
+				}
 				sprite_index = spr_hurt
 				image_index = 0
 			

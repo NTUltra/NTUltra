@@ -1,5 +1,5 @@
 ///@description AI
-alarm[1] = actTime + random(actTime)
+alarm[1] = actTime + random(actTime - 1)
 if goToTarget
 	exit;
 scrTarget()
@@ -16,7 +16,7 @@ if target != noone {
 	}
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if !justAroundWall && dis > max(0,32 - loops) && random(2) < 1 || loops > 4{
-			alarm[2] = 12;
+			alarm[2] = 13;
 			alarm[1] += 12 + actTime + 10;
 			if loops < 1
 				justAroundWall = true;

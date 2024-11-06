@@ -107,7 +107,7 @@ function scrGameModes() {
 	gamemode_have[14] = 0;
 	gamemode_tip[14] = "YOU GOT THIS PARTNER";
 	gamemode_description[14] = "NO WEAPONS! JUST FISH'S PARTNER";
-	gamemode_nocombo[14] = [1,46,7,11,13,14,26,27,31,35,37,8,48];
+	gamemode_nocombo[14] = [1,46,7,11,13,26,27,31,35,37,8,48];
 
 	gamemode[15] = "NO LEVEL UP";//
 	gamemode_unlock[15] = "GET TO THE SCRAPYARD AT LEVEL 1";
