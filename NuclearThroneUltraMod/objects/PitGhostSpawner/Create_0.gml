@@ -3,7 +3,6 @@ maxhealth = 23
 mySize = 1
 event_inherited()
 team = 7;
-canFly = true;
 meleedamage = 0
 spr_idle = sprPitGhostSpawner;
 spr_walk = sprPitGhostSpawnerWalk;

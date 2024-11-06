@@ -45,7 +45,7 @@ projectileSpeed = 3;
 projectileSpeedAdd = -0.2;
 gunInBetween = 10;
 normalGunAngle = gunangle;
-crazyDelay = 10;
+crazyDelay = 14;
 crazyStep = 30;
 alarm[8] = 30;
 crazyAmmoReverseMax = 20;
@@ -60,7 +60,7 @@ idpdSpawnCooldown = 4;
 if loops > 2
 {
 	crazyStep = 28;
-	crazyDelay -= 1;
+	crazyDelay -= 4;
 	gunDelay -= 15;
 	actTime = 18;
 	crazyProjectileSpeed += 0.1;
@@ -68,7 +68,7 @@ if loops > 2
 }
 if loops > 3
 {
-	crazyDelay -= 1;
+	crazyDelay -= 2;
 	gunDelay -= 15;
 	gunInBetween -= 1;
 	projectileSpeed += 0.4;

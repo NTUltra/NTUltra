@@ -47,8 +47,8 @@ function scrRaces() {
 	race_acti[2] = "<p>SHIELD<p>"
 	race_butt[2] = "LONGER <p>SHIELD<p>"
 	race_butt_detail[2] = "75% LONGER <p>SHIELD<p>"
-	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>2<w> <r>HEALTH<r>";
-	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TURN INTO A <p>TORPEDO<p>#COSTS <w>2<w> <r>HEALTH<r>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
+	race_vision[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TAKE <w>2<w> <r>DAMAGE<r>#AND TURN INTO A <p>TORPEDO<p>";
+	race_vision_detail[2] = "PRESS <w>[E]<w> WHILE <p>SHIELDING<p>#TO TAKE <w>2<w> <r>DAMAGE<r>#AND TURN INTO A <p>TORPEDO<p>#YOU ARE <aq>IMMUNE<aq> WHILE IN <p>TORPEDO<p> FORM";
 	if isUnique
 	{
 		race_vision[2] = string_replace_all(race_vision[2],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -117,7 +117,7 @@ function scrRaces() {
 	race_acti[5] = "<w>SNARE<w> ENEMIES"
 	race_butt[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 35% <r>HP<r>##<w>SNARE<w> IS SLIGHTLY BIGGER"
 	race_butt_detail[5] = "<w>SNARE<w> FINISHES ENEMIES#UNDER 35% <r>HP<r>#(THRESHOLD CAN BE INCREASED WITH DAMAGE BOOSTS)##SNARE IS 25% BIGGER";
-	race_vision[5] = "CAST A VINE#BETWEEN YOU AND YOUR <g>SNARE<g>#<w>TRAPPED<w> <r>ENEMIES<r> DEAL <w>NO<w> CONTACT DAMAGE";
+	race_vision[5] = "CAST A <g>VINE<g>#BETWEEN YOU AND YOUR <g>SNARE<g>#<w>TRAPPED<w> <r>ENEMIES<r> DEAL <w>NO<w> CONTACT DAMAGE";
 	race_vision_detail[5] = race_vision[5];
 	race_lock[5] = "KILL 100 ENEMIES TO UNLOCK"
 	race_have[5] = 0
@@ -611,7 +611,7 @@ function scrRaces() {
 	race_name[25] = "DOCTOR"//MUTATION SMITH
 	race_pass[25] = "ALL <g>MUTATIONS<g> ARE UPGRADED#GETS LESS <g>RADIATION<g> FROM ENEMIES#START AT <g>LEVEL<g> <w>2<w>"//SLIGHTLY BETTER MUTATIONS# LEVELS SLOWER
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
-	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES NEARBY#AND STEALS SOME OF THEIR <g>RADS<g>"
+	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES NEARBY#AND STEALS SOME OF THEIR <g>RADS<g>##<w>ACTIVE<w> CAN NO LONGER <r>KILL<r> YOU"
 	race_butt_detail[25] = race_butt[25];
 	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>";
 	race_vision_detail[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#INSTANTLY <w>COLLECT<w> ALL RADS#ALL <w>PICKUPS<w> AND <g>RADS<g>#SPREAD THE <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>#ENABLE <g>MUTATIONS<g> AT THE END OF THE <w>AREA<w>";
@@ -663,7 +663,7 @@ function scrRaces() {
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
 	race_vision[27] = "PRESS <w>[E]<w> TO:#CAST A <aq>SHIELD<aq>#AROUND YOUR <w>HAND<w>";
-	race_vision_detail[27] = "PRESS <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>#THE AREA DEALS INITIAL DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
+	race_vision_detail[27] = "PRESS <w>[E]<w> TO:#CREATE A TEMPORARY AREA OF <aq>PROTECTION<aq>#AROUND YOUR <w>HAND<w>#THE AREA DEALS DAMAGE#AND BLOCKS <pi>SQUARES<pi>";
 	if isUnique
 	{
 		race_vision[27] = string_replace_all(race_vision[27],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");

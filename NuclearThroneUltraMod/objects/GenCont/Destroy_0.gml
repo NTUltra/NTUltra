@@ -7,6 +7,7 @@ with PlayerAlarms
 	event_user(0);	
 }
 */
+
 if scrIsGamemode(8)
 {
 	with Floor

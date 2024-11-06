@@ -1,9 +1,10 @@
 raddrop = 30
-maxhealth = 600
+maxhealth = 650
 mySize = 3
 loops = GetPlayerLoops();
 if loops > 0
 	maxhealth = 700;
+scrBossHealthBuff();
 event_inherited()
 meleedamage = 3
 canFly = true;

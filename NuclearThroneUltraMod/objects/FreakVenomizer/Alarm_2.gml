@@ -17,6 +17,7 @@ if hit[0] != noone
 		alarm[2] = 0;
 		alarm[3] = 0;
 		isHost = false;
+		myPartner = other.id;
 	}
 }
 else

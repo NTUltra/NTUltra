@@ -12,7 +12,8 @@ spr_hurt = sprScrapBossMissileHurt
 spr_dead = sprScrapBossMissileDead
 
 alarm[2] = 2;
-scrTarget()
+alarm[4] = 10;
+alarm[5] = 120;
 explodeOnHitTime = 60;
 if instance_exists(Player)
 {

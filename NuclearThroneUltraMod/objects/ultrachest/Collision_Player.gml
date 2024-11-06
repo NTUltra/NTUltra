@@ -5,12 +5,18 @@ if !instance_exists(GenCont)
 		isOnInteractable = true;
 	var cost = 372//45% on level 10//310;//50% on level 10
 	if Player.skill_got[23]//Open mind
-		cost -= 62;//248//40%
-	if Player.race == 20
-		cost -= 62;
+		cost -= 75;//248//40%
+	//if Player.skill_got[5] && Player.race == 20
+	//	cost -= 70;
 	var mr = 620;
 	with Player
 		mr = GetPlayerMaxRad();
+	if cost > mr
+	{
+		name = "YOU NEED TO BE A HIGHER LEVEL";
+		explainTimer = 0;
+		exit;
+	}
 	name = string((cost/mr)*100)+actionName;
 	if KeyCont.key_pick[Player.p] = 1 && Player.maxhealth > 0
 	{

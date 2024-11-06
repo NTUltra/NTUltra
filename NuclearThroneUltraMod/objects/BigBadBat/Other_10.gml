@@ -9,6 +9,8 @@ audio_play_sound_on(emitter,sndEraser,false,4);
 with instance_create(xx,yy,EnemyBullet1Square)
 {
 	motion_add(dir,other.pSpeedJawbreaker)
+	if other.venomous
+		isVenomized = true;
 	image_angle = direction
 	team = other.team
 }
@@ -17,6 +19,8 @@ yy = y + lengthdir_y(odis,dir-90);
 with instance_create(xx,yy,EnemyBullet1Square)
 {
 	motion_add(dir,other.pSpeedJawbreaker)
+	if other.venomous
+		isVenomized = true;
 	image_angle = direction
 	team = other.team
 }

@@ -17,7 +17,13 @@ if gammaGuts
 			else
 			{
 				snd_play(sndGammaGutsKill,0,true);
+				with Player
+				{
+					alarm[3] = max(3,alarm[3]);	
+				}
 				instance_create(x,y,GammaGutsBlast);
+				instance_create(x,y,GammaGutsProjectileDestroyer);
+				instance_create(other.x,other.y,GammaGutsProjectileDestroyer);
 			}
 		}
 	}

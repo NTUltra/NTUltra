@@ -3,9 +3,9 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 70
-maxhealth = 420
+maxhealth = 500
 if loops > 0
-	maxhealth = 450
+	maxhealth = 600
 scrBossHealthBuff();
 rotationSpeed *= 1.05;
 EnemyHealthAdjustments();

@@ -1656,7 +1656,7 @@ function scrWeapons() {
 	wep_name[148] = "HAND SHOTGUN"
 	wep_type[148] = 2
 	wep_auto[148] = 0
-	wep_load[148] = 28
+	wep_load[148] = 25
 	wep_cost[148] = 2
 	wep_sprt[148] = sprPistole
 	wep_area[148] = -1
@@ -1935,7 +1935,7 @@ function scrWeapons() {
 	wep_name[173] = "DIRECTOR RIFLE"
 	wep_type[173] = 1
 	wep_auto[173] = 2
-	wep_load[173] = 16
+	wep_load[173] = 15
 	wep_cost[173] = 5
 	wep_sprt[173] = sprDirectorRifle
 	wep_area[173] = 3
@@ -4032,7 +4032,7 @@ function scrWeapons() {
 	wep_name[359] = "LASER BOMB LAUNCHER"
 	wep_type[359] = 4
 	wep_auto[359] = 0
-	wep_load[359] = 26
+	wep_load[359] = 27
 	wep_cost[359] = 3
 	wep_sprt[359] = sprLaserBombLauncher
 	wep_area[359] = 11
@@ -5994,7 +5994,7 @@ function scrWeapons() {
 	wep_type[533] = 2
 	wep_auto[533] = 0
 	wep_load[533] = 38
-	wep_cost[533] = 10
+	wep_cost[533] = 9.5
 	wep_sprt[533] = sprSuperHeavySlugger
 	wep_area[533] = 30
 	wep_text[533] = "lets go dude"
@@ -9109,14 +9109,14 @@ function scrWeapons() {
 	wep_popup[812] = "DESTROYS SQUARES!";
 	
 	wep_name[813] = "BIG DOG LAUNCHER"
-	wep_type[813] = 5
+	wep_type[813] = 4
 	wep_auto[813] = 0
 	wep_load[813] = 600
 	wep_cost[813] = 50
 	wep_sprt[813] = sprBigDogLauncher
 	wep_area[813] = -2
 	wep_text[813] = "this is why you dont let your community design weapons"
-	wep_swap[813] = sndSwapShotgun
+	wep_swap[813] = sndBigDogTaunt
 	wep_rad[813] = 0;
 	wep_popup[813] = "NOT WORTH";
 	

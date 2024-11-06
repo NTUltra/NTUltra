@@ -4,6 +4,7 @@
 event_inherited();
 raddrop = 50
 maxhealth = 430
+scrBossHealthBuff();
 EnemyHealthAdjustments();
 acc += 2;
 maxSpeed += 1.5;

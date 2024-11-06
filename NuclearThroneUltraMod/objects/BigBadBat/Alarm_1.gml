@@ -11,7 +11,7 @@ if !reachHalfHealth && my_health < maxhealth
 {
 	reachHalfHealth = true;
 	pSpeedAccurate += 0.5;
-	actTime -= 2;
+	actTime = max(1,actTime - 3);
 }
 if instance_exists(Player) {
 	var ran = random(105);

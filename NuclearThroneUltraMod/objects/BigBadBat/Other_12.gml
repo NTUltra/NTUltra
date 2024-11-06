@@ -6,6 +6,8 @@ if instance_exists(Player)
 	audio_play_sound_on(emitter,sndSuperSlugger,false,4);
 	with instance_create(x,y,EnemyBullet1Square)
 	{
+		if other.venomous
+			isVenomized = true;
 		motion_add(dir,other.pSpeedAccurate)
 		image_angle = direction
 		team = other.team

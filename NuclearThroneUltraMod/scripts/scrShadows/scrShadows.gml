@@ -14,7 +14,7 @@ function scrShadows() {
 	draw_clear_alpha(c_black,0)
 	with Wall
 	{
-		if collision_point(x+8,y+24,Floor,false,false)
+		if gotShadow
 			draw_sprite_ext(outspr,outindex,x-vx,y+2+16-vy,1,-1,0,c_black,1)
 	}
 	with Bones

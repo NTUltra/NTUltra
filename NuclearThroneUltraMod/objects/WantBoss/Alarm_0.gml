@@ -197,12 +197,12 @@ if target != noone && instance_exists(target)
 		with WantBoss
 		{
 			if alarm[0] < 60
-				alarm[0]+=15*a;
+				alarm[0] += 15*a;
 			a++;
 		}
 		instance_destroy()
 	}
 }
 tries++;
-alarm[0] = 5
+alarm[0] = 15
 

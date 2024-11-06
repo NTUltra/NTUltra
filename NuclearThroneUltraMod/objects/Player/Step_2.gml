@@ -179,217 +179,226 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					angl += anglStep;
 					}
 				}
-			instance_create_depth(x,y,depth - 1,WepSwap);
-			if !isGold
-			{
-				onlyusemegold = false;	
-			}
-			if !targetPickup.pickedup
-				weaponspickedup+=1;
-
-			if scrCheckGold(wep_name[targetPickup.wep])
-			{
-				snd_play(sndGoldPickup);
-			}
-
-			//GUN GAME
-			if weaponspickedup>=50
-				scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
-
-			//favourable BUILD GAMMODE
-			if scrFavourableWeapons(targetPickup.wep)
-			scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
-
-			//SKINS
-			//if targetPickup.wep == 328 || targetPickup.wep == 633//BLACK SWORD
-			//scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
-
-			if race == 9 && (targetPickup.wep == 329 || targetPickup.wep == 634)//Dark sword
-				scrUnlockCSkin(9,"FOR PICKING UP THE DARK SWORD AS CHICKEN",0);
-			if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
-			{
-			toxicweaponsfound++;
-			if toxicweaponsfound>=2
-			scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
-			}
-
-			snd_play(sndWeaponPickup)
-			if bwep == 0
-			{
-				bcurse = curse
-				isPermanentB = isPermanent;
-				visitedPortalsB = visitedPortals;
-				hasBeenEatenB = hasBeenEaten;
-				if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
+				instance_create_depth(x,y,depth - 1,WepSwap);
+				if !isGold
 				{
-					maxhealth -= 4;
-					maxhealth = max(maxhealth,1);
+					onlyusemegold = false;	
 				}
-				bwep = wep
-				bwepmod1 = wepmod1;
-				bwepmod2 = wepmod2;
-				bwepmod3 = wepmod3;
-				bwepmod4 = wepmod4;
-			}
-			else if cwep == 0 && ultra_got[31]//robot ultra third wep
-			{
-				ccurse = curse
-				isPermanentC = isPermanent;
-				visitedPortalsC = visitedPortals;
-				hasBeenEatenC = hasBeenEaten;
-				cwep = wep
-				cwepmod1 = wepmod1;
-				cwepmod2 = wepmod2;
-				cwepmod3 = wepmod3;
-				cwepmod4 = wepmod4;
-			}
-			else if wep != 0
-			{
-				var tx = targetPickup.x;
-				var ty = targetPickup.y;
+				if !targetPickup.pickedup
+					weaponspickedup+=1;
+
+				if scrCheckGold(wep_name[targetPickup.wep])
+				{
+					snd_play(sndGoldPickup);
+				}
+
+				//GUN GAME
+				if weaponspickedup>=50
+					scrUnlockGameMode(11,"FOR PICKING UP 50 WEAPONS THIS RUN")
+
+				//favourable BUILD GAMMODE
+				if scrFavourableWeapons(targetPickup.wep)
+				scrUnlockGameMode(2,"FOR PICKING UP A FAVOURABLE WEAPON")
+
+				//SKINS
+				//if targetPickup.wep == 328 || targetPickup.wep == 633//BLACK SWORD
+				//scrUnlockBSkin(9,"FOR PICKING UP THE BLACK SWORD",0);
+
+				if race == 9 && (targetPickup.wep == 329 || targetPickup.wep == 634)//Dark sword
+					scrUnlockCSkin(9,"FOR PICKING UP THE DARK SWORD AS CHICKEN",0);
+				if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
+				{
+				toxicweaponsfound++;
+				if toxicweaponsfound>=2
+				scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
+				}
+
+				snd_play(sndWeaponPickup)
+				if bwep == 0
+				{
+					bcurse = curse
+					isPermanentB = isPermanent;
+					visitedPortalsB = visitedPortals;
+					hasBeenEatenB = hasBeenEaten;
+					if ultra_got[29] && altUltra && bwep == 0 && wep != 0//ROBOT EXCLUSIVE TASTE
+					{
+						maxhealth -= 4;
+						maxhealth = max(maxhealth,1);
+					}
+					bwep = wep
+					bwepmod1 = wepmod1;
+					bwepmod2 = wepmod2;
+					bwepmod3 = wepmod3;
+					bwepmod4 = wepmod4;
+				}
+				else if cwep == 0 && ultra_got[31]//robot ultra third wep
+				{
+					ccurse = curse
+					isPermanentC = isPermanent;
+					visitedPortalsC = visitedPortals;
+					hasBeenEatenC = hasBeenEaten;
+					cwep = wep
+					cwepmod1 = wepmod1;
+					cwepmod2 = wepmod2;
+					cwepmod3 = wepmod3;
+					cwepmod4 = wepmod4;
+				}
+				else if wep != 0
+				{
+					var tx = targetPickup.x;
+					var ty = targetPickup.y;
 		
-				if ultra_got[66] && altUltra
-				{
-					tx = x;
-					ty = y;
-					if alarm[3] < 1 && !instance_exists(ImmunityCooldown)
-						alarm[3] = max(alarm[3],8);
-					snd_hurt = sndDamageNegate;
-					scrGiveEuphoriaShield();
-					ammoReduction = 0.5;
-				}
-				with instance_create(tx,ty,WepPickup)
-				{
-					heavyHeartDelay = 0;
-					pickedup=true;
-					scrWeapons()
-					wep = other.wep;
-					name = wep_name[wep];
-					type = wep_type[wep];
-					curse = other.curse;
-					isPermanent = other.isPermanent;
-					visitedPortals = other.visitedPortals;
-					hasBeenEaten = other.hasBeenEaten;
-					wepmod1 = other.wepmod1;
-					wepmod2 = other.wepmod2;
-					wepmod3 = other.wepmod3;
-					wepmod4 = other.wepmod4;
-					//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
-					sprite_index = wep_sprt[wep]
-					ammo = 0
-					if isPermanent
-						persistent = true;
-				}
-			}
-			wep = targetPickup.wep
-			curse = targetPickup.curse
-			if ultra_got[72] && !altUltra && curse != 0
-			{
-				snd_play_2d(sndUncurse);
-				if scrIsCrown(14) {
-					snd_play(sndHealthPickup);
-					scrHeal(1,true);
-				}
-				curse = 0;
-			}
-			isPermanent = targetPickup.isPermanent;
-			visitedPortals = targetPickup.visitedPortals;
-			hasBeenEaten = targetPickup.hasBeenEaten;
-			newWeaponMod = targetPickup.newWeaponMod;
-			with NewWeaponModHUD
-			{
-				alarm[0] = 1;
-			}
-			wepmod1 = targetPickup.wepmod1
-			wepmod2 = targetPickup.wepmod2
-			wepmod3 = targetPickup.wepmod3
-			wepmod4 = targetPickup.wepmod4
-			if (!(ultra_got[21] && altUltra))
-			{
-				if reload > 0{
-					scrFlexibleElbowReload(wep);
-				}
-				can_shoot = 1
-				reload = min(reload,0)
-				queueshot = 0;
-				if skill_got[35]
-				{
-					var lowa = wep_load[wep]*-2;
-					if reload <= lowa*0.5 && queueshot < 1
+					if ultra_got[66] && altUltra
 					{
-						queueshot++;
-						scrPlayReloadSound(wep);
-						scrFlexibleElbowReload(wep);
-					} else if reload <= lowa && queueshot < 2
+						tx = x;
+						ty = y;
+						if alarm[3] < 1 && !instance_exists(ImmunityCooldown)
+							alarm[3] = max(alarm[3],8);
+						snd_hurt = sndDamageNegate;
+						scrGiveEuphoriaShield();
+						ammoReduction = 0.5;
+					}
+					with instance_create(tx,ty,WepPickup)
 					{
-						queueshot++;
-						scrPlayReloadSound(wep);
-						scrFlexibleElbowReload(wep);
+						heavyHeartDelay = 0;
+						pickedup=true;
+						scrWeapons()
+						wep = other.wep;
+						name = wep_name[wep];
+						type = wep_type[wep];
+						curse = other.curse;
+						isPermanent = other.isPermanent;
+						visitedPortals = other.visitedPortals;
+						hasBeenEaten = other.hasBeenEaten;
+						wepmod1 = other.wepmod1;
+						wepmod2 = other.wepmod2;
+						wepmod3 = other.wepmod3;
+						wepmod4 = other.wepmod4;
+						//alarm[0] = 0; Can't heavy heart this? Let's try it this out first it seems fun
+						sprite_index = wep_sprt[wep]
+						ammo = 0
+						if isPermanent
+							persistent = true;
 					}
 				}
-				if ultra_got[66] && altUltra
+				wep = targetPickup.wep
+				curse = targetPickup.curse
+				if ultra_got[72] && !altUltra && curse != 0
 				{
-					bcan_shoot = 1
-					breload = min(breload,0)
-					bqueueshot = 0;
+					snd_play_2d(sndUncurse);
+					if scrIsCrown(14) {
+						snd_play(sndHealthPickup);
+						scrHeal(1,true);
+					}
+					curse = 0;
+				}
+				isPermanent = targetPickup.isPermanent;
+				visitedPortals = targetPickup.visitedPortals;
+				hasBeenEaten = targetPickup.hasBeenEaten;
+				newWeaponMod = targetPickup.newWeaponMod;
+				with NewWeaponModHUD
+				{
+					alarm[0] = 1;
+				}
+				wepmod1 = targetPickup.wepmod1
+				wepmod2 = targetPickup.wepmod2
+				wepmod3 = targetPickup.wepmod3
+				wepmod4 = targetPickup.wepmod4
+				if (!(ultra_got[21] && altUltra))
+				{
+					if reload > 0{
+						scrFlexibleElbowReload(wep);
+					}
+					can_shoot = 1
+					reload = min(reload,0)
+					queueshot = 0;
 					if skill_got[35]
 					{
-						var lowb = wep_load[bwep]*-2;
-						if breload <= lowb*0.5 && bqueueshot < 1
+						var lowa = wep_load[wep]*-2;
+						if reload <= lowa*0.5 && queueshot < 1
 						{
-							bqueueshot++;
-							scrPlayReloadSound(bwep);
-							scrFlexibleElbowReload(bwep);
-						} else if breload <= lowb && bqueueshot < 2
+							queueshot++;
+							scrPlayReloadSound(wep);
+							scrFlexibleElbowReload(wep);
+						} else if reload <= lowa && queueshot < 2
 						{
-							bqueueshot++;
-							scrPlayReloadSound(bwep);
-							scrFlexibleElbowReload(bwep);
+							queueshot++;
+							scrPlayReloadSound(wep);
+							scrFlexibleElbowReload(wep);
+						}
+					}
+					if ultra_got[66] && altUltra
+					{
+						bcan_shoot = 1
+						breload = min(breload,0)
+						bqueueshot = 0;
+						if skill_got[35]
+						{
+							var lowb = wep_load[bwep]*-2;
+							if breload <= lowb*0.5 && bqueueshot < 1
+							{
+								bqueueshot++;
+								scrPlayReloadSound(bwep);
+								scrFlexibleElbowReload(bwep);
+							} else if breload <= lowb && bqueueshot < 2
+							{
+								bqueueshot++;
+								scrPlayReloadSound(bwep);
+								scrFlexibleElbowReload(bwep);
+							}
 						}
 					}
 				}
-			}
 
-			if wep == 298//golden oops gun
-			{
-				steam_shutdown();
-				game_end();
-			}
+				if wep == 298//golden oops gun
+				{
+					steam_shutdown();
+					game_end();
+				}
 
 
-			snd_play(wep_swap[wep])
-			if (curse)
-			{
-				snd_play(sndSwapCursed);
-			}
-			if (scrCheckGold(wep_name[targetPickup.wep]))
-			{
-				snd_play(sndSwapGold);	
-			}
-			if (!array_contains(previousPickedUpWep, wep))
-			{
-				dir = instance_create(x,y,PopupText)
-				dir.mytext = string(wep_name[wep])+"!"
-				if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
-					with instance_create(x,y,PopupText)
-					{
-						moveSpeed = 1;
-						alarm[1] = 60;
-						theColour = c_green;
-						mytext = other.wep_popup[other.wep];
+				snd_play(wep_swap[wep])
+				if (curse)
+				{
+					snd_play(sndSwapCursed);
+				}
+				if (scrCheckGold(wep_name[targetPickup.wep]))
+				{
+					snd_play(sndSwapGold);	
+				}
+				if (!array_contains(previousPickedUpWep, wep))
+				{
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = string(wep_name[wep])+"!"
+					if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
+						with instance_create(x,y,PopupText)
+						{
+							moveSpeed = 1;
+							alarm[1] = 60;
+							theColour = c_green;
+							mytext = other.wep_popup[other.wep];
+						}
 					}
 				}
+				previousPickedUpWep[pickupWepIndex] = wep;
+				pickupWepIndex += 1;
+				alarm[7] = 25;
+				//Done picking up
+				scrWeaponHold();
+				with targetPickup
+				{
+					instance_destroy(id,false)
+				}
+				targetPickup = noone;
 			}
-			previousPickedUpWep[pickupWepIndex] = wep;
-			pickupWepIndex += 1;
-			alarm[7] = 25;
-			//Done picking up
-			scrWeaponHold();
-			with targetPickup
+			else if curse != 0
 			{
-				instance_destroy(id,false)
-			}
-			targetPickup = noone;
+				BackCont.shake += 4;
+				with instance_create(x,y,PopupText)
+				{
+					mytext = "CAN ONLY SWAP CURSED WEAPONS#WITH OTHER CURSED WEAPONS"
+					theColour= c_purple;
+				}
 			}
 			if ( wep != 0 && bwep != 0 && cwep != 0 && scrMeleeWeapons(wep) && scrMeleeWeapons(bwep) && scrMeleeWeapons(cwep))
 			{
@@ -507,7 +516,7 @@ if skill_got[2] && tookHit && !exception
 	extrafeetalarm = 40;
 	extrafeetdodged = false;
 }
-if skill_got[38] && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
+if skill_got[38] && !ignoreMetabolism && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
 {
 	metabolism += 1;
 	var metabolismBreak = 3;
@@ -554,6 +563,7 @@ if skill_got[38] && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1
 	}
 	triggerMetabolism = false;
 }
+ignoreMetabolism = false;
 if (skill_got[46]) && (tookHit && !exception && alarm[3] < 1 && alarm[1] < 1)
 {
 	if peaceBarriers > 0
@@ -755,6 +765,18 @@ if (tookHit)
 			{
 				instance_destroy();	
 			}
+			/*
+			var n = instance_nearest(x,y,enemy)
+			if n != noone
+			{
+				snd_play_fire(sndBlobFireS);
+				with instance_create(x,y,UltraBlobBall)
+				{
+					motion_add(point_direction(x,y,n.x,n.y),14);
+					dmg = 100;
+					team = other.team
+				}
+			}*/
 			var healTaken = 0;
 			if prevhealth < maxhealth + defaultOverhealAddition
 			{
@@ -762,7 +784,7 @@ if (tookHit)
 				if race == 25//Doctor buff
 				{
 					healTaken += 1
-					alarm[3] = max(alarm[3],20);
+					alarm[3] = max(alarm[3],30);
 				}
 					/*
 				if (skill_got[9]) //Second stomache
@@ -814,7 +836,7 @@ if (tookHit)
 			}
 			Sleep(50);
 			scrGiveEuphoriaShield();
-			alarm[3] = max(alarm[3],14);
+			alarm[3] = max(alarm[3],20);
 			if skill_got[12]
 				alarm[3] += 2;
 		}

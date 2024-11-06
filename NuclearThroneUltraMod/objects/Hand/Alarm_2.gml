@@ -74,7 +74,7 @@ if target != noone && instance_exists(target)
 		}
 		else
 		{
-			if alarm[11] > 0
+			if alarm[11] > 0 || mySize > 4
 				other.target = noone;
 			else
 			{

@@ -46,17 +46,21 @@ if instance_exists(Player)
 			var yy = y + lengthdir_y(odis,dir+90);
 			with instance_create(xx,yy,EnemyBullet1Square)
 	        {
-	        motion_add(dir,other.pSpeedSpinny)
-	        image_angle = direction
-	        team = other.team
+				if other.venomous
+					isVenomized = true;
+		        motion_add(dir,other.pSpeedSpinny)
+		        image_angle = direction
+		        team = other.team
 	        }
 			xx = x + lengthdir_x(odis,dir-90);
 			yy = y + lengthdir_y(odis,dir-90);
 			with instance_create(xx,yy,EnemyBullet1Square)
 	        {
-	        motion_add(dir,other.pSpeedSpinny)
-	        image_angle = direction
-	        team = other.team
+				if other.venomous
+					isVenomized = true;
+		        motion_add(dir,other.pSpeedSpinny)
+		        image_angle = direction
+		        team = other.team
 	        }
 		}
 	}

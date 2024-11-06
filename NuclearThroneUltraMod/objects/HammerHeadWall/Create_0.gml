@@ -1,4 +1,5 @@
 /// @description Init Simple
+gotShadow = false;
 topspr=sprHammerHeadWallResource;
 outspr=mskPickupThroughWall;
 colour = c_white;

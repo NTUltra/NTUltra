@@ -36,7 +36,7 @@ with RadChest {
 	y = f.y+16;
 	scrForcePosition60fps();
 }*/
-mySize = 4
+mySize = 5
 event_inherited();
 meleedamage = 7
 

@@ -7,6 +7,7 @@ function scrLoadRun(selectedRunIndex){
 	{
 		UberCont.race = 1
 		UberCont.loadedRun = true;
+		instance_create(x,y,NoProtoChest);
 		if !instance_exists(GenCont)
 		    with instance_create(x,y,GenCont)
 		    {race = 1

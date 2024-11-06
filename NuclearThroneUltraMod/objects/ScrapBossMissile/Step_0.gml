@@ -6,10 +6,10 @@ if sprite_index != spr_hurt and target != noone
 
 if sprite_index == spr_hurt
 {
-	if alarm[1] < 1
-		alarm[1] = explodeOnHitTime;
+	if alarm[5] < 1
+		alarm[5] = explodeOnHitTime;
 }
-if alarm[1] < 20
+if alarm[5] < 20
 {
 	alarm[3] = blink;
 }

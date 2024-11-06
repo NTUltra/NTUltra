@@ -128,7 +128,7 @@ function scrSkills() {
 	skill_detail[6] = "20% CHANCE KILLS REGENERATE <y>AMMO<y>";
 	skill_tips[6] = "ammo everywhere"
 	skill_msnd[6] =  sndMutLuckyShot
-	skill_bons[6] = "+25% CHANCE#(TOTAL: 26%)";
+	skill_bons[6] = "26% INSTEAD";
 	
 	
 	skill_name[7] = "BLOODLUST"
@@ -143,36 +143,37 @@ function scrSkills() {
 	}
 	skill_tips[7] = "drink blood"
 	skill_msnd[7] =  sndMutBloodlust
-	skill_bons[7] = "+25% CHANCE#(TOTAL: 9.6%)";
+	skill_bons[7] = "9.6% INSTEAD";
 
 
 	skill_name[8] = "GAMMA GUTS"
 	if !UberCont.useSeed && random(800)<1
 		skill_name[8] = "SOCIAL DISTANCING"
 	skill_text[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#YOU TAKE LESS <w>ENEMY CONTACT DAMAGE<w>"
-	skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#ALLOWS <g>SERENE DREAMS<g> TO DEAL DAMAGE"
+	//skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#ALLOWS <g>SERENE DREAMS<g> TO DEAL DAMAGE"
+	skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#VERY BRIEFLY BECOME <aq>IMMUNE<aq>#WHEN YOU <w>KILL<w> USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#ALLOWS <g>SERENE DREAMS<g> TO DEAL DAMAGE"
 	if instance_exists(Player)
 	{
 		if Player.race == 13//Sheep
 		{
-			skill_detail[8] = "<pi>CHARGE<pi> DEALS MORE DAMAGE#<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
+			skill_detail[8] = "<pi>CHARGE<pi> DEALS MORE DAMAGE#<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#VERY BRIEFLY BECOME <aq>IMMUNE<aq>#WHEN YOU <w>KILL<w> USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 		}
 		else if Player.race == 2//CRYSTAL
 		{
-			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU OR YOUR <p>SHIELD<p>#TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
+			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU OR YOUR <p>SHIELD<p>#TAKE DAMAGE#VERY BRIEFLY BECOME <aq>IMMUNE<aq>#WHEN YOU <w>KILL<w> USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"
 		}
 		else if Player.race == 1//FISH
 		{
-			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU#TAKE DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#<w>EXTENDED RANGE<w> WHEN <g>ROLLING<g>"
+			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU#TAKE DAMAGE#VERY BRIEFLY BECOME <aq>IMMUNE<aq>#WHEN YOU <w>KILL<w> USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>#<w>EXTENDED RANGE<w> WHEN <g>ROLLING<g>"
 		}
 		else if Player.race == 18//ANGEL
 		{
-			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#YOUR <aq>DEFLECT<aq> DEALS MORE CONTACT DAMAGE#DON'T TAKE DAMAGE FROM#ENEMIES THAT YOU KILL USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"	
+			skill_detail[8] = "<w>ENEMIES<w> TOUCHING YOU TAKE DAMAGE#YOUR <aq>DEFLECT<aq> DEALS MORE CONTACT DAMAGE#VERY BRIEFLY BECOME <aq>IMMUNE<aq>#WHEN YOU <w>KILL<w> USING <g>GAMMA GUTS<g>#YOU TAKE 50% LESS <w>ENEMY CONTACT DAMAGE<w>"	
 		}
 	}
 	skill_tips[8] = "skin glows"
 	skill_msnd[8] =  sndMutGammaGuts
-	skill_bons[8] = "+2 CONTACT DAMAGE#TAKE 25% LESS CONTACT DAMAGE";
+	skill_bons[8] = "+30% CONTACT DAMAGE#TAKE 75% LESS CONTACT DAMAGE";
 	
 
 	
@@ -375,7 +376,7 @@ function scrSkills() {
 	skill_bons[22] = "+7% RELOAD SPEED +25% DAMAGE";
 
 	skill_name[23] = "OPEN MIND"
-	skill_text[23] = "MORE <w>CHESTS<w>"
+	skill_text[23] = "MORE <w>CHESTS<w>#OPENING CHESTS <w>RELOADS<w> YOUR WEAPONS"
 	skill_detail[23] = "EXTRA <w>CHESTS<w> SPAWN#SEE CONTENTS OF WEAPON <w>CHESTS<w>##OPENING <w>CHESTS<w>#FULLY <w>RELOADS<w> YOUR WEAPONS#REDUCE COST OF <g>ULTRA CHESTS<g>"
 	if canCheckUltra && Player.ultra_got[1]
 		skill_detail[23] = "EXTRA <w>CHESTS<w> SPAWN#SEE CONTENTS OF WEAPON <w>CHESTS<w>#INCREASE <g>CONFISCATE<g> CHANCE#BY 25%##OPENING <w>CHESTS<w>#FULLY <w>RELOADS<w> YOUR WEAPONS#REDUCE COST OF <g>ULTRA CHESTS<g>"
@@ -462,7 +463,7 @@ function scrSkills() {
 	
 	skill_name[32] = "ALKALINE SALIVA"
 	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (2<r>HP<r>)#CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>2<w><r>HP<r>)##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING#LONGER IMMUNITY";
@@ -501,7 +502,7 @@ function scrSkills() {
 	skill_detail[34] = "+10% <w>RELOAD SPEED<w> ON ALL WEAPONS##WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#CHANCE DEPENDS ON:#BASE RELOAD TIME & DROP RATE"
 	skill_tips[34] = "looting and shooting"
 	skill_msnd[34] =  sndMutFlexibleElbows
-	skill_bons[34] = "+20% RELOAD SPEED (TOTAL: 12%)#+50% SLAP DAMAGE";
+	skill_bons[34] = "12% RELOAD SPEED INSTEAD#+50% SLAP DAMAGE";
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
@@ -557,8 +558,10 @@ function scrSkills() {
 	skill_name[41] = "NERVES OF STEEL"
 	//skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#SLIGHTLY INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
 	//skill_detail[41] = "REPLACE 2 <r>MAX HEALTH<r> WITH 1 <gb>MAX ARMOUR<gb>##WHEN <w>FULL<w> ON <gb>ARMOUR<gb>:#<w>+15%<w> PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU ARE <w>MISSING<w> <gb>ARMOUR<gb>:#REDUCE PRIMARY <w>RELOAD TIME<w>#BY <w>37%<w> OF <w>BASE<w> RELOAD TIME#AND <w>+20%<w> <w>CONSTANT<w> RELOAD SPEED##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>"
-	skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN YOU HAVE <w>MAX<w> <gb>ARMOUR<gb>:#<w>SLIGHTLY<w> INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU HAVE <r>NO<r> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
-	skill_detail[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN YOU HAVE <w>MAX<w> <gb>ARMOUR<gb>:#<w>SLIGHTLY<w> INCREASE PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU HAVE <r>NO<r> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE PRIMARY <w>RELOAD SPEED<w>##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>";
+	//skill_text[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN YOU HAVE <w>MAX<w> <gb>ARMOUR<gb>:#<w>SLIGHTLY<w> INCREASE <w>RELOAD SPEED<w>##WHENEVER YOU HAVE <r>NO<r> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
+	//skill_detail[41] = "REPLACE 2 <r>HEALTH<r> WITH 1 <gb>ARMOUR<gb>##WHEN YOU HAVE <w>MAX<w> <gb>ARMOUR<gb>:#<w>SLIGHTLY<w> INCREASE PRIMARY <w>RELOAD SPEED<w>##WHENEVER YOU HAVE <r>NO<r> <gb>ARMOUR<gb>#<w>SIGNIFICANTLY<w> INCREASE PRIMARY <w>RELOAD SPEED<w>##<w>ENEMIES<w> HAVE A VERY SMALL CHANCE#TO DROP <gb>ARMOUR<gb>";
+	skill_text[41] = "REPLACE <w>2<w> <r>HEALTH<r> WITH <w>1<w> <gb>ARMOUR<gb>##WHEN YOU HAVE <w>EXACTLY 1<w> <gb>ARMOUR<gb>:#<w>SIGNIFICANTLY<w> INCREASE <w>RELOAD SPEED<w>";
+	skill_detail[41] = "REPLACE <w>2<w> <r>HEALTH<r> WITH <w>1<w> <gb>ARMOUR<gb>##WHEN YOU HAVE <w>EXACTLY 1<w> <gb>ARMOUR<gb>:#<w>SIGNIFICANTLY<w> INCREASE PRIMARY <w>RELOAD SPEED<w>##<w>ENEMIES<w> HAVE A SMALL CHANCE#TO DROP <gb>ARMOUR<gb>";
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[41] = "LOSE 1 <gb>ARMOUR<gb>#WHEN YOU HAVE <w>MAX<w> <gb>ARMOUR<gb>#<w>SLIGHTLY<w> INCREASE <w>RELOAD SPEED<w>";

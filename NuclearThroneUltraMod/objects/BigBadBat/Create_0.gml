@@ -1,9 +1,9 @@
 raddrop = 50
-maxhealth = 440
+maxhealth = 550
 loops = GetPlayerLoops();
 
 if loops > 0
-	maxhealth = 480
+	maxhealth = 650
 scrBossHealthBuff();
 mySize = 6;
 
@@ -63,11 +63,15 @@ if loops > 2
 {
 	rotationSpeed *= 1.1;
 }
-if loops > 4
+if loops > 3
 {
 	laserDuration -= 5;
 	rotationSpeed *= 1.1;
 	pSpeedSpinny += 0.2;
+}
+if loops > 4
+{
+	venomous = true;
 }
 if target != noone
 	angle = point_direction(target.x,target.y,x,y);

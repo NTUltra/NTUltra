@@ -57,7 +57,7 @@ if (UberCont.canMultiCrown)
 		Player.crown[array_length(Player.crown)] = crown;
 		if Player.race == 18 && array_length(Player.crown) > 2
 		{
-			scrUnlockCSkin(18,"FOR EQUIPPING THREE CROWNS AS ONCE#AS ANGEL");
+			scrUnlockCSkin(18,"FOR EQUIPPING THREE CROWNS AT ONCE#AS ANGEL");
 		}
 		if !canReAdd
 			Player.crownpoints -= 1

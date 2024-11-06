@@ -1,6 +1,9 @@
 /// @description shooot
 if alarm[7] > 0
-	alarm[1] += 5;
+{
+	alarm[1] = 900;
+	exit;
+}
 snd_play_2d(sndBigMachineShoot);
 
 ///shoot

@@ -1,4 +1,5 @@
 var area;
+gotShadow = false;
 phaseable = false;
 colour = c_gray;
 alarm[2] = 70;//90

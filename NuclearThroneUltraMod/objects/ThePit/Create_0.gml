@@ -5,6 +5,6 @@ alarm[0] = 90;
 jumpScared = false;
 ghostLocations = [];
 loops = GetPlayerLoops();
-enoughEnemies = 35;
+enoughEnemies = 20;
 enoughEnemies += min(loops*4,60);
 alarm[4] = 90;

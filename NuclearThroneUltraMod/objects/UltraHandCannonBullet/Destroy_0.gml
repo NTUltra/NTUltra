@@ -1,5 +1,5 @@
 /// @description Explode into more bullets
-var am = 18;
+var am = 16;
 var angstep = 360/am;
 var ang = direction;
 var maxdis = 32;

@@ -177,7 +177,8 @@ function scrPopChests() {
 			with instance_furthest(Player.x,Player.y,WeaponChest)
 			{
 				instance_destroy(id,false);
-				if !scrIsGamemode(26) && !scrIsGamemode(27) && isValidGamemodeToUnlock()//not dayly
+				if !scrIsGamemode(26) && !scrIsGamemode(27) && isValidGamemodeToUnlock() && !instance_exists(NoProtoChest)//not dayly
+				{
 					if Player.skill_got[23] //OPEN MIND
 					{
 						instance_create(x,y-24,ProtoChest)
@@ -204,6 +205,7 @@ function scrPopChests() {
 					{
 						instance_create(x,y,ProtoChest)
 					}
+				}
 			}
 		}
 			gol = 0
@@ -269,7 +271,14 @@ function scrPopChests() {
 	//Ultra chest
 	if instance_exists(Player)
 	{
-		if Player.area == 134 || Player.area == 136 || (Player.loops > 1 && Player.level >= 10 && (Player.subarea == 1 || (Player.subarea == 2 && Player.skill_got[23])))
+		var loopRequired = 1;
+		var levelRequired = 10;
+		if Player.skill_got[23]
+		{
+			loopRequired = 0;
+			levelRequired = 0;
+		}
+		if gol > 0 && (Player.area == 134 || Player.area == 136 || (Player.loops > loopRequired && Player.level >= levelRequired && (Player.subarea == 1 || (Player.skill_got[23]))))
 		{
 			scrCreateMissingChest(UltraChest,1);
 		}

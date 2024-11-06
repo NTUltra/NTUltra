@@ -343,3 +343,12 @@ with Crown
 	y = Player.y;
 	scrForcePosition60fps();
 }
+
+with NoProtoChest
+{
+	with ProtoChest
+	{
+		instance_destroy(id,false);	
+	}
+	instance_destroy();	
+}

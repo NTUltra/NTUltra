@@ -1,7 +1,7 @@
 raddrop = 0
 maxhealth = 800
 meleedamage = 0
-mySize = 4
+mySize = 5
 
 event_inherited()
 team = 5;

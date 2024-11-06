@@ -54,7 +54,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 		{
 			mh = Player.maxarmour
 			h = Player.armour;
-			itemdrop *= 0.88;
+			itemdrop *= 0.86;
 			canHealth *= 0.25;
 		}
 		if itemdrop > 1
@@ -156,6 +156,10 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	}
 	if Player.ultra_got[30] && !Player.altUltra {//Robot regurgitate
 		weapondrop *= 1.15;
+	}
+	if Player.race == 17
+	{
+		weapondrop *= 1.1;	
 	}
 	if Player.skill_got[0]//heavy heart
 	{
@@ -306,12 +310,14 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	if itemdrop > 0 && ran < min(itemdrop * (need + dropRateBuff), 100)
 	{//0.3 for each ally Rebel has REBEL ULTRA C?
 		//Nerves of Steel
-		if (instance_exists(Player) && Player.skill_got[41] && Player.armour < Player.maxarmour && random(100) < (3 - (Player.armour * 0.5)) ) {
+		if (!instance_exists(HPPickup) && instance_exists(Player) && Player.skill_got[41] && random(100) < max(2,(5 - (Player.armour * 0.5))) ) {
 			pickup = instance_create(x,y,HPPickup)
 			with WantHealth
 				instance_destroy();
 			with pickup {
 				isArmour = true;
+				speed = 1;
+				direction = other.direction;
 				sprite_index = sprArmourPickup;
 				if scrIsCrown(32)//Misfortune
 				{
@@ -328,9 +334,9 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 				}
 			}
 			UberCont.dropLimit += 1;
-			return pickup;
+			//return pickup;
 		}
-		else if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
+		if random(mh) > h and random(3) < 2 and !scrIsCrown(2) and Player.canHeal and random(1) <= canHealth
 		{
 			pickup = instance_create(x,y,HPPickup)
 			with WantHealth

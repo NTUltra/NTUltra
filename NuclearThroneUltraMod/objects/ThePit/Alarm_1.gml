@@ -1,5 +1,5 @@
 /// @description Still close enough?
-if point_distance(x,y,Player.x,Player.y) < 200
+if instance_exists(Player) && point_distance(x,y,Player.x,Player.y) < 200
 {
 	var numEn = 0;
 	with enemy
@@ -7,7 +7,7 @@ if point_distance(x,y,Player.x,Player.y) < 200
 		if team != 2
 			numEn ++;
 	}
-	if numEn < 2 || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
+	if numEn < enoughEnemies || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
 		if (!jumpScared)
 			alarm[2] = 30;

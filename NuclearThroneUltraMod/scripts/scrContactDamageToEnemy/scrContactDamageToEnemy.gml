@@ -48,6 +48,12 @@ function scrContactDamageToEnemy(hitEnemy){
 				if (hitEnemy.my_health <= 0 && skill_got[8] || actuallyDead)//gamma guts kill?
 				{
 					snd_play(sndGammaGutsKill,0,true);
+					alarm[3] = max(3,alarm[3]);
+					instance_create(x,y,GammaGutsProjectileDestroyer)
+					with hitEnemy
+					{
+						instance_create(x,y,GammaGutsProjectileDestroyer)
+					}
 					instance_create(x,y,GammaGutsBlast);
 				}
 			}

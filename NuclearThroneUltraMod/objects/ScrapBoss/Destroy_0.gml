@@ -1,4 +1,4 @@
-if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(ScrapBoss) == 1
+if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(ScrapBoss) == 1 && team != 2
 with MusCont
 {
 audio_stop_sound(song)

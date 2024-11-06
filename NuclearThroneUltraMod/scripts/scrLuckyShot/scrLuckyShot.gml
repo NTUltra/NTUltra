@@ -4,7 +4,7 @@
 function scrLuckyShot(){
 	var chance = 2;
 	var ran = 10;
-	if Player.race == 25
+	if Player.race == 25 || (Player.ultra_got[19] && !Player.altUltra)
 		chance = 2.6
 	if Player.skill_got[6] = 1 and random(ran) < chance//0.214% 0.23%
     {

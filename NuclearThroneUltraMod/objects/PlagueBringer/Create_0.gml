@@ -1,5 +1,5 @@
 /// @description INIT
-alarm[0] = 150;
+alarm[0] = 110;
 alarm[1] = 5;
 alarm[2] = 2;
 alarm[3] = 17;

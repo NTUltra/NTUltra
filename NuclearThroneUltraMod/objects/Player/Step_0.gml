@@ -529,6 +529,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
+			peaceBarriers += 1;
 			// newMovement = !newMovement;
 			Sleep(100);
 			getVision = true;
@@ -1526,7 +1527,7 @@ if (!instance_exists(LevCont))
 			scrFlexibleElbowReload(bwep);
 		}
 		if skill_got[41]
-		{
+		{/*
 			if armour < maxarmour
 			{
 				if race == 25
@@ -1535,7 +1536,8 @@ if (!instance_exists(LevCont))
 					reload -= 0.19;
 				reload *= 0.999;
 			}
-			else
+			else*/
+			if armour == 1
 			{
 				if race == 25
 					reload -= 0.07;
@@ -2924,19 +2926,30 @@ if skill_got[8] {
 	for (var i = 0; i < al; i ++)
 	{
 		with gutsRange[| i] {
-			DealDamage(gutsDmg,true,true,false);
-			sprite_index = spr_hurt
-			image_index = 0
+			if team != other.team
+			{
+				DealDamage(gutsDmg,true,true,false);
+				sprite_index = spr_hurt
+				image_index = 0
 			
-			if meleedamage > 0
-				spd = 0.4;
-			else
-				spd = 1;
+				if meleedamage > 0
+					spd = 0.4;
+				else
+					spd = 1;
 				
-			if is60fps
-				motion_add(point_direction(other.x,other.y,x,y),spd*0.5)
-			else
-				motion_add(point_direction(other.x,other.y,x,y),spd)
+				if is60fps
+					motion_add(point_direction(other.x,other.y,x,y),spd*0.5)
+				else
+					motion_add(point_direction(other.x,other.y,x,y),spd)
+				if my_health <= 0
+				{
+					alarm[3] = max(3,alarm[3]);
+					snd_play(sndGammaGutsKill,0.1);
+					instance_create(x,y,GammaGutsBlast);
+					instance_create(x,y,GammaGutsProjectileDestroyer);
+					instance_create(other.x,other.y,GammaGutsProjectileDestroyer);	
+				}
+			}
 		}
 	}
 	ds_list_destroy(gutsRange);

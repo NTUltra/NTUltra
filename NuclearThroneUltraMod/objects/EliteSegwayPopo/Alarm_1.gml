@@ -69,7 +69,7 @@ if target != noone
 				walk = actTime;
 			}
 		}
-		else if random(2) < 1 && !wasBehindWall
+		else if dis < 320 && random(2) < 1 && !wasBehindWall
 		{
 			//SHOOT
 			walk = actTime * 2;

@@ -22,7 +22,7 @@ if um == ultramods.bulletShotgun
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed;
+		speed = other.speed + 2;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -39,7 +39,8 @@ else if um == ultramods.laserBullet
 	instance_destroy(id,false);
 	with instance_create(x,y,FrostLaser)
 	{
-		image_yscale -= 0.4;
+		defaultPierce -= 24;
+		image_yscale -= 0.6;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;

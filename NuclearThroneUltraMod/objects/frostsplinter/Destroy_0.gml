@@ -3,6 +3,7 @@
 // Inherit the parent event
 event_inherited();
 BackCont.shake += 1;
+/*
 snd_play(sndFlareExplode,0.1,true)
 var ang = direction + 180;
 var am = 3;
@@ -15,5 +16,11 @@ repeat(am)
 		team = other.team
 		ang += angstep;
 	}
+}*/
+with instance_create(x,y,IceFlame)
+{
+	speed = max(other.speed * 0.5,2)
+	direction = other.direction;
+	team = other.team;	
 }
 

@@ -9,6 +9,7 @@ spr_dead = sprBigGeneratorDead
 
 event_inherited()
 right = 1;
+alarm[2] = 5;
 team = 3;
 maxhealth = 80;
 meleedamage = 0;

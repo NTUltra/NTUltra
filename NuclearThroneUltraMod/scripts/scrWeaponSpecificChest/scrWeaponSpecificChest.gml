@@ -6,6 +6,7 @@ function scrWeaponSpecificChest(){
 	ammoGet = 0;
 	curse = 0
 	heavyHeart = false;
+	wep_target = [];
 	var new_wep_name = [];
 	var new_wep_type = [];
 	var new_wep_auto = [];
@@ -19,8 +20,9 @@ function scrWeaponSpecificChest(){
 	var new_wep_popup = [];
 	var j = 0;
 	for (var wi = 0; wi < maxwep; wi++) {
-		if wep_area[wi] < 0
+		if wep_area[wi] > -1
 		{
+			wep_target[j] = wi;
 			new_wep_name[j] = wep_name[wi];
 			new_wep_type[j] = wep_type[wi];
 			new_wep_auto[j] = wep_auto[wi];
@@ -46,20 +48,18 @@ function scrWeaponSpecificChest(){
 	wep_swap = [];
 	wep_rad = [];
 	wep_popup = [];
-
-	wep_name = new_wep_name;
-	wep_type = new_wep_type;
-	wep_auto = new_wep_auto;
-	wep_load = new_wep_load;
-	wep_cost = new_wep_cost;
-	wep_sprt = new_wep_sprt;
-	wep_area = new_wep_area;
-	wep_text = new_wep_text;
-	wep_swap = new_wep_swap;
-	wep_rad = new_wep_rad;
-	wep_popup = new_wep_popup;
+	array_copy(wep_name,0,new_wep_name,0,array_length(new_wep_name));
+	array_copy(wep_type,0,new_wep_type,0,array_length(new_wep_type));
+	array_copy(wep_auto,0,new_wep_auto,0,array_length(new_wep_auto));
+	array_copy(wep_load,0,new_wep_load,0,array_length(new_wep_load));
+	array_copy(wep_cost,0,new_wep_cost,0,array_length(new_wep_cost));
+	array_copy(wep_sprt,0,new_wep_sprt,0,array_length(new_wep_sprt));
+	array_copy(wep_area,0,new_wep_area,0,array_length(new_wep_area));
+	array_copy(wep_text,0,new_wep_text,0,array_length(new_wep_text));
+	array_copy(wep_swap,0,new_wep_swap,0,array_length(new_wep_swap));
+	array_copy(wep_rad,0,new_wep_rad,0,array_length(new_wep_rad));
+	array_copy(wep_popup,0,new_wep_popup,0,array_length(new_wep_popup));
 	maxwep = array_length(wep_name) - 1;
-	
 	var repeats = 2;
 	if instance_exists(Player) 
 	{

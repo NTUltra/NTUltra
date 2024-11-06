@@ -690,7 +690,7 @@ function scrFire3(hasTailNow){
 		case 813:
 		snd_play(sndExplosionS);
 		snd_play_fire(sndBigDogIntro)
-
+		snd_play_fire(sndBigDogWalk)
 		instance_create(x,y,NoDrama);
 		with instance_create(x,y,ScrapBoss)
 		{

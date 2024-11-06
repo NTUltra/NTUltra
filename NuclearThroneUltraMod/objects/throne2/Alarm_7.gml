@@ -1,4 +1,6 @@
 /// @description Start beam
+if instance_exists(Throne2Beam)
+	exit;
 snd_play(sndNothingBeamStart);
 snd_loop(sndNothingBeamLoop);
 if isInverted

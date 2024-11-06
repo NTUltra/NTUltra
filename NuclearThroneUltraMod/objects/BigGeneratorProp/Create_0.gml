@@ -9,6 +9,7 @@ event_inherited()
 
 my_health = maxhealth;
 canFly = false;
+isStuck = false;
 team = 1;
 spr_hurt_actual = sprBigGeneratorHurt;
 spr_activate = sprBigGeneratorActivate;

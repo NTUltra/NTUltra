@@ -4,7 +4,7 @@
 function BloodLust(){
 	//SOME KILLS REGENERATE HEALTH
 	var chance = 7.6
-	if Player.race == 25
+	if Player.race == 25 || (Player.ultra_got[19] && !Player.altUltra)
 		chance = 9.5
 	if instance_exists(DropReducer) && Player.my_health < Player.maxhealth && Player.my_health <= 2
 		chance += 1;//Took a hit not from self damage and is now low on health

@@ -3,6 +3,7 @@ maxhealth = 245
 loops = GetPlayerLoops();
 if loops > 0
 	maxhealth += 55;
+scrBossHealthBuff();
 mySize = 3
 event_inherited()
 

@@ -3,7 +3,11 @@ if other.team != team and other.my_health > 0 && alarm[0] < 1
 	instance_destroy()
 	with other
 	{
-		if instance_exists(Player){
+		if object_index == Player
+		{
+			hitBy = other.sprite_index;	
+		}
+		else if instance_exists(Player){
 			if Player.ultra_got[28]//roids ultra d
 			{other.dmg += 2}
 		}

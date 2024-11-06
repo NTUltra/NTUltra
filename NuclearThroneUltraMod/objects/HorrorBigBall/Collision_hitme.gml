@@ -14,6 +14,11 @@ if other.team != team && other.my_health > 0 && !array_contains(hitEntities, oth
 	}
 	myPower -= 1;
 	if myPower < 1
-		instance_destroy();
+	{
+		image_xscale -= 0.05;
+		image_yscale -= 0.05;
+		if image_xscale < 0.1
+			instance_destroy();
+	}
 }
 

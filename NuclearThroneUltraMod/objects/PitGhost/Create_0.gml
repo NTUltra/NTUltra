@@ -1,5 +1,5 @@
 raddrop = 3;
-maxhealth = 12
+maxhealth = 9;
 mySize = 1
 event_inherited()
 team = 7;

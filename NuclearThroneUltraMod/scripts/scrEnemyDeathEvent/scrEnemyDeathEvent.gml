@@ -97,16 +97,18 @@ function scrEnemyDeathEvent(isSheep = false){
 			//Heavy heart
 			
 		}
-		
+		/*
 		var defaultWepDrop = 0;
 		if Player.skill_got[0]
 		{
 			defaultWepDrop += 0.5
+			if (Player.ultra_got[19] && !Player.altUltra)
+				defaultWepDrop += 0.1;
 		}
 		if Player.race == 17
 		{
 			defaultWepDrop += 0.5
-		}
+		}*/
 		if Player.ultra_got[55] && !Player.altUltra //&& !isSheep
 		{
 			if instance_number(object_index) == 1
@@ -165,8 +167,8 @@ function scrEnemyDeathEvent(isSheep = false){
 			defaultWepDrop += 1;
 		}
 		*/
-		if defaultWepDrop > 0
-			scrDrop(0,defaultWepDrop);
+		//if defaultWepDrop > 0
+		//	scrDrop(0,defaultWepDrop);
 		with Player
 		{
 			if other.countKill
@@ -304,7 +306,7 @@ function scrEnemyDeathEvent(isSheep = false){
 			if skill_got[24]
 			{
 				var m = 0.7;//0.65;
-				if isdoc
+				if isdoc || (ultra_got[19] && !altUltra)
 				{
 					m = 0.62;//0.5625;
 				}
@@ -348,7 +350,7 @@ function scrEnemyDeathEvent(isSheep = false){
 			if skill_got[28]
 			{
 				rage+=1;
-				if isdoc
+				if isdoc || (ultra_got[19] && !altUltra)
 					rage += 0.25;
 				if rage>500//MAX RAGE
 					rage=500;//340

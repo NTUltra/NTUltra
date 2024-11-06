@@ -3,7 +3,10 @@ if other.team != team and other.my_health > 0 && instance_exists(myHead) && !arr
 	myHead.hits[array_length(myHead.hits)] = other.id;
 	with other
 	{
-		DealDamage(other.dmg)
+		if team == 0
+			DealDamage(other.dmg * 0.5)
+		else
+			DealDamage(other.dmg)
 		if instance_exists(Player)
 		{
 			//freeze bitch!

@@ -22,6 +22,8 @@ if loops>0
 				motion_add(other.gunangle,ps+random(0.5))
 				image_angle = direction
 				team = other.team
+				if team == 2
+					sprite_index = sprEnemyBullet1Deflected;
 			}
 		gunangle += angStep;
 	}
@@ -36,6 +38,8 @@ if loops>0
 					motion_add(other.gunangle,ps + 1.1+random(0.5))
 					image_angle = direction
 					team = other.team
+					if team == 2
+						sprite_index = sprEnemyBullet1Deflected;
 				}
 			gunangle += angStep
 		}
@@ -52,6 +56,8 @@ if loops>0
 				motion_add(other.gunangle,ps + 1+random(1))
 				image_angle = direction
 				team = other.team
+				if team == 2
+					sprite_index = sprPlayerSquareBullet;
 			}
 			gunangle += angStep;
 		}
@@ -68,6 +74,8 @@ else
 			motion_add(other.gunangle,ps)
 			image_angle = direction
 			team = other.team
+			if team == 2
+				sprite_index = sprEnemyBullet1Deflected;
 		}
 		gunangle += angStep;
 	}

@@ -61,6 +61,9 @@ function scrCollectHP(num = 2){
 
 			instance_create(x,y,HealFX)
 		}
+		//RUSH CROWN
+		if scrIsCrown(4)
+			num += 1
 		if Player.skill_got[36]
 		{
 			/*
@@ -71,15 +74,11 @@ function scrCollectHP(num = 2){
 			}
 			*/
 			speed = 6;
-			scrRaddrop(2);
+			scrRaddrop(num);
 		}
 		if scrIsGamemode(9) //Casual mode
 			num +=1;
 
-
-		//RUSH CROWN
-		if scrIsCrown(4)
-			num += 1
 		scrPhotosythesis(num);
 		if Player.my_health + num <= Player.maxhealth + Player.defaultOverhealAddition
 			Player.my_health += num

@@ -1,4 +1,5 @@
 scrWeapons()
+wep_target = [];
 SetSeedWeapon();
 mySize = 1;
 team = 0;

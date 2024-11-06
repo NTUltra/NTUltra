@@ -39,7 +39,9 @@ gunGodFirst = false;
 gunGodFirstB = false;
 gunGodImmune = false;
 rage = 0;
-rageHit = 28;
+rageHitDefault = 28;
+rageHit = rageHitDefault;
+rageHitBuff = 5;
 rageIndicator = 0;
 canInfiniteFire = false
 canInfiniteFireB = false
@@ -80,6 +82,7 @@ guarenteedReroll = 0;
 anyMutation = 0;
 metabolism = 0;
 triggerMetabolism = false;
+ignoreMetabolism = false;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -735,7 +738,7 @@ if race == 25 // DOCTOR
 	level = 2;
 	skillsChosen += 1;
 	boilingMax += 20;
-	rageHit -= 5;
+	rageHit -= rageHitBuff;
 }
 
 if scrIsGamemode(9)

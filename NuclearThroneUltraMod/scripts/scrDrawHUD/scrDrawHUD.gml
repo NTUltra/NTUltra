@@ -192,6 +192,8 @@ function scrDrawHUD() {
 	var armour = dataRef.armour;
 	var maxArmour = dataRef.maxarmour;
 	var armo = sprArmour;
+	if dataRef.race == 20 && dataRef.skill_got[dataRef.maxskill + 1]//Piggy bank
+		armourX += 18;
 	if (dataRef.ultra_got[62] && dataRef.altUltra)
 	{
 		if venomized
@@ -200,10 +202,13 @@ function scrDrawHUD() {
 		}
 	}
 	var dir=0;
+	var gotArmour = 0;
+	if dataRef.skill_got[41] && armour == 1
+		gotArmour = 2;
 	repeat(maxArmour)
 	{
 		dir++;
-		draw_sprite(armo,dir > armour ? 1 : 0,vx+armourX+(15*dir),vy+4);
+		draw_sprite(armo,dir > armour ? 1 : gotArmour,vx+armourX+(15*dir),vy+4);
 	}
 	if dataRef.race == 16 && dataRef.skill_got[5]
 	{
@@ -760,7 +765,7 @@ function scrDrawHUD() {
 					if holdExplainMutation >= 10
 					{
 						scrDrawHelp(ht);
-						if dataRef.race == 25 && dataRef.skill_bons[dir] != ""
+						if dataRef.skill_bons[dir] != "" && (dataRef.race == 25 || scrPlantApexPredatorKillSkillBuff(dir))
 						{
 							//DOCTOR BONUS
 							txt = string_replace_all(ht,"#"," ");
@@ -807,7 +812,7 @@ function scrDrawHUD() {
 						if holdExplainMutation >= 10
 						{
 							scrDrawHelp(ht);
-							if dataRef.race == 25 && dataRef.skill_bons[skillIndex] != ""
+							if dataRef.skill_bons[skillIndex] != "" && (dataRef.race == 25 || scrPlantApexPredatorKillSkillBuff(dir))
 							{
 								//DOCTOR BONUS
 								txt = string_replace_all(ht,"#"," ");
@@ -951,17 +956,20 @@ function scrDrawHUD() {
 	{
 		var wepName = dataRef.wep_name[dataRef.cwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.cwep]);
+		var isPopup = dataRef.wep_popup[dataRef.cwep] == "";
 		if dataRef.wep_area[dataRef.cwep] >= 0
 		{
+			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
-			+ "\n" + wepName);
+			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
 			draw_sprite(sprWepTier,0,vx+118,vy+22);
 		}
 		else
 		{
-			scrDrawHelp("\n" + wepName);
-			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
+			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
+			scrDrawHelp(wepName,0,c_silver,!isPopup);
+			scrDrawHelp(string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
 		}
 	}
 	}
@@ -1056,17 +1064,20 @@ function scrDrawHUD() {
 	{
 		var wepName = dataRef.wep_name[dataRef.bwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.bwep]);
+		var isPopup = dataRef.wep_popup[dataRef.bwep] == "";
 		if dataRef.wep_area[dataRef.bwep] >= 0
 		{
+			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
-			+ "\n" + wepName);
+			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
 			draw_sprite(sprWepTier,0,vx+118,vy+22);
 		}
 		else
 		{
-			scrDrawHelp("\n" + wepName);
-			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
+			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
+			scrDrawHelp(wepName,0,c_silver,!isPopup);
+			scrDrawHelp(string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
 		}
 	}
 
@@ -1206,17 +1217,20 @@ function scrDrawHUD() {
 	{
 		var wepName = dataRef.wep_name[dataRef.wep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.wep]);
+		var isPopup = (dataRef.wep_popup[dataRef.wep] == "");
 		if dataRef.wep_area[dataRef.wep] >= 0
 		{
+			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
-			+ "\n" + wepName);
+			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
 			draw_sprite(sprWepTier,0,vx+118,vy+22);
 		}
 		else
 		{
-			scrDrawHelp("\n" + wepName);
-			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
+			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
+			scrDrawHelp(wepName,0,c_silver,!isPopup);
+			scrDrawHelp(string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
 		}
 	}
 	
@@ -1445,7 +1459,7 @@ function scrDrawHUD() {
 		rto = 9 //-3;
 		var px = vx + 16;
 		if dataRef.skill_got[36]
-			px += 6;
+			px += 5;
 		draw_sprite(sprPiggyBankHUD,(dataRef.piggyBank/dataRef.maxPiggyBank)*12,px,vy+4)	
 	}
 	if dataRef.skillpoints > 0
@@ -2304,27 +2318,19 @@ function scrDrawHUD() {
 				explainTimer += 1*dt;
 				var yy = y-oy - 22;
 				draw_sprite(sprEPickup,UberCont.opt_gamepad,x,yy-2)
-		
-				draw_set_color(c_black)
-				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-				draw_text(x-ox,yy,string_hash_to_newline(string(name)))
-				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
-				draw_set_color(c_white)
-				draw_text(x-ox,yy-1,string_hash_to_newline(string(name)))
+				scrDrawTextBackgrounded(x-ox,yy,string_hash_to_newline(string(name)))
 			
 				if explainTimer > 20
 				{
+					
 					var mr = 620;
 					with dataRef
+					{
 						mr = GetPlayerMaxRad();
+					}
 					var helpText = "YOU HAVE " + string((Player.rad/mr)*100) + "% RADS";
 					yy = y - oy + 14;
-					draw_set_color(c_black)
-					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-					draw_text(x-ox,yy,string_hash_to_newline(string(helpText)))
-					draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
-					draw_set_color(c_white)
-					draw_text(x-ox,yy-1,string_hash_to_newline(string(helpText)))
+					scrDrawTextBackgrounded(x-ox,yy,string_hash_to_newline(string(helpText)))
 				}
 			}
 			else

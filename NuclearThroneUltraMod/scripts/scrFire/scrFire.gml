@@ -72,14 +72,14 @@ function scrFire(canDrown = true) {
 		{
 			canPuffyCheek = 4;
 		}
-		//Nerves of steel
-		if ultra_got[2]&& alarm[2] > 0
+		if ultra_got[2] && alarm[2] > 0
 		{
 		 	reload -= wep_load[wep]*0.1;
 		}
+		//Nerves of steel
 		if skill_got[41]
 		{
-			if armour < 1
+			if armour == 1//armour < 1
 			{
 				if reload > 200
 					reload -= 50;
@@ -93,7 +93,7 @@ function scrFire(canDrown = true) {
 				{
 					reload -= wep_load[wep]*0.35;
 				}
-			}
+			}/*
 			else if armour == maxarmour
 			{
 				if reload > 200
@@ -108,7 +108,7 @@ function scrFire(canDrown = true) {
 				{
 					reload -= wep_load[wep]*0.15;
 				}
-			}
+			}*/
 		}
 		queueshot = max(queueshot-1,0);
 		fired = true;

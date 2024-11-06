@@ -22,6 +22,12 @@ with Player
 			DealDamage(d, true, true, false)
 			if gg
 			{
+				with Player
+				{
+					alarm[3] = max(3,alarm[3]);	
+				}
+				instance_create(x,y,GammaGutsProjectileDestroyer);
+				instance_create(other.x,other.y,GammaGutsProjectileDestroyer);
 				snd_play(sndGammaGutsKill,0,true);
 				with instance_create(x,y,GammaGutsBlast)
 				{

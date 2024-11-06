@@ -14,6 +14,26 @@ if instance_exists(Player)
 				y = n.y + o;
 				scrForcePosition60fps();
 			}
+			isStuck = false;
+		}
+		else if !canFly && place_meeting(x,y,WallHitMe)
+		{
+			if isStuck
+			{
+				with instance_place(x,y,WallHitMe)
+				{
+					instance_destroy();
+					instance_create(x,y,FloorExplo);
+				}
+			}
+			else
+			{
+				isStuck = true;	
+			}
+		}
+		else
+		{
+			isStuck = false;	
 		}
 	}
 	if !instance_exists(WallRemover) && instance_exists(WallHitMe)

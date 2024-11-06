@@ -18,6 +18,8 @@ throwDirection = direction;
 isInFight = 0;
 accuracy = 1;
 firstHits = [];
+alarm[9] = 20;
+healthScale = 0;
 if instance_exists(Player)
 {
 	accuracy = Player.accuracy;
@@ -41,7 +43,8 @@ if instance_exists(Player)
 		loops += 1;
 		maxhealth += 2;
 	}
-	maxhealth += min(loops * 2,10);
+	healthScale = min(loops * 2,10);
+	maxhealth += healthScale;
 	if Player.ultra_got[39] && !Player.altUltra
 		alarm[3] = 30;
 	if Player.bskin == 2 || Player.bskin == 5

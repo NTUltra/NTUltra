@@ -7,6 +7,7 @@ name = "MELEE WEAPON CHEST";
 spawnLocationY = y - 32;
 wep = [];
 scrWeapons();
+wep_target = [];
 for (var wi = 0; wi < maxwep; wi++) {
 	if !scrMeleeWeapons(wi)
 	{

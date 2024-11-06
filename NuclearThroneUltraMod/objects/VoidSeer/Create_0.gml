@@ -16,12 +16,12 @@ textQueue = [];
 cantUnderstand = true;
 previousWep = 0;
 previousBwep = 0;
-specialConditionMet = 0;
-if (array_length(UberCont.voidSpecialCondition) > 0)
+specialConditionMet = -1;
+if (loops > 0 && array_length(UberCont.voidSpecialConditions) > 0)
 {
 	specialConditionMet = UberCont.voidSpecialConditions[0];
-	UberCont.voidSpecialCondition[0] = [];
-	array_delete(UberCont.voidSpecialCondition,0,1);
+	array_delete(UberCont.voidSpecialConditions,0,1);
+	debug(UberCont.voidSpecialConditions);
 }
 //Only do unique character onces
 if (UberCont.char_void_entered[race] == 1)

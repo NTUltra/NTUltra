@@ -4,14 +4,19 @@ if loops < 1
 	maxhealth = 350;
 else
 	maxhealth = 400;
-	
+scrBossHealthBuff();
+isInverted = true;
 if instance_exists(Player)
 {
 	if Player.area == 140 && loops < 1
 		maxhealth -= 75;
 	else if Player.area == 137
 	{
-		maxhealth += 100;	
+		maxhealth += 100;
+	}
+	else
+	{
+		isInverted = false;
 	}
 }
 meleedamage = 0

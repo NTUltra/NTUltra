@@ -1,8 +1,11 @@
 /// @description Frost
-alarm[2] = 4;
-with instance_create(x,y,IceFlame)
+if speed > 1
 {
-	speed = other.speed*0.25;
-	direction = other.direction;
-	team = other.team;	
+	alarm[2] = 5;
+	with instance_create(x,y,IceFlame)
+	{
+		speed = other.speed*0.25;
+		direction = other.direction;
+		team = other.team;	
+	}
 }

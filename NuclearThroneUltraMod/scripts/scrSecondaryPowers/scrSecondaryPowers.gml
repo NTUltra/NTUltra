@@ -125,11 +125,7 @@ function scrSecondaryPowers() {
 				{
 					if my_health > 2
 					{
-						if armour > 0
-							armour -= 1;
-						else
-							DealDamage(2,false,false,false);
-					
+						DealDamage(2,false,false,false);
 						hitBy = sprite_index;
 						exception = true;
 						sprite_index = spr_hurt
@@ -863,7 +859,7 @@ function scrSecondaryPowers() {
 							sprite_index=sprBecomeHorrorBigBalC;
 						team = other.team;
 						//Max is about 20
-						myPower = ballPower;
+						myPower = 2 + ballPower * 1.25;
 						image_xscale = (0.1 + clamp(myPower*0.025,0,0.75))*2;
 						image_yscale = image_xscale;
 						direction = aimDirection;
@@ -876,6 +872,10 @@ function scrSecondaryPowers() {
 			case 22:
 				if !isOverlapping && (KeyCont.key_regal[p] == 1) && (my_health > 1 && !scrIsCrown(41) || my_health > 2)
 				{
+					if outOfCombat
+					{
+						ignoreMetabolism = true;	
+					}
 					DealDamage(1);
 					sprite_index = spr_hurt;
 					image_index = 0;
@@ -1041,20 +1041,31 @@ function scrSecondaryPowers() {
 			break;
 			//HANDS
 			case 27:
-				if !instance_exists(HandBlock) && (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
+				if (KeyCont.key_regal[p] == 1 || KeyCont.key_regal[p] == 2)
 				{
-					with Hand
+					var canHand = true;
+					with HandBlock
 					{
-						BackCont.shake += 10;
-						snd_play(sndHumphryHalt);
-						if alarm[1] > 0
-							alarm[1] += 5;
-						else if alarm[2] > 0
-							alarm[2] += 5;
-						previousSprite = sprite_index;
-						sprite_index = spr_block;
-						with instance_create(x,y,HandBlock) {
-							team = other.team;	
+						if image_index <= 11
+							canHand = false;
+					}
+					if canHand
+					{
+						with Hand
+						{
+							BackCont.shake += 10;
+							snd_play(sndHumphryHalt);
+							if alarm[1] > 0
+								alarm[1] += 5;
+							else if alarm[2] > 0
+								alarm[2] += 5;
+							previousSprite = sprite_index;
+							sprite_index = spr_block;
+							with instance_create(x + lengthdir_x(32,image_angle + 180),y + lengthdir_y(32,image_angle + 180),HandBlock) {
+								team = other.team;
+								direction = other.image_angle;
+								speed = 2;
+							}
 						}
 					}
 				}

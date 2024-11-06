@@ -21,7 +21,7 @@ repeat(1+mediumchest) {
 		with instance_create(x,y,WepPickup)
 		{
 			scrWeapons()
-			wep = other.wep[i];
+			wep = other.wep_target[other.wep[i]];
 			name = wep_name[wep]
 			ammo = other.ammoGet;
 			type = wep_type[wep]

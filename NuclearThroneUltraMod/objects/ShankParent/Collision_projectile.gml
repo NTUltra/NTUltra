@@ -19,7 +19,7 @@ if team != other.team && (image_index < 1 || canAlwaysDeflect)
 		with other
 			instance_destroy()
 	}
-	else if other.typ == 3
+	else if other.typ == 3 || (typ == 0 && canBeMoved)
 	{
 		if scrMeleeAmmoCost(2)
 			exit;

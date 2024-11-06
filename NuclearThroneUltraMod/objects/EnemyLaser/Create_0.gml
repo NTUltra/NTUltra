@@ -15,7 +15,7 @@ sprStart = sprEnemyLaserStart;
 sprEnd = sprEnemyLaserEnd;
 maxDistance = 160;
 alarm[2] = 3;
-alarm[3] = 2;
+alarm[3] = 1;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	alarm[2] = 1;

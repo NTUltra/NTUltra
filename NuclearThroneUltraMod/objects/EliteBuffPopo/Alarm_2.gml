@@ -49,7 +49,7 @@ if team == 2
 }
 else
 {
-	var range = max(1,22 - fireRate * 1.5);
+	var range = max(1,20 - fireRate * 1.5);
 	var ps = 7 - (fireRate*0.5)//4.9 start
 	if far ps -= 0.5;
 	with instance_create(x,y,PopoBouncerBullet){
@@ -93,13 +93,13 @@ else if collision_line(x,y,target.x,target.y,Wall,false,false)
 	}
 	ammo -= 1;
 }
-if fireRate > 1
+if fireRate > 2
 {
 	fireRate -= 0.5;
 }
 else
 {
-	fireRate = 2;	
+	fireRate = 3;	
 }
 
 	

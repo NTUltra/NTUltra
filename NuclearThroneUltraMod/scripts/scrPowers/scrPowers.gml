@@ -186,7 +186,7 @@ function scrPowers(raceOverwrite = -1) {
 			else// if my_health > 1 || !scrIsGamemode(9)
 			{
 				//Regular active 
-				if !scrIsCrown(41) || my_health > 2
+				if (!scrIsCrown(41) && (!skill_got[5] || my_health > 1) || my_health > 2)
 				{
 					if my_health == 1 && skill_got[32] && isAlkaline
 					{
@@ -218,15 +218,27 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
-						if armour > 0
-							armour -= 1;
-						else
-							DealDamage(1,false,false,false);
+						DealDamage(1,false,false,false);
 						hitBy = sprite_index;
 						exception = true;
 					    if my_health<=0 //KILL YOSELF USING ACTIVE
 					    {
-						    if skill_got[25]//strong spirit
+							if skill_got[46] && peaceBarriers > 0
+							{
+								my_health = 1;
+								audio_stop_sound(snd_hurt);
+								snd_play_2d(sndPeaceHit,0.1);
+								scrGiveEuphoriaShield();
+								alarm[3] = max(alarm[3],6);
+								peaceBarriers -= 1;
+								peaceBarrierTime = 0;
+							}
+							else if armour > 0
+							{
+								armour -= 1;
+								my_health = 1;
+							}
+						    else if skill_got[25]//strong spirit
 						    {
 							    if strongspirit==true&&strongspiritused==false
 							    {
@@ -1520,17 +1532,11 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					if !(instance_exists(Ally))
 					{
-						if armour > 0
-							armour -= 1;
-						else
-							DealDamage(1,false,false,false);
+						DealDamage(1,false,false,false);
 						hitBy = sprite_index;
 					}
 					else{
-						if armour > 0
-							armour -= 1;
-						else
-							DealDamage(2,false,false,false);
+						DealDamage(2,false,false,false);
 						hitBy = sprite_index;
 					}
 					exception = true;
@@ -1586,7 +1592,7 @@ function scrPowers(raceOverwrite = -1) {
 		//PLANT
 		if race == 5
 		{
-			if !ultra_got[19] || canKillKillKill <= 0
+			if !ultra_got[19] || (canKillKillKill <= 0 && altUltra)
 			{
 				var poppedSeed = false;
 				var tangles = 0;

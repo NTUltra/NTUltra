@@ -36,6 +36,9 @@
     "name":"sprInvertedBigBadBatIdle",
     "path":"sprites/sprInvertedBigBadBatIdle/sprInvertedBigBadBatIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBigBadBat",
+    "path":"sprites/mskBigBadBat/mskBigBadBat.yy",
+  },
   "visible":true,
 }

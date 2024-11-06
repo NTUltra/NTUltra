@@ -11,7 +11,7 @@ if !sleeping && existTime > 20
 	instance_create(x,y,Explosion);
 	snd_play(sndLightning1,0.1)
 	var ang = random(360);
-	var am = 6;
+	var am = 5;
 	var angStep = 360/am;
 	var l = min(6,4+GetPlayerLoops());
 	repeat(am)

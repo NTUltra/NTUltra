@@ -56,4 +56,5 @@ totemBuffed = false;
 super = false;
 myConfusion = noone;
 canFly = true;
+isStuck = false;
 scrInitDrops(5);

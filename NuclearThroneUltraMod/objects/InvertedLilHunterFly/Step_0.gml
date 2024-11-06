@@ -51,6 +51,8 @@ z = 0
 alarm[1] = 20;
 if my_health < maxhealth * 0.5
 	alarm[1] = 5;
+if scrIsGamemode(9)
+	alarm[1] += 10;
 var bonk = true;
 if intro = 0
 {

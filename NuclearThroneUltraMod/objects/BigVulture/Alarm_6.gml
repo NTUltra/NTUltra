@@ -2,6 +2,7 @@
 if instance_exists(Player) && Player.skill_got[29]
 {
 	alarm[1] += 50;
+	alarm[8] = 3;
 	scrGiveSnooze();
 }
 else

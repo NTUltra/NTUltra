@@ -82,7 +82,7 @@ scrDrawTextColours(drawx,drawy-14,string(fulltxt))
 draw_set_color(c_white)
 draw_text(drawx,drawy-14-string_height(string_hash_to_newline(txt2))+string_height(string_hash_to_newline(skill_name[skill])),string_hash_to_newline(string(skill_name[skill])))
 
-if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
+if instance_exists(Player) && skill_bons[skill] != "" && (Player.race == 25  || scrPlantApexPredatorKillSkillBuff(skill))
 {
 	var bonusTxt = string_hash_to_newline(skill_bons[skill]);
 	drawy += string_height(bonusTxt);

@@ -47,7 +47,7 @@ if crown == 18 || crown == 38 || crown == 42
 	}
 	image_index = crown;
 }
-if  KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset)
+if  alarm[1] < 1 && KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset)
 {
 	KeyCont.key_fire[p] = 2;
 	if instance_exists(MultiCrownMenu) && scrIsCrown(crown)

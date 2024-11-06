@@ -1,3 +1,5 @@
+if alarm[1] > 0
+	exit;
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,yy-16,x+12,yy+16,0)
 var yy = y + yOffset;

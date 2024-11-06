@@ -9,7 +9,10 @@ if !hitEnemy && owner != -1 && instance_exists(owner)
 	{
 		if alarm[3] < 1 && my_health > 1
 		{
-			DealDamage(2);
+			if my_health == 2
+				DealDamage(1);
+			else
+				DealDamage(2);
 			snd_play(sndBloodHurt);
 			var ang = other.image_angle;
 			repeat(3)

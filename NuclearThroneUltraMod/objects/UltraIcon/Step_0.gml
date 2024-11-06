@@ -134,6 +134,13 @@ if (selected && visible &&
 			scrUnlockAltSkin(race, 0);
 		}
 	}
+	else if skill == 19 && !isAlternative
+	{
+		with Player
+		{
+			regeHit = rageHitDefault - rageHitBuff;
+		}
+	}
 	else if skill == 19 && Player.race == 5 && isAlternative
 	{
 		with Player
@@ -697,7 +704,12 @@ if (selected && visible &&
 	}
 	else if skill==3//FISH COMPANION ONLY PARTNER ONLY ULTRA GAMEMODE UNLOCK
 	{
-	scrUnlockGameMode(14,"FOR TAKING THIS ULTRA");
+		with UberCont
+		{
+			//Lore dump
+			array_push(voidSpecialConditions,0);
+		}
+		scrUnlockGameMode(14,"FOR TAKING THIS ULTRA");
 	}
 	else if skill==13//Melting Ultra A Brain capacity UNLOCK GAMEMODE 1HP EQUALITY
 	{

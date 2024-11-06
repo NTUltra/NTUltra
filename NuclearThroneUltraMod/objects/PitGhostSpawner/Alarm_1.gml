@@ -46,6 +46,7 @@ if target != noone {
 	else if instance_exists(ThePit) && instance_number(enemy) < 30
 	{
 		motion_add(point_direction(x,y,ThePit.x,ThePit.y),acc);
+		mp_potential_step(ThePit.x,ThePit.y,3,false);
 		walk = actTime;
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrPlantApexPredatorKillSkillBuff",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrPlantApexPredatorKillSkillBuff",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
