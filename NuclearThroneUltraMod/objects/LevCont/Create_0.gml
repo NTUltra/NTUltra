@@ -767,7 +767,6 @@ if scrIsGamemode(32) || UberCont.voidChallengeGoing[5]{
 		//No alkaline and no strong spirit
 		strongspirit = false;
 		strongspiritused = false;
-		skill_got[5] = 0;
 		skill_got[14] = 0;
 		skill_got[25] = 0;
 		skill_got[32] = 0;

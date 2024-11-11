@@ -6,3 +6,4 @@ if heavyHeart
 		wep[1] = scrDecideLightningWep();
 	} until (wep[0] != wep[1]);
 }
+wep_target = wep;

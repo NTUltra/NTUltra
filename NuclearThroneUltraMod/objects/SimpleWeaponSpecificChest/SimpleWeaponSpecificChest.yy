@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"MorphWeaponChest",
+  "%Name":"SimpleWeaponSpecificChest",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"MorphWeaponChest",
+  "name":"SimpleWeaponSpecificChest",
   "overriddenProperties":[],
   "parent":{
     "name":"Pickups",
     "path":"folders/Objects/Pickups.yy",
   },
   "parentObjectId":{
-    "name":"SimpleWeaponSpecificChest",
-    "path":"objects/SimpleWeaponSpecificChest/SimpleWeaponSpecificChest.yy",
+    "name":"WeaponSpecificChest",
+    "path":"objects/WeaponSpecificChest/WeaponSpecificChest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprMorphWeaponChest",
-    "path":"sprites/sprMorphWeaponChest/sprMorphWeaponChest.yy",
+    "name":"sprLightningWeaponChest",
+    "path":"sprites/sprLightningWeaponChest/sprLightningWeaponChest.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -22,4 +22,6 @@ actTime = 12;
 
 acc = 1;
 maxSpeed = 4.5;
-materializeRange = 132;
+materializeRange = 164;
+if GetPlayerLoops() > 0
+	materializeRange = 132;

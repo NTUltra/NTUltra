@@ -4,9 +4,9 @@ y -= vspeed * wallPierce
 
 if walled = 0
 {
-walled = 1
-snd_play(sndMeleeWall,0.1)
-snd_play(sndExplosionS);
+	walled = 1
+	snd_play(sndMeleeWall,0.1)
+	snd_play(sndExplosionS);
 }
 with other
 {

@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg += 10;
+dmg += 5;
 alarm[0] = 15;
 blinkTime --;
 alarm[3] = alarm[0] - 8;

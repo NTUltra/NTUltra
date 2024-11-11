@@ -13,8 +13,8 @@
     "path":"folders/Objects/Pickups.yy",
   },
   "parentObjectId":{
-    "name":"WeaponSpecificChest",
-    "path":"objects/WeaponSpecificChest/WeaponSpecificChest.yy",
+    "name":"SimpleWeaponSpecificChest",
+    "path":"objects/SimpleWeaponSpecificChest/SimpleWeaponSpecificChest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

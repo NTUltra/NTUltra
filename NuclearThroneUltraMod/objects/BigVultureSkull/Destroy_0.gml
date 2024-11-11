@@ -20,5 +20,6 @@ if spr_idle == sprBigVultureSkullOpen
 }
 with PitEnterance
 {
-	disable = true;	
+	disable = true;
+	name = "";
 }

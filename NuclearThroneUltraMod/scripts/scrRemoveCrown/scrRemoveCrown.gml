@@ -18,6 +18,10 @@ function scrRemoveCrown(oldcrown){
 			UberCont.maxHpIncrease ++;
 		}
 	}
+	if oldcrown == 4
+	{
+		Player.rushcrownlevels = 0;	
+	}
 	//CROWN OF PROTECTION
 	if oldcrown == 20
 	{

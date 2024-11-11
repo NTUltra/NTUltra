@@ -161,7 +161,12 @@ function scrDrawGameOver() {
 	}
 	if gameovertime > 30
 	{
-		draw_rectangle(vx,vy+hh-20 - 32,vx+__view_get( e__VW.WView, 0 ),vy+hh + 20 - 32,0);
+		if !scrIsGamemode(8)
+		{
+			draw_rectangle(vx,vy+hh-20 - 32,
+			lerp(vx,vx+__view_get( e__VW.WView, 0 ),clamp((gameovertime-30) / 10,0,1)),
+			vy+hh + 20 - 32,0);
+		}
 		
 		var syy = yy + 22;
 		var titleWidth = 210;
@@ -220,8 +225,9 @@ function scrDrawGameOver() {
 		draw_set_color(c_white)
 		draw_text_ext(vx+wh,yy,string_hash_to_newline(string(gameover)),8,titleWidth)
 		draw_text(vx+wh,vy+h-20,endText);
-		
-		var gotHover = scrDrawRoute();
+		var gotHover = false;
+		if !scrIsGamemode(8)
+			gotHover = scrDrawRoute();
 		
 		if instance_exists(DataRef) && DataRef.hitBy != noone && DataRef.my_health <= 0
 		{

@@ -533,6 +533,9 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			getVision = true;
+			instance_create(x,y,LightningWeaponChest);
+			instance_create(x,y,MorphWeaponChest);
+			instance_create(x,y,ToxicWeaponChest);
 			//instance_create(x,y,MusMimicBoss);
 			//isPermanent = true;
 			//piggyBank = 100;

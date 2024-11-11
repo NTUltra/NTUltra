@@ -58,11 +58,9 @@ function scrUpdateScore(theOther, isPerliminary = false){
 			if scrIsGamemode(8)// VAN FAN
 			{
 				//Check if this is your highest score
-				var tf = round(VanFan.time_frame);
-				debug("tf: ", tf);
-				debug("data: ", encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)]);
-				//if (tf > encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)])
-				//{
+				if instance_exists(VanFan)
+				{
+					var tf = round(VanFan.time_frame);
 					encrypted_data.ctot_weeklies_score[1][$"w"+string(weeklyWeek)] = tf;
 					scrSaveEncrypted();
 					runRace[0] = tf;
@@ -70,7 +68,7 @@ function scrUpdateScore(theOther, isPerliminary = false){
 					runRace[2] = encrypted_data.username;
 					runRace[3] = Player.race;
 					runRace[4] = Player.bskin;
-				//}
+				}
 			}
 			else
 			{

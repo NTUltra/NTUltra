@@ -10,6 +10,7 @@ with Player {
 			with instance_create(x,y,EnemyBullet2)
 			{
 				motion_add(ang,18);
+				sprite_index = sprScorpionBulletPlayer;
 				image_angle = direction
 				team = other.team
 				event_perform(ev_alarm,11);

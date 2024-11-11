@@ -93,7 +93,7 @@ function scrSecretUltraStat() {
 	//REBEL
 	//39
 	secret_ultra_name[11] = "BIG REBEL"
-	secret_ultra_text[11] = "+50 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
+	secret_ultra_text[11] = "+61 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
 	secret_ultra_tips[11] = "she is a maniac!"
 	secret_ultra_hint[11] = "ULTRA / ANTI-HEAL";
 	secret_ultra_unlk[11] = "HAVE NO HEALING MUTATIONS\nOR HOLD AN ULTRA WEAPON";

@@ -27,14 +27,17 @@ function scrAimAssistLaser(originalDirection, adjustAimAssist = 1, additionalAim
 			modBoost = 9;
 		if ultra_got[65]
 			modBoost += 11;
-		if wepmod1 == 13
-			aimAssist += modBoost;
-		if wepmod2 == 13
-			aimAssist += modBoost;
-		if wepmod3 == 13
-			aimAssist += modBoost;
-		if wepmod4 == 13
-			aimAssist += modBoost;
+		if !scrIsCrown(29)
+		{
+			if wepmod1 == 13
+				aimAssist += modBoost;
+			if wepmod2 == 13
+				aimAssist += modBoost;
+			if wepmod3 == 13
+				aimAssist += modBoost;
+			if wepmod4 == 13
+				aimAssist += modBoost;
+		}
 	}
 	aimAssist *= adjustAimAssist;
 	if aimAssist > 0 && instance_exists(enemy)

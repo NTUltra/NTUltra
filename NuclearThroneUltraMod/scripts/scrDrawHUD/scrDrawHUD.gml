@@ -959,7 +959,7 @@ function scrDrawHUD() {
 		var isPopup = dataRef.wep_popup[dataRef.cwep] == "";
 		if dataRef.wep_area[dataRef.cwep] >= 0
 		{
-			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
+			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
@@ -967,7 +967,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
+			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
 		}
@@ -1067,7 +1067,7 @@ function scrDrawHUD() {
 		var isPopup = dataRef.wep_popup[dataRef.bwep] == "";
 		if dataRef.wep_area[dataRef.bwep] >= 0
 		{
-			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
+			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
@@ -1075,7 +1075,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
+			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
 		}
@@ -1220,7 +1220,7 @@ function scrDrawHUD() {
 		var isPopup = (dataRef.wep_popup[dataRef.wep] == "");
 		if dataRef.wep_area[dataRef.wep] >= 0
 		{
-			scrDrawHelp("\n\n" + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
+			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
@@ -1228,7 +1228,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
+			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
 		}

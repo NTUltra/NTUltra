@@ -1,4 +1,8 @@
 /// @description Exit
+with CrownGuardian
+{
+	raddrop = 0;
+}
 with Player
 	isOnInteractable = true;
 if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)

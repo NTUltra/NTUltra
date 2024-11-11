@@ -35,7 +35,7 @@ if selected
 {
 
 drawy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-34//48
-if instance_exists(Player) && Player.race == 25 && skill_bons[skill] != ""
+if instance_exists(Player) && (Player.race == 25  || scrPlantApexPredatorKillSkillBuff(skill)) && skill_bons[skill] != ""
 	drawy -= string_height(string_hash_to_newline(skill_bons[skill]));
 
 /*

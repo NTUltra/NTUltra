@@ -16,6 +16,10 @@ team = other.team
 maxDistance = 4 + other.maxAmmo - other.ammo;
 laserDecrease -= 0.15;
 laserDecrease = max(laserDecrease,0.05);
+if instance_exists(Player) && Player.skill_got[12]
+{
+	maxDistance *= 0.75;
+}
 alarm[2] += 12 + other.maxAmmo - other.ammo;
 image_yscale = 0.25;
 event_perform(ev_alarm,0)
@@ -26,6 +30,10 @@ if ammo > maxAmmo - 1
 	{image_angle = other.gunangle - 2;
 	team = other.team
 	maxDistance = 2 + other.maxAmmo - other.ammo;
+	if instance_exists(Player) && Player.skill_got[12]
+	{
+		maxDistance *= 0.75;
+	}
 	laserDecrease -= 0.15;
 	laserDecrease = max(laserDecrease,0.05);
 	alarm[2] += 14 + other.maxAmmo - other.ammo;
@@ -36,6 +44,10 @@ if ammo > maxAmmo - 1
 	{image_angle = other.gunangle + 2;
 	team = other.team
 	maxDistance = 2 + other.maxAmmo - other.ammo;
+	if instance_exists(Player) && Player.skill_got[12]
+	{
+		maxDistance *= 0.75;
+	}
 	laserDecrease -= 0.15;
 	laserDecrease = max(laserDecrease,0.05);
 	alarm[2] += 14 + other.maxAmmo - other.ammo;

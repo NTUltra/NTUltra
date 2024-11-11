@@ -3328,6 +3328,7 @@ function scrWeapons() {
 	wep_text[296] = "more pellets"
 	wep_swap[296] = sndSwapExplosive
 	wep_rad[296] = 0;
+	wep_popup[296] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
 
 	wep_name[297] = "ULTRA FLAK CANNON"
 	wep_type[297] = 2
@@ -4440,7 +4441,7 @@ function scrWeapons() {
 	wep_text[393] = "holding fire will increase the power"
 	wep_swap[393] = sndSwapDragon
 	wep_rad[393] = 0;
-	wep_popup[396] = "GETS MORE POWERFUL#THE LONGER YOU HOLD THE TRIGGER"
+	wep_popup[393] = "GETS MORE POWERFUL#THE LONGER YOU HOLD THE TRIGGER"
 	
 	wep_name[394] = "FLAME AXE"
 	wep_type[394] = 0
@@ -9463,8 +9464,8 @@ function scrWeapons() {
 	wep_name[844] = "SUPER PLOP MACHINEGUN"
 	wep_type[844] = 1
 	wep_auto[844] = 1
-	wep_load[844] = 3
-	wep_cost[844] = 5//14
+	wep_load[844] = 5
+	wep_cost[844] = 6//14
 	wep_sprt[844] = sprSuperPlopMachinegun
 	wep_area[844] = 21
 	wep_text[844] = "7 PLOPS AT A TIME"
@@ -9723,7 +9724,7 @@ function scrWeapons() {
 	wep_rad[866] = 0;
 	
 	wep_name[867] = "TOXIC HAND CANNON"
-	wep_type[867] = 1
+	wep_type[867] = 4
 	wep_auto[867] = 0
 	wep_load[867] = 25
 	wep_cost[867] = 1.5

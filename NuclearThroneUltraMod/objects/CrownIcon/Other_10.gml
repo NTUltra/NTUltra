@@ -254,9 +254,6 @@ if crown == 31
 	}
 }
 
-if crown!=4//not crown of haste
-Player.rushcrownlevels=0;
-
 if crown != 25
 {
 	with PlayerAlarms

@@ -41,6 +41,7 @@ with Player//Data to keep
 	}
 	canblacksword = other.canblacksword;
 	//gotMinimumArmour = other.gotMinimumArmour;
+	rushcrownlevels = other.rushcrownlevels;
 	gunGameKill = other.gunGameKill;
 	rnglevelloop = other.rnglevelloop;
 	firedthislevel = other.firedthislevel;

@@ -1,7 +1,6 @@
 /// @description Init
-serverPort = "0000";
-updateVersion = "31.01";
-betaVersion = "31.01";
+updateVersion = "31.03";
+betaVersion = "31.03";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;

@@ -60,6 +60,7 @@ function scrCreateDataRef() {
 		wep_type = other.wep_type;
 		wep_sprt = other.wep_sprt;
 		wep_area = other.wep_area;
+		wep_popup = other.wep_popup;
 		ammo = other.ammo;
 		typ_ammo = other.typ_ammo;
 		typ_amax = other.typ_amax;

@@ -1,5 +1,6 @@
 /// @description Boom
-snd_play(sndClusterOpen);
+if !audio_is_playing(sndClusterOpen)
+	snd_play(sndClusterOpen);
 var ang = random(360);
 var angstep = 360/8;
 repeat(8)

@@ -549,8 +549,8 @@ function scrSkills() {
 	skill_bons[39] = "CHARGES FASTER"
 	
 	skill_name[40] = "BOUNCY FAT"
-	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE <y>AMMO<y> INSTEAD";
-	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE LETHAL DAMAGE#<aq>PREVENT<aq> IT AND LOSE#<w>75%<w> OF BASE TOTAL <y>AMMO<y>#<w>20%<w> LESS FOR TYPES YOU'RE HOLDING"
+	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE <w>LETHAL DAMAGE<w>#<aq>PREVENT<aq> IT AND LOSE <y>AMMO<y> INSTEAD";
+	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE <w>LETHAL DAMAGE<w>#<aq>PREVENT<aq> IT AND LOSE#<w>75%<w> OF BASE TOTAL <y>AMMO<y>#<w>20%<w> LESS FOR TYPES YOU'RE HOLDING"
 	skill_tips[40] = "layer of fat"
 	skill_msnd[40] =  sndMutBouncyFat;
 	skill_bons[40] = "-27% AMMO COST (TOTAL: 55%)"

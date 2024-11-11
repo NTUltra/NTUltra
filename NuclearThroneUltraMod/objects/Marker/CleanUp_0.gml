@@ -7,3 +7,10 @@ with Player {
 		pSpeedBoost -= other.speedBoost;
 	}
 }
+with PlayerSpawn {
+	if accuracy > 0
+	{
+		accuracy /= other.accuracyBuff;
+		pSpeedBoost -= other.speedBoost;
+	}
+}

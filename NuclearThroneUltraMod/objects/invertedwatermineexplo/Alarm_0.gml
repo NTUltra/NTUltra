@@ -18,7 +18,11 @@ image_angle = direction;}*/
 with instance_create(x,y,EnemyLaser)
 {image_angle = ang
 	team = 0;
-	maxDistance = 36;
+	maxDistance = 34;
+	if instance_exists(Player) && Player.skill_got[12]
+	{
+		maxDistance *= 0.75;
+	}
 event_perform(ev_alarm,0)}
 ang += 60}
 

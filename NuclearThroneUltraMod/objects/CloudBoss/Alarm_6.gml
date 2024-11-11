@@ -10,4 +10,5 @@ with instance_create(x+lengthdir_x(smackRange,90),y+lengthdir_y(smackRange,90),N
 	motion_add(90+random(10)-5,other.smackSpeed)
 	team = other.team
 }
+vspeed = 2;
 alarm[1] = actTime * 2;

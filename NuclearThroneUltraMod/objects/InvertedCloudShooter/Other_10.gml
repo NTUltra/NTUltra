@@ -18,6 +18,10 @@ repeat(am)
 		image_angle = ang;
 		team = other.team
 		maxDistance = 3;
+		if instance_exists(Player) && Player.skill_got[12]
+		{
+			maxDistance *= 0.75;
+		}
 		laserDecrease -= 0.1;
 		laserDecrease = max(laserDecrease,0.05);
 		alarm[2] += 30;

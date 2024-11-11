@@ -836,9 +836,7 @@ if (tookHit)
 			}
 			Sleep(50);
 			scrGiveEuphoriaShield();
-			alarm[3] = max(alarm[3],20);
-			if skill_got[12]
-				alarm[3] += 2;
+			alarm[3] += 20;
 		}
 	}
 	if skill_got[12]//euphoria resistance?
@@ -991,9 +989,16 @@ if(my_health <= 0 && maxhealth > 0)
 	else if my_health <= 0 && lastWishPrevent {
 		BackCont.shake += 20;
 		Sleep(100);
-		my_health = max(1,round(maxhealth*0.5));
-		if race == 25
-			my_health = maxhealth;
+		if canHeal
+		{
+			my_health = max(1,round(maxhealth*0.5));
+			if race == 25
+				my_health = maxhealth;
+		}
+		else
+		{
+			my_health = 1;	
+		}
 		lastWishPrevent = false;
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMutLastWish);

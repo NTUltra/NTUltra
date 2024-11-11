@@ -1983,6 +1983,7 @@
     {"id":{"name":"ShovelBurst","path":"objects/ShovelBurst/ShovelBurst.yy",},},
     {"id":{"name":"ShowVoidEssenceTemporarily","path":"objects/ShowVoidEssenceTemporarily/ShowVoidEssenceTemporarily.yy",},},
     {"id":{"name":"SideArtUpDown","path":"objects/SideArtUpDown/SideArtUpDown.yy",},},
+    {"id":{"name":"SimpleWeaponSpecificChest","path":"objects/SimpleWeaponSpecificChest/SimpleWeaponSpecificChest.yy",},},
     {"id":{"name":"SixShooter","path":"objects/SixShooter/SixShooter.yy",},},
     {"id":{"name":"SkeletonChair","path":"objects/SkeletonChair/SkeletonChair.yy",},},
     {"id":{"name":"SkeletonGambleCooldown","path":"objects/SkeletonGambleCooldown/SkeletonGambleCooldown.yy",},},

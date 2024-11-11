@@ -22,6 +22,42 @@ if !disable
 					if instance_exists(Player)
 						motion_add(point_direction(Player.x,Player.y,x,y),0.25);
 				}
+				if GetPlayerLoops() > 0
+				{
+					with other
+					{
+						with instance_create(x,y,Portal)
+						{
+							type = 1
+							pullstrength = 3;
+							alarm[1] = 1;
+							x = other.x;
+							y = other.y;
+							scrForcePosition60fps();
+							with Player
+							{
+								area = 139
+								subarea = 0
+								lockout = true;
+								if loops < 1
+									hard += 2;
+								x = other.x;
+								y = other.y;
+								scrForcePosition60fps();
+							}
+						}
+						with enemy
+						{
+							my_health = 0;
+							prevhealth = 0;
+						}
+						with instance_create(x,y,PortalEnviromentReplacer)
+						{
+							area = 139;
+							prevArea = 1;
+						}
+					}
+				}
 			}
 		}
 	}

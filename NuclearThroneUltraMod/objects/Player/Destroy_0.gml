@@ -353,6 +353,7 @@ if visible && my_health < 1
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	rushcrownlevels = other.rushcrownlevels;
 	wep = other.wep;
 	canblacksword = other.canblacksword;
 	ammo = other.ammo;
@@ -498,6 +499,7 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		instance_create(x,y,ReviveRogue);
 		alarm[0] = 30;
 		//Purity
+		maxhealth -= other.abundanceHealth;
 		if scrIsCrown(29)
 		{
 			var wantHealth = 0

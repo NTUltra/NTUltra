@@ -96,7 +96,7 @@ function scrSpawnEndLevelPortal(){
 						with Player
 						{
 							if seconds<11 && area != 100 && area != 135 && area != 104 && area != 137 && !instance_exists(CrownVaultExit) && ( my_health>0 || bleed>0 )
-								scrUnlockGameMode(6,"FOR COMPLETING A LEVEL#IN UNDER 10 SECONDS")
+								scrUnlockGameMode(6,"FOR COMPLETING AN AREA#IN UNDER 10 SECONDS")
 						}
 					    instance_create(dir.x+16,dir.y+16,WallBreak);
         

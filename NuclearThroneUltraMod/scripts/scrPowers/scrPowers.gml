@@ -242,12 +242,19 @@ function scrPowers(raceOverwrite = -1) {
 						    {
 							    if strongspirit==true&&strongspiritused==false
 							    {
-								    snd_play_2d(sndStrongSpiritLost);
-								    my_health=1;
+								    snd_play(sndStrongSpiritLost);
+								    my_health = 1;
+									BackCont.shake += 10;
 									Sleep(50);
-								    alarm[1]=20;//invincibility 
+									alarm[3] += 18;
+									snd_hurt = sndDamageNegate;
+									scrGiveEuphoriaShield();
 								    strongspiritused=true;
 								    strongspirit=false;
+									with instance_create(x,y,StrongSpiritBlock)
+									{
+										image_speed = 0.5;
+									}
 							    }
 							    else
 									scrUnlockCSkin(25,"HAHAHAHAHA!",0);
@@ -1016,7 +1023,7 @@ function scrPowers(raceOverwrite = -1) {
 				    else
 				    {
 					    if alarm[3]<1
-					    alarm[3]=2;//imunity
+							alarm[3]=2;//imunity
 			
 					    instance_create(x,y,Teleport);
 						if skill_got[5]
@@ -1485,10 +1492,10 @@ function scrPowers(raceOverwrite = -1) {
 			var wepType = TargetWepTypeForAmmoConsumption(takePercentage);
 			if wepType != wep_type[bwep] && wepType != wep_type[wep]
 				takePercentage *= 3;
-			if wepType != 0 && !scrIsCrown(40)
+			if wepType != 0 || scrIsCrown(40)
 			{
 				ammoRebel = true;
-				if wepType == 0 {
+				if wepType == 0  && !scrIsCrown(40){
 					snd_play(sndEmpty)
 					dir = instance_create(x,y,PopupText)
 					dir.mytext = "THIS DOESN'T USE AMMO";

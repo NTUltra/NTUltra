@@ -470,7 +470,7 @@ function scrPopEnemies() {
     }
 	//CLOUDLAND
     if spawnarea = 138 && (instance_number(enemy) < 2 || random(10) < 6) {
-		if loops > 0 {
+		if loops > 0  && (instance_number(enemy) < 2 || random(10) < 1) {
 			if random(35) < 1
 				instance_create(x + 16, y + 16, GraveyardSniper)
 	        else if random(3) < 1
@@ -486,7 +486,7 @@ function scrPopEnemies() {
 	        }
 		}
     }
-	//CLOUDLAND
+	//INVERTED CLOUDLAND
     if spawnarea = 140 && (instance_number(enemy) < 2 || random(10) < 6) {
 		if loops > 0 {
 			if random(35) < 1

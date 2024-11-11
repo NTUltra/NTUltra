@@ -12,9 +12,10 @@ y = creator.y
 repeat(2)
 {
 with instance_create(x,y,ToxicThrowerGas)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,7+random(3))
-//team = other.team
-scrCopyWeaponMod(other);
+{
+	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,8+random(3))
+	//team = other.team
+	scrCopyWeaponMod(other);
 }
 }
 

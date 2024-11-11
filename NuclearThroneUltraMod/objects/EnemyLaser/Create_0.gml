@@ -15,15 +15,19 @@ sprStart = sprEnemyLaserStart;
 sprEnd = sprEnemyLaserEnd;
 maxDistance = 160;
 alarm[2] = 3;
-alarm[3] = 1;
+alarm[3] = 2;
 if instance_exists(Player) && Player.skill_got[12]
 {
 	alarm[2] = 1;
 	laserDecrease = 0.25;
+	maxDistance *= 0.75;
 }
 	dmg = 3;
 if scrIsGamemode(9)//Casual mode
 	dmg = 2;
 if scrIsHardMode()//HARD MODE
+{
 	dmg = 4;
+	alarm[2] += 1;
+}
 //dir=0;

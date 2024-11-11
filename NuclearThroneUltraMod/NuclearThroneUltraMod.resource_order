@@ -1761,6 +1761,7 @@
     {"name":"ShovelBurst","order":179,"path":"objects/ShovelBurst/ShovelBurst.yy",},
     {"name":"ShowVoidEssenceTemporarily","order":58,"path":"objects/ShowVoidEssenceTemporarily/ShowVoidEssenceTemporarily.yy",},
     {"name":"SideArtUpDown","order":42,"path":"objects/SideArtUpDown/SideArtUpDown.yy",},
+    {"name":"SimpleWeaponSpecificChest","order":47,"path":"objects/SimpleWeaponSpecificChest/SimpleWeaponSpecificChest.yy",},
     {"name":"SixShooter","order":214,"path":"objects/SixShooter/SixShooter.yy",},
     {"name":"SkeletonChair","order":5,"path":"objects/SkeletonChair/SkeletonChair.yy",},
     {"name":"SkeletonGambleCooldown","order":131,"path":"objects/SkeletonGambleCooldown/SkeletonGambleCooldown.yy",},

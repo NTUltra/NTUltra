@@ -4,7 +4,7 @@ alarm[1] = 10
 alarm[0] = 60
 //loops = GetPlayerLoops();
 //if loops > 0
-alarm[10] = 10;
+alarm[10] = 20;
 alarm[2] = 1;
 alarm[6] = 10;
 gotHit = false;

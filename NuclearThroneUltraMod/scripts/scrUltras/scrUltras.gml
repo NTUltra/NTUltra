@@ -331,7 +331,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) &&  Player.race == 10 && (Player.altUltra))
 		{
 			ultra_name[39] = "BIG REBEL"
-		    ultra_text[39] = "+60 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
+		    ultra_text[39] = "+61 MAX <r>HP<r>!#YOU CAN'T <r>HEAL<r>#EVERY LOOP RESET HP TO FULL#ALLIES COST <y>AMMO<y>##RESISTANT TO <g>VENOM<g> DAMAGE"
 		    ultra_tips[39] = "she is a maniac!"
 		}
 		

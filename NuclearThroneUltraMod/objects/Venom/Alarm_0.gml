@@ -4,7 +4,7 @@ with owner
 {
 	snd_play(sndVenom,0.1);
 	BackCont.shake += 1;
-	DealDamage(theDamage);
+	DealDamage(theDamage,false,true,false);
 	with instance_create(x,y,AcidStreak)
 	{
 		motion_add(random(360),4 + (theDamage*2));
@@ -20,7 +20,7 @@ with owner
 	walk = 0;
 }
 amount -= 1;
-if amount > 0 && instance_exists(owner)
+if amount > 0 && owner != noone && instance_exists(owner)
 {
 	alarm[0] = rate;	
 }

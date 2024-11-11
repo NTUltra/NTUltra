@@ -850,10 +850,10 @@ if (yungCuzCskin > 2)
 
 
 if scrIsCrown(4) && area !=100 && race = 15 && area != 137
-rushcrownlevels++;
+	rushcrownlevels++;
 
-if rushcrownlevels=5
-scrUnlockBSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM",0);
+if rushcrownlevels == 5
+	scrUnlockBSkin(15,"FOR COMPLETING 5 AREAS IN A ROW#USING CROWN OF HASTE AS ATOM",0);
 
 	StartHogInvestment();
 

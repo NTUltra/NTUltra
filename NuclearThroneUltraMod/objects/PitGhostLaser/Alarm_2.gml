@@ -10,11 +10,16 @@ var sprtS = sprPopoLaserStart;
 var sprE = sprPopoLaserEnd;
 if team == 2
 	sprt = sprLaser;
+
 with instance_create(x,y,GhostLaser)
 {
 	image_angle = other.gunangle
 	team = other.team
 	maxDistance = 4;
+	if instance_exists(Player) && Player.skill_got[12]
+	{
+		maxDistance *= 0.75;
+	}
 	laserDecrease -= 0.15;
 	laserDecrease = max(laserDecrease,0.05);
 	alarm[2] += 12;
