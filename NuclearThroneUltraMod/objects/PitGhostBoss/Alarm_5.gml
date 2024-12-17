@@ -20,7 +20,7 @@ if instance_exists(Player) && Player.skill_got[12]
 {
 	maxDistance *= 0.75;
 }
-alarm[2] += 12 + other.maxAmmo - other.ammo;
+alarm[2] += tellTime + other.maxAmmo - other.ammo;
 image_yscale = 0.25;
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
@@ -59,8 +59,8 @@ walk = 0;
 if ammo > 0
 {
 	ammo -= 1;
-	alarm[5] = 6;
-	alarm[1] += 6;
+	alarm[5] = fireRate + 2;
+	alarm[1] += fireRate + 2;
 }
 else
 {

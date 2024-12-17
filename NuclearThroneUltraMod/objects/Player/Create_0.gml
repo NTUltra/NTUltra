@@ -11,6 +11,7 @@ if UberCont.normalGameSpeed == 60 && !instance_exists(FPSHACK) && !instance_exis
 	instance_create(x,yimm,FPSHACK);p
 }*/
 event_inherited();
+firstLoad = false;
 if scrIsGamemode(51) && !instance_exists(Acid)
 {
 	with instance_create(x,y,Acid) {

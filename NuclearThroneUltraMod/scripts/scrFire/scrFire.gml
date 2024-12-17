@@ -5504,14 +5504,14 @@ function scrFire(canDrown = true) {
 	}
 	if !scrIsCrown(29)//Crown of purity
 	{
-		var reloadBoost = 0.065;
+		var reloadBoost = 0.055;
 		if Player.skill_got[30] == 1
 		{
-			reloadBoost = 0.105;
+			reloadBoost = 0.10;
 		}
 		if Player.ultra_got[65]
 		{
-			reloadBoost += 0.06;
+			reloadBoost += 0.055;
 		}
 	
 		if wepmod1==12

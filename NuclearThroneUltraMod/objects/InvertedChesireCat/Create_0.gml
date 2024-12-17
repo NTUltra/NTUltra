@@ -1,5 +1,5 @@
 raddrop = 150
-maxhealth = 600
+maxhealth = 610
 mySize = 4
 scrBossHealthBuff();
 
@@ -52,24 +52,24 @@ wazerOffset = 90;
 tellTime = 12;
 
 loops = GetPlayerLoops();
-startLoop = 3;
-ca = 6 + min(7+(loops-startLoop)*2,12);
+startLoop = 1;
+ca = 6 + min(7+(loops-startLoop)*2,14);
 cang = random(360);
 caspd = min(6,4+((loops-startLoop)*0.5));
 actTime = 11;
 if loops > 0
 {
 	actTime -= 2;
-	wazerDuration -= 0.8;
+	wazerDuration -= 4;
 }
 if loops > 1
 {
-	wazerDuration -= 8;
+	wazerDuration -= 4;
 	actTime = 7;	
 }
 if loops > startLoop
 {
-	alarm[6] = 180;
+	alarm[6] = 160;
 	if instance_exists(Player)
 	{
 		if Player.skill_got[29]	//Insomnia

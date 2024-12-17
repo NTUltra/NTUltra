@@ -1,5 +1,9 @@
 ///@description AI
 alarm[1] = 14 + random(10)//30+random(10)
+if loops > 1 && !doDiamonds {
+	alarm[5] = 10;
+	doDiamonds = true;
+}
 if !halfHP && my_health < maxhealth * 0.6
 {
 	halfHP = true;

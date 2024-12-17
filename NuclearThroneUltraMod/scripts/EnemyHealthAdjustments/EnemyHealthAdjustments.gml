@@ -10,7 +10,7 @@ function EnemyHealthAdjustments(){
 			my_health = 1;
 			maxhealth = my_health;
 		}
-		maxhealth *= 1 + (clamp(Player.loops-1,0,7)*0.1);//0.15
+		maxhealth *= 1 + (Player.loops-1 * 0.09);//0.15
 		maxhealth += (Player.loops * 2);
 		if scrIsHardMode()
 			maxhealth *= 1.1;
@@ -52,7 +52,7 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.95;
 		}
-		if scrIsCrown(22) && random(100 + floor(my_health*0.1)) < 35//Crown of luck
+		if scrIsCrown(22) && random(100 + floor(my_health*0.15)) < 35//Crown of luck
 		{
 			//my_health = floor(my_health*0.1);
 			my_health = floor(my_health * (0.1 + clamp(ogmaxhealth*0.00005,0,0.15)));

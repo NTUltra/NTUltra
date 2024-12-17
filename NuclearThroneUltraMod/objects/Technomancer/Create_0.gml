@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 420//450
+maxhealth = 500//450
 scrBossHealthBuff();
 meleedamage = 0
 mySize = 3
@@ -37,3 +37,8 @@ imageIndex = sprite_get_number(spr_disappear);
 myKind = Technomancer;
 inverted = false;
 scrAddDrops(1);
+actTime = 20;
+loops = GetPlayerLoops();
+if loops > 2
+	image_speed = 0.5;
+actTime -= clamp((loops-1)*3,0,10);

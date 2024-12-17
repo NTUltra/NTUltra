@@ -664,10 +664,12 @@ if Player.area = 100
 		}
 	}
 }
-else if (Player.area > 2 and Player.subarea = 2 && Player.area!=101&&Player.area!=6
+else if (Player.area > 2 and 
+(Player.subarea = 2 || (Player.area == 139 && Player.loops > 0))
+&& Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area != 123 && Player.area != 124 && Player.area != 117
-&& (Player.area < 128)
+&& (Player.area < 128 || Player.area == 139)
 && Player.area!=115 && Player.area!=116 && !scrIsGamemode(25)
 && !(Player.area == 9 && Player.loops > 9) && !(Player.area == 118 && Player.loops > 9))
 {

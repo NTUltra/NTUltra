@@ -40,7 +40,7 @@ if loops>0
 			gunangle += angStep
 		}
 
-	}
+	}/*
 	if loops>3
 	{
 		var angStep = 360/3;
@@ -56,7 +56,7 @@ if loops>0
 			gunangle += angStep;
 		}
 
-	}
+	}*/
 }
 var angStep = 360/6;
 repeat(5)//6

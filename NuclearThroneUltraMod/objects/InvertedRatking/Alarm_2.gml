@@ -10,6 +10,7 @@ sprite_index = spr_fire
 		if instance_exists(Player) && Player.skill_got[29] {
 			alarm[1] = 60
 			scrGiveSnooze();
+			walk = 1 + irandom(2);
 			speed = 1;
 		}
 	}

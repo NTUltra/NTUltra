@@ -4,8 +4,8 @@ with instance_create(x,y,Smoke)
 motion_add(random(360),random(2))
 }
 
-if speed = 0
-instance_destroy()
+if speed == 0
+	instance_destroy()
 
-image_speed = speed/12
+image_speed = clamp(speed * 0.05,0.1,0.8);
 

@@ -108,6 +108,7 @@ else if currentArea == 106 && !instance_exists(WantBoss)
 	//venuz car
     with instance_furthest(10016, 10016, Car) {
         instance_create(x, y, CarVenus)
+		instance_create(x,y,WallBreak);
         instance_change(Wind, false)
     }
 	if !instance_exists(CarVenus)
@@ -115,6 +116,7 @@ else if currentArea == 106 && !instance_exists(WantBoss)
 		with instance_furthest(10016, 10016,Floor)
 		{
 			instance_create(x+16, y+16, CarVenus)
+			instance_create(x,y,WallBreak);
 		}
 	}
 }

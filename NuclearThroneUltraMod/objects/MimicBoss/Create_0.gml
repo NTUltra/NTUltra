@@ -40,7 +40,7 @@ snd_dead = sndFrogExplode
 walk = 0
 gunangle = random(360)
 wkick = 0
-actTime = 7;
+actTime = 6;
 
 acc = 0.9;
 maxSpeed = 4;
@@ -51,13 +51,14 @@ weaponType = -1;
 maxAmmo = 6;
 ammo = 6;
 fireRate = 2;
-wakeupTime = 15;
+wakeupTime = 10;
 race = 1;
-tellTime = 14;
+tellTime = 13;
 if loops < 1
 {
-	tellTime += 3;
-	actTime += 1;
+	wakeupTime += 5;
+	tellTime += 4;
+	actTime += 2;
 }
 wepangle = choose(-140,140)
 wepflip = 1

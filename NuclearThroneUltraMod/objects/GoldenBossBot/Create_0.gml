@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 fireDelay = 46;
-maxhealth = 700;
+maxhealth = 800;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 raddrop += 5;

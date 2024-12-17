@@ -3339,7 +3339,7 @@ function scrWeapons() {
 	wep_area[297] = 21
 	wep_text[297] = "green ball of green pellets"
 	wep_swap[297] = sndSwapExplosive
-	wep_rad[297] = 18;//14ultrashotgun
+	wep_rad[297] = 17;//14ultrashotgun
 
 	wep_name[298] = "GOLDEN OOPS GUN"
 	wep_type[298] = 1

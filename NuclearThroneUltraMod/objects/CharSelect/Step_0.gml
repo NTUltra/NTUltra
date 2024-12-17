@@ -164,6 +164,7 @@ if button = 1 and mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y
 	}
 	with Player
 	{
+		firstLoad = true;
 		restarted = true;
 		randomlySelected = ranChar;
 	}

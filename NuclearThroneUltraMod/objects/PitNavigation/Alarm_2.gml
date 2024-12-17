@@ -15,6 +15,10 @@ with Tangle
 {
 	instance_destroy();	
 }
+with Blasphemia
+{
+	instance_destroy();	
+}
 with TrapScorchMark
 {
 	instance_destroy();	

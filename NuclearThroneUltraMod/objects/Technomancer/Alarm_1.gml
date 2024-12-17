@@ -1,5 +1,5 @@
 ///@description AI
-alarm[1] = 30+random(20)
+alarm[1] = actTime+random(actTime)
 if inverted
 	alarm[1] -= 5;
 scrTarget()
@@ -8,8 +8,8 @@ if target != noone
 	var dis = point_distance(x,y,target.x,target.y)
 	if !hasHadIntro && dis < 200
 	{
-		alarm[2] = 20;
-		alarm[1] = 60;
+		alarm[2] = 15;
+		alarm[1] = 30;
 		imageIndex = 0;
 		with myKind
 			hasHadIntro = true;
@@ -28,6 +28,7 @@ if target != noone
 				else if random(2) < 1
 				{
 					//SPAWN TURRET
+					var gotSnoozer = instance_exists(Player) && Player.skill_got[29];
 					var canSpawnTurret = false;
 					var xx = x - 64;
 					var yy = y - 32;
@@ -45,7 +46,12 @@ if target != noone
 						with instance_create(xx,yy,turretToSpawn)
 						{
 							countKill = false;
-							alarm[1] *= 0.8;
+							alarm[1] = 7;
+							if gotSnoozer
+							{
+								alarm[1] += 15;
+								scrGiveSnooze();	
+							}
 						}
 					}
 					xx = x + 64;
@@ -57,7 +63,12 @@ if target != noone
 						with instance_create(xx,yy,turretToSpawn)
 						{
 							countKill = false;
-							alarm[1] *= 0.8;
+							alarm[1] = 7;
+							if gotSnoozer
+							{
+								alarm[1] += 15;
+								scrGiveSnooze();	
+							}
 						}
 					}
 					xx = x + 64;
@@ -69,7 +80,12 @@ if target != noone
 						with instance_create(xx,yy,turretToSpawn)
 						{
 							countKill = false;
-							alarm[1] *= 0.8;
+							alarm[1] = 7;
+							if gotSnoozer
+							{
+								alarm[1] += 15;
+								scrGiveSnooze();	
+							}
 						}
 					}
 					xx = x - 64;
@@ -81,7 +97,12 @@ if target != noone
 						with instance_create(xx,yy,turretToSpawn)
 						{
 							countKill = false;
-							alarm[1] *= 0.8;
+							alarm[1] = 7;
+							if gotSnoozer
+							{
+								alarm[1] += 15;
+								scrGiveSnooze();	
+							}
 						}
 					}
 			
@@ -90,7 +111,7 @@ if target != noone
 						spr_idle = spr_fire1;
 						spr_walk = spr_fire1;
 						sprite_index = spr_fire1;
-						alarm[1] = image_number/image_speed + 20;
+						alarm[1] = image_number/image_speed + 12;
 						if inverted
 							alarm[1] -= 5;
 						imageIndex = 0;

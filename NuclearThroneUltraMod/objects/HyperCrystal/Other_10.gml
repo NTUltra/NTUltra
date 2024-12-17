@@ -3,6 +3,7 @@ if ds_exists(myCrystals,ds_type_list)
 	ds_list_clear(myCrystals);
 snd_play(sndHyperCrystalSpawn);
 instance_create(x,y,WallBreak);
+var l = loops;
 repeat(ammo)
 {
 	var crystal = noone;
@@ -31,7 +32,13 @@ repeat(ammo)
 		with crystal
 		{
 			depth = other.depth + 1;
-			alarm[1] *= 0.5;
+			alarm[1] *= 0.4;
+			if l > 1
+				alarm[1] = 10;
+			if instance_exists(Player) && Player.skill_got[29] {
+				alarm[1] += 20;
+				scrGiveSnooze();
+			}
 			droprate = 40;
 			countKill = false;
 		}

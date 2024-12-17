@@ -1,5 +1,5 @@
 raddrop = 150
-maxhealth = 900//750
+maxhealth = 1000//750
 mySize = 6
 
 
@@ -20,6 +20,8 @@ snd_dead = sndHyperCrystalDead
 
 
 //behavior
+doDiamonds = false;
+diamondsAngle = 0;
 loops = GetPlayerLoops();
 ammo = 4 + min(4,loops);
 angleStep = 360/ammo;
@@ -28,6 +30,7 @@ maxSpeed = 1;
 alarm[1] = 30+random(90)
 crystalDis = 0;
 maxCrystalDis = 100;
+maxCrystalDis += 8 * clamp(loops - 1,0,4);
 myCrystals = ds_list_create();
 normalCrystal = LaserCrystal;
 altCrystal = LightningCrystal;

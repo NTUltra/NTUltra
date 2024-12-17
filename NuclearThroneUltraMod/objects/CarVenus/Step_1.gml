@@ -18,7 +18,7 @@ if sprite_index = spr_hurt
 sprite_index = spr_idle}
 
 
-if my_health <= 0
+if my_health <= 0 && alarm[1] < 1
 instance_destroy()
 
 if speed > 4

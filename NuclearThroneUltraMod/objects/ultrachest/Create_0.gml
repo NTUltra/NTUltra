@@ -46,6 +46,8 @@ if instance_exists(Player)
 if scrIsCrown(9)
 {
 	alarm[3] = 10;
+	alarm[1] = 0;
+	weps[0] = 0;
 	if !instance_exists(GenCont)
 		event_perform(ev_alarm,3);
 	exit;

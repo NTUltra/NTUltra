@@ -1,5 +1,5 @@
 /// @description Constant circle spam
-alarm[6] = 60;
+alarm[6] = 65;
 snd_play(sndEnemyFire);
 var angStep = 360/ca;
 var ang = cang;

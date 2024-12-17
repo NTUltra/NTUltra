@@ -1,0 +1,14 @@
+/// @description Always Pierce
+if (candmg && other.team != team && other.my_health > 0 && !array_contains(hitEntities,other.id))
+{
+	hitEntities[array_length(hitEntities)] = other.id;
+	with other
+	{
+		snd_play(snd_hurt, hurt_pitch_variation,true)
+		DealDamage(other.dmg);
+		sprite_index = spr_hurt
+		image_index = 0
+		motion_add(other.direction,6)
+	}
+	event_user(4);
+}

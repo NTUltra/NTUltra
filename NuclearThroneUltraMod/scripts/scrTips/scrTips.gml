@@ -393,15 +393,15 @@ function scrTips() {
 	if Player.area = 129
 	tip = choose("blood line","multi crown")
 	if Player.area = 130
-	tip = choose("factory","weapons here","robots","what are they building in there","beat the boss to get your gun back");
+	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","factory","weapons here","robots","what are they building in there","beat the boss to get your gun back");
 	if Player.area = 131
-	tip = choose("inverted factory","this is not normal","automation");
+	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","inverted factory","this is not normal","automation");
 	if Player.area = 132
-	tip = choose("cursed factory","mistakes were built","cursed robots");
+	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","cursed factory","mistakes were built","cursed robots");
 	if Player.area = 133
-	tip = choose("golden factory","bling bling guns","gold digging");
+	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","golden factory","bling bling guns","gold digging");
 	if Player.area = 134
-	tip = choose("ultra factory","supreme technology","top of the line","ultra robots");
+	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","ultra factory","supreme technology","top of the line","ultra robots");
 	if Player.area = 135//HQ
 	tip = choose("become the captain","nono popo","end this","stop the chase","end the popo");
 	if Player.area = 136//Ultra scrapyard
@@ -409,9 +409,12 @@ function scrTips() {
 	if Player.area = 137//VOID
 	tip = choose("void","nothing","empty","the good? the bad and the ugly","...","essence","space in between worlds","nothingness","darkness","the unknown","not of our worlds");
 	if Player.area = 138//CLOUDLAND
-	tip = choose("fluff","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!","venom damages you until you are at 1hp or you pickup hp");
+	tip = choose("fluff","grenades fall down","corpses fall down","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!","venom damages you until you are at 1hp or you pickup hp");
 	if Player.area = 139//THE PIT
-	tip = choose("the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?");
+	tip = choose("vault available here on loop","the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?");
+	if Player.area = 140//INVCLOUDLAND
+	tip = choose("pink clouds","inverted skies","venomous monsters","they fly","lasers and bullets","cotton candy clouds");
+	
 	}
 	else if tiptype = 2
 	{

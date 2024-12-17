@@ -1,10 +1,14 @@
+var ang = direction;
+var angStep = 360/bullets;
 repeat(bullets)
 {
-with instance_create(x,y,Bullet5)
-{motion_add(random(360),12+random(10))
-image_angle = direction
-team = other.team
-}
+	with instance_create(x,y,Bullet5)
+	{
+		motion_add(ang,17)
+		image_angle = direction
+		team = other.team
+	}
+	ang += angStep;
 }
 Sleep(20)
 

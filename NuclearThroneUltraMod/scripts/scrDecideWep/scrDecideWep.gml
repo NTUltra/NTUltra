@@ -17,9 +17,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 	{
 		maxTriesParam *= 0.5;
 	}
+	var isFactory = dataRef.area == 130 || dataRef.area == 131 || dataRef.area == 132 || dataRef.area == 133 || dataRef.area == 134
 	if scrIsGamemode(2) {
 		//Favourable build
-		if dataRef.loops > 0
+		if isFactory || dataRef.loops > 0
 			decideWep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140, 236,197,127,128,395,397,536,540,542, 118, 563,543,541,538, 507, 506, 504, 494, 487, 120, 524, 266, 544, 396, 550, 121, 422, 456);
 		else
 			decideWep=choose(592, 591, 500, 508, 410, 24,79,12,11,562, 481, 360, 596, 598, 22, 99, 213, 220, 331, 221, 222, 223, 87, 234, 140);
@@ -38,7 +39,6 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			minWepArea = floor(minWepArea);
 			maxTries += 20;
 		}
-			
 		if (cursed) {
 			wepTier += 2;
 			maxTries += 5;
@@ -52,6 +52,13 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 		}
 		wepTier += dataRef.hard;
+		if isFactory
+		{
+			wepTier += 1;
+			maxTries *= 1.25;
+			maxAreaGoodEnough += 1;
+			minWepArea += 1;
+		}
 		wepTier = floor(wepTier);
 		wepTier = max(1,wepTier);
 		if dataRef.race == 17
@@ -114,7 +121,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			decideWep = maxValidTierWep;
 		}
 	}
-	while (decideWep == 402 && !(scrIsCrown(5) || dataRef.skill_got[0] || dataRef.area == 130 || dataRef.area == 131 || dataRef.area == 132 || dataRef.area == 133 || dataRef.area == 134))//Rolled gun gun? you must have crown of guns or heavy heart
+	while (decideWep == 402 && !(scrIsCrown(5) || dataRef.skill_got[0] || isFactory))//Rolled gun gun? you must have crown of guns or heavy heart
 	{
 		decideWep = scrDecideWep(wepTierParam, maxTriesParam, cursedParam, minWepAreaParam);
 	}

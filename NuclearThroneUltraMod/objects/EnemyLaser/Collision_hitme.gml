@@ -1,4 +1,4 @@
-if other.team != team and other.my_health > 0 && image_yscale > 0.15
+if other.team != team and other.my_health > 0 && image_yscale > 0.15 && alarm[3] < 1
 {
 	with other
 	{
@@ -6,7 +6,7 @@ if other.team != team and other.my_health > 0 && image_yscale > 0.15
 		{
 			if object_index == Player
 			{
-				if alarm[3] > 0 || other.alarm[3] > 0 || hurtTime > 0//When immune dont deal damage and dont trigger blast armour
+				if alarm[3] > 0 || hurtTime > 0//When immune dont deal damage and dont trigger blast armour
 				{
 					exit;
 				}

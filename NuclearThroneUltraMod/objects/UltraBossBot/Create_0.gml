@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-maxhealth = 700
+maxhealth = 800
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 spr_idle = sprUltraBossBotIdle;

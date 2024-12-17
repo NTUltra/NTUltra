@@ -22,6 +22,12 @@ with ThePit
 		if voidChallengeGoing[0]
 			portalEssence += 6;
 	}
+	with Player
+	{
+		lastarea = 139;
+		lastsubarea = 1;
+		inverted = true;
+	}
 	with instance_create(x,y,Portal) {
 		x = other.x;
 		y = other.y;

@@ -15,6 +15,11 @@ if object_index == BossBot {
 	}
 }
 instance_create(x,y-16,GoldChest);
+instance_create(x,y+16,GoldChest);
+if instance_exists(Player) && Player.skill_got[23]
+{
+	instance_create(x,y+32,GoldChest);
+}
 if existTime > 15
 {
 	with instance_create(x,y,GreenExplosion)

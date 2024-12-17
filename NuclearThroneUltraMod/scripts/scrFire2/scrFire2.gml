@@ -2980,13 +2980,13 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,UltraFlakBullet)
 	{
-	motion_add(aimDirection+(random(10)-5)*other.accuracy,12+random(3))
+	motion_add(aimDirection+(random(10)-5)*other.accuracy,16)
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(34,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(34,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 8
+	BackCont.viewx2 += lengthdir_x(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(40,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 10
 	wkick = 8
 
 	break;

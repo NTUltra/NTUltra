@@ -1,6 +1,10 @@
 room_speed=UberCont.normalGameSpeed*UberCont.opt_loading;
 loadTime = 60;
 depth = -100;
+with Player
+{
+	firstLoad = false;	
+}
 if UberCont.opt_loading == 4
 {
 	loadTime = 4;
@@ -460,7 +464,7 @@ else if Player.area == 140
 	goal = 200 + s;
 else if Player.area == 139//THE PIT
 {
-	goal = 190;//DONT INCREASE EACH LOOP THIS IS ALREADY BIG
+	goal = 130;//190 DONT INCREASE EACH LOOP THIS IS ALREADY BIG
 	if Player.loops > 0
 		goal -= 10;
 }

@@ -27,8 +27,8 @@ if ammo > maxAmmo - 1
 if ammo > 0
 {
 	ammo -= 1;
-	alarm[2] = 4;
-	alarm[1] += 4;
+	alarm[2] = fireRate;
+	alarm[1] += fireRate;
 }
 else
 {
