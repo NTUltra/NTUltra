@@ -7065,7 +7065,7 @@ function scrWeapons() {
 	wep_type[630] = 5
 	wep_auto[630] = 1
 	wep_load[630] = 15
-	wep_cost[630] = 2
+	wep_cost[630] = 3
 	wep_sprt[630] = sprPlasmaQuake
 	wep_area[630] = 9
 	wep_text[630] = "shake the earth"
@@ -8748,7 +8748,7 @@ function scrWeapons() {
 	wep_name[781] = "CORE SPLITTER"
 	wep_type[781] = 4
 	wep_auto[781] = 3
-	wep_load[781] = 4
+	wep_load[781] = 3.5
 	wep_cost[781] = 1
 	wep_sprt[781] = sprCoreSplitter
 	wep_area[781] = 18

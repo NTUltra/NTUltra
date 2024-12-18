@@ -10,15 +10,24 @@ spr_hurt = sprInvertedBigVultureHurt;
 spr_eat = sprInvertedBigVultureEat;
 spr_dead = sprInvertedBigVultureDead
 
-projectileSpeed += 1;
+projectileSpeed += 0.9;
 isInverted = true;
 raddrop = 80
 maxhealth = 140;
+if loops > 0
+{
+	maxhealth += 50;
+}
 scrBossHealthBuff();
 EnemyHealthAdjustments();
-maxAmmo = 25;
+maxAmmo = 24;
 fireRate = 1;
 fireRate2 = 5;
+if loops > 0
+{
+	maxAmmo += 2;
+	fireRate2 = 4;	
+}
 chargeSpeed = 4.8;
 maxChargeSpeed = 18;
 maxSpeed = 3.2;

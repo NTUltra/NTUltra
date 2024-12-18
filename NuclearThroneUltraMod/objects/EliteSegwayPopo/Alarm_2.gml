@@ -8,18 +8,21 @@ if team == 2
 with instance_create(x,y,IDPDLaser)
 {image_angle = other.gunangle
 team = other.team
+maxDistance *= 0.4;
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 
 with instance_create(x,y,IDPDLaser)
 {image_angle = other.gunangle+other.sniperOffset
 team = other.team
+maxDistance *= 0.4;
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 
 with instance_create(x,y,IDPDLaser)
 {image_angle = other.gunangle-other.sniperOffset
 team = other.team
+maxDistance *= 0.4;
 event_perform(ev_alarm,0)
 sprite_index = sprt;sprStart = sprtS; sprEnd = sprE;}
 

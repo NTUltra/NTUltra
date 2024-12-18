@@ -10,17 +10,19 @@ snd_play_fire(sndJackHammer)
 snd_play_fire(choose(sndSpark1,sndSpark2));
 //FIRING
 if instance_exists(Player){
-    with instance_create(x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),LightningShank)
+    with instance_create(
+	x+lengthdir_x(4+((Player.skill_got[13]+Player.bettermelee)*10),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),
+	y+lengthdir_y(4+((Player.skill_got[13]+Player.bettermelee)*10),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),LightningShank)
     {
 		hasCosted = other.hasCosted;
-    dmg = 4;
+		dmg = 4;
 	knockback = 2;
     if instance_exists(Player){
     Player.longarms = 0
     Player.longarms = (Player.skill_got[13]+Player.bettermelee)*3
-    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3+Player.longarms)}
+    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,4+Player.longarms)}
     else{
-    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,3)}
+    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(30)-15,4)}
 	scrCopyWeaponMod(other);
     image_angle = direction
     team = other.team}

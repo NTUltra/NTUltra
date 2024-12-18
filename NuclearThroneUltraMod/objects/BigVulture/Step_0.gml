@@ -91,18 +91,18 @@ else if alarm[7] < 1 //Charge tell??
 
 	if corpseTarget != noone && instance_exists(corpseTarget) && alarm[2] < 1
 	{
-		if point_distance(x,y,corpseTarget.x,corpseTarget.y) < 24
+		if point_distance(x,y,corpseTarget.x,corpseTarget.y) < 24 + min(32, loops)
 		{
 			walk = 0;
 			speed = 0;
-			alarm[1] += 15;
+			alarm[1] += 15 - min(10,loops*2);
 			sprite_index = spr_eat;
 			if alarm[2] < 1
 			{
 				image_index = 0;
 			}
 				
-			alarm[2] = 15;
+			alarm[2] = 15 - min(10,loops*2);
 			alarm[3] = 1;
 
 		}

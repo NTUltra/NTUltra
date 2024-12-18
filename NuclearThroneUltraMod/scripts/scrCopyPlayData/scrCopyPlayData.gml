@@ -103,7 +103,6 @@ function scrCopyPlayData(){
 		accuracy: Player.accuracy,
 		standartAccuracy: Player.standartAccuracy,
 		kills: Player.kills,
-		invertedchance: Player.invertedchance,
 		crownvisits: Player.crownvisits,
 		hard: Player.hard,
 		maxSpeed: Player.maxSpeed,

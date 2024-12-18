@@ -57,11 +57,12 @@ isInverted = false;
 if loops > 0
 {
 	tellTime = 7;
-	actTime -= 2;
+	actTime -= 4;
 	fireRate = 4;
 	maxAmmo ++;
 	acc += 1;
 	dashDuration -= 1;
+	dashStart += 1;
 	maxSpeed += 2;
 }
 if loops > 2

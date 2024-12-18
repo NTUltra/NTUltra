@@ -14,7 +14,7 @@ if target != noone
 		lasty = target.y;
 		gunangle = point_direction(x,y,target.x,target.y)
 		var dis = point_distance(x,y,target.x,target.y);
-		if dis < goForSmackRange || stuck
+		if (dis < goForSmackRange && (random(2) < 1 || stuck)) 
 		{
 			//goForSmackRange
 			with Player
@@ -69,13 +69,13 @@ if target != noone
 				walk = actTime;
 			}
 		}
-		else if dis < 320 && random(2) < 1 && !wasBehindWall
+		else if dis < 340 && !wasBehindWall
 		{
 			//SHOOT
 			walk = actTime * 2;
 			direction = gunangle + choose(30,-30);
 			alarm[2] = tellTime;
-			alarm[1] = alarm[2] + actTime * 5;
+			alarm[1] = alarm[2] + actTime * 4;
 		}
 		else
 		{

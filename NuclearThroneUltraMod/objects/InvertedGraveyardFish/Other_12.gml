@@ -15,3 +15,15 @@ with instance_create(x,y,EnemyHomingTriangle)
 	image_angle = direction
 	team = other.team
 }
+if loops > 0
+{
+	if loops > 0
+	{
+		with instance_create(x,y,EnemyHomingTriangle)
+		{
+			motion_add(other.gunangle,2);
+			image_angle = direction
+			team = other.team
+		}
+	}	
+}

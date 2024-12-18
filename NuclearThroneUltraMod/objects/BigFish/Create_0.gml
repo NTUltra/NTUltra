@@ -56,12 +56,23 @@ maxShoot = 10;
 currentShoot = 0;
 if loops > 0
 {
+	actTime = 7;
 	maxShoot = 99999;
+	suckRange += 20;
+	maxSpeed += 0.5;
 	fishTime = 10;
 	fishFireRate = 4;
+	chargeSpeed += 1;
+	chargeDis += 10;
+	chargeTell -= 4;
 }
 if loops > 1
+{
 	fishFireRate = 3;
+	chargeSpeed += 1;
+	chargeDis += 10;
+	chargeTell -= 6;
+}
 if loops > 4
 {
 	fishFireRate = 2;	

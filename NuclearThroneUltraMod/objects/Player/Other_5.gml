@@ -959,7 +959,6 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		boostLevel = other.boostLevel;
 		ultimategamble = other.ultimategamble;
 		kills = other.kills;
-		invertedchance = other.invertedchance;
 		crownvisits = other.crownvisits;
 		hard = other.hard;
 		//PLANT

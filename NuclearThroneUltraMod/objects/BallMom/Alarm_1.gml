@@ -1,5 +1,5 @@
 /// @description AI
-alarm[1] = 15+random(10)
+alarm[1] = actTime+random(actTime)
 if isInverted 
 	alarm[1] -= 5;
 if !almostDead && my_health < 0.25
@@ -31,31 +31,12 @@ if active
 				sprite_index=sprFrogHeal;
 			}
 			snd_play(sndBloodlustProc);
-			my_health += 8;
+			my_health += 8 + min(42,loops*2);
 			my_health = min(maxhealth,my_health);
 		}
 	}
 	var ran = random(100);
-	if ran > 80 && instance_number(SuperFrog) < 5 && instance_number(InvertedSuperFrog) < 5
-	{
-		if isInverted
-		{
-			with instance_create(x,y,InvertedFrogEgg)
-			{
-				team = other.team;
-				alarm[0] = 100;
-			}
-		}
-		else
-		{
-			with instance_create(x,y,FrogEgg)
-			{
-				team = other.team;
-				alarm[0] = 120;//4 seconds
-			}
-		}
-	}
-	else if ran > 50 && target != noone
+	if ran > 70 && target != noone && instance_exists(target)
 	{
 		speed *= 0.5;
 		sprite_index = spr_fire;
@@ -66,6 +47,26 @@ if active
             image_angle = direction
             team = other.team
         }
+		alarm[1] -= 2;
+	}
+	else if ran > 40 && instance_number(SuperFrog) < 5 + loops && instance_number(InvertedSuperFrog) < 5 + loops
+	{
+		if isInverted
+		{
+			with instance_create(x,y,InvertedFrogEgg)
+			{
+				team = other.team;
+				alarm[0] = 100 - min(70,other.loops*5);
+			}
+		}
+		else
+		{
+			with instance_create(x,y,FrogEgg)
+			{
+				team = other.team;
+				alarm[0] = 120 - min(70,other.loops*5);//4 seconds
+			}
+		}
 	}
 }
 if random(2) >= 0.8
@@ -80,3 +81,4 @@ if random(2) >= 0.8
 	else 
 		motion_add(random(360),theSpeed)
 }
+alarm[1] = max(1,alarm[1]);

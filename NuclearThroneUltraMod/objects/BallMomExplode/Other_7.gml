@@ -11,15 +11,20 @@ if sprite_index == sprFrogQueenDying
 	var ang = random(360);
 	var am = 80;
 	var angStep = 360 / am
-	repeat(am)
+	var spd = 3 + min(14,GetPlayerLoops()*2);
+	repeat(1 + floor((spd*0.5) - 3))
 	{
-		with instance_create(x,y,EnemyBullet2)
-	    {
-		    motion_add(ang,4)
-		    image_angle = direction
-		    team = other.team
-	    }
-		ang += angStep;
+		repeat(am)
+		{
+			with instance_create(x,y,EnemyBullet2)
+		    {
+			    motion_add(ang,spd)
+			    image_angle = direction
+			    team = other.team
+		    }
+			ang += angStep;
+		}
+		spd -= 2;
 	}
 }
 else if sprite_index == sprInvertedFrogQueenDying
@@ -34,15 +39,20 @@ else if sprite_index == sprInvertedFrogQueenDying
 	var ang = random(360);
 	var am = 80;
 	var angStep = 360 / am
-	repeat(am)
+	var spd = 8 + min(14,GetPlayerLoops()*2);
+	repeat(1 + floor((spd*0.5) - 8))
 	{
-		with instance_create(x,y,EnemyBullet2)
-	    {
-		    motion_add(ang,8)
-		    image_angle = direction
-		    team = other.team
-	    }
-		ang += angStep;
+		repeat(am)
+		{
+			with instance_create(x,y,EnemyBullet2)
+		    {
+			    motion_add(ang,8)
+			    image_angle = direction
+			    team = other.team
+		    }
+			ang += angStep;
+		}
+		spd -= 2;
 	}
 }
 else

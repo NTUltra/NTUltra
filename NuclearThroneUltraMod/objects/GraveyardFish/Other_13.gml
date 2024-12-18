@@ -1,4 +1,13 @@
 /// @description Player Teleport
+if loops > 0
+{
+	with instance_create(x,y,EnemyHomingTriangle)
+	{
+		motion_add(other.gunangle,2);
+		image_angle = direction
+		team = other.team
+	}
+}
 if !reachedHalfHealth
 	snd_play_2d(sndOasisBossHalfHP);
 

@@ -61,9 +61,17 @@ if instance_exists(Player)
 		}
 		SetSeed();
 		var inc = random(120);
-		var ic = invertedchance;
-		if instance_exists(Player) && Player.skill_got[30]//Power craving
-			ic += 10;
+		var ic = 8;
+		ic += min(48,GetPlayerLoops());
+		if scrIsCrown(12)
+			ic += 62;
+		if instance_exists(Player) 
+		{
+			if Player.skill_got[30]//Power craving
+				ic += 12;
+			if Player.race == 27
+				ic += 12;
+		}
 		with WepPickup
 		{
 			if wep == 375

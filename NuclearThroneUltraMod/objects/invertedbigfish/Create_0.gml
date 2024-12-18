@@ -13,18 +13,31 @@ scrBossHealthBuff();
 healAmount = 11;
 EnemyHealthAdjustments()
 inverted = true;
-actTime = 6;
+actTime -= 2;
 suckRange = 160;
 maxSpeed = 3;//2
 suckTime = 50;
 fishFireRate = 4;
-if loops > 0
-	fishFireRate = 2;
 originalMaxspeed = maxSpeed;
 chargeSpeed = 6;//7
 chargeDis = 80;
-suckAcc = 0.098;
 chargeTell = 20;
+if loops > 0
+{
+	fishFireRate = 2;
+	suckRange += 20;
+	maxSpeed += 0.5;
+	chargeSpeed += 1;
+	chargeDis += 10;
+	chargeTell -= 2;
+}
+if loops > 1
+{
+	chargeSpeed += 1;
+	chargeDis += 10;
+	chargeTell -= 2;
+}	
+suckAcc = 0.098;
 spr_idle = sprInvertedOasisBossIdle
 spr_walk = sprInvertedOasisBossWalk
 spr_hurt = sprInvertedOasisBossHurt

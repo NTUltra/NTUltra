@@ -435,7 +435,6 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		betterTail = other.betterTail;
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
-		invertedchance = other.invertedchance;
 		hard = other.hard;
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;

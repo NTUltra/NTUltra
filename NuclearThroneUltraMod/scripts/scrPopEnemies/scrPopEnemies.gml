@@ -430,7 +430,7 @@ function scrPopEnemies() {
     }
 	//ULTRA SCRAPYARD
     if spawnarea = 136 {
-		if loops > 0 && instance_number(enemy) < 2 || random(3) < 2{
+		if loops > 0 && instance_number(enemy) < 2 || random(4) < 2{
 			if styleb = 1 && random(2) < 1 {
 				instance_create(x + 16, y + 16, choose(UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, choose(PalaceGuardian,UltraSalamander)))
 	        }
@@ -449,7 +449,7 @@ function scrPopEnemies() {
 	                    instance_create(x + 16, y + 16, choose(UltraRaven, UltraRaven, Bandit, BanditSquare))
 	            }
 	        }
-		} else if instance_number(enemy) < 2 || random(3) < 2{
+		} else if instance_number(enemy) < 2 || random(4) < 2{
 			if styleb = 1 && random(2) < 1 {
 				instance_create(x + 16, y + 16, choose(UltraMeleeFake, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander, UltraSalamander))
 	        }

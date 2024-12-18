@@ -279,7 +279,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[31] = "why not all three?"
     
 	    ultra_name[32] = "GUN EXTENSION"
-	    ultra_text[32] = "REPLACE ACTIVE WITH:#<w>FORCE SHOT<w>#YOUR ACTIVE FIRES YOUR WEAPON#AT THE COST OF <r>RADS<r> INSTEAD OF <y>AMMO<y>#COST IS DETERMINED BY <w>RELOAD TIME<w>##THRONEBUTT REDUCES COST"
+	    ultra_text[32] = "REPLACE ACTIVE WITH:#<w>FORCE SHOT<w>#YOUR ACTIVE FIRES YOUR WEAPON#AT THE COST OF <g>RADS<g> INSTEAD OF <y>AMMO<y>#COST IS DETERMINED BY <w>RELOAD TIME<w>##THRONEBUTT REDUCES COST"
 	    ultra_tips[32] = "burping shots"
     
 	//CHICKEN 

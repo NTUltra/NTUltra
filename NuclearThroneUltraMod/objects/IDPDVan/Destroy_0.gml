@@ -80,12 +80,7 @@ if loops > 3 {
 		am = 16;
 	var angStep = 360/am;
 	var ps = 3;
-	if loops > 7
-		ps = 3.5;
-	if loops > 8
-		ps = 4;
-	if loops > 9
-		ps = 4.5;
+	ps += clamp((loops-3) * 0.5,0,7);
 	repeat(am)
 	{
 		with instance_create(x,y,EnemyBullet1Square)

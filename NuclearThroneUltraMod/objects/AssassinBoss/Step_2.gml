@@ -12,9 +12,10 @@ if fakeded > 0
 		depth -= 2;
 		mask_index = mskBandit;
 		team = 1;
+		maxhealth *= 0.8;
 		my_health = maxhealth;
 		aggression = 0;
-		EnemyHealthAdjustments();
+		// EnemyHealthAdjustments();
 		run = false;
 		alarm[1] = 60;
 		snd_play_2d(sndAssassinGetUp)

@@ -10,7 +10,7 @@ with instance_create(x,y,EnemyIceFlame)
 team = other.team
 move_contact_solid(direction,0.3)
 }
-
+instance_create(x,y,WallBreak);
 
 }
 until dir > 100 or place_meeting(x,y,Wall)

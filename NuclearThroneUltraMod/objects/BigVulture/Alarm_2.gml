@@ -1,7 +1,7 @@
 /// @description Heal from corpse
 if corpseTarget != noone && instance_exists(corpseTarget) && sprite_index != spr_hurt
 {
-	if point_distance(x,y,corpseTarget.x,corpseTarget.y) < 24
+	if point_distance(x,y,corpseTarget.x,corpseTarget.y) < 24 + min(32, loops)
 	{
 		snd_play(sndHealthPickup);
 		with instance_create(x, y - 16, HealFX)

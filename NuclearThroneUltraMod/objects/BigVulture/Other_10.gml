@@ -16,3 +16,25 @@ if target != noone
 }
 chargeDirection = direction
 gunangle = direction;
+if loops > 0
+{
+	var spd = 2;
+	repeat(7 + min(18,loops))
+	{
+		with instance_create(x,y,EnemyBullet1Square)
+		{
+			team = other.team;
+			direction = other.direction;
+			speed = spd;
+			image_angle = direction;
+		}
+		with instance_create(x,y,EnemyBullet1Square)
+		{
+			team = other.team;
+			direction = other.direction + 180;
+			speed = spd;
+			image_angle = direction;
+		}
+		spd += 1.4;
+	}
+}

@@ -242,7 +242,6 @@ function scrLoadRun(selectedRunIndex){
 			Player.standartAccuracy = encryptedRun.standartAccuracy;
 			Player.kills = encryptedRun.kills;
 			UberCont.loadedKills = Player.kills;
-			Player.invertedchance = encryptedRun.invertedchance;
 			Player.crownvisits = encryptedRun.crownvisits;
 			Player.hard = encryptedRun.hard;
 			if variable_struct_exists(encryptedRun, "maxspeed")

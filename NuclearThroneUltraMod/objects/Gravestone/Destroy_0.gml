@@ -15,7 +15,7 @@ repeat(3)
 with instance_create(x,y,GraveyardSkeleton)
 {
 	raddrop = 0;
-	existTime = 15;
+	existTime = 10;
 	alarm[1] *= 0.5;
 	//insomnia start slower
 	if instance_exists(Player)

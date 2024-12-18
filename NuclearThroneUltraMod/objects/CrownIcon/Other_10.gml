@@ -73,12 +73,6 @@ else
 	Player.crownpoints -= 1
 }
 //RESET INVERTED CHANCE
-with Player
-{
-    invertedchance = 10;
-	if race == 27
-		invertedchance = 25;
-}
 with UberCont
 {
 	if usedRandom
@@ -388,16 +382,6 @@ if crown == 43//FROG
 	//}	
 }
 
-//CROWN OF INVERSION
-if crown == 12
-{
-	with Player
-	{
-		invertedchance = 80;
-		if race == 27
-			invertedchance = 100;
-	}
-}
 //Crown of drowning
 if crown == 13
 {

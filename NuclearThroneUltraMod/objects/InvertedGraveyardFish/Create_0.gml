@@ -5,8 +5,13 @@ event_inherited();
 meleedamage = 5;
 maxhealth = 255;
 loops = GetPlayerLoops()
+actTime -= 1;
 if loops > 0
+{
 	maxhealth = 330;
+	maxSpeed += 1;
+	acc += 1;
+}
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 spr_idle = sprInvertedGraveyardFishIdle

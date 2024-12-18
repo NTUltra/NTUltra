@@ -35,5 +35,9 @@ if other.team != team
 		instance_create(x,y,Smoke);
 		
 	}
+	if UberCont.normalGameSpeed == 60
+		dmg = max(1,dmg - 0.25);
+	else
+		dmg = max(1,dmg - 0.5);
 }
 

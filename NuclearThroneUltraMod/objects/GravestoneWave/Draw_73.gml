@@ -1,6 +1,7 @@
 /// @description Radius
 if alarm[0] < 1
 {
+	var wowie = GetPlayerLoops() > 0;
 	BackCont.shake += 0.5;
 	draw_set_alpha(opacity);
 	draw_circle_width_colour(x,y,radius,1,col2);
@@ -17,6 +18,15 @@ if alarm[0] < 1
 				depth = other.depth-1;
 			instance_create(x,y,Flicker);
 			BackCont.shake += 0.25;
+			if wowie
+			{
+				with instance_create(x,y,EnemyHomingTriangle)
+				{
+					motion_add(random(360),2);
+					image_angle = direction
+					team = 1;
+				}
+			}
 		}
 	}
 	ds_list_destroy(newcollision);

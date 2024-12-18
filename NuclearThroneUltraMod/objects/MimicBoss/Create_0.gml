@@ -60,6 +60,16 @@ if loops < 1
 	tellTime += 4;
 	actTime += 2;
 }
+else if loops > 1
+{
+	tellTime -= 1;
+	actTime -= 1;
+	if loops > 2
+	{
+		tellTime -= 1;
+		actTime -= 1;
+	}
+}
 wepangle = choose(-140,140)
 wepflip = 1
 smackRange = 8;

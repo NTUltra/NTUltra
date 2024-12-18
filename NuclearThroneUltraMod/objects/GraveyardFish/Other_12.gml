@@ -1,4 +1,13 @@
 /// @description MASS Teleport
+if loops > 0
+{
+	with instance_create(x,y,EnemyHomingTriangle)
+	{
+		motion_add(other.gunangle,2);
+		image_angle = direction
+		team = other.team
+	}
+}
 snd_play_2d(sndHyperCrystalSearch);
 var allFloors = [];
 var i = 0;

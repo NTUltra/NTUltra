@@ -1,5 +1,8 @@
 raddrop = 100
 maxhealth = 160
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 50;
 scrBossHealthBuff();
 meleedamage = 0
 mySize = 1
@@ -13,16 +16,16 @@ fireRate2 = 2;
 shooting2 = 0;
 chargeSpeed = 2.85;
 maxChargeSpeed = 12;
-loops = GetPlayerLoops();
+actTime = 10;
 maxChargeSpeed += clamp(loops,0,3)*0.5;
 maxSpeed = 3;
 //behavior
 walk = 0
 wkick = 0
-
+actTime -= min(4,loops);
 corpseTarget = noone;
 projectileSpeed = 7;
-projectileSpeed += clamp(loops,0,3)*0.5;
+projectileSpeed += clamp(loops,0,4);
 
 alarm[1] = 40;
 alarm[2] = 1;
@@ -64,7 +67,11 @@ ammo = 0;
 maxAmmo = 6;
 fireRate = 2;
 shooting = 0;
-
+if loops > 0
+{
+	fireRate = 1;
+	maxAmmo += 3;
+}
 if !scrIsGamemode(25)
 	existTime = 40;
 

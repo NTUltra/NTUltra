@@ -4,6 +4,16 @@ if !scrIsGamemode(25)
 	if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHunterFly) && !instance_exists(InvertedLilHunterFly) && !instance_exists(VanSpawn) && !instance_exists(SurvivalPortal)
 	{
 		//var maxU = UberCont.maxUltramod;
+		if UberCont.crownVaultChallenge < 3
+		{
+			instance_create(x,y,ShowVoidEssenceTemporarily);
+			with UberCont
+			{
+				portalEssence += 5 * (UberCont.crownVaultChallenge + 1)
+				if voidChallengeGoing[0]
+					portalEssence += 5 * (UberCont.crownVaultChallenge + 1);
+			}
+		}
 		var yy = centerY-96;
 		with Corpse
 		{

@@ -13,8 +13,8 @@
     "path":"folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId":{
-    "name":"EnergyHammerSlash",
-    "path":"objects/EnergyHammerSlash/EnergyHammerSlash.yy",
+    "name":"SlashParent",
+    "path":"objects/SlashParent/SlashParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

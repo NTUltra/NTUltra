@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+actTime -= 1;
 raddrop = 150
 maxhealth = 420;
 scrBossHealthBuff();

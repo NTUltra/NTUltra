@@ -648,10 +648,6 @@ if scrIsHardMode()//HARD MODE
 inverted = false; //for when entering inverted portals
 invertedportalcounter = 0;
 invertedportaldelay = 10;
-invertedchance = 8;
-if race == 27
-	invertedchance = 20;
-
 
 oasis = false;
 oasisskip = -1;
