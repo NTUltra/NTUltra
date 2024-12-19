@@ -9,13 +9,16 @@ if KeyCont.key_pick[other.p] = 1
 		mask_index = mskPickupThroughWall;
 		with other
 		{
-			with PitNavigation
+			if area != 104
 			{
-				instance_destroy();	
+				with PitNavigation
+				{
+					instance_destroy();	
+				}
+				area = 103
+				inverted = false;
+				subarea = 0
 			}
-			area = 103
-			inverted = false;
-			subarea = 0
 		}
 		//with enemy
 		//	my_health = 0

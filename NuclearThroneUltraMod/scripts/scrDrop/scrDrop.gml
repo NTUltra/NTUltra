@@ -438,7 +438,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 			ammo = 20
 			curse = 0
 			sprite_index = wep_sprt[wep];
-			if collision_point(x,y,Wall,false,false)
+			if collision_point(x,y,Wall,false,false) || !collision_point(x,y,Floor,false,false)
 			{
 				var n = instance_nearest(x,y,Floor)
 				if n != noone {

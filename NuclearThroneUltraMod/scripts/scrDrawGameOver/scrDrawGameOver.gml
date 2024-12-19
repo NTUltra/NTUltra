@@ -93,7 +93,11 @@ function scrDrawGameOver() {
 		if race = 0 || scrIsGamemode(23)
 		{
 			ranChar = true;
-			do race = 1+irandom(racemax-1) until race_have[race] = 1
+			do {race = 1+irandom(UberCont.racemax-1);} until UberCont.race_have[race] = 1
+		}
+		with UberCont
+		{
+			race = other.race;	
 		}
 		if scrIsGamemode(47)
 		{
@@ -118,6 +122,13 @@ function scrDrawGameOver() {
 			{race = other.race
 			crown = other.crown}
 		instance_create(x,y,Player);
+		with Player
+		{
+			randomlySelected = ranChar;
+			restarted = true;
+			nochest = -1;
+			skeletonlives = 0;
+		}
 		with MusCont
 			instance_destroy()
 		instance_create(0,0,MusCont)

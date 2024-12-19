@@ -4,6 +4,7 @@ image_index = 0;
 alarm[3] = image_number/image_speed;
 snd_play(sndGhostFire,0.1);
 with instance_create(x, y, PitGhostLaser) {
+	wasResurrected = true;
 	raddrop = 0;
 	countKill = false;
 	motion_add(other.gunangle + 5, 1)
@@ -21,6 +22,7 @@ with instance_create(x, y, PitGhostLaser) {
 	}
 }
 with instance_create(x, y, PitGhostLaser) {
+	wasResurrected = true;
 	raddrop = 0;
 	countKill = false;
 	motion_add(other.gunangle - 5, 1)

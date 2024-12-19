@@ -6308,7 +6308,7 @@ function scrFire2(hasTailNow) {
 			snd_play_fire(sndLightning1)
 			snd_play_fire(sndLaser)
 		}
-		var aimDir = aimDirection+(random(2)-1)*other.accuracy;
+		var aimDir = aimDirection+(random(2)-1)*accuracy;
 		with instance_create(x,y,Laser)
 		{image_angle = aimDir;
 		team = other.team;

@@ -5,6 +5,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 	if !inArray
 		hitEntities[array_length(hitEntities)] = other.id;
 	alarm[1] = hitDelay;
+	var me = id;
 	with other
 	{
 		DealDamage(other.dmg);
@@ -14,12 +15,16 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		motion_add(other.direction,8)
 		
 		BackCont.shake += 5
-			instance_create(x,y,Explosion);
+			with instance_create(x,y,Explosion) {
+				scrCopyWeaponMod(me);
+			}
 			var ang = random(360);
 			var angstep = 360/3;
 			repeat(3)
 			{
-				instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),SmallExplosion);
+				with instance_create(x+lengthdir_x(24,ang),y+lengthdir_y(24,ang),SmallExplosion) {
+					scrCopyWeaponMod(me);
+				}
 				ang += angstep;
 			}
 	}

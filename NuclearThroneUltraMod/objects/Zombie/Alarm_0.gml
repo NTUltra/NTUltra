@@ -122,6 +122,42 @@ repeat(clamp(Player.loops + 1, 1, 10))
 		case 127://Graveyard
 			chosenZombie = choose(InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSkeleton, InvertedGraveyardSniper);
 		break;
+		case 128://Courtyard
+			chosenZombie = CourtyardGuardian;
+		break;
+		case 129://INV Courtyard
+			chosenZombie = InvertedCourtyardGuardian;
+		break;
+		case 130://Factory
+			chosenZombie = choose(SquareBot,OctaBot);
+		break;
+		case 131://Factory
+			chosenZombie = choose(SquareBot,OctaBot);
+		break;
+		case 132://Inverted Factory
+			chosenZombie = choose(InvertedSquareBot,InvertedOctaBot);
+		break;
+		case 133://Cursed Factory
+			chosenZombie = choose(CursedSquareBot,CursedOctaBot);
+		break;
+		case 134://GoldenFactory
+			chosenZombie = choose(GoldenSquareBot,GoldenOctaBot);
+		break;
+		case 135://Ultra Factory
+			chosenZombie = choose(UltraSquareBot,UltraOctaBot);
+		break;
+		case 136://Ultra Scrapyard
+			chosenZombie = choose(UltraRaven,UltraRaven,SmallUltraSniper,UltraSalamander);
+		break;
+		case 138://Clouds
+			chosenZombie = choose(CloudFlyer,CloudKnifer);
+		break;
+		case 139://The pit
+			chosenZombie = choose(PitGhost,PitGhostLaser,PitGhostLaser,PitGhostExploder);
+		break;
+		case 140://Inv Clouds
+			chosenZombie = choose(InvertedCloudFlyer,InvertedCloudKnifer);
+		break;
 		default:
 			chosenZombie = choose(GraveyardSniper, GraveyardSkeleton);
 		break;

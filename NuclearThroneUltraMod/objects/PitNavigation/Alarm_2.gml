@@ -11,6 +11,10 @@ with CloudEnterance
 {
 	instance_destroy();	
 }
+with InversionShard
+{
+	instance_destroy();	
+}
 with Tangle
 {
 	instance_destroy();	
@@ -166,6 +170,14 @@ with Pickup
 		instance_destroy(id,false);
 }
 BackCont.shake += 100;
+if UberCont.killedInvertedThrone2 && !UberCont.canSpawnInversionShards && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
+{
+	UberCont.canSpawnInversionShards = true;
+}
+else
+{
+	UberCont.canSpawnInversionShards = false;
+}
 scrPopulate();
 if scrIsGamemode(40)
 	scrPopEnemies1vs1(Player.area, Player.subarea, Player.loops);

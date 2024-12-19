@@ -30,7 +30,7 @@ function scrPandaThrow(){
 				speed *= -0.8;	
 			}
 			scrWeapons()
-			if other.ultra_got[54]=1
+			if other.ultra_got[54] && wep_type[wep] > -2
 			{
 				if UberCont.useSeed
 				{

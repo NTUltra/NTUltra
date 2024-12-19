@@ -4,7 +4,7 @@ loreDump = [
 		//FISH
 		[
 			//FIRST TIME
-			"So you're a fish?",
+			"So you're a fish?","Green man",
 		],
 		[
 			//LOOP 1
@@ -33,7 +33,7 @@ loreDump = [
 		//CRYSTAL
 		[
 			//FIRST TIME
-			"So you're a fish?",
+			"Moving Crystals?","Purple woman",
 		],
 		[
 			//LOOP 1
@@ -54,7 +54,7 @@ loreDump = [
 		//EYES
 		[
 			//FIRST TIME
-			"You can almost see as much as me",
+			"You can almost see as much as me","You have good perspective",
 		],
 		[
 			//LOOP 1
@@ -77,7 +77,7 @@ loreDump = [
 		//MELTING
 		[
 			//FIRST TIME
-			"You are in pain",
+			"You are in pain","Melting away",
 		],
 		[
 			//LOOP 1

@@ -3,7 +3,7 @@ if instance_exists(Wall)
 {
 	var xx = x;
 	var yy = y;
-	if target != noone
+	if target != noone && instance_exists(target)
 	{
 		var ang = random(360);
 		xx = target.x + lengthdir_x(128,ang);

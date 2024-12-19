@@ -2376,12 +2376,12 @@ function scrPowers(raceOverwrite = -1) {
 				var t1 = wep_type[wep];
 				var t2 = wep_type[bwep];
 				var al = 6;//weapon types total
-				var takePercentage = 0.015//0.015//1.5%%//0.0075;//0.75%
+				var takePercentage = 0.5//0.015//1.5%%//0.0075;//0.75%
 				var startingIndex = 1;
 				if scrIsCrown(40)
 				{
 					startingIndex = 0;
-					takePercentage = 0.014;
+					takePercentage = 0.4;
 				}
 				for (var i = startingIndex; i < al; i++) {
 					if (i != t1 && i != t2)

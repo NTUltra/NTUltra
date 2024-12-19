@@ -44,7 +44,7 @@ if UberCont.hasBeenSaved
 	UberCont.hasBeenSaved = false;
 }
 isInInverted = false;
-var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
+//var cameFromOuterSpace = (area == 100 || area == 104 || scrIsInInvertedArea());
 
 //SKINS
 if !scrIsCrown(34) || rewinds <= 0
@@ -88,7 +88,7 @@ if ultra_got[21] && altUltra && gunGod > 0
 	}
 	gunGod = 0;
 }
-if UberCont.killedInvertedThrone2 && !cameFromOuterSpace && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
+if UberCont.killedInvertedThrone2 && !UberCont.canSpawnInversionShards && UberCont.collectedInversionShards < 3 && scrIsInInvertedArea()
 {
 	UberCont.canSpawnInversionShards = true;
 }
@@ -849,7 +849,7 @@ if (yungCuzCskin > 2)
 }
 
 
-if scrIsCrown(4) && area !=100 && race = 15 && area != 137
+if scrIsCrown(4) && area != 100 && race = 15 && area != 137
 	rushcrownlevels++;
 
 if rushcrownlevels == 5
