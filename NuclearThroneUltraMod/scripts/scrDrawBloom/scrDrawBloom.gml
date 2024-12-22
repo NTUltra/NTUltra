@@ -467,10 +467,10 @@ function scrDrawBloom() {
 	}
 	with MegaLaser
 	{
-	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale,5,image_angle,c_white,ba)
-	draw_sprite_ext(sprLaserStart,img,xstart - vx ,ystart - vy,5,5,image_angle,c_white,ba)
-	draw_sprite_ext(sprLaserEnd,img,x - vx,y - vy,5,5,image_angle,c_white,ba)
-	draw_sprite_ext(sprPlasmaBall,img,xstart - vx +lengthdir_x(8,Direction),ystart - vy+lengthdir_y(8,Direction),2,2,image_angle,c_white,1)
+	var ysMega = max(image_yscale, 2);
+	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,image_xscale,ysMega,image_angle,c_white,ba)
+	draw_sprite_ext(sprLaserStart,img,xstart - vx ,ystart - vy,ysMega,ysMega,image_angle,c_white,ba)
+	draw_sprite_ext(sprLaserEnd,img,x - vx,y - vy,ysMega,ysMega,image_angle,c_white,ba)
 	}
 	with EnemyLaser
 	{

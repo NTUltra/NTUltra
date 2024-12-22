@@ -16,7 +16,10 @@ if speed > 3
 		alarm[4] = 5;
 		addSpeed = other.spamProjectileVelocity;
 		if other.dropFreaks
+		{
 			isVenomized = true;
+			sprite_index = sprIDPDVenomizedSquareBullet;
+		}
 	}
 	with instance_create(x,y,EnemyBullet1Square)
 	{
@@ -29,7 +32,10 @@ if speed > 3
 		alarm[4] = 5;
 		addSpeed = other.spamProjectileVelocity;
 		if other.dropFreaks
+		{
 			isVenomized = true;
+			sprite_index = sprIDPDVenomizedSquareBullet;
+		}
 	}
 	with instance_create(x,y,EnemyBullet1Square)
 	{
@@ -42,6 +48,9 @@ if speed > 3
 		alarm[4] = 5;
 		addSpeed = other.spamProjectileVelocity;
 		if other.dropFreaks
+		{
 			isVenomized = true;
+			sprite_index = sprIDPDVenomizedSquareBullet;
+		}
 	}
 }

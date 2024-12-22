@@ -85,9 +85,12 @@ if loops > 3 {
 	{
 		with instance_create(x,y,EnemyBullet1Square)
 		{
-			if other.dropFreaks
-				isVenomized = true;
 			sprite_index = sprIDPDSquareBullet;
+			if other.dropFreaks
+			{
+				isVenomized = true;
+				sprite_index = sprIDPDVenomizedSquareBullet;
+			}
 			onlyHitPlayerTeam = true;
 			motion_add(ang,ps);
 			image_angle = direction

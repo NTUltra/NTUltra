@@ -6,7 +6,7 @@ if canDamage && other.team != team and other.my_health > 0
 		{
 			if object_index == Player
 			{
-				if alarm[3] > 0 || hurtTime > 0//When immune dont deal damage and dont trigger blast armour
+				if alarm[3] > 0//When immune dont deal damage and dont trigger blast armour
 					exit;
 				hitBy = sprEnemyLaserCircle;
 			}

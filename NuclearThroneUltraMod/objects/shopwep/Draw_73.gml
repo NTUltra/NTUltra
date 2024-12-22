@@ -160,15 +160,18 @@ if place_meeting(x,y,ShopSelector) && wep != 0
 	draw_set_color(c_white)
 	
 	var dyy = drawy-24
-	var txtt = wep_area[wep];
-	draw_set_color(c_black)
-	draw_text(drawx + 7,dyy,string_hash_to_newline(string(txtt)))
-	draw_text(drawx + 7+1,dyy,string_hash_to_newline(string(txtt)))
-	draw_text(drawx + 7,dyy - 1,string_hash_to_newline(string(txtt)))
-	draw_set_color(c_silver)
-	draw_text(drawx + 7,dyy - 1,string_hash_to_newline(string(txtt)))
-	draw_set_color(c_white)
-	draw_sprite(sprWepTier,0,drawx - 14,dyy - 6);
+	if wep_area[wep] > -1
+	{
+		var txtt = wep_area[wep];
+		draw_set_color(c_black)
+		draw_text(drawx + 7,dyy,string_hash_to_newline(string(txtt)))
+		draw_text(drawx + 7+1,dyy,string_hash_to_newline(string(txtt)))
+		draw_text(drawx + 7,dyy - 1,string_hash_to_newline(string(txtt)))
+		draw_set_color(c_silver)
+		draw_text(drawx + 7,dyy - 1,string_hash_to_newline(string(txtt)))
+		draw_set_color(c_white)
+		draw_sprite(sprWepTier,0,drawx - 14,dyy - 6);
+	}
 	//draw_text(drawx+string_width(txt)/2,drawy-14-string_height(txt),string(skill_name[skill]))
 }
 else

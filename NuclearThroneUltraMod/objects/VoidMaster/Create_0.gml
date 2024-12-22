@@ -21,17 +21,18 @@ if loops < 1 && instance_exists(Player) && UberCont.char_void_entered[Player.rac
 }
 else
 {
-	with UberCont
-	{
-		var al = array_length(voidChallengeGoing);
-		for (var i = 0; i < al; i ++)
+	if !instance_exists(RegalNavigation)
+		with UberCont
 		{
-			if voidChallengeGoing[i]
+			var al = array_length(voidChallengeGoing);
+			for (var i = 0; i < al; i ++)
 			{
-				other.completedChallenge = true;	
+				if voidChallengeGoing[i]
+				{
+					other.completedChallenge = true;	
+				}
 			}
 		}
-	}
 }
 openedShop = false;
 openedAdditionalChallenges = false;

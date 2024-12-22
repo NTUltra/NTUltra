@@ -59,8 +59,9 @@ function suck() {
 			}
 		}
 	}
-
-	var dir = point_direction(x,y,target.x,target.y)
+	var dir = persistent_direction;
+	if target != noone && instance_exists(target)
+		dir = point_direction(x,y,target.x,target.y);
 	BackCont.shake += 0.5
 	speed=0;
 	if inverted

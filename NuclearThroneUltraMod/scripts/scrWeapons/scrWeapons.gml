@@ -780,7 +780,7 @@ function scrWeapons() {
 	wep_load[69] = 7
 	wep_cost[69] = 1
 	wep_sprt[69] = sprOopsGun
-	wep_area[69] = -2
+	wep_area[69] = -3
 	wep_text[69] = "suicidal"
 	wep_swap[69] = sndSwapPistol
 	wep_rad[69] = 0;
@@ -3347,7 +3347,7 @@ function scrWeapons() {
 	wep_load[298] = 7
 	wep_cost[298] = 1
 	wep_sprt[298] = sprGoldenOopsGun
-	wep_area[298] = -2
+	wep_area[298] = -3
 	wep_text[298] = "you are not supposed to live"
 	wep_swap[298] = sndSwapPistol
 	wep_rad[298] = 0;
@@ -3989,7 +3989,7 @@ function scrWeapons() {
 	wep_name[355] = "JAWBREAKER"
 	wep_type[355] = 2
 	wep_auto[355] = 2
-	wep_load[355] = 16
+	wep_load[355] = 15
 	wep_cost[355] = 1.25
 	wep_sprt[355] = sprJawbreaker
 	wep_area[355] = 1
@@ -4196,7 +4196,7 @@ function scrWeapons() {
 	wep_load[373] = 8
 	wep_cost[373] = 0
 	wep_sprt[373] = sprVanPusher
-	wep_area[373] = -2
+	wep_area[373] = -3
 	wep_text[373] = "push away da popo"
 	wep_swap[373] = sndSwapEnergy
 	wep_rad[373] = 0;
@@ -4324,7 +4324,7 @@ function scrWeapons() {
 	wep_name[383] = "GOLDEN JAWBREAKER"
 	wep_type[383] = 2
 	wep_auto[383] = 2
-	wep_load[383] = 15
+	wep_load[383] = 14
 	wep_cost[383] = 1.25
 	wep_sprt[383] = sprGoldenJawbreaker
 	wep_area[383] = 17
@@ -4401,7 +4401,7 @@ function scrWeapons() {
 	wep_name[390] = "JAWSPLITTER"
 	wep_type[390] = 3
 	wep_auto[390] = 2
-	wep_load[390] = 17
+	wep_load[390] = 16
 	wep_cost[390] = 1.25
 	wep_sprt[390] = sprJawSplitter
 	wep_area[390] = 1
@@ -4412,7 +4412,7 @@ function scrWeapons() {
 	wep_name[391] = "GOLDEN JAWSPLITTER"
 	wep_type[391] = 3
 	wep_auto[391] = 2
-	wep_load[391] = 16
+	wep_load[391] = 15
 	wep_cost[391] = 1.25
 	wep_sprt[391] = sprGoldenJawSplitter
 	wep_area[391] = 17
@@ -9883,7 +9883,7 @@ function scrWeapons() {
 	wep_name[881] = "SIX SHOOTER"
 	wep_type[881] = 1
 	wep_auto[881] = 2
-	wep_load[881] = 3//OVERWRITTEN IN FIRE EVENT
+	wep_load[881] = 2//OVERWRITTEN IN FIRE EVENT
 	wep_cost[881] = 2
 	wep_sprt[881] = sprSixShooter
 	wep_area[881] = 10
@@ -9891,7 +9891,18 @@ function scrWeapons() {
 	wep_swap[881] = sndSwapPistol
 	wep_rad[881] = 0;
 	wep_popup[881] = "LONGER RELOAD AFTER SIX SHOTS#SYNERGIZES WITH TAIL'S END";
-
+	/*
+	wep_name[882] = "DEATH RAY"
+	wep_type[882] = 5
+	wep_auto[882] = 0
+	wep_load[882] = 30
+	wep_cost[882] = 5
+	wep_sprt[882] = sprLaserGun
+	wep_area[882] = 10
+	wep_text[882] = "futuristic weaponry"
+	wep_swap[882] = sndSwapEnergy
+	wep_rad[882] = 0;
+	*/
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

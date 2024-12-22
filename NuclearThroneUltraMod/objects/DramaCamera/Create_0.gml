@@ -310,7 +310,7 @@ else if instance_exists(InvertedGraveyardFish) && instance_exists(PitNavigation)
 {
 	name = "INVERTED GRAVE FISH";
 		if canFunny && random(80)<1
-			name = choose("INVERTED GRAVE DIGGER");
+			name = choose("INVERTED GRAVE DIGGER","NON TELEPORTING FISH");
 }
 else if instance_exists(InvertedAssassinBoss) && instance_exists(PitNavigation)
 {

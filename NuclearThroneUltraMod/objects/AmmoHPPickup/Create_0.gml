@@ -39,8 +39,6 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
-	if Player.skill_got[9]
-		alarm[0] += 50;
 	//RUSH CROWN
 	if scrIsCrown(4) { alarm[0] *= 0.4}
 

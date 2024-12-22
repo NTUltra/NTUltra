@@ -54,7 +54,7 @@ if  alarm[1] < 1 && KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondR
 		snd_play_2d(sndClickBack);
 	else
 		snd_play_2d(sndClick);
-	if !instance_exists(MultiCrownMenu) || (canReAdd || scrIsCrown(crown))
+	if !instance_exists(MultiCrownMenu) || ((canReAdd || scrIsCrown(crown)) && crown != 1)
 	{
 		event_user(0);
 	}

@@ -10,9 +10,11 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 
 image_yscale = 4.5
 dmg = 3;
+maxDistance = 200;
 if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1{
+		maxDistance += Player.betterlaserbrain
 		image_yscale = 5.5+(Player.betterlaserbrain*0.5)
 	}
 }

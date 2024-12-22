@@ -54,7 +54,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		wepTier += dataRef.hard;
 		if isFactory
 		{
-			wepTier += 1;
+			wepTier += 2;
 			maxTries *= 1.25;
 			maxAreaGoodEnough += 1;
 			minWepArea += 1;

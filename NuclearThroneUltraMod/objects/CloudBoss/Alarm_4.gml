@@ -8,5 +8,5 @@ with MimicBossPlateau
 		d = scrDrop(15,0,false,0,2)//Only drops health
 	}
 	if d == noone
-		scrDrop(9,0);
+		scrDrop(10,0);
 }

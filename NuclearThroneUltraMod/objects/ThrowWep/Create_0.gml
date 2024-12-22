@@ -4,7 +4,7 @@ image_angle = random(360)
 image_speed = 0
 friction = 0.4
 motion_add(random(360),0.5+random(1))
-
+visitedPortals = 0;
 rotspeed = (random(1)+1)*choose(1,-1)
 /*
 if UberCont.opt_gamemode=1{//one weapon only

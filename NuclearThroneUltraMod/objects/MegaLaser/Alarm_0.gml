@@ -101,7 +101,7 @@ if Mod3 == 11
 	pierce += modBoost;
 if Mod4 == 11
 	pierce += modBoost;
-while !((place_meeting(x,y,hitme) and dir > pierce) or collision_point(x,y,Wall,false,false) || dir > 200)// or dir > 320)
+while !((place_meeting(x,y,hitme) and dir > pierce) or collision_point(x,y,Wall,false,false) || dir > maxDistance)// or dir > 320)
 {
 	x += lengthdir_x(1,image_angle);
 	y += lengthdir_y(1,image_angle);

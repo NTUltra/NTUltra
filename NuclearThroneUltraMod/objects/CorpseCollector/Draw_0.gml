@@ -13,7 +13,8 @@ for (var i = 0; i < al; i++;)
 	var toDraw = corpses[| i];
 	var dx = toDraw.xx - cx
 	var dy = toDraw.yy - cy
-	draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,1,0,c_white,1);
+	if sprite_exists(toDraw.spr)
+		draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,1,0,c_white,1);
 }
 surface_reset_target();
 draw_surface_ext(surf,cx,cy,1,1,0,c_white,1);

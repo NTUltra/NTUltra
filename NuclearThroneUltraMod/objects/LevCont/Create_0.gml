@@ -760,7 +760,7 @@ if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrI
 }
 if preventDoublePatience
 	Player.skill_got[27] = 0;
-if scrIsGamemode(32) || UberCont.voidChallengeGoing[5]{
+if scrIsGamemode(32){
 	// One hit wonder
 	with Player
 	{

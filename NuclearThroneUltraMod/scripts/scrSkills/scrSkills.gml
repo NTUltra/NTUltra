@@ -179,11 +179,11 @@ function scrSkills() {
 	
 	skill_name[9] = "SECOND STOMACH"
 	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>#<w>HP DROPS<w> LAST <w>ALMOST 2 SECONDS<w> LONGER"
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{
 		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>#<w>HP DROPS<w> LAST <w>ALMOST 2 SECONDS<w> LONGER"
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
@@ -462,8 +462,8 @@ function scrSkills() {
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#7 DAMAGE MAX";
 	
 	skill_name[32] = "ALKALINE SALIVA"
-	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>2<w><r>HP<r>)##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
+	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>1<w>";
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>2<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>1<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING#LONGER IMMUNITY";

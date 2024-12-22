@@ -70,6 +70,9 @@ function scrExportWeapons(){
 		var areaName = "";
 		switch (t)
 		{
+			case -3:
+				areaName = "UNOBTAINABLE";
+				break;
 			case -2:
 				areaName = "OUTSIDE POOL";
 				break;

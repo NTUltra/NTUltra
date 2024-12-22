@@ -2983,5 +2983,41 @@ function scrFire3(hasTailNow){
 		BackCont.shake += shakey
 
 		break;
+		
+		//DEATH RAY
+		/*
+		case 882:
+
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndLaserUpg)
+		else
+		snd_play_fire(sndLaser)
+		with instance_create(x,y,LaserWallDestroyer)
+		{
+			if GetPlayerUltramod() == ultramods.laserBullet
+			{
+				
+			}
+			image_angle = aimDirection+(random(2)-1)*other.accuracy
+			image_yscale += 4;
+			dmg += 2;
+			alarm[1] += 10;
+			maxDistance -= 150;
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		BackCont.viewx2 += lengthdir_x(60,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(60,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 30
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,64);
+			motion_add(aimDirection+180,8)
+		}
+		wkick = 8
+
+		break;
+		*/
 	}
 }

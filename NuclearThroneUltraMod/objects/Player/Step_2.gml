@@ -778,7 +778,7 @@ if (tookHit)
 				}
 			}*/
 			var healTaken = 0;
-			if prevhealth < maxhealth + defaultOverhealAddition
+			if prevhealth < maxhealth + 1 + defaultOverhealAddition
 			{
 				healTaken = 2;
 				if race == 25//Doctor buff
@@ -786,24 +786,11 @@ if (tookHit)
 					healTaken += 1
 					alarm[3] = max(alarm[3],30);
 				}
-					/*
-				if (skill_got[9]) //Second stomache
+				with instance_create(x,y,HealFX)
 				{
-					healTaken += 1;
-					with instance_create(x,y,HealFX)
-					{
-						sprite_index = sprHealBigFX;
-						depth = other.depth - 1;	
-					}
+					depth = other.depth - 1;	
 				}
-				else
-				{*/
-					with instance_create(x,y,HealFX)
-					{
-						depth = other.depth - 1;	
-					}
-				//}
-				my_health = min(maxhealth + defaultOverhealAddition,prevhealth+healTaken);
+				my_health = min(maxhealth + 1 + defaultOverhealAddition,prevhealth+healTaken);
 			}
 			else
 			{

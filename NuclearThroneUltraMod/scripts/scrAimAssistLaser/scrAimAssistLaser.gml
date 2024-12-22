@@ -59,7 +59,7 @@ function scrAimAssistLaser(originalDirection, adjustAimAssist = 1, additionalAim
 		else
 		{
 			var t = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-			if (collision_line(x,y,t.x,t.y,Wall,false,true) < 0)
+			if (t != noone && collision_line(x,y,t.x,t.y,Wall,false,true) < 0)
 			{
 				var wantD = point_direction(x,y,t.x,t.y);
 				//Check the angle difference

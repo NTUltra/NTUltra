@@ -13,10 +13,6 @@ if Player.ultra_got[30] && Player.altUltra
 	
 	if Player.curse
 	{
-		if scrIsCrown(14) {
-			snd_play(sndHealthPickup);
-			scrHeal(1, true);	
-		}
 		if Player.bcurse
 		{
 			Player.ccurse = 1;

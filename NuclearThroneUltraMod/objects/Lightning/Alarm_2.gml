@@ -83,7 +83,7 @@ if al > 0 && alarm[0] < 1
 							if object_index == Player
 							{
 								hitBy = sprLightningEnemyRepresent;
-								if alarm[3] > 0 || hurtTime > 0
+								if alarm[3] > 0
 									canHit = false;
 							}
 							if sprite_index != spr_hurt && canHit

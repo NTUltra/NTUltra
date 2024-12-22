@@ -26,7 +26,7 @@ if fakeded > 0
 		image_index = 0;
 		alarm[3] = image_number/image_speed;
 		alarm[7] = alarm[3] + afterImageDelay;
-		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave)
+		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave) && !instance_exists(PitNavigation)
 		{
 			with MusCont
 			{

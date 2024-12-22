@@ -27,10 +27,26 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 				speed = 0;
 				if skill_got[32] && isAlkaline
 				{
-					if race == 25
-						scrHeal(3);
+					var healTaken = 0;
+					if prevhealth < maxhealth + 1 + defaultOverhealAddition
+					{
+						healTaken = 2;
+						if race == 25//Doctor buff
+						{
+							healTaken += 1
+							alarm[3] = max(alarm[3],30);
+						}
+						with instance_create(x,y,HealFX)
+						{
+							depth = other.depth - 1;	
+						}
+						my_health = min(maxhealth + 1 + defaultOverhealAddition,prevhealth+healTaken);
+					}
 					else
-						scrHeal(2);
+					{
+						my_health = prevhealth;
+					}
+					scrPhotosythesis(healTaken);
 					isAlkaline = false;
 					snd_play(sndAlkalineRefund);
 					with instance_create(x,y,HealFX)
