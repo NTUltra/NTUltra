@@ -12,7 +12,7 @@ var props = ds_list_create();
 var al = instance_place_list(x,y,prop,props,false);
 	for (var i = 0; i < al; i++) {
 		with props[| i] {
-			motion_add(point_direction(other.x,other.y,x,y),2);	
+			motion_add(point_direction(other.x,other.y,x,y),2);
 		}
 	}
 ds_list_destroy(props);

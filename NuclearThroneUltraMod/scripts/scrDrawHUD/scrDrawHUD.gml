@@ -957,9 +957,17 @@ function scrDrawHUD() {
 		var wepName = dataRef.wep_name[dataRef.cwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.cwep]);
 		var isPopup = dataRef.wep_popup[dataRef.cwep] == "";
+		var enters = "\n";
+		var strh = string_height_ext(dataRef.wep_name[dataRef.cwep],string_height("A"),206);
+		while strh > string_height("A")
+		{
+			enters += "\n";
+			strh -= string_height("A");
+		}
 		if dataRef.wep_area[dataRef.cwep] >= 0
 		{
-			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
+			enters += "\n";
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.cwep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
@@ -967,7 +975,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.cwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.cwep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.cwep]),0,c_white,true);
 		}
@@ -1065,9 +1073,17 @@ function scrDrawHUD() {
 		var wepName = dataRef.wep_name[dataRef.bwep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.bwep]);
 		var isPopup = dataRef.wep_popup[dataRef.bwep] == "";
+		var enters = "\n";
+		var strh = string_height_ext(dataRef.wep_name[dataRef.bwep],string_height("A"),206);
+		while strh > string_height("A")
+		{
+			enters += "\n";
+			strh -= string_height("A");
+		}
 		if dataRef.wep_area[dataRef.bwep] >= 0
 		{
-			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
+			enters += "\n";
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.bwep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
@@ -1075,7 +1091,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.bwep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.bwep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.bwep]),0,c_white,true);
 		}
@@ -1218,9 +1234,17 @@ function scrDrawHUD() {
 		var wepName = dataRef.wep_name[dataRef.wep];
 		wepName += scrTranslateWeaponAutoType(dataRef.wep_auto[dataRef.wep]);
 		var isPopup = (dataRef.wep_popup[dataRef.wep] == "");
+		var enters = "\n";
+		var strh = string_height_ext(dataRef.wep_name[dataRef.wep],string_height("A"),206);
+		while strh > string_height("A")
+		{
+			enters += "\n";
+			strh -= string_height("A");
+		}
 		if dataRef.wep_area[dataRef.wep] >= 0
 		{
-			scrDrawHelp("\n\n" + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
+			enters += "\n";
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
 			scrDrawHelp("  " + string(dataRef.wep_area[dataRef.wep])
 			+ "\n" + wepName,0,c_silver,!isPopup);
 			scrDrawHelp("\n" + string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
@@ -1228,7 +1252,7 @@ function scrDrawHUD() {
 		}
 		else
 		{
-			scrDrawHelp("\n" + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
+			scrDrawHelp(enters + (dataRef.wep_auto[dataRef.wep] != 0 ? "\n" : "") + string(dataRef.wep_popup[dataRef.wep]),0,c_green,isPopup);
 			scrDrawHelp(wepName,0,c_silver,!isPopup);
 			scrDrawHelp(string(dataRef.wep_name[dataRef.wep]),0,c_white,true);
 		}

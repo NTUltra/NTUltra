@@ -41,6 +41,7 @@ if KeyCont.key_pick[other.p] = 1
 		mask_index = mskPickupThroughWall;
 	}
 	Player.lastarea = nav;
+	Player.subarea = Player.lastsubarea;
 	if textScaleX == -1
 		Player.inverted = true;
 }

@@ -9211,7 +9211,7 @@ function scrWeapons() {
 	wep_rad[821] = 0;
 	
 	wep_name[822] = "LIGHTNING GLOVE"
-	wep_type[822] = 5
+	wep_type[822] = 0
 	wep_auto[822] = 0
 	wep_load[822] = 31
 	wep_cost[822] = 0

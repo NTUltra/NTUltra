@@ -1652,7 +1652,7 @@ if (!instance_exists(LevCont))
 		{
 			breload -= 0.5;
 		}
-		if skill_got[28] = 1
+		if skill_got[28]
 		{
 			//rage
 			var rageAccuracy;

@@ -55,8 +55,8 @@ riseStep = false;
 event_inherited()
 if scrIsGamemode(5)//1HP gamemode
 {
-	my_health += 9;
-	maxhealth += 9;
+	my_health += 50;
+	maxhealth += 50;
 }
 canBeEaten = false;
 walk = 0;

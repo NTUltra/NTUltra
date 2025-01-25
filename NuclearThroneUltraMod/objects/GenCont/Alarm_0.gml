@@ -129,7 +129,7 @@ if Player.area!=104
 	scrPopulate()
 
 alarm[1] = 2
-if Player.area == 100 && Player.crownvisits > 1
+if Player.area == 100 && Player.crownvisits > 0
 {
 	if !instance_exists(Torch)
 	{

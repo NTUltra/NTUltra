@@ -12,7 +12,7 @@ if instance_exists(Player)
 	with Player {
 		if instance_exists(PitNavigation) && area == 127
 			area = 141;
-		if skill_got[44] && !instance_exists(CrescentMoon){
+		if (skill_got[44] && instance_number(CrescentMoon) < (1 + (instance_number(YungCuzDupe) * 2))) {
 			with instance_create(x,y,CrescentMoon)
 			{
 				owner = other.id;

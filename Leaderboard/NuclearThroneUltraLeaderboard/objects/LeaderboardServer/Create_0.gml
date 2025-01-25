@@ -1,6 +1,7 @@
 /// @description Init
-updateVersion = "31.03";
-betaVersion = "31.03";
+game_set_speed(10, gamespeed_fps);
+updateVersion = "31.04";
+betaVersion = "31.04";
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;

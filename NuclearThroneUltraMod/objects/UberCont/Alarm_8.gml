@@ -59,6 +59,7 @@ else
 		{
 			randomlySelected = ranChar;
 			restarted = true;
+			firstLoad = true;
 			nochest = -1;
 			skeletonlives = 0;
 		}

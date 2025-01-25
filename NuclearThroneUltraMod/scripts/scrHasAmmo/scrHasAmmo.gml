@@ -3,7 +3,10 @@
 ///@param
 function scrHasAmmo(){
 	var al = 6;//weapon types total
-	for (var i = 1; i < al; i++) {
+	var startI = 1;
+	if scrIsCrown(40)
+		startI = 0;
+	for (var i = startI; i < al; i++) {
 		if ammo[i] > 0
 			return true;
 	}

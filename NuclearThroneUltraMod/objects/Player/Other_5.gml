@@ -1,4 +1,5 @@
 /// @description Black sword? and UNLOCKABLES
+instance_activate_object(Friend);
 if instance_exists(Credits)
 	exit;
 if swapChar
@@ -202,6 +203,8 @@ if (race == 12 || (copyPassive == 12 && race != 9))//yung cuz reset max HP
 		yungCuzCskin = 0;	
 	}
 	maxhealth = scrGetMaxPossibleHealth();
+	abundanceHealth = 0;
+	//maxhealth -= maxhealth - scrCalculatePlayerBaseMaxHealth();//Remove bonus cause it will remain
 }
 
 if ((ultra_got[40] = 1) && canHeal)
@@ -373,7 +376,7 @@ horrorcharge=origincharge;
 oasis=false;
 
 ///looping! ---------------------------
-if looping && area != 104
+if looping && area != 104 && !rewinding
 {
 	if ultra_got[39] && altUltra
 	{
@@ -450,7 +453,6 @@ if looping && area != 104
 	UberCont.ctot_loop[race] += 1
 	    loops += 1
 	if loops > 2 && race = 4
-		scrUnlockCSkin(4,"FOR REACHING LOOP 3#AS MELTING ON 1HP EQUALITY",5);
 	    if (ultra_got[73] == 1)
 		{
 			ultra_got[73] = 0;
@@ -802,7 +804,8 @@ if looping && area != 104
     
 	subarea = 1
 }
-
+if area != 1
+	rewinding = false;
 
 if restarted
 	exit;

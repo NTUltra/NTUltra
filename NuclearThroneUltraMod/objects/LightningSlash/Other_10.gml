@@ -8,7 +8,7 @@
 
 // Inherit the parent event
 event_inherited();
-if (array_length(hitEntities) > 0 && instance_exists(hitEntities[array_length(hitEntities)-1]))
+if (UberCont.recursionCheck <= 28 && array_length(hitEntities) > 0 && instance_exists(hitEntities[array_length(hitEntities)-1]))
 {
 	with instance_create(hitEntities[array_length(hitEntities)-1].x,hitEntities[array_length(hitEntities)-1].y,Lightning)
 	{

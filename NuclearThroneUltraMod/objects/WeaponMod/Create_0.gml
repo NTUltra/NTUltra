@@ -50,6 +50,7 @@ alarm[5] = 5;
 alarm[6] = 5;
 alarm[7] = 10;
 alarm[4] = 5;
+alarm[8] = 20;
 var tries = 200;
 while place_meeting(x,y,InteractableProp) && tries > 0
 {

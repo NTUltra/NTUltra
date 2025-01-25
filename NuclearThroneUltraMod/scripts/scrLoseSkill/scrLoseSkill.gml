@@ -72,6 +72,10 @@ function scrLoseSkill(skillIndex, disableInstead = false) {
 			}
 			skeletonGambleBongas = 0;
 		break;
+		case 9: //SECOND STOMACH
+			defaultOverhealAddition -= 1;
+			defaultOverhealAddition = max(0,defaultOverhealAddition);
+		break;
 		case 10: //BACK MUSCLE
 			if ultra_got[85]
 			{
@@ -159,7 +163,7 @@ function scrLoseSkill(skillIndex, disableInstead = false) {
 		case 28: //RAGE
 			if !disableInstead
 				rage = 0;
-			accuracy=standartAccuracy;
+			accuracy = standartAccuracy;
 		break;
 		case 31: //TOUGH SHELL
 			if ultra_got[62] && altUltra//Living armour

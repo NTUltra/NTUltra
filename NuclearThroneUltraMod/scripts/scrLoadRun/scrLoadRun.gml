@@ -102,6 +102,8 @@ function scrLoadRun(selectedRunIndex){
 			Player.skeletonlives = encryptedRun.skeletonlives;
 			Player.patience = encryptedRun.patience;
 			Player.skillpoints = encryptedRun.skillpoints;
+			if variable_struct_exists(encryptedRun, "anyMutation")
+				Player.anyMutation = encryptedRun.anyMutation;
 			Player.level = encryptedRun.level;
 			Player.maxlevel = encryptedRun.maxlevel;
 			Player.rad = encryptedRun.rad;
@@ -384,6 +386,20 @@ function scrLoadRun(selectedRunIndex){
 				Player.crownpoints = encryptedRun.crownpoints;
 			else
 				Player.crownpoints = 0;
+			if variable_struct_exists(encryptedRun, "hogWep")
+				Player.hogWep = encryptedRun.hogWep;
+			if variable_struct_exists(encryptedRun, "hogWepmod1")
+				Player.hogWepmod1 = encryptedRun.hogWepmod1;
+			if variable_struct_exists(encryptedRun, "hogWepmod2")
+				Player.hogWepmod2 = encryptedRun.hogWepmod2;
+			if variable_struct_exists(encryptedRun, "hogWepmod3")
+				Player.hogWepmod3 = encryptedRun.hogWepmod3;
+			if variable_struct_exists(encryptedRun, "hogWepmod4")
+				Player.hogWepmod4 = encryptedRun.hogWepmod4;
+			if variable_struct_exists(encryptedRun, "hogCurse")
+				Player.hogCurse = encryptedRun.hogCurse;
+			if variable_struct_exists(encryptedRun, "hogIsPermanent")
+				Player.hogIsPermanent = encryptedRun.hogIsPermanent;
 			/*
 			if variable_struct_exists(encryptedRun, "duoPartner1")
 			{

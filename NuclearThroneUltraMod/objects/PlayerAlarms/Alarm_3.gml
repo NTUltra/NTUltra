@@ -5,10 +5,12 @@ with Player
 	if !outOfCombat && !lockout
 	{
 		var al = 6;//weapon types total
-		for (var i = 1; i < al; i++) {
+		for (var i = 0; i < al; i++) {
 			if ammo[i] > typ_amax[i]
 			{
-				if i == 1
+				if i == 0
+					ammo[i] -= 1.5;
+				else if i == 1
 					ammo[i] -= 4;
 				else
 					ammo[i] -= 1;
@@ -16,4 +18,4 @@ with Player
 		}
 	}
 }
-alarm[3] = 10;
+alarm[3] = 11;

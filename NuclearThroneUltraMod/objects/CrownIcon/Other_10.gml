@@ -279,6 +279,7 @@ if crown == 11
 		var pw = wep;
 		var bw = bwep;
 		var cw = cwep;
+		var crownss = crown;
 		//MODIFIERS!
 		var wp1 = wepmod1;
 		var wp2 = wepmod2;
@@ -323,7 +324,7 @@ if crown == 11
 		freeAmmoRound = 1;
 		ultimategamble = true;
 		race = other.race
-		crown = [11];
+		crown = crownss;
 		lastarea = other.lastarea;
 		lastwishused = false;
 		area = other.area//other.lastarea;

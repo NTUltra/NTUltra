@@ -3,7 +3,7 @@ loadTime = 60;
 depth = -100;
 with Player
 {
-	firstLoad = false;	
+	firstLoad = false;
 }
 if UberCont.opt_loading == 4
 {

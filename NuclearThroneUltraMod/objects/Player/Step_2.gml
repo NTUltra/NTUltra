@@ -1021,14 +1021,14 @@ if(my_health <= 0 && maxhealth > 0)
 		var baseammo;
 		baseammo[0] = 33 baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;
-		for (var i = 1; i < al; i++) {
+		var startI = 1;
+		if scrIsCrown(40)
+			startI = 0;
+		for (var i = startI; i < al; i++) {
 			if (ammo[i] < 0) {
 				takePercentage += 0.05;
 			}
 		}
-		var startI = 1;
-		if scrIsCrown(40)
-			startI = 0;
 		for (var i = startI; i < al; i++) {
 			var wasAbove = (ammo[i] > 0);
 			var usePercentage = takePercentage;
@@ -1446,11 +1446,9 @@ if maxhealth > 0
 				}
 			}
 		}
-		if scrIsCrown(42) && !scrIsCrown(38) && maxarmour > 0
+		if scrIsCrown(42) && !scrIsCrown(38)
 		{
 			//Scarcity
-			maxarmour -= abundanceHealth;
-			abundanceHealth = 0;
 			if scrIsCrown(40) || wep_type[wep] != 0
 			{
 				if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
@@ -1465,15 +1463,8 @@ if maxhealth > 0
 		}
 		if maxarmour + abundanceHealth <= 0
 		{
-			if maxarmour == 1
-			{
-				abundanceHealth = 0;
-			}
-			else
-			{
-				abundanceHealth += maxarmour;
-				maxarmour = 1;
-			}
+			abundanceHealth = maxarmour - 1;
+			maxarmour = 1;
 		}
 		else
 		{
@@ -1499,11 +1490,9 @@ if maxhealth > 0
 				}
 			}
 		}
-		if scrIsCrown(42) && !scrIsCrown(38) && maxhealth > 0
+		if scrIsCrown(42) && !scrIsCrown(38)
 		{
 			//Scarcity
-			maxhealth -= abundanceHealth;
-			abundanceHealth = 0;
 			if scrIsCrown(40) || wep_type[wep] != 0
 			{
 				if (ammo[wep_type[wep]] > typ_amax[wep_type[wep]]*0.5)
@@ -1518,15 +1507,8 @@ if maxhealth > 0
 		}
 		if maxhealth + abundanceHealth <= 0
 		{
-			if maxhealth == 1
-			{
-				abundanceHealth = 0;
-			}
-			else
-			{
-				abundanceHealth += maxhealth;
-				maxhealth = 1;
-			}
+			abundanceHealth = maxhealth - 1;
+			maxhealth = 1;
 		}
 		else
 		{

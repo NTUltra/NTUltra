@@ -2,6 +2,7 @@
 with instance_create(x,y,PauseTimer) {
 	persistent = true;	
 }
+alarm[2] = 300;
 race = 0;
 acceleration = max(0.8,Player.acceleration);
 maxSpeed = clamp(Player.maxSpeed - 1,1,5);

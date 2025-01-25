@@ -2,6 +2,11 @@
 
 if instance_exists(Player)
 {
+	if Player.area == 100
+	{
+		instance_deactivate_object(PitNavigation)
+		exit;
+	}
 	var ar = currentArea;
 	switch (ar)
 	{

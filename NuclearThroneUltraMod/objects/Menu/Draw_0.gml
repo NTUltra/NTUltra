@@ -103,7 +103,7 @@ if widescreen > 0
 		if !instance_exists(LoadoutSelect) || !LoadoutSelect.ultraOpen
 		{
 			var col = c_white
-			if instance_exists(LoadoutSelect) && LoadoutSelect.skinLocked
+			if !instance_exists(LoadoutSelect) || LoadoutSelect.skinLocked
 				col = c_black;
 			if skinIndex == 20
 			{

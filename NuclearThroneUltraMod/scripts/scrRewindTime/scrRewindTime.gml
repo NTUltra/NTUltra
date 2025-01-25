@@ -23,6 +23,7 @@ function scrRewindTime(){
 		inverted = TimeRewinder.inverted;
 		freeAmmoRound = TimeRewinder.freeAmmoRound;
 		fromCribToVault = TimeRewinder.fromCribToVault;
+		rewinding = true;
 	}
 	room_restart();
 }

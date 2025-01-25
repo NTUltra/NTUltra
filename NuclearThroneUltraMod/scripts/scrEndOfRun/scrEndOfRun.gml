@@ -3,6 +3,7 @@
 ///@param
 function scrEndOfRun(){
 	//Also delete in alarm[2] in UberCont if object is deactivated during menuing
+	instance_activate_object(Friend);
 	with Acid
 	{
 		instance_destroy();	

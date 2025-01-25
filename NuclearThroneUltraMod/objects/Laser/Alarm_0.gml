@@ -30,13 +30,13 @@ if(instance_exists(Player)){
 				snd_play_fire(sndTripleMachinegun);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet1Explosive)
-				{motion_add(other.image_angle-(5*acc),18)
+				{motion_add(other.image_angle-(4*acc),18)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet1Explosive)
-				{motion_add(other.image_angle+(5*acc),18)
+				{motion_add(other.image_angle+(4*acc),18)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
@@ -48,21 +48,21 @@ if(instance_exists(Player)){
 				snd_play_fire(sndUltraPistol);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet4)
-				{motion_add(other.image_angle-(5*acc),22)
+				{motion_add(other.image_angle-(4*acc),22)
 					scrCopyWeaponMod(other);
 					dmg -= 2;
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet4)
-				{motion_add(other.image_angle+(5*acc),22)
+				{motion_add(other.image_angle+(4*acc),22)
 					scrCopyWeaponMod(other);
 					dmg -= 2;
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				instance_destroy(id,false);
-			exit;
+				exit;
 			}
 			else if laserhit > 0 && instance_exists(Player)
 			{
@@ -80,13 +80,13 @@ if(instance_exists(Player)){
 				snd_play_fire(sndBouncerFire);
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,Bullet3)
-				{motion_add(other.image_angle-(5*acc),14)
+				{motion_add(other.image_angle-(4*acc),14)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,Bullet3)
-				{motion_add(other.image_angle+(5*acc),14)
+				{motion_add(other.image_angle+(4*acc),14)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
@@ -94,17 +94,18 @@ if(instance_exists(Player)){
 				instance_destroy(id,false);
 				exit;
 			}
-			else if object_index == MorphLaser
+			if object_index == MorphLaser
 			{
+				var acc = scrGetPlayerAccuracy();
 				snd_play_fire(sndCuber);
 				with instance_create(x,y,MorphBullet)
-				{motion_add(other.image_angle+5,20)
+				{motion_add(other.image_angle+(4*acc),20)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
 				alarm[11] = 0;}
 				with instance_create(x,y,MorphBullet)
-				{motion_add(other.image_angle-5,20)
+				{motion_add(other.image_angle-(4*acc),20)
 					scrCopyWeaponMod(other);
 				image_angle = direction
 				team = other.team
@@ -171,7 +172,7 @@ if(instance_exists(Player)){
 				var acc = scrGetPlayerAccuracy();
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle+5*acc,24)
+					motion_add(other.image_angle+4*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
@@ -180,7 +181,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle-5*acc,24)
+					motion_add(other.image_angle-4*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
@@ -189,7 +190,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle+10*acc,24)
+					motion_add(other.image_angle+8*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
@@ -198,7 +199,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle-10*acc,24)
+					motion_add(other.image_angle-8*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
@@ -207,7 +208,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle+15*acc,24)
+					motion_add(other.image_angle+14*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction
@@ -216,7 +217,7 @@ if(instance_exists(Player)){
 				}
 				with instance_create(x,y,thebolt)
 				{
-					motion_add(other.image_angle-15*acc,24)
+					motion_add(other.image_angle-14*acc,24)
 					dmg = round(dmg*0.4);
 					scrCopyWeaponMod(other);
 					image_angle = direction

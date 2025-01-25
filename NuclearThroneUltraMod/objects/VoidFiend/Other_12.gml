@@ -117,37 +117,39 @@ if !openedShop
 	}
 
 	//Weapon type specific chests
-	with instance_create(x - 128,yy + 128,VoidShopItemMeleeChest)
+	if !scrIsGamemode(2)
 	{
-		image_index = 3;
-		image_speed = 0.4;
+		with instance_create(x - 128,yy + 128,VoidShopItemMeleeChest)
+		{
+			image_index = 3;
+			image_speed = 0.4;
+		}
+		with instance_create(x - 96,yy + 128,VoidShopItemBulletChest)
+		{
+			image_index = 2;
+			image_speed = 0.4;
+		}
+		with instance_create(x - 64,yy + 128,VoidShopItemShotgunChest)
+		{
+			image_index = 1;
+			image_speed = 0.4;
+		}
+		with instance_create(x - 32,yy + 128,VoidShopItemBoltChest)
+		{
+			image_index = 1;
+			image_speed = 0.5;
+		}
+		with instance_create(x,yy + 128,VoidShopItemExplosiveChest)
+		{
+			image_index = 2;
+			image_speed = 0.5;
+		}
+		with instance_create(x + 32,yy + 128,VoidShopItemEnergyChest)
+		{
+			image_index = 3;
+			image_speed = 0.5;
+		}
 	}
-	with instance_create(x - 96,yy + 128,VoidShopItemBulletChest)
-	{
-		image_index = 2;
-		image_speed = 0.4;
-	}
-	with instance_create(x - 64,yy + 128,VoidShopItemShotgunChest)
-	{
-		image_index = 1;
-		image_speed = 0.4;
-	}
-	with instance_create(x - 32,yy + 128,VoidShopItemBoltChest)
-	{
-		image_index = 1;
-		image_speed = 0.5;
-	}
-	with instance_create(x,yy + 128,VoidShopItemExplosiveChest)
-	{
-		image_index = 2;
-		image_speed = 0.5;
-	}
-	with instance_create(x + 32,yy + 128,VoidShopItemEnergyChest)
-	{
-		image_index = 3;
-		image_speed = 0.5;
-	}
-	
 	with instance_create(x - 32,yy + 160,VoidShopItemCurseToggle)
 	{
 		image_index = 1;

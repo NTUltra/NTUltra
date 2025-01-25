@@ -106,6 +106,7 @@ else if !instance_exists(CrownGuardian)
 				scrForcePosition60fps();
 			}
 		}
+		alarm[5] = 4;
 		//instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 	}
 	with MovingCorpse

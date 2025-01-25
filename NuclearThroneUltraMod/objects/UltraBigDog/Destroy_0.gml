@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+scrUnlockCSkin(4,"DEFEAT ULTRA BIG DOG#AS MELTING ON 1HP EQUALITY",5);
 scrDrop(0,50)
 with myCorpse
 {

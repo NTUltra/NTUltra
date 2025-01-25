@@ -40,6 +40,8 @@ if (selected && visible &&
 				inDebt = false;
 				scrUnlockAltSkin(race, 0);
 				spr_idle=sprMutant21DIdle;
+				spr_sit=sprMutant21DIdle;
+				spr_go_sit=sprMutant21DIdle;
 				spr_walk=sprMutant21DWalk;
 				spr_hurt=sprMutant21DHurt;
 				spr_dead=sprMutant21DDead;
@@ -73,6 +75,8 @@ if (selected && visible &&
 				if bskin == 1 || bskin == 4
 				{
 					spr_idle=sprMutant3EIdle;
+					spr_go_sit=sprMutant3EIdle;
+					spr_sit=sprMutant3EIdle;
 					spr_walk=sprMutant3EWalk;
 					spr_hurt=sprMutant3EHurt;
 					spr_dead=sprMutant3EDead;
@@ -81,6 +85,8 @@ if (selected && visible &&
 				else if bskin == 2 || bskin == 5
 				{
 					spr_idle=sprMutant3FIdle;
+					spr_sit=sprMutant3FIdle;
+					spr_go_sit=sprMutant3FIdle;
 					spr_walk=sprMutant3FWalk;
 					spr_hurt=sprMutant3FHurt;
 					spr_dead=sprMutant3FDead;
@@ -88,6 +94,8 @@ if (selected && visible &&
 				else
 				{
 					spr_idle=sprMutant3DIdle;
+					spr_sit=sprMutant3DIdle;
+					spr_go_sit=sprMutant3DIdle;
 					spr_walk=sprMutant3DWalk;
 					spr_hurt=sprMutant3DHurt;
 					spr_dead=sprMutant3DDead;
@@ -102,6 +110,8 @@ if (selected && visible &&
 			altUltra = true;
 			scrUltras(true, false);
 			spr_idle = sprMutant3GIdle;
+			spr_sit = sprMutant3GIdle;
+			spr_go_sit = sprMutant3GIdle;
 			spr_walk = sprMutant3GWalk;
 			spr_hurt = sprMutant3GHurt;
 			spr_dead = sprMutant3GDead;
@@ -127,6 +137,8 @@ if (selected && visible &&
 			scrUltras(true, false);
 			defaultOverhealAddition += 2;
 			spr_idle = sprMutant5DIdle;
+			spr_sit = sprMutant5DIdle;
+			spr_go_sit = sprMutant5DIdle;
 			spr_walk = sprMutant5DWalk;
 			spr_hurt = sprMutant5DHurt;
 			spr_dead = sprMutant5DDead;
@@ -302,6 +314,8 @@ if (selected && visible &&
 					altUltra = true;
 					scrUltras(true,false);
 					spr_idle=sprMutant27BIdle;
+					spr_sit=sprMutant27BIdle;
+					spr_go_sit=sprMutant27BIdle;
 					spr_walk=sprMutant27BWalk;
 					spr_hurt=sprMutant27BHurt;
 					spr_dead=sprMutant27BDead;
@@ -321,6 +335,8 @@ if (selected && visible &&
 					altUltra = true;
 					scrUltras(true,false);
 					spr_idle=sprMutant27CIdle;
+					spr_sit=sprMutant27CIdle;
+					spr_go_sit=sprMutant27CIdle;
 					spr_walk=sprMutant27CWalk;
 					spr_hurt=sprMutant27CHurt;
 					spr_dead=sprMutant27CDead;
@@ -343,6 +359,8 @@ if (selected && visible &&
 				scrWeaponAdjustCost(0.85);
 				bskin = 2;
 				spr_idle=sprMutant1CIdle;
+				spr_sit=sprMutant1CIdle;
+				spr_go_sit=sprMutant1CIdle;
 				spr_walk=sprMutant1CWalk;
 				spr_hurt=sprMutant1CHurt;
 				spr_dead=sprMutant1CDead;
@@ -382,6 +400,8 @@ if (selected && visible &&
 			{
 				scrUnlockAltSkin(race, bskin);
 				spr_idle=sprMutant6DIdle;
+				spr_sit=sprMutant6DIdle;
+				spr_go_sit=sprMutant6DIdle;
 				spr_walk=sprMutant6DWalk;
 				spr_hurt=sprMutant6DHurt;
 				spr_dead=sprMutant6DDead;
@@ -390,6 +410,8 @@ if (selected && visible &&
 			{
 				scrUnlockAltSkin(race, bskin);
 				spr_idle=sprMutant6EIdle;
+				spr_sit=sprMutant6EIdle;
+				spr_go_sit=sprMutant6EIdle;
 				spr_walk=sprMutant6EWalk;
 				spr_hurt=sprMutant6EHurt;
 				spr_dead=sprMutant6EDead;
@@ -449,6 +471,8 @@ if (selected && visible &&
 				scrUnlockAltSkin(race, bskin);
 				bskin = 3;
 				spr_idle=sprMutant9DIdle;
+				spr_sit=sprMutant9DIdle;
+				spr_go_sit=sprMutant9DIdle;
 				spr_walk=sprMutant9DWalk;
 				spr_hurt=sprMutant9DHurt;
 				spr_dead=sprMutant9DDead;
@@ -458,6 +482,8 @@ if (selected && visible &&
 				scrUnlockAltSkin(race, bskin);
 				bskin = 4;
 				spr_idle=sprMutant9EIdle;
+				spr_sit=sprMutant9EIdle;
+				spr_go_sit=sprMutant9EIdle;
 				spr_walk=sprMutant9EWalk;
 				spr_hurt=sprMutant9EHurt;
 				spr_dead=sprMutant9DDead;
@@ -479,6 +505,8 @@ if (selected && visible &&
 			if bskin == 0 || bskin == 3
 			{
 				spr_idle=sprMutant10EIdle;
+				spr_sit=sprMutant10EIdle;
+				spr_go_sit=sprMutant10EIdle;
 				spr_walk=sprMutant10EWalk;
 				spr_hurt=sprMutant10EHurt;
 				spr_dead=sprMutant10EDead;
@@ -486,12 +514,16 @@ if (selected && visible &&
 			else if bskin == 1 || bskin == 4
 			{
 				spr_idle=sprMutant10FIdle;
+				spr_sit=sprMutant10FIdle;
+				spr_go_sit=sprMutant10FIdle;
 				spr_walk=sprMutant10FWalk;
 				spr_hurt=sprMutant10FHurt;
 				spr_dead=sprMutant10FDead;
 			} else if bskin == 2 || bskin == 5
 			{
 				spr_idle=sprMutant10GIdle;
+				spr_sit=sprMutant10GIdle;
+				spr_go_sit=sprMutant10GIdle;
 				spr_walk=sprMutant10GWalk;
 				spr_hurt=sprMutant10GHurt;
 				spr_dead=sprMutant10GDead;
@@ -522,6 +554,8 @@ if (selected && visible &&
 				scrUnlockAltSkin(race, 0);
 				bskin = 4;
 				spr_idle=sprMutant16DIdle;
+				spr_go_sit=sprMutant16DIdle;
+				spr_sit=sprMutant16DIdle;
 				spr_walk=sprMutant16DWalk;
 				spr_hurt=sprMutant16DHurt;
 				spr_dead=sprMutant16DDead;
@@ -593,6 +627,8 @@ if (selected && visible &&
 				rogueammo = min(rogueammomax,rogueammo);
 				scrUnlockAltSkin(race, 0);
 				spr_idle=sprMutant22DIdle;
+				spr_sit=sprMutant22DIdle;
+				spr_go_sit=sprMutant22DIdle;
 				spr_walk=sprMutant22DWalk;
 				spr_hurt=sprMutant22DHurt;
 				spr_dead=sprMutant22DDead;
@@ -641,6 +677,8 @@ if (selected && visible &&
 				scrUltras(true, false);
 				scrUnlockAltSkin(race, 0);
 				spr_idle=sprMutant25DIdle;
+				spr_sit=sprMutant25DIdle;
+				spr_go_sit=sprMutant25DIdle;
 				spr_walk=sprMutant25DWalk;
 				spr_hurt=sprMutant25DHurt;
 				spr_dead=sprMutant25DDead;
@@ -829,6 +867,7 @@ if (selected && visible &&
 		with GenCont
 		race=Player.race;
 		var newPlayer = instance_create(x,y,Player);
+		UberCont.skillDeposit = [];
 		with Player
 		{
 			if id != newPlayer.id

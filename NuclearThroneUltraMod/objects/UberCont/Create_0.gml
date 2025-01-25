@@ -3,7 +3,7 @@ version = 000
 encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
-updateVersion = "31.03"
+updateVersion = "31.04"
 subUpdateVersion = ".00";
 notUpdated = "";
 serverIp = "00.00.000.000"serverPort = 0000;

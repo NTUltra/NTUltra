@@ -297,6 +297,13 @@ function scrCrowns() {
 	crown_used[43] = 0
 	crown_tips[43] = "quick start"
 	
+	//CROWN OF PUFFERFISH
+	/*
+	crown_name[44] = "[CROWN OF PUFFERFISH]"
+	crown_text[44] = "<aq>PREVENT A HIT<aq>WHEN A WEAPON IS FULLY PRE-RELOADED WITH <g>PUFFY CHEEKS<g>#FOR ATLEAST <w>5 SECONDS<w>#AND/OR WHEN <g>ALIEN INTESTINES<g> IS NEAR FULLY CHARGED#WHEN TRIGGERED CONSUME ALIEN INTESTINES CHARGE#AND/OR UNLOAD YOUR PUFFY CHEEKS"
+	crown_used[44] = 0
+	crown_tips[44] = "quick start"
+	*/
 	//have nerves of steel or adrenline fuel?
 	/*
 	crown_name[35] = "[CROWN OF AGGRESSION]"

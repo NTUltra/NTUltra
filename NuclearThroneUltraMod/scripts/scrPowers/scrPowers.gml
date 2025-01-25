@@ -1215,7 +1215,8 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				var targetHealth = scrCalculatePlayerBaseMaxHealth();
 				cost = max(round(targetHealth*0.3),1);
-				canSpawn = (maxhealth - cost >= 1);
+				var baseHealth = scrCalculatePlayerBaseMaxHealth();
+				canSpawn = (baseHealth - cost >= 1);
 			
 			}
 			if canSpawn {
@@ -1248,15 +1249,13 @@ function scrPowers(raceOverwrite = -1) {
 					}
 				}
 				else if !ultra_got[46] {
-					var baseHealth = scrCalculatePlayerBaseMaxHealth();
-					var bonusHealth = maxhealth - baseHealth;
+					
 					var lostHp = 3;
 					maxhealth = max(1,maxhealth - cost);//0.5
 					if my_health > maxhealth
 						my_health = max(1,my_health - cost,maxhealth);
 					if scrIsCrown(35)
 						my_health = max(my_health - 1, 1);
-					maxhealth += bonusHealth;
 					hitBy = sprite_index;
 				}
         		exception = true;
@@ -3382,7 +3381,7 @@ function scrPowers(raceOverwrite = -1) {
 				event_user(0);
 			}
 		}
-		if !skill_got[maxskill + 1] || speed > 1
+		if !skill_got[maxskill + 1] || speed > 2
 		{
 			if UberCont.normalGameSpeed == 60
 				chickenFocus -= chickenFocusCostRate*0.5;
@@ -3863,6 +3862,11 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						//my_health = max(my_health,other.my_health);
 						//armour = max(armour, other.armour);
+						var healAmount = other.my_health - my_health;
+						if healAmount >= 6
+						{
+							scrUnlockBSkin(9,"FOR RESTORING 6 HP#USING CHICKEN'S REGAL VISION");
+						}
 						my_health = other.my_health;
 						armour = other.armour;
 					}

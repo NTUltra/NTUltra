@@ -97,6 +97,7 @@ hunterEye = 0;
 hunterEyeMax = 200;
 sheepFakeouts = 0;
 rewinds = 0;
+rewinding = false;
 alienIntestines = 0;
 alienDir = 5;
 charpoints = 0;
