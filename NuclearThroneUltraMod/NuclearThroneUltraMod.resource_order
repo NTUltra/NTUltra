@@ -2335,6 +2335,7 @@
     {"name":"scrBecomeRoguePopo","order":82,"path":"scripts/scrBecomeRoguePopo/scrBecomeRoguePopo.yy",},
     {"name":"scrBladeBoltMarrow","order":4,"path":"scripts/scrBladeBoltMarrow/scrBladeBoltMarrow.yy",},
     {"name":"scrBlankArmour","order":7,"path":"scripts/scrBlankArmour/scrBlankArmour.yy",},
+    {"name":"scrBleedDamage","order":104,"path":"scripts/scrBleedDamage/scrBleedDamage.yy",},
     {"name":"scrBloodWeaponsArray","order":96,"path":"scripts/scrBloodWeaponsArray/scrBloodWeaponsArray.yy",},
     {"name":"scrBoltMarrow","order":18,"path":"scripts/scrBoltMarrow/scrBoltMarrow.yy",},
     {"name":"scrBoltTrail","order":8,"path":"scripts/scrBoltTrail/scrBoltTrail.yy",},

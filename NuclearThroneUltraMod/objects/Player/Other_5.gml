@@ -9,6 +9,10 @@ if ultra_got[16]
 	meltingd = lastEnemyKilled;
 	lastEnemyKilled = [noone, noone];
 }
+if (ultra_got[33] && !altUltra && my_health <= 0)
+{
+	scrChickenRegen(1);
+}
 jump = 0;
 roll = 0;
 didJumpRoll = false;

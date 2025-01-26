@@ -533,7 +533,7 @@ if !instance_exists(LevCont) and visible = 1
 			ammo[0] = -100;
 			// newMovement = !newMovement;
 			Sleep(100);
-			getVision = true;
+			//getVision = true;
 			instance_create(x,y,LightningWeaponChest);
 			instance_create(x,y,MorphWeaponChest);
 			instance_create(x,y,ToxicWeaponChest);

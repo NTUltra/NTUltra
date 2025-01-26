@@ -18,6 +18,10 @@ function scrCallculateFinalDamage(inputDamage){
 		{
 			dmgDeal = dmgDeal*1.20;
 		}
+		if ultra_got[33] && !altUltra && my_health <= 0//Chicken bleed
+		{
+			dmgDeal = scrBleedDamage(dmgDeal);
+		}
 		if ( (skill_got[5]) && (race == 11))//HUNTER THRONE BUTT
 		{
 			if dmgDeal > 0

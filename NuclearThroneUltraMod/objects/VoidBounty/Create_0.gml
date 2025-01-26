@@ -4,5 +4,5 @@
 event_inherited();
 name = "COMPLETE BOSS BOUNTY";
 spr_item = sprVoidItemBounties;
-cost = 11;
+cost = 8;
 bountyNumber = 0;

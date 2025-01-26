@@ -664,7 +664,7 @@ if Player.area = 100
 		}
 	}
 }
-else if (Player.area > 2 and 
+else if ((Player.area > 2 || (Player.area == 1 && Player.loops > 0)) and 
 (Player.subarea = 2 || (Player.area == 139 && Player.loops > 0))
 && Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111

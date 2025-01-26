@@ -284,7 +284,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//CHICKEN 
 	ultra_name[33] = "HARDER TO KILL"
-	ultra_text[33] = "<w>KILLS<w> EXTEND <r>BLEED<r> TIME#<g>CROWN VAULTS<g> REGENERATE <w>1<w> <r>MAX HP<r>"
+	ultra_text[33] = "<w>KILLS<w> EXTEND <r>BLEED<r> TIME#<g>CROWN VAULTS<g> REGENERATE <w>1<w> <r>MAX HP<r>#<r>BLEEDING<r> INCREASES <w>DAMAGE DEALT<w> BY <w>50%<w>#LOSE LESS <r>MAX HP<r> UPON DYING##ENDING AN AREA WHILE <r>BLEEDING<r>#ALWAYS <w>RESTORES YOUR HEAD<w>"
 	ultra_tips[33] = "immortal"
 	
 	//FIRE WEAPON

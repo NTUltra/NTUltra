@@ -2570,6 +2570,7 @@
     {"id":{"name":"scrBecomeRoguePopo","path":"scripts/scrBecomeRoguePopo/scrBecomeRoguePopo.yy",},},
     {"id":{"name":"scrBladeBoltMarrow","path":"scripts/scrBladeBoltMarrow/scrBladeBoltMarrow.yy",},},
     {"id":{"name":"scrBlankArmour","path":"scripts/scrBlankArmour/scrBlankArmour.yy",},},
+    {"id":{"name":"scrBleedDamage","path":"scripts/scrBleedDamage/scrBleedDamage.yy",},},
     {"id":{"name":"scrBloodWeaponsArray","path":"scripts/scrBloodWeaponsArray/scrBloodWeaponsArray.yy",},},
     {"id":{"name":"scrBoltMarrow","path":"scripts/scrBoltMarrow/scrBoltMarrow.yy",},},
     {"id":{"name":"scrBoltTrail","path":"scripts/scrBoltTrail/scrBoltTrail.yy",},},

@@ -378,19 +378,16 @@ function scrEnemyDeathEvent(isSheep = false){
 				}
 			}
 			//Chicken Ultra A harder to kill
-			if ultra_got[33] == 1 && !altUltra
+			if ultra_got[33] && !altUltra
 		    {
 			    if my_health <= 0
 			    {
-				    if race = 9 and bleed < 150
+				    if race = 9
 				    {
 				        if bleed > 0 {
-							bleed-=30;
+							bleed -= 18 + min(other.maxhealth * 0.125, 50);
 				        }
-						if bleed <= 0
-						{
-							bleed = 1;	
-						}
+						bleed = max(bleed, -30);
 				    }
 			    }
 		    }

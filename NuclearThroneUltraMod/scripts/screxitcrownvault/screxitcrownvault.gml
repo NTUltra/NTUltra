@@ -20,7 +20,7 @@ function scrExitCrownVault(){
 			Player.subarea = 1;
 		else if Player.area == 113//Banditland
 			Player.subarea = 1;
-		else if Player.area == 9
+		else if (instance_exists(SecretSheepNavigation) && Player.area == 9)
 			Player.subarea = 3;
 		else
 			Player.subarea = 2

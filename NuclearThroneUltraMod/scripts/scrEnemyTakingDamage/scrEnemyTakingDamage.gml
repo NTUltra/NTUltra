@@ -29,6 +29,10 @@ function scrEnemyTakingDamage() {
 			{
 				dmgTaken = dmgTaken*1.20;
 			}
+			if Player.ultra_got[33] && !Player.altUltra && Player.my_health <= 0//Chicken bleed
+			{
+				dmgTaken = scrBleedDamage(dmgTaken);
+			}
 			if ( (Player.skill_got[5]) && (Player.race == 11))//HUNTER THRONE BUTT
 			{
 				if dmgTaken > 0

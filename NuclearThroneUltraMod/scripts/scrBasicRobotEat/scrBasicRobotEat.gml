@@ -26,6 +26,22 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 			}
 			repeat(4)
 			{
+				if Player.skill_got[41]
+				{
+					if random(100) < max(2,(6 - (Player.armour * 0.5)))	
+					{
+						with instance_create(xx,yy,HPPickup)
+						{
+							isArmour = true;
+							direction = other.direction;
+							sprite_index = sprArmourPickup;
+							if scrIsCrown(32)//Misfortune
+							{
+								sprite_index = sprArmourAmmo;
+							}
+						}
+					}
+				}
 				if random(maxhealth) > my_health and !scrIsCrown(2)
 					instance_create(xx,yy,HPPickup)
 				else
@@ -79,6 +95,22 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 	}
 
 	var shouldHeal = true;
+	if Player.skill_got[41]
+	{
+		if random(100) < max(2,(6 - (Player.armour * 0.5)))	
+		{
+			with instance_create(xx,yy,HPPickup)
+			{
+				isArmour = true;
+				direction = other.direction;
+				sprite_index = sprArmourPickup;
+				if scrIsCrown(32)//Misfortune
+				{
+					sprite_index = sprArmourAmmo;
+				}
+			}
+		}
+	}
 	if Player.skill_got[5] = 1
 	{
 		if !audio_is_playing(sndRobotEatUpg)
