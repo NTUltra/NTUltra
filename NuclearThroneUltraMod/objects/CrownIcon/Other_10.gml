@@ -176,14 +176,14 @@ if crown == 8 && !Player.tookDestiny
 {
 	with Player
 	{
-		var maxAvailable = clamp(maxlevel - level,0,2);
+		var maxAvailable = clamp(maxlevel - level,0,1);
 		skillpoints += maxAvailable
 		level += maxAvailable;
 		if firstLoad
 		{
 			firstLoad = false;
-			anyMutation += maxAvailable;
 		}
+		anyMutation += 1;
 		//skillsChosen -= 1;
 		tookDestiny = true;
 	}

@@ -96,192 +96,6 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 
-		if race == 25//Mutation doctor
-		{
-			if ultra_got[99]
-			{//necro doctor
-    
-				//snd_play_2d(sndNecromancerRevive)
-				        //audio_stop_sound(sndBouncerHitWall)
-				var markedForRev = false;
-			    var numberOfEnems = 0;
-				if instance_exists(IDPDVan)
-					numberOfEnems = instance_number(IDPDVan);
-				if (instance_number(enemy) > numberOfEnems)
-				{
-					with CorpseCollector
-					{
-						var al = ds_list_size(corpses)
-						var markForDelete = [];
-						var j = 0;
-						for (var i = 0; i < al; i++)
-						{
-							var corpse = corpses[| i];
-							var xx = corpse.xx;
-							var yy = corpse.yy;
-							if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-							{
-								with instance_create(xx,yy,BloodStreak)
-								{
-									motion_add(point_direction(Player.x,Player.y,x,y),8)
-									image_angle = direction
-								}
-								if corpse.mySize > 2
-									scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-								else
-									scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
-								instance_create(xx,yy,AllyFreak);
-								markedForRev = true;
-								markForDelete[j] = i;
-								j ++;
-							}
-						}
-						for (var i = 0; i < j; i++)
-						{
-							ds_list_delete(corpses,markForDelete[i]);
-						}
-					}
-					with Corpse
-					{
-						if (image_speed == 0 || alarm[6] < 1) //and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-							&& point_distance(x,y,other.x,other.y) < 250
-						{
-						    instance_destroy()
-						    with instance_create(x,y,BloodStreak)
-						    {
-								motion_add(point_direction(Player.x,Player.y,x,y),8)
-								image_angle = direction
-						    }
-						    if mySize > 2
-								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-							else
-								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
-						    instance_create(x,y,AllyFreak);
-							markedForRev = true;
-					    }
-					}
-					if markedForRev
-					{
-						snd_play(sndNecromancerRevive);
-						scrDoctorThroneButt(4,2);
-					}
-				}
-
-			}
-			else if ultra_got[98]
-			{
-				if rad > 15
-				{
-					audio_stop_sound(sndMutant0Slct)
-					audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
-					audio_play_sound(sndMutant0Slct,90,0)
-					instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-					rad -= 15;
-					scrDoctorThroneButt();
-				}
-				else
-					scrEmptyRad();
-
-			}
-			else// if my_health > 1 || !scrIsGamemode(9)
-			{
-				//Regular active 
-				if (!scrIsCrown(41) && (!skill_got[5] || my_health > 1) || my_health > 2)
-				{
-					if my_health == 1 && skill_got[32] && isAlkaline
-					{
-						isAlkaline = false;
-						var h = 4;
-						my_health = min(h,maxhealth);
-				
-						with instance_create(x,y,SharpTeeth)
-							owner=other.id;
-						snd_play(sndAlkalineProc,0,true)
-						var pt = instance_create(x,y,PopupText)
-						if UberCont.opt_ammoicon
-						{
-							if my_health = maxhealth
-								pt.mytext = "MAX";
-							else
-								pt.mytext = "+"+string(h-1);
-				
-							pt.sprt = sprHPIconPickup;
-						}
-						else
-						{
-							if my_health = maxhealth
-								pt.mytext = "MAX HP";
-							else
-								pt.mytext = "+"+string(h-1)+" HP";
-						}
-						Sleep(50);
-					}
-					else
-					{
-						DealDamage(1,false,false,false);
-						hitBy = sprite_index;
-						exception = true;
-					    if my_health<=0 //KILL YOSELF USING ACTIVE
-					    {
-							if skill_got[46] && peaceBarriers > 0
-							{
-								my_health = 1;
-								audio_stop_sound(snd_hurt);
-								snd_play_2d(sndPeaceHit,0.1);
-								scrGiveEuphoriaShield();
-								alarm[3] = max(alarm[3],6);
-								peaceBarriers -= 1;
-								peaceBarrierTime = 0;
-							}
-							else if armour > 0
-							{
-								armour -= 1;
-								my_health = 1;
-							}
-						    else if skill_got[25]//strong spirit
-						    {
-							    if strongspirit==true&&strongspiritused==false
-							    {
-								    snd_play(sndStrongSpiritLost);
-								    my_health = 1;
-									BackCont.shake += 10;
-									Sleep(50);
-									alarm[3] += 18;
-									snd_hurt = sndDamageNegate;
-									scrGiveEuphoriaShield();
-								    strongspiritused=true;
-								    strongspirit=false;
-									with instance_create(x,y,StrongSpiritBlock)
-									{
-										image_speed = 0.5;
-									}
-							    }
-							    else
-									scrUnlockCSkin(25,"HAHAHAHAHA!",0);
-						    }
-						    else
-								scrUnlockCSkin(25,"HAHAHAHAHA!",0);
-					    }
-					}
-				    //if my_health<1&&strongspirit
-				    image_index=0;
-				    sprite_index=spr_hurt;
-				    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
-				    repeat(14)
-				    {
-					    with instance_create(x,y,Rad)
-					    {
-							motion_add(other.direction,other.speed)
-						    motion_add(random(360),random(5)+3)
-						    repeat(speed)
-						    speed *= 0.9
-						}
-				    }
-					scrDoctorThroneButt();
-				}
-			}
-		}
-
 		if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 		{
 			if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))
@@ -2262,7 +2076,191 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 		
+		if race == 25 && (KeyCont.key_spec[p] = 1 || (ultra_got[99] && !instance_exists(MeltingDelay)))//Mutation doctor
+		{
+			if ultra_got[99]
+			{//necro doctor
+				instance_create(x,y,MeltingDelay);
+				//snd_play_2d(sndNecromancerRevive)
+				        //audio_stop_sound(sndBouncerHitWall)
+				var markedForRev = false;
+			    var numberOfEnems = 0;
+				if instance_exists(IDPDVan)
+					numberOfEnems = instance_number(IDPDVan);
+				if (instance_number(enemy) > numberOfEnems)
+				{
+					with CorpseCollector
+					{
+						var al = ds_list_size(corpses)
+						var markForDelete = [];
+						var j = 0;
+						for (var i = 0; i < al; i++)
+						{
+							var corpse = corpses[| i];
+							var xx = corpse.xx;
+							var yy = corpse.yy;
+							if point_distance(xx,yy,other.x,other.y) < 250//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+							{
+								with instance_create(xx,yy,BloodStreak)
+								{
+									motion_add(point_direction(Player.x,Player.y,x,y),8)
+									image_angle = direction
+								}
+								if corpse.mySize > 2
+									scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								else
+									scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),xx,yy,1,1,random(360),c_white,1);
+								instance_create(xx,yy,AllyFreak);
+								markedForRev = true;
+								markForDelete[j] = i;
+								j ++;
+							}
+						}
+						for (var i = 0; i < j; i++)
+						{
+							ds_list_delete(corpses,markForDelete[i]);
+						}
+					}
+					with Corpse
+					{
+						if (image_speed == 0 || alarm[6] < 1) //and x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+							&& point_distance(x,y,other.x,other.y) < 250
+						{
+						    instance_destroy()
+						    with instance_create(x,y,BloodStreak)
+						    {
+								motion_add(point_direction(Player.x,Player.y,x,y),8)
+								image_angle = direction
+						    }
+						    if mySize > 2
+								scrAddToBGFXLayer(sprMeltSplatBig,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+							else
+								scrAddToBGFXLayer(sprMeltSplat,choose(0,1,2,3,4),x,y,1,1,random(360),c_white,1);
+						    instance_create(x,y,AllyFreak);
+							markedForRev = true;
+					    }
+					}
+					if markedForRev
+					{
+						snd_play(sndNecromancerRevive);
+						scrDoctorThroneButt(4,2);
+					}
+				}
 
+			}
+			else if ultra_got[98]
+			{
+				if rad > 15
+				{
+					audio_stop_sound(sndMutant0Slct)
+					audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
+					audio_play_sound(sndMutant0Slct,90,0)
+					instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
+					rad -= 15;
+					scrDoctorThroneButt();
+				}
+				else
+					scrEmptyRad();
+
+			}
+			else// if my_health > 1 || !scrIsGamemode(9)
+			{
+				//Regular active 
+				if (!scrIsCrown(41) && (!skill_got[5] || my_health > 1) || my_health > 2)
+				{
+					if my_health == 1 && skill_got[32] && isAlkaline
+					{
+						isAlkaline = false;
+						var h = 4;
+						my_health = min(h,maxhealth);
+				
+						with instance_create(x,y,SharpTeeth)
+							owner=other.id;
+						snd_play(sndAlkalineProc,0,true)
+						var pt = instance_create(x,y,PopupText)
+						if UberCont.opt_ammoicon
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX";
+							else
+								pt.mytext = "+"+string(h-1);
+				
+							pt.sprt = sprHPIconPickup;
+						}
+						else
+						{
+							if my_health = maxhealth
+								pt.mytext = "MAX HP";
+							else
+								pt.mytext = "+"+string(h-1)+" HP";
+						}
+						Sleep(50);
+					}
+					else
+					{
+						DealDamage(1,false,false,false);
+						hitBy = sprite_index;
+						exception = true;
+					    if my_health<=0 //KILL YOSELF USING ACTIVE
+					    {
+							if skill_got[46] && peaceBarriers > 0
+							{
+								my_health = 1;
+								audio_stop_sound(snd_hurt);
+								snd_play_2d(sndPeaceHit,0.1);
+								scrGiveEuphoriaShield();
+								alarm[3] = max(alarm[3],6);
+								peaceBarriers -= 1;
+								peaceBarrierTime = 0;
+							}
+							else if armour > 0
+							{
+								armour -= 1;
+								my_health = 1;
+							}
+						    else if skill_got[25]//strong spirit
+						    {
+							    if strongspirit==true&&strongspiritused==false
+							    {
+								    snd_play(sndStrongSpiritLost);
+								    my_health = 1;
+									BackCont.shake += 10;
+									Sleep(50);
+									alarm[3] += 18;
+									snd_hurt = sndDamageNegate;
+									scrGiveEuphoriaShield();
+								    strongspiritused=true;
+								    strongspirit=false;
+									with instance_create(x,y,StrongSpiritBlock)
+									{
+										image_speed = 0.5;
+									}
+							    }
+							    else
+									scrUnlockCSkin(25,"HAHAHAHAHA!",0);
+						    }
+						    else
+								scrUnlockCSkin(25,"HAHAHAHAHA!",0);
+					    }
+					}
+				    //if my_health<1&&strongspirit
+				    image_index=0;
+				    sprite_index=spr_hurt;
+				    snd_play_2d(snd_hurt_actual, hurt_pitch_variation);
+				    repeat(14)
+				    {
+					    with instance_create(x,y,Rad)
+					    {
+							motion_add(other.direction,other.speed)
+						    motion_add(random(360),random(5)+3)
+						    repeat(speed)
+						    speed *= 0.9
+						}
+				    }
+					scrDoctorThroneButt();
+				}
+			}
+		}
 		
 		//ANGEL
 		if race == 18 && !instance_exists(AngelActive) //ANGEL
