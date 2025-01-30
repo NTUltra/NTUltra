@@ -9924,6 +9924,22 @@ function scrWeapons() {
 			}
 		}
 	}
+	
+	highest_wep_tier = 0;
+	// var highestTierWeapon = 0;
+	for (var i = 0; i < maxwep+1; i++) {
+	    // code here
+		wep_cost_base[i] = wep_cost[i];
+		wep_rad_base[i] = wep_rad[i];
+		wep_type_base[i] = wep_type[i];
+		wep_load_base[i] = wep_load[i];
+		if wep_area[i] > highest_wep_tier
+		{
+			highest_wep_tier = wep_area[i];
+			 //highestTierWeapon = i;
+		}
+	}
+	
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
 	typ_ammo[0] = 4 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
 	typ_amax_base[0] = 33 typ_amax_base[1] = 255 typ_amax_base[2] = 55 typ_amax_base[3] = 55 typ_amax_base[4] = 55 typ_amax_base[5] = 55
@@ -9962,20 +9978,7 @@ function scrWeapons() {
 	typ_name[0] = "MELEE" typ_name[1] = "BULLETS" typ_name[2] = "SHELLS" typ_name[3] = "BOLTS" typ_name[4] = "EXPLOSIVES" typ_name[5] = "ENERGY"
 
 	
-	highest_wep_tier = 0;
-	// var highestTierWeapon = 0;
-	for (var i = 0; i < maxwep+1; i++) {
-	    // code here
-		wep_cost_base[i] = wep_cost[i];
-		wep_rad_base[i] = wep_rad[i];
-		wep_type_base[i] = wep_type[i];
-		wep_load_base[i] = wep_load[i];
-		if wep_area[i] > highest_wep_tier
-		{
-			highest_wep_tier = wep_area[i];
-			 //highestTierWeapon = i;
-		}
-	}
+	
 	
 	//Debug how many weapons there are of each tier
 	//scrExportWeapons();

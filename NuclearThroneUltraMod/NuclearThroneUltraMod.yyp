@@ -8640,6 +8640,7 @@
     {"id":{"name":"sprMimicSpawn","path":"sprites/sprMimicSpawn/sprMimicSpawn.yy",},},
     {"id":{"name":"sprMimicSpawnLoop","path":"sprites/sprMimicSpawnLoop/sprMimicSpawnLoop.yy",},},
     {"id":{"name":"sprMimicTell","path":"sprites/sprMimicTell/sprMimicTell.yy",},},
+    {"id":{"name":"sprMindControlPower","path":"sprites/sprMindControlPower/sprMindControlPower.yy",},},
     {"id":{"name":"sprMindPower","path":"sprites/sprMindPower/sprMindPower.yy",},},
     {"id":{"name":"sprMindPowerTB","path":"sprites/sprMindPowerTB/sprMindPowerTB.yy",},},
     {"id":{"name":"sprMindPowerVoid","path":"sprites/sprMindPowerVoid/sprMindPowerVoid.yy",},},

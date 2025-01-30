@@ -37,7 +37,7 @@ else
 		{
 			if point_distance(x,y,other.x,other.y) < 120 and point_distance(x,y,other.x,other.y) > 32
 			{
-				if collision_line(other.target.x,other.target.y,x,y,Wall,1,1) < 0 and random(3) < 2
+				if other.target != noone && instance_exists(other.target) && collision_line(other.target.x,other.target.y,x,y,Wall,1,1) < 0 and random(3) < 2
 					scrRavenLift()
 			}
 		}

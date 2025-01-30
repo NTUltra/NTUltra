@@ -683,9 +683,9 @@ if Player.ultra_got[11] {
     with enemy//brainwashed enemy
     {
     //draw_text(x,y,string(team));
-        if  team>=5
+        if  team >= 5
         {
-			draw_sprite_ext(sprMindPower,Player.wave,x,y,right,1,0,c_white,1)
+			draw_sprite_ext(sprMindControlPower,Player.wave,x,y,right,1,0,c_white,1)
         //draw_text(x,y,"I am a fool")
         //draw_text(target.x,target.y,"target")
         }

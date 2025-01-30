@@ -8271,6 +8271,7 @@
     {"name":"sprMimicSpawn","order":26,"path":"sprites/sprMimicSpawn/sprMimicSpawn.yy",},
     {"name":"sprMimicSpawnLoop","order":27,"path":"sprites/sprMimicSpawnLoop/sprMimicSpawnLoop.yy",},
     {"name":"sprMimicTell","order":9,"path":"sprites/sprMimicTell/sprMimicTell.yy",},
+    {"name":"sprMindControlPower","order":31,"path":"sprites/sprMindControlPower/sprMindControlPower.yy",},
     {"name":"sprMindPower","order":17,"path":"sprites/sprMindPower/sprMindPower.yy",},
     {"name":"sprMindPowerTB","order":15,"path":"sprites/sprMindPowerTB/sprMindPowerTB.yy",},
     {"name":"sprMindPowerVoid","order":6,"path":"sprites/sprMindPowerVoid/sprMindPowerVoid.yy",},

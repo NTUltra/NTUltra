@@ -2,6 +2,8 @@
 // /@description
 ///@param
 function scrRewindTime(){
+	if !instance_exists(TimeRewinder)
+		exit;
 	with Player {
 		snd_play_2d(sndRewind,0,true,false,1,1);
 		rewinds--;
