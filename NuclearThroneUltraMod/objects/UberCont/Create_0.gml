@@ -8,6 +8,7 @@ subUpdateVersion = ".00";
 notUpdated = "";
 serverIp = "00.00.000.000"serverPort = 0000;
 currentSave = 0;
+newContent = true;
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

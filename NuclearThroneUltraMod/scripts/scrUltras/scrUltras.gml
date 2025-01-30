@@ -835,10 +835,74 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	maxultra = 108;
 	
+	
 	ultra_name[109] = "TRASH"
 	ultra_text[109] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
 	ultra_tips[109] = "challenge run"
-
+	
+	if UberCont.newContent
+	{
+		//THIEF
+	    ultra_name[109] = "EXPERIENCED"
+	    ultra_text[109] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
+	    ultra_tips[109] = "learning quickly"
+        
+	    ultra_name[110] = "RAPID MUSTACHE GROWTH"
+	    ultra_text[110] = "SKILL ALSO INCREASES <w>RELOAD SPEED<w>"
+	    ultra_tips[110] = "quickdraw"
+        
+	    ultra_name[111] = "PROTECTIVE FACIAL HAIR"
+	    ultra_text[111] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
+	    ultra_tips[111] = "strong skillet"
+        
+		ultra_name[112] = "DISCIPLINE"
+	    ultra_text[112] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
+	    ultra_tips[112] = "discipline those projectiles!"
+		
+		//Have any director weapon
+		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
+		{
+			ultra_name[112] = "GRUMPY LECTURE"
+			//TODO change to unequipped ammo
+		    ultra_text[112] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
+		    ultra_tips[112] = "teach them a lesson!"
+		}
+	
+	//NOTHING
+	ultra_name[113] = "EXPERIENCED"
+	ultra_text[113] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
+	ultra_tips[113] = "learning quickly"
+        
+	ultra_name[114] = "RAPID MUSTACHE GROWTH"
+	ultra_text[114] = "SKILL ALSO INCREASES <w>RELOAD SPEED<w>"
+	ultra_tips[114] = "quickdraw"
+        
+	ultra_name[115] = "PROTECTIVE FACIAL HAIR"
+	ultra_text[115] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
+	ultra_tips[115] = "strong skillet"
+        
+	ultra_name[116] = "DISCIPLINE"
+	ultra_text[116] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
+	ultra_tips[116] = "discipline those projectiles!"
+		
+	//Have any director weapon
+	if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
+	{
+		ultra_name[116] = "GRUMPY LECTURE"
+		//TODO change to unequipped ammo
+		ultra_text[116] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
+		ultra_tips[116] = "teach them a lesson!"
+	}
+	
+	maxultra = 116;
+	
+	
+	ultra_name[117] = "TRASH"
+	ultra_text[117] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
+	ultra_tips[117] = "challenge run"
+	
+	}
+	
 	dir = 0
 	if resetUltraGot
 		repeat(maxultra+2)

@@ -7,42 +7,59 @@ image_index = racemax+1
 image_speed = 0
 
 //visible = 1
-
-
-x = __view_get( e__VW.XView, 0 )+8+22*num//-(UberCont.mouse__x-view_xview)*0.7
+var xstep = 22;
+var loffset = 8;
+if UberCont.newContent
+{
+	xstep = 20;
+	loffset = 12;
+}
+x = __view_get( e__VW.XView, 0 )+loffset+xstep*num//-(UberCont.mouse__x-view_xview)*0.7
 y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 row = 0;
 if num == 13//SWAPP ATOM AND SHEEP
 {
 	row = 1;
-	x = __view_get( e__VW.XView, 0 )+8+(22*2);
+	x = __view_get( e__VW.XView, 0 )+loffset+(xstep*2);
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
 }
 else if num == 15
 {
 	row = 0;
-	x = __view_get( e__VW.XView, 0 )+8+(22*13);
+	x = __view_get( e__VW.XView, 0 )+loffset+(xstep*13);
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
 }
-else if num>13
+else if num == 28
+{
+	row = 0;
+	x = __view_get( e__VW.XView, 0 )+loffset+xstep*(num-14);
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
+}
+else if num == 29
+{
+	row = 1;
+	x = __view_get( e__VW.XView, 0 )+loffset+xstep*(num-15);
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
+}
+else if num > 13
 {
 //yy=58;
 	row = 1;
 	if num == 27//PUT HANDS AT BOTTOM LEFT
 	{
-		x = __view_get( e__VW.XView, 0 ) + 8
+		x = __view_get( e__VW.XView, 0 ) + loffset
 	}
 	else
 	{
-		x = __view_get( e__VW.XView, 0 )+8+22*(num-13);
+		x = __view_get( e__VW.XView, 0 )+loffset+xstep*(num-13);
 	}
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-24
 
 }
 else
 {
-y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
-//x = view_xview+8+22;
+	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
+	//x = view_xview+8+xstep;
 }
 if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
 {
