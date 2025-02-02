@@ -2985,7 +2985,6 @@ function scrFire3(hasTailNow){
 		break;
 		
 		//DEATH RAY
-		/*
 		case 882:
 
 		if Player.skill_got[17] = 1
@@ -3018,6 +3017,55 @@ function scrFire3(hasTailNow){
 		wkick = 8
 
 		break;
-		*/
+		
+		//VOID PISTOL
+		case 883:
+		// scrUnlockCharacter(28,"");
+		// scrUnlockCharacter(29,"");
+		snd_play_fire(sndVoidBlaster)
+
+		with instance_create(x,y,VoidPistolBullet)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 3
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,3)
+		}
+		break;
+		
+		//DAGGER
+		case 884:
+
+		snd_play_fire(sndHeavyScrewdriver)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),DaggerShank)
+		{
+			owner = other.id;
+			dmg = 12;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+			motion_add(aimDirection,3.5)
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 1
+		wkick = -8
+
+		break;
+	
 	}
 }

@@ -9891,7 +9891,9 @@ function scrWeapons() {
 	wep_swap[881] = sndSwapPistol
 	wep_rad[881] = 0;
 	wep_popup[881] = "LONGER RELOAD AFTER SIX SHOTS#SYNERGIZES WITH TAIL'S END";
-	/*
+	
+	if UberCont.newContent
+	{
 	wep_name[882] = "DEATH RAY"
 	wep_type[882] = 5
 	wep_auto[882] = 0
@@ -9902,9 +9904,33 @@ function scrWeapons() {
 	wep_text[882] = "futuristic weaponry"
 	wep_swap[882] = sndSwapEnergy
 	wep_rad[882] = 0;
-	*/
+	
+	wep_name[883] = "VOID PISTOL"
+	wep_type[883] = 4
+	wep_auto[883] = 1
+	wep_load[883] = 9
+	wep_cost[883] = 1
+	wep_sprt[883] = sprRevolver
+	wep_area[883] = -1
+	wep_text[883] = "void pistol deals damage based on remaining enemy health and destroys all projectiles and pickups"
+	wep_swap[883] = sndSwapPistol
+	wep_rad[883] = 0;
+	wep_popup[883] = "DEALS DAMAGE BASED ON#REMAINING ENEMY HEALTH";
+	
+	wep_name[884] = "DAGGER"
+	wep_type[884] = 0
+	wep_auto[884] = 0
+	wep_load[884] = 12
+	wep_cost[884] = 0
+	wep_sprt[884] = sprScrewDriver
+	wep_area[884] = 1
+	wep_text[884] = "the dagger deals double damage when you attack an enemy from behind them"
+	wep_swap[884] = sndSwapSword
+	wep_rad[884] = 0;
+	wep_popup[884] = "DEALS DOUBLE DAMAGE#WHEN BACKSTABBING";
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
+	}
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

@@ -131,6 +131,26 @@ if UberCont.race_have[27]
 	char[27].spr_slct = sprHandsMenu
 	char[27].num = 27
 }
+if UberCont.race_have[28]
+{
+	char[28] = instance_create(190,90,CampChar)
+	char[28].sprite_index = sprHandsMenu
+	char[28].spr_menu = sprHandsMenuSelected
+	char[28].spr_to = sprHandsMenuSelect
+	char[28].spr_from = sprHandsMenuDeselect
+	char[28].spr_slct = sprHandsMenu
+	char[28].num = 28
+}
+if UberCont.race_have[29]
+{
+	char[29] = instance_create(180,50,CampChar)
+	char[29].sprite_index = sprHandsMenu
+	char[29].spr_menu = sprHandsMenuSelected
+	char[29].spr_to = sprHandsMenuSelect
+	char[29].spr_from = sprHandsMenuDeselect
+	char[29].spr_slct = sprHandsMenu
+	char[29].num = 29
+}
 
 
 BackCont.viewx2 = Campfire.x-__view_get( e__VW.WView, 0 )/2
@@ -142,7 +162,7 @@ var dir;
 dir = 5
 repeat(racemax-4)
 {
-if UberCont.race_have[dir] = 1 && dir !=24 && dir !=20 && dir!=9 && dir !=17  && dir !=27
+if UberCont.race_have[dir] = 1 && dir !=24 && dir !=20 && dir!=9 && dir !=17  && dir !=27 && dir != 28 && dir != 29
 {
 char[dir] = instance_create(64,48,CampChar)
 char[dir].num = dir
@@ -229,6 +249,12 @@ char[26].sprite_index=sprMutant26Idle
 break;
 case 27:
 char[27].sprite_index=sprMutant27Idle
+break;
+case 28:
+char[28].sprite_index=sprMutant27Idle
+break;
+case 29:
+char[29].sprite_index=sprMutant27Idle
 break;
 }
 with char[dir]

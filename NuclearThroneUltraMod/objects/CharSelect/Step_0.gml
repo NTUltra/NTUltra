@@ -102,6 +102,12 @@ if button = 1 and mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y
 	case 27:
     snd_cnfm=sndMutant27Cnfm;
     break;
+	case 28:
+    snd_cnfm=sndMutant27Cnfm;
+    break;
+	case 29:
+    snd_cnfm=sndMutant27Cnfm;
+    break;
     
     }
     
@@ -259,6 +265,12 @@ if button = 1 and mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y
     snd_slct=sndMutant26Slct;
     break;
 	case 27:
+    snd_slct=sndMutant27Slct;
+    break;
+	case 28:
+    snd_slct=sndMutant27Slct;
+    break;
+	case 29:
     snd_slct=sndMutant27Slct;
     break;
     

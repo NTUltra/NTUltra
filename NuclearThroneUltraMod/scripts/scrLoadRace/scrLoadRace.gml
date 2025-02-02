@@ -222,6 +222,22 @@ function scrLoadRace() {
 	spr_go_sit = sprMutant27BIdle;//TODO
 	spr_sit = sprMutant27BIdle;//TODO
 	break;
+	case 28:
+	spr_idle=sprMutant27BIdle;
+	spr_walk=sprMutant27BWalk;
+	spr_hurt=sprMutant27BHurt;
+	spr_dead=sprMutant27BDead;
+	spr_go_sit = sprMutant27BIdle;//TODO
+	spr_sit = sprMutant27BIdle;//TODO
+	break;
+	case 29:
+	spr_idle=sprMutant27BIdle;
+	spr_walk=sprMutant27BWalk;
+	spr_hurt=sprMutant27BHurt;
+	spr_dead=sprMutant27BDead;
+	spr_go_sit = sprMutant27BIdle;//TODO
+	spr_sit = sprMutant27BIdle;//TODO
+	break;
 
 	}
 	}
@@ -438,6 +454,22 @@ function scrLoadRace() {
 	spr_sit = sprMutant26CIdle;//TODO
 	break;
 	case 27:
+	spr_idle=sprMutant27CIdle;
+	spr_walk=sprMutant27CWalk;
+	spr_hurt=sprMutant27CHurt;
+	spr_dead=sprMutant27CDead;
+	spr_go_sit = sprMutant27CIdle;//TODO
+	spr_sit = sprMutant27CIdle;//TODO
+	break;
+	case 28:
+	spr_idle=sprMutant27CIdle;
+	spr_walk=sprMutant27CWalk;
+	spr_hurt=sprMutant27CHurt;
+	spr_dead=sprMutant27CDead;
+	spr_go_sit = sprMutant27CIdle;//TODO
+	spr_sit = sprMutant27CIdle;//TODO
+	break;
+	case 29:
 	spr_idle=sprMutant27CIdle;
 	spr_walk=sprMutant27CWalk;
 	spr_hurt=sprMutant27CHurt;
@@ -884,6 +916,22 @@ function scrLoadRace() {
 	spr_go_sit = sprMutant27Idle;//TODO
 	spr_sit = sprMutant27Idle;//TODO
 	break;
+	case 28:
+	spr_idle=sprMutant27Idle;
+	spr_walk=sprMutant27Walk;
+	spr_hurt=sprMutant27Hurt;
+	spr_dead=sprMutant27Dead;
+	spr_go_sit = sprMutant27Idle;//TODO
+	spr_sit = sprMutant27Idle;//TODO
+	break;
+	case 29:
+	spr_idle=sprMutant27Idle;
+	spr_walk=sprMutant27Walk;
+	spr_hurt=sprMutant27Hurt;
+	spr_dead=sprMutant27Dead;
+	spr_go_sit = sprMutant27Idle;//TODO
+	spr_sit = sprMutant27Idle;//TODO
+	break;
 	}
 
 	}
@@ -1195,6 +1243,34 @@ function scrLoadRace() {
 	break;
 	
 	case 27://
+	snd_hurt=sndMutant27Hurt;
+	snd_dead=sndMutant27Dead;
+	snd_lowa=sndMutant27LowA;
+	snd_lowh=sndMutant27LowH;//
+	snd_crwn=sndMutant27Crwn;
+	snd_chst=sndMutant27Chst;//chst
+	snd_wrld=sndMutant27Wrld;
+	snd_thrn=sndMutant27Thrn;//
+	snd_valt=sndMutant27Valt;
+	snd_cpt=sndMutant27Cpt;//Captain win (unused for now)
+	snd_good=[sndMutant27Chst2,sndMutant27Chst3];
+	break;
+	
+	case 28://
+	snd_hurt=sndMutant27Hurt;
+	snd_dead=sndMutant27Dead;
+	snd_lowa=sndMutant27LowA;
+	snd_lowh=sndMutant27LowH;//
+	snd_crwn=sndMutant27Crwn;
+	snd_chst=sndMutant27Chst;//chst
+	snd_wrld=sndMutant27Wrld;
+	snd_thrn=sndMutant27Thrn;//
+	snd_valt=sndMutant27Valt;
+	snd_cpt=sndMutant27Cpt;//Captain win (unused for now)
+	snd_good=[sndMutant27Chst2,sndMutant27Chst3];
+	break;
+	
+	case 29://
 	snd_hurt=sndMutant27Hurt;
 	snd_dead=sndMutant27Dead;
 	snd_lowa=sndMutant27LowA;

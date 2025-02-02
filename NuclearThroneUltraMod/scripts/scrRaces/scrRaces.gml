@@ -700,11 +700,16 @@ function scrRaces() {
 		race_butt[28] = "STABBING DEALS AN ADDITIONAL#+20% OF REMAINING ENEMY HEALTH#AS DAMAGE#DECOY CAN SHOOT"
 		//DONT REVEAL YOURSELF WHEN STEALING FOR THE FIRST TIME UPON ENTERING STEALTH
 		race_butt_detail[28] = "STABBING DEALS AN ADDITIONAL#+20% OF REMAINING ENEMY HEALTH#AS DAMAGE#DECOY CAN SHOOT"
-		race_inpsiration[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH";
-		race_inpsiration_detail[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH";
+		race_vision[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH";
+		race_vision_detail[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH";
+		if isUnique
+		{
+			race_vision[28] = string_replace_all(race_vision[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision_detail[28] = string_replace_all(race_vision_detail[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		}
 		race_lock[28] = "KILL 5 THIEFS"
 		race_have[28] = 0
-		race_swep[28] = 1//REVOLVER
+		race_swep[28] = 884//DAGGER
 		race_bskin[28] = 0
 		race_cskin[28] = 0
 		race_dskin[28] = 0
@@ -719,11 +724,16 @@ function scrRaces() {
 		race_acti[29] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE PLAYAREA#TO DESTROY EVERYTHING"
 		race_butt[29] = "BIGGER VOID CONSUMPTION"
 		race_butt_detail[29] = "BIGGER VOID CONSUMPTION##USING VOID CONSUMPTION#TEMPORARILY INCREASES YOUR <r>MAX HEALTH<r>"
-		race_inpsiration[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
-		race_inpsiration_detail[20] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
+		race_vision[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
+		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
+		if isUnique
+		{
+			race_vision[29] = string_replace_all(race_vision[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision_detail[29] = string_replace_all(race_vision_detail[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		}
 		race_lock[29] = "DEFEAT THE VOID MASTER"
 		race_have[29] = 0
-		race_swep[29] = 443//VOID DAGGER //DEALS DAMAGE BASED ON REMAINING HEALTH
+		race_swep[29] = 883//VOID PISTOL
 		race_bskin[29] = 0
 		race_cskin[29] = 0
 		race_dskin[29] = 0
