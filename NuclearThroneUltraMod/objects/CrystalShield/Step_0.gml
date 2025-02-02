@@ -1,7 +1,7 @@
 if instance_exists(Player){
 	if Player.lockout
 	{
-		if !sprite_index == spr_disappear
+		if sprite_index != spr_disappear
 		{
 			sprite_index = spr_disappear
 			image_speed = 0.6

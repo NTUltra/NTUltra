@@ -16,8 +16,6 @@ if other.team != team
 				{
 					if other.owner != noone && instance_exists(other.owner)
 					{
-							debug(other.owner.x);
-							debug(right);
 						if (right > 0 && (other.owner.x < x || other.x < x))
 						{
 							BackCont.shake += 5;
