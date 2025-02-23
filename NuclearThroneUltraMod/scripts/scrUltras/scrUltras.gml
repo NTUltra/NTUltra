@@ -844,29 +844,28 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	{
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU EVEN IN LINE OF SIGHT TO OTHER ENEMIES"
+	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU#EVEN	WHILE IN LINE OF SIGHT TO ENEMIES"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
 	    ultra_text[110] = "YOU ARE COMPLETLY <aq>IMMUNE<aq> DURING <p>STEALTH<p>"
-	    ultra_tips[110] = ""
+	    ultra_tips[110] = "can't be seen, can't be hit"
 		
-		//Have any director weapon
+		//something
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
-			ultra_name[110] = "SWIFT STRIKE"
-			//TODO change to unequipped ammo
-		    ultra_text[110] = "UPGRADED SWIFT STRIKE"
+			ultra_name[110] = ""
+		    ultra_text[110] = ""
 		    ultra_tips[110] = ""
 		}
         
-	    ultra_name[111] = "SWIFT STRIKE"
-	    ultra_text[111] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
-	    ultra_tips[111] = "strong skillet"
+		ultra_name[111] = "KNIFE SKILLS"
+		ultra_text[111] = "ALL <w>MELEE WEAPONS<w> DEAL#<w>+4 FIXED DAMAGE<w>##UPGRADED NON <p>STEALTH<p> <w>STAB<w>#MORE <r>DAMAGE<r>#<r>SPLASH DAMAGE<r>#CAN STEAL ITEMS/WEAPONS#STEAL MORE <y>AMMO<y>"
+		ultra_tips[111] = "show your chops"
         
-		ultra_name[112] = "DISCIPLINE"
-	    ultra_text[112] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
-	    ultra_tips[112] = "discipline those projectiles!"
+		ultra_name[112] = "SWIFT STRIKE"
+	    ultra_text[112] = "STEALTH PERSISTS FOR#A <w>FEW SECONDS<w> AFTER vSHOOTING<w>##YOU CAN STAB <w>3<w> <r>ENEMIES<r>#BEFORE <w>BREAKING<w> <p>STEALTH<p>"
+	    ultra_tips[112] = "multiple assassinations"
 		
 		
 	

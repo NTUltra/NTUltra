@@ -10533,6 +10533,8 @@
     {"id":{"name":"sprThiefStabUpg","path":"sprites/sprThiefStabUpg/sprThiefStabUpg.yy",},},
     {"id":{"name":"sprThiefSteal","path":"sprites/sprThiefSteal/sprThiefSteal.yy",},},
     {"id":{"name":"sprThiefStealHit","path":"sprites/sprThiefStealHit/sprThiefStealHit.yy",},},
+    {"id":{"name":"sprThiefStealHitUpg","path":"sprites/sprThiefStealHitUpg/sprThiefStealHitUpg.yy",},},
+    {"id":{"name":"sprThiefStealUpg","path":"sprites/sprThiefStealUpg/sprThiefStealUpg.yy",},},
     {"id":{"name":"sprThiefWalk","path":"sprites/sprThiefWalk/sprThiefWalk.yy",},},
     {"id":{"name":"sprThrone2Bullet","path":"sprites/sprThrone2Bullet/sprThrone2Bullet.yy",},},
     {"id":{"name":"sprThrone2EndEnd","path":"sprites/sprThrone2EndEnd/sprThrone2EndEnd.yy",},},

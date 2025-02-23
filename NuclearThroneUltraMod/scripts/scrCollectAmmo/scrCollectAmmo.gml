@@ -176,8 +176,9 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		gain_multiplier += 0.5
 	if isSuperCursed
 		gain_multiplier += 0.5
-
-	Player.ammo[type] += floor((Player.typ_ammo[type]+extra) * gain_multiplier)
+	
+	var amountOfAmmo = max(1,floor((Player.typ_ammo[type]+extra) * gain_multiplier));
+	Player.ammo[type] += amountOfAmmo
 
 	if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
 		Player.ammo[type] = Player.typ_amax[type]
@@ -189,7 +190,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			dir = instance_create(x,y,PopupText)
 			dir.sprt = sprAmmoIconsPickup
 			dir.ii = type;
-			dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
+			dir.mytext = "+"+string(amountOfAmmo)//+string(Player.typ_name[type])
 			if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX"//+string(Player.typ_name[type])
 	
@@ -198,7 +199,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		else
 		{
 			dir = instance_create(x,y,PopupText)
-			dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))+" "+string(Player.typ_name[type])
+			dir.mytext = "+"+string(amountOfAmmo)+" "+string(Player.typ_name[type])
 			if Player.ammo[type] == Player.typ_amax[type]
 				dir.mytext = "MAX "+string(Player.typ_name[type])
 
@@ -211,7 +212,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		dir = instance_create(x,y,AmmoPopUp)
 		dir.sprt = sprAmmoIconsPickup
 		dir.ii = type;
-		dir.mytext = "+"+string(floor((Player.typ_ammo[type]+extra) * gain_multiplier))//+string(Player.typ_name[type])
+		dir.mytext = "+"+string(amountOfAmmo)//+string(Player.typ_name[type])
 		if Player.ammo[type] == Player.typ_amax[type]
 			dir.mytext = "MAX"//+string(Player.typ_name[type])
 		with dir {

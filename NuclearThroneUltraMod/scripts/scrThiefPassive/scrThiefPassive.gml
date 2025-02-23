@@ -48,5 +48,9 @@ function scrThiefPassive() {
 				justAsheep = false;
 			}
 		}
+		else if isInvisible && ultra_got[110] && !altUltra
+		{
+			alarm[3] = max(1,alarm[3]);	
+		}
 	}
 }

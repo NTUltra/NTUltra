@@ -5315,7 +5315,7 @@ function scrFire(canDrown = true) {
 			}
 		}
 	}
-	if Player.ultra_got[34]==1//Chicken Ultra B ninja
+	if Player.ultra_got[34]//Chicken Ultra B ninja
 	{
 	//some melee exceptions
 		if scrMeleeWeapons(wep)
@@ -5328,6 +5328,20 @@ function scrFire(canDrown = true) {
 					dmg = ceil(dmg);
 					BackCont.shake += 2;
 					image_speed *= 0.8;
+				}
+			}
+		}
+	}
+	if Player.ultra_got[111]//Knife skills
+	{
+		if scrMeleeWeapons(wep)
+	    {
+			with MeleeParent {
+				if !appliedBoost
+				{
+					appliedBoost = true;
+					dmg += 4;
+					BackCont.shake += 1;
 				}
 			}
 		}

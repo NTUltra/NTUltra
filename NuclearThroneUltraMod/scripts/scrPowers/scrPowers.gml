@@ -125,6 +125,7 @@ function scrPowers(raceOverwrite = -1) {
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
+							motion_add(stabDir,9)
 							with instance_create(x,y,AnimDestroyTop)
 							{
 								depth -= 1;
@@ -138,6 +139,7 @@ function scrPowers(raceOverwrite = -1) {
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30
+							motion_add(stabDir,6)
 							with instance_create(x,y,AnimDestroyTop)
 							{
 								depth -= 1;
@@ -145,39 +147,81 @@ function scrPowers(raceOverwrite = -1) {
 								image_angle = random(360);
 							}
 						}
+						sprite_index = spr_hurt
+						image_index = 0
+						snd_play(snd_hurt, hurt_pitch_variation,true)
 						with scrDrop(20,8) {
 							motion_add(stabDir + 180, 3);	
 						}
 					}
-					scrCollectAmmo();
+					scrCollectAmmo(0.5);
 					scrTurnOffInvisibility();
 				}
 				else if !instance_exists(ThiefStealDelay)
 				{
 					instance_create(x,y,ThiefStealDelay);
-					with instance_create(x,y,AnimDestroyTop)
+					if other.ultra_got[110] && other.altUltra
 					{
-						image_angle = stabDir
-						sprite_index = sprThiefSteal;
-						motion_add(image_angle,2);
-					}
-					BackCont.viewx2 += lengthdir_x(10,stabDir)*UberCont.opt_shake
-					BackCont.viewy2 += lengthdir_y(10,stabDir)*UberCont.opt_shake
-					BackCont.shake += 10
-					with n
-					{
-						DealDamage(2);
+						scrCollectAmmo(0.2);
 						with instance_create(x,y,AnimDestroyTop)
 						{
-							depth -= 1;
-							sprite_index = sprThiefStealHit;
-							image_angle = random(360);
+							image_angle = stabDir
+							sprite_index = sprThiefStealUpg;
+							motion_add(image_angle,3);
 						}
-						with scrDrop(10,4) {
-							motion_add(stabDir + 180, 3);	
-						}
+						BackCont.viewx2 += lengthdir_x(30,stabDir)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(30,stabDir)*UberCont.opt_shake
+						BackCont.shake += 20
 					}
-					scrCollectAmmo(0.5);
+					else
+					{
+						scrCollectAmmo(0.125);
+						with instance_create(x,y,AnimDestroyTop)
+						{
+							image_angle = stabDir
+							sprite_index = sprThiefSteal;
+							motion_add(image_angle,2);
+						}
+						BackCont.viewx2 += lengthdir_x(10,stabDir)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(10,stabDir)*UberCont.opt_shake
+						BackCont.shake += 10	
+					}
+					with n
+					{
+						if other.ultra_got[111]
+						{
+							DealDamage(20 + min(10,other.loops));
+							with instance_create(x,y,ThiefStab) {
+								dmg = 15;	
+							}
+							motion_add(stabDir,6)
+							with instance_create(x,y,AnimDestroyTop)
+							{
+								depth -= 1;
+								sprite_index = sprThiefStealHitUpg;
+								image_angle = random(360);
+							}
+							with scrDrop(9,3) {
+								motion_add(stabDir + 180, 3);
+							}
+						}
+						else
+						{
+							DealDamage(3 + min(10,other.loops));
+							motion_add(stabDir,4)
+							with instance_create(x,y,AnimDestroyTop)
+							{
+								depth -= 1;
+								sprite_index = sprThiefStealHit;
+								image_angle = random(360);
+							}
+						}
+						sprite_index = spr_hurt
+						image_index = 0
+						snd_play(snd_hurt, hurt_pitch_variation,true)
+						
+					}
+					
 				}
 				if !skill_got[2]
 				{
