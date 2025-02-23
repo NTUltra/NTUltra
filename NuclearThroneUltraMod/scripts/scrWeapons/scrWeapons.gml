@@ -9922,7 +9922,7 @@ function scrWeapons() {
 	wep_auto[884] = 0
 	wep_load[884] = 12
 	wep_cost[884] = 0
-	wep_sprt[884] = sprScrewDriver
+	wep_sprt[884] = sprDagger
 	wep_area[884] = 1
 	wep_text[884] = "the dagger deals double damage when you attack an enemy from behind them"
 	wep_swap[884] = sndSwapSword

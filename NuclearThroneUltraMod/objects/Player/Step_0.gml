@@ -7,6 +7,7 @@ if instance_exists(GenCont) || instance_exists(LevCont) || instance_exists(Start
 	exit;
 }
 var canMeleeAmmo = scrIsCrown(40);
+scrThiefPassive();
 if ultra_got[21] && altUltra
 {
 	if canInfiniteFire

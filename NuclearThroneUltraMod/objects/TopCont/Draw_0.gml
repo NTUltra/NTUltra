@@ -704,7 +704,7 @@ if Player.ultra_got[11] {
                 
     }*/
 }
-if Player.justAsheep
+if Player.justAsheep && !Player.isInvisible
 {
 	with enemy {
 		if point_distance(x,y,Player.x,Player.y) < 96

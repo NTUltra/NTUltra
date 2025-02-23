@@ -327,6 +327,8 @@ function scrShadows() {
 			}
 			else if race == 14
 				draw_sprite(shdPanda,0,x-vx,py-vy)
+			else if race == 28
+				draw_sprite(shdThief,0,x-vx,py-vy)
 			else if race = 18
 			{
 				if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
@@ -343,6 +345,8 @@ function scrShadows() {
 		{
 			if race == 14
 				draw_sprite(shdPanda,0,x-vx,py-vy)
+			else if race == 28
+				draw_sprite(shdThief,0,x-vx,py-vy)
 			if race = 18
 			{
 				if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
@@ -356,6 +360,8 @@ function scrShadows() {
 	{
 		if race == 14
 			draw_sprite(shdPanda,0,x-vx,y-vy)
+		else if race == 28
+			draw_sprite(shdThief,0,x-vx,y-vy)
 		else if race = 18
 		{
 			if (!instance_exists(Wall) || collision_point(x,y,Floor,false,false))
@@ -373,7 +379,9 @@ function scrShadows() {
 	if visible = 1
 	{
 		if race == 14
-		draw_sprite(shdPanda,0,x-vx,y-vy)
+			draw_sprite(shdPanda,0,x-vx,y-vy)
+		else if race == 28
+			draw_sprite(shdThief,0,x-vx,y-vy)
 		else if race=18
 		draw_sprite(shd24,0,x-vx,y-vy+12)
 		else

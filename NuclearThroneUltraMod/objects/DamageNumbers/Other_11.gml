@@ -1,4 +1,9 @@
 /// @description Post create create event
+if dmg > 9999 || dmg < 0
+{
+	instance_destroy();
+	exit;
+}
 fade = 0;
 alarm[5] = 0;
 alarm[2] = 1;

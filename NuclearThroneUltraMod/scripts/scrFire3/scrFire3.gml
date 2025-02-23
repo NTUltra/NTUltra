@@ -3048,8 +3048,10 @@ function scrFire3(hasTailNow){
 
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),DaggerShank)
 		{
+			sprite_index = sprThiefShank;
+			mask_index = mskDaggerShank;
 			owner = other.id;
-			dmg = 12;
+			dmg = 11;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)

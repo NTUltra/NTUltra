@@ -95,7 +95,96 @@ function scrPowers(raceOverwrite = -1) {
 				snd_loop(sndFrogLoop);
 			}
 		}
-
+		if race == 28//THIEF
+		{
+			var n = instance_nearest(x,y,enemy)
+			if n != noone && instance_exists(n) && distance_to_object(n) < 64 && !collision_line(x,y,n.x,n.y,Wall,false,false) {
+				var stabDir = point_direction(x,y,n.x,n.y);
+				if isInvisible
+				{
+					with instance_create(x,y,AnimDestroyTop)
+					{
+						image_angle = stabDir
+						if other.skill_got[5]
+						{
+							sprite_index = sprThiefStabUpg;
+							motion_add(image_angle,4);
+						}
+						else
+						{
+							sprite_index = sprThiefStab;
+							motion_add(image_angle,2);
+						}
+					}
+					with n
+					{
+						if other.skill_got[5]
+						{
+							instance_create(x,y,ThiefStab);
+							DealDamage(50 + my_health*0.2);
+							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
+							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
+							BackCont.shake += 40
+							with instance_create(x,y,AnimDestroyTop)
+							{
+								depth -= 1;
+								sprite_index = sprThiefHitUpg;
+								image_angle = random(360);
+							}
+						}
+						else
+						{
+							DealDamage(50);
+							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
+							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
+							BackCont.shake += 30
+							with instance_create(x,y,AnimDestroyTop)
+							{
+								depth -= 1;
+								sprite_index = sprThiefHit;
+								image_angle = random(360);
+							}
+						}
+						with scrDrop(20,8) {
+							motion_add(stabDir + 180, 3);	
+						}
+					}
+					scrCollectAmmo();
+					scrTurnOffInvisibility();
+				}
+				else if !instance_exists(ThiefStealDelay)
+				{
+					instance_create(x,y,ThiefStealDelay);
+					with instance_create(x,y,AnimDestroyTop)
+					{
+						image_angle = stabDir
+						sprite_index = sprThiefSteal;
+						motion_add(image_angle,2);
+					}
+					BackCont.viewx2 += lengthdir_x(10,stabDir)*UberCont.opt_shake
+					BackCont.viewy2 += lengthdir_y(10,stabDir)*UberCont.opt_shake
+					BackCont.shake += 10
+					with n
+					{
+						DealDamage(2);
+						with instance_create(x,y,AnimDestroyTop)
+						{
+							depth -= 1;
+							sprite_index = sprThiefStealHit;
+							image_angle = random(360);
+						}
+						with scrDrop(10,4) {
+							motion_add(stabDir + 180, 3);	
+						}
+					}
+					scrCollectAmmo(0.5);
+				}
+				if !skill_got[2]
+				{
+					motion_add(stabDir,6);
+				}
+			}
+		}
 		if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 		{
 			if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))

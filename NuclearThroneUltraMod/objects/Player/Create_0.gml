@@ -61,6 +61,7 @@ canKillKillKill = false;
 autoFire = 0;
 excessDamageDeal = 0;
 humphrySkill = 0;
+isInvisible = false;
 gunGameKill = 10;
 tinyKrakenSpawned = 0;
 canCrownOfProtection = 0;

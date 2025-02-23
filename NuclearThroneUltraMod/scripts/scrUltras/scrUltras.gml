@@ -843,15 +843,24 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if UberCont.newContent
 	{
 		//THIEF
-	    ultra_name[109] = "EXPERIENCED"
-	    ultra_text[109] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
-	    ultra_tips[109] = "learning quickly"
+	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
+	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU EVEN IN LINE OF SIGHT TO OTHER ENEMIES"
+	    ultra_tips[109] = "they will never see you coming"
         
-	    ultra_name[110] = "RAPID MUSTACHE GROWTH"
-	    ultra_text[110] = "SKILL ALSO INCREASES <w>RELOAD SPEED<w>"
-	    ultra_tips[110] = "quickdraw"
+	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
+	    ultra_text[110] = "YOU ARE COMPLETLY <aq>IMMUNE<aq> DURING <p>STEALTH<p>"
+	    ultra_tips[110] = ""
+		
+		//Have any director weapon
+		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
+		{
+			ultra_name[110] = "SWIFT STRIKE"
+			//TODO change to unequipped ammo
+		    ultra_text[110] = "UPGRADED SWIFT STRIKE"
+		    ultra_tips[110] = ""
+		}
         
-	    ultra_name[111] = "PROTECTIVE FACIAL HAIR"
+	    ultra_name[111] = "SWIFT STRIKE"
 	    ultra_text[111] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
 	    ultra_tips[111] = "strong skillet"
         
@@ -859,16 +868,9 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_text[112] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	    ultra_tips[112] = "discipline those projectiles!"
 		
-		//Have any director weapon
-		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
-		{
-			ultra_name[112] = "GRUMPY LECTURE"
-			//TODO change to unequipped ammo
-		    ultra_text[112] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
-		    ultra_tips[112] = "teach them a lesson!"
-		}
+		
 	
-	//NOTHING
+	//NO THING
 	ultra_name[113] = "EXPERIENCED"
 	ultra_text[113] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
 	ultra_tips[113] = "learning quickly"

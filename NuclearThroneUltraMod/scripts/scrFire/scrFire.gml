@@ -9,6 +9,11 @@ function scrFire(canDrown = true) {
 	}
 	if wep==0{
 		exit;}
+	if isInvisible
+	{
+		scrTurnOffInvisibility();
+		
+	}
 	if instance_exists(ReloadableGun)
 	{
 		with ReloadableGun
