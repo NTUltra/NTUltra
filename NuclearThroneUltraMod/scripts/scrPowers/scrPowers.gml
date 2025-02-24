@@ -3535,9 +3535,9 @@ function scrPowers(raceOverwrite = -1) {
 								//my_health = max(my_health,other.my_health);
 								//armour = max(armour, other.armour);
 								var healAmount = other.my_health - my_health;
-								if healAmount >= 6
+								if healAmount >= 4
 								{
-									scrUnlockBSkin(9,"FOR RESTORING 6 HP#USING CHICKEN'S REGAL VISION");
+									scrUnlockBSkin(9,"FOR REWINDING 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION");
 								}
 								my_health = other.my_health;
 								armour = other.armour;
@@ -3994,9 +3994,9 @@ function scrPowers(raceOverwrite = -1) {
 						//my_health = max(my_health,other.my_health);
 						//armour = max(armour, other.armour);
 						var healAmount = other.my_health - my_health;
-						if healAmount >= 6
+						if healAmount >= 4
 						{
-							scrUnlockBSkin(9,"FOR RESTORING 6 HP#USING CHICKEN'S REGAL VISION");
+							scrUnlockBSkin(9,"FOR REWINDING 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION");
 						}
 						my_health = other.my_health;
 						armour = other.armour;

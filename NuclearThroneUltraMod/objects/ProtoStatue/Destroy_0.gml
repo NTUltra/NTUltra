@@ -22,6 +22,21 @@ if close
 		x = other.xstart;
 		y = other.ystart;
 	}
+	if instance_exists(ThePit)
+	{
+		with Player
+		{
+			lastarea = 139;
+			lastsubarea = 1;
+			inverted = true;
+		}
+		with PlayerSpawn
+		{
+			lastarea = 139;
+			lastsubarea = 1;
+			inverted = true;
+		}
+	}
 	if instance_exists(Player)
 	{
 		Player.area = 100
@@ -29,7 +44,7 @@ if close
 	else if instance_exists(PlayerSpawn)
 	{
 		PlayerSpawn.area = 100;
-		PlayerSpawn.lastsubarea = PlayerSpawn.subarea;
+		//PlayerSpawn.lastsubarea = PlayerSpawn.subarea;
 	}
 }
 else //Destroy and not full, pink sheep

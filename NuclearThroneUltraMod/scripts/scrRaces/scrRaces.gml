@@ -230,7 +230,7 @@ function scrRaces() {
 	race_eskin[9] = 0
 	race_fskin[9] = 0
 	race_gskin[9] = 0
-	race_bskin_lock[9] = "RESTORING 6 HEALTH#USING CHICKEN'S REGAL VISION"
+	race_bskin_lock[9] = "REWIND 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION"
 	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
 
 

@@ -181,8 +181,8 @@ function scrPopChests() {
 				{
 					if Player.skill_got[23] //OPEN MIND
 					{
-						instance_create(x,y-24,ProtoChest)
-						with instance_create(x,y+24,ProtoChest)
+						instance_create(x,y-44,ProtoChest)
+						with instance_create(x,y+44,ProtoChest)
 						{
 							issecond = true;
 							wep = UberCont.protowep2

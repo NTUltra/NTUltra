@@ -17,7 +17,10 @@ function scrPopEnemies1vs1(area, subarea, loops){
 		with enemy
 			instance_destroy(id,false);
 		with becomenemy
-			instance_destroy(id,false);
+		{
+			if object_index != ThePit
+				instance_destroy(id,false);
+		}
 	}
 
 	if !instance_exists(OneVOne)

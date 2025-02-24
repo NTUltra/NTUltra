@@ -10,7 +10,8 @@ if speed<1 && alarm[1] < 1
 	image_speed = 0;
 	speed = 0;
 }
-else if um == 0 || alarm[11] < 1
+else if alarm[11] < 1 || (um != ultramods.rocketBolt && um != ultramods.plasmaBolt && um != ultramods.laserBolt
+&& um != ultramods.shotgunSplinterElectro && um != ultramods.shotgunBolt && um != ultramods.boltBullet)
 {
 	scrBoltMarrow(1,2);
 	with scrBoltTrail(trailColour,trailShrinkRate,trailSize)

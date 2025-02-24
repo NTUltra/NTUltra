@@ -7,7 +7,6 @@ if instance_exists(Player) && !endPieceSpawned
 	if area == 139 && !instance_exists(ThePit)
 	{
 		scrCreateThePit();
-		
 		instance_create(x,y,ThePit);
 	}
 	if area == 138 && myFloors > 6

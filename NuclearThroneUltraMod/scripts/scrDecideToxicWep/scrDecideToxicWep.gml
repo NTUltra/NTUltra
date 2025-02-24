@@ -27,7 +27,7 @@ function scrDecideToxicWep() {
 			newWep = choose(31,130,146,317,318,319,326,417,469,564,565,566,574,580,581,648,649)
 			maxTries --;
 		}
-		until (((wep_area[newWep] <= tier && (newWep != Player.newWep and newWep != Player.bwep)) or Player.race = 7)
+		until (((wep_area[newWep] <= tier && (newWep != Player.wep and newWep != Player.bwep)) or Player.race = 7)
 		|| maxTries <= 0)
 	
 	return newWep;

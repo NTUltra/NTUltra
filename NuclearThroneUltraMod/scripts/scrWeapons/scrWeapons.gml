@@ -1202,7 +1202,7 @@ function scrWeapons() {
 
 	wep_name[107] = "SHORTGUN"
 	wep_type[107] = 2
-	wep_auto[107] = 0
+	wep_auto[107] = 2
 	wep_load[107] = 13
 	wep_cost[107] = 2
 	wep_sprt[107] = sprShortgun
@@ -3155,7 +3155,7 @@ function scrWeapons() {
 
 	wep_name[281] = "GOLDEN SHORTGUN"
 	wep_type[281] = 2
-	wep_auto[281] = 0
+	wep_auto[281] = 2
 	wep_load[281] = 12
 	wep_cost[281] = 2
 	wep_sprt[281] = sprGoldenShortgun
@@ -6147,7 +6147,7 @@ function scrWeapons() {
 	
 	wep_name[547] = "BLOOD SHORTGUN"
 	wep_type[547] = 1
-	wep_auto[547] = 0
+	wep_auto[547] = 2
 	wep_load[547] = 13
 	wep_cost[547] = 8
 	wep_sprt[547] = sprBloodShortgun

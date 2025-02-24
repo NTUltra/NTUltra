@@ -1,5 +1,5 @@
 /// @description Skip lines
-if instance_exists(KeyCont)
+if instance_exists(KeyCont) && instance_exists(Player)
 {
 	with VoidNPC
 	{

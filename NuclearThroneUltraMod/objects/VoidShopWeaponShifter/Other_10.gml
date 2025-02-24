@@ -24,7 +24,8 @@ if chooseTimer == 0
 			wantTier = 19;
 		if array_contains(other.start_wep, wep) || array_contains(other.race_swep,wep)
 			wantTier = 13;
-		wep = irandom(maxwep);
+		//wep = irandom(maxwep);
+		wep += 1;
 		if wep > maxwep
 			wep = 1;
 		var tries = maxwep * 2;
@@ -35,6 +36,7 @@ if chooseTimer == 0
 				wep = 1;
 			tries -= 1;
 		}
+		other.chosenWep = wep;
 		//UNLOCK GOLDEN WEAPON
 		if scrCheckGold(wep_name[wep])
 		{
@@ -56,9 +58,16 @@ else
 {
 	with Player
 	{
-		wep = other.originalWep;
+		var targetWep = wep;
+		if bwep == other.chosenWep
+		{
+			bwep = other.originalWep;
+			targetWep = bwep;
+		}
+		else
+			wep = other.originalWep;
 		with instance_create(x,y,PopupText) {
-			mytext = other.wep_name[other.wep];
+			mytext = other.wep_name[targetWep];
 			theColour=c_lime;
 			moveSpeed = 1;
 			alarm[1] = 60;
