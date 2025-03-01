@@ -9,6 +9,10 @@ if ultra_got[16]
 	meltingd = lastEnemyKilled;
 	lastEnemyKilled = [noone, noone];
 }
+if race == 28
+{
+	scrActivateThiefStealth();
+}
 if (ultra_got[33] && !altUltra && my_health <= 0)
 {
 	scrChickenRegen(1);

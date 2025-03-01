@@ -5,6 +5,7 @@ owner = -1;
 scrWeaponModInit();
 //behaviorprojectileSpeed
 gunangle = random(360)
+isInvisible = false;
 //alarm[0] = 20
 wkick = 0
 maxSpeed = 3;

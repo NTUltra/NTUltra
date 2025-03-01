@@ -36,12 +36,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprProtectionArea",
-    "path":"sprites/sprProtectionArea/sprProtectionArea.yy",
+    "name":"sprThiefSplash",
+    "path":"sprites/sprThiefSplash/sprThiefSplash.yy",
   },
   "spriteMaskId":{
-    "name":"mskProtectionArea",
-    "path":"sprites/mskProtectionArea/mskProtectionArea.yy",
+    "name":"sprThiefSplash",
+    "path":"sprites/sprThiefSplash/sprThiefSplash.yy",
   },
-  "visible":false,
+  "visible":true,
 }

@@ -622,12 +622,18 @@ function scrSkills() {
 	skill_bons[maxskill + 1] = "";
 	
 	/*
-	skill_name[42] = "GLUTINOUS SOMETHING"
-	skill_text[42] = "ALLOWS YOU TO STACK UP ON EXCESS HEALING AND AMMO#IT GETS APPLIED AS SOON AS POSSIBLE#THE MORE EXCESS YOU HAVE STACKED UP THE SOMETHING POWER"
+	skill_name[42] = "GLUTINOUS BELLY"
+	skill_text[42] = "ALLOWS YOU TO STACK UP ON EXCESS HEALING AND AMMO#IT GETS APPLIED AS SOON AS POSSIBLE#THE MORE EXCESS YOU HAVE STACKED UP:#THE MORE DAMAGE YOU DEAL"
 	skill_tips[42] = "EAT THE RICH"
 	skill_bons[42] = "CARRY 1 ADDITION DROP"
 	skill_msnd[42] =  sndMutBouncyFat;
 	
+	skill_name[47] = "IRON NAILS"
+	skill_text[47] = "<w>SINGLE FIRE<w> WEAPONS ARE <w>AUTOMATIC<w>##CONTINUOUSLY FIRING <w>AUTO<w> WEAPONS:#INCREASES <w>RELOAD SPEED<w>#AND RESTORES: <y>AMMO<y> OR <gb>ARMOUR<gb>"
+	skill_detail[47] = "<w>SINGLE FIRE<w> WEAPONS ARE <w>AUTOMATIC<w>#<w>AUTOMATIC<w> WEAPONS <w>FIRE FASTER<w>#THE <w>LONGER<w> YOU HOLD DOWN THE <w>TRIGGER<w>##CONTINOUSLY FIRING AUTO WEAPONS:#RESTORES <y>AMMO<y>#OR <gb>ARMOUR<gb> IF YOU HAVE <gb>ARMOUR<gb>#(WEAPON SPECIFIC MUTATION)"
+	skill_tips[47] = "bullet nails"
+	skill_bons[47] = "+30% RELOAD SPEED"
+	skill_msnd[47] =  sndMutBouncyFat;
 	
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
 	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them

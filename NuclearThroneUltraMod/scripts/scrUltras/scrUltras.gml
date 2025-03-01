@@ -851,10 +851,10 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_text[110] = "YOU ARE COMPLETLY <aq>IMMUNE<aq> DURING <p>STEALTH<p>"
 	    ultra_tips[110] = "can't be seen, can't be hit"
 		
-		//something
+		//have any ammo mutation
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
-			ultra_name[110] = ""
+			ultra_name[110] = "INCREASE HOW MUCH AMMO YOU STEAL##FOR EACH AMMO TYPE THAT IS FULL:#KILLS CAN SPAWN#A CORRESPONDING MELEE SHANK"
 		    ultra_text[110] = ""
 		    ultra_tips[110] = ""
 		}

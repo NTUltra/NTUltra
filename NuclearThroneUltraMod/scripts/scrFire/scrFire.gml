@@ -9,7 +9,7 @@ function scrFire(canDrown = true) {
 	}
 	if wep==0{
 		exit;}
-	if isInvisible
+	if UberCont.newContent && isInvisible
 	{
 		scrTurnOffInvisibility();
 		
@@ -5332,7 +5332,7 @@ function scrFire(canDrown = true) {
 			}
 		}
 	}
-	if Player.ultra_got[111]//Knife skills
+	if UberCont.newContent && Player.ultra_got[111]//Knife skills
 	{
 		if scrMeleeWeapons(wep)
 	    {

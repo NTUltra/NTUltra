@@ -3,6 +3,7 @@ friction = 0.45
 image_speed = 0.4
 isWalking = 0;
 IsShielding = 0;
+isInvisible = false;
 hurt_pitch_variation = 0;
 maxSpeed = Player.maxSpeed;
 alienIntestines = 0;

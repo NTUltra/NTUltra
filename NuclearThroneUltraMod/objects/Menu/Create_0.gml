@@ -131,7 +131,7 @@ if UberCont.race_have[27]
 	char[27].spr_slct = sprHandsMenu
 	char[27].num = 27
 }
-if UberCont.race_have[28]
+if UberCont.newContent && UberCont.race_have[28]
 {
 	char[28] = instance_create(190,90,CampChar)
 	char[28].sprite_index = sprHandsMenu
@@ -141,7 +141,7 @@ if UberCont.race_have[28]
 	char[28].spr_slct = sprHandsMenu
 	char[28].num = 28
 }
-if UberCont.race_have[29]
+if UberCont.newContent && UberCont.race_have[29]
 {
 	char[29] = instance_create(180,50,CampChar)
 	char[29].sprite_index = sprHandsMenu

@@ -121,7 +121,7 @@ function scrPowers(raceOverwrite = -1) {
 						if other.skill_got[5]
 						{
 							instance_create(x,y,ThiefStab);
-							DealDamage(50 + my_health*0.2);
+							DealDamage(50 + min(100,other.loops*3) + my_health*0.2);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -135,7 +135,7 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{
-							DealDamage(50);
+							DealDamage(50 + min(100,other.loops*3));
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30
@@ -154,15 +154,26 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(stabDir + 180, 3);	
 						}
 					}
-					scrCollectAmmo(0.5);
+					if ultra_got[110] && altUltra
+						scrCollectAmmo(1);
+					else
+						scrCollectAmmo(0.5);
 					scrTurnOffInvisibility();
+					if !skill_got[2]
+					{
+						motion_add(stabDir,7);
+					}
 				}
 				else if !instance_exists(ThiefStealDelay)
 				{
 					instance_create(x,y,ThiefStealDelay);
-					if other.ultra_got[110] && other.altUltra
+					
+					if other.ultra_got[111]
 					{
-						scrCollectAmmo(0.2);
+						if other.ultra_got[110] && altUltra
+							scrCollectAmmo(0.3);
+						else
+							scrCollectAmmo(0.15);
 						with instance_create(x,y,AnimDestroyTop)
 						{
 							image_angle = stabDir
@@ -175,7 +186,10 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
-						scrCollectAmmo(0.125);
+						if other.ultra_got[110] && altUltra
+							scrCollectAmmo(0.2);
+						else
+							scrCollectAmmo(0.125);
 						with instance_create(x,y,AnimDestroyTop)
 						{
 							image_angle = stabDir
@@ -190,9 +204,9 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if other.ultra_got[111]
 						{
-							DealDamage(20 + min(10,other.loops));
+							DealDamage(18 + min(20,other.loops * 3));
 							with instance_create(x,y,ThiefStab) {
-								dmg = 15;	
+								dmg = 15 + min(10,other.loops * 2);	
 							}
 							motion_add(stabDir,6)
 							with instance_create(x,y,AnimDestroyTop)
@@ -207,7 +221,7 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{
-							DealDamage(3 + min(10,other.loops));
+							DealDamage(3 + min(10,other.loops) * 2);
 							motion_add(stabDir,4)
 							with instance_create(x,y,AnimDestroyTop)
 							{
@@ -221,11 +235,10 @@ function scrPowers(raceOverwrite = -1) {
 						snd_play(snd_hurt, hurt_pitch_variation,true)
 						
 					}
-					
-				}
-				if !skill_got[2]
-				{
-					motion_add(stabDir,6);
+					if !skill_got[2]
+					{
+						motion_add(stabDir,6);
+					}
 				}
 			}
 		}

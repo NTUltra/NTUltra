@@ -447,7 +447,10 @@ if race == 24//Elementor
 		instance_destroy();
 	instance_create(x,y,ElementorHead);
 }
-
+if race == 28
+{
+	scrActivateThiefStealth();
+}
 canSecondaryPop = true;
 
 if scrIsGamemode(14) //fish companion only
