@@ -16,6 +16,8 @@
     {"$GMSpriteFrame":"","%Name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","name":"c2623bc0-00d4-4d67-9760-a61d426bfe46","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","name":"d82145c6-a1eb-4fc0-8f64-d8e3d2f6c584","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"d88b2496-ae2c-4a3a-a9c3-e989cb4830c4","name":"d88b2496-ae2c-4a3a-a9c3-e989cb4830c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"4d4a46f1-93e4-44e2-8864-b58ad8fa4997","name":"4d4a46f1-93e4-44e2-8864-b58ad8fa4997","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -52,7 +54,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":4.0,
+    "length":6.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -83,6 +85,12 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c2a55a4-7f34-48bd-a1f0-5b0bf36aa040","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f93cf31e-01e0-4cca-817a-83831b5e1188","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d88b2496-ae2c-4a3a-a9c3-e989cb4830c4","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1367ba5a-3ad5-41bb-b565-01cf14eb2650","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d4a46f1-93e4-44e2-8864-b58ad8fa4997","path":"sprites/sprRogueAmmoHUD/sprRogueAmmoHUD.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d664fdea-2824-4b1b-b8be-20843dc668e6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -7,7 +7,13 @@ spr_idle=sprBigMachineTurret
 spr_fire=sprBigMachineTurretFire
 loops = GetPlayerLoops();
 proj = EnemyBullet1;
-if loops > 10
+defaultSpeed = 2;
+if UberCont.newContent && loops > 0
+{
+	proj = EnemyBullet1Diamond
+	defaultSpeed -= 0.2;
+}
+else if loops > 10
 	proj = EnemyBouncerBullet;
 actTime = 50;
 actTime -= min(30,loops*10)

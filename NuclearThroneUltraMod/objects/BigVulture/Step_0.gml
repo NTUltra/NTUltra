@@ -19,6 +19,10 @@ if shooting < 1
 		{
 			event_user(2);
 			var proj = EnemyBullet1
+			if UberCont.newContent && loops > 0
+			{
+				proj = EnemyBullet1Diamond;
+			}
 			if (ammo % 2 == 0)
 				proj = EnemyBullet1Square
 			with instance_create(x,y,proj)

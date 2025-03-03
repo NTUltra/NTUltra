@@ -9917,17 +9917,52 @@ function scrWeapons() {
 	wep_rad[883] = 0;
 	wep_popup[883] = "DEALS DAMAGE BASED ON#REMAINING ENEMY HEALTH";
 	
-	wep_name[884] = "DAGGER"
+	wep_name[884] = "DOUBLE DAGGERS"
 	wep_type[884] = 0
-	wep_auto[884] = 0
-	wep_load[884] = 12
+	wep_auto[884] = 2
+	wep_load[884] = 14
 	wep_cost[884] = 0
 	wep_sprt[884] = sprDagger
-	wep_area[884] = 1
+	wep_area[884] = -1
 	wep_text[884] = "the dagger deals double damage when you attack an enemy from behind them"
 	wep_swap[884] = sndSwapSword
 	wep_rad[884] = 0;
 	wep_popup[884] = "DEALS DOUBLE DAMAGE#WHEN BACKSTABBING";
+	
+	wep_name[885] = "DUAL VIPERS"
+	wep_type[885] = 1
+	wep_auto[885] = 3
+	wep_load[885] = 4
+	wep_cost[885] = 2
+	wep_sprt[885] = sprDualVipers
+	wep_area[885] = 24
+	wep_text[885] = "trusty double revolver"
+	wep_swap[885] = sndSwapPistol
+	wep_rad[885] = 0;
+	wep_popup[885] = "DUAL WIELD";
+
+	wep_name[886] = "IRON GUN"
+	wep_type[886] = 3
+	wep_auto[886] = 0
+	wep_load[886] = 6
+	wep_cost[886] = 2
+	wep_sprt[886] = sprSplinterGun
+	wep_area[886] = 4
+	wep_text[886] = "this will hurt"
+	wep_swap[886] = sndSwapBow
+	wep_rad[886] = 0;
+	
+	wep_name[887] = "IRON BURST GUN"
+	wep_type[887] = 3
+	wep_auto[887] = 2
+	wep_load[887] = 8
+	wep_cost[887] = 5
+	wep_sprt[887] = sprSplinterGun
+	wep_area[887] = 4
+	wep_text[887] = "this will hurt"
+	wep_swap[887] = sndSwapBow
+	wep_rad[887] = 0;
+
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	}

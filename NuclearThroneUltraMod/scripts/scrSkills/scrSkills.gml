@@ -499,7 +499,7 @@ function scrSkills() {
 	*/
 	skill_name[34] = "FLEXIBLE ELBOWS"
 	skill_text[34] = "<w>RELOADING<w> SOMETIMES <g>SLAPS<g> ENEMIES"
-	skill_detail[34] = "+10% <w>RELOAD SPEED<w> ON ALL WEAPONS##WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#CHANCE DEPENDS ON:#BASE RELOAD TIME & DROP RATE"
+	skill_detail[34] = "+10% <w>RELOAD SPEED<w> ON ALL WEAPONS##WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#CHANCE DEPENDS ON:#BASE RELOAD TIME & DROP RATE#(+2 DAMAGE EACH LOOP)"
 	skill_tips[34] = "looting and shooting"
 	skill_msnd[34] =  sndMutFlexibleElbows
 	skill_bons[34] = "12% RELOAD SPEED INSTEAD#+50% SLAP DAMAGE";
@@ -622,29 +622,24 @@ function scrSkills() {
 	skill_bons[maxskill + 1] = "";
 	
 	/*
-	skill_name[42] = "GLUTINOUS BELLY"
-	skill_text[42] = "ALLOWS YOU TO STACK UP ON EXCESS HEALING AND AMMO#IT GETS APPLIED AS SOON AS POSSIBLE#THE MORE EXCESS YOU HAVE STACKED UP:#THE MORE DAMAGE YOU DEAL"
-	skill_tips[42] = "EAT THE RICH"
-	skill_bons[42] = "CARRY 1 ADDITION DROP"
-	skill_msnd[42] =  sndMutBouncyFat;
-	
-	skill_name[47] = "IRON NAILS"
-	skill_text[47] = "<w>SINGLE FIRE<w> WEAPONS ARE <w>AUTOMATIC<w>##CONTINUOUSLY FIRING <w>AUTO<w> WEAPONS:#INCREASES <w>RELOAD SPEED<w>#AND RESTORES: <y>AMMO<y> OR <gb>ARMOUR<gb>"
-	skill_detail[47] = "<w>SINGLE FIRE<w> WEAPONS ARE <w>AUTOMATIC<w>#<w>AUTOMATIC<w> WEAPONS <w>FIRE FASTER<w>#THE <w>LONGER<w> YOU HOLD DOWN THE <w>TRIGGER<w>##CONTINOUSLY FIRING AUTO WEAPONS:#RESTORES <y>AMMO<y>#OR <gb>ARMOUR<gb> IF YOU HAVE <gb>ARMOUR<gb>#(WEAPON SPECIFIC MUTATION)"
-	skill_tips[47] = "bullet nails"
-	skill_bons[47] = "+30% RELOAD SPEED"
+	skill_name[47] = "GLUTINOUS BELLY"
+	skill_text[47] = "ALLOWS YOU TO STACK UP ON ANY EXCESS RESOURCES"
+	skill_detail[47] = "ALLOWS YOU TO STACK UP ON EXCESS ANY RESOURCE TYPE#HEALING, AMMO, ARMOUR, RADS ETC.#IT GETS APPLIED AS SOON AS POSSIBLE"
+	skill_tips[47] = "EAT THE RICH"
+	skill_bons[47] = "+30% STACK"
 	skill_msnd[47] =  sndMutBouncyFat;
+	
+	skill_name[48] = "IRON NAILS"
+	skill_text[48] = "ALL WEAPONS ARE AUTO#CONTINUOUSLY FIRING WEAPONS:#INCREASES <w>RELOAD SPEED<w>#AND RESTORES: <y>AMMO<y> OR <gb>ARMOUR<gb>"
+	skill_detail[48] = "ALL WEAPONS ARE<w>AUTOMATIC<w>#WEAPONS <w>FIRE FASTER<w>#THE <w>LONGER<w> YOU HOLD DOWN THE <w>TRIGGER<w>##CONTINOUSLY FIRING WEAPONS:#RESTORES <y>AMMO<y>#OR <gb>ARMOUR<gb> IF YOU HAVE <gb>ARMOUR<gb>#(WEAPON SPECIFIC MUTATION)"
+	skill_tips[48] = "bullet nails"
+	skill_bons[48] = "+30% RELOAD SPEED"
+	skill_msnd[48] =  sndMutBouncyFat;
 	
 	A SET OF SPECIAL SECRET WEAPON SPECIFIC MUTATIONS YOU HAVE TO DO SOME SORT OF PRE-LOOP CHALLENGE FOR, REPLACES ONE LEVEL/NORMAL MUTATION
 	or just add them to the set its nice to encounter them and take them based on your weapon instead of going out of your way to get them
-	skill_name[42] = "ADRENALINE RUSH"
-	skill_text[42] = "AUTOMATIC WEAPONS RELOAD FASTER AS AMMO GETS LOWER"
-	skill_tips[42] = "this includes flamethrowers!"
-	skill_bons[42] = "+5% RELOAD SPEED"
-	skill_msnd[42] =  sndMutBouncyFat;
-	
 	skill_name[43] = "CLICKY HEELS"
-	skill_text[43] = "SINGLE FIRE WEAPONS HAVE A CHANCE TO INSTANTLY RELOAD"
+	skill_text[43] = "FIRING SINGLE FIRE WEAPONS HAS A CHANCE TO INSTANTLY RELOAD REFUND AMMO AND HEAL"
 	skill_tips[43] = "chance depends on reload time"
 	skill_bons[43] = "+5% CHANCE"
 	skill_msnd[43] =  sndMutBouncyFat;

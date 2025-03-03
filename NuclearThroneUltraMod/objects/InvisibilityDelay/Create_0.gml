@@ -1,2 +1,2 @@
 /// @description Lifetime and alpha
-alarm[0] = 20;
+alarm[0] = 15;

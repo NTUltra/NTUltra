@@ -26,7 +26,7 @@ function scrDrawBloom() {
 		draw_line_width(
 		lerp(xstart - vx ,x - vx,lp),
 		lerp(ystart - vy,y - vy,lp),
-		x - vx,y - vy,3 - lp);
+		x - vx,y - vy,bloomSet - lp);
 	}
 	draw_set_alpha(1);
 	with DistanceScaleBullet

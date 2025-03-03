@@ -31,11 +31,11 @@ justjumped = false;
 instance_create(x,y,BigWallBreak);
 scrAddDrops(1);
 
-actTime = 10;
+actTime = 12;
 maxSpeed = 2;
-maxJumpSpeed = 8;
+maxJumpSpeed = 7.9;
 jumpAcc = 0.5;
-jumpDuration = 6;
+jumpDuration = 5.75;
 loops = GetPlayerLoops();
 if loops > 0
 {

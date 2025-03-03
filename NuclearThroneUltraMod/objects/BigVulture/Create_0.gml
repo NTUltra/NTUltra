@@ -24,7 +24,7 @@ walk = 0
 wkick = 0
 actTime -= min(4,loops);
 corpseTarget = noone;
-projectileSpeed = 7;
+projectileSpeed = 6.75;
 projectileSpeed += clamp(loops,0,4);
 
 alarm[1] = 40;

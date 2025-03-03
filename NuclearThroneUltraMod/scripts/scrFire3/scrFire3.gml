@@ -3045,27 +3045,105 @@ function scrFire3(hasTailNow){
 		snd_play_fire(sndHeavyScrewdriver)
 
 		instance_create(x,y,Dust)
-
-		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection),DaggerShank)
+		with instance_create(x,y,ThiefDoubleDaggerBurst)
+		{
+			if other.altFire
+				oddEven = 1
+			creator = other.id
+			ammo = 2
+			time = 1
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+		altFire = !altFire;
+		/*
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection - 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection - 10*accuracy),DaggerShank)
 		{
 			sprite_index = sprThiefShank;
 			mask_index = mskDaggerShank;
 			owner = other.id;
-			dmg = 11;
+			dmg = 6;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
-			motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
+			motion_add(aimDirection-(10*other.accuracy),4+longarms)
 			image_angle = direction
 			team = other.team
 		}
-
-		wepangle = -wepangle
-		if !skill_got[2]
-			motion_add(aimDirection,3.5)
-		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection + 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection + 10*accuracy),DaggerShank)
+		{
+			sprite_index = sprThiefShank;
+			mask_index = mskDaggerShank;
+			owner = other.id;
+			dmg = 6;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+(10*other.accuracy),4+longarms)
+			image_angle = direction
+			team = other.team
+		}*/
+		if !instance_exists(SlowSlash)
+			with instance_create(x,y,SlowSlash)
+			{
+				target = other.id;
+				wep = other.wep;
+				wepangle = other.wepangle;
+				wepangleTarget = -wepangle;
+				time = 8;
+				alarm[0] = time;
+			}
+		BackCont.viewx2 += lengthdir_x(5,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(5,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 1
-		wkick = -8
+		wkick = -12
+
+		break;
+		
+		//DUAL VIPERS
+		case 885:
+
+		altFire = !altFire;
+		with instance_create(x,y,DualViperBurst)
+		{
+			altFire = other.altFire;
+			creator = other.id
+			ammo = 2
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 2
+
+		break;
+		
+		//IRON GUN
+		case 886:
+
+		with instance_create(x,y,InstantNail)
+		{
+			direction = aimDirection + ((random(10) - 5) * other.accuracy);
+			image_angle = direction;
+			team = other.team
+			event_perform(ev_alarm,0);
+		}
+
+		break;
+		
+		//IRON BURST GUN
+		case 887:
+
+		with instance_create(x,y,InstantNailBurst)
+		{
+			creator = other.id
+			ammo = 4
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
 
 		break;
 	

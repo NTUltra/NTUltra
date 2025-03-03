@@ -7,6 +7,7 @@ t = 0;
 col = c_yellow;
 width = 2;
 cost = 0.5;
+bloomSet = 3;
 radCost = 0;
 radCost = 0;
 borderWidth = 0.5;
@@ -24,3 +25,7 @@ if instance_exists(Player)
 }
 knockback = 2;
 hitTarget = noone;
+with instance_create(x,y,AnimDestroyBloom)
+{
+	sprite_index = sprMicroBulletBloom;
+}

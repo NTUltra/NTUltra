@@ -125,7 +125,6 @@ function scrDrawHUD() {
 			else
 				draw_sprite(sprHealthBarPeaceFull,dataRef.peaceBarriers,vx+hx,vy+4);
 		}
-		
 		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
 		{
 			var cfbi = 0;
@@ -1530,6 +1529,7 @@ function scrDrawHUD() {
 
 	//AMMO ICONS
 	img = 0
+	var glutton = 0;
 	var hump = instance_exists(HumphryDiscipline) && dataRef.altUltra && dataRef.ultra_got[104]
 	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 1 && dataRef.wep_type[dataRef.bwep] != 1)
 	{
@@ -1543,6 +1543,7 @@ function scrDrawHUD() {
 		img = 3;
 	draw_sprite(sprBulletIconBG,img,vx+2,vy+ammoheight)
 	draw_sprite(sprBulletIcon,clamp(7-ceil((dataRef.ammo[1]/dataRef.typ_amax[1])*7),-1,7)+1,vx+2,vy+ammoheight)//36
+	draw_sprite(sprBulletIconOutline,glutton,vx+2,vy+ammoheight)
 
 	img = 0
 	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 2 && dataRef.wep_type[dataRef.bwep] != 2)

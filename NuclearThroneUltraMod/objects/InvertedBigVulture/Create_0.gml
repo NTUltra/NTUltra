@@ -10,7 +10,7 @@ spr_hurt = sprInvertedBigVultureHurt;
 spr_eat = sprInvertedBigVultureEat;
 spr_dead = sprInvertedBigVultureDead
 
-projectileSpeed += 0.9;
+projectileSpeed += 0.8;
 isInverted = true;
 raddrop = 80
 maxhealth = 140;

@@ -11,3 +11,4 @@ queue = 0;
 hook = 0;
 scrInitDrops(1);
 team = 2;
+loops = GetPlayerLoops();

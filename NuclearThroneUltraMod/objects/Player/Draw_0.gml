@@ -130,7 +130,12 @@ else
 bwepright = right
 
 if bwep != 0 and race != 7 && !instance_exists(PandaSleep)
+{
 	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,yy,image_yscale,bwepright,90+15*right,c_silver,alpha)
+	if scrIsDualWield(bwep) {
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2.25,yy,image_yscale,bwepright,90+20*right,c_silver,alpha)	
+	}
+}
 
 if scrEnableLaserSight()
 {
@@ -180,25 +185,27 @@ if scrEnableLaserSight()
 
 if ultra_got[31]//draw robots third weapon on its back
 {
-draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right,yy-2,image_xscale,bwepright,90+right*-15,c_white,alpha)
-
+	draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right,yy-2,image_xscale,bwepright,90+right*-15,c_silver,alpha)
+	if scrIsDualWield(cwep) {
+		draw_sprite_ext(wep_sprt[cwep],triggerfinger,x-right*1.25,yy,image_yscale,bwepright,90-20*right,c_silver,alpha)	
+	}
 }
 //DUAL WIELDING
-if ultra_got[27]=1 && !altUltra//copy primary
+if (ultra_got[27]=1 && !altUltra)//copy primary
 {
 
-//first draw secondary on back of roids
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
+	//first draw secondary on back of roids
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
 
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
 
-twep=bwep;//save secondary in third wepslot
-bwep=wep;//secondary slot will now be your primary
-//bwepangle=wepangle;//angle
+	twep=bwep;//save secondary in third wepslot
+	bwep=wep;//secondary slot will now be your primary
+	//bwepangle=wepangle;//angle
 
 }
 //Roids lasersight
-if race = 7 and bwep != 0
+if race == 7 and bwep != 0
 {
 	if wep_type[bwep] = 3 and bwep != 18
 	{
@@ -243,22 +250,33 @@ if race = 7 and bwep != 0
 		}
 	}
 	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
+	if scrIsDualWield(bwep)
+	{
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),yy+gunY+lengthdir_y(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),image_yscale,bwepright,aimDirection+(-bwepangle*(1-bwkick/30)),c_white,alpha)
+	}
 	if bwep = 63 || wep = 343//Blackhole/Dimension Generator
 	{
-	if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
+		if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
 
-	draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,alpha)}}
+		draw_sprite_ext(sprBlackHoleGeneration,triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-wkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-wkick/20)),c_white,alpha)
+		}
+	}
 
 }
 
-if ultra_got[27]=1 && !altUltra//copy primary
+if (ultra_got[27]=1 && !altUltra)//copy primary
 {
-bwep=twep;//and return weapon
+	bwep=twep;//and return weapon
 }
 //DRAW DA GUNZ
+if scrIsDualWield(wep)
+{
+	//draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
+	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(-wepangle*(1-wkick/30))),yy+gunY+lengthdir_y(-wkick,aimDirection+(-wepangle*(1-wkick/30))),image_yscale,-wepright,aimDirection+(-wepangle*(1-wkick/30)),c_white,alpha)
+}
 if back = 1 and (!(IsShielding)||(ultra_got[7]==1)) && !instance_exists(PandaSleep){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
-
+	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+	
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
@@ -337,12 +355,13 @@ if triggerfinger>7
 triggerfinger=0;
 
 if back = -1 and !(IsShielding) && !instance_exists(PandaSleep){
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
-if wep = 63 || wep = 343//Blackhole/Dimension Generator
-{
-if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
-draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
-}}
+	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+	if wep = 63 || wep = 343//Blackhole/Dimension Generator
+	{
+		if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
+			draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+		}
+	}
 }
 
 //else if ultra_got[11]=1// keep the animations goin on brainwashed enemies
@@ -376,7 +395,7 @@ if wkick > 0
 if wkick < 0
 	wkick += 1
 
-if race = 7
+if race == 7
 {
 if bwkick > 0
 bwkick -= 1
