@@ -28,6 +28,11 @@ if instance_exists(creator)
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,2);
+			sprite_index = sprMicroBulletBloom;
+		}
 		event_perform(ev_alarm,0);
 	}
 

@@ -25,7 +25,3 @@ if instance_exists(Player)
 }
 knockback = 2;
 hitTarget = noone;
-with instance_create(x,y,AnimDestroyBloom)
-{
-	sprite_index = sprMicroBulletBloom;
-}

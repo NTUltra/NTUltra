@@ -26,7 +26,7 @@ if instance_exists(Player)
 		targetY = y;
 		splitX = x;
 		splitY = y;
-		if true && jumps < 100
+		if boltMarrow && jumps < 100
 		{
 			var enem = instance_nearest(x,y,enemy)
 		    if enem != myPierce && enem.team != team && point_distance(x,y,enem.x,enem.y) < 24 + Player.betterboltmarrow && enem.mask_index != mskPickupThroughWall && !collision_line(x,y,enem.x,enem.y,Wall,false,false)

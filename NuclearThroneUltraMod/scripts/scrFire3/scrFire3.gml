@@ -197,7 +197,13 @@ function scrFire3(hasTailNow){
 				image_angle = direction
 				team = other.team
 				scrGiveProjectileStats();
-			event_perform(ev_alarm,0);
+				with instance_create(x,y,AnimDestroyBloom)
+				{
+					motion_add(other.direction,1);
+					sprite_index = sprMicroBulletBloom;
+					image_angle = direction;
+				}
+				event_perform(ev_alarm,0);
 			}
 			angg += angStep
 		}
@@ -208,6 +214,12 @@ function scrFire3(hasTailNow){
 			image_angle = direction
 			team = other.team
 			scrGiveProjectileStats();
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				motion_add(other.direction,1);
+				sprite_index = sprMicroBulletBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 		with instance_create(x,y,MicroBullet)
@@ -216,6 +228,12 @@ function scrFire3(hasTailNow){
 			image_angle = direction
 			team = other.team
 			scrGiveProjectileStats();
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				motion_add(other.direction,1);
+				sprite_index = sprMicroBulletBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 
@@ -2985,6 +3003,7 @@ function scrFire3(hasTailNow){
 		break;
 		
 		//DEATH RAY
+		/*
 		case 882:
 
 		if Player.skill_got[17] = 1
@@ -3017,12 +3036,11 @@ function scrFire3(hasTailNow){
 		wkick = 8
 
 		break;
+		*/
 		
 		//VOID PISTOL
-		case 883:
-		// scrUnlockCharacter(28,"");
-		// scrUnlockCharacter(29,"");
-		snd_play_fire(sndVoidBlaster)
+		case 882:
+		snd_play_fire(sndVoidPistol)
 
 		with instance_create(x,y,VoidPistolBullet)
 		{motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
@@ -3040,11 +3058,9 @@ function scrFire3(hasTailNow){
 		break;
 		
 		//DAGGER
-		case 884:
+		case 883:
 
-		snd_play_fire(sndHeavyScrewdriver)
-
-		instance_create(x,y,Dust)
+		instance_create(x,y,Smoke)
 		with instance_create(x,y,ThiefDoubleDaggerBurst)
 		{
 			if other.altFire
@@ -3056,32 +3072,6 @@ function scrFire3(hasTailNow){
 			event_perform(ev_alarm,0)
 		}
 		altFire = !altFire;
-		/*
-		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection - 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection - 10*accuracy),DaggerShank)
-		{
-			sprite_index = sprThiefShank;
-			mask_index = mskDaggerShank;
-			owner = other.id;
-			dmg = 6;
-			longarms = 0
-			longarms = (Player.skill_got[13]+other.bettermelee)*3
-			motion_add(aimDirection-(10*other.accuracy),4+longarms)
-			image_angle = direction
-			team = other.team
-		}
-		
-		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDirection + 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDirection + 10*accuracy),DaggerShank)
-		{
-			sprite_index = sprThiefShank;
-			mask_index = mskDaggerShank;
-			owner = other.id;
-			dmg = 6;
-			longarms = 0
-			longarms = (Player.skill_got[13]+other.bettermelee)*3
-			motion_add(aimDirection+(10*other.accuracy),4+longarms)
-			image_angle = direction
-			team = other.team
-		}*/
 		if !instance_exists(SlowSlash)
 			with instance_create(x,y,SlowSlash)
 			{
@@ -3100,7 +3090,7 @@ function scrFire3(hasTailNow){
 		break;
 		
 		//DUAL VIPERS
-		case 885:
+		case 884:
 
 		altFire = !altFire;
 		with instance_create(x,y,DualViperBurst)
@@ -3121,20 +3111,27 @@ function scrFire3(hasTailNow){
 		break;
 		
 		//IRON GUN
-		case 886:
+		case 885:
 
 		with instance_create(x,y,InstantNail)
 		{
 			direction = aimDirection + ((random(10) - 5) * other.accuracy);
 			image_angle = direction;
 			team = other.team
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				image_speed = 0.6;
+				motion_add(other.direction,2);
+				sprite_index = sprInstantIronBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 
 		break;
 		
 		//IRON BURST GUN
-		case 887:
+		case 886:
 
 		with instance_create(x,y,InstantNailBurst)
 		{

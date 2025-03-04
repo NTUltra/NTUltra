@@ -9894,74 +9894,75 @@ function scrWeapons() {
 	
 	if UberCont.newContent
 	{
+		/* //trash visually
 	wep_name[882] = "DEATH RAY"
 	wep_type[882] = 5
 	wep_auto[882] = 0
 	wep_load[882] = 30
 	wep_cost[882] = 5
-	wep_sprt[882] = sprLaserGun
+	wep_sprt[882] = sprDeathRay
 	wep_area[882] = 10
 	wep_text[882] = "futuristic weaponry"
 	wep_swap[882] = sndSwapEnergy
 	wep_rad[882] = 0;
+		*/
+	wep_name[882] = "VOID PISTOL"
+	wep_type[882] = 4
+	wep_auto[882] = 1
+	wep_load[882] = 9
+	wep_cost[882] = 1
+	wep_sprt[882] = sprVoidPistol
+	wep_area[882] = -1
+	wep_text[882] = "void pistol deals damage based on remaining enemy health and destroys all projectiles and pickups"
+	wep_swap[882] = sndSwapPistol
+	wep_rad[882] = 0;
+	wep_popup[882] = "DEALS DAMAGE BASED ON#REMAINING ENEMY HEALTH";
 	
-	wep_name[883] = "VOID PISTOL"
-	wep_type[883] = 4
-	wep_auto[883] = 1
-	wep_load[883] = 9
-	wep_cost[883] = 1
-	wep_sprt[883] = sprRevolver
+	wep_name[883] = "DOUBLE DAGGERS"
+	wep_type[883] = 0
+	wep_auto[883] = 2
+	wep_load[883] = 14
+	wep_cost[883] = 0
+	wep_sprt[883] = sprDagger
 	wep_area[883] = -1
-	wep_text[883] = "void pistol deals damage based on remaining enemy health and destroys all projectiles and pickups"
-	wep_swap[883] = sndSwapPistol
+	wep_text[883] = "the dagger deals double damage when you attack an enemy from behind them"
+	wep_swap[883] = sndSwapSword
 	wep_rad[883] = 0;
-	wep_popup[883] = "DEALS DAMAGE BASED ON#REMAINING ENEMY HEALTH";
+	wep_popup[883] = "DEALS DOUBLE DAMAGE#WHEN BACKSTABBING";
 	
-	wep_name[884] = "DOUBLE DAGGERS"
-	wep_type[884] = 0
-	wep_auto[884] = 2
-	wep_load[884] = 14
-	wep_cost[884] = 0
-	wep_sprt[884] = sprDagger
-	wep_area[884] = -1
-	wep_text[884] = "the dagger deals double damage when you attack an enemy from behind them"
-	wep_swap[884] = sndSwapSword
+	wep_name[884] = "DUAL VIPERS"
+	wep_type[884] = 1
+	wep_auto[884] = 3
+	wep_load[884] = 4
+	wep_cost[884] = 2
+	wep_sprt[884] = sprDualVipers
+	wep_area[884] = 24
+	wep_text[884] = "trusty double revolver"
+	wep_swap[884] = sndSwapPistol
 	wep_rad[884] = 0;
-	wep_popup[884] = "DEALS DOUBLE DAMAGE#WHEN BACKSTABBING";
-	
-	wep_name[885] = "DUAL VIPERS"
-	wep_type[885] = 1
-	wep_auto[885] = 3
-	wep_load[885] = 4
-	wep_cost[885] = 2
-	wep_sprt[885] = sprDualVipers
-	wep_area[885] = 24
-	wep_text[885] = "trusty double revolver"
-	wep_swap[885] = sndSwapPistol
-	wep_rad[885] = 0;
-	wep_popup[885] = "DUAL WIELD";
+	wep_popup[884] = "DUAL WIELD";
 
-	wep_name[886] = "IRON GUN"
+	wep_name[885] = "IRON GUN"
+	wep_type[885] = 3
+	wep_auto[885] = 0
+	wep_load[885] = 6
+	wep_cost[885] = 2
+	wep_sprt[885] = sprIronGun
+	wep_area[885] = 12
+	wep_text[885] = "hitscan bolts!"
+	wep_swap[885] = sndSwapBow
+	wep_rad[885] = 0;
+	
+	wep_name[886] = "IRON BURST GUN"
 	wep_type[886] = 3
-	wep_auto[886] = 0
-	wep_load[886] = 6
-	wep_cost[886] = 2
-	wep_sprt[886] = sprSplinterGun
-	wep_area[886] = 4
-	wep_text[886] = "this will hurt"
+	wep_auto[886] = 2
+	wep_load[886] = 8
+	wep_cost[886] = 5
+	wep_sprt[886] = sprIronBurstGun
+	wep_area[886] = 16
+	wep_text[886] = "makes up for an iron deficiency"
 	wep_swap[886] = sndSwapBow
 	wep_rad[886] = 0;
-	
-	wep_name[887] = "IRON BURST GUN"
-	wep_type[887] = 3
-	wep_auto[887] = 2
-	wep_load[887] = 8
-	wep_cost[887] = 5
-	wep_sprt[887] = sprSplinterGun
-	wep_area[887] = 4
-	wep_text[887] = "this will hurt"
-	wep_swap[887] = sndSwapBow
-	wep_rad[887] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

@@ -32,9 +32,14 @@ with instance_create(x,y,MicroBullet)
 	image_angle = direction;
 	scrCopyWeaponMod(other);
 	event_perform(ev_alarm,0);
-
-image_angle = direction
-team = other.team
+	image_angle = direction
+	team = other.team
+	with instance_create(x,y,AnimDestroyBloom)
+	{
+		motion_add(other.direction,1);
+		sprite_index = sprMicroBulletBloom;
+		image_angle = direction;
+	}
 }
 
 

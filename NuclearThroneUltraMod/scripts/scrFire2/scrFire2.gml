@@ -266,6 +266,12 @@ function scrFire2(hasTailNow) {
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroPlasmaBloom;
+			image_angle = direction;
+		}
 		event_perform(ev_alarm,0);
 	}
 
@@ -14548,13 +14554,19 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(30)-15)*other.accuracy;
-	image_angle = direction;
-	team = other.team
-	scrGiveProjectileStats();
-	event_perform(ev_alarm,0);
+		direction = aimDirection+(random(30)-15)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroBulletBloom;
+			image_angle = direction;
+		}
+		event_perform(ev_alarm,0);
 	}
-
+	
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 2
@@ -14575,6 +14587,12 @@ function scrFire2(hasTailNow) {
 			image_angle = direction;
 			team = other.team
 			scrGiveProjectileStats();
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				motion_add(other.direction,1);
+				sprite_index = sprMicroBulletBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 	}
@@ -15264,6 +15282,12 @@ function scrFire2(hasTailNow) {
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,2);
+			sprite_index = sprUltraMicroBulletBloom;
+			image_angle = direction;
+		}
 		event_perform(ev_alarm,0);
 	}
 
@@ -15588,11 +15612,17 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(8)-4)*other.accuracy;
-	image_angle = direction;
-	team = other.team
-	scrGiveProjectileStats();
-	event_perform(ev_alarm,0);
+		direction = aimDirection+(random(8)-4)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroBulletBloom;
+			image_angle = direction;
+		}
+		event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
@@ -16279,6 +16309,12 @@ function scrFire2(hasTailNow) {
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroNadeBloom;
+			image_angle = direction;
+		}
 		event_perform(ev_alarm,0);
 	}
 
@@ -16441,11 +16477,17 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(32)-16)*other.accuracy;
-	image_angle = direction;
-	team = other.team
-	scrGiveProjectileStats();
-	event_perform(ev_alarm,0);
+		direction = aimDirection+(random(32)-16)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroBulletBloom;
+			image_angle = direction;
+		}
+		event_perform(ev_alarm,0);
 	}
 	if !skill_got[2]
 	{
@@ -17324,6 +17366,12 @@ function scrFire2(hasTailNow) {
 			image_angle = direction;
 			team = other.team
 			scrGiveProjectileStats();
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				motion_add(other.direction,1);
+				sprite_index = sprMicroNadeBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 	}
@@ -17415,11 +17463,17 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(6)-3)*other.accuracy;
-	image_angle = direction;
-	team = other.team
-	scrGiveProjectileStats();
-	event_perform(ev_alarm,0);
+		direction = aimDirection+(random(6)-3)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroBulletBloom;
+			image_angle = direction;
+		}
+		event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
@@ -17568,11 +17622,17 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-	direction = aimDirection+(random(28)-14)*other.accuracy;
-	image_angle = direction;
-	team = other.team
-	scrGiveProjectileStats();
-	event_perform(ev_alarm,0);
+		direction = aimDirection+(random(28)-14)*other.accuracy;
+		image_angle = direction;
+		team = other.team
+		scrGiveProjectileStats();
+		with instance_create(x,y,AnimDestroyBloom)
+		{
+			motion_add(other.direction,1);
+			sprite_index = sprMicroBulletBloom;
+			image_angle = direction;
+		}
+		event_perform(ev_alarm,0);
 	}
 
 	BackCont.viewx2 += lengthdir_x(4.5,aimDirection+180)*UberCont.opt_shake
@@ -17804,6 +17864,12 @@ function scrFire2(hasTailNow) {
 			image_angle = direction;
 			team = other.team
 			scrGiveProjectileStats();
+			with instance_create(x,y,AnimDestroyBloom)
+			{
+				motion_add(other.direction,1);
+				sprite_index = sprMicroBulletBloom;
+				image_angle = direction;
+			}
 			event_perform(ev_alarm,0);
 		}
 	}

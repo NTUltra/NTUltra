@@ -26,6 +26,13 @@ with instance_create(x,y,InstantNail)
 	image_angle = direction;
 	team = other.team
 	scrCopyWeaponMod(other);
+	with instance_create(x,y,AnimDestroyBloom)
+	{
+		image_speed = 0.6;
+		motion_add(other.direction,2);
+		sprite_index = sprInstantIronBloom;
+		image_angle = direction;
+	}
 	event_perform(ev_alarm,0);
 }
 
