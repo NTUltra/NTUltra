@@ -120,8 +120,9 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if other.skill_got[5]
 						{
+							snd_play(sndThiefStabStealUpg,0.01);
 							instance_create(x,y,ThiefStab);
-							DealDamage(50 + min(100,other.loops*3) + my_health*0.2);
+							DealDamage(90 + min(100,other.loops*3) + my_health*0.2);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -135,7 +136,8 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{
-							DealDamage(50 + min(100,other.loops*3));
+							snd_play(sndThiefStabSteal,0.01);
+							DealDamage(90 + min(100,other.loops*3));
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30
@@ -155,7 +157,10 @@ function scrPowers(raceOverwrite = -1) {
 						}
 					}
 					if ultra_got[110] && altUltra
+					{
 						scrCollectAmmo(1);
+						BackCont.shake += 4;
+					}
 					else
 						scrCollectAmmo(0.5);
 					scrTurnOffInvisibility();
@@ -204,6 +209,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if other.ultra_got[111]
 						{
+							snd_play(sndThiefStealUpg,0.01);
 							DealDamage(18 + min(20,other.loops * 3));
 							with instance_create(x,y,ThiefStab) {
 								dmg = 15 + min(10,other.loops * 2);	
@@ -221,6 +227,7 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{
+							snd_play(sndThiefSteal,0.01);
 							DealDamage(3 + min(10,other.loops) * 2);
 							motion_add(stabDir,4)
 							with instance_create(x,y,AnimDestroyTop)
@@ -242,6 +249,51 @@ function scrPowers(raceOverwrite = -1) {
 				}
 			}
 		}
+		
+		if race == 29//NO THING
+		{
+			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
+			if instance_exists(Pickup)
+				with VoidBlock
+				{
+					image_index = 0;
+					image_xscale = max(image_xscale, 1);
+					image_yscale = image_xscale;
+				}
+			if skill_got[5]
+			{
+				with Rad
+				{
+					BackCont.shake += 1;
+					radValue *= 0.5;
+					instance_create(x,y,VoidBlockBig);
+					event_user(0);
+				}
+				with AmmoPickup
+				{
+					BackCont.shake += 2;
+					ammoValue *= 0.5;
+					with instance_create(x,y,VoidBlockBig) {
+						image_xscale += 0.125;
+						image_yscale += 0.125;
+					}
+					event_user(0);
+				}
+			}
+			else
+			{
+				with Pickup
+				{
+					BackCont.shake += 1;
+					instance_destroy();
+					if object_index == Rad
+						instance_create(x,y,VoidBlock);
+					else
+						instance_create(x,y,VoidBlockBig);
+				}
+			}
+		}
+		
 		if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 		{
 			if (armour < 1 && !ultra_got[63]) && !freeArmourStrike || (ultra_got[63] && my_health < 3 && !(ultra_got[62] && altUltra && armour > 1))

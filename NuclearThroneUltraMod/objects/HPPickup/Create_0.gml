@@ -4,6 +4,7 @@ event_inherited();
 
 isArmour = false;
 
+ammoValue = 1;
 if instance_exists(Player)
 {
 	if Player.skill_got[9]

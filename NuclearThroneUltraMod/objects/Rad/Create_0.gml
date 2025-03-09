@@ -4,6 +4,7 @@ depth = -1;
 isGettingSucked = false;
 
 blink = 30
+radValue = 1;
 alarm[0] = 150+random(30)
 if scrIsGamemode(9) //CASUAL MODE
 	alarm[0] += 30;

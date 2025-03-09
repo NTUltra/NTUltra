@@ -9,12 +9,12 @@ if instance_exists(creator)
 	y = creator.y
 	//FIRING
 	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-	snd_play_fire(snd)
 	with instance_create(x,y,Shell)
 	motion_add(aimDirection+180+random(50)-25,2+random(2))
 
 	var len = 3 * accuracy;
 	var offset = 90;
+	snd_play_fire(choose(sndDualViper1,sndDualViper2))
 	if altFire
 		offset = -90;
 	altFire = !altFire;

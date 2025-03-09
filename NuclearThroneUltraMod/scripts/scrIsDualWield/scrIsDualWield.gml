@@ -2,5 +2,5 @@
 // /@description
 ///@param
 function scrIsDualWield(theWep){
-	return theWep == 884 || theWep == 885;
+	return theWep == 883 || theWep == 884;
 }

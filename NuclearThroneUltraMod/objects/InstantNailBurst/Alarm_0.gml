@@ -10,7 +10,7 @@ y = creator.y
 //FIRING
 if effects
 {
-	snd_play_fire(snd)
+	snd_play_fire(sndIronGun)
 	BackCont.viewx2 += lengthdir_x(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 	BackCont.shake += 2

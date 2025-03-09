@@ -9910,7 +9910,7 @@ function scrWeapons() {
 	wep_type[882] = 4
 	wep_auto[882] = 1
 	wep_load[882] = 9
-	wep_cost[882] = 1
+	wep_cost[882] = 0.5
 	wep_sprt[882] = sprVoidPistol
 	wep_area[882] = -1
 	wep_text[882] = "void pistol deals damage based on remaining enemy health and destroys all projectiles and pickups"

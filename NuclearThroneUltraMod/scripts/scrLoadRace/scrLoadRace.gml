@@ -921,16 +921,16 @@ function scrLoadRace() {
 	spr_walk=sprMutant28Walk;
 	spr_hurt=sprMutant28Hurt;
 	spr_dead=sprMutant28Dead;
-	spr_go_sit = sprMutant28GoSit;//TODO
+	spr_go_sit = sprMutant28BGoSit;//TODO
 	spr_sit = sprMutant28Sit;//TODO
 	break;
 	case 29:
-	spr_idle=sprMutant27Idle;
-	spr_walk=sprMutant27Walk;
-	spr_hurt=sprMutant27Hurt;
-	spr_dead=sprMutant27Dead;
-	spr_go_sit = sprMutant27Idle;//TODO
-	spr_sit = sprMutant27Idle;//TODO
+	spr_idle=sprMutant29Idle;
+	spr_walk=sprMutant29Walk;
+	spr_hurt=sprMutant29Hurt;
+	spr_dead=sprMutant29Dead;
+	spr_go_sit = sprMutant29GoSit;//TODO
+	spr_sit = sprMutant29Sit;//TODO
 	break;
 	}
 

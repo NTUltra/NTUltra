@@ -3067,7 +3067,7 @@ function scrFire3(hasTailNow){
 				oddEven = 1
 			creator = other.id
 			ammo = 2
-			time = 1
+			time = 2
 			team = other.team
 			event_perform(ev_alarm,0)
 		}
@@ -3112,7 +3112,7 @@ function scrFire3(hasTailNow){
 		
 		//IRON GUN
 		case 885:
-
+		snd_play_fire(sndIronGun)
 		with instance_create(x,y,InstantNail)
 		{
 			direction = aimDirection + ((random(10) - 5) * other.accuracy);

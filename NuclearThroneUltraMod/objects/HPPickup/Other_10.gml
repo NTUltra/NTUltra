@@ -6,11 +6,11 @@ if scrIsCrown(32)//Crown of misfortune
 {
 	if scrIsCrown(5)//Crown of guns
 	{
-		scrCollectAmmo(0.5);
+		scrCollectAmmo(ammoValue * 0.5);
 	}
 	else
 	{
-		scrCollectAmmo(1.25);
+		scrCollectAmmo(ammoValue * 1.25);
 	}
 }
 var stoppedVenom = false;
@@ -25,8 +25,8 @@ with EnemyVenom
 if stoppedVenom
 {
 	if instance_exists(Player) && Player.skill_got[9]
-		scrCollectHP(1);
+		scrCollectHP(ammoValue);
 }
 else
-	scrCollectHP(2);
+	scrCollectHP(ammoValue * 2);
 instance_destroy()

@@ -691,7 +691,10 @@ if race = 2 {
     //snd_hurt = sndHitRock no more need for this
     maxhealth = 10
 }
-
+if race = 29
+{
+	maxhealth = 1;
+}
 if race = 4 //melting
 maxhealth = 2
 

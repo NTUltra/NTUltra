@@ -4,7 +4,7 @@ if instance_exists(Player)
 	instance_destroy();
 	with Player
 	{
-		var add = 10;
+		var add = other.radValue;
 		if scrIsCrown(4)
 			add += 1.8;
 		else if scrIsCrown(18)

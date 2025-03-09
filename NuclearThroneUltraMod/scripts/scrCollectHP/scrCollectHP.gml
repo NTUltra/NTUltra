@@ -2,7 +2,8 @@
 // /@description
 ///@param
 function scrCollectHP(num = 2){
-
+	if num < 1
+		exit;
 	if isArmour
 	{
 		num = 1;

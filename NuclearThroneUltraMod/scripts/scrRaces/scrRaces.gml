@@ -709,21 +709,21 @@ function scrRaces() {
 		}
 		race_lock[28] = "KILL 5 THIEFS"
 		race_have[28] = 0
-		race_swep[28] = 884//DAGGER
+		race_swep[28] = 883//DAGGER
 		race_bskin[28] = 0
 		race_cskin[28] = 0
 		race_dskin[28] = 0
 		race_eskin[28] = 0
 		race_fskin[28] = 0
 		race_gskin[28] = 0
-		race_bskin_lock[28] = "STEAL FROM ANOTHER THIEF AS THIEF"
-		race_cskin_lock[28] = "DEAL OVER 300 DAMAGE TO AN ENEMY IN A SINGLE STAB (THRONEBUTT)"
+		race_bskin_lock[28] = "(NOT IMPLEMENTED)#STEAL FROM ANOTHER THIEF AS THIEF"
+		race_cskin_lock[28] = "(NOT IMPLEMENTED)#DEAL OVER 300 DAMAGE TO AN ENEMY#IN A SINGLE STAB (THRONEBUTT)"
 		
-		race_name[29] = "NOTHING"
-		race_pass[29] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+		race_name[29] = "NO THING"
+		race_pass[29] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
 		race_acti[29] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE PLAYAREA#TO DESTROY EVERYTHING"
-		race_butt[29] = "BIGGER VOID CONSUMPTION"
-		race_butt_detail[29] = "BIGGER VOID CONSUMPTION##USING VOID CONSUMPTION#TEMPORARILY INCREASES YOUR <r>MAX HEALTH<r>"
+		race_butt[29] = "BETTER VOID CONSUMPTION#VOID CONSUMPTION COLLECTS SOME <y>RES<y><g>OUR<g><r>CES<r>"
+		race_butt_detail[29] = "BIGGER VOID CONSUMPTION#COLLECT ALL RESOURCES FOR HALF VALUE WHEN VOID CONSUMING"
 		race_vision[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
 		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
 		if isUnique
@@ -733,15 +733,15 @@ function scrRaces() {
 		}
 		race_lock[29] = "DEFEAT THE VOID MASTER"
 		race_have[29] = 0
-		race_swep[29] = 883//VOID PISTOL
+		race_swep[29] = 882//VOID PISTOL
 		race_bskin[29] = 0
 		race_cskin[29] = 0
 		race_dskin[29] = 0
 		race_eskin[29] = 0
 		race_fskin[29] = 0
 		race_gskin[29] = 0
-		race_bskin_lock[29] = "CONSUME ATLEAST 20 RADS IN ONE ACTIVE USAGE"
-		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE AS NOTHING"
+		race_bskin_lock[29] = "(NOT IMPLEMENTED)#REACH PALACE#WHILE BELOW LEVEL 6#AS NO THING"
+		race_cskin_lock[29] = "(NOT IMPLEMENTED)#COMPLETE A VOID CHALLENGE#AS NO THING"
 		
 		racemax = 29
 	}

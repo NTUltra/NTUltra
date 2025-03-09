@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-alarm[2] = 2;
+alarm[2] = 1;
 image_speed = 0;
 aimed = false;
 col = c_yellow;

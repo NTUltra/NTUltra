@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndThiefSteal",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.06449,
+  "name":"sndThiefSteal",
+  "parent":{
+    "name":"Thief",
+    "path":"folders/Sounds/Player/Thief.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndThiefSteal.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1220,6 +1220,29 @@ if (rad > mr)
 	if level < maxlevel || scrIsGamemode(22)
 	{
 		//rad -= level*60
+		if race == 29
+		{
+			BackCont.shake += 100;
+			Sleep(20);
+			with instance_create(x,y,Flash)
+			{
+				alpha = 0.4;
+				alarm[1] = 4;
+			}
+			alarm[3] = max(alarm[3],30);
+			with projectile
+			{
+				if team!=other.team
+				{
+					if isGrenade
+						instance_destroy(id,false);
+					else
+						instance_destroy();
+				}
+			}
+			maxhealth += 1;
+			my_health += 1;
+		}
 		rad -= mr;
 		if !UberCont.hadUnlockDisablePopup && scrIsGamemode(22) && isValidGamemodeToUnlock() && UberCont.highestReachedLevel + 1 > 19
 		{

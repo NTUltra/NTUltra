@@ -14,7 +14,7 @@ if instance_exists(creator)
 		{
 			if other.ammo % 2 == other.oddEven
 			{
-				snd_play_fire(sndSword1)
+				snd_play_fire(sndThiefKnife1)
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDir - 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDir - 10*accuracy),DaggerShank)
 				{
@@ -32,7 +32,7 @@ if instance_exists(creator)
 			}
 			else
 			{
-				snd_play_fire(sndSword2)
+				snd_play_fire(sndThiefKnife2)
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*10,aimDir + 10*accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*10,aimDir + 10*accuracy),DaggerShank)
 				{

@@ -48,7 +48,7 @@ if actualLives < 1 && !reincarnate && visible && my_health < 1
 	if audio_exists(song)
 	audio_stop_sound(song);
 	}
-	if race == 3 && bskin == 6
+	if race == 29 || (race == 3 && bskin == 6)
 	{
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{

@@ -870,30 +870,34 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		
 	
 	//NO THING
-	ultra_name[113] = "EXPERIENCED"
-	ultra_text[113] = "GAIN 150% <w>SKILL<w> WHEN YOU DEAL DAMAGE"
+	ultra_name[113] = "ZERO"
+	ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#TEMPORARILY INCREASES <r>MAX HEALTH<r>"
 	ultra_tips[113] = "learning quickly"
+	
+	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
+	{
+		ultra_name[113] = "INFINITY"
+		//TODO change to unequipped ammo
+		ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#TEMPORARILY GRANTS <w>INFINITE AMMO<w>"
+		ultra_tips[113] = "teach them a lesson!"
+	}
         
-	ultra_name[114] = "RAPID MUSTACHE GROWTH"
-	ultra_text[114] = "SKILL ALSO INCREASES <w>RELOAD SPEED<w>"
+	ultra_name[114] = "ABYSS"
+	ultra_text[114] = "WHEN YOU KILL ANENEMY#ALL ENEMIES OF THAT TYPE#WILL BE SENT TO THE NEXT AREA##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN"
 	ultra_tips[114] = "quickdraw"
         
-	ultra_name[115] = "PROTECTIVE FACIAL HAIR"
-	ultra_text[115] = "WHEN YOU HAVE MORE THEN <w>200 SKILL<w>#AND YOU DIE#YOUR DEATH WILL BE <aq>PREVENTED<aq>#AND YOUR SKILL WILL BE RESET#YOU CAN'T GAIN SKILL#FOR 3 SECONDS AFTER TRIGGERING THIS"
-	ultra_tips[115] = "strong skillet"
-        
-	ultra_name[116] = "DISCIPLINE"
+	ultra_name[115] = "NULL"
+	ultra_text[115] = "ALL YOUR PROJECTILES#DELETE ENEMY PROJECTILES#<y>RES<y><g>OUR<g><r>CES<r> ARE COLLECTED FOR 25% VALUE"
+	ultra_tips[115] = "0"
+    /*
+	ultra_name[116] = "DYING WHEN AT OR ABOVE LEVEL 10#WILL RESET YOUR LEVEL TO 1 AND PREVENT DEATH"
 	ultra_text[116] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	ultra_tips[116] = "discipline those projectiles!"
-		
+	*/
+	ultra_name[116] = "NIL"
+	ultra_text[116] = "FOR EACH HEALTH MISSING:#GAIN A VOID SPHERE#THAT SPIRALS AROUND YOU#DELETING ENEMY PROJECTILES AND <y>RES<y><g>OUR<g><r>CES<r>#AND DEALING MASSIVE DAMAGE TO ENEMIES"
+	ultra_tips[116] = "0"
 	//Have any director weapon
-	if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
-	{
-		ultra_name[116] = "GRUMPY LECTURE"
-		//TODO change to unequipped ammo
-		ultra_text[116] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
-		ultra_tips[116] = "teach them a lesson!"
-	}
 	
 	maxultra = 116;
 	
