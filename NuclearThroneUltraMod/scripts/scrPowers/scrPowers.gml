@@ -254,12 +254,29 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
 			if instance_exists(Pickup)
+			{
+				BackCont.shake += 4;
+				if instance_exists(VoidBlock)
+				{
+					if skill_got[5]
+						snd_play_2d(sndVoidConsumptionL,0.01);
+					else
+						snd_play_2d(sndVoidConsumptionS,0.01);
+				}
+				else
+				{
+					if skill_got[5]
+						snd_play_2d(sndVoidConsumptionXL,0.01);
+					else
+						snd_play_2d(sndVoidConsumptionM,0.01);
+				}
 				with VoidBlock
 				{
 					image_index = 0;
 					image_xscale = max(image_xscale, 1);
 					image_yscale = image_xscale;
 				}
+			}
 			if skill_got[5]
 			{
 				with Rad

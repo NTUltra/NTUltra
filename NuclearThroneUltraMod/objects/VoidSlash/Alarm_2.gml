@@ -12,7 +12,7 @@ for (var k = 0; k < pAll; k++) {
 ds_list_destroy(pickups);
 
 var dust = ds_list_create();
-var dAll = instance_place_list(x,y,Dust,pickups,false)
+var dAll = instance_place_list(x,y,Dust,dust,false)
 for (var k = 0; k < dAll; k++) {
 	with instance_create(dust[| k].x,dust[| k].y,PlutoFX)
 	{

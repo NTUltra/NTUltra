@@ -3,7 +3,7 @@
   "%Name":"sprMenuPointer",
   "bboxMode":1,
   "bbox_bottom":4,
-  "bbox_left":1,
+  "bbox_left":0,
   "bbox_right":5,
   "bbox_top":0,
   "collisionKind":0,

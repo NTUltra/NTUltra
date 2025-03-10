@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sprLogoOld",
   "bboxMode":1,
-  "bbox_bottom":57,
+  "bbox_bottom":59,
   "bbox_left":0,
   "bbox_right":166,
   "bbox_top":0,
