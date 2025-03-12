@@ -12,6 +12,6 @@ instance_create(x,y,WallBreak);
 snd_hurt = sndHitMetal
 
 image_xscale = 1
-
+used = false;
 name = "CAR"
 

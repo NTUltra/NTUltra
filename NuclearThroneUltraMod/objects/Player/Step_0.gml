@@ -1839,7 +1839,11 @@ if sprite_index != spr_hurt and lsthealth > my_health// && alarm[3] < 1
 var tempMaxSpeed = 0;
 tempMaxSpeed += 0.1;//A minor speed boost to all for the game feel
 if isInvisible
+{
 	tempMaxSpeed += 1;
+	if ultra_got[110] && !altUltra
+		tempMaxSpeed += 1;
+}
 if ultra_got[108] && place_meeting(x,y,HandTrail)
 {
 	tempMaxSpeed += 1;

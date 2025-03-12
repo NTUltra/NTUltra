@@ -8,7 +8,7 @@ function scrThiefPassive() {
 		{
 			var n = instance_nearest(x,y,enemy);
 			instance_create(x,y,InvisibilityDelay);
-			if place_meeting(x,y,ThiefHidingField) || (n != noone && instance_exists(n) && collision_line(x,y,n.x,n.y,Wall,false,false))
+			if !instance_exists(enemy) || place_meeting(x,y,ThiefHidingField) || (n != noone && instance_exists(n) && collision_line(x,y,n.x,n.y,Wall,false,false))
 			{
 				with instance_place(x,y,ThiefHidingField) {
 					sprite_index = sprThiefHidingFieldActivate;
@@ -23,7 +23,7 @@ function scrThiefPassive() {
 		}
 		else if isInvisible && ultra_got[110] && !altUltra
 		{
-			alarm[3] = max(1,alarm[3]);	
+			alarm[3] = max(5,alarm[3]);
 		}
 	}
 }

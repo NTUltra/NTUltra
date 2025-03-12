@@ -98,7 +98,7 @@ function scrPowers(raceOverwrite = -1) {
 		if race == 28//THIEF
 		{
 			var n = instance_nearest(x,y,enemy)
-			if n != noone && instance_exists(n) && distance_to_object(n) < 64 && !collision_line(x,y,n.x,n.y,Wall,false,false) {
+			if n != noone && instance_exists(n) && distance_to_object(n) < 70 && !collision_line(x,y,n.x,n.y,Wall,false,false) {
 				var stabDir = point_direction(x,y,n.x,n.y);
 				if isInvisible
 				{
@@ -163,7 +163,6 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 						scrCollectAmmo(0.5);
-					scrTurnOffInvisibility();
 					if !skill_got[2]
 					{
 						motion_add(stabDir,7);
@@ -247,6 +246,10 @@ function scrPowers(raceOverwrite = -1) {
 						motion_add(stabDir,6);
 					}
 				}
+			}
+			if isInvisible
+			{
+				scrTurnOffInvisibility();
 			}
 		}
 		

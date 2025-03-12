@@ -844,14 +844,14 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	{
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU#EVEN	WHILE IN LINE OF SIGHT TO ENEMIES"
+	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU#EVEN	WHILE IN LINE OF SIGHT TO ENEMIES##INCREASE STEALTH SWAP <aq>IMMUNITY<aq> DURATION"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
-	    ultra_text[110] = "YOU ARE COMPLETLY <aq>IMMUNE<aq> DURING <p>STEALTH<p>"
+	    ultra_text[110] = "YOU ARE COMPLETLY <aq>IMMUNE<aq> DURING <p>STEALTH<p>#<p>STEALTH<p> ACTIVATES QUICKER#MOVE FASTER DURING <p>STEALTH<p>"
 	    ultra_tips[110] = "can't be seen, can't be hit"
 		
-		//have any ammo mutation
+		//have any ammo mutation or crown of greed
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
 			ultra_name[110] = "INCREASE HOW MUCH AMMO YOU STEAL##FOR EACH AMMO TYPE THAT IS FULL:#KILLS CAN SPAWN#A CORRESPONDING MELEE SHANK"
@@ -877,7 +877,6 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
 	{
 		ultra_name[113] = "INFINITY"
-		//TODO change to unequipped ammo
 		ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#TEMPORARILY GRANTS <w>INFINITE AMMO<w>"
 		ultra_tips[113] = "teach them a lesson!"
 	}

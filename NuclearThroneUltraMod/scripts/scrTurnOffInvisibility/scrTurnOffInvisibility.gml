@@ -9,6 +9,13 @@ function scrTurnOffInvisibility(){
 		spr_idle = sprMutant28Idle;
 		spr_walk = sprMutant28Walk;
 	}
+	snd_play(sndThiefShow,0.05);
+	if ultra_got[109]
+	{
+		alarm[3] = max(15,alarm[3] + 5);
+	}
+	else
+		alarm[3] = max(5,alarm[3] + 2);
 	instance_create(x,y,InvisibilityDelay);
 	var ang = random(360);
 	repeat(6)

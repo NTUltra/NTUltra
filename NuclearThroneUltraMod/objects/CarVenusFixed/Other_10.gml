@@ -1,13 +1,21 @@
 /// @description Go to space
+if !instance_exists(Player)
+	exit;
+if used
+{
+	isInteractableNow = false;
+	exit
+}
 with Player
 	isOnInteractable = true;
-if KeyCont.key_pick[other.p] = 1
+if KeyCont.key_pick[Player.p] = 1
 {
 	if !instance_exists(WantBoss) && !instance_exists(BigFish) && !instance_exists(AssassinBoss)
 	{
+		used = true;
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
-		with other
+		with Player
 		{
 			if area != 104
 			{
@@ -53,4 +61,3 @@ if KeyCont.key_pick[other.p] = 1
 		}
 	}
 }
-

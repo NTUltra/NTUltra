@@ -10,6 +10,15 @@ function scrEnemyDeathEvent(isSheep = false){
 	scrCrownOfFright();
 	if instance_exists(Player)
 	{
+		//Thief hidden in plain sight
+		if Player.ultra_got[109]
+		{
+			if random(100) < 30
+			{
+				instance_create(x,y,ThiefHidingField);
+				snd_play(sndThiefHidingField,0.1);
+			}
+		}
 		//PLANT ULTRA B KILLER
 		if Player.ultra_got[18] == 1 && !Player.altUltra
 		{
