@@ -5315,37 +5315,7 @@ function scrFire(canDrown = true) {
 			}
 		}
 	}
-	if Player.ultra_got[34]//Chicken Ultra B ninja
-	{
-	//some melee exceptions
-		if scrMeleeWeapons(wep)
-	    {
-			with MeleeParent {
-				if !appliedBoost
-				{
-					appliedBoost = true;
-					dmg *= 1.15;
-					dmg = ceil(dmg);
-					BackCont.shake += 2;
-					image_speed *= 0.8;
-				}
-			}
-		}
-	}
-	if UberCont.newContent && Player.ultra_got[111]//Knife skills
-	{
-		if scrMeleeWeapons(wep)
-	    {
-			with MeleeParent {
-				if !appliedBoost
-				{
-					appliedBoost = true;
-					dmg += 4;
-					BackCont.shake += 1;
-				}
-			}
-		}
-	}
+	
 	//YV ultra C 
 	//if firing a bullet weapon add a small percentage of shotgun ammo
 

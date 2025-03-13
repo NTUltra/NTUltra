@@ -7,3 +7,4 @@ draw_set_colour(theColour);
 draw_set_alpha(alpha);
 draw_rectangle(l,t,r,b,false);
 draw_set_alpha(1);
+draw_set_colour(c_white);

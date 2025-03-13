@@ -1224,9 +1224,8 @@ if (rad > mr)
 		{
 			BackCont.shake += 100;
 			Sleep(20);
-			with instance_create(x,y,Flash)
+			with instance_create(x,y,NoThingFlash)
 			{
-				alpha = 0.4;
 				alarm[1] = 4;
 			}
 			alarm[3] = max(alarm[3],30);
@@ -3052,6 +3051,37 @@ if instance_exists(Tangle)
 					y -= vspeed * dt;
 					scrForcePosition60fps();
 				}
+			}
+		}
+	}
+}
+if Player.ultra_got[34]//Chicken Ultra B ninja
+{
+//some melee exceptions
+	if scrMeleeWeapons(wep)
+	{
+		with MeleeParent {
+			if !appliedBoost
+			{
+				appliedBoost = true;
+				dmg *= 1.15;
+				dmg = ceil(dmg);
+				BackCont.shake += 2;
+				image_speed *= 0.8;
+			}
+		}
+	}
+}
+if UberCont.newContent && Player.ultra_got[111]//Knife skills
+{
+	if scrMeleeWeapons(wep)
+	{
+		with MeleeParent {
+			if !appliedBoost
+			{
+				appliedBoost = true;
+				dmg += 5;
+				BackCont.shake += 1;
 			}
 		}
 	}

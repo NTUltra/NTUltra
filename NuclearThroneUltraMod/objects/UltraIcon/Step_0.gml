@@ -345,6 +345,20 @@ if (selected && visible &&
 			}	
 		}
 	}
+	else if skill == 110 && Player.race == 28//Thief secret ultras
+	{
+		with Player
+		{
+			if (other.isAlternative)
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
+				with Player {
+					altUltra = true;
+					scrUltras(true,false);
+				}
+			}	
+		}
+	}
 	if skill == 2
 	{
 		scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	

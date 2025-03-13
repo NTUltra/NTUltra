@@ -1478,6 +1478,32 @@ if maxhealth > 0
 	}
 	else
 	{
+		maxhealth -= thiefHealth;
+		thiefHealth = 0;
+		if ultra_got[110] && altUltra
+		{
+			if scrIsCrown(40) && ammo[0] >= typ_amax_base[0]
+			{
+				thiefHealth += 1;
+			}
+			var ail = array_length(ammo);
+			for (var ai = 1; ai < ail; ai ++)
+			{
+				if ammo[ai] >= typ_amax_base[ai]
+				{
+					thiefHealth += 1;
+				}	
+			}
+		}
+		if maxhealth + thiefHealth <= 0
+		{
+			thiefHealth = maxhealth - 1;
+			maxhealth = 1;
+		}
+		else
+		{
+			maxhealth = maxhealth + thiefHealth;
+		}
 		maxhealth -= abundanceHealth;
 		abundanceHealth = 0;
 		if scrIsCrown(38) && !scrIsCrown(42)

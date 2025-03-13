@@ -420,6 +420,28 @@ function scrEnemyDeathEvent(isSheep = false){
 		{
 			with Player
 			{
+				if UberCont.newContent && ultra_got[114]
+				{
+					if !isBoss && instance_number(other.object_index) > 1 && !array_contains(enemyAbyssLockout,other.object_index)
+					{
+						var abyssIndex = array_length(enemyTypeAbyss);
+						enemyAbyssCount[abyssIndex] = 0;
+						enemyTypeAbyss[abyssIndex] = other.object_index;
+						var maxSounds = 8;
+						with other.object_index
+						{
+							if BackCont.shake < 100
+								BackCont.shake += 2;
+							maxSounds -= 1;
+							if maxSounds > 0
+								snd_play(sndVoidConsumptionS,0.1);
+							other.enemyAbyssCount[abyssIndex] += 1;
+							countKill = false;
+							wasResurrected = true;//No zombies
+							my_health = 0;
+						}
+					}
+				}
 				if ultra_got[16]
 				{
 					if lastEnemyKilled[lastEnemyKilledIndex] != other.object_index

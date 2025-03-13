@@ -656,4 +656,14 @@ function scrPopulate() {
 	        until instance_number(PizzaEntrance) <= 1
 		}
     }
+	
+	with Player
+	{
+		debug("clear abyss");
+		enemyAbyssLockout = [];
+		array_copy(enemyAbyssLockout,0,enemyTypeAbyss,0,array_length(enemyTypeAbyss));
+		enemyTypeAbyss = [];
+		enemyAbyssIndex = 0;
+		enemyAbyssCount = [];
+	}
 }

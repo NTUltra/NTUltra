@@ -1,7 +1,25 @@
 function scrPopEnemies() {
 	var loops = 0;
 	if instance_exists(Player)
+	{
 		loops = Player.loops;
+		if UberCont.newContent && Player.ultra_got[114]
+		{
+			//if random(100) < 30
+			//{
+				if Player.enemyAbyssIndex < array_length(Player.enemyAbyssCount) && Player.enemyAbyssCount[Player.enemyAbyssIndex] > 0
+				{
+					instance_create(x + 16, y + 16, Player.enemyTypeAbyss[Player.enemyAbyssIndex])
+					Player.enemyAbyssCount[Player.enemyAbyssIndex] -= 1;
+					if Player.enemyAbyssCount[Player.enemyAbyssIndex] <= 0 && Player.enemyAbyssIndex < array_length(Player.enemyAbyssCount)
+					{
+						Player.enemyAbyssIndex += 1;
+					}
+				}
+				
+			//}
+		}
+	}
 	if scrIsHardMode()//HARD MODE
 		loops ++;
 		

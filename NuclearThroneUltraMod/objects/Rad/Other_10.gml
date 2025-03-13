@@ -1,7 +1,8 @@
 /// @description Collect
 if instance_exists(Player)
 {
-	instance_destroy()
+	if isBeingVoided != 1
+		instance_destroy()
 	with Player
 	{
 		var add = other.radValue;

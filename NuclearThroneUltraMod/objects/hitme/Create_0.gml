@@ -5,6 +5,7 @@ existTime = 0;
 depth = 1;
 myConfusion = noone;
 wasResurrected = false;
+isBoss = false;
 isSnooze = false;
 gettingKnocked = 0;
 morphMe = 0;

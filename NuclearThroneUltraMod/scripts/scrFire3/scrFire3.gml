@@ -3057,7 +3057,7 @@ function scrFire3(hasTailNow){
 		}
 		break;
 		
-		//DAGGER
+		//DOUBLE DAGGERS
 		case 883:
 
 		instance_create(x,y,Smoke)

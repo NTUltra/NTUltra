@@ -854,49 +854,48 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		//have any ammo mutation or crown of greed
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
-			ultra_name[110] = "INCREASE HOW MUCH AMMO YOU STEAL##FOR EACH AMMO TYPE THAT IS FULL:#KILLS CAN SPAWN#A CORRESPONDING MELEE SHANK"
-		    ultra_text[110] = ""
-		    ultra_tips[110] = ""
+			ultra_name[110] = "GREEDY THIEF"
+		    ultra_text[110] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>"
+		    ultra_tips[110] = "the collector"
 		}
         
 		ultra_name[111] = "KNIFE SKILLS"
-		ultra_text[111] = "ALL <w>MELEE WEAPONS<w> DEAL#<w>+4 FIXED DAMAGE<w>##UPGRADED NON <p>STEALTH<p> <w>STAB<w>#MORE <r>DAMAGE<r>#<r>SPLASH DAMAGE<r>#CAN STEAL ITEMS/WEAPONS#STEAL MORE <y>AMMO<y>"
+		ultra_text[111] = "ALL <w>MELEE WEAPONS<w> DEAL#<w>+5 FIXED DAMAGE<w>##UPGRADED NON <p>STEALTH<p> <w>STAB<w>#MORE <r>DAMAGE<r>#<r>SPLASH DAMAGE<r>#CAN STEAL ITEMS/WEAPONS#STEAL MORE <y>AMMO<y>"
 		ultra_tips[111] = "show your chops"
         
 		ultra_name[112] = "SWIFT STRIKE"
-	    ultra_text[112] = "STEALTH PERSISTS FOR#A <w>FEW SECONDS<w> AFTER vSHOOTING<w>##YOU CAN STAB <w>3<w> <r>ENEMIES<r>#BEFORE <w>BREAKING<w> <p>STEALTH<p>"
+	    ultra_text[112] = "STEALTH PERSISTS FOR#A <w>FEW SECONDS<w> AFTER <w>SHOOTING<w>##YOU CAN STAB <w>3<w> <r>ENEMIES<r>#BEFORE <w>BREAKING<w> <p>STEALTH<p>"
 	    ultra_tips[112] = "multiple assassinations"
 		
 		
 	
 	//NO THING
 	ultra_name[113] = "ZERO"
-	ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#TEMPORARILY INCREASES <r>MAX HEALTH<r>"
-	ultra_tips[113] = "learning quickly"
+	ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#INCREASES <r>MAX HEALTH<r> BY <w>1<w> FOR <w>2 SECONDS<w>"
+	ultra_tips[113] = "0"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
 	{
 		ultra_name[113] = "INFINITY"
-		ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#TEMPORARILY GRANTS <w>INFINITE AMMO<w>"
-		ultra_tips[113] = "teach them a lesson!"
+		ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
+		ultra_tips[113] = "8"
 	}
         
 	ultra_name[114] = "ABYSS"
-	ultra_text[114] = "WHEN YOU KILL ANENEMY#ALL ENEMIES OF THAT TYPE#WILL BE SENT TO THE NEXT AREA##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN"
-	ultra_tips[114] = "quickdraw"
+	ultra_text[114] = "WHEN YOU <r>KILL<r> AN <r>ENEMY<r>#<w>ALL<w> <r>ENEMIES<r> OF THAT <w>TYPE<w>#WILL BE SENT TO THE <w>NEXT AREA<w>##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN#DOES NOT WORK ON BOSSES"
+	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"
-	ultra_text[115] = "ALL YOUR PROJECTILES#DELETE ENEMY PROJECTILES#<y>RES<y><g>OUR<g><r>CES<r> ARE COLLECTED FOR 25% VALUE"
-	ultra_tips[115] = "0"
+	ultra_text[115] = "<g>RADIATION<g> CAN BE <p>CONSUMED<p> TWICE"
+	ultra_tips[115] = "absolute"
     /*
 	ultra_name[116] = "DYING WHEN AT OR ABOVE LEVEL 10#WILL RESET YOUR LEVEL TO 1 AND PREVENT DEATH"
 	ultra_text[116] = "SLIGHTLY INCREASE ACTIVE COST#ACTIVE CAN <w>SHRINK<w>#ALL ENEMY PROJECTILES#INTO <p>NOTHINGNESS<p>#DOUBLE <w>STUN<w> DURATION"
 	ultra_tips[116] = "discipline those projectiles!"
 	*/
 	ultra_name[116] = "NIL"
-	ultra_text[116] = "FOR EACH HEALTH MISSING:#GAIN A VOID SPHERE#THAT SPIRALS AROUND YOU#DELETING ENEMY PROJECTILES AND <y>RES<y><g>OUR<g><r>CES<r>#AND DEALING MASSIVE DAMAGE TO ENEMIES"
-	ultra_tips[116] = "0"
-	//Have any director weapon
+	ultra_text[116] = "FOR EACH HEALTH MISSING:#GAIN A VOID SPHERE#THAT SPIRALS AROUND YOU#DEALING DAMAGE#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
+	ultra_tips[116] = "absent"
 	
 	maxultra = 116;
 	

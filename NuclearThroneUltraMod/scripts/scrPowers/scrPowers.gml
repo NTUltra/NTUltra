@@ -99,6 +99,10 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			var n = instance_nearest(x,y,enemy)
 			if n != noone && instance_exists(n) && distance_to_object(n) < 70 && !collision_line(x,y,n.x,n.y,Wall,false,false) {
+				var tn = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+				//Prioritize enemy near the aim of the player
+				if tn != noone && instance_exists(tn) && distance_to_object(tn) < 70
+					n = tn;
 				var stabDir = point_direction(x,y,n.x,n.y);
 				if isInvisible
 				{
@@ -108,12 +112,12 @@ function scrPowers(raceOverwrite = -1) {
 						if other.skill_got[5]
 						{
 							sprite_index = sprThiefStabUpg;
-							motion_add(image_angle,4);
+							motion_add(image_angle,5);
 						}
 						else
 						{
 							sprite_index = sprThiefStab;
-							motion_add(image_angle,2);
+							motion_add(image_angle,4);
 						}
 					}
 					with n
@@ -182,7 +186,7 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							image_angle = stabDir
 							sprite_index = sprThiefStealUpg;
-							motion_add(image_angle,3);
+							motion_add(image_angle,5);
 						}
 						BackCont.viewx2 += lengthdir_x(30,stabDir)*UberCont.opt_shake
 						BackCont.viewy2 += lengthdir_y(30,stabDir)*UberCont.opt_shake
@@ -198,20 +202,21 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							image_angle = stabDir
 							sprite_index = sprThiefSteal;
-							motion_add(image_angle,2);
+							motion_add(image_angle,4);
 						}
 						BackCont.viewx2 += lengthdir_x(10,stabDir)*UberCont.opt_shake
 						BackCont.viewy2 += lengthdir_y(10,stabDir)*UberCont.opt_shake
 						BackCont.shake += 10	
 					}
+					var l = loops;
 					with n
 					{
 						if other.ultra_got[111]
 						{
 							snd_play(sndThiefStealUpg,0.01);
-							DealDamage(18 + min(20,other.loops * 3));
+							DealDamage(18 + min(20,l * 3));
 							with instance_create(x,y,ThiefStab) {
-								dmg = 15 + min(10,other.loops * 2);	
+								dmg = 15 + min(10,l * 2);	
 							}
 							motion_add(stabDir,6)
 							with instance_create(x,y,AnimDestroyTop)
@@ -227,7 +232,7 @@ function scrPowers(raceOverwrite = -1) {
 						else
 						{
 							snd_play(sndThiefSteal,0.01);
-							DealDamage(3 + min(10,other.loops) * 2);
+							DealDamage(3 + min(10,l) * 2);
 							motion_add(stabDir,4)
 							with instance_create(x,y,AnimDestroyTop)
 							{
@@ -249,7 +254,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			if isInvisible
 			{
-				scrTurnOffInvisibility();
+				scrTurnOffInvisibility(true);
 			}
 		}
 		
@@ -259,6 +264,48 @@ function scrPowers(raceOverwrite = -1) {
 			if instance_exists(Pickup)
 			{
 				BackCont.shake += 4;
+				if ultra_got[113]
+				{
+					BackCont.shake += 2;
+					repeat(2)
+						with instance_create(x + random_range(12,-12),y + random_range(12,-12),PlutoFX)
+						{
+							sprite_index = sprVoidBulletTrail;
+							image_index = irandom(image_number - 1);
+							motion_add(random(360),1);
+						}
+					if altUltra
+					{
+						alarm[2] = 30;
+						if !instance_exists(GunWarrant)
+							instance_create(x,y,GunWarrant);
+						else
+						{
+							with GunWarrant
+							{
+								sprite_index = sprGunWarrantStart;
+								image_index = 0;
+							}
+						}
+					}
+					else
+					{
+						noThingHealth += 1;
+						maxhealth += 1;
+						
+						if !instance_exists(NoThingHealth)
+						{
+							instance_create(x,y,NoThingHealth);
+						}
+						else
+						{
+							with NoThingHealth
+							{
+								alarm[0] = lifeDuration;	
+							}
+						}
+					}
+				}
 				if instance_exists(VoidBlock)
 				{
 					if skill_got[5]
@@ -276,40 +323,52 @@ function scrPowers(raceOverwrite = -1) {
 				with VoidBlock
 				{
 					image_index = 0;
-					image_xscale = max(image_xscale, 1);
+					image_xscale = max(image_xscale, 1.125);
 					image_yscale = image_xscale;
 				}
-			}
-			if skill_got[5]
-			{
-				with Rad
+				if skill_got[5]
 				{
-					BackCont.shake += 1;
-					radValue *= 0.5;
-					instance_create(x,y,VoidBlockBig);
-					event_user(0);
-				}
-				with AmmoPickup
-				{
-					BackCont.shake += 2;
-					ammoValue *= 0.5;
-					with instance_create(x,y,VoidBlockBig) {
-						image_xscale += 0.125;
-						image_yscale += 0.125;
-					}
-					event_user(0);
-				}
-			}
-			else
-			{
-				with Pickup
-				{
-					BackCont.shake += 1;
-					instance_destroy();
-					if object_index == Rad
-						instance_create(x,y,VoidBlock);
-					else
+					var nullVoid = ultra_got[115] ? 1 : 0
+					with Rad
+					{
+						BackCont.shake += 1;
+						radValue *= 0.5;
 						instance_create(x,y,VoidBlockBig);
+						isBeingVoided += nullVoid;
+						event_user(0);
+						isBeingVoided += nullVoid;
+					}
+					with AmmoPickup
+					{
+						BackCont.shake += 2;
+						ammoValue *= 0.5;
+						with instance_create(x,y,VoidBlockBig) {
+							image_xscale += 0.125;
+							image_yscale += 0.125;
+						}
+						event_user(0);
+					}
+				}
+				else
+				{
+					if ultra_got[115]
+					{
+						with Rad
+						{
+							isBeingVoided += 1;
+						}
+					}
+					with Pickup
+					{
+						BackCont.shake += 1;
+						if isBeingVoided != 1
+							instance_destroy();
+						isBeingVoided += 1;
+						if object_index == Rad
+							instance_create(x,y,VoidBlock);
+						else
+							instance_create(x,y,VoidBlockBig);
+					}
 				}
 			}
 		}

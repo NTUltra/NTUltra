@@ -182,6 +182,10 @@ if canAlt
 	{
 		sprite_index = sprBoomHands;
 	}
+	else if skill == 110 && Player.race == 28 && (((Player.unlockAlternativeUltras || isAlternative)) || (scrIsCrown(18) || scrHasAmmoGenMutation()))
+	{
+		sprite_index = sprBoomHands;
+	}
 	
 	if spr == sprite_index
 		instance_destroy();

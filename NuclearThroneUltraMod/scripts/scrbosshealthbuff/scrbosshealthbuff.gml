@@ -8,7 +8,7 @@ function scrBossHealthBuff(){
 		maxhealth *= 1.27;
 	maxhealth += max(ls * 30,0);
 	maxhealth *= 1 + max(0,(ls - 1)*0.19);
-	
+	isBoss = true;
 	if scrIsHardMode()//HARD MODE
 	{
 		maxhealth *= 1.5;
