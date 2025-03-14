@@ -600,6 +600,16 @@ function scrTips() {
 	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",
 	,"your active can be held down")
 	
+	if Player.race = 28//Thief
+	tip = choose("Thief can steal ammo and health drops","your starting daggers deal double damage when backstabbing an enemy","thief is faster while invisible",
+	"break line of sight to enemies to go invisible","thief does not fight fair"
+	,"you can still steal while not invisible")
+	
+	if Player.race = 29//No thing
+	tip = choose("0"," ","your starting void pistol deals more damage to higher health enemies",
+	"your starting void pistol destroys pickups and rads","void consumption does not destroy new pickups","void consumption destroys all types of enemy projectiles"
+	,"void consumption spheres can stack damage when overlapping the same enemy","creature of the void")
+	
 	}
 	else if tiptype = 3 //WEAPONS
 		tip = Player.wep_text[Player.wep]

@@ -67,6 +67,7 @@ queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
 offset = 0;
+isInvisible = false;
 
 accuracy = Player.accuracy
 

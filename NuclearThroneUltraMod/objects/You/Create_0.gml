@@ -150,7 +150,7 @@ firstEntry = true;
 
 //enemy
 prevhealth=my_health;
-
+isInvisible = false;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;

@@ -42,6 +42,7 @@ bwepright = 1
 target = noone;
 right = 1;
 reload = 0;
+isInvisible = false;
 breload = 0;
 queueshot = 0;
 bqueueshot = 0;

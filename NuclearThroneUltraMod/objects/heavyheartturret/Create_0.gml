@@ -48,7 +48,7 @@ newWeaponMod = -1;
 queueshot = 0;
 bqueueshot = 0;
 cqueueshot = 0;
-
+isInvisible = false;
 
 raddrop=4;
 rad = 0
