@@ -1115,6 +1115,15 @@ function scrSecondaryPowers() {
 					
 				}
 			break;
+			
+			//NO THING
+			case 29:
+				if !isOverlapping && KeyCont.key_regal[p] == 1
+				{
+					snd_play_2d(sndVoidBeam);
+					instance_create(x,y,VoidBeam);
+				}
+			break;
 		}
 	}
 	isOnInteractable = false;

@@ -75,6 +75,10 @@ if unkillable
 {
 	alarm[3] = 2;
 }
+if instance_exists(VoidBeam)
+{
+	alarm[3] = max(alarm[3],1);	
+}
 var representingCost = round(wep_cost[wep]);
 var ignoreAmmo = false;
 if ultra_got[70]

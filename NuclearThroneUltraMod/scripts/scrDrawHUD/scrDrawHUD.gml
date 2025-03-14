@@ -1,3 +1,4 @@
+
 function scrDrawHUD() {
 	var canMeleeAmmo = scrIsCrown(40);
 	if instance_exists(DataRef)

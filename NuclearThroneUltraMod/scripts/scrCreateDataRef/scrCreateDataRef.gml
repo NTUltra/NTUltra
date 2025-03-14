@@ -106,6 +106,8 @@ function scrCreateDataRef() {
 		lastWishPrevent = other.lastWishPrevent;
 		chickenFocusMax = other.chickenFocusMax;
 		chickenFocusInUse = false;
+		voidBeam = other.voidBeam;
+		voidBeamMax = other.voidBeamMax;
 		peaceBarrierTime = other.peaceBarrierTime;
 		peaceBarrierDuration = other.peaceBarrierDuration;
 		peaceBarriers = other.peaceBarriers;
