@@ -109,7 +109,7 @@ function scrRaces() {
 	race_fskin[4] = 0
 	race_gskin[4] = 0
 	race_bskin_lock[4] = "LOOP WITHOUT#HEALTH INCREASING OR DAMAGE PREVENTING#MUTATIONS AND CROWNS"//#RHINO SKIN,#STRONG SPIRIT#ALKALINE SALIVA#BOUNCY FAT#NERVES OF STEEL#TOUGH SHELL#LAST WISH, INNER PEACE#CROWN OF PROTECTION#AND CROWN OF LIFE#CROWN OF STABILITY#AS MELTING"
-	race_cskin_lock[4] = "DEFEAT ULTRA BIG DOG#1HP EQUALITY#GAMEMODE#AS MELTING"
+	race_cskin_lock[4] = "DEFEAT ULTRA BIG DOG#ON 1HP EQUALITY#GAMEMODE#AS MELTING"
 
 
 	race_name[5] = "PLANT"
@@ -256,7 +256,7 @@ function scrRaces() {
 	race_fskin[10] = 0
 	race_gskin[10] = 0
 	race_bskin_lock[10] = "COMPLETE A#MAIN AREA ON LOOP#WITHOUT FIRING#AS REBEL"
-	race_cskin_lock[10] = "REACH B?N??T L?N?"
+	race_cskin_lock[10] = "REACH B?N??T L?N?#AS REBEL"
 
 
 	race_name[11] = "HUNTER"
@@ -700,14 +700,15 @@ function scrRaces() {
 		race_butt[28] = "UPGRADE <p>STEALTH STAB<p>"
 		//DONT REVEAL YOURSELF WHEN STEALING FOR THE FIRST TIME UPON ENTERING STEALTH
 		race_butt_detail[28] = "UPGRADE <p>STEALTH STAB<p>#MORE <r>DAMAGE<r>#+20% OF REMAINING ENEMY HEALTH#<r>SPLASH DAMAGE<r>#HIGHER STEAL <w>DROP RATE<w>#STEAL MORE <y>AMMO<y>"
-		race_vision[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH##EVERY OTHER <p>STEALTH<p> <w>STAB<w>#ALWAYS <r>HEALS<r> <w>1<w>";
-		race_vision_detail[28] = "PRESS <w>[E]<w> TO:#SACRIFICE TWO HEALTH AND ENTER STEALTH##EVERY OTHER <p>STEALTH<p> <w>STAB<w>#ALWAYS <r>HEALS<r> <w>1<w>";
+		race_vision[28] = "PRESS <w>[E]<w> TO:#USE UNEQUIPPED <y>AMMO<y># TO ENTER STEALTH";
+		race_vision_detail[28] = "PRESS <w>[E]<w> TO:#USE UNEQUIPPED <y>AMMO<y># TO ENTER STEALTH";
 		if isUnique
 		{
 			race_vision[28] = string_replace_all(race_vision[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 			race_vision_detail[28] = string_replace_all(race_vision_detail[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		}
-		race_lock[28] = "KILL 5 THIEFS"
+		var n = string(scrCountWeaponsFound());
+		race_lock[28] = "FIND "+ n +"/100 DIFFERENT WEAPONS"
 		race_have[28] = 0
 		race_swep[28] = 883//DAGGER
 		race_bskin[28] = 0
@@ -720,18 +721,22 @@ function scrRaces() {
 		race_cskin_lock[28] = "(NOT IMPLEMENTED)#DEAL OVER 300 DAMAGE TO AN ENEMY#IN A SINGLE STAB (THRONEBUTT)"
 		
 		race_name[29] = "NO THING"
-		race_pass[29] = "START WITH 1<r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
-		race_acti[29] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE PLAYAREA#TO DESTROY EVERYTHING"
+		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+		race_acti[29] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE AREA#TO DESTROY EVERYTHING"
 		race_butt[29] = "BETTER VOID CONSUMPTION#VOID CONSUMPTION COLLECTS SOME <y>RES<y><g>OUR<g><r>CES<r>"
 		race_butt_detail[29] = "BIGGER VOID CONSUMPTION#COLLECT ALL RESOURCES FOR HALF VALUE WHEN VOID CONSUMING"
-		race_vision[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
-		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#TRIGGER VOID CONSUMPTION AROUND YOU#FOR TWO HEALTH";
+		race_vision[29] = "";
+		//<y>RES<y><g>OUR<g><r>CES<r> LOST IN <p>VOID CONSUMPTION<p>#CHARGE UP A <p>VOID BEAM<p>#PRESS <w>[E]<w> TO#UNLEASH THE <p>VOID BEAM<p>#<aq>IMMUNE<aq> WHILE FIRING <p>VOID BEAM<p>"
+		//Resources used in void consumption stack up into a void beam that you can fire by pressing <w>[E]<w> You are immune while firing void beam
+		//Resources lost get put into a chest that you can either explode or collect
+		//race_vision[29] = "PRESS <w>[E]<w> TO:#ENTER VOID MODE AT THE COST OF <w>2<w><r>HP<r>#WHILE IN VOID MODE#YOU ARE IMMUNE BUT CANNOT COLLECT RESOURCES OR FIRE";
+		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#SEND YOUR VOID COMSUMPTION TOWARD NEARBY ENEMIES";
 		if isUnique
 		{
 			race_vision[29] = string_replace_all(race_vision[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 			race_vision_detail[29] = string_replace_all(race_vision_detail[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
 		}
-		race_lock[29] = "DEFEAT THE VOID MASTER"
+		race_lock[29] = "DEFEAT THE VOID MASTER IN A DUEL"
 		race_have[29] = 0
 		race_swep[29] = 882//VOID PISTOL
 		race_bskin[29] = 0

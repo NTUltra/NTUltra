@@ -15,6 +15,11 @@ detectedPlayerHealth = 0;
 
 stabilize = 0;
 stabilizeDelay = 22;
+
+voidSpheres = ds_list_create();
+voidSphereAngle = 0;
+voidSphereRotationSpeed = 4;
+voidSphereDistance = 96;
 //13.4
 //20.8
 //0.065 0.054 

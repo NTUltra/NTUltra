@@ -59,6 +59,14 @@ draw_self();
 	{
 		event_perform(ev_draw,0);	
 	}
+	with VoidSphere
+	{
+		event_perform(ev_draw,0);	
+	}
+	with VoidBlockProjectile
+	{
+		draw_self();
+	}
 if instance_exists(Spiral)
 	with Bones
 		draw_sprite_ext(sprite_index,-1,x,y,image_xscale,1,0,c_white,1)

@@ -418,7 +418,7 @@ if my_health < prevhealth
 {
 	tookHit = true;
 	if race == 28
-		scrTurnOffInvisibility()
+		scrTurnOffInvisibility(false, false, true)
 	if !exception && loops > 0
 	{
 		instance_create(x,y,DropReducer);

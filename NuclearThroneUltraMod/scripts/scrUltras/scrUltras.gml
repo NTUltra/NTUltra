@@ -869,7 +869,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		
 		
 	
-	//NO THING
+	//NO THING NoThing
 	ultra_name[113] = "ZERO"
 	ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#INCREASES <r>MAX HEALTH<r> BY <w>1<w> FOR <w>2 SECONDS<w>"
 	ultra_tips[113] = "0"
@@ -894,7 +894,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[116] = "discipline those projectiles!"
 	*/
 	ultra_name[116] = "NIL"
-	ultra_text[116] = "FOR EACH HEALTH MISSING:#GAIN A VOID SPHERE#THAT SPIRALS AROUND YOU#DEALING DAMAGE#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
+	ultra_text[116] = "FOR EACH <r>HEALTH<r> MISSING:#GAIN A <p>VOID SPHERE<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
 	ultra_tips[116] = "absent"
 	
 	maxultra = 116;

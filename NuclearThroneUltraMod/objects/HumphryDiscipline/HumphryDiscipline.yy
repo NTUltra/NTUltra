@@ -16,8 +16,8 @@
     "path":"folders/Objects/Player/Ability.yy",
   },
   "parentObjectId":{
-    "name":"All",
-    "path":"objects/All/All.yy",
+    "name":"UseUnequippedAmmo",
+    "path":"objects/UseUnequippedAmmo/UseUnequippedAmmo.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -100,9 +100,13 @@ if area = 104
 {
 	scrUnlockCharacter(12,"FOR GOING TO DA CRIB")
 }
+if area = 136
+{
+	scrUnlockCharacter(28,"FOR REACHING ULTRA SCRAPYARD")
+}
 
-if area = 113
-scrUnlockCSkin(10,"FOR DISCOVERING BANDITLAND",0);
+if race == 10 && area = 113
+	scrUnlockCSkin(10,"FOR DISCOVERING BANDITLAND",0);
 
 if race == 4 && (area == 126 || area == 127)
 	scrUnlockCharacter(19,"FOR REACHING#THE GRAVEYARD#AS MELTING");

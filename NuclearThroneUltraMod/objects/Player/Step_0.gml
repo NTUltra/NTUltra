@@ -531,7 +531,7 @@ if !instance_exists(LevCont) and visible = 1
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
 			peaceBarriers += 1;
-			ammo[0] = -100;
+			getVision = true;
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
@@ -586,97 +586,7 @@ if !instance_exists(LevCont) and visible = 1
 			wepmod3 --;
 			wepmod4 --;
 		}
-		if keyboard_check_pressed(vk_numpad1) {
-			repeat(3) {
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			    instance_create(f.x + 16,f.y + 16,CursedSpider);
-				thing = instance_create(f.x + 16,f.y + 16,PopupText);
-				thing.mytext = "GRAPES";
-			}
-		}
-		if keyboard_check_pressed(vk_numpad2) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,AssassinBoss);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "BIG ASS";
-		}
-		if keyboard_check_pressed(vk_numpad3) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,Thief);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "Thief";
-		}
-		if keyboard_check_pressed(vk_numpad4) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,JungleFly);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "FLY";
-		}
-		if keyboard_check_pressed(vk_numpad5) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,PalaceGuardian);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "GUARDIAN";
-		}
-		if keyboard_check_pressed(vk_numpad6) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,ExploGuardian);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "EXPLODER";
-		}
-		if keyboard_check_pressed(vk_numpad7) {
-			repeat(2) {
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*56,y + dsin(dangle)*56,Floor);
-				instance_create(f.x + 16,f.y + 16,Bandit);
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-				instance_create(f.x + 16,f.y + 16,SavannaBandit);
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*72,y + dsin(dangle)*72,Floor);
-				instance_create(f.x + 16,f.y + 16,EraserBandit);
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*80,y + dsin(dangle)*80,Floor);
-				instance_create(f.x + 16,f.y + 16,LaserBandit);
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*88,y + dsin(dangle)*88,Floor);
-				instance_create(f.x + 16,f.y + 16,JungleBandit);
-				var dangle = random(1)*360;
-				var f = instance_nearest(x + dcos(dangle)*96,y + dsin(dangle)*96,Floor);
-				instance_create(f.x + 16,f.y + 16,BanditSquare);
-			}
-			thing = instance_create(x,y,PopupText);
-			thing.mytext = "BANDITLAND PROBABLY";
-		}
-		if keyboard_check_pressed(vk_numpad8) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			instance_create(f.x + 16,f.y + 16,IDPDSpawn);
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "POPO";
-		}
-		if keyboard_check_pressed(vk_numpad9) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*64,y + dsin(dangle)*64,Floor);
-			with TopCont
-			{
-				if darkness = 1
-					darkness = 0;
-				else if darkness == 0
-					darkness = 2;
-				else
-					darkness = 1;
-			}
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "DARKNESS TOGGLE";
-		}
-		if keyboard_check_pressed(vk_numpad0) {
+		if keyboard_check_pressed(vk_pagedown) {
 			if unkillable {
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "NOT UNKILLABLE!";
@@ -1224,6 +1134,7 @@ if (rad > mr)
 		{
 			BackCont.shake += 100;
 			Sleep(20);
+			snd_play_2d(sndVoidCreepEnd);
 			with instance_create(x,y,NoThingFlash)
 			{
 				alarm[1] = 4;

@@ -264,6 +264,9 @@ function scrPowers(raceOverwrite = -1) {
 			if instance_exists(Pickup)
 			{
 				BackCont.shake += 4;
+				with PlayerAlarms3 {
+					voidSphereAngle *= -1;	
+				}
 				if ultra_got[113]
 				{
 					BackCont.shake += 2;
@@ -331,22 +334,28 @@ function scrPowers(raceOverwrite = -1) {
 					var nullVoid = ultra_got[115] ? 1 : 0
 					with Rad
 					{
-						BackCont.shake += 1;
-						radValue *= 0.5;
-						instance_create(x,y,VoidBlockBig);
-						isBeingVoided += nullVoid;
-						event_user(0);
-						isBeingVoided += nullVoid;
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							BackCont.shake += 1;
+							radValue *= 0.5;
+							instance_create(x,y,VoidBlockBig);
+							isBeingVoided += nullVoid;
+							event_user(0);
+							isBeingVoided += nullVoid;
+						}
 					}
 					with AmmoPickup
 					{
-						BackCont.shake += 2;
-						ammoValue *= 0.5;
-						with instance_create(x,y,VoidBlockBig) {
-							image_xscale += 0.125;
-							image_yscale += 0.125;
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							BackCont.shake += 2;
+							ammoValue *= 0.5;
+							with instance_create(x,y,VoidBlockBig) {
+								image_xscale += 0.125;
+								image_yscale += 0.125;
+							}
+							event_user(0);
 						}
-						event_user(0);
 					}
 				}
 				else
@@ -355,21 +364,27 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						with Rad
 						{
-							isBeingVoided += 1;
+							if point_distance(x,y,other.x,other.y) < 300
+								isBeingVoided += 1;
 						}
 					}
 					with Pickup
 					{
-						BackCont.shake += 1;
-						if isBeingVoided != 1
-							instance_destroy();
-						isBeingVoided += 1;
-						if object_index == Rad
-							instance_create(x,y,VoidBlock);
-						else
-							instance_create(x,y,VoidBlockBig);
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							BackCont.shake += 1;
+							if isBeingVoided != 1
+								instance_destroy();
+							isBeingVoided += 1;
+							if object_index == Rad
+								instance_create(x,y,VoidBlock);
+							else
+								instance_create(x,y,VoidBlockBig);
+						}
 					}
 				}
+				if BackCont.shake > 100
+					BackCont.shake = 100;
 			}
 		}
 		
@@ -2840,6 +2855,8 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					else
 					{
+						if ultra_got[104] && altUltra
+							instance_create(x,y,UseUnequippedAmmo);
 						instance_create(x,y,HumphryDiscipline);
 					}
 				}

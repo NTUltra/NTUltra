@@ -1,2 +1,2 @@
-/// @description Lifetime and alpha
+/// @description Lifetime
 alarm[0] = 20;

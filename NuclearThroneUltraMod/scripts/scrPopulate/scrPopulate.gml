@@ -657,13 +657,16 @@ function scrPopulate() {
 		}
     }
 	
+	if UberCont.newContent
 	with Player
 	{
-		debug("clear abyss");
-		enemyAbyssLockout = [];
-		array_copy(enemyAbyssLockout,0,enemyTypeAbyss,0,array_length(enemyTypeAbyss));
-		enemyTypeAbyss = [];
-		enemyAbyssIndex = 0;
-		enemyAbyssCount = [];
+		if ultra_got[114]
+		{
+			enemyAbyssLockout = [];
+			array_copy(enemyAbyssLockout,0,enemyTypeAbyss,0,array_length(enemyTypeAbyss));
+			enemyTypeAbyss = [];
+			enemyAbyssIndex = 0;
+			enemyAbyssCount = [];
+		}
 	}
 }

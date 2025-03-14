@@ -24,7 +24,7 @@ function scrDrawHUD() {
 	var vx = 0//GameRender.viewX;//camera_get_view_x(view_camera[0]);
 	var vy = -1//GameRender.viewY;//camera_get_view_y(view_camera[0]);
 	var yo = 0;
-	if dataRef.race == 9 || dataRef.copyPassive == 9
+	if (dataRef.race == 9 || dataRef.copyPassive == 9) || (dataRef.race == 29 && dataRef.skill_got[dataRef.maxskill + 1])//VOID BEAM/Chicken focus
 		yo = 1;
 	
 	///POPUP TEXT
@@ -140,6 +140,17 @@ function scrDrawHUD() {
 			else if dataRef.chickenFocusDelayTime > 0
 				focusIndex = 2;
 			draw_sprite_ext(sprChickenFocusBarFill,focusIndex,vx+hx+2,vy+18,clamp(84*(dataRef.chickenFocus/dataRef.chickenFocusMax),0,84),1,0,c_white,1)
+		}
+		if dataRef.race == 29 && dataRef.skill_got[dataRef.maxskill + 1]//VOID BEAM
+		{
+			var cfbi = 0;
+			draw_sprite(sprVoidBeamBar,cfbi,vx+hx,vy+16)
+			var focusIndex = 1;
+			if instance_exists(VoidBeam)
+				focusIndex = 0;
+			else if dataRef.voidBeam < dataRef.voidBeamMax
+				focusIndex = 2;
+			draw_sprite_ext(sprVoidBeamBarFill,focusIndex,vx+hx+2,vy+18,clamp(84*(dataRef.voidBeam/dataRef.voidBeamMax),0,84),1,0,c_white,1)
 		}
 		if dataRef.skill_got[45] && instance_exists(PlayerAlarms3)
 		{
@@ -1530,8 +1541,8 @@ function scrDrawHUD() {
 	//AMMO ICONS
 	img = 0
 	var glutton = 0;
-	var hump = instance_exists(HumphryDiscipline) && dataRef.altUltra && dataRef.ultra_got[104]
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 1 && dataRef.wep_type[dataRef.bwep] != 1)
+	var hump = instance_exists(UseUnequippedAmmo)// && dataRef.altUltra && dataRef.ultra_got[104]
+	if (hump && dataRef.wep_type[dataRef.wep] != 1 && dataRef.wep_type[dataRef.bwep] != 1)
 	{
 		img = 3
 	}
@@ -1546,7 +1557,7 @@ function scrDrawHUD() {
 	draw_sprite(sprBulletIconOutline,glutton,vx+2,vy+ammoheight)
 
 	img = 0
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 2 && dataRef.wep_type[dataRef.bwep] != 2)
+	if (hump && dataRef.wep_type[dataRef.wep] != 2 && dataRef.wep_type[dataRef.bwep] != 2)
 	{
 		img = 3
 	}
@@ -1560,7 +1571,7 @@ function scrDrawHUD() {
 	draw_sprite(sprShotIcon,clamp(7-ceil((dataRef.ammo[2]/dataRef.typ_amax[2])*7),-1,7)+1,vx+12,vy+ammoheight)
 
 	img = 0
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 3 && dataRef.wep_type[dataRef.bwep] != 3)
+	if (hump && dataRef.wep_type[dataRef.wep] != 3 && dataRef.wep_type[dataRef.bwep] != 3)
 	{
 		img = 3
 	}
@@ -1574,7 +1585,7 @@ function scrDrawHUD() {
 	draw_sprite(sprBoltIcon,clamp(7-ceil((dataRef.ammo[3]/dataRef.typ_amax[3])*7),-1,7)+1,vx+22,vy+ammoheight)
 
 	img = 0
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 4 && dataRef.wep_type[dataRef.bwep] != 4)
+	if (hump && dataRef.wep_type[dataRef.wep] != 4 && dataRef.wep_type[dataRef.bwep] != 4)
 	{
 		img = 3
 	}
@@ -1588,7 +1599,7 @@ function scrDrawHUD() {
 	draw_sprite(sprExploIcon,clamp(7-ceil((dataRef.ammo[4]/dataRef.typ_amax[4])*7),-1,7)+1,vx+32,vy+ammoheight)
 
 	img = 0
-	if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 5 && dataRef.wep_type[dataRef.bwep] != 5)
+	if (hump && dataRef.wep_type[dataRef.wep] != 5 && dataRef.wep_type[dataRef.bwep] != 5)
 	{
 		img = 3
 	}
@@ -1603,7 +1614,7 @@ function scrDrawHUD() {
 	if (canMeleeAmmo)
 	{
 		img = 0
-		if (dataRef.race == 26 && hump && dataRef.wep_type[dataRef.wep] != 0 && dataRef.wep_type[dataRef.bwep] != 0)
+		if (hump && dataRef.wep_type[dataRef.wep] != 0 && dataRef.wep_type[dataRef.bwep] != 0)
 		{
 			img = 3
 		}

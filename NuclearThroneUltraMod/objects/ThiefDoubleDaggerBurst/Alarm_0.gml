@@ -51,7 +51,6 @@ if instance_exists(creator)
 			if object_index != Player || !skill_got[2]
 			{
 				motion_add(aimDir,2);
-				scrMoveContactSolid(aimDir, 2);
 			}
 			BackCont.viewx2 += lengthdir_x(8,aimDir)*UberCont.opt_shake
 			BackCont.viewy2 += lengthdir_y(8,aimDir)*UberCont.opt_shake

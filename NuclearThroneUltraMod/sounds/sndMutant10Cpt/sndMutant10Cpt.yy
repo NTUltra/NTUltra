@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndMutant10Cpt",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.742688,
+  "name":"sndMutant10Cpt",
+  "parent":{
+    "name":"Rebel",
+    "path":"folders/Sounds/Player/Rebel.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMutant10Cpt.wav",
+  "type":0,
+  "volume":1.0,
+}

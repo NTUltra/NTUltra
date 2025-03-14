@@ -359,6 +359,13 @@ if (selected && visible &&
 			}	
 		}
 	}
+	else if skill == 116//No Thing nill
+	{
+		with PlayerAlarms3
+		{
+			alarm[6] = 5;	
+		}
+	}
 	if skill == 2
 	{
 		scrUnlockGameMode(29,"FOR TAKING FISH'S ULTRA#GUN WARRANT");	

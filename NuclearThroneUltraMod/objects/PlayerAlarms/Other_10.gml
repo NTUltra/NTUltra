@@ -139,5 +139,9 @@ if instance_exists(Player)
 		{
 			alarm[4] = 1;	
 		}
+		if Player.ultra_got[116]
+		{
+			alarm[6] = 5;	
+		}
 	}
 }

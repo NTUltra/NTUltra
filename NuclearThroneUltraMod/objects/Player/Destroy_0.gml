@@ -642,6 +642,9 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 
 		if UberCont.ctot_kill[race]>=100//UNLOCK PLANT
 			scrUnlockCharacter(5,"FOR GETTING OVER 100 KILLS");
+			
+		if scrCountWeaponsFound() >= 100//UNLOCK THIEF
+			scrUnlockCharacter(28,"FOR FINDING 100 UNIQUE WEAPONS");
 
 		if kills>=2000 && race = 5
 			scrUnlockCSkin(5,"FOR GETTING 2.000 KILLS#IN ONE RUN AS PLANT",0);

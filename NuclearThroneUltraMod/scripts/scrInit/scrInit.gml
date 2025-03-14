@@ -10,8 +10,10 @@ function scrInit() {
 	justUnlocked = [];
 	isLeaderboardGamemode = false;
 	//INIT DATA
+	any_wep_found = [];
 	opt_pickup = 69;
 	opt_regal = 70;
+	any_wep_found = [];
 	scrRaces();
 	scrStartingWeapons();
 	scrGameModes();
@@ -38,6 +40,9 @@ function scrInit() {
 	scrLoad();
 	scrLegacyWeaponStart();
 	
+	//Track weapons for thief unlock
+	var n = string(scrCountWeaponsFound());
+	race_lock[28] = "FIND "+ n +"/100 DIFFERENT WEAPONS"
 	
 	//To those who missed it
 	if scrCheckOneGold()//do all characters have at least one golden weapon

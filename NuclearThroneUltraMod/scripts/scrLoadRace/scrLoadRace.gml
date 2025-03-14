@@ -1062,6 +1062,7 @@ function scrLoadRace() {
 	snd_wrld=sndMutant10Wrld;
 	snd_thrn=sndMutant10Thrn;
 	snd_valt=sndMutant10Valt;
+	snd_cpt=sndMutant10Cpt;//Captain win (unused for now)
 	break;
 	case 11://Hunter
 	snd_hurt=sndMutantHunterHurt
@@ -1257,17 +1258,17 @@ function scrLoadRace() {
 	break;
 	
 	case 28://
-	snd_hurt=sndMutant27Hurt;
-	snd_dead=sndMutant27Dead;
-	snd_lowa=sndMutant27LowA;
-	snd_lowh=sndMutant27LowH;//
-	snd_crwn=sndMutant27Crwn;
-	snd_chst=sndMutant27Chst;//chst
-	snd_wrld=sndMutant27Wrld;
-	snd_thrn=sndMutant27Thrn;//
-	snd_valt=sndMutant27Valt;
-	snd_cpt=sndMutant27Cpt;//Captain win (unused for now)
-	snd_good=[sndMutant27Chst2,sndMutant27Chst3];
+	snd_hurt=sndMutant10Hurt;
+	snd_dead=sndMutant10Dead;
+	snd_lowa=sndMutant10LowA;
+	snd_lowh=sndMutant10LowH;//
+	snd_crwn=sndMutant10Crwn;
+	snd_chst=sndMutant10Chst;//chst
+	snd_wrld=sndMutant10Wrld;
+	snd_thrn=sndMutant10Thrn;//
+	snd_valt=sndMutant10Valt;
+	snd_cpt=sndMutant10Cpt;//Captain win (unused for now)
+	//snd_good=[sndMutant27Chst2,sndMutant27Chst3];
 	break;
 	
 	case 29://
