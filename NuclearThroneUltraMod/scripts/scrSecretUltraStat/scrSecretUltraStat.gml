@@ -283,7 +283,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[33] = "HAVE CROWN OF BLOOD/APOCALYPSE\nOR PLAY GORE GALORE GAMEMODE";
 	
 	secret_ultra_name[34] = "VOID STYLE"
-	secret_ultra_text[34] = "YOUR ACTIVE CHANGES INTO <p>VOID<p> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <p>VOID<p> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
+	secret_ultra_text[34] = "YOUR ACTIVE CHANGES INTO <v>VOID<v> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <v>VOID<v> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
 	secret_ultra_tips[34] = "see into the void"
 	secret_ultra_hint[34] = "VOID KING GUTS";
 	secret_ultra_unlk[34] = "HAVE GAMMA GUTS AND NO CROWN";
@@ -323,7 +323,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[39] = "HAVE AN AMMO GENERATING MUTATION\nOR CROWN OF GREED";
 	
 	secret_ultra_name[40] = "INFINITY"
-	secret_ultra_text[40] = "USING <p>VOID CONSUMPTION<p>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
+	secret_ultra_text[40] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
 	secret_ultra_tips[40] = "8"
 	secret_ultra_hint[40] = "SOMETHING INFINITY IDK!?";
 	secret_ultra_unlk[40] = "???";

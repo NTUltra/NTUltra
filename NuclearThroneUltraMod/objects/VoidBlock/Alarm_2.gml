@@ -1,4 +1,14 @@
 /// @description Eats  Corpses and Dust
+//Spread
+var n = instance_nearest_notme(x,y,VoidBlock);
+if n != noone && point_distance(x,y,n.x,n.y) < sprite_width - 8
+{
+	var dx = x - n.x;
+	var dy = y - n.y;
+	var d = point_direction(0, 0, dx, dy);
+	x += lengthdir_x(3,d);
+	y += lengthdir_y(3,d);
+}
 var dust = ds_list_create();
 var dAll = instance_place_list(x,y,Dust,dust,false)
 for (var k = 0; k < dAll; k++) {

@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Eat explosion
 BackCont.shake += 1;
 with other
 {

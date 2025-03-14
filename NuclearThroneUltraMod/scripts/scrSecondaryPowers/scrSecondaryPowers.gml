@@ -1078,12 +1078,12 @@ function scrSecondaryPowers() {
 					var t1 = wep_type[wep];
 					var t2 = wep_type[bwep];
 					var al = 6;//weapon types total
-					var takePercentage = 0.2//0.015//1.5%%//0.0075;//0.75%
+					var takePercentage = 0.15//0.015//1.5%%//0.0075;//0.75%
 					var startingIndex = 1;
 					if scrIsCrown(40)
 					{
 						startingIndex = 0;
-						takePercentage = 0.16;
+						takePercentage = 0.125;
 					}
 					for (var i = startingIndex; i < al; i++) {
 						if (i != t1 && i != t2)
@@ -1097,6 +1097,7 @@ function scrSecondaryPowers() {
 					}
 					if !insufficientFunds
 					{
+						BackCont.shake += 10;
 						instance_create(x,y,UseUnequippedAmmo);
 						scrActivateThiefStealth();
 					}
@@ -1104,6 +1105,7 @@ function scrSecondaryPowers() {
 					{
 						if !instance_exists(PopupTextLockoutPlayer)
 						{
+							BackCont.shake += 5;
 							//snd_play_2d(snd_lowa,0,true,false,10);
 							snd_play(sndEmpty)
 							dir = instance_create(x,y,PopupTextLockoutPlayer);
@@ -1118,10 +1120,23 @@ function scrSecondaryPowers() {
 			
 			//NO THING
 			case 29:
-				if !isOverlapping && KeyCont.key_regal[p] == 1
+				if !isOverlapping && KeyCont.key_regal[p] == 1 && !instance_exists(VoidBeam)
 				{
-					snd_play_2d(sndVoidBeam);
-					instance_create(x,y,VoidBeam);
+					if (voidBeam >= voidBeamMax)
+					{
+						snd_play_2d(sndVoidBeam);
+						instance_create(x,y,VoidBeam);
+					}
+					else if !instance_exists(PopupTextLockoutPlayer)
+					{
+						BackCont.shake += 5;
+						//snd_play_2d(snd_lowa,0,true,false,10);
+						snd_play(sndUltraEmpty);
+						dir = instance_create(x,y,PopupTextLockoutPlayer);
+						dir.mytext = "NOT ENOUGH CONSUMED";
+						dir.theColour=c_red;
+						drawempty = 30
+					}
 				}
 			break;
 		}

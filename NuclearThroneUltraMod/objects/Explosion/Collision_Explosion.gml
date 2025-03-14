@@ -19,12 +19,3 @@ if myScorchMark != noone
 		scrForcePosition60fps();
 	}
 }
-/*
-if myExplosionMask != noone && myExplosionMask != -1 && instance_exists(myExplosionMask) {
-	with myExplosionMask
-	{
-		x = other.x;
-		y = other.y;
-	}
-}
-*/

@@ -37,8 +37,8 @@
     "path":"sprites/sprVoidBlockBig/sprVoidBlockBig.yy",
   },
   "spriteMaskId":{
-    "name":"sprVoidBlockBig",
-    "path":"sprites/sprVoidBlockBig/sprVoidBlockBig.yy",
+    "name":"mskVoidBlockBig",
+    "path":"sprites/mskVoidBlockBig/mskVoidBlockBig.yy",
   },
   "visible":true,
 }

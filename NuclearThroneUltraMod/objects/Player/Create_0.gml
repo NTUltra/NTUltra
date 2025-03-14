@@ -784,7 +784,7 @@ chickenFocusDelayTime = 0;
 chickenFocusDelayRate = 1;
 chickenFocusInUse = false;
 voidBeam = 0;
-voidBeamMax = 200;
+voidBeamMax = 175;
 rad = 0
 
 if race == 28

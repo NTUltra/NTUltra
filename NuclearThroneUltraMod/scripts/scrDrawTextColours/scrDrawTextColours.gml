@@ -33,4 +33,9 @@ function scrDrawTextColours(xx,yy,txt){
 		var rogueBlue = make_colour_rgb(22,97,223);
 		draw_text_colour(xx,yy,scrFilterText(txt,"<b>"),rogueBlue,rogueBlue,rogueBlue,rogueBlue,1);
 	}
+	if (string_replace_all(txt,"<v>","") != txt)
+	{
+		var voidColour = make_colour_rgb(89,147,178);
+		draw_text_colour(xx,yy,scrFilterText(txt,"<v>"),voidColour,voidColour,voidColour,voidColour,1);
+	}
 }

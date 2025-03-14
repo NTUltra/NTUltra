@@ -692,9 +692,9 @@ function scrRaces() {
 			IF NOT INVISIBLE:
 		*/
 		race_name[28] = "THIEF"
-		race_pass[28] = "WHEN OUT OF <r>ENEMY<r> <w>LINE OF SIGHT<w> ENTER <p>STEALTH<p>"//THIEFS ARE NOT INVICIBLE TO YOU
+		race_pass[28] = "WHEN OUT OF <r>ENEMY<r> <w>LINE OF SIGHT<w>#ENTER <p>STEALTH<p>"//THIEFS ARE NOT INVICIBLE TO YOU
 		//YOU HAVE A SPEED BOOST WHEN INVISIBLE
-		race_acti[28] = "STAB & STEAL, UPGRADED WHILE INVISIBLE"
+		race_acti[28] = "<w>STAB & STEAL<w>#<w>UPGRADED<w> WHILE <p>INVISIBLE<p>"
 		//WHEN NOT INVISIBLE THIS IS A HOLD...
 		//WHEN INVISIBLE THIS IS INSTANT BUT REVEALS YOU
 		race_butt[28] = "UPGRADE <p>STEALTH STAB<p>"
@@ -721,12 +721,12 @@ function scrRaces() {
 		race_cskin_lock[28] = "(NOT IMPLEMENTED)#DEAL OVER 300 DAMAGE TO AN ENEMY#IN A SINGLE STAB (THRONEBUTT)"
 		
 		race_name[29] = "NO THING"
-		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU LEVEL UP"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
-		race_acti[29] = "VOID CONSUMPTION:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE AREA#TO DESTROY EVERYTHING"
-		race_butt[29] = "BETTER VOID CONSUMPTION#VOID CONSUMPTION COLLECTS SOME <y>RES<y><g>OUR<g><r>CES<r>"
-		race_butt_detail[29] = "BIGGER VOID CONSUMPTION#COLLECT ALL RESOURCES FOR HALF VALUE WHEN VOID CONSUMING"
-		race_vision[29] = "";
-		//<y>RES<y><g>OUR<g><r>CES<r> LOST IN <p>VOID CONSUMPTION<p>#CHARGE UP A <p>VOID BEAM<p>#PRESS <w>[E]<w> TO#UNLEASH THE <p>VOID BEAM<p>#<aq>IMMUNE<aq> WHILE FIRING <p>VOID BEAM<p>"
+		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
+		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> COLLECTS SOME <y>RES<y><g>OUR<g><r>CES<r>"
+		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#COLLECT ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
+		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
+		//<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>"
 		//Resources used in void consumption stack up into a void beam that you can fire by pressing <w>[E]<w> You are immune while firing void beam
 		//Resources lost get put into a chest that you can either explode or collect
 		//race_vision[29] = "PRESS <w>[E]<w> TO:#ENTER VOID MODE AT THE COST OF <w>2<w><r>HP<r>#WHILE IN VOID MODE#YOU ARE IMMUNE BUT CANNOT COLLECT RESOURCES OR FIRE";

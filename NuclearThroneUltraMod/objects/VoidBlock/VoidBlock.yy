@@ -43,8 +43,8 @@
     "path":"sprites/sprVoidBlock/sprVoidBlock.yy",
   },
   "spriteMaskId":{
-    "name":"sprVoidBlock",
-    "path":"sprites/sprVoidBlock/sprVoidBlock.yy",
+    "name":"mskVoidBlock",
+    "path":"sprites/mskVoidBlock/mskVoidBlock.yy",
   },
   "visible":true,
 }

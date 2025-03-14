@@ -86,7 +86,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) && Player.race == 3 && Player.altUltra)
 	{
 		ultra_name[10] = "VOID STYLE"
-		ultra_text[10] = "YOUR ACTIVE CHANGES INTO <p>VOID<p> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <p>VOID<p> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
+		ultra_text[10] = "YOUR ACTIVE CHANGES INTO <v>VOID<v> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <v>VOID<v> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
 		ultra_tips[10] = "see into the void"
 	}
 
@@ -871,13 +871,13 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	//NO THING NoThing
 	ultra_name[113] = "ZERO"
-	ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#INCREASES <r>MAX HEALTH<r> BY <w>1<w> FOR <w>2 SECONDS<w>"
+	ultra_text[113] = "USING <v>VOID CONSUMPTION<v>:#INCREASES <r>MAX HEALTH<r> BY <w>1<w> FOR <w>2 SECONDS<w>"
 	ultra_tips[113] = "0"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
 	{
 		ultra_name[113] = "INFINITY"
-		ultra_text[113] = "USING <p>VOID CONSUMPTION<p>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
+		ultra_text[113] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
 		ultra_tips[113] = "8"
 	}
         
