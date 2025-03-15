@@ -8,7 +8,7 @@ spr_fire=sprBigMachineTurretFire
 loops = GetPlayerLoops();
 proj = EnemyBullet1;
 defaultSpeed = 2;
-if UberCont.newContent && loops > 0
+if loops > 0
 {
 	proj = EnemyBullet1Diamond
 	defaultSpeed -= 0.2;

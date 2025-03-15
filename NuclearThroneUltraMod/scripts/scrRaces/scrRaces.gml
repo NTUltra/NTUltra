@@ -683,8 +683,6 @@ function scrRaces() {
 	
 	racemax = 27;
 
-	if UberCont.newContent
-	{
 		/*
 			THIEF
 			PASSIVE: WHEN OUT OF LINE OF SIGHT FROM ENEMIES#BECOME INVISIBLE#WHEN INVISIBLE YOU ARE IMMUNE
@@ -723,8 +721,8 @@ function scrRaces() {
 		race_name[29] = "NO THING"
 		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
 		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
-		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> COLLECTS SOME <y>RES<y><g>OUR<g><r>CES<r>"
-		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#COLLECT ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
+		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> <w>COLLECTS<w> SOME <y>RES<y><g>OUR<g><r>CES<r>"
+		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
 		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
 		//<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>"
 		//Resources used in void consumption stack up into a void beam that you can fire by pressing <w>[E]<w> You are immune while firing void beam
@@ -749,5 +747,4 @@ function scrRaces() {
 		race_cskin_lock[29] = "(NOT IMPLEMENTED)#COMPLETE A VOID CHALLENGE#AS NO THING"
 		
 		racemax = 29
-	}
 }

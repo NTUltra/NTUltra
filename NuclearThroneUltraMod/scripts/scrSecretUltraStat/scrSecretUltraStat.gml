@@ -314,8 +314,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[38] = "BY THE POWER OF THE SUN!"
 	secret_ultra_hint[38] = "DOUBLE HEALING";
 	secret_ultra_unlk[38] = "HAVE ATLEAST TWO\nHEALING MUTATIONS";
-	if UberCont.newContent
-	{
+	
 	secret_ultra_name[39] = "GREEDY THIEF"
 	secret_ultra_text[39] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>"
 	secret_ultra_tips[39] = "the collector"
@@ -325,10 +324,8 @@ function scrSecretUltraStat() {
 	secret_ultra_name[40] = "INFINITY"
 	secret_ultra_text[40] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
 	secret_ultra_tips[40] = "8"
-	secret_ultra_hint[40] = "SOMETHING INFINITY IDK!?";
-	secret_ultra_unlk[40] = "???";
-	}
-
+	secret_ultra_hint[40] = "NULL AMMO";
+	secret_ultra_unlk[40] = "HAVE ATLEAST ONE AMMO TYPE\nNEAR EMPTY";
 	
 	maxsecretultra = array_length(secret_ultra_name);
 	//109

@@ -27,26 +27,23 @@ else if random(3)<1//shotgunlike
 	if loops > 10
 	{
 		snd_play(sndBouncerFire);
-		if UberCont.newContent
+		with instance_create(x,y,EnemyBouncerBullet)
 		{
-			with instance_create(x,y,EnemyBouncerBullet)
-			{
-				motion_add(other.image_angle-30,other.defaultSpeed + 0.25)
-				image_angle = direction
-				team = 1;
-			}
-			with instance_create(x,y,EnemyBouncerBullet)
-			{
-				motion_add(other.image_angle,other.defaultSpeed + 0.25)
-				image_angle = direction
-				team = 1;
-			}
-			with instance_create(x,y,EnemyBouncerBullet)
-			{
-				motion_add(other.image_angle+30,other.defaultSpeed + 0.25)
-				image_angle = direction
-				team = 1;
-			}
+			motion_add(other.image_angle-30,other.defaultSpeed + 0.25)
+			image_angle = direction
+			team = 1;
+		}
+		with instance_create(x,y,EnemyBouncerBullet)
+		{
+			motion_add(other.image_angle,other.defaultSpeed + 0.25)
+			image_angle = direction
+			team = 1;
+		}
+		with instance_create(x,y,EnemyBouncerBullet)
+		{
+			motion_add(other.image_angle+30,other.defaultSpeed + 0.25)
+			image_angle = direction
+			team = 1;
 		}
 	}
 	else

@@ -9,7 +9,7 @@ function scrFire(canDrown = true) {
 	}
 	if wep==0{
 		exit;}
-	if UberCont.newContent && isInvisible
+	if isInvisible
 	{
 		scrTurnOffInvisibility();
 		

@@ -420,7 +420,7 @@ function scrEnemyDeathEvent(isSheep = false){
 		{
 			with Player
 			{
-				if UberCont.newContent && ultra_got[114]
+				if ultra_got[114]
 				{
 					if !isBoss && instance_number(other.object_index) > 1 && !array_contains(enemyAbyssLockout,other.object_index)
 					{

@@ -2987,7 +2987,7 @@ if Player.ultra_got[34]//Chicken Ultra B ninja
 		}
 	}
 }
-if UberCont.newContent && Player.ultra_got[111]//Knife skills
+if Player.ultra_got[111]//Knife skills
 {
 	if scrMeleeWeapons(wep)
 	{

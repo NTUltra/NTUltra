@@ -60,6 +60,10 @@ function scrHasFoundAllSecretUltrasFor(theRace){
 				return ctot_secret_ultra_found[30] > 0
 			case 27://HANDS
 				return ctot_secret_ultra_found[31] > 0 && ctot_secret_ultra_found[32] > 0
+			case 28://Thief
+				return ctot_secret_ultra_found[39] > 0
+			case 29://No Thing
+				return ctot_secret_ultra_found[40] > 0
 		}
 	}
 }

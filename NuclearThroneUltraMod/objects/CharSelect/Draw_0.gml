@@ -9,11 +9,8 @@ image_speed = 0
 //visible = 1
 var xstep = 22;
 var loffset = 8;
-if UberCont.newContent
-{
 	xstep = 20;
 	loffset = 12;
-}
 x = __view_get( e__VW.XView, 0 )+loffset+xstep*num//-(UberCont.mouse__x-view_xview)*0.7
 y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-36
 row = 0;

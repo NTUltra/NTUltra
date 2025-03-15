@@ -359,6 +359,20 @@ if (selected && visible &&
 			}	
 		}
 	}
+	else if skill == 113 && Player.race == 29//No Thing secret ultras
+	{
+		with Player
+		{
+			if (other.isAlternative)
+			{
+				scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
+				with Player {
+					altUltra = true;
+					scrUltras(true,false);
+				}
+			}	
+		}
+	}
 	else if skill == 116//No Thing nill
 	{
 		with PlayerAlarms3

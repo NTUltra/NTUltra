@@ -3,7 +3,7 @@ function scrPopEnemies() {
 	if instance_exists(Player)
 	{
 		loops = Player.loops;
-		if UberCont.newContent && Player.ultra_got[114]
+		if Player.ultra_got[114]
 		{
 			//if random(100) < 30
 			//{

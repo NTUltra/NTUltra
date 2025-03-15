@@ -833,18 +833,9 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_text[108] = "ALLOWS YOUR HAND TO COLLECT#<r>RADS<r> & <w>PICKUPS<w>##HAND LEAVES A <w>TRAIL<w>#THAT <w>SPEEDS YOU UP<w> AND <w>SLOWS<w> <r>ENEMIES<r>#INCLUDING <w>PROJECTILES<w>##<w>HAND IS FASTER<w>#THE HAND IS EVEN FASTER#WHILE IN AN <w>INVERTED AREA<w>"
 	ultra_tips[108] = "i shouldn't be level 10 to pick up ammo"
 	
-	maxultra = 108;
-	
-	
-	ultra_name[109] = "TRASH"
-	ultra_text[109] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
-	ultra_tips[109] = "challenge run"
-	
-	if UberCont.newContent
-	{
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME KILLS CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN HIDE YOU#EVEN	WHILE IN LINE OF SIGHT TO ENEMIES##INCREASE STEALTH SWAP <aq>IMMUNITY<aq> DURATION"
+	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <p>HIDE<p> YOU#EVEN	WHILE IN <w>LINE OF SIGHT<w> TO <r>ENEMIES<r>##INCREASE <p>STEALTH<p> SWAP <aq>IMMUNITY<aq> DURATION"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
@@ -904,7 +895,6 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_text[117] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
 	ultra_tips[117] = "challenge run"
 	
-	}
 	
 	dir = 0
 	if resetUltraGot

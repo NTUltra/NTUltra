@@ -14,10 +14,11 @@ function scrContactDamageToEnemy(hitEnemy){
 					contactDmg = 9//dmg dealt by gamma guts
 				else
 					contactDmg = 7//dmg dealt by gamma guts (if you want to change it also change it in AngelActive
+				contactDmg += min(10,loops);
 			}
 			if race == 15 //Atom
 			{
-				contactDmg += 2+min(4,loops);
+				contactDmg += 2 + min(10,loops);
 				if ultra_got[58]
 					contactDmg += 6;
 			}

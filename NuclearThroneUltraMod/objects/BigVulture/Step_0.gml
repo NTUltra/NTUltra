@@ -19,7 +19,7 @@ if shooting < 1
 		{
 			event_user(2);
 			var proj = EnemyBullet1
-			if UberCont.newContent && loops > 0
+			if loops > 0
 			{
 				proj = EnemyBullet1Diamond;
 			}

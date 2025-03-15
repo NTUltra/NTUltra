@@ -184,7 +184,11 @@ if canAlt
 	}
 	else if skill == 110 && Player.race == 28 && (((Player.unlockAlternativeUltras || isAlternative)) || (scrIsCrown(18) || scrHasAmmoGenMutation()))
 	{
-		sprite_index = sprBoomHands;
+		sprite_index = sprGreedyThief;
+	}
+	else if skill == 113 && Player.race == 29 && (((Player.unlockAlternativeUltras || isAlternative)) || (scrHasAlmostEmptyAmmo()))
+	{
+		sprite_index = sprInfinityUltra;
 	}
 	
 	if spr == sprite_index

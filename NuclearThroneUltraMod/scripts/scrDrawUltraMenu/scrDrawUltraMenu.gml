@@ -207,6 +207,24 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 				case 27:
 					drawSprite = sprHotHands;
 				break;
+				case 28:
+					var u = 39;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_found[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprGreedyThief;
+				break;
+				case 29:
+					var u = 40;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_found[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprInfinityUltra;
+				break;
 			}
 		}
 		else if j == 5

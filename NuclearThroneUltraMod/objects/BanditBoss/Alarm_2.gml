@@ -15,20 +15,12 @@ if instance_exists(Player)
 {
 if Player.loops>0
 {
-	if UberCont.newContent
-		with instance_create(x,y,EnemyBullet1Diamond)
-		{
-			motion_add(other.gunangle+random(30)-15,9)
-			image_angle = direction
-			team = other.team
-		}
-	else
-		with instance_create(x,y,EnemyBullet1)
-		{
-			motion_add(other.gunangle+random(30)-15,10)
-			image_angle = direction
-			team = other.team
-		}
+	with instance_create(x,y,EnemyBullet1Diamond)
+	{
+		motion_add(other.gunangle+random(30)-15,9)
+		image_angle = direction
+		team = other.team
+	}
 }
 else
 {//PRELOOP

@@ -9892,20 +9892,6 @@ function scrWeapons() {
 	wep_rad[881] = 0;
 	wep_popup[881] = "LONGER RELOAD AFTER SIX SHOTS#SYNERGIZES WITH TAIL'S END";
 	
-	if UberCont.newContent
-	{
-		/* //trash visually
-	wep_name[882] = "DEATH RAY"
-	wep_type[882] = 5
-	wep_auto[882] = 0
-	wep_load[882] = 30
-	wep_cost[882] = 5
-	wep_sprt[882] = sprDeathRay
-	wep_area[882] = 10
-	wep_text[882] = "futuristic weaponry"
-	wep_swap[882] = sndSwapEnergy
-	wep_rad[882] = 0;
-		*/
 	wep_name[882] = "VOID PISTOL"
 	wep_type[882] = 4
 	wep_auto[882] = 1
@@ -9966,7 +9952,6 @@ function scrWeapons() {
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
-	}
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1

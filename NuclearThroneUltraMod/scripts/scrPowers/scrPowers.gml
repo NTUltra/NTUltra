@@ -357,7 +357,7 @@ function scrPowers(raceOverwrite = -1) {
 							}
 						if altUltra
 						{
-							alarm[2] = 30;
+							alarm[2] = 25;
 							if !instance_exists(GunWarrant)
 								instance_create(x,y,GunWarrant);
 							else
@@ -403,9 +403,14 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					with VoidBlock
 					{
-						image_index = 0;
-						image_xscale = max(image_xscale, 1.125);
-						image_yscale = image_xscale;
+						if chain < 2
+						{
+							image_index = 0;
+							image_xscale = max(image_xscale, 1.125);
+							image_yscale = image_xscale;
+							image_speed = 0.4;
+						}
+						chain += 1;
 					}
 					voidBeam = min(voidBeam,voidBeamMax);
 					if BackCont.shake > 50

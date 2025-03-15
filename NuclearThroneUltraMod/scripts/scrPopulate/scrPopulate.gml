@@ -657,7 +657,6 @@ function scrPopulate() {
 		}
     }
 	
-	if UberCont.newContent
 	with Player
 	{
 		if ultra_got[114]
