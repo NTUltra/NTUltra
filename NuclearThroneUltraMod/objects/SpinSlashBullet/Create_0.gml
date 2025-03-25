@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+shk = 0;
 canAlwaysDeflect = true;
 norecycle = false;
 dmg = 4;

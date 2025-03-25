@@ -2863,7 +2863,7 @@ if hitWall && sprite_index != spr_hurt && alarm[3] < 1 && hammerheadcounter < 1 
 	}
 	instance_create(x,y,WallBreak);
 }
-if skill_got[8] {
+if skill_got[8] && !isInvisible {
 	var gutsRange = ds_list_create();
 	var gammaRange = 18 + (ultra_got[58] * 4)
 	var gutsDmg = 1.5;

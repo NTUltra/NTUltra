@@ -3,6 +3,7 @@ function scrDrawUpdate() {
 	//DRAW UPDATE
 	if widescreen > 0
 		widescreen -= 8
+		/*
 	if keyboard_check_pressed(vk_space)
 	{
 	if updatepage=0
@@ -10,7 +11,7 @@ function scrDrawUpdate() {
 	else
 	updatepage=0;
 	}
-
+*/
 	if updatepage=0
 	{
 		if keyboard_check_pressed(ord("D"))
@@ -25,35 +26,17 @@ function scrDrawUpdate() {
 		{
 			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/824529/310000");
 		}
-	var txt0 = @"#UPDATE [31.00.00]
+	var txt0 = @"#UPDATE [32.BETA.07]
 	
-	* NEW PLAYER PROGRESSION SYSTEMS!
-	* ADDED IDPD HQ!
-	* NEW ELITE IDPD!
-	* NEW MUTATION INNER PEACE
-	* ANOTHER HIDDEN NEW MUTATION!
-	* LOADS OF NEW WEAPONS!
-	* NEW AREAS AND BOSSES
-	* ADDED SOME OTHER SIGNIFICANT FEATURES
-
-	* REBALANCED AMMO
-	* MORE WEAPON DROPS!
+	* TWO NEW MUTANTS!
 	
-	* MELEE DEFLECT WINDOW DECREASED
-	
-	* GRAVEYARD REWARD CHANGED
-	
-	* IMPROVED BOSS INTROS!
-		
-	* ADDED AND CHANGED SOME ULTRA MODS
-	
-	* ADDED OUTLINE WHEN YOU ARE IMMUNE
+	* INCREASEED DAMAGE OF ALL ULTRA WEAPONS
 		
 	PRESS [B] FOR UPDATES ON BLUESKY
 	PRESS [D] TO JOIN THE DISCORD
 	PRESS [C] FOR FULL CHANGELOG
-	
-	PRESS [SPACE] FOR PAGE 2"
+	"
+	//PRESS [SPACE] FOR PAGE 2"
 	}
 	else
 	{

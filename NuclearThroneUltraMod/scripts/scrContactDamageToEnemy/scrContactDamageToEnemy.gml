@@ -2,7 +2,7 @@
 // /@description
 ///@param other
 function scrContactDamageToEnemy(hitEnemy){
-	if hitEnemy.team != team && team != 0
+	if !isInvisible && hitEnemy.team != team && team != 0
 	{
 		var actuallyDead = false;
 		if hitEnemy.team != 0//Dealing the damage with gamma guts

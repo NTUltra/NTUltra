@@ -18,8 +18,17 @@ if spr_idle == sprBigVultureSkullOpen
 	sprite_index = wep_sprt[375]
 	}
 }
+var xx = x;
+var yy = y;
 with PitEnterance
 {
 	disable = true;
 	name = "";
+	var a = point_direction(x,y,xx,yy);
+	with instance_create(x + lengthdir_x(16,a),y + lengthdir_y(16,a),WallBreakLine)
+	{
+		snd_play(sndExplosionS);
+		image_angle = a
+		image_xscale = point_distance(x,y,xx,yy);
+	}
 }

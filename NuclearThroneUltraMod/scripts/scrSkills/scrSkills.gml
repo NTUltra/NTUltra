@@ -623,6 +623,13 @@ function scrSkills() {
 	
 	/*
 	skill_name[47] = "GLUTINOUS BELLY"
+	skill_text[47] = "AT THE <w>START<w> OF AN <w>AREA<w>:#INCREASE <r>MAX HEALTH<r> FOR EACH <y>AMMO<y> <w>TYPE<w> THAT IS <w>NEAR FULL<w>"
+	skill_detail[47] = "AT THE <w>START<w> OF AN <w>AREA<w>:#GAIN <w>1<w> <r>MAX HEALTH<r> FOR EACH <y>AMMO<y> <w>TYPE<w> THAT IS <w>NEAR FULL<w>#GAIN AN ADDITIONAL <r>HEALTH<r> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
+	skill_tips[47] = "EAT THE RICH"
+	skill_bons[47] = "+30% STACK"
+	skill_msnd[47] =  sndMutBouncyFat;
+	
+	skill_name[47] = "GLUTINOUS BELLY"
 	skill_text[47] = "ALLOWS YOU TO STACK UP ON ANY EXCESS RESOURCES"
 	skill_detail[47] = "ALLOWS YOU TO STACK UP ON EXCESS ANY RESOURCE TYPE#HEALING, AMMO, ARMOUR, RADS ETC.#IT GETS APPLIED AS SOON AS POSSIBLE"
 	skill_tips[47] = "EAT THE RICH"

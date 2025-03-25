@@ -3136,6 +3136,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 		sprite_index = sprUltraLaser;
+		dmg += 0.25;
 	team = other.team
 	defaultPierce *= 2;
 	image_yscale+=0.25;
@@ -3145,6 +3146,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)+7*other.accuracy
 		sprite_index = sprUltraLaser;
+		dmg += 0.25;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3154,6 +3156,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)+14*other.accuracy
 		sprite_index = sprUltraLaser;
+		dmg += 0.25;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3163,6 +3166,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)-7*other.accuracy
 		sprite_index = sprUltraLaser;
+		dmg += 0.25;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3172,6 +3176,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Laser)
 	{image_angle = aimDirection+(random(2)-1)-14*other.accuracy
 		sprite_index = sprUltraLaser;
+		dmg += 0.25;
 	team = other.team
 	image_yscale+=0.25;
 	defaultPierce *= 2;
@@ -3197,7 +3202,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
-	dmg = 26;
+	dmg = 27;
 	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
@@ -3208,7 +3213,7 @@ function scrFire(canDrown = true) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*15,aimDirection+50*Player.accuracy),Slash)
 	{
-	dmg = 23
+	dmg = 24
 	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
@@ -3219,7 +3224,7 @@ function scrFire(canDrown = true) {
 	team = other.team}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*15,aimDirection-50*Player.accuracy),Slash)
 	{
-	dmg = 23
+	dmg = 24
 	wallPierce *= 0.5;
 	sprite_index=sprUltraSlash;
 	longarms = 0
@@ -5240,9 +5245,9 @@ function scrFire(canDrown = true) {
 	wepangle = -wepangle
 	wkick = -7
 	break;
+	
 	//ULTRA BLADE GUN
 	case 193:
-
 
 	snd_play_fire(sndDiscgun)
 

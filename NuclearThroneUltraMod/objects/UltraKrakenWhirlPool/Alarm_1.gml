@@ -21,7 +21,7 @@ with instance_create(xx,yy,Tentacle)
 	scrCopyWeaponMod(other);
 	sprite_index=sprUltraTentacle;
 	ultra=true;
-	dmg = 6;//10+irandom(4)
+	dmg = 8;//10+irandom(4)
 	if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 	{
 		dmg += 1;

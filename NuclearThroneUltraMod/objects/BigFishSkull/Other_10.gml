@@ -2,6 +2,10 @@
 isInteractableNow = false;
 if spr_idle == sprBigFishSkullOpen
 {
+	if alarm[1] > 0
+	{
+		alarm[1] = max(alarm[1],30);
+	}
 	isInteractableNow = true;
 	var thereIsBoss = false;
 	with WantBoss

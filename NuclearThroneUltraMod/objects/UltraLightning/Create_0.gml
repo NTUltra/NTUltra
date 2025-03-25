@@ -1,5 +1,5 @@
 event_inherited();
-dmg += 5;
+dmg += 6;
 branch -= 5;
 fork += 1;
 iframeskip -= 0.05;

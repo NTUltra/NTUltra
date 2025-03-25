@@ -14,6 +14,11 @@ if target != noone
 	else if target.x > x
 		right = 1
 }
+else
+{
+	alarm[5] = 0;
+	exit;
+}
 chargeDirection = direction
 gunangle = direction;
 if loops > 0

@@ -1,4 +1,4 @@
-alarm[0] = 90 + irandom(40);
+alarm[0] = 70 + irandom(40);
 with enemy
 {
 	if team != 2

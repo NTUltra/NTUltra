@@ -23,7 +23,7 @@ if instance_exists(Player)
 	{
 		scrCopyWeaponMod(other);
 		motion_add(d+(random(4)-2)*Player.accuracy,10+(other.rate*5))
-		dmg = 25 + (other.rate*10);
+		dmg = 30 + (other.rate*10);
 		wallsdestroyed=5+(other.rate*4);
 		image_angle = direction
 		team = other.team

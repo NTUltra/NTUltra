@@ -27,10 +27,10 @@ if introSpiel
 				text = "TAKE LOOK AND BUY!";
 			}
 			alarm[2] = 5;
-			event_user(2);
 		break;
 		case 4:
 			introSpiel = false;
+			event_user(2);
 		with TextHandler {
 				text = "";
 			}

@@ -11,6 +11,7 @@ if ultra_got[16]
 }
 if race == 28
 {
+	firstReveal = true;
 	scrActivateThiefStealth();
 }
 if (ultra_got[33] && !altUltra && my_health <= 0)

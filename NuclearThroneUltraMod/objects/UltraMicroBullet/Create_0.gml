@@ -1,5 +1,5 @@
 event_inherited();
-dmg += 3;
+dmg += 4;
 width = 4;
 col = c_lime;
 image_xscale = 2;

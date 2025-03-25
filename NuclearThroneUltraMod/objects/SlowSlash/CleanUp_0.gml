@@ -2,5 +2,6 @@
 if instance_exists(target) && target != noone
 	with target
 	{
-		wepangle = other.wepangleTarget;
+		if wepangle != 0
+			wepangle = other.wepangleTarget;
 	}

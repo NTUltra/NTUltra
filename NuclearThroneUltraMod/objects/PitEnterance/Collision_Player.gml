@@ -4,6 +4,13 @@ if !disable
 {
 	with Player
 		isOnInteractable = true;
+	with BigVultureSkull
+	{
+		if alarm[1] > 0
+		{
+			alarm[1] = max(alarm[1],30);
+		}
+	}
 	if KeyCont.key_pick[other.p] = 1
 	{
 		KeyCont.key_pick[Player.p] = 2;

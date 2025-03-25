@@ -97,12 +97,13 @@ function scrPowers(raceOverwrite = -1) {
 		}
 		if race == 28//THIEF
 		{
-			var n = instance_nearest(x,y,enemy)
-			if n != noone && instance_exists(n) && distance_to_object(n) < 70 && !collision_line(x,y,n.x,n.y,Wall,false,false) {
-				var tn = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+			//var n = instance_nearest(x,y,enemy)
+			if thiefTarget != noone {//n != noone && instance_exists(n) && distance_to_object(n) < 66 + (skill_got[5]*24) && !collision_line(x,y,n.x,n.y,Wall,false,false) {
+				//var tn = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
 				//Prioritize enemy near the aim of the player
-				if tn != noone && instance_exists(tn) && distance_to_object(tn) < 70
-					n = tn;
+				//if tn != noone && instance_exists(tn) && distance_to_object(tn) < 70
+					//n = tn;
+				var n = thiefTarget;
 				var stabDir = point_direction(x,y,n.x,n.y);
 				if isInvisible
 				{
@@ -126,7 +127,7 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
 							instance_create(x,y,ThiefStab);
-							DealDamage(90 + min(100,other.loops*3) + my_health*0.2);
+							DealDamage(100 + min(100,other.loops*3) + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -141,7 +142,16 @@ function scrPowers(raceOverwrite = -1) {
 						else
 						{
 							snd_play(sndThiefStabSteal,0.01);
-							DealDamage(90 + min(100,other.loops*3));
+							with instance_create(x,y,ThiefStab)
+							{
+								range *= 0.5;
+								range -= 2;
+								image_xscale *= 0.5;
+								image_yscale = image_xscale;
+								dmg = 12;
+								visible = false;
+							}
+							DealDamage(80 + min(100,other.loops*3));
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30
@@ -309,9 +319,9 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					if ultra_got[115]
 					{
-						with Rad
+						with Pickup
 						{
-							if point_distance(x,y,other.x,other.y) < 300
+							if object_index != Rad && object_index != BigRad && point_distance(x,y,other.x,other.y) < 300
 								isBeingVoided += 1;
 						}
 					}
@@ -320,18 +330,19 @@ function scrPowers(raceOverwrite = -1) {
 						if point_distance(x,y,other.x,other.y) < 300
 						{
 							targetedOne = true;
-							BackCont.shake += 1;
 							if isBeingVoided != 1
 								instance_destroy();
 							isBeingVoided += 1;
 							if object_index == Rad
 							{
+								BackCont.shake += 1;
 								if regal
 									other.voidBeam += 1;
 								instance_create(x,y,VoidBlock);
 							}
 							else
 							{
+								BackCont.shake += 2;
 								if regal
 									other.voidBeam += 5;
 								instance_create(x,y,VoidBlockBig);
@@ -413,8 +424,8 @@ function scrPowers(raceOverwrite = -1) {
 						chain += 1;
 					}
 					voidBeam = min(voidBeam,voidBeamMax);
-					if BackCont.shake > 50
-						BackCont.shake = 50;
+					if BackCont.shake > 60
+						BackCont.shake = 60;
 				}
 			}
 		}
@@ -2385,6 +2396,7 @@ function scrPowers(raceOverwrite = -1) {
 				if skill_got[maxskill + 1]
 				{
 					snd_play(sndMeltingImmune,0.1);
+					scrHeal(1);
 					alarm[3] = max(alarm[3], 5);
 					scrGiveEuphoriaShield();
 				}

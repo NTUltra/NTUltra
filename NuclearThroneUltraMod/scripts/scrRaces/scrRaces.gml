@@ -97,7 +97,7 @@ function scrRaces() {
 	race_acti[4] = "EXPLODE CORPSES"
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
 	race_butt_detail[4] = "TRIPLE <r>BLOOD<r> <w>CORPSE<w> EXPLOSIONS";
-	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME";
+	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME#AND <r>HEALS<r> <w>1<w>";
 	race_vision_detail[4] = race_vision[4];
 	race_lock[4] = "DIE TO UNLOCK"
 	race_have[4] = 0
@@ -697,13 +697,13 @@ function scrRaces() {
 		//WHEN INVISIBLE THIS IS INSTANT BUT REVEALS YOU
 		race_butt[28] = "UPGRADE <p>STEALTH STAB<p>"
 		//DONT REVEAL YOURSELF WHEN STEALING FOR THE FIRST TIME UPON ENTERING STEALTH
-		race_butt_detail[28] = "UPGRADE <p>STEALTH STAB<p>#MORE <r>DAMAGE<r>#+20% OF REMAINING ENEMY HEALTH#<r>SPLASH DAMAGE<r>#HIGHER STEAL <w>DROP RATE<w>#STEAL MORE <y>AMMO<y>"
+		race_butt_detail[28] = "UPGRADE <p>STEALTH STAB<p>#LONGER <w>RANGE<w>#MORE <r>DAMAGE<r>#+25% OF REMAINING ENEMY HEALTH#HIGHER STEAL <w>DROP RATE<w>#STEAL MORE <y>AMMO<y>"
 		race_vision[28] = "PRESS <w>[E]<w> TO:#USE UNEQUIPPED <y>AMMO<y># TO ENTER STEALTH";
 		race_vision_detail[28] = "PRESS <w>[E]<w> TO:#USE UNEQUIPPED <y>AMMO<y># TO ENTER STEALTH";
 		if isUnique
 		{
-			race_vision[28] = string_replace_all(race_vision[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
-			race_vision_detail[28] = string_replace_all(race_vision_detail[28],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision[28] = string_replace_all(race_vision[28],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision_detail[28] = string_replace_all(race_vision_detail[28],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		}
 		var n = string(scrCountWeaponsFound());
 		race_lock[28] = "FIND "+ n +"/100 DIFFERENT WEAPONS"
@@ -731,10 +731,10 @@ function scrRaces() {
 		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#SEND YOUR VOID COMSUMPTION TOWARD NEARBY ENEMIES";
 		if isUnique
 		{
-			race_vision[29] = string_replace_all(race_vision[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
-			race_vision_detail[29] = string_replace_all(race_vision_detail[29],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision[29] = string_replace_all(race_vision[29],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision_detail[29] = string_replace_all(race_vision_detail[29],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		}
-		race_lock[29] = "DEFEAT THE VOID MASTER IN A DUEL"
+		race_lock[29] = "WAKE ME UP IN THE VOID BEFORE LOOPING"
 		race_have[29] = 0
 		race_swep[29] = 882//VOID PISTOL
 		race_bskin[29] = 0

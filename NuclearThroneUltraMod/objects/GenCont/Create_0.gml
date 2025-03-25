@@ -464,7 +464,7 @@ else if Player.area == 140
 	goal = 200 + s;
 else if Player.area == 139//THE PIT
 {
-	goal = 130;//190 DONT INCREASE EACH LOOP THIS IS ALREADY BIG
+	goal = 90//130;//190 DONT INCREASE EACH LOOP THIS IS ALREADY BIG
 	if Player.loops > 0
 		goal -= 10;
 }

@@ -179,6 +179,10 @@ if crown == 8 && !Player.tookDestiny
 		var maxAvailable = clamp(maxlevel - level,0,1);
 		skillpoints += maxAvailable
 		level += maxAvailable;
+		if race == 29
+		{
+			maxhealth += maxAvailable;
+		}
 		if firstLoad
 		{
 			firstLoad = false;

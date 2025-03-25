@@ -1,4 +1,8 @@
 /// @description Eats pickups Corpses and Dust
+var ix = image_xscale;
+if object_index == VoidPistolBullet
+image_xscale *= 3;
+image_yscale = image_xscale;
 var pickups = ds_list_create();
 var pAll = instance_place_list(x,y,Pickup,pickups,false)
 for (var k = 0; k < pAll; k++) {
@@ -10,7 +14,8 @@ for (var k = 0; k < pAll; k++) {
 	instance_destroy(pickups[| k]);
 }
 ds_list_destroy(pickups);
-
+image_xscale = ix;
+image_yscale = image_xscale;
 var dust = ds_list_create();
 var dAll = instance_place_list(x,y,Dust,pickups,false)
 for (var k = 0; k < dAll; k++) {

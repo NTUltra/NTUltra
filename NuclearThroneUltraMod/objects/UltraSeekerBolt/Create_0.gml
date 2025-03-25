@@ -5,7 +5,7 @@ typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 
 theColour = c_lime;
 target=0;
-dmg = 20;
+dmg = 22;
 hits=8;//normal 1
 if instance_exists(Player){
 if Player.skill_got[21] = 1//bolt marrow

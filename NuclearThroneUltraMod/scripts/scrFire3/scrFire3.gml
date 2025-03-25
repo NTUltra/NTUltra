@@ -1709,7 +1709,7 @@ function scrFire3(hasTailNow){
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg = 6;//10+irandom(4)
+			dmg = 8;//10+irandom(4)
 			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 			{
 				dmg += 1;
@@ -2350,7 +2350,7 @@ function scrFire3(hasTailNow){
 		BackCont.shake += 3
 		break;
 		
-		//ULTRA SLEDGEHAMMER
+		//ULTRA LIGHTNING SLEDGEHAMMER
 		case 864:
 
 		snd_play_fire(sndUltraSledgehammer)
@@ -2823,7 +2823,7 @@ function scrFire3(hasTailNow){
 			walled = 1;
 			sprite_index=sprUltraSlash;
 			longarms = 0
-			dmg = 16;
+			dmg = 21;
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection,2.5+longarms)
 			image_angle = direction
@@ -2838,7 +2838,7 @@ function scrFire3(hasTailNow){
 			team = other.team
 			sprite_index = sprUltraStaffShank;
 			mask_index = mskUltraStaffShank;
-			dmg = 20;
+			dmg = 26;
 		}
 
 		wepangle = -wepangle
@@ -2885,6 +2885,7 @@ function scrFire3(hasTailNow){
 			snd_play_fire(sndUltraLaserMinigun)
 		with instance_create(x,y,Laser)
 		{
+			dmg += 0.25;
 			sprite_index = sprUltraLaser;
 			image_yscale += 0.25;
 			isUltra = true;
@@ -3127,7 +3128,12 @@ function scrFire3(hasTailNow){
 			}
 			event_perform(ev_alarm,0);
 		}
-
+		
+		BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 4
+		
 		break;
 		
 		//IRON BURST GUN
@@ -3141,6 +3147,39 @@ function scrFire3(hasTailNow){
 			team = other.team
 			event_perform(ev_alarm,0) 
 		}
+
+		break;
+		
+		//HYPER SCYTHER
+		case 887:
+
+		with instance_create(x,y,ScytherBurst)
+		{
+			creator = other.id
+			ammo = 4
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		break;
+		
+		
+		//ULTRA LINE FIRE
+		case 888:
+
+		snd_play_fire(sndUltraGrenade)
+		snd_play_fire(sndHyperLauncher)
+		with instance_create(x,y,UltraLineFire)
+		{
+		direction = aimDirection+(random(2)-1)*other.accuracy
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 8
 
 		break;
 	

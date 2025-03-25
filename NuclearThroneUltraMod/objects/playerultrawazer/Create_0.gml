@@ -2,6 +2,6 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 3.5;
+dmg = 4;
 startSpr = sprUltraWazerStart;
 endSpr = sprUltraWazerEnd;

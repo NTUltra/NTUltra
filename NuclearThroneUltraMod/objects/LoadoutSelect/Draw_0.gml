@@ -391,6 +391,10 @@ if (hasNoMenuOpen()
 						spriteIndex = uniqueStartingWeapons + 12;//Elementor
 					else if race == 26
 						spriteIndex = uniqueStartingWeapons + 13;//Humphry
+					else if race == 28
+						spriteIndex = uniqueStartingWeapons + 14;//Thief
+					else if race == 29
+						spriteIndex = uniqueStartingWeapons + 15;//No Thing
 				}
 				draw_sprite_ext(sprStartingWeapons,spriteIndex,xx - 48,yy- 2,wepPortraitScale*-1,wepPortraitScale,wepAngle,col,1);
 				if bwep > -1

@@ -1,5 +1,5 @@
 event_inherited();
-dmg = 100;
+dmg = 110;
 balls = 14;
 destroyScale -= 0.1;
 alarm[11] = 0;

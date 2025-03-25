@@ -233,6 +233,11 @@ function scrLoseSkill(skillIndex, disableInstead = false) {
 			}
 		break;
 	}
+	if !disableInstead && race == 29
+	{
+		maxhealth -= 1;
+		maxhealth = max(1,maxhealth);
+	}
 	level -= 1;
 	totalSkills--;
 	skillsChosen --;

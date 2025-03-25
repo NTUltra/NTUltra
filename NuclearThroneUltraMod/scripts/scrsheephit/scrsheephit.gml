@@ -3,7 +3,7 @@
 ///@param
 function scrSheepHit(){
 	with Player {
-		if justAsheep && other.team != 0 && other.team != team//|| scrCheckForAllParents(other.id, enemy))
+		if justAsheep && !isInvisible && other.team != 0 && other.team != team//|| scrCheckForAllParents(other.id, enemy))
 		{
 			if (((!ultra_got[50] || altUltra) || instance_number(enemy) == 1 || instance_exists(NuclearThrone1)) && instance_exists(PlayerAlarms2) && PlayerAlarms2.alarm[0] < 1) {
 				with other

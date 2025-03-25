@@ -8,6 +8,7 @@ spr_hurt = spr_inactive;
 spr_dead = sprBigGeneratorDead
 
 event_inherited()
+isBoss = true;
 right = 1;
 alarm[2] = 5;
 team = 3;

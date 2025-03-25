@@ -23,7 +23,7 @@ with instance_create(x+lengthdir_x(len,dir),y+lengthdir_y(len,dir),Slash)
 	wallPierce *= 0.5;
 direction=dir
 ang = direction
-dmg = 12
+dmg = 15
 longarms = 0
 if instance_exists(Player)
 longarms = (Player.skill_got[13]+Player.bettermelee)*3

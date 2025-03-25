@@ -62,6 +62,8 @@ autoFire = 0;
 excessDamageDeal = 0;
 humphrySkill = 0;
 isInvisible = false;
+firstReveal = true;
+thiefTarget = noone;
 gunGameKill = 10;
 tinyKrakenSpawned = 0;
 canCrownOfProtection = 0;
@@ -707,6 +709,10 @@ if race == 19 //skeleton
 if race == 16//Viking
 {
 	maxhealth = 6;
+}
+if race == 28//Thief lucky 7
+{
+	maxhealth = 7;
 }
 if race == 26//Good O'l Humphry
 {

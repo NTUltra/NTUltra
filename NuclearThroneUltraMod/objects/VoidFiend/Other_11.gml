@@ -16,7 +16,7 @@ else
 		choose (
 		"YOU BUY SOMETHING " + raceName,
 		"YOU BUY SOMETHING " + raceName,
-		"YOU BUY SOMETHING " + raceName,
+		"TRY GIVING MY BROTHER TWO CURSED WEAPONS",
 		"YOU BUY SOMETHING " + raceName,
 		"YOU BUY SOMETHING " + raceName,
 		raceName + " LOOK AT WHAT I SELL",

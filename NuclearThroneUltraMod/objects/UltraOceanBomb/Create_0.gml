@@ -2,5 +2,5 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 25;
+dmg = 28;
 alarm[0] = 15;

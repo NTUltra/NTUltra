@@ -3052,7 +3052,7 @@ function scrFire2(hasTailNow) {
 	instance_create(x,y,Smoke)
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-		dmg = 19;
+		dmg = 22;
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
@@ -3070,7 +3070,7 @@ function scrFire2(hasTailNow) {
 		instance_create(x,y,Smoke)
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
-			dmg = 19;
+			dmg = 22;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
 			longarms = 0
@@ -4350,7 +4350,7 @@ function scrFire2(hasTailNow) {
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg = 6;//10+irandom(4)
+			dmg = 8;//10+irandom(4)
 			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 			{
 				dmg += 1;
@@ -8816,7 +8816,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index=sprUltraSlash;
-		dmg = 24
+		dmg = 26
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -8826,7 +8826,7 @@ function scrFire2(hasTailNow) {
 	}
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraBigSlash)
 	{
-		dmg = 74//energy hammer is 50
+		dmg = 80//energy hammer is 50
 		longarms = 0
 	
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -9564,7 +9564,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(6+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(6+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 	{
 		sprite_index=sprUltraSlash;
-		dmg = 35
+		dmg = 40
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -9709,7 +9709,7 @@ function scrFire2(hasTailNow) {
 	{image_angle = aimDirection+(random(2)-1)*other.accuracy
 	team = other.team
 	image_yscale +=0.4;
-	dmg = 4;
+	dmg = 4.5;
 	event_perform(ev_alarm,0)
 	}
 	if !skill_got[2]
@@ -14773,7 +14773,6 @@ function scrFire2(hasTailNow) {
 		team = other.team
 		event_perform(ev_alarm,0)
 	}
-	wepangle = -wepangle
 
 	break;
 	
@@ -15324,7 +15323,7 @@ function scrFire2(hasTailNow) {
 	{
 		sprite_index=sprUltraTentacle;
 		ultra=true;
-		dmg = 6;
+		dmg = 8;
 		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
 			dmg += 1;

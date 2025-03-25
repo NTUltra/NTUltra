@@ -316,7 +316,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[38] = "HAVE ATLEAST TWO\nHEALING MUTATIONS";
 	
 	secret_ultra_name[39] = "GREEDY THIEF"
-	secret_ultra_text[39] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>"
+	secret_ultra_text[39] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>#GAIN <w>+2<w> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
 	secret_ultra_tips[39] = "the collector"
 	secret_ultra_hint[39] = "AMMO GREED";
 	secret_ultra_unlk[39] = "HAVE AN AMMO GENERATING MUTATION\nOR CROWN OF GREED";
@@ -328,6 +328,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[40] = "HAVE ATLEAST ONE AMMO TYPE\nNEAR EMPTY";
 	
 	maxsecretultra = array_length(secret_ultra_name);
+	
 	//109
 	secret_ultra_name[maxsecretultra + 1] = "TRASH"
 	secret_ultra_text[maxsecretultra + 1] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"

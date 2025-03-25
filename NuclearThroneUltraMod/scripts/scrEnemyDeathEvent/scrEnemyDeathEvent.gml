@@ -185,7 +185,7 @@ function scrEnemyDeathEvent(isSheep = false){
 				
 			var t = 0;
 			
-			if !isSheep
+			if !isSheep && !isInvisible
 			{
 				//Sheep Ultra B Just A Sheep
 				if ultra_got[50] == 1 && !altUltra
@@ -422,7 +422,7 @@ function scrEnemyDeathEvent(isSheep = false){
 			{
 				if ultra_got[114]
 				{
-					if !isBoss && instance_number(other.object_index) > 1 && !array_contains(enemyAbyssLockout,other.object_index)
+					if !other.isBoss && instance_number(other.object_index) > 1 && !array_contains(enemyAbyssLockout,other.object_index)
 					{
 						var abyssIndex = array_length(enemyTypeAbyss);
 						enemyAbyssCount[abyssIndex] = 0;

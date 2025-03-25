@@ -50,6 +50,11 @@ if (UberCont.char_void_entered[race] == 1)
 			visible = false;
 			alarm[0] = 0;
 		}
+		with NoThingUnlocker
+		{
+			visible = false;
+			alarm[0] = 0;
+		}
 		with VoidExit
 		{
 			alarm[0] = 0;

@@ -45,6 +45,7 @@ if target != noone
 	direction = point_direction(x,y,target.x,target.y);
 else
 	direction = random(360);
+chargeDirection = direction;
 gunangle = direction;
 speed = 1;
 if hspeed > 0

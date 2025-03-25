@@ -47,9 +47,14 @@ function scrCreateVoidArea(defaultVoidCreation = true){
 			//instance_create(xo, yo, VoidBench);
 			if !instance_exists(SecretSheepNavigation)
 				instance_create(xo, yo - 24, VoidMaster);
+			if !UberCont.race_have[29] && GetPlayerLoops() < 1 && !instance_exists(SecretSheepNavigation) && !instance_exists(PitNavigation)
+				instance_create(xo,yo + 112,NoThingUnlocker);
+			
 			var xo = x;
 			var yo = y - 218//192;
 			instance_create(xo, yo, VoidSeer);
+			
+			//If no thing isnt unlocked
 		}
 	}
 }

@@ -1,5 +1,5 @@
 raddrop = 3;
-maxhealth = 9;
+maxhealth = 8;
 mySize = 1
 event_inherited()
 team = 7;
@@ -19,7 +19,7 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(60)
 wkick = 0
-actTime = 14;
+actTime = 16;
 
 acc = 1;
 maxSpeed = 3.5;
@@ -32,3 +32,5 @@ targetY = y;
 targetLerp = 0;
 goToTarget = false;
 loops = GetPlayerLoops();
+if loops > 0
+	actTime -= 2;

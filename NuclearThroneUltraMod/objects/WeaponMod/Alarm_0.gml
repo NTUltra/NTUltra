@@ -1,5 +1,6 @@
 /// @description apply mod and give wep
 UberCont.weapons_modded += 1;
+instance_create(x,y,WallBreak);
 alarm[6] = 0;
 var modTarget = 1;
 if (wepmod1==0)

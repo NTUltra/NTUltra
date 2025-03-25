@@ -1,5 +1,5 @@
 event_inherited();
-dmg = 45;
+dmg = 50;
 amountOfPellets = 4;
 if instance_exists(Player)
 {

@@ -189,6 +189,11 @@ if killerSequence
 				visible = true;
 				alarm[0] = 4;
 			}
+			with NoThingUnlocker
+			{
+				visible = true;
+				alarm[0] = 4;
+			}
 			alarm[2] = 5;
 		break;
 		case 16:
@@ -221,6 +226,10 @@ if killerSequence
 			with VoidMaster
 			{
 				hasShitToSay = true;	
+			}
+			with NoThingUnlocker
+			{
+				hasShitToSay = true;
 			}
 			hasShitToSay = true;
 		break;
@@ -291,6 +300,12 @@ if killerSequence
 				alarm[0] = 4;
 				hasShitToSay = true;
 			}
+			with NoThingUnlocker
+			{
+				visible = true;
+				alarm[0] = 4;
+				hasShitToSay = true;
+			}
 			with VoidBench
 			{
 				visible = true;	
@@ -321,6 +336,10 @@ if killerSequence
 			with VoidMaster
 			{
 				hasShitToSay = true;	
+			}
+			with NoThingUnlocker
+			{
+				hasShitToSay = true;
 			}
 			killerSequence = false;
 			alarm[2] = 5;

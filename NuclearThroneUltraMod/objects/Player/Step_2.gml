@@ -349,7 +349,14 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						}
 					}
 				}
-
+				if wep == 375
+				{
+					with PitEnterance
+					{
+						image_speed = 0.4;
+						image_index = 0;
+					}
+				}
 				if wep == 298//golden oops gun
 				{
 					steam_shutdown();
@@ -433,7 +440,7 @@ if my_health < prevhealth
 		if alarm[3] < 1
 		{
 			noHit = 0;
-			if scrIsGamemode(32) || ultra_got[109] || UberCont.voidChallengeGoing[5]
+			if scrIsGamemode(32) || ultra_got[117] || UberCont.voidChallengeGoing[5]
 			{
 				my_health = 0;
 				prevhealth = 0;
@@ -1276,7 +1283,10 @@ if my_health <= 0 && armour < 1
 					spr_walk = sprMutant9HeadlessWalk
 				}
 			}
-
+			with myCorpse
+			{
+				instance_destroy();	
+			}
 			myCorpse = instance_create(x,y,MovingCorpseDynamic)
 			with myCorpse
 			{
@@ -1492,6 +1502,8 @@ if maxhealth > 0
 				if ammo[ai] >= typ_amax_base[ai]
 				{
 					thiefHealth += 1;
+					if wep_type[wep] == ai || wep_type[bwep] == ai || (cwep != 0 && wep_type[cwep] == ai)
+						thiefHealth += 1;
 				}	
 			}
 		}

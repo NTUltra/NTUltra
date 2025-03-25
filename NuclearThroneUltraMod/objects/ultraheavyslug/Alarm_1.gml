@@ -1,4 +1,4 @@
 /// @description dmg reduc
-dmg -= 20
+dmg -= 15
 if sprite_index == sprUltraHeavySlugHighDmg
 sprite_index = sprUltraHeavySlug;

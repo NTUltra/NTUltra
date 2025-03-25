@@ -298,7 +298,14 @@ with Player
 	if (race == 18 || jump > 0) && !instance_exists(PlayerInPortal)&& !instance_exists(PlayerInEnding)&& !instance_exists(PlayerInFakeDeath)
 		event_perform(ev_draw,0);//on top of all things cause I'm an angel!
 
-
+	if race == 28 && isInvisible && thiefTarget != noone && instance_exists(thiefTarget)
+	{
+		var ttx = thiefTarget.x;
+		var tty = thiefTarget.y;
+		var ttd = point_direction(ttx,tty,x,y);
+		var ttlen = max(thiefTarget.sprite_width,thiefTarget.sprite_height) * 0.5;
+		draw_sprite_ext(sprThiefStabIndicator,0,ttx + lengthdir_x(ttlen,ttd), tty + lengthdir_y(ttlen,ttd),1,1,ttd,c_white,1);
+	}
 }
 //FOGGGG
 

@@ -10,7 +10,7 @@ function EnemyHealthAdjustments(){
 			my_health = 1;
 			maxhealth = my_health;
 		}
-		maxhealth *= 1 + max(0,(Player.loops-1 * 0.07));//0.15
+		maxhealth *= 1 + max(0,(Player.loops-1 * 0.05));//0.15
 		if Player.loops > 0
 			maxhealth += 1;
 		maxhealth += Player.loops;

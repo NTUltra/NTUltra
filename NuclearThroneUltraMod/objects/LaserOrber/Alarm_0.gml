@@ -38,6 +38,7 @@ if other.isUltra
 {
 	sprite_index = sprUltraBouncingLaser;
 	laserhit += 3;
+	dmg += 0.25;
 	image_yscale += 0.25;
 }
 event_perform(ev_alarm,0)}

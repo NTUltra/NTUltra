@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description More weapons
 
 if instance_number(WepPickup) < 2
 {
@@ -8,3 +8,4 @@ else
 {
 	scrDropNearby(40,20);
 }
+event_inherited();

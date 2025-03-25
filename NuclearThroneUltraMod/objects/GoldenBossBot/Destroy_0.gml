@@ -5,8 +5,8 @@
 // Inherit the parent event
 event_inherited();
 
-instance_create(x,y-32,GoldChest);
-
+instance_create(x + 32,y,GoldChest);
+instance_create(x - 32,y,GoldChest);
 with UberCont {
 	if isValidGamemodeToUnlock()
 	{

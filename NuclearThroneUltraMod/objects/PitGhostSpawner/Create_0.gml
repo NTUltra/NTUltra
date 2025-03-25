@@ -18,10 +18,13 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 30+random(60)
 wkick = 0
-actTime = 12;
+actTime = 15;
 
 acc = 1;
 maxSpeed = 4.5;
 materializeRange = 164;
 if GetPlayerLoops() > 0
+{
 	materializeRange = 132;
+	actTime = 12;
+}

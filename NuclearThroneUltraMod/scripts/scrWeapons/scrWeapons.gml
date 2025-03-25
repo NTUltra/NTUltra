@@ -6450,7 +6450,7 @@ function scrWeapons() {
 	wep_load[574] = 43
 	wep_cost[574] = 8
 	wep_sprt[574] = sprLineEverything
-	wep_area[574] = 25
+	wep_area[574] = 23
 	wep_text[574] = "don't get in the line of fire"
 	wep_swap[574] = sndSwapFlame
 	wep_rad[574] = 0;
@@ -7199,7 +7199,7 @@ function scrWeapons() {
 	wep_load[642] = 4
 	wep_cost[642] = 1.5
 	wep_sprt[642] = sprUltraBeamShotgun
-	wep_area[642] = 23
+	wep_area[642] = 25
 	wep_text[642] = "leaking"
 	wep_swap[642] = sndSwapShotgun
 	wep_rad[642] = 5;
@@ -8770,7 +8770,7 @@ function scrWeapons() {
 	wep_name[783] = "CHARGE OVERDRIVER"
 	wep_type[783] = 1
 	wep_auto[783] = 3
-	wep_load[783] = 3
+	wep_load[783] = 2.5
 	wep_cost[783] = 1
 	wep_sprt[783] = sprOverdriver
 	wep_area[783] = 9
@@ -9167,7 +9167,7 @@ function scrWeapons() {
 	wep_rad[817] = 0;
 	
 	wep_name[818] = "HOT POGO STICK"
-	wep_type[818] = 5
+	wep_type[818] = 4
 	wep_auto[818] = 0
 	wep_load[818] = 30
 	wep_cost[818] = 1
@@ -9895,7 +9895,7 @@ function scrWeapons() {
 	wep_name[882] = "VOID PISTOL"
 	wep_type[882] = 4
 	wep_auto[882] = 1
-	wep_load[882] = 9
+	wep_load[882] = 10
 	wep_cost[882] = 0.5
 	wep_sprt[882] = sprVoidPistol
 	wep_area[882] = -1
@@ -9907,7 +9907,7 @@ function scrWeapons() {
 	wep_name[883] = "DOUBLE DAGGERS"
 	wep_type[883] = 0
 	wep_auto[883] = 2
-	wep_load[883] = 14
+	wep_load[883] = 15
 	wep_cost[883] = 0
 	wep_sprt[883] = sprDagger
 	wep_area[883] = -1
@@ -9934,7 +9934,7 @@ function scrWeapons() {
 	wep_load[885] = 6
 	wep_cost[885] = 2
 	wep_sprt[885] = sprIronGun
-	wep_area[885] = 12
+	wep_area[885] = 10
 	wep_text[885] = "hitscan bolts!"
 	wep_swap[885] = sndSwapBow
 	wep_rad[885] = 0;
@@ -9949,13 +9949,35 @@ function scrWeapons() {
 	wep_text[886] = "makes up for an iron deficiency"
 	wep_swap[886] = sndSwapBow
 	wep_rad[886] = 0;
+	
+	wep_name[887] = "HYPER SCYTHER"
+	wep_type[887] = 1
+	wep_auto[887] = 2
+	wep_load[887] = 6
+	wep_cost[887] = 5
+	wep_sprt[887] = sprHyperScyther
+	wep_area[887] = 15
+	wep_text[887] = "hyper fast melee bullets"
+	wep_swap[887] = sndSwapMachinegun
+	wep_rad[887] = 0;
+	
+	wep_name[888] = "ULTRA FIRE LINE"
+	wep_type[888] = 4
+	wep_auto[888] = 1
+	wep_load[888] = 12
+	wep_cost[888] = 2
+	wep_sprt[888] = sprUltraLineFire
+	wep_area[888] = 21
+	wep_text[888] = ""
+	wep_swap[888] = sndSwapFlame
+	wep_rad[888] = 6;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	
 	maxwep = array_length(wep_name)-1;
 	var al = array_length(wep_popup)-1
-	for (var wi = 0; wi < maxwep; wi++) {
+	for (var wi = 0; wi < maxwep + 1; wi++) {
 		if (wi > al || !is_string(wep_popup[wi]))
 		{
 			wep_popup[wi] = "";
@@ -9964,7 +9986,7 @@ function scrWeapons() {
 	//Only melee
 	if ((scrIsGamemode(31)) && !instance_exists(MenuGen))
 	{
-		for (var wi = 0; wi < maxwep; wi++) {
+		for (var wi = 0; wi < maxwep + 1; wi++) {
 			if !scrMeleeWeapons(wi)
 			{
 				 wep_area[wi] = -1;

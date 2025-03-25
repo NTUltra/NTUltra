@@ -4,7 +4,7 @@ if image_index < 2 {
 }
 else {
 	if (!shanked) {
-		dmg += 5;
+		dmg += 6;
 		shanked = true;
 		image_speed += 0.2;
 		x += lengthdir_x(16,direction);

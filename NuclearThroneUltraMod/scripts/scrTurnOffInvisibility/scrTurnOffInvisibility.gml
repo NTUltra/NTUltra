@@ -2,6 +2,26 @@
 // /@description
 ///@param
 function scrTurnOffInvisibility(fromPower = false, justTurnOff = false, fromDamage = false){
+	if skill_got[29] && firstReveal//Hypersomnia
+	{
+		firstReveal = false;
+		var t = 290;
+		if t > 0
+		{
+			with enemy
+			{
+				if alarm[1]>0
+				{
+					alarm[1]+=t;
+					scrGiveSnooze();
+				}
+			}
+			with PlayerAlarms2
+			{
+				alarm[0] = t;	
+			}
+		}
+	}
 	if !justTurnOff && ultra_got[112] && thiefStabs < 3
 	{
 		if fromPower

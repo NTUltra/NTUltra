@@ -6,7 +6,9 @@ with Player
 		instance_create(other.x-5,other.y-16,Notice);
 		instance_create(other.x+5,other.y-16,Notice);	
 	}
-	justAsheep = false;	
+	justAsheep = false;
+	if race == 28
+		scrTurnOffInvisibility()
 }
 sprite_index=sprInvertedChesireCatIntro;
 mask_index=mskPickupThroughWall;

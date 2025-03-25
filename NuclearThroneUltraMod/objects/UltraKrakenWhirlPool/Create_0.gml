@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 radius = 100;
-dmg = 6;
+dmg = 8;
 alarm[0] = 1;
 hits = [];
 allHits = 0;

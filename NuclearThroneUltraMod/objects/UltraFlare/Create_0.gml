@@ -1,4 +1,4 @@
 event_inherited();
 alarm[2] = 1;
-dmg = 50;
+dmg = 60;
 hitEntities = [];

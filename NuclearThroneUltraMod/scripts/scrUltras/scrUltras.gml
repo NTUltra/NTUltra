@@ -846,7 +846,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
 			ultra_name[110] = "GREEDY THIEF"
-		    ultra_text[110] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>"
+		    ultra_text[110] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>#GAIN <w>+2<w> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
 		    ultra_tips[110] = "the collector"
 		}
         
@@ -862,7 +862,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	//NO THING NoThing
 	ultra_name[113] = "ZERO"
-	ultra_text[113] = "USING <v>VOID CONSUMPTION<v>:#INCREASES <r>MAX HEALTH<r> BY <w>1<w> FOR <w>2 SECONDS<w>"
+	ultra_text[113] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w? INCREASES <r>MAX HEALTH<r> BY <w>1<w>"
 	ultra_tips[113] = "0"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
@@ -877,7 +877,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"
-	ultra_text[115] = "<g>RADIATION<g> CAN BE <p>CONSUMED<p> TWICE"
+	ultra_text[115] = "<r>HEALTH<r> AND <y>AMMO<y> DROPS CAN BE <p>CONSUMED<p> TWICE"
 	ultra_tips[115] = "absolute"
     /*
 	ultra_name[116] = "DYING WHEN AT OR ABOVE LEVEL 10#WILL RESET YOUR LEVEL TO 1 AND PREVENT DEATH"

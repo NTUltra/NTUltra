@@ -1,3 +1,3 @@
 /// @description Damage
-scrSplashDamage(dmg,64,false);
+scrSplashDamage(dmg,range,false);
 BackCont.shake += 20
