@@ -86,6 +86,12 @@ if team == 2 && isog
 			other.ammo *= 1.2;
 			other.ammo += 2;
 		}
+		if skill_got[43]
+		{
+			//ammoDecrease -= 0.07;
+			other.ammo *= 1.1;
+			other.ammo += 2;
+		}
 		if skill_got[17]
 		{
 			//ammoDecrease -= 0.07;

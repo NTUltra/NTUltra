@@ -20,7 +20,8 @@ if (candmg && other.team != team && other.my_health > 0 && !array_contains(hitEn
 				with instance_create(x,y,boltStick)
 				{
 					scrCopyWeaponMod(other);
-					image_angle = other.image_angle
+					sprite_index = other.sprite_index;
+					image_index = 1;
 					target = other.target
 					team = other.team;
 				}

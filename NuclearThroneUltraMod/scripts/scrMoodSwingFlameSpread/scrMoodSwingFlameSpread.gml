@@ -1,7 +1,7 @@
 ///scrMoodSwingFlameSpread();
 // /@description
 ///@param
-function scrMoodSwingFlameSpread(range, wantDmg = 0){
+function scrMoodSwingFlameSpread(range, wantDmg = 0,addDmg = 0){
 	var burning = false;
 	if instance_exists(enemy)
 	{
@@ -21,6 +21,7 @@ function scrMoodSwingFlameSpread(range, wantDmg = 0){
 			{
 				if wantDmg != 0
 					dmg = wantDmg;
+				dmg += addDmg;
 				xOrigin = other.x;
 				yOrigin = other.y;
 				team = 2;

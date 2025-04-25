@@ -10,7 +10,7 @@
 event_inherited();
 wepFire = -1;
 isVenomized = 0;
-dmg -= 1;
+dmg -= 0.75;
 stretchTime = 6;
 alarm[4] = stretchTime;
 xTarget = x;

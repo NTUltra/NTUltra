@@ -3182,6 +3182,53 @@ function scrFire3(hasTailNow){
 		wkick = 8
 
 		break;
+		
+		//GLACIAL CROSSBOW
+		case 889:
+
+		snd_play_fire(sndCrossbow)
+		snd_play_fire(choose(sndFrost1,sndFrost2));
+		
+		with instance_create(x,y,FreezeBolt)
+		{motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,2);
+			motion_add(aimDirection+180,1)
+		}
+		
+		BackCont.viewx2 += lengthdir_x(50,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(50,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 5
+
+		break;
+		
+		//GLACIAL AUTO CROSSBOW
+		case 890:
+
+		snd_play_fire(sndCrossbow)
+		snd_play_fire(choose(sndFrost1,sndFrost2));
+		
+		with instance_create(x,y,FreezeBolt)
+		{motion_add(aimDirection+(random(12)-6)*other.accuracy,21)
+		image_angle = direction
+		team = other.team}
+
+		if !skill_got[2]
+		{
+			motion_add(aimDirection+180,1)
+		}
+		
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = 4
+
+		break;
 	
 	}
 }

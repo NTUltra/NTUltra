@@ -6,6 +6,18 @@ function scrMoodSwingIcicle(am, hitTarget){
 		exit;
 	var angStep = 360/am;
 	var ang = random(360);
+	if instance_exists(enemy)
+	{
+		var n = noone;
+		if instance_exists(owner) && owner != noone
+			n = instance_nearest_not_instance(x,y,enemy,owner);
+		else
+			n = instance_nearest(x,y,enemy);
+		if n.team != 2 && n.my_health > 0 && !collision_line(x,y,n.x,n.y,Wall,false,false)
+		{
+			ang = point_direction(x,y,n.x,n.y);	
+		}
+	}
 	repeat(am)
 	{
 		with instance_create(x,y,FrostIcicle)

@@ -9971,6 +9971,28 @@ function scrWeapons() {
 	wep_text[888] = ""
 	wep_swap[888] = sndSwapFlame
 	wep_rad[888] = 6;
+	
+	wep_name[889] = "GLACIAL CROSSBOW"
+	wep_type[889] = 3
+	wep_auto[889] = 0
+	wep_load[889] = 30
+	wep_cost[889] = 3
+	wep_sprt[889] = sprCrossbow
+	wep_area[889] = 5
+	wep_text[889] = "SLIPPERY"
+	wep_swap[889] = sndSwapBow
+	wep_rad[889] = 0;
+	
+	wep_name[890] = "GLACIAL AUTO CROSSBOW"
+	wep_type[890] = 3
+	wep_auto[890] = 1
+	wep_load[890] = 11
+	wep_cost[890] = 3
+	wep_sprt[890] = sprCrossbow
+	wep_area[890] = 10
+	wep_text[890] = "glass blur"
+	wep_swap[890] = sndSwapBow
+	wep_rad[890] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
