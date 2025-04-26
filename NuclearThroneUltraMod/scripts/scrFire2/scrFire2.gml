@@ -17271,15 +17271,17 @@ function scrFire2(hasTailNow) {
 	
 	//TRIAGON
 	case 759:
-	snd_play_fire(sndTriagon);
-	
+	if Player.skill_got[17] = 1
+		snd_play_fire(sndTriagonUpg)
+	else
+		snd_play_fire(sndTriagon)
 	with instance_create(x + lengthdir_x(32,aimDirection),y + lengthdir_y(32,aimDirection),PlasmaImpact)
 	{
-		image_speed = 0.4;
-		dmg = 5;
+		image_speed -= 0.1;
+		dmg += 2;
 		motion_add(aimDirection,5);
 		if other.altFire
-			image_xscale = -1;
+			image_xscale *= -1;
 		image_angle = direction
 		team = other.team
 		sprite_index = sprEnergyTriangle;

@@ -590,7 +590,7 @@ if !instance_exists(LevCont) and visible = 1
 			wepmod3 --;
 			wepmod4 --;
 		}
-		if keyboard_check_pressed(vk_pagedown) {
+		if keyboard_check_pressed(vk_numpad0) {
 			if unkillable {
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "NOT UNKILLABLE!";
@@ -2989,8 +2989,8 @@ if Player.ultra_got[34]//Chicken Ultra B ninja
 }
 if Player.ultra_got[111]//Knife skills
 {
-	if scrMeleeWeapons(wep)
-	{
+	//if scrMeleeWeapons(wep)
+	//{
 		with MeleeParent {
 			if !appliedBoost
 			{
@@ -2999,5 +2999,5 @@ if Player.ultra_got[111]//Knife skills
 				BackCont.shake += 1;
 			}
 		}
-	}
+	//}
 }

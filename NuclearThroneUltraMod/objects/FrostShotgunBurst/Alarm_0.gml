@@ -21,6 +21,8 @@ if instance_exists(creator)
 		{motion_add(ang,other.projectileSpeed + (other.ammo*2))
 		image_angle = direction
 		team = other.team
+		if other.ultramodded
+			alarm[11] = 0;
 		scrCopyWeaponMod(other);}
 		ang += angstep;
 	}

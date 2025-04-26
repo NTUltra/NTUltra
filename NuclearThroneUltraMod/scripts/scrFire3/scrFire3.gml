@@ -3186,8 +3186,7 @@ function scrFire3(hasTailNow){
 		//GLACIAL CROSSBOW
 		case 889:
 
-		snd_play_fire(sndCrossbow)
-		snd_play_fire(choose(sndFrost1,sndFrost2));
+		snd_play_fire(sndFrostCrossbow)
 		
 		with instance_create(x,y,FreezeBolt)
 		{motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
@@ -3210,8 +3209,7 @@ function scrFire3(hasTailNow){
 		//GLACIAL AUTO CROSSBOW
 		case 890:
 
-		snd_play_fire(sndCrossbow)
-		snd_play_fire(choose(sndFrost1,sndFrost2));
+		snd_play_fire(sndFrostCrossbow)
 		
 		with instance_create(x,y,FreezeBolt)
 		{motion_add(aimDirection+(random(12)-6)*other.accuracy,21)
@@ -3227,6 +3225,35 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 3
 		wkick = 4
+
+		break;
+		
+		//OCTAGON
+		case 891:
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndOctagonUpg)
+		else
+			snd_play_fire(sndOctagon)
+	
+		with instance_create(x + lengthdir_x(32,aimDirection),y + lengthdir_y(32,aimDirection),Octagon)
+		{
+			motion_add(aimDirection,5);
+			image_angle = direction;
+			if other.altFire
+				image_angle += 45;
+			team = other.team
+		}
+		altFire = !altFire;
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,8);
+			motion_add(aimDirection+180,8)
+		}
+	
+		BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 2;
 
 		break;
 	

@@ -9923,7 +9923,7 @@ function scrWeapons() {
 	wep_cost[884] = 2
 	wep_sprt[884] = sprDualVipers
 	wep_area[884] = 24
-	wep_text[884] = "trusty double revolver"
+	wep_text[884] = "ganster guns"
 	wep_swap[884] = sndSwapPistol
 	wep_rad[884] = 0;
 	wep_popup[884] = "DUAL WIELD";
@@ -9989,10 +9989,21 @@ function scrWeapons() {
 	wep_load[890] = 11
 	wep_cost[890] = 3
 	wep_sprt[890] = sprCrossbow
-	wep_area[890] = 10
+	wep_area[890] = 12
 	wep_text[890] = "glass blur"
 	wep_swap[890] = sndSwapBow
 	wep_rad[890] = 0;
+	
+	wep_name[891] = "OCTAGUN"
+	wep_type[891] = 5
+	wep_auto[891] = 0
+	wep_load[891] = 120
+	wep_cost[891] = 8
+	wep_sprt[891] = sprTriagon
+	wep_area[891] = 2
+	wep_text[891] = "octagon of death"
+	wep_swap[891] = sndSwapEnergy
+	wep_rad[891] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

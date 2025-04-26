@@ -82,6 +82,15 @@ if(instance_exists(Player)){
 var dir;
 dir = 0
 var pierce = defaultPierce;
+var modBoost = 12;
+with Player
+{
+	if skill_got[17]
+		pierce += 16;
+	//Projectile Speed
+	if skill_got[30] == 1//Power craving
+		modBoost = 16;
+}
 if Mod1 == 11
 	pierce += modBoost;
 if Mod2 == 11

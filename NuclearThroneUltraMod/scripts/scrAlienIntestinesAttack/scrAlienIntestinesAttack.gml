@@ -5,10 +5,7 @@ function scrAlienIntestinesAttack(){
 	var ys = 0;
 	snd_play(choose(sndWater1,sndWater2) ,0.1);
 	var d = 0;
-	if loops > 1
-		d += 1;
-	if loops > 0
-		d += 0.5;
+	d += loops;
 	if alienIntestines > 30
 		snd_play_fire(sndRoll);
 	if alienIntestines > 80

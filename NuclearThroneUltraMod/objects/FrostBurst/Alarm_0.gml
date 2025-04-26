@@ -14,6 +14,8 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(5
 
 with instance_create(x,y,FreezeBullet)
 {
+	if other.ultramodded
+		alarm[11] = 0;
 	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(4)-2,16)
 	image_angle = direction
 	team = other.team

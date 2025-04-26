@@ -31,7 +31,7 @@ if um == ultramods.plasmaBolt
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed * 0.5;
+		speed = other.speed * 0.25;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -47,7 +47,7 @@ if um == ultramods.plasmaBolt
 	}
 	with instance_create(x,y,FrostLaser)
 	{
-		image_yscale += 0.4;
+		image_yscale += 0.45;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -61,8 +61,9 @@ if um == ultramods.plasmaBolt
 	instance_destroy(id,false);
 	with instance_create(x,y,FrostShotgunBurst)
 	{
+		ultramodded = true;
 		creator = Player
-		ammo = 5
+		ammo = 4
 		time = 2
 		team = other.team
 		event_perform(ev_alarm,0)
@@ -72,8 +73,9 @@ if um == ultramods.plasmaBolt
 	instance_destroy(id,false);
 	with instance_create(x,y,FrostBurst)
 	{
+		ultramodded = true;
 		creator = Player
-		ammo = 8
+		ammo = 7
 		time = 2
 		team = other.team
 		event_perform(ev_alarm,0) 
