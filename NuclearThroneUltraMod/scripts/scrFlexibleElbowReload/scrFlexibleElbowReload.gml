@@ -21,7 +21,7 @@ function scrFlexibleElbowReload(wp){
 							ds_list_add(activationList,n);
 							instance_deactivate_object(n);
 						}
-						if n != noone && n.team != 2 && point_distance(x,y,n.x,n.y) < 164 {
+						if n != noone && n.team != 2 && point_distance(x,y,n.x,n.y) < 200 {//164 {
 							slapped = instance_create(x,y,FlexibleElbowsSlap)
 							with slapped
 							{

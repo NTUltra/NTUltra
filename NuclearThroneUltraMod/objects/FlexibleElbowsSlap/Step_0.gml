@@ -21,9 +21,9 @@ if time == 1
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
 		if instance_exists(Player) && Player.race == 25
-			DealDamage(25 + min(100,other.loops*2),false,true,false);
+			DealDamage(25 + (other.loops*2),false,true,false);
 		else
-			DealDamage(20 + min(100,other.loops*2),false,true,false);
+			DealDamage(20 + (other.loops*2),false,true,false);
 		
 		var direct = other.id;
 		var hits = ds_list_create();

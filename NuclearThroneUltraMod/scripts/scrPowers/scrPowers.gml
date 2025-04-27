@@ -356,7 +356,7 @@ function scrPowers(raceOverwrite = -1) {
 					with PlayerAlarms3 {
 						voidSphereAngle *= -1;	
 					}
-					if ultra_got[113]
+					if ultra_got[113] && !altUltra
 					{
 						BackCont.shake += 2;
 						repeat(2)
@@ -366,7 +366,7 @@ function scrPowers(raceOverwrite = -1) {
 								image_index = irandom(image_number - 1);
 								motion_add(random(360),1);
 							}
-						if altUltra
+						/*if altUltra
 						{
 							alarm[2] = 25;
 							if !instance_exists(GunWarrant)
@@ -381,7 +381,7 @@ function scrPowers(raceOverwrite = -1) {
 							}
 						}
 						else
-						{
+						{*/
 							noThingHealth += 1;
 							maxhealth += 1;
 						
@@ -396,7 +396,7 @@ function scrPowers(raceOverwrite = -1) {
 									alarm[0] = lifeDuration;	
 								}
 							}
-						}
+						//}
 					}
 					if instance_exists(VoidBlock)
 					{
