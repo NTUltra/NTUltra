@@ -109,8 +109,8 @@ if !instance_exists(GenCont)
 				type = choose(1,2,3,4,5)
 			else
 				type = other.wep_type[other.wep]
-
-			other.ammo[type] += other.typ_ammo[type]*3
+			var ammoBoost = scrGetAmmoBoost();
+			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 			if other.ammo[type] > other.typ_amax[type]
 				other.ammo[type] = other.typ_amax[type]
 
@@ -135,8 +135,7 @@ if !instance_exists(GenCont)
 				type = choose(1,2,3,4,5)
 			else
 				type = other.wep_type[other.bwep]
-
-			other.ammo[type] += other.typ_ammo[type]*3
+			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 			if other.ammo[type] > other.typ_amax[type]
 				other.ammo[type] = other.typ_amax[type]
 
@@ -164,7 +163,7 @@ if !instance_exists(GenCont)
 				else
 					type = other.wep_type[other.cwep]
 
-				other.ammo[type] += other.typ_ammo[type]*3
+				other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 				if other.ammo[type] > other.typ_amax[type]
 					other.ammo[type] = other.typ_amax[type]
 

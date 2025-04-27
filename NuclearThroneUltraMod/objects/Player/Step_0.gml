@@ -590,7 +590,7 @@ if !instance_exists(LevCont) and visible = 1
 			wepmod3 --;
 			wepmod4 --;
 		}
-		if keyboard_check_pressed(vk_numpad0) {
+		if keyboard_check_pressed(vk_numpad0) || keyboard_check_pressed(vk_pagedown) {
 			if unkillable {
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "NOT UNKILLABLE!";

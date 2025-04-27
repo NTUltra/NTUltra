@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrGetPortalEssenceBoost",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrGetPortalEssenceBoost",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Scripts/Mutations.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

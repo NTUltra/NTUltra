@@ -2,9 +2,7 @@
 instance_create(x,y,ShowVoidEssenceTemporarily);
 with UberCont
 {
-	portalEssence += 2
-	if voidChallengeGoing[0]
-		portalEssence += 2;
+	portalEssence += 2 * scrGetPortalEssenceBoost();
 }
 
 if loops > 2

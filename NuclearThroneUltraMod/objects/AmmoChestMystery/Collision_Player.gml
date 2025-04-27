@@ -1,8 +1,8 @@
 if !instance_exists(GenCont)
 {
 do type = choose(1,2,3,4,5) until type != other.wep_type[other.wep] and type != other.wep_type[other.bwep]
-
-other.ammo[type] += other.typ_ammo[type]*3
+var ammoBoost = scrGetAmmoBoost();
+other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
 	other.ammo[type] = other.typ_amax[type]
 

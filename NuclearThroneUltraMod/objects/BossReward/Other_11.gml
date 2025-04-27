@@ -33,30 +33,14 @@ switch(array_length(UberCont.collectedRewards))
 	case 2:
 		with UberCont {
 			instance_create(x,y,ShowVoidEssenceTemporarily);
-			portalEssence += 10;
-			if (voidChallengeGoing[0])
+			var gotamount = 10 * scrGetPortalEssenceBoost();
+			portalEssence += gotamount;
+			with instance_create(x,y,PopupText)
 			{
-				portalEssence += 10;
-				with Player
-				{
-					with instance_create(x,y,PopupText)
-					{
-						mytext = "+20 PORTAL ESSENCE!"
-						theColour = c_lime;
-						moveSpeed = 1;
-						alarm[1] = 60;
-					}
-				}
-			}
-			else
-			{
-				with instance_create(x,y,PopupText)
-				{
-					mytext = "+10 PORTAL ESSENCE!"
-					theColour = c_lime;
-					moveSpeed = 1;
-					alarm[1] = 60;
-				}
+				mytext = "+" + string(gotamount) + " PORTAL ESSENCE!"
+				theColour = c_lime;
+				moveSpeed = 1;
+				alarm[1] = 60;
 			}
 		}
 		snd_play(other.snd_chst);

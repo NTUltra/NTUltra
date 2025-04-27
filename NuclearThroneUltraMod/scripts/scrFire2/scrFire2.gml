@@ -9179,8 +9179,8 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team}
 
-	BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = 6
 

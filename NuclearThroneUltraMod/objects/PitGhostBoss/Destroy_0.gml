@@ -18,9 +18,7 @@ with ThePit
 	instance_create(x,y,ShowVoidEssenceTemporarily);
 	with UberCont
 	{
-		portalEssence += 6
-		if voidChallengeGoing[0]
-			portalEssence += 6;
+		portalEssence += 6 * scrGetPortalEssenceBoost();
 	}
 	with Player
 	{

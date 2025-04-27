@@ -9,9 +9,7 @@ if !scrIsGamemode(25)
 			instance_create(x,y,ShowVoidEssenceTemporarily);
 			with UberCont
 			{
-				portalEssence += 5 * (UberCont.crownVaultChallenge + 1)
-				if voidChallengeGoing[0]
-					portalEssence += 5 * (UberCont.crownVaultChallenge + 1);
+				portalEssence += 5 * (UberCont.crownVaultChallenge + 1) * scrGetPortalEssenceBoost();
 			}
 		}
 		var yy = centerY-96;

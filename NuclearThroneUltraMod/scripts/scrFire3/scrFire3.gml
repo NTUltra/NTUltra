@@ -3256,6 +3256,52 @@ function scrFire3(hasTailNow){
 		wkick = 2;
 
 		break;
+		
+		//GRAVITY BOMBER
+		case 892:
+
+		snd_play_fire(sndGravityBomb)
+
+		with instance_create(x,y,GravityBomb)
+		{
+		sticky = 0
+		motion_add(aimDirection+(random(6)-3)*other.accuracy,9)
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,4);
+			motion_add(aimDirection+180,4)
+		}
+		BackCont.viewx2 += lengthdir_x(24,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(24,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 6
+
+		break;
+		
+		//ENERGY BLASTER
+		case 893:
+
+		snd_play_fire(sndEnergyBlasterCharge)
+
+		with instance_create(x,y,EnergyBlaster)
+		{
+			creator = other.id
+			ammo = 5+(Player.skill_got[17]+other.betterlaserbrain)*2
+			time = 1
+			team = other.team
+			alarm[0] = 9//15 originally
+			alarm[1] = alarm[0] + ammo*time;
+			if Player.skill_got[42]
+			{
+				alarm[0] = max(1,alarm[0]*0.25);
+				if Player.ultra_got[97] && !Player.altUltra
+					alarm[0] = 1;
+			}
+		}
+
+		break;
 	
 	}
 }

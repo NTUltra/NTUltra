@@ -1,0 +1,10 @@
+event_inherited();
+image_speed = 0
+image_xscale = 0.2
+image_yscale = 0.2
+dmg = 2;
+accuracy = 1;
+if instance_exists(Player)
+{
+	accuracy = Player.accuracy;
+}

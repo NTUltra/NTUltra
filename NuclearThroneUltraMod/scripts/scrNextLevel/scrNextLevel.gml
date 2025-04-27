@@ -4,9 +4,7 @@ function scrNextLevel(skipping = false) {
 	{
 		with UberCont
 		{
-			portalEssence += 1;
-			if voidChallengeGoing[0]
-				portalEssence += 1;
+			portalEssence += 1 * scrGetPortalEssenceBoost();
 		}
 		scrAddArea(area);
 		scrAddToRoute(area);
@@ -124,9 +122,7 @@ function scrNextLevel(skipping = false) {
 					subarea = 1;
 					with UberCont
 					{
-						portalEssence += 4;
-						if voidChallengeGoing[0]
-							portalEssence += 4;
+						portalEssence += 4 * scrGetPortalEssenceBoost();
 					}
 				}
 				else

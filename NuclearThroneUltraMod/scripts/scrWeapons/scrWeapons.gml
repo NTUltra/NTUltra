@@ -9977,10 +9977,10 @@ function scrWeapons() {
 	wep_auto[889] = 0
 	wep_load[889] = 30
 	wep_cost[889] = 3
-	wep_sprt[889] = sprCrossbow
+	wep_sprt[889] = sprGlacialCrossbow
 	wep_area[889] = 5
 	wep_text[889] = "SLIPPERY"
-	wep_swap[889] = sndSwapBow
+	wep_swap[889] = sndSwapFrost
 	wep_rad[889] = 0;
 	
 	wep_name[890] = "GLACIAL AUTO CROSSBOW"
@@ -9988,10 +9988,10 @@ function scrWeapons() {
 	wep_auto[890] = 1
 	wep_load[890] = 11
 	wep_cost[890] = 3
-	wep_sprt[890] = sprCrossbow
+	wep_sprt[890] = sprGlacialAutoCrossbow
 	wep_area[890] = 12
 	wep_text[890] = "glass blur"
-	wep_swap[890] = sndSwapBow
+	wep_swap[890] = sndSwapFrost
 	wep_rad[890] = 0;
 	
 	wep_name[891] = "OCTAGUN"
@@ -9999,11 +9999,33 @@ function scrWeapons() {
 	wep_auto[891] = 0
 	wep_load[891] = 120
 	wep_cost[891] = 8
-	wep_sprt[891] = sprTriagon
-	wep_area[891] = 2
+	wep_sprt[891] = sprOctagun
+	wep_area[891] = 4
 	wep_text[891] = "octagon of death"
 	wep_swap[891] = sndSwapEnergy
 	wep_rad[891] = 0;
+	
+	wep_name[892] = "GRAVITY BOMBER"
+	wep_type[892] = 5
+	wep_auto[892] = 0
+	wep_load[892] = 120
+	wep_cost[892] = 10
+	wep_sprt[892] = sprGravityBomber
+	wep_area[892] = 4
+	wep_text[892] = "implosion!"
+	wep_swap[892] = sndSwapEnergy
+	wep_rad[892] = 0;
+	
+	wep_name[893] = "ENERGY BLASTER"
+	wep_type[893] = 5
+	wep_auto[893] = 3
+	wep_load[893] = 10
+	wep_cost[893] = 3
+	wep_sprt[893] = sprLaserGun
+	wep_area[893] = 1
+	wep_text[893] = "energy and recycle gland"
+	wep_swap[893] = sndSwapEnergy
+	wep_rad[893] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

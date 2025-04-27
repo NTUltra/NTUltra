@@ -9,9 +9,7 @@ function scrNextLevelPitRoute() {
 			{
 				with UberCont
 				{
-					portalEssence += 4;
-					if voidChallengeGoing[0]
-						portalEssence += 4;
+					portalEssence += 4 * scrGetPortalEssenceBoost();
 				}
 				area = 141;
 				subarea = 1;

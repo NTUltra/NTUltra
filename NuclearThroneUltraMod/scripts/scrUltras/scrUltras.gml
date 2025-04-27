@@ -870,7 +870,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		//Increase damage of void consumption based on the total portal essence you hold.
 		ultra_name[113] = "INFINITY"
 		//ultra_text[113] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
-		ultra_text[113] = "INCREASE DAMAGE OF <v>VOID CONSUMPTION<v>#BASED ON TOTAL <p>PORTAL ESSENCE<p> YOU HOLD";
+		ultra_text[113] = "COLLECT <w>50%<w> MORE <p>PORTAL ESSENCE<p>##WHENEVER YOU GAIN <y>AMMO<y>#GAIN MORE BASED ON#THE TOTAL <p>PORTAL ESSENCE<p> YOU HOLD";
 		ultra_tips[113] = "8"
 	}
         

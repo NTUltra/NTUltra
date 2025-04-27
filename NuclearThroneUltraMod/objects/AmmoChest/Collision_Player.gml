@@ -1,6 +1,7 @@
 if !instance_exists(GenCont)
 {
 	var canMeleeAmmo = scrIsCrown(40);
+	var ammoBoost = scrGetAmmoBoost();
 	repeat(chestValue)
 	{
 		if mediumchest==0
@@ -33,8 +34,8 @@ if !instance_exists(GenCont)
 			scrChestOpenMindReload(other);
 			with other
 			{
-				ammo[t] += typ_ammo[t]*other.ammoValue
-				var amount = typ_ammo[t]*other.ammoValue;
+				ammo[t] += typ_ammo[t]*other.ammoValue*ammoBoost
+				var amount = typ_ammo[t]*other.ammoValue*ammoBoost;
 				var excess = ammo[t] - typ_amax[t];
 				if ammo[t] > typ_amax[t]
 					ammo[t] = typ_amax[t];
@@ -130,7 +131,7 @@ if !instance_exists(GenCont)
 
 					type = i;
 
-					other.ammo[type] += other.typ_ammo[type]*ammoValue
+					other.ammo[type] += other.typ_ammo[type]*ammoValue*ammoBoost
 					if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
 						other.ammo[type] = other.typ_amax[type]
 
@@ -159,7 +160,7 @@ if !instance_exists(GenCont)
 
 					type = i;
 
-					other.ammo[type] += other.typ_ammo[type]*ammoValue
+					other.ammo[type] += other.typ_ammo[type]*ammoValue*ammoBoost
 					if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
 						other.ammo[type] = other.typ_amax[type]
 

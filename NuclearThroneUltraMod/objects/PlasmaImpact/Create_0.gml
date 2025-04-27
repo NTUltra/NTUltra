@@ -1,7 +1,7 @@
 event_inherited();
 image_speed = 0.5
 
-BackCont.shake += 3
+BackCont.shake += 2
 
 team = 2
 repeat(3)
@@ -12,6 +12,7 @@ if instance_exists(Player)
 {
 	if Player.skill_got[17] = 1
 	{
+		BackCont.shake += 1
 		image_xscale += 0.2;
 		image_yscale += 0.2;
 		image_speed -= 0.1;
