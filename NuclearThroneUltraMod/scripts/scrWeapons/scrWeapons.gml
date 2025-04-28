@@ -10043,12 +10043,12 @@ function scrWeapons() {
 	wep_name[895] = "SLINGSHOT"
 	wep_type[895] = 3
 	wep_auto[895] = 0
-	wep_load[895] = 25
+	wep_load[895] = 30
 	wep_cost[895] = 1
-	wep_sprt[895] = sprScyther
+	wep_sprt[895] = sprSlingShot
 	wep_area[895] = 2
-	wep_text[895] = "Melee bullets"
-	wep_swap[895] = sndSwapMachinegun
+	wep_text[895] = "tossing rocks"
+	wep_swap[895] = sndSwapBow
 	wep_rad[895] = 0;
 
 	//Swiss army bowwa

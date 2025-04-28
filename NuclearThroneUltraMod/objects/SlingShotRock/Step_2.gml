@@ -1,3 +1,6 @@
 /// @description Bolt marrow
 scrBoltMarrow();
-scrBoltTrail();
+if !hasSplit
+	scrBoltTrail(col,0.1,2);
+else
+	scrBoltTrail(col);

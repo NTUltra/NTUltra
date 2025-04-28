@@ -3329,8 +3329,7 @@ function scrFire3(hasTailNow){
 		
 		//SLINGSHOT
 		case 895:
-			
-			snd_play_fire(sndWhip)
+			snd_play_fire(sndSlingShot)
 
 			with instance_create(x,y,SlingShotRock)
 			{
@@ -3341,10 +3340,10 @@ function scrFire3(hasTailNow){
 			}
 			if !skill_got[2]
 				motion_add(aimDirection,1);
-			BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 			BackCont.shake += 2
-			wkick = 5
+			wkick = -5
 			
 		break;
 	

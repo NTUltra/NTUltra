@@ -7,6 +7,8 @@ hasSplit = false;
 rotation = choose(20, - 20);
 xprev = xstart;
 yprev = ystart;
+col = make_color_rgb(153,129,112);
+hitEntities = [];
 alarm[1] = 1;
 if instance_exists(ThroneIISpiral)
 	alarm[9] = 5;
