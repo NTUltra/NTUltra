@@ -21,3 +21,4 @@ if instance_exists(Player)
 		}
 	}
 }
+alarm[2] = 2;

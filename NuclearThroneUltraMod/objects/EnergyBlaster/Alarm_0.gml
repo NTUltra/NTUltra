@@ -14,18 +14,18 @@ if instance_exists(creator)
 		if ammo > 0
 			snd_play(sndEnergyBlasterBurstUpg,0.1);
 		else
-			snd_play_fire(sndEnergyBlasterUpg)
+			snd_play_fire(sndEnergyBlasterBurstEndUpg)
 	}
 	else
 	{
 		if ammo > 0
 			snd_play(sndEnergyBlasterBurst,0.1);
 		else
-			snd_play_fire(sndEnergyBlaster)
+			snd_play_fire(sndEnergyBlasterBurstEnd)
 	}
 	with instance_create(x,y,EnergyBullet)
 	{
-		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (random(8)-4)*other.accuracy, 17 + other.ammo);
+		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (random(12)-6)*other.accuracy, 17 + other.ammo);
 		scrCopyWeaponMod(other);
 		image_angle = direction
 		team = other.team

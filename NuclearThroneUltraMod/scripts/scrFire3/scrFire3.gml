@@ -3288,7 +3288,7 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,EnergyBlaster)
 		{
 			creator = other.id
-			ammo = 5+(Player.skill_got[17]+other.betterlaserbrain)*2
+			ammo = 4+(Player.skill_got[17]+other.betterlaserbrain)*2
 			time = 1
 			team = other.team
 			alarm[0] = 9//15 originally
@@ -3301,6 +3301,51 @@ function scrFire3(hasTailNow){
 			}
 		}
 
+		break;
+		
+		//ENERGY PISTOL
+		case 894:
+
+		if instance_exists(Player) && Player.skill_got[17] = 1
+		{
+			snd_play_fire(sndEnergyBlasterUpg)
+		}
+		else
+		{
+			snd_play_fire(sndEnergyBlaster)
+		}
+
+		with instance_create(x,y,EnergyBullet)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,18)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = 3
+
+		break;
+		
+		//SLINGSHOT
+		case 895:
+			
+			snd_play_fire(sndWhip)
+
+			with instance_create(x,y,SlingShotRock)
+			{
+				sticky = 0
+				motion_add(aimDirection+(random(10)-5)*other.accuracy,11)
+				image_angle = direction
+				team = other.team
+			}
+			if !skill_got[2]
+				motion_add(aimDirection,1);
+			BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += 2
+			wkick = 5
+			
 		break;
 	
 	}

@@ -10019,13 +10019,37 @@ function scrWeapons() {
 	wep_name[893] = "ENERGY BLASTER"
 	wep_type[893] = 5
 	wep_auto[893] = 3
-	wep_load[893] = 10
-	wep_cost[893] = 3
-	wep_sprt[893] = sprLaserGun
-	wep_area[893] = 1
-	wep_text[893] = "energy and recycle gland"
+	wep_load[893] = 20
+	wep_cost[893] = 4
+	wep_sprt[893] = sprEnergyBlaster
+	wep_area[893] = 2
+	wep_text[893] = "energy brain and recycle gland"
 	wep_swap[893] = sndSwapEnergy
 	wep_rad[893] = 0;
+	wep_popup[893] = "WORKS WITH RECYCLE GLAND!#AND ENERGY BRAIN";
+	
+	wep_name[894] = "ENERGY PISTOL"
+	wep_type[894] = 5
+	wep_auto[894] = 0
+	wep_load[894] = 7
+	wep_cost[894] = 1
+	wep_sprt[894] = sprEnergyPistol
+	wep_area[894] = 1
+	wep_text[894] = "energy revolver"
+	wep_swap[894] = sndSwapEnergy
+	wep_rad[894] = 0;
+	wep_popup[894] = "WORKS WITH RECYCLE GLAND!#AND ENERGY BRAIN";
+	
+	wep_name[895] = "SLINGSHOT"
+	wep_type[895] = 3
+	wep_auto[895] = 0
+	wep_load[895] = 25
+	wep_cost[895] = 1
+	wep_sprt[895] = sprScyther
+	wep_area[895] = 2
+	wep_text[895] = "Melee bullets"
+	wep_swap[895] = sndSwapMachinegun
+	wep_rad[895] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
