@@ -14,6 +14,7 @@ if instance_exists(Player)
 {
 	if scrIsHardMode()
 		baseDmg += 0.1;
+	baseDmg += Player.loops * 0.06;
 	var damageBoost = max(1,Player.skill_got[8]*1.1) + frac(Player.skill_got[5] * 1.2);
 	dmg = baseDmg*damageBoost;
 	if Player.skill_got[2]//Extra feet synergy why not

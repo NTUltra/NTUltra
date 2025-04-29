@@ -3749,7 +3749,7 @@ function scrFire2(hasTailNow) {
 	case 321:
 
 	snd_play_fire(sndScrewdriver)
-
+	snd_play(choose(sndSpark1,sndSpark2));
 	instance_create(x,y,Dust)
 
 	with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),LightningShank)
@@ -3765,7 +3765,6 @@ function scrFire2(hasTailNow) {
 	if !skill_got[2]
 	{
 		motion_add(aimDirection,2)
-		scrMoveContactSolid(aimDirection,1)
 	}
 	BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake

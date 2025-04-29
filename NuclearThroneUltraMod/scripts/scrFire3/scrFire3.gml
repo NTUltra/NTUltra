@@ -3330,10 +3330,10 @@ function scrFire3(hasTailNow){
 		//SLINGSHOT
 		case 895:
 			snd_play_fire(sndSlingShot)
-
 			with instance_create(x,y,SlingShotRock)
 			{
 				sticky = 0
+				
 				motion_add(aimDirection+(random(10)-5)*other.accuracy,11)
 				image_angle = direction
 				team = other.team
@@ -3345,6 +3345,104 @@ function scrFire3(hasTailNow){
 			BackCont.shake += 2
 			wkick = -5
 			
+		break;
+		
+		//BASEBALL BAT
+		case 896:
+
+		snd_play_fire(sndBaseballBat)
+		instance_create(x,y,Dust)
+		altFire = !altFire;
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+		{
+			snd_wallhit = choose(sndBaseballBatHit1,sndBaseballBatHit2);
+			sprite_index = sprBatSlash;
+			mask_index = mskBatSlash;
+			if other.altFire
+				image_yscale *= -1;
+			dmg = 8
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.6+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,7)
+		}
+		BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -5
+
+		break;
+		
+		//SAW
+		case 897:
+
+		snd_play_fire(sndHandSaw)
+		instance_create(x,y,Dust)
+		altFire = !altFire;
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Shank)
+		{
+			image_speed = max(0.1,image_speed-0.05);
+			sprite_index = sprSawSlash;
+			mask_index = mskSawSlash;
+			if other.altFire
+				image_yscale *= -1;
+			dmg = 7.5
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,7)
+		}
+		BackCont.viewx2 += lengthdir_x(14,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -5
+
+		break;
+		
+		//TASER
+		case 898:
+
+		if Player.skill_got[17]
+			snd_play_fire(sndTaserUpg)
+		else
+			snd_play_fire(sndTaser)
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),LightningShank)
+		{
+			dmg = 2;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
+			image_angle = direction
+			team = other.team
+			sprite_index = sprTaserShank;
+			mask_index = mskTaserShank;
+		}
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,4)
+		}
+		BackCont.viewx2 += lengthdir_x(17,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(17,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -7
+
 		break;
 	
 	}

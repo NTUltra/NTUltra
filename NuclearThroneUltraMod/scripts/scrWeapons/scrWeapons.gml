@@ -10044,12 +10044,45 @@ function scrWeapons() {
 	wep_type[895] = 3
 	wep_auto[895] = 0
 	wep_load[895] = 30
-	wep_cost[895] = 1
+	wep_cost[895] = 3
 	wep_sprt[895] = sprSlingShot
 	wep_area[895] = 2
 	wep_text[895] = "tossing rocks"
 	wep_swap[895] = sndSwapBow
 	wep_rad[895] = 0;
+	
+	wep_name[896] = "BASEBALL BAT"
+	wep_type[896] = 0
+	wep_auto[896] = 0
+	wep_load[896] = 15
+	wep_cost[896] = 0
+	wep_sprt[896] = sprBaseballBat
+	wep_area[896] = 2
+	wep_text[896] = "homerun"
+	wep_swap[896] = sndSwapBow
+	wep_rad[896] = 0;
+	
+	wep_name[897] = "HAND SAW"
+	wep_type[897] = 0
+	wep_auto[897] = 0
+	wep_load[897] = 18
+	wep_cost[897] = 0
+	wep_sprt[897] = sprHandSaw
+	wep_area[897] = 2
+	wep_text[897] = "the hand saw can hit the same enemy twice"
+	wep_swap[897] = sndSwapBow
+	wep_rad[897] = 0;
+	
+	wep_name[898] = "TASER"
+	wep_type[898] = 0
+	wep_auto[898] = 0
+	wep_load[898] = 21
+	wep_cost[898] = 0
+	wep_sprt[898] = sprTaser
+	wep_area[898] = 2
+	wep_text[898] = "thats a pretty lethal taser"
+	wep_swap[898] = sndSwapEnergy
+	wep_rad[898] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
