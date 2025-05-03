@@ -539,9 +539,6 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
-			instance_create(x,y,LightningWeaponChest);
-			instance_create(x,y,MorphWeaponChest);
-			instance_create(x,y,ToxicWeaponChest);
 			//instance_create(x,y,MusMimicBoss);
 			//isPermanent = true;
 			//piggyBank = 100;
@@ -609,6 +606,10 @@ if !instance_exists(LevCont) and visible = 1
 		    thing = instance_create(x,y,PopupText)
 			thing.mytext = "RADS!";
 			rad = GetPlayerMaxRad()*2;
+		}
+		if keyboard_check_pressed(ord("M")) {
+		    instance_create(x+64,y,BigWallBreak);
+			instance_create(x+64,y,HyenaBoss);
 		}
 		if keyboard_check_pressed(ord("T")) {
 			if instance_exists(Portal) && scrIsGamemode(25)

@@ -531,6 +531,10 @@ with InvertedChesireCat{
 		}
 	}
 }
+with HyenaBoss
+{
+	event_user(0);
+}
 with DiscTrail
 {
 	draw_set_color(theColour);
@@ -596,6 +600,7 @@ with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
+
 /*
 with VoidMasterBoss
 {

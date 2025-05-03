@@ -8536,8 +8536,8 @@ function scrWeapons() {
 	wep_name[762] = "MICRO LAUNCHER SHOTGUN"
 	wep_type[762] = 4
 	wep_auto[762] = 1
-	wep_load[762] = 10
-	wep_cost[762] = 4
+	wep_load[762] = 14
+	wep_cost[762] = 3.5
 	wep_sprt[762] = sprMicroLauncherShotgun
 	wep_area[762] = 16
 	wep_text[762] = "railshotgun"

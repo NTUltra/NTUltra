@@ -861,7 +861,7 @@ function scrLoadRace() {
 	spr_sit = sprMutant20Idle;//TODO
 	break;
 	case 21:
-	spr_idle=sprMutant21Idle;
+	spr_idle=sprMutant21EIdle;
 	spr_walk=sprMutant21Walk;
 	spr_hurt=sprMutant21Hurt;
 	spr_dead=sprMutant21Dead;

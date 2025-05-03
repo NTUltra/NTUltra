@@ -4,7 +4,7 @@
 event_inherited();
 actTime -= 1;
 raddrop = 150
-maxhealth = 420;
+maxhealth = 460;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 inverted = true;

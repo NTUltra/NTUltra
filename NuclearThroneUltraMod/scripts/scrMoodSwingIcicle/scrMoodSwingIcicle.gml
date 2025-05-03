@@ -9,8 +9,8 @@ function scrMoodSwingIcicle(am, hitTarget){
 	if instance_exists(enemy)
 	{
 		var n = noone;
-		if instance_exists(owner) && owner != noone
-			n = instance_nearest_not_instance(x,y,enemy,owner);
+		if instance_exists(hitTarget) && hitTarget != noone
+			n = instance_nearest_not_instance(x,y,enemy,hitTarget);
 		else
 			n = instance_nearest(x,y,enemy);
 		if n.team != 2 && n.my_health > 0 && !collision_line(x,y,n.x,n.y,Wall,false,false)

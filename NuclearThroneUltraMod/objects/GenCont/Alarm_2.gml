@@ -190,17 +190,29 @@ if Player.loops > 0 && (Player.area == 107 && Player.subarea == 2)
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 2 && Player.subarea == 1) ||  Player.area == 10 && Player.subarea == 2))
+if (Player.loops > 0 && (Player.area == 2 && Player.subarea == 1))
 {
 	scrSpawnBoss(BallMom);
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(BallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 110 && Player.subarea == 1) || (Player.area == 121 && Player.subarea == 2)) )
+if (Player.loops > 0 && (Player.area == 110 && Player.subarea == 1) )
 {
 	scrSpawnBoss(InvertedBallMom);
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(InvertedBallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
+}
+if (Player.loops > 0 && ((Player.area == 10 && Player.subarea == 2)))
+{
+	scrSpawnBoss(HyenaBoss);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(HyenaBoss,1+clamp(floor((Player.loops-4)*0.25),1,2));
+}
+if (Player.loops > 0 && ((Player.area == 121 && Player.subarea == 2)) )
+{
+	scrSpawnBoss(InvertedHyenaBoss);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(InvertedHyenaBoss,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
 if (Player.loops > 0 && Player.area == 4 && Player.subarea == 1)
 {

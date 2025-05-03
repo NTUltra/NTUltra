@@ -3,38 +3,28 @@ if oasis
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BanditBoss) == 1
 with MusCont
 {
-//optimise sound_discard(song)
-//optimise sound_discard(amb)
-
-audio_stop_sound(song);
-if instance_exists(Player) && Player.area == 2
-{
-	song = mus2;
-	amb = amb2;
-	if !audio_is_playing(song)
+	audio_stop_sound(song);
+	if instance_exists(Player) && Player.area == 2
 	{
-		snd_loop(song);
+		song = mus2;
+		amb = amb2;
+		if !audio_is_playing(song)
+		{
+			snd_loop(song);
+		}
+		if !audio_is_playing(amb)
+		{
+			snd_loop(amb);
+		}
 	}
-	if !audio_is_playing(amb)
+	else
 	{
-		snd_loop(amb);
+		song = musBossWin
+		snd_play_2d(song)
 	}
-}
-else
-{
-	song = musBossWin
-	snd_play_2d(song)
-}
-//snd_loop(amb)
-
-audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
-
-audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
-
-audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
-
-//audio_sound_gain(sndBossWin,max(0,sqrt(UberCont.opt_musvol)),0);
-
+	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
+	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
+	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);
 }
 repeat(2)
 scrDrop(100,0)

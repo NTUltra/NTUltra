@@ -41,6 +41,7 @@ if candmg and other.team != team
 				scrCopyWeaponMod(other);
 				sprite_index = other.sprite_index;
 				image_index = 1;
+				image_speed = 0;
 				target = other.target
 				team = other.team;
 			}

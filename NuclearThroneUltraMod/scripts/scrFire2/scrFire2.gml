@@ -17357,10 +17357,14 @@ function scrFire2(hasTailNow) {
 	case 762:
 
 	snd_play(sndMicroLauncher,0.03,true);
+	var i = 0;
 	repeat(5)
 	{
 		with instance_create(x,y,MicroNade)
 		{
+			makeSound = false;
+			if i == 1 || i == 5
+				makeSound = true;
 			dmg -= 1;
 			direction = aimDirection+(random(30)-15) * other.accuracy;
 			image_angle = direction;
@@ -17374,6 +17378,7 @@ function scrFire2(hasTailNow) {
 			}
 			event_perform(ev_alarm,0);
 		}
+		i+= 1;
 	}
 
 	BackCont.viewx2 += lengthdir_x(24,aimDirection+180)*UberCont.opt_shake

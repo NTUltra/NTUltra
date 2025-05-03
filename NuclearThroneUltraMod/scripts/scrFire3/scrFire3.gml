@@ -2499,7 +2499,7 @@ function scrFire3(hasTailNow){
 		motion_add(aimDirection+other.right*100+random(80)-40,3+random(2))
 
 		with instance_create(x,y,Bullet12)
-		{motion_add(aimDirection+(random(26)-13)*other.accuracy,16)
+		{motion_add(aimDirection+(random(26)-13)*other.accuracy,18)
 		image_angle = direction
 		team = other.team}
 		if !skill_got[2]

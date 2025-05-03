@@ -7,5 +7,5 @@ for (var i = 0; i < al; i++) {
 		canSpawnSwarm = true;
 	instance_destroy(walls[| i]);
 }
-ds_list_clear(walls);
+ds_list_destroy(walls);
 instance_create(targetX,targetY,SmallWallBreak);

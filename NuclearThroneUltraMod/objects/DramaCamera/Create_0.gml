@@ -123,10 +123,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			}
 			if area = 2 || (area == 10 && subarea == 2)
 			{
-				if instance_exists(BanditBoss) && !instance_exists(BallMom)
+				if instance_exists(BanditBoss) && !instance_exists(HyenaBoss)
 					song = musBoss1;
 				else
-					song = musBoss5;
+					song = musUltraVisionary;
 			}
 			else if area == 110 && subarea == 2
 				song = musBoss5B;
@@ -140,6 +140,10 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 				song = musUltraOasisBoss;
 			else if area == 10 || area == 121 || (area == 100 && instance_exists(InvertedBigVulture))
 				song = musBoss10
+			else if area == 121 && instance_exists(InvertedHyenaBoss)
+			{
+				song = musUltraVisionary;
+			}
 			else if area == 114 || area == 123
 				song = musUltraBushBoxBoss;
 			else if area == 119 || area == 120
@@ -619,10 +623,9 @@ else
 	{
 		 if subarea == 2
 		{
-			image_index = 6;
-			name = "MOM ON VACATION";
+			name = "BIG HYENA";
 			if canFunny && random(100) < 1
-				name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+				name = choose("FRED");
 		}
 		else
 		{
@@ -642,10 +645,9 @@ else
 		}
 		else
 		{
-			image_index = 6;
-			name = "MOM ON VACATION";
+			name = "INVERTED BIG HYENA";
 			if canFunny && random(100) < 1
-				name = choose("WE NOT SKIPPING THIS FIGHT","BALL MOM ON VACATION","MOMMY IN THE SUN","BIKINI");
+				name = choose("SMURF FRED");
 		}
 	}
 	else if area == 119
