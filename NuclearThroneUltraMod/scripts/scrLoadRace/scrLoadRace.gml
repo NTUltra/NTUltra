@@ -410,8 +410,8 @@ function scrLoadRace() {
 	spr_walk=sprMutant21CWalk;
 	spr_hurt=sprMutant21CHurt;
 	spr_dead=sprMutant21CDead;
-	spr_go_sit = sprMutant21CIdle;//TODO
-	spr_sit = sprMutant21CIdle;//TODO
+	spr_go_sit = sprMutant21CGoSit;//TODO
+	spr_sit = sprMutant21CSit;//TODO
 	break;
 	case 22:
 	spr_idle=sprMutant22CIdle;
@@ -619,12 +619,12 @@ function scrLoadRace() {
 		spr_sit = sprMutant16DIdle;//TODO
 		break;
 		case 21:
-		spr_idle=sprMutant21DIdle;
-		spr_walk=sprMutant21DWalk;
-		spr_hurt=sprMutant21DHurt;
-		spr_dead=sprMutant21DDead;
-		spr_go_sit = sprMutant21DIdle;//TODO
-		spr_sit = sprMutant21DIdle;//TODO
+		spr_idle=sprMutant21EIdle;
+		spr_walk=sprMutant21EWalk;
+		spr_hurt=sprMutant21EHurt;
+		spr_dead=sprMutant21EDead;
+		spr_go_sit = sprMutant21EGoSit;//TODO
+		spr_sit = sprMutant21ESit;//TODO
 		break;
 		case 22:
 		spr_idle=sprMutant22DIdle;
@@ -861,7 +861,7 @@ function scrLoadRace() {
 	spr_sit = sprMutant20Idle;//TODO
 	break;
 	case 21:
-	spr_idle=sprMutant21EIdle;
+	spr_idle=sprMutant21Idle;
 	spr_walk=sprMutant21Walk;
 	spr_hurt=sprMutant21Hurt;
 	spr_dead=sprMutant21Dead;
