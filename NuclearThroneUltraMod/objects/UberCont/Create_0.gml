@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.BETA"
-subUpdateVersion = ".09";
+subUpdateVersion = "11";
 notUpdated = "";
 serverIp = "00.00.000.000"serverPort = 0000;
 currentSave = 0;
@@ -99,6 +99,7 @@ wallsBroken = 0;
 visitedScrap = false;
 visitedOasis = false;
 visitedSavanna = false;
+killedChesireCat = false;
 setAimThisFrame = false;
 scrInit();
 window_set_min_width(640);

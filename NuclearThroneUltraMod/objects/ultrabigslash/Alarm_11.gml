@@ -82,7 +82,7 @@ else {
 	event_inherited();
 	snd_play_fire(sndBloodLauncher);
 	var am = 6 + speed + dmg;
-	var ddd = ceil(other.dmg*0.2);
+	var ddd = ceil(other.dmg*0.25);
 	with instance_create(x,y,Tentacle)
 	{
 		sprite_index=sprUltraTentacle;
@@ -90,6 +90,10 @@ else {
 		image_yscale += 0.3;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 2;
+		}
 		image_angle = other.image_angle;
 		team = other.team
 		ammo = am
@@ -115,6 +119,10 @@ else {
 		image_yscale += 0.3;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 2;
+		}
 		image_angle = other.image_angle-( 30*acc);
 		team = other.team
 		ammo = am
@@ -126,7 +134,7 @@ else {
 		image_angle = other.image_angle
 		}
 
-		repeat(ddd){
+		repeat(min(4,ddd)){
 			with instance_create(x,y,FishBoost)
 			{
 				motion_add( other.image_angle+random(60)-30,2+random(4) );
@@ -140,6 +148,10 @@ else {
 		image_yscale += 0.3;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 2;
+		}
 		image_angle = other.image_angle+( 30*acc);
 		team = other.team
 		ammo = am
@@ -151,7 +163,7 @@ else {
 		image_angle = other.image_angle
 		}
 
-		repeat(ddd){
+		repeat(min(4,ddd)){
 			with instance_create(x,y,FishBoost)
 			{
 				motion_add( other.image_angle+random(60)-30,2+random(4) );
@@ -165,6 +177,10 @@ else {
 		image_yscale += 0.3;
 		isog = false;
 		dmg = ddd;//6 dmg = 1dmg
+		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+		{
+			dmg += 2;
+		}
 		image_angle = other.image_angle-( 60*acc);
 		team = other.team
 		ammo = am
@@ -176,7 +192,7 @@ else {
 		image_angle = other.image_angle
 		}
 
-		repeat(ddd){
+		repeat(min(4,ddd)){
 			with instance_create(x,y,FishBoost)
 			{
 				motion_add( other.image_angle+random(60)-30,2+random(4) );

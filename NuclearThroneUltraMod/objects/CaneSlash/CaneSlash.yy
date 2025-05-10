@@ -12,8 +12,8 @@
     "path":"folders/Objects/Projectiles/Melee.yy",
   },
   "parentObjectId":{
-    "name":"WrenchSlash",
-    "path":"objects/WrenchSlash/WrenchSlash.yy",
+    "name":"CrowBarSlash",
+    "path":"objects/CrowBarSlash/CrowBarSlash.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

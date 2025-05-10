@@ -133,7 +133,8 @@ if canAlt
 	{
 		sprite_index = sprQuickSwapper;
 	}
-	else if skill == 68 && Player.race == 17 && (Player.unlockAlternativeUltras || isAlternative || scrHasMorphMod() || scrHasMorphWeapon())
+	else if skill == 68 && Player.race == 17 && (Player.unlockAlternativeUltras || isAlternative || UberCont.killedChesireCat || 
+	(instance_exists(Player) && (Player.area == 8 || Player.area == 109) || scrHasMorphMod() || scrHasMorphWeapon()))
 	{
 		sprite_index = sprEnginuity;
 	}
@@ -152,6 +153,11 @@ if canAlt
 	else if skill == 77 && Player.race == 20 && (Player.unlockAlternativeUltras || isAlternative || Player.skill_got[0] || scrIsCrown(5))
 	{
 		sprite_index = sprHoardingThief;
+	}
+	else if skill == 84 && Player.race == 21 && (Player.unlockAlternativeUltras || isAlternative || UberCont.killedChesireCat || 
+	(instance_exists(Player) && (Player.area == 8 || Player.area == 109) || scrHasMorphWeapon() || scrHasMorphMod()))
+	{
+		sprite_index = sprCatHorror;
 	}
 	else if skill == 87 && Player.race == 22 && (Player.unlockAlternativeUltras || isAlternative || scrHasAnEmptyLife())
 	{

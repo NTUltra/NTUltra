@@ -24,8 +24,6 @@ false);
 draw_set_colour(c_white);
 if Player.crownpoints = 0
 {
-	
-
 	var xx = __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5);
 	//draw_line(xx,-999999,xx,999999); //CENTER LINE
 	var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-splatY;
@@ -54,6 +52,28 @@ if Player.crownpoints = 0
 	else if Player.refundPoints > 0
 	{
 		var tt = "RECOLLECT YOUR";
+		draw_set_font(fntB);
+		var tyy = __view_get( e__VW.YView, 0 )+47
+		/*
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 + 1,tyy,tt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 + 1,tyy + 1,tt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy + 1,tt,c_black,c_black,c_black,c_black,1);
+		*/
+		//draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy,tt);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy,tt,c_white,c_white,c_white,c_white,1);
+		tt = "MUTATION!";
+		tyy = __view_get( e__VW.YView, 0 )+76
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 + 1,tyy,tt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5 + 1,tyy + 1,tt,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy + 1,tt,c_black,c_black,c_black,c_black,1);
+		//draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy,tt);
+		draw_text_colour(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,tyy,tt,c_lime,c_lime,c_lime,c_lime,1);
+		draw_set_font(fntM);
+	}
+	else if Player.rerollpoints > 0 && Player.skillpoints < 1
+	{
+		draw_sprite(sprRerollSplat,image_index,xx,yy);
+		var tt = "REROLL ONE";
 		draw_set_font(fntB);
 		var tyy = __view_get( e__VW.YView, 0 )+47
 		/*

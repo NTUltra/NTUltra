@@ -46,11 +46,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 1;
+			dmg += 2;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 1;
+			dmg += 2;
 		}
 		team = other.team
 		ammo = am

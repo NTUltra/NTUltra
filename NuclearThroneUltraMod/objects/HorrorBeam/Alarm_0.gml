@@ -73,6 +73,8 @@ else if bskin=2
 sprite_index=sprHorrorBeamC;
 else if bskin==3
 sprite_index=sprHorrorBeamD;
+else if bskin==4
+sprite_index=sprHorrorBeamE;
 
 rad=other.rad;
 direction = other.direction

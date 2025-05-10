@@ -1,0 +1,17 @@
+event_inherited();
+dmg = 150;
+t = 0.5;
+col = c_red;
+width = 8;
+cost = 0.5;
+borderWidth = 4;
+middleColour = c_black//make_colour_rgb(200,252,50);
+canDamage = true;
+cost = 0;
+knockback = 40;
+timeIncrease = 0.15;
+destroyTime = 30;
+railFx = sprUltraRailGunEffect;
+railHit = sprUltraRailgunHit;
+hitScale = 1;
+splashDamage = 32;

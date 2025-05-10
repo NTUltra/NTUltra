@@ -4,7 +4,7 @@
 event_inherited();
 
 //drop super disc gun??
-if(random(100)<3){//2
+if(canDropSuperDisc){//2
 	with instance_create(x,y,WepPickup)
 	{
 	scrWeapons()

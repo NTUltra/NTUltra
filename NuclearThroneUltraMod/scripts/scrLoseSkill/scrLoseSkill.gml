@@ -1,7 +1,7 @@
 ///scrLoseSkill();
 // /@description need to run in player
 ///@param
-function scrLoseSkill(skillIndex, disableInstead = false) {
+function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true) {
 	with GameRender
 	{
 		mutationDynamicHud = dynamicHudResetTime;
@@ -238,7 +238,8 @@ function scrLoseSkill(skillIndex, disableInstead = false) {
 		maxhealth -= 1;
 		maxhealth = max(1,maxhealth);
 	}
-	level -= 1;
+	if shouldLevelDown
+		level -= 1;
 	totalSkills--;
 	skillsChosen --;
 	with GameRender {

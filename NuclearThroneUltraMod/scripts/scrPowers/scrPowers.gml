@@ -572,6 +572,10 @@ function scrPowers(raceOverwrite = -1) {
 							sprite_index=sprHorrorBeamB;
 					    else if bskin = 2
 							sprite_index=sprHorrorBeamC;
+						else if bskin == 3
+							sprite_index = sprHorrorBeamD;
+						else if bskin == 4
+							sprite_index = sprHorrorBeamE;
     
 					    originnr=instance_number(HorrorBeam);
     
@@ -588,6 +592,10 @@ function scrPowers(raceOverwrite = -1) {
 								sprite_index=sprHorrorBeamSpawnB
 					        else if other.bskin=2
 								sprite_index=sprHorrorBeamSpawnC
+							else if other.bskin=3
+								sprite_index=sprHorrorBeamSpawnD
+							else if other.bskin=4
+								sprite_index=sprHorrorBeamSpawnE
 					        else
 								sprite_index=sprHorrorBeamSpawn
 							image_angle = other.image_angle
@@ -1056,43 +1064,46 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			if (ultra_got[68] && altUltra)
 			{
-				//Weapon smith enginuity ultra
-				snd_play(sndMorphStart);
-				instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
-				var len = 20;
-				var dirr = random(360);
-				repeat(3)
+				if !instance_exists(MorphCooldown)
 				{
-					instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
-					dirr += 120;
-				}
-				if skill_got[5]
-				{
-					var len = 40;
-					dirr += 60;
+					//Weapon smith enginuity ultra
+					snd_play(sndMorphStart);
+					instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
+					var len = 20;
+					var dirr = random(360);
 					repeat(3)
 					{
 						instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
 						dirr += 120;
 					}
-				}
-				if !isRerollingInstead
-				{
-					var wantTier = wep_area[wep];
-					wep ++;
-					if wep > maxwep
-						wep = 1;
-					while (wep_area[wep] != wantTier)
+					if skill_got[5]
 					{
+						var len = 40;
+						dirr += 60;
+						repeat(3)
+						{
+							instance_create(UberCont.mouse__x + lengthdir_x(len,dirr),UberCont.mouse__y + lengthdir_y(len,dirr),Morph);
+							dirr += 120;
+						}
+					}
+					if !isRerollingInstead
+					{
+						var wantTier = wep_area[wep];
 						wep ++;
 						if wep > maxwep
 							wep = 1;
+						while (wep_area[wep] != wantTier)
+						{
+							wep ++;
+							if wep > maxwep
+								wep = 1;
+						}
+						scrAddNewWeaponDrop(wep, true);
+						with instance_create(x,y,PopupText) {
+							mytext = other.wep_name[other.wep];
+						}
+						scrWeaponHold();
 					}
-					scrAddNewWeaponDrop(wep, true);
-					with instance_create(x,y,PopupText) {
-						mytext = other.wep_name[other.wep];
-					}
-					scrWeaponHold();
 				}
 			}
 		    else if !isRerollingInstead && bwep != 0
@@ -3484,6 +3495,8 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamC;
 					else if bskin = 3
 						sprite_index=sprHorrorBeamD;
+					else if bskin = 4
+						sprite_index=sprHorrorBeamE;
     
 				    originnr=instance_number(HorrorBeam);
     
@@ -3502,6 +3515,8 @@ function scrPowers(raceOverwrite = -1) {
 							sprite_index=sprHorrorBeamSpawnC
 						else if other.bskin=3
 							sprite_index=sprHorrorBeamSpawnD
+						else if other.bskin=4
+							sprite_index=sprHorrorBeamSpawnE
 				        else
 							sprite_index=sprHorrorBeamSpawn
 				        image_angle = other.image_angle
@@ -3519,6 +3534,8 @@ function scrPowers(raceOverwrite = -1) {
 					sprite_index=sprHorrorBeamC;
 				else if bskin = 3
 					sprite_index=sprHorrorBeamD;
+				else if bskin = 4
+					sprite_index=sprHorrorBeamE;
 
 				originnr=instance_number(HorrorBeam);
 
@@ -3537,6 +3554,8 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamSpawnC
 					else if other.bskin=3
 						sprite_index=sprHorrorBeamSpawnD
+					else if other.bskin=4
+						sprite_index=sprHorrorBeamSpawnE
 				    else
 						sprite_index=sprHorrorBeamSpawn
 				    image_angle = other.image_angle
@@ -3556,6 +3575,8 @@ function scrPowers(raceOverwrite = -1) {
 				sprite_index=sprHorrorBeamC;
 			else if bskin = 3
 				sprite_index=sprHorrorBeamD;
+			else if bskin = 4
+				sprite_index=sprHorrorBeamE;
     
 		    originnr=instance_number(HorrorBeam);
     
@@ -3574,6 +3595,8 @@ function scrPowers(raceOverwrite = -1) {
 					sprite_index=sprHorrorBeamSpawnC
 				else if other.bskin=3
 					sprite_index=sprHorrorBeamSpawnD
+				else if other.bskin=4
+					sprite_index=sprHorrorBeamSpawnE
 		        else
 					sprite_index=sprHorrorBeamSpawn
 		        image_angle = other.image_angle
@@ -4321,6 +4344,8 @@ function scrPowers(raceOverwrite = -1) {
 				sprite_index=sprBecomeHorrorBigBalC;
 			else if other.bskin == 3
 				sprite_index=sprBecomeHorrorBigBalD;
+			else if other.bskin == 4
+				sprite_index=sprBecomeHorrorBigBalE;
 			team = other.team;
 			//Max is about 20
 			myPower = other.horrorcharge;

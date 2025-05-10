@@ -48,6 +48,60 @@ if Player.refundPoints > 0 && !UberCont.voidChallengeGoing[4]
 	}
 	exit;
 }
+if Player.rerollpoints > 0 && scrHasEnoughMutations(1) && Player.skillpoints < 1
+{
+	amountOfSkills = 8;
+	var gottenSkills = [];
+	with Player
+	{
+		var si = 0;
+		repeat(maxskill + 1)
+		{
+			if skill_got[si]
+			{
+				gottenSkills[array_length(gottenSkills)] = si;
+			}
+			si++;
+		}
+	}
+	amountOfSkills = min(array_length(gottenSkills),8);
+	var selectedSkills = [];
+	var selectedSkillsIndex = 0;
+	do {
+		var selectedSkill = -1;
+		do {
+			selectedSkill = gottenSkills[irandom(array_length(gottenSkills) - 1)];
+		} until (selectedSkill != -1 && !array_contains(selectedSkills,selectedSkill))
+		selectedSkills[array_length(selectedSkills)] = selectedSkill;
+		selectedSkillsIndex += 1;
+	} until (selectedSkillsIndex >= amountOfSkills)
+	var totalSkillsPositioning = amountOfSkills;
+	for (var i = 0; i <= amountOfSkills; i++)
+	{
+		if i == amountOfSkills
+		{
+			with instance_create(0,0,RerollIcon)
+			{
+				totalSkills = totalSkillsPositioning;
+				skillIndex = i;
+				skill = -1;
+				sprite_index = sprRerollNothing;
+				event_perform(ev_alarm,1);
+			}
+		}
+		else
+		{
+			with instance_create(0,0,RerollIcon)
+			{
+				totalSkills = totalSkillsPositioning;
+				skillIndex = i;
+				skill = selectedSkills[i];
+				event_perform(ev_alarm,1);
+			}
+		}
+	}
+	exit;
+}
 if Player.charpoints > 0
 {
 	scrRaces();
@@ -502,26 +556,6 @@ else
 		exit;    
     
 	    }//end of the ultra code
-    /*else if Player.ultra_got[73]{// Skelly ultra A redemption patience all da time
-		//MUTATIONS
-	    scrSkills()//maybe dont run this when ultra
-		amountOfSkills = 5;
-	    skills = array_create(amountOfSkills,maxskill+1);
-		for (var i = 0; i < amountOfSkills; i++)
-		{
-			var newSkill = 0;
-			if scrSkillLeft(skills)
-			{
-				do newSkill = ceil(random(maxskill))
-					until (!Player.skill_got[newSkill] && !array_contains(skills,newSkill))
-				skills[i] = newSkill;
-			}
-			else
-			{
-				skills[i] = maxskill + 1;
-			}
-		}
-    }*/
 	//Get a regular mutation
 	if array_length(UberCont.skillDeposit) > 0
 	{
@@ -602,10 +636,14 @@ else
 	}
 	//MUTATIONS
 	scrSkills()//maybe dont run this when ultra
-	amountOfSkills = 6;
+	amountOfSkills = 4 + UberCont.mutation_crystals_collected_1 + UberCont.mutation_crystals_collected_2// + UberCont.mutation_crystals_collected_3;
+	if (scrIsGamemode(27) || scrIsGamemode(26) || UberCont.isLeaderboardGamemode)
+		amountOfSkills = 6;
 	if scrIsCrown(8)
 		amountOfSkills = 2;
 	if Player.race == 21 || Player.phoenixrevives > 6//Horror
+		amountOfSkills ++;
+	if Player.ultra_got[84] && Player.altUltra
 		amountOfSkills ++;
 	skills = array_create(amountOfSkills,maxskill+1);
 	for (var i = 0; i < amountOfSkills; i++)

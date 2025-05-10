@@ -50,6 +50,12 @@ function scrSaveStats() {
 		dir +=1;
 	}
 	
+	
+	ini_write_real("STATS","mutationcrystalscollected1",mutation_crystals_collected_1);
+	ini_write_real("STATS","mutationcrystalscollected2",mutation_crystals_collected_2);
+	ini_write_real("STATS","mutationcrystalscollected3",mutation_crystals_collected_3);
+
+	
 	ini_write_real("STATS","ctotwallsdestroyed",ctot_walls_destroyed);
 	
 	ini_write_real("STATS","boss_bot_normal",boss_bot_normal);

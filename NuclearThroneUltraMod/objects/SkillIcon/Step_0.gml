@@ -459,6 +459,9 @@ if selected && visible
 		if skill==13||skill==14||skill==15||skill==16||skill==17||skill==21||skill==42||skill==43//wep specific
 		{Player.heavyheart++;}
 
+		with RerollIcon
+		instance_destroy();
+
 		with SkillIcon
 		instance_destroy()
 
@@ -468,9 +471,9 @@ if selected && visible
 		with UltraIcon
 		instance_destroy()
 
-		if Player.skillpoints > 0 || Player.refundPoints > 0
+		if Player.skillpoints > 0 || Player.refundPoints > 0 || Player.charpoints > 0 || (Player.rerollpoints > 0 && scrHasEnoughMutations(1))
 		{
-		instance_create(x,y,LevCont);
+			instance_create(x,y,LevCont);
 		}
 		else if !instance_exists(GenCont)
 		{

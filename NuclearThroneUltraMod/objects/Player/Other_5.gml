@@ -24,6 +24,8 @@ didJumpRoll = false;
 consecutiveGoodBloodGambles = 0;
 tinyKrakenSpawned = 0;
 stressTargetHealth = 99;
+if ultra_got[84] && altUltra
+	rerollpoints = 1;
 if ultra_got[50] && altUltra
 	charpoints = 1;
 if ultra_got[19] && altUltra
@@ -929,6 +931,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		skillpoints = other.skillpoints;
 		crownpoints = other.crownpoints;
 		charpoints = other.charpoints;
+		rerollpoints = other.rerollpoints;
 		level = other.level;
 		maxlevel = other.maxlevel;
 		rad = other.rad;

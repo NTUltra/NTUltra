@@ -15,8 +15,8 @@
     "path":"folders/Objects/Projectiles.yy",
   },
   "parentObjectId":{
-    "name":"Railgun",
-    "path":"objects/Railgun/Railgun.yy",
+    "name":"MicroBullet",
+    "path":"objects/MicroBullet/MicroBullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

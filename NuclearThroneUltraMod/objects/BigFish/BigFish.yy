@@ -21,8 +21,8 @@
   "name":"BigFish",
   "overriddenProperties":[],
   "parent":{
-    "name":"Boss",
-    "path":"folders/Objects/Enemies/Boss.yy",
+    "name":"Oasis",
+    "path":"folders/Objects/Enemies/Boss/Oasis.yy",
   },
   "parentObjectId":{
     "name":"enemyCollisionWall",

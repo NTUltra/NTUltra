@@ -24,7 +24,7 @@ if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y <
 	
 	with LevCont
 		instance_destroy()
-	if Player.charpoints > 0 || Player.skillpoints > 0 || Player.crownpoints > 0
+	if Player.charpoints > 0 || Player.skillpoints > 0 || Player.crownpoints > 0 || Player.rerollpoints > 0
 	{
 		instance_create(x,y,LevCont);
 	}

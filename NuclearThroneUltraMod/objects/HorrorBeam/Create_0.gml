@@ -20,6 +20,7 @@ originnr=0;
 
 ultraD=false
 accuracyBoost = 1;
+minDamage = 0;
 if instance_exists(Player)
 {
 	if Player.ultra_got[84]
@@ -32,5 +33,6 @@ if instance_exists(Player)
 		image_speed = 0.35;
 	}
 }
+minDamage += GetPlayerLoops();
 canBeMoved = false;
 isLaser = false;

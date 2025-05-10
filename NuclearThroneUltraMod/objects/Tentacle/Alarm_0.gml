@@ -255,7 +255,11 @@ if round(ammo) > 0
 				{
 					sprite_index=sprUltraTentacle;
 					ultra=true;
-					dmg = 6;
+					dmg = 9;
+					if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+					{
+						dmg += 2;
+					}
 					image_yscale += 0.3;
 					direction = other.direction+choose(80+random(30),-80+random(-30))
 					image_angle = direction

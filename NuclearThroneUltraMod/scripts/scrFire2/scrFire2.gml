@@ -2680,9 +2680,9 @@ function scrFire2(hasTailNow) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	
-	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 5
@@ -2813,9 +2813,9 @@ function scrFire2(hasTailNow) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
-	alarm[3]=max(4,alarm[3]);//imunity
 	//wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
@@ -3050,9 +3050,15 @@ function scrFire2(hasTailNow) {
 
 	instance_create(x,y,Dust)
 	instance_create(x,y,Smoke)
+	var offset = 8 + (32 * accuracy);
+	var xo1 = lengthdir_x(offset,aimDirection + 90);
+	var xo2 = lengthdir_x(offset,aimDirection - 90);
+	var yo1 = lengthdir_y(offset,aimDirection + 90);
+	var yo2 = lengthdir_y(offset,aimDirection - 90);
+
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-		dmg = 22;
+		dmg = 30;
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
@@ -3062,15 +3068,42 @@ function scrFire2(hasTailNow) {
 		image_angle = direction
 		team = other.team
 	}
-	instance_create(x,y,BigWallBreak);
-	repeat(3+Player.skill_got[13])
+	with instance_create(x+xo1+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo1+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
-		scrMoveContactSolid(aimDirection,32)
+		dmg = 30;
+		wallPierce *= 0.5;
+		sprite_index=sprUltraSlash;
+		longarms = 0
+		
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,3+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	with instance_create(x+xo2+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo2+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
+	{
+		dmg = 30;
+		wallPierce *= 0.5;
+		sprite_index=sprUltraSlash;
+		longarms = 0
+		
+		longarms = (Player.skill_got[13]+other.bettermelee)*3
+		motion_add(aimDirection,3+longarms)
+		image_angle = direction
+		team = other.team
+	}
+	instance_create(x,y,BigWallBreak);
+	var msk = mask_index;
+	mask_index = mskPickupThroughWall;
+	repeat(4+Player.skill_got[13])
+	{
+		x += lengthdir_x(32,aimDirection);
+		y += lengthdir_y(32,aimDirection);
 		instance_create(x,y,Dust)
 		instance_create(x,y,Smoke)
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
-			dmg = 22;
+			dmg = 30;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
 			longarms = 0
@@ -3079,7 +3112,30 @@ function scrFire2(hasTailNow) {
 			image_angle = direction
 			team = other.team
 		}
+		with instance_create(x+xo1+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo1+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
+		{
+			dmg = 30;
+			wallPierce *= 0.5;
+			sprite_index=sprUltraSlash;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x+xo2+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo2+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
+		{
+			dmg = 30;
+			wallPierce *= 0.5;
+			sprite_index=sprUltraSlash;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
 	}
+	mask_index = msk;
 	if !skill_got[2]
 	{
 		x += lengthdir_x(2,aimDirection+180)
@@ -3091,8 +3147,8 @@ function scrFire2(hasTailNow) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
-	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 8
@@ -4745,8 +4801,8 @@ function scrFire2(hasTailNow) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
-	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -8823,7 +8879,7 @@ function scrFire2(hasTailNow) {
 		image_angle = direction
 		team = other.team
 	}
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraBigSlash)
+	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraLollipopSlash)
 	{
 		dmg = 80//energy hammer is 50
 		longarms = 0
@@ -15322,10 +15378,10 @@ function scrFire2(hasTailNow) {
 	{
 		sprite_index=sprUltraTentacle;
 		ultra=true;
-		dmg = 8;
+		dmg = 9;
 		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 1;
+			dmg += 2;
 		}
 		image_angle = aimDirection+(random(60)-30)*other.accuracy
 		team = other.team

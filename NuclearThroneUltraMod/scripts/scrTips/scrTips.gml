@@ -640,7 +640,7 @@ function scrTips() {
 		}
 	}
 	else if tiptype = 5 	//CROWNS
-		tip = Player.crown_tips[Player.crown[irandom(array_length(Player.crown)-1)]]
+		tip = Player.crown_tips[Player.crown[clamp(irandom(array_length(Player.crown)-1),0,array_length(Player.crown)-1)]]
 	else if tiptype = 6  //ULTRAS
 	{
 	if Player.level>=10
@@ -655,7 +655,7 @@ function scrTips() {
 	    tip=""
 	}
 	else if tiptype == 7 ///GAMEMODE
-		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[irandom(array_length(UberCont.opt_gamemode)-1)]];
+		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[clamp(irandom(array_length(UberCont.opt_gamemode)-1),0,array_length(Player.crown)-1)]];
 	if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
 	{
 		tip = "KILL KILL KILL";	

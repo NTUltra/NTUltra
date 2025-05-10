@@ -151,6 +151,7 @@ function scrEndOfRun(){
 		refundLastWishPrevent = false
 		refundSkeletonLives = 0
 		refundLastWish = false;
+		killedChesireCat = false;
 		if playFullyCompleted
 		{
 			playFullyCompleted = false;

@@ -74,6 +74,11 @@ function scrLoadStats() {
 	}
 
 	ctot_walls_destroyed = ini_read_real("STATS","ctotwallsdestroyed",0);
+	
+	mutation_crystals_collected_1 = ini_read_real("STATS","mutationcrystalscollected1",0);
+	mutation_crystals_collected_2 = ini_read_real("STATS","mutationcrystalscollected2",0);
+	mutation_crystals_collected_3 = ini_read_real("STATS","mutationcrystalscollected3",0);
+	
 	tot_areas = [];
 	var i = 0;
 	while(ini_key_exists("STATS","totarea"+string(i))) {

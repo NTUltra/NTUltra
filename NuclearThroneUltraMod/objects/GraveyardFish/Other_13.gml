@@ -17,6 +17,7 @@ if tpTimes > 0
 	alarm[5] = 10 + irandom(20);
 tpTimes--;
 scrActivateAllOutOfRange();
+if instance_exists(Player)
 with hitme
 {
 	if team == 2

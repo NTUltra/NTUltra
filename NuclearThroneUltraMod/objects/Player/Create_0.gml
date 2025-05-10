@@ -107,6 +107,7 @@ rewinding = false;
 alienIntestines = 0;
 alienDir = 5;
 charpoints = 0;
+rerollpoints = 0;
 freeAmmoRound = 0;
 hogWep[0] = 0;
 hogWep[1] = 0;

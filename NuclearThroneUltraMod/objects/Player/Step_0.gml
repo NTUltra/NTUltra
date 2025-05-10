@@ -609,7 +609,7 @@ if !instance_exists(LevCont) and visible = 1
 		}
 		if keyboard_check_pressed(ord("M")) {
 		    instance_create(x+64,y,BigWallBreak);
-			instance_create(x+64,y,HyenaBoss);
+			instance_create(x+64,y,MutationChoiceReward);
 		}
 		if keyboard_check_pressed(ord("T")) {
 			if instance_exists(Portal) && scrIsGamemode(25)
@@ -1048,8 +1048,9 @@ if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 {
 	instance_create(x,y,WepSwap)
 	scrSwapWeps()
-	if ultra_got[68] && altUltra {
+	if ultra_got[68] && altUltra && !instance_exists(MorphCooldown) {
 		snd_play(sndMorphStart);
+		instance_create(x,y,MorphCooldown);
 		instance_create(UberCont.mouse__x,UberCont.mouse__y,Morph);
 		var len = 20;
 		var dirr = random(360);
@@ -2416,7 +2417,7 @@ if ((abs(h_point) > dedzone) || (abs(v_point) > dedzone))
 
 /* */
 ///Angel flying through walls
-if race==18
+if race == 18
 {
 	if !instance_exists(LevCont) && instance_exists(WallHitMe)// && !instance_exists(Portal)
 	{

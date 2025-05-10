@@ -177,7 +177,7 @@ function scrSecretUltraStat() {
 	secret_ultra_text[21] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>#<p>THRONEBUTT<p> INCREASES MORPH AMOUNT"
 	secret_ultra_tips[21] = "moldable weapons"
 	secret_ultra_hint[21] = "REMORPH";
-	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON OR MOD";
+	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";
 	
 
 	//ANGEL
@@ -326,6 +326,13 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[40] = "8"
 	secret_ultra_hint[40] = "NULL AMMO";
 	secret_ultra_unlk[40] = "HAVE ATLEAST ONE AMMO TYPE\nNEAR EMPTY";
+	
+	//84
+	secret_ultra_name[41] = "MORPHING CAT"
+	secret_ultra_text[41] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPPH<pi>"
+	secret_ultra_tips[41] = "cute kitty with big guns"
+	secret_ultra_hint[41] = "KILLER CAT";
+	secret_ultra_unlk[41] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";
 	
 	maxsecretultra = array_length(secret_ultra_name);
 	

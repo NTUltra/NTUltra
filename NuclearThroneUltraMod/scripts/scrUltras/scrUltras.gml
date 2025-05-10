@@ -663,6 +663,13 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_name[84] = "POWER"
 	ultra_text[84] = "HOMING <g>BEAM<g>#<g>BEAM<g> GOES THROUGH <w>WALLS<w>#<g>BEAM<g> DESTROYS PROJECTILES BETTER"
 	ultra_tips[84] = "thats a good beam"
+	if altOverride || (instance_exists(Player) && Player.race == 21 && Player.altUltra)
+	{
+		ultra_name[84] = "MORPHING CAT"
+		//ultra_text[84] = "YOU CAN PHASE THROUGH WALLS WHILE USING BEAM#BEAM MORPHS#USING BEAM SPAWNS MORPH BULLETS AND LASERS AROUND YOU#WHEN OUT OF <g>RADS<g> BEAM USES <g>ENERGY<g> <y>AMMO<y>"
+		ultra_text[84] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPPH<pi>"
+		ultra_tips[84] = "cute kitty with big guns"
+	}
 
 	// ULTRA E IS ULTRA 0
 

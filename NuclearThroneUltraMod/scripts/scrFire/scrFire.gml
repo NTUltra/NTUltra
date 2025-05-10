@@ -2892,8 +2892,8 @@ function scrFire(canDrown = true) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
-	alarm[3]=max(4,alarm[3]);//imunity
 	//wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
@@ -2950,9 +2950,9 @@ function scrFire(canDrown = true) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
-	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -3411,9 +3411,9 @@ function scrFire(canDrown = true) {
 	{
 		x = currentX;
 		y = currentY;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
-	alarm[3]=max(4,alarm[3]);//imunity
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
@@ -3719,7 +3719,7 @@ function scrFire(canDrown = true) {
 		team = other.team
 		sprite_index = sprLollipopSlash;
 	}
-	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),BigSlash)
+	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),LollipopSlash)
 	{
 		dmg = 32//shovel is 8 sledge = 16
 		longarms = 0

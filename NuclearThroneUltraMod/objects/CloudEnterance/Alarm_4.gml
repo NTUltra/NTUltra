@@ -8,7 +8,6 @@ else
 	var i = 0;
 	with Player
 	{
-		var gottenSkills = [];
 		var si = 0;
 		repeat(maxskill)
 		{

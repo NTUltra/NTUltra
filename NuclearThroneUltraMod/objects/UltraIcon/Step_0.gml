@@ -39,6 +39,7 @@ if (selected && visible &&
 				cash = maxCash;
 				inDebt = false;
 				scrUnlockAltSkin(race, 0);
+				bskin = 4;
 				spr_idle=sprMutant21DIdle;
 				spr_sit=sprMutant21DIdle;
 				spr_go_sit=sprMutant21DIdle;
@@ -282,6 +283,26 @@ if (selected && visible &&
 		with BackCont
 		{
 			alarm[3]=60;	
+		}
+	}
+	else if skill == 84 && isAlternative
+	{
+		with Player
+		{
+			rerollpoints = 1;
+			maxhealth = 9;
+			my_health = 9;
+			scrUnlockGameMode(22,"FOR TAKING A#SECRET ULTRA MUTATION");
+			altUltra = true;
+			scrUltras(true, false);
+			scrUnlockAltSkin(race, 1);
+			bskin = 5;
+			spr_idle=sprMutant21EIdle;
+			spr_sit=sprMutant21DIdle;
+			spr_go_sit=sprMutant21EIdle;
+			spr_walk=sprMutant21EWalk;
+			spr_hurt=sprMutant21EHurt;
+			spr_dead=sprMutant21EDead;
 		}
 	}
 	else if skill == 92 && Player.race == 23 && isAlternative
@@ -1275,7 +1296,7 @@ if (selected && visible &&
 
 	}
 
-	if Player.skillpoints > 0 || Player.charpoints > 0 || giveMeMore
+	if Player.skillpoints > 0 || Player.charpoints > 0 || (Player.rerollpoints > 0 && scrHasEnoughMutations(1)) || giveMeMore
 	{
 		if regularprocedure
 			instance_create(x,y,LevCont)

@@ -1,3 +1,4 @@
+
 ///xxx();
 
 // /@description
@@ -10,6 +11,21 @@ function scrEnemyDeathEvent(isSheep = false){
 	scrCrownOfFright();
 	if instance_exists(Player)
 	{
+		//Cat Horror
+		if Player.ultra_got[84] && Player.altUltra
+		{
+			var len = 20;
+			var dirr = random(360);
+			instance_create(x,y,Morph);
+			if mySize > 2
+			{
+				repeat(4)
+				{
+					instance_create(x + lengthdir_x(len,dirr),y + lengthdir_y(len,dirr),Morph);
+					dirr += 72;
+				}
+			}
+		}
 		//Thief hidden in plain sight
 		if Player.ultra_got[109]
 		{

@@ -19,5 +19,5 @@ alarm[0]=10+random(60);
 alarm[1]=30+random(120);
 
 image_speed=0;
-
+minDamage = 1 + GetPlayerLoops();
 sprite_index = choose(sprHorrorCash1,sprHorrorCash2,sprHorrorCash3,sprHorrorCash4);

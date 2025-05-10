@@ -1,4 +1,4 @@
-if speed > 1
+if speed > 1 && alarm[3] < 1
 {
 	var msk = mask_index;
 	mask_index = sprite_index;
@@ -7,11 +7,13 @@ if speed > 1
 	var hits = ds_list_create();
 	var al = instance_place_list(x,y,hitme,hits,false)
 	var hitAnEnemy = false;
+	var didHit = false;
 	for (var i = 0; i < al; i++) {
 		with hits[| i]
 		{
 			if other.team != team and my_health > 0
 			{
+				didHit = true;
 				if team != 0
 					hitAnEnemy = true;
 				if instance_exists(Player) && Player.ultra_got[54] == 1
@@ -65,6 +67,8 @@ if speed > 1
 			}
 		}
 	}
+	if didHit
+		alarm[3] = 5;
 	/*
 	if hitAnEnemy && instance_exists(Player) && Player.ultra_got[55] && !Player.altUltra
 	{
@@ -122,8 +126,9 @@ else
 				direction = point_direction(x,y,nearest.x,nearest.y);
 			}
 		} 
-		if Player.ultra_got[54] == 1
+		if Player.ultra_got[54] == 1 && alarm[4] < 1
 		{
+			alarm[4] = 10;
 			snd_play(sndExplosion);
 			instance_create(x,y,Explosion);
 		}

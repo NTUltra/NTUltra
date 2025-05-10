@@ -1,18 +1,28 @@
 function scrMeleeWeapons(wep) {
-	with Player
-	{
-		if (wep != 0 && (wep_type[wep] == 0 || wep == 24 || wep == 36 || wep == 53 || wep == 223 || wep == 553
-		|| wep==198 || wep==37|| wep==126|| wep==108 || wep==109 || wep == 286 || wep == 301 || wep == 350
-		|| wep==123 || wep == 222|| wep==239 || wep==220 || wep==291 || wep == 332 || wep == 377 || wep == 458 
-		|| wep == 495 || wep == 577 || wep == 588 || wep == 591 || wep == 592 || wep == 593 || wep == 596
-		|| wep == 625 || wep == 481 || wep == 669 || wep == 492 || wep == 603 || wep == 604 || wep == 177
-		|| wep == 674 || wep == 67 || wep == 253 || wep == 254 || wep == 255 || wep == 256 || wep == 479 || wep == 480
-		|| wep == 81 || wep == 605 || wep == 719 || wep == 752 || wep == 809 || wep == 812 || wep == 821 || wep == 825
-		|| wep == 822 || wep == 272 || wep == 275 || wep == 484 || wep == 714 || wep == 887 || wep == 756 || wep == 898
-		))
+	var melees = [24,36,53,223,553
+		,198,37,126,108,109,286,301,350
+		,123,222,239,220,291,332,377,458 
+		,495,577,588,591,592,593,596
+		,625,481,669,492,603,604,177
+		,674,67,253,254,255,256,479,480
+		,81,605,719,752,809,812,821,825
+		,822,272,275,484,714,887,756,898]
+	if instance_exists(Player)
+		with Player
 		{
-			return true;
+			if (wep != 0 && (wep_type[wep] == 0 || array_contains(melees, wep)))
+			{
+				return true;
+			}
 		}
-	}
+	else
+		with UberCont
+		{
+			if (wep != 0 && (wep_type[wep] == 0 || array_contains(melees, wep)))
+			{
+				return true;
+			}
+		}
+	
 	return false;
 }

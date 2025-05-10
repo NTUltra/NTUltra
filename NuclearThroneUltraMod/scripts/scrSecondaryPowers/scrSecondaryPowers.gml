@@ -857,6 +857,10 @@ function scrSecondaryPowers() {
 							sprite_index=sprBecomeHorrorBigBalB;
 						else if other.bskin = 2
 							sprite_index=sprBecomeHorrorBigBalC;
+						else if other.bskin = 3
+							sprite_index=sprBecomeHorrorBigBalD;
+						else if other.bskin = 4
+							sprite_index=sprBecomeHorrorBigBalE;
 						team = other.team;
 						//Max is about 20
 						myPower = 2 + ballPower * 1.25;

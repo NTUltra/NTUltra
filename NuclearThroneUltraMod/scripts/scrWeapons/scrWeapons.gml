@@ -601,7 +601,6 @@ function scrWeapons() {
 	wep_swap[53] = sndSwapEnergy
 	wep_rad[53] = 0;
 
-
 	wep_name[54] = "HYPER LAUNCHER"
 	wep_type[54] = 4
 	wep_auto[54] = 0
@@ -3377,13 +3376,13 @@ function scrWeapons() {
 	wep_name[301] = "ULTRA GLOVE"
 	wep_type[301] = 4
 	wep_auto[301] = 0
-	wep_load[301] = 14
+	wep_load[301] = 12
 	wep_cost[301] = 1
 	wep_sprt[301] = sprUltraGlove
-	wep_area[301] = 19
+	wep_area[301] = 30
 	wep_text[301] = "ultra fingers"
 	wep_swap[301] = sndSwapHammer
-	wep_rad[301] = 16;//ultra shovel 14
+	wep_rad[301] = 12;//ultra shovel 14
 
 	wep_name[302] = "ULTRA SPLINTER GUN"
 	wep_type[302] = 3
@@ -10059,7 +10058,7 @@ function scrWeapons() {
 	wep_sprt[896] = sprBaseballBat
 	wep_area[896] = 2
 	wep_text[896] = "homerun"
-	wep_swap[896] = sndSwapBow
+	wep_swap[896] = sndSwapHammer
 	wep_rad[896] = 0;
 	
 	wep_name[897] = "HAND SAW"
@@ -10070,7 +10069,7 @@ function scrWeapons() {
 	wep_sprt[897] = sprHandSaw
 	wep_area[897] = 2
 	wep_text[897] = "the hand saw can hit the same enemy twice"
-	wep_swap[897] = sndSwapBow
+	wep_swap[897] = sndSwapHammer
 	wep_rad[897] = 0;
 	
 	wep_name[898] = "TASER"
@@ -10083,6 +10082,85 @@ function scrWeapons() {
 	wep_text[898] = "thats a pretty lethal taser"
 	wep_swap[898] = sndSwapEnergy
 	wep_rad[898] = 0;
+	
+	wep_name[899] = "TRIPLE MORPH-O-RIFLE"
+	wep_type[899] = 1
+	wep_auto[899] = 1
+	wep_load[899] = 4
+	wep_cost[899] = 5
+	wep_sprt[899] = sprTripleMorphORifle
+	wep_area[899] = 10
+	wep_text[899] = "bah bah blaster"
+	wep_swap[899] = sndSwapPistol
+	wep_rad[899] = 0;
+	wep_popup[899] = "SHEEP HAVE A HIGH#DROP RATE";
+	
+	wep_name[900] = "ULTRA TRIDENT"
+	wep_type[900] = 0
+	wep_auto[900] = 0
+	wep_load[900] = 25
+	wep_cost[900] = 0
+	wep_sprt[900] = sprUltraTrident
+	wep_area[900] = 29
+	wep_text[900] = "lime lord of the radiated seas"
+	wep_swap[900] = sndSwapDragon
+	wep_rad[900] = 18;
+	
+	wep_name[901] = "BOOM BLASTER"
+	wep_type[901] = 4
+	wep_auto[901] = 0
+	wep_load[901] = 35
+	wep_cost[901] = 3
+	wep_sprt[901] = sprBoomBlaster
+	wep_area[901] = 12
+	wep_text[901] = "DIRECT HITS THAT DON'T KILL REDUCE RELOAD TIME"
+	wep_swap[901] = sndSwapExplosive
+	wep_rad[901] = 0;
+	wep_popup[901] = "DIRECT HITS THAT DON'T KILL#REDUCE RELOAD TIME";
+	
+	wep_name[902] = "ULTRA HYPER LAUNCHER"
+	wep_type[902] = 4
+	wep_auto[902] = 1
+	wep_load[902] = 8
+	wep_cost[902] = 1
+	wep_sprt[902] = sprUltraHyperLauncher
+	wep_area[902] = 33
+	wep_text[902] = "it will be over in an instant"
+	wep_swap[902] = sndSwapExplosive
+	wep_rad[902] = 10;
+	
+	wep_name[903] = "EXTENDER"
+	wep_type[903] = 4
+	wep_auto[903] = 3
+	wep_load[903] = 18
+	wep_cost[903] = 1
+	wep_sprt[903] = sprExtender
+	wep_area[903] = 12
+	wep_text[903] = "automatic handsaw"
+	wep_swap[903] = sndSwapMotorized
+	wep_rad[903] = 0;
+	
+	wep_name[904] = "KRAKEN BURST GUN"
+	wep_type[904] = 4
+	wep_auto[904] = 2
+	wep_load[904] = 40//10
+	wep_cost[904] = 4
+	wep_sprt[904] = sprKrakenBurstGun
+	wep_area[904] = 4
+	wep_text[904] = "SEA STRIKER"
+	wep_swap[904] = sndSwapDragon
+	wep_rad[904] = 0;
+	
+	wep_name[905] = "CAR DOOR"
+	wep_type[905] = 0
+	wep_auto[905] = 2
+	wep_load[905] = 38
+	wep_cost[905] = 0
+	wep_sprt[905] = sprCarDoor
+	wep_area[905] = 5
+	wep_text[905] = "hits like a truck"
+	wep_swap[905] = sndSwapMotorized
+	wep_rad[905] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
@@ -10163,4 +10241,5 @@ function scrWeapons() {
 	
 	//Debug how many weapons there are of each tier
 	//scrExportWeapons();
+	//scrSortOutUltraWeapons();
 }

@@ -94,8 +94,8 @@ if al > 0 && alarm[0] < 1
 			var walls = ds_list_create();
 			var ys = image_yscale;
 			var xs = image_xscale;
-			image_yscale = 6;
-			image_xscale = 6;
+			image_yscale = 5;
+			image_xscale = 5;
 			var wAll = instance_place_list(xx,yy,Wall,walls,false)
 			for (var k = 0; k < wAll; k++) {
 				if UberCont.recursionCheck < 29

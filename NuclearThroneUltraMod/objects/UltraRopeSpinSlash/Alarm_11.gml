@@ -48,10 +48,10 @@ else
 		with instance_create(x,y,Tentacle)
 		{
 			isog = false;
-			dmg = 8;//6 dmg = 1dmg\
+			dmg = 9;//6 dmg = 1dmg\
 			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 			{
-				dmg += 1;
+				dmg += 2;
 			}
 			sprite_index=sprUltraTentacle;
 			ultra=true;

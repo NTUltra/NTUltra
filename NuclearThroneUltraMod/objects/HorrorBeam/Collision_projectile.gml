@@ -38,6 +38,11 @@ if other.team!=2
 		with instance_create(x,y,BulletHit)
 		sprite_index=sprHorrorHitD;
 		}
+		else if bskin==4
+		{
+		with instance_create(x,y,BulletHit)
+		sprite_index=sprHorrorHitE;
+		}
 		else
 		{
 		with instance_create(x,y,BulletHit)

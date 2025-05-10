@@ -11,7 +11,8 @@ with myExplosionMask {
 	else
 		dmg = other.dmg;
 }
-BackCont.shake += 4;//On top of normal explo
+if BackCont.shake < 20
+	BackCont.shake += 4;//On top of normal explo
 depth --;
 if instance_exists(Player){
 	if Player.ultra_got[57]//atom bomb

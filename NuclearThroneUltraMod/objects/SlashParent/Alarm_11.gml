@@ -8,7 +8,7 @@ y = yprevious;
 if um == ultramods.bloodMelee
 {
 	var toSpawn = HeavyBloodBullet;
-	if (sprite_index == sprUltraSlash || sprite_index == sprUltraBigSlash || sprite_index == sprUltraHeavySlash || sprite_index == sprUltraLightningSlash)
+	if (sprite_index == sprUltraSlash || sprite_index == sprUltraBigSlash || sprite_index == sprUltraHeavySlash || sprite_index == sprUltraLightningSlash || sprite_index == sprUltraKrakenSlash)
 	{
 		toSpawn = UltraBloodBullet;
 	}
@@ -68,11 +68,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 1;
+			dmg += 4;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 1;
+			dmg += 2;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0
@@ -101,11 +101,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 1;
+			dmg += 4;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 1;
+			dmg += 2;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0
@@ -134,11 +134,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 1;
+			dmg += 4;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 1;
+			dmg += 2;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0

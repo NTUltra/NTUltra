@@ -27,11 +27,11 @@ if instance_exists(Player){
 				ultra = true;
 				sprite_index=sprUltraTentacle;
 				scrCopyWeaponMod(other);
-				dmg = 6;
+				dmg = 9;
 				image_yscale += 0.3;
 				if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 				{
-					dmg += 1;
+					dmg += 2;
 				}
 				with instance_create(x,y,LightningSpawn)
 				{
@@ -216,7 +216,11 @@ for(var i = ammo; i > 0; i -= 1)
 				ultra = true;
 				sprite_index=sprUltraTentacle;
 				image_yscale += 0.3;
-				dmg = 6;
+				dmg = 9;
+				if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
+				{
+					dmg += 2;
+				}
 				ammo = clamp(other.ammo*0.34,2,16)+1;
 				isog = other.isog;
 				fork = other.fork;

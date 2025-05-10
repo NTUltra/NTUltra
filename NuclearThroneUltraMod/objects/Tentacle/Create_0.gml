@@ -33,7 +33,7 @@ if instance_exists(Player)
 	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 	{
 		image_speed-=0.1;
-		dmg += 1;
+		dmg += 2;
 		bloodDelay -= 1;
 		alarm[2] += 1;
 		fork = 8;

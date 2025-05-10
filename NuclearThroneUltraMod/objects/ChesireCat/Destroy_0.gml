@@ -14,7 +14,8 @@ scrDefeatedRequiredBoss(secretChallengeBosses.cheshireCat);
 scrDrop(100,0)
 scrDrop(100,40)
 scrDrop(100,100)
-
+with UberCont
+	killedChesireCat = true;
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(ChesireCat) == 1
 with MusCont
 {

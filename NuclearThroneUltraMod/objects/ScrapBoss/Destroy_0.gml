@@ -40,6 +40,13 @@ scrDrop(50,100,false,1)
 scrDrop(0,50)
 scrBossKill();
 Sleep(50)
+if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_1 < 1
+{
+	with instance_create(x,y,MutationChoiceReward)
+	{
+		crystalNumber = 1;
+	}
+}
 if object_index == UltraBigDog
 {
 	with instance_create(x,y,UltraBigDogExplode)

@@ -6,13 +6,18 @@ dmg = 1;
 impactWristed = false;
 team = 0;
 corpseHome = 0.3;
+minDamage = 1;
 if instance_exists(Player){
 	if Player.ultra_got[52] {
 		friction=0.32;
 		dmg = 1.5;
+		minDamage = 1 + max(0,Player.loops - 1);
+		dmg += max(0,(Player.loops - 1) * 0.5);
 	}
 	if Player.skill_got[20] {
 		dmg = 2;
+		dmg += max(0,(Player.loops - 1) * 0.5);
+		minDamage = 1 + max(0,Player.loops * 0.5 - 1);
 		alarm[1] = 1;
 		alarm[3] = 1;
 		impactWristed = true;

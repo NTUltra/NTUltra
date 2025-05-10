@@ -1,6 +1,15 @@
 scrDrop(50,50)
 
-event_inherited()
+event_inherited();
+
+if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_2 < 1
+{
+	with instance_create(x,y,MutationChoiceReward)
+	{
+		crystalNumber = 2;
+	}
+}
+
 if UberCont.area == 4 || UberCont.area == 111 || UberCont.area == 115
 scrDefeatedRequiredBoss(secretChallengeBosses.hyperCrystal);
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) == 1

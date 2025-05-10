@@ -8,7 +8,7 @@ if other.team != team and other.my_health > 0
 			raddrop+=other.rad;
 			with HorrorBeam
 				rad = 0;
-			DealDamage(clamp(floor(other.charge*0.25),3,5));
+			DealDamage(other.minDamage + clamp(floor(other.charge*0.25),3,5));
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,2+other.charge)
@@ -37,6 +37,11 @@ if other.team != team and other.my_health > 0
 		{
 		with instance_create(x,y,BulletHit)
 		sprite_index=sprHorrorHitD;
+		}
+		else if bskin==4
+		{
+		with instance_create(x,y,BulletHit)
+		sprite_index=sprHorrorHitE;
 		}
 		else
 		{

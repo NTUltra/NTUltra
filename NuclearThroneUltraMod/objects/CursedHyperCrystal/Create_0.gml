@@ -13,3 +13,7 @@ spr_hurt = sprCursedHyperCrystalHurt
 spr_dead = sprCursedHyperCrystalDead
 spr_fire = sprHyperCrystalFire
 alarm[4] = 4;
+canDropSuperDisc = false;
+SetSeedWeapon();
+if random(100) < 5
+	canDropSuperDisc = true;

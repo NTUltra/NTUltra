@@ -1035,9 +1035,8 @@ function scrFire3(hasTailNow){
 		{
 			x = currentX;
 			y = currentY;
+			alarm[3]=max(4,alarm[3]);//imunity
 		}
-
-		alarm[3]=max(4,alarm[3]);//imunity
 		//wepangle = -wepangle
 		BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
@@ -1709,10 +1708,10 @@ function scrFire3(hasTailNow){
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg = 8;//10+irandom(4)
+			dmg = 9;//10+irandom(4)
 			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 			{
-				dmg += 1;
+				dmg += 2;
 			}
 			image_angle = aimDirection+(random(60)-30)*other.accuracy
 			team = other.team
@@ -2630,7 +2629,7 @@ function scrFire3(hasTailNow){
 
 		instance_create(x,y,Dust)
 
-		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),WrenchSlash)
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),CrowBarSlash)
 		{
 			image_yscale *= sign(other.wepangle);
 			snd_wallhit = sndCrowbarHitWall;
@@ -3442,6 +3441,222 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(17,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 2
 		wkick = -7
+
+		break;
+		
+		//TRIPLE MORPH-O-RIFLE
+		case 899:
+
+		snd_play_fire(sndCuber);
+
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,MorphBullet)
+		{
+			motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,MorphBullet)
+		{
+			motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,19)
+			image_angle = direction
+			team = other.team
+		}
+		with instance_create(x,y,MorphBullet)
+		{
+			motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,19)
+			image_angle = direction
+			team = other.team
+		}
+
+		BackCont.viewx2 += lengthdir_x(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = 5
+
+		break;
+		
+		//ULTRA TRIDENT
+		case 900:
+
+		snd_play_fire(sndUltraShovel)
+		snd_play_fire(sndBloodHammer)
+		snd_play_fire(sndRoll)
+	
+		instance_create(x,y,Dust)
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),UltraKrakenSlash)
+		{
+			dmg = 26
+			longarms = 0
+		
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			image_yscale = choose(1,-1);
+			team = other.team
+			with instance_create(x,y,LightningSpawn)
+			{
+				sprite_index=sprTentacleSpawn
+				image_angle = other.image_angle
+			}
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add( other.image_angle+random(60)-30,2+random(4) );
+			}
+		}
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection+40*accuracy),UltraKrakenSlash)
+		{
+			dmg = 24
+			length += 2;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+40*other.accuracy,2+longarms)
+			image_angle = direction
+			image_yscale = choose(1,-1);
+			team = other.team
+			with instance_create(x,y,LightningSpawn)
+			{
+				sprite_index=sprTentacleSpawn
+				image_angle = other.image_angle
+			}
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add( other.image_angle+random(60)-30,2+random(4) );
+			}
+		}
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection-40*Player.accuracy),UltraKrakenSlash)
+		{
+			dmg = 24
+			length += 2;
+			longarms = 0
+		
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection-40*Player.accuracy,2+longarms)
+			image_angle = direction
+			image_yscale = choose(1,-1);
+			team = other.team
+			with instance_create(x,y,LightningSpawn)
+			{
+				sprite_index=sprTentacleSpawn
+				image_angle = other.image_angle
+			}
+			with instance_create(x,y,FishBoost)
+			{
+				motion_add( other.image_angle+random(60)-30,2+random(4) );
+			}
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+			motion_add(aimDirection,8)
+		BackCont.viewx2 += lengthdir_x(30,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -6
+
+		break;
+		
+		//BOOM BLASTER
+		case 901:
+
+		snd_play_fire(sndBoomBlaster)
+		
+		with instance_create(x,y,Smoke)
+			motion_add(aimDirection+(random(30)-15)*other.accuracy,2+random(3))
+		with instance_create(x,y,BoomBlaster)
+		{
+			direction = aimDirection;
+			image_angle = direction;
+			team = other.team
+			scrGiveProjectileStats();
+			event_perform(ev_alarm,0);
+		}
+
+		BackCont.viewx2 += lengthdir_x(50,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(50,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = 6
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,20);
+			motion_add(aimDirection + 180, 6);
+		}
+
+		break;
+		
+		//ULTRA HYPER LAUNCHER
+		case 902:
+
+		snd_play_fire(sndUltraHyperLauncher)
+
+		with instance_create(x,y,UltraHyperGrenade)
+		{
+		direction = aimDirection+(random(4)-2)*other.accuracy
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		wkick = 8
+
+		break;
+		
+		//EXTENDER
+		case 903:
+		with instance_create(x,y,SawWaveBurst)
+		{
+			accuracy = other.accuracy;
+			creator = other.id
+			ammo = 9
+			time = 2
+			team = other.team
+			event_perform(ev_alarm,0);
+		}
+
+		break;
+		
+		//KRAKEN BURST GUN
+		case 904:
+
+		with instance_create(x,y,KrakenBurst)
+		{
+		creator = other.id
+		ammo = 6
+		time = 7
+		team = other.team
+		event_perform(ev_alarm,0) 
+		}
+
+		break;
+		
+		//CAR DOOR
+		case 905:
+		if Player.skill_got[42]
+			snd_play_fire(sndPrepCarDoorShort);
+		else
+			snd_play_fire(sndPrepCarDoor);
+		scrSpinnableWeapon(wep);
+		instance_create(x,y,Smoke);
+		with instance_create(x,y,CarDoorBurst)
+		{
+			thisWep = other.wep;
+			accuracy = other.accuracy;
+			creator = other.id
+			ammo = 1
+			time = 9
+			team = other.team
+			alarm[0] = 15//15 originally
+			if Player.skill_got[2]
+				shouldslow = false;
+			if Player.skill_got[42]
+			{
+				alarm[0] = max(1,alarm[0]*0.25);
+				if Player.ultra_got[97] && !Player.altUltra
+					alarm[0] = 1;
+			}
+		}
 
 		break;
 	

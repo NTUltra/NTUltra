@@ -75,7 +75,7 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 			am ++;
 		break;
 		case 21:	//Horror
-			am ++;
+			am += 2;
 		break;
 		case 27:	//Hands
 			am ++;
@@ -353,6 +353,15 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 					unlockHint = "HINT: " + secret_ultra_hint[u];
 					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
 					drawSprite = sprYvGodsDontDie;
+				break;
+				case 21:
+					var u = 41;
+					name = string_hash_to_newline(secret_ultra_name[u]);
+					text = secret_ultra_text[u];
+					canShowThis = UberCont.ctot_secret_ultra_found[u];
+					unlockHint = "HINT: " + secret_ultra_hint[u];
+					howToUnlock = "UNLOCK: " + secret_ultra_unlk[u];
+					drawSprite = sprCatHorror;
 				break;
 				default: 
 					name = string_hash_to_newline(ultra_name[i]);
