@@ -1005,7 +1005,7 @@ if !instance_exists(LevCont) and visible = 1
     		autoFire = 6;
 			clicked = 0;
 		}
-		else if (wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey && canPuffyCheek <= 0
+		else if (wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey && (canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1)
 		{
 			if ultra_got[44] == 1 && instance_exists(Marker)
 			{
@@ -1684,7 +1684,7 @@ if (!instance_exists(LevCont))
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
-	if !lockout && (!IsShielding || ultra_got[7]==1) && canPuffyCheek <= 0 && !instance_exists(StunLockout)
+	if !lockout && (!IsShielding || ultra_got[7]==1) && (canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1) && !instance_exists(StunLockout)
 	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || (wep_type[wep] == 0)) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B

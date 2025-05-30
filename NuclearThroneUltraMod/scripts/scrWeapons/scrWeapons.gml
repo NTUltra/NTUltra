@@ -10161,6 +10161,17 @@ function scrWeapons() {
 	wep_text[905] = "hits like a truck"
 	wep_swap[905] = sndSwapMotorized
 	wep_rad[905] = 0;
+	
+	wep_name[906] = "OLD SLUGGER"
+	wep_type[906] = 2
+	wep_auto[906] = 0
+	wep_load[906] = 42
+	wep_cost[906] = 4
+	wep_sprt[906] = sprOldSlugger
+	wep_area[906] = 1
+	wep_text[906] = "old but still packs a hefty punch"
+	wep_swap[906] = sndSwapShotgun
+	wep_rad[906] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

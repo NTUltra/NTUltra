@@ -10,7 +10,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
 draw_set_colour(c_white);
 
-if latestVersion != UberCont.updateVersion && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
+if scrIsLatestVersion(latestVersion)
 {
 	if alarm[0] < 1
 	draw_text(camera_get_view_x(view_camera[0])+4,

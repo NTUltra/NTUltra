@@ -1,8 +1,8 @@
 /// @description Spooky jumpscare done
 BackCont.shake += 20;
 var i = 0;
-var ghosts = [PitGhost,PitGhostLaser,PitGhostExploder,PitGhostSpawner,PitGhost,PitGhostSpawner];
-repeat(6)
+var ghosts = [PitGhost,PitGhostLaser,PitGhostExploder,PitGhostSpawner];
+repeat(4)
 {
 	with instance_create(ghostLocations[i][0],ghostLocations[i][1], ghosts[i])
 	{

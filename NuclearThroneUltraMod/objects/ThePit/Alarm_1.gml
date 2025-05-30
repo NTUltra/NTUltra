@@ -10,7 +10,7 @@ if instance_exists(Player) && point_distance(x,y,Player.x,Player.y) < 200
 	if numEn < enoughEnemies || (instance_exists(IDPDVan) && numEn == instance_number(IDPDVan))
 	{
 		if (!jumpScared)
-			alarm[2] = 30;
+			alarm[2] = 15;
 		else
 		{
 			instance_create_depth(x,y,depth-1,BecomeGhostBoss);

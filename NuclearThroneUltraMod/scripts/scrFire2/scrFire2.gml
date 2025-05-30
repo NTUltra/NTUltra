@@ -1606,7 +1606,10 @@ function scrFire2(hasTailNow) {
 	{motion_add(aimDirection+(random(10)-5)*other.accuracy,14)//16
 	image_angle = direction
 	team = other.team}
-
+	if !skill_got[2]
+	{
+		motion_add(aimDirection + 180,2)
+	}
 	BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
 	BackCont.shake += 18

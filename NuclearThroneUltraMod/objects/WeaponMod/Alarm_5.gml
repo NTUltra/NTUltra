@@ -16,4 +16,7 @@ var al = instance_place_list(x,y,prop,props,false);
 		}
 	}
 ds_list_destroy(props);
+
+if collision_line(x-8,y-15,x+8,y-10,Wall,false,false)
+	y += 2;
 alarm[5] = 5;

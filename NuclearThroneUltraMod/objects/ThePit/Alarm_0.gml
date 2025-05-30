@@ -14,7 +14,7 @@ if instance_exists(Player) && alarm[1] < 1
 			numEn -= instance_number(IDPDVan);
 		if numEn < enoughEnemies
 		{
-			alarm[1] = 60;
+			alarm[1] = 50;
 		}
 	}
 }

@@ -86,6 +86,22 @@ if instance_exists(Player)
 			}
 			event_user(2);
 		break;
+		case 104:
+			with CorpseCollector
+			{
+				with instance_nearest(px,py,Wall)
+				{
+					other.x = x + 8;
+					other.y = y + 8;
+				}
+				if !instance_exists(Portal)
+					with instance_create(x,y,Portal) {
+						typ = 1;
+						inverted = false;
+						byPassCheck = true;
+					}
+			}
+		break;
 	}
 }
 else

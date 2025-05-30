@@ -80,6 +80,8 @@ function scrNextLevel(skipping = false) {
 						lastsubarea = subarea;
 					}
 				    area = 104;
+					with PitNavigation
+						currentArea = 104;
 				    visitedCrib = true;
 					/*
 					if scrIsCrown(24)

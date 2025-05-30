@@ -14,9 +14,9 @@ if (type == network_type_data) {
 			debug(latestVersion);
 			UberCont.totalDailies = buffer_read(buffer, buffer_u16);
 			UberCont.totalWeeklies = buffer_read(buffer, buffer_u16);
-			//latestVersion = buffer_read(buffer, buffer_string);//BETA VERSION
+			latestVersion = buffer_read(buffer, buffer_string);//BETA VERSION
 			UberCont.weeklyWeek = UberCont.totalWeeklies;
-			if latestVersion != UberCont.updateVersion// && latestVersion != UberCont.updateVersion + UberCont.subUpdateVersion
+			if !scrIsLatestVersion(latestVersion, true)
 			{
 				notUpdated = "*"
 				if canShow //BETATEMP

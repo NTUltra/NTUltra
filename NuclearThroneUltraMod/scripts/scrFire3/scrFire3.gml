@@ -3659,6 +3659,29 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
+		
+		//OLD SLUGGER
+		case 906:
+
+		snd_play_fire(sndOldSlugger)
+
+		with instance_create(x,y,HeavySlug)
+		{motion_add(aimDirection+(random(14)-7)*other.accuracy,11.5)//16
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 24
+		wkick = 12
+		
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,16);
+			motion_add(aimDirection + 180,6)
+		}
+
+		break;
 	
 	}
 }

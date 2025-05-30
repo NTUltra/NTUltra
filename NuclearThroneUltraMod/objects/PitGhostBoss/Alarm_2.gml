@@ -30,7 +30,7 @@ if ammo > 0
 	alarm[2] = fireRate;
 	alarm[1] += fireRate;
 }
-else
+else if loops > 0 || random(3) < 1
 {
 	motion_add(gunangle,acc);
 	with instance_create(x, y, PitGhostLaser) {

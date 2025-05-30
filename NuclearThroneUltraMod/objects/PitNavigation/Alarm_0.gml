@@ -10,7 +10,7 @@ if alarm[1] < 1 && !instance_exists(GenCont) && !instance_exists(InvertedRavenFl
 	}
 	if instance_exists(IDPDVan)
 		numEn -= instance_number(IDPDVan);
-	if !instance_exists(WantBoss) && numEn < 1 && !instance_exists(BecomeInvertedGraveyardFish)
+	if !instance_exists(WantBoss) && numEn < 1 && !instance_exists(BecomeInvertedGraveyardFish) && (currentArea != 104 || !instance_exists(CarVenusFixed))
 	{
 		alarm[1] = 15;
 		alarm[0] = 0;

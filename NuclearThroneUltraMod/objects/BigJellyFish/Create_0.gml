@@ -9,8 +9,8 @@ meleedamage = 5
 spr_idle = sprBigJellyFishIdle
 spr_walk = sprBigJellyFishIdle
 spr_hurt = sprBigJellyFishHurt
-spr_dead = sprJellyFishDead
-spr_fire = sprJellyFishFire
+spr_dead = sprBigJellyFishDead
+spr_fire = sprBigJellyFishFire
 
 
 snd_hurt = sndHitFlesh
@@ -23,6 +23,7 @@ ammo = maxAmmo;
 alarm[1] = 30+random(90)
 maxSpeed = 2.5;
 loops = GetPlayerLoops();
+firstTime = false;
 length = 5;
 if loops > 0
 {

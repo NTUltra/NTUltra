@@ -127,6 +127,9 @@ function scrAreaFullName(area){
 			case 103://YV MANSION
 				txt = "Y.V. MANSION";
 			break;
+			case 104://YV CRIB
+				txt = "Y.V. CRIB";
+			break;
 			case 125://INV YV MANSION
 				txt = "Y.V. MANSION";
 				upsideDown = true;
