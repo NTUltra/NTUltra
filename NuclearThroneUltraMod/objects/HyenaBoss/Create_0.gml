@@ -73,7 +73,7 @@ wkick = 0
 actTime = 9;
 
 acc = 1;
-maxSpeed = 4;
+maxSpeed = 3.5;
 leapMaxSpeed = 11.5;
 leapDuration = 17;
 leapBackupDuration = 20;

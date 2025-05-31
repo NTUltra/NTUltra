@@ -10154,7 +10154,7 @@ function scrWeapons() {
 	wep_name[905] = "CAR DOOR"
 	wep_type[905] = 0
 	wep_auto[905] = 2
-	wep_load[905] = 38
+	wep_load[905] = 37
 	wep_cost[905] = 0
 	wep_sprt[905] = sprCarDoor
 	wep_area[905] = 5
@@ -10165,13 +10165,37 @@ function scrWeapons() {
 	wep_name[906] = "OLD SLUGGER"
 	wep_type[906] = 2
 	wep_auto[906] = 0
-	wep_load[906] = 42
+	wep_load[906] = 50
 	wep_cost[906] = 4
 	wep_sprt[906] = sprOldSlugger
 	wep_area[906] = 1
 	wep_text[906] = "old but still packs a hefty punch"
 	wep_swap[906] = sndSwapShotgun
 	wep_rad[906] = 0;
+	
+	wep_name[907] = "THREE PUNCH COMBO GLOVE"
+	wep_type[907] = 4
+	wep_auto[907] = 2
+	wep_load[907] = 40
+	wep_cost[907] = 3
+	wep_sprt[907] = sprThreePunchComboGlove
+	wep_area[907] = 3
+	wep_text[907] = "left hook right hook left hook"
+	wep_swap[907] = sndSwapHammer
+	wep_rad[907] = 0;
+	wep_popup[907] = "REVERSE RECOIL";
+	
+	wep_name[908] = "EIGHT PUNCH COMBO GLOVE"
+	wep_type[908] = 4
+	wep_auto[908] = 2
+	wep_load[908] = 40
+	wep_cost[908] = 4
+	wep_sprt[908] = sprEightPunchComboGlove
+	wep_area[908] = 13
+	wep_text[908] = "consecutive punches"
+	wep_swap[908] = sndSwapHammer
+	wep_rad[908] = 0;
+	wep_popup[908] = "REVERSE RECOIL";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

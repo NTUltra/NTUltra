@@ -1,5 +1,6 @@
 if other.team != team and other.my_health > 0
 {
+	BackCont.shake += 5;
 	var cb = boostCorpse;
 	with instance_create(x,y,BulletHit)
 		sprite_index = sprHeavySlugHit

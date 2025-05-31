@@ -595,9 +595,12 @@ function scrDrawBloom() {
 	with MutationChoiceReward
 	{
 		//draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
-		draw_set_alpha(0.5 + abs(sin(wave)*0.5));
-		draw_circle_colour(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,c_lime,c_lime,false)
-		draw_set_alpha(1);
+		if !collected
+		{
+			draw_set_alpha(0.5 + abs(sin(wave)*0.5));
+			draw_circle_colour(x-__view_get( e__VW.XView, 0 ),y-__view_get( e__VW.YView, 0 ),48,c_lime,c_lime,false)
+			draw_set_alpha(1);
+		}
 		//event_user(0);
 	}
 	with SunBeam

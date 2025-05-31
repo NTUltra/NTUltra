@@ -2675,15 +2675,16 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-	scrForcePosition60fps();
-	xprevious = x;
-	yprevious = y;
+		scrForcePosition60fps();
+		xprevious = x;
+		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
+
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
@@ -2808,15 +2809,15 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-	scrForcePosition60fps();
-	xprevious = x;
-	yprevious = y;
+		scrForcePosition60fps();
+		xprevious = x;
+		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
 	//wepangle = -wepangle
@@ -3145,12 +3146,12 @@ function scrFire2(hasTailNow) {
 		y += lengthdir_y(2,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
@@ -4799,12 +4800,12 @@ function scrFire2(hasTailNow) {
 		scrForcePosition60fps();
 		xprevious = x;
 		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake

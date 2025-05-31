@@ -53,7 +53,7 @@ if instance_exists(Player)
 	    instance_create(x,y,AngelDeflect);
 		if UberCont.unlocked_alt_routes && !scrIsGamemode(10)
 		{
-		    if area=1&&subarea<3
+		    if area=1/*&&subarea<3*/
 		    {oasisskip=instance_number(chestprop);
 		    if instance_exists(RadChest)
 		    oasisskip+=1;}
@@ -91,19 +91,19 @@ if instance_exists(Player)
 		var didSpawnInv = false;
 		if (UberCont.unlocked_alt_routes/* && !scrIsGamemode(10)*/ && (random(100)<ic+clamp(loops*2,0,20) || wep == 375 || bwep == 375 || cwep == 375))//Inversion magnet
 		{
-		    if ( (area=1&&subarea<3)  )
+		    if ( (area=1/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area==10&&subarea<3)  )//Inv Savanna
+			else if ( (area==10/*&&subarea<3*/)  )//Inv Savanna
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area==101&&subarea<3)  )//Inv Oasis
+			else if ( (area==101/*&&subarea<3*/)  )//Inv Oasis
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
@@ -115,25 +115,25 @@ if instance_exists(Player)
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area==114&&subarea<2)  )//Inv Jungle
+			else if ( (area==114/*&&subarea<2*/)  )//Inv Jungle
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area==117&&subarea<2)  )//Inv mushroom
+			else if ( (area==117/*&&subarea<2*/)  )//Inv mushroom
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area==126&&subarea<2)  )//Graveyard
+			else if ( (area==126/*&&subarea<2*/)  )//Graveyard
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( ((area == 130 || area == 132 || area == 133 || area == 134) && subarea<3)  )//Factory
+			else if ( ((area == 130 || area == 132 || area == 133 || area == 134) /*&& subarea<3*/)  )//Factory
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
@@ -145,43 +145,43 @@ if instance_exists(Player)
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( (area=3&&subarea<3)  )
+		    else if ( (area=3/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( area == 4 &&  subarea < 2)
+		    else if ( area == 4 /*&& subarea < 2*/)
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( (area=5&&subarea<3)  )
+		    else if ( (area=5/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( area=6&&subarea<2  )
+		    else if ( area=6/*&&subarea<2*/  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( (area=7&&subarea<3)  )
+		    else if ( (area=7/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-		    else if ( (area=8&&subarea<3)  )
+		    else if ( (area=8/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area == 9&&subarea<3)  )
+			else if ( (area == 9/*&&subarea<3*/)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;

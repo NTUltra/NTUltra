@@ -1027,15 +1027,15 @@ function scrFire3(hasTailNow){
 		}
 		if !skill_got[2]
 		{
-		scrForcePosition60fps();
-		xprevious = x;
-		yprevious = y;
+			scrForcePosition60fps();
+			xprevious = x;
+			yprevious = y;
+			alarm[3]=max(4,alarm[3]);//imunity
 		}
 		else
 		{
 			x = currentX;
 			y = currentY;
-			alarm[3]=max(4,alarm[3]);//imunity
 		}
 		//wepangle = -wepangle
 		BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
@@ -3423,7 +3423,7 @@ function scrFire3(hasTailNow){
 
 		with instance_create(x+lengthdir_x(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(5+(Player.skill_got[13]+bettermelee)*10,aimDirection),LightningShank)
 		{
-			dmg = 2;
+			dmg = 1;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection+(random(10)-5)*other.accuracy,4+longarms)
@@ -3647,7 +3647,7 @@ function scrFire3(hasTailNow){
 			ammo = 1
 			time = 9
 			team = other.team
-			alarm[0] = 15//15 originally
+			alarm[0] = 14//15 originally
 			if Player.skill_got[2]
 				shouldslow = false;
 			if Player.skill_got[42]
@@ -3670,9 +3670,9 @@ function scrFire3(hasTailNow){
 		image_angle = direction
 		team = other.team}
 
-		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
-		BackCont.shake += 24
+		BackCont.viewx2 += lengthdir_x(35,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(35,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 26
 		wkick = 12
 		
 		if !skill_got[2]
@@ -3682,6 +3682,33 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
-	
+		
+		//THREE PUNCH COMBO GLOVE
+		case 907:
+		
+		with instance_create(x,y,GloveBurst)
+		{
+			creator = other.id
+			ammo = 3
+			time = 7
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		break;
+		
+		//EIGHT PUNCH COMBO GLOVE
+		case 908:
+		
+		with instance_create(x,y,HeavyGloveBurst)
+		{
+			creator = other.id
+			ammo = 8
+			time = 3
+			team = other.team
+			event_perform(ev_alarm,0)
+		}
+
+		break;
 	}
 }

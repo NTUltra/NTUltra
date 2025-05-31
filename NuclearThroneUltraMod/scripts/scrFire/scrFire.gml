@@ -2887,12 +2887,12 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	//wepangle = -wepangle
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
@@ -2945,12 +2945,12 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
@@ -3406,12 +3406,12 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
+		alarm[3]=max(4,alarm[3]);//imunity
 	}
 	else
 	{
 		x = currentX;
 		y = currentY;
-		alarm[3]=max(4,alarm[3]);//imunity
 	}
 
 	BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
