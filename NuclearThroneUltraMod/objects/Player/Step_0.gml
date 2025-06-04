@@ -539,7 +539,6 @@ if !instance_exists(LevCont) and visible = 1
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
-			//instance_create(x,y,MusMimicBoss);
 			//isPermanent = true;
 			//piggyBank = 100;
 			//peaceBarriers += 1;
@@ -555,6 +554,7 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				my_health = 0;
 			}
+			instance_create(x + 64,y,BigJellyFish);
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)

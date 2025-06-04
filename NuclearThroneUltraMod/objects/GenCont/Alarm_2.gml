@@ -202,6 +202,18 @@ if (Player.loops > 0 && (Player.area == 110 && Player.subarea == 1) )
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(InvertedBallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
+if (Player.loops > 0 && ((Player.area == 101 && Player.subarea == 2)))
+{
+	scrSpawnBoss(BigJellyFish);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(BigJellyFish,1+clamp(floor((Player.loops-4)*0.25),1,2));
+}
+if (Player.loops > 0 && ((Player.area == 122 && Player.subarea == 2)) )
+{
+	scrSpawnBoss(InvertedBigJellyFish);
+	if (Player.loops > 5)
+		scrSpawnMoreBosses(InvertedBigJellyFish,1+clamp(floor((Player.loops-4)*0.25),1,2));
+}
 if (Player.loops > 0 && ((Player.area == 10 && Player.subarea == 2)))
 {
 	scrSpawnBoss(HyenaBoss);

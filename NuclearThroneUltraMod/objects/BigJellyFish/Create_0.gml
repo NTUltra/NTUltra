@@ -16,21 +16,14 @@ spr_fire = sprBigJellyFishFire
 snd_hurt = sndHitFlesh
 
 //behavior
-tellTime = 20;
-actTime = 10;
-maxAmmo = 3;
+tellTime = 10;
+actTime = 6;
+maxAmmo = 4;
 ammo = maxAmmo;
 alarm[1] = 30+random(90)
-maxSpeed = 2.5;
+maxSpeed = 2.75;
 loops = GetPlayerLoops();
-firstTime = false;
-length = 5;
-if loops > 0
-{
-	actTime = 6;
-	tellTime = 15;
-	length ++;
-}
+firstTime = true;
 if loops > 2
 	length ++;
 if loops > 4
@@ -39,3 +32,10 @@ if loops > 4
 sleeping = false;;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;
+	
+var adjustedLoops = max(0,loops - 2);
+length = 20 + min(adjustedLoops * 2,20);
+jellyDelay = max(3,16 - (adjustedLoops*2));
+jellyMaxAmmoDelay = max(10,90 - (adjustedLoops*2));
+jellyMaxAmmo = min(10,3 + adjustedLoops);
+jellyAmmo = jellyMaxAmmo;

@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"NuclearThroneUltraMod",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -468,13 +468,14 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"Steamworks_Extension_Documentation.html","CopyToMask":0,"filePath":"datafiles","name":"Steamworks_Extension_Documentation.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"NuclearThroneUltraMod",
   "resources":[
@@ -1391,6 +1392,7 @@
     {"id":{"name":"InvertedBigFlower","path":"objects/InvertedBigFlower/InvertedBigFlower.yy",},},
     {"id":{"name":"InvertedBigGuardianBullet","path":"objects/InvertedBigGuardianBullet/InvertedBigGuardianBullet.yy",},},
     {"id":{"name":"InvertedBigGuardianSquareBullet","path":"objects/InvertedBigGuardianSquareBullet/InvertedBigGuardianSquareBullet.yy",},},
+    {"id":{"name":"InvertedBigJellyFish","path":"objects/InvertedBigJellyFish/InvertedBigJellyFish.yy",},},
     {"id":{"name":"InvertedBigMachine","path":"objects/InvertedBigMachine/InvertedBigMachine.yy",},},
     {"id":{"name":"InvertedBigMachineLaser","path":"objects/InvertedBigMachineLaser/InvertedBigMachineLaser.yy",},},
     {"id":{"name":"InvertedBigMachineTurret","path":"objects/InvertedBigMachineTurret/InvertedBigMachineTurret.yy",},},
@@ -4588,6 +4590,7 @@
     {"id":{"name":"sndThunder","path":"sounds/sndThunder/sndThunder.yy",},},
     {"id":{"name":"sndThunderStrike","path":"sounds/sndThunderStrike/sndThunderStrike.yy",},},
     {"id":{"name":"sndThunderStrikeUpg","path":"sounds/sndThunderStrikeUpg/sndThunderStrikeUpg.yy",},},
+    {"id":{"name":"sndTinyJellyFishSpawn","path":"sounds/sndTinyJellyFishSpawn/sndTinyJellyFishSpawn.yy",},},
     {"id":{"name":"sndTinySnare","path":"sounds/sndTinySnare/sndTinySnare.yy",},},
     {"id":{"name":"sndTorpedoFire","path":"sounds/sndTorpedoFire/sndTorpedoFire.yy",},},
     {"id":{"name":"sndTorpedoLinger1","path":"sounds/sndTorpedoLinger1/sndTorpedoLinger1.yy",},},

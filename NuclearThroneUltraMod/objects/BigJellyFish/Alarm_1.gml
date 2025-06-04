@@ -1,7 +1,21 @@
 ///@description AI
 alarm[1] = actTime+random(actTime)//30 + 10
-if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
+if (instance_exists(Player) && !Player.justAsheep) sleeping = false;
 
+if firstTime
+{
+	if point_distance(x,y,target.x,target.y) < 300
+	{
+		alarm[3] = jellyDelay;
+		firstTime = false;
+		debug("go jelly spawn");
+		instance_create(x,y,DramaCamera);
+	}
+	else
+	{
+		exit;	
+	}
+}
 scrTarget()
 if target != noone
 {

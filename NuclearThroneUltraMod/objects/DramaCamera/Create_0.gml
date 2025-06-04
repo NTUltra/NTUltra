@@ -595,17 +595,31 @@ else
 	}
 	else if area = 101
 	{
-	//with instance_create(x,y,Drama)
-		name = "BIG FISH"
-		if canFunny && random(200) < 1
-			name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
+		//with instance_create(x,y,Drama)
+		if subarea == 2
+		{
+			name = "BIG JELLYFISH";
+		}
+		else
+		{
+			name = "BIG FISH"
+			if canFunny && random(200) < 1
+				name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
+		}
 	}
 	else if area = 122
 	{
 	//with instance_create(x,y,Drama)
-		name = "INVERTED BIG FISH"
-		if canFunny && random(200) < 1
-			name = choose("GAS FISH","THAT'S MISTER\nFISH FOR YOU!");
+		if subarea == 2
+		{
+			name = "INVERTED BIG JELLYFISH";
+		}
+		else
+		{
+			name = "INVERTED BIG FISH"
+			if canFunny && random(200) < 1
+				name = choose("GAS FISH","THAT'S MISTER\nFISH FOR YOU!");
+		}
 	}
 	else if area == 9
 	{
