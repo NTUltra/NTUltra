@@ -2,6 +2,8 @@
 alarm[2] = 2;
 var ogx = x;
 var ogy = y;
+var xo = xstart - x
+var yo = xstart - x
 var ogxs = image_xscale;
 var ogys = image_yscale;
 var al = array_length(lightningList);
@@ -12,8 +14,8 @@ if al > 0 && alarm[0] < 1
 	for (var i = 0; i < al; i++) {
 		if (i == 0 || (i % 2 == 0))//Only half of the lightning has collision to optimize
 		{
-			var xx = lightningList[i].xx;
-			var yy = lightningList[i].yy;
+			var xx = lightningList[i].xx - xo;
+			var yy = lightningList[i].yy - yo;
 			image_xscale = lightningList[i].xs
 			var hits = ds_list_create();
 			var totalHits = instance_place_list(

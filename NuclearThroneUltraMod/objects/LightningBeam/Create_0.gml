@@ -11,6 +11,7 @@ damageTicks = 2;
 if instance_exists(Player) && Player.skill_got[17]
 {
 	dmg = 7 + Player.betterlaserbrain;
+	radius += 8;
 	damageTicks += 1;
 }
 team = 2;

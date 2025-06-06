@@ -7,9 +7,7 @@ function scrCanWeDisco(){
 		if //Morph weapon mod
 		scrHasMorphMod() ||
 		//Any morph weapon
-		scrHasMorphWeapon() ||
-		//Disco gun
-		wep == 396 || bwep == 396 || cwep == 396
+		scrHasMorphWeapon()
 			return true;
 	}
 	return false;

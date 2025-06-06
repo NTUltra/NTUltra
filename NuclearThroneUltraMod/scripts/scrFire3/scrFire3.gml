@@ -3710,5 +3710,22 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
+		
+		//CANDY CORN GUN
+		case 909:
+
+		snd_play_fire(sndDiscgun)
+
+		with instance_create(x,y,CandyCorn)
+		{motion_add(aimDirection+(random(16)-8)*other.accuracy,14)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(9,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 4
+
+		break;
 	}
 }

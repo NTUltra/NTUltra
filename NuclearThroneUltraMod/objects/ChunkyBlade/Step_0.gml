@@ -16,7 +16,7 @@ if place_meeting(x,y,Wall)
 	else
 	{
 		move_bounce_solid(true);
-		snd_play(sndDiscBounce);
+		snd_play(sndDiscBounce,0.1);
 		scrForcePosition60fps();
 		with instance_create(x,y,DiscBounce)
 			image_angle = other.image_angle

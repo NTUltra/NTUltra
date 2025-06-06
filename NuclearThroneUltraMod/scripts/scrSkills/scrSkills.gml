@@ -622,6 +622,7 @@ function scrSkills() {
 	skill_bons[maxskill + 1] = "";
 	
 	/*
+	(Community reaction to this was: pretty positive but do the allies spawning thing and probably with a lot of effort to make it unique per character?! which is cool)
 	skill_name[47] = "GLUTINOUS BELLY"
 	skill_text[47] = "COLLECTING EXCESS AMMO#WILL EVENTUALLY CONVERT TO <r>OVERHEAL<r>#UP TO 4 ABOVE MAX HP#EXCESS <r>HEALING<r> GIVES <y>AMMO<y>"
 	skill_text[47] = "EXCESS <r>HEALING<r> GIVES <y>AMMO<y>##EXCESS AMMO STACKS UP TO#EVENTUALLY SPAWN BELLIES#THAT PROTECTS YOU AND RELEASE <g>TOXIC GASS<g>#AND DEALS DAMAGE TO ENEMIES"
@@ -655,6 +656,13 @@ function scrSkills() {
 	
 	skill_name[43] = "HOT HEAD"
 	skill_text[43] = "IDK"
+	skill_tips[43] = "A"
+	skill_bons[43] = "V"
+	skill_msnd[43] =  sndMutBouncyFat;
+	
+	(Community reaction to this was: nahhh bro)
+	skill_name[43] = "ENDORFINE RUSH"
+	skill_text[43] = "GET 20 PORTAL ESSENCE#INCREASE WEAPON TIER BY 5"
 	skill_tips[43] = "A"
 	skill_bons[43] = "V"
 	skill_msnd[43] =  sndMutBouncyFat;

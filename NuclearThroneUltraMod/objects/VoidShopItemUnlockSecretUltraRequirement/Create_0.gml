@@ -4,5 +4,5 @@
 event_inherited();
 
 spr_item = sprVoidItemUnlockSecretUltraRequirement;
-name = "UNLOCK A SECRET ULTRA REQUIREMENT";
+name = "UNLOCK TWO SECRET ULTRA REQUIREMENT";
 cost = 1;

@@ -3985,7 +3985,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						var spd = speed;
 						var minSpeed = min(spd,2);
-						scrEyesTelekinesis(true,tb*2 + 4,px,py);
+						scrEyesTelekinesisNoCollision(true,tb*2 + 4,px,py);
 						motion_add(point_direction(x,y,px,py),8 + tb);
 						image_angle = direction;
 						speed = spd;
@@ -4057,9 +4057,9 @@ function scrPowers(raceOverwrite = -1) {
 				&& point_distance(x,y,other.x,other.y) < 250
 				{
 					var pd = point_direction(x,y,px,py)+od;
-					if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
+					//if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
 						x += lengthdir_x(ts,pd)
-					if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
+					//if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
 						y += lengthdir_y(ts,pd)
 				}
 			}

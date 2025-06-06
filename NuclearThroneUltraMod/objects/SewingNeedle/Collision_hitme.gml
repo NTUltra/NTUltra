@@ -16,7 +16,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 			image_index = 0
 			motion_add(other.direction,8)
 		
-			BackCont.shake += 5
+			BackCont.shake += 1
 		}
 	}
 }

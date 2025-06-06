@@ -7,9 +7,12 @@ instance_destroy()
 }
 else
 {
-snd_play(sndDiscBounce)
-with instance_create(x,y,DiscBounce)
-image_angle = other.image_angle}
+	snd_play(sndDiscBounce,0.1)
+	if boltMarrowed
+		direction = scrAimAssistLaser(direction,0.75,16, true);
+	with instance_create(x,y,DiscBounce)
+	image_angle = other.image_angle
+}
 
 
 

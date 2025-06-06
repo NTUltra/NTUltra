@@ -26,7 +26,7 @@ if instance_exists(owner) && image_index < image_number - endEarly
 		{
 			var spd = speed;
 			var minSpeed = min(spd,2);
-			scrEyesTelekinesis(true,tb,px,py);
+			scrEyesTelekinesisNoCollision(true,tb,px,py);
 			motion_add(point_direction(x,y,px,py),1 + tb);
 			image_angle = direction;
 			speed = clamp(spd - 0.1,minSpeed,spd);

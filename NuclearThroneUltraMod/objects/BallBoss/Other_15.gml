@@ -6,7 +6,11 @@ for (var i = 0; i < 400; i += 96)
 {
 	for (var j = 0; j < 400; j += 96)
 	{
-		instance_create(xx + i,yy + j,EnemyIon);
+		with instance_create(xx + i,yy + j,EnemyIon)
+		{
+			team = other.team;
+			alarm[0] -= 4;	
+		}
 	}
 }
 alarm[1] += actTime;

@@ -1,2 +1,2 @@
-/// @description xxx
+/// @description Open
 event_user(0);

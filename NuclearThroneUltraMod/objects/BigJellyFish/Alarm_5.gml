@@ -1,0 +1,1 @@
+/// @description ThunderStrike cooldown

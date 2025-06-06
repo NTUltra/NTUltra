@@ -1,7 +1,7 @@
 ///@description Fire
 if ammo > 0
 {
-	alarm[2] = 2;
+	alarm[2] = 3;
 	if ammo == maxAmmo || ammo % 2 == 0
 	{
 		snd_play(sndLightning1,0.1)
@@ -16,7 +16,7 @@ if ammo > 0
 	var ang = random(360);
 	var am = 6;
 	var angStep = 360/am;
-	var l = max(4,length - ammo);
+	var l = ceil(max(4,length - ammo * 1.5));
 	repeat(am)
 	{
 		with instance_create(x,y,Lightning)
@@ -36,3 +36,4 @@ else
 sprite_index = spr_idle
 }
 
+alarm[1] += alarm[2];

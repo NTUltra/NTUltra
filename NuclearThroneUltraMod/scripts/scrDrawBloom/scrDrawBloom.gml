@@ -189,9 +189,9 @@ function scrDrawBloom() {
 		if al > 0 && alarm[0] < 1
 		{
 			for (var i = 0; i < al; i++) {
-				draw_sprite_ext(sprite_index,-1,lightningList[i].xx - vx,lightningList[i].yy- vy,lightningList[i].xs,image_yscale,lightningList[i].ang,c_white,ba + bloom)
+				draw_sprite_ext(sprite_index,-1,x + lightningList[i].xx - vx,y + lightningList[i].yy- vy,lightningList[i].xs,image_yscale,lightningList[i].ang,c_white,ba + bloom)
 			}
-			draw_sprite_ext(sprLightningEnd,-1,lightningList[al-1].xx - vx,lightningList[al-1].yy- vy,1,image_yscale*0.5,lightningList[al-1].ang,c_white,ba)
+			draw_sprite_ext(sprLightningEnd,-1,x + lightningList[al-1].xx - vx,y + lightningList[al-1].yy- vy,1,image_yscale*0.5,lightningList[al-1].ang,c_white,ba)
 		}
 	}
 

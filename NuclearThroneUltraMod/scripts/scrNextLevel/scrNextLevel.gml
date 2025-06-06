@@ -186,7 +186,7 @@ function scrNextLevel(skipping = false) {
 		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136
 		{
 			//Inverted savanna
-			if area = 121//bring to inverted mushroom
+			if area = 121//bring to mushroom
 		    {
 				//TODO
 		        if inverted && area == 121 &&subarea<3
@@ -202,10 +202,10 @@ function scrNextLevel(skipping = false) {
 		        }
 		        else
 		        {
-		        area = 124
-				lastarea = 124;
+		        area = 117
+				lastarea = 117;
 		        subarea = 1;
-				inverted=true
+				inverted=false
 				/*
 				if scrIsCrown(24)
 					hard -= 1;
@@ -243,10 +243,10 @@ function scrNextLevel(skipping = false) {
 			}
 			if area == 125//Inv Mansion
 			{
-				//To Labs
-				area = 6
-				lastarea = 6;
-				subarea = 1;
+				//To scrap 2
+				area = 3
+				lastarea = 2;
+				subarea = 2;
 				inverted = false;
 				scrAddArea(area);
 				scrAddToRoute(area);
@@ -270,7 +270,7 @@ function scrNextLevel(skipping = false) {
 		        else
 		        {
 		        area = 7
-		        subarea = 2
+		        subarea = 1
 				lastarea = 7;
 				inverted = false
 				scrAddArea(area);
@@ -284,11 +284,11 @@ function scrNextLevel(skipping = false) {
 				lastarea = area;
 				lastsubarea = subarea;
 				//TODO
-		        if inverted && area == 123 &&subarea<2
+		        if inverted && area == 123 &&subarea<3
 		        {
 			        //inverted big bush box
 			        area = 123
-			        subarea=2;
+			        subarea = 2;
 			        inverted = false;
 					scrAddArea(area);
 					scrAddToRoute(area);
@@ -296,7 +296,7 @@ function scrNextLevel(skipping = false) {
 		        }
 		        else
 		        {
-					//To big bad bat
+					//To caves 1
 			        area = 4
 					lastarea = 4;
 			        subarea = 1
@@ -454,12 +454,12 @@ function scrNextLevel(skipping = false) {
 		        }
 		        else
 		        {
-		        area = 3
-		        subarea = 1
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
+			        area = 2
+			        subarea = 1
+					inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
+			        exit;
 		        }
 		    }
     
@@ -476,11 +476,11 @@ function scrNextLevel(skipping = false) {
 				scrAddToRoute(area);
 		        exit;
 		        }
-		        else//inv scrap to vulcano
+		        else//inv scrap to labs
 		        {
-		        area=7;
+		        area=6;
 		        subarea=1;
-				lastarea = 7;
+				lastarea = 6;
 				inverted = false;
 				scrAddArea(area);
 				scrAddToRoute(area);
@@ -502,12 +502,12 @@ function scrNextLevel(skipping = false) {
 				scrAddToRoute(area);
 		        exit;
 		        }
-		        else//Inv frozen city to wonderland
+		        else//Inv frozen city to Caves
 		        {
-		        area=8;
-				lastarea = 8;
-				lastsubarea = 2;
-		        subarea=2;
+		        area=4;
+				lastarea = 4;
+				lastsubarea = 1;
+		        subarea=1;
 				inverted = false;
 				scrAddArea(area);
 				scrAddToRoute(area);
@@ -529,11 +529,11 @@ function scrNextLevel(skipping = false) {
 				scrAddToRoute(area);
 		        exit;
 		        }
-		        else//Inverted vulcano bring to frozen city
+		        else//Inverted vulcano bring to wonderland
 		        {
-		        area = 5;
-		        subarea = 2;
-				lastarea = 5;
+		        area = 8;
+		        subarea = 1;
+				lastarea = 8;
 				inverted = false;
 				scrAddArea(area);
 				scrAddToRoute(area);
@@ -576,7 +576,7 @@ function scrNextLevel(skipping = false) {
     
 		    if area = 110//inv sewers bring from sewers to mansion?
 		    {
-			    area=103;
+			    area=3;
 			    subarea=1;
 			    lastarea=3;
 			    inverted = false;
@@ -594,11 +594,11 @@ function scrNextLevel(skipping = false) {
 					subarea = 2;
 					inverted = false;
 				}
-				else//Skip one palace
+				else//inv caves to palace
 				{
 					area = 9;
 					lastarea = 9;
-					subarea = 2;
+					subarea = 1;
 					inverted = false;
 				}
 				scrAddArea(area);
@@ -618,10 +618,10 @@ function scrNextLevel(skipping = false) {
 					scrAddToRoute(area);
 			        exit;
 		        }
-		        else//Inv labs to wonderlands 1
+		        else//Inv labs to frozen cityy
 		        {
-					area=8
-					lastarea = 8;
+					area=5
+					lastarea = 5;
 					subarea=1;
 					inverted = false;
 					scrAddArea(area);

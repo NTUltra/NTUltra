@@ -10195,7 +10195,18 @@ function scrWeapons() {
 	wep_text[908] = "consecutive punches"
 	wep_swap[908] = sndSwapHammer
 	wep_rad[908] = 0;
-	wep_popup[908] = "REVERSE RECOIL";
+	
+	wep_name[909] = "CANDY CORN GUN"
+	wep_type[909] = 3
+	wep_auto[909] = 1
+	wep_load[909] = 10
+	wep_cost[909] = 1
+	wep_sprt[909] = sprBladeGun
+	wep_area[909] = 5
+	wep_text[909] = "sugar rush"
+	wep_swap[909] = sndSwapBow
+	wep_rad[909] = 0;
+	wep_popup[909] = "MORPHS ENEMIES";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

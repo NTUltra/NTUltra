@@ -17,19 +17,20 @@ snd_hurt = sndHitFlesh
 
 //behavior
 tellTime = 10;
-actTime = 6;
-maxAmmo = 4;
+thunderStrikeTellTime = 16;
+actTime = 10;
+maxAmmo = 5;
 ammo = maxAmmo;
 alarm[1] = 30+random(90)
-maxSpeed = 2.75;
+maxSpeed = 3.25;
 loops = GetPlayerLoops();
 firstTime = true;
-if loops > 2
-	length ++;
-if loops > 4
-	length ++;
-	
-sleeping = false;;
+if loops > 3
+{
+	maxAmmo += 1;
+	actTime -= 2;
+}
+sleeping = false;
 if instance_exists(Player) && Player.skill_got[29]
 	sleeping = true;
 	
@@ -39,3 +40,6 @@ jellyDelay = max(3,16 - (adjustedLoops*2));
 jellyMaxAmmoDelay = max(10,90 - (adjustedLoops*2));
 jellyMaxAmmo = min(10,3 + adjustedLoops);
 jellyAmmo = jellyMaxAmmo;
+targetX = x;
+targetY = y;
+myThunderStrikeTarget = noone;
