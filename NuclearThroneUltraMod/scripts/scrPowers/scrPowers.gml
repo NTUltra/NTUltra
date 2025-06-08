@@ -205,7 +205,7 @@ function scrPowers(raceOverwrite = -1) {
 					else
 					{
 						if other.ultra_got[110] && altUltra
-							scrCollectAmmo(0.2);
+							scrCollectAmmo(0.25);
 						else
 							scrCollectAmmo(0.125);
 						with instance_create(x,y,AnimDestroyTop)

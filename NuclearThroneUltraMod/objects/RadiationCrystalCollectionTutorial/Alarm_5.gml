@@ -19,5 +19,5 @@ with MutationChoiceReward
 }
 with Player
 {
-	lockout = false;	
+	lockout = false;
 }

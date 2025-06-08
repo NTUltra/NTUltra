@@ -436,7 +436,7 @@ function scrEnemyDeathEvent(isSheep = false){
 		{
 			with Player
 			{
-				if ultra_got[114]
+				if ultra_got[114] && !scrIsInEnemyFreeArea()
 				{
 					if !other.isBoss && instance_number(other.object_index) > 1 && !array_contains(enemyAbyssLockout,other.object_index)
 					{

@@ -10191,7 +10191,7 @@ function scrWeapons() {
 	wep_load[908] = 40
 	wep_cost[908] = 4
 	wep_sprt[908] = sprEightPunchComboGlove
-	wep_area[908] = 13
+	wep_area[908] = 16
 	wep_text[908] = "consecutive punches"
 	wep_swap[908] = sndSwapHammer
 	wep_rad[908] = 0;
@@ -10201,12 +10201,58 @@ function scrWeapons() {
 	wep_auto[909] = 1
 	wep_load[909] = 10
 	wep_cost[909] = 1
-	wep_sprt[909] = sprBladeGun
-	wep_area[909] = 5
+	wep_sprt[909] = sprCandyCornGun
+	wep_area[909] = 8
 	wep_text[909] = "sugar rush"
 	wep_swap[909] = sndSwapBow
 	wep_rad[909] = 0;
 	wep_popup[909] = "MORPHS ENEMIES";
+	
+	wep_name[910] = "SUPER CANDY CORN GUN"
+	wep_type[910] = 3
+	wep_auto[910] = 1
+	wep_load[910] = 4
+	wep_cost[910] = 0.5
+	wep_sprt[910] = sprSuperCandyCornGun
+	wep_area[910] = 15
+	wep_text[910] = "sweet haze"
+	wep_swap[910] = sndSwapBow
+	wep_rad[910] = 0;
+	wep_popup[910] = "MORPHS ENEMIES";
+	
+	wep_name[911] = "DEATH SCYTHE"
+	wep_type[911] = 0
+	wep_auto[911] = 1
+	wep_load[911] = 26
+	wep_cost[911] = 0
+	wep_sprt[911] = sprDeathScythe
+	wep_area[911] = 17
+	wep_text[911] = "Corpses freeze"
+	wep_swap[911] = sndSwapSword
+	wep_rad[911] = 0;
+	wep_popup[911] = "EXPLODES CORPSES";
+	
+	wep_name[912] = "GLACIAL SPEAR"
+	wep_type[912] = 3
+	wep_auto[912] = 0
+	wep_load[912] = 24
+	wep_cost[912] = 1
+	wep_sprt[912] = sprGlacialSpear
+	wep_area[912] = 14
+	wep_text[912] = "POWER OF ICE"
+	wep_swap[912] = sndSwapFrost
+	wep_rad[912] = 0;
+	
+	wep_name[913] = "FROST GUN"
+	wep_type[913] = 4
+	wep_auto[913] = 3
+	wep_load[913] = 7
+	wep_cost[913] = 1
+	wep_sprt[913] = sprFrostGun
+	wep_area[913] = 3
+	wep_text[913] = "lingering ice flames"
+	wep_swap[913] = sndSwapFrost
+	wep_rad[913] = 0;
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

@@ -23,7 +23,7 @@ if instance_exists(Player)
 		bloomSprite = sprCrescentMoonBloomGamma;
 		spr = sprCrescentMoonGamma;
 		alarm[4] = 3;
-		dmg = 1;
+		dmg = 2 + Player.loops;
 	}
 }
 sprNormal = spr;

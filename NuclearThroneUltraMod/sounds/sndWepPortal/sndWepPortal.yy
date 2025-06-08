@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.501179,
+  "duration":0.50117916,
   "name":"sndWepPortal",
   "parent":{
     "name":"Pickups",

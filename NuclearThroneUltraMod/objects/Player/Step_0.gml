@@ -554,7 +554,7 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				my_health = 0;
 			}
-			instance_create(x + 64,y,BigJellyFish);
+			//instance_create(x + 64,y,BigJellyFish);
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)
@@ -1777,7 +1777,7 @@ if hammerheadDig > 0
 {
 	tempMaxSpeed += 1.5;
 	if race == 25
-	tempMaxSpeed += 0.75;
+		tempMaxSpeed += 0.75;
 }
 outOfCombat = (!instance_exists(enemy) || instance_number(enemy) <= instance_number(IDPDVan)) && !instance_exists(becomenemy)
 if instance_exists(SurvivalWave)
@@ -2998,7 +2998,7 @@ if Player.ultra_got[111]//Knife skills
 			if !appliedBoost
 			{
 				appliedBoost = true;
-				dmg += 5;
+				dmg += 8;
 				BackCont.shake += 1;
 			}
 		}

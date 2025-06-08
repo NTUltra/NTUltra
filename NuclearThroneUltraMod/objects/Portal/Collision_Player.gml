@@ -163,7 +163,9 @@ endgame = 12;//originally 30
 }
 if inverted{
 	with other
-	inverted=true//take me to the inverted universe
+	{
+		inverted = true//take me to the inverted universe
+	}
 }
 
 

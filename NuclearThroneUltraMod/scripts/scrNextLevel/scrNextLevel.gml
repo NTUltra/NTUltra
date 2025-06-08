@@ -631,7 +631,7 @@ function scrNextLevel(skipping = false) {
     
 		    }
 
-		    if area=101 && subarea == 3
+		    if area=101 && subarea == 3 && !inverted
 		    {
 				//Oasis to vulcano
 				lastarea = area;
@@ -715,6 +715,11 @@ function scrNextLevel(skipping = false) {
 							area = 115;
 							subarea = 1;
 						}
+						else if inverted
+						{
+							area = 111
+							subarea = 1;
+						}
 						else
 						{
 							area = 4;
@@ -766,8 +771,15 @@ function scrNextLevel(skipping = false) {
 		}    
 		//TO INVERTED AREAS
 		if ( area=1 && inverted )//inv desert
-		{area=105
-		lastarea=105;
+		{
+			area=105
+			lastarea=105;
+			if subarea > 2
+			{
+				area = 	110;
+				lastarea = 110;
+				subarea = 1;
+			}
 		}
 
 		if ( area=1 && oasis )
@@ -777,57 +789,118 @@ function scrNextLevel(skipping = false) {
 		inverted = false;}
 
 		if ( area=3 && inverted )//inv scrap
-		{area=106;
-		lastarea=106;
+		{
+			area=106;
+			lastarea=106;
+			if subarea > 2
+			{
+				area = 112;
+				lastarea = 112;
+				subarea = 1;
+			}
 		}//in case of crownvault
 
 		if ( area=4 && inverted )//inv crystal caves
-		{area=111;
-		subarea=1;
-		lastarea=111;}//in case of crownvault
+		{
+			area=111;
+			lastarea=111;
+			if subarea > 1
+			{
+				area = 118;
+				lastarea = 118;
+				subarea = 1;
+			}
+		}//in case of crownvault
 
 		if ( area=5 && inverted )//inv frozen city
-		{area=107;
-		lastarea=107;
+		{
+			area=107;
+			lastarea=107;
+			if subarea > 2
+			{
+				area = 111;
+				lastarea = 111;
+				subarea = 1;
+			}
 		}//in case of crownvault
 
 		if ( area=6 && inverted )//inv labs
-		{area=112;
-		subarea=1;
-		lastarea=112;}//in case of crownvault
+		{
+			area=112;
+			lastarea=112;
+			if subarea > 1
+			{
+				area = 107;
+				lastarea = 107;
+				subarea = 1;
+			}
+		}//in case of crownvault
 
 		if ( area=7 && inverted )//inv vulcano
-		{area=108;
-		lastarea=108;}//in case of crownvault
+		{
+			area=108;
+			lastarea=108;
+			if subarea > 2
+			{
+				area = 109;
+				lastarea = 109;
+				subarea = 1;
+			}
+		}//in case of crownvault
 
 		if ( area=8 && inverted )//inv wonderland
-		{area=109;
-		lastarea = 109
+		{
+			area=109;
+			lastarea = 109
+			if subarea > 2
+			{
+				area = 118;
+				lastarea = 118;
+				subarea = 1;
+			}
 		}//in case of crownvault
 	
 		if ( area == 9 && inverted )//inv Palace
-		{area=118;
-		lastarea = 118
+		{
+			area=118;
+			lastarea = 118
+			if subarea > 2
+			{
+				area = 120;
+				lastarea = 120;
+				subarea = 1;
+			}
 		}//in case of crownvault
 
 		if ( area == 2 && inverted )//inv sewers
-		{area=110;
-		subarea=1;
-		lastarea=110;}
+		{
+			area=110;
+			subarea=1;
+			lastarea=110;
+		}
 	
 		if ( area == 10 && inverted )//inv Savanna
-		{area=121;
-		lastarea=121;
+		{
+			area=121;
+			lastarea=121;
+			if subarea > 2
+			{
+				area = 124;
+				lastarea = 124;
+				subarea = 1;
+			}
 		}
 		if ( area == 117 && inverted )//inv Mushroom
-		{area=124;
-		lastarea=124;
-		subarea = 0;
+		{
+			area=124;
+			lastarea=124;
+			subarea = 0;
 		}
 		if ( area == 126 && inverted )//inv Graveyard
-		{area=127;
-		lastarea=127;
-		subarea = 1;
+		{
+			area=127;
+			lastarea=127;
+			subarea = 1;
 		}
 		if ( inverted && (area == 130 || area == 132 || area == 133 || area == 134) )//to inv factory
 		{
@@ -835,11 +908,21 @@ function scrNextLevel(skipping = false) {
 			lastarea=131;
 			subarea = 1;
 		}
-		if ( area == 114 && inverted )//inv Mushroom
+		if ( area == 114 && inverted )//inv Jungle
 		{
 			area=123;
 			lastarea=123;
-			subarea = 1;
+			if subarea > 1
+			{
+				area = 111;
+				lastarea = 111;
+				subarea = 1;
+				if (curse || bcurse || ccurse)
+				{
+					area = 115;
+					inverted = false;
+				}
+			}
 		}
 		if ( area == 103 && inverted ) //Iv mansion
 		{
@@ -848,12 +931,19 @@ function scrNextLevel(skipping = false) {
 			subarea = 0;
 		}
 		if ( area==101 && inverted )//inv Oasis
-		{area=122;
-		lastarea=122;
+		{
+			area=122;
+			lastarea=122;
+			if subarea > 2
+			{
+				area = 108;
+				lastarea = 108;
+				subarea = 1;
+			}
 		}
 		if !skipping
 		{
-			if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)&&subarea<2//inverted
+			if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)//&&subarea<2//inverted
 			{
 				if area == 112//Inv labs normal labs skips one
 				{

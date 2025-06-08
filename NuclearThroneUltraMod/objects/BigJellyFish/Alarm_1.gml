@@ -2,24 +2,25 @@
 alarm[1] = actTime+random(actTime)//30 + 10
 if (instance_exists(Player) && !Player.justAsheep) sleeping = false;
 
-if firstTime
-{
-	if point_distance(x,y,target.x,target.y) < 300
-	{
-		alarm[3] = jellyDelay;
-		firstTime = false;
-		instance_create(x,y,DramaCamera);
-	}
-	else
-	{
-		exit;	
-	}
-}
-if alarm[3] < 1
-	alarm[3] = alarm[3] = jellyMaxAmmoDelay;
+
 scrTarget()
 if target != noone
 {
+	if firstTime
+	{
+		if point_distance(x,y,target.x,target.y) < 300
+		{
+			alarm[3] = jellyDelay;
+			firstTime = false;
+			instance_create(x,y,DramaCamera);
+		}
+		else
+		{
+			exit;	
+		}
+	}
+	if alarm[3] < 1
+		alarm[3] = alarm[3] = jellyMaxAmmoDelay;
 	if random(3) < 1
 		direction = random(360)
 	if collision_line(x,y,target.x,target.y,Wall,0,0) && alarm[4] < 1 && alarm[5] < 1

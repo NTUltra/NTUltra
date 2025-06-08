@@ -3725,7 +3725,138 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(9,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 5
 		wkick = 4
+		if !skill_got[2]
+			motion_add(aimDirection + 180,1)
 
 		break;
+		
+		//SUPER CANDY CORN GUN
+		case 910:
+
+		snd_play_fire(sndDiscgun)
+
+		with instance_create(x,y,CandyCorn)
+		{motion_add(aimDirection+(random(20)-15)*other.accuracy,12 + irandom(4))
+		image_angle = direction
+		team = other.team}
+		if !skill_got[2]
+			motion_add(aimDirection + 180,1)
+		BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
+
+		break;
+		
+		//DEATH SCYTHE
+		case 911:
+
+		snd_play_fire(sndFrostShot1);
+		snd_play_fire(sndHammer)
+		var t = team;
+		instance_create(x,y,Dust)
+		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),DeathSlash)
+		{
+			image_yscale = choose(1,-1);
+			dmg = 30//shovel is 12 is frostglove
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			team = t
+		}
+		var len = 32 + ((Player.skill_got[13]+bettermelee)*20);
+		var angStep = (80*accuracy) / 6;
+		var aimDir = aimDirection - (angStep*3);
+		var fx = x + lengthdir_x(len,aimDir);
+		var fy = y + lengthdir_y(len,aimDir);
+		repeat(6)
+		{
+			with instance_create(fx,fy,IceFlame)
+			{
+				motion_add(aimDir,4+random(1))
+				image_angle = direction
+				team = t
+			}
+			aimDir += angStep;
+			fx = x + lengthdir_x(len,aimDir);
+			fy = y + lengthdir_y(len,aimDir);
+		}
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,5)
+			scrMoveContactSolid(aimDirection,4)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 1
+		wkick = -4
+
+		break;
+		
+		//ICE SPEAR
+		case 912:
+
+		snd_play_fire(sndMeleeSpear)
+		snd_play_fire(sndFrostDagger)
+		snd_play_fire(sndFrostCrossbow)
+		
+		with instance_create(x,y,FreezeBolt)
+		{motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
+		image_angle = direction
+		team = other.team}
+		
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),FrostSpearShank)
+		{
+			longarms = 0
+			if Player.skill_got[13]
+			{
+				longarms = (Player.skill_got[13]+other.bettermelee)
+				image_yscale += 0.25 + other.bettermelee;
+				maxRange += 20+other.bettermelee;
+				minRange += 10+other.bettermelee;
+			}
+			motion_add(aimDirection,1+longarms)
+			image_angle = direction
+			team = other.team
+			event_perform(ev_alarm,0);
+		}
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,10)
+			scrMoveContactSolid(aimDirection,20)
+		}
+		wepangle = -wepangle
+		BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 10
+		wkick = -20
+
+		break;
+		
+		//FROST GUN
+		case 913:
+		with instance_create(x,y,IceFlameBurst)
+		{
+			if instance_exists(Player) && Player.skill_got[42]
+				image_speed -= 0.1;
+			image_angle = aimDirection;
+			burstAim = aimDirection;
+			creator = other.id
+			ammo = 8
+			projectileSpeed = 5;
+			time = 1
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+		snd_play_fire(choose(sndFrost1,sndFrost2))
+		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 2
+
+		break;
+		
 	}
 }

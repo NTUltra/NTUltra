@@ -659,7 +659,7 @@ function scrPopulate() {
 	
 	with Player
 	{
-		if ultra_got[114]
+		if ultra_got[114] && !scrIsInEnemyFreeArea()
 		{
 			enemyAbyssLockout = [];
 			array_copy(enemyAbyssLockout,0,enemyTypeAbyss,0,array_length(enemyTypeAbyss));

@@ -1,5 +1,5 @@
 /// @description WepPickup
-if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont) && !instance_exists(PandaSleep){
+if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists(GenCont) && !instance_exists(LevCont)  && !instance_exists(SpiralCont) && !instance_exists(PandaSleep) && !lockout && !isOnInteractable{
 	var canMeleeAmmo = scrIsCrown(40);
 	var findingNewWeapon = false;
 	if targetPickup == noone
@@ -734,7 +734,7 @@ else if ultra_got[62] && altUltra {
 }
 
 //}
-if alarm[3] > 0/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
+if (alarm[3] > 0 || lockout)/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
 	if sprite_index == spr_hurt
 	{

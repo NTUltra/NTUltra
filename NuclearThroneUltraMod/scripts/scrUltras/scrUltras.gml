@@ -842,7 +842,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <p>HIDE<p> YOU#EVEN	WHILE IN <w>LINE OF SIGHT<w> TO <r>ENEMIES<r>##INCREASE <p>STEALTH<p> SWAP <aq>IMMUNITY<aq> DURATION"
+	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <w>ALWAYS<w> <p>HIDE<p> YOU##INCREASE <p>STEALTH<p> SWAP <aq>IMMUNITY<aq> DURATION"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
@@ -853,12 +853,12 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		if altOverride || (instance_exists(Player) && Player.race == 28 && Player.altUltra)
 		{
 			ultra_name[110] = "GREEDY THIEF"
-		    ultra_text[110] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>#GAIN <w>+2<w> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
+		    ultra_text[110] = "<w>STEAL TWICE<w> AS MUCH <y>AMMO<y>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>#GAIN <w>+2<w> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
 		    ultra_tips[110] = "the collector"
 		}
         
 		ultra_name[111] = "KNIFE SKILLS"
-		ultra_text[111] = "ALL <w>MELEE WEAPONS<w> DEAL#<w>+5 FIXED DAMAGE<w>##UPGRADED NON <p>STEALTH<p> <w>STAB<w>#MORE <r>DAMAGE<r>#<r>SPLASH DAMAGE<r>#CAN STEAL ITEMS/WEAPONS#STEAL MORE <y>AMMO<y>"
+		ultra_text[111] = "ALL <w>MELEE WEAPONS<w> DEAL#<w>+8 FIXED DAMAGE<w>##UPGRADED NON <p>STEALTH<p> <w>STAB<w>#MORE <r>DAMAGE<r>#<r>SPLASH DAMAGE<r>#CAN STEAL ITEMS/WEAPONS#STEAL MORE <y>AMMO<y>"
 		ultra_tips[111] = "show your chops"
         
 		ultra_name[112] = "SWIFT STRIKE"

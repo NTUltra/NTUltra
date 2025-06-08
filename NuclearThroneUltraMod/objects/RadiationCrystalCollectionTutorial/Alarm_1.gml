@@ -1,7 +1,7 @@
 /// @description Disappear enemies
 with IDPDSpawn
 {
-	instance_destroy(id,false);	
+	instance_destroy(id,false);
 }
 with enemy
 {
@@ -9,6 +9,6 @@ with enemy
 }
 with Player
 {
-	alarm[3] = max(alarm[3],2);	
+	alarm[3] = max(alarm[3],10);	
 }
 alarm[1] = 2;

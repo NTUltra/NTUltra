@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.394594,
+  "duration":0.39460316,
   "name":"sndFrostDagger",
   "parent":{
     "name":"Melee",

@@ -3,7 +3,7 @@ function scrPopEnemies() {
 	if instance_exists(Player)
 	{
 		loops = Player.loops;
-		if Player.ultra_got[114]
+		if Player.ultra_got[114] && !scrIsInEnemyFreeArea()
 		{
 			//if random(100) < 30
 			//{

@@ -1,6 +1,6 @@
 /// @description Gamma guts
 spr = sprNormal;
-if (deflectDurability < maxDeflect || alarm[1] > 0)
+if (instance_exists(Player) && !Player.isInvisible && deflectDurability < maxDeflect || alarm[1] > 0)
 {
 	var hitting = false;
 	var hits = ds_list_create();

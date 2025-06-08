@@ -22,7 +22,7 @@ __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ),
 __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-bottom,
 false);
 draw_set_colour(c_white);
-if Player.crownpoints = 0
+if Player.crownpoints == 0
 {
 	var xx = __view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5);
 	//draw_line(xx,-999999,xx,999999); //CENTER LINE
@@ -117,10 +117,10 @@ if Player.crownpoints = 0
 }
 else
 {
-draw_set_color(c_black)
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+47,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+47,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+46,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
-draw_set_color(c_white)
-draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+46,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
+	draw_set_color(c_black)
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+47,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+47,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+46,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
+	draw_set_color(c_white)
+	draw_text(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+46,string_hash_to_newline("VAULT COMPLETED!#PICK YOUR CROWN"))
 }

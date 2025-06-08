@@ -7,7 +7,7 @@ with UberCont///UNLOCK CROWN
 var usedRandom = false;
 if keeper
 {
-	Player.crownpoints -= 1
+	Player.crownpoints = max(0,Player.crownpoints - 1);
 }
 else {
 if crown = 0
@@ -30,7 +30,7 @@ if (UberCont.canMultiCrown)
 		Player.crown = [1];
 		with Crown
 			instance_destroy();
-		Player.crownpoints -= 1;
+		Player.crownpoints = max(0,Player.crownpoints - 1);
 	}
 	else if scrIsCrown(crown)
 	{
@@ -60,7 +60,7 @@ if (UberCont.canMultiCrown)
 			scrUnlockCSkin(18,"FOR EQUIPPING THREE CROWNS AT ONCE#AS ANGEL");
 		}
 		if !canReAdd
-			Player.crownpoints -= 1
+			Player.crownpoints = max(0,Player.crownpoints - 1);
 	}
 }
 else
@@ -70,7 +70,7 @@ else
 	with Crown
 		instance_destroy();
 	Player.crown = [crown]
-	Player.crownpoints -= 1
+	Player.crownpoints = max(0,Player.crownpoints - 1);
 }
 //RESET INVERTED CHANCE
 with UberCont

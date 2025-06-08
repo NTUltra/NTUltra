@@ -12,7 +12,7 @@ if mask_index != mskPickupThroughWall
 		var canDo = true;
 		with Player
 		{
-			if !visible || lockout
+			if !visible || lockout || targetPickup != noone
 				canDo = false
 			else
 				isOnInteractable = true;

@@ -131,9 +131,9 @@ if UberCont.race_have[27]
 	char[27].spr_slct = sprHandsMenu
 	char[27].num = 27
 }
-if UberCont.race_have[28]
+if UberCont.race_have[28]//Thief
 {
-	char[28] = instance_create(190,90,CampChar)
+	char[28] = instance_create(24,130,CampChar)
 	char[28].sprite_index = sprHandsMenu
 	char[28].spr_menu = sprHandsMenuSelected
 	char[28].spr_to = sprHandsMenuSelect
@@ -141,9 +141,9 @@ if UberCont.race_have[28]
 	char[28].spr_slct = sprHandsMenu
 	char[28].num = 28
 }
-if UberCont.race_have[29]
+if UberCont.race_have[29]//No Thing
 {
-	char[29] = instance_create(180,50,CampChar)
+	char[29] = instance_create(150,90,CampChar)
 	char[29].sprite_index = sprHandsMenu
 	char[29].spr_menu = sprHandsMenuSelected
 	char[29].spr_to = sprHandsMenuSelect

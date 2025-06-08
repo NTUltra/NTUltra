@@ -24,5 +24,5 @@ tutorial = [
 alarm[1] = alarm[0];
 with Player
 {
-	alarm[3] = max(alarm[3],other.alarm[1]);	
+	alarm[3] = max(alarm[3],other.alarm[1]) + 10;	
 }
