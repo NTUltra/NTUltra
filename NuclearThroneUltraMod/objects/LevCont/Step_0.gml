@@ -33,12 +33,14 @@ if scrIsGamemode(28) || instance_exists(AllMutationsLeft)//ALL MUTATION CHOICES
 		}
 	}
 }
+var switchingMenu = false;
 if KeyCont.key_west[0] == 1
 {
+	event_user(0);
 	snd_play_2d(sndHover);
 	selectedIndex -= 1;
 	var hasSelectedSkill = false;
-	if instance_exists(UltraIcon) || instance_exists(SkillIcon)
+	if instance_exists(UltraIcon) || instance_exists(SkillIcon) || instance_exists(CrownIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{
@@ -61,6 +63,43 @@ if KeyCont.key_west[0] == 1
 		{
 			if selectedIndex < 0
 				selectedIndex = instance_number(SkillIcon) - 1;
+		}
+		else if instance_exists(CrownIcon)
+		{
+			if controllingSecondaryMenu && instance_exists(MultiCrownMenu)
+			{
+				hasSelectedSkill = true;
+				if selectedIndex < -2
+				{
+					if MultiCrownMenu.selectedCrown != -1
+						selectedIndex = -1;
+					else
+						selectedIndex = -2;
+				}
+				else if selectedIndex <= 0 || (selectedIndex > 0 && MultiCrownMenu.maxWidthCrowns > 0 && selectedIndex % MultiCrownMenu.maxWidthCrowns == 0)
+				{
+					selectedIndex += MultiCrownMenu.maxWidthCrowns;
+				}
+			}
+			else
+			{
+				if selectedIndex == 11
+					selectedIndex = instance_number(CrownIcon) - 1;
+				if selectedIndex < 0
+					selectedIndex = instance_number(CrownIcon) - 1 - 12;
+				with CrownIcon
+				{
+					if rowPosition == other.selectedIndex
+					{
+						selected = true;
+						hasSelectedSkill = true;
+					}
+					else
+						selected = false;
+				}
+				controllingSecondaryMenu = false;
+				previouslySelectedIndex = selectedIndex;
+			}
 		}
 		with SkillIcon
 		{
@@ -92,10 +131,11 @@ if KeyCont.key_west[0] == 1
 }
 else if KeyCont.key_east[0] == 1
 {
+	event_user(0);
 	snd_play_2d(sndHover);
 	selectedIndex += 1;
 	var hasSelectedSkill = false;
-	if instance_exists(UltraIcon) || instance_exists(SkillIcon)
+	if instance_exists(UltraIcon) || instance_exists(SkillIcon) || instance_exists(CrownIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{
@@ -116,6 +156,42 @@ else if KeyCont.key_east[0] == 1
 		{
 			if selectedIndex > instance_number(SkillIcon) - 1
 				selectedIndex = 0;
+		}
+		else if instance_exists(CrownIcon)
+		{
+			if controllingSecondaryMenu && instance_exists(MultiCrownMenu)
+			{
+				hasSelectedSkill = true;
+				if selectedIndex == 0 || (selectedIndex < 0 && MultiCrownMenu.selectedCrown == -1)
+				{
+					selectedIndex = -2;	
+				}
+				else if selectedIndex > MultiCrownMenu.lastCrown
+				{
+					selectedIndex -= MultiCrownMenu.lastCrownRowWidth;
+				}
+				else if (selectedIndex - 1 > 0 && MultiCrownMenu.maxWidthCrowns > 0 && (selectedIndex - 1) % MultiCrownMenu.maxWidthCrowns == 0)
+					selectedIndex -= MultiCrownMenu.maxWidthCrowns;
+			}
+			else 
+			{
+				if selectedIndex == 12
+					selectedIndex = 0;
+				else if selectedIndex > instance_number(CrownIcon) - 1
+					selectedIndex = 12;
+				with CrownIcon
+				{
+					if rowPosition == other.selectedIndex
+					{
+						selected = true;
+						hasSelectedSkill = true;
+					}
+					else
+						selected = false;
+				}
+				controllingSecondaryMenu = false;
+				previouslySelectedIndex = selectedIndex;
+			}
 		}
 		with SkillIcon
 		{
@@ -144,4 +220,155 @@ else if KeyCont.key_east[0] == 1
 		}
 	}
 	until (hasSelectedSkill)
+}
+else if KeyCont.key_sout[0] == 1
+{
+	event_user(0);
+	if instance_exists(CrownIcon)
+	{
+		snd_play_2d(sndHover);
+		if controllingSecondaryMenu && instance_exists(MultiCrownMenu)
+		{
+			if selectedIndex < 0
+			{
+				switchingMenu = true;
+				controllingSecondaryMenu = false;
+				selectedIndex = previouslySelectedIndex;
+			}
+			else
+			{
+				if selectedIndex + MultiCrownMenu.maxWidthCrowns >= MultiCrownMenu.lastCrown
+					selectedIndex = -2;
+				else
+					selectedIndex += MultiCrownMenu.maxWidthCrowns;	
+			}
+		}
+		else
+		{
+			if !UberCont.unlocked_more_crowns || selectedIndex + 12 > instance_number(CrownIcon) - 1
+			{
+				if instance_exists(MultiCrownMenu)
+				{
+					switchingMenu = true;
+					controllingSecondaryMenu = true;
+					selectedIndex = -2;
+					if MultiCrownMenu.lastCrown >= 0
+						selectedIndex = 1;
+				}
+				else if UberCont.unlocked_more_crowns
+				{
+					selectedIndex -= 12;
+				}
+			}
+			else if UberCont.unlocked_more_crowns
+			{
+				selectedIndex += 12;
+			}
+			if !switchingMenu
+			{
+				with CrownIcon
+				{
+					if rowPosition == other.selectedIndex
+					{
+						selected = true;
+					}
+					else
+						selected = false;
+				}
+				controllingSecondaryMenu = false;
+				previouslySelectedIndex = selectedIndex;
+			}
+		}
+	}
+}
+else if KeyCont.key_nort[0] == 1
+{
+	event_user(0);
+	if instance_exists(CrownIcon)
+	{
+		snd_play_2d(sndHover);
+		if controllingSecondaryMenu && instance_exists(MultiCrownMenu)
+		{
+			if selectedIndex < 0
+			{
+				if MultiCrownMenu.lastCrown >= 0
+					selectedIndex = MultiCrownMenu.lastCrown;
+				else
+				{
+					switchingMenu = true;
+					controllingSecondaryMenu = false;
+					selectedIndex = previouslySelectedIndex;
+				}
+			}
+			else if MultiCrownMenu.lastCrown >= 0
+			{
+				if selectedIndex - MultiCrownMenu.maxWidthCrowns < 0
+				{
+					switchingMenu = true;
+					controllingSecondaryMenu = false;
+					selectedIndex = previouslySelectedIndex;
+				}
+				else
+				{
+					selectedIndex -= MultiCrownMenu.maxWidthCrowns;
+				}
+			} 
+		}
+		else
+		{
+			if !UberCont.unlocked_more_crowns || selectedIndex - 12 < 0
+			{
+				if instance_exists(MultiCrownMenu)
+				{
+					switchingMenu = true;
+					controllingSecondaryMenu = true;
+					selectedIndex = -2;
+				}
+				else if UberCont.unlocked_more_crowns
+				{
+					selectedIndex += 12;
+				}
+			}
+			else if UberCont.unlocked_more_crowns
+			{
+				selectedIndex -= 12;
+			}
+			if !switchingMenu
+			{
+				with CrownIcon
+				{
+					if rowPosition == other.selectedIndex
+					{
+						selected = true;
+					}
+					else
+						selected = false;
+				}
+				controllingSecondaryMenu = false;
+				previouslySelectedIndex = selectedIndex;
+			}
+		}
+	}
+}
+if switchingMenu
+{
+	snd_play_2d(sndClickBack);
+	if !controllingSecondaryMenu {
+		with CrownIcon
+		{
+			if rowPosition == other.selectedIndex
+			{
+				selected = true;
+			}
+			else
+				selected = false;
+		}
+	}
+	else
+	{
+		with CrownIcon
+		{
+			selected = false;	
+		}
+	}
 }

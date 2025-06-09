@@ -1,3 +1,4 @@
+p = 0;
 if instance_exists(Credits)
 	exit;
 if instance_exists(Player)

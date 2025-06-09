@@ -10042,7 +10042,7 @@ function scrWeapons() {
 	wep_name[895] = "SLINGSHOT"
 	wep_type[895] = 3
 	wep_auto[895] = 0
-	wep_load[895] = 30
+	wep_load[895] = 32
 	wep_cost[895] = 3
 	wep_sprt[895] = sprSlingShot
 	wep_area[895] = 2

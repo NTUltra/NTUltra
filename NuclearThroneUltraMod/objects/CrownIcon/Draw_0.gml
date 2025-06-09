@@ -3,16 +3,20 @@ if alarm[1] > 0
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,yy-16,x+12,yy+16,0)
 var yy = y + yOffset;
-var hover = (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > yy-16 and UberCont.mouse__y < yy+16)
+var hover = selected || (UberCont.mouse__x > x-10 and UberCont.mouse__x < x+10 and UberCont.mouse__y > yy-16 and UberCont.mouse__y < yy+16)
 var l = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]);
+var throughHoverSelect = false;
 if instance_exists(MultiCrownMenu)
 {
 	var width = 128;
 	if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
 		width -= 32;
 	l = l - width;
-	if MultiCrownMenu.hoverSelected && MultiCrownMenu.selectedCrown == crown
+	if MultiCrownMenu.hoverSelected == crown// && MultiCrownMenu.selectedCrown == crown
+	{
 		hover = true;
+		throughHoverSelect = true;
+	}
 }
 if (instance_exists(UnlockingSecondRow))
 {
@@ -34,9 +38,10 @@ if (instance_exists(UnlockingSecondRow))
 	draw_sprite(sprCrownSelect,sprite_get_number(sprCrownSelect) - 1,x,yy)
 	draw_set_alpha(1);
 }
-else if hover
+else if hover && !fakeHover
 {
-	draw_sprite(sprSkillSelected,-1,x,yy)
+	if !throughHoverSelect
+		draw_sprite(sprSkillSelected,-1,x,yy)
 	draw_sprite(sprite_index,crown,x+2,yy-2)
 }
 else
@@ -45,12 +50,14 @@ else
 	draw_sprite_ext(sprite_index,crown,x,yy,1,1,0,c_black,0.05)
 }
 var isCurrentCrown = false;
-if (crown != 1 && scrIsCrown(crown))
+if (crown != 1 && scrIsCrown(crown) && !fakeHover)
 {
 	isCurrentCrown = true;
 	var col = make_color_rgb(72,156,8);
 	draw_rectangle_color(x-12,yy-16 - (hover*2),x+12+hover,yy+15,col,col,col,col,true);	
 }
+if fakeHover
+	isCurrentCrown = true;
 draw_set_valign(fa_bottom)
 draw_set_halign(fa_right)
 txt2 = "";

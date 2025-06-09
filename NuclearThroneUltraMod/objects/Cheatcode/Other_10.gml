@@ -10,8 +10,11 @@ if (hundredPercentI) >= array_length(hundredPercent)
 	{
 		var dir=0;
 		about_to_unlock_alt_routes = 1
-		unlocked_alt_routes = 0;
-		unlocked_inverted_areas = 0;
+		unlocked_alt_routes = true;
+		unlocked_inverted_areas = true;
+		mutation_crystals_collected_1 = 1;
+		mutation_crystals_collected_2 = 1;
+		//mutation_crystals_collected_3 = 1;
 		//unlocked_alt_routes = ini_read_real("STATS","unlocked_alt_routes",0);
 		//unlocked_inverted_areas = ini_read_real("STATS","unlocked_inverted_areas",0);
 		unlocked_more_crowns = 1

@@ -24,6 +24,7 @@ repeat(6)
 }
 with instance_create(tx,ty,ReviveFX)
 {
+	snd_play(choose(sndDeathScytheCorpse1,sndDeathScytheCorpse2),0.05);
 	if other.um == ultramods.fireFrost
 		sprite_index = sprFireRevive;
 	else

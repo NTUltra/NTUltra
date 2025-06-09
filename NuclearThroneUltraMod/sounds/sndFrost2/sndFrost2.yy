@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.382729,
+  "duration":0.38274378,
   "name":"sndFrost2",
   "parent":{
     "name":"Bullet",

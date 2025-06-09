@@ -3714,7 +3714,7 @@ function scrFire3(hasTailNow){
 		//CANDY CORN GUN
 		case 909:
 
-		snd_play_fire(sndDiscgun)
+		snd_play_fire(choose(sndCandyCorn1,sndCandyCorn2,sndCandyCorn3))
 
 		with instance_create(x,y,CandyCorn)
 		{motion_add(aimDirection+(random(16)-8)*other.accuracy,14)
@@ -3733,7 +3733,7 @@ function scrFire3(hasTailNow){
 		//SUPER CANDY CORN GUN
 		case 910:
 
-		snd_play_fire(sndDiscgun)
+		snd_play_fire(choose(sndCandyCorn1,sndCandyCorn2,sndCandyCorn3))
 
 		with instance_create(x,y,CandyCorn)
 		{motion_add(aimDirection+(random(20)-15)*other.accuracy,12 + irandom(4))
@@ -3751,8 +3751,7 @@ function scrFire3(hasTailNow){
 		//DEATH SCYTHE
 		case 911:
 
-		snd_play_fire(sndFrostShot1);
-		snd_play_fire(sndHammer)
+		snd_play_fire(sndDeathScythe);
 		var t = team;
 		instance_create(x,y,Dust)
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),DeathSlash)
@@ -3840,7 +3839,12 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,IceFlameBurst)
 		{
 			if instance_exists(Player) && Player.skill_got[42]
+			{
 				image_speed -= 0.1;
+				snd_play(sndFrostGunUpg,0.02)
+			}
+			else
+				snd_play(sndFrostGun,0.02)
 			image_angle = aimDirection;
 			burstAim = aimDirection;
 			creator = other.id
@@ -3850,7 +3854,6 @@ function scrFire3(hasTailNow){
 			team = other.team
 			event_perform(ev_alarm,0) 
 		}
-		snd_play_fire(choose(sndFrost1,sndFrost2))
 		BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 5

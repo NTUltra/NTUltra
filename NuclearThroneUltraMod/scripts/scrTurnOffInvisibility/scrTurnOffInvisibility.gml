@@ -35,6 +35,10 @@ function scrTurnOffInvisibility(fromPower = false, justTurnOff = false, fromDama
 	}
 	else
 	{
+		with ThiefStealthDurationDelay
+		{
+			instance_destroy();	
+		}
 		thiefStabs = 0;
 		justAsheep = false;
 		isInvisible = false;

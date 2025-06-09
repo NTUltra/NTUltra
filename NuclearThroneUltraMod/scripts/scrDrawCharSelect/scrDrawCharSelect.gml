@@ -3,14 +3,14 @@ function scrDrawCharSelect() {
 		widescreen += 8
 
 	mouseover = -1;
-	
 	/*
 	with CampChar{
 	if position_meeting(UberCont.mouse__x,UberCont.mouse__y,self) and y > view_yview+48 and y < view_yview+view_hview-48 and UberCont.mouse__y > view_yview+Menu.widescreen and UberCont.mouse__y < view_yview+view_hview-Menu.widescreen
 	other.mouseover = num}*/
 	if Menu.camLerp >= 1
 	with CharSelect{
-		if position_meeting(mouse_x,mouse_y,id)// and y > view_yview+48 and y < view_yview+view_hview-48
+		//position_meeting(mouse_x,mouse_y,id)// and y > view_yview+48 and y < view_yview+view_hview-48
+		if (selected || (mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y+24))
 		{
 			other.mouseover = num
 		}

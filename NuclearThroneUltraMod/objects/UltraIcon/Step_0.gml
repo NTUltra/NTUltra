@@ -6,13 +6,13 @@ if (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x 
 		selected = false;
 		
 	selected = true;
-	with UberCont
+	with LevCont
 	{
 		selectedIndex = other.skillIndex;	
 	}
 }
 if (selected && visible &&
-((KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)))
+((KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && ((!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right)) || (UberCont.mouse__x < x+22 and UberCont.mouse__y < y+22 and UberCont.mouse__x > x-22 and UberCont.mouse__y > y-22)))
 && ((alarm[0]<1) ) || (exceptionclick && (alarm[0]<1)))
 {
 	KeyCont.key_fire[p] = 2;

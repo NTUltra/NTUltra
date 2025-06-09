@@ -1,4 +1,4 @@
-if KeyCont.key_fire[p] = 1 and (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+23 and UberCont.mouse__x > x and UberCont.mouse__y > y)
+if KeyCont.key_fire[p] = 1 and (selected || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+23 and UberCont.mouse__x > x and UberCont.mouse__y > y))
 {
 	with Player
 	{

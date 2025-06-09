@@ -42,9 +42,11 @@ if Menu.mouseover == image_index
 		n = string(race_name[image_index]);
 	else
 		n = string(race_lock[image_index]);
-			
-	var mx = lerp(mouse_x,tx,0.5);
-	var tx = lerp(mouse_x,tx,0.75);
+	var mouseX = mouse_x;
+	if selected
+		mouseX = x;
+	var mx = lerp(mouseX,tx,0.5);
+	var tx = lerp(mouseX,tx,0.75);
 	var xx = clamp(tx - string_width(n) * 0.5,camera_get_view_x(view_camera[0]) + 3,camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]) - string_width(n) - 3);
 	var yy = ty;//camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - 60;
 	var col = make_colour_rgb(59,46,66);

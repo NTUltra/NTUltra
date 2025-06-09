@@ -18,7 +18,7 @@ function scrPowers(raceOverwrite = -1) {
 	
 	if scrIsCrown(34)
 		race = 0;
-	if skill_got[39] && alienIntestines < 330
+	if skill_got[39] && alienIntestines < 330 && (!isInvisible || instance_exists(ThiefStealthDurationDelay))
 	{
 		if UberCont.normalGameSpeed == 60
 		{
@@ -121,13 +121,14 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(image_angle,4);
 						}
 					}
+					var d = 25 + level * 5;
 					with n
 					{
 						if other.skill_got[5]
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
 							instance_create(x,y,ThiefStab);
-							DealDamage(100 + min(100,other.loops*3) + my_health*0.25);
+							DealDamage(d + 25 + min(100,other.loops*3) + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -151,7 +152,7 @@ function scrPowers(raceOverwrite = -1) {
 								dmg = 12;
 								visible = false;
 							}
-							DealDamage(80 + min(100,other.loops*3));
+							DealDamage(d + min(100,other.loops*3));
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30

@@ -604,7 +604,7 @@ function scrTips() {
 	tip = choose("Thief can steal ammo and health drops","your starting daggers deal double damage when backstabbing an enemy","thief is faster while invisible",
 	"break line of sight to enemies to go invisible","thief does not fight fair","you don't take contact damage while in stealth","you can't deal contact damage while in stealth",
 	"hypersomnia activates after you first reveal yourself","Thief's stab can target invisible enemies"
-	,"you can still steal while not invisible")
+	,"you can still steal while not invisible","active damage scales each loop","stealth stab damage increases each level")
 	
 	if Player.race = 29//No thing
 	tip = choose("0"," ","your starting void pistol deals more damage to higher health enemies",

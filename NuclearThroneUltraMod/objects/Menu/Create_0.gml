@@ -133,12 +133,13 @@ if UberCont.race_have[27]
 }
 if UberCont.race_have[28]//Thief
 {
-	char[28] = instance_create(24,130,CampChar)
-	char[28].sprite_index = sprHandsMenu
-	char[28].spr_menu = sprHandsMenuSelected
-	char[28].spr_to = sprHandsMenuSelect
-	char[28].spr_from = sprHandsMenuDeselect
-	char[28].spr_slct = sprHandsMenu
+	char[28] = instance_create(30,42,CampChar)
+	char[28].image_xscale = -1;
+	char[28].sprite_index = sprThiefMenu
+	char[28].spr_menu = sprThiefMenuSelected
+	char[28].spr_to = sprThiefMenuSelectNoFlash;
+	char[28].spr_from = sprThiefMenuDeselect
+	char[28].spr_slct = sprThiefMenu
 	char[28].num = 28
 }
 if UberCont.race_have[29]//No Thing
@@ -318,9 +319,16 @@ instance_create(x,y-32,TV)
 if UberCont.race_have[10] = 1{
 char[10].x = 20;
 char[10].y = 40;
+
+if UberCont.race_have[28]
+{
+	char[10].x = 9;
+	char[10].y = 42;
+}
 char[10].camX = 0;
 char[10].sprite_index = sprRebelMenu
 char[10].spr_menu = sprRebelMenuSelected
+char[10].spr_special = sprRebelMenuAwe
 char[10].spr_to = sprRebelMenuSelect
 char[10].spr_from = sprRebelMenuDeselect
 char[10].spr_slct = sprRebelMenu}
@@ -484,7 +492,7 @@ camLerp = 1;
 
 firstEntry = true;
 portraitLerp = 0;
-
+p = 0;
 if UberCont.playFullyCompleted
 {
 	alarm[4] = 45;

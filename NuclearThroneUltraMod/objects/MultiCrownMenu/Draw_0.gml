@@ -7,6 +7,7 @@ var wantText = "";
 var ystep = 36;
 var perWidth = 4
 draw_set_alpha(1);
+hoverSelected = -1;	
 if UberCont.opt_sideart != sprite_get_number(sprSideArt) + 1
 {
 	perWidth = 3;
@@ -45,6 +46,8 @@ var yy = margin - scroll;
 //Yeet this on a surface and make it scrollable
 surface_set_target(currentCrownsSurface);
 draw_clear_alpha(c_black,1);
+var wideFirst = true;
+lastCrownRowWidth = 0;
 repeat(array_length(currentCrown))
 {
 	if currentCrown[i] != 1
@@ -53,16 +56,30 @@ repeat(array_length(currentCrown))
 		var yo = 0;
 		if yy < height && alarm[0] < 1
 		{
+			var hover = false;
 			if (mouse_x < l + xx + crownWidth &&
 			mouse_x > l + xx  &&
 			mouse_y > surfaceY + yy &&
 			mouse_y < surfaceY + yy + crownHeight)
+				hover = true;
+			if (LevCont.selectedIndex == i && LevCont.controllingSecondaryMenu) || hover
 			{
 				xo = 2;
 				yo = -2;
-				hoverSelected = true;
-				if mouse_check_button_pressed(mb_left)
+				hoverSelected = currentCrown[i];
+				with LevCont
 				{
+					controllingSecondaryMenu = true;
+					selectedIndex = i;
+				}
+				with CrownIcon
+				{
+					selected = false;
+				}
+				if (KeyCont.key_pick[p] == 1 || KeyCont.key_fire[p] = 1 && (hover || (!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right))))
+				{
+					KeyCont.key_fire[p] = 2;
+					KeyCont.key_pick[p] = 2;
 					if scrIsCrown(Player.crown)
 					{
 						snd_play_2d(sndClickBack);
@@ -80,22 +97,35 @@ repeat(array_length(currentCrown))
 						event_user(0);
 						instance_destroy();
 					}
-					debug("crown now: ", currentCrown);
 					continue;
 				}
 			}
 		}
 		if scrIsCrown(currentCrown[i])
+		{
+			draw_sprite(sprSkillSelected,-1,xx + 13, yy + 19)
 			draw_sprite_ext(sprCrownSelect,currentCrown[i],xx + 13 + xo, yy + 19 + yo, 1,1,0,c_white,1);
+		}
 		else
-			draw_sprite_ext(sprCrownSelect,currentCrown[i],xx + 13 + xo, yy + 19 + yo, 1,1,0,c_white,0.5);
+		{
+			draw_sprite_ext(sprSkillSelected,-1,xx + 13, yy + 19,1,1,0,c_gray,1)
+			draw_sprite_ext(sprCrownSelect,currentCrown[i],xx + 13 + xo, yy + 19 + yo, 1,1,0,c_dkgray,1);
+		}
 		xx += 29;
+		lastCrownRowWidth += 1
+		if wideFirst
+		{
+			maxWidthCrowns = lastCrownRowWidth;
+		}
 		if xx > width - 36
 		{
+			wideFirst = false;
 			//xx = l + margin;
+			lastCrownRowWidth = 0;
 			xx = sideMargin;
 			yy += ystep;
 		}
+		lastCrown = i;
 	}
 	i += 1;
 }
@@ -103,15 +133,29 @@ surface_reset_target();
 draw_surface(currentCrownsSurface,l,surfaceY)
 var arrowSize = 12;
 var arrowScale = 1;
+var arrowHover = false;
 if (mouse_x < r - sideMargin + arrowSize &&
 mouse_x > r - 32 - sideMargin - arrowSize &&
 mouse_y > b - 12 - margin - arrowSize &&
 mouse_y < b - 12 - margin + arrowSize)
+	arrowHover = true;
+if arrowHover || (LevCont.selectedIndex == -2 && LevCont.controllingSecondaryMenu)
 {
 	arrowScale = 1.5;
 	wantText = "<w>CONFIRM<w> SELECTION?";
-	if mouse_check_button_pressed(mb_left)
+	with LevCont
 	{
+		controllingSecondaryMenu = true;
+		selectedIndex = -2;
+	}
+	with CrownIcon
+	{
+		selected = false;
+	}
+	if (KeyCont.key_pick[p] == 1 || KeyCont.key_fire[p] = 1 && (arrowHover || (!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right))))
+	{
+		KeyCont.key_fire[p] = 2;
+		KeyCont.key_pick[p] = 2;
 		snd_play_2d(sndClick);
 		event_user(1);	
 	}
@@ -121,23 +165,35 @@ else
 	arrowScale = 1;	
 }
 draw_sprite_ext(sprLoadOutArrow,0,r - 24 - sideMargin, b - 12 - margin, arrowScale,arrowScale,270,c_white,1);
-hoverSelected = false;	
 if selectedCrown != -1
 {
 	var selectedCrownScale = 1;
 	var xo = 0;
 	var yo = 0;
-	if (alarm[0] < 1 &&
-	mouse_x < l + sideMargin + crownWidth &&
+	var selectedCrownHover = false;
+	if (mouse_x < l + sideMargin + crownWidth &&
 	mouse_x > l + 32 + sideMargin - crownWidth &&
 	mouse_y > b - 12 - margin - crownHeight &&
 	mouse_y < b - 12 - margin + crownHeight)
+		selectedCrownHover = true;
+	if (alarm[0] < 1 && (selectedCrownHover || (LevCont.selectedIndex == -1 && LevCont.controllingSecondaryMenu)))
 	{
 		xo = 2;
 		yo = -2;
-		hoverSelected = true;
-		if mouse_check_button_pressed(mb_left)
+		hoverSelected = selectedCrown;
+		with LevCont
 		{
+			controllingSecondaryMenu = true;
+			selectedIndex = -1;
+		}
+		with CrownIcon
+		{
+			selected = false;
+		}
+		if (KeyCont.key_pick[p] == 1 || KeyCont.key_fire[p] = 1 && (selectedCrownHover || (!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right))))
+		{
+			KeyCont.key_fire[p] = 2;
+			KeyCont.key_pick[p] = 2;
 			alarm[0] = 5;
 			snd_play_2d(sndClickBack);
 			selectedCrown = -1;
@@ -150,6 +206,28 @@ if selectedCrown != -1
 	}
 }
 
+//Check if crown is currently there or not?
+if hoverSelected > -1
+{
+	var crownExists = false;
+	with CrownIcon
+	{
+		if crown == other.hoverSelected
+			crownExists = true;
+	}
+	if !crownExists
+	{
+		with instance_nearest(x,y,CrownIcon)
+		{
+			var actualCrown = crown;
+			crown = other.hoverSelected;
+			fakeHover = true;
+			event_perform(ev_draw,0);
+			fakeHover = false;
+			crown = actualCrown;
+		}
+	}
+}
 if wantText != ""
 {
 	draw_set_valign(fa_bottom)

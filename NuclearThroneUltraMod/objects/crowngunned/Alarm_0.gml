@@ -21,15 +21,16 @@ if instance_exists(enemy)
 	var dir = instance_nearest(x,y,enemy)
 	if speed > 0
 	{
-	if dir != noone && distance_to_object(dir) < 48
-	{
-	motion_add(point_direction(dir.x,dir.y,x,y),2)
+		if dir != noone && distance_to_object(dir) < 48
+		{
+			motion_add(point_direction(dir.x,dir.y,x,y),2)
+		}
+			motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)
+		if instance_exists(Player)
+			motion_add(Player.direction,1)
 	}
-	motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),1)
-	if instance_exists(Player)
-	motion_add(Player.direction,1)
-	}
-	if dir != noone && dir.team != 2 &&  collision_line(x,y,dir.x,dir.y,Wall,false,false) == noone
+	if dir != noone && dir.team != 2 && collision_line(x,y,dir.x,dir.y,Wall,false,false) == noone
+	&& (!instance_exists(Player) || (!Player.isInvisible || instance_exists(ThiefStealthDurationDelay)))
 	{
 		gunangle = point_direction(x,y,dir.x,dir.y);
 		if instance_exists(Player) && Player.skill_got[17] == 1

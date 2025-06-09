@@ -3,128 +3,131 @@ if !visible
 if mode = 0
 {
 //TITLE SCREEN
-	if KeyCont.key_fire[p] = 1 && !instance_exists(Vlambeer)
+	if (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && !instance_exists(Vlambeer)
 	{
-
-	mode = 1
-	instance_create(x,y,LoadoutSelect);
-	instance_create(x,y,CreditsSelect)
-	instance_create(x,y,StatsSelect)
-	instance_create(x,y,QuitSelect);
-	instance_create(x,y,OptionSelect)
-	instance_create(x,y,OptionSelect2)
-	instance_create(x,y,DailyScore);
-	instance_create(x,y,DailyRace);
-	instance_create(x,y,Weekly);
-	instance_create(x,y,ViewLeaderboard);
-		if firstEntry
-		{
-			with UpdateChecker
+		KeyCont.key_fire[p] = 2;
+		KeyCont.key_pick[p] = 2;
+		mode = 1
+		instance_create(x,y,LoadoutSelect);
+		instance_create(x,y,CreditsSelect)
+		instance_create(x,y,StatsSelect)
+		instance_create(x,y,QuitSelect);
+		instance_create(x,y,OptionSelect)
+		instance_create(x,y,OptionSelect2)
+		instance_create(x,y,DailyScore);
+		instance_create(x,y,DailyRace);
+		instance_create(x,y,Weekly);
+		instance_create(x,y,ViewLeaderboard);
+			if firstEntry
 			{
-				event_user(0);	
-			}
-		}
-		firstEntry = false;
-	with MusCont
-	{
-		if alarm[0] > 0
-			alarm[0] = 1
-	}
-
-	num = 0
-	dix = 0
-	diy = 0
-	var totals = racemax + 1;
-	var halfWay = 14;
-	var justUnlockedSecondRow = false;
-	if !UberCont.unlocked_more_characters
-	{
-		totals = halfWay;
-		with UberCont
-		{
-			var r = 0;
-			repeat(racemax + 1)
-			{
-				if (race_have[r] && (r >= totals && r != 15 || r == 13))
+				with UpdateChecker
 				{
-					justUnlockedSecondRow = true;
+					event_user(0);	
 				}
-				r += 1;
 			}
-		}
-		if (justUnlockedSecondRow)
+			firstEntry = false;
+		with MusCont
 		{
-			totals = racemax + 1;
+			if alarm[0] > 0
+				alarm[0] = 1
+		}
+
+		num = 0
+		dix = 0
+		diy = 0
+		var totals = racemax + 1;
+		var halfWay = 14;
+		var justUnlockedSecondRow = false;
+		if !UberCont.unlocked_more_characters
+		{
+			totals = halfWay;
 			with UberCont
 			{
-				unlocked_more_characters = true;
-				scrSave();
+				var r = 0;
+				repeat(racemax + 1)
+				{
+					if (race_have[r] && (r >= totals && r != 15 || r == 13))
+					{
+						justUnlockedSecondRow = true;
+					}
+					r += 1;
+				}
 			}
-		}
-	}
-	repeat(totals)
-	{
-		with instance_create(0,0,CharSelect)
-		{
-			num = other.num
-			if num == 13//Swap atom and sheep
-				num = 15;
-			else if num == 15
-				num = 13;
-		}
-		if (num == racemax) {
-			num = -1;
-		}
-		num += 1;
-	}
-	with UberCont
-	{
-		if (array_length(justUnlocked) > 0)
-		{
-			with instance_create(x,y,UnlockingCharacter)
+			if (justUnlockedSecondRow)
 			{
-				justUnlocked = UberCont.justUnlocked;
+				totals = racemax + 1;
+				with UberCont
+				{
+					unlocked_more_characters = true;
+					scrSave();
+				}
 			}
 		}
-		with CharSelect
+		repeat(totals)
 		{
-			if array_contains(UberCont.justUnlocked,num)
+			with instance_create(0,0,CharSelect)
 			{
-				unlocking = true;	
-				depth -= 100;
+				num = other.num
+				if num == 13//Swap atom and sheep
+					num = 15;
+				else if num == 15
+					num = 13;
 			}
+			if (num == racemax) {
+				num = -1;
+			}
+			num += 1;
 		}
-		justUnlocked = [];
-	}
-	if justUnlockedSecondRow
-	{
-		with CharSelect {
-			if (num >= halfWay && num != 15) || num == 13 
+		with UberCont
+		{
+			if (array_length(justUnlocked) > 0)
 			{
-				// visible = false;
-				yOffset = -15;
+				with instance_create(x,y,UnlockingCharacter)
+				{
+					justUnlocked = UberCont.justUnlocked;
+				}
 			}
-			else
-				yOffset = simpleOffset;
+			with CharSelect
+			{
+				if array_contains(UberCont.justUnlocked,num)
+				{
+					unlocking = true;	
+					depth -= 100;
+				}
+			}
+			justUnlocked = [];
 		}
-		instance_create(x,y,UnlockingSecondRow);
-	}
-	//instance_create(x,y,UpdateSelect)
-	instance_create(x,y,Cheatcode);
-	//If savefile found
-	if (UberCont.total_run_slots > 0)
-	{
-		with instance_create(x,y,LoadSelect)
-			depth = other.depth - 5;
-	}
-	exit;
+		if justUnlockedSecondRow
+		{
+			with CharSelect {
+				if (num >= halfWay && num != 15) || num == 13 
+				{
+					// visible = false;
+					yOffset = -15;
+				}
+				else
+					yOffset = simpleOffset;
+			}
+			instance_create(x,y,UnlockingSecondRow);
+		}
+		//instance_create(x,y,UpdateSelect)
+		instance_create(x,y,Cheatcode);
+		//If savefile found
+		if (UberCont.total_run_slots > 0)
+		{
+			with instance_create(x,y,LoadSelect)
+				depth = other.depth - 5;
+		}
+		exit;
 	}
 }
 
 if mode = 1
 {
-	if (KeyCont.key_spec[p] = 1 && ((!instance_exists(LoadoutSelect) || !LoadoutSelect.wepmenuopen) || !hasNoMenuOpen()))
+	if ((KeyCont.key_spec[p] == 1 || KeyCont.key_regal[p] == 1) && ((!instance_exists(LoadoutSelect) || !LoadoutSelect.wepmenuopen) || !hasNoMenuOpen()))
 	{
+		KeyCont.key_spec[p] = 2;
+		KeyCont.key_regal[p] = 2;
 		scrReturnMenu();
 	}
 }

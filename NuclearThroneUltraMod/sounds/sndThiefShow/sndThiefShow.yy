@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.417959,
+  "duration":0.41795918,
   "name":"sndThiefShow",
   "parent":{
     "name":"Thief",

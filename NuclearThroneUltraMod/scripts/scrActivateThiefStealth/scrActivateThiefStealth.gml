@@ -32,6 +32,7 @@ function scrActivateThiefStealth(){
 	}
 	isInvisible = true;
 	justAsheep = true;
+	instance_create(x,y,ThiefStealthDurationDelay);
 	with enemy
 	{
 		if team != other.team

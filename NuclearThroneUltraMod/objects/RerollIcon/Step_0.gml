@@ -40,7 +40,7 @@ if selected && visible
 			snd_play_2d(sndClickBack);
 		UberCont.opt_show_mutation_details = showDetail;
 	}
-	else if instance_exists(Player) && (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && (!mouse_check_button_pressed(mb_left) || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20))
+	else if instance_exists(Player) && (KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1) && ((!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right)) || (UberCont.mouse__x < x+16 and UberCont.mouse__y < y+16 and UberCont.mouse__x > x-20 and UberCont.mouse__y > y-20))
 	{
 		KeyCont.key_fire[p] = 2;
 		KeyCont.key_pick[p] = 2;

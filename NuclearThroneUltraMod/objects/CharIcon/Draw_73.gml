@@ -1,7 +1,7 @@
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,y-16,x+12,y+16,0)
 var hover = false;
-if UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCont.mouse__y > y and UberCont.mouse__y < y+24
+if selected || (UberCont.mouse__x > x and UberCont.mouse__x < x+16 and UberCont.mouse__y > y and UberCont.mouse__y < y+24)
 {
 	hover = true;
 	draw_sprite(sprSelected,-1,x,y)

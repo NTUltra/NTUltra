@@ -1,5 +1,7 @@
 if mode = 2
 {
+	KeyCont.key_fire[p] = 2;
+	KeyCont.key_pick[p] = 2;
 	instance_destroy()
 	room_speed = 30;
 	with Menu

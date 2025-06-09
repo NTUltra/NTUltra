@@ -9,7 +9,7 @@ if other.team != team
 			sprite_index = spr_hurt
 		    image_index = 0
 		    motion_add(other.direction,4)
-			if t == 2
+			if t != 2
 				DealDamage(3)//6
 			else
 			{

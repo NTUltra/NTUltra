@@ -1,6 +1,6 @@
 if !instance_exists(Menu) || Menu.widescreen < 50 || !instance_exists(BackCont) || instance_exists(UnlockingCharacter)
 	exit;
-if visible && KeyCont.key_fire[p] = 1 and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and StatsSelect.selected = 0 and CreditsSelect.selected = 0 and UpdateChecker.selected = 0
+if visible && (KeyCont.key_fire[p] = 1|| KeyCont.key_pick[p] == 1) and OptionSelect.selected = 0 and OptionSelect2.selected = 0 and StatsSelect.selected = 0 and CreditsSelect.selected = 0 and UpdateChecker.selected = 0
 {
 if button = 0
 button = 1
@@ -10,7 +10,12 @@ button = 2
 else
 button = 0
 //y+34 moet 24
-if button = 1 and mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y+24 and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
+var hovering = (mouse_x > x and mouse_x < x+16 and mouse_y > y and mouse_y < y+24)
+if hovering
+{
+	selected = false;	
+}
+if Menu.camLerp >= 1 && button = 1 and (selected || hovering) and image_index != racemax+1 and image_speed = 0 && UberCont.race_have[num]==1
 {
     if Menu.race = num
     {

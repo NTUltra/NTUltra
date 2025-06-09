@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":3.990937,
+  "duration":3.9909525,
   "name":"sndBlobTrail",
   "parent":{
     "name":"Explosive",

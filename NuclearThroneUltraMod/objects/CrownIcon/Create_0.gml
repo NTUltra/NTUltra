@@ -15,10 +15,11 @@ area=Player.area;
 }
 else
 race=0;
-
+selected = false;
 rowPosition = 0;
 canReAdd = false;
 yOffset = 0;
 secretToggle = false;
+fakeHover = false;
 alarm[0] = 120;
 alarm[1] = 2;

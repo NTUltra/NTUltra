@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.810688,
+  "duration":0.8107029,
   "name":"sndBlackSwordMega",
   "parent":{
     "name":"Melee",

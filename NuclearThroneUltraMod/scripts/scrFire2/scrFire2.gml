@@ -2638,7 +2638,7 @@ function scrFire2(hasTailNow) {
 	//GOLDEN DEAD GLOVE
 	case 286:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(choose(sndGlove1,sndGlove2))
 
 	instance_create(x,y,Dust)
 	var currentX = x;
@@ -2649,7 +2649,7 @@ function scrFire2(hasTailNow) {
 		sprite_index=sprGoldenSlash
 		dmg = 9
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -2663,6 +2663,7 @@ function scrFire2(hasTailNow) {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
+				walled = 1;
 				sprite_index=sprGoldenSlash
 				dmg = 9
 				longarms = 0
@@ -2783,7 +2784,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 	{
 		longarms = 0
-		
+		walled = 1;
 			longarms = (Player.skill_got[13]+other.bettermelee)*2
 		motion_add(aimDirection,1+longarms)
 		image_angle = aimDirection
@@ -2798,6 +2799,7 @@ function scrFire2(hasTailNow) {
 			instance_create(x,y,Dust)
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 			{
+				walled = 1;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*2
 			motion_add(aimDirection,1+longarms)
@@ -3066,7 +3068,7 @@ function scrFire2(hasTailNow) {
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -3078,7 +3080,7 @@ function scrFire2(hasTailNow) {
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3+longarms)
 		image_angle = direction
@@ -3090,7 +3092,7 @@ function scrFire2(hasTailNow) {
 		wallPierce *= 0.5;
 		sprite_index=sprUltraSlash;
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,3+longarms)
 		image_angle = direction
@@ -3107,6 +3109,7 @@ function scrFire2(hasTailNow) {
 		instance_create(x,y,Smoke)
 		with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
+			walled = 1;
 			dmg = 30;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
@@ -3118,6 +3121,7 @@ function scrFire2(hasTailNow) {
 		}
 		with instance_create(x+xo1+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo1+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
+			walled = 1;
 			dmg = 30;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
@@ -3129,6 +3133,7 @@ function scrFire2(hasTailNow) {
 		}
 		with instance_create(x+xo2+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+yo2+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergyHammerSlash)
 		{
+			walled = 1;
 			dmg = 30;
 			wallPierce *= 0.5;
 			sprite_index=sprUltraSlash;
@@ -4759,6 +4764,7 @@ function scrFire2(hasTailNow) {
 	case 350:
 
 	snd_play_fire(sndHammer)
+	snd_play_fire(choose(sndGlove1,sndGlove2))
 	var currentX = x;
 	var currentY = y;
 	instance_create(x,y,Dust)
@@ -4769,7 +4775,7 @@ function scrFire2(hasTailNow) {
 		dmg = 14;
 		sprite_index=sprHeavySlash;
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -4787,7 +4793,7 @@ function scrFire2(hasTailNow) {
 				dmg = 14;
 				sprite_index=sprHeavySlash;
 				longarms = 0
-				
+				walled = 1;
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)
 				image_angle = direction

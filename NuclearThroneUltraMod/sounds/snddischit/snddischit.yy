@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.317312,
+  "duration":0.31732425,
   "name":"sndDiscHit",
   "parent":{
     "name":"Weapons",

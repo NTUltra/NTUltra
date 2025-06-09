@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":3.536062,
+  "duration":3.536077,
   "name":"sndBloodCannon",
   "parent":{
     "name":"Explosive",

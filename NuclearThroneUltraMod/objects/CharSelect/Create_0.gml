@@ -12,3 +12,4 @@ hoverTime = 0;
 row = 0;
 unlocking = false;
 unlockTime = 0;
+selected = false;

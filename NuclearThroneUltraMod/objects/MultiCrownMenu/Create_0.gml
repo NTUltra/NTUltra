@@ -15,4 +15,7 @@ hoverSelected = false;
 image_speed = 0.4;
 currentCrownsSurface = -1;
 scroll = 0;
-debug("create multicrown");
+p = 0;
+maxWidthCrowns = 0;
+lastCrown = -1;
+lastCrownRowWidth = 0;

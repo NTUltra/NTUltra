@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":4.155125,
+  "duration":4.1551476,
   "name":"sndBloodCannonLoop",
   "parent":{
     "name":"Explosive",

@@ -11,6 +11,8 @@ scroll = 0;
 scrollWidth = 0;
 scrollSpeed = 24;
 selectedIndex = -1;
+previouslySelectedIndex = 0;
+controllingSecondaryMenu = false;
 with KeyCont
 {
 	key_fire[0] = 2;

@@ -2848,7 +2848,7 @@ function scrFire(canDrown = true) {
 	//DEAD GLOVE
 	case 108:
 
-	snd_play_fire(sndHammer)
+	snd_play_fire(choose(sndGlove1,sndGlove2))
 
 	instance_create(x,y,Dust)
 	var currentX = x;
@@ -2858,7 +2858,7 @@ function scrFire(canDrown = true) {
 	{
 		dmg = 9
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -2873,6 +2873,7 @@ function scrFire(canDrown = true) {
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Slash)
 			{
 				dmg = 9
+				walled = 1;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)
@@ -2916,7 +2917,7 @@ function scrFire(canDrown = true) {
 	{
 		dmg = 6
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -2931,6 +2932,7 @@ function scrFire(canDrown = true) {
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),BloodSlash)
 			{
 				dmg = 5
+				walled = 1;
 				longarms = 0
 				longarms = (Player.skill_got[13]+other.bettermelee)*3
 				motion_add(aimDirection,2.7+longarms)
@@ -3370,7 +3372,7 @@ function scrFire(canDrown = true) {
 	{
 		dmg = 14
 		longarms = 0
-		
+		walled = 1;
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
 		motion_add(aimDirection,2.7+longarms)
 		image_angle = direction
@@ -3390,6 +3392,7 @@ function scrFire(canDrown = true) {
 			}
 			with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),FrostSlash)
 			{
+				walled = 1;
 				dmg = 14
 				longarms = 0
 				alarm[11] = choose(0,1);

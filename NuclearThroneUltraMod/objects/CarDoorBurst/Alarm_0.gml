@@ -15,8 +15,8 @@ if instance_exists(creator) && instance_exists(Player)
 	//FIRING
 	snd_play_fire(sndCarDoorSlam)
 	with instance_create(
-	x+lengthdir_x((Player.skill_got[13]+Player.bettermelee)*10,dir),
-	y+lengthdir_y((Player.skill_got[13]+Player.bettermelee)*10,dir),
+	x+lengthdir_x(4+(Player.skill_got[13]+Player.bettermelee)*10,dir),
+	y+lengthdir_y(4+(Player.skill_got[13]+Player.bettermelee)*10,dir),
 	MetalPipeSlash)
 	{
 		dmg = 60;
@@ -25,7 +25,7 @@ if instance_exists(creator) && instance_exists(Player)
 		longarms = 0
 		if instance_exists(Player)
 			longarms = (Player.skill_got[13]+Player.bettermelee)*3
-		motion_add(dir + (random_range(6,-6)*other.accuracy),1+longarms)
+		motion_add(dir + (random_range(6,-6)*other.accuracy),2+longarms)
 		image_angle = direction
 		scrCopyWeaponMod(other);
 		team = other.team

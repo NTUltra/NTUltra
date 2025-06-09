@@ -47,9 +47,25 @@ if crown == 18 || crown == 38 || crown == 42
 	}
 	image_index = crown;
 }
-if  alarm[1] < 1 && KeyCont.key_fire[p] = 1 && !instance_exists(UnlockingSecondRow) && (UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset)
+var hover = false;
+if ((UberCont.mouse__x < x+10 and UberCont.mouse__y < y+16 + yOffset and UberCont.mouse__x > x-10 and UberCont.mouse__y > y-16 + yOffset))
+{
+	hover = true;
+	with CrownIcon
+		selected = false;
+	selected = true;
+	with LevCont
+	{
+		selectedIndex = other.rowPosition;
+		previouslySelectedIndex = selectedIndex;
+		controllingSecondaryMenu = false;
+	}
+}
+if alarm[1] < 1 && !instance_exists(UnlockingSecondRow) && 
+(selected && (KeyCont.key_pick[p] == 1 || KeyCont.key_fire[p] = 1 && (hover || (!mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right)))))
 {
 	KeyCont.key_fire[p] = 2;
+	KeyCont.key_pick[p] = 2;
 	if instance_exists(MultiCrownMenu) && scrIsCrown(crown)
 		snd_play_2d(sndClickBack);
 	else
