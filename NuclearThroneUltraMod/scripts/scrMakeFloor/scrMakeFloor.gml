@@ -500,6 +500,10 @@ function scrMakeFloor(limiter) {
 		instance_create(x - 32,y + 32,Floor)
 		instance_create(x + 32,y - 32,Floor)*/
 	}
+	//SEWER PIPE NETWORK
+	if area == 142 {
+		instance_create(x,y,Floor);
+	}
 	//THE PIT
 	if area == 139 {
 		var bigger = choose(false,false,true);
@@ -925,14 +929,42 @@ function scrMakeFloor(limiter) {
 			}
 		}
 	}
+	else if area == 142 && instance_number(Floor) > 4
+	{
+		var maxTries = 9999;
+		trn = 0;
+		do {
+			maxTries -= 1;
+			trn = choose(0,0,0,0,0,0,0,0,0,90,-90)
+		}
+		until maxTries < 0 || !place_meeting(x+lengthdir_x(32,direction + trn),y+lengthdir_y(32,direction + trn),Floor)
+		if trn == 0 && !place_meeting(x,y,Wall)
+		{
+			if direction == 0 || direction == 180
+			{
+				//Horizontal
+				instance_create(x,y,Wall);
+				instance_create(x + 16,y,Wall);
+			}
+			else if direction == 90 || direction == 270
+			{
+				//Vertical
+				instance_create(x,y,Wall);
+				instance_create(x,y + 16,Wall);
+			}
+		}
+		else {
+			instance_create(x,y,WallBreak);
+		}
+	}
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
 	else if ((area == 9 || area == 118) && subarea == 3)
 		direction = 90;
+	
 	//else if area == 118 && subarea == 3
 	//	direction = 270;
-
 
 	if abs(trn) = 90 and (area = 6 || area = 112) and random(2) < 1
 	{
@@ -1081,41 +1113,41 @@ function scrMakeFloor(limiter) {
 
 	if area == 2 or area == 110
 	{
-	if random(14+instance_number(FloorMaker)) > 15
-	{
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
-	instance_destroy()
-	}
-	if random(15) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(14+instance_number(FloorMaker)) > 15
+		{
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		instance_destroy()
+		}
+		if random(15) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 
 	if (area == 3 || area == 106) && subarea !=3
 	{
-	if random(39+instance_number(FloorMaker)) > 40
-	{
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
-	{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
-	instance_destroy()
-	}
-	if random(25) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(39+instance_number(FloorMaker)) > 40
+		{
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
+		{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		instance_destroy()
+		}
+		if random(25) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	if area = 4 || area = 111 || area == 115
 	{
-	if random(9+instance_number(FloorMaker)) > 10
-	{
-	instance_destroy()
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
-	}
-	if random(4) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(9+instance_number(FloorMaker)) > 10
+		{
+		instance_destroy()
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		}
+		if random(4) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	if area == 135 && instance_number(Floor) > 5 && Player.subarea != 3
 	{
@@ -1149,27 +1181,27 @@ function scrMakeFloor(limiter) {
 	}
 	if area = 6 || area = 112
 	{
-	if random(21+instance_number(FloorMaker)) > 22
-	{
-	instance_destroy()
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
-	{
-	instance_create(x,y,Floor)
-	instance_create(x+16,y+16,AmmoChest)}
-	}
-	if random(20) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(21+instance_number(FloorMaker)) > 22
+		{
+		instance_destroy()
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48
+		{
+		instance_create(x,y,Floor)
+		instance_create(x+16,y+16,AmmoChest)}
+		}
+		if random(20) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 
 	if area = 7 || area=108//CUSTOM
 	{
-	if !instance_exists(WeaponChest) && random(14+instance_number(FloorMaker)) > 15
-	{
-	if point_distance(x,y,10016,10016) > 48{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
-	instance_destroy()
-	}
+		if !instance_exists(WeaponChest) && random(14+instance_number(FloorMaker)) > 15
+		{
+		if point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		instance_destroy()
+		}
 		if subarea != 3 && random(30) < 5
 			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
@@ -1177,52 +1209,56 @@ function scrMakeFloor(limiter) {
 	if area = 8 || area = 109//WONDERLAND
 	{
 
-	if random(14) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(14) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
 	}
 
 
 	if area = 102//pizza sewers
 	{
-	if random(9+instance_number(FloorMaker)) > 10
-	{
-	if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
-	instance_create(x+16,y+16,AmmoChest)
-	instance_create(x,y,Floor)}
-	instance_destroy()
-	}
-	if random(5) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if random(9+instance_number(FloorMaker)) > 10
+		{
+		if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+		instance_create(x+16,y+16,AmmoChest)
+		instance_create(x,y,Floor)}
+		instance_destroy()
+		}
+		if random(5) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 
 	if area = 103 || area == 125//yv mansion
 	{
-	if !instance_exists(WeaponChest) && random(31+instance_number(FloorMaker)) > 32
-	{
-	instance_destroy()
-	if point_distance(x,y,10016,10016) > 48{
-	instance_create(x,y,Floor)
-	instance_create(x+16,y+16,AmmoChest)}
-	}
-	if random(20) < 1
-	with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		if !instance_exists(WeaponChest) && random(31+instance_number(FloorMaker)) > 32
+		{
+		instance_destroy()
+		if point_distance(x,y,10016,10016) > 48{
+		instance_create(x,y,Floor)
+		instance_create(x+16,y+16,AmmoChest)}
+		}
+		if random(20) < 1
+		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	
 	//Multi Crown
-	if area = 128 || area == 129{ if random(5) < 2
-	{instance_create(x,y,Floor)
-	instance_create(x+32,y,Floor)
-	instance_create(x-32,y,Floor)
-
-	}else 
-	{
-	instance_create(x,y,Floor)
-	instance_create(x,y+32,Floor)
-	}}
+	if area = 128 || area == 129
+	{ 
+		if random(5) < 2
+		{
+			instance_create(x,y,Floor)
+			instance_create(x+32,y,Floor)
+			instance_create(x-32,y,Floor)
+		}
+		else 
+		{
+			instance_create(x,y,Floor)
+			instance_create(x,y+32,Floor)
+		}
+	}
 
 	x += lengthdir_x(32,direction);
 	y += lengthdir_y(32,direction);

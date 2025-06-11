@@ -29,7 +29,7 @@ with GraveyardEntrance
 		my_health = 0;	
 	}
 }
-if UberCont.area == 10 || (instance_exists(Player) && Player.area == 121)
+if (UberCont.area == 121 || UberCont.area == 10 || UberCont.area == 127 || UberCont.area == 126) || (instance_exists(Player) && (Player.area == 121 || Player.area == 10 || Player.area == 127 || Player.area == 126))
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigVulture);
 if !isOneWeaponOnlyModes() && !instance_exists(SurvivalWave) && !instance_exists(InvaderBossSpawnPortal)
 {

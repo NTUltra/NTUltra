@@ -48,7 +48,7 @@ if target != noone && instance_exists(target) {
 			var aim = head1aim + angle_difference(gunangle,head1aim) * 0.25;
 			head1Animation = 0;
 			spr_head1 = spr_head1_fire;
-            with instance_create(x + (head1x * right), y + head1y, EnemyBullet5) {
+            with instance_create(x + (head1x * right), y + head1y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed + 1)
                 image_angle = direction
                 team = other.team
@@ -61,7 +61,7 @@ if target != noone && instance_exists(target) {
 			var aim = head2aim + angle_difference(gunangle,head2aim) * 0.25;
 			head2Animation = 0;
 			spr_head2 = spr_head2_fire;
-            with instance_create(x + (head2x * right), y + head2y, EnemyBullet5) {
+            with instance_create(x + (head2x * right), y + head2y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed + 1)
                 image_angle = direction
                 team = other.team
@@ -74,7 +74,7 @@ if target != noone && instance_exists(target) {
 			var aim = head3aim + angle_difference(gunangle,head3aim) * 0.25;
 			head3Animation = 0;
 			spr_head3 = spr_head3_fire;
-            with instance_create(x + (head3x * right), y + head3y, EnemyBullet5) {
+            with instance_create(x + (head3x * right), y + head3y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed + 1)
                 image_angle = direction
                 team = other.team
@@ -87,7 +87,7 @@ if target != noone && instance_exists(target) {
 			var aim = head1aim + angle_difference(gunangle,head1aim) * 0.33;
 			head1Animation = 0;
 			spr_head1 = spr_head1_fire;
-            with instance_create(x + (head1x * right), y + head1y, EnemyBullet5) {
+            with instance_create(x + (head1x * right), y + head1y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed)
                 image_angle = direction
                 team = other.team
@@ -95,7 +95,7 @@ if target != noone && instance_exists(target) {
 			var aim = head2aim + angle_difference(gunangle,head2aim) * 0.33;
 			head2Animation = 0;
 			spr_head2 = spr_head2_fire;
-            with instance_create(x + (head2x * right), y + head2y, EnemyBullet5) {
+            with instance_create(x + (head2x * right), y + head2y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed)
                 image_angle = direction
                 team = other.team
@@ -103,7 +103,7 @@ if target != noone && instance_exists(target) {
 			var aim = head3aim + angle_difference(gunangle,head3aim) * 0.33;
 			head3Animation = 0;
 			spr_head3 = spr_head3_fire;
-            with instance_create(x + (head3x * right), y + head3y, EnemyBullet5) {
+            with instance_create(x + (head3x * right), y + head3y, EnemyBullet5Square) {
                 motion_add(aim, other.projectileSpeed)
                 image_angle = direction
                 team = other.team

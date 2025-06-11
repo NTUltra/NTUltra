@@ -29,7 +29,7 @@ function scrPopPropsAlt() {
 	instance_create(x,y,NOWALLSHEREPLEASE)
 	}
 	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme) && Player.area != 130 && Player.area != 131
-	 && Player.area != 132 && Player.area != 133 && Player.area != 134
+	 && Player.area != 132 && Player.area != 133 && Player.area != 134 && Player.area != 142
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
 	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116 and Player.area != 137//lill walls
 	{

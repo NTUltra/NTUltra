@@ -103,6 +103,9 @@ function scrAreaFullName(area){
 				txt = "THE PIT"
 				upsideDown = true;
 			break;
+			case 142://SEWER PIPE NETWORK
+				txt = "SEWER PIPE NETWORK"
+			break;
 			case 116://Survival Arena
 				txt = "SURVIVAL ARENA"
 			break;

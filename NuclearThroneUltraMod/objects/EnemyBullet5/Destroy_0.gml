@@ -10,6 +10,6 @@ with instance_create(x,y,SmallExplosion)
 			dmg = 3;
 	}
 }
-if !audio_is_playing(sndExplosion)
-snd_play(sndExplosion);
+if !audio_is_playing(sndExplosionS)
+	snd_play(sndExplosionS);
 

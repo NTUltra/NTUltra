@@ -61,8 +61,7 @@ if hasNoMenuOpen()
 		{
 			selected = false;
 		}
-		if hasNoMenuOpen()
-			event_user(1);
+		event_user(1);
 	}
 	else if KeyCont.key_sout[p] == 1
 	{
@@ -72,8 +71,7 @@ if hasNoMenuOpen()
 			selected = false;
 		}
 		//DOWN
-		if hasNoMenuOpen()
-			event_user(1);	
+		event_user(1);	
 	}
 	else if !mouse_check_button_pressed(mb_left) && !mouse_check_button_pressed(mb_right) &&
 	(KeyCont.key_fire[p] == 1 || KeyCont.key_pick[p] == 1)

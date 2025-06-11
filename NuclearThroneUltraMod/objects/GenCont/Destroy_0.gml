@@ -181,7 +181,7 @@ if instance_exists(Player)
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
-			else if ( (area == 9/*&&subarea<3*/)  )
+			else if ( (area == 9 &&subarea < 3)  )
 		    {
 				invertedportalcounter=1;
 				invertedportaldelay=45+inc;

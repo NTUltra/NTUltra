@@ -43,8 +43,8 @@
     "path":"sprites/sprEnemyBullet5/sprEnemyBullet5.yy",
   },
   "spriteMaskId":{
-    "name":"mskBullet1",
-    "path":"sprites/mskBullet1/mskBullet1.yy",
+    "name":"mskEnemyBullet4",
+    "path":"sprites/mskEnemyBullet4/mskEnemyBullet4.yy",
   },
   "visible":true,
 }

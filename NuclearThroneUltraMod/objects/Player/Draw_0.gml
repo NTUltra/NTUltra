@@ -296,7 +296,7 @@ if hammerheadDig <= 0
 			draw_sprite_ext(sprite_index,image_index,x+1,yy-1,right,image_yscale,angle,c_white,alpha);
 			draw_sprite_ext(sprite_index,image_index,x-1,yy-1,right,image_yscale,angle,c_white,alpha);
 			draw_sprite_ext(sprite_index,image_index,x-1,yy+1,right,image_yscale,angle,c_white,alpha);
-		shader_reset();	
+		shader_reset();
 	}
 	draw_sprite_ext(sprite_index,-1,x,yy,right,image_yscale,angle,c_white,playerAlpha)//PLAYER GETS DRAWN HERE
 	if race == 24 && my_health > 0 && instance_exists(ElementorHead) //Elemental Mushroom head

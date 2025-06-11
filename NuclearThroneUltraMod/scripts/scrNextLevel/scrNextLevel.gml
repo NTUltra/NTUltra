@@ -182,6 +182,22 @@ function scrNextLevel(skipping = false) {
 		{
 			lastarea = area
 		}
+		else if area == 119 || area == 120
+		{
+			//THRONE 2 
+			//inverted = false;
+			/*
+			if area == 120
+			{
+				UberCont.extraVan = -1;
+				with instance_create(x,y,Explainer)
+					name = "ONE LESS VAN THIS LOOP";
+			}
+			else
+				UberCont.extraVan = 0;
+			*/
+			area = 137;//VOID
+		}
 		else if subarea == 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
 		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136
 		{
@@ -243,10 +259,10 @@ function scrNextLevel(skipping = false) {
 			}
 			if area == 125//Inv Mansion
 			{
-				//To scrap 2
+				//To scrap 3
 				area = 3
-				lastarea = 2;
-				subarea = 2;
+				lastarea = 3;
+				subarea = 3;
 				inverted = false;
 				scrAddArea(area);
 				scrAddToRoute(area);
@@ -665,21 +681,6 @@ function scrNextLevel(skipping = false) {
 					area = 1;
 				subarea = 1;
 			}*/
-		}
-		else if area == 119 || area == 120
-		{
-			//inverted = false;
-			/*
-			if area == 120
-			{
-				UberCont.extraVan = -1;
-				with instance_create(x,y,Explainer)
-					name = "ONE LESS VAN THIS LOOP";
-			}
-			else
-				UberCont.extraVan = 0;
-			*/
-			area = 137;
 		}
 		if ( subarea < 3 and area != 2 and area != 105 and area != 106
 		&& !(area = 6 && subarea > 1)//Labs has 2 areas

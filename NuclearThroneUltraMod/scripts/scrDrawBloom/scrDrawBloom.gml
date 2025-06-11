@@ -234,6 +234,8 @@ function scrDrawBloom() {
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with EnemyBullet5
 	draw_sprite_ext(sprEnemyBullet4,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
+	with EnemyBullet5Square
+	draw_sprite_ext(sprEnemyBullet4Square,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with EnemyBouncerBullet
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with Slug

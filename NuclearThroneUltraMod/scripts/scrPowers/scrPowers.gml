@@ -1236,7 +1236,7 @@ function scrPowers(raceOverwrite = -1) {
 					var triedFloors = [];
 					var i = 0;
 					var n = noone;
-					while ((!place_meeting(mx+hspeed,my+vspeed,Floor) || place_meeting(mx+hspeed,my+vspeed,WallHitMe))
+					while ((!place_meeting(mx,my,Floor) || place_meeting(mx,my,WallHitMe))
 					|| (!place_meeting(mx,my,Floor) || place_meeting(mx,my,WallHitMe))
 					|| i > 50)
 					{
@@ -1250,6 +1250,18 @@ function scrPowers(raceOverwrite = -1) {
 								o = 8;
 							mx = n.x+o;
 							my = n.y+o;
+							if place_meeting(mx + o,my + o,WallHitMe)
+							{
+								var ogx = x;
+								var ogy = y;
+								x = mx;
+								y = my;
+								move_outside_solid(point_direction(ogx,ogy,mx,my),16);
+								mx = x;
+								my = y;
+								x = ogx;
+								y = ogy;
+							}
 						}
 					}
 					//Safety but will probably never reach

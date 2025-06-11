@@ -66,7 +66,7 @@ if selected && visible
 
 		with UltraIcon
 		instance_destroy()
-		if Player.skillpoints > 0 || Player.refundPoints > 0 || Player.charpoints > 0 || (Player.rerollpoints > 0 && scrHasEnoughMutations(1))
+		if Player.skillpoints > 0 || Player.refundPoints > 0 || Player.charpoints > 0 || Player.crownpoints > 0|| (Player.rerollpoints > 0 && scrHasEnoughMutations(1))
 		{
 			instance_create(x,y,LevCont);
 		}

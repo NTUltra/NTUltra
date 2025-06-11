@@ -25,7 +25,7 @@ spr_dead = sprMoneyPileDead
 
 snd_hurt = sndHitPlant
 }
-
+alarm[0] = 10;
 alarm[1] = 2;
 
 

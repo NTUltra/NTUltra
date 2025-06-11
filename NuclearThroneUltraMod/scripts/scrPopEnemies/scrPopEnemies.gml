@@ -523,6 +523,25 @@ function scrPopEnemies() {
 		}
     }
 	
+	//PIPE WORLD
+    if spawnarea = 142 {
+		if loops > 0 {
+			if random(35) < 1
+				instance_create(x + 24, y + 24, Slime)
+	        else if random(3) < 1
+				instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+	        else {
+	            instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+	        }
+		} else {
+	        if random(3) < 1
+				instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+	        else {
+	            instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+	        }
+		}
+    }
+	
 	//THE PIT!
     if spawnarea = 139 {
 		var n = instance_nearest(x,y,enemy);
