@@ -1,7 +1,4 @@
-if side = 1
-side = 0
-else
-side = 1
+
 snd_play(sndFreakBanditSmack,
 0.1, 
 false, 

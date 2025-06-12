@@ -22,20 +22,20 @@ function scrPopProps() {
 	//walls near the player for safer spawn
 	if random(5)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,prop)
 	&& point_distance(x,y,Player.x,Player.y)<128 and Player.area != 100 and Player.area != 6 and Player.area != 112 and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104 and !(Player.area = 8 && Player.subarea=3)
-	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123 and Player.area != 135 and Player.area != 138 and Player.area != 139 and Player.area != 140
+	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123 and Player.area != 135 and Player.area != 138 and Player.area != 139 and Player.area != 140 and Player.area != 142
 	{
 		
 		myx = x+choose(0,16)
 		myy = y+choose(0,16)
 		if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
 		&& Player.area != 130 && Player.area != 131 and Player.area != 9 and Player.area != 118 and Player.area != 137
-			instance_create(myx,myy,Wall)
+			instance_create(myx,myy,Wall)//WALLSPAWN!?
 		instance_create(x,y,NOWALLSHEREPLEASE)
 	}
 	if random(6) < 1 and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,hitme) && Player.area != 130 && Player.area != 131
-	 && Player.area != 132 && Player.area != 133 && Player.area != 134 && Player.area != 142
+	 && Player.area != 132 && Player.area != 133 && Player.area != 134
 	and Player.area != 100 and Player.area != 6 and Player.area != 9 and Player.area != 118 and Player.area != 112  and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104
-	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116 and Player.area != 137 and Player.area != 135 and Player.area != 138 and Player.area != 140//lill walls
+	and !(Player.area = 8 && Player.subarea=3) and Player.area != 116 and Player.area != 137 and Player.area != 135 and Player.area != 138 and Player.area != 140 and Player.area != 142//lill walls
 	{
 		myx = x+choose(0,16)
 		myy = y+choose(0,16)
@@ -44,22 +44,19 @@ function scrPopProps() {
 			if point_distance(myx,myy,Player.x,Player.y) > 128 && (!instance_exists(VenomTrap) || random(20 + instance_number(VenomTrap)) < 1)//RANDOM TRAP
 			{
 				if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
-					instance_create(myx,myy,Wall)
+					instance_create(myx,myy,Wall)//WALLSPAWN!?
 				instance_create(myx,myy,VenomTrap)
 			}
 		}
 		else
 		{
 			if !place_meeting(myx,myy,hitme) && !place_meeting(myx,myy,chestprop) && !place_meeting(myx,myy,RadChest) && !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(myx,myy,prop)
-				instance_create(myx,myy,Wall)
+				instance_create(myx,myy,Wall)//WALLSPAWN!?
 		
 			instance_create(x,y,NOWALLSHEREPLEASE)
 			if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 3 || spawnarea == 121) && Player.subarea != 3) && (!instance_exists(Trap) || random(24 + instance_number(Trap)) < 1)
 				instance_create(myx,myy,Trap)
 			
-			if (point_distance(myx,myy,Player.x,Player.y) > 142) && (!instance_exists(ToxicTrap) || random(24 + instance_number(ToxicTrap)) < 1)
-				instance_create(myx,myy,ToxicTrap)
-				
 			if (point_distance(myx,myy,Player.x,Player.y) > 128 and (spawnarea = 2 || spawnarea == 110) && Player.loops > 1) && (!instance_exists(ToxicTrap) || random(24 + instance_number(ToxicTrap)) < 1)
 				instance_create(myx,myy,ToxicTrap)
 

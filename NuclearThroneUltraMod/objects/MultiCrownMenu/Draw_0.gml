@@ -62,7 +62,7 @@ repeat(array_length(currentCrown))
 			mouse_y > surfaceY + yy &&
 			mouse_y < surfaceY + yy + crownHeight)
 				hover = true;
-			if (LevCont.selectedIndex == i && LevCont.controllingSecondaryMenu) || hover
+			if (instance_exists(LevCont) && LevCont.selectedIndex == i && LevCont.controllingSecondaryMenu) || hover
 			{
 				xo = 2;
 				yo = -2;
@@ -139,7 +139,7 @@ mouse_x > r - 32 - sideMargin - arrowSize &&
 mouse_y > b - 12 - margin - arrowSize &&
 mouse_y < b - 12 - margin + arrowSize)
 	arrowHover = true;
-if arrowHover || (LevCont.selectedIndex == -2 && LevCont.controllingSecondaryMenu)
+if arrowHover || (instance_exists(LevCont) && LevCont.selectedIndex == -2 && LevCont.controllingSecondaryMenu)
 {
 	arrowScale = 1.5;
 	wantText = "<w>CONFIRM<w> SELECTION?";
@@ -176,7 +176,7 @@ if selectedCrown != -1
 	mouse_y > b - 12 - margin - crownHeight &&
 	mouse_y < b - 12 - margin + crownHeight)
 		selectedCrownHover = true;
-	if (alarm[0] < 1 && (selectedCrownHover || (LevCont.selectedIndex == -1 && LevCont.controllingSecondaryMenu)))
+	if (alarm[0] < 1 && (selectedCrownHover || (instance_exists(LevCont) && LevCont.selectedIndex == -1 && LevCont.controllingSecondaryMenu)))
 	{
 		xo = 2;
 		yo = -2;
@@ -215,7 +215,7 @@ if hoverSelected > -1
 		if crown == other.hoverSelected
 			crownExists = true;
 	}
-	if !crownExists
+	if !crownExists && instance_exists(CrownIcon)
 	{
 		with instance_nearest(x,y,CrownIcon)
 		{

@@ -1,8 +1,10 @@
 side = choose(0,1)
+team = 7;
 depth = -8;
 alarm[0] = 100+random(40);
 fire = 0
-myscorch = instance_create(x,y,TrapScorchMark)
+myscorch = instance_create(x,y,TrapScorchMark);
+myTop = instance_create(x,y,VenomTrapTop);
 with myscorch
 {
 	sprite_index = sprVenomTrapMark;	

@@ -8,7 +8,7 @@ spr_walk = sprMiniSlimeWalk;
 spr_hurt = sprMiniSlimeHurt;
 spr_fire = sprMiniSlimeFire;
 spr_dead = sprMiniSlimeDead
-
+shd = shd8;
 snd_hurt = sndHitPlant
 
 //behavior
@@ -18,7 +18,7 @@ alarm[1] = 30+random(90)
 wkick = 0
 actTime = 18;
 maxSpeed = 1.5;
-projectileSpeed = 3;
+projectileSpeed = 2.2;
 acidAmount = 3;
 droprate = 10;
 slimeExplosion = noone;

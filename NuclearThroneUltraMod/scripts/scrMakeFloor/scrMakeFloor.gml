@@ -929,7 +929,7 @@ function scrMakeFloor(limiter) {
 			}
 		}
 	}
-	else if area == 142 && instance_number(Floor) > 4
+	else if area == 142
 	{
 		var maxTries = 9999;
 		trn = 0;

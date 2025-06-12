@@ -384,6 +384,25 @@ function scrPopulate() {
             with Bones
             sprite_index = sprSewerDecal
         }
+		if spawnarea = 142 {
+
+            TopDecals();
+            with TopDecal
+            sprite_index = sprPipeWorldTopDecal
+			var walls = ds_list_create();
+			var al = instance_place_list(x,y,WallHitMe,walls,false);
+			if al > 2
+			{
+				for (var i = 0; i < al; i++)
+				{
+					with walls[| i]
+					{
+						instance_destroy();	
+					}
+				}
+			}
+			ds_list_destroy(walls);
+        }
         if spawnarea = 7 || spawnarea = 108 //CUSTOM
         {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
@@ -467,7 +486,39 @@ function scrPopulate() {
 
     //spawning chests
     scrPopChests()
-
+	if Player.area == 142
+	{
+		//Venom trap
+		with Wall
+		{
+			if point_distance(x,y,Player.x,Player.y) > 128
+			{
+				var n = instance_nearest(x,y,VenomTrap);
+				if (!instance_exists(VenomTrap) || (n != noone && point_distance(x,y,n.x,n.y) > 128))
+				{
+					if ((!place_meeting(x + 32,y,WallHitMe) && place_meeting(x + 32,y,Floor))
+					|| (!place_meeting(x - 32,y,WallHitMe) && place_meeting(x - 32,y,Floor))
+					|| (!place_meeting(x,y + 32,WallHitMe) && place_meeting(x,y + 32,Floor))
+					|| (!place_meeting(x,y - 32,WallHitMe) && place_meeting(x,y - 32,Floor)))
+					with instance_create(x,y,VenomTrap) {
+						team = 1;
+						var walls = ds_list_create();
+						var al = collision_rectangle_list(x - 16,y - 16,x + 16, y + 16, WallHitMe,false,false,walls,false);
+						for (var i = 0; i < al; i++)
+						{
+							with walls[| i]
+							{
+								var f = instance_place(x,y,Floor);
+								if  f != noone && f.object_index == Floor
+									instance_destroy();
+							}
+						}
+						ds_list_destroy(walls);
+					}
+				}
+			}
+		}
+	}
 	//BOSSES
 	if !scrIsGamemode(40)
 	{

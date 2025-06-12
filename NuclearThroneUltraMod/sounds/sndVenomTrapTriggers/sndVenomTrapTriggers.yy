@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.602125,
+  "duration":0.60213155,
   "name":"sndVenomTrapTriggers",
   "parent":{
     "name":"Regular",

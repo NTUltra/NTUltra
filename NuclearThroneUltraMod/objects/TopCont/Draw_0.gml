@@ -22,7 +22,7 @@ draw_self();
 	}
 	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 	with TopSmall
-	draw_sprite(sprite_index,image_index,x,y-8)
+		draw_sprite(sprite_index,image_index,x,y-8)
 	//draw_sprite_ext(sprite_index,-1,x,y-8,1,1,0,background_color,1)
 	with Wall
 	{
@@ -31,6 +31,8 @@ draw_self();
 	with Wall {
 		draw_sprite_ext(topspr,topindex,x,y-8,1,1,image_angle,colour,1);
 	}
+	with VenomTrapTop
+		draw_sprite(sprite_index,image_index,x,y-8)
 	with PlayerGhostTeleporter
 	{
 		draw_self();

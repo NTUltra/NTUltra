@@ -199,7 +199,7 @@ function scrNextLevel(skipping = false) {
 			area = 137;//VOID
 		}
 		else if subarea == 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136
+		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136 || area == 142
 		{
 			//Inverted savanna
 			if area = 121//bring to mushroom
@@ -326,7 +326,7 @@ function scrNextLevel(skipping = false) {
 			{
 				lastarea = area;
 				lastsubarea = subarea;
-				if inverted && subarea<3
+				/*if inverted && subarea<2
 		        {
 			        //inverted chesire
 			        area = 118
@@ -336,8 +336,9 @@ function scrNextLevel(skipping = false) {
 					scrAddToRoute(area);
 			        exit;
 		        }
-		        else//inv palace to throne 2
-		        {
+		        else*///inv palace to throne 2
+		        if subarea > 2
+				{
 					area=120;
 			        subarea=0;
 					scrAddArea(area);
@@ -427,6 +428,12 @@ function scrNextLevel(skipping = false) {
 				scrAddArea(area);
 				scrAddToRoute(area);
 				exit;
+			}
+			//Pipe World to Labs
+			if area == 142 && subarea > 0
+			{
+				area = 6;
+				subarea = 1;
 			}
 			if area == 117 && subarea > 0 && !inverted//Mushroom
 			{
@@ -535,25 +542,25 @@ function scrNextLevel(skipping = false) {
 		    if area = 108//inv vulcano bring to dragon
 		    {
 				//TODO
-		        if inverted && subarea<3
+		        /* inverted && subarea<3
 		        {
-		        //inverted purple dragon
-		        area = 108
-		        subarea = 3;
-		        inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
+			        //inverted purple dragon
+			        area = 108
+			        subarea = 3;
+			        inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
+			        exit;
 		        }
-		        else//Inverted vulcano bring to wonderland
+		        else */if subarea > 2//Inverted vulcano bring to wonderland
 		        {
-		        area = 8;
-		        subarea = 1;
-				lastarea = 8;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
+			        area = 8;
+			        subarea = 1;
+					lastarea = 8;
+					inverted = false;
+					scrAddArea(area);
+					scrAddToRoute(area);
+					exit;
 		        }
     
 		    }
@@ -865,12 +872,14 @@ function scrNextLevel(skipping = false) {
 		{
 			area=118;
 			lastarea = 118
+			exit;
+			/*
 			if subarea > 2
 			{
 				area = 120;
 				lastarea = 120;
 				subarea = 1;
-			}
+			}*/
 		}//in case of crownvault
 
 		if ( area == 2 && inverted )//inv sewers

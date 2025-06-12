@@ -8,7 +8,7 @@ spr_walk = sprBigSlimeWalk;
 spr_hurt = sprBigSlimeHurt;
 spr_fire = sprBigSlimeFire;
 spr_dead = sprBigSlimeDead
-
+shd = shd24;
 snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
 
@@ -16,7 +16,7 @@ snd_dead = sndFrogExplode
 actTime = 14;
 acc = 0.8;
 maxSpeed = 2.5;
-projectileSpeed = 4.8;
+projectileSpeed = 3.5;
 acidAmount = 12;
 droprate = 25;
 slimeExplosion = SlimeExplosion;

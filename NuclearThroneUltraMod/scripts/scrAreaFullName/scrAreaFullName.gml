@@ -103,9 +103,6 @@ function scrAreaFullName(area){
 				txt = "THE PIT"
 				upsideDown = true;
 			break;
-			case 142://SEWER PIPE NETWORK
-				txt = "SEWER PIPE NETWORK"
-			break;
 			case 116://Survival Arena
 				txt = "SURVIVAL ARENA"
 			break;
@@ -199,6 +196,13 @@ function scrAreaFullName(area){
 			break;
 			case 141: //Inverted storm
 				txt = "INVERSION GAUNTLET";
+				upsideDown = true;
+			break;
+			case 142: //PIPE WORLD
+				txt = "SEWER PIPE NETWORK";
+			break;
+			case 143: //INVERTED PIPE WORLD
+				txt = "SEWER PIPE NETWORK";
 				upsideDown = true;
 			break;
 		}

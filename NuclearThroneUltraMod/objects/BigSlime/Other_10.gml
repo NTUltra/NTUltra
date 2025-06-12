@@ -8,13 +8,21 @@ if ran < 4 {
 	//Nearest right angle
 	if gunangle > 0
 		gunangle = round(gunangle/90) * 90;
-    with instance_create(x, y, EnemyBullet2) {
+	var chooseAngle = choose(90,-90);
+	var ys = sign(chooseAngle);
+    with instance_create(x, y, EnemyBullet2WallHugger) {
+		isVenomized = true;
+		wallDirection = chooseAngle;
+		image_yscale = ys;
         motion_add(other.gunangle, other.projectileSpeed)
         image_angle = direction
         team = other.team
     }
-	with instance_create(x, y, EnemyBullet2) {
-        motion_add(other.gunangle, other.projectileSpeed - 1)
+	with instance_create(x, y, EnemyBullet2WallHugger) {
+		isVenomized = true;
+		wallDirection = chooseAngle;
+		image_yscale = ys;
+        motion_add(other.gunangle, other.projectileSpeed - 0.5)
         image_angle = direction
         team = other.team
     }
@@ -29,33 +37,27 @@ else if ran < 6
 	if gunangle > 0
 		gunangle = round(gunangle/90) * 90;
     with instance_create(x, y, ToxicGas) {
-        motion_add(other.gunangle, other.projectileSpeed)
-        image_angle = direction
+        motion_add(other.gunangle, other.projectileSpeed - 0.75)
         team = other.team
     }
 	with instance_create(x, y, ToxicGas) {
-        motion_add(other.gunangle, other.projectileSpeed - 1)
-        image_angle = direction
-        team = other.team
-    }
-	with instance_create(x + lengthdir_x(2,gunangle + 90), y + lengthdir_y(2,gunangle + 90), ToxicGas) {
-        motion_add(other.gunangle, other.projectileSpeed)
-        image_angle = direction
+        motion_add(other.gunangle, other.projectileSpeed - 2)
         team = other.team
     }
 	with instance_create(x + lengthdir_x(2,gunangle + 90), y + lengthdir_y(2,gunangle + 90), ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 1)
-        image_angle = direction
+        team = other.team
+    }
+	with instance_create(x + lengthdir_x(2,gunangle + 90), y + lengthdir_y(2,gunangle + 90), ToxicGas) {
+        motion_add(other.gunangle, other.projectileSpeed - 1.75)
         team = other.team
     }
 	with instance_create(x + lengthdir_x(2,gunangle - 90), y + lengthdir_y(2,gunangle - 90), ToxicGas) {
-        motion_add(other.gunangle, other.projectileSpeed)
-        image_angle = direction
+        motion_add(other.gunangle, other.projectileSpeed - 1.25)
         team = other.team
     }
 	with instance_create(x + lengthdir_x(2,gunangle - 90), y + lengthdir_y(2,gunangle - 90), ToxicGas) {
-        motion_add(other.gunangle, other.projectileSpeed - 1)
-        image_angle = direction
+        motion_add(other.gunangle, other.projectileSpeed - 1.5)
         team = other.team
     }
 	
