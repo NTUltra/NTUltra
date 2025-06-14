@@ -1,5 +1,5 @@
 raddrop = 2
-maxhealth = 12
+maxhealth = 9;
 mySize = 1
 event_inherited();
 venomous = true;
@@ -10,7 +10,7 @@ spr_walk = sprSlimeWalk;
 spr_hurt = sprSlimeHurt;
 spr_fire = sprSlimeFire;
 spr_dead = sprSlimeDead
-shd = shd16;
+shd = shd12;
 snd_hurt = sndHitPlant
 
 //behavior
@@ -24,4 +24,5 @@ maxSpeed = 2;
 projectileSpeed = 3;
 acidAmount = 6;
 droprate = 15;
+shdOffset = -1;
 slimeExplosion = MiniSlimeExplosion;

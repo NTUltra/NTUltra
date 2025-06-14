@@ -39,6 +39,7 @@ else if ran < 6
     with instance_create(x, y, ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 0.75)
         team = other.team
+		friction += 0.02;
     }
 	with instance_create(x, y, ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 2)
@@ -47,18 +48,22 @@ else if ran < 6
 	with instance_create(x + lengthdir_x(2,gunangle + 90), y + lengthdir_y(2,gunangle + 90), ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 1)
         team = other.team
+		friction += 0.0175;
     }
 	with instance_create(x + lengthdir_x(2,gunangle + 90), y + lengthdir_y(2,gunangle + 90), ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 1.75)
         team = other.team
+		friction += 0.015
     }
 	with instance_create(x + lengthdir_x(2,gunangle - 90), y + lengthdir_y(2,gunangle - 90), ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 1.25)
         team = other.team
+		friction += 0.015
     }
 	with instance_create(x + lengthdir_x(2,gunangle - 90), y + lengthdir_y(2,gunangle - 90), ToxicGas) {
         motion_add(other.gunangle, other.projectileSpeed - 1.5)
         team = other.team
+		friction += 0.015
     }
 	
     alarm[1] += actTime;

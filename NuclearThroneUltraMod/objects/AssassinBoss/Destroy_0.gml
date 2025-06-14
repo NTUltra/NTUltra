@@ -3,7 +3,7 @@ if dropItem
 scrDrop(40,0)
 scrDrop(100,0)
 }
-if UberCont.area == 3 || UberCont.area == 106 || instance_exists(PitNavigation)
+if UberCont.area == 3 || UberCont.area == 106 || UberCont.area == 142 || instance_exists(PitNavigation)
 	scrDefeatedRequiredBoss(secretChallengeBosses.bigAssassin);
 scrBossKill();
 event_inherited()

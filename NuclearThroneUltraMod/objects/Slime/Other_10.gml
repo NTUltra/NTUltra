@@ -36,10 +36,12 @@ else if ran < 6
 	with instance_create(x, y, ToxicGas) {
         motion_add(other.gunangle, max(1,other.projectileSpeed - 1))
         team = other.team
+		friction += 0.01;
     }
 	with instance_create(x, y, ToxicGas) {
         motion_add(other.gunangle, max(1,other.projectileSpeed - 1.5))
         team = other.team
+		friction += 0.015;
     }
     alarm[1] += actTime;
 }

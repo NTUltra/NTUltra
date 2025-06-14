@@ -378,6 +378,10 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with EnemyBullet2WallHugger
+{
+	draw_self();
+}
 with TopFlame
 {
 	draw_self();
@@ -602,7 +606,10 @@ with SquareBat
 {
 	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
 }
-
+with Slime
+{
+	draw_sprite_ext(sprite_index,-1,x,y,right,1,image_angle,c_white,1)
+}
 /*
 with VoidMasterBoss
 {

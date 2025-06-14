@@ -44,8 +44,8 @@
     "path":"sprites/sprJungleAssassinIdle/sprJungleAssassinIdle.yy",
   },
   "spriteMaskId":{
-    "name":"mskBandit",
-    "path":"sprites/mskBandit/mskBandit.yy",
+    "name":"mskAssassin",
+    "path":"sprites/mskAssassin/mskAssassin.yy",
   },
   "visible":true,
 }

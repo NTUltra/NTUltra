@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.218,
+  "duration":1.2180046,
   "name":"sndWallBreakScrap",
   "parent":{
     "name":"Wallbreak",

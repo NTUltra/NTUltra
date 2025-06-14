@@ -527,15 +527,15 @@ function scrPopEnemies() {
     if spawnarea = 142 {
 		if loops > 0 {
 			if random(35) < 1
-				instance_create(x + 24, y + 24, Slime)
+				instance_create(x + 24, y + 24, SquareBot)
 	        else if random(3) < 1
-				instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+				instance_create(x + 24, y + 24, choose(BigSlime,MeleeFake,SquareBat))
 	        else {
 	            instance_create(x + 24, y + 24, choose(BigSlime,Slime))
 	        }
 		} else {
 	        if random(3) < 1
-				instance_create(x + 24, y + 24, choose(BigSlime,Slime))
+				instance_create(x + 24, y + 24, choose(MeleeFake,BigSlime))
 	        else {
 	            instance_create(x + 24, y + 24, choose(BigSlime,Slime))
 	        }

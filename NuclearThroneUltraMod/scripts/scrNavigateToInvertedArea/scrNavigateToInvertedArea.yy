@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrNavigateToInvertedArea",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrNavigateToInvertedArea",
+  "parent":{
+    "name":"LevelGen",
+    "path":"folders/Scripts/LevelGen.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

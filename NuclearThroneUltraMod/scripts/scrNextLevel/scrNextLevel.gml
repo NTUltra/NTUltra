@@ -184,516 +184,80 @@ function scrNextLevel(skipping = false) {
 		}
 		else if area == 119 || area == 120
 		{
-			//THRONE 2 
-			//inverted = false;
-			/*
-			if area == 120
-			{
-				UberCont.extraVan = -1;
-				with instance_create(x,y,Explainer)
-					name = "ONE LESS VAN THIS LOOP";
-			}
-			else
-				UberCont.extraVan = 0;
-			*/
 			area = 137;//VOID
 		}
-		else if subarea == 1 || area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
-		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136 || area == 142
+		//Out of order normal navigation
+		else if area == 126 && subarea > 1//Graveyard
 		{
-			//Inverted savanna
-			if area = 121//bring to mushroom
-		    {
-				//TODO
-		        if inverted && area == 121 &&subarea<3
-		        {
-		        //inverted big vulture
-		        area = 121
-				lastarea = 121;
-		        subarea=3;
-		        inverted=true;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		        else
-		        {
-		        area = 117
-				lastarea = 117;
-		        subarea = 1;
-				inverted=false
-				/*
-				if scrIsCrown(24)
-					hard -= 1;
-				else
-				*/
-				if !skipping
-					hard += 1;
-					
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		    }
-			if area == 124//Inv mushroom
-			{
-				//Jungle 2
-				area = 114
-				lastarea = 114;
-				subarea = 1;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			if area == 127//Inv Graveyard
-			{
-				//Inv scrapyard
-				area = 106
-				lastarea = 106;
-				subarea = 2;
-				inverted = true;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			if area == 125//Inv Mansion
-			{
-				//To scrap 3
-				area = 3
-				lastarea = 3;
-				subarea = 3;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Inverted Oasis
-			if area = 122
-		    {
-				//TODO
-		        if inverted && area == 122 &&subarea < 3
-		        {
-		        //inverted big Fish
-		        area = 122
-		        subarea=3;
-				lastarea = 122;
-		        inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		        else
-		        {
-		        area = 7
-		        subarea = 1
-				lastarea = 7;
-				inverted = false
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		    }
-			//Inverted Jungle
-			if area = 123
-		    {
-				lastarea = area;
-				lastsubarea = subarea;
-				//TODO
-		        if inverted && area == 123 &&subarea<3
-		        {
-			        //inverted big bush box
-			        area = 123
-			        subarea = 2;
-			        inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		        else
-		        {
-					//To caves 1
-			        area = 4
-					lastarea = 4;
-			        subarea = 1
-					inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		    }
-			if area == 118
-			{
-				lastarea = area;
-				lastsubarea = subarea;
-				/*if inverted && subarea<2
-		        {
-			        //inverted chesire
-			        area = 118
-			        subarea = 3;
-					lastarea = 118;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		        else*///inv palace to throne 2
-		        if subarea > 2
-				{
-					area=120;
-			        subarea=0;
-					scrAddArea(area);
-					scrAddToRoute(area);
-					exit;
-					/*
-					//LOOP
-			        area=1;
-			        subarea=1;
-					inverted = false;
-					looping=true;
-			        exit;*/
-		        }
-			}
-		    if area = 113 && subarea > 1//banditland
-		    {
-		        area = 8//chesire cat
-				lastarea = 8;
-		        subarea=3;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		    }
-			//Jungle
-			if area == 114 && subarea > 1
-			{
-				// To caves
-				if (curse || bcurse || ccurse)
-				{
-					area = 115;
-					subarea = 1;
-					inverted = false;
-				}
-				else
-				{
-					area = 4;
-					lastarea = 4;
-					subarea = 1;
-					inverted = false;
-				}
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Courtyard
-			if (area == 128 || area == 129) && subarea > 1
-			{
-				// Back to vault
-				area = 100;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Graveyard
-			if area == 126 && subarea > 0 && !inverted
-			{
-				// To scrapyard
-				area = 3;
-				lastarea = 3;
-				subarea = 1;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Factory
-			if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0 && (!inverted || area == 131))
-			{
-				// To inv palace
-				area = 118;
-				lastarea = 118;
-				subarea = 2;
-				inverted = true;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Ultra scrapyard
-			if area == 136 && subarea > 2
-			{
-				// To Inv mushroom
-				area = 124;
-				lastarea = 124;
-				subarea = 0;
-				inverted = true;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			//Pipe World to Labs
-			if area == 142 && subarea > 0
-			{
-				area = 6;
-				subarea = 1;
-			}
-			if area == 117 && subarea > 0 && !inverted//Mushroom
-			{
-				//To jungle
-				area = 114
-				subarea = 0;
-			}
-		    if area = 103 && subarea > 0 && !inverted//YV mansion
-		    {
-		        area = 3
-		        subarea = 2;
-		    }
-			if area == 102//Pizza to oasis boss
-			{
-				area = 101;
-				subarea = 2;
-				inverted = false;
-			}
-		    if area = 105//bring to scrapyard inv desert or pizza
-		    {
-				//TODO
-		        if inverted && area = 105 &&subarea<3
-		        {
-					if ( oasis )
-					{
-						area=101;
-						lastarea = 101;
-						subarea=1;
-						inverted = false;
-					}
-					else
-					{
-					    //inverted big bandit
-					    area = 105
-					    subarea=3;
-					    inverted = false;
-					}
-					scrAddArea(area);
-					scrAddToRoute(area);
-					exit;
-		        }
-		        else
-		        {
-			        area = 2
-			        subarea = 1
-					inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		    }
-    
-		    if area = 106//inverted scrapyard
-		    {
-				//TODO
-		        if inverted && subarea<3
-		        {
-		        //inverted big dog
-		        area = 106
-		        subarea = 3;
-		        inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		        else//inv scrap to labs
-		        {
-		        area=6;
-		        subarea=1;
-				lastarea = 6;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-    
-		    }
-    
-		    if area = 107//inv frozen citybring to lill cunter
-		    {
-				//TODO
-		        if inverted && subarea<3
-		        {
-		        //inverted lil hunter
-		        area = 107
-		        subarea = 3;
-		        inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-		        else//Inv frozen city to Caves
-		        {
-		        area=4;
-				lastarea = 4;
-				lastsubarea = 1;
-		        subarea=1;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		        exit;
-		        }
-    
-		    }
-    
-		    if area = 108//inv vulcano bring to dragon
-		    {
-				//TODO
-		        /* inverted && subarea<3
-		        {
-			        //inverted purple dragon
-			        area = 108
-			        subarea = 3;
-			        inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		        else */if subarea > 2//Inverted vulcano bring to wonderland
-		        {
-			        area = 8;
-			        subarea = 1;
-					lastarea = 8;
-					inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-					exit;
-		        }
-    
-		    }
-    
-		    if area = 109//inv wonderland
-		    {
-				//TODO
-		        if inverted && subarea<3
-		        {
-			        area = 109
-					lastarea = 109;
-			        subarea = 3;
-			        inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-		        exit;
-		        }
-		        else//go to crystal caves
-		        {
-			       if (curse || bcurse || ccurse)
-					{
-						area = 115;
-						subarea = 1;
-						inverted = false;
-					}
-					else
-					{
-						area = 4;
-						lastarea = 4;
-						subarea = 1;
-						inverted = false;
-					}
-		        }
-        
-		    }
-    
-		    if area = 110//inv sewers bring from sewers to mansion?
-		    {
-			    area=3;
-			    subarea=1;
-			    lastarea=3;
-			    inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-		    exit;
-		    }
-    
-		    if area = 111//inv crystal cavesbring from caves to lil hunter
-		    {
-				if inverted && subarea<2
-				{
-					area = 111;
-					lastarea = 111;
-					subarea = 2;
-					inverted = false;
-				}
-				else//inv caves to palace
-				{
-					area = 9;
-					lastarea = 9;
-					subarea = 1;
-					inverted = false;
-				}
-				scrAddArea(area);
-				scrAddToRoute(area);
-		    exit;
-		    }
-    
-		    if area = 112//inv labs
-		    {
-				if inverted && subarea<2
-		        {
-        
-			        area = 112
-			        subarea = 2;
-			        inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-			        exit;
-		        }
-		        else//Inv labs to frozen cityy
-		        {
-					area=5
-					lastarea = 5;
-					subarea=1;
-					inverted = false;
-					scrAddArea(area);
-					scrAddToRoute(area);
-					exit;
-		        }
-    
-		    }
-
-		    if area=101 && subarea == 3 && !inverted
-		    {
-				//Oasis to vulcano
-				lastarea = area;
-				lastsubarea = subarea;
-			    area = 7
-			    subarea = 1
-			    oasis = false
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-		    }
-			//Cursed caves to caves 2
-			if area == 115
-			{
-				lastarea = area;
-				lastsubarea = subarea;
-				area = 4;
-				subarea = 2;
-				inverted = false;
-				scrAddArea(area);
-				scrAddToRoute(area);
-				exit;
-			}
-			/*
-			if area == 135//HQ I guess its impossible really
-			{
-				if lastarea != 135
-					area = lastarea;
-				else
-					area = 1;
-				subarea = 1;
-			}*/
+			area = 3;
+			subarea = 0;
+			lastarea = area;
+			lastsubarea = subarea;
 		}
-		if ( subarea < 3 and area != 2 and area != 105 and area != 106
+		else if area = 103//YV mansion
+		{
+			area = 3
+			subarea = 1;
+		}
+		//Jungle
+		else if area == 114 && subarea > 1
+		{
+			// To caves
+			if (curse || bcurse || ccurse)
+			{
+				area = 115;
+				subarea = 0;
+			}
+			else
+			{
+				area = 4;
+				subarea = 0;
+			}
+		}
+		//Factory
+		else if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0)
+		{
+			// To inv palace
+			area = 118;
+			subarea = 1;
+			inverted = true;
+		}
+		//Ultra scrapyard
+		else if area == 136 && subarea > 2
+		{
+			area = 4;
+			subarea = 0;
+			lastarea = area;
+			lastsubarea = subarea;
+		}
+		//Pipe World
+		else if area == 142
+		{
+			//to Labs
+			area = 6;
+			subarea = 0;
+		}
+		//Mushroom
+		else if area == 117
+		{
+			//To jungle
+			area = 114
+			subarea = 0;
+		}
+		else /*if area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
+		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136 || area == 142*/
+		{
+			//NAVIGATION IN INVERTED AREAS!
+			scrNavigationInsideInvertedAreas(skipping);
+		}
+		//INCREASE SUBAREA!?
+		if ( subarea < 3 and area != 2// and area != 105 and area != 106
 		&& !(area = 6 && subarea > 1)//Labs has 2 areas
 		&& !(area = 4 && subarea > 1) //Caves has 2 areas
 		&& !(area = 114 && subarea > 1) )//Jungle has 2 areas
+		{
 			subarea += 1
+		}
 		else if area < 100// && area=2 && area=4
 		{
 			if area < 9
@@ -777,183 +341,23 @@ function scrNextLevel(skipping = false) {
 				area = 119;	
 			}
 		}    
-		//TO INVERTED AREAS
-		if ( area=1 && inverted )//inv desert
+		else if ( area=1 && oasis )
 		{
-			area=105
-			lastarea=105;
-			if subarea > 2
-			{
-				area = 	110;
-				lastarea = 110;
-				subarea = 1;
-			}
-		}
-
-		if ( area=1 && oasis )
-		{area=101;
-		lastarea = 101;
-		subarea=1;
-		inverted = false;}
-
-		if ( area=3 && inverted )//inv scrap
-		{
-			area=106;
-			lastarea=106;
-			if subarea > 2
-			{
-				area = 112;
-				lastarea = 112;
-				subarea = 1;
-			}
-		}//in case of crownvault
-
-		if ( area=4 && inverted )//inv crystal caves
-		{
-			area=111;
-			lastarea=111;
-			if subarea > 1
-			{
-				area = 118;
-				lastarea = 118;
-				subarea = 1;
-			}
-		}//in case of crownvault
-
-		if ( area=5 && inverted )//inv frozen city
-		{
-			area=107;
-			lastarea=107;
-			if subarea > 2
-			{
-				area = 111;
-				lastarea = 111;
-				subarea = 1;
-			}
-		}//in case of crownvault
-
-		if ( area=6 && inverted )//inv labs
-		{
-			area=112;
-			lastarea=112;
-			if subarea > 1
-			{
-				area = 107;
-				lastarea = 107;
-				subarea = 1;
-			}
-		}//in case of crownvault
-
-		if ( area=7 && inverted )//inv vulcano
-		{
-			area=108;
-			lastarea=108;
-			if subarea > 2
-			{
-				area = 109;
-				lastarea = 109;
-				subarea = 1;
-			}
-		}//in case of crownvault
-
-		if ( area=8 && inverted )//inv wonderland
-		{
-			area=109;
-			lastarea = 109
-			if subarea > 2
-			{
-				area = 118;
-				lastarea = 118;
-				subarea = 1;
-			}
-		}//in case of crownvault
-	
-		if ( area == 9 && inverted )//inv Palace
-		{
-			area=118;
-			lastarea = 118
-			exit;
-			/*
-			if subarea > 2
-			{
-				area = 120;
-				lastarea = 120;
-				subarea = 1;
-			}*/
-		}//in case of crownvault
-
-		if ( area == 2 && inverted )//inv sewers
-		{
-			area=110;
+			area=101;
+			lastarea = 101;
 			subarea=1;
-			lastarea=110;
+			inverted = false;
 		}
-	
-		if ( area == 10 && inverted )//inv Savanna
+		//TO INVERTED AREAS
+		else if inverted
 		{
-			area=121;
-			lastarea=121;
-			if subarea > 2
-			{
-				area = 124;
-				lastarea = 124;
-				subarea = 1;
-			}
-		}
-		if ( area == 117 && inverted )//inv Mushroom
-		{
-			area=124;
-			lastarea=124;
-			subarea = 0;
-		}
-		if ( area == 126 && inverted )//inv Graveyard
-		{
-			area=127;
-			lastarea=127;
-			subarea = 1;
-		}
-		if ( inverted && (area == 130 || area == 132 || area == 133 || area == 134) )//to inv factory
-		{
-			area=131;
-			lastarea=131;
-			subarea = 1;
-		}
-		if ( area == 114 && inverted )//inv Jungle
-		{
-			area=123;
-			lastarea=123;
-			if subarea > 1
-			{
-				area = 111;
-				lastarea = 111;
-				subarea = 1;
-				if (curse || bcurse || ccurse)
-				{
-					area = 115;
-					inverted = false;
-				}
-			}
-		}
-		if ( area == 103 && inverted ) //Iv mansion
-		{
-			area = 125;
-			lastarea = 125;
-			subarea = 0;
-		}
-		if ( area==101 && inverted )//inv Oasis
-		{
-			area=122;
-			lastarea=122;
-			if subarea > 2
-			{
-				area = 108;
-				lastarea = 108;
-				subarea = 1;
-			}
+			scrNavigateToInvertedArea();
 		}
 		if !skipping
 		{
-			if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110 || area = 111 || area = 112 || area == 121 || area == 122 || area == 123 || area == 124 || area == 125)//&&subarea<2//inverted
+			if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110
+			|| area = 111 || area = 112 || area == 121 || area == 122 || area == 123
+			|| area == 124 || area == 125)//&&subarea<2//inverted
 			{
 				if area == 112//Inv labs normal labs skips one
 				{

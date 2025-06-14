@@ -36,6 +36,9 @@
     "name":"sprJungleAssassinHide",
     "path":"sprites/sprJungleAssassinHide/sprJungleAssassinHide.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskAssassin",
+    "path":"sprites/mskAssassin/mskAssassin.yy",
+  },
   "visible":true,
 }

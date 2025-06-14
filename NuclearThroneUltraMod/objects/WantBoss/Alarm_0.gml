@@ -130,7 +130,7 @@ if target != noone && instance_exists(target)
 			}
 			else
 			{
-			    if other.area=3 && other.loops>0 && instance_exists(Floor)//scrapyard
+			    if (other.area=3 || other.area == 142) && other.loops>0 && instance_exists(Floor)//scrapyard
 			    {
 					if scrIsGamemode(44)
 					{

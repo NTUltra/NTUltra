@@ -573,7 +573,7 @@ if !instance_exists(LevCont) and visible = 1
 		    curse = !curse;
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "CURSE TOGGLE";
-			instance_create(x + 64,y,BigBadBat);
+			instance_create(x + 64,y,SquareBat);
 		}
 		if keyboard_check_pressed(ord("B")) {
 			instance_create(x,y,WallBreak);

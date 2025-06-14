@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 2
-maxhealth = 6;
+maxhealth = 3;
 EnemyHealthAdjustments();
 meleedamage = 1
 spr_idle = sprMiniSlimeIdle;
@@ -22,3 +22,4 @@ projectileSpeed = 2.2;
 acidAmount = 3;
 droprate = 10;
 slimeExplosion = noone;
+shdOffset = -5;

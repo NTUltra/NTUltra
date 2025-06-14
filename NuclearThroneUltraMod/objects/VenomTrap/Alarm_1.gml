@@ -2,8 +2,9 @@ if fire > 0
 {
 	
 	fire -= 1
-	var o = 8;
+	var o = 12;
 	var didFire = false;
+	var s = 6;
 	if side = 1||loop
 	{
 		if !position_meeting(x-4,y+8,Wall) && collision_point(x - 4,y+8,Floor,false,false)
@@ -13,7 +14,7 @@ if fire > 0
 			{
 				team = other.team;
 				bleedAngle = 180;
-				hspeed = -8;
+				hspeed = -s;
 				dodgeAble = false;
 				image_angle = direction;
 				x += lengthdir_x(o,direction + 180);
@@ -27,12 +28,19 @@ if fire > 0
 			{
 				team = other.team;
 				bleedAngle = 0;
-				hspeed = 8;
+				hspeed = s;
 				dodgeAble = false;
 				image_angle = direction;
 				x += lengthdir_x(o,direction + 180);
 				y += lengthdir_y(o,direction + 180);
 			}
+		}
+		if didFire
+		{
+			if canDoSides == 2
+				canDoSides = 3;
+			else 
+				canDoSides = 1;	
 		}
 	}
 	if side = 0||loop
@@ -44,7 +52,7 @@ if fire > 0
 			{
 				team = other.team;
 				bleedAngle = 270;
-				vspeed = -8;
+				vspeed = -s;
 				dodgeAble = false;
 				image_angle = direction;
 				x += lengthdir_x(o,direction + 180);
@@ -58,12 +66,19 @@ if fire > 0
 			{
 				team = other.team;
 				bleedAngle = 90;
-				vspeed = 8;
+				vspeed = s;
 				dodgeAble = false;
 				image_angle = direction;
 				x += lengthdir_x(o,direction + 180);
 				y += lengthdir_y(o,direction + 180);
 			}
+		}
+		if didFire
+		{
+			if canDoSides == 1
+				canDoSides = 3;
+			else 
+				canDoSides = 2;	
 		}
 	}
 	if didFire && fire != 3

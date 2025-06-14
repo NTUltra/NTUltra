@@ -42,7 +42,7 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 						}
 					}
 				}
-				if random(maxhealth) > my_health and !scrIsCrown(2)
+				if random(maxhealth) > my_health// and !scrIsCrown(2)
 					instance_create(xx,yy,HPPickup)
 				else
 					instance_create(xx,yy,AmmoPickup)
@@ -116,7 +116,7 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 		if !audio_is_playing(sndRobotEatUpg)
 			snd_play_2d(sndRobotEatUpg)
 		r += 4;
-		if Player.my_health < Player.maxhealth - 1 && random(Player.maxhealth-1) > Player.my_health and !scrIsCrown(2)
+		if Player.my_health < Player.maxhealth - 1 && random(Player.maxhealth-1) > Player.my_health// and !scrIsCrown(2)
 		{
 			instance_create(xx,yy,HPPickup);
 			shouldHeal = false;
@@ -130,9 +130,10 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 	{
 		if !audio_is_playing(sndRobotEat)
 			snd_play_2d(sndRobotEat);
-		shouldHeal = false;
+		if !instance_exists(EnemyVenom)
+			shouldHeal = false;
 	}
-	if Player.my_health < Player.maxhealth - 1 && random(Player.maxhealth-1) > Player.my_health and !scrIsCrown(2)
+	if Player.my_health < Player.maxhealth - 1 && random(Player.maxhealth-1) > Player.my_health// and !scrIsCrown(2)
 	{
 		instance_create(xx,yy,HPPickup);
 		shouldHeal = false;
@@ -141,6 +142,10 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 		instance_create(xx,yy,AmmoPickup)
 	if shouldHeal && canForceHeal{
 		scrHeal(1);
+		with EnemyVenom
+		{
+			instance_destroy();	
+		}
 		snd_play_2d(sndHealthPickup);
 	}
 	if Player.ultra_got[29] || Player.ultra_got[30] || Player.ultra_got[31]

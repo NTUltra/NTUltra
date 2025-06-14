@@ -11,7 +11,7 @@ if instance_exists(Player)
 }
 if area == 1 || area == 105 || area == 10 || area == 7 || area == 108 || area == 113 || area == 110 || area == 3 || area == 106 || area == 126 || area == 127 || area == 120 || area == 121 || area == 10
 	snd_wallbreak = sndWallBreakRock;
-else if area == 2 || area == 110 || area == 3 || area == 106 || area == 5 || area == 107
+else if area == 2 || area == 110 || area == 3 || area == 106 || area == 5 || area == 107 || area == 142
 	snd_wallbreak = sndWallBreakScrap;
 else if area == 4 || area == 115 || area == 111 || area == 136
 	snd_wallbreak = sndWallBreakCrystal;

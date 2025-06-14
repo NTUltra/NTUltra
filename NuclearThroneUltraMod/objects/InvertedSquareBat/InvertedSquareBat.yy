@@ -40,5 +40,5 @@
     "name":"mskSquareBat",
     "path":"sprites/mskSquareBat/mskSquareBat.yy",
   },
-  "visible":true,
+  "visible":false,
 }

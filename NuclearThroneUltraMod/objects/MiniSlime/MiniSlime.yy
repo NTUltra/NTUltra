@@ -40,5 +40,5 @@
     "name":"mskMiniSlime",
     "path":"sprites/mskMiniSlime/mskMiniSlime.yy",
   },
-  "visible":true,
+  "visible":false,
 }

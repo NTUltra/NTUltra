@@ -37,8 +37,8 @@
     "path":"sprites/sprInvertedMeleeFake/sprInvertedMeleeFake.yy",
   },
   "spriteMaskId":{
-    "name":"mskBandit",
-    "path":"sprites/mskBandit/mskBandit.yy",
+    "name":"mskAssassin",
+    "path":"sprites/mskAssassin/mskAssassin.yy",
   },
   "visible":true,
 }

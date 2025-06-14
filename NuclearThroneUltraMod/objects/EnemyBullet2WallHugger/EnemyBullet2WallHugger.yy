@@ -43,5 +43,5 @@
     "name":"mskEnemyBullet2WallHugger",
     "path":"sprites/mskEnemyBullet2WallHugger/mskEnemyBullet2WallHugger.yy",
   },
-  "visible":true,
+  "visible":false,
 }

@@ -10,8 +10,8 @@ function scrDecideMorphWep() {
 				maxTries = 2000;
 		do 
 	    {
-	        wep = scrMorphWeaponsArray(Player.loops,scrIsGamemode(31));//choose(70, 73, 98, 198, 408, 659, 468, 495, 646, 663, 750, 755)
-	        maxTries --;
+			myWep = ar[irandom(array_length(ar)-1)];
+			maxTries --;
 	    }
 	    until (((wep != Player.wep and wep != Player.bwep and wep != Player.cwep) or Player.race = 7)
 	    || maxTries <= 0)
@@ -22,5 +22,5 @@ function scrDecideMorphWep() {
 		myWep = ar[irandom(array_length(ar)-1)];	
 	}
     
-    return wep;
+    return myWep;
 }

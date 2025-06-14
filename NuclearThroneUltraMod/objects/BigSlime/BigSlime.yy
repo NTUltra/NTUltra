@@ -41,5 +41,5 @@
     "name":"mskBigSlime",
     "path":"sprites/mskBigSlime/mskBigSlime.yy",
   },
-  "visible":true,
+  "visible":false,
 }

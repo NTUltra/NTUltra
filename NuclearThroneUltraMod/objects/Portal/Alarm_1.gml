@@ -63,6 +63,8 @@ if goTime
 	{
 		alarm[0] = 0;
 		alarm[1] = 0;
+		with myTop
+			image_index = 0;
 	}
 	sprite_index = sprPortalSpawn;
 	if isPink

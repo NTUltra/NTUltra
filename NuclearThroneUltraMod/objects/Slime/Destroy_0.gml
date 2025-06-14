@@ -17,6 +17,7 @@ repeat(acidAmount)
 		with instance_create(x, y, ToxicGas) {
 	        motion_add(dir,0.25)
 	        team = other.team
+			friction += 0.02;
 	    }
 }
 if slimeExplosion != noone

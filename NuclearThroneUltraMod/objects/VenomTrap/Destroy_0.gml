@@ -3,6 +3,6 @@ if instance_exists(GenCont) || instance_exists(Spiral) || instance_exists(LevCon
 {
 	with myscorch
 		instance_destroy();
-	with myTop
-		instance_destroy();
 }
+with myTop
+	instance_destroy();
