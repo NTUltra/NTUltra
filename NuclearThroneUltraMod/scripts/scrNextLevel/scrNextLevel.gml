@@ -237,12 +237,30 @@ function scrNextLevel(skipping = false) {
 			area = 6;
 			subarea = 0;
 		}
+		//OASIS
+		else if area == 101 && subarea > 2
+		{
+			//Oasis to vulcano
+			area = 7
+			subarea = 0;
+			oasis = false;
+		}
 		//Mushroom
 		else if area == 117
 		{
 			//To jungle
 			area = 114
 			subarea = 0;
+		}
+		else if area == 102//Pizza to oasis boss
+		{
+			area = 101;
+			subarea = 2;
+		}
+		else if area == 115
+		{
+			area = 4;
+			subarea = 1;
 		}
 		else /*if area = 105 || area = 106 || area = 107 || area = 101 || area = 110 || area = 111 || area = 112 || area = 103 || area = 109 || area = 113 || area == 114 || area = 108 || area == 115 || area == 117 || area == 118
 		|| area == 121 || area == 122 || area == 123 || area == 124 || area == 125 || area == 126 || area == 128 || area == 129 || area == 130 || area == 131 || area == 132 || area == 133 || area == 134 || area == 135 || area == 136 || area == 142*/
@@ -341,12 +359,12 @@ function scrNextLevel(skipping = false) {
 				area = 119;	
 			}
 		}    
-		else if ( area=1 && oasis )
+		else if ( area == 1 && oasis )
 		{
-			area=101;
-			lastarea = 101;
-			subarea=1;
+			area = 101;
+			subarea = 1;
 			inverted = false;
+			oasis = false;
 		}
 		//TO INVERTED AREAS
 		else if inverted

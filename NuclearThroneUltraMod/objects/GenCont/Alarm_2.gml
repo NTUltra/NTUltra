@@ -725,7 +725,7 @@ if Player.area=1 || Player.area == 105
 				instance_create(x+16,y+16,BigFishSkull)
 	}
 }
-if Player.area == 2 || Player.area == 105
+if Player.area == 2 || Player.area == 110
 {
 	var f = instance_furthest(Player.x,Player.y,Floor)
 	with instance_nearest(f.x,f.y,Floor)
