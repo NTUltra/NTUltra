@@ -8,7 +8,6 @@ spr_hurt = sprGraveyardEntranceHurt
 
 spr_dead = sprGraveyardEntranceDead
 name = "TOUCH?"
-
 event_inherited();
 shadowSprite = shd24;
 shadowYoffset = - 8;

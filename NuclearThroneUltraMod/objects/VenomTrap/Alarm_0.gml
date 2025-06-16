@@ -16,5 +16,5 @@ if canDoSides == 3
 	32,
 	250)
 fire = 3
-alarm[0] = 90
+alarm[0] = timer;
 

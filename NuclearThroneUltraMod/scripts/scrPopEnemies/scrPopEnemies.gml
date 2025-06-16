@@ -542,6 +542,25 @@ function scrPopEnemies() {
 		}
     }
 	
+	//INVERTED PIPE WORLD
+    if spawnarea = 143 {
+		if loops > 0 {
+			if random(35) < 1
+				instance_create(x + 24, y + 24, InvertedSquareBot)
+	        else if random(3) < 1
+				instance_create(x + 24, y + 24, choose(InvertedBigSlime,InvertedMeleeFake,InvertedSquareBat))
+	        else {
+	            instance_create(x + 24, y + 24, choose(InvertedBigSlime,InvertedSlime))
+	        }
+		} else {
+	        if random(3) < 1
+				instance_create(x + 24, y + 24, choose(InvertedMeleeFake,InvertedBigSlime))
+	        else {
+	            instance_create(x + 24, y + 24, choose(InvertedBigSlime,InvertedSlime))
+	        }
+		}
+    }
+	
 	//THE PIT!
     if spawnarea = 139 {
 		var n = instance_nearest(x,y,enemy);

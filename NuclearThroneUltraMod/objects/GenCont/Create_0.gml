@@ -234,6 +234,9 @@ if instance_exists(Player)
 			case 142:
 			__background_set_colour( make_color_rgb(84, 78, 58) )
 			break;
+			case 143:
+			__background_set_colour( make_color_rgb(65, 67, 76) )
+			break;
 		}
 	}
 	else
@@ -359,6 +362,8 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(127, 12, 58) )
 		else if Player.area == 142//Pipe world
 			__background_set_colour( make_color_rgb(53, 34, 34) )
+		else if Player.area == 143//Inverted Pipe world
+			__background_set_colour( make_color_rgb(31, 51, 31) )
 	}
 }
 else

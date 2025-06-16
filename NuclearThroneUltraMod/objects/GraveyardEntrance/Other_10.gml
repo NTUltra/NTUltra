@@ -1,9 +1,9 @@
 /// @description Go to Graveyard
 if isActivated
 	isInteractableNow = false;
-if my_health > 0 && isInteractableNow && !instance_exists(BallMom)
+if my_health > 0 && isInteractableNow && !instance_exists(HyenaBoss) && !instance_exists(BallMom)
 {
-	if KeyCont.key_pick[Player.p] = 1
+	if instance_exists(Player) && KeyCont.key_pick[Player.p] = 1
 	{
 		UberCont.hadBossIntro = false;
 		isActivated = true;
@@ -68,6 +68,7 @@ if my_health > 0 && isInteractableNow && !instance_exists(BallMom)
 			preva = Player.area;
 		else if instance_exists(PlayerSpawn)
 			prevA = PlayerSpawn.area;
+	
 		with instance_create(x,y,PortalEnviromentReplacer)
 		{
 			area = 126;

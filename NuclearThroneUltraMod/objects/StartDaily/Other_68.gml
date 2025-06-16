@@ -152,6 +152,8 @@ if (type == network_type_data) {
 					scrAddNewWeaponDrop(wep);
 					if race == 7
 						bwep = wep;
+					else
+						bwep = 0;
 					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
 						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
 					scrWeaponHold();

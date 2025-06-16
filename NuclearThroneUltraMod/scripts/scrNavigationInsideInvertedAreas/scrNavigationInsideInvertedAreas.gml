@@ -2,8 +2,7 @@
 // /@description
 ///@param
 function scrNavigationInsideInvertedAreas(skipping){
-	lastarea = area;
-	lastsubarea = subarea;
+	//Keep in mind this code rruns before the subarea increases
 	//Inverted savanna
 	if area = 121
 	{
@@ -148,7 +147,7 @@ function scrNavigationInsideInvertedAreas(skipping){
 		area = 5
 		subarea = 0;
 	}
-	if area != 100 && area != 135
+	if area != 100 && area != 135 && area != 104 && area != 137
 	{
 		lastarea = area;
 		lastsubarea = subarea;

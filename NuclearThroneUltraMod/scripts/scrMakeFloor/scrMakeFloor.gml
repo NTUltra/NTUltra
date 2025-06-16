@@ -501,7 +501,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x + 32,y - 32,Floor)*/
 	}
 	//SEWER PIPE NETWORK
-	if area == 142 {
+	if area == 142 || area == 143 {
 		instance_create(x,y,Floor);
 	}
 	//THE PIT
@@ -929,7 +929,7 @@ function scrMakeFloor(limiter) {
 			}
 		}
 	}
-	else if area == 142
+	else if area == 142 || area == 143
 	{
 		var maxTries = 9999;
 		trn = 0;

@@ -158,6 +158,9 @@ function scrTopArea(area){
 	case 142:
 	sprite_index=sprWall142Trans;
 	break;
+	case 143:
+	sprite_index=sprWall143Trans;
+	break;
 	default:
 	sprite_index=sprWall0Trans;
 	break;

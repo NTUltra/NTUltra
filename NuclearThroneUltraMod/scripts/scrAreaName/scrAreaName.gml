@@ -71,6 +71,13 @@ function scrAreaName(area,subarea,loops){
 			case 136://Ultra scrapyard
 				txt = "3C_" + string(subarea);
 			break;
+			case 142://Pipe World
+				txt = "3D_" + string(subarea);
+			break;
+			case 143://Pipe World
+				txt = "3D_" + string(subarea);
+				upsideDown = true;
+			break;
 			case 116://Survival Arena
 				txt = string(subarea);
 			break;

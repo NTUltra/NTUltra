@@ -403,6 +403,25 @@ function scrPopulate() {
 			}
 			ds_list_destroy(walls);
         }
+		if spawnarea = 143 {
+
+            TopDecals();
+            with TopDecal
+            sprite_index = sprInvertedPipeWorldTopDecal
+			var walls = ds_list_create();
+			var al = instance_place_list(x,y,WallHitMe,walls,false);
+			if al > 2
+			{
+				for (var i = 0; i < al; i++)
+				{
+					with walls[| i]
+					{
+						instance_destroy();	
+					}
+				}
+			}
+			ds_list_destroy(walls);
+        }
         if spawnarea = 7 || spawnarea = 108 //CUSTOM
         {
             if !place_free(x - 32, y) and!place_free(x + 32, y) and place_free(x, y) {
@@ -486,7 +505,7 @@ function scrPopulate() {
 
     //spawning chests
     scrPopChests()
-	if Player.area == 142
+	if Player.area == 142 || Player.area == 143
 	{
 		//Venom trap
 		with Wall
@@ -592,12 +611,22 @@ function scrPopulate() {
 	        instance_create(x, y, WantBoss)
 	    }
 
-	    if (Player.area = 3 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	    if (Player.area == 3 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
 	        repeat(min(3,ceil(Player.loops*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }
 
-	    if (Player.area = 106 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	    if (Player.area == 106 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(Player.loops*0.25)))
+	        instance_create(x, y, WantBoss);
+	    }
+		
+		if (Player.area == 142 && Player.subarea == 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(Player.loops*0.25)))
+	        instance_create(x, y, WantBoss);
+	    }
+
+	    if (Player.area == 143 && Player.subarea == 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
 	        repeat(min(3,ceil(Player.loops*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }

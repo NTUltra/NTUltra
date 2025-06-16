@@ -1838,7 +1838,8 @@ function scrDrawHUD() {
 		{
 			if isInteractableNow
 			{
-				if (name == "DEFEAT BOSS FIRST" || instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer) || instance_exists(BallMom))
+				if (name == "DEFEAT BOSS FIRST" || instance_exists(WantBoss) || instance_exists(AssassinBoss) || instance_exists(InvertedAssassinBoss) || instance_exists(SandWorm) || instance_exists(Technomancer) || instance_exists(BallMom)
+				 || instance_exists(HyenaBoss) || instance_exists(BanditBoss))
 				{
 					var txt = "DEFEAT BOSS FIRST";
 					draw_set_color(c_black)
@@ -2643,6 +2644,10 @@ function scrDrawHUD() {
             scrDrawSecretFinder(ox,oy);
         }
 		with CloudEnterance
+		{
+            scrDrawSecretFinder(ox,oy);
+        }
+		with PipeWorldEnterance
 		{
             scrDrawSecretFinder(ox,oy);
         }

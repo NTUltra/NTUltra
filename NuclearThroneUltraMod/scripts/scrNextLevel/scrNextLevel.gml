@@ -178,7 +178,12 @@ function scrNextLevel(skipping = false) {
 			scrAddToRoute(area);
 			exit;
 		}
-		if area < 100
+		//TO INVERTED AREAS
+		if inverted
+		{
+			scrNavigateToInvertedArea();
+		}
+		else if area < 100
 		{
 			lastarea = area
 		}
@@ -231,7 +236,7 @@ function scrNextLevel(skipping = false) {
 			lastsubarea = subarea;
 		}
 		//Pipe World
-		else if area == 142
+		else if area == 142 && subarea > 1
 		{
 			//to Labs
 			area = 6;
@@ -269,96 +274,10 @@ function scrNextLevel(skipping = false) {
 			scrNavigationInsideInvertedAreas(skipping);
 		}
 		//INCREASE SUBAREA!?
-		if ( subarea < 3 and area != 2// and area != 105 and area != 106
-		&& !(area = 6 && subarea > 1)//Labs has 2 areas
-		&& !(area = 4 && subarea > 1) //Caves has 2 areas
-		&& !(area = 114 && subarea > 1) )//Jungle has 2 areas
+		if inverted
 		{
-			subarea += 1
+			inverted = false;
 		}
-		else if area < 100// && area=2 && area=4
-		{
-			if area < 9
-			{
-			    if inverted == false
-			    {
-					if area == 3
-					{
-						//Swap labs and caves
-						area = 6
-						subarea = 1;
-					}
-					else if area == 4 && subarea == 2
-					{
-						area = 9
-						subarea = 1;
-					}
-					else if area == 5 && (curse || bcurse || ccurse)
-					{
-						area = 115;
-						subarea = 1;
-					}
-					else if area == 5
-					{
-						if (curse || bcurse || ccurse)
-						{
-							area = 115;
-							subarea = 1;
-						}
-						else if inverted
-						{
-							area = 111
-							subarea = 1;
-						}
-						else
-						{
-							area = 4;
-							subarea = 1;
-						}
-					}
-					else if area == 6 && subarea == 2
-					{
-						area = 5;
-						subarea = 1;
-					}
-					else if area == 8 && subarea == 3
-					{
-						//Wonderland 3 to cave
-						if (curse || bcurse || ccurse)
-						{
-							area = 115;
-							subarea = 1;
-						}
-						else
-						{
-							area = 4;
-							subarea = 1;
-						}
-					}
-					else
-					{
-					    area += 1
-					    subarea = 1
-					}
-			    }
-			}
-			else if area == 10//Savanna to Jungle
-			{
-				area = 117;
-				subarea = 1;
-				/*
-				if scrIsCrown(24)
-					hard -= 1;
-				else
-				*/
-				if !skipping
-					hard += 1;
-			}
-			else if area == 9
-			{
-				area = 119;	
-			}
-		}    
 		else if ( area == 1 && oasis )
 		{
 			area = 101;
@@ -366,11 +285,73 @@ function scrNextLevel(skipping = false) {
 			inverted = false;
 			oasis = false;
 		}
-		//TO INVERTED AREAS
-		else if inverted
+		else if area == 3 && subarea > 2
 		{
-			scrNavigateToInvertedArea();
+			//Swap labs and caves
+			area = 6
+			subarea = 1;
 		}
+		else if area == 4 && subarea > 1
+		{
+			area = 9
+			subarea = 1;
+		}
+		else if area == 5 && subarea > 2
+		{
+			//Frozen cityy to caves
+			if (curse || bcurse || ccurse)
+			{
+				area = 115;
+			}
+			else
+			{
+				area = 4;
+			}
+			subarea = 1;
+		}
+		else if area == 6 && subarea > 1
+		{
+			area = 5;
+			subarea = 1;
+		}
+		else if area == 8 && subarea > 2
+		{
+			//Wonderland 3 to cave
+			subarea = 1;
+			if (curse || bcurse || ccurse)
+			{
+				area = 115;
+			}
+			else
+			{
+				area = 4;
+			}
+		}
+		else if area == 10 && subarea > 2//Savanna to Jungle
+		{
+			area = 117;
+			subarea = 1;
+			if !skipping
+				hard += 1;
+		}
+		else if area == 9 && subarea > 2
+		{
+			//Palace to throne
+			area = 119;
+			subarea = 1;
+		}
+		else if ( subarea < 3 and area != 2// and area != 105 and area != 106
+		&& !(area = 6 && subarea > 1)//Labs has 2 areas
+		&& !(area = 4 && subarea > 1) //Caves has 2 areas
+		&& !(area = 114 && subarea > 1) )//Jungle has 2 areas
+		{
+			subarea += 1
+		}
+		else if area < 9//Normal area increase
+		{
+			area += 1
+			subarea = 1
+		}    
 		if !skipping
 		{
 			if (area=105 || area=106|| area=107 || area = 108 || area = 109 || area = 110

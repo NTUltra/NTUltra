@@ -187,6 +187,12 @@ if instance_exists(Player)
 				invertedportaldelay=45+inc;
 				didSpawnInv = true;
 		    }
+			 else if (area == 142)
+		    {
+				invertedportalcounter=1;
+				invertedportaldelay=45+inc;
+				didSpawnInv = true;
+		    }
 			if didSpawnInv
 			{
 				with ForceInversion
