@@ -730,6 +730,7 @@ if race == 7 //roids secondary weapon
 			bwep = irandom(maxwep);
         else
             bwep = UberCont.opt_gm1wep
+		instance_create(x,y,RadFree);
     }
     else if !UberCont.secondary_start_wep[race] || UberCont.selected_start_bwep[race] == -2 {
         bwep = wep
@@ -863,6 +864,7 @@ extrafeetdodged = false;
 
 //lava
 hotfloor = 0;
+radFloor = 0;
 
 //freezing
 getFrozen = 0;

@@ -1,6 +1,6 @@
 /// @description Camera movement
 
-if !instance_exists(Player) || instance_exists(Credits)
+if !instance_exists(Player) || instance_exists(Credits) || instance_exists(Tutorializer)
 	exit;
 var vw = __view_get( e__VW.WView, 0 )*0.5;
 var vh = __view_get( e__VW.HView, 0 )*0.5;

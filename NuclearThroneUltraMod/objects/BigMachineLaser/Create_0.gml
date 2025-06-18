@@ -23,9 +23,9 @@ loops = GetPlayerLoops();
 maxSpeed += min(2.5,loops*0.25);
 if loops > 0
 {
-	maxAmmo = 8 + min(10,loops);
+	maxAmmo = 7 + min(10,loops);
 	fireRate = 2;
-	laserDelay = 55 - min(30,loops*5);
+	laserDelay = 65 - min(30,loops*5);
 	if loops > 1
 		fireRate = 1;
 }

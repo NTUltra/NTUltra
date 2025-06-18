@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":5.102018,
+  "duration":5.1020184,
   "name":"sndChickenHeadlessLoop",
   "parent":{
     "name":"Player",

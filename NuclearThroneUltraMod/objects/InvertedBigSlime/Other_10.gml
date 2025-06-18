@@ -1,4 +1,9 @@
 /// @description Fire More
+with Slime
+{
+	alarm[1] += 5;	
+}
+alarm[1] += actTime;
 var ran = random(10);
 if ran < 4 {
     snd_play(sndEnemyFire);

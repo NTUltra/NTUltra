@@ -167,6 +167,23 @@ if instance_exists(Player)
 			y = 10016;
 		}
 		scrForcePosition60fps();
+		if area == 144
+		{
+			var f = instance_place(x,y,Floor)
+			if f.styleb == 1
+			{
+				with f
+				{
+					styleb = false;
+					depth += 1;
+					sprite_index = sprFloor144;
+					with instance_place(x,y,FloorBloom)
+					{
+						instance_destroy();	
+					}
+				}
+			}
+		}
 	}
 	if (Player.area == 9 || Player.area == 118) && Player.subarea == 3
 		Player.y -= 64;

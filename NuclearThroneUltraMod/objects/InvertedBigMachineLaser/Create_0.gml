@@ -21,7 +21,7 @@ fireRate = 2;
 laserDelay = 60;
 if loops > 0
 {
-	maxAmmo = 7 + min(10,loops);
+	maxAmmo = 6 + min(10,loops);
 	fireRate = 1;
-	laserDelay = 50 - min(30,loops*5);
+	laserDelay = 55 - min(30,loops*5);
 }

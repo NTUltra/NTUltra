@@ -38,7 +38,7 @@ if existTime > 15
 	}
 }
 with WeaponDeposit {
-	with instance_create(other.x,other.y,WepPickup)
+	with instance_create(other.x,other.y,WepPickupForOneWepOnly)
 	{
 		persistent = true;
 		scrWeapons()

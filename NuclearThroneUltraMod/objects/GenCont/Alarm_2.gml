@@ -796,7 +796,7 @@ if (Player.area == 134)
 }
 
 
-if (Player.area == 8 || Player.area == 109) && Player.loops > 1 && Player.subarea == 1
+if ((Player.area == 8 || Player.area == 109) && Player.loops > 1 && Player.subarea == 1)
 {
 	//Mushroomland
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)

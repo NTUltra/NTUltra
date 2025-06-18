@@ -23,6 +23,7 @@ if instance_exists(Player)
 	//	dmg = 5;
 	if Player.race=23
 	{
+		cantHitTeam = 2;
 		team = 2;
 		//the normal scale
 		image_xscale += 0.15

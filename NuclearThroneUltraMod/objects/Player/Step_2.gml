@@ -1255,7 +1255,8 @@ if my_health <= 0 && armour < 1
 			{maxhealth=0}
 
 			snd_play(sndChickenLoseHead)
-			snd_loop(sndChickenHeadlessLoop)
+			if !audio_is_playing(sndChickenHeadlessLoop)
+				snd_loop(sndChickenHeadlessLoop)
 			repeat(12){
 			with instance_create(x,y,BloodStreak){
 			motion_add(random(360),2+random(3))

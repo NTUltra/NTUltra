@@ -156,6 +156,8 @@ if (type == network_type_data) {
 						bwep = 0;
 					if ammo[wep_type[wep]] < typ_ammo[wep_type[wep]] * 3
 						ammo[wep_type[wep]] += typ_ammo[wep_type[wep]] * 3;
+					if !instance_exists(RadFree)
+						instance_create(x,y,RadFree);
 					scrWeaponHold();
 				}
 			}

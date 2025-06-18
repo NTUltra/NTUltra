@@ -237,6 +237,9 @@ if instance_exists(Player)
 			case 143:
 			__background_set_colour( make_color_rgb(65, 67, 76) )
 			break;
+			case 144:
+			__background_set_colour( make_color_rgb(72, 253, 8) )
+			break;
 		}
 	}
 	else
@@ -364,6 +367,8 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(53, 34, 34) )
 		else if Player.area == 143//Inverted Pipe world
 			__background_set_colour( make_color_rgb(31, 51, 31) )
+		else if Player.area == 144//Radiation sludge land
+			__background_set_colour( make_color_rgb(71, 76, 56) )
 	}
 }
 else

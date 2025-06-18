@@ -176,6 +176,21 @@ function scrFloorArea(area, styleb){
 	case 143:
 	sprite_index=sprFloor143;
 	break;
+	case 144:
+	sprite_index=sprFloor144B;
+	image_index = choose(0,1,2,3);
+	with instance_create(x,y,FloorBloom) {
+		sprite_index = sprFloor144B;
+		image_index = other.image_index;
+	}
+	with instance_create_depth(x,y,depth,FloorOverlay)
+	{
+		image_speed = 0;
+		image_index = choose(0,1);
+	}
+	depth -= 1;
+	
+	break;
 	default:
 	sprite_index=sprFloor0B;
 	break;
@@ -345,6 +360,10 @@ function scrFloorArea(area, styleb){
 	break;
 	case 143:
 	sprite_index=sprFloor143;
+	break;
+	case 144:
+	sprite_index=sprFloor144;
+	image_index = choose(0,1,2,3,4,0,1,2,3,4,5);
 	break;
 	default:
 	sprite_index=sprFloor0;

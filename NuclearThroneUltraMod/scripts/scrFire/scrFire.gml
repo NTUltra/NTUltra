@@ -122,7 +122,8 @@ function scrFire(canDrown = true) {
 			ammo[wep_type[wep]] -= wep_cost[wep]
 			//if Player.ultra_got[70]
 			//ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
-			rad -= wep_rad[wep]
+			if !instance_exists(RadFree)
+				rad -= wep_rad[wep]
 			rad = max(rad,0);
 		}
 		with Player {

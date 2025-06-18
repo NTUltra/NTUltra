@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.13068,
+  "duration":1.1306803,
   "name":"sndChickenRegenHead",
   "parent":{
     "name":"Player",

@@ -5,8 +5,7 @@ angle = random(360)
 turnspeed = random(8)-4
 rotspeed = random(16)-8
 
-image_index = random(image_number)
-image_speed = 0
+
 if instance_exists(Player)
 {
 var area;
@@ -63,6 +62,10 @@ case 135:sprite_index = sprDebris135; break;
 case 136:sprite_index = sprDebris136; break;
 case 137:sprite_index = sprDebris137; break;
 case 138:sprite_index = sprDebris138; break;
+case 142:sprite_index = sprDebris142; break;
+case 143:sprite_index = sprDebris143; break;
+case 144:sprite_index = sprDebris144; break;
+case 145:sprite_index = sprDebris145; break;
 default: sprite_index = sprDebris0; break;
 }
 
@@ -104,6 +107,8 @@ rotspeed = (10+random(20))*choose(1,-1)
 
 	
 }
+image_index = random(image_number)
+image_speed = 0
 if scrIsGamemode(24)
 {
 	sprite_index = sprSkillIcon

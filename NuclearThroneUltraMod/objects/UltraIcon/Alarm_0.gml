@@ -6,6 +6,7 @@ if (!isAlternative && !canAlt)// && !scrIsGamemode(22) && !scrIsGamemode(30) <-L
 	with instance_create(x,y - 32,UltraIcon)
 	{
 		skill = other.skill;
+		skillIndex = other.skillIndex + 0.5;
 		canAlt = true;
 		if (scrTranslateUltraToSecretStat(skill,Player.bskin) > -1 && UberCont.ctot_secret_ultra_found[scrTranslateUltraToSecretStat(skill,Player.bskin)])
 			isAlternative = true;

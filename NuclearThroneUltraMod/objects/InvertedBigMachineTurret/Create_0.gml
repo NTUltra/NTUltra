@@ -19,4 +19,4 @@ if loops > 0
 if loops > 10
 	proj = EnemyBouncerBullet;
 actTime = 40;
-actTime -= min(25,loops*9)
+actTime -= min(25,loops*5)

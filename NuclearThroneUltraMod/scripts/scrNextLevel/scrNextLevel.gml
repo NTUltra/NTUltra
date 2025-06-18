@@ -192,17 +192,15 @@ function scrNextLevel(skipping = false) {
 			area = 137;//VOID
 		}
 		//Out of order normal navigation
-		else if area == 126 && subarea > 1//Graveyard
+		else if area == 126 && subarea > 0//Graveyard
 		{
 			area = 3;
 			subarea = 0;
-			lastarea = area;
-			lastsubarea = subarea;
 		}
 		else if area = 103//YV mansion
 		{
 			area = 3
-			subarea = 1;
+			subarea = 2;
 		}
 		//Jungle
 		else if area == 114 && subarea > 1
@@ -225,7 +223,7 @@ function scrNextLevel(skipping = false) {
 			// To inv palace
 			area = 118;
 			subarea = 1;
-			inverted = true;
+			inverted = false;
 		}
 		//Ultra scrapyard
 		else if area == 136 && subarea > 2

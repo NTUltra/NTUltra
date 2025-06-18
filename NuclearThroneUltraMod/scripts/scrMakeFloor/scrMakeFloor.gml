@@ -67,6 +67,9 @@ function scrMakeFloor(limiter) {
 
 	if area = 4|| area = 111 || area = 115//caves?
 	instance_create(x,y,Floor)
+	
+	if area = 144 || area = 145//RADIATION SLUDGE LAND
+	instance_create(x,y,Floor)
 
 	if area = 5 || area = 107 
 	{ if ( (subarea != 3 &&random(10) < 1) || (subarea == 3 && random(20)<1 ) )//frozzen city 11
@@ -862,6 +865,8 @@ function scrMakeFloor(limiter) {
 	trn = choose(0,0,0,0,90,-90)
 	else if area = 4 || area = 111 || area = 115
 	trn = choose(0,0,0,0,90,-90,180)
+	else if area = 144 || area = 145//RADIATION SLUDGE LAND
+	trn = choose(0,0,0,0,0,0,90,-90,180);
 	else if area = 5 || area = 107
 	trn = choose(0,0,0,0,180,180)//0 0 0 0 0 180
 	else if area = 6 || area = 112
@@ -1148,6 +1153,19 @@ function scrMakeFloor(limiter) {
 		}
 		if random(4) < 1
 		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+	}
+	//RADIATION SLUDGE LAND
+	if area == 144 || area == 145
+	{
+		if random(9+instance_number(FloorMaker)) > 10
+		{
+			instance_destroy()
+			if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
+			instance_create(x+16,y+16,AmmoChest)
+			instance_create(x,y,Floor)}
+		}
+		if instance_number(Floor) > 10 && instance_number(FloorMaker) < 2 || random(4) < 1
+			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	if area == 135 && instance_number(Floor) > 5 && Player.subarea != 3
 	{

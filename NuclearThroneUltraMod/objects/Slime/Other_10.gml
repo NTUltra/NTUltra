@@ -1,5 +1,10 @@
 /// @description Fire
 var ran = random(10);
+with Slime
+{
+	alarm[1] += 5;	
+}
+alarm[1] += actTime;
 if ran < 4 {
     snd_play(sndEnemyFire);
 	sprite_index = spr_fire;

@@ -25,6 +25,22 @@ function scrGenerateFloorMaker(limiter) {
 				//Crown of opposite onto crown of disco
 				styleb = choose(1,1,1,1,1,1,0)
 			}
+			if Player.area == 144 || Player.area == 145
+			{
+				//RADIATION SLUDGE LAND
+				var gotB = false;
+				with Floor
+				{
+					if styleb == 1
+						gotB = true;
+				}
+				if !gotB
+				{
+					styleb = true;
+					if scrIsCrown(27)
+						styleb = false;
+				}
+			}
 			var s = clamp(Player.loops*5,0,30);
 			goal += s;
 			

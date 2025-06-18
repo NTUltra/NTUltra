@@ -183,7 +183,21 @@ if !instance_exists(GenCont)
 				}
 		}
 	}
-	snd_play(sndAmmoChest)
+	snd_play(sndAmmoChest);
+	//Just in case ultra weapon with no rads
+	with Player {
+		if rad < wep_rad[wep]
+		{
+			rad += max(30,wep_rad[wep]);
+			repeat(6)
+			{
+				with instance_create(x,y,PlutoFX)
+				{
+					motion_add(random(360),2);
+				}	
+			}
+		}
+	}
 	instance_destroy()
 }
 

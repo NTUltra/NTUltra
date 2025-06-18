@@ -14,15 +14,19 @@ if hasNoMenuOpen()
 		{
 			race --;
 			if race == 13
-				race = racemax;
+				race = 26;
 			else if race == 14
 				race = 12;
 			else if race == 15
 				race = 13;
 			else if race == 12
 				race = 14
+			else if race == 27
+				race = 0;
 			else if race < 0
-				race = 15;
+				race = 28;
+			else if race == 28
+				race = 26;
 		}
 		until (UberCont.race_have[race])
 	
@@ -46,9 +50,13 @@ if hasNoMenuOpen()
 			else if race == 14
 				race = 16;
 			else if race == 16
+				race = 28;
+			else if race == 29
 				race = 0;
-			else if race > racemax
+			else if race == 28
 				race = 14;
+			else if race > racemax
+				race = 27;
 
 		}
 		until (UberCont.race_have[race])

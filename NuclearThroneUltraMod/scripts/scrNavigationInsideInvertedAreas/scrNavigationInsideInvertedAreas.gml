@@ -75,7 +75,7 @@ function scrNavigationInsideInvertedAreas(skipping){
 	{
 		//to Labs
 		area = 6;
-		subarea = 1;
+		subarea = 0;
 	}
 	//Inverted desert
 	else if area = 105
@@ -147,7 +147,7 @@ function scrNavigationInsideInvertedAreas(skipping){
 		area = 5
 		subarea = 0;
 	}
-	if area != 100 && area != 135 && area != 104 && area != 137
+	if area != 100 && area != 135 && area != 104 && area != 137 && area != 128 && area != 129
 	{
 		lastarea = area;
 		lastsubarea = subarea;

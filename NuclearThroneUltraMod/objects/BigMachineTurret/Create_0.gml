@@ -16,5 +16,5 @@ if loops > 0
 else if loops > 10
 	proj = EnemyBouncerBullet;
 actTime = 50;
-actTime -= min(30,loops*10)
+actTime -= min(30,loops*5)
 depth = 2;

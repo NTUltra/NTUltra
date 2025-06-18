@@ -30,7 +30,7 @@ function scrChickenRegen(healAmount){
 		        maxhealth = min(maxhealth + healAmount,targetHealth);
 				my_health = max(my_health,1);
 	        }
-			bleed = 1;
+			bleed = 2;
 	    }
 	}
 }

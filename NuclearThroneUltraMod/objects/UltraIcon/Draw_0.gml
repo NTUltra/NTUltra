@@ -1,6 +1,5 @@
 draw_set_color(c_dkgray)
 //draw_rectangle(x-12,y-16,x+12,y+16,0)
-
 if selected
 {
 draw_sprite(sprSkillSelected,-1,x,y)

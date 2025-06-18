@@ -149,6 +149,7 @@ function scrTips() {
 	"kraken pulls enemies towards you",
 	"doing alright",
 	"let's have fun!",
+	"Ammo chest can refill your rads if you walk over them with an ultra weapon without having enough rads to fire that ultra weapon",
 	"be kind",
 	"blast!",
 	"overcome the challenge!",

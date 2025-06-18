@@ -143,7 +143,7 @@ function scrNavigateToInvertedArea(){
 			subarea = 1;
 		}
 	}
-	if area != 100 && area != 135 && area != 104 && area != 137
+	if area != 100 && area != 135 && area != 104 && area != 137 && area != 128 && area != 129
 	{
 		lastarea = area;
 		lastsubarea = subarea;

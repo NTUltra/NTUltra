@@ -34,20 +34,33 @@ if scrIsGamemode(28) || instance_exists(AllMutationsLeft)//ALL MUTATION CHOICES
 	}
 }
 var switchingMenu = false;
+var numberOfUltras = 0;
+var thereIsAlt = false;
+with UltraIcon
+{
+	if !isAlternative
+	{
+		numberOfUltras += 1;	
+	}
+	else
+		thereIsAlt = true;
+}
 if KeyCont.key_west[0] == 1
 {
 	event_user(0);
 	snd_play_2d(sndHover);
 	selectedIndex -= 1;
 	var hasSelectedSkill = false;
+	var maxTries = 9999;
 	if instance_exists(UltraIcon) || instance_exists(SkillIcon) || instance_exists(CrownIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{
 			if selectedIndex < 0
 			{
-				selectedIndex = instance_number(UltraIcon) + instance_number(SkillIcon) - 1;
+				selectedIndex = numberOfUltras + instance_number(SkillIcon) - 1;
 			}
+			debug(selectedIndex);
 			with UltraIcon
 			{
 				if skillIndex == other.selectedIndex
@@ -126,7 +139,8 @@ if KeyCont.key_west[0] == 1
 			else
 				selected = false;
 		}
-	} until (hasSelectedSkill)
+		maxTries -= 1;
+	} until (hasSelectedSkill || maxTries < 1)
 	
 }
 else if KeyCont.key_east[0] == 1
@@ -135,11 +149,12 @@ else if KeyCont.key_east[0] == 1
 	snd_play_2d(sndHover);
 	selectedIndex += 1;
 	var hasSelectedSkill = false;
+	var maxTries = 999;
 	if instance_exists(UltraIcon) || instance_exists(SkillIcon) || instance_exists(CrownIcon)
 	do {
 		if instance_exists(UltraIcon)
 		{
-			if selectedIndex > instance_number(UltraIcon) + instance_number(SkillIcon)- 1
+			if selectedIndex > numberOfUltras + instance_number(SkillIcon)- 1
 				selectedIndex = 0;
 			with UltraIcon
 			{
@@ -218,13 +233,41 @@ else if KeyCont.key_east[0] == 1
 			else
 				selected = false;
 		}
+		maxTries -= 1;
 	}
-	until (hasSelectedSkill)
+	until (hasSelectedSkill || maxTries < 1)
 }
 else if KeyCont.key_sout[0] == 1
 {
 	event_user(0);
-	if instance_exists(CrownIcon)
+	if thereIsAlt
+	{
+		debug(frac(selectedIndex));
+		var prevSelectedIndex = selectedIndex;
+		if frac(selectedIndex) > 0
+		{
+			selectedIndex -= 0.5;	
+		}
+		else
+		{
+			selectedIndex += 0.5;
+		}
+		with UltraIcon
+		{
+			if skillIndex == other.selectedIndex
+			{
+				selected = true;
+				hasSelectedSkill = true;
+			}
+			else
+				selected = false;
+		}
+		if !hasSelectedSkill
+		{
+			selectedIndex = prevSelectedIndex;
+		}
+	}
+	else if instance_exists(CrownIcon)
 	{
 		snd_play_2d(sndHover);
 		if controllingSecondaryMenu && instance_exists(MultiCrownMenu)
@@ -284,7 +327,34 @@ else if KeyCont.key_sout[0] == 1
 else if KeyCont.key_nort[0] == 1
 {
 	event_user(0);
-	if instance_exists(CrownIcon)
+	if thereIsAlt
+	{
+		debug(frac(selectedIndex));
+		var prevSelectedIndex = selectedIndex;
+		if frac(selectedIndex) > 0
+		{
+			selectedIndex -= 0.5;	
+		}
+		else
+		{
+			selectedIndex += 0.5;
+		}
+		with UltraIcon
+		{
+			if skillIndex == other.selectedIndex
+			{
+				selected = true;
+				hasSelectedSkill = true;
+			}
+			else
+				selected = false;
+		}
+		if !hasSelectedSkill
+		{
+			selectedIndex = prevSelectedIndex;
+		}
+	}
+	else if instance_exists(CrownIcon)
 	{
 		snd_play_2d(sndHover);
 		if controllingSecondaryMenu && instance_exists(MultiCrownMenu)

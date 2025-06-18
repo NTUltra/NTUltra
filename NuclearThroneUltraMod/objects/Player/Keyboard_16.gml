@@ -1,7 +1,7 @@
 /// @description More areas
 if UberCont.public = 0 {
 	if keyboard_check_pressed(ord("1")) {
-	    area = 142
+	    area = 144
 	    subarea = 0
 	    with enemy
 	    my_health = 0

@@ -78,6 +78,13 @@ function scrAreaName(area,subarea,loops){
 				txt = "3D_" + string(subarea);
 				upsideDown = true;
 			break;
+			case 144://RADIATION SLUDGE LAND
+				txt = "5D_" + string(subarea);
+			break;
+			case 145://RADIATION SLUDGE LAND
+				txt = "5D_" + string(subarea);
+				upsideDown = true;
+			break;
 			case 116://Survival Arena
 				txt = string(subarea);
 			break;
