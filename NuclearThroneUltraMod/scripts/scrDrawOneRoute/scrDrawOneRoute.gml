@@ -326,6 +326,24 @@ function scrDrawOneRoute(myRoute, myRouteIndex, myTime, overwriteRouteColour = f
 				tx = ox + xstep * 4;
 				ty = oy + ystep * 2;
 			break;
+			case 142://pipe world
+				tx = ox + xstep * 2;
+				ty = oy + ystep * 2;
+			break;
+			case 143://INV pipe world
+				tx = ox + xstep * 2;
+				ty = oy + ystep * 2;
+				inverted = true;
+			break;
+			case 144://radiation sludge land
+				tx = ox + xstep * 5;
+				ty = oy + ystep * 2;
+			break;
+			case 145://radiation sludge land
+				tx = ox + xstep * 5;
+				ty = oy + ystep * 2;
+				inverted = true;
+			break;
 		}
 		if (justSquares)
 		{

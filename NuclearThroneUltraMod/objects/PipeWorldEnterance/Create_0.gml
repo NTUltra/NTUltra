@@ -1,4 +1,5 @@
 var loops = GetPlayerLoops();
+
 maxhealth = 50;
 if loops > 0 || scrIsHardMode()
 	maxhealth = 120 * clamp(loops*6,1,14)
@@ -14,3 +15,8 @@ scrCreateSpace(1);
 y += 8;
 x += 16;
 alarm[2] = 20;
+if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes)
+{
+	instance_destroy(id,false);
+	exit;
+}

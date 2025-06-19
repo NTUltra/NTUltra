@@ -27,6 +27,7 @@ function scrGenerateFloorMaker(limiter) {
 			}
 			if Player.area == 144 || Player.area == 145
 			{
+				goal = 10;
 				//RADIATION SLUDGE LAND
 				var gotB = false;
 				with Floor
@@ -36,9 +37,18 @@ function scrGenerateFloorMaker(limiter) {
 				}
 				if !gotB
 				{
-					styleb = true;
+					styleb = 1;
 					if scrIsCrown(27)
-						styleb = false;
+						styleb = 0;
+				}
+				else
+				{
+					var nearest = instance_nearest(x,y,Floor);
+					//Variety
+					if nearest.styleb == 0
+						styleb = 1;
+					else
+						styleb = 0;
 				}
 			}
 			var s = clamp(Player.loops*5,0,30);
@@ -250,7 +260,8 @@ function scrGenerateFloorMaker(limiter) {
 				Player.x=x+16;
 				Player.y=y+16;
 			}*/
-			instance_create(x,y,Floor)
+			if !place_meeting(x,y,Floor)
+				instance_create(x,y,Floor)
 			if (Player.area == 9 && Player.subarea == 3)
 			{
 				instance_create(x,y,Floor)

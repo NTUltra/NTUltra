@@ -525,9 +525,9 @@ function scrWeapons() {
 	wep_type[47] = 4
 	wep_auto[47] = 0
 	wep_load[47] = 50
-	wep_cost[47] = 3
+	wep_cost[47] = 5
 	wep_sprt[47] = sprNukeLauncher
-	wep_area[47] = 10
+	wep_area[47] = 8
 	wep_text[47] = "this is what started it all"
 	wep_swap[47] = sndSwapExplosive
 	wep_rad[47] = 0;
@@ -5926,8 +5926,8 @@ function scrWeapons() {
 	wep_name[527] = "GOLDEN NUKE LAUNCHER"
 	wep_type[527] = 4
 	wep_auto[527] = 0
-	wep_load[527] = 47
-	wep_cost[527] = 3
+	wep_load[527] = 48
+	wep_cost[527] = 5
 	wep_sprt[527] = sprGoldNukeLauncher
 	wep_area[527] = 20
 	wep_text[527] = "luxury apocalypse starter"

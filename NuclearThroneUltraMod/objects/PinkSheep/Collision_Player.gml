@@ -20,16 +20,16 @@ if KeyCont.key_pick[other.p] = 1 && !used
 			{
 				lastarea = 8;	
 			}
-			else if area == 114
+			else// if area == 114
 			{
 				area = 8;
 				subarea = 2;
 			}
-			else
+			/*else
 			{
 				area = 8;
 				subarea = 1;
-			}
+			}*/
 		}
 		with instance_create(x,y,Portal)
 		{

@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Pieces",
-    "path":"folders/Sprites/Palace/Palace Enemy/TheThrone/Throne1/Pieces.yy",
+    "path":"folders/Sprites/Enemies/Palace Enemy/TheThrone/Throne1/Pieces.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -70,9 +70,15 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"25782b77-332f-4ac9-93a6-aa792c13112b","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5500a230-b7b5-4d6a-b596-fdd521e7d144","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a713e41-3d42-4d05-8921-0345205a5cae","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e799b899-bd98-4247-8ffe-2e1155db9f58","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"94155a89-4b4f-4438-a729-bd01b961746c","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2e213f2a-e3fd-4971-bb7e-4b3a08a1d2ea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25782b77-332f-4ac9-93a6-aa792c13112b","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5500a230-b7b5-4d6a-b596-fdd521e7d144","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a713e41-3d42-4d05-8921-0345205a5cae","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e799b899-bd98-4247-8ffe-2e1155db9f58","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"94155a89-4b4f-4438-a729-bd01b961746c","path":"sprites/sprNothingRightDeactivatedHurtLink/sprNothingRightDeactivatedHurtLink.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2e213f2a-e3fd-4971-bb7e-4b3a08a1d2ea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -240,6 +240,13 @@ function scrNextLevel(skipping = false) {
 			area = 6;
 			subarea = 0;
 		}
+		//Pipe World
+		else if area == 144 && subarea > 0
+		{
+			//to palace
+			area = 9;
+			subarea = 0;
+		}
 		//OASIS
 		else if area == 101 && subarea > 2
 		{
@@ -272,7 +279,7 @@ function scrNextLevel(skipping = false) {
 			scrNavigationInsideInvertedAreas(skipping);
 		}
 		//INCREASE SUBAREA!?
-		if inverted
+		if inverted && area != 100 && area != 135 && area != 104 && area != 137 && area != 128 && area != 129
 		{
 			inverted = false;
 		}

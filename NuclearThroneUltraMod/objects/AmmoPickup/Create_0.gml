@@ -45,6 +45,33 @@ if sprite_index == sprAmmo {
 				isArmour = true;
 				sprite_index = sprArmourAmmo;
 			}
+			if cursed {
+				if sprite_index == sprHPAmmo
+					sprite_index = sprCursedHPAmmo;
+				else
+					sprite_index = sprCursedArmourAmmo
+				alarm[0] -= 100
+				alarm[3] = 5;
+				if Player.ultra_got[30] && Player.altUltra
+				{
+					alarm[4] = 5;
+					alarm[0] += 50;
+				}
+			}
+			if supercursed {
+				actTime -= 5;
+				if Player.ultra_got[62] && Player.altUltra// living armour
+					sprite_index = sprSuperCursedArmourAmmo;
+				else
+					sprite_index = sprSuperCursedHPAmmo
+				alarm[0] -= 40
+				alarm[3] = 5;
+				if Player.ultra_got[30] && Player.altUltra
+				{
+					alarm[4] = 5;
+					alarm[0] += 50;
+				}
+			}
 		}
 		else
 		{

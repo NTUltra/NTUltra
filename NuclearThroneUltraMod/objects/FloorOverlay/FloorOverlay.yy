@@ -31,6 +31,9 @@
     "name":"sprFloor144BOverlay",
     "path":"sprites/sprFloor144BOverlay/sprFloor144BOverlay.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskFloor",
+    "path":"sprites/mskFloor/mskFloor.yy",
+  },
   "visible":true,
 }

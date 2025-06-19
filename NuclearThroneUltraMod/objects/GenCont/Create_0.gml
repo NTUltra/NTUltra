@@ -483,6 +483,8 @@ else if Player.area == 139//THE PIT
 	if Player.loops > 0
 		goal -= 10;
 }
+else if Player.area == 140//Sludge land
+	goal = 200 + s;
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;

@@ -415,6 +415,20 @@ function scrTips() {
 	tip = choose("vault available here on loop","the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?");
 	if Player.area = 140//INVCLOUDLAND
 	tip = choose("pink clouds","inverted skies","venomous monsters","they fly","lasers and bullets","cotton candy clouds");
+	if Player.area = 141//INVERSION GAUNTLET
+	tip = choose("???","everywhere and nowhere","the storm","everything is connected","into the storm","start the gauntlet");
+	if Player.area = 142//Pipe world
+	tip = choose("sewer pipe network","pipes","connecting...","subworld","skipping ahead","beware of venomous slime!");
+	if Player.area = 143//INV Pipe world
+	tip = choose("repeating pipes","more pipes","not leaving the network","connecting deeper");
+	if Player.area = 144//RADIATION SLUDGE LAND
+	tip = choose("radiation sludge","time to level up!","infinite radiation here","beware of radiation traps","sludge speeds you up","sludge is venomous!","flying characters don't get sludge rads unless extra feet");
+	if Player.area = 145//RADIATION SLUDGE LAND
+	tip = choose("purple sludge","more sludge");
+	if Player.area = 146//BLOOD LAND
+	tip = choose("blood weapon chest here","red","meat","blood");
+	if Player.area = 147//BLOOD LAND
+	tip = choose("toxic blood","green blood");
 	
 	}
 	else if tiptype = 2

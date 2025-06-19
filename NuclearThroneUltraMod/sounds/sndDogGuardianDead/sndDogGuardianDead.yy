@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.837375,
+  "duration":0.8373923,
   "name":"sndDogGuardianDead",
   "parent":{
     "name":"Palace",

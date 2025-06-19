@@ -205,6 +205,20 @@ function scrAreaFullName(area){
 				txt = "SEWER PIPE NETWORK";
 				upsideDown = true;
 			break;
+			case 144: //RADIATION SLUDGE LAND
+				txt = "RADIATION SLUDGE LAND";
+			break;
+			case 145: //RADIATION SLUDGE LAND
+				txt = "RADIATION SLUDGE LAND";
+				upsideDown = true;
+			break;
+			case 146: //BLOOD LAND
+				txt = "BLOOD LAND";
+			break;
+			case 147: //BLOOD LAND
+				txt = "BLOOD LAND";
+				upsideDown = true;
+			break;
 		}
 	}
 	return [txt,upsideDown];

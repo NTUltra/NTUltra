@@ -1609,6 +1609,40 @@ function scrPopEnemies() {
 		if !instance_exists(IDPDSpawn) || (instance_number(IDPDSpawn) < clamp(loops + 1,2,4))
 			instance_create(x,y,IDPDSpawn);	
 	}
+	//RADIATION SLUDGE LAND
+	//PALACE
+    if spawnarea == 144 {
+		if loops > 0 {
+			if styleb = 1 {
+	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,VenusRadTrap))
+	        } else {
+	            var ran = random(100);
+	            if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer,CloudShooter))
+	            } else if ran > 30 {
+					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
+				}
+				else if instance_number(enemy) < 1
+				{
+					instance_create(x + 16, y + 16,PalaceGuardian);
+				}
+	        }
+		} else {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,VenusRadTrap))
+	        } else {
+	            var ran = random(100);
+
+	            if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(BigSlime, GhostGuardian, CubeGuardian))
+	            }
+				else if instance_number(enemy) < 1
+				{
+					instance_create(x + 16, y + 16,GhostGuardian);
+				}
+	        }
+		}
+    }
 	//Crown Courtyard
     if spawnarea = 128{
 		if loops > 0 {

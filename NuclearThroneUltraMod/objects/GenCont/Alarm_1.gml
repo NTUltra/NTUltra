@@ -175,9 +175,13 @@ if instance_exists(Player)
 				with f
 				{
 					styleb = false;
-					depth += 1;
+					depth += 2;
 					sprite_index = sprFloor144;
 					with instance_place(x,y,FloorBloom)
+					{
+						instance_destroy();	
+					}
+					with instance_place(x,y,FloorOverlay)
 					{
 						instance_destroy();	
 					}

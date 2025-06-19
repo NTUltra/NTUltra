@@ -2258,6 +2258,36 @@ function scrDrawHUD() {
 				//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
 			}
 		}
+		with RadiationSludgeLandEntrance
+		{
+			if place_meeting(x,y,Player)
+			{
+				if !wentIn
+				{
+					if !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter) && !instance_exists(WantBoss) && !instance_exists(LilHunterFly) && !instance_exists(LilHunterDie) && !instance_exists(InvertedLilHunterFly) && !instance_exists(InvertedLilHunterDie)
+					{
+						draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox+16,y-oy-7)
+						draw_set_color(c_black)
+						draw_text(x-ox+16,y-oy-30,string_hash_to_newline(string(name)))
+						draw_text(x-ox+17,y-oy-30,string_hash_to_newline(string(name)))
+						draw_text(x-ox+17,y-oy-31,string_hash_to_newline(string(name)))
+						draw_set_color(c_white)
+						draw_text(x-ox+16,y-oy-31,string_hash_to_newline(string(name)))
+					}
+					else
+					{
+						var txt = "DEFEAT BOSS FIRST";
+						draw_set_color(c_black)
+						draw_text(x-ox,y-oy-30,txt)
+						draw_text(x-ox+1,y-oy-30,txt)
+						draw_text(x-ox+1,y-oy-31,txt)
+						draw_set_color(c_white)
+						draw_text(x-ox,y-oy-31,txt)
+					}
+					//draw_sprite(sprAmmoPointer,0,view_xview+5-10+type*10,view_yview+32+12)
+				}
+			}
+		}
 		with PinkSheep
 		{
 			if place_meeting(x,y,Player) && Player.area != 8 && Player.area != 113 && !used
@@ -2648,6 +2678,10 @@ function scrDrawHUD() {
             scrDrawSecretFinder(ox,oy);
         }
 		with PipeWorldEnterance
+		{
+            scrDrawSecretFinder(ox,oy);
+        }
+		with RadiationSludgeLandEntrance
 		{
             scrDrawSecretFinder(ox,oy);
         }

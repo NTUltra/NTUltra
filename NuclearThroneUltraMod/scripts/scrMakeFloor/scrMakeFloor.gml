@@ -69,7 +69,10 @@ function scrMakeFloor(limiter) {
 	instance_create(x,y,Floor)
 	
 	if area = 144 || area = 145//RADIATION SLUDGE LAND
-	instance_create(x,y,Floor)
+	{
+		if !place_meeting(x,y,Floor)
+			instance_create(x,y,Floor)
+	}
 
 	if area = 5 || area = 107 
 	{ if ( (subarea != 3 &&random(10) < 1) || (subarea == 3 && random(20)<1 ) )//frozzen city 11

@@ -731,6 +731,12 @@ if Player.area == 2 || Player.area == 110
 	with instance_nearest(f.x,f.y,Floor)
 		instance_create(x+16,y+16,PipeWorldEnterance)
 }
+if Player.subarea > 2 && (Player.area == 5 || Player.area == 107)
+{
+	var f = instance_furthest(Player.x,Player.y,Floor)
+	with instance_nearest(f.x,f.y,Floor)
+		instance_create(x,y,RadiationSludgeLandEntrance)
+}
 if Player.area == 9 && Player.subarea == 1
 {
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor)

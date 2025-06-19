@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndVenusFlyTrapBulletFire",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.36136055,
+  "name":"sndVenusFlyTrapBulletFire",
+  "parent":{
+    "name":"RadiationSludge",
+    "path":"folders/Sounds/RadiationSludge.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndVenusFlyTrapBulletFire.ogg",
+  "type":0,
+  "volume":1.0,
+}

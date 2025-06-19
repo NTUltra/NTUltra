@@ -10,7 +10,6 @@ if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_rou
 	exit;
 }
 alarm[0]=120;
-
 name = "PIZZA TIME?"
 
 wentIn = false;

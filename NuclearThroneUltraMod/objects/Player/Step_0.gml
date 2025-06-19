@@ -1794,52 +1794,7 @@ if outOfCombat
 	if !scrIsGamemode(25)
 		tempMaxSpeed += 1;
 }
-	
-maxSpeed += tempMaxSpeed;
-//CAP SPEED
-/*
-var por = instance_place(x,y,Portal);
-if !visible || (por != noone && por.alarm[1] < 1 && por.sprite_index != sprPortalSpawn) || instance_exists(SpiralCont)
-{
-	speed = 0;
-}
-else */if race == 23 && ultra_got[92] == 0
-{
-	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
-	if toxicamount > 0
-	{
-		speed *= 0.35;
-	}
-	else
-	{
-		speed = clamp(speed,maxSpeed*0.7,maxSpeed);
-	}
-}
-else if speed > maxSpeed
-	speed = maxSpeed
-maxSpeed -= tempMaxSpeed;
-if lockout
-	speed = 0;
-if roll = 1
-{
-	if UberCont.normalGameSpeed == 60
-		flushCharge += 0.5;
-	else
-		flushCharge += 1;
-	speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
-	if jump <= 0 && mask_index == mskPickupThroughWall
-	{
-		var msk = mask_index;
-		mask_index = mskPlayer;
-		if place_meeting(x,y,WallHitMe)
-		{
-			x = xprevious;
-			y = yprevious;
-		}
-		mask_index = msk;
-		instance_create(x,y,Dust);
-	}
-}
+//FLOORING	
 if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) && !instance_exists(SpiralCont))
 {
 	var remainHotFloor = 0;
@@ -1961,21 +1916,24 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 			if gs == sprFloor144B || gs == sprFloor144Explo
 			{
 				//RADIATION FLOOR
-				if jump <= 0 && (skill_got[14] || (race != 18 && race != 15))
+				if jump <= 0 && (skill_got[2] || (race != 18 && race != 15))
 				{
+					tempMaxSpeed += 1;
 					if is60fps
 					{
-						radFloor += 0.5;
+						if !skill_got[2]
+							radFloor += 0.5;
 						rad += 5;
 					}
 					else
 					{
-						radFloor += 1;
+						if !skill_got[2]
+							radFloor += 1;
 						rad += 10;
 					}
 					if instance_exists(EnemyVenom)
 						radFloor = 0;
-					if !skill_got[14] && radFloor == round(radFloor) && radFloor > 2 && (radFloor > 19 || radFloor % 2 == 0)
+					if radFloor == round(radFloor) && radFloor > 2 && (radFloor > 19 || radFloor % 2 == 0)
 					{
 						snd_play(sndVenomTick,0.1);
 						BackCont.shake += 1;
@@ -1995,7 +1953,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 						BackCont.shake += 10;
 						Sleep(50);
 					}
-					if radFloor > 42
+					if radFloor > 47
 					{
 						Sleep(100);
 						rad += 100;
@@ -2013,7 +1971,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 							ang += angStep;
 						}
 						DealDamage(1,false,false,false);
-						hitBy = sprFloor144B;
+						hitBy = sprRadiationPool;
 						radFloor=0;//allright you've burned now continue
 						//GAMEMODE UNLOCKABLE WALL IS LAVA
 						scrApplyEnemyVenom(0,id);
@@ -2129,7 +2087,47 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 	radFloor = remainRadFloor;
 }
 
+maxSpeed += tempMaxSpeed;
+//CAP SPEED
+if race == 23 && ultra_got[92] == 0
+{
+	//speed = clamp(speed,maxSpeed*0.8,maxSpeed);
+	if toxicamount > 0
+	{
+		speed *= 0.35;
+	}
+	else
+	{
+		speed = clamp(speed,maxSpeed*0.7,maxSpeed);
+	}
+}
+else if speed > maxSpeed
+	speed = maxSpeed
+maxSpeed -= tempMaxSpeed;
+if lockout
+	speed = 0;
+if roll = 1
+{
+	if UberCont.normalGameSpeed == 60
+		flushCharge += 0.5;
+	else
+		flushCharge += 1;
+	speed = 6.3*max(1,(skill_got[2]*1.3))//xtra feet rolling
+	if jump <= 0 && mask_index == mskPickupThroughWall
+	{
+		var msk = mask_index;
+		mask_index = mskPlayer;
+		if place_meeting(x,y,WallHitMe)
+		{
+			x = xprevious;
+			y = yprevious;
+		}
+		mask_index = msk;
+		instance_create(x,y,Dust);
+	}
+}
 
+//RELOAD
 scr60fpsReload();
 if reload > 0 && !canInfiniteFire
 	can_shoot = 0

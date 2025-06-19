@@ -79,10 +79,17 @@ function scrAreaName(area,subarea,loops){
 				upsideDown = true;
 			break;
 			case 144://RADIATION SLUDGE LAND
-				txt = "5D_" + string(subarea);
+				txt = "6D_" + string(subarea);
 			break;
 			case 145://RADIATION SLUDGE LAND
-				txt = "5D_" + string(subarea);
+				txt = "6D_" + string(subarea);
+				upsideDown = true;
+			break;
+			case 146: //Bloodland
+				txt = "4D_"+string(subarea);
+			break;
+			case 147: //Inverted Bloodland
+				txt = "4D_"+string(subarea);
 				upsideDown = true;
 			break;
 			case 116://Survival Arena
