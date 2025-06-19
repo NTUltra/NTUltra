@@ -52,10 +52,8 @@ function scrTurnOffInvisibility(fromPower = false, justTurnOff = false, fromDama
 		{
 			if ultra_got[109]
 			{
-				alarm[3] = max(15,alarm[3] + 5);
+				alarm[3] = max(14,alarm[3] + 5);
 			}
-			else
-				alarm[3] = max(5,alarm[3] + 2);
 		}
 		instance_create(x,y,InvisibilityDelay);
 		var ang = random(360);

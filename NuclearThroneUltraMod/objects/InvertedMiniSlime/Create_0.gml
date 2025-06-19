@@ -10,10 +10,8 @@ spr_fire = sprInvertedMiniSlimeFire;
 spr_dead = sprInvertedMiniSlimeDead
 
 //behavior
-actTime = 16;
+actTime = 20;
 maxSpeed = 2;
 projectileSpeed = 2.5;
 acidAmount = 4;
 droprate = 10;
-slimeExplosion = noone;
-shdOffset = -5;

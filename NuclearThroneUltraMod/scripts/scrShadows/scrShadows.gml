@@ -455,6 +455,8 @@ function scrShadows() {
 		draw_sprite(shd,0,x-vx,y-vy + shdOffset)
 	with FreakBandit
 		draw_sprite(shd24,0,x-vx,y-vy - 2)
+	with RadDiver
+		draw_sprite(shd24,0,x-vx,y-vy - 4)
 	with UltraProtector
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with UltraBandit

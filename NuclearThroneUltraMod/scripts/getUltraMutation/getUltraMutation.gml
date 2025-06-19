@@ -38,9 +38,9 @@ function getUltraMutation(){
 			if noUltra
 				return previousUltra;
 		}
-		if ultra_got[109]//Trash secret
+		if ultra_got[117]//Trash secret
 		{
-			return 109;	
+			return 117;	
 		}
 		else
 		{

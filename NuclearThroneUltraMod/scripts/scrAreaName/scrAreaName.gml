@@ -71,27 +71,6 @@ function scrAreaName(area,subarea,loops){
 			case 136://Ultra scrapyard
 				txt = "3C_" + string(subarea);
 			break;
-			case 142://Pipe World
-				txt = "3D_" + string(subarea);
-			break;
-			case 143://Pipe World
-				txt = "3D_" + string(subarea);
-				upsideDown = true;
-			break;
-			case 144://RADIATION SLUDGE LAND
-				txt = "6D_" + string(subarea);
-			break;
-			case 145://RADIATION SLUDGE LAND
-				txt = "6D_" + string(subarea);
-				upsideDown = true;
-			break;
-			case 146: //Bloodland
-				txt = "4D_"+string(subarea);
-			break;
-			case 147: //Inverted Bloodland
-				txt = "4D_"+string(subarea);
-				upsideDown = true;
-			break;
 			case 116://Survival Arena
 				txt = string(subarea);
 			break;
@@ -192,6 +171,27 @@ function scrAreaName(area,subarea,loops){
 			break;
 			case 141: //Inversion gauntlet
 				txt = "2C?4B?5?"
+				upsideDown = true;
+			break;
+			case 142://Pipe World
+				txt = "3D_" + string(subarea);
+			break;
+			case 143://Pipe World
+				txt = "3D_" + string(subarea);
+				upsideDown = true;
+			break;
+			case 144://RADIATION SLUDGE LAND
+				txt = "6D_" + string(subarea);
+			break;
+			case 145://RADIATION SLUDGE LAND
+				txt = "6D_" + string(subarea);
+				upsideDown = true;
+			break;
+			case 146: //Bloodland
+				txt = "4D_"+string(subarea);
+			break;
+			case 147: //Inverted Bloodland
+				txt = "4D_"+string(subarea);
 				upsideDown = true;
 			break;
 		}

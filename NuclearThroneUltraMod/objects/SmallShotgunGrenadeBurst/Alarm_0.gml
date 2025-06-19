@@ -20,7 +20,7 @@ repeat(am)
 {
 	with instance_create(x,y,SmallGrenade)
 	{
-		alarm[0] = 20;
+		alarm[0] = 21;
 		if other.isGold
 			sprite_index = sprSmallGoldGrenade
 		motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(other.randomAccuracy)-(other.randomAccuracy*0.5))*other.creator.accuracy,other.projectileSpeed+other.ammo)//speed=10

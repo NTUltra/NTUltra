@@ -12,6 +12,7 @@ with myscorch
 }
 loop=false;
 canDoSides = 0;
+fireAmount = 2;
 if instance_exists(Player)
 {
 	if Player.loops>1//loop 2 yo
@@ -24,8 +25,12 @@ if instance_exists(Player)
 		alarm[0] += 90;
 		scrGiveSnooze(0,0);
 	}
+	if Player.area == 139//The pit
+		fireAmount += 1;
 	if Player.area == 143
+	{
 		timer -= 30;
+	}
 }
 if canDoSides < 3
 {

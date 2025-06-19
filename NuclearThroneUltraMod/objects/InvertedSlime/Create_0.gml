@@ -12,7 +12,7 @@ spr_hurt = sprInvertedMiniSlimeHurt;
 spr_fire = sprInvertedMiniSlimeFire;
 spr_dead = sprInvertedMiniSlimeDead
 
-actTime = 12;
+actTime = 16;
 maxSpeed = 2.5;
 projectileSpeed = 3.25;
 acidAmount = 7;

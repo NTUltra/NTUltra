@@ -513,7 +513,7 @@ function scrPopulate() {
 			if point_distance(x,y,Player.x,Player.y) > 128
 			{
 				var n = instance_nearest(x,y,VenomTrap);
-				if (!instance_exists(VenomTrap) || (n != noone && point_distance(x,y,n.x,n.y) > 128))
+				if (!instance_exists(VenomTrap) || (n != noone && point_distance(x,y,n.x,n.y) > 160))
 				{
 					if ((!place_meeting(x + 32,y,WallHitMe) && place_meeting(x + 32,y,Floor))
 					|| (!place_meeting(x - 32,y,WallHitMe) && place_meeting(x - 32,y,Floor))

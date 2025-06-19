@@ -2,7 +2,7 @@ var sleepy = false;
 if instance_exists(Player) && Player.skill_got[29] {
 	sleepy = true;	
 }
-repeat(4)
+repeat(3)
 {
 	with instance_create(x+random(8)-4,y+random(8)-4,MiniSlime)
 	{

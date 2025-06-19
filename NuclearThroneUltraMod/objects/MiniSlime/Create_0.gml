@@ -11,10 +11,10 @@ spr_dead = sprMiniSlimeDead
 shd = shd8;
 
 //behavior
-actTime = 18;
+actTime = 22;
 maxSpeed = 1.5;
 projectileSpeed = 2.2;
 acidAmount = 3;
 droprate = 10;
 slimeExplosion = noone;
-shdOffset = -5;
+shdOffset = -6;

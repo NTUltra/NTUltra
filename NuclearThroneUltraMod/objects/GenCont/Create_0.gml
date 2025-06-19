@@ -240,6 +240,15 @@ if instance_exists(Player)
 			case 144:
 			__background_set_colour( make_color_rgb(72, 253, 8) )
 			break;
+			case 145:
+			__background_set_colour( make_color_rgb(72, 253, 8) )
+			break;
+			case 146:
+			__background_set_colour( make_color_rgb(73, 14, 14) )
+			break;
+			case 147:
+			__background_set_colour( make_color_rgb(73, 14, 14) )
+			break;
 		}
 	}
 	else
@@ -369,6 +378,12 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(31, 51, 31) )
 		else if Player.area == 144//Radiation sludge land
 			__background_set_colour( make_color_rgb(71, 76, 56) )
+		else if Player.area == 145//Radiation sludge land
+		__background_set_colour( make_color_rgb(71, 76, 56) )
+		else if Player.area == 146//Blood land
+		__background_set_colour( make_color_rgb(76, 30, 14) )
+		else if Player.area == 147//Blood land
+		__background_set_colour( make_color_rgb(71, 76, 56) )
 	}
 }
 else
@@ -483,8 +498,10 @@ else if Player.area == 139//THE PIT
 	if Player.loops > 0
 		goal -= 10;
 }
-else if Player.area == 140//Sludge land
-	goal = 200 + s;
+else if Player.area == 144 || Player.area == 145//Sludge land
+	goal = 160 + s;
+else if Player.area == 142 || Player.area == 143//Pipewoorld
+	goal = 60 + s;
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;

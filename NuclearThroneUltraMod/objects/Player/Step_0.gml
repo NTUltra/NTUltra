@@ -1953,7 +1953,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 						BackCont.shake += 10;
 						Sleep(50);
 					}
-					if radFloor > 47
+					if radFloor > 48
 					{
 						Sleep(100);
 						rad += 100;

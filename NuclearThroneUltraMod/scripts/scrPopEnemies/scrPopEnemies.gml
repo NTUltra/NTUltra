@@ -1557,12 +1557,12 @@ function scrPopEnemies() {
 	        }
 		} else {
 			if styleb = 1 && random(8) < 2 {
-	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian,ExploGuardian))
+	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, /*GhostGuardian,*/ExploGuardian))
 	        } else {
 	            var ran = random(100);
 
 	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, GhostGuardian, GuardianDog))
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, /*GhostGuardian,*/ GuardianDog))
 	            }
 				else if instance_number(enemy) < 1
 				{
@@ -1589,12 +1589,11 @@ function scrPopEnemies() {
 	        }
 		} else {
 			if styleb = 1 && random(7) < 2 {
-	            instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedGuardianDog, InvertedGhostGuardian))
+	            instance_create(x + 16, y + 16, choose(InvertedGuardianDog, InvertedGuardianDog/*, InvertedGhostGuardian*/))
 	        } else {
 	            var ran = random(100);
 
 	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedCubeGuardian, InvertedGhostGuardian, InvertedGuardianDog))
 	            }
 				else if instance_number(enemy) < 1
 				{
@@ -1610,35 +1609,36 @@ function scrPopEnemies() {
 			instance_create(x,y,IDPDSpawn);	
 	}
 	//RADIATION SLUDGE LAND
-	//PALACE
     if spawnarea == 144 {
 		if loops > 0 {
-			if styleb = 1 {
-	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,VenusRadTrap))
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,RadDiver,BigSlime))
 	        } else {
 	            var ran = random(100);
-	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer,CloudShooter))
-	            } else if ran > 30 {
-					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
+				if ran > 90
+				{
+					instance_create(x + 16, y + 16, choose(SmallUltraSniper, BigSlime,PitGhostExploder))	
 				}
+	            else if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(RadDiver, RadDiver, GhostGuardian,UltraRaven))
+	            }
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,PalaceGuardian);
+					instance_create(x + 16, y + 16,RadDiver);
 				}
 	        }
 		} else {
 			if styleb == 1 {
-	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,VenusRadTrap))
+	            instance_create(x + 16, y + 16, choose(VenusRadTrap, VenusRadTrap, VenusRadTrap,RadDiver))
 	        } else {
 	            var ran = random(100);
 
 	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(BigSlime, GhostGuardian, CubeGuardian))
+	                instance_create(x + 16, y + 16, choose(RadDiver, RadDiver, GhostGuardian))
 	            }
 				else if instance_number(enemy) < 1
 				{
-					instance_create(x + 16, y + 16,GhostGuardian);
+					instance_create(x + 16, y + 16,RadDiver);
 				}
 	        }
 		}

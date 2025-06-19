@@ -10,10 +10,10 @@ spr_fire = sprInvertedBigSlimeFire;
 spr_dead = sprInvertedBigSlimeDead
 
 //behavior
-actTime = 14;
+actTime = 16;
 acc = 0.8;
 maxSpeed = 3;
-projectileSpeed = 3.5;
+projectileSpeed = 3.25;
 acidAmount = 13;
 droprate = 20;
 shdOffset = -3;

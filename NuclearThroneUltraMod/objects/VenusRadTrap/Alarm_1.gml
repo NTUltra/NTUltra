@@ -28,6 +28,9 @@ scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if point_distance(target.x, target.y, x, y) > 48 {
+			sprite_index = spr_fire;
+			image_index = 0;
+			alarm[2] = sprite_get_number(spr_fire)/image_speed;
             snd_play(sndGuardianFire,0.15)
 			with instance_create(x,y - 8,VenusTrapBulletSpawn)
 			{	

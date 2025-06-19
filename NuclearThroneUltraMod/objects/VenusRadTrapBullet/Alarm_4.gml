@@ -1,7 +1,7 @@
 /// @description Fires bullets
 alarm[4] = fireDelay;
 gunAngle += rotation;
-fullCircle += rotation;
+fullCircle += abs(rotation);
 snd_play(sndVenusFlyTrapBulletFire,0.1);
 with instance_create(x,y,ExploGuardianBullet)
 {

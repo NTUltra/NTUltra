@@ -3,11 +3,11 @@ instance_create(x,y,WallBreakWallOnly);
 with instance_create(x,y,SmallExplosion)
 {
 	team=other.team;
-	if !scrIsGamemode(34)
+	if !scrIsGamemode(34)//Not hard mode
 	{
 		dmg=3;
 		with myExplosionMask
-			dmg = 3;
+			dmg = 2;
 	}
 }
 if !audio_is_playing(sndExplosionS)

@@ -206,10 +206,10 @@ function scrAreaFullName(area){
 				upsideDown = true;
 			break;
 			case 144: //RADIATION SLUDGE LAND
-				txt = "RADIATION SLUDGE LAND";
+				txt = "RADIATION SLUDGE";
 			break;
 			case 145: //RADIATION SLUDGE LAND
-				txt = "RADIATION SLUDGE LAND";
+				txt = "RADIATION SLUDGE";
 				upsideDown = true;
 			break;
 			case 146: //BLOOD LAND

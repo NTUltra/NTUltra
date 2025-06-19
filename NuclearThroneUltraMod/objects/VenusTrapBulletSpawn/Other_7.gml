@@ -17,6 +17,9 @@ if owner != -1 && instance_exists(owner) && owner.my_health > 0
 			image_angle = direction;
 			gunAngle = direction;
 			startingAngle = gunAngle;
+			projectileSpeed = other.projectileSpeed;
+			fireDelay = other.fireDelay;
+			rotation = other.myRotation;
 		}
 	}
 }

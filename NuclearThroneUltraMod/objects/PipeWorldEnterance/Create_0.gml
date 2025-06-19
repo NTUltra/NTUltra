@@ -1,6 +1,6 @@
 var loops = GetPlayerLoops();
 
-maxhealth = 50;
+maxhealth = 80;
 if loops > 0 || scrIsHardMode()
 	maxhealth = 120 * clamp(loops*6,1,14)
 mySize = 1

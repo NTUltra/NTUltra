@@ -27,7 +27,7 @@ if ran < 4 {
 		isVenomized = true;
 		wallDirection = chooseAngle;
 		image_yscale = ys;
-        motion_add(other.gunangle, other.projectileSpeed - 0.5)
+        motion_add(other.gunangle, other.projectileSpeed - 0.25)
         image_angle = direction
         team = other.team
     }

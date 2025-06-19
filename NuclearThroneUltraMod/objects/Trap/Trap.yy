@@ -40,6 +40,9 @@
     "name":"sprTrap",
     "path":"sprites/sprTrap/sprTrap.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskWall",
+    "path":"sprites/mskWall/mskWall.yy",
+  },
   "visible":true,
 }

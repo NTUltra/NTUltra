@@ -13,10 +13,10 @@ snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
 
 //behavior
-actTime = 14;
+actTime = 18;
 acc = 0.8;
 maxSpeed = 2.5;
-projectileSpeed = 3.5;
+projectileSpeed = 3.25;
 acidAmount = 12;
 droprate = 25;
 shdOffset = -3;

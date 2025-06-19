@@ -1,5 +1,4 @@
-
-///xxx();
+///scrFloorArea();
 // /@description
 ///@param
 function scrFloorArea(area, styleb){
@@ -204,6 +203,12 @@ function scrFloorArea(area, styleb){
 	depth -= 1;
 	
 	break;
+	case 145:
+	sprite_index=sprFloor145B;
+	break;
+	case 146:
+	sprite_index=sprFloor146B;
+	break;
 	default:
 	sprite_index=sprFloor0B;
 	break;
@@ -377,6 +382,12 @@ function scrFloorArea(area, styleb){
 	case 144:
 	sprite_index=sprFloor144;
 	image_index = choose(0,1,2,3,4,0,1,2,3,4,5);
+	break;
+	case 145:
+	sprite_index=sprFloor145;
+	break;
+	case 146:
+	sprite_index=sprFloor146;
 	break;
 	default:
 	sprite_index=sprFloor0;

@@ -842,7 +842,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <w>ALWAYS<w> <p>HIDE<p> YOU##INCREASE <p>STEALTH<p> SWAP <aq>IMMUNITY<aq> DURATION"
+	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <w>ALWAYS<w> <p>HIDE<p> YOU##SWAPPING <p>STEALTH<p BRIEFLY MAKES YOU <aq>IMMUNE<aq>"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"

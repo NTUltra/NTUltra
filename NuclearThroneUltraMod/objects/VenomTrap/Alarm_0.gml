@@ -15,6 +15,6 @@ if canDoSides == 3
 	70,
 	32,
 	250)
-fire = 3
+fire = fireAmount
 alarm[0] = timer;
 

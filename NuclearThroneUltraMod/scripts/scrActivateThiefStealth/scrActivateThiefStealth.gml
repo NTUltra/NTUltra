@@ -4,10 +4,8 @@
 function scrActivateThiefStealth(){
 	if ultra_got[109]
 	{
-		alarm[3] = max(15,alarm[3] + 5);
+		alarm[3] = max(14,alarm[3] + 5);
 	}
-	else
-		alarm[3] = max(5,alarm[3] + 2);
 	if !instance_exists(GenCont)
 		snd_play(sndThiefHide,0.05);
 	var ang = random(360);
