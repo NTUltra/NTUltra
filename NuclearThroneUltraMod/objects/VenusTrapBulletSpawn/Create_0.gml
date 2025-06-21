@@ -9,3 +9,4 @@ image_speed = 0.5
 projectileSpeed = 6;
 fireDelay = 4;
 myRotation = 20;
+isInverted = false;

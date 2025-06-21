@@ -43,6 +43,11 @@ if target != noone {
 				team = other.team;
 				owner = other.id;
 				motion_add(90,2.5);
+				isInverted = other.isInverted;
+				if isInverted
+				{
+					sprite_index = sprInvertedGuardianBulletSpawn;
+				}
 			}
 			alarm[1] = actTime * 4;
         }

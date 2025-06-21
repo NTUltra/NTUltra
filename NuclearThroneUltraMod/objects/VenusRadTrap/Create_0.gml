@@ -29,3 +29,4 @@ acc = 0;
 maxSpeed = 0;
 imageIndex = 0;
 routines = 150 + irandom(200);
+isInverted = false;

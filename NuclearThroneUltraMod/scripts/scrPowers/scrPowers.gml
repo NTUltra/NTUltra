@@ -105,6 +105,7 @@ function scrPowers(raceOverwrite = -1) {
 					//n = tn;
 				var n = thiefTarget;
 				var stabDir = point_direction(x,y,n.x,n.y);
+				var l = loops;
 				if isInvisible
 				{
 					with instance_create(x,y,AnimDestroyTop)
@@ -121,14 +122,14 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(image_angle,4);
 						}
 					}
-					var d = 25 + level * 5;
+					var d = 20 + level * 5;
 					with n
 					{
 						if other.skill_got[5]
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
 							instance_create(x,y,ThiefStab);
-							DealDamage(d + 25 + min(100,other.loops*3) + my_health*0.25);
+							DealDamage(d + 25 + min(100,l*2) + l + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -149,10 +150,10 @@ function scrPowers(raceOverwrite = -1) {
 								range -= 2;
 								image_xscale *= 0.5;
 								image_yscale = image_xscale;
-								dmg = 12;
+								dmg = 11 + l;
 								visible = false;
 							}
-							DealDamage(d + min(100,other.loops*3));
+							DealDamage(d + min(100,l*2) + l);
 							BackCont.viewx2 += lengthdir_x(40,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(40,stabDir)*UberCont.opt_shake
 							BackCont.shake += 30
@@ -219,15 +220,14 @@ function scrPowers(raceOverwrite = -1) {
 						BackCont.viewy2 += lengthdir_y(10,stabDir)*UberCont.opt_shake
 						BackCont.shake += 10	
 					}
-					var l = loops;
 					with n
 					{
 						if other.ultra_got[111]
 						{
 							snd_play(sndThiefStealUpg,0.01);
-							DealDamage(18 + min(20,l * 3));
+							DealDamage(18 + min(20,l * 2) + l);
 							with instance_create(x,y,ThiefStab) {
-								dmg = 15 + min(10,l * 2);	
+								dmg = 15 + min(10,l) + l;	
 							}
 							motion_add(stabDir,6)
 							with instance_create(x,y,AnimDestroyTop)
@@ -243,7 +243,7 @@ function scrPowers(raceOverwrite = -1) {
 						else
 						{
 							snd_play(sndThiefSteal,0.01);
-							DealDamage(3 + min(10,l) * 2);
+							DealDamage(3 + min(10,l) + l);
 							motion_add(stabDir,4)
 							with instance_create(x,y,AnimDestroyTop)
 							{

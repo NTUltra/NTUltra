@@ -51,8 +51,8 @@
     "path":"sprites/sprRadDiverIdle/sprRadDiverIdle.yy",
   },
   "spriteMaskId":{
-    "name":"mskBandit",
-    "path":"sprites/mskBandit/mskBandit.yy",
+    "name":"mskRadDiver",
+    "path":"sprites/mskRadDiver/mskRadDiver.yy",
   },
   "visible":true,
 }

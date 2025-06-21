@@ -256,18 +256,18 @@ function scrNextLevel(skipping = false) {
 			oasis = false;
 		}
 		//Mushroom
-		else if area == 117
+		else if area == 117 && subarea > 0
 		{
 			//To jungle
 			area = 114
 			subarea = 0;
 		}
-		else if area == 102//Pizza to oasis boss
+		else if area == 102 && subarea > 0//Pizza to oasis boss
 		{
 			area = 101;
 			subarea = 2;
 		}
-		else if area == 115
+		else if area == 115 && subarea > 0
 		{
 			area = 4;
 			subarea = 1;

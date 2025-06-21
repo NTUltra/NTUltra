@@ -27,3 +27,5 @@ projectileSpeed = 5;
 amountOfProjectiles = 1;
 loops = GetPlayerLoops();
 maxAmountOfProjectiles = min(30,12 + loops);
+damageMultiplier = 3;
+isInverted = false;

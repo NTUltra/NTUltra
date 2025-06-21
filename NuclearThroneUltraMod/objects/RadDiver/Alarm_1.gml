@@ -22,6 +22,11 @@ if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 				team = other.team;
 				owner = other.id;
 				motion_add(other.gunangle,3);
+				isInverted = other.isInverted;
+				if isInverted
+				{
+					sprite_index = sprInvertedGuardianBulletSpawn;
+				}
 			}
 			alarm[1] = actTime * 4;
 	}
