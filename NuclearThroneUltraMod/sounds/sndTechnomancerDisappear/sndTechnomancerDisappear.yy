@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.646969,
+  "duration":1.6469841,
   "name":"sndTechnomancerDisappear",
   "parent":{
     "name":"Technomancer",

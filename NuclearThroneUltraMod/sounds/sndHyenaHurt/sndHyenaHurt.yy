@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.349206,
+  "duration":0.34920636,
   "name":"sndHyenaHurt",
   "parent":{
     "name":"Savanna",

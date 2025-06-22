@@ -1594,6 +1594,7 @@ function scrPopEnemies() {
 	            var ran = random(100);
 
 	            if ran > 55 {
+					instance_create(x + 16, y + 16, choose(InvertedPalaceGuardian, InvertedPalaceGuardian, InvertedExploGuardian, InvertedExploGuardian, InvertedCubeGuardian, /*InvertedGhostGuardian,*/ InvertedGuardianDog))
 	            }
 				else if instance_number(enemy) < 1
 				{

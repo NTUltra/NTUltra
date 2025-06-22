@@ -1,5 +1,5 @@
 /// @description Thunder Strike
-snd_play_fire(sndThunderStrike);
+snd_play_2d(sndThunderStrike);
 alarm[5] = actTime;
 sprite_index = spr_idle
 var aimDirection = point_direction(x,y,targetX,targetY);

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.473344,
+  "duration":0.473356,
   "name":"sndExploGuardianHurt",
   "parent":{
     "name":"Palace",

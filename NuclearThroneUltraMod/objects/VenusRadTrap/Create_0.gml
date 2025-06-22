@@ -16,8 +16,8 @@ spr_fire = sprVenusRadTrapFire;
 spr_active = sprVenusRadTrapActivate;
 
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
+snd_hurt = sndVenusRadTrapHurt
+snd_dead = sndVenusRadTrapDead
 active = 0;
 //behavior
 alarm[1] = 60;//30+random(90)

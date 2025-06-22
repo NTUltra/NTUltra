@@ -1,9 +1,10 @@
 raddrop = 10
 maxhealth = 700//45
-mySize = 1
+mySize = 2
 
 
-event_inherited()
+event_inherited();
+scrBossHealthBuff();
 meleedamage = 5
 
 spr_idle = sprBigJellyFishIdle
@@ -13,10 +14,10 @@ spr_dead = sprBigJellyFishDead
 spr_fire = sprBigJellyFishFire
 
 
-snd_hurt = sndHitFlesh
+snd_hurt = sndHitBigJellyFish
 
 //behavior
-tellTime = 10;
+tellTime = 1;
 thunderStrikeTellTime = 16;
 actTime = 10;
 maxAmmo = 5;
@@ -43,3 +44,5 @@ jellyAmmo = jellyMaxAmmo;
 targetX = x;
 targetY = y;
 myThunderStrikeTarget = noone;
+
+myJellyFish = TinyJellyFish;

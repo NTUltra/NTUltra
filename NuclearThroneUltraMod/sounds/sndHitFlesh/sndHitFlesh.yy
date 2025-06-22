@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.237347,
+  "duration":0.23734693,
   "name":"sndHitFlesh",
   "parent":{
     "name":"Enviroment",

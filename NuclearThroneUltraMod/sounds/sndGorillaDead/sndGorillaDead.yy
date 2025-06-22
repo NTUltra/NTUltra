@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.560794,
+  "duration":0.56079364,
   "name":"sndGorillaDead",
   "parent":{
     "name":"Jungle",

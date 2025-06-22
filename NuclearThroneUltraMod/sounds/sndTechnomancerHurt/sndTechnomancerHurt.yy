@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.637375,
+  "duration":0.6373923,
   "name":"sndTechnomancerHurt",
   "parent":{
     "name":"Technomancer",

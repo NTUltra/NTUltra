@@ -226,13 +226,13 @@ if (Player.loops > 0 && ((Player.area == 121 && Player.subarea == 2)) )
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(InvertedHyenaBoss,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && Player.area == 4 && Player.subarea == 1)
+if (Player.loops > 0 && ((Player.area == 4 || Player.area == 144) && Player.subarea == 1))
 {
 	scrSpawnBoss(HyperCrystal);
 	if (Player.loops > 5)
 		scrSpawnMoreBosses(HyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
 }
-if (Player.loops > 0 && Player.area == 111 && Player.subarea == 1)
+if (Player.loops > 0 && ((Player.area == 111 || Player.area == 145) && Player.subarea == 1))
 {
 	scrSpawnBoss(InvertedHyperCrystal);
 	if (Player.loops > 5)

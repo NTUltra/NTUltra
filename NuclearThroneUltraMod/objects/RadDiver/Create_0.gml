@@ -11,8 +11,8 @@ spr_hurt = sprRadDiverHurt
 spr_dead = sprRadDiverDead;
 spr_fire = sprRadDiverFire;
 
-snd_hurt = sndHitPlant
-snd_dead = sndFrogExplode
+snd_hurt = sndRadDiverHurt
+snd_dead = sndRadDiverDead
 
 //behavior
 walk = 0

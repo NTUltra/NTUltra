@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.821344,
+  "duration":0.8213605,
   "name":"sndGuardianDead",
   "parent":{
     "name":"Palace",

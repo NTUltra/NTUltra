@@ -1,7 +1,8 @@
 raddrop = 50
-maxhealth = 450
+maxhealth = 430
 mySize = 4
 event_inherited()
+scrBossHealthBuff();
 meleedamage = 5
 spr_idle_normal = sprBossHyenaIdle;
 spr_idle = sprBossHyenaIdleRepresent
@@ -83,3 +84,4 @@ leapDirection = direction;
 immuneHealth = my_health;
 forceAnimation = 0;
 projectileSpeed = 6.5;
+isInverted = false;

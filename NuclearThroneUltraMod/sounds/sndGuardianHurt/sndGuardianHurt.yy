@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.494031,
+  "duration":0.4940363,
   "name":"sndGuardianHurt",
   "parent":{
     "name":"Palace",

@@ -47,8 +47,8 @@
     "path":"sprites/sprBigJellyFishIdle/sprBigJellyFishIdle.yy",
   },
   "spriteMaskId":{
-    "name":"mskJellyFish",
-    "path":"sprites/mskJellyFish/mskJellyFish.yy",
+    "name":"mskBigJellyFish",
+    "path":"sprites/mskBigJellyFish/mskBigJellyFish.yy",
   },
   "visible":true,
 }

@@ -11,7 +11,8 @@ spr_hurt = sprSlimeHurt;
 spr_fire = sprSlimeFire;
 spr_dead = sprSlimeDead
 shd = shd12;
-snd_hurt = sndHitPlant
+snd_hurt = sndSlimeHurt;
+snd_dead = sndSlimeDead;
 
 //behavior
 walk = 0

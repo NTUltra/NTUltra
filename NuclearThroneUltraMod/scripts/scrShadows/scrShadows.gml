@@ -44,7 +44,7 @@ function scrShadows() {
 	with HyenaBoss
 	draw_sprite(shd96,0,x-vx,y-vy)
 	with BigJellyFish
-	draw_sprite(shd64,0,x-vx,y-vy)
+	draw_sprite(shd64,0,x-vx,y-vy + 8)
 	with LightningDrone
 	draw_sprite(shd16,0,x-vx,y-vy+8)
 	with PaperCraft

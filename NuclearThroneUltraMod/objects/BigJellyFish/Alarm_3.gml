@@ -16,7 +16,7 @@ if target != noone && instance_exists(target) && instance_number(TinyJellyFish) 
 	if instance_exists(Player) && Player.skill_got[29] {
 		sleepy = true;	
 	}
-	with instance_create(x+random(16)-8,y+random(16)-8,TinyJellyFish)
+	with instance_create(x+random(16)-8,y+random(16)-8,myJellyFish)
 	{
 		wasResurrected = true;
 		existTime = 30;

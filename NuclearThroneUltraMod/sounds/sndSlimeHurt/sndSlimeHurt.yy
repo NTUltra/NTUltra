@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndSlimeHurt",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.2060771,
+  "name":"sndSlimeHurt",
+  "parent":{
+    "name":"PipeWorld",
+    "path":"folders/Sounds/Enemies/PipeWorld.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndSlimeHurt.ogg",
+  "type":0,
+  "volume":1.0,
+}

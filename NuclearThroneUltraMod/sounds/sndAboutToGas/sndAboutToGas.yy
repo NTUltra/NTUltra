@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.493401,
+  "duration":0.49340135,
   "name":"sndAboutToGas",
   "parent":{
     "name":"BigMushroomBoss",

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.428688,
+  "duration":1.4287075,
   "name":"sndExploGuardianFire",
   "parent":{
     "name":"Palace",

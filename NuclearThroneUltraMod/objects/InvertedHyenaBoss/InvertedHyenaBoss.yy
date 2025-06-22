@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBossHyenaIdleLeg",
-    "path":"sprites/sprBossHyenaIdleLeg/sprBossHyenaIdleLeg.yy",
+    "name":"sprInvertedBossHyenaIdle",
+    "path":"sprites/sprInvertedBossHyenaIdle/sprInvertedBossHyenaIdle.yy",
   },
   "spriteMaskId":{
     "name":"mskBossHyena",

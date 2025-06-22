@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.066688,
+  "duration":1.0666894,
   "name":"sndExploGuardianCharge",
   "parent":{
     "name":"Palace",

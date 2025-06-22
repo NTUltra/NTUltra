@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndVenusRadTrapHurt",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.266712,
+  "name":"sndVenusRadTrapHurt",
+  "parent":{
+    "name":"RadiationSludge",
+    "path":"folders/Sounds/Enemies/RadiationSludge.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndVenusRadTrapHurt.ogg",
+  "type":0,
+  "volume":1.0,
+}

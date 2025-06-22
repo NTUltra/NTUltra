@@ -286,7 +286,7 @@ function scrDrawHUD() {
 	}
 
 	//GAMEMODES
-	if (!scrIsOnlyNormalGamemode() && !instance_exists(LevCont))
+	if ((!scrIsOnlyNormalGamemode() || array_length(UberCont.voidChallengeGoing) > 0) && !instance_exists(LevCont))
 	{
 		var xxx = camera_get_view_x(view_camera[0]);
 		var yyy = camera_get_view_y(view_camera[0]) + __view_get( e__VW.HView, 0 );
