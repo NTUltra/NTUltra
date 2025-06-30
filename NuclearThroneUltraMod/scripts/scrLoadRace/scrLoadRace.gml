@@ -1278,7 +1278,7 @@ function scrLoadRace() {
 	snd_lowh=sndMutant27LowH;//
 	snd_crwn=sndMutant27Crwn;
 	snd_chst=sndMutant27Chst;//chst
-	snd_wrld=sndMutant27Wrld;
+	snd_wrld=sndMutant29Wrld;
 	snd_thrn=sndMutant27Thrn;//
 	snd_valt=sndMutant27Valt;
 	snd_cpt=sndMutant27Cpt;//Captain win (unused for now)

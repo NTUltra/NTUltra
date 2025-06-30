@@ -1,7 +1,7 @@
 /// @description Fires bullets
 alarm[4] = fireDelay;
 gunAngle += rotation;
-fullCircle += abs(rotation);
+fullCircle += rotation;
 snd_play(sndVenusFlyTrapBulletFire,0.1);
 with instance_create(x,y,ExploGuardianBullet)
 {
@@ -9,7 +9,7 @@ with instance_create(x,y,ExploGuardianBullet)
 	image_angle = direction
 	team = other.team
 }
-if fullCircle > 360
+if fullCircle > 360 || fullCircle < - 360
 {
 	instance_destroy();	
 }

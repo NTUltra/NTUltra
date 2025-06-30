@@ -1800,6 +1800,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 	var remainHotFloor = 0;
 	var remainFrostFloor = 0;
 	var remainRadFloor = 0;
+	var remainPurpleRadFloor = 0;
 	var grounds = ds_list_create();
 	var al = instance_position_list(x,y,Floor,grounds,false)
 	for (var i = 0; i < al; i ++)
@@ -1982,6 +1983,71 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					remainRadFloor = radFloor;
 				}
 			}
+			else if gs == sprFloor145B || gs == sprFloor145Explo
+			{
+				//DRAIN RADIATION FLOOR
+				if jump <= 0 && (skill_got[2] || (race != 18 && race != 15))
+				{
+					tempMaxSpeed -= 0.125;
+					if is60fps
+					{
+						if !skill_got[2]
+							purpleRadFloor += 0.5;
+						rad -= 5;
+					}
+					else
+					{
+						if !skill_got[2]
+							purpleRadFloor += 1;
+						rad -= 10;
+					}
+					if rad < 0
+						rad = 0;
+					if instance_exists(EnemyVenom)
+						purpleRadFloor = 0;
+					if purpleRadFloor == round(purpleRadFloor) && purpleRadFloor > 2 && (purpleRadFloor > 30 || purpleRadFloor % 2 == 0)
+					{
+						snd_play(sndVenomTick,0.1);
+						BackCont.shake += 1;
+						with instance_create(x,y,AcidStreak)
+						{
+							motion_add(random(360),6 + random(3));
+							image_angle = direction;
+						}
+					}
+					if purpleRadFloor == 36
+					{
+						BackCont.shake += 10;
+						Sleep(50);
+					}
+					if purpleRadFloor > 61
+					{
+						Sleep(100);
+						snd_play_2d(sndVenom);
+						var am = 8;
+						var ang = random(360);
+						var angStep = 360/am;
+						repeat(am)
+						{
+							with instance_create(x,y,AcidStreak)
+							{
+								motion_add(ang,6 + random(3));
+								image_angle = direction;
+							}
+							ang += angStep;
+						}
+						DealDamage(1,false,false,false);
+						hitBy = sprInvertedRadiationPool;
+						purpleRadFloor=0;//allright you've burned now continue
+						//GAMEMODE UNLOCKABLE WALL IS LAVA
+						scrApplyEnemyVenom(0,id);
+						snd_play_2d(snd_hurt);
+						sprite_index = spr_hurt;
+						image_index = 0;
+					}
+					remainPurpleRadFloor = purpleRadFloor;
+				}
+			}
 			else if gs == sprFloor7Explo || gs == sprFloorLava
 			{
 				if !skill_got[14]
@@ -2085,6 +2151,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 	getFrozen = remainFrostFloor;
 	hotfloor = remainHotFloor;
 	radFloor = remainRadFloor;
+	purpleRadFloor = remainPurpleRadFloor;
 }
 
 maxSpeed += tempMaxSpeed;

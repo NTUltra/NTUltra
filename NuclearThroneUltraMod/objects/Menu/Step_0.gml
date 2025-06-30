@@ -22,7 +22,7 @@ if hasNoMenuOpen()
 			else if race == 12
 				race = 14
 			else if race == 27
-				race = 0;
+				race = 15;
 			else if race < 0
 				race = 28;
 			else if race == 28

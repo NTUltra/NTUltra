@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.05068,
+  "duration":1.0506803,
   "name":"sndRatKingDie",
   "parent":{
     "name":"Regular",

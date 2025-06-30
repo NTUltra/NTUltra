@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":10.698333,
+  "duration":10.698344,
   "name":"sndMutant27Thrn",
   "parent":{
     "name":"Hands",

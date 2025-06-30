@@ -2,12 +2,10 @@ function scrDecideMorphWep() {
 	var ar = [];
     if instance_exists(Player)
     {
-		if scrIsGamemode(31)
-		    return choose(198,495);
-	        var maxTries = 1000;
-			ar = scrMorphWeaponsArray(Player.loops,scrIsGamemode(31));
-	        if Player.race == 8
-				maxTries = 2000;
+	    var maxTries = 1000;
+		ar = scrMorphWeaponsArray(Player.loops,scrIsGamemode(31));
+	    if Player.race == 8
+			maxTries = 2000;
 		do 
 	    {
 			myWep = ar[irandom(array_length(ar)-1)];

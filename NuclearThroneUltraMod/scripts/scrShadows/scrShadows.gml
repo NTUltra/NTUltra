@@ -269,6 +269,11 @@ function scrShadows() {
 	draw_sprite(shd32,0,x-vx,y-vy)
 	with BigMaggotInverted
 	draw_sprite(shd32,0,x-vx,y-vy)
+	
+	with BloodCow
+	draw_sprite(shd24,0,x-vx,y-vy)
+	with BloodLurker
+	draw_sprite(shd24,0,x-vx,y-vy + 4)
 	with SandWorm
 	{
 		if sprite_index != spr_disappear_end && (sprite_index != spr_appear || image_index > 7)

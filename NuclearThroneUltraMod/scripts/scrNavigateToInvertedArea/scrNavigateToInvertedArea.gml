@@ -70,7 +70,7 @@ function scrNavigateToInvertedArea(){
 		subarea += 1;
 		if subarea > 3
 		{
-			area = 118;
+			area = 111;
 			subarea = 1;
 		}
 	}//in case of crownvault
@@ -107,6 +107,11 @@ function scrNavigateToInvertedArea(){
 	else if ( area == 142)//inv pipeworld
 	{
 		area = 143;
+		subarea = 1;
+	}
+	else if ( area == 144)//inv radiation sludge land
+	{
+		area = 145;
 		subarea = 1;
 	}
 	else if (area == 130 || area == 132 || area == 133 || area == 134) //to inv factory

@@ -865,7 +865,7 @@ extrafeetdodged = false;
 //lava
 hotfloor = 0;
 radFloor = 0;
-
+purpleRadFloor = 0;
 //freezing
 getFrozen = 0;
 frozen = 0;

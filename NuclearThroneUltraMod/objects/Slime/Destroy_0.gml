@@ -7,7 +7,7 @@ repeat(acidAmount)
     dir += dirStep;
     with instance_create(x,y,AcidStreak)
     {
-		motion_add(dir,8)
+		motion_add(dir,12 + other.acidAmount)
 		image_angle = direction
     }
 }

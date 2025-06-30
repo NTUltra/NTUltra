@@ -178,19 +178,6 @@ function scrFloorArea(area, styleb){
 	case 144:
 	sprite_index=sprFloor144B;
 	image_index = choose(0,1,2,3);
-	/*
-	var fs = ds_list_create();
-	var al = instance_place_list(x,y,Floor,fs,false);
-	for (var i = 0; i < al; i++)
-	{
-		with fs[| i]
-		{
-			if id != other.id
-				instance_destroy();
-		}
-	}
-	ds_list_destroy(fs);
-	*/
 	with instance_create(x,y,FloorBloom) {
 		sprite_index = sprFloor144B;
 		image_index = other.image_index;
@@ -205,6 +192,18 @@ function scrFloorArea(area, styleb){
 	break;
 	case 145:
 	sprite_index=sprFloor145B;
+	image_index = choose(0,1,2,3);
+	with instance_create(x,y,FloorBloom) {
+		sprite_index = sprFloor145B;
+		image_index = other.image_index;
+	}
+	with instance_create_depth(x,y,depth,FloorOverlay)
+	{
+		sprite_index = sprFloor145BOverlay;
+		image_speed = 0;
+		image_index = choose(0,1);
+	}
+	depth -= 1;
 	break;
 	case 146:
 	sprite_index=sprFloor146B;

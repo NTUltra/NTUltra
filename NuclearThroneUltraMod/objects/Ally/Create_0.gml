@@ -118,7 +118,7 @@ name=choose(
 "Lars","Mary","Jeremy","Paul","Randy","Kevin","Martin","Jessica","Harold","Stimpy","Dopey","Momo","Appa","Poki",
 /*rares*/choose("Big Tam","Chubbyemu","Kakujo","Tit","Kuntala","Bob Weaver","Noodle",
 "Jezus","God","Waifu","A dirty casual","Juul","TurtleMelon","Burrino","Lucifina","Yoku","Doorknob","Oddishman","Aquatsunami",
-"Worm Chase","Good O'l Humphry","Y.V. follower","Prophet","Little shit","Chad","Mr. Toiletpaper","<3","Please don't let me die",
+"Worm Chase","Good Ol' Humphry","Y.V. follower","Prophet","Little shit","Chad","Mr. Toiletpaper","<3","Please don't let me die",
 "Daph","Blob","Aquatsunami","Paper","Raymey","Paper","Raymey","DidacticAscended","ringno","peanutbrain"),/*rare*/
 /*rares*/choose("butt","")/*rare*/
 ,"Heather","Joe","Barbara","Cheryl","Amy","Loki","Hughie","Iskal","Jasmine","Annie","Britta","Abed","Sheldon","Curtis","Geofrey","Emanuel","Chase",

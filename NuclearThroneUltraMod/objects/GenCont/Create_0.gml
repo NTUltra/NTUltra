@@ -241,7 +241,7 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(72, 253, 8) )
 			break;
 			case 145:
-			__background_set_colour( make_color_rgb(72, 253, 8) )
+			__background_set_colour( make_color_rgb(155, 22, 249) )
 			break;
 			case 146:
 			__background_set_colour( make_color_rgb(73, 14, 14) )
@@ -379,7 +379,7 @@ if instance_exists(Player)
 		else if Player.area == 144//Radiation sludge land
 			__background_set_colour( make_color_rgb(71, 76, 56) )
 		else if Player.area == 145//Radiation sludge land
-		__background_set_colour( make_color_rgb(71, 76, 56) )
+		__background_set_colour( make_color_rgb(82, 88, 102) )
 		else if Player.area == 146//Blood land
 		__background_set_colour( make_color_rgb(76, 30, 14) )
 		else if Player.area == 147//Blood land

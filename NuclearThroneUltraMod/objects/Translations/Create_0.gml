@@ -603,7 +603,7 @@ loreDump = [
 		[
 			//LOOP 1
 			"We in the void simply look for a way to return*You can help us with your portal essence*Collect portal essence by going through portals*Any portal, except for the green ones",
-			"I will be watching you Good O'l Humphry, such a strange name*Very curious to see what lies behind it",
+			"I will be watching you Good Ol' Humphry, such a strange name*Very curious to see what lies behind it",
 			"Unlike the others that pass through here you would not rid yourself of your name*I wonder why",
 		],
 		[

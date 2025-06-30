@@ -242,6 +242,7 @@ else if KeyCont.key_sout[0] == 1
 	event_user(0);
 	if thereIsAlt
 	{
+		snd_play_2d(sndHover);
 		var hasSelectedSkill = false;
 		var prevSelectedIndex = selectedIndex;
 		if frac(selectedIndex) > 0
@@ -329,6 +330,7 @@ else if KeyCont.key_nort[0] == 1
 	event_user(0);
 	if thereIsAlt
 	{
+		snd_play_2d(sndHover);
 		var hasSelectedSkill = false;
 		var prevSelectedIndex = selectedIndex;
 		if frac(selectedIndex) > 0

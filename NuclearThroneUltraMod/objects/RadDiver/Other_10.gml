@@ -5,16 +5,28 @@ if alarm[2] < 1
 	var angle = random(360);
 	amountOfProjectiles = min(amountOfProjectiles,maxAmountOfProjectiles);
 	var angleStep = 360/amountOfProjectiles;
-	repeat(amountOfProjectiles)
-	{
-		with instance_create(x,y,ExploGuardianBullet)
+	if isInverted
+		repeat(amountOfProjectiles)
 		{
-			motion_add(angle,other.projectileSpeed);
-			image_angle = direction
-			team = other.team
+			with instance_create(x,y,InvertedExploGuardianBullet)
+			{
+				motion_add(angle,other.projectileSpeed);
+				image_angle = direction
+				team = other.team
+			}
+			angle += angleStep;
 		}
-		angle += angleStep;
-	}
+	else
+		repeat(amountOfProjectiles)
+		{
+			with instance_create(x,y,ExploGuardianBullet)
+			{
+				motion_add(angle,other.projectileSpeed);
+				image_angle = direction
+				team = other.team
+			}
+			angle += angleStep;
+		}
 	alarm[2] = min(40,2 + amountOfProjectiles);
 	if target != noone
 	{

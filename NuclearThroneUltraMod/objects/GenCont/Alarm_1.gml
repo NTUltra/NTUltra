@@ -141,6 +141,13 @@ if instance_exists(Player)
 			instance_destroy(id,false);
 	    }
 	}
+	else if Player.area == 146 || Player.area == 147//Blood
+	{
+		 with WeaponChest
+	    {
+			instance_create(x,y+16,BloodWeaponChest)
+	    }
+	}
 	if ( (Player.area = 101 && Player.area = 10)  && Player.subarea == 1) {
 	    with WeaponChest
 	    {
@@ -177,6 +184,27 @@ if instance_exists(Player)
 					styleb = false;
 					depth += 2;
 					sprite_index = sprFloor144;
+					with instance_place(x,y,FloorBloom)
+					{
+						instance_destroy();	
+					}
+					with instance_place(x,y,FloorOverlay)
+					{
+						instance_destroy();	
+					}
+				}
+			}
+		}
+		else if area == 145
+		{
+			var f = instance_place(x,y,Floor)
+			if f.styleb == 1
+			{
+				with f
+				{
+					styleb = false;
+					depth += 2;
+					sprite_index = sprFloor145;
 					with instance_place(x,y,FloorBloom)
 					{
 						instance_destroy();	

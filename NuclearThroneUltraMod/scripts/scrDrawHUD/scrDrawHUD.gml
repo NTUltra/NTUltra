@@ -2657,6 +2657,10 @@ function scrDrawHUD() {
         {
             scrDrawSecretFinder(ox,oy);
         }
+		with BloodCowSkull
+        {
+            scrDrawSecretFinder(ox,oy);
+        }
         with MushroomLandEntrance
         {
             scrDrawSecretFinder(ox,oy);

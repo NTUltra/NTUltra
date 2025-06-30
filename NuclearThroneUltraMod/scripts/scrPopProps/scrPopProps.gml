@@ -240,10 +240,10 @@ function scrPopProps() {
 		}
 		
 	    if spawnarea == 7 && !place_meeting(x,y,Wall){ //CUSTOM
-		    if random(60) < 1{
+		    /*if random(60) < 1{
 				instance_create(x+16,y+16,BigSkull)
 			}
-		    else if random(13)<1{
+		    else */if random(13)<1{
 				instance_create(x+16,y+16,Crystal)
 		    } else if random(5) < 3
 			{

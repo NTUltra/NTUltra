@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.237256,
+  "duration":0.23725623,
   "name":"sndVoidSphereFire",
   "parent":{
     "name":"NoThing",

@@ -6791,7 +6791,7 @@ function scrWeapons() {
 	wep_cost[605] = 11
 	wep_sprt[605] = sprStabinator
 	wep_area[605] = 22
-	wep_text[605] = "time for a good o'l fashion stabbin'"
+	wep_text[605] = "time for a good ol' fashion stabbin'"
 	wep_swap[605] = sndSwapExplosive
 	wep_rad[605] = 0;
 	

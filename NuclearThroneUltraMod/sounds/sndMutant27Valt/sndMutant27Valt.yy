@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":4.519875,
+  "duration":4.5198865,
   "name":"sndMutant27Valt",
   "parent":{
     "name":"Hands",

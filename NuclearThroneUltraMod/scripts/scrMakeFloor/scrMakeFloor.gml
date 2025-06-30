@@ -76,6 +76,14 @@ function scrMakeFloor(limiter) {
 	if area = 146 || area = 147//BLOOD LAND
 	{
 		instance_create(x,y,Floor)
+		instance_create(x+32,y,Floor)
+		instance_create(x+32,y+32,Floor)
+		instance_create(x,y+32,Floor)
+		instance_create(x,y-32,Floor)
+		instance_create(x-32,y,Floor)
+		instance_create(x+32,y-32,Floor)
+		instance_create(x-32,y-32,Floor)
+		instance_create(x-32,y+32,Floor)
 	}
 
 	if area = 5 || area = 107 
@@ -1302,6 +1310,15 @@ function scrMakeFloor(limiter) {
 
 	x += lengthdir_x(32,direction);
 	y += lengthdir_y(32,direction);
+	
+	if area == 146 || area == 147//Bloodland double step
+	{
+		x += lengthdir_x(32,direction);
+		y += lengthdir_y(32,direction);
+		instance_create(x,y,Floor);
+		x += lengthdir_x(32,direction);
+		y += lengthdir_y(32,direction);
+	}
 
 	return limiter;
 }

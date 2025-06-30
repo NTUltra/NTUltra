@@ -39,7 +39,7 @@ else
 					snd_play(snd_good[irandom(array_length(snd_good)-1)]);
 				else
 					snd_play(snd_thrn);
-				if area == 114
+				if area == 114 || area == 123
 				{
 					if area != 100
 					{

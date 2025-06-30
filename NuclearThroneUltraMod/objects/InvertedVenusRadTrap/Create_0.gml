@@ -10,6 +10,7 @@ EnemyHealthAdjustments();
 prevHealth = my_health;
 actTime -= 1;
 EnemyHealthAdjustments();
+spr_inactive = sprInvertedVenusRadTrap;
 spr_idle = sprInvertedVenusRadTrap;
 spr_walk = sprInvertedVenusRadTrap;
 spr_hurt = sprInvertedVenusRadTrap;

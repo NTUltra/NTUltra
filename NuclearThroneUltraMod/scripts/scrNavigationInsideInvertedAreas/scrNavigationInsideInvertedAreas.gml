@@ -42,7 +42,7 @@ function scrNavigationInsideInvertedAreas(skipping){
 		subarea = 0
 	}
 	//Inverted Jungle
-	else if area = 123 && subarea > 2
+	else if area = 123 && subarea > 1
 	{
 		//To caves 1
 		area = 4
@@ -75,6 +75,13 @@ function scrNavigationInsideInvertedAreas(skipping){
 	{
 		//to Labs
 		area = 6;
+		subarea = 0;
+	}
+	//Inverted radiation sludge
+	else if area == 145
+	{
+		//to Palace
+		area = 9;
 		subarea = 0;
 	}
 	//Inverted desert

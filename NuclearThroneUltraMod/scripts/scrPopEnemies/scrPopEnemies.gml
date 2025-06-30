@@ -1618,10 +1618,10 @@ function scrPopEnemies() {
 	            var ran = random(100);
 				if ran > 90
 				{
-					instance_create(x + 16, y + 16, choose(SmallUltraSniper, BigSlime,PitGhostExploder))	
+					instance_create(x + 16, y + 16, choose(RhinoFreak, BigSlime,PitGhostExploder))	
 				}
 	            else if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(RadDiver, RadDiver, GhostGuardian,UltraRaven))
+	                instance_create(x + 16, y + 16, choose(RadDiver, GhostGuardian,UltraRaven))
 	            }
 				else if instance_number(enemy) < 1
 				{
@@ -1635,11 +1635,81 @@ function scrPopEnemies() {
 	            var ran = random(100);
 
 	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(RadDiver, RadDiver, GhostGuardian))
+	                instance_create(x + 16, y + 16, choose(RadDiver, GhostGuardian))
 	            }
 				else if instance_number(enemy) < 1
 				{
 					instance_create(x + 16, y + 16,RadDiver);
+				}
+	        }
+		}
+    }
+	//INVERTED RADIATION SLUDGE LAND
+    if spawnarea == 145 {
+		if loops > 0 {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(InvertedVenusRadTrap, InvertedVenusRadTrap, InvertedVenusRadTrap,InvertedRadDiver,InvertedBigSlime))
+	        } else {
+	            var ran = random(100);
+				if ran > 90
+				{
+					instance_create(x + 16, y + 16, choose(InvertedRhinoFreak, InvertedBigSlime,PitGhostExploder))	
+				}
+	            else if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian,UltraRaven))
+	            }
+				else if instance_number(enemy) < 1
+				{
+					instance_create(x + 16, y + 16,InvertedRadDiver);
+				}
+	        }
+		} else {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(InvertedVenusRadTrap, InvertedVenusRadTrap, InvertedVenusRadTrap,InvertedRadDiver))
+	        } else {
+	            var ran = random(100);
+
+	            if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian))
+	            }
+				else if instance_number(enemy) < 1
+				{
+					instance_create(x + 16, y + 16,InvertedRadDiver);
+				}
+	        }
+		}
+    }
+	//Blood Land
+    if spawnarea == 146 {
+		if loops > 0 {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(InvertedVenusRadTrap, InvertedVenusRadTrap, InvertedVenusRadTrap,InvertedRadDiver,InvertedBigSlime))
+	        } else {
+	            var ran = random(100);
+				if ran > 90
+				{
+					instance_create(x + 16, y + 16, choose(InvertedRhinoFreak, InvertedBigSlime,PitGhostExploder))	
+				}
+	            else if ran > 55 {
+	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian,UltraRaven))
+	            }
+				else if instance_number(enemy) < 1
+				{
+					instance_create(x + 16, y + 16,InvertedRadDiver);
+				}
+	        }
+		} else {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(BloodLurker, BloodLurker, BloodCow,BloodCow))
+	        } else {
+	            var ran = random(100);
+
+	            if ran > 20 {
+	                instance_create(x + 16, y + 16, choose(BigMaggot, BloodLurker, BloodCow))
+	            }
+				else
+				{
+					instance_create(x + 16, y + 16,Maggot);
 				}
 	        }
 		}

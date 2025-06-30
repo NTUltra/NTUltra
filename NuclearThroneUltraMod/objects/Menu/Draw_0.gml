@@ -82,7 +82,7 @@ if widescreen > 0
 		if race == 20
 			rn = "BUSINESS\nHOG";
 		else if race == 26
-			rn = "GOOD O'L\nHUMPHRY";
+			rn = "GOOD OL'\nHUMPHRY";
 		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
 		{
 			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 92 + additional,min(1,portraitLerp));
