@@ -1779,6 +1779,7 @@
     {"id":{"name":"NewWeaponModHUD","path":"objects/NewWeaponModHUD/NewWeaponModHUD.yy",},},
     {"id":{"name":"NightCactus","path":"objects/NightCactus/NightCactus.yy",},},
     {"id":{"name":"NoDrama","path":"objects/NoDrama/NoDrama.yy",},},
+    {"id":{"name":"NoHealing","path":"objects/NoHealing/NoHealing.yy",},},
     {"id":{"name":"NoProtoChest","path":"objects/NoProtoChest/NoProtoChest.yy",},},
     {"id":{"name":"NoThingFlash","path":"objects/NoThingFlash/NoThingFlash.yy",},},
     {"id":{"name":"NoThingHealth","path":"objects/NoThingHealth/NoThingHealth.yy",},},

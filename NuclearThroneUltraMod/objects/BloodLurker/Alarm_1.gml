@@ -6,6 +6,16 @@ if target != noone {
 		var dis = point_distance(target.x, target.y, x, y)
         if dis > 54 && dis < 300 {
             snd_play(sndEnemyFire)
+			with BloodCow
+			{
+				if alarm[1] < actTime * 2
+					alarm[1] += actTime;	
+			}
+			with BloodLurker
+			{
+				if alarm[1] < actTime * 2
+					alarm[1] += actTime;	
+			}
 			gunangle = point_direction(x, y, target.x, target.y);
 			walk = alarm[1] - random(actTime*0.5);
 			motion_add(random(360),maxSpeed * 0.5);
@@ -13,7 +23,7 @@ if target != noone {
 			if dis > 128
 				spd += 1
 			if dis > 256
-				spd += 1;
+				spd += 0.75;
 			var len = 6;
 			sprite_index = spr_fire;
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;

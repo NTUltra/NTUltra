@@ -41,12 +41,10 @@ if my_health > 0 && isInteractableNow && !instance_exists(WantBoss) && !instance
 			my_health = 0;
 			prevhealth = 0;
 		}
-		with Pickup
-		{
-			instance_destroy(id,false);	
-		}
+		instance_create(x,y,NoHealing);
 		with Player {
 			my_health = 1;
+			prevhealth = 1;
 			snd_play(choose(snd_lowa,snd_lowh));
 			image_angle = 0;
 			angle = 0;

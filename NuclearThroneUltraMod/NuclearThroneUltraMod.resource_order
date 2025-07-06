@@ -1579,6 +1579,7 @@
     {"name":"NewWeaponModHUD","order":75,"path":"objects/NewWeaponModHUD/NewWeaponModHUD.yy",},
     {"name":"NightCactus","order":3,"path":"objects/NightCactus/NightCactus.yy",},
     {"name":"NoDrama","order":74,"path":"objects/NoDrama/NoDrama.yy",},
+    {"name":"NoHealing","order":51,"path":"objects/NoHealing/NoHealing.yy",},
     {"name":"NoProtoChest","order":46,"path":"objects/NoProtoChest/NoProtoChest.yy",},
     {"name":"NoThingFlash","order":80,"path":"objects/NoThingFlash/NoThingFlash.yy",},
     {"name":"NoThingHealth","order":147,"path":"objects/NoThingHealth/NoThingHealth.yy",},
