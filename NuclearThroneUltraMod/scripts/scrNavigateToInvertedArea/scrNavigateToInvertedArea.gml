@@ -117,7 +117,7 @@ function scrNavigateToInvertedArea(){
 	else if (area == 130 || area == 132 || area == 133 || area == 134) //to inv factory
 	{
 		area = 131;
-		subarea = 1;
+		subarea = 2;
 	}
 	else if ( area == 114)//inv Jungle
 	{
@@ -147,10 +147,5 @@ function scrNavigateToInvertedArea(){
 			area = 108;
 			subarea = 1;
 		}
-	}
-	if area != 100 && area != 135 && area != 104 && area != 137 && area != 128 && area != 129
-	{
-		lastarea = area;
-		lastsubarea = subarea;
 	}
 }

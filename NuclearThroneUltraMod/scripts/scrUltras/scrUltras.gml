@@ -667,7 +667,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	{
 		ultra_name[84] = "MORPHING CAT"
 		//ultra_text[84] = "YOU CAN PHASE THROUGH WALLS WHILE USING BEAM#BEAM MORPHS#USING BEAM SPAWNS MORPH BULLETS AND LASERS AROUND YOU#WHEN OUT OF <g>RADS<g> BEAM USES <g>ENERGY<g> <y>AMMO<y>"
-		ultra_text[84] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPPH<pi>"
+		ultra_text[84] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPH<pi>"
 		ultra_tips[84] = "cute kitty with big guns"
 	}
 

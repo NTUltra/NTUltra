@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 430
+maxhealth = 380
 mySize = 4
 event_inherited()
 scrBossHealthBuff();

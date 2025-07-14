@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.27254,
+  "duration":0.27253968,
   "name":"sndEnemySlash",
   "parent":{
     "name":"Regular",

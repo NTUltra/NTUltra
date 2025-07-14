@@ -17,6 +17,7 @@ if KeyCont.key_pick[other.p] = 1 && !disable
 		snd_play(snd_crwn);
 		scrGiveCrownPoints(1);
 		lockout = true;
+		area = 100;
 	}
 	UberCont.canMultiCrown = true;
 	Sleep(20);

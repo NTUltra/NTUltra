@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":4.375011,
+  "duration":4.3750114,
   "name":"sndExplosionCar",
   "parent":{
     "name":"Enviroment",

@@ -58,4 +58,5 @@ motion_add(180,8);}
 }*/
 friction=4;
 alarm[3]=45;
+depth -= 1;
 

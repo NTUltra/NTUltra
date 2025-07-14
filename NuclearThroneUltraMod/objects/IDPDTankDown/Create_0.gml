@@ -12,3 +12,4 @@ gunangle = 90;
 normalGunAngle = gunangle;
 laserY = 0;
 alarm[8] = 0;
+depth += 1;

@@ -1,0 +1,11 @@
+event_inherited();
+image_speed = 0.4;
+friction = 0;
+loops = 0;
+typ = 2;
+dmg = 4;
+xPrev = x;
+yPrev = y;
+alarm[1] = 1;
+rotation = choose(16,-16);
+scrInitDrops(1);

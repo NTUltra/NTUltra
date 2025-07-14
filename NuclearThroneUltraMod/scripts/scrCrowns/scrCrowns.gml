@@ -130,9 +130,9 @@ function scrCrowns() {
 	
 	crown_name[20] = "[CROWN OF PROTECTION]"
 	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
-		crown_text[20] = "NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY THIRD <r>WEAPON CHEST<r> GIVES <w>1<w> <gb>ARMOUR<gb>"
+		crown_text[20] = "NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY FOURTH <r>WEAPON CHEST<r> GIVES <w>1<w> <gb>ARMOUR<gb>"
 	else
-		crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY FOURTH <w>WEAPON<w> DROP GIVES <w>1<w> <gb>ARMOUR<gb>"
+		crown_text[20] = "REPLACE <w>1<w> <r>MAX HEALTH<r> WITH <w>1<w> <gb>MAX ARMOUR<gb>#NO <y>AMMO<y> FROM <w>WEAPON<w> DROPS#EVERY FOURTH <r>WEAPON CHEST<r> GIVES <w>1<w> <gb>ARMOUR<gb>"
 	crown_used[20] = 0
 	crown_tips[20] = "stay safe"
 	

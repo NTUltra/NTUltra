@@ -10,7 +10,7 @@ if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_2 < 1
 	}
 }
 
-if UberCont.area == 4 || UberCont.area == 111 || UberCont.area == 115
+if UberCont.area == 4 || UberCont.area == 111 || UberCont.area == 115 || UberCont.area == 144 || UberCont.area == 145
 scrDefeatedRequiredBoss(secretChallengeBosses.hyperCrystal);
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) == 1
 with MusCont {

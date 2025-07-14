@@ -137,7 +137,7 @@ if (type == network_type_data) {
 			}
 			#region gamemode handling
 			debug("GAMEMODES ", UberCont.opt_gamemode);
-			if scrIsGamemode(1) || scrIsGamemode(46)//One weapon only
+			if scrIsGamemode(1) || scrIsGamemode(46)//One weapon only starting weapon
 			{
 				UberCont.opt_gm1wep = buffer_read(buffer,buffer_u16);
 				debug(UberCont.opt_gm1wep);
@@ -322,7 +322,11 @@ if (type == network_type_data) {
 			{
 				UberCont.canMultiCrown = true;
 			}
-			if scrIsGamemode(48)
+			if scrIsGamemode(47)//Double active
+			{
+				UberCont.useRaceActive = buffer_read(buffer,buffer_u16);
+			}
+			if scrIsGamemode(48)//MARKSMAN
 			{
 				with Player
 				{
@@ -337,14 +341,14 @@ if (type == network_type_data) {
 					scrWeaponHold();
 				}
 			}
-			if scrIsGamemode(49)
+			if scrIsGamemode(49)//Visionn
 			{
 				with Player
 				{
 					getVision = true;	
 				}
 			}
-			if scrIsGamemode(51) && !instance_exists(Acid)
+			if scrIsGamemode(51) && !instance_exists(Acid)//RAINBOW?
 			{
 				with instance_create(x,y,Acid) {
 					persistent = true;

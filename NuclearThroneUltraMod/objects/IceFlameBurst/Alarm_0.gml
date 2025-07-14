@@ -7,6 +7,7 @@ if instance_exists(creator) && ammo >= 0
 	//FIRING
 	with instance_create(x,y,IceFlame)
 	{
+		freezetime -= 1;
 		motion_add(other.burstAim+((random(4)-2)*other.accuracy),
 		6 + (other.ammo))
 		scrCopyWeaponMod(other);

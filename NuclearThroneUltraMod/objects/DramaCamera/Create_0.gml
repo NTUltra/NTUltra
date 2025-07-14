@@ -126,13 +126,13 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 				if instance_exists(BanditBoss) && !instance_exists(HyenaBoss)
 					song = musBoss1;
 				else
-					song = musUltraVisionary;
+					song = musBoss5;
 			}
 			else if area == 110 && subarea == 2
 				song = musBoss5B;
-			else if area == 4
+			else if area == 4 || area == 144
 				song = musBoss6;
-			else if area == 115
+			else if area == 115|| area == 145
 				song = musBoss6B;
 			else if area == 111
 				song = choose(musBoss6,musBoss6B);
@@ -420,7 +420,7 @@ else
 				name = choose("THERE SHE IS!","BEST FRIEND","JUST WANT A HUG");
 		}
 	}
-	else if area == 4
+	else if area == 4 || area == 144
 	{
 	//with instance_create(x,y,Drama)
 		if subarea == 1
@@ -437,7 +437,7 @@ else
 				name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
 		}
 	}
-	else if area = 111
+	else if area = 111 || area == 145
 	{
 		if subarea == 1
 		{

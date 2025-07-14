@@ -25,7 +25,29 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 		}
 		alarm[1] = 1;
 	}
-	if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
+	if Player.ultra_got[30] && Player.altUltra
+	{
+		canUncurse = false;
+		if Player.curse
+		{
+			if Player.bcurse
+			{
+				Player.ccurse = 1;
+			}
+			else
+			{
+				Player.bcurse = 1;	
+			}
+		}
+		else
+		{
+			Player.curse = 1;
+		}
+		snd_play_2d(sndCursedChest);
+		repeat(20)
+			instance_create(x+random(32)-16,y+random(32)-16,Curse)
+	}
+	else if Player.curse = 1 or Player.bcurse = 1 or Player.ccurse = 1
 	{
 		if Player.curse != 0 || Player.bcurse != 0 || Player.ccurse != 0
 		{

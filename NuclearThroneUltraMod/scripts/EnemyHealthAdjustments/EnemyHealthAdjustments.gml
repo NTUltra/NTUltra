@@ -10,10 +10,10 @@ function EnemyHealthAdjustments(){
 			my_health = 1;
 			maxhealth = my_health;
 		}
-		maxhealth *= 1 + max(0,(Player.loops-1 * 0.05));//0.15
+		maxhealth *= 1 + max(0,(Player.loops * 0.04));//vanilla 0.05
 		if Player.loops > 0
 			maxhealth += 1;
-		maxhealth += Player.loops;
+		maxhealth += Player.loops * 0.75;
 		if scrIsHardMode()
 			maxhealth *= 1.1;
 		if scrIsCrown(10)

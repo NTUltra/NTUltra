@@ -1,9 +1,9 @@
 raddrop = 10
 loops = GetPlayerLoops();
 if loops < 1
-	maxhealth = 320;
+	maxhealth = 280;
 else
-	maxhealth = 400;
+	maxhealth = 380;
 scrBossHealthBuff();
 isInverted = true;
 if instance_exists(Player)

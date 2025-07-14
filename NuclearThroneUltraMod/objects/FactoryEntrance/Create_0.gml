@@ -1,5 +1,5 @@
 loops = GetPlayerLoops();
-maxhealth = 150 * clamp(loops*5,1,10)
+maxhealth = 200 + (100 * clamp(loops*5,1,10))
 mySize = 1
 spr_idle = sprFactoryEntrance;
 spr_hurt = sprFactoryEntranceHurt

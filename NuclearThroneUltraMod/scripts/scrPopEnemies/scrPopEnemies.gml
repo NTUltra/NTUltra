@@ -1683,19 +1683,16 @@ function scrPopEnemies() {
     if spawnarea == 146 {
 		if loops > 0 {
 			if styleb == 1 {
-	            instance_create(x + 16, y + 16, choose(InvertedVenusRadTrap, InvertedVenusRadTrap, InvertedVenusRadTrap,InvertedRadDiver,InvertedBigSlime))
+	            instance_create(x + 16, y + 16, choose(BloodLurker, BloodLurker, BloodCow,BloodCow, Hyena, GraveyardBreeder))
 	        } else {
 	            var ran = random(100);
-				if ran > 90
+				if ran > 20
 				{
-					instance_create(x + 16, y + 16, choose(InvertedRhinoFreak, InvertedBigSlime,PitGhostExploder))	
+					instance_create(x + 16, y + 16, choose(BigMaggot, BloodLurker, BloodCow, Hyena, GraveyardBreeder))
 				}
-	            else if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian,UltraRaven))
-	            }
-				else if instance_number(enemy) < 1
+				else
 				{
-					instance_create(x + 16, y + 16,InvertedRadDiver);
+					instance_create(x + 16, y + 16,Maggot);
 				}
 	        }
 		} else {

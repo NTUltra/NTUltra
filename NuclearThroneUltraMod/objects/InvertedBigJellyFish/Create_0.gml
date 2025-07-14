@@ -10,7 +10,7 @@ spr_dead = sprInvertedBigJellyFishDead
 spr_fire = sprBigJellyFishFire
 
 raddrop = 70
-maxhealth = 600;
+maxhealth = 400;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 tellTime = 5;

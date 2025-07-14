@@ -37,6 +37,9 @@ if existTime > 15
 		ang += angStep;
 	}
 }
+var curseIt = 0;
+if object_index == CursedBossBot
+	curseIt = 1;
 with WeaponDeposit {
 	with instance_create(other.x,other.y,WepPickupForOneWepOnly)
 	{
@@ -53,7 +56,7 @@ with WeaponDeposit {
 		name = wep_name[wep]
 		ammo = 0
 		type = wep_type[wep]
-		curse = 0
+		curse = curseIt
 		sprite_index = wep_sprt[wep]
 	}
 	instance_destroy();

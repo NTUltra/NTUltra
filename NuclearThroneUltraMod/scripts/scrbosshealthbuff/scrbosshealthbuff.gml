@@ -5,9 +5,9 @@ function scrBossHealthBuff(){
 	var ls = GetPlayerLoops();
 	var baseHealth = maxhealth;
 	if ls > 0
-		maxhealth *= 1.27;
+		maxhealth *= 1.2;
 	maxhealth += max(ls * 30,0);
-	maxhealth *= 1 + max(0,(ls - 1)*0.19);
+	maxhealth *= 1 + max(0,(ls - 1)*0.15);
 	isBoss = true;
 	if scrIsHardMode()//HARD MODE
 	{

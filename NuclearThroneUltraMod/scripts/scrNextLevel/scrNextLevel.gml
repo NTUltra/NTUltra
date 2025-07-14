@@ -176,6 +176,7 @@ function scrNextLevel(skipping = false) {
 			}
 			scrAddArea(area);
 			scrAddToRoute(area);
+			scrSaveLastArea(area, subarea);
 			exit;
 		}
 		//TO INVERTED AREAS
@@ -218,7 +219,7 @@ function scrNextLevel(skipping = false) {
 			}
 		}
 		//Factory
-		else if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 0)
+		else if ((area == 130 || area == 131 || area == 132 || area == 133 || area == 134) && subarea > 1)
 		{
 			// To inv palace
 			area = 118;
@@ -240,11 +241,18 @@ function scrNextLevel(skipping = false) {
 			area = 6;
 			subarea = 0;
 		}
-		//Pipe World
+		//Radiation sludge
 		else if area == 144 && subarea > 0
 		{
 			//to palace
 			area = 9;
+			subarea = 0;
+		}
+		//Blood land
+		else if area == 146 && subarea > 0
+		{
+			//to frozen city
+			area = 5;
 			subarea = 0;
 		}
 		//OASIS
@@ -442,5 +450,6 @@ function scrNextLevel(skipping = false) {
 	{
 		scrAddArea(area);
 		scrAddToRoute(area);
+		scrSaveLastArea(area, subarea);
 	}
 }

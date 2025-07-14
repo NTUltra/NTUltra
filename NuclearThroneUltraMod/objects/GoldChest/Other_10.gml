@@ -1,4 +1,7 @@
 /// @description OPEN CHEST
+var isCurse = 0;
+if instance_exists(Player) && Player.area == 132
+	isCurse = 1;
 with instance_create(x,y,WepPickup)
 {
 	scrWeapons()
@@ -7,7 +10,7 @@ with instance_create(x,y,WepPickup)
 	name = wep_name[wep]
 	ammo = other.ammoGet
 	type = wep_type[wep]
-	curse = 0
+	curse = isCurse
 	sprite_index = wep_sprt[wep]
 }
 if aditionalwep != 0
@@ -20,7 +23,7 @@ if aditionalwep != 0
 		name = wep_name[wep]
 		ammo = other.ammoGet
 		type = wep_type[wep]
-		curse = 0
+		curse = isCurse
 		sprite_index = wep_sprt[wep]
 	}
 }
@@ -34,7 +37,7 @@ if heavyHeart
 		name = wep_name[wep]
 		ammo = other.ammoGet
 		type = wep_type[wep]
-		curse = 0
+		curse = isCurse
 		sprite_index = wep_sprt[wep]
 	}	
 }

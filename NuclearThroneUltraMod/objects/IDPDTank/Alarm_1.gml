@@ -31,9 +31,8 @@ if !reachedHalfHealth  && my_health < maxhealth*0.5
 }
 if !isDown
 {
-	
 	with Player {
-		if ((x > other.middleX + other.moveRange + 52) || (x < other.middleX - other.moveRange - 52)
+		if ((x > other.middleX + other.moveRange + other.moveRangeMargin) || (x < other.middleX - other.moveRange - other.moveRangeMargin)
 		|| (y < other.y) || (y > other.y + other.verticalDistanceBeteenTanks))
 		{
 			snd_play_2d(sndIonCharge);
@@ -73,8 +72,13 @@ if target != noone {
 	    with instance_create(x,y,PopoMissile) {
 		    motion_add(other.gunangle+random(10)-5,0.5)
 		    image_angle = direction
-			alarm[2] += 5;
+			alarm[2] += 10;
 		    team = other.team
+			with instance_create_depth(x,y,other.depth - 1, AnimDestroyImportant) {
+				sprite_index = sprTankMissileFire;
+				image_angle = other.direction;
+				image_speed = 0.4;
+			}
 		}
 		speed = 0;
 	    alarm[1] = actTime * 2;

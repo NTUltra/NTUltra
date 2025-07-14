@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.196125,
+  "duration":0.20399094,
   "name":"sndBloodHitWall",
   "parent":{
     "name":"HitWall",

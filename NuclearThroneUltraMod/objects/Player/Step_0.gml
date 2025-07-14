@@ -1914,10 +1914,10 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					}
 				}
 			}
-			if gs == sprFloor144B || gs == sprFloor144Explo
+			if (gs == sprFloor144B || gs == sprFloor144Explo)
 			{
 				//RADIATION FLOOR
-				if jump <= 0 && (skill_got[2] || (race != 18 && race != 15))
+				if jump <= 0 && (skill_got[2] || (race != 18 && race != 15 && !gotRadFloored))
 				{
 					tempMaxSpeed += 1;
 					if is60fps
@@ -1956,6 +1956,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					}
 					if radFloor > 48
 					{
+						gotRadFloored = true;
 						Sleep(100);
 						rad += 100;
 						snd_play_2d(sndVenom);
@@ -1983,22 +1984,20 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					remainRadFloor = radFloor;
 				}
 			}
-			else if gs == sprFloor145B || gs == sprFloor145Explo
+			else if (gs == sprFloor145B || gs == sprFloor145Explo)
 			{
 				//DRAIN RADIATION FLOOR
-				if jump <= 0 && (skill_got[2] || (race != 18 && race != 15))
+				if jump <= 0 && !skill_got[2] && ((race != 18 && race != 15 && !gotPurpleRadFloored))
 				{
 					tempMaxSpeed -= 0.125;
 					if is60fps
 					{
-						if !skill_got[2]
-							purpleRadFloor += 0.5;
+						purpleRadFloor += 0.5;
 						rad -= 5;
 					}
 					else
 					{
-						if !skill_got[2]
-							purpleRadFloor += 1;
+						purpleRadFloor += 1;
 						rad -= 10;
 					}
 					if rad < 0
@@ -2022,6 +2021,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					}
 					if purpleRadFloor > 61
 					{
+						gotPurpleRadFloored = true;
 						Sleep(100);
 						snd_play_2d(sndVenom);
 						var am = 8;
@@ -2145,6 +2145,12 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					if alarm[4] < 1
 						alarm[4] = 1;
 				}
+			}
+			else
+			{
+				//Nothing special
+				gotRadFloored = false;
+				gotPurpleRadFloored = false;
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrChooseGamemodesWeekly(){
-	var gamemode = [irandom_range(1,60),0,0];//41
+	var gamemode = [irandom_range(1,61),irandom_range(1,61),0];//41
 	//Manual gamemode injection here
 	var option = [];
 	if gamemode == 26//Daily race
@@ -105,6 +105,7 @@ function scrChooseGamemodesWeekly(){
 		case 45:
 			gamemode = [46,47,0]//any start double active
 			option[0] = scrRollSpecificWeapon();
+			option[1] = irandom_range(1,29)//All mutants
 		break;
 		case 46:
 			gamemode = [46,41,0]//Anys tarting wep and double hp
@@ -129,6 +130,7 @@ function scrChooseGamemodesWeekly(){
 		case 52:
 			gamemode = [46,47,23]//any start + Double active + random mutant
 			option[0] = scrRollSpecificWeapon();
+			option[1] = irandom_range(1,29)//All mutants
 		break;
 		case 53:
 			gamemode = [46,36,34]//any start + ultra mod start + hard mode
@@ -160,6 +162,9 @@ function scrChooseGamemodesWeekly(){
 		case 60:
 			gamemode = [46,9,6]//Any start + casual + claus
 			option[0] = scrRollSpecificWeapon();
+		break;
+		case 61://Double active
+			option[0] = irandom_range(1,29)//All mutants
 		break;
 	}
 	return [gamemode, option];

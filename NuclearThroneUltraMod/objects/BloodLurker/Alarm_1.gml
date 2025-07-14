@@ -5,7 +5,7 @@ if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dis = point_distance(target.x, target.y, x, y)
         if dis > 54 && dis < 300 {
-            snd_play(sndEnemyFire)
+            snd_play(sndBloodEnemyFire)
 			with BloodCow
 			{
 				if alarm[1] < actTime * 2
@@ -21,29 +21,29 @@ if target != noone {
 			motion_add(random(360),maxSpeed * 0.5);
 			var spd = 2;
 			if dis > 128
-				spd += 1
+				spd += 0.5
 			if dis > 256
-				spd += 0.75;
+				spd += 0.5;
 			var len = 6;
 			sprite_index = spr_fire;
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;
             with instance_create(x + lengthdir_x(len,gunangle), y  + lengthdir_y(len,gunangle), EnemyBullet1Small) {
-                motion_add(other.gunangle + 1, spd)
-                image_angle = direction
-                team = other.team
-            }
-			 with instance_create(x + lengthdir_x(len,gunangle + 180), y  + lengthdir_y(len,gunangle + 180), EnemyBullet1Small) {
-                motion_add(other.gunangle - 1, spd)
-                image_angle = direction
-                team = other.team
-            }
-			with instance_create(x + lengthdir_x(len,gunangle + 90), y + lengthdir_y(len,gunangle + 90), EnemyBullet1Small) {
                 motion_add(other.gunangle + 2, spd)
                 image_angle = direction
                 team = other.team
             }
-			with instance_create(x + lengthdir_x(len,gunangle - 90), y + lengthdir_y(len,gunangle - 90), EnemyBullet1Small) {
+			 with instance_create(x + lengthdir_x(len,gunangle + 180), y  + lengthdir_y(len,gunangle + 180), EnemyBullet1Small) {
                 motion_add(other.gunangle - 2, spd)
+                image_angle = direction
+                team = other.team
+            }
+			with instance_create(x + lengthdir_x(len,gunangle + 90), y + lengthdir_y(len,gunangle + 90), EnemyBullet1Small) {
+                motion_add(other.gunangle + 4, spd)
+                image_angle = direction
+                team = other.team
+            }
+			with instance_create(x + lengthdir_x(len,gunangle - 90), y + lengthdir_y(len,gunangle - 90), EnemyBullet1Small) {
+                motion_add(other.gunangle - 4, spd)
                 image_angle = direction
                 team = other.team
             }

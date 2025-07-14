@@ -866,6 +866,8 @@ extrafeetdodged = false;
 hotfloor = 0;
 radFloor = 0;
 purpleRadFloor = 0;
+gotRadFloored = false;
+gotPurpleRadFloored = false;
 //freezing
 getFrozen = 0;
 frozen = 0;

@@ -329,7 +329,7 @@ function scrSecretUltraStat() {
 	
 	//84
 	secret_ultra_name[41] = "MORPHING CAT"
-	secret_ultra_text[41] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPPH<pi>"
+	secret_ultra_text[41] = "SET YOUR <r>HEALTH<r> TO <w>9<w>##EACH AREA CHOOSE A <g>MUTATION<g> TO <pi>REROLL<pi>#GAIN ANOTHER <g>MUTATION<g> <w>CHOICE<w>##<w>KILLS<w> SPAWN <pi>MORPH<pi>"
 	secret_ultra_tips[41] = "cute kitty with big guns"
 	secret_ultra_hint[41] = "KILLER CAT";
 	secret_ultra_unlk[41] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";

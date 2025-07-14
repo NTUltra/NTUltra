@@ -20,7 +20,7 @@ if my_health > 0 && !used
 			}
 			*/
 			area = 130;
-			subarea = 0;
+			subarea = 1;
 			//If one exists from previous loop
 			with WeaponDeposit {
 				with instance_create(other.x,other.y,WepPickup)

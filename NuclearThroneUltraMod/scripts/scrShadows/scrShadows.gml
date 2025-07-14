@@ -271,7 +271,7 @@ function scrShadows() {
 	draw_sprite(shd32,0,x-vx,y-vy)
 	
 	with BloodCow
-	draw_sprite(shd24,0,x-vx,y-vy + 2)
+	draw_sprite(shd24,0,x-vx + right,y-vy + 2)
 	with BloodLurker
 	draw_sprite(shd24,0,x-vx,y-vy + 4)
 	with SandWorm

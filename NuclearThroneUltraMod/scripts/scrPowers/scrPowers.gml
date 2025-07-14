@@ -269,167 +269,6 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 		
-		if race == 29//NO THING
-		{
-			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
-			if instance_exists(Pickup)
-			{
-				var regal = (!instance_exists(VoidBeam) && skill_got[maxskill + 1])
-				var targetedOne = false;
-				if skill_got[5]
-				{
-					var nullVoid = ultra_got[115] ? 1 : 0
-					with Rad
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							if regal 
-							{
-								if object_index == Rad
-									other.voidBeam += 1;
-								else
-									other.voidBeam += 5;
-							}
-							BackCont.shake += 1;
-							radValue *= 0.5;
-							instance_create(x,y,VoidBlockBig);
-							isBeingVoided += nullVoid;
-							event_user(0);
-							isBeingVoided += nullVoid;
-						}
-					}
-					with AmmoPickup
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							BackCont.shake += 2;
-							ammoValue *= 0.5;
-							if regal
-								other.voidBeam += 5;
-							with instance_create(x,y,VoidBlockBig) {
-								image_xscale += 0.125;
-								image_yscale += 0.125;
-							}
-							event_user(0);
-						}
-					}
-				}
-				else
-				{
-					if ultra_got[115]
-					{
-						with Pickup
-						{
-							if object_index != Rad && object_index != BigRad && point_distance(x,y,other.x,other.y) < 300
-								isBeingVoided += 1;
-						}
-					}
-					with Pickup
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							if isBeingVoided != 1
-								instance_destroy();
-							isBeingVoided += 1;
-							if object_index == Rad
-							{
-								BackCont.shake += 1;
-								if regal
-									other.voidBeam += 1;
-								instance_create(x,y,VoidBlock);
-							}
-							else
-							{
-								BackCont.shake += 2;
-								if regal
-									other.voidBeam += 5;
-								instance_create(x,y,VoidBlockBig);
-							}
-						}
-					}
-				}
-				if targetedOne
-				{
-					BackCont.shake += 4;
-					with PlayerAlarms3 {
-						voidSphereAngle *= -1;	
-					}
-					if ultra_got[113] && !altUltra
-					{
-						BackCont.shake += 2;
-						repeat(2)
-							with instance_create(x + random_range(12,-12),y + random_range(12,-12),PlutoFX)
-							{
-								sprite_index = sprVoidBulletTrail;
-								image_index = irandom(image_number - 1);
-								motion_add(random(360),1);
-							}
-						/*if altUltra
-						{
-							alarm[2] = 25;
-							if !instance_exists(GunWarrant)
-								instance_create(x,y,GunWarrant);
-							else
-							{
-								with GunWarrant
-								{
-									sprite_index = sprGunWarrantStart;
-									image_index = 0;
-								}
-							}
-						}
-						else
-						{*/
-							noThingHealth += 1;
-							maxhealth += 1;
-						
-							if !instance_exists(NoThingHealth)
-							{
-								instance_create(x,y,NoThingHealth);
-							}
-							else
-							{
-								with NoThingHealth
-								{
-									alarm[0] = lifeDuration;	
-								}
-							}
-						//}
-					}
-					if instance_exists(VoidBlock)
-					{
-						if skill_got[5]
-							snd_play_2d(sndVoidConsumptionL,0.01);
-						else
-							snd_play_2d(sndVoidConsumptionS,0.01);
-					}
-					else
-					{
-						if skill_got[5]
-							snd_play_2d(sndVoidConsumptionXL,0.01);
-						else
-							snd_play_2d(sndVoidConsumptionM,0.01);
-					}
-					with VoidBlock
-					{
-						if chain < 2
-						{
-							image_index = 0;
-							image_xscale = max(image_xscale, 1.125);
-							image_yscale = image_xscale;
-							image_speed = 0.4;
-						}
-						chain += 1;
-					}
-					voidBeam = min(voidBeam,voidBeamMax);
-					if BackCont.shake > 60
-						BackCont.shake = 60;
-				}
-			}
-		}
 		
 		if race == 16// && ((armour > 0 && !ultra_got[63]) || (ultra_got[63] && my_health > 2) || freeArmourStrike)//Viking
 		{
@@ -3188,321 +3027,360 @@ function scrPowers(raceOverwrite = -1) {
 		if (race == 6 && ((ultra_got[24] && !altUltra) || (altUltra && ultra_got[23])) && wep_auto[wep] == 1)
 			scrYVPower();
 
-	if ultra_got[19] && !altUltra//Plant sprint
-	{/*
-	if ultra_got[104]
-	{
-	with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Smoke)
-	{motion_add(other.direction+180+random(40)-20,0.1+random(2))
-	team = other.team}
-	}
-	else
-	{*/
-		with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Dust)
+		if ultra_got[19] && !altUltra//Plant sprint
+		{/*
+		if ultra_got[104]
+		{
+		with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Smoke)
 		{motion_add(other.direction+180+random(40)-20,0.1+random(2))
 		team = other.team}
-		//}
-
-		if skill_got[2]==1//extra feet
-		{
-			maxSpeed = 6.5;
-			//maxSpeed=5.7;
-			//if ultra_got[104]
-			//	maxSpeed=7.7
 		}
 		else
-		{
-			maxSpeed = 6;
-		//maxSpeed=5.2;
-		//if ultra_got[104]
-		//maxSpeed=7.2
+		{*/
+			with instance_create(x+lengthdir_x(random(4),random(360)),y+lengthdir_y(random(4),random(360)),Dust)
+			{motion_add(other.direction+180+random(40)-20,0.1+random(2))
+			team = other.team}
+			//}
+
+			if skill_got[2]==1//extra feet
+			{
+				maxSpeed = 6.5;
+				//maxSpeed=5.7;
+				//if ultra_got[104]
+				//	maxSpeed=7.7
+			}
+			else
+			{
+				maxSpeed = 6;
+			//maxSpeed=5.2;
+			//if ultra_got[104]
+			//maxSpeed=7.2
+			}
+			image_speed=0.6;
 		}
-		image_speed=0.6;
-	}
 
-	if race == 23 //Frog
-	{
+		if race == 23 //Frog
+		{
 
-	//if ultra_got[92]=0
-	//speed=0;
+		//if ultra_got[92]=0
+		//speed=0;
 		
-	    if toxicamount < maxtoxicamount
-	    {
-		    if ultra_got[90]//intimacy ultra
-			{
-				if UberCont.normalGameSpeed == 60
-					toxicamount += 1;
-				else
-					toxicamount += 2;
-			}
-		    else
-			{
-				if toxicamount < 0
+		    if toxicamount < maxtoxicamount
+		    {
+			    if ultra_got[90]//intimacy ultra
 				{
 					if UberCont.normalGameSpeed == 60
-						toxicamount += 0.5;
-					else
 						toxicamount += 1;
+					else
+						toxicamount += 2;
 				}
-				else
+			    else
+				{
+					if toxicamount < 0
+					{
+						if UberCont.normalGameSpeed == 60
+							toxicamount += 0.5;
+						else
+							toxicamount += 1;
+					}
+					else
+					{
+						if UberCont.normalGameSpeed == 60
+							toxicamount += 0.75;
+						else
+							toxicamount += 1.5;
+					}
+				}
+				if toxicamount > 0
+				{
+				    if ultra_got[91]//FROG MOMMA ULTRA C
+				    {
+						var e = FrogEgg;
+							if toxicUltra
+								e = UltraFrogEgg;
+						if toxicamount = floor(maxtoxicamount*0.1)
+							with instance_create(x,y,e)
+							{
+								team = other.team;	
+							}
+    
+				    }
+					if toxicamount % 3 == 0
+					{
+						if ultra_got[92] && altUltra
+						{
+							var g = Splinter;
+							var d = 5;
+							if toxicUltra
+							{
+								g = UltraSplinter;
+								d = 10;
+							}
+							with instance_create(x,y,g)
+							{
+								dmg = d;
+								motion_add(random(360),18)
+								image_angle = direction
+								team = other.team
+							}
+						}
+						else
+						{
+							var g = ToxicThrowerGas;
+							if toxicUltra
+								g = UltraToxicThrowerGas;
+							if toxicamount % 6 == 0
+							{
+								with instance_create(x,y,g)
+								{
+									motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(20,-20),1.4+random(1.4)+(other.skill_got[5] * 1.2));
+								}
+							}
+							else
+							{
+								with instance_create(x,y,g)
+								{
+									motion_add(random(360),1+random(1.8)+(other.skill_got[5] * 1.2));
+									//dmg += 1;
+								}
+							}
+						}
+					}
+				}
+		    }
+			else
+			{
+				audio_stop_sound(sndFrogLoop);
+				audio_stop_sound(sndFrogLoopButt);
+			}
+		}
+
+
+		//HORROR
+		if race == 21 //&& random(2)<1// && !instance_exists(HorrorBeam)
+		{
+
+			if ultra_got[0] && altUltra
+			{
+				if !inDebt || cash > 0
 				{
 					if UberCont.normalGameSpeed == 60
-						toxicamount += 0.75;
-					else
-						toxicamount += 1.5;
-				}
-			}
-			if toxicamount > 0
-			{
-			    if ultra_got[91]//FROG MOMMA ULTRA C
-			    {
-					var e = FrogEgg;
-						if toxicUltra
-							e = UltraFrogEgg;
-					if toxicamount = floor(maxtoxicamount*0.1)
-						with instance_create(x,y,e)
-						{
-							team = other.team;	
-						}
-    
-			    }
-				if toxicamount % 3 == 0
-				{
-					if ultra_got[92] && altUltra
 					{
-						var g = Splinter;
-						var d = 5;
-						if toxicUltra
+						cash -= 0.5;
+						horrordelay = !horrordelay;
+					}
+					else
+					{
+						cash --;
+					}
+					if !horrordelay
+					{
+						if horrorcharge=origincharge
+							snd_play_2d(sndHorrorCashFlowStart);
+							//snd_play_2d(sndHorrorBeam);
+						var m = maxcharge;
+						if skill_got[5]
+							m += 5;
+						if horrorcharge < m
 						{
-							g = UltraSplinter;
-							d = 10;
+							if  UberCont.normalGameSpeed == 60
+								horrorcharge += 0.1+(skill_got[5]*0.15);
+							else
+								horrorcharge += 0.2+(skill_got[5]*0.3);
 						}
-						with instance_create(x,y,g)
+						if skill_got[5]
 						{
-							dmg = d;
-							motion_add(random(360),18)
+							if  UberCont.normalGameSpeed == 60
+								horrorhealtime += 0.5;
+							else
+								horrorhealtime++;
+
+						    if horrorhealtime>70
+						    {
+							    if my_health<maxhealth
+							    {
+							        my_health++;
+									snd_play(sndHealthPickup);
+							        with instance_create(x,y - 8,HealFX)
+										sprite_index=sprHorrorTB;
+        
+							        if UberCont.opt_ammoicon
+									{
+										dir = instance_create(x,y,PopupText)
+										dir.sprt = sprHPIconPickup;
+										dir.mytext = "+1"
+										if Player.my_health = Player.maxhealth
+											dir.mytext = "MAX"
+										else if Player.my_health > Player.maxhealth
+											dir.mytext = "OVER MAX"
+									}
+									else
+									{
+										dir = instance_create(x,y,PopupText)
+										dir.mytext = "+1 HP";
+										if Player.my_health = Player.maxhealth
+											dir.mytext = "MAX HP"
+										else if Player.my_health > Player.maxhealth
+											dir.mytext = "OVER MAX HP"
+									}
+							    }
+								horrorhealtime=0;
+						    }
+							if !(audio_is_playing(sndHorrorCashFlowTB))
+								snd_loop(sndHorrorCashFlowTB);
+						}
+						else if !(audio_is_playing(sndHorrorCashFlow))
+							snd_loop(sndHorrorCashFlow);
+				
+						var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+						var r = 1
+						if horrorcharge > 12
+							r = 2;
+						repeat(r)
+						with instance_create(x,y,HorrorMoney)
+						{
+							charge = other.horrorcharge;
+							motion_add(aimDirection+((random(charge*4)-charge*2)*other.accuracy),8.5+random(3)+(charge*0.5))
 							image_angle = direction
 							team = other.team
 						}
-					}
-					else
-					{
-						var g = ToxicThrowerGas;
-						if toxicUltra
-							g = UltraToxicThrowerGas;
-						if toxicamount % 6 == 0
-						{
-							with instance_create(x,y,g)
-							{
-								motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + random_range(20,-20),1.4+random(1.4)+(other.skill_got[5] * 1.2));
-							}
-						}
-						else
-						{
-							with instance_create(x,y,g)
-							{
-								motion_add(random(360),1+random(1.8)+(other.skill_got[5] * 1.2));
-								//dmg += 1;
-							}
-						}
+						var s = max(2,horrorcharge*0.25);
+						BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
+						BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
+						BackCont.shake += s;
 					}
 				}
 			}
-	    }
-		else
-		{
-			audio_stop_sound(sndFrogLoop);
-			audio_stop_sound(sndFrogLoopButt);
-		}
-	}
-
-
-	//HORROR
-	if race == 21 //&& random(2)<1// && !instance_exists(HorrorBeam)
-	{
-
-		if ultra_got[0] && altUltra
-		{
-			if !inDebt || cash > 0
+			else if rad>0
 			{
-				if UberCont.normalGameSpeed == 60
-				{
-					cash -= 0.5;
-					horrordelay = !horrordelay;
-				}
+				if !instance_exists(HorrorSuckDelay)
+					instance_create(x,y,HorrorSuckDelay);
 				else
-				{
-					cash --;
-				}
-				if !horrordelay
-				{
-					if horrorcharge=origincharge
-						snd_play_2d(sndHorrorCashFlowStart);
-						//snd_play_2d(sndHorrorBeam);
-					var m = maxcharge;
-					if skill_got[5]
-						m += 5;
-					if horrorcharge < m
+					with HorrorSuckDelay
 					{
-						if  UberCont.normalGameSpeed == 60
-							horrorcharge += 0.1+(skill_got[5]*0.15);
-						else
-							horrorcharge += 0.2+(skill_got[5]*0.3);
+						alarm[0] = suckDelay;	
 					}
-					if skill_got[5]
-					{
-						if  UberCont.normalGameSpeed == 60
-							horrorhealtime += 0.5;
-						else
-							horrorhealtime++;
 
-					    if horrorhealtime>70
-					    {
-						    if my_health<maxhealth
-						    {
-						        my_health++;
-								snd_play(sndHealthPickup);
-						        with instance_create(x,y - 8,HealFX)
-									sprite_index=sprHorrorTB;
-        
-						        if UberCont.opt_ammoicon
-								{
-									dir = instance_create(x,y,PopupText)
-									dir.sprt = sprHPIconPickup;
-									dir.mytext = "+1"
-									if Player.my_health = Player.maxhealth
-										dir.mytext = "MAX"
-									else if Player.my_health > Player.maxhealth
-										dir.mytext = "OVER MAX"
-								}
-								else
-								{
-									dir = instance_create(x,y,PopupText)
-									dir.mytext = "+1 HP";
-									if Player.my_health = Player.maxhealth
-										dir.mytext = "MAX HP"
-									else if Player.my_health > Player.maxhealth
-										dir.mytext = "OVER MAX HP"
-								}
-						    }
-							horrorhealtime=0;
-					    }
-						if !(audio_is_playing(sndHorrorCashFlowTB))
-							snd_loop(sndHorrorCashFlowTB);
-					}
-					else if !(audio_is_playing(sndHorrorCashFlow))
-						snd_loop(sndHorrorCashFlow);
-				
-					var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-					var r = 1
-					if horrorcharge > 12
-						r = 2;
-					repeat(r)
-					with instance_create(x,y,HorrorMoney)
-					{
-						charge = other.horrorcharge;
-						motion_add(aimDirection+((random(charge*4)-charge*2)*other.accuracy),8.5+random(3)+(charge*0.5))
-						image_angle = direction
-						team = other.team
-					}
-					var s = max(2,horrorcharge*0.25);
-					BackCont.viewx2 += lengthdir_x(s,aimDirection+180)*UberCont.opt_shake
-					BackCont.viewy2 += lengthdir_y(s,aimDirection+180)*UberCont.opt_shake
-					BackCont.shake += s;
-				}
+			if horrorcharge=origincharge
+				snd_play_2d(sndHorrorBeam);
+
+			if horrorcharge<maxcharge
+			{
+				if  UberCont.normalGameSpeed == 60
+					horrorcharge += 0.1+(skill_got[5]*0.1);
+				else
+					horrorcharge += 0.2+(skill_got[5]*0.2);
 			}
-		}
-		else if rad>0
-		{
-			if !instance_exists(HorrorSuckDelay)
-				instance_create(x,y,HorrorSuckDelay);
-			else
-				with HorrorSuckDelay
-				{
-					alarm[0] = suckDelay;	
-				}
+			if skill_got[5]
+			{
+				if  UberCont.normalGameSpeed == 60
+					horrorhealtime += 0.5;
+				else
+					horrorhealtime++;
 
-		if horrorcharge=origincharge
-			snd_play_2d(sndHorrorBeam);
-
-		if horrorcharge<maxcharge
-		{
-			if  UberCont.normalGameSpeed == 60
-				horrorcharge += 0.1+(skill_got[5]*0.1);
-			else
-				horrorcharge += 0.2+(skill_got[5]*0.2);
-		}
-		if skill_got[5]
-		{
-			if  UberCont.normalGameSpeed == 60
-				horrorhealtime += 0.5;
-			else
-				horrorhealtime++;
-
-		    if horrorhealtime>70
-		    {
-			    if my_health < maxhealth
+			    if horrorhealtime>70
 			    {
-			        my_health++;
-			        with instance_create(x,y,HealFX)
-						sprite_index=sprHorrorTB;
-					snd_play(sndHealthPickup);
-					var dir;
-					if UberCont.opt_ammoicon
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.sprt = sprHPIconPickup;
-						dir.mytext = "+1"
-						if Player.my_health = Player.maxhealth
-							dir.mytext = "MAX"
-						else if Player.my_health > Player.maxhealth
-							dir.mytext = "OVER MAX"
-					}
-					else
-					{
-						dir = instance_create(x,y,PopupText)
-						dir.mytext = "+1 HP";
-						if Player.my_health = Player.maxhealth
-							dir.mytext = "MAX HP"
-						else if Player.my_health > Player.maxhealth
-							dir.mytext = "OVER MAX HP"
-					}
-			    }
+				    if my_health < maxhealth
+				    {
+				        my_health++;
+				        with instance_create(x,y,HealFX)
+							sprite_index=sprHorrorTB;
+						snd_play(sndHealthPickup);
+						var dir;
+						if UberCont.opt_ammoicon
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.sprt = sprHPIconPickup;
+							dir.mytext = "+1"
+							if Player.my_health = Player.maxhealth
+								dir.mytext = "MAX"
+							else if Player.my_health > Player.maxhealth
+								dir.mytext = "OVER MAX"
+						}
+						else
+						{
+							dir = instance_create(x,y,PopupText)
+							dir.mytext = "+1 HP";
+							if Player.my_health = Player.maxhealth
+								dir.mytext = "MAX HP"
+							else if Player.my_health > Player.maxhealth
+								dir.mytext = "OVER MAX HP"
+						}
+				    }
         
-			    horrorhealtime=0;
-		    }
+				    horrorhealtime=0;
+			    }
 
-		if !(audio_is_playing(sndHorrorLoopTB))
-		snd_loop(sndHorrorLoopTB);
+			if !(audio_is_playing(sndHorrorLoopTB))
+			snd_loop(sndHorrorLoopTB);
 
     
-		}
-		else if !(audio_is_playing(sndHorrorLoop))
-			snd_loop(sndHorrorLoop);
-
-		if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
-		{
-
-			// this makes the beam more efficient
-			//if random(3)<2
-			var cost = 1.3;
-			if ultra_got[83]
-				cost = 1.2;
-			if  UberCont.normalGameSpeed == 60
-			{
-				cost *= 0.5;
-				horrordelay = !horrordelay;
 			}
-			rad -= cost;
-			if !horrordelay
+			else if !(audio_is_playing(sndHorrorLoop))
+				snd_loop(sndHorrorLoop);
+
+			if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
 			{
-				if horrorcharge>12&&random(2)<1
+
+				// this makes the beam more efficient
+				//if random(3)<2
+				var cost = 1.3;
+				if ultra_got[83]
+					cost = 1.2;
+				if  UberCont.normalGameSpeed == 60
 				{
-					rad -= cost;
-				    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-				    {
-				    bskin=other.bskin
-				    if bskin = 1
+					cost *= 0.5;
+					horrordelay = !horrordelay;
+				}
+				rad -= cost;
+				if !horrordelay
+				{
+					if horrorcharge>12&&random(2)<1
+					{
+						rad -= cost;
+					    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+					    {
+					    bskin=other.bskin
+					    if bskin = 1
+							sprite_index=sprHorrorBeamB;
+						else if bskin = 2
+							sprite_index=sprHorrorBeamC;
+						else if bskin = 3
+							sprite_index=sprHorrorBeamD;
+						else if bskin = 4
+							sprite_index=sprHorrorBeamE;
+    
+					    originnr=instance_number(HorrorBeam);
+    
+					    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+					    team = other.team
+					    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+					    ammo=50
+					    charge=other.horrorcharge;
+					    event_perform(ev_alarm,0)
+					    rad=1;
+					        with instance_create(x,y,LightningSpawn)
+					        {
+					        if other.bskin=1
+								sprite_index=sprHorrorBeamSpawnB
+							else if other.bskin=2
+								sprite_index=sprHorrorBeamSpawnC
+							else if other.bskin=3
+								sprite_index=sprHorrorBeamSpawnD
+							else if other.bskin=4
+								sprite_index=sprHorrorBeamSpawnE
+					        else
+								sprite_index=sprHorrorBeamSpawn
+					        image_angle = other.image_angle
+					        }
+					    }
+
+					}
+
+					with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+					{
+					bskin=other.bskin
+					if bskin = 1
 						sprite_index=sprHorrorBeamB;
 					else if bskin = 2
 						sprite_index=sprHorrorBeamC;
@@ -3510,19 +3388,19 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamD;
 					else if bskin = 4
 						sprite_index=sprHorrorBeamE;
-    
-				    originnr=instance_number(HorrorBeam);
-    
-				    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-				    team = other.team
-				    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-				    ammo=50
-				    charge=other.horrorcharge;
-				    event_perform(ev_alarm,0)
-				    rad=1;
-				        with instance_create(x,y,LightningSpawn)
-				        {
-				        if other.bskin=1
+
+					originnr=instance_number(HorrorBeam);
+
+					image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+					team = other.team
+					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+					ammo=50
+					charge=other.horrorcharge;
+					rad=1;
+					event_perform(ev_alarm,0)
+					    with instance_create(x,y,LightningSpawn)
+					    {
+					    if other.bskin=1
 							sprite_index=sprHorrorBeamSpawnB
 						else if other.bskin=2
 							sprite_index=sprHorrorBeamSpawnC
@@ -3530,18 +3408,20 @@ function scrPowers(raceOverwrite = -1) {
 							sprite_index=sprHorrorBeamSpawnD
 						else if other.bskin=4
 							sprite_index=sprHorrorBeamSpawnE
-				        else
+					    else
 							sprite_index=sprHorrorBeamSpawn
-				        image_angle = other.image_angle
-				        }
-				    }
-
+					    image_angle = other.image_angle
+					    }
+					}
 				}
+			}
 
-				with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-				{
-				bskin=other.bskin
-				if bskin = 1
+			if random(4)<1
+			{
+			    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+			    {
+			    bskin=other.bskin
+			    if bskin = 1
 					sprite_index=sprHorrorBeamB;
 				else if bskin = 2
 					sprite_index=sprHorrorBeamC;
@@ -3549,19 +3429,19 @@ function scrPowers(raceOverwrite = -1) {
 					sprite_index=sprHorrorBeamD;
 				else if bskin = 4
 					sprite_index=sprHorrorBeamE;
-
-				originnr=instance_number(HorrorBeam);
-
-				image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-				team = other.team
-				motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-				ammo=50
-				charge=other.horrorcharge;
+    
+			    originnr=instance_number(HorrorBeam);
+    
+			    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+			    team = other.team
+			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+			    ammo=50
+			    charge=other.horrorcharge;
 				rad=1;
-				event_perform(ev_alarm,0)
-				    with instance_create(x,y,LightningSpawn)
-				    {
-				    if other.bskin=1
+			    event_perform(ev_alarm,0)
+			        with instance_create(x,y,LightningSpawn)
+			        {
+			        if other.bskin=1
 						sprite_index=sprHorrorBeamSpawnB
 					else if other.bskin=2
 						sprite_index=sprHorrorBeamSpawnC
@@ -3569,650 +3449,781 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index=sprHorrorBeamSpawnD
 					else if other.bskin=4
 						sprite_index=sprHorrorBeamSpawnE
-				    else
+			        else
 						sprite_index=sprHorrorBeamSpawn
-				    image_angle = other.image_angle
-				    }
-				}
+			        image_angle = other.image_angle
+			        }
+			    }
 			}
-		}
-
-		if random(4)<1
-		{
-		    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-		    {
-		    bskin=other.bskin
-		    if bskin = 1
-				sprite_index=sprHorrorBeamB;
-			else if bskin = 2
-				sprite_index=sprHorrorBeamC;
-			else if bskin = 3
-				sprite_index=sprHorrorBeamD;
-			else if bskin = 4
-				sprite_index=sprHorrorBeamE;
-    
-		    originnr=instance_number(HorrorBeam);
-    
-		    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-		    team = other.team
-		    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-		    ammo=50
-		    charge=other.horrorcharge;
-			rad=1;
-		    event_perform(ev_alarm,0)
-		        with instance_create(x,y,LightningSpawn)
-		        {
-		        if other.bskin=1
-					sprite_index=sprHorrorBeamSpawnB
-				else if other.bskin=2
-					sprite_index=sprHorrorBeamSpawnC
-				else if other.bskin=3
-					sprite_index=sprHorrorBeamSpawnD
-				else if other.bskin=4
-					sprite_index=sprHorrorBeamSpawnE
-		        else
-					sprite_index=sprHorrorBeamSpawn
-		        image_angle = other.image_angle
-		        }
-		    }
-		}
 
 		
-		BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-		BackCont.shake += 0.9
+			BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+			BackCont.shake += 0.9
 
 
-		}
-		else if audio_is_playing(sndHorrorLoop)||audio_is_playing(sndHorrorLoopTB)
-		{
-			audio_stop_sound(sndHorrorLoop);
-			audio_stop_sound(sndHorrorLoopTB);
-			snd_play_2d(sndHorrorEmpty);
-			scrEmptyRad();
-		}
-		rad = max(rad,0);
-	}
-
-
-	if race==24
-	{
-		if ultra_got[93] && altUltra
-		{
-			if !instance_exists(ElementorWind)
-			{
-				snd_play_2d(sndElementorWind,0.03);
-				var aim = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-				repeat(6+(skill_got[5]*2))
-				{
-					with instance_create(x+random_range(12,-12),y+random_range(12,-12),Dust)
-					{
-						motion_add(aim+random_range(30,-30),4+other.skill_got[5]+random(4));
-						
-					}
-				}
-				with instance_create(x,y,ElementorWind)
-				{
-					motion_add(aim,4);
-					if other.skill_got[5]
-					{
-						dmg += 1;
-						speed += 1;
-						projectilePush += 0.19;
-					}
-					image_angle = direction;
-					team = other.team;
-				}
 			}
+			else if audio_is_playing(sndHorrorLoop)||audio_is_playing(sndHorrorLoopTB)
+			{
+				audio_stop_sound(sndHorrorLoop);
+				audio_stop_sound(sndHorrorLoopTB);
+				snd_play_2d(sndHorrorEmpty);
+				scrEmptyRad();
+			}
+			rad = max(rad,0);
 		}
-		else if !lockoutElementor && !instance_exists(CloudArea)//Elementor
-		{
-			
-			var takePercentage = 0.05;//0.75%
-			if skill_got[5]
-			{
-				takePercentage = 0.04;//0.05%
-			}
-			var wepType = TargetWepTypeForAmmoConsumption(takePercentage, 5);
-			if wepType != wep_type[bwep] && wepType != wep_type[wep]
-				takePercentage *= 5;
-			var cost = typ_ammo[wepType]*takePercentage;
-			if ((wepType != 0  && !scrIsCrown(40)) && ammo[wepType] - cost > 0)
-			{
-				var myMask = mask_index;
-				mask_index=mskWall;
-				var am = 1;
-				var i = 0;
-				if ultra_got[93] && !altUltra
-					am = 5;
-				var placedWall = false;
-				var mx = UberCont.mouse__x;
-				var my = UberCont.mouse__y;
-				repeat(am)
-				{
-					placedWall = scrElementorPlaceWall(mx,my);
-					switch(i)
-					{
-						case 0:
-							mx = UberCont.mouse__x + 16;
-							my = UberCont.mouse__y;
-						break;
-						case 1:
-							mx = UberCont.mouse__x - 16;
-							my = UberCont.mouse__y;
-						break;
-						case 2:
-							mx = UberCont.mouse__x;
-							my = UberCont.mouse__y + 16;
-						break;
-						case 3:
-							mx = UberCont.mouse__x;
-							my = UberCont.mouse__y - 16;
-						break;
-					}
-					i++;
-				}
-				if (placedWall)
-				{
-					ammo[wepType] = ammo[wepType] - cost;
-				}
-				mask_index=myMask;
-				if (ammo[wepType] <= 0)
-				{
-					if scrIsCrown(13)
-					{
-						with Crown {
-							event_user(0);	
-						}
-					}
-				}
-			}
-			else
-			{
-				lockoutElementor = true;
-				snd_play_2d(snd_lowa,0,true,false,10);
-				snd_play(sndEmpty)
-				var dir = instance_create(x,y,PopupText)
-				dir.mytext = "NOT ENOUGH AMMO";
-				dir.theColour=c_red;
-				drawempty = 30
-				BackCont.shake += 5;
-			}
-		}
-	}
 
 
-	//CHICKEN constant
-	if race == 9 && chickenFocus > 0 && !(instance_exists(GenCont))
-	{
-		if chickenFocus == chickenFocusMax
+		if race==24
 		{
-			with AudioObject
+			if ultra_got[93] && altUltra
 			{
-				event_user(0);
-			}
-		}
-		if !skill_got[maxskill + 1] || speed > 2
-		{
-			if UberCont.normalGameSpeed == 60
-				chickenFocus -= chickenFocusCostRate*0.5;
-			else
-				chickenFocus -= chickenFocusCostRate;
-			
-			if chickenFocus <= 0
-			{
-				with ChickenRewindPosition
+				if !instance_exists(ElementorWind)
 				{
-					if active
+					snd_play_2d(sndElementorWind,0.03);
+					var aim = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+					repeat(6+(skill_got[5]*2))
 					{
-						with other
+						with instance_create(x+random_range(12,-12),y+random_range(12,-12),Dust)
 						{
-							x = other.x;
-							y = other.y;
-							scrForcePosition60fps();
-							if maxhealth > 0
-							{
-								//my_health = max(my_health,other.my_health);
-								//armour = max(armour, other.armour);
-								var healAmount = other.my_health - my_health;
-								if healAmount >= 4
-								{
-									scrUnlockBSkin(9,"FOR REWINDING 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION");
-								}
-								my_health = other.my_health;
-								armour = other.armour;
-							}
-							alarm[3] = max(alarm[3],2);
+							motion_add(aim+random_range(30,-30),4+other.skill_got[5]+random(4));
+						
 						}
 					}
-					instance_destroy();
-				}	
-			}
-		}
-		chickenFocusDelayTime = chickenFocusDelay;
-		chickenFocusInUse = true;
-		var slow = 0.4;
-		var slowMove = 0.2;
-		room_speed=24;//15
-		if UberCont.normalGameSpeed == 60
-		{
-			room_speed = 48;
-			slow = 0.2;
-		}
-		if (ultra_got[35])
-		{
-			if altUltra
-			{
-				chickenFocusDelayTime = chickenFocusDelay * 0.49;
-				if UberCont.normalGameSpeed == 60
-					chickenFocus -= chickenFocusCostRate*0.15;
-				else
-					chickenFocus -= chickenFocusCostRate* 0.3;
-				var pslow = 2;
-				slowMove = 2;
-				with projectile
-				{
-					x -= hspeed*pslow;
-					y -= vspeed*pslow;
-					speed += friction*pslow;
+					with instance_create(x,y,ElementorWind)
+					{
+						motion_add(aim,4);
+						if other.skill_got[5]
+						{
+							dmg += 1;
+							speed += 1;
+							projectilePush += 0.19;
+						}
+						image_angle = direction;
+						team = other.team;
+					}
 				}
 			}
-			else
+			else if !lockoutElementor && !instance_exists(CloudArea)//Elementor
 			{
-				var pslow = 0.5;
-				if skill_got[12]
-					pslow = 0.6;
-				
-				with projectile
+			
+				var takePercentage = 0.05;//0.75%
+				if skill_got[5]
 				{
-					if team == other.team
+					takePercentage = 0.04;//0.05%
+				}
+				var wepType = TargetWepTypeForAmmoConsumption(takePercentage, 5);
+				if wepType != wep_type[bwep] && wepType != wep_type[wep]
+					takePercentage *= 5;
+				var cost = typ_ammo[wepType]*takePercentage;
+				if ((wepType != 0  && !scrIsCrown(40)) && ammo[wepType] - cost > 0)
+				{
+					var myMask = mask_index;
+					mask_index=mskWall;
+					var am = 1;
+					var i = 0;
+					if ultra_got[93] && !altUltra
+						am = 5;
+					var placedWall = false;
+					var mx = UberCont.mouse__x;
+					var my = UberCont.mouse__y;
+					repeat(am)
 					{
-						x -= hspeed;
-						y -= vspeed;
-						speed += friction;
+						placedWall = scrElementorPlaceWall(mx,my);
+						switch(i)
+						{
+							case 0:
+								mx = UberCont.mouse__x + 16;
+								my = UberCont.mouse__y;
+							break;
+							case 1:
+								mx = UberCont.mouse__x - 16;
+								my = UberCont.mouse__y;
+							break;
+							case 2:
+								mx = UberCont.mouse__x;
+								my = UberCont.mouse__y + 16;
+							break;
+							case 3:
+								mx = UberCont.mouse__x;
+								my = UberCont.mouse__y - 16;
+							break;
+						}
+						i++;
 					}
+					if (placedWall)
+					{
+						ammo[wepType] = ammo[wepType] - cost;
+					}
+					mask_index=myMask;
+					if (ammo[wepType] <= 0)
+					{
+						if scrIsCrown(13)
+						{
+							with Crown {
+								event_user(0);	
+							}
+						}
+					}
+				}
+				else
+				{
+					lockoutElementor = true;
+					snd_play_2d(snd_lowa,0,true,false,10);
+					snd_play(sndEmpty)
+					var dir = instance_create(x,y,PopupText)
+					dir.mytext = "NOT ENOUGH AMMO";
+					dir.theColour=c_red;
+					drawempty = 30
+					BackCont.shake += 5;
+				}
+			}
+		}
+
+
+		//CHICKEN constant
+		if race == 9 && chickenFocus > 0 && !(instance_exists(GenCont))
+		{
+			if chickenFocus == chickenFocusMax
+			{
+				with AudioObject
+				{
+					event_user(0);
+				}
+			}
+			if !skill_got[maxskill + 1] || speed > 2
+			{
+				if UberCont.normalGameSpeed == 60
+					chickenFocus -= chickenFocusCostRate*0.5;
+				else
+					chickenFocus -= chickenFocusCostRate;
+			
+				if chickenFocus <= 0
+				{
+					with ChickenRewindPosition
+					{
+						if active
+						{
+							with other
+							{
+								x = other.x;
+								y = other.y;
+								scrForcePosition60fps();
+								if maxhealth > 0
+								{
+									//my_health = max(my_health,other.my_health);
+									//armour = max(armour, other.armour);
+									var healAmount = other.my_health - my_health;
+									if healAmount >= 4
+									{
+										scrUnlockBSkin(9,"FOR REWINDING 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION");
+									}
+									my_health = other.my_health;
+									armour = other.armour;
+								}
+								alarm[3] = max(alarm[3],2);
+							}
+						}
+						instance_destroy();
+					}	
+				}
+			}
+			chickenFocusDelayTime = chickenFocusDelay;
+			chickenFocusInUse = true;
+			var slow = 0.4;
+			var slowMove = 0.2;
+			room_speed=24;//15
+			if UberCont.normalGameSpeed == 60
+			{
+				room_speed = 48;
+				slow = 0.2;
+			}
+			if (ultra_got[35])
+			{
+				if altUltra
+				{
+					chickenFocusDelayTime = chickenFocusDelay * 0.49;
+					if UberCont.normalGameSpeed == 60
+						chickenFocus -= chickenFocusCostRate*0.15;
 					else
+						chickenFocus -= chickenFocusCostRate* 0.3;
+					var pslow = 2;
+					slowMove = 2;
+					with projectile
 					{
 						x -= hspeed*pslow;
 						y -= vspeed*pslow;
 						speed += friction*pslow;
 					}
 				}
-			}
-		}
-		else
-		{
-			with projectile
-			{
-				x -= hspeed*0.2;
-				y -= vspeed*0.2;
-				speed += friction * 0.2;
-			}
-		}
-		with enemy {
-			if alarm[1] > 1
-			{
-				alarm[1] += slow;
-			}
-			x -= hspeed*slowMove;
-			y -= vspeed*slowMove;
-		}
-		if skill_got[maxskill + 1] && !instance_exists(ChickenRewindPosition)
-		{
-			with instance_create(x,y,ChickenRewindPosition)
-			{
-				my_health = other.my_health;
-				armour = other.armour;
-			}
-		}
-		if instance_exists(Decoy)//CHICKEN VANISH
-		{
-			instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
-		}
-		if skill_got[5]//THRONE BUTT
-		{//Normal movement speed
-			if my_health > 0 && raceOverwrite == -1
-			{
-				if bskin=1
-				{
-					spr_walk = sprMutant9BThronebutt;
-					if ultra_got[35] && altUltra
-						spr_walk=sprMutant9EThronebutt;
-				}
-				else if bskin=2
-					spr_walk = sprMutant9CThronebutt;
-				else if bskin=3
-					spr_walk = sprMutant9DThronebutt;
-				else if bskin=4
-					spr_walk = sprMutant9EThronebutt;
 				else
 				{
-					spr_walk=sprMutant9Thronebutt;
-					if ultra_got[35] && altUltra
-						spr_walk=sprMutant9DThronebutt;
+					var pslow = 0.5;
+					if skill_got[12]
+						pslow = 0.6;
+				
+					with projectile
+					{
+						if team == other.team
+						{
+							x -= hspeed;
+							y -= vspeed;
+							speed += friction;
+						}
+						else
+						{
+							x -= hspeed*pslow;
+							y -= vspeed*pslow;
+							speed += friction*pslow;
+						}
+					}
 				}
-			}
-
-			if skill_got[2]==1//extra feet
-			{
-				//normal : 4.5
-				maxSpeed=5.625//6.3;//6.5// 4.5
 			}
 			else
 			{
-				// normal : 4
-			maxSpeed=5//5.8;//6//normal 4   4*(30/room_speed)
-			}
-			//friction = 0.45 normal
-			//image_speed = 0.4 normal
-			image_speed=0.5////0.7;
-			friction = 0.5625//0.90;
-
-			if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-			hspeed -= 0.75
-			if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-			hspeed += 0.75
-			if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-			vspeed -= 0.75
-			if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-			vspeed += 0.75
-		}
-		else
-		{
-			reload += 0.1;
-		    if speed>maxSpeed-0.75//make chicken a lill slower in slow mo when no thronebutt
-		    {
-				speed-=0.75;
-		    }
-		}
-		if !audio_is_playing(sndChickenLoop) {snd_play_2d(sndChickenStart) snd_loop(sndChickenLoop)}
-	}
-
-	//STEROIDS
-	if race == 7 and bwep != 0 //and wep != 0
-	{
-		if !ultra_got[27] || altUltra
-			scrSwapWeps()
-		else if !altUltra{
-			twep=bwep;
-			bwep=wep;
-			scrSwapWeps();
-		}
-		//if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
-		//	scrEmpty()
-		var representingCost = round(wep_cost[wep]);
-		var ignoreAmmo = false;
-		if ultra_got[70]
-			representingCost = min(representingCost,0.5);
-		else if scrIsCrown(13)//Crown of drowning
-		{
-			representingCost = 0;
-		}
-		else if scrIsGamemode(48)
-		{
-			representingCost = 0;
-			ignoreAmmo = true;
-		}
-		if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
-		{
-			if wep_auto[wep] == 1 || wep_auto[wep] == 3 || KeyCont.key_spec[p] == 1
-				scrFire()
-		}
-	    scrSwapWeps();
-		
-		if wep == 0 && bwep != 0
-			scrSwapWeps();
-	    if ultra_got[27]=1 && !altUltra{//mirror hands
-			bwep=twep
-	    }
-    
-    
-	}
-
-	//MIND CONTROL
-	if race == 3
-	{
-		var px = x;
-		var py = y;
-		var od = 180;
-		var ps = ultra_got[9] && altUltra;
-		var tb = skill_got[5];
-		var pp = ultra_got[12];
-		if ultra_got[10] && altUltra
-		{
-			if (!instance_exists(VoidStyle))
-			{
-				var dis = 48;
-				snd_play(sndVoidStyle);
-				with enemy
-				{
-					if (point_distance(x,y,other.x,other.y) > dis)
-					{
-						scrEyesTelekinesis(true,tb*2 + 4,px,py);
-						motion_add(point_direction(x,y,px,py),8 + tb);
-					}
-				}
 				with projectile
 				{
-					if canBeMoved && team != other.team && point_distance(x,y,other.x,other.y) > dis
+					x -= hspeed*0.2;
+					y -= vspeed*0.2;
+					speed += friction * 0.2;
+				}
+			}
+			with enemy {
+				if alarm[1] > 1
+				{
+					alarm[1] += slow;
+				}
+				x -= hspeed*slowMove;
+				y -= vspeed*slowMove;
+			}
+			if skill_got[maxskill + 1] && !instance_exists(ChickenRewindPosition)
+			{
+				with instance_create(x,y,ChickenRewindPosition)
+				{
+					my_health = other.my_health;
+					armour = other.armour;
+				}
+			}
+			if instance_exists(Decoy)//CHICKEN VANISH
+			{
+				instance_create(x+irandom(8)-4,y+irandom(8)-4,Smoke);
+			}
+			if skill_got[5]//THRONE BUTT
+			{//Normal movement speed
+				if my_health > 0 && raceOverwrite == -1
+				{
+					if bskin=1
 					{
-						var spd = speed;
-						var minSpeed = min(spd,2);
-						scrEyesTelekinesisNoCollision(true,tb*2 + 4,px,py);
-						motion_add(point_direction(x,y,px,py),8 + tb);
-						image_angle = direction;
-						speed = spd;
+						spr_walk = sprMutant9BThronebutt;
+						if ultra_got[35] && altUltra
+							spr_walk=sprMutant9EThronebutt;
+					}
+					else if bskin=2
+						spr_walk = sprMutant9CThronebutt;
+					else if bskin=3
+						spr_walk = sprMutant9DThronebutt;
+					else if bskin=4
+						spr_walk = sprMutant9EThronebutt;
+					else
+					{
+						spr_walk=sprMutant9Thronebutt;
+						if ultra_got[35] && altUltra
+							spr_walk=sprMutant9DThronebutt;
 					}
 				}
-				with instance_create(x,y,VoidStyle)
-				{
-					owner = other.id;
-					team = other.team;
-				}
-			}
-		}
-		else
-		{
-			if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
 
-			if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
-			
-			with chestprop
-			{
-				scrEyesTelekinesis(ps,tb,px,py);
-			}
-			with Pickup
-			{
-				scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
-			}
-			with RadChest
-			{
-				scrEyesTelekinesis(ps,tb,px,py);
-			}
-			with WepPickup
-			{
-				scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
-			}
-	
-			if altUltra && ultra_got[9]
-			{
-				px = mouse_x;
-				py = mouse_y;
-				od = 0;
-				if !instance_exists(EyesCrosshair)
+				if skill_got[2]==1//extra feet
 				{
-					instance_create(mouse_x,mouse_y,EyesCrosshair);	
+					//normal : 4.5
+					maxSpeed=5.625//6.3;//6.5// 4.5
 				}
 				else
 				{
-					with EyesCrosshair
-					{
-						x = mouse_x;
-						y = mouse_y;
-					}
+					// normal : 4
+				maxSpeed=5//5.8;//6//normal 4   4*(30/room_speed)
 				}
-			}
-			with enemy
-			{
-				scrEyesTelekinesis(ps,tb,px,py);
-			}
-			with Sheep
-			{
-				scrEyesTelekinesis(ps,tb,px,py);
-			}
+				//friction = 0.45 normal
+				//image_speed = 0.4 normal
+				image_speed=0.5////0.7;
+				friction = 0.5625//0.90;
 
-			var ts = 1.05+(Player.skill_got[5]*1.1);
-			if ultra_got[9] == 1 && altUltra
-				ts = 1.3+(Player.skill_got[5]*1.1);
-			with projectile
-			{
-				if canBeMoved && team != 2 //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-				&& point_distance(x,y,other.x,other.y) < 250
-				{
-					var pd = point_direction(x,y,px,py)+od;
-					//if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
-						x += lengthdir_x(ts,pd)
-					//if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
-						y += lengthdir_y(ts,pd)
-				}
-			}
-			with Explosion
-			{
-				if point_distance(x,y,other.x,other.y) < 250//x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
-				{
-					var pd = point_direction(x,y,px,py)+od;
-					x += lengthdir_x(ts,pd)
-					y += lengthdir_y(ts,pd)
-				}
-			}
-
-			if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
-				scrProjectileStyle(team, px, py);
-			}
-		}
-	}
-
-	//SHEEP
-	if race==13 && !ultra_got[49]
-	{
-		if !instance_exists(SheepStorm)
-		{
-			if (ultra_got[51] && altUltra && sheepFakeouts > 0)
-			{
-				//Its hypnosis in click event
+				if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+				hspeed -= 0.75
+				if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+				hspeed += 0.75
+				if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+				vspeed -= 0.75
+				if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+				vspeed += 0.75
 			}
 			else
 			{
-				if !instance_exists(SheepStorm)
-				{
-					with instance_create(x,y,SheepStorm)
-					{
-						if other.skill_got[other.maxskill+1]
-							gotVision = true;
-						team=other.team;
-					}
-					if skill_got[2]==1//extra feet
-					{
-						maxSpeed=7;
-					}
-					else
-					{
-						maxSpeed=6;
-					}
-				}
-				
-			}	
-		}
-		var is60fps = UberCont.normalGameSpeed == 60;
-		if !instance_exists(SheepBreak)
-		{
-			if speed > 4
-			{
-				var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
-			
-				image_speed = 0.5;
-				if sheepPower < powerMax
-				{
-					if is60fps
-						sheepPower += 0.38*0.5;
-					else
-						sheepPower += 0.38;
-				}
-				else
-				{
-					sheepPower = powerMax;
-				}
-				if (skill_got[5])
-				{
-					if is60fps
-						sheepPower += 0.055*0.5;
-					else
-						sheepPower += 0.055;
-				}
-				if (skill_got[2])
-				{
-					if is60fps
-						sheepPower += 0.025*0.5;
-					else
-						sheepPower += 0.025;
-				}
-				if (ultra_got[51])
-				{
-					if is60fps
-						sheepPower += 0.085*0.5;
-					else
-						sheepPower += 0.085;
-				}
-				if sheepPower > sheepPowerToHaveEffect
-					image_speed = 0.6;
-				if sheepPower >= 10
-					image_speed = 0.7;
+				reload += 0.1;
+			    if speed>maxSpeed-0.75//make chicken a lill slower in slow mo when no thronebutt
+			    {
+					speed-=0.75;
+			    }
 			}
-			else if sheepPower > 0
-			{
-				if is60fps
-					sheepPower = sheepPower - (0.4*0.5);
-				else
-					sheepPower = sheepPower - 0.4;
-				sheepPower = max(sheepPower,0);
-				//speed=10;
-				var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
-				if (is60fps)
-				{
-					//Move in opposite direction to reduce control
-					if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-					hspeed += (2.2-moveBoost)*0.5
-					if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-					hspeed -= (2.2-moveBoost)*0.5
-					if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-					vspeed += (2.2-moveBoost)*0.5
-					if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-					vspeed -= (2.2-moveBoost)*0.5
-					motion_add(direction,(3.5)*0.5);
-				}
-				else
-				{
-					//Move in opposite direction to reduce control
-					if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
-					hspeed += 2.2-moveBoost
-					if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
-					hspeed -= 2.2-moveBoost
-					if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
-					vspeed += 2.2-moveBoost
-					if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
-					vspeed -= 2.2-moveBoost
-					motion_add(direction,3.5);
-				}
-				if sheepPower < sheepPowerToHaveEffect && speed > maxSpeed
-					speed = maxSpeed;
-			}
+			if !audio_is_playing(sndChickenLoop) {snd_play_2d(sndChickenStart) snd_loop(sndChickenLoop)}
 		}
-		else if speed > maxSpeed - 1
+
+		//STEROIDS
+		if race == 7 and bwep != 0 //and wep != 0
 		{
-			speed = maxSpeed - 1;
-		}
+			if !ultra_got[27] || altUltra
+				scrSwapWeps()
+			else if !altUltra{
+				twep=bwep;
+				bwep=wep;
+				scrSwapWeps();
+			}
+			//if ammo[wep_type[wep]] < wep_cost[wep] and KeyCont.key_spec[p] = 1 and wep_type[wep] != 0
+			//	scrEmpty()
+			var representingCost = round(wep_cost[wep]);
+			var ignoreAmmo = false;
+			if ultra_got[70]
+				representingCost = min(representingCost,0.5);
+			else if scrIsCrown(13)//Crown of drowning
+			{
+				representingCost = 0;
+			}
+			else if scrIsGamemode(48)
+			{
+				representingCost = 0;
+				ignoreAmmo = true;
+			}
+			if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
+			{
+				if wep_auto[wep] == 1 || wep_auto[wep] == 3 || KeyCont.key_spec[p] == 1
+					scrFire()
+			}
+		    scrSwapWeps();
 		
-	}
+			if wep == 0 && bwep != 0
+				scrSwapWeps();
+		    if ultra_got[27]=1 && !altUltra{//mirror hands
+				bwep=twep
+		    }
+    
+    
+		}
+
+		//MIND CONTROL
+		if race == 3
+		{
+			var px = x;
+			var py = y;
+			var od = 180;
+			var ps = ultra_got[9] && altUltra;
+			var tb = skill_got[5];
+			var pp = ultra_got[12];
+			if ultra_got[10] && altUltra
+			{
+				if (!instance_exists(VoidStyle))
+				{
+					var dis = 48;
+					snd_play(sndVoidStyle);
+					with enemy
+					{
+						if (point_distance(x,y,other.x,other.y) > dis)
+						{
+							scrEyesTelekinesis(true,tb*2 + 4,px,py);
+							motion_add(point_direction(x,y,px,py),8 + tb);
+						}
+					}
+					with projectile
+					{
+						if canBeMoved && team != other.team && point_distance(x,y,other.x,other.y) > dis
+						{
+							var spd = speed;
+							var minSpeed = min(spd,2);
+							scrEyesTelekinesisNoCollision(true,tb*2 + 4,px,py);
+							motion_add(point_direction(x,y,px,py),8 + tb);
+							image_angle = direction;
+							speed = spd;
+						}
+					}
+					with instance_create(x,y,VoidStyle)
+					{
+						owner = other.id;
+						team = other.team;
+					}
+				}
+			}
+			else
+			{
+				if !audio_is_playing(sndEyesLoop) snd_loop(sndEyesLoop)
+
+				if !sound_isplaying(sndEyesLoopUpg) and Player.skill_got[5] =1 snd_loop(sndEyesLoopUpg)
+			
+				with chestprop
+				{
+					scrEyesTelekinesis(ps,tb,px,py);
+				}
+				with Pickup
+				{
+					scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+				}
+				with RadChest
+				{
+					scrEyesTelekinesis(ps,tb,px,py);
+				}
+				with WepPickup
+				{
+					scrEyesTelekinesisThroughWalls(ps,pp,tb,px,py);
+				}
+	
+				if altUltra && ultra_got[9]
+				{
+					px = mouse_x;
+					py = mouse_y;
+					od = 0;
+					if !instance_exists(EyesCrosshair)
+					{
+						instance_create(mouse_x,mouse_y,EyesCrosshair);	
+					}
+					else
+					{
+						with EyesCrosshair
+						{
+							x = mouse_x;
+							y = mouse_y;
+						}
+					}
+				}
+				with enemy
+				{
+					scrEyesTelekinesis(ps,tb,px,py);
+				}
+				with Sheep
+				{
+					scrEyesTelekinesis(ps,tb,px,py);
+				}
+
+				var ts = 1.05+(Player.skill_got[5]*1.1);
+				if ultra_got[9] == 1 && altUltra
+					ts = 1.3+(Player.skill_got[5]*1.1);
+				with projectile
+				{
+					if canBeMoved && team != 2 //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
+					&& point_distance(x,y,other.x,other.y) < 250
+					{
+						var pd = point_direction(x,y,px,py)+od;
+						//if !place_meeting(x+lengthdir_x(ts,pd),y,Wall)
+							x += lengthdir_x(ts,pd)
+						//if !place_meeting(x,y+lengthdir_y(ts,pd),Wall)
+							y += lengthdir_y(ts,pd)
+					}
+				}
+				with Explosion
+				{
+					if point_distance(x,y,other.x,other.y) < 250//x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 ) && team != 2
+					{
+						var pd = point_direction(x,y,px,py)+od;
+						x += lengthdir_x(ts,pd)
+						y += lengthdir_y(ts,pd)
+					}
+				}
+
+				if ultra_got[9] == 1 && !altUltra {//eyes Projectile Style ULTRA A
+					scrProjectileStyle(team, px, py);
+				}
+			}
+		}
+
+		//SHEEP
+		if race==13 && !ultra_got[49]
+		{
+			if !instance_exists(SheepStorm)
+			{
+				if (ultra_got[51] && altUltra && sheepFakeouts > 0)
+				{
+					//Its hypnosis in click event
+				}
+				else
+				{
+					if !instance_exists(SheepStorm)
+					{
+						with instance_create(x,y,SheepStorm)
+						{
+							if other.skill_got[other.maxskill+1]
+								gotVision = true;
+							team=other.team;
+						}
+						if skill_got[2]==1//extra feet
+						{
+							maxSpeed=7;
+						}
+						else
+						{
+							maxSpeed=6;
+						}
+					}
+				
+				}	
+			}
+			var is60fps = UberCont.normalGameSpeed == 60;
+			if !instance_exists(SheepBreak)
+			{
+				if speed > 4
+				{
+					var powerMax = 10 + (ultra_got[51] * 5) + (skill_got[5] * 2);
+			
+					image_speed = 0.5;
+					if sheepPower < powerMax
+					{
+						if is60fps
+							sheepPower += 0.38*0.5;
+						else
+							sheepPower += 0.38;
+					}
+					else
+					{
+						sheepPower = powerMax;
+					}
+					if (skill_got[5])
+					{
+						if is60fps
+							sheepPower += 0.055*0.5;
+						else
+							sheepPower += 0.055;
+					}
+					if (skill_got[2])
+					{
+						if is60fps
+							sheepPower += 0.025*0.5;
+						else
+							sheepPower += 0.025;
+					}
+					if (ultra_got[51])
+					{
+						if is60fps
+							sheepPower += 0.085*0.5;
+						else
+							sheepPower += 0.085;
+					}
+					if sheepPower > sheepPowerToHaveEffect
+						image_speed = 0.6;
+					if sheepPower >= 10
+						image_speed = 0.7;
+				}
+				else if sheepPower > 0
+				{
+					if is60fps
+						sheepPower = sheepPower - (0.4*0.5);
+					else
+						sheepPower = sheepPower - 0.4;
+					sheepPower = max(sheepPower,0);
+					//speed=10;
+					var moveBoost = (skill_got[2]*1.4) + (skill_got[5]*1.4) + (ultra_got[5]*2.3);
+					if (is60fps)
+					{
+						//Move in opposite direction to reduce control
+						if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+						hspeed += (2.2-moveBoost)*0.5
+						if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+						hspeed -= (2.2-moveBoost)*0.5
+						if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+						vspeed += (2.2-moveBoost)*0.5
+						if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+						vspeed -= (2.2-moveBoost)*0.5
+						motion_add(direction,(3.5)*0.5);
+					}
+					else
+					{
+						//Move in opposite direction to reduce control
+						if KeyCont.key_west[p] = 2 or KeyCont.key_west[p] = 1
+						hspeed += 2.2-moveBoost
+						if KeyCont.key_east[p] = 2 or KeyCont.key_east[p] = 1
+						hspeed -= 2.2-moveBoost
+						if KeyCont.key_nort[p] = 2 or KeyCont.key_nort[p] = 1
+						vspeed += 2.2-moveBoost
+						if KeyCont.key_sout[p] = 2 or KeyCont.key_sout[p] = 1
+						vspeed -= 2.2-moveBoost
+						motion_add(direction,3.5);
+					}
+					if sheepPower < sheepPowerToHaveEffect && speed > maxSpeed
+						speed = maxSpeed;
+				}
+			}
+			else if speed > maxSpeed - 1
+			{
+				speed = maxSpeed - 1;
+			}
+		
+		}
+	
+		//NO THING
+		if race == 29 && !instance_exists(NoThingVoidConsumption)//NO THING
+		{
+			var len = 48;
+			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+			with instance_create(x + lengthdir_x(len,aimDirection),y + lengthdir_y(len,aimDirection),NoThingVoidConsumption)
+			{
+				direction = aimDirection;
+				image_angle = direction;
+				speed = 2;
+			}
+			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
+			if false && instance_exists(Pickup)
+			{
+				var regal = (!instance_exists(VoidBeam) && skill_got[maxskill + 1])
+				var targetedOne = false;
+				if skill_got[5]
+				{
+					var nullVoid = ultra_got[115] ? 1 : 0
+					with Rad
+					{
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							targetedOne = true;
+							if regal 
+							{
+								if object_index == Rad
+									other.voidBeam += 1;
+								else
+									other.voidBeam += 5;
+							}
+							BackCont.shake += 1;
+							radValue *= 0.5;
+							instance_create(x,y,VoidBlockBig);
+							isBeingVoided += nullVoid;
+							event_user(0);
+							isBeingVoided += nullVoid;
+						}
+					}
+					with AmmoPickup
+					{
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							targetedOne = true;
+							BackCont.shake += 2;
+							ammoValue *= 0.5;
+							if regal
+								other.voidBeam += 5;
+							with instance_create(x,y,VoidBlockBig) {
+								image_xscale += 0.125;
+								image_yscale += 0.125;
+							}
+							event_user(0);
+						}
+					}
+				}
+				else
+				{
+					if ultra_got[115]
+					{
+						with Pickup
+						{
+							if object_index != Rad && object_index != BigRad && point_distance(x,y,other.x,other.y) < 300
+								isBeingVoided += 1;
+						}
+					}
+					with Pickup
+					{
+						if point_distance(x,y,other.x,other.y) < 300
+						{
+							targetedOne = true;
+							if isBeingVoided != 1
+								instance_destroy();
+							isBeingVoided += 1;
+							if object_index == Rad
+							{
+								BackCont.shake += 1;
+								if regal
+									other.voidBeam += 1;
+								instance_create(x,y,VoidBlock);
+							}
+							else
+							{
+								BackCont.shake += 2;
+								if regal
+									other.voidBeam += 5;
+								instance_create(x,y,VoidBlockBig);
+							}
+						}
+					}
+				}
+				if targetedOne
+				{
+					BackCont.shake += 4;
+					with PlayerAlarms3 {
+						voidSphereAngle *= -1;	
+					}
+					if ultra_got[113] && !altUltra
+					{
+						BackCont.shake += 2;
+						repeat(2)
+							with instance_create(x + random_range(12,-12),y + random_range(12,-12),PlutoFX)
+							{
+								sprite_index = sprVoidBulletTrail;
+								image_index = irandom(image_number - 1);
+								motion_add(random(360),1);
+							}
+						/*if altUltra
+						{
+							alarm[2] = 25;
+							if !instance_exists(GunWarrant)
+								instance_create(x,y,GunWarrant);
+							else
+							{
+								with GunWarrant
+								{
+									sprite_index = sprGunWarrantStart;
+									image_index = 0;
+								}
+							}
+						}
+						else
+						{*/
+							noThingHealth += 1;
+							maxhealth += 1;
+						
+							if !instance_exists(NoThingHealth)
+							{
+								instance_create(x,y,NoThingHealth);
+							}
+							else
+							{
+								with NoThingHealth
+								{
+									alarm[0] = lifeDuration;	
+								}
+							}
+						//}
+					}
+					if instance_exists(VoidBlock)
+					{
+						if skill_got[5]
+							snd_play_2d(sndVoidConsumptionL,0.01);
+						else
+							snd_play_2d(sndVoidConsumptionS,0.01);
+					}
+					else
+					{
+						if skill_got[5]
+							snd_play_2d(sndVoidConsumptionXL,0.01);
+						else
+							snd_play_2d(sndVoidConsumptionM,0.01);
+					}
+					with VoidBlock
+					{
+						if chain < 2
+						{
+							image_index = 0;
+							image_xscale = max(image_xscale, 1.125);
+							image_yscale = image_xscale;
+							image_speed = 0.4;
+						}
+						chain += 1;
+					}
+					voidBeam = min(voidBeam,voidBeamMax);
+					if BackCont.shake > 60
+						BackCont.shake = 60;
+				}
+			
+			}
+		}
 	}//END OF HOLD RMB
 	else if audio_is_playing(sndEyesLoop) or audio_is_playing(sndChickenLoop) or audio_is_playing(sndEyesLoopUpg) 
 	{

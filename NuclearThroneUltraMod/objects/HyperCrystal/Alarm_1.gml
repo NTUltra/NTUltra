@@ -26,7 +26,16 @@ if target != noone
 	}
 	else
 	{
-		if dis < 160 && alarm[2] < 1 && alarm[3] < 1
+		if dis > 200
+		{
+			direction = point_direction(x,y,target.x,target.y);
+			if isCursed && random(3) < 1
+			if isCursed//Teleport why not
+			{
+				event_user(2);
+			}
+		}
+		else if dis < 160 && alarm[2] < 1 && alarm[3] < 1
 		{
 			var ds = ds_list_size(myCrystals);
 			var alive = 0;
@@ -45,7 +54,10 @@ if target != noone
 				event_user(1);
 			}
 		
-			if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && random(3) < 1
+			var n = instance_nearest(x,y,Floor);
+		if n == noone || n.object_index == FloorExplo
+			direction = point_direction(target.x,target.y,x,y);
+		else if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && random(3) < 1
 				direction = point_direction(x,y,target.x,target.y);
 		}
 		else if dis < 64

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.477846,
+  "duration":0.47784582,
   "name":"sndHitMetal",
   "parent":{
     "name":"Enviroment",

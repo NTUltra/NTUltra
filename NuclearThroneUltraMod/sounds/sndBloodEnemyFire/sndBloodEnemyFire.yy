@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndBloodEnemyFire",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.9253968,
+  "name":"sndBloodEnemyFire",
+  "parent":{
+    "name":"Regular",
+    "path":"folders/Sounds/Enemies/Regular.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndBloodEnemyFire.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -10,8 +10,8 @@ spr_hurt = sprBloodCowHurt;
 spr_dead = sprBloodCowDead;
 spr_fire = sprBloodCowFire;
 
-snd_hurt = sndHitFlesh
-snd_dead = sndRatKingDie
+snd_hurt = sndBloodCowHurt;
+snd_dead = sndBloodCowDie;
 
 //behavior
 walk = 0

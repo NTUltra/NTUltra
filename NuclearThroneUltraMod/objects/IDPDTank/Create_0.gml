@@ -31,6 +31,7 @@ maxSpeed = 6;
 reachedHalfHealth = false;
 middleX = x;
 moveRange = 96;
+moveRangeMargin = 52;
 verticalDistanceBeteenTanks = 192;
 if instance_exists(NuclearThrone1)
 {
@@ -46,7 +47,7 @@ projectileSpeedAdd = -0.2;
 gunInBetween = 10;
 normalGunAngle = gunangle;
 crazyDelay = 14;
-crazyStep = 30;
+crazyStep = 34;
 alarm[8] = 30;
 crazyAmmoReverseMax = 20;
 crazyAmmoReverse = crazyAmmoReverseMax;
@@ -59,7 +60,7 @@ noYDir = 1;
 idpdSpawnCooldown = 4;
 if loops > 2
 {
-	crazyStep = 28;
+	crazyStep = 32;
 	crazyDelay -= 4;
 	gunDelay -= 15;
 	actTime = 18;

@@ -49,6 +49,7 @@ if my_health > 0 && isInteractableNow && !instance_exists(WantBoss) && !instance
 			image_angle = 0;
 			angle = 0;
 			area = 146
+			subarea = 0;
 		}
 		KeyCont.key_pick[Player.p] = 2;
 		mask_index = mskPickupThroughWall;
