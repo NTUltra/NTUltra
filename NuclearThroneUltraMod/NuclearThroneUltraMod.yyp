@@ -4346,6 +4346,7 @@
     {"id":{"name":"sndNothingSmallball","path":"sounds/sndNothingSmallball/sndNothingSmallball.yy",},},
     {"id":{"name":"sndNothingStart","path":"sounds/sndNothingStart/sndNothingStart.yy",},},
     {"id":{"name":"sndNothingTaunt","path":"sounds/sndNothingTaunt/sndNothingTaunt.yy",},},
+    {"id":{"name":"sndNoThingVoidConsuming","path":"sounds/sndNoThingVoidConsuming/sndNoThingVoidConsuming.yy",},},
     {"id":{"name":"sndNoThingVoidConsumption","path":"sounds/sndNoThingVoidConsumption/sndNoThingVoidConsumption.yy",},},
     {"id":{"name":"sndNukeExplosion","path":"sounds/sndNukeExplosion/sndNukeExplosion.yy",},},
     {"id":{"name":"sndNukeFire","path":"sounds/sndNukeFire/sndNukeFire.yy",},},

@@ -4,6 +4,7 @@ if !instance_exists(Player)
 	exit;
 var regal = gotRegal;
 var targetedOne = false;
+var preSound = false;
 var me = id;
 if gotThroneButt
 {
@@ -24,9 +25,27 @@ if gotThroneButt
 			}
 			BackCont.shake += 1;
 			radValue *= 0.5;
-			with instance_create(x,y,VoidBlockBig)
-				createdBy = me;
 			isBeingVoided += nullVoid;
+			if isBeingVoided != 1
+			{
+				preSound = true;
+				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				{
+					shake = 1;
+					sprite_index = other.sprite_index;
+					createdBy = me;
+					blockType = VoidBlockBig;
+				}
+			}
+			else
+			{
+				//Null instant consumption
+				BackCont.shake += 1;
+				with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+				{
+					createdBy = me;
+				}
+			}
 			event_user(0);
 			isBeingVoided += nullVoid;
 		}
@@ -43,10 +62,29 @@ if gotThroneButt
 			ammoValue *= 0.5;
 			if regal
 				Player.voidBeam += 5;
-			with instance_create(x,y,VoidBlockBig) {
-				createdBy = me;
-				image_xscale += 0.125;
-				image_yscale += 0.125;
+			if isBeingVoided != 1
+			{
+				preSound = true;
+				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				{
+					shake = 2;
+					sprite_index = other.sprite_index;
+					image_xscale += 0.125;
+					image_yscale += 0.125;
+					createdBy = me;
+					blockType = VoidBlockBig;
+				}
+			}
+			else
+			{
+				//Null instant consumption
+				BackCont.shake += 2;
+				with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+				{
+					image_xscale += 0.125;
+					image_yscale += 0.125;
+					createdBy = me;
+				}
 			}
 			event_user(0);
 		}
@@ -70,35 +108,57 @@ else
 		{
 			targetedOne = true;
 			if isBeingVoided != 1
-				instance_destroy();
-			isBeingVoided += 1;
-			if object_index == Rad
 			{
-				if regal
-					Player.voidBeam += 1;
-				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				preSound = true;
+				if object_index == Rad
 				{
-					shake = 1;
-					sprite_index = other.sprite_index;
-					image_xscale = other.image_xscale;
-					image_yscale = other.image_yscale;
-					createdBy = me;
+					if regal
+						Player.voidBeam += 1;
+					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+					{
+						shake = 1;
+						sprite_index = other.sprite_index;
+						createdBy = me;
+					}
 				}
+				else
+				{
+					if regal
+						Player.voidBeam += 5;
+					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+					{
+						shake = 2;
+						sprite_index = other.sprite_index;
+						createdBy = me;
+						blockType = VoidBlockBig;
+					}
+				}
+				instance_destroy();
 			}
 			else
 			{
-				if regal
-					Player.voidBeam += 5;
-				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				if object_index == Rad
 				{
-					shake = 2;
-					sprite_index = other.sprite_index;
-					image_xscale = other.image_xscale;
-					image_yscale = other.image_yscale;
-					createdBy = me;
-					blockType = VoidBlockBig;
+					if regal
+						Player.voidBeam += 1;
+					BackCont.shake += 1;
+					with instance_create_depth(x,y,depth - 1,VoidBlock)
+					{
+						createdBy = me;
+					}
+				}
+				else
+				{
+					if regal
+						Player.voidBeam += 5;
+					BackCont.shake += 2;
+					with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+					{
+						createdBy = me;
+					}
 				}
 			}
+			isBeingVoided += 1;
 		}
 	}
 	ds_list_destroy(pickups);
@@ -153,7 +213,15 @@ if targetedOne
 			}
 		//}
 	}
-	instance_create_depth(x,y,depth,VoidBlockSound);
+	if preSound
+		instance_create_depth(x,y,depth,VoidBlockSound);
+	else if !instance_exists(VoidBlock)
+	{
+		if gotThroneButt
+			snd_play_2d(sndVoidConsumptionXL,0.01);
+		else
+			snd_play_2d(sndVoidConsumptionM,0.01);
+	}
 	if instance_exists(VoidBlock)
 	{
 		if gotThroneButt

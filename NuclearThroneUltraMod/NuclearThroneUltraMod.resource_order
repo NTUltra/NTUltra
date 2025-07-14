@@ -4078,6 +4078,7 @@
     {"name":"sndNothingSmallball","order":10,"path":"sounds/sndNothingSmallball/sndNothingSmallball.yy",},
     {"name":"sndNothingStart","order":9,"path":"sounds/sndNothingStart/sndNothingStart.yy",},
     {"name":"sndNothingTaunt","order":8,"path":"sounds/sndNothingTaunt/sndNothingTaunt.yy",},
+    {"name":"sndNoThingVoidConsuming","order":7,"path":"sounds/sndNoThingVoidConsuming/sndNoThingVoidConsuming.yy",},
     {"name":"sndNoThingVoidConsumption","order":6,"path":"sounds/sndNoThingVoidConsumption/sndNoThingVoidConsumption.yy",},
     {"name":"sndNukeExplosion","order":3,"path":"sounds/sndNukeExplosion/sndNukeExplosion.yy",},
     {"name":"sndNukeFire","order":5,"path":"sounds/sndNukeFire/sndNukeFire.yy",},
