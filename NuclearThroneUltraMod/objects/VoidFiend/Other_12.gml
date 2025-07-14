@@ -29,6 +29,14 @@ if !openedShop
 		image_index = 0;
 		image_speed = 0.3;
 	}
+	if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_2 < 1
+	{
+		with instance_create(x - 128,yy + 94,VoidShopItemRadiationCrystal)
+		{
+			image_index = 0;
+			image_speed = 0.25;
+		}
+	}
 	if UberCont.gotRegalThisRun && instance_exists(Player) && !Player.skill_got[Player.maxskill + 1]
 		with instance_create(x - 32,yy + 94,VoidShopItemRegalRefund)
 		{

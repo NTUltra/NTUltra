@@ -1,0 +1,10 @@
+/// @description Init
+createdBy = noone;
+xo = 0;
+yo = 0;
+xs = 0;
+ys = 0;
+alarm[0] = 1;
+alarm[1] = 15;
+blockType = VoidBlock;
+shake = 1;

@@ -720,7 +720,7 @@ function scrRaces() {
 		
 		race_name[29] = "NO THING"
 		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
-		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN THE AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
+		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN AN AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
 		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> <w>COLLECTS<w> SOME <y>RES<y><g>OUR<g><r>CES<r>"
 		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
 		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";

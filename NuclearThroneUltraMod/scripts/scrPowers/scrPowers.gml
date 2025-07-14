@@ -4056,6 +4056,7 @@ function scrPowers(raceOverwrite = -1) {
 		//NO THING
 		if race == 29 && !instance_exists(NoThingVoidConsumption)//NO THING
 		{
+			snd_play_2d(sndNoThingVoidConsumption,0.01);
 			var len = 48;
 			var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 			with instance_create(x + lengthdir_x(len,aimDirection),y + lengthdir_y(len,aimDirection),NoThingVoidConsumption)
@@ -4065,6 +4066,7 @@ function scrPowers(raceOverwrite = -1) {
 				speed = 2;
 			}
 			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
+			/*
 			if false && instance_exists(Pickup)
 			{
 				var regal = (!instance_exists(VoidBeam) && skill_got[maxskill + 1])
@@ -4176,6 +4178,7 @@ function scrPowers(raceOverwrite = -1) {
 						}
 						else
 						{*/
+						/*
 							noThingHealth += 1;
 							maxhealth += 1;
 						
@@ -4221,8 +4224,8 @@ function scrPowers(raceOverwrite = -1) {
 					if BackCont.shake > 60
 						BackCont.shake = 60;
 				}
-			
 			}
+			*/
 		}
 	}//END OF HOLD RMB
 	else if audio_is_playing(sndEyesLoop) or audio_is_playing(sndChickenLoop) or audio_is_playing(sndEyesLoopUpg) 

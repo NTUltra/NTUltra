@@ -606,9 +606,18 @@ function scrSkills() {
 	skill_name[46] = "INNER PEACE"
 	skill_text[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>";
 	skill_detail[46] = "WHILE <w>IN COMBAT<w> AND NOT <w>TAKING DAMAGE<w>:#SLOWLY GAIN A <aq>PROTECTIVE BARRIER<aq>#THAT <aq>BLOCKS<aq> ONE HIT#CAN STACK UP TO <w>3<w> <aq>BARRIERS<aq>#SUBSEQUENT <aq>BARRIERS<aq> CHARGE SLOWER";
-	skill_tips[46] = "rush of adrenaline"
+	skill_tips[46] = "peace of mind"
 	skill_msnd[46] =  sndMutInnerPeace;
 	skill_bons[46] = "+23% CHARGE RATE#CAN CHARGE UP TO 4 BARRIERS"
+	
+	/*
+	skill_name[47] = "HOLLOW BONES"
+	skill_text[47] = "EVERY SO MUCH <y>AMMO<y> YOU SPEND#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <p>IMPLODE<p>";
+	skill_detail[47] = "EVERY 15% <y>AMMO<y> YOU SPEND#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <p>IMPLODE<p>";
+	skill_tips[47] = "emptyness"
+	skill_msnd[47] =  sndMutInnerPeace;
+	skill_bons[47] = "EVERY 11% AMMO"
+	*/
 	
 	skill_name[maxskill + 1] = "REGAL VISION"
 	skill_text[maxskill + 1] = "UPGRADES YOUR SPECIAL ABILITY"

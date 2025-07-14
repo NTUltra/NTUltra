@@ -1,5 +1,6 @@
 /// @description Init
 alarm[0] = 3;
+alarm[1] = 1;
 image_speed = 0.7;
 gotRegal = false;
 gotThroneButt = false;

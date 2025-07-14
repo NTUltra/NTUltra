@@ -74,19 +74,30 @@ else
 			isBeingVoided += 1;
 			if object_index == Rad
 			{
-				BackCont.shake += 1;
 				if regal
 					Player.voidBeam += 1;
-				with instance_create(x,y,VoidBlock)
+				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				{
+					shake = 1;
+					sprite_index = other.sprite_index;
+					image_xscale = other.image_xscale;
+					image_yscale = other.image_yscale;
 					createdBy = me;
+				}
 			}
 			else
 			{
-				BackCont.shake += 2;
 				if regal
 					Player.voidBeam += 5;
-				with instance_create(x,y,VoidBlockBig)
+				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+				{
+					shake = 2;
+					sprite_index = other.sprite_index;
+					image_xscale = other.image_xscale;
+					image_yscale = other.image_yscale;
 					createdBy = me;
+					blockType = VoidBlockBig;
+				}
 			}
 		}
 	}
@@ -142,6 +153,7 @@ if targetedOne
 			}
 		//}
 	}
+	instance_create_depth(x,y,depth,VoidBlockSound);
 	if instance_exists(VoidBlock)
 	{
 		if gotThroneButt
@@ -149,19 +161,20 @@ if targetedOne
 		else
 			snd_play_2d(sndVoidConsumptionS,0.01);
 	}
-	else
+	/*else
 	{
 		if gotThroneButt
 			snd_play_2d(sndVoidConsumptionXL,0.01);
 		else
 			snd_play_2d(sndVoidConsumptionM,0.01);
-	}
+	}*/
 	with VoidBlock
 	{
 		if createdBy != other.id
 		{
 			if chain < 2
 			{
+				BackCont.shake += 1;
 				image_index = 0;
 				image_xscale = max(image_xscale, 1.125);
 				image_yscale = image_xscale;

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.736213,
+  "duration":0.73621315,
   "name":"sndVoidConsumptionS",
   "parent":{
     "name":"NoThing",
