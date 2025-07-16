@@ -5,11 +5,21 @@ with enemy
 	if team != 2
 		numEn ++;
 }
-if instance_exists(IDPDVan)
-	numEn -= instance_number(IDPDVan);
-if numEn == 0 &&
-(!instance_exists(becomenemy) and 
-!instance_exists(Menu) and !instance_exists(RadMaggotChest) and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(UltraIcon))
+var numEn = 0;
+var totalHp = 0;
+var bossLeft = false;
+with enemy
+{
+	if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
+	{
+		if isBoss
+			bossLeft = true;
+		numEn ++;
+		totalHp += my_health;
+	}
+}
+var atLeast = 30;
+if totalHp < atLeast && !bossLeft && numEn < 4 && !instance_exists(WantBoss) && !instance_exists(becomenemy)
 {
 	image_index = 2;
 	name = "ENTER VOID?";

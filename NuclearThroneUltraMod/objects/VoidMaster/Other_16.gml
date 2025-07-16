@@ -1,5 +1,5 @@
 /// @description Spawn boss bounties
-if !openedShop && instance_exists(RegalNavigation)
+if !openedShop && (instance_exists(RegalNavigation) || instance_exists(SecretSheepNavigation))
 {
 	openedShop = true;
 	if !array_contains(UberCont.killedBoss,secretChallengeBosses.bigFish)

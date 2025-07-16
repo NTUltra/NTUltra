@@ -1,12 +1,10 @@
 /// @description GO TO vOID
-if image_index == 1
-	image_index = 2;
 with Player
 {
 	radFloor = 0;
 	purpleRadFloor = 0;
 }
-if image_index == 2 && !wentIn && !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter) && !instance_exists(WantBoss) && !instance_exists(LilHunterFly) && !instance_exists(LilHunterDie) && !instance_exists(InvertedLilHunterFly) && !instance_exists(InvertedLilHunterDie)
+if image_index == 2 && !wentIn
 {
 	with Player
 		isOnInteractable = true;
@@ -16,10 +14,7 @@ if image_index == 2 && !wentIn && !instance_exists(LilHunter) && !instance_exist
 		snd_play(sndOasisHorn);
 		name = "";
 		KeyCont.key_pick[Player.p] = 2;
-		with Player
-		{
-			area = 137
-		}
+		
 		var prevA = UberCont.area;
 		if instance_exists(Player)
 			prevA = Player.area;

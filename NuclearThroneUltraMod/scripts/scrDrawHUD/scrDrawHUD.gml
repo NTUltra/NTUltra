@@ -2295,13 +2295,13 @@ function scrDrawHUD() {
 				if !wentIn
 				{
 					if image_index == 2
-						draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox+16,y-oy-7)
+						draw_sprite(sprEPickup,UberCont.opt_gamepad,x-ox,y-oy-7)
 					draw_set_color(c_black)
-					draw_text(x-ox+16,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+17,y-oy-30,string_hash_to_newline(string(name)))
-					draw_text(x-ox+17,y-oy-31,string_hash_to_newline(string(name)))
+					draw_text(x-ox,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-30,string_hash_to_newline(string(name)))
+					draw_text(x-ox+1,y-oy-31,string_hash_to_newline(string(name)))
 					draw_set_color(c_white)
-					draw_text(x-ox+16,y-oy-31,string_hash_to_newline(string(name)))
+					draw_text(x-ox,y-oy-31,string_hash_to_newline(string(name)))
 				}
 			}
 		}

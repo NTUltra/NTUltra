@@ -22,13 +22,10 @@ function scrPushOffWepPickup(){
 	if w != noone && point_distance(x,y,w.x,w.y) <= range
 	{
 		with w {
-			if canBeMoved
+			if speed < 4
 			{
-				if speed < 4
-				{
-					motion_add(direction+1,1.8);
-					vspeed += 0.05;
-				}
+				motion_add(direction+1,1.8);
+				vspeed += 0.05;
 			}
 		}
 	}
@@ -37,13 +34,10 @@ function scrPushOffWepPickup(){
 	if w != noone && point_distance(x,y,w.x,w.y) <= range
 	{
 		with w {
-			if canBeMoved
+			if speed < 4
 			{
-				if speed < 4
-				{
-					motion_add(direction+1,1.8);
-					vspeed += 0.05;
-				}
+				motion_add(direction+1,1.8);
+				vspeed += 0.05;
 			}
 		}
 	}

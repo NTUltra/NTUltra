@@ -1711,6 +1711,38 @@ function scrPopEnemies() {
 	        }
 		}
     }
+	//Inverted Blood Land
+    if spawnarea == 147 {
+		if loops > 0 {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(InvertedBloodLurker, InvertedBloodLurker, InvertedBloodCow,InvertedBloodCow, InvertedHyena, InvertedGraveyardBreeder))
+	        } else {
+	            var ran = random(100);
+				if ran > 20
+				{
+					instance_create(x + 16, y + 16, choose(BigMaggotInverted, InvertedBloodLurker, InvertedBloodCow, InvertedHyena, InvertedGraveyardBreeder))
+				}
+				else
+				{
+					instance_create(x + 16, y + 16,MaggotInverted);
+				}
+	        }
+		} else {
+			if styleb == 1 {
+	            instance_create(x + 16, y + 16, choose(InvertedBloodLurker, InvertedBloodLurker, InvertedBloodCow,InvertedBloodCow))
+	        } else {
+	            var ran = random(100);
+
+	            if ran > 20 {
+	                instance_create(x + 16, y + 16, choose(BigMaggotInverted, InvertedBloodLurker, InvertedBloodCow))
+	            }
+				else
+				{
+					instance_create(x + 16, y + 16,MaggotInverted);
+				}
+	        }
+		}
+    }
 	//Crown Courtyard
     if spawnarea = 128{
 		if loops > 0 {

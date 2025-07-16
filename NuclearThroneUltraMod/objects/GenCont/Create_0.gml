@@ -247,7 +247,7 @@ if instance_exists(Player)
 			__background_set_colour( make_color_rgb(73, 14, 14) )
 			break;
 			case 147:
-			__background_set_colour( make_color_rgb(73, 14, 14) )
+			__background_set_colour( make_color_rgb(14, 74, 76) )
 			break;
 		}
 	}
@@ -382,8 +382,10 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(82, 88, 102) )
 		else if Player.area == 146//Blood land
 		__background_set_colour( make_color_rgb(76, 30, 14) )
+		//else if Player.area == 147//Blood land
+		//__background_set_colour( make_color_rgb(71, 76, 56) )
 		else if Player.area == 147//Blood land
-		__background_set_colour( make_color_rgb(71, 76, 56) )
+		__background_set_colour( make_color_rgb(10, 66, 76) )
 	}
 }
 else

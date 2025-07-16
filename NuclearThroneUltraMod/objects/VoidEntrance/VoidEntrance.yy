@@ -41,8 +41,8 @@
     "path":"sprites/sprVoidEntrance/sprVoidEntrance.yy",
   },
   "spriteMaskId":{
-    "name":"mskFloor",
-    "path":"sprites/mskFloor/mskFloor.yy",
+    "name":"mskWepPickup",
+    "path":"sprites/mskWepPickup/mskWepPickup.yy",
   },
   "visible":true,
 }

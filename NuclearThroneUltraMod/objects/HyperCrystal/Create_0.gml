@@ -1,5 +1,6 @@
 raddrop = 150
-maxhealth = 1000//750
+maxhealth = 900//750
+scrBossHealthBuff();
 mySize = 6
 
 

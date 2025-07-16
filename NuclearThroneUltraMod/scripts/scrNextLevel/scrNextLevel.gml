@@ -144,6 +144,7 @@ function scrNextLevel(skipping = false) {
 			}
 			else if instance_exists(SecretSheepNavigation)
 			{
+				debug("SHEEP NAVIGATION");
 				if subarea < 1
 				{
 					subarea = 1;

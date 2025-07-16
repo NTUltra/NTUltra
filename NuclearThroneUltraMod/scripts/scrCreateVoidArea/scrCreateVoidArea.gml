@@ -45,7 +45,7 @@ function scrCreateVoidArea(defaultVoidCreation = true){
 			var xo = x - 96;
 			var yo = y - 128;
 			//instance_create(xo, yo, VoidBench);
-			if !instance_exists(SecretSheepNavigation)
+			//if !instance_exists(SecretSheepNavigation)
 				instance_create(xo, yo - 24, VoidMaster);
 			if !UberCont.race_have[29] && GetPlayerLoops() < 1 && !instance_exists(SecretSheepNavigation) && !instance_exists(PitNavigation)
 				instance_create(xo,yo + 112,NoThingUnlocker);

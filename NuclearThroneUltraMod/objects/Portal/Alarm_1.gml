@@ -4,17 +4,19 @@ if !byPassCheck && (type == 3 || inverted)
 {	
 	var numEn = 0;
 	var totalHp = 0;
+	var bossLeft = false;
 	with enemy
 	{
 		if team != 2 && object_index != IDPDVan && object_index != IDPDVanVertical
 		{
+			if isBoss
+				bossLeft = true;
 			numEn ++;
 			totalHp += my_health;
 		}
 	}
 	var atLeast = 30;
-	if totalHp < atLeast && !instance_exists(BigDisc) && !instance_exists(GraveyardFish) && numEn < 4 && !instance_exists(WantBoss)
-	&& !instance_exists(SandWorm) && !instance_exists(WallCrawler) && !instance_exists(becomenemy)
+	if totalHp < atLeast && !bossLeft && numEn < 4 && !instance_exists(WantBoss) && !instance_exists(becomenemy)
 	{
 		goTime = true;
 	}
