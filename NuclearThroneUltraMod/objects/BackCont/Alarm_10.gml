@@ -40,7 +40,7 @@ if instance_exists(Player)
 	{
 		with Player
 		{
-			if place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor)
+			if race != 18 && (place_meeting(x,y,WallHitMe) || !place_meeting(x,y,Floor))
 			{
 				if other.playerOutOfPlace
 				{

@@ -1,5 +1,5 @@
 /// @description Spawn the challenges
-if !openedShop&& !instance_exists(RegalNavigation)
+if !openedShop && !instance_exists(RegalNavigation) && !instance_exists(SecretSheepNavigation)
 {
 	openedShop = true;
 	if !UberCont.voidChallengeCompleted[0]

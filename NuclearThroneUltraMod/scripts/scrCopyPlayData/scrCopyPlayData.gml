@@ -80,6 +80,7 @@ function scrCopyPlayData(){
 		voidExtremeChallenges: UberCont.voidExtremeChallenges,
 		voidMutationDeposit: UberCont.voidMutationDeposit,
 		voidWeaponDeposit: UberCont.voidWeaponDeposit,
+		hasBeenInVoid: UberCont.hasBeenInVoid,
 		seed: UberCont.savedSeed,
 		horrorEtaken: Player.horrorEtaken,
 		hogpoints: Player.hogpoints,

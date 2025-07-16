@@ -19,7 +19,7 @@ if other.team != team and other.my_health > 0
 		else
 		{
 			snd_play(snd_hurt, hurt_pitch_variation,true)
-			var bigdmg = d + ceil(clamp(my_health*0.20,d,500));
+			var bigdmg = d + ceil(clamp(my_health*0.15,d,500));
 			BackCont.shake += min(30,bigdmg);
 			if bigdmg > 20
 				bigDamage = true;

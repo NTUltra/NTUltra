@@ -1,4 +1,4 @@
-var amount = 19;//17
+var amount = 18;//17
 if instance_exists(Player)
 {
 	//if GetPlayerLoops() > 0

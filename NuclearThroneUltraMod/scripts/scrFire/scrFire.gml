@@ -2889,7 +2889,7 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{
@@ -2948,7 +2948,7 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{
@@ -3410,7 +3410,7 @@ function scrFire(canDrown = true) {
 		y += lengthdir_y(1,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{

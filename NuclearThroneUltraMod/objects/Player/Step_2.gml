@@ -1298,7 +1298,7 @@ if my_health <= 0 && armour < 1
 			motion_add(other.direction,other.speed)
 			speed += max(0,-other.my_health/5)
 			if other.bskin=2
-			sprite_index = mskPickupThroughWall;//invisible basicly
+				sprite_index = mskPickupThroughWall;//invisible basicly
 			else if other.bskin=1
 			{
 				sprite_index = sprMutant9BHeadIdle;

@@ -10246,7 +10246,7 @@ function scrWeapons() {
 	wep_name[913] = "FROST GUN"
 	wep_type[913] = 4
 	wep_auto[913] = 3
-	wep_load[913] = 7
+	wep_load[913] = 8
 	wep_cost[913] = 1
 	wep_sprt[913] = sprFrostGun
 	wep_area[913] = 3

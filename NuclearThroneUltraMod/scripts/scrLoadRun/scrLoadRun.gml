@@ -197,8 +197,12 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.voidExtremeChallenges = encryptedRun.voidExtremeChallenges;	
 			if variable_struct_exists(encryptedRun, "voidWeaponDeposit")
 				UberCont.voidWeaponDeposit = encryptedRun.voidWeaponDeposit;
-				if variable_struct_exists(encryptedRun, "voidMutationDeposit")
+			if variable_struct_exists(encryptedRun, "voidMutationDeposit")
 				UberCont.voidMutationDeposit = encryptedRun.voidMutationDeposit;
+			if variable_struct_exists(encryptedRun, "hasBeenInVoid")
+				UberCont.hasBeenInVoid = encryptedRun.hasBeenInVoid;
+			else
+				UberCont.hasBeenInVoid = true;
 			UberCont.savedSeed = encryptedRun.seed;
 			UberCont.useSeed = true;
 			UberCont.seed = encryptedRun.seed;

@@ -8,4 +8,3 @@ else
 {
 	scrDropNearby(40,20);
 }
-event_inherited();

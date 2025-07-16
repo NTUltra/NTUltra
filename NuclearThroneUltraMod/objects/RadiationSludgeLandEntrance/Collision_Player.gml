@@ -12,7 +12,6 @@ if !wentIn && !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter)
 		with Player
 		{
 			area = 144
-			subarea = 0
 			snd_play_2d(sndVenom);
 			var am = 8;
 			var ang = random(360);
@@ -26,9 +25,6 @@ if !wentIn && !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter)
 				}
 				ang += angStep;
 			}
-			hitBy = sprRadiationPool;
-			scrApplyEnemyVenom(0,id);
-			my_health = min(my_health,2);
 			rad = 0;
 		}
 		var prevA = 5;

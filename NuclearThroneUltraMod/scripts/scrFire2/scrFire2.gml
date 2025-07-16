@@ -2679,7 +2679,7 @@ function scrFire2(hasTailNow) {
 		scrForcePosition60fps();
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 
 	}
 	else
@@ -2814,7 +2814,7 @@ function scrFire2(hasTailNow) {
 		scrForcePosition60fps();
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{
@@ -3151,7 +3151,7 @@ function scrFire2(hasTailNow) {
 		y += lengthdir_y(2,aimDirection+180)
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{
@@ -4806,7 +4806,7 @@ function scrFire2(hasTailNow) {
 		scrForcePosition60fps();
 		xprevious = x;
 		yprevious = y;
-		alarm[3]=max(4,alarm[3]);//imunity
+		alarm[3]=max(3,alarm[3]);//imunity
 	}
 	else
 	{

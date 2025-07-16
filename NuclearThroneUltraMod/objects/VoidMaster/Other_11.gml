@@ -17,7 +17,7 @@ else
 		}
 		alarm[2] = 5;
 	}
-	else if keepTalking > 1 && !instance_exists(RegalNavigation)
+	else if keepTalking > 1 && !instance_exists(RegalNavigation) && !instance_exists(SecretSheepNavigation)
 	{
 		dialogueStep = 0;
 		keepTalking += 1;
@@ -27,7 +27,7 @@ else
 		}
 		alarm[2] = 5;
 	}
-	else if !instance_exists(RegalNavigation)
+	else if !instance_exists(RegalNavigation) && !instance_exists(SecretSheepNavigation)
 	{
 		if !startedDuel
 			keepTalking += 1;
@@ -37,7 +37,7 @@ else
 		}
 		alarm[2] = 5;
 	}
-	else if instance_exists(RegalNavigation)
+	else if instance_exists(RegalNavigation) || instance_exists(SecretSheepNavigation)
 	{
 		with TextHandler
 		{

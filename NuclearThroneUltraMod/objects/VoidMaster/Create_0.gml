@@ -21,7 +21,7 @@ if loops < 1 && instance_exists(Player) && UberCont.char_void_entered[Player.rac
 }
 else
 {
-	if !instance_exists(RegalNavigation)
+	if !instance_exists(RegalNavigation) && !instance_exists(SecretSheepNavigation)
 		with UberCont
 		{
 			var al = array_length(voidChallengeGoing);

@@ -169,8 +169,9 @@ if !instance_exists(LevCont) and visible = 1
 		{
 			specBuffer = 3;
 		}
-		if jump <= 0
+		if jump <= 0 && race != 18
 		{
+			debug("JUMPING RESET");
 			didJumpRoll = false;
 			if !skill_got[5] || !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
 			{
@@ -181,6 +182,7 @@ if !instance_exists(LevCont) and visible = 1
 					var n = instance_nearest(x,y,Floor);
 					if n != noone
 					{
+						debug("NANNI!");
 						var o = 16;
 						if n.object_index == FloorExplo
 							o = 8;
@@ -2593,7 +2595,7 @@ if race == 18
 		        }
         
 			    //GET HURT when flying too long unless acent ultra D
-			    if ( ( !place_meeting(x,y,Floor) || flying>0 || mask_index == mskPickupThroughWall || place_meeting(x,y,WallHitMe) ) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
+			    if ( ( !place_meeting(x,y,Floor) || flying>0 /*|| mask_index == mskPickupThroughWall*/ /*|| place_meeting(x,y,WallHitMe) */) && !instance_exists(LevCont) && !(ultra_got[72] && !altUltra) )//NOT ASCND ULTRA
 			    {
 				    //var wall = instance_nearest(x,y,Wall);
 					if is60fps
@@ -2971,12 +2973,12 @@ if !instance_exists(Ghosting) && jump <= 0
 		}
 		mask_index = msk;
 	}
-	else if place_meeting(x,y,WallHitMe)
+	/*else if place_meeting(x,y,WallHitMe)
 	{	
 		hitWall = true;
 		flying = 2;
 		mask_index = mskPickupThroughWall;
-	}
+	}*/
 }
 if !hitWall
 {

@@ -1030,7 +1030,7 @@ function scrFire3(hasTailNow){
 			scrForcePosition60fps();
 			xprevious = x;
 			yprevious = y;
-			alarm[3]=max(4,alarm[3]);//imunity
+			alarm[3]=max(3,alarm[3]);//imunity
 		}
 		else
 		{

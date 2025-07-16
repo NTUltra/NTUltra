@@ -10,6 +10,7 @@ spr_dead = sprBigSkullDead
 
 
 event_inherited()
+alarm[1] = 5;
 shadowSprite = shd32;
 isActivated = false;
 snd_hurt = sndHitRock

@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Init
 
 // Inherit the parent event
 event_inherited();
@@ -11,7 +11,6 @@ maxSpeed += 0.25;
 acc += 0.1;
 actTime -= 5;
 projectileSpeed += 0.25;
-EnemyHealthAdjustments();
 spr_idle = sprInvertedRadDiverIdle;
 spr_walk = sprInvertedRadDiverIdle;
 spr_hurt = sprInvertedRadDiverHurt;

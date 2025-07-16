@@ -1,5 +1,9 @@
 if object_index == CloudShooter
 	scrDropNearby(40,15);
+else
+{
+	event_inherited();	
+}
 if !sleeping
 	with instance_create(xprevious,yprevious,EnemyHomingTriangle)
 	{

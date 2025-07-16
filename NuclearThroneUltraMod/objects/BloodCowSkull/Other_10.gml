@@ -43,8 +43,8 @@ if my_health > 0 && isInteractableNow && !instance_exists(WantBoss) && !instance
 		}
 		instance_create(x,y,NoHealing);
 		with Player {
-			my_health = 1;
-			prevhealth = 1;
+			my_health = 3;
+			prevhealth = 3;
 			snd_play(choose(snd_lowa,snd_lowh));
 			image_angle = 0;
 			angle = 0;

@@ -4,6 +4,7 @@ with Player
 if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2) && isOpen
 {
 	snd_play(sndPortalOld);
+	UberCont.hasBeenInVoid = true;
 	KeyCont.key_pick[Player.p] = 2;
 	mask_index = mskPickupThroughWall;
 	isOpen = false;

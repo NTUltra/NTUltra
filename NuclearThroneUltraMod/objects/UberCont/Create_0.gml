@@ -183,6 +183,7 @@ voidExtremeChallenges = false;
 voidMutationDeposit = [];
 voidWeaponDeposit = [];
 voidSpecialConditions = [];
+hasBeenInVoid = false;
 gotRegalThisRun = false;
 savedSeed = 0;
 canSave = false;

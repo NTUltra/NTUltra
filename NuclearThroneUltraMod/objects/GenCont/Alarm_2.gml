@@ -754,6 +754,11 @@ if ((Player.area == 7 || Player.area == 108) && Player.subarea == 2)
 	with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,BloodCowSkull)
 }
+if ((Player.area == 144 || Player.area == 145))
+{
+	with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
+		instance_create(x+16,y+16,VoidEntrance)
+}
 if (scrIsInInvertedArea() || Player.area == 128) && Player.area != 120 && !(Player.area == 118 && Player.subarea == 3)
 {
 var f = instance_furthest(Player.x,Player.y,Floor);

@@ -28,5 +28,5 @@ activateRange = 44;
 acc = 0;
 maxSpeed = 0;
 imageIndex = 0;
-routines = 150 + irandom(200);
+routines = 100 + irandom(200);
 isInverted = false;

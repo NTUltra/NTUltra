@@ -302,6 +302,42 @@ function scrDecideInvader(){
 					fb = sprFloor129B;
 					fe = sprFloor129Explo;
 				break;
+				case 142://PIPE NETWORK
+					array_push(spawns,InvertedBigSlime, InvertedBigSlime, InvertedSlime, InvertedMeleeFake, InvertedMeleeFake, InvertedMeleeBandit);
+					fa = sprFloor143;
+					fb = sprFloor143;
+					fe = sprFloor143Explo;
+				break
+				case 143://Inverted PIPE NETWORK
+					array_push(spawns,BigSlime, BigSlime, Slime, MeleeFake, MeleeFake, MeleeBandit);
+					fa = sprFloor142;
+					fb = sprFloor142;
+					fe = sprFloor142Explo;
+				break
+				case 144://RADIATION SLUDGE
+					array_push(spawns,InvertedRadDiver, InvertedVenusRadTrap, InvertedRadDiver, InvertedVenusRadTrap, InvertedGhostGuardian, InvertedGhostGuardian);
+					fa = sprFloor145;
+					fb = sprFloor145;
+					fe = sprFloor145Explo;
+				break
+				case 145://Inverted RADIATION SLUDGE
+					array_push(spawns,RadDiver, VenusRadTrap, RadDiver, VenusRadTrap, GhostGuardian, GhostGuardian);
+					fa = sprFloor144;
+					fb = sprFloor144;
+					fe = sprFloor144Explo;
+				break
+				case 146://BLOOD LAND
+					array_push(spawns,InvertedBloodCow, InvertedBloodCow, InvertedBloodLurker, InvertedBloodLurker, InvertedBigMaggot, InvertedBigMaggot);
+					fa = sprFloor147;
+					fb = sprFloor147;
+					fe = sprFloor147Explo;
+				break
+				case 147://Inverted BLOOD LAND
+					array_push(spawns,BloodCow, BloodCow, BloodLurker, BloodLurker, BigMaggot, BigMaggot);
+					fa = sprFloor146;
+					fb = sprFloor146;
+					fe = sprFloor146Explo;
+				break
 			}
 			
 			if array_length(spawns) > 0
