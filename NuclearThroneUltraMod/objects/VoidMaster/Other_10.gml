@@ -213,7 +213,7 @@ else
 		}
 		else
 		{
-			if instance_exists(RegalNavigation)
+			if instance_exists(RegalNavigation) || instance_exists(SecretSheepNavigation)
 			{
 				switch(dialogueStep)
 				{

@@ -114,6 +114,11 @@ function scrNavigateToInvertedArea(){
 		area = 145;
 		subarea = 1;
 	}
+	else if ( area == 146)//inv blood land
+	{
+		area = 147;
+		subarea = 1;
+	}
 	else if (area == 130 || area == 132 || area == 133 || area == 134) //to inv factory
 	{
 		area = 131;

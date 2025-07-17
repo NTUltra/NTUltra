@@ -18,6 +18,7 @@
     {"$GMSpriteFrame":"","%Name":"2661fcf7-4dd9-468a-9a6f-ba56247bad25","name":"2661fcf7-4dd9-468a-9a6f-ba56247bad25","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"b8e810e8-88c8-487b-b4aa-0c7aa6d1007f","name":"b8e810e8-88c8-487b-b4aa-0c7aa6d1007f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"de41de98-229a-4985-b5bc-5aa9f77df868","name":"de41de98-229a-4985-b5bc-5aa9f77df868","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b6bff9ac-d0be-49cd-bc38-3fe4f563fa8c","name":"b6bff9ac-d0be-49cd-bc38-3fe4f563fa8c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"1f9cb993-f28b-4603-9109-9556afbaecca","name":"1f9cb993-f28b-4603-9109-9556afbaecca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -55,7 +56,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":7.0,
+    "length":8.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -95,8 +96,11 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"de41de98-229a-4985-b5bc-5aa9f77df868","path":"sprites/sprInvertedBloodCowDead/sprInvertedBloodCowDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6944b932-d8ee-4e46-84f2-46f1e9a12d66","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6bff9ac-d0be-49cd-bc38-3fe4f563fa8c","path":"sprites/sprInvertedBloodCowDead/sprInvertedBloodCowDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"bc32c6fa-c179-42e9-8e7e-ca6bfd0bc979","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1f9cb993-f28b-4603-9109-9556afbaecca","path":"sprites/sprInvertedBloodCowDead/sprInvertedBloodCowDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"557b24b2-f8e7-4708-a7f8-1335a4c00986","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"557b24b2-f8e7-4708-a7f8-1335a4c00986","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

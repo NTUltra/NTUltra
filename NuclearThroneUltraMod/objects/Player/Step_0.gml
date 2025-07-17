@@ -1936,7 +1936,7 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 					}
 					if instance_exists(EnemyVenom)
 						radFloor = 0;
-					if radFloor == round(radFloor) && radFloor > 2 && (radFloor > 19 || radFloor % 2 == 0)
+					if radFloor == round(radFloor) && radFloor > 2 && (radFloor > 24 || radFloor % 2 == 0)
 					{
 						snd_play(sndVenomTick,0.1);
 						BackCont.shake += 1;
@@ -1951,12 +1951,12 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 							speed = 3;
 						}
 					}
-					if radFloor == 20
+					if radFloor == 24
 					{
 						BackCont.shake += 10;
 						Sleep(50);
 					}
-					if radFloor > 48
+					if radFloor > 50
 					{
 						gotRadFloored = true;
 						Sleep(100);

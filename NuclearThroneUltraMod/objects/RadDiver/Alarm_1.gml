@@ -1,7 +1,7 @@
 ///@description AI
 alarm[1] = actTime + random(actTime)
 scrTarget()
-if target != noone {
+if target != noone  && instance_exists(target){
 if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         gunangle = point_direction(x, y, target.x, target.y);
         sprite_index = spr_fire;

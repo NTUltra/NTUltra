@@ -2,7 +2,7 @@ raddrop = 14
 maxhealth = 45
 mySize = 1
 event_inherited();
-
+isInverted = false;
 meleedamage = 0
 spr_idle = sprBloodCowIdle;
 spr_walk = sprBloodCowWalk;

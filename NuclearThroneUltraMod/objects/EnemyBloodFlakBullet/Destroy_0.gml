@@ -5,16 +5,17 @@ if team == 2
 	proj = Bullet2;
 }
 var l = min(5,loops);
-repeat(6)
+var spd = projS + l;
+repeat(amount)
 {
 	with instance_create(x, y, proj) {
-	    motion_add(ang, 9+l)
+	    motion_add(ang, spd)
 	    image_angle = direction
 	    team = other.team
 	}
 	with instance_create(x,y,BloodStreak)
 	{
-		motion_add(ang + 30, 6);
+		motion_add(ang + 30, spd - 3);
 	    image_angle = direction
 	}
 	ang += 60;

@@ -84,6 +84,13 @@ function scrNavigationInsideInvertedAreas(skipping){
 		area = 9;
 		subarea = 0;
 	}
+	//Inverted Blood
+	else if area == 147
+	{
+		//to frozen city
+		area = 5;
+		subarea = 0;
+	}
 	//Inverted desert
 	else if area = 105
 	{

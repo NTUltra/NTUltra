@@ -9,3 +9,5 @@ yPrev = y;
 alarm[1] = 1;
 rotation = choose(16,-16);
 scrInitDrops(1);
+projS = 9;
+amount = 6;

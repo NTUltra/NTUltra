@@ -28,6 +28,12 @@ if target != noone {
 			sprite_index = spr_fire;
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;
             with instance_create(x, y, EnemyBloodFlakBullet) {
+				if other.isInverted
+				{
+					spd += 0.125;
+					amount += 2;
+					projS += 0.5;
+				}
                 motion_add(other.gunangle, spd)
                 image_angle = direction
                 team = other.team

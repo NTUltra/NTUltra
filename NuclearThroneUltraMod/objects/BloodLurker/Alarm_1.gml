@@ -27,6 +27,20 @@ if target != noone {
 			var len = 6;
 			sprite_index = spr_fire;
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;
+			if isInverted
+			{
+				spd += 0.125;
+				with instance_create(x + lengthdir_x(len,gunangle + 270), y + lengthdir_y(len,gunangle + 270), EnemyBullet1Small) {
+	                motion_add(other.gunangle + 6, spd + 0.1)
+	                image_angle = direction
+	                team = other.team
+	            }
+				with instance_create(x + lengthdir_x(len,gunangle - 270), y + lengthdir_y(len,gunangle - 270), EnemyBullet1Small) {
+	                motion_add(other.gunangle - 6, spd + 0.1)
+	                image_angle = direction
+	                team = other.team
+	            }
+			}
             with instance_create(x + lengthdir_x(len,gunangle), y  + lengthdir_y(len,gunangle), EnemyBullet1Small) {
                 motion_add(other.gunangle + 2, spd)
                 image_angle = direction

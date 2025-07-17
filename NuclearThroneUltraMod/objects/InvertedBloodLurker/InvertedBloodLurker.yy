@@ -12,8 +12,8 @@
     "path":"folders/Objects/Enemies/BloodLand.yy",
   },
   "parentObjectId":{
-    "name":"enemyCollisionWall",
-    "path":"objects/enemyCollisionWall/enemyCollisionWall.yy",
+    "name":"BloodLurker",
+    "path":"objects/BloodLurker/BloodLurker.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

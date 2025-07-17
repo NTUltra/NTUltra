@@ -8,6 +8,7 @@ spr_hurt = sprInvertedBloodLurkerHurt;
 spr_dead = sprInvertedBloodLurkerDead;
 spr_fire = sprInvertedBloodLurkerFire;
 
+isInverted = true;
 actTime = 11;
 acc = 1.2;
 maxSpeed = 4;

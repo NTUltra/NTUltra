@@ -1,5 +1,23 @@
 /// @description areas regular
 function scrNextLevel(skipping = false) {
+	if instance_exists(VoidDetour)
+	{
+		if VoidDetour.goneIn
+		{
+			area = VoidDetour.lastarea;
+			subarea = VoidDetour.lastsubarea;
+			inverted = VoidDetour.inverted;
+			with VoidDetour
+			{
+				instance_destroy();	
+			}
+		}
+		else
+		{
+			VoidDetour.goneIn = true;
+			exit;
+		}
+	}
 	if !skipping
 	{
 		with UberCont
@@ -144,6 +162,7 @@ function scrNextLevel(skipping = false) {
 			}
 			else if instance_exists(SecretSheepNavigation)
 			{
+				
 				debug("SHEEP NAVIGATION");
 				if subarea < 1
 				{

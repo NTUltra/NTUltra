@@ -12,7 +12,7 @@ spr_fire = sprBloodLurkerFire;
 
 snd_hurt = sndBloodLurkerHurt;
 snd_dead = sndBloodLurkerDie;
-
+isInverted = false;
 //behavior
 walk = 0
 gunangle = 0;

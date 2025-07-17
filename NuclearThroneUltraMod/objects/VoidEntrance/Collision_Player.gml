@@ -24,12 +24,14 @@ if image_index == 2 && !wentIn
 			prevArea = prevA;
 		}
 		snd_play(sndVoidCreepEnd);
-		with instance_create(x,y,SecretSheepNavigation)
+		with instance_create(x,y,VoidDetour)
 		{
 			lastarea = Player.area;
 			inverted = Player.inverted;
 			lastsubarea = Player.subarea;
 		}
+		with Player
+			area = 137;
 		with instance_create(x,y,Portal){
 			type = 1
 			pullstrength = 3;
