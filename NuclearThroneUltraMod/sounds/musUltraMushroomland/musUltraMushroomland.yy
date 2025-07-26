@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":83.81877,
+  "duration":83.81878,
   "name":"musUltraMushroomland",
   "parent":{
     "name":"Music & amb",

@@ -123,7 +123,7 @@ else if !reachLowHealth && my_health < maxhealth * 0.35
 	with MusCont
 	{
 		audio_stop_sound(song);
-		song = musChimera2;
+		song = musUltraChimera2;
 		snd_loop(song);
 		audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 	}

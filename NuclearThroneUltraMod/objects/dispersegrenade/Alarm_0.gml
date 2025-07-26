@@ -1,7 +1,7 @@
 alarm[0]=time;
 snd_play(sndGrenadeRifle,0.2);
 with instance_create(x,y,SmallGrenade)
-{motion_add(other.image_angle+90,9)
+{motion_add(other.image_angle+90,12)
 image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);

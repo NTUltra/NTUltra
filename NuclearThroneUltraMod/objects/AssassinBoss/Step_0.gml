@@ -30,7 +30,7 @@ if (my_health <= 0 && lifes > 0 && fakeded < 0 && instance_number(enemy) - insta
 		with MusCont
 		{
 			audio_stop_sound(song);
-			song = musBossWin
+			song = musUltraBossWin
 			snd_play_2d(song)
 			audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 		}

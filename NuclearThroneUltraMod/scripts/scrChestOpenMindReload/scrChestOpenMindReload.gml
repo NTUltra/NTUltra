@@ -53,9 +53,9 @@ function scrChestOpenMindReload(thePlayer, dealDamageAnyway = false){
 			var lowc = 0;
 			if skill_got[35]
 			{
-				lowa = wep_load[wep]*-2;
-				lowb = wep_load[bwep]*-2;
-				lowc = wep_load[cwep]*-2;
+				lowa = wep_load[wep]*-3;
+				lowb = wep_load[bwep]*-3;
+				lowc = wep_load[cwep]*-3;
 			}
 			reload = lowa;
 			breload = lowb;

@@ -29,7 +29,7 @@ if UberCont.crownVaultChallenge > 2
 	exit;
 }
 snd_play_2d(sndCrownCurses);
-song = musReflection;
+song = musUltraReflection;
 with MusCont
 {
 	audio_stop_sound(song);

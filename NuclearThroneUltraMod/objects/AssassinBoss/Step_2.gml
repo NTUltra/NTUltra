@@ -26,13 +26,13 @@ if fakeded > 0
 		image_index = 0;
 		alarm[3] = image_number/image_speed;
 		alarm[7] = alarm[3] + afterImageDelay;
-		if !audio_is_playing(musAssassinBoss) && !instance_exists(SurvivalWave) && !instance_exists(PitNavigation)
+		if !audio_is_playing(musUltraAssassinBoss) && !instance_exists(SurvivalWave) && !instance_exists(PitNavigation)
 		{
 			with MusCont
 			{
 				if audio_is_playing(song)
 					audio_stop_sound(song);
-				song = musAssassinBoss;
+				song = musUltraAssassinBoss;
 				snd_loop(song)
 				audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 			}

@@ -1,4 +1,4 @@
 /// @description xxx
 event_inherited();
 isGold = false;
-projectileSpeed = 9;
+projectileSpeed = 14;

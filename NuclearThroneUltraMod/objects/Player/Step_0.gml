@@ -1238,9 +1238,9 @@ var lowb = 0;
 var lowc = 0;
 if skill_got[35]
 {
-	lowa = wep_load[wep]*-2;
-	lowb = wep_load[bwep]*-2;
-	lowc = wep_load[cwep]*-2;
+	lowa = wep_load[wep]*-3;
+	lowb = wep_load[bwep]*-3;
+	lowc = wep_load[cwep]*-3;
 }
 if ultra_got[24] && altUltra && reload <= lowa && breload <= lowb
 {
@@ -1651,35 +1651,52 @@ if (!instance_exists(LevCont))
 	//PUFFY CHEEKS
 	if skill_got[35]
 	{
-		if reload <= lowa*0.5 && queueshot < 1
+		if reload <= lowa*0.33333333333333333333333333333333 && queueshot < 1
 		{
 			queueshot++;
 			scrPlayReloadSound(wep);
 			scrFlexibleElbowReload(wep);
-		} else if reload <= lowa && queueshot < 2
+		} else if reload <= lowa*0.66666666666666666666666666666667 && queueshot < 2
+		{
+			queueshot++;
+			scrPlayReloadSound(wep);
+			scrFlexibleElbowReload(wep);
+		}
+		 else if reload <= lowa && queueshot < 3
 		{
 			queueshot++;
 			scrPlayReloadSound(wep);
 			scrFlexibleElbowReload(wep);
 		}
 	
-		if breload <= lowb*0.5 && bqueueshot < 1
+		if breload <= lowb*0.33333333333333333333333333333333 && bqueueshot < 1
 		{
 			bqueueshot++;
 			scrPlayReloadSound(bwep);
 			scrFlexibleElbowReload(bwep);
-		} else if breload <= lowb && bqueueshot < 2
+		}
+		else if breload <= lowb*0.66666666666666666666666666666667 && bqueueshot < 2
+		{
+			bqueueshot++;
+			scrPlayReloadSound(bwep);
+			scrFlexibleElbowReload(bwep);
+		} else if breload <= lowb && bqueueshot < 3
 		{
 			bqueueshot++;
 			scrPlayReloadSound(bwep);
 			scrFlexibleElbowReload(bwep);
 		}
 	
-		if creload <= lowc*0.5 && cqueueshot < 1
+		if creload <= lowc*0.33333333333333333333333333333333 && cqueueshot < 1
 		{
 			cqueueshot++;
 			scrPlayReloadSound(cwep);
-		} else if creload <= lowc && cqueueshot < 2
+		} else if creload <= lowc*0.66666666666666666666666666666667 && cqueueshot < 2
+		{
+			cqueueshot++;
+			scrPlayReloadSound(cwep);
+			scrFlexibleElbowReload(cwep);
+		} else if creload <= lowc && cqueueshot < 3
 		{
 			cqueueshot++;
 			scrPlayReloadSound(cwep);
@@ -2791,6 +2808,9 @@ if hammerheadcounter > 0
 			if hammerheadtimer > 5 || roll != 0 || instance_exists(SheepStorm) || instance_exists(CrystalShield)
 			{
 				hammerheadcounter --;
+				reload -= 5;
+				breload -= 5;
+				creload -= 5;
 				if (hammerheadDig <= 0)
 				{
 					snd_play(sndWallBreak);

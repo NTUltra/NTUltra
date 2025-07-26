@@ -15,9 +15,9 @@ if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 	{
 		if Player.skill_got[35]
 		{
-			lowa = wep_load[wep]*-2;
-			lowb = wep_load[bwep]*-2;
-			lowc = wep_load[cwep]*-2;
+			lowa = wep_load[wep]*-3;
+			lowb = wep_load[bwep]*-3;
+			lowc = wep_load[cwep]*-3;
 		}
 	}
 	if Player.reload > lowa || Player.breload > lowb || Player.creload > lowc

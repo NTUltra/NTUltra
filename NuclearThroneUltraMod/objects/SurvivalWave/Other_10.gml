@@ -360,7 +360,7 @@ switch (waveNumber)
 	case 28://Courtyard
 		if instance_exists(TopCont)
 			TopCont.darkness = 0;
-		song = mus128;
+		song = musUltra128;
 		with Floor
 		{
 			if styleb

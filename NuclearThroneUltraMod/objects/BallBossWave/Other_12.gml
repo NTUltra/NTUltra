@@ -9,7 +9,7 @@ if instance_exists(BecomeBallBoss)
 scrActivateAllOutOfRange();
 if instance_exists(TopCont)
 	TopCont.darkness = 0;
-song = musConfrontingMyself;
+song = musUltraConfrontingMyself;
 with enemy
 {
 	instance_destroy(id,false);	

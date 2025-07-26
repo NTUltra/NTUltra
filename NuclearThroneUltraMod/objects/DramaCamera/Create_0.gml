@@ -83,7 +83,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		}
 		else if instance_exists(VoidMasterBoss)
 		{
-			song = musChimera2;
+			song = musUltraChimera2;
 		}
 		else if instance_exists(PitGhostBoss)
 		{
@@ -101,7 +101,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 			{
 				if subarea == 1
 				{
-					song = musAssassinBoss;
+					song = musUltraAssassinBoss;
 				}
 				else
 				{
@@ -129,7 +129,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 					song = musBoss5;
 			}
 			else if area == 110 && subarea == 2
-				song = musBoss5B;
+				song = musUltraBossInvMom;
 			else if area == 4 || area == 144
 				song = musBoss6;
 			else if area == 115|| area == 145
@@ -139,7 +139,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		    else if area = 101 || area == 122
 				song = musUltraOasisBoss;
 			else if area == 10 || area == 121 || (area == 100 && instance_exists(InvertedBigVulture))
-				song = musBoss10
+				song = musUltraBigVulture
 			else if area == 121 && instance_exists(InvertedHyenaBoss)
 			{
 				song = musUltraVisionary;

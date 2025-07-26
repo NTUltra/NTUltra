@@ -1,5 +1,5 @@
 event_inherited();
-friction = 0.1
+friction = 0.15
 alarm[1] = 6
 alarm[0] = 30
 offx = random(2)-1

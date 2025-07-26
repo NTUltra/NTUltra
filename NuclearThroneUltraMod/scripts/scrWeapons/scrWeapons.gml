@@ -8725,7 +8725,7 @@ function scrWeapons() {
 	wep_name[779] = "FLAME BAZOOKA"
 	wep_type[779] = 4
 	wep_auto[779] = 1
-	wep_load[779] = 18
+	wep_load[779] = 20
 	wep_cost[779] = 3
 	wep_sprt[779] = sprFlameBazooka
 	wep_area[779] = 11

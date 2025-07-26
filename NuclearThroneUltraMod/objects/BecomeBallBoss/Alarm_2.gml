@@ -10,7 +10,7 @@ if instance_exists(Player)
 		with MusCont
 		{
 			audio_stop_sound(song);
-			song = musChimera1;
+			song = musUltraChimera1;
 			snd_loop(song);
 			audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 		}

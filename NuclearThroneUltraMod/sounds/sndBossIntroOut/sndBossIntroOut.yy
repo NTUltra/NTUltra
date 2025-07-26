@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.354031,
+  "duration":1.3540363,
   "name":"sndBossIntroOut",
   "parent":{
     "name":"Music & amb",

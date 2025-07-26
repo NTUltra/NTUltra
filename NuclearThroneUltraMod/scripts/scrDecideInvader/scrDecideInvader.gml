@@ -327,7 +327,7 @@ function scrDecideInvader(){
 					fe = sprFloor144Explo;
 				break
 				case 146://BLOOD LAND
-					array_push(spawns,InvertedBloodCow, InvertedBloodCow, InvertedBloodLurker, InvertedBloodLurker, InvertedBigMaggot, InvertedBigMaggot);
+					array_push(spawns,InvertedBloodCow, InvertedBloodCow, InvertedBloodLurker, InvertedBloodLurker, BigMaggotInverted, BigMaggotInverted);
 					fa = sprFloor147;
 					fb = sprFloor147;
 					fe = sprFloor147Explo;
@@ -394,10 +394,7 @@ function scrDecideInvader(){
 			}
 			else if area == 113//Pizza sewers
 			{
-				if (loops % 2 == 0)
-					scrSpawnInvaderBoss(clamp(loops - 3,1,2),BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
-				else
-					scrSpawnInvaderBoss(clamp(loops - 3,1,2),InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
+				scrSpawnInvaderBoss(clamp(loops - 3,1,2),PitGhostBoss,sprFloor139,sprFloor139B,sprFloor139Explo);
 			}
 			else if (area == 9 || area == 118) && subarea == 1//Palace 7 - 1
 			{
@@ -419,6 +416,13 @@ function scrDecideInvader(){
 					scrSpawnInvaderBoss(1,LilHunter,sprFloor5,sprFloor5B,sprFloor5Explo);//EVEN
 				else
 					scrSpawnInvaderBoss(1,InvertedLilHunter,sprFloor107,sprFloor107B,sprFloor107Explo);//EVEN
+			}
+			else if (area == 146 || area == 147)//BLOOD LAND
+			{
+				if (loops % 2 == 0)
+					scrSpawnInvaderBoss(clamp(loops - 3,1,2),BigVulture,sprFloor10,sprFloor10B,sprFloor10Explo);//EVEN
+				else
+					scrSpawnInvaderBoss(clamp(loops - 3,1,2),InvertedBigVulture,sprFloor121,sprFloor121B,sprFloor121Explo);//EVEN
 			}
 			else if (area == 8 || area == 109) && subarea == 1//Wonderland 5C - 1
 			{

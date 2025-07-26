@@ -1,5 +1,5 @@
 event_inherited();
-dmg = 20;
+dmg = 18;
 acc += 2;
 maxSpeed += 4;
 alarm[1] += 3;

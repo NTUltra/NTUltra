@@ -405,8 +405,8 @@ function scrSkills() {
 	skill_bons[25] = "RECHARGES WHEN AT 75% HP";
 
 	skill_name[26] = "HAMMER HEAD"
-	skill_text[26] = "<w>DIG<w> THROUGH SOME <w>WALLS<w>";
-	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU ARE <aq>IMMUNE<aq> AND <w>FAST<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
+	skill_text[26] = "<w>DIG<w> THROUGH SOME <w>WALLS<w>##<w>RELOAD<w> YOUR WEAPONS AND#BECOME <aq>IMMUNE<aq> WHILE <w>DIGGING<w>";
+	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU <w>RELOAD<w> YOUR WEAPONS,#YOU ARE <aq>IMMUNE<aq> AND MOVE <w>FASTER<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS#LONGER DIG IMMUNITY#EVEN FASTER MOVEMENT";
@@ -506,10 +506,10 @@ function scrSkills() {
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
+	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO TWO SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";

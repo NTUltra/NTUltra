@@ -86,8 +86,8 @@ function scrEnemyDeathEvent(isSheep = false){
 				var lowc = 0;
 				if skill_got[35]//PUFFY CHEEKS
 				{
-					lowb = wep_load[bwep]*-2;
-					lowc = wep_load[cwep]*-2;
+					lowb = wep_load[bwep]*-3;
+					lowc = wep_load[cwep]*-3;
 				}
 				var dropped = false;
 				if bwep == 0 || breload > lowb

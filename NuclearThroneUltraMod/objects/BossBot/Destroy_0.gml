@@ -68,7 +68,7 @@ with MusCont
 //optimise sound_discard(amb)
 
 audio_stop_sound(song);
-song = musBossWin
+song = musUltraBossWin
 snd_play_2d(song)
 //snd_loop(amb)
 

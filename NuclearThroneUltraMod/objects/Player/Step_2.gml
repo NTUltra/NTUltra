@@ -311,41 +311,89 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					}
 					can_shoot = 1
 					reload = min(reload,0)
-					queueshot = 0;
 					if skill_got[35]
 					{
-						var lowa = wep_load[wep]*-2;
-						if reload <= lowa*0.5 && queueshot < 1
+						var lowa = wep_load[wep]*-3;
+						reload = min(reload,lowa);
+						if queueshot < 1
 						{
 							queueshot++;
 							scrPlayReloadSound(wep);
 							scrFlexibleElbowReload(wep);
-						} else if reload <= lowa && queueshot < 2
+						}
+						if queueshot < 2
+						{
+							queueshot++;
+							scrPlayReloadSound(wep);
+							scrFlexibleElbowReload(wep);
+						}
+						if queueshot < 3
 						{
 							queueshot++;
 							scrPlayReloadSound(wep);
 							scrFlexibleElbowReload(wep);
 						}
 					}
+					else
+						queueshot = 0;
 					if ultra_got[66] && altUltra
 					{
 						bcan_shoot = 1
 						breload = min(breload,0)
-						bqueueshot = 0;
+						
+						ccan_shoot = 1
+						creload = min(creload,0)
+						
 						if skill_got[35]
 						{
-							var lowb = wep_load[bwep]*-2;
-							if breload <= lowb*0.5 && bqueueshot < 1
-							{
-								bqueueshot++;
-								scrPlayReloadSound(bwep);
-								scrFlexibleElbowReload(bwep);
-							} else if breload <= lowb && bqueueshot < 2
+							var lowb = wep_load[bwep]*-3;
+							breload = min(breload,lowb);
+							if bqueueshot < 1
 							{
 								bqueueshot++;
 								scrPlayReloadSound(bwep);
 								scrFlexibleElbowReload(bwep);
 							}
+							if bqueueshot < 2
+							{
+								bqueueshot++;
+								scrPlayReloadSound(bwep);
+								scrFlexibleElbowReload(bwep);
+							}
+							if bqueueshot < 3
+							{
+								bqueueshot++;
+								scrPlayReloadSound(bwep);
+								scrFlexibleElbowReload(bwep);
+							}
+							if skill_got[35]
+							{
+								var lowc = wep_load[cwep]*-3;
+								creload = min(creload,lowc);
+								if cqueueshot < 1
+								{
+									cqueueshot++;
+									scrPlayReloadSound(cwep);
+									scrFlexibleElbowReload(cwep);
+								}
+								if cqueueshot < 2
+								{
+									cqueueshot++;
+									scrPlayReloadSound(cwep);
+									scrFlexibleElbowReload(cwep);
+								}
+								if cqueueshot < 3
+								{
+									cqueueshot++;
+									scrPlayReloadSound(cwep);
+									scrFlexibleElbowReload(cwep);
+								}
+							}
+						}
+						else
+						{
+							queueshot = 0;
+							bqueueshot = 0;
 						}
 					}
 				}

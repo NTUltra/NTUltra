@@ -19,7 +19,7 @@ with MusCont
 	}
 	else
 	{
-		song = musBossWin
+		song = musUltraBossWin
 		snd_play_2d(song)
 	}
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

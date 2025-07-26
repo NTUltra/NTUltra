@@ -14,7 +14,7 @@ with MusCont {
 		else if Player.area == 110
 			song = musUltraInvertedSewers;
 		else if Player.area == 10
-			song = mus10;
+			song = musUltra10;
 	}
 	snd_loop(song)
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

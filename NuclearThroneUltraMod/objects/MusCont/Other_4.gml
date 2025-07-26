@@ -231,7 +231,7 @@ if scrIsGamemode(8) && area != 0
     }
 	else if area == 10 || area == 121 //savanna
     {
-        song = mus10
+        song = musUltra10
 
         amb = amb1
     }
@@ -261,7 +261,7 @@ if scrIsGamemode(8) && area != 0
     }
 	else if area == 128 {
 
-        song = mus128
+        song = musUltra128
 
         amb = amb100;
     }
