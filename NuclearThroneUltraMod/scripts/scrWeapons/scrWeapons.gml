@@ -10253,6 +10253,18 @@ function scrWeapons() {
 	wep_text[913] = "lingering ice flames"
 	wep_swap[913] = sndSwapFrost
 	wep_rad[913] = 0;
+	
+	wep_name[914] = "RAINBOW WAZER"
+	wep_type[914] = 5
+	wep_auto[914] = 3
+	wep_load[914] = 9
+	wep_cost[914] = 1
+	wep_sprt[914] = sprWazerRifle
+	wep_area[914] = 24
+	wep_text[914] = "bring sheep"
+	wep_swap[914] = sndSwapEnergy
+	wep_rad[914] = 0;
+	wep_popup[914] = "MORPHS ENEMIES";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

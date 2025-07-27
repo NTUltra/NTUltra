@@ -3861,5 +3861,102 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//RAINBOW WAZER
+		case 914:
+		var um = GetPlayerUltramod()
+		if um == ultramods.laserBullet
+		{
+			with instance_create(x,y,Burst)
+			{
+				ultramodded = true;
+				creator = other.id
+				ammo = 3
+				time = 2
+				aimOffset = 5 * other.accuracy;
+				team = other.team
+				event_perform(ev_alarm,0) 
+			}
+			with instance_create(x,y,Burst)
+			{
+				ultramodded = true;
+				creator = other.id
+				ammo = 3
+				time = 2
+				aimOffset = -5 * other.accuracy;
+				team = other.team
+				alarm[0] = 1;
+			}
+		}
+		else if um == ultramods.laserBolt
+		{
+			with instance_create(x,y,SplinterBurst2)
+			{
+				ultramodded = true;
+				accuracy = 6*other.accuracy;
+				creator = other.id
+				ammo = 2
+				maxammo = ammo;
+				time = 2
+				team = other.team
+				event_perform(ev_alarm,0) 
+			}
+			with instance_create(x,y,SplinterBurst2)
+			{
+				ultramodded = true;
+				accuracy = -6*other.accuracy;
+				creator = other.id
+				ammo = 2
+				maxammo = ammo;
+				time = 2
+				team = other.team
+				alarm[0] = 1;
+			}
+		}
+		else
+		{
+			var exists = false;
+			with PlayerMorphWazer
+			{
+				if owner == other.id
+					exists = true;
+			}
+			if Player.skill_got[42]
+				scrActivateTail(hasTailNow);
+			if !exists
+			{
+				snd_play_2d(sndWazerStart,0,true);
+				with instance_create(x,y,PlayerMorphWazer)
+				{
+					owner = other.id;
+					team = other.team;
+					mywep = other.wep
+					if mywep == 788
+						alarm[0] = 9;
+					else
+						alarm[0] = 11;
+					if Player.skill_got[42]
+					{
+						alarm[0] = ceil(alarm[0]*Player.betterTail);
+					}
+					owner = other.id;
+					camKick = 5;
+					camShake = 3;
+					wkick = 4;
+				}
+			}
+			else
+			{
+				with PlayerMorphWazer
+				{
+					if owner == other.id
+					{
+						alarm[6] += alarm[0] - 1;
+						alarm[0] = 2 + other.wep_load[other.wep];
+					}
+				}
+			}
+		}
+		break;
+		
 	}
 }

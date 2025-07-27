@@ -7009,7 +7009,6 @@ function scrFire2(hasTailNow) {
 	break;
 	
 	//WAZER RIFLE/PISTOL
-	case 788:
 	case 424:
 	var um = GetPlayerUltramod()
 	if um == ultramods.laserBullet
