@@ -197,9 +197,9 @@ function scrSecondaryPowers() {
 					var lowc = 0;
 					if skill_got[35]
 					{
-						lowa = wep_load[wep]*-3;
-						lowb = wep_load[bwep]*-3;
-						lowc = wep_load[cwep]*-3;
+						lowa = wep_load[wep]*-puffyCheekAmount;
+						lowb = wep_load[bwep]*-puffyCheekAmount;
+						lowc = wep_load[cwep]*-puffyCheekAmount;
 					}
 					if reload > lowa
 					{
@@ -718,7 +718,7 @@ function scrSecondaryPowers() {
 					}
 				}
 			break;
-			//WEAPON SMITH
+			//WEAPON SMITH weaponsmith
 			case 17:
 				if !isOverlapping && (KeyCont.key_regal[p] == 1)
 				{
@@ -1092,9 +1092,11 @@ function scrSecondaryPowers() {
 					for (var i = startingIndex; i < al; i++) {
 						if (i != t1 && i != t2)
 						{
-							if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
+							if (alarm[2] > 0 || (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0))
 							{
-								ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
+								scrSpendingAmmo(i,typ_amax[i]*takePercentage);
+								if alarm[2] < 1
+									ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
 								insufficientFunds = false;
 							}
 						}

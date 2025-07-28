@@ -387,7 +387,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
     
 	    ultra_name[48] = "LAG"
-	    ultra_text[48] = "FIRST TWO HITS#YOU TAKE IN A LEVEL WILL BE <aq>NEGLECTED<aq>"
+	    ultra_text[48] = "FIRST <w>TWO<w> HITS#YOU TAKE IN A LEVEL WILL BE <aq>NEGLECTED<aq>"
 	    ultra_tips[48] = "dead not dead"
     
 	//SHEEP 

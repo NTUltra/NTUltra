@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 46;
+	maxskill = 47;
 
 
 	dir = 0
@@ -369,7 +369,7 @@ function scrSkills() {
 	else
 	{
 		skill_text[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>:#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER"//#<w>KEEP RELOAD SPEED BOOST<w>#UNTIL THE END OF AN AREA"
-		skill_detail[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>:#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER#UP TO 70% RELOAD SPEED#UP TO 35% FOR OFFHAND WEAPONS#RELOAD BOOST <w>LINGERS<w>#FOR 3 SECONDS AFTER <r>HEALING<r>#ALSO GET RELOAD BOOST WHEN MAX HP IS 1"//#<w>KEEP MAX REACHED RELOAD SPEED BOOST<w>#UNTIL <w>THE END OF AN AREA<w>"
+		skill_detail[22] = "WHENEVER YOU TAKE <r>DAMAGE<r>:#<w>DEAL<w> <r>DAMAGE<r> TO ALL <w>NEARBY ENEMIES<w>#AND BRIEFLY <w>STUN<w> THEM##<w>RELOAD<w> YOUR WEAPONS#AS <r>HP<r> GETS LOWER#UP TO 70% RELOAD SPEED#UP TO 35% FOR OFFHAND WEAPONS#RELOAD BOOST <w>LINGERS<w>#FOR 3 SECONDS AFTER <r>HEALING<r>#ALSO GET RELOAD BOOST WHEN MAX HP IS 1"//#<w>KEEP MAX REACHED RELOAD SPEED BOOST<w>#UNTIL <w>THE END OF AN AREA<w>"
 	}
 	skill_tips[22] = "ultimate low health hybrid"
 	skill_msnd[22] =  sndMutSharpStress
@@ -512,7 +512,7 @@ function scrSkills() {
 		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
-	skill_bons[35] = "+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
+	skill_bons[35] = "CAN LOAD UP TO FOUR SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
 	
 	skill_name[36] = "ABSORBING PORES"
 	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
@@ -610,6 +610,12 @@ function scrSkills() {
 	skill_msnd[46] =  sndMutInnerPeace;
 	skill_bons[46] = "+23% CHARGE RATE#CAN CHARGE UP TO 4 BARRIERS"
 	
+	skill_name[47] = "HOLLOW BONES"
+	skill_text[47] = "<w>SPENDING<w> <y>AMMO<y>#CAN CAUSE AN <p>IMPLOSION<p>!"
+	skill_detail[47] = "EVERY <w>10%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO IMPLODE#DEALING ADDITIONAL DAMAGE,#<w>STUNNING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
+	skill_tips[47] = "there is an emptyness inside"
+	skill_bons[47] = "EVERY 7% AMMO SPENT#BIGGER IMPLOSION"
+	skill_msnd[47] =  sndMutBouncyFat;
 	/*
 	skill_name[47] = "HOLLOW BONES"
 	skill_text[47] = "EVERY SO MUCH <y>AMMO<y> YOU SPEND#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <p>IMPLODE<p>";
@@ -631,6 +637,9 @@ function scrSkills() {
 	skill_bons[maxskill + 1] = "";
 	
 	/*
+	
+	
+	
 	(Community reaction to this was: pretty positive but do the allies spawning thing and probably with a lot of effort to make it unique per character?! which is cool)
 	skill_name[47] = "GLUTINOUS BELLY"
 	skill_text[47] = "COLLECTING EXCESS AMMO#WILL EVENTUALLY CONVERT TO <r>OVERHEAL<r>#UP TO 4 ABOVE MAX HP#EXCESS <r>HEALING<r> GIVES <y>AMMO<y>"

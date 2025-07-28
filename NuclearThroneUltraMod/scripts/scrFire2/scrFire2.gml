@@ -3644,7 +3644,8 @@ function scrFire2(hasTailNow) {
 		{
 			chargetime = 1;
 			rate += 2;
-			Player.ammo[type]-=cost
+			//Player.ammo[type]-=cost;
+			//scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
 		}
 		maxcharge *= Player.betterTail;
 		scrActivateTail(hasTailNow);

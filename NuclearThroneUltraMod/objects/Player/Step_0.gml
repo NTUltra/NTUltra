@@ -575,7 +575,7 @@ if !instance_exists(LevCont) and visible = 1
 		    curse = !curse;
 			thing = instance_create(f.x + 16,f.y + 16,PopupText);
 			thing.mytext = "CURSE TOGGLE";
-			instance_create(x + 64,y,SquareBat);
+			scrApplyEnemyVenom(3,id);
 		}
 		if keyboard_check_pressed(ord("B")) {
 			instance_create(x,y,WallBreak);
@@ -1238,9 +1238,9 @@ var lowb = 0;
 var lowc = 0;
 if skill_got[35]
 {
-	lowa = wep_load[wep]*-3;
-	lowb = wep_load[bwep]*-3;
-	lowc = wep_load[cwep]*-3;
+	lowa = wep_load[wep]*-puffyCheekAmount;
+	lowb = wep_load[bwep]*-puffyCheekAmount;
+	lowc = wep_load[cwep]*-puffyCheekAmount;
 }
 if ultra_got[24] && altUltra && reload <= lowa && breload <= lowb
 {
@@ -1566,12 +1566,13 @@ if (!instance_exists(LevCont))
 			reload -= 0.1;
 			breload -= 0.1;
 			creload -= 0.1;
+			/*
 			if race == 25
 			{
 				reload -= 0.020;
 				breload -= 0.020;
 				creload -= 0.020;
-			}
+			}*/
 		}
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{
@@ -1651,56 +1652,35 @@ if (!instance_exists(LevCont))
 	//PUFFY CHEEKS
 	if skill_got[35]
 	{
-		if reload <= lowa*0.33333333333333333333333333333333 && queueshot < 1
+		var lowaP = lowa/puffyCheekAmount;
+		for (var i = 0; i <= puffyCheekAmount; i++)
 		{
-			queueshot++;
-			scrPlayReloadSound(wep);
-			scrFlexibleElbowReload(wep);
-		} else if reload <= lowa*0.66666666666666666666666666666667 && queueshot < 2
-		{
-			queueshot++;
-			scrPlayReloadSound(wep);
-			scrFlexibleElbowReload(wep);
+			if queueshot < i && reload <= lowaP*i
+			{
+				queueshot++;
+				scrPlayReloadSound(wep);
+				scrFlexibleElbowReload(wep);
+			}
 		}
-		 else if reload <= lowa && queueshot < 3
+		var lowbP = lowb/puffyCheekAmount;
+		for (var i = 0; i <= puffyCheekAmount; i++)
 		{
-			queueshot++;
-			scrPlayReloadSound(wep);
-			scrFlexibleElbowReload(wep);
+			if bqueueshot < i && breload <= lowbP*i
+			{
+				bqueueshot++;
+				scrPlayReloadSound(bwep);
+				scrFlexibleElbowReload(bwep);
+			}
 		}
-	
-		if breload <= lowb*0.33333333333333333333333333333333 && bqueueshot < 1
+		var lowcP = lowc/puffyCheekAmount;
+		for (var i = 0; i <= puffyCheekAmount; i++)
 		{
-			bqueueshot++;
-			scrPlayReloadSound(bwep);
-			scrFlexibleElbowReload(bwep);
-		}
-		else if breload <= lowb*0.66666666666666666666666666666667 && bqueueshot < 2
-		{
-			bqueueshot++;
-			scrPlayReloadSound(bwep);
-			scrFlexibleElbowReload(bwep);
-		} else if breload <= lowb && bqueueshot < 3
-		{
-			bqueueshot++;
-			scrPlayReloadSound(bwep);
-			scrFlexibleElbowReload(bwep);
-		}
-	
-		if creload <= lowc*0.33333333333333333333333333333333 && cqueueshot < 1
-		{
-			cqueueshot++;
-			scrPlayReloadSound(cwep);
-		} else if creload <= lowc*0.66666666666666666666666666666667 && cqueueshot < 2
-		{
-			cqueueshot++;
-			scrPlayReloadSound(cwep);
-			scrFlexibleElbowReload(cwep);
-		} else if creload <= lowc && cqueueshot < 3
-		{
-			cqueueshot++;
-			scrPlayReloadSound(cwep);
-			scrFlexibleElbowReload(cwep);
+			if cqueueshot < i && creload <= lowcP*i
+			{
+				cqueueshot++;
+				scrPlayReloadSound(cwep);
+				scrFlexibleElbowReload(cwep);
+			}
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload

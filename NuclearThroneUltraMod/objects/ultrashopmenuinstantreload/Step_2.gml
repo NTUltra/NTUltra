@@ -13,11 +13,11 @@ if ShopWheel.alarm[0] > 0 && !ShopWheel.used
 	var lowc = 0;
 	with Player
 	{
-		if Player.skill_got[35]
+		if skill_got[35]
 		{
-			lowa = wep_load[wep]*-3;
-			lowb = wep_load[bwep]*-3;
-			lowc = wep_load[cwep]*-3;
+			lowa = wep_load[wep]*-puffyCheekAmount;
+			lowb = wep_load[bwep]*-puffyCheekAmount;
+			lowc = wep_load[cwep]*-puffyCheekAmount;
 		}
 	}
 	if Player.reload > lowa || Player.breload > lowb || Player.creload > lowc

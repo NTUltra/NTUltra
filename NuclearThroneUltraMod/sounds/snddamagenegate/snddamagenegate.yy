@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.162188,
+  "duration":0.16219954,
   "name":"sndDamageNegate",
   "parent":{
     "name":"Fx",

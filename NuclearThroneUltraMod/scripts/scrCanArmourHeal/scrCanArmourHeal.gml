@@ -46,9 +46,11 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 	{
 		if (shouldTakeAmmo)
 		{
+			scrSpendingAmmo(wepType, cost);
 			ammo[wepType] = ammo[wepType] - cost;
 			if (ammo[wepType] <= 0)
 			{
+				scrSpendingAmmo(wepType, cost * 0.5);
 				ammo[wepType] -= cost * 0.5;
 				if scrIsCrown(13)
 				{
@@ -59,9 +61,11 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 			}
 			if doAgain
 			{
+				scrSpendingAmmo(bWepType, bCost);
 				ammo[bWepType] = ammo[bWepType] - bCost;
 				if (ammo[bWepType] <= 0)
 				{
+					scrSpendingAmmo(bWepType, bCost * 0.5);
 					ammo[bWepType] -= bCost * 0.5;
 					if scrIsCrown(13)
 					{
@@ -70,9 +74,11 @@ function scrCanArmourHeal(shouldTakeAmmo = false) {
 						}
 					}
 				}
+				scrSpendingAmmo(bWepType, bCost);
 				ammo[cWepType] = ammo[cWepType] - cCost;
 				if (ammo[cWepType] <= 0)
 				{
+					scrSpendingAmmo(bWepType, bCost * 0.5);
 					ammo[cWepType] -= cCost * 0.5;
 					if scrIsCrown(13)
 					{

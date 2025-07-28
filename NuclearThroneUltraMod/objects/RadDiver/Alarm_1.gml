@@ -39,6 +39,13 @@ if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		right = -1
     else if target.x > x
 		right = 1
+	
+	if toTarget
+	{
+		motion_add(point_direction(x,y,target.x,target.y),acc*2);
+		walk = max(walk,4);
+	}
+	toTarget = false;
 }
 else if random(4) < 1 {
     motion_add(random(360), acc)

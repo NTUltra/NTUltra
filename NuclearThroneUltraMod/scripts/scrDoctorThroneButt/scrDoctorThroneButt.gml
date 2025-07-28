@@ -1,7 +1,7 @@
 ///scrDoctorThroneButt();
 // /@description
 ///@param
-function scrDoctorThroneButt(theDamage = 5, theRad = 3){
+function scrDoctorThroneButt(theDamage = max(2,level) + loops, theRad = 3){
 	if skill_got[5] {
 		snd_play_2d(sndSharpTeeth);
 		snd_play(sndUltraGrenadeSuck);

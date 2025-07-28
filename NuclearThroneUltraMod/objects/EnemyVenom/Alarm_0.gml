@@ -1,6 +1,6 @@
 /// @description Deal damage
 var theDamage = dmg;
-var breakPoint = 2;
+var breakPoint = 1;
 var toCheck = 10;
 if instance_exists(owner)
 {
@@ -16,15 +16,28 @@ if instance_exists(owner)
 		}
 		else
 		{
-			toCheck = owner.my_health;	
+			toCheck = owner.my_health;
 		}
+		debug(toCheck);
+		debug(Player.isAlkaline);
+		if Player.skill_got[32] && Player.isAlkaline
+		{
+			debug("GOT ALK");
+			toCheck += 1;	
+		}
+		toCheck += max(0,Player.skill_got[46] ? Player.peaceBarriers : 0) + ((Player.skill_got[38] && Player.metabolism == Player.metabolismBreak) ? 1 : 0) + max(0,Player.lag) + max(0,Player.armour);
+		debug(((Player.metabolism == Player.metabolismBreak) ? 1 : 0));
+		debug(toCheck);
+		while (theDamage > 0 && toCheck - theDamage < breakPoint) {
+			theDamage -= 1;
+		} 
 	}
 	else
 	{
 		toCheck = owner.my_health;	
 	}
 }
-if !instance_exists(owner) || owner == noone || toCheck < breakPoint || hits > maxDamage
+if !instance_exists(owner) || owner == noone || toCheck <= breakPoint || hits > maxDamage
 {
 	instance_destroy();	
 	exit;
@@ -60,12 +73,12 @@ with owner
 	}
 	sprite_index = spr_hurt;
 	image_index = 0;
-}
-if !instance_exists(owner) || owner == noone || toCheck < breakPoint - theDamage
+}/*
+if !instance_exists(owner) || owner == noone || toCheck < breakPoint
 {
 	instance_destroy();	
 }
 else
-{
+{*/
 	alarm[0] = rate;	
-}
+//}

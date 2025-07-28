@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrHollowBones",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrHollowBones",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

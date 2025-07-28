@@ -441,9 +441,9 @@ if selected && visible
 		{
 			with Player
 			{
-				var lowa = wep_load[wep]*-3;
-				var lowb = wep_load[bwep]*-3;
-				var lowc = wep_load[cwep]*-3;
+				var lowa = wep_load[wep]*-puffyCheekAmount;
+				var lowb = wep_load[bwep]*-puffyCheekAmount;
+				var lowc = wep_load[cwep]*-puffyCheekAmount;
 				reload = lowa;
 				breload = lowb;
 				creload = lowc;

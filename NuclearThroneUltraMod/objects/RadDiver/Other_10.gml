@@ -28,8 +28,5 @@ if alarm[2] < 1
 			angle += angleStep;
 		}
 	alarm[2] = min(40,2 + amountOfProjectiles);
-	if target != noone && instance_exists(target)
-	{
-		motion_add(point_direction(x,y,target.x,target.y),acc*2);	
-	}
+	toTarget = true;
 }

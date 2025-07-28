@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrSpendingAmmo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrSpendingAmmo",
+  "parent":{
+    "name":"ProjectileScripts",
+    "path":"folders/Scripts/Weapons/ProjectileScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

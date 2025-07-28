@@ -9,13 +9,13 @@ function scrMeleeAmmoCost(myCost = 1){
 		with Player
 		{
 			var targetAmmo = other.meleeAmmoType;
-			if alarm[2] > 0
+			/*if alarm[2] > 0
 			{
 				myCost = 0;
 				hasEnoughAmmo = true;
 			}
 			else
-			{
+			{*/
 				if targetAmmo == 1
 				{
 					myCost *= 7.7272727272727272727272727272727;
@@ -42,7 +42,7 @@ function scrMeleeAmmoCost(myCost = 1){
 					var cp = myCost/33;
 					var radCost = 35 * cp;//Normally 40
 					myCost *= 0.5;
-					if rad < radCost
+					if alarm[2] > 0 || rad < radCost
 					{
 						hasEnoughRads = false;
 					}
@@ -98,9 +98,9 @@ function scrMeleeAmmoCost(myCost = 1){
 						myCost *= 1.1;
 					}	
 				}
-				if ammo[targetAmmo] >= myCost
+				if alarm[2] > 0 || ammo[targetAmmo] >= myCost
 					hasEnoughAmmo = true;
-			}
+			//}
 		}
 		if !hasEnoughRads
 		{
@@ -131,7 +131,9 @@ function scrMeleeAmmoCost(myCost = 1){
 			}
 			with Player
 			{
-				ammo[targetAmmo] -= myCost;
+				scrSpendingAmmo(targetAmmo,myCost);
+				if alarm[2] < 1
+					ammo[targetAmmo] -= myCost;
 			}
 		}
 		else 

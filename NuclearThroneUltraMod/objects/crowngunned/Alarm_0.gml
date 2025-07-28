@@ -44,7 +44,7 @@ if instance_exists(enemy)
 			team = 2;
 			event_perform(ev_alarm,0)
 		}
-		alarm[0] += 4;
+		alarm[0] += 7;
 		if dir.x < x
 			wepright = -1
 		else if dir.x > x

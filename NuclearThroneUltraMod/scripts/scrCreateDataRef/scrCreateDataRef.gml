@@ -52,6 +52,7 @@ function scrCreateDataRef() {
 		queueshot = other.queueshot;
 		bqueueshot = other.bqueueshot;
 		cqueueshot = other.cqueueshot;
+		puffyCheekAmount = other.puffyCheekAmount;
 		reload = other.reload;
 		breload = other.breload;
 		creload = other.creload;

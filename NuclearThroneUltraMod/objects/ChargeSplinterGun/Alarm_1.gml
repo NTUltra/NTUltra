@@ -10,7 +10,8 @@ if instance_exists(creator)
 if (scrCanChargeChargeGun())
 {
 
-Player.ammo[type]-=cost;
+Player.ammo[type] -= cost;
+scrSpendingAmmo(type,cost);
 //if !audio_is_playing(sndNadeAlmost)
 //snd_play(sndNadeAlmost);
 rate++;

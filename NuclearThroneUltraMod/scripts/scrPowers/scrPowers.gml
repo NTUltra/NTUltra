@@ -708,8 +708,12 @@ function scrPowers(raceOverwrite = -1) {
 						if (ammo[wep_type[wep]] >= 0 && ultra_got[74])
 						{
 							var punishment = 6;
-							ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
-							rad = max(0,rad - wep_rad[wep] * punishment);
+							scrSpendingAmmo(wep_type[wep],wep_cost[wep]*punishment);
+							if (Player.alarm[2] < 1)
+							{
+								ammo[wep_type[wep]] -= wep_cost[wep]*punishment;
+								rad = max(0,rad - wep_rad[wep] * punishment);
+							}
 						}
 						else
 						{
@@ -1537,6 +1541,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 				if ammoRebel
 				{
+					scrSpendingAmmo(wepType,typ_ammo[wepType]*takePercentage);
 					ammo[wepType] -= typ_ammo[wepType]*takePercentage
 					if ammo[wepType] <= 0
 					{
@@ -1871,7 +1876,8 @@ function scrPowers(raceOverwrite = -1) {
 						if reload < other.reload
 							other.reload = reload;
 					}
-					if (Player.alarm[2]<1)//alarm = Fish Ultra B
+					scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
+					if (Player.alarm[2] < 1)//Infinite ammo
 					{
 						ammo[wep_type[wep]] -= wep_cost[wep]
 						ammo[wep_type[wep]] = max(0,ammo[wep_type[wep]]);
@@ -2478,7 +2484,7 @@ function scrPowers(raceOverwrite = -1) {
 					if wepType != wep_type[bwep] && wepType != wep_type[wep]
 						takePercentage *= 3;
 					var cost = typ_ammo[wepType]*takePercentage;
-					if (ammo[wepType]-cost >= 0) || (ultra_got[70] && ammo[wepType] > 0)
+					if (ammo[wepType]-cost >= 0 || alarm[2] > 0) || (ultra_got[70] && ammo[wepType] > 0)
 					{
 						snd_hurt = sndDamageNegate;
 						instance_create(x,y,AngelActive);
@@ -2490,7 +2496,9 @@ function scrPowers(raceOverwrite = -1) {
 						} else {
 							snd_play_2d(sndAngelActive,0.1,false,false,2,1);
 						}
-						ammo[wepType]-= cost//2.5?
+						if alarm[2] < 1
+							ammo[wepType]-= cost//2.5?
+						scrSpendingAmmo(wepType,cost);
 						var heal = 0;
 						if  ammo[wepType] <= 0
 						{
@@ -2583,7 +2591,9 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if (ammo[i] > 1 && ammo[i] - typ_amax[i]*takePercentage > 0)
 						{
-							ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
+							scrSpendingAmmo(i,typ_amax[i]*takePercentage);
+							if alarm[2] < 1
+								ammo[i] = max(1,ammo[i] - typ_amax[i]*takePercentage);
 							insufficientFunds = false;
 						}
 					}
@@ -3508,6 +3518,7 @@ function scrPowers(raceOverwrite = -1) {
 			{
 			
 				var takePercentage = 0.05;//0.75%
+				var originalTakePercentage = takePercentage;
 				if skill_got[5]
 				{
 					takePercentage = 0.04;//0.05%
@@ -3516,7 +3527,7 @@ function scrPowers(raceOverwrite = -1) {
 				if wepType != wep_type[bwep] && wepType != wep_type[wep]
 					takePercentage *= 5;
 				var cost = typ_ammo[wepType]*takePercentage;
-				if ((wepType != 0  && !scrIsCrown(40)) && ammo[wepType] - cost > 0)
+				if ((wepType != 0  && !scrIsCrown(40)) && (alarm[2] > 0 || ammo[wepType] - cost > 0))
 				{
 					var myMask = mask_index;
 					mask_index=mskWall;
@@ -3553,7 +3564,9 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if (placedWall)
 					{
-						ammo[wepType] = ammo[wepType] - cost;
+						scrSpendingAmmo(wepType,cost);
+						if alarm[2] < 1
+							ammo[wepType] = ammo[wepType] - cost;
 					}
 					mask_index=myMask;
 					if (ammo[wepType] <= 0)

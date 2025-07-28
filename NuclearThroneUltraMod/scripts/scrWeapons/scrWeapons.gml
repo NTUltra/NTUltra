@@ -1102,7 +1102,7 @@ function scrWeapons() {
 	wep_name[98] = "MORPH-O-PISTOL"
 	wep_type[98] = 5
 	wep_auto[98] = 2
-	wep_load[98] = 20
+	wep_load[98] = 17
 	wep_cost[98] = 1
 	wep_sprt[98] = sprMorphOPistol
 	wep_area[98] = 3
@@ -2524,7 +2524,7 @@ function scrWeapons() {
 	wep_name[225] = "GOLDEN PLASMA GUN"
 	wep_type[225] = 5
 	wep_auto[225] = 1
-	wep_load[225] = 14
+	wep_load[225] = 15
 	wep_cost[225] = 2
 	wep_sprt[225] = sprGoldenPlasmaGun
 	wep_area[225] = 19
@@ -7239,7 +7239,7 @@ function scrWeapons() {
 	wep_name[646] = "GOLDEN MORPH-O-PISTOL"
 	wep_type[646] = 5
 	wep_auto[646] = 2
-	wep_load[646] = 19
+	wep_load[646] = 16
 	wep_cost[646] = 1
 	wep_sprt[646] = sprGoldenMorphOPistol
 	wep_area[646] = 19

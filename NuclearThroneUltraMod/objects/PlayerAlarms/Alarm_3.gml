@@ -9,11 +9,20 @@ with Player
 			if ammo[i] > typ_amax[i]
 			{
 				if i == 0
+				{
 					ammo[i] -= 1.5;
+					scrSpendingAmmo(i,1.5);
+				}
 				else if i == 1
+				{
 					ammo[i] -= 4;
+					scrSpendingAmmo(i,4);
+				}
 				else
+				{
 					ammo[i] -= 1;
+					scrSpendingAmmo(i,1);
+				}
 			}
 		}
 	}

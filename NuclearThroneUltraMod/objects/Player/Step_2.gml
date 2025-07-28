@@ -208,9 +208,9 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					scrUnlockCSkin(9,"FOR PICKING UP THE DARK SWORD AS CHICKEN",0);
 				if scrToxicWeapons(targetPickup.wep, wep_name[targetPickup.wep]) && !targetPickup.pickedup && race = 23
 				{
-				toxicweaponsfound++;
-				if toxicweaponsfound>=2
-				scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
+					toxicweaponsfound++;
+					if toxicweaponsfound >= 2
+						scrUnlockBSkin(23,"BY USING 2 DIFFERENT TOXIC WEAPONS#IN ONE RUN AS FROG",0)
 				}
 
 				snd_play(sndWeaponPickup)
@@ -313,25 +313,17 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					reload = min(reload,0)
 					if skill_got[35]
 					{
-						var lowa = wep_load[wep]*-3;
+						var lowa = wep_load[wep]*-puffyCheekAmount;
 						reload = min(reload,lowa);
-						if queueshot < 1
+						var lowaP = lowa/puffyCheekAmount;
+						for (var i = 0; i <= puffyCheekAmount; i++)
 						{
-							queueshot++;
-							scrPlayReloadSound(wep);
-							scrFlexibleElbowReload(wep);
-						}
-						if queueshot < 2
-						{
-							queueshot++;
-							scrPlayReloadSound(wep);
-							scrFlexibleElbowReload(wep);
-						}
-						if queueshot < 3
-						{
-							queueshot++;
-							scrPlayReloadSound(wep);
-							scrFlexibleElbowReload(wep);
+							if queueshot < i && reload <= lowaP*i
+							{
+								queueshot++;
+								scrPlayReloadSound(wep);
+								scrFlexibleElbowReload(wep);
+							}
 						}
 					}
 					else
@@ -348,45 +340,29 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						{
 							var lowb = wep_load[bwep]*-3;
 							breload = min(breload,lowb);
-							if bqueueshot < 1
+							var lowbP = lowb/puffyCheekAmount;
+							for (var i = 0; i <= puffyCheekAmount; i++)
 							{
-								bqueueshot++;
-								scrPlayReloadSound(bwep);
-								scrFlexibleElbowReload(bwep);
+								if bqueueshot < i && breload <= lowbP*i
+								{
+									bqueueshot++;
+									scrPlayReloadSound(bwep);
+									scrFlexibleElbowReload(bwep);
+								}
 							}
-							if bqueueshot < 2
-							{
-								bqueueshot++;
-								scrPlayReloadSound(bwep);
-								scrFlexibleElbowReload(bwep);
-							}
-							if bqueueshot < 3
-							{
-								bqueueshot++;
-								scrPlayReloadSound(bwep);
-								scrFlexibleElbowReload(bwep);
-							}
-							if skill_got[35]
+							if cwep != 0
 							{
 								var lowc = wep_load[cwep]*-3;
 								creload = min(creload,lowc);
-								if cqueueshot < 1
+								var lowcP = lowc/puffyCheekAmount;
+								for (var i = 0; i <= puffyCheekAmount; i++)
 								{
-									cqueueshot++;
-									scrPlayReloadSound(cwep);
-									scrFlexibleElbowReload(cwep);
-								}
-								if cqueueshot < 2
-								{
-									cqueueshot++;
-									scrPlayReloadSound(cwep);
-									scrFlexibleElbowReload(cwep);
-								}
-								if cqueueshot < 3
-								{
-									cqueueshot++;
-									scrPlayReloadSound(cwep);
-									scrFlexibleElbowReload(cwep);
+									if cqueueshot < i && creload <= lowcP*i
+									{
+										cqueueshot++;
+										scrPlayReloadSound(cwep);
+										scrFlexibleElbowReload(cwep);
+									}
 								}
 							}
 						}
@@ -394,6 +370,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 						{
 							queueshot = 0;
 							bqueueshot = 0;
+							cqueueshot = 0;
 						}
 					}
 				}
@@ -545,20 +522,31 @@ if skill_got[22]//Stress Sharp teeth part
 		{
 			multiplier = 2.5//Sharp teeth's damage!
 		}
+		var stunAmount = 7;
 		if scrIsGamemode(24) //SHARP STRESS GAMEMODE
+		{
 			multiplier *= level;
+			stunAmount = stunAmount + max(0,(level-1));
+		}
 		if scrIsCrown(18) //Crown of greed
 			multiplier *= 2
 		snd_play_2d(sndSharpTeeth);
 		with enemy {
 			if team != other.team && //x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-			point_distance(x,y,other.x,other.y) < 250
+			point_distance(x,y,other.x,other.y) < 300
 			{
 				snd_play(snd_hurt, hurt_pitch_variation,true)
 				Sleep(10)
-				DealDamage(other.sharpteeth*multiplier,false,true,false)//Sharp teeth's damage!
-				sprite_index = spr_hurt
-				image_index = 0
+				DealDamage(ceil(other.sharpteeth*multiplier) + other.loops,false,true,false)//Sharp teeth's damage!
+				sprite_index = spr_hurt;
+				image_index = 0;
+				if alarm[1] > 1 && alarm[11] < stunAmount*2 && alarm[1] < stunAmount*2
+				{
+					alarm[1] += stunAmount;
+					alarm[11] += stunAmount;
+				}
+				walk = 0;
+				speed = 0;
 				motion_add(
 				point_direction(other.x,other.y,x,y),8);
 				with instance_create(x,y,SharpTeeth)
@@ -573,67 +561,7 @@ if skill_got[2] && tookHit && !exception
 	extrafeetalarm = 40;
 	extrafeetdodged = false;
 }
-if skill_got[38] && !ignoreMetabolism && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
-{
-	metabolism += 1;
-	var metabolismBreak = 3;
-	if race == 25
-		metabolismBreak = 2;
-	if metabolism > metabolismBreak
-	{
-		metabolism = 0;
-		my_health = prevhealth;
-		if race == 22
-			event_user(0);
-		audio_stop_sound(snd_hurt);
-		snd_play_2d(sndMetabolism,0.1);
-		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],6);
-		if race == 25//Doctor
-		{
-			scrCollectAmmo(0.5);
-		}
-		else
-		{
-			repeat(3)
-				scrCollectAmmo(1);
-		}
-		tookHit = false;
-	}
-	else if metabolism == metabolismBreak
-	{
-		BackCont.shake += 15;
-		snd_play_2d(sndGainProtection);
-		with instance_create_depth(x,y,depth + 1, GainBarrier)
-		{
-			sprite_index = other.sprite_index;
-			owner = other.id;
-		}
-		with instance_create_depth(x,y,depth + 1, GainBarrier)
-		{
-			sprite_index = other.sprite_index;
-			owner = other.id;
-			scale += 0.75;
-			alpha = 0;
-			alarm[1] = 6;
-		}
-	}
-	triggerMetabolism = false;
-}
-ignoreMetabolism = false;
-if (skill_got[46]) && (tookHit && !exception && alarm[3] < 1 && alarm[1] < 1)
-{
-	if peaceBarriers > 0
-	{
-		my_health = prevhealth;
-		audio_stop_sound(snd_hurt);
-		snd_play_2d(sndPeaceHit,0.1);
-		scrGiveEuphoriaShield();
-		alarm[3] = max(alarm[3],6);
-		peaceBarriers -= 1;
-	}
-	peaceBarrierTime = 0;
-}
+
 //Crown of Greed
 if scrIsCrown(18) && !exception && !greedException
 {
@@ -727,61 +655,202 @@ if race == 25 && tookHit
 		}
 	}
 }
-/* */
-///imunity codes
-if ultra_got[48]&&lag>0
-{
-	if tookHit&&my_health!=maxhealth&&alarm[3]<1&&!exception
-	{
-		lag -= 1;
-		alarm[3] = max(alarm[3],12);//before your lag lowers again}
-	}
-}
-
-//if race=16 || race = 17 || race = 19 || race = 20 || race = 21//Viking and Gunsmith use armour and Skeleton and businesshog actually
-//{
 var rageWasHit = false;
-if armour > 0
+//DAMAGE PREVVENTION
+if (tookHit)
 {
-	if tookHit && /*my_health != maxhealth && */alarm[3] < 1&& !exception
+	//Took a hit?
+	if skill_got[38] && !ignoreMetabolism && (triggerMetabolism || tookHit && (exception || (alarm[3] < 1 && alarm[1] < 1)))
 	{
-		tookDamageThisArea = true;
-		armour -= 1;
-		if UberCont.voidChallengeGoing[1] && !instance_exists(VoidChallengeDamage)
+		metabolism += 1;
+		//var metabolismBreak = 3;
+		//if race == 25
+		//	metabolismBreak = 2;
+		if metabolism > metabolismBreak
 		{
-			armour -= 1;
-			instance_create(x,y,VoidChallengeDamage);
-		}
-		if armour == 2 && ultra_got[62] && altUltra && scrIsCrown(41)
-		{
-			alarm[3] = max(alarm[3],12);
+			metabolism = 0;
+			my_health = prevhealth;
+			if race == 22
+				event_user(0);
+			audio_stop_sound(snd_hurt);
+			snd_play_2d(sndMetabolism,0.1);
 			scrGiveEuphoriaShield();
+			alarm[3] = max(alarm[3],6);
+			if race == 25//Doctor
+			{
+				scrCollectAmmo(0.5);
+			}
+			else
+			{
+				repeat(3)
+					scrCollectAmmo(1);
+			}
+			tookHit = false;
 		}
-		sprite_index = spr_hurt;
-		image_index = 0;
-		canAnimateDuringImmune = 0;
-		hurtTime = 0;
-		snd_play(sndLostArmour);
-		alarm[3] = max(alarm[3],4);//before your armour lowers again}
-		if skill_got[28] && !rageWasHit
+		else if metabolism == metabolismBreak
 		{
-			rageWasHit = true;
-			rage = max(floor(rage-rageHit),0);
-			if loops > 0
-				rage -= 2;
+			BackCont.shake += 15;
+			snd_play_2d(sndGainProtection);
+			with instance_create_depth(x,y,depth + 1, GainBarrier)
+			{
+				sprite_index = other.sprite_index;
+				owner = other.id;
+			}
+			with instance_create_depth(x,y,depth + 1, GainBarrier)
+			{
+				sprite_index = other.sprite_index;
+				owner = other.id;
+				scale += 0.75;
+				alpha = 0;
+				alarm[1] = 6;
+			}
 		}
-		scrBlankArmour();
-		if ultra_got[64]
-			scrSerpentArmourStrike();
+		triggerMetabolism = false;
 	}
-	if armour > maxarmour
-		armour = maxarmour;
+	if (tookHit && !exception && alarm[3] < 1 && alarm[1] < 1)
+	{
+		if (skill_got[32] && isAlkaline)//Alkaline Savila
+		{
+			var damageTaken = (prevhealth - my_health) - damageReduced;
+			//Needs to be healable or lethal
+			if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
+			{
+				isAlkaline = false;
+				with EnemyVenom
+				{
+					instance_destroy();	
+				}
+				/*
+				var n = instance_nearest(x,y,enemy)
+				if n != noone
+				{
+					snd_play_fire(sndBlobFireS);
+					with instance_create(x,y,UltraBlobBall)
+					{
+						motion_add(point_direction(x,y,n.x,n.y),14);
+						dmg = 100;
+						team = other.team
+					}
+				}*/
+				var healTaken = 0;
+				if prevhealth < maxhealth + 1 + defaultOverhealAddition
+				{
+					healTaken = 2;
+					if race == 25//Doctor buff
+					{
+						healTaken += 1
+						alarm[3] = max(alarm[3],30);
+					}
+					with instance_create(x,y,HealFX)
+					{
+						depth = other.depth - 1;	
+					}
+					my_health = min(maxhealth + 1 + defaultOverhealAddition,prevhealth+healTaken);
+				}
+				else
+				{
+					my_health = prevhealth;
+				}
+				scrPhotosythesis(healTaken);
+				with instance_create(x,y,SharpTeeth)
+					owner=other.id;
+				snd_play(sndAlkalineProc,0,true);
+				var pt = instance_create(x,y,PopupText)
+				if UberCont.opt_ammoicon
+				{
+					if my_health == maxhealth
+						pt.mytext = "MAX";
+					else if my_health > maxhealth
+						pt.mytext = "OVER MAX"
+					else
+						pt.mytext = "+"+string(healTaken);
+				
+					pt.sprt = sprHPIconPickup;
+				}
+				else
+				{
+					if my_health = maxhealth
+						pt.mytext = "MAX HP";
+					else if my_health > maxhealth
+						pt.mytext = "OVER MAX"
+					else
+						pt.mytext = "+"+string(healTaken)+" HP";
+				}
+				Sleep(50);
+				scrGiveEuphoriaShield();
+				alarm[3] += 20;
+			}
+		}
+		else if ultra_got[48] && lag > 0
+		{
+			lag -= 1;
+			alarm[3] = max(alarm[3],12);//before your lag lowers again}
+		}
+		else if (skill_got[46]) && peaceBarriers > 0
+		{
+			if peaceBarriers > 0
+			{
+				my_health = prevhealth;
+				audio_stop_sound(snd_hurt);
+				snd_play_2d(sndPeaceHit,0.1);
+				scrGiveEuphoriaShield();
+				alarm[3] = max(alarm[3],6);
+				peaceBarriers -= 1;
+				my_health = prevhealth
+			}
+			peaceBarrierTime = 0;
+		}
+		else if armour > 0
+		{
+			tookDamageThisArea = true;
+			armour -= 1;
+			my_health = prevhealth;
+			if UberCont.voidChallengeGoing[1] && !instance_exists(VoidChallengeDamage)
+			{
+				armour -= 1;
+				instance_create(x,y,VoidChallengeDamage);
+			}
+			if armour == 2 && ultra_got[62] && altUltra && scrIsCrown(41)
+			{
+				alarm[3] = max(alarm[3],12);
+				scrGiveEuphoriaShield();
+			}
+			sprite_index = spr_hurt;
+			image_index = 0;
+			canAnimateDuringImmune = 0;
+			hurtTime = 0;
+			snd_play(sndLostArmour);
+			alarm[3] = max(alarm[3],4);//before your armour lowers again}
+			if skill_got[28] && !rageWasHit
+			{
+				rageWasHit = true;
+				rage = max(floor(rage-rageHit),0);
+				if loops > 0
+					rage -= 2;
+			}
+			scrBlankArmour();
+			if ultra_got[64]
+				scrSerpentArmourStrike();
+			if armour > maxarmour
+				armour = maxarmour;
+		}
+		else if ultra_got[62] && altUltra {
+			my_health = min(1,my_health);
+		}
+	}
+	if skill_got[12] && !exception//euphoria resistance?
+	{
+		if race=25
+			alarm[3] = max(16,alarm[3]);
+		else
+			alarm[3] = max(alarm[3],12);//duration
+		canAnimateDuringImmune = 0;
+		snd_hurt = sndDamageNegate;
+		instance_create(x,y,EuphoriaBlock);
+		scrGiveEuphoriaShield();
+	}
 }
-else if ultra_got[62] && altUltra {
-	my_health = min(1,my_health);
-}
-
-//}
+ignoreMetabolism = false;
 if (alarm[3] > 0 || lockout)/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 {
 	if sprite_index == spr_hurt
@@ -807,98 +876,6 @@ if (alarm[3] > 0 || lockout)/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 		tookHit = false;
 	}
 }
-
-if (tookHit)
-{
-	//Took a hit?
-	if (skill_got[32] && isAlkaline/* && lag < 1 && armour < 1*/ && !exception)//Alkaline Savila
-	{
-		var damageTaken = (prevhealth - my_health) - damageReduced;
-		//Needs to be healable or lethal
-		if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
-		{
-			isAlkaline = false;
-			with EnemyVenom
-			{
-				instance_destroy();	
-			}
-			/*
-			var n = instance_nearest(x,y,enemy)
-			if n != noone
-			{
-				snd_play_fire(sndBlobFireS);
-				with instance_create(x,y,UltraBlobBall)
-				{
-					motion_add(point_direction(x,y,n.x,n.y),14);
-					dmg = 100;
-					team = other.team
-				}
-			}*/
-			var healTaken = 0;
-			if prevhealth < maxhealth + 1 + defaultOverhealAddition
-			{
-				healTaken = 2;
-				if race == 25//Doctor buff
-				{
-					healTaken += 1
-					alarm[3] = max(alarm[3],30);
-				}
-				with instance_create(x,y,HealFX)
-				{
-					depth = other.depth - 1;	
-				}
-				my_health = min(maxhealth + 1 + defaultOverhealAddition,prevhealth+healTaken);
-			}
-			else
-			{
-				my_health = prevhealth;
-			}
-			scrPhotosythesis(healTaken);
-			with instance_create(x,y,SharpTeeth)
-				owner=other.id;
-			snd_play(sndAlkalineProc,0,true);
-			var pt = instance_create(x,y,PopupText)
-			if UberCont.opt_ammoicon
-			{
-				if my_health == maxhealth
-					pt.mytext = "MAX";
-				else if my_health > maxhealth
-					pt.mytext = "OVER MAX"
-				else
-					pt.mytext = "+"+string(healTaken);
-				
-				pt.sprt = sprHPIconPickup;
-			}
-			else
-			{
-				if my_health = maxhealth
-					pt.mytext = "MAX HP";
-				else if my_health > maxhealth
-					pt.mytext = "OVER MAX"
-				else
-					pt.mytext = "+"+string(healTaken)+" HP";
-			}
-			Sleep(50);
-			scrGiveEuphoriaShield();
-			alarm[3] += 20;
-		}
-	}
-	if skill_got[12]//euphoria resistance?
-	{
-		if !instance_exists(GenCont)&&(!instance_exists(myShield) || myShield == -1)&&!instance_exists(LevCont)&&!exception
-		{
-			if race=25
-				alarm[3] = max(16,alarm[3]);
-			else
-				alarm[3] = max(alarm[3],12);//duration
-			canAnimateDuringImmune = 0;
-			snd_hurt = sndDamageNegate;
-			instance_create(x,y,EuphoriaBlock);
-			scrGiveEuphoriaShield();
-		}
-	}
-}
-
 /* */
 ///strong spirit justasheep
 if(my_health <= 0 && maxhealth > 0)
@@ -1094,7 +1071,9 @@ if(my_health <= 0 && maxhealth > 0)
 			}
 			if !wasAbove
 				usePercentage -= 0.05;
-			ammo[i] = floor(ammo[i] - (baseammo[i]*usePercentage));
+			var theCost = floor(ammo[i] - (baseammo[i]*usePercentage));
+			scrSpendingAmmo(i,theCost);
+			ammo[i] = theCost;
 			if wasAbove && ammo[i] <= 0 {
 				lostAmmo++
 			}

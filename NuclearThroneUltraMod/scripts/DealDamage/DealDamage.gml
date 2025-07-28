@@ -14,7 +14,8 @@ function DealDamage(theDamage, isPerFrame = false,boostDamage = true, canMod = t
 					scrModHit(other);
 				if (boostDamage)
 				{
-					scrScarierFace(theDamage,isPerFrame)
+					scrScarierFace(theDamage,isPerFrame);
+					scrHollowBones();
 				}
 			}
 		}

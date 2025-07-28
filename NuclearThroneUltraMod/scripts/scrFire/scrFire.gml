@@ -117,6 +117,7 @@ function scrFire(canDrown = true) {
 		}
 		queueshot = max(queueshot-1,0);
 		fired = true;
+		scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
 		if (alarm[2]<1)//alarm = Fish Ultra B
 		{
 			ammo[wep_type[wep]] -= wep_cost[wep]
@@ -1683,7 +1684,7 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,Lightning)
 	{image_angle = aimDirection+(random(60)-30)*other.accuracy
 	team = other.team
-	ammo = 11+random(6)
+	ammo = 12+random(6)
 	event_perform(ev_alarm,0)
 	with instance_create(x,y,LightningSpawn)
 	image_angle = other.image_angle}}
