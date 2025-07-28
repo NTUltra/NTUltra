@@ -3471,6 +3471,7 @@ function scrFire2(hasTailNow) {
 */
 	//BLASPHEMIA
 	case 311:
+		var ls = GetPlayerLoops();
 		switch (wep_sprt[311])
 		{
 			case sprYVExcalibur1:
@@ -3478,7 +3479,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 28
+					dmg = 25 + ceil(ls*0.5)//28
 					sprite_index = sprExcaliburSlash;
 					mask_index = mskExcaliburSlash;
 					longarms = 0
@@ -3506,7 +3507,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 35
+					dmg = 31 + ceil(ls*0.5)//35
 					sprite_index = sprExcaliburBigSlash;
 					image_yscale = choose(1,-1);
 					mask_index = mskBigSlash;
@@ -3534,7 +3535,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),LanceShank)
 				{
-					dmg = 24
+					dmg = 18 + ls//24
 					sprite_index = sprExcaliburBigShank;
 					mask_index = mskExcaliburBigShank;
 					image_yscale = choose(1,-1);
@@ -3563,7 +3564,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),ExcaliburHammerBoom)
 				{
-					dmg = 28
+					dmg = 26 + ls
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDirection,2.7+longarms)
@@ -7010,6 +7011,7 @@ function scrFire2(hasTailNow) {
 	break;
 	
 	//WAZER RIFLE/PISTOL
+	case 788:
 	case 424:
 	var um = GetPlayerUltramod()
 	if um == ultramods.laserBullet

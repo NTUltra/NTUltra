@@ -347,7 +347,18 @@ with CrownPickup
 	with Torch
 	{
 		if point_distance(x,y,other.x,other.y) < 240
-			instance_change(WepSwap,false)
+		{
+			if instance_exists(HintGiver) && HintGiver.owner == id
+			{
+				var f = instance_furthest(other.x,other.y,Floor);
+				x = f.x + 16;
+				y = f.y + 16;
+			}
+			else
+			{
+				instance_change(WepSwap,false);
+			}
+		}
 	}
 }
 

@@ -3,7 +3,7 @@
 ///@param
 function scrHollowBones(){
 	//Player.ultra_got[57] 
-	if (instance_exists(Player) && (Player.skill_got[47] || true)) {
+	if (instance_exists(Player) && (Player.skill_got[47])) {
 		if instance_exists(WantHollowImplosion)
 		{
 			BackCont.shake += 7;

@@ -2,6 +2,7 @@ raddrop = 30
 maxhealth = 30
 mySize = 2
 event_inherited()
+loops = GetPlayerLoops();
 gunangle = 0;
 walk = 0;
 meleedamage = 0
@@ -21,6 +22,7 @@ snd_dead = sndVenusRadTrapDead
 active = 0;
 //behavior
 alarm[1] = 60;//30+random(90)
+alarm[3] = 30;
 wkick = 0
 actTime = 10;
 

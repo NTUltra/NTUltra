@@ -14,6 +14,6 @@ if instance_exists(Player) && Player.race == 25
 	image_xscale = scale;
 	image_yscale = scale;
 }
-rotation = random_range(9,-9);
+rotation = random_range(8,-8);
 alarm[3] = 1;
 scaleDecrease = 0.05 - random_range(0,0.015);

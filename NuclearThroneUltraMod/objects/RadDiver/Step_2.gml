@@ -5,6 +5,6 @@ event_inherited();
 
 if my_health < prevHealth
 {
-	amountOfProjectiles = max(damageMultiplier, ceil(prevHealth - my_health) * damageMultiplier);
+	amountOfProjectiles = max(damageMultiplier, ceil(prevHealth - max(0,my_health)) * damageMultiplier);
 	event_user(0);	
 }

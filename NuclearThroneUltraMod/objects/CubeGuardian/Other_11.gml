@@ -37,11 +37,11 @@ var lp = random(1);
 //Euphoria
 if instance_exists(Player)
 {
-if Player.skill_got[12] = 1
-{
-	rotSpeed = rotSpeed*0.7
-	dis -= 8;
-}
+	if Player.skill_got[12] = 1
+	{
+		rotSpeed = rotSpeed*0.7
+		dis -= 8;
+	}
 }
 for (var i = 0; i < amountOfProjectiles; i++) {
 	with myCompanions[i]

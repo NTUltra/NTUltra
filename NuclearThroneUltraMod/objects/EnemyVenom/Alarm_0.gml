@@ -1,5 +1,6 @@
 /// @description Deal damage
 var theDamage = dmg;
+var checkingDamage = dmg;
 var breakPoint = 1;
 var toCheck = 10;
 if instance_exists(owner)
@@ -7,9 +8,9 @@ if instance_exists(owner)
 	if owner.object_index == Player
 	{
 		if scrIsCrown(18) || scrIsCrown(41)
-			breakPoint += 1;
+			checkingDamage *= 2;
 		if UberCont.voidChallengeGoing[1]
-			breakPoint += 1;
+			checkingDamage *= 2;
 		if Player.ultra_got[62] && Player.altUltra//LIVING ARMOUR
 		{
 			toCheck = Player.armour;
@@ -18,18 +19,14 @@ if instance_exists(owner)
 		{
 			toCheck = owner.my_health;
 		}
-		debug(toCheck);
-		debug(Player.isAlkaline);
 		if Player.skill_got[32] && Player.isAlkaline
 		{
-			debug("GOT ALK");
 			toCheck += 1;	
 		}
 		toCheck += max(0,Player.skill_got[46] ? Player.peaceBarriers : 0) + ((Player.skill_got[38] && Player.metabolism == Player.metabolismBreak) ? 1 : 0) + max(0,Player.lag) + max(0,Player.armour);
-		debug(((Player.metabolism == Player.metabolismBreak) ? 1 : 0));
-		debug(toCheck);
-		while (theDamage > 0 && toCheck - theDamage < breakPoint) {
-			theDamage -= 1;
+		while (checkingDamage > 0 && toCheck - checkingDamage < breakPoint) {
+			checkingDamage *= 0.5
+			theDamage *= 0.5
 		} 
 	}
 	else

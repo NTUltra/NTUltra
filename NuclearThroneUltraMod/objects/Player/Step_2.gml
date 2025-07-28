@@ -788,15 +788,19 @@ if (tookHit)
 		}
 		else if (skill_got[46]) && peaceBarriers > 0
 		{
-			if peaceBarriers > 0
+			my_health = prevhealth;
+			audio_stop_sound(snd_hurt);
+			snd_play_2d(sndPeaceHit,0.1);
+			scrGiveEuphoriaShield();
+			alarm[3] = max(alarm[3],6);
+			peaceBarriers -= 1;
+			my_health = prevhealth
+			if skill_got[28] && !rageWasHit
 			{
-				my_health = prevhealth;
-				audio_stop_sound(snd_hurt);
-				snd_play_2d(sndPeaceHit,0.1);
-				scrGiveEuphoriaShield();
-				alarm[3] = max(alarm[3],6);
-				peaceBarriers -= 1;
-				my_health = prevhealth
+				rageWasHit = true;
+				rage = max(floor(rage-rageHit),0);
+				if loops > 0
+					rage -= 2;
 			}
 			peaceBarrierTime = 0;
 		}

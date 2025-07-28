@@ -49,3 +49,4 @@ fired = false;
 
 myCompanions = [];
 instance_create(x,y,BigWallBreak);
+shot = false;

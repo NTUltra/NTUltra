@@ -1,5 +1,6 @@
 /// @description Fire!!
 fired = true;
+shot = false;
 var ps = projectileSpeed;
 var am = array_length(myCompanions);
 for (var i = 0; i < am; i++) {
@@ -35,7 +36,6 @@ repeat(4)
 {
 	with instance_create(x,y,exploBullet)
 	{
-		//offsetDir = 0;
 		motion_add(angle,ps);
 		image_angle = direction
 		team = other.team

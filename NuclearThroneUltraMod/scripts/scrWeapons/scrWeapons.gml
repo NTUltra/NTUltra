@@ -3497,13 +3497,14 @@ function scrWeapons() {
 	wep_name[311] = "BLASPHEMIA"
 	wep_type[311] = 0
 	wep_auto[311] = 0
-	wep_load[311] = 15
+	wep_load[311] = 17//15
 	wep_cost[311] = 0
 	wep_sprt[311] = sprYVExcalibur1
 	wep_area[311] = -2
 	wep_text[311] = "weapon of an inverted GOD"
 	wep_swap[311] = sndSwapHammer
 	wep_rad[311] = 0;
+	wep_popup[311] = "DAMAGE SCALES EACH LOOP!";
 	
 	wep_name[312] = "ROGUE RIFLE"
 	wep_type[312] = 1

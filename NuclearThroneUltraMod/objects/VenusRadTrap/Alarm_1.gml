@@ -8,7 +8,7 @@ else if active < 2
 {
 	mask_index = mskPickupThroughWall;
 	routines -= 1;
-	if instance_number(enemy) < 6
+	if instance_number(enemy) < 6 + loops
 		routines -= 10;
 	alarm[1] = actTime;
 	scrTarget()
@@ -19,6 +19,10 @@ else if active < 2
 			image_index = 0;
 			active = 1;
 			imageIndex = 0;
+			with VenusRadTrap
+			{
+				routines -= 20;	
+			}
 		}
 	}
 	exit;

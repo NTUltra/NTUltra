@@ -5,5 +5,5 @@ growspeed -= 0.02
 image_angle += rot
 
 if image_xscale < 0.04
-instance_destroy()
+	instance_destroy()
 

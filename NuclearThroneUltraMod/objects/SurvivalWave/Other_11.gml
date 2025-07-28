@@ -321,12 +321,12 @@ switch (UberCont.crownVaultChallenge)
 		};
 		wave[i] = {
 			obj: SquareBat,
-			time: 30,
+			time: 120,
 		};
 		i++;
 		wave[i] = {
 			obj: BigBadBat,
-			time: 300,
+			time: 230,
 		};
 		i++;
 		repeat(4)
@@ -489,7 +489,7 @@ switch (UberCont.crownVaultChallenge)
 		{
 			wave[i] = {
 				obj: Wolf,
-				time: 22,
+				time: 18,
 			};
 			i++;
 		};
@@ -497,7 +497,7 @@ switch (UberCont.crownVaultChallenge)
 		{
 			wave[i] = {
 				obj: Ratking,
-				time: 40,
+				time: 30,
 			};
 			i++;
 		};
@@ -508,7 +508,7 @@ switch (UberCont.crownVaultChallenge)
 		i++
 		wave[i] = {
 			obj: BuffGator,
-			time: 120,
+			time: 100,
 		};
 		i++
 		wave[i] = {
@@ -518,10 +518,10 @@ switch (UberCont.crownVaultChallenge)
 		i++
 		wave[i] = {
 			obj: BallMom,
-			time: 270,
+			time: 260,
 		};
 		i++
-		repeat(4)
+		repeat(8)
 		{
 			wave[i] = {
 				obj: Exploder,

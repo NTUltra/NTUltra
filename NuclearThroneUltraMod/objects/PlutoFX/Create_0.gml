@@ -9,3 +9,8 @@ image_xscale = 0.7
 image_yscale = 0.7
 rot = (1+random(3))*choose(1,-1)
 growspeed = 0.05+random(0.05)
+if UberCont.normalGameSpeed == 60
+{
+	growspeed *= 0.5;
+	rot *= 0.5;
+}

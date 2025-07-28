@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":3,
   "conversionMode":0,
-  "duration":119.05217,
+  "duration":119.052155,
   "name":"musUltraCrownGluttonBoss",
   "parent":{
     "name":"Music & amb",

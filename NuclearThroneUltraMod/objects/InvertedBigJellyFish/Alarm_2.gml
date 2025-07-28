@@ -19,7 +19,7 @@ if ammo > 0
 	{
 		with instance_create(x,y,ToxicGas) {
 			cantHitTeam = other.team;
-			motion_add(ang,3);	
+			motion_add(ang,4);	
 		}
 		ang += angStep;
 	}

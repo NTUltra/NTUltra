@@ -8,7 +8,7 @@ function scrMorphWeaponsArray(loops, meleesOnly = false) {
 		if meleesOnly
 			return [198,495,135,478];
 		
-		return [70, 73, 98, 198, 408, 659, 468, 495, 646, 663, 750, 755, 899, 396, 819, 820, 909,910,773];
+		return [70, 73, 98, 198, 408, 659, 468, 495, 646, 663, 750, 755, 899, 396, 819, 820, 909,910,773,914];
 	}
 	if meleesOnly
 		return [198,495,135];

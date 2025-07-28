@@ -3198,6 +3198,7 @@
     {"name":"sndCrystalTeleport","order":24,"path":"sounds/sndCrystalTeleport/sndCrystalTeleport.yy",},
     {"name":"sndCrystalTorpedo","order":25,"path":"sounds/sndCrystalTorpedo/sndCrystalTorpedo.yy",},
     {"name":"sndCrystalTorpedoExit","order":26,"path":"sounds/sndCrystalTorpedoExit/sndCrystalTorpedoExit.yy",},
+    {"name":"sndCubeGuardianQuickShot","order":21,"path":"sounds/sndCubeGuardianQuickShot/sndCubeGuardianQuickShot.yy",},
     {"name":"sndCuber","order":41,"path":"sounds/sndCuber/sndCuber.yy",},
     {"name":"sndCursedChest","order":9,"path":"sounds/sndCursedChest/sndCursedChest.yy",},
     {"name":"sndCursedOasisBossAppear","order":8,"path":"sounds/sndCursedOasisBossAppear/sndCursedOasisBossAppear.yy",},

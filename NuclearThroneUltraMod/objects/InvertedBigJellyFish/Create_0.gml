@@ -13,9 +13,9 @@ raddrop = 70
 maxhealth = 400;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
-tellTime = 5;
+tellTime = 4;
 jellyDelay -= 1;
-actTime -= 2;
+actTime -= 4;
 maxAmmo += 2;
 jellyMaxAmmoDelay += 1;
 myJellyFish = InvertedTinyJellyFish;

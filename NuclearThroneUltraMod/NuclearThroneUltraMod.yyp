@@ -3443,6 +3443,7 @@
     {"id":{"name":"sndCrystalTeleport","path":"sounds/sndCrystalTeleport/sndCrystalTeleport.yy",},},
     {"id":{"name":"sndCrystalTorpedo","path":"sounds/sndCrystalTorpedo/sndCrystalTorpedo.yy",},},
     {"id":{"name":"sndCrystalTorpedoExit","path":"sounds/sndCrystalTorpedoExit/sndCrystalTorpedoExit.yy",},},
+    {"id":{"name":"sndCubeGuardianQuickShot","path":"sounds/sndCubeGuardianQuickShot/sndCubeGuardianQuickShot.yy",},},
     {"id":{"name":"sndCuber","path":"sounds/sndCuber/sndCuber.yy",},},
     {"id":{"name":"sndCursedChest","path":"sounds/sndCursedChest/sndCursedChest.yy",},},
     {"id":{"name":"sndCursedOasisBossAppear","path":"sounds/sndCursedOasisBossAppear/sndCursedOasisBossAppear.yy",},},

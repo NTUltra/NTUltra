@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndCubeGuardianQuickShot",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.25959185,
+  "name":"sndCubeGuardianQuickShot",
+  "parent":{
+    "name":"Palace",
+    "path":"folders/Sounds/Palace.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCubeGuardianQuickShot.ogg",
+  "type":0,
+  "volume":1.0,
+}

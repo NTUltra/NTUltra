@@ -13,7 +13,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		dataRef = DataRef;
 	else
 		return 0;
-	if dataRef.hard > 13
+	if dataRef.hard > 13 || dataRef.hard < 2
 	{
 		maxTriesParam *= 0.5;
 	}

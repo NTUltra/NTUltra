@@ -30,6 +30,7 @@ if instance_exists(enemy)
 			motion_add(Player.direction,1)
 	}
 	if dir != noone && dir.team != 2 && collision_line(x,y,dir.x,dir.y,Wall,false,false) == noone
+	&& distance_to_object(dir) < 300
 	&& (!instance_exists(Player) || (!Player.isInvisible || instance_exists(ThiefStealthDurationDelay)))
 	{
 		gunangle = point_direction(x,y,dir.x,dir.y);

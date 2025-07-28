@@ -74,7 +74,7 @@ else if um == ultramods.lightningPellet
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = other.speed + 2;
+		speed = other.speed + 4;
 		alarm[11] = 0;
 	}
 	with instance_create(x,y,Lightning)
@@ -82,7 +82,7 @@ else if um == ultramods.lightningPellet
 		image_angle = other.direction;
 		dmg -= 2;
 		team = other.team
-		ammo = 4 + irandom(4);
+		ammo = 6 + irandom(5);
 		scrCopyWeaponMod(other);
 		isog = false;
 		event_perform(ev_alarm,0)
