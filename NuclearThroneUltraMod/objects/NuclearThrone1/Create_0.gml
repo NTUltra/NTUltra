@@ -52,7 +52,8 @@ cantrishot = true;
 
 riseStep = false;
 
-event_inherited()
+event_inherited();
+isBoss = true;
 if scrIsGamemode(5)//1HP gamemode
 {
 	my_health += 50;

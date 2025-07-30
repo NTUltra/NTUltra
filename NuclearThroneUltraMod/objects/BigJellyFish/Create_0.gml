@@ -5,6 +5,7 @@ mySize = 2
 
 event_inherited();
 scrBossHealthBuff();
+isBoss = true; 
 meleedamage = 5
 
 spr_idle = sprBigJellyFishIdle

@@ -9,7 +9,7 @@ maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 
 event_inherited()
-
+isBoss = true;
 
 spr_idle = sprBanditBossIdle
 spr_walk = sprBanditBossWalk

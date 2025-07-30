@@ -47,6 +47,7 @@ else if um == ultramods.bulletPlasma
 	with instance_create(x,y,Laser)
 	{
 		laserhit += 1;
+		dmg -= 0.25;
 		sprite_index=sprBouncingLaser;
 		image_yscale -= 0.25
 		alarm[2] = max(1,alarm[2] - 1);

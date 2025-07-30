@@ -21,5 +21,5 @@ with instance_create(x,y,ClawSlashSecond)
 	speed = other.speed * 0.5;
 	team = other.team;
 	scrCopyWeaponMod(other);
-	dmg = other.dmg + 2;
+	dmg = other.dmg + 1;
 }

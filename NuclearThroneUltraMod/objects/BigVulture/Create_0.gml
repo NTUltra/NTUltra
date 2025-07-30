@@ -7,7 +7,8 @@ scrBossHealthBuff();
 meleedamage = 0
 mySize = 1
 
-event_inherited()
+event_inherited();
+isBoss = true;
 isInverted = false;
 ignoreOverlap = true;
 gunangle1 = 0;

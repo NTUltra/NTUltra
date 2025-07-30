@@ -24,3 +24,4 @@ super = false;
 alarm[0] = 20;
 friction = 0.4;
 image_xscale = choose(1, -1);
+alarm[10] = 5;

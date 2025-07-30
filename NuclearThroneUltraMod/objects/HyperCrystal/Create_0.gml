@@ -6,7 +6,7 @@ mySize = 6
 
 event_inherited()
 meleedamage = 200
-
+isBoss = true;
 depth --;
 spr_idle = sprHyperCrystalIdle
 spr_walk = sprHyperCrystalIdle

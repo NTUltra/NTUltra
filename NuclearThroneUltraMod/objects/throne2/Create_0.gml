@@ -9,7 +9,7 @@ mySize = 6;
 
 event_inherited()
 meleedamage = 10
-
+isBoss = true;
 depth -= 1;
 alarm[10] = 0;
 spr_idle = sprNothing2Idle

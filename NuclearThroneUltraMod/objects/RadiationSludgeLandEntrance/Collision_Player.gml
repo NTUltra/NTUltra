@@ -1,4 +1,4 @@
-/// @description You want to go for pizza?
+/// @description You want to go radiation sludge
 if !wentIn && !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter) && !instance_exists(WantBoss) && !instance_exists(LilHunterFly) && !instance_exists(LilHunterDie) && !instance_exists(InvertedLilHunterFly) && !instance_exists(InvertedLilHunterDie)
 {
 	with Player
@@ -12,6 +12,7 @@ if !wentIn && !instance_exists(LilHunter) && !instance_exists(InvertedLilHunter)
 		with Player
 		{
 			area = 144
+			subarea = 0;
 			snd_play_2d(sndVenom);
 			var am = 8;
 			var ang = random(360);

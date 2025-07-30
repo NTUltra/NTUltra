@@ -6,7 +6,7 @@ if loops > 0
 scrBossHealthBuff();
 mySize = 3
 event_inherited()
-
+isBoss = true;
 team = 7;
 canFly = true;
 meleedamage = 0

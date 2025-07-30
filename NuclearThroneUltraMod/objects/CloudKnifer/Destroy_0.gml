@@ -13,7 +13,7 @@ repeat(3)
 	}
 	dir += 120
 }
-if fps_real >= fps
+if fps_real >= fps - 5
 	repeat(3+irandom(4))
 	{
 		with instance_create(x,y,RavenFeather)

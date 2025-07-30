@@ -38,6 +38,7 @@ with RadChest {
 }*/
 mySize = 5
 event_inherited();
+isBoss = true;
 meleedamage = 7
 
 fireProof = true;

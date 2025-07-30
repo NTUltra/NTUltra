@@ -8,6 +8,7 @@ mySize = 5
 
 event_inherited()
 meleedamage = 0;
+isBoss = true;
 
 spr_idle = sprBigMachineIntro
 spr_walk = sprBigMachineIdle

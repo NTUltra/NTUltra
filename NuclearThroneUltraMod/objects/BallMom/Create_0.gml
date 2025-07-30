@@ -6,7 +6,7 @@ scrBossHealthBuff();
 
 
 event_inherited()
-
+isBoss = true;
 loops = GetPlayerLoops();
 meleedamage = 10
 

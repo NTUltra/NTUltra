@@ -155,6 +155,12 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	case 27:
 	return sprMutant27BIdle;
 	break;
+	case 28:
+	return sprMutant28BIdle;
+	break;
+	case 29:
+	return sprMutant29BIdle;
+	break;
 
 	}
 	}
@@ -260,6 +266,12 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	break;
 	case 27:
 	return sprMutant27CIdle;
+	break;
+	case 28:
+	return sprMutant28CIdleConceal;
+	break;
+	case 29:
+	return sprMutant29CIdle;
 	break;
 	}
 
@@ -387,6 +399,12 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	break;
 	case 27:
 	return sprMutant27Idle;
+	break;
+	case 28:
+	return sprMutant28Idle;
+	break;
+	case 29:
+	return sprMutant29Idle;
 	break;
 	}
 

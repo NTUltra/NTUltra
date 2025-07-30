@@ -3,7 +3,8 @@ maxhealth = 680
 mySize = 4
 scrBossHealthBuff();
 
-event_inherited()
+event_inherited();
+isBoss = true;
 meleedamage = 3
 canFly = true;
 alarm[10] = 0;

@@ -22,7 +22,8 @@ if instance_exists(Player)
 meleedamage = 0
 mySize = 2
 
-event_inherited()
+event_inherited();
+isBoss = true;
 myMimicFriend = noone;
 scrAddDrops(2);
 spawnedDuplicate = false;

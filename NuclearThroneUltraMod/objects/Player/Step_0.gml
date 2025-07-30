@@ -2385,7 +2385,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		}
 		instance_create(x,y,EuphoriaBlock);
 		if race == 25 {
-			if scrDrop(70,7) != noone
+			if scrDrop(60,7) != noone
 				snd_play(sndExtraFeetDodge);
 			else
 			{
@@ -2400,7 +2400,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		}
 		else
 		{
-			if scrDrop(60,5) != noone
+			if scrDrop(50,5) != noone
 				snd_play(sndExtraFeetDodge);
 			else
 			{

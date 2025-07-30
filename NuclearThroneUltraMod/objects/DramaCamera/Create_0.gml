@@ -92,6 +92,8 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		else
 		{
 		    var area = instance_exists(Player) ? Player.area : UberCont.area;
+			if area == 100
+				area = instance_exists(Player) ? Player.lastarea : UberCont.lastarea;
 			var subarea = instance_exists(Player) ? Player.subarea : UberCont.subarea;
 		    if area = 1 || area = 105 || (area == 100 && instance_exists(InvertedBanditBoss))
 			{
@@ -198,7 +200,7 @@ with BackCont
 widescreen = 0
 
 
-name="BOSS";
+name = "BOSS";
 var canFunny = false;
 if instance_exists(Player)
 {
@@ -334,7 +336,7 @@ else
 			name = choose("BIG BITCH","HERE WE GO AGAIN","REBEL'S BROTHER","BIG DAD");	
 		}
 	}
-	else if area = 105 || (area == 100 && instance_exists(InvertedBanditBoss))
+	else if area == 105 || (area == 100 && instance_exists(InvertedBanditBoss))
 	{
 	//with instance_create(x,y,Drama)
 		name = "INVERTED BIG BANDIT"
@@ -344,7 +346,7 @@ else
 			name = choose("BIG FUCK","SHITBAG","MISTER ASS","VARIETY STREAMER");
 		}
 	}
-	else if area = 2
+	else if area == 2
 	{
 		if instance_exists(BanditBoss) && !instance_exists(BallMom)
 		{
@@ -374,7 +376,7 @@ else
 		}
 		image_index = 29;
 	}
-	else if area = 3
+	else if area == 3
 	{
 	//with instance_create(x,y,Drama)
 		if subarea = 3
@@ -394,7 +396,7 @@ else
 
 		}
 	}
-	else if area = 136
+	else if area == 136
 	{
 	//with instance_create(x,y,Drama)
 		if canFunny && random(100)<1
@@ -403,7 +405,7 @@ else
 			name = "ULTRA BIG DOG";
 		image_index = 45;
 	}
-	else if area = 106
+	else if area == 106
 	{
 	//with instance_create(x,y,Drama)
 		if subarea = 3
@@ -437,7 +439,7 @@ else
 				name = choose("THE BIG BAD BAT","SQUARES!","BATMAN","BIG BAT");	
 		}
 	}
-	else if area = 111 || area == 145
+	else if area == 111 || area == 145
 	{
 		if subarea == 1
 		{
@@ -453,14 +455,14 @@ else
 				name = choose("PURPLE BAT","THE BAT OF DEATH");	
 		}
 	}
-	else if area = 115
+	else if area == 115
 	{
 		name = "CURSED HYPER CRYSTAL";
 		image_index = 10;
 		if canFunny && random(90)<1
 			name = choose("A MISTAKE","PURPLE MENACE");
 	}
-	else if area = 114
+	else if area == 114
 	{
 	//with instance_create(x,y,Drama)
 	name = "BUSH BOX"
@@ -474,7 +476,7 @@ else
 		if canFunny && random(200)<1
 			name = choose("GAY BUSH","PINK BUSH","BUSH BALL");
 	}
-	else if area = 5
+	else if area == 5
 	{
 		if subarea > 2
 		{
@@ -492,7 +494,7 @@ else
 				name= choose("BIG DIC","LARGE STAR","DUMB BOSS");
 		}
 	}
-	else if area = 107
+	else if area == 107
 	{
 	//with instance_create(x,y,Drama)
 		if subarea > 2
@@ -510,7 +512,7 @@ else
 				name= choose("BROWN DISC","BIG OOPS");
 		}
 	}
-	else if area = 6 
+	else if area == 6 
 	{
 		if subarea == 2
 		{
@@ -526,7 +528,7 @@ else
 				name = choose("TECH-ROMANCER","LITTLE SHIT");
 		}
 	}
-	else if area = 112
+	else if area == 112
 	{
 		if subarea == 2
 		{
@@ -543,7 +545,7 @@ else
 		}
 
 	}
-	else if area = 7
+	else if area == 7
 	{
 	//with instance_create(x,y,Drama)
 		image_index = 11;
@@ -557,7 +559,7 @@ else
 			name = "PURPLE DRAGON"
 	
 	}
-	else if area = 108
+	else if area == 108
 	{
 	//with instance_create(x,y,Drama)
 		image_index = 33;
@@ -571,7 +573,7 @@ else
 			name = "INVERTED DRAGON"
 	
 	}
-	else if area = 8
+	else if area == 8
 	{
 	//with instance_create(x,y,Drama)
 		if subarea=2
@@ -589,11 +591,11 @@ else
 
 	    }
 	}
-	else if area = 109
+	else if area == 109
 	{
 		name = "INVERTED CHESHIRE CAT"
 	}
-	else if area = 101
+	else if area == 101
 	{
 		//with instance_create(x,y,Drama)
 		if subarea == 2
@@ -607,7 +609,7 @@ else
 				name = choose("HEY LOOK\nIT'S FISH\nFROM NUCLEAR THRONE","O'L BITEY");
 		}
 	}
-	else if area = 122
+	else if area == 122
 	{
 	//with instance_create(x,y,Drama)
 		if subarea == 2

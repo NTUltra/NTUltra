@@ -8,3 +8,4 @@ alarm[0] = 60;
 alarm[3] = 120;
 disappearTime = 5;
 canspawnportal = true;
+consistentLowFps = 0;

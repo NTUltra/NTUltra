@@ -4,7 +4,8 @@ scrBossHealthBuff();
 meleedamage = 0
 mySize = 1
 
-event_inherited()
+event_inherited();
+isBoss = true;	
 canFly = true;
 team = 3;
 

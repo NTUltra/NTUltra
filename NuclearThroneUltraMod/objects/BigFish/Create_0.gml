@@ -9,6 +9,7 @@ sucking = false;
 scrBossHealthBuff();
 
 event_inherited();
+isBoss = true;
 meleedamage = 3
 
 healAmount = 10;

@@ -5,7 +5,8 @@ loops = GetPlayerLoops();
 if loops > 0
 	maxhealth = 600;
 scrBossHealthBuff();
-event_inherited()
+event_inherited();
+isBoss = true;
 meleedamage = 3
 canFly = true;
 venomous = true;

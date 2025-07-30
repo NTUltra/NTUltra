@@ -4,7 +4,7 @@ mySize = 3
 scrBossHealthBuff();
 event_inherited()
 meleedamage = 5
-
+isBoss = true;
 isInverted = false;
 spr_idle = sprWallCrawler
 spr_walk = sprWallCrawler

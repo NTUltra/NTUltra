@@ -4,7 +4,7 @@ meleedamage = 0
 mySize = 6;
 scrBossHealthBuff();
 event_inherited()
-
+isBoss = true;
 spr_idle = sprBushBox
 spr_walk = sprBushBoxWalk
 spr_chrg = spr_walk

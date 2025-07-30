@@ -10,6 +10,7 @@ meleedamage = 0;
 raddrop = 0;
 // Inherit the parent event
 event_inherited();
+isBoss = true;
 canBeEaten = false;
 isInverted = false;
 alarm[1] = 0;

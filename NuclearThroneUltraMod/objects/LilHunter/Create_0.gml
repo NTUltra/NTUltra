@@ -5,7 +5,8 @@ scrBossHealthBuff();
 meleedamage = 0
 mySize = 1
 
-event_inherited()
+event_inherited();
+isBoss = true;
 team = 3;
 loop=false;
 reachedHalfHealth = false;

@@ -6,7 +6,7 @@ mySize = 3
 
 event_inherited();
 alarm[10] = 0;
-
+isBoss = true;
 spr_idle = sprInvertedCrownGluttonBossIdle
 spr_walk = sprInvertedCrownGluttonBossIdle
 spr_hurt = sprInvertedCrownGluttonBossHurt

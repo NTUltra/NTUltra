@@ -7,7 +7,8 @@ else
 	raddrop = 20;
 mySize = 3
 scrBossHealthBuff();
-event_inherited()
+event_inherited();
+isBoss = true;
 meleedamage = 4;
 existTime = 25;
 spr_idle = sprGraveyardFishIdle

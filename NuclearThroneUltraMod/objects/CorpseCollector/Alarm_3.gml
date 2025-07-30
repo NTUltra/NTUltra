@@ -1,22 +1,31 @@
 /// @description Optimization check
 alarm[3] = 90;
 
-if !instance_exists(GenCont) && !instance_exists(DramaCamera) && fps_real < min(48,fps)
+if !instance_exists(GenCont) && !instance_exists(DramaCamera) && fps_real < min(44,fps)
 {
-	if visible && alarm[1] < 1
+	consistentLowFps += 1;
+	if consistentLowFps > 3 || fps_real < 25
 	{
-		alarm[1] = 5;
-	} else with TopCont
-	{
-		bloom = false;	
+		consistentLowFps = 4;
+		if visible && alarm[1] < 1
+		{
+			alarm[1] = 5;
+		} else with TopCont
+		{
+			bloom = false;	
+		}
+		visible = false;
+		with Top
+		{
+			instance_destroy();
+		}
+		with TopSmall
+		{
+			instance_destroy();	
+		}
 	}
-	visible = false;
-	with Top
-	{
-		instance_destroy();
-	}
-	with TopSmall
-	{
-		instance_destroy();	
-	}
+}
+else
+{
+	consistentLowFps = 0;	
 }

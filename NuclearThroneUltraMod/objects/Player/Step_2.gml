@@ -842,17 +842,6 @@ if (tookHit)
 			my_health = min(1,my_health);
 		}
 	}
-	if skill_got[12] && !exception//euphoria resistance?
-	{
-		if race=25
-			alarm[3] = max(16,alarm[3]);
-		else
-			alarm[3] = max(alarm[3],12);//duration
-		canAnimateDuringImmune = 0;
-		snd_hurt = sndDamageNegate;
-		instance_create(x,y,EuphoriaBlock);
-		scrGiveEuphoriaShield();
-	}
 }
 ignoreMetabolism = false;
 if (alarm[3] > 0 || lockout)/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
@@ -879,6 +868,21 @@ if (alarm[3] > 0 || lockout)/*|| lag>0 *//*&&my_health!=maxhealth*/&& !exception
 		my_health = prevhealth;
 		tookHit = false;
 	}
+}
+//Post damage prevention took damage effect
+if tookHit
+{
+	if skill_got[12] && !exception//euphoria resistance?
+	{
+		if race=25
+			alarm[3] = max(16,alarm[3]);
+		else
+			alarm[3] = max(alarm[3],12);//duration
+		canAnimateDuringImmune = 0;
+		snd_hurt = sndDamageNegate;
+		instance_create(x,y,EuphoriaBlock);
+		scrGiveEuphoriaShield();
+	}	
 }
 /* */
 ///strong spirit justasheep

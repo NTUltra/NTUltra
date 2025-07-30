@@ -10,6 +10,7 @@ spr_hurt = sprBigMachineCoreHurt;
 spr_dead = mskPickupThroughWall;
 // Inherit the parent event
 event_inherited();
+isBoss = true;
 image_speed = 0.4;
 myBody = noone;
 depth -= 1;

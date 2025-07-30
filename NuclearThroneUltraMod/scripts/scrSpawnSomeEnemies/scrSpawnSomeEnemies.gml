@@ -12,13 +12,13 @@ function scrSpawnSomeEnemies(){
         scrPopEnemies()
 				
 	//spawn some more enemies on loop
-	if Player.loops > 0 && random(2) < Player.loops
+	if Player.loops > 0 && random(1.75) < Player.loops
 		scrPopEnemies();
 					
-	if Player.loops > 5 && random(15) < Player.loops - 7
+	if Player.loops > 3 && random(15) < Player.loops - 5
 		scrPopEnemies();
 					
-	if Player.loops > 10 && random(15) < Player.loops - 13
+	if Player.loops > 9 && random(15) < Player.loops - 12
 		scrPopEnemies();
 				
 	if scrIsHardMode() && !scrIsGamemode(40) && spawnarea != 100 && spawnarea != 104 && spawnarea != 137
@@ -50,13 +50,13 @@ function scrSpawnSomeEnemies(){
 					{
 						instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraSniper);
 					}
-					else if spawnarea != 2  && spawnarea != 110 && spawnarea != 3 && spawnarea != 106 && spawnarea != 139//no sewers & no scrap no inv cloud
+					else if spawnarea != 2  && spawnarea != 110 && spawnarea != 3 && spawnarea != 106 && spawnarea != 139 && spawnarea != 142 && spawnarea != 143//no sewers & no scrap no inv cloud
 					{
 						if ran < 30
 						{
 							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraCrystal);
 						}
-						else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108
+						else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108 && spawnarea != 146 && spawnarea != 147
 						{
 							//Not mushroom vulcano or labs
 							if ran < 35

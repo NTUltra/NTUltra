@@ -16,7 +16,7 @@ for (var i = 0; i < al; i++;)
 	var ang = toDraw.angle;
 		draw_sprite_ext(toDraw.spr,toDraw.ii,dx,dy,toDraw.xscale,toDraw.yscale,ang,toDraw.col,toDraw.alpha);
 }
-if fps_real < min(48,fps)
+if fps_real < min(44,fps)
 {
 	
 	amount = max(amount - 100,0);
@@ -24,10 +24,6 @@ if fps_real < min(48,fps)
 	{
 		with FX
 			instance_destroy();
-		with GraveyardSkeleton
-		{
-			alarm[3] = 0;
-		}
 	}
 }
 else if amount < maxAmount

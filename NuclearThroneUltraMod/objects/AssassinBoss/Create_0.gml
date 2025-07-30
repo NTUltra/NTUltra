@@ -7,7 +7,7 @@ mySize = 1
 dropItem = true;
 
 event_inherited()
-
+isBoss = true;
 spr_sit = sprAssassinBossSit;
 spr_idle_actual = sprAssassinBossIdle;
 spr_idle = spr_sit

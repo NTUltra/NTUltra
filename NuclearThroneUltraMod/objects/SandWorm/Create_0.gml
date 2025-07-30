@@ -3,8 +3,9 @@ maxhealth = 550
 mySize = 3
 scrBossHealthBuff();
 event_inherited();
+isBoss = true;
 meleedamage = 10
-
+isBoss = true;
 venomous = true;
 alarm[10] = 0;//Can be on no floor
 snd_hurt = sndSandWormHurt;

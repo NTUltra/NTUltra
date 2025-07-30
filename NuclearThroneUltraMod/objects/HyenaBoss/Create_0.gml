@@ -1,8 +1,9 @@
 raddrop = 50
-maxhealth = 380
+maxhealth = 380;
+scrBossHealthBuff();
 mySize = 4
 event_inherited()
-scrBossHealthBuff();
+isBoss = true;
 meleedamage = 5
 spr_idle_normal = sprBossHyenaIdle;
 spr_idle = sprBossHyenaIdleRepresent

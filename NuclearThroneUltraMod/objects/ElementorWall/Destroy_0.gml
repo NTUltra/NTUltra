@@ -1,6 +1,6 @@
 var xx = x + 8;
 var yy = y + 8;
-if fps_real >= fps
+if fps_real >= fps - 5
 repeat(2)
 with instance_create(xx,yy,Debris)
 motion_add(random(360),random(1));

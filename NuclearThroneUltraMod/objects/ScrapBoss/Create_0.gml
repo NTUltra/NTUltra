@@ -8,7 +8,8 @@ scrBossHealthBuff();
 meleedamage = 0
 mySize = 3
 
-event_inherited()
+event_inherited();
+isBoss = true;
 existTime = 30;
 meleedamage = 0;
 isInverted = false;

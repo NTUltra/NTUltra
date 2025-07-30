@@ -1,4 +1,7 @@
 var area;
+alarm[2] = 2;
+xprev = x;
+yprev = y;
 depth = 7;
 time = 10
 mySize = 1;

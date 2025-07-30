@@ -6,7 +6,7 @@ if instance_exists(InvertedNuclearThrone1)
 scrBossHealthBuff();
 event_inherited()
 meleedamage = 20
-
+isBoss = true;
 team = 3;
 firstEntry = false;
 isDown = false;

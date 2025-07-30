@@ -8,7 +8,8 @@ meleedamage = 0
 mySize = 2
 scrBossHealthBuff();
 
-event_inherited()
+event_inherited();
+isBoss = true;
 targetHealth = maxhealth;
 instance_create(x,y,DramaCamera);
 spr_idle = sprStatueBossIdle

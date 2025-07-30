@@ -5,7 +5,7 @@ meleedamage = 0
 mySize = 3
 
 event_inherited()
-
+isBoss = true;
 spr_idle = sprTechnomancerActivate
 spr_walk = sprTechnomancerActivate
 spr_hurt = sprTechnoMancerHurt

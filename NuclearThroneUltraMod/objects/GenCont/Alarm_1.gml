@@ -26,7 +26,9 @@ if instance_exists(Player)
 	}
 	with UberCont {
 		area = Player.area;
+		lastarea = Player.lastarea;
 		subarea = Player.subarea;
+		lastsubarea = Player.lastsubarea;
 	}
 	with Crown
 	{

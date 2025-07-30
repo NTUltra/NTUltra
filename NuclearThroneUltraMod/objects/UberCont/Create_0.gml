@@ -43,7 +43,9 @@ opt_ammoicon = true;
 
 //this is for the menu
 area=0;
+lastarea = 0;
 subarea=1;
+lastsubarea = 0;
 loops=0;
 lastSaveLoop = -1;
 areasVisited = 0;
