@@ -1,6 +1,6 @@
 event_inherited()
 
-if target != noone && goForIt
+if target != noone && goForIt && instance_exists(target)
 {
 	motion_add(point_direction(x,y,target.xprevious,target.yprevious),acc);
 }

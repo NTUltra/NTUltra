@@ -1,7 +1,7 @@
 /// @description Fire big balls
 if target != noone
 {
-	if loops > random(3)
+	if loops + 1 > random(3)
 	{
 		with instance_create(x,y,BigGuardianBulletSpawn)
 		{

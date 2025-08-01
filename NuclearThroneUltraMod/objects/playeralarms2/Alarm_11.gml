@@ -22,7 +22,7 @@ if instance_exists(Player)
 			}
 		}
 		ds_list_clear(hits);
-		al = collision_circle_list(x,y,32,projectile,false,false,hits,false)
+		al = collision_circle_list(x,y,34,projectile,false,false,hits,false)
 		for (var i = 0; i < al; i ++)
 		{
 			with hits[| i]
@@ -31,10 +31,10 @@ if instance_exists(Player)
 				{
 					x -= hspeed;
 					y -= vspeed;
-					if speed > 2
+					if speed > 2.25
 					{
-						speed *= 0.8;
-						speed = max(speed - 1, 2);
+						speed *= 0.85;
+						speed = max(speed - 0.5, 2.5);
 					}
 				}
 			}

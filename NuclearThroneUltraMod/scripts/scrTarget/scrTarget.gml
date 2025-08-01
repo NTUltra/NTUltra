@@ -6,7 +6,7 @@ function scrTarget() {
 		{
 			if instance_exists(Decoy)//Chickens vanish
 			{
-				target = Decoy;
+				target = instance_nearest(x,y,Decoy);
 			}
 			else {
 				target = instance_nearest(x,y,Player);

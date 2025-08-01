@@ -4,7 +4,7 @@ if owner > -1 && instance_exists(owner) && instance_exists(Player)
 	if owner.bigballs
 	{
 		snd_play_2d(sndBigBallFire);
-		if loops > random(3)
+		if loops + 1 > random(3)
 		{
 			with instance_create(x,y,BigGuardianBulletSpawn)
 			{

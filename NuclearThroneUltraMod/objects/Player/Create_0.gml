@@ -90,7 +90,7 @@ metabolismBreak = 3;
 triggerMetabolism = false;
 ignoreMetabolism = false;
 hollowBonesCounter = 0;
-hollowBonesTrigger = 0.16;
+hollowBonesTrigger = 0.18;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -444,7 +444,7 @@ if race == 25
 	peaceBarrierDuration *= 0.8;
 	metabolismBreak = 2;
 	puffyCheekAmount = 4;
-	hollowBonesTrigger = 0.13
+	hollowBonesTrigger = 0.15
 }
 if race == 14//Panda
 {

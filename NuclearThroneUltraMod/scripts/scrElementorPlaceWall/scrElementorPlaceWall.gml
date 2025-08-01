@@ -33,6 +33,10 @@ function scrElementorPlaceWall(mx, my){
 				{
 					instance_destroy(id,false);
 					instance_create(x,y,FloorExplo);
+					with instance_place(x,y,Trap)
+					{
+						instance_destroy();	
+					}
 				}
 			}
 		}

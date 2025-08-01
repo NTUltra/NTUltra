@@ -1,6 +1,7 @@
 event_inherited();
 typ = 2 
-dmg = 100;
+dmg = 80;
+dmgPercentage = 0.06;
 aimed = false;
 col = c_white;
 width = 5;

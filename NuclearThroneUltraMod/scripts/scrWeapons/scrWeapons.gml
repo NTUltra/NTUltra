@@ -2881,7 +2881,7 @@ function scrWeapons() {
 	wep_name[257] = "LIGHTNING CROSSBOW"
 	wep_type[257] = 3
 	wep_auto[257] = 1
-	wep_load[257] = 26
+	wep_load[257] = 27
 	wep_cost[257] = 1.5
 	wep_sprt[257] = sprLightningCrossbow
 	wep_area[257] = 5
@@ -8959,6 +8959,7 @@ function scrWeapons() {
 	wep_text[799] = "rip and tear"
 	wep_swap[799] = sndSwapSword
 	wep_rad[799] = 0;
+	wep_popup[801] = "DEALS ADDITIONAL DAMAGE#BASED ON REMAINING ENEMY HEALTH";
 	
 	wep_name[800] = "BLOB MACHINEGUN"
 	wep_type[800] = 4

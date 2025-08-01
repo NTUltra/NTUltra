@@ -78,14 +78,12 @@ function scrLoadRun(selectedRunIndex){
 			{
 				Player.skill_got[array_length(Player.skill_got)] = 0;
 			}
-			// var targetLength = array_length(Player.ultra_got);
+			targetLength = array_length(Player.ultra_got);
 			Player.ultra_got = encryptedRun.ultra_got;
-			/*
 			while (array_length(Player.ultra_got) < targetLength)
 			{
 				Player.ultra_got[array_length(Player.ultra_got)] = 0;
 			}
-			*/
 			if encryptedRun.maxhp != pointer_null && encryptedRun.maxhp != undefined
 				Player.maxhealth = encryptedRun.maxhp;
 			Player.my_health = encryptedRun.hp;

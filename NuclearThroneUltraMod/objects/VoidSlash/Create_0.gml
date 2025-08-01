@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-dmg = 40;
+dmgPercentage = 0.005;
+dmg = 32;
 typ = 0;
 walled = 1;
