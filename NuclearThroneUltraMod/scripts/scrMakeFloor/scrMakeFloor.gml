@@ -750,7 +750,7 @@ function scrMakeFloor(limiter) {
 		}
 	}
 	//HQ
-	if area = 135{ 
+	if area == 135 || area == 148 {
 		if subarea == 3
 		{
 			scrCreateCaptainArea();
@@ -920,7 +920,7 @@ function scrMakeFloor(limiter) {
 	{
 		trn = 0;	
 	}
-	else if area == 135
+	else if area == 135 || area == 148
 		trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90)
 	else if area == 139
 	{
@@ -1197,7 +1197,7 @@ function scrMakeFloor(limiter) {
 		if instance_number(Floor) > 10 && instance_number(FloorMaker) < 2 || random(4) < 1
 			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
-	if area == 135 && instance_number(Floor) > 5 && Player.subarea != 3
+	if (area == 135 || area == 148) && instance_number(Floor) > 5 && Player.subarea != 3
 	{
 		if random(10-instance_number(FloorMaker)) > 7
 		{

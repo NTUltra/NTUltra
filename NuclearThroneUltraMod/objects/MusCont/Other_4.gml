@@ -301,7 +301,7 @@ if scrIsGamemode(8) && area != 0
 
         amb = ambUltra134;
     }
-	else if area == 135 {
+	else if area == 135 || area == 148{
 
         song = mus106
 

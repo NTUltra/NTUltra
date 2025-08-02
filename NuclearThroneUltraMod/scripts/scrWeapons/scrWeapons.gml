@@ -10261,7 +10261,7 @@ function scrWeapons() {
 	wep_auto[914] = 3
 	wep_load[914] = 9
 	wep_cost[914] = 1
-	wep_sprt[914] = sprWazerRifle
+	wep_sprt[914] = sprRainbowWazerGun
 	wep_area[914] = 24
 	wep_text[914] = "bring sheep"
 	wep_swap[914] = sndSwapEnergy

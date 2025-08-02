@@ -1,6 +1,5 @@
 maxhealth = 2
 mySize = 1
-
 var img;
 img = choose(1,2,3)
 
@@ -36,6 +35,8 @@ spr_dead = sprCactus3Dead}
 }
 
 event_inherited()
+
+alarm[1] = 5;
 
 move_contact_solid(random(360),random(12))
 if !place_free(x,y+12)

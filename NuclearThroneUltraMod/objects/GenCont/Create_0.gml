@@ -249,6 +249,9 @@ if instance_exists(Player)
 			case 147:
 			__background_set_colour( make_color_rgb(14, 74, 76) )
 			break;
+			case 148:
+				__background_set_colour( make_color_rgb(26,20,18) )
+			break;
 		}
 	}
 	else
@@ -386,6 +389,8 @@ if instance_exists(Player)
 		//__background_set_colour( make_color_rgb(71, 76, 56) )
 		else if Player.area == 147//Blood land
 		__background_set_colour( make_color_rgb(10, 66, 76) )
+		else if Player.area == 148//Blood land
+		__background_set_colour( make_color_rgb(190, 211, 204) )
 	}
 }
 else
@@ -480,7 +485,7 @@ else if Player.area == 128 || Player.area == 129//Courtyard
 goal = 150+s;
 else if Player.area == 130 || Player.area == 131 || Player.area == 132 || Player.area == 133 || Player.area == 134//Factory
 goal = 130+s;
-else if Player.area == 135//Hq
+else if Player.area == 135 || Player.area == 148//Hq
 {
 goal = 130+s;
 	if Player.subarea == 3

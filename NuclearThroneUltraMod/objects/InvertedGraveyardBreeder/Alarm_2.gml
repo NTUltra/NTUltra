@@ -11,6 +11,7 @@ with instance_create(x,y,InvertedGraveyardSkeleton)
 	alarm[1] = 5;
 	raddrop = 0;
 	countKill = false;
+	wasResurrected = true;
 	motion_add(other.gunangle+random(40)-20,3+random(1))
 	team = other.team
 }

@@ -5,7 +5,8 @@ if loops > 0
 	maxhealth = 15;
 
 
-event_inherited()
+event_inherited();
+alarm[1] = 5;
 scrInitDrops(1);
 var img;
 img = choose(1,2,3)

@@ -347,6 +347,12 @@ function scrWallArea(area){
 	sprite_index = sprWall147Bot;
 	break;
 	
+	case 148:
+	topspr=sprWall148Top;
+	outspr=sprWall148Out;
+	sprite_index = sprWall148Bot;
+	break;
+	
 	default:
 	topspr=sprWall0Top;
 	outspr=sprWall0Out;

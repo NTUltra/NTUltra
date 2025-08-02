@@ -22,7 +22,8 @@ function scrPopProps() {
 	//walls near the player for safer spawn
 	if random(5)<1  and !place_meeting(x,y,NOWALLSHEREPLEASE) && !place_meeting(x,y,hitme) && !place_meeting(x,y,chestprop) && !place_meeting(x,y,RadChest) && !place_meeting(x,y,prop)
 	&& point_distance(x,y,Player.x,Player.y)<128 and Player.area != 100 and Player.area != 6 and Player.area != 112 and (Player.area !=5 or random(3) < 1) and Player.area != 102 and Player.area != 104 and !(Player.area = 8 && Player.subarea=3)
-	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123 and Player.area != 135 and Player.area != 138 and Player.area != 139 and Player.area != 140 and Player.area != 142 and Player.area != 143
+	and Player.area != 9 and Player.area != 118 and Player.area != 114 and Player.area != 116 and Player.area != 123 and Player.area != 135 and Player.area != 148
+	and Player.area != 138 and Player.area != 139 and Player.area != 140 and Player.area != 142 and Player.area != 143
 	{
 		
 		myx = x+choose(0,16)
@@ -163,9 +164,21 @@ function scrPopProps() {
 	//else
 	instance_create(x+16,y+16,Cactus)
 	}
-	if spawnarea = 135 && subarea != 3 && !place_meeting(x,y,Wall) && random(2)<1//HQ
+	if spawnarea = 146 && !place_meeting(x,y,Wall) && random(2) < 1
+	{
+		instance_create(x+16,y+16,BonePile1)
+	}
+	if spawnarea = 147 && !place_meeting(x,y,Wall) && random(2) < 1
+	{
+		instance_create(x+16,y+16,InvertedBonePile1)
+	}
+	else if spawnarea = 135 && subarea != 3 && !place_meeting(x,y,Wall) && random(2)<1//HQ
 	{
 		instance_create(x+16,y+16,PottedPlant)
+	}
+	if spawnarea = 148 && subarea != 3 && !place_meeting(x,y,Wall) && random(2)<1//HQ
+	{
+		instance_create(x+16,y+16,FreakPottedPlant)
 	}
 	if spawnarea = 2
 	{

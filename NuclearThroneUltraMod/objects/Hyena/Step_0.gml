@@ -10,7 +10,7 @@ else if alarm[2] > 0
 if walk > 0
 {
 walk -= 1
-	if target != noone
+	if target != noone && instance_exists(target)
 	{
 		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 		{

@@ -18,7 +18,7 @@ if scrIsInInvertedArea()//INV
 type=5;
 if Player.area == 8//WONDERLAND
 type = 6;
-if Player.area == 135//HQ
+if Player.area == 135 || Player.area == 148//HQ
 type = 3;
 if Player.area == 137//VOID
 type = 7;

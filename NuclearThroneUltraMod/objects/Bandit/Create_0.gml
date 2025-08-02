@@ -5,6 +5,9 @@ mySize = 1
 
 event_inherited()
 loops = GetPlayerLoops();
+actTime = 15;
+tellTime = 15;
+minRange = 54;
 if scrIsHardMode()//HARD MODE
 {
 	if (!(instance_exists(Player) && Player.area == 1 && Player.loops < 1) || random(5) < 1)
@@ -12,6 +15,14 @@ if scrIsHardMode()//HARD MODE
 		instance_destroy(id,false);
 		instance_create(x,y,UltraBandit);
 	}
+}
+projectileSpeed = 4;
+
+if loops > 0
+{
+	minRange = 24;
+	projectileSpeed += 0.5;
+	tellTime = 10;
 }
 if loops > 2
 {

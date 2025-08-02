@@ -17,7 +17,7 @@ function scrPopChests() {
 	{
 		if Player.area == 104//YV mansion
 			return;
-		if Player.area == 135 && Player.subarea == 3//Captain
+		if (Player.area == 135 || Player.area == 148) && Player.subarea == 3//Captain
 		{
 			with RadChest
 				instance_destroy(id,false);

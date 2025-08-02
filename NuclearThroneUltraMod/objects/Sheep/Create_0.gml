@@ -1,4 +1,5 @@
 event_inherited();
+wasResurrected = true;
 raddrop = 1;
 countKill = false;
 maxhealth = 1

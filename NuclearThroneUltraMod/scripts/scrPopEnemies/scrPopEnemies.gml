@@ -1538,6 +1538,17 @@ function scrPopEnemies() {
 			}
 		}
     }
+	if spawnarea == 148 && subarea != 3 {
+	    var ran = random(100);
+		if ran < 70 || !instance_exists(enemy)
+		{
+		    if ran > 25 && ran < 70{
+		        instance_create(x + 16, y + 16, choose(IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak))
+		    } else {
+				instance_create(x + 16, y + 16, choose(IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak, IDPDFreak))
+			}
+		}
+    }
 	//PALACE
     if spawnarea == 9 && subarea != 3 {
 		if loops > 0 {

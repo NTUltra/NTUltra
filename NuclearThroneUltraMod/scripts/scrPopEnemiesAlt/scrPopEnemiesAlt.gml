@@ -1387,12 +1387,20 @@ function scrPopEnemiesAlt() {
 			}
 		}
     }
-	if spawnarea == 135/* && subarea != 3 */{
+	if spawnarea == 135 || spawnarea == 148/* && subarea != 3 */{
 	    var ran = random(100);
 	    if ran > 80 {
 	        instance_create(x + 16, y + 16, choose(BanditBoss, InvertedBanditBoss, Bandit, Bandit, Bandit))
 	    } else if ran > 10{
 			instance_create(x + 16, y + 16, choose(Exploder, Exploder, InvertedExploder, InvertedExploder, ExploFreak, InvertedExploFreak))
+		}
+    }
+	if spawnarea == 135/*&& subarea != 3 */{
+	    var ran = random(100);
+	    if ran > 80 {
+	        instance_create(x + 16, y + 16, choose(FreakBandit, FreakBandit, InvertedFreakBandit, InvertedFreakBandit, FreakBandit))
+	    } else if ran > 10{
+			instance_create(x + 16, y + 16, choose(FreakBandit,InvertedFreakBandit,Exploder, Exploder, InvertedExploder, InvertedExploder, ExploFreak, InvertedExploFreak))
 		}
     }
 

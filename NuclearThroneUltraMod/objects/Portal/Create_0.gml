@@ -77,7 +77,7 @@ else if currentarea == 100 || currentarea == 128 || currentarea == 129
 {
 	type = 3;
 }
-else if !inverted && currentarea == 135{
+else if !inverted && (currentarea == 135 || currentarea == 148){
 	isHQ = true;
 	sprite_index = sprPopoPortalStart;
 }
