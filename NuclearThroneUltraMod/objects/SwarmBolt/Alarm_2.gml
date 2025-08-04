@@ -31,7 +31,7 @@ else
 //target=instance_nearest(x,y,enemy);
 
 if target!=0 && target != noone && target.team != team
-motion_add(point_direction(x,y,target.x,target.y),1+(boltMarrowed*1.5)+eagleEyed);
+motion_add(point_direction(x,y,target.x,target.y),1+(boltMarrowed*1.75)+eagleEyed);
 }
 if speed>mxSpd
 speed=max(mxSpd,speed*0.54);

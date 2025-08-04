@@ -1,5 +1,5 @@
 /// @description Got hit fire random bullet
-if alarm[2] < 1
+if alarm[2] < 1 && !sleeping
 {
 	snd_play(sndVenusFlyTrapBulletFire,0.1);
 	var angle = random(360);

@@ -45,43 +45,40 @@ function scrTarget() {
 		}
 		else if Player.race == 10 && target == Player.id {
 			if instance_exists(Ally){//Yung cuz's dupes
-			    with enemy
-			    {
-					var n =instance_nearest(x,y,Ally);
-					if n != noone
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
-				    {
+				var n = instance_nearest(x,y,Ally);
+				if n != noone
+				{
+					if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
+					{
 						target = instance_nearest(x,y,Player)
 					}
-				    else
+					else
 					{
 						target = n
 					}
-			    }
+				}
 		    } 
 		}
 		else if Player.ultra_got[3] && target == Player.id {
 			if instance_exists(Partner){//Yung cuz's dupes
-			    with enemy
-			    {
-					var n =instance_nearest(x,y,Partner);
-					if n != noone
-				    if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
-				    {
+				var n = instance_nearest(x,y,Partner);
+				if n != noone
+				{
+					if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
+					{
 						target = instance_nearest(x,y,Player)
 					}
-				    else
+					else
 					{
 						target = n;
 					}
-			    }
+				}
 		    } 
 		}
 		if instance_exists(RobotTurret){//Robot's turret
-			with enemy
+			var n =instance_nearest(x,y,RobotTurret);
+			if n != noone
 			{
-				var n =instance_nearest(x,y,RobotTurret);
-				if n != noone
 				if point_distance(x,y,Player.x,Player.y) < point_distance(x,y,n.x,n.y)
 				{
 					target = instance_nearest(x,y,Player)
@@ -91,7 +88,7 @@ function scrTarget() {
 					target = n
 				}
 			}
-		} 
+		}
 		if target == Player.id && Player.justAsheep
 		{
 			target = noone;

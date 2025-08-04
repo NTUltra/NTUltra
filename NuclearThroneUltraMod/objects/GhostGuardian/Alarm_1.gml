@@ -1,4 +1,5 @@
 alarm[1] = actTime+random(actTime)
+sleeping = false;
 scrTarget()
 if target != noone
 {

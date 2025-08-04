@@ -31,11 +31,11 @@ if target!=0 && target.team != team
 {
 	motion_add(point_direction(x,y,target.x,target.y),acc+(bm*2)+ee);
 
-		if point_distance(x,y,target.x,target.y) < 14 + bm*12
+		if point_distance(x,y,target.x,target.y) < 14 + bm*14
 		{
 			var dir = point_direction(x,y,target.x,target.y);
-			x += lengthdir_x(4,dir);
-			y += lengthdir_y(4,dir);
+			x += lengthdir_x(4 + bm,dir);
+			y += lengthdir_y(4 + bm,dir);
 		}
 	}
 }

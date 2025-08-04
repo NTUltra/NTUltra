@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.126406,
+  "duration":0.13061224,
   "name":"sndAdrenalineHeal",
   "parent":{
     "name":"Pickups",

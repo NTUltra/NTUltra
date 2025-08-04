@@ -196,6 +196,22 @@ function scrPopulate() {
                 sprite_index = sprMushroomDecal;
             }
         }
+		else if spawnarea = 146 //Bloodland
+        {
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprBloodLandTopDecal;
+				image_index = irandom(image_number - 1)
+            }
+        }
+		else if spawnarea = 147 //Bloodland
+        {
+            TopDecals();
+            with TopDecal {
+                sprite_index = sprInvertedBloodLandTopDecal;
+				image_index = irandom(image_number - 1)
+            }
+        }
 		else if spawnarea = 124 //Mushroom
         {
             //GenBones();

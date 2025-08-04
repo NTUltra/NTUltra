@@ -570,13 +570,17 @@ if !instance_exists(LevCont) and visible = 1
 			}*/
 		}
 		if keyboard_check_pressed(ord("C")) {
-			var dangle = random(1)*360;
-			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
-		    curse = !curse;
-			thing = instance_create(f.x + 16,f.y + 16,PopupText);
-			thing.mytext = "CURSE TOGGLE";
-			instance_create(x+64,y,BigWallBreak);
-			instance_create(x+64,y,InvertedCubeGuardian);
+			with instance_create(x + 96,y - 8,AmmoPickup)
+				speed = 0;
+			with instance_create(x + 96,y + 8,HPPickup)
+				speed = 0;
+			//var dangle = random(1)*360;
+			//var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
+		    //curse = !curse;
+			//thing = instance_create(f.x + 16,f.y + 16,PopupText);
+			//thing.mytext = "CURSE TOGGLE";
+			//instance_create(x+64,y,BigWallBreak);
+			//instance_create(x+64,y,InvertedCubeGuardian);
 			//scrApplyEnemyVenom(3,id);
 		}
 		if keyboard_check_pressed(ord("B")) {

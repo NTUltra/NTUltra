@@ -14,12 +14,12 @@ function scrBoltMarrow(reduc = 1, rangeChange = 0){
 				{
 					var xx = dir.x - hspeed * reduc;
 					var yy = dir.y - vspeed * reduc
-					if !collision_line(xx,yy,dir.x,dir.y,Wall,false,false)
-					{
+					//if !collision_line(xx,yy,dir.x,dir.y,Wall,false,false)
+					//{
 					    x = xx
 					    y = yy
 						scrForcePosition60fps();
-					}
+					//}
 				}
 		    }
 		}

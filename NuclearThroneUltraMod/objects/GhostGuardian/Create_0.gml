@@ -4,7 +4,7 @@ mySize = 3
 
 event_inherited();
 meleedamage = 5
-
+sleeping = true;
 actTime = 7;
 maxRange = 190;
 spr_idle = sprGhostGuardianWalk;

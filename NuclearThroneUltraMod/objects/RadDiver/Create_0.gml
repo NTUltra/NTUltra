@@ -1,7 +1,8 @@
 raddrop = 20
 maxhealth = 60
 mySize = 1
-event_inherited()
+event_inherited();
+sleeping = true;
 prevHealth = my_health;
 meleedamage = 3
 venomous = true;

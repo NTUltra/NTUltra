@@ -22,7 +22,7 @@ if !supercursed || gotPluto
 		if !inverted && alarm[1] < 1
 			levelEnded = true;
 	}
-	var range = Player.betterpluto;
+	var range = Player.betterpluto + additionalRange;
 	if (cursed)
 	{
 		range *= 0.5;
@@ -37,6 +37,7 @@ if !supercursed || gotPluto
 		range = max(range,16);
 		levelEnded = false;
 	}
+	range = max(range,8);
 	if (levelEnded)
 	{
 		sped += 2;
@@ -61,7 +62,7 @@ if !supercursed || gotPluto
 	else
 	{
 		isGettingSucked = false;
-		if point_distance(x, y, Player.x, Player.y) < range + 36 {
+		if point_distance(x, y, Player.x, Player.y) < range + 36 + additionalRange {
 			var slowSuck = as*0.0625;
 			suckDirection = point_direction(x, y, Player.x, Player.y)
 			if levelEnded || !collision_line(x,y,x + lengthdir_x(slowSuck, suckDirection),y,Wall,false,false)
@@ -131,7 +132,7 @@ if !supercursed || gotPluto
 		var dis = point_distance(x, y, Player.x, Player.y);
 	    if dis < 48 && dis > 16 {//37
 	        if levelEnded || !collision_line(x,y,x + lengthdir_x(curseSpeed, suckDirection),y,Wall,false,false)
-	        x -= lengthdir_x(curseSpeed, suckDirection)
+				x -= lengthdir_x(curseSpeed, suckDirection)
 	        if levelEnded || !collision_line(x,y,x,y + lengthdir_y(curseSpeed, suckDirection),Wall,false,false)
 				y -= lengthdir_y(curseSpeed, suckDirection)
 		}

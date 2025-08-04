@@ -85,7 +85,7 @@ function scrNavigationInsideInvertedAreas(skipping){
 		subarea = 0;
 	}
 	//Inverted Blood
-	else if area == 147
+	else if area == 147 && subarea > 0
 	{
 		//to frozen city
 		area = 5;

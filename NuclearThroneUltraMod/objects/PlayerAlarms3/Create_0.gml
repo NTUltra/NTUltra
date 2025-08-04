@@ -1,10 +1,13 @@
 /// @description Init
 adrenalineAmmoCooldown = 5;
 adrenalineHealCooldown = 38;
+adrenalineAmmoTimer = adrenalineAmmoCooldown;
+adrenalineHealTimer = adrenalineHealCooldown;
 detectedCombat = false;
 if instance_exists(Player) && Player.race == 25
 {
 	adrenalineHealCooldown = 29;
+	adrenalineHealTimer = adrenalineHealCooldown;
 }
 adrenalineAmmoTimer = adrenalineAmmoCooldown;
 adrenalineHealTimer = adrenalineHealCooldown;

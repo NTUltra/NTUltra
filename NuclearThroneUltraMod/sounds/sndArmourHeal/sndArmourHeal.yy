@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.662906,
+  "duration":0.6629252,
   "name":"sndArmourHeal",
   "parent":{
     "name":"Pickups",

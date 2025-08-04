@@ -118,6 +118,12 @@ function scrDrawCharSelect() {
 			case 27:
 				spr = sprExplain27;
 			break;
+			case 28:
+				spr = sprExplain28;
+			break;
+			case 29:
+				spr = sprExplain29Old;
+			break;
 			default:
 				spr = sprExplain1
 			break;

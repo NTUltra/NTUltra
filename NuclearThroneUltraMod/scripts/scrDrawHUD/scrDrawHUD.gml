@@ -164,7 +164,12 @@ function scrDrawHUD() {
 				var adrenalineColour = make_colour_rgb(72,253,8);
 				if !PlayerAlarms3.detectedCombat
 					adrenalineColour = make_colour_rgb(72,156,17);
-				draw_sprite_ext(sprHealthBarAdrenaline,round(lerp(sprite_get_number(sprHealthBarAdrenaline) - 1,0,max(1,PlayerAlarms3.adrenalineHealTimer) / PlayerAlarms3.adrenalineHealCooldown)),vx+hx,vy+4,1,1,0,adrenalineColour,1)
+				if PlayerAlarms3.adrenalineHealTimer < 0
+				{
+					draw_sprite_ext(sprHealthBarAdrenalineArmourHeal,round(lerp(sprite_get_number(sprHealthBarAdrenaline) - 1,0,max(1,PlayerAlarms3.adrenalineHealTimer + PlayerAlarms3.adrenalineHealCooldown) / PlayerAlarms3.adrenalineHealCooldown)),vx+hx,vy+4,1,1,0,adrenalineColour,1)
+				}
+				else
+					draw_sprite_ext(sprHealthBarAdrenaline,round(lerp(sprite_get_number(sprHealthBarAdrenaline) - 1,0,max(1,PlayerAlarms3.adrenalineHealTimer) / PlayerAlarms3.adrenalineHealCooldown)),vx+hx,vy+4,1,1,0,adrenalineColour,1)
 			}
 		}
 		vy += yo;

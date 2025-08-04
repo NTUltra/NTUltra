@@ -125,6 +125,8 @@ if instance_exists(Player)
 			detectedEnemyHealth = 0;
 			adrenalineAmmoTimer = adrenalineAmmoCooldown;
 			adrenalineHealTimer = adrenalineHealCooldown;
+			adrenalineAmmoTimer = min(adrenalineAmmoTimer, Player.adrenalineAmmoTimer);
+			adrenalineHealTimer = min(adrenalineHealTimer, Player.adrenalineHealTimer);
 		}
 		if Player.skill_got[46]
 		{

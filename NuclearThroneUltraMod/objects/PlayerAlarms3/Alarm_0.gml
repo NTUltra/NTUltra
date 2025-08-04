@@ -29,12 +29,14 @@ if enemyHealthWasChanged || playerHealthWasChanged
 							canAmmo = true;
 							adrenalineAmmoTimer = adrenalineAmmoCooldown;
 						}
-						if adrenalineHealTimer <= 0 && other.my_health < other.maxhealth
+						if (adrenalineHealTimer <= 0 && (other.my_health < other.maxhealth || (adrenalineHealTimer + adrenalineHealCooldown <= 0 && other.armour < other.maxarmour)))
 						{
 							canAdrenalineHeal = true;
 							adrenalineHealTimer = adrenalineHealCooldown;
 						}
 					}
+					adrenalineAmmoTimer = other.adrenalineAmmoTimer;
+					adrenalineHealTimer = other.adrenalineHealTimer;
 					if canAmmo
 					{
 						//scrSwapWeps();
@@ -45,8 +47,32 @@ if enemyHealthWasChanged || playerHealthWasChanged
 					}
 					if canAdrenalineHeal
 					{
-						scrHeal(1);
-						snd_play(sndAdrenalineHeal,0.01);
+						if my_health < maxhealth
+						{
+							scrHeal(1);
+							snd_play(sndAdrenalineHeal,0.01);
+						}
+						else if armour < maxarmour
+						{
+							armour = min(maxarmour,armour + 1);
+							snd_play(sndArmourHeal,0.01);
+							if UberCont.opt_ammoicon
+							{
+								var dir = instance_create(x,y,PopupText)
+								dir.sprt = sprArmourIconPickup;
+								dir.mytext = "+"+string(1)
+								if Player.armour >= Player.maxarmour
+								dir.mytext = "MAX"
+							}
+							else
+							{
+								var dir = instance_create(x,y,PopupText)
+								dir.mytext = "+"+string(1)+" ARMOUR"
+								if Player.armour >= Player.maxarmour
+								dir.mytext = "MAX ARMOUR"
+							}
+						}
+						
 						with instance_create(x,y,HealFX)
 						{
 							sprite_index = sprSmallHealFX;

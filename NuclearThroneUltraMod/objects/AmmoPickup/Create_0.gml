@@ -1,4 +1,5 @@
 event_inherited();
+additionalRange += 6;
 if scrIsGamemode(48)
 	instance_destroy(id,false);
 isArmour = false;

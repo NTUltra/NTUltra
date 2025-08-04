@@ -78,7 +78,7 @@ rad = 999;
 //Unused but referenced
 bettermelee = 0;
 betterlaserbrain = 0;
-betterpluto = 32;
+betterpluto = 30;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;

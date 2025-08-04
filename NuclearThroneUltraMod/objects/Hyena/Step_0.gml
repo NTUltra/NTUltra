@@ -12,13 +12,19 @@ if walk > 0
 walk -= 1
 	if target != noone && instance_exists(target)
 	{
-		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+		with target
 		{
-			motion_add(point_direction(x,y,target.x,target.y),accCharge);
-		}
-		else
-		{
-			motion_add(direction,acc)	
+			with other
+			{
+				if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+				{
+					motion_add(point_direction(x,y,target.x,target.y),accCharge);
+				}
+				else
+				{
+					motion_add(direction,acc)	
+				}
+			}
 		}
 	}
 	else

@@ -1,7 +1,7 @@
 /// @description Replace with armour
 // Inherit the parent event
 event_inherited();
-
+additionalRange = 0;
 isArmour = false;
 
 ammoValue = 1;

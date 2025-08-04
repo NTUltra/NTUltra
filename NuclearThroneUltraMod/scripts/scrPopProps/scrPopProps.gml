@@ -164,13 +164,19 @@ function scrPopProps() {
 	//else
 	instance_create(x+16,y+16,Cactus)
 	}
-	if spawnarea = 146 && !place_meeting(x,y,Wall) && random(2) < 1
+	if spawnarea = 146 && !place_meeting(x,y,Wall)
 	{
-		instance_create(x+16,y+16,BonePile1)
+		if random(2) < 1
+			instance_create(x+16,y+16,BonePile2)
+		else
+			instance_create(x+16,y+16,BonePile1)
 	}
-	if spawnarea = 147 && !place_meeting(x,y,Wall) && random(2) < 1
+	if spawnarea = 147 && !place_meeting(x,y,Wall)
 	{
-		instance_create(x+16,y+16,InvertedBonePile1)
+		if random(2) < 1
+			instance_create(x+16,y+16,InvertedBonePile2)
+		else
+			instance_create(x+16,y+16,InvertedBonePile1)
 	}
 	else if spawnarea = 135 && subarea != 3 && !place_meeting(x,y,Wall) && random(2)<1//HQ
 	{

@@ -1,12 +1,15 @@
 event_inherited()
 
-if target != noone && goForIt && instance_exists(target)
+with target
 {
-	motion_add(point_direction(x,y,target.xprevious,target.yprevious),acc);
+	with other
+	{
+		motion_add(point_direction(x,y,target.xprevious,target.yprevious),acc);	
+	}
 }
 if speed > maxSpeed
 	speed = maxSpeed
-else if speed < 2
+else if speed < 2 && !sleeping
 	speed = 2;
 	
 if (hspeed > 0)
