@@ -123,7 +123,8 @@ char[17].num = 17
 }
 if UberCont.race_have[27]
 {
-	char[27] = instance_create(200,70,CampChar)
+	//char[27] = instance_create(200,70,CampChar)
+	char[27] = instance_create(180,35,CampChar);
 	char[27].sprite_index = sprHandsMenu
 	char[27].spr_menu = sprHandsMenuSelected
 	char[27].spr_to = sprHandsMenuSelect
@@ -145,11 +146,11 @@ if UberCont.race_have[28]//Thief
 if UberCont.race_have[29]//No Thing
 {
 	char[29] = instance_create(150,90,CampChar)
-	char[29].sprite_index = sprHandsMenu
-	char[29].spr_menu = sprHandsMenuSelected
-	char[29].spr_to = sprHandsMenuSelect
-	char[29].spr_from = sprHandsMenuDeselect
-	char[29].spr_slct = sprHandsMenu
+	char[29].sprite_index = sprNoThingMenu
+	char[29].spr_menu = sprNoThingMenuSelected
+	char[29].spr_to = sprNoThingMenuSelect
+	char[29].spr_from = sprNoThingMenuDeselect
+	char[29].spr_slct = sprNoThingMenu
 	char[29].num = 29
 }
 
@@ -436,13 +437,17 @@ char[23].spr_from = sprMutant23GoSit
 char[23].spr_slct = sprMutant23Sit}
 
 if UberCont.race_have[25] = 1{
-char[25].x = 180;
-char[25].y = 35;
+//char[25].x = 180;
+//char[25].y = 35;
+char[25].x = 200;
+char[25].y = 70;
 char[25].sprite_index = sprMutationDoctorMenu
 char[25].spr_menu = sprMutationDoctorMenuSelected
 char[25].spr_to = sprMutationDoctorMenuSelect
 char[25].spr_from = sprMutationDoctorMenuDeselect
-char[25].spr_slct = sprMutationDoctorMenu}
+char[25].spr_slct = sprMutationDoctorMenu
+char[25].spr_special = sprMutationDoctorMenuGiveRad;
+}
 
 if UberCont.race_have[26] = 1{
 char[26].x = 48;

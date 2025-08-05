@@ -21,7 +21,7 @@ if sprite_index == sprAmmo {
 		{
 			curselevel ++;
 		}
-		else if Player.skill_got[3] == 1
+		else if Player.skill_got[3]
 		{
 			curselevel --;
 		}

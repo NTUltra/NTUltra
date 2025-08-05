@@ -31,7 +31,17 @@ function scrCollectHP(num = 2){
 		}
 		with instance_create(x,y,SmallChestPickup)
 		{
-			sprite_index = sprPickupArmourPickup
+			image_angle = other.image_angle;
+			if instance_exists(Player) && Player.skill_got[3]
+			{
+				sprite_index = sprPickupArmourPickupUpg;
+				motion_add(image_angle - 90,2);
+			}
+			else
+			{
+				sprite_index = sprPickupArmourPickup
+				motion_add(image_angle - 90,0.5);
+			}
 		}
 		snd_play(sndArmourHeal);
 	}
@@ -105,6 +115,20 @@ function scrCollectHP(num = 2){
 			else if Player.my_health > Player.maxhealth
 			dir.mytext = "OVER MAX HP"
 		}
-		instance_create(x,y,SmallChestPickup)
+		if instance_exists(Player) && Player.skill_got[3]
+		{
+			with instance_create(x,y,SmallChestPickup)
+			{
+				image_angle = other.image_angle;
+				sprite_index = sprSmallChestPickupUpg;
+				motion_add(image_angle - 90,2);
+			}
+		}
+		else
+			with instance_create(x,y,SmallChestPickup)
+			{
+				image_angle = other.image_angle;
+				motion_add(image_angle - 90,0.5);
+			}
 	}
 }

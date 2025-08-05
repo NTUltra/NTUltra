@@ -2354,13 +2354,13 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			else if ultra_got[98]
 			{
-				if rad > 15
+				if rad > 16
 				{
 					audio_stop_sound(sndMutant0Slct)
 					audio_sound_pitch(sndMutant0Slct,random_range(0.6,0.9))
 					audio_play_sound(sndMutant0Slct,90,0)
 					instance_create(UberCont.mouse__x,UberCont.mouse__y,Infect);
-					rad -= 15;
+					rad -= 16;
 					scrDoctorThroneButt();
 				}
 				else

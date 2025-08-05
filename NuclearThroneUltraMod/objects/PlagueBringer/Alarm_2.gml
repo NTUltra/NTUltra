@@ -18,6 +18,8 @@ with Player
 		}
 		with instance_create(x + lengthdir_x(32,dir),y + lengthdir_y(32,dir),InkBlob)
 		{
+			dmg += other.dmg;
+			dmgAdd += other.dmgAdd;
 			team = 2;
 			direction = dir;
 			speed = 0;

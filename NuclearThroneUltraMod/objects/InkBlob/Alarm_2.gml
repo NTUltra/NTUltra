@@ -8,12 +8,14 @@ if (scrIgniteToxic())
 		with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),Flame)
 		{
 			team = 2;
+			dmg += other.dmgAdd;
 			scrCopyWeaponMod(other);
 			motion_add(dir,2);
 		}
 		dir += 180;
 	}
 	with instance_create(x,y,InkBlobIgnite) {
-		ang = dir + 90;	
+		ang = dir + 90;
+		dmgAdd = other.dmgAdd;
 	}
 }

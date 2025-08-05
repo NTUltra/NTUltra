@@ -8,10 +8,10 @@ if other.team != 2 and other.my_health > 0
 				alarm[9]=6;
 			else//its already infected well then deal some more damage
 			{
-				DealDamage(20,true);
+				DealDamage(other.dmg*2 + (my_health * 0.02),true);
 			}
 
-			DealDamage(10)
+			DealDamage(other.dmg)
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.direction,2)

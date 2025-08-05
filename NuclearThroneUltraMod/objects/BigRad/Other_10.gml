@@ -95,12 +95,20 @@ if instance_exists(Player)
 
 	if Player.skill_got[3]//Pluto
 	{
-	with instance_create(x,y,BulletHit)
-	sprite_index=sprEatBigRad;
+		with instance_create(x,y,BulletHit)
+		{
+			image_angle = other.image_angle;
+			sprite_index = sprEatBigRadPlut;
+			motion_add(image_angle,1);
+		}
 	}
 	else
 	{
-	with instance_create(x,y,BulletHit)
-	sprite_index=sprEatBigRadPlut;
+		with instance_create(x,y,BulletHit)
+		{
+			image_angle = other.image_angle;
+			sprite_index = sprEatBigRad;
+			motion_add(image_angle,0.5);
+		}
 	}
 }

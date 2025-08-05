@@ -51,6 +51,7 @@ if instance_exists(Player){
 		repeat(am)
 		with instance_create(x,y,SwarmBolt)
 		{
+			dmg += GetPlayerLoops() * 0.5;
 			hits += 1;
 			team = 2;
 			alarm[0] = 3

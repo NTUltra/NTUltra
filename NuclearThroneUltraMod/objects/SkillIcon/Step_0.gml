@@ -134,7 +134,7 @@ if selected && visible
 		{
 			if Player.race == 25//Plutonium hunger
 			{
-				Player.betterpluto = 108;
+				Player.betterpluto = 100;//108
 			}
 			else
 			{

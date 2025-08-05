@@ -19,7 +19,7 @@ friction = 0.4
 right = choose(1,-1)
 
 team = 2;
-
+dmg = 3 + GetPlayerLoops();
 //behavior
 walk = 0
 gunangle = random(360)

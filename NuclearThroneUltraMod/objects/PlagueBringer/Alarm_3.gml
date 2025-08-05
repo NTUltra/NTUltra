@@ -8,6 +8,7 @@ with Player
 	snd_play(sndTermite,0.2);
 	with instance_create(x,y,Termite)
 	{
+		dmg += other.dmg;
 		motion_add(ran,3)
 		team = 2;
 	}

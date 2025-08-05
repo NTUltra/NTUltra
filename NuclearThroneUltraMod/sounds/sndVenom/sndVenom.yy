@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.405156,
+  "duration":0.4051474,
   "name":"sndVenom",
   "parent":{
     "name":"Melee",

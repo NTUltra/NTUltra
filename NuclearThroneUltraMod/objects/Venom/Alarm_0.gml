@@ -2,7 +2,7 @@
 var theDamage = dmg;
 with owner
 {
-	snd_play(sndVenom,0.1);
+	snd_play(sndVenomPlayer,0.1);
 	BackCont.shake += 1;
 	DealDamage(theDamage,false,true,false);
 	with instance_create(x,y,AcidStreak)

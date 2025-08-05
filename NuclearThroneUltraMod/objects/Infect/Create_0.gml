@@ -1,5 +1,9 @@
 var len = 24;
 var ang = random(360);
+loops = GetPlayerLoops();
+dmg = 10 + loops;
+dmgScale = loops * 0.5;
+dmgAdd = loops * 0.3;
 repeat(12)
 {
 	with instance_create(x+lengthdir_x(len,ang),
@@ -46,6 +50,8 @@ with instance_create(x,y,BloodStreak)
 snd_play(sndBlobExploS,0.01);
 with instance_create(x,y,InkBlob)
 {
+	dmg += other.dmgScale;
+	dmgAdd += other.dmgAdd;
 	team = 2;
 	speed = 0;
 }
@@ -54,6 +60,8 @@ repeat(5)
 {
 	with instance_create(x + lengthdir_x(24,dir),y + lengthdir_y(24,dir),InkBlob)
 	{
+		dmg += other.dmgScale;
+		dmgAdd += other.dmgAdd;
 		speed = 0;
 		direction = dir;
 		team = 2;

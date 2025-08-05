@@ -8,6 +8,8 @@ with Player
 	with instance_create(x,y,InkBlob)
 	{
 		speed = 0;
+		dmg += other.dmg;
+		dmgAdd += other.dmgAdd;
 	}
 	var dir = random(360);
 	BackCont.shake += 5;
@@ -24,6 +26,8 @@ with Player
 		}
 		with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
 		{
+			dmg += other.dmg;
+			dmgAdd += other.dmgAdd;
 			team = 2;
 			direction = dir;
 			speed = 0;

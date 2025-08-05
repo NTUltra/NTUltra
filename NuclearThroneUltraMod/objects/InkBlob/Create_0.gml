@@ -18,6 +18,7 @@ rotation = random_range(10,20) * choose(1,-1);
 xPrev = x;
 yPrev = y;
 dmg = 3;
+dmgAdd = 0;
 oScale = 1;
 inkSplat = sprInkBlobSplat;
 alarm[0] = 1;

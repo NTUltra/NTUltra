@@ -1,7 +1,7 @@
 if instance_exists(HorrorSuckDelay)
 {
 	image_index = 0;
-	if place_meeting(x,y,Wall)
+	if collision_line(xprevious,yprevious,x,y,Wall,false,false)
 	{
 		move_bounce_solid(false);
 		move_outside_solid(direction,8);
@@ -30,9 +30,9 @@ if instance_exists(Player) && (!cursed) {
 		{
 		    if instance_exists(ProtoStatue) && point_distance(x, y, ProtoStatue.x, ProtoStatue.y) < 185 && (Player.ultra_got[12] == 1 || (collision_line(x, y, ProtoStatue.x, ProtoStatue.y, Wall, 0, 0) < 0)) {
 				suckDirection = point_direction(x, y, ProtoStatue.x, ProtoStatue.y);
-		        if levelEnded || !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+		        if levelEnded || !collision_line(x,y,x + lengthdir_x(stepDis, suckDirection), y,Wall,false,false)
 					x += lengthdir_x(stepDis, suckDirection)
-		        if levelEnded || !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		        if levelEnded || !collision_line(x,y,x, y + lengthdir_y(stepDis, suckDirection),Wall,false,false)
 					y += lengthdir_y(stepDis, suckDirection)
 			
 				if place_meeting(x,y,ProtoStatue)
@@ -42,9 +42,9 @@ if instance_exists(Player) && (!cursed) {
 		    }
 		    else if levelEnded || point_distance(x, y, Player.x, Player.y) < extraRange + Player.betterpluto {
 				suckDirection = point_direction(x, y, Player.x, Player.y);
-		        if levelEnded || !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+		        if levelEnded || !collision_line(x,y,x + lengthdir_x(stepDis, suckDirection), y,Wall,false,false)
 					x += lengthdir_x(stepDis, suckDirection)
-		        if levelEnded || !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		        if levelEnded || !collision_line(x,y,x, y + lengthdir_y(stepDis, suckDirection),Wall,false,false)
 					y += lengthdir_y(stepDis, suckDirection)
 
 		        isGettingSucked = true;
@@ -56,9 +56,9 @@ if instance_exists(Player) && (!cursed) {
 		    else if instance_exists(Implosion) {
 		        if point_distance(x, y, Implosion.x, Implosion.y) < 80 or instance_exists(Portal) {
 					suckDirection = point_direction(x, y, Implosion.x, Implosion.y);
-		            if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+		            if !collision_line(x,y,x + lengthdir_x(stepDis, suckDirection), y,Wall,false,false)
 						x += lengthdir_x(stepDis, suckDirection)
-		            if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		            if !collision_line(x,y,x, y + lengthdir_y(stepDis, suckDirection),Wall,false,false)
 						y += lengthdir_y(stepDis, suckDirection)
 					if place_meeting(x,y,Implosion)
 					{
@@ -69,9 +69,9 @@ if instance_exists(Player) && (!cursed) {
 			else if (Player.ultra_got[108] && instance_exists(Hand) && point_distance(x, y, Hand.x, Hand.y) < extraRange + Player.betterpluto)
 			{
 				suckDirection = point_direction(x, y, Hand.x, Hand.y);
-				if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+				if !collision_line(x,y,x + lengthdir_x(stepDis, suckDirection), y,Wall,false,false)
 					x += lengthdir_x(stepDis, suckDirection)
-		        if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+		        if !collision_line(x,y,x, y + lengthdir_y(stepDis, suckDirection),Wall,false,false)
 					y += lengthdir_y(stepDis, suckDirection)
 				if place_meeting(x,y,Hand)
 				{
@@ -84,9 +84,9 @@ if instance_exists(Player) && (!cursed) {
 				if point_distance(x, y, n.x, n.y) < extraRange + Player.betterpluto
 				{
 					suckDirection = point_direction(x, y, n.x, n.y);
-					if !place_meeting(x + lengthdir_x(stepDis, suckDirection), y,Wall)
+					if !collision_line(x,y,x + lengthdir_x(stepDis, suckDirection), y,Wall,false,false)
 						x += lengthdir_x(stepDis, suckDirection)
-				    if !place_meeting(x, y + lengthdir_y(stepDis, suckDirection),Wall)
+				    if !collision_line(x,y,x, y + lengthdir_y(stepDis, suckDirection),Wall,false,false)
 						y += lengthdir_y(stepDis, suckDirection)
 					if place_meeting(x,y,YungCuzDupe)
 					{
@@ -112,7 +112,7 @@ if instance_exists(Player) && (!cursed) {
 			}
 		}
 	}
-	else if place_meeting(x,y,Wall)
+	else if collision_line(xprevious,yprevious,x,y,Wall,false,false)
 	{
 		move_bounce_solid(false);
 		move_outside_solid(direction,8);

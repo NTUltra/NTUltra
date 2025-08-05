@@ -29,6 +29,8 @@ with Player
 			}
 			with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
 			{
+				dmg += other.dmg;
+				dmgAdd += other.dmgAdd;
 				team = 2;
 				direction = dir;
 				speed = 0;
@@ -37,6 +39,7 @@ with Player
 		}
 		with instance_create(x,y,Termite)
 		{
+			dmg += other.dmg;
 			motion_add(random(360),3)
 			team = 2;
 		}
@@ -59,6 +62,8 @@ with Player
 			}
 			with instance_create(x + lengthdir_x(64,dir),y + lengthdir_y(64,dir),InkBlob)
 			{
+				dmg += other.dmg;
+				dmgAdd += other.dmgAdd;
 				team = 2;
 				direction = dir;
 				speed = 0;
@@ -67,6 +72,7 @@ with Player
 		}
 		with instance_create(x,y,Termite)
 		{
+			dmg += other.dmg;
 			motion_add(random(360),3)
 			team = 2;
 		}

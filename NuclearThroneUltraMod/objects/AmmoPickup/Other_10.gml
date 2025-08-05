@@ -4,8 +4,20 @@ if !instance_exists(Player)
 	
 rerolls = 0;
 //if max ammo?&&50% of time
-
-instance_create(x,y,SmallChestPickup);
+if instance_exists(Player) && Player.skill_got[3]
+{
+	with instance_create(x,y,SmallChestPickup)
+	{
+		sprite_index = sprSmallChestPickupUpg;
+		image_angle = other.image_angle;
+		motion_add(image_angle - 90,2);
+	}
+}
+else
+	with instance_create(x,y,SmallChestPickup){
+		image_angle = other.image_angle;
+		motion_add(image_angle - 90,0.5);
+	}
 if scrIsCrown(32)//Crown of misfortune
 {
 	scrCollectAmmo(ammoValue * 1.25, cursed, supercursed);

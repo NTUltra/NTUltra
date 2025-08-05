@@ -9,5 +9,5 @@ snd_play(snd_dead,0.1,true);
 snd_play(sndMeatExplo,0.1,true)
 with instance_create(x,y,MeatExplosion)
 {
-	dmg = 3;//norma dmg = 4
+	dmg = other.dmg;//norma dmg = 4
 }

@@ -15,3 +15,6 @@ Sleep(20);
 snd_play_2d(sndPlagueBringer);
 alarm[4] = 30;
 alarm[5] = 60;
+loops = GetPlayerLoops();
+dmg = loops * 0.5;
+dmgAdd = loops * 0.3;

@@ -12,6 +12,8 @@ if instance_exists(Player)
 		sprite_index = sprHPUpg;
 		mask_index = sprHPUpg;
 	}
+	if Player.race == 25 && Player.skill_got[3]//DOCTOR
+		mask_index = mskBigWepPickup;
 	if Player.ultra_got[62] && Player.altUltra
 	{
 		//LIVING ARMOUR

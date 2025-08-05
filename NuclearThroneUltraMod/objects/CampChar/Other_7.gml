@@ -59,6 +59,17 @@ else
 			    }
 			}
 			sprite_index = spr_from 
+			if num == 29
+			{
+				with CampChar
+				{
+					if num == 25
+					{
+						sprite_index = spr_special;
+						image_index = 0;
+					}
+				}
+			}
 		}
 	}
 }

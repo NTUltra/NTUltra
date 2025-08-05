@@ -1,6 +1,8 @@
 /// @description infected
 alarm[9]=7;
-DealDamage(4)
+if alarm[1] > 2
+	alarm[1] += 3;
+DealDamage(3 + GetPlayerLoops() + (my_health * 0.01))
 sprite_index = spr_hurt
 image_index = 0
 motion_add(random(360),2)

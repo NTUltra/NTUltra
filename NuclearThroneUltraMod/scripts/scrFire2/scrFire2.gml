@@ -18023,7 +18023,7 @@ function scrFire2(hasTailNow) {
 		snd_play_fire(sndMachinegun)
 		with instance_create(x,y,BulletMarksMan)
 		{
-			dmg = 4;
+			dmg = 5;
 			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),12)
 			image_angle = direction
 			team = other.team
@@ -18034,7 +18034,7 @@ function scrFire2(hasTailNow) {
 		snd_play_fire(sndPopgun)
 		with instance_create(x,y,Bullet2MarksMan)
 		{
-			dmg = 4;
+			dmg = 5;
 			motion_add(aimDirection + ((random(30) - 15)*other.accuracy),15)
 			image_angle = direction
 			team = other.team

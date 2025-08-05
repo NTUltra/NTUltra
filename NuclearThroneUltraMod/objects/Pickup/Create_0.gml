@@ -12,7 +12,11 @@ if instance_exists(Player)
 	if Player.skill_got[3]
 	{
 		hasPluto = true;
-		alarm[6] = 1;	
+		alarm[6] = 1;
+		if Player.race == 25//DOCTOR
+		{
+			mask_index = mskBigWepPickup;
+		}
 	}
 	if Player.loops > 1
 	{

@@ -507,6 +507,12 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_name[63] = "COLD HEART"
 	    ultra_text[63] = "<gb>ARMOUR<gb> <w>STRIKE<w> USES 2<r>HP<r>#INSTEAD OF <gb>ARMOUR<gb>##<gb>ARMOUR<gb> STRIKE <aq>FREEZES<aq> ENEMIES##WHILE YOU HAVE <gb>ARMOUR<gb>#PRIMARY <w>RELOAD SPEED<w> +20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
+		
+		/*
+			ultra_name[63] = "VENOM HEART"
+		    ultra_text[63] = "ALL DAMAGE YOU DEAL VENOMIZES ENEMIES#VENOM DAMAGE DEALS ADDITIONAL DAMAGE BASED ON REMAINING ENEMY HEALTH#YOU ARE IMMUNE TO VENOM WHILE YOU HAVE ARMOUR"
+		    ultra_tips[63] = "serpent lord"
+		*/
     
 	    ultra_name[64] = "BLANK ARMOUR"
 	    ultra_text[64] = "WHENEVER YOU LOSE <gb>ARMOUR<gb>#TRIGGER <w>SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#<w>CLEAR<w> ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
@@ -764,7 +770,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
     
 	ultra_name[98] = "PLAGUE DOCTOR"
-	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#<p>INFEST<p> ENEMIES USING <g>RADS<g>"
+	ultra_text[98] = "YOUR ACTIVE CHANGES INTO#<p>INFEST<p> ENEMIES USING <g>RADS<g>##DEALING <r>DAMAGE<r> <w>OVER TIME<w>#DEALS <r>DAMAGE<r> BASED ON <w>REMAINING HEALTH<w>"
 	ultra_tips[98] = "I am here to heal you"
     
 	ultra_name[99] = "NECROMANCER"
