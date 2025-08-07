@@ -1631,7 +1631,7 @@ function scrPopEnemies() {
 				{
 					instance_create(x + 16, y + 16, choose(RhinoFreak, BigSlime,PitGhostExploder))	
 				}
-	            else if ran > 55 {
+	            else if ran > 60 {
 	                instance_create(x + 16, y + 16, choose(RadDiver, GhostGuardian,UltraRaven))
 	            }
 				else if instance_number(enemy) < 1
@@ -1645,7 +1645,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 
-	            if ran > 55 {
+	            if ran > 60 {
 	                instance_create(x + 16, y + 16, choose(RadDiver, GhostGuardian))
 	            }
 				else if instance_number(enemy) < 1
@@ -1666,7 +1666,7 @@ function scrPopEnemies() {
 				{
 					instance_create(x + 16, y + 16, choose(InvertedRhinoFreak, InvertedBigSlime,PitGhostExploder))	
 				}
-	            else if ran > 55 {
+	            else if ran > 60 {
 	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian,UltraRaven))
 	            }
 				else if instance_number(enemy) < 1
@@ -1680,7 +1680,7 @@ function scrPopEnemies() {
 	        } else {
 	            var ran = random(100);
 
-	            if ran > 55 {
+	            if ran > 60 {
 	                instance_create(x + 16, y + 16, choose(InvertedRadDiver, InvertedRadDiver, InvertedGhostGuardian))
 	            }
 				else if instance_number(enemy) < 1

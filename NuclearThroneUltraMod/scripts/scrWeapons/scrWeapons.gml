@@ -10145,8 +10145,8 @@ function scrWeapons() {
 	wep_name[904] = "KRAKEN BURST GUN"
 	wep_type[904] = 4
 	wep_auto[904] = 2
-	wep_load[904] = 40//10
-	wep_cost[904] = 4
+	wep_load[904] = 50//10
+	wep_cost[904] = 5
 	wep_sprt[904] = sprKrakenBurstGun
 	wep_area[904] = 4
 	wep_text[904] = "SEA STRIKER"

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.330688,
+  "duration":0.33070296,
   "name":"sndHorrorEmpty",
   "parent":{
     "name":"Horror",

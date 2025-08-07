@@ -725,6 +725,7 @@ function scrFire3(hasTailNow){
 					instance_create(x,y,FloorExplo);
 				}
 			}
+			ds_list_destroy(walls);
 			alarm[2] = 2;
 		}
 		var rando = random(360);

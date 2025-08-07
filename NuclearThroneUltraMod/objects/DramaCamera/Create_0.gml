@@ -223,6 +223,20 @@ if instance_exists(MimicBoss)
 		}
 	}
 }
+else if instance_exists(InvertedHostileHorror)
+{
+	name = "INVERTED HOSTILE HORROR";
+	sprite_index = sprBigPortrait;
+	image_index = 141;
+	//image_index = 18;
+}
+else if instance_exists(HostileHorror)
+{
+	name = "HOSTILE HORROR";
+	sprite_index = sprBigPortrait;
+	image_index = 140;
+	//image_index = 18;
+}
 else if instance_exists(InvertedCloudBoss)
 {
 	UberCont.hadBossIntro = false;

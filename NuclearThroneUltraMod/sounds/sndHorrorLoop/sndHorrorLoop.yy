@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":2.250094,
+  "duration":2.2501135,
   "name":"sndHorrorLoop",
   "parent":{
     "name":"Horror",

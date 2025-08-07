@@ -140,10 +140,13 @@ for(var i = floor(ammo); i > 0; i -= 1)
 	{
 		target = instance_nearest(xxx+lengthdir_x(12,angle),yyy+lengthdir_y(12,angle),enemy);
 	}
-	if instance_exists(target) && target != noone && target.team != team && target.my_health > 0
+	if instance_exists(target) && target != noone && target.team != team
 	{
+		var mh = 0;
+		with target
+			mh = my_health;
 		//var dir = instance_nearest(x+lengthdir_x(80,direction),y+lengthdir_y(80,direction),target)
-		if !collision_line(xxx,yyy,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
+		if mh > 0 && !collision_line(xxx,yyy,target.x,target.y,Wall,false,false) && point_distance(x,y,target.x,target.y) < 150-accuracy*2
 			motion_add(point_direction(xxx,yyy,target.x,target.y),1.5-(accuracy*0.04))
 	}
 	angle = direction

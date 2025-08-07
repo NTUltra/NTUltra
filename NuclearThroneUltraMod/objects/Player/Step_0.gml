@@ -570,10 +570,8 @@ if !instance_exists(LevCont) and visible = 1
 			}*/
 		}
 		if keyboard_check_pressed(ord("C")) {
-			with instance_create(x + 96,y - 8,AmmoPickup)
-				speed = 0;
-			with instance_create(x + 96,y + 8,HPPickup)
-				speed = 0;
+			instance_create(x + 96,y - 8,HostileHorror);
+			alarm[3] = 300;
 			//var dangle = random(1)*360;
 			//var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 		    //curse = !curse;
@@ -581,7 +579,7 @@ if !instance_exists(LevCont) and visible = 1
 			//thing.mytext = "CURSE TOGGLE";
 			//instance_create(x+64,y,BigWallBreak);
 			//instance_create(x+64,y,InvertedCubeGuardian);
-			//scrApplyEnemyVenom(3,id);
+			//scrApplyEnemyVenom(1,id);
 		}
 		if keyboard_check_pressed(ord("B")) {
 			instance_create(x,y,WallBreak);
@@ -1142,9 +1140,11 @@ if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 var mr = GetPlayerMaxRad()
 if (rad > mr)
 {
-	if level < maxlevel || scrIsGamemode(22)
+	if level < maxlevel && !hasLeveledUp || scrIsGamemode(22)
 	{
 		//rad -= level*60
+		if altUltra && ultra_got[33]
+			hasLeveledUp = true;
 		if race == 29
 		{
 			BackCont.shake += 100;

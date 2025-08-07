@@ -74,7 +74,7 @@ if target != noone && instance_exists(target)
 			}
 			else if other.area=105 && other.subarea == 3
 			{
-				instance_create(x,y,InvertedBanditBoss)
+				instance_create(x,y,Invertedss)
 			}
 			else if other.area=105 || (other.oasis && instance_exists(BigFishSkull) && other.area == 100)
 			{
@@ -95,6 +95,14 @@ if target != noone && instance_exists(target)
 			else if other.area == 129
 			{
 				instance_create(x,y,InvertedCrownGlutton);
+			}
+			else if other.area == 144
+			{
+				instance_create(x,y,HostileHorror);
+			}
+			else if other.area == 145
+			{
+				instance_create(x,y,InvertedHostileHorror);
 			}
 			else if scrIsGamemode(44) && other.area == 120
 			{

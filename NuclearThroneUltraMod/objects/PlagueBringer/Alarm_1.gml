@@ -1,5 +1,7 @@
 /// @description Plague
 alarm[1] = 10;
+var d = dmg;
+var da = dmgAdd;
 with Player
 {
 	other.x = x;
@@ -8,8 +10,8 @@ with Player
 	with instance_create(x,y,InkBlob)
 	{
 		speed = 0;
-		dmg += other.dmg;
-		dmgAdd += other.dmgAdd;
+		dmg += d;
+		dmgAdd += da;
 	}
 	var dir = random(360);
 	BackCont.shake += 5;
@@ -26,8 +28,8 @@ with Player
 		}
 		with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
 		{
-			dmg += other.dmg;
-			dmgAdd += other.dmgAdd;
+			dmg += d;
+			dmgAdd += da;
 			team = 2;
 			direction = dir;
 			speed = 0;

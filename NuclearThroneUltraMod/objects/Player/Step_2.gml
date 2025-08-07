@@ -587,9 +587,9 @@ if (skill_got[31])
 	if (tookHit)
 	{
 		var dmgTaken = prevhealth - my_health;
-		var maxDmg = 9;
+		var maxDmg = 8;
 		if race == 25
-			maxDmg = 8;
+			maxDmg = 7;
 		var megaBreak = false;
 		if dmgTaken > maxDmg
 		{

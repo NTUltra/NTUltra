@@ -322,6 +322,10 @@ function scrShadows() {
 	if visible
 	draw_sprite(shd32,0,x+8-vx,y+90-vy)
 	}
+	with HostileHorror
+	{
+		draw_sprite(shd24,0,x-vx,y-vy)
+	}
 	with Player
 	{
 		var py = y;

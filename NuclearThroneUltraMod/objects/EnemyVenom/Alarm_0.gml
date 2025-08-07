@@ -60,6 +60,7 @@ with owner
 		}
 	if other.venomized
 	{
+		snd_hurt = snd_hurt_actual;
 		snd_play(snd_hurt, hurt_pitch_variation,true);
 		hurtTime = hurtDurationLoop - 2;
 		alarm[3] = 0;

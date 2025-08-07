@@ -149,6 +149,7 @@ function scrCopyPlayData(){
 		lastEnemyKilled: Player.lastEnemyKilled,
 		lastEnemyKilledIndex: Player.lastEnemyKilledIndex,
 		phoenixrevives: Player.phoenixrevives,
+		hasLeveledUp: Player.hasLeveledUp,
 		globalMutationsChosen: UberCont.globalMutationsChosen,
 		seedWeaponSmith: UberCont.seedWeaponSmith,
 		canMultiCrown: UberCont.canMultiCrown,

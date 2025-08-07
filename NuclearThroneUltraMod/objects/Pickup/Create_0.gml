@@ -1,4 +1,7 @@
 /// @description Init
+alarm[11] = 5;
+xprev = x;
+yprev = y;
 depth = -2;
 hasPluto = false;
 suckDirection = 0;

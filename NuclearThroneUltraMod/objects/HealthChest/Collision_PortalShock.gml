@@ -21,8 +21,8 @@ with Player {
 		targetHealth += UberCont.maxHpIncrease;
 		if skill_got[1] == 1//Rhino skin
 			targetHealth += 4;
-		if skill_got[31]//Tough shell
-			targetHealth += 1;
+		//if skill_got[31]//Tough shell
+		//	targetHealth += 1;
 		if skill_got[33]//Glass arm cannon
 			targetHealth = max(1,targetHealth-2);
 		if skill_got[41]//nerves of steel

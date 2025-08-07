@@ -79,7 +79,7 @@ if ( prevhealth > my_health)
 {
 
 	var dmgTaken = prevhealth-my_health;
-	var maxDmg = 9;
+	var maxDmg = 8;
 	var megaBreak = false;
 	if dmgTaken > maxDmg
 	{

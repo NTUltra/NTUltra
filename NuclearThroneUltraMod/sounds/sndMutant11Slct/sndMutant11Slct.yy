@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.522469,
+  "duration":0.52247167,
   "name":"sndMutant11Slct",
   "parent":{
     "name":"Horror",

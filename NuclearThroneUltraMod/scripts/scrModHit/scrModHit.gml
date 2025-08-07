@@ -8,9 +8,9 @@ function scrModHit(projectileRef) {
 	{
 		target = noone;
 		walk = 0;
-		var sleepAmount = 1;
+		var sleepAmount = 10;
 		if wp != 0
-			sleepAmount = ceil(Player.wep_load[wp]*0.65);
+			sleepAmount = ceil(Player.wep_load[wp]*0.75);
 		sleepAmount = max(1,sleepAmount);
 		with projectile
 		{
@@ -18,7 +18,7 @@ function scrModHit(projectileRef) {
 				wepFire = -1;
 		}
 		projectileRef.wepFire = 0;
-		if alarm[1] > 2 && alarm[1] < 30
+		if alarm[1] > 2 && alarm[1] < 30 && alarm[11] < 5
 		{
 			//speed *= 0.6;
 			speed = 0;

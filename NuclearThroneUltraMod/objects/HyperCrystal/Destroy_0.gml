@@ -2,11 +2,11 @@ scrDrop(50,50)
 
 event_inherited();
 
-if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_2 < 1
+if isValidGamemodeToUnlock() && UberCont.mutation_crystals_collected_3 < 1
 {
 	with instance_create(x,y,MutationChoiceReward)
 	{
-		crystalNumber = 2;
+		crystalNumber = 3;
 	}
 }
 

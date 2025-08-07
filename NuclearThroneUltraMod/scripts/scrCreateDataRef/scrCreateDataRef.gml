@@ -99,6 +99,7 @@ function scrCreateDataRef() {
 		level = other.level;
 		boostLevel = other.boostLevel;
 		phoenixrevives = other.phoenixrevives;
+		hasLeveledUp = other.hasLeveledUp;
 		humphrySkill = other.humphrySkill;
 		drawempty = 0;
 		drawlowhp = 0;

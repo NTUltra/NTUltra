@@ -55,7 +55,7 @@ canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
 peaceBarrierTime = 0;
-peaceBarrierDuration = 46;//42
+peaceBarrierDuration = 48;//46 42  48 = 16 seconds
 peaceBarriers = 0;
 peaceBarriersMax = 3;
 adrenalineAmmoTimer = 999;
@@ -245,6 +245,7 @@ if instance_exists(BackCont)
 BackCont.alarm[4] = 10;
 canblacksword = false;
 phoenixrevives = 0;
+hasLeveledUp = false;
 firedthislevel = false;
 firedOnce = false;
 fired = false;

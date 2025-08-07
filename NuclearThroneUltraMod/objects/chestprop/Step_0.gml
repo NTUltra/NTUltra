@@ -14,12 +14,12 @@ else
 }
 
 if speed > 4
-speed = 4
+	speed = 4
 
 if instance_exists(GenCont)
 {
-x = xstart
-y = ystart
+	x = xstart
+	y = ystart
 }
 
 var overlap = instance_place(x,y,chestprop);

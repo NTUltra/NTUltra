@@ -18,6 +18,7 @@ if (ultra_got[33] && !altUltra && my_health <= 0)
 {
 	scrChickenRegen(1);
 }
+hasLeveledUp = false;
 jump = 0;
 roll = 0;
 didJumpRoll = false;
@@ -1001,6 +1002,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		lastEnemyKilledIndex = other.lastEnemyKilledIndex;
 		guarenteedReroll = other.guarenteedReroll;
 		phoenixrevives = other.phoenixrevives;
+		hasLeveledUp = other.hasLeveledUp;
 		cwepmod2 = other.cwepmod2
 		cwepmod3 = other.cwepmod3
 		cwepmod4 = other.cwepmod4
@@ -1026,8 +1028,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			maxhealth += 50;
 		if skill_got[1]
 			maxhealth += 4;
-		if skill_got[31]//Tough shell
-			maxhealth += 1;
+		//if skill_got[31]//Tough shell
+		//	maxhealth += 1;
 		if skill_got[33]//Glass arm cannon
 			maxhealth -= 2;
 		if race == 16

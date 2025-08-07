@@ -73,7 +73,7 @@ function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true
 			skeletonGambleBongas = 0;
 		break;
 		case 9: //SECOND STOMACH
-			defaultOverhealAddition -= 1;
+			//defaultOverhealAddition -= 1;
 			defaultOverhealAddition = max(0,defaultOverhealAddition);
 		break;
 		case 10: //BACK MUSCLE

@@ -178,12 +178,12 @@ function scrSkills() {
 
 	
 	skill_name[9] = "SECOND STOMACH"
-	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
+	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{
-		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
+		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
@@ -455,11 +455,11 @@ function scrSkills() {
 	skill_name[31] = "TURTLE SHELL"
 	else
 	skill_name[31] = "TOUGH SHELL"
-	skill_text[31] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
-	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN 2 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>##NOTHING CAN DEAL MORE#THAN 8 DAMAGE TO YOU"
+	skill_text[31] = /*"+1 <r>MAX HP<r>#*/"<w>REDUCE INCOMING DAMAGE<w>"
+	skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN 2 <w>DAMAGE<w> TO YOU#DEALS ONE LESS <w>DAMAGE<w>##NOTHING CAN DEAL MORE#THAN 7 DAMAGE TO YOU"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
-	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#7 DAMAGE MAX";
+	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
 	
 	skill_name[32] = "ALKALINE SALIVA"
 	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>1<w>";

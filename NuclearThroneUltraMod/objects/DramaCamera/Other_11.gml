@@ -1,4 +1,8 @@
 /// @description Get sound
+with HostileHorror
+{
+	other.bossIntroSound = sndHostileHorrorEnter;
+}
 with BanditBoss
 {
 	other.bossIntroSound = sndBigMushroomBossIntro

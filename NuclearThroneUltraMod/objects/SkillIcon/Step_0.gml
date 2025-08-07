@@ -111,7 +111,7 @@ if selected && visible
 			}
 
 		}
-		else if skill == 31//Tough shell
+		/*else if skill == 31//Tough shell
 		{
 			if Player.ultra_got[62] && Player.altUltra//Living armour
 			{
@@ -124,7 +124,7 @@ if selected && visible
 				Player.my_health += 1
 			}
 
-		}
+		}*/
 		else if skill = 2
 		{
 			scrApplyExtraFeet();
@@ -151,13 +151,13 @@ if selected && visible
 		scrUnlockCharacter(15,"FOR TAKING THRONE BUTT AS CRYSTAL");
 
 		}
-		else if skill == 9
+		/*else if skill == 9
 		{
 			with Player
 			{
 				defaultOverhealAddition += 1;	
 			}
-		}
+		}*/
 		else if skill == 10
 		{
 			with Player
@@ -266,8 +266,8 @@ if selected && visible
 					targetHealth += UberCont.maxHpIncrease;
 					if skill_got[1] == 1//Rhino skin
 						targetHealth += 4;
-					if skill_got[31]//Tough shell
-						targetHealth += 1;
+					//if skill_got[31]//Tough shell
+					//	targetHealth += 1;
 					if skill_got[33]//Glass arm cannon
 						targetHealth = max(1,targetHealth-2);
 					if skill_got[41]//nerves of steel

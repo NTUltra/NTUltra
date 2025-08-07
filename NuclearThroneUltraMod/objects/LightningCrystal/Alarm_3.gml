@@ -22,7 +22,7 @@ sprite_index = spr_fire
 }
 else
 {
-sprite_index = spr_idle
+	sprite_index = spr_idle
 }
 
 /* */

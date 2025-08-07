@@ -312,6 +312,14 @@ function scrCrowns() {
 	crown_tips[35] = "again"
 	*/
 	
+	/*
+	//Only available in first crown vaults or crown start
+	crown_name[43] = "[CROWN OF VOID]"
+	crown_text[43] = "GAIN NO PORTAL ESSENCE WHEN ENTERING A PORTAL#INSTEAD GET 1 PORTAL ESSENCE WHEN YOU KILL A BOSS#AND 20 WHEN YOU LOOP"
+	crown_used[43] = 0
+	crown_tips[43] = "quick start"
+	*/
+	
 	crownmax = 23
 	secretcrownmax = 21;
 

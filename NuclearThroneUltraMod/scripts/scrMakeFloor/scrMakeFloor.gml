@@ -881,7 +881,12 @@ function scrMakeFloor(limiter) {
 	else if area = 4 || area = 111 || area = 115
 	trn = choose(0,0,0,0,90,-90,180)
 	else if area = 144 || area = 145//RADIATION SLUDGE LAND
-	trn = choose(0,0,0,0,0,0,90,-90,180);
+	{
+		if instance_number(Floor) > 10
+			trn = choose(0,0,0,0,0,0,90,-90,180);
+		else
+			trn = 0;
+	}
 	else if area = 146 || area = 147//BLOOD LAND
 	trn = choose(0,0,0,0,0,0,90,-90,180);
 	else if area = 5 || area = 107
@@ -1179,7 +1184,9 @@ function scrMakeFloor(limiter) {
 			instance_destroy()
 			if !instance_exists(WeaponChest) && point_distance(x,y,10016,10016) > 48{
 			instance_create(x+16,y+16,AmmoChest)
-			instance_create(x,y,Floor)}
+			if !place_meeting(x,y,Floor)
+				instance_create(x,y,Floor)
+			}
 		}
 		if instance_number(Floor) > 10 && instance_number(FloorMaker) < 2 || random(4) < 1
 			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};

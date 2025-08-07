@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.14517,
+  "duration":0.14517006,
   "name":"sndMaggotBite",
   "parent":{
     "name":"Regular",

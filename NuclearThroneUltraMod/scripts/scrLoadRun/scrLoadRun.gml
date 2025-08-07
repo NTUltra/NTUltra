@@ -354,8 +354,10 @@ function scrLoadRun(selectedRunIndex){
 				Player.guarenteedReroll = 0;
 			if variable_struct_exists(encryptedRun, "phoenixrevives")
 				Player.phoenixrevives = encryptedRun.phoenixrevives;
+			if variable_struct_exists(encryptedRun, "hasLeveledUp")
+				Player.hasLeveledUp = encryptedRun.hasLeveledUp;
 			if variable_struct_exists(encryptedRun, "metabolism")
-				Player.phoenixrevives = encryptedRun.metabolism;
+				Player.metabolism = encryptedRun.metabolism;
 			if variable_struct_exists(encryptedRun, "globalMutationsChosen")
 				UberCont.globalMutationsChosen = encryptedRun.globalMutationsChosen;
 			if variable_struct_exists(encryptedRun, "seedWeaponSmith")

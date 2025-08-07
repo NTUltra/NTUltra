@@ -1,5 +1,7 @@
 /// @description End the plague
 instance_destroy();
+var d = dmg;
+var da = dmgAdd;
 with Player
 {
 	BackCont.shake += min(50,other.totalRadsCollected);
@@ -29,8 +31,8 @@ with Player
 			}
 			with instance_create(x + lengthdir_x(16,dir),y + lengthdir_y(16,dir),InkBlob)
 			{
-				dmg += other.dmg;
-				dmgAdd += other.dmgAdd;
+				dmg += d;
+				dmgAdd += da;
 				team = 2;
 				direction = dir;
 				speed = 0;
@@ -62,8 +64,8 @@ with Player
 			}
 			with instance_create(x + lengthdir_x(64,dir),y + lengthdir_y(64,dir),InkBlob)
 			{
-				dmg += other.dmg;
-				dmgAdd += other.dmgAdd;
+				dmg += d;
+				dmgAdd += da;
 				team = 2;
 				direction = dir;
 				speed = 0;

@@ -575,6 +575,11 @@ function scrPopulate() {
 			if Player.loops > 11
 				instance_create(x, y, WantBoss)
 	    }
+		if Player.area == 144 || Player.area == 145{
+	        instance_create(x, y, WantBoss)//Big bad bat
+			if Player.loops > 11
+				instance_create(x, y, WantBoss)
+	    }
 		if Player.area = 111 and Player.subarea = 2 {
 	        instance_create(x, y, WantBoss)//Inverted big bad
 			if Player.loops > 11

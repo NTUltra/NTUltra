@@ -142,6 +142,7 @@ if !supercursed || gotPluto
 		}
 	}
 }
+/*
 if !levelEnded && speed > 0
 {
 	if mask_index != mskPickupThroughWall
@@ -157,3 +158,4 @@ if !levelEnded && speed > 0
 		mask_index = msk;
 	}
 }
+*/

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.285375,
+  "duration":0.2853968,
   "name":"sndDogGuardianMelee",
   "parent":{
     "name":"Palace",

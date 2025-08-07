@@ -6,6 +6,7 @@ if !instance_exists(SecretFinder)
 if instance_exists(Player)
 {
 	with Player {
+		alarm[3] = max(alarm[3],60);
 		if ultra_got[30] && altUltra
 		{
 			alarm[11] = 60;	

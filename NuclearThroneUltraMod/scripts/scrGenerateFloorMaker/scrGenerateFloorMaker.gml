@@ -251,6 +251,12 @@ function scrGenerateFloorMaker(limiter) {
 			}
 		}
 		limiter = scrMakeFloor(limiter);
+		if myFloors >= goal && fc < globalGoal
+		{
+			//Create a branch because we have not reached the target yet
+			debug("DID NOT FINISH GENERATION");
+			with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
+		}
 		/*
 		with GenCont
 		{

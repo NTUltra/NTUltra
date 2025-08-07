@@ -29,6 +29,7 @@ if canSpawn
 			if owner > -1 && instance_exists(owner)
 				with instance_create(x+lengthdir_x(offset,angle),y+lengthdir_y(offset,angle),projectileToSpawn)
 				{
+					sprite_index = other.projectileToSpawnSprite;
 					motion_add(angle,pspd);
 					image_angle = direction
 					image_speed *= 2;

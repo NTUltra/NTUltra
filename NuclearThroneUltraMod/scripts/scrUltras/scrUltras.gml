@@ -291,7 +291,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 9 && (Player.altUltra))
 	{
 		ultra_name[33] = "PHOENIX"
-		ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> <w>2<w>#<aq>PREVENT<aq> <w>DEATH<w>#LOSE <w>TWO LEVELS<w> AND <w>TWO RANDOM<w> <g>MUTATIONS<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER"
+		ultra_text[33] = "CAN NO LONGER BECOME <w>HEADLESS<w> INSTEAD#WHILE YOU ARE ABOVE <g>LEVEL<g> <w>2<w>#<aq>PREVENT<aq> <w>DEATH<w>#LOSE <w>TWO LEVELS<w> AND <w>TWO RANDOM<w> <g>MUTATIONS<g>##EVERYTIME YOUR DEATH IS PREVENTED#YOU PERMANENTLY BECOME <w>STRONGER<w>#AND YOU <g>LEVEL<g> UP SLOWER#CAN ONLY <g>LEVEL<g> UP ONCE PER AREA"
 		ultra_tips[33] = "rise and rise again"
 	}
 
