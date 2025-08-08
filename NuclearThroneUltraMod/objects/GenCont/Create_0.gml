@@ -437,8 +437,8 @@ else if Player.area = 108 && Player.subarea==3
 {
 	goal = 30;
 }
-else if Player.area = 104
-goal=150+s
+else if Player.area = 104//YV MANSION
+goal=15+s
 else if Player.area == 105//inverted desert
 goal=130+s
 else if Player.area == 106 || Player.area == 136//inverted scrapyard

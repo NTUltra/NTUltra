@@ -11,13 +11,13 @@ with Player
 			canFire = true;
 			ammo[wep_type[wep]] -= wep_cost[wep];
 			rad -= wep_rad[wep];
+			scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
 		}
 	}
 	else 
 		canFire = true;
 	if canFire
 	{
-		scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
 		/*
 			20 * 1.3 = 26;
 			26 * 1.25 = 32.5;

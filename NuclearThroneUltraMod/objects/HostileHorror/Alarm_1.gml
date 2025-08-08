@@ -11,7 +11,7 @@ if target != noone {
 	{
 	    if alarm[3] < 1 && collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 			gunangle = point_direction(x, y, target.x, target.y);
-	        alarm[3] = fireRate;
+	        alarm[3] = fireRate + 1;
 			snd_play(sndHorrorBeam);
 			if mySound == noone || !instance_exists(mySound)
 			{

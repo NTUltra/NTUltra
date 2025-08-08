@@ -294,7 +294,15 @@ if (hasNoMenuOpen()
 		}
 		else
 		{
-			drawMenuBSkin(skin,race,c_white);
+			if ( skin == 0 ||
+				(UberCont.race_dskin[race] && skin == 3) ||
+				(UberCont.race_eskin[race] && skin == 4) ||
+				(UberCont.race_fskin[race] && skin == 5) ||
+				(UberCont.race_gskin[race] && skin == 6)
+			)
+				drawMenuBSkin(skin,race,c_white);
+			else
+				drawMenuBSkin(skin,race,c_black);
 		}
 		
 		

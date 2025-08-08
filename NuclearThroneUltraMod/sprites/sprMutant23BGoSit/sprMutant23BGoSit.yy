@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Frog",
-    "path":"folders/Sprites/Player/Custom/Frog.yy",
+    "name":"FrogB",
+    "path":"folders/Sprites/Player/Custom/Frog/FrogB.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

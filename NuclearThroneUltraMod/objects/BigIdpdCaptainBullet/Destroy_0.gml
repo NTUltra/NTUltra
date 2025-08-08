@@ -25,6 +25,8 @@ if canSpawn
 		{
 			with instance_create(x+lengthdir_x(offset,angle),y+lengthdir_y(offset,angle),projectileToSpawn)
 			{
+				sprite_index = other.projectileToSpawnSprite;
+				typ = other.typ;
 				motion_add(angle,pspd);
 				image_angle = direction
 				image_speed *= 2;

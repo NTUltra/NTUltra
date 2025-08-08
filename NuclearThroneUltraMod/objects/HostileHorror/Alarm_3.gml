@@ -15,7 +15,7 @@ if target != noone && collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 	else if target.x > x
 		right = 1
 	radAmmo -= 1;
-	with instance_create(x, y, HostileHorrorBullet) {
+	with instance_create(x, y, projectileType) {
 	    motion_add(other.gunangle, other.projectileSpeed);
 	    image_angle = direction;
 	    team = other.team

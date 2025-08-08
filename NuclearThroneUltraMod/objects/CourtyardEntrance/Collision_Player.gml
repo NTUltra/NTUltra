@@ -40,4 +40,11 @@ if KeyCont.key_pick[other.p] = 1 && !instance_exists(Throne2)
 		}
 		alarm[1] = 1;
 	}
+	with enemy
+	{
+		if object_index != 	CrownGuardian && object_index != Throne2
+			instance_destroy(id,false);
+	}
+	with becomenemy
+		instance_destroy(id,false);
 }

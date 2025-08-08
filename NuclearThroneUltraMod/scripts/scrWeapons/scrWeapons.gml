@@ -270,8 +270,8 @@ function scrWeapons() {
 	wep_name[24] = "ENERGY SWORD"
 	wep_type[24] = 5
 	wep_auto[24] = 0
-	wep_load[24] = 11
-	wep_cost[24] = 3
+	wep_load[24] = 12
+	wep_cost[24] = 2
 	wep_sprt[24] = sprEnergySword
 	wep_area[24] = 11
 	wep_text[24] = "zzzwwoonggg"
@@ -3567,7 +3567,7 @@ function scrWeapons() {
 	wep_load[317] = 9
 	wep_cost[317] = 1
 	wep_sprt[317] = sprAutoToxicBow
-	wep_area[317] = 7
+	wep_area[317] = 8
 	wep_text[317] = "so many farts"
 	wep_swap[317] = sndSwapBow
 	wep_rad[317] = 0;
@@ -10267,6 +10267,18 @@ function scrWeapons() {
 	wep_swap[914] = sndSwapEnergy
 	wep_rad[914] = 0;
 	wep_popup[914] = "MORPHS ENEMIES";
+	
+	wep_name[915] = "STINK STICK"
+	wep_type[915] = 0
+	wep_auto[915] = 0
+	wep_load[915] = 14
+	wep_cost[915] = 0
+	wep_sprt[915] = sprStinkStick
+	wep_area[915] = 4
+	wep_text[915] = "stank stick"
+	wep_swap[915] = sndSwapHammer
+	wep_rad[915] = 0;
+	wep_popup[915] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

@@ -875,7 +875,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	//NO THING NoThing
 	ultra_name[113] = "ZERO"
-	ultra_text[113] = "WHEN YOU <v>VOID CONSUME<v>:#<w>TEMPORARILY<w> INCREASES <r>MAX HEALTH<r> BY <w>1<w>"
+	ultra_text[113] = "WHENEVER YOU <v>VOID CONSUME<v>:#<w>TEMPORARILY<w> INCREASES <r>MAX HEALTH<r> BY <w>1<w>"
 	ultra_tips[113] = "0"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)
@@ -888,7 +888,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
         
 	ultra_name[114] = "ABYSS"
-	ultra_text[114] = "WHEN YOU <r>KILL<r> AN <r>ENEMY<r>#<w>ALL<w> <r>ENEMIES<r> OF THAT <w>TYPE<w>#WILL BE SENT TO THE <w>NEXT AREA<w>##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN#DOES NOT WORK ON BOSSES"
+	ultra_text[114] = "WHEN YOU <r>KILL<r> AN <r>ENEMY<r>#<w>ALL<w> <r>ENEMIES<r> OF THAT <w>TYPE<w>#WILL BE SENT TO THE <w>NEXT AREA<w>##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN#DOES NOT WORK ON BOSSES#SENT OVER ENEMIES LOSE 25% <r>HEALTH<r>"
 	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"

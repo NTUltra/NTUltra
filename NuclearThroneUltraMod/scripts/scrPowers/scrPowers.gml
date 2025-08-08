@@ -4077,6 +4077,8 @@ function scrPowers(raceOverwrite = -1) {
 				direction = aimDirection;
 				image_angle = direction;
 				speed = 2;
+				if other.skill_got[5]
+					speed += 1;
 			}
 			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
 			/*

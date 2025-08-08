@@ -1,7 +1,7 @@
 scrDrop(100,100);
 raddrop = raddrop + min(radAmmo,maxRadAmmo);
 event_inherited()
-
+scrUnlockCharacter(21,"FOR DEFEATING HOSTILE HORROR!");	
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(HostileHorror) == 1
 	with MusCont
 	{

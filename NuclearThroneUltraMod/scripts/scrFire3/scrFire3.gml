@@ -3959,5 +3959,36 @@ function scrFire3(hasTailNow){
 		}
 		break;
 		
+		//STINK STICK
+		case 915:
+
+		snd_play_fire(sndBaseballBat)
+		instance_create(x,y,Dust)
+		altFire = !altFire;
+		with instance_create(x+lengthdir_x(10+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(10+((Player.skill_got[13]+bettermelee)*20),aimDirection),ToxicSlash)
+		{
+			snd_wallhit = choose(sndBaseballBatHit1,sndBaseballBatHit2);
+			if other.altFire
+				image_yscale *= -1;
+			dmg = 9
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,7)
+		}
+		BackCont.viewx2 += lengthdir_x(16,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(16,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -5
+
+		break;
+		
 	}
 }

@@ -8,11 +8,13 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[0] = true;
 			voidChallengeGoing[0] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 		}
 		if voidChallengeGoing[1] && !voidChallengeCompleted[1]
 		{
 			voidChallengeCompleted[1] = true;
 			voidChallengeGoing[1] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with Player
 			{
 				var currentLives = array_length(livesRegain);
@@ -36,6 +38,7 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[2] = true;
 			voidChallengeGoing[2] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with Player
 			{
 				if ultra_got[62] && altUltra//LIVING ARMOUR
@@ -69,6 +72,7 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[3] = true;
 			voidChallengeGoing[3] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;
@@ -96,6 +100,7 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[4] = true;
 			voidChallengeGoing[4] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;
@@ -117,6 +122,7 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[5] = true;
 			voidChallengeGoing[5] = false;
+			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;

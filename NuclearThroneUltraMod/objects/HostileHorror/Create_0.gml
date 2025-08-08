@@ -17,7 +17,7 @@ snd_dead = sndMutant11Dead
 snd_melee = sndDogGuardianMelee
 //behavior
 walk = 0
-gunangle = random(360)
+gunangle = 0;
 alarm[1] = 30;
 if instance_exists(Player) && Player.skill_got[29]
 {
@@ -34,4 +34,6 @@ mySound = noone;
 acc = 0.8;
 maxSpeed = 3.5;
 consecutiveShots = 0;
+lightingLength = 9;
 alarm[4] = 7;
+projectileType = HostileHorrorBullet;

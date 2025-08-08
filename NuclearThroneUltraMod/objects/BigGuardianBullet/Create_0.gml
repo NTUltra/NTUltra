@@ -11,6 +11,7 @@ image_speed = 0.4;
 image_angle = random(360);
 friction = 0;// 0.09;
 projectileToSpawn = GuardianBulletSpawn;
+projectileToSpawnSprite = sprGuardianBulletSpawn;
 hitSprite = sprGuardianBulletHit;
 alarm[0] = 4;
 alarm[5] = 5;//secret cheat

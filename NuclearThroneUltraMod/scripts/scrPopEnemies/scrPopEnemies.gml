@@ -9,7 +9,11 @@ function scrPopEnemies() {
 			//{
 				if Player.enemyAbyssIndex < array_length(Player.enemyAbyssCount) && Player.enemyAbyssCount[Player.enemyAbyssIndex] > 0
 				{
-					instance_create(x + 16, y + 16, Player.enemyTypeAbyss[Player.enemyAbyssIndex])
+					with instance_create(x + 16, y + 16, Player.enemyTypeAbyss[Player.enemyAbyssIndex])
+					{
+						my_health *= 0.75;
+						alarm[1] += 60;
+					}
 					Player.enemyAbyssCount[Player.enemyAbyssIndex] -= 1;
 					if Player.enemyAbyssCount[Player.enemyAbyssIndex] <= 0 && Player.enemyAbyssIndex < array_length(Player.enemyAbyssCount)
 					{

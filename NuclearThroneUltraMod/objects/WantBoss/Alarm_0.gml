@@ -74,7 +74,7 @@ if target != noone && instance_exists(target)
 			}
 			else if other.area=105 && other.subarea == 3
 			{
-				instance_create(x,y,Invertedss)
+				instance_create(x,y,InvertedBanditBoss)
 			}
 			else if other.area=105 || (other.oasis && instance_exists(BigFishSkull) && other.area == 100)
 			{

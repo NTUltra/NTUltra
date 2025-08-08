@@ -638,7 +638,7 @@ else
 	}
 	//MUTATIONS
 	scrSkills()//maybe dont run this when ultra
-	amountOfSkills = 4 + UberCont.mutation_crystals_collected_1 + UberCont.mutation_crystals_collected_2// + UberCont.mutation_crystals_collected_3;
+	amountOfSkills = 4 + UberCont.mutation_crystals_collected_1 + UberCont.mutation_crystals_collected_2 + UberCont.mutation_crystals_collected_3;
 	if (scrIsGamemode(27) || scrIsGamemode(26) || UberCont.isLeaderboardGamemode)
 		amountOfSkills = 6;
 	if scrIsCrown(8)

@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Viking",
-    "path":"folders/Sprites/Player/Custom/Viking.yy",
+    "name":"VikingD",
+    "path":"folders/Sprites/Player/Custom/Viking/VikingD.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

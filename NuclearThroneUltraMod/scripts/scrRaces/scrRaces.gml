@@ -1,5 +1,7 @@
 function scrRaces() {
 
+	racemax = 29
+	altSkinAmount = array_create(racemax + 1,0);
 	var isUnique = instance_exists(UberCont) && UberCont.opt_pickup != UberCont.opt_regal;
 	var regalBut = "E";
 	if instance_exists(UberCont)
@@ -90,6 +92,7 @@ function scrRaces() {
 	race_gskin[3] = 0
 	race_bskin_lock[3] = "REACH PIZZA SEWERS#AS EYES"
 	race_cskin_lock[3] = "LOOP WITH EAGLE EYES#AS EYES"
+	altSkinAmount[3] = 4;
 
 
 	race_name[4] = "MELTING"
@@ -130,6 +133,7 @@ function scrRaces() {
 	race_gskin[5] = 0
 	race_bskin_lock[5] = "REACH WONDERLAND#IN UNDER 8 MINUTES#AS PLANT"
 	race_cskin_lock[5] = "KILL 2.000#ENEMIES IN ONE RUN#AS PLANT"
+	altSkinAmount[5] = 1;
 
 
 	race_name[6] = "Y.V."
@@ -157,6 +161,7 @@ function scrRaces() {
 	race_gskin[6] = 0
 	race_bskin_lock[6] = "UNLOCK ALL#GOLDEN WEAPONS#FOR ONE CHARACTER"
 	race_cskin_lock[6] = "UNLOCK#A GOLDEN WEAPON#FOR ALL CHARACTERS"
+	altSkinAmount[6] = 2;
 
 
 	race_name[7] = "STEROIDS"
@@ -207,6 +212,7 @@ function scrRaces() {
 	race_gskin[8] = 0
 	race_bskin_lock[8] = "EAT A TIER 18+ OR HYPER WEAPON"
 	race_cskin_lock[8] = "EAT AN ULTRA WEAPON"
+	altSkinAmount[8] = 2;
 
 
 	race_name[9] = "CHICKEN"
@@ -232,6 +238,7 @@ function scrRaces() {
 	race_gskin[9] = 0
 	race_bskin_lock[9] = "REWIND 4 DAMAGE TAKEN#USING CHICKEN'S REGAL VISION"
 	race_cskin_lock[9] = "ACQUIRE#THE DARK SWORD#LOOP WITH#CHICKEN SWORD"
+	altSkinAmount[9] = 2;
 
 
 	race_name[10] = "REBEL"
@@ -257,7 +264,7 @@ function scrRaces() {
 	race_gskin[10] = 0
 	race_bskin_lock[10] = "COMPLETE A#MAIN AREA ON LOOP#WITHOUT FIRING#AS REBEL"
 	race_cskin_lock[10] = "REACH B?N??T L?N?#AS REBEL"
-
+	altSkinAmount[10] = 3;
 
 	race_name[11] = "HUNTER"
 	race_pass[11] = "HIGHER PROJECTILE <w>VELOCITY<w>#BETTER <w>ACCURACY<w>"
@@ -410,7 +417,7 @@ function scrRaces() {
 	race_gskin[16] = 0
 	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 5 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
-
+	altSkinAmount[16] = 1;
 
 	race_name[17] = "WEAPONSMITH"//WEAPON SMITH
 	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER <y>TIER<y> WEAPONS"
@@ -519,7 +526,8 @@ function scrRaces() {
 		race_vision[21] = string_replace_all(race_vision[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[21] = string_replace_all(race_vision_detail[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[21] = "GO GO GHOST BUSTING!"
+	//race_lock[21] = "GO GO GHOST BUSTING!"
+	race_lock[21] = "DEFEAT HOSTILE HORROR#IN THE RADIATION SLUDGE TRENCH"
 	race_have[21] = 0
 	race_swep[21] = 1
 	race_bskin[21] = 0
@@ -530,7 +538,7 @@ function scrRaces() {
 	race_gskin[21] = 0
 	race_bskin_lock[21] = "REACH THE PALACE#WITHOUT LEVELING UP#AS HORROR"
 	race_cskin_lock[21] = "COMPLETE A#MAIN AREA ON LOOP#USING ONLY THE BEAM"
-
+	altSkinAmount[21] = 2;
 
 	race_name[22] = "ROGUE"
 	race_pass[22] = "BLAST ARMOUR, <b>HEAT<b>"//"WALK FOREVER"
@@ -555,7 +563,7 @@ function scrRaces() {
 	race_gskin[22] = 0
 	race_bskin_lock[22] = "SURVIVE IN#THE GAMEMODE#VAN FAN#FOR ATLEAST#30 SECONDS#AS ROGUE"
 	race_cskin_lock[22] = "USE 8 PORTAL STRIKES#IN ONE AREA"
-
+	altSkinAmount[22] = 1;
 
 	race_name[23] = "FROG"
 	race_pass[23] = "IMMUNE TO <g>TOXIC<g>";
@@ -669,7 +677,8 @@ function scrRaces() {
 		race_vision[27] = string_replace_all(race_vision[27],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 		race_vision_detail[27] = string_replace_all(race_vision_detail[27],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
-	race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
+	//race_lock[27] = "KILL THE INVERTED THRONE TO UNLOCK"
+	race_lock[27] = "GO GO GHOST HUNTING!"
 	race_have[27] = 0
 	race_swep[27] = 443
 	race_bskin[27] = 0
@@ -681,8 +690,6 @@ function scrRaces() {
 	race_bskin_lock[27] = "SLAP#THE PURPLE DRAGON#TO DEATH#(KILL WITH ACTIVE)"
 	race_cskin_lock[27] = "SUCKERPUNCH#THREE IDPD VANS#INTO OBLIVION#IN A SINGLE RUN#(KILL WITH THRONE BUTT)"
 	
-	racemax = 27;
-
 		/*
 			THIEF
 			PASSIVE: WHEN OUT OF LINE OF SIGHT FROM ENEMIES#BECOME INVISIBLE#WHEN INVISIBLE YOU ARE IMMUNE
@@ -744,7 +751,6 @@ function scrRaces() {
 		race_fskin[29] = 0
 		race_gskin[29] = 0
 		race_bskin_lock[29] = "(NOT IMPLEMENTED)#REACH PALACE#WHILE BELOW LEVEL 6#AS NO THING"
-		race_cskin_lock[29] = "(NOT IMPLEMENTED)#COMPLETE A VOID CHALLENGE#AS NO THING"
+		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE#AS NO THING"
 		
-		racemax = 29
 }

@@ -8,4 +8,4 @@ with ThroneExplo
 	explo = PurpleExplosion;
 	sprite_index = sprInvertedNothingDeathLoop;
 }
-scrUnlockCharacter(27,"FOR KILLING THE INVERTED THRONE");
+//scrUnlockCharacter(27,"FOR KILLING THE INVERTED THRONE");

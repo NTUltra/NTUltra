@@ -1,9 +1,9 @@
 if instance_exists(Player)
-{if Player.area = 5 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
+{if Player.area == 5 and !instance_exists(GenCont) and !instance_exists(LevCont) and !instance_exists(FloorMaker)
 {
 //SNOW & ICE TEST
 if instance_nearest(x-16,y-16,Floor).styleb = 1
-friction = 0.05
+friction = 0.1
 else
 friction = 1.5
 }
@@ -21,6 +21,6 @@ sprite_index = spr_idle}
 if my_health <= 0
 instance_destroy()
 
-if speed > 4
-speed = 4
+if speed > 1
+speed = 1
 

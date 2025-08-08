@@ -8,7 +8,8 @@ scrDrop(50,0);
 scrDrop(100,0);
 scrBossKill();
 scrEndBossMusic();
-scrUnlockCharacter(21,"FOR KILLING THE PIT GHOST!");	
+//scrUnlockCharacter(21,"FOR KILLING THE PIT GHOST!");	
+scrUnlockCharacter(27,"FOR KILLING THE PIT GHOST!");	
 with enemy
 {
 	my_health = 0;	

@@ -109,6 +109,13 @@ else if !instance_exists(CrownGuardian)
 		alarm[5] = 4;
 		//instance_create(x,y,becomenemy);//CANT SPAWN A PORTAL NOW
 	}
+	with enemy
+	{
+		if object_index != 	CrownGuardian && object_index != Throne2
+			instance_destroy(id,false);
+	}
+	with becomenemy
+		instance_destroy(id,false);
 	with MovingCorpse
 	{
 		if alarm[0] > 1

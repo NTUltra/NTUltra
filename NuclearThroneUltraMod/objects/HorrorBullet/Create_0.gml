@@ -8,7 +8,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 3//0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 bskin=0;
-dmg = 4;
+dmg = 3;
 if instance_exists(Player)
 {
 	if Player.bskin == 1
@@ -20,6 +20,7 @@ if instance_exists(Player)
 		sprite_index = sprHorrorCBullet;
 	}
 }
+dmg += GetPlayerLoops();
 cost = 0.5;
 norecycle = choose(true,false);
 radcost = 0;

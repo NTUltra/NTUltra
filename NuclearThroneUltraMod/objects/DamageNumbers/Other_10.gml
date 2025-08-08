@@ -1,6 +1,6 @@
 /// @description Draw event
 speed = clamp(speed,1.5,6+size);
-if dmg > 9999 || dmg < 0
+if dmg > 999 || dmg < 0
 {
 	instance_destroy();
 	exit;

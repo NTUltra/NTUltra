@@ -124,7 +124,12 @@ function scrDrawHUD() {
 			if dataRef.race == 25
 				draw_sprite(sprHealthBarPeaceFullDoctor,dataRef.peaceBarriers,vx+hx,vy+4);
 			else
-				draw_sprite(sprHealthBarPeaceFull,dataRef.peaceBarriers,vx+hx,vy+4);
+			{
+				if dataRef.ultra_got[62] && dataRef.altUltra
+					draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
+				else
+					draw_sprite(sprHealthBarPeaceFull,dataRef.peaceBarriers,vx+hx,vy+4);
+			}
 		}
 		if dataRef.race == 9 || dataRef.copyPassive == 9// Chicken
 		{

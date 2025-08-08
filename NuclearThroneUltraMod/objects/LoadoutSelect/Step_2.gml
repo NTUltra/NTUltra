@@ -94,10 +94,10 @@ if (hasNoMenuOpen())
 			{
 				//Secret skins
 				while (
-					(!UberCont.race_dskin[race] && skin == 3) ||
-					(!UberCont.race_eskin[race] && skin == 4) ||
-					(!UberCont.race_fskin[race] && skin == 5) ||
-					(!UberCont.race_gskin[race] && skin == 6)
+					((!UberCont.race_dskin[race] && (!UberCont.race_bskin[race] || !UberCont.race_cskin[race] || UberCont.altSkinAmount[race] < 1)) && skin == 3) ||
+					((!UberCont.race_eskin[race] && (!UberCont.race_bskin[race] || !UberCont.race_cskin[race] || UberCont.altSkinAmount[race] < 2)) && skin == 4) ||
+					((!UberCont.race_fskin[race] && (!UberCont.race_bskin[race] || !UberCont.race_cskin[race] || UberCont.altSkinAmount[race] < 3)) && skin == 5) ||
+					((!UberCont.race_gskin[race] && (!UberCont.race_bskin[race] || !UberCont.race_cskin[race] || UberCont.altSkinAmount[race] < 4)) && skin == 6)
 				)
 				{
 					skin++

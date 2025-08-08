@@ -868,6 +868,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),EnergySlash)
 	{
+		dmg = 22;
 	longarms = 0
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.7+longarms)

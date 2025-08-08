@@ -5,9 +5,10 @@ damagers have a DAMAGE
 their collision can be NORMAL, PIERCING or PIERCING AT OVERKILL (piercing checks per frame)
 their type can be 0, DEFLECTABLE, DESTRUCTABLE or DEFLECTORS
 they have a FORCE and can be 0 or DIRECTIONAL */
-
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 image_yscale = 1.4//1.2
+damageTicks = 0;
+alarm[3] = 1;
 alarm[2] = 2;
 knockback = 5;
 laserhit=0;
@@ -25,7 +26,7 @@ if instance_exists(Player)
 }
 aimed=false;
 img = 0
-dmg = 2;
+dmg = 2;//over 6 ticks by default thus 10/12 damage
 isog = true;
 startImg = sprLaserStart;
 endImg = sprLaserEnd;
