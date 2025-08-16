@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.481814,
+  "duration":0.48181406,
   "name":"sndMeleeSpearHit1",
   "parent":{
     "name":"Melee",

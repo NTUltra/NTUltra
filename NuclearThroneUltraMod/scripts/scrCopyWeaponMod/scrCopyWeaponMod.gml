@@ -1,8 +1,8 @@
 ///scrCopyWeaponMod();
 // /@description
 ///@param
-function scrCopyWeaponMod(othr){
-	if instance_exists(Player) && othr.team == Player.team
+function scrCopyWeaponMod(othr, shouldMod = true){
+	if shouldMod && instance_exists(Player) && othr.team == Player.team
 	{
 		if !scrIsCrown(29)
 		{

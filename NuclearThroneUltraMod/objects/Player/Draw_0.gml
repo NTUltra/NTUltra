@@ -269,14 +269,16 @@ if (ultra_got[27]=1 && !altUltra)//copy primary
 	bwep=twep;//and return weapon
 }
 //DRAW DA GUNZ
-if scrIsDualWield(wep)
+if wepVisible
 {
-	//draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
-	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(-wepangle*(1-wkick/30))),yy+gunY+lengthdir_y(-wkick,aimDirection+(-wepangle*(1-wkick/30))),image_yscale,-wepright,aimDirection+(-wepangle*(1-wkick/30)),c_white,alpha)
-}
-if back = 1 and (!(IsShielding)||(ultra_got[7]==1)) && !instance_exists(PandaSleep){
-	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
-	
+	if scrIsDualWield(wep)
+	{
+		//draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
+		draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(-wepangle*(1-wkick/30))),yy+gunY+lengthdir_y(-wkick,aimDirection+(-wepangle*(1-wkick/30))),image_yscale,-wepright,aimDirection+(-wepangle*(1-wkick/30)),c_white,alpha)
+	}
+	if back = 1 and (!(IsShielding)||(ultra_got[7]==1)) && !instance_exists(PandaSleep){
+		draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+}	
 if wep = 63 || wep = 343//Blackhole/Dimension Generator
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
@@ -355,11 +357,14 @@ if triggerfinger>7
 triggerfinger=0;
 
 if back = -1 and !(IsShielding) && !instance_exists(PandaSleep){
-	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
-	if wep = 63 || wep = 343//Blackhole/Dimension Generator
+	if wepVisible
 	{
-		if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
-			draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+		draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+		if wep = 63 || wep = 343//Blackhole/Dimension Generator
+		{
+			if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
+				draw_sprite_ext(sprBlackHoleGeneration,wave,x+lengthdir_x(-wkick,aimDirection+(wepangle*(1-wkick/20))),yy+gunY+lengthdir_y(-wkick,aimDirection+(wepangle*(1-wkick/20))),image_yscale,wepright,aimDirection+(wepangle*(1-wkick/20)),c_white,alpha)
+			}
 		}
 	}
 }

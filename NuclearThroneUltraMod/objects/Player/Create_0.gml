@@ -788,6 +788,7 @@ cwkick = 0
 wepangle = 0;
 bwepangle = 0
 cwepangle = 0
+wepVisible = true;
 bwepflip = 1
 cwepflip = 1
 nochest = -1

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.443673,
+  "duration":0.44367346,
   "name":"sndCrossReload",
   "parent":{
     "name":"Weapons",

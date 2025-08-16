@@ -36,7 +36,7 @@ if candmg and other.team != team
 			target = other.id
 			with instance_create(x,y,boltStick)
 			{
-				scrCopyWeaponMod(other);
+				scrCopyWeaponMod(other, other.shouldMod);
 				image_angle = other.image_angle
 				target = other.target
 				team = other.team;

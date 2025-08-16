@@ -3990,5 +3990,74 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//KUNAI
+		case 916:
+
+		altFire += 1;
+		wepVisible = false;
+		var t = 0;
+		if !instance_exists(KunaiTracker)
+		{
+			instance_create(x,y,KunaiTracker);	
+		}
+		else
+		{
+			with KunaiTracker
+			{
+				tracker += 1;
+			}
+		}
+		with KunaiTracker
+			t = tracker;
+		if t == 2
+		{
+			wep_sprt[916] = sprKunaiCritWeapon;
+		}
+		else
+		{
+			wep_sprt[916] = sprKunaiWeapon;
+		}
+		if t == 3
+		{
+			snd_play_fire(choose(sndKunaiCrit1,sndKunaiCrit2));
+			with KunaiTracker
+				tracker = 0;
+			BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 8
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection+(random(4)-2)*other.accuracy,34)
+				image_angle = direction
+				dmg = round(dmg * 1.5);
+				sprite_index = sprKunaiCrit
+				boltStick = KunaiStickCrit;
+				sndHit1 = sndKunaiCritHit1;
+				sndHit2 = sndKunaiCritHit2;
+				team = other.team;
+				trailShrink = 0.15;
+				trailScale = 2.5;
+				trailColour = make_colour_rgb(200,200,200);
+			}
+			wkick = 10
+		}
+		else
+		{
+			snd_play_fire(choose(sndKunai1,sndKunai2));
+			wkick = 5
+			BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 4
+			with instance_create(x,y,Kunai)
+			{motion_add(aimDirection+(random(4)-2)*other.accuracy,26)
+			image_angle = direction
+			team = other.team}
+		}
+
+		
+		wepangle = -wepangle;
+
+		break;
+		
 	}
 }

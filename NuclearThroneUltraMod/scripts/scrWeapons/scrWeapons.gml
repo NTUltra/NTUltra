@@ -10279,6 +10279,18 @@ function scrWeapons() {
 	wep_swap[915] = sndSwapHammer
 	wep_rad[915] = 0;
 	wep_popup[915] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
+	
+	wep_name[916] = "KUNAI"
+	wep_type[916] = 4
+	wep_auto[916] = 1
+	wep_load[916] = 8
+	wep_cost[916] = 1
+	wep_sprt[916] = sprKunaiWeapon
+	wep_area[916] = 11
+	wep_text[916] = "suzu"
+	wep_swap[916] = sndSwapBow
+	wep_rad[916] = 0;
+	wep_popup[916] = "EVERY THIRD KUNAI DEALS#CRITICAL DAMAGE";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

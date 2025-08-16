@@ -251,7 +251,7 @@ function scrGenerateFloorMaker(limiter) {
 			}
 		}
 		limiter = scrMakeFloor(limiter);
-		if myFloors >= goal && fc < globalGoal
+		if myFloors >= goal && fc < globalGoal && instance_number(FloorMaker) < 2
 		{
 			//Create a branch because we have not reached the target yet
 			debug("DID NOT FINISH GENERATION");

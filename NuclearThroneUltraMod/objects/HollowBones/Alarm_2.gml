@@ -33,7 +33,7 @@ for (var i = 0; i < al; i++)
 					y += lengthdir_y(1,d);
 				walk = 0;
 				speed = 0;
-				if alarm[1] > 1 && alarm[1] < 10 && alarm[11] < 10
+				if alarm[1] > 1 && alarm[1] < 10 && alarm[11] < 1
 				{
 					alarm[1] += 1;
 					alarm[11] += 1;

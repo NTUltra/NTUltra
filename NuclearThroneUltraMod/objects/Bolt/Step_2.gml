@@ -5,7 +5,7 @@ if collision_line(xprev,yprev,x,y,Wall,false,false) || collision_point(x,y,Wall,
 if alarm[11] < 1
 {
 	scrBoltMarrow();
-	scrBoltTrail(trailColour,0.1,trailScale);
+	scrBoltTrail(trailColour,trailShrink,trailScale);
 }
 if speed<1&&alarm[2]<1
 {

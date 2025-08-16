@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.508345,
+  "duration":0.50834465,
   "name":"sndCrossbow",
   "parent":{
     "name":"Bolts",

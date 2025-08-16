@@ -1,7 +1,7 @@
 /// @description Wall Collision
 if speed != 0
 {
-	snd_play(sndBoltHitWall,0.1,true,true,1,false,true,0.76)
+	snd_play(sndWallHit,0.1,true,true,1,false,true,0.76)
 	speed = 0
 	canBeMoved = false;
 	var tries = 0

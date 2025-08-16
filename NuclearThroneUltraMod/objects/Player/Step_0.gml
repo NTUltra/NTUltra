@@ -1350,6 +1350,7 @@ if (!instance_exists(LevCont))
 		scr60fpsReload();
 		if reload <= 0 && can_shoot == 0
 		{
+			wepVisible = true;
 			autoFire = 6;
 			can_shoot = 1
 			if ultra_got[21] && altUltra
