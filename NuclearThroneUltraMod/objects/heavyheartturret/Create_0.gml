@@ -38,6 +38,7 @@ rad=0;
 
 accuracy = 1;
 altFire = true;
+wepVisible = true;
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;

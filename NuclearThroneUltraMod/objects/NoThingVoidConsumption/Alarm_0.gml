@@ -58,10 +58,15 @@ if gotThroneButt
 		with ammoPickups[| i]
 		{
 			targetedOne = true;
+			var isUpg = sprite_index == sprHPUpg;
 			BackCont.shake += 2;
 			ammoValue *= 0.5;
 			if regal
+			{
 				Player.voidBeam += 5;
+				if isUpg
+					Player.voidBeam += 2;
+			}
 			if isBeingVoided != 1
 			{
 				preSound = true;
@@ -69,8 +74,16 @@ if gotThroneButt
 				{
 					shake = 2;
 					sprite_index = other.sprite_index;
-					image_xscale += 0.125;
-					image_yscale += 0.125;
+					if isUpg
+					{
+						image_xscale += 0.25;
+						image_yscale += 0.25;
+					}
+					else
+					{
+						image_xscale += 0.125;
+						image_yscale += 0.125;
+					}
 					createdBy = me;
 					blockType = VoidBlockBig;
 				}
@@ -81,8 +94,16 @@ if gotThroneButt
 				BackCont.shake += 2;
 				with instance_create_depth(x,y,depth - 1,VoidBlockBig)
 				{
-					image_xscale += 0.125;
-					image_yscale += 0.125;
+					if isUpg
+					{
+						image_xscale += 0.25;
+						image_yscale += 0.25;
+					}
+					else
+					{
+						image_xscale += 0.125;
+						image_yscale += 0.125;
+					}
 					createdBy = me;
 				}
 			}
@@ -123,14 +144,24 @@ else
 				}
 				else
 				{
+					var isUpg = sprite_index == sprHPUpg;
 					if regal
+					{
 						Player.voidBeam += 5;
+						if isUpg
+							Player.voidBeam += 2;
+					}
 					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
 					{
 						shake = 2;
 						sprite_index = other.sprite_index;
 						createdBy = me;
 						blockType = VoidBlockBig;
+						if isUpg
+						{
+							image_xscale += 0.125;
+							image_yscale += 0.125;
+						}
 					}
 				}
 				instance_destroy();
@@ -149,12 +180,22 @@ else
 				}
 				else
 				{
+					var isUpg = sprite_index == sprHPUpg;
 					if regal
+					{
 						Player.voidBeam += 5;
+						if isUpg
+							Player.voidBeam += 2;
+					}
 					BackCont.shake += 2;
 					with instance_create_depth(x,y,depth - 1,VoidBlockBig)
 					{
 						createdBy = me;
+						if isUpg
+						{
+							image_xscale += 0.125;
+							image_yscale += 0.125;
+						}
 					}
 				}
 			}

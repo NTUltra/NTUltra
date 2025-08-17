@@ -5406,6 +5406,7 @@ function scrFire2(hasTailNow) {
 	//OBSIDIAN THROWING KNIFE
 	case 370:
 	snd_play_fire(sndEnemySlash);
+	wepVisible = false;
 	var yc = object_index != Player;
 	with instance_create(x,y,ThrowWepNoReturn)
 	{

@@ -54,6 +54,7 @@ wepmod2 = Player.wepmod2;
 wepmod3 = Player.wepmod3;
 wepmod4 = Player.wepmod4;
 altFire = true;
+wepVisible = true;
 isPermanent = false;
 isPermanentB = false;
 isPermanentC = false;

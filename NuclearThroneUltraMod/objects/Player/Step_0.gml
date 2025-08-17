@@ -975,74 +975,81 @@ if !instance_exists(LevCont) and visible = 1
 	(ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || (wep_type[wep] == 0)) and rad >= wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 	{
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
-		if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
+		if ((canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1))
 		{
-			if ultra_got[44] == 1 && instance_exists(Marker)
+			if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
 			{
-				scrCrackShotFire();
-			}
-			else
-			{
-				var shootIt = true;
-				if jump > 0
+				if ultra_got[44] == 1 && instance_exists(Marker)
 				{
-					y -= jumpY;
-					var msk = mask_index;
-					mask_index = mskPlayer;
-					if !place_meeting(x,y,Wall)
-					{
-						scrFire();
-					}
-					else
-					{
-						can_shoot = 0;	
-					}
-					y += jumpY;
-					mask_index = msk;
+					scrCrackShotFire();
 				}
 				else
 				{
-					scrFire();
-				}
-				with YungCuzDupe
-					event_user(0);
-			}
-			if reload > 0
-				can_shoot = 0;
-    		autoFire = 6;
-			clicked = 0;
-		}
-		else if (wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey && (canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1)
-		{
-			if ultra_got[44] == 1 && instance_exists(Marker)
-			{
-				scrCrackShotFire();
-			}
-			else
-			{
-				if jump > 0
-				{
-					y -= jumpY;
-					var msk = mask_index;
-					mask_index = mskPlayer;
-					if !place_meeting(x,y,Wall)
+					var shootIt = true;
+					if jump > 0
 					{
-						scrFire();
+						y -= jumpY;
+						var msk = mask_index;
+						mask_index = mskPlayer;
+						if !place_meeting(x,y,Wall)
+						{
+							scrFire();
+						}
+						else
+						{
+							can_shoot = 0;	
+						}
+						y += jumpY;
+						mask_index = msk;
 					}
-					/*
 					else
 					{
-						can_shoot = 0;	
-					}*/
-					y += jumpY;
-					mask_index = msk;
+						debug("FIRE WHILE 2 ", KeyCont.key_fire[p]);
+						scrFire();
+					}
+					KeyCont.key_fire[p] = 2;//IT IS NO LONGER A SINGLE CLICK
+					with YungCuzDupe
+						event_user(0);
+				}
+				//if reload > 0
+				if ((reload > 0 || canPuffyCheek > 0) && !canInfiniteFire)
+					can_shoot = 0;
+	    		autoFire = 6;
+				clicked = 0;
+			}
+			else if ((wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey)
+			{
+				if ultra_got[44] == 1 && instance_exists(Marker)
+				{
+					scrCrackShotFire();
 				}
 				else
 				{
-					scrFire();
+					if jump > 0
+					{
+						y -= jumpY;
+						var msk = mask_index;
+						mask_index = mskPlayer;
+						if !place_meeting(x,y,Wall)
+						{
+							scrFire();
+						}
+						/*
+						else
+						{
+							can_shoot = 0;	
+						}*/
+						y += jumpY;
+						mask_index = msk;
+					}
+					else
+					{
+						debug("FIRE WHILE 3 ", KeyCont.key_fire[p]);
+						scrFire();
+					}
+					with YungCuzDupe
+						event_user(0);
 				}
-				with YungCuzDupe
-					event_user(0);
 			}
 		}
 	}
@@ -1265,6 +1272,13 @@ else if gunGodImmune
 	gunGodImmune = false;	
 }
 if canPuffyCheek > 0 {
+	if (KeyCont.key_fire[p] == 2 || (race == 7 && KeyCont.key_spec[p] == 2))
+	{
+		if is60fps
+		canPuffyCheek -= 0.125;
+	else
+		canPuffyCheek -= 0.25;
+	}
 	if is60fps
 		canPuffyCheek -= 0.5;
 	else
@@ -1273,6 +1287,40 @@ if canPuffyCheek > 0 {
 else
 {
 	canPuffyCheek = 0;
+}
+if canPuffyCheekB > 0 {
+	if (KeyCont.key_fire[p] == 2 || (race == 7 && KeyCont.key_spec[p] == 2))
+	{
+		if is60fps
+		canPuffyCheekB -= 0.125;
+	else
+		canPuffyCheekB -= 0.25;
+	}
+	if is60fps
+		canPuffyCheekB -= 0.5;
+	else
+		canPuffyCheekB -= 1;
+}
+else
+{
+	canPuffyCheekB = 0;
+}
+if canPuffyCheekC > 0 {
+	if (KeyCont.key_fire[p] == 2 || (race == 7 && KeyCont.key_spec[p] == 2))
+	{
+		if is60fps
+		canPuffyCheekC -= 0.125;
+	else
+		canPuffyCheekC -= 0.25;
+	}
+	if is60fps
+		canPuffyCheekC -= 0.5;
+	else
+		canPuffyCheekC -= 1;
+}
+else
+{
+	canPuffyCheekC = 0;
 }
 //Can't reload while in loading shit, will automatically reload
 if (!instance_exists(LevCont))
@@ -1348,9 +1396,12 @@ if (!instance_exists(LevCont))
 		}
 	
 		scr60fpsReload();
+		if reload <= 1 && canPuffyCheek < 5
+			wepVisible = true;
+		
 		if reload <= 0 && can_shoot == 0
 		{
-			wepVisible = true;
+			
 			autoFire = 6;
 			can_shoot = 1
 			if ultra_got[21] && altUltra
@@ -1432,6 +1483,8 @@ if (!instance_exists(LevCont))
 			breload -= 0.9
 		}
 		scr60fpsReload();
+		if breload <= 1 && canPuffyCheek < 5
+			bwepVisible = true;
 		if breload <= 0 && bcan_shoot == 0
 		{
 			bcan_shoot = 1
@@ -1691,8 +1744,12 @@ if (!instance_exists(LevCont))
 		}
 	}
 	//Can we fire again? Two times in a frame? Or even more if you go negative reload
-	if !lockout && (!IsShielding || ultra_got[7]==1) && (canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1) && !instance_exists(StunLockout)
-	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
+	if (!lockout
+	&& (!IsShielding || ultra_got[7])
+	&& (canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1)
+	&& !instance_exists(StunLockout)
+	and (wep_auto[wep] = 1 || wep_auto[wep] == 3) 
+	and (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0))
 	{
 		while can_shoot == 1 and (flying == 0 || instance_exists(ThroneIISpiral)) and (ignoreAmmo || (ammo[wep_type[wep]] >= representingCost || (wep_type[wep] == 0)) and rad>=wep_rad[wep] || alarm[2]>0)//alarm = Fish Ultra B
 		{
@@ -1720,12 +1777,13 @@ if (!instance_exists(LevCont))
 				}
 				else
 				{
+					debug("FIRE WHILE 1 ", KeyCont.key_fire[p]);
 					scrFire();
 				}
 				with YungCuzDupe
 					event_user(0);
 			}
-			if reload > 0 && !canInfiniteFire
+			if ((reload > 0 || canPuffyCheek > 0) && !canInfiniteFire)
 				can_shoot = 0;
 		}
 	}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndTripleKunai2",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.3914966,
+  "name":"sndTripleKunai2",
+  "parent":{
+    "name":"Bolts",
+    "path":"folders/Sounds/Weapons/Bolts.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndTripleKunai2.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -3795,15 +3795,15 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//ICE SPEAR
+		//GLACIAL SPEAR
 		case 912:
 
 		snd_play_fire(sndMeleeSpear)
 		snd_play_fire(sndFrostDagger)
 		snd_play_fire(sndFrostCrossbow)
-		
+		wepVisible = false;
 		with instance_create(x,y,FreezeBolt)
-		{motion_add(aimDirection+(random(4)-2)*other.accuracy,22)
+		{motion_add(aimDirection+(random(4)-2)*other.accuracy,28)
 		image_angle = direction
 		team = other.team}
 		
@@ -3814,8 +3814,8 @@ function scrFire3(hasTailNow){
 			{
 				longarms = (Player.skill_got[13]+other.bettermelee)
 				image_yscale += 0.25 + other.bettermelee;
-				maxRange += 20+other.bettermelee;
-				minRange += 10+other.bettermelee;
+				maxRange += 20 + other.bettermelee;
+				minRange += 10 + other.bettermelee;
 			}
 			motion_add(aimDirection,1+longarms)
 			image_angle = direction
@@ -3831,7 +3831,7 @@ function scrFire3(hasTailNow){
 		BackCont.viewx2 += lengthdir_x(40,aimDirection)*UberCont.opt_shake
 		BackCont.viewy2 += lengthdir_y(40,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 10
-		wkick = -20
+		wkick = -28
 
 		break;
 		
@@ -4027,7 +4027,7 @@ function scrFire3(hasTailNow){
 			BackCont.shake += 8
 			with instance_create(x,y,Kunai)
 			{
-				motion_add(aimDirection+(random(4)-2)*other.accuracy,34)
+				motion_add(aimDirection+(random(6)-3)*other.accuracy,34)
 				image_angle = direction
 				dmg = round(dmg * 1.5);
 				sprite_index = sprKunaiCrit
@@ -4049,9 +4049,120 @@ function scrFire3(hasTailNow){
 			BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
 			BackCont.shake += 4
 			with instance_create(x,y,Kunai)
-			{motion_add(aimDirection+(random(4)-2)*other.accuracy,26)
+			{motion_add(aimDirection+(random(6)-3)*other.accuracy,26)
 			image_angle = direction
 			team = other.team}
+		}
+
+		
+		wepangle = -wepangle;
+
+		break;
+		
+		//TRIPLE KUNAI
+		case 917:
+
+		altFire += 1;
+		wepVisible = false;
+		var t = 0;
+		if !instance_exists(KunaiTracker)
+		{
+			instance_create(x,y,KunaiTracker);	
+		}
+		else
+		{
+			with KunaiTracker
+			{
+				tracker += 1;
+			}
+		}
+		with KunaiTracker
+			t = tracker;
+		if t == 2
+		{
+			wep_sprt[917] = sprTripleKunaiCritWeapon;
+		}
+		else
+		{
+			wep_sprt[917] = sprTripleKunaiWeapon;
+		}
+		if t == 3
+		{
+			snd_play_fire(choose(sndTripleKunaiCrit1,sndTripleKunaiCrit2));
+			with KunaiTracker
+				tracker = 0;
+			BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 8
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection+((random(6)-3)*other.accuracy),36)
+				image_angle = direction
+				dmg = round(dmg * 1.5);
+				sprite_index = sprKunaiCrit
+				boltStick = KunaiStickCrit;
+				sndHit1 = sndKunaiCritHit1;
+				sndHit2 = sndKunaiCritHit2;
+				team = other.team;
+				trailShrink = 0.15;
+				trailScale = 2.5;
+				trailColour = make_colour_rgb(200,200,200);
+			}
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection+((12+random(6)-3)*other.accuracy),36)
+				image_angle = direction
+				dmg = round(dmg * 1.5);
+				sprite_index = sprKunaiCrit
+				boltStick = KunaiStickCrit;
+				sndHit1 = sndKunaiCritHit1;
+				sndHit2 = sndKunaiCritHit2;
+				team = other.team;
+				trailShrink = 0.15;
+				trailScale = 2.5;
+				trailColour = make_colour_rgb(200,200,200);
+			}
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection-((12+random(6)-3)*other.accuracy),36)
+				image_angle = direction
+				dmg = round(dmg * 1.5);
+				sprite_index = sprKunaiCrit
+				boltStick = KunaiStickCrit;
+				sndHit1 = sndKunaiCritHit1;
+				sndHit2 = sndKunaiCritHit2;
+				team = other.team;
+				trailShrink = 0.15;
+				trailScale = 2.5;
+				trailColour = make_colour_rgb(200,200,200);
+			}
+			wkick = 10
+		}
+		else
+		{
+			snd_play_fire(choose(sndTripleKunai1,sndTripleKunai2));
+			wkick = 5
+			BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 4
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection+(random(6)-3)*other.accuracy,28)
+				image_angle = direction
+				team = other.team
+			}
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection+(12+(random(6)-3)*other.accuracy),28)
+				image_angle = direction
+				team = other.team
+			}
+			with instance_create(x,y,Kunai)
+			{
+				motion_add(aimDirection-(12+(random(6)-3)*other.accuracy),28)
+				image_angle = direction
+				team = other.team
+			}
 		}
 
 		

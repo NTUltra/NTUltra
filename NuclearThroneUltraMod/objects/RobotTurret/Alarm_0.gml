@@ -4,7 +4,7 @@ exit;}
 alarm[0]=reload
 
 scrFire();
-
+alarm[2] = 5;
 wepammo-=wepcost;
 
 if wepammo <= 0

@@ -31,6 +31,7 @@ else
 UberCont.mouse__x = mx;
 UberCont.mouse__y = my;
 scrFire();
+alarm[1] = 5;
 UberCont.mouse__x = currentMx;
 UberCont.mouse__y = currentMy;
 

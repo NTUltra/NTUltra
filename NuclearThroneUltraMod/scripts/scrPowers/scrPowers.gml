@@ -3783,6 +3783,7 @@ function scrPowers(raceOverwrite = -1) {
 		//STEROIDS
 		if race == 7 and bwep != 0 //and wep != 0
 		{
+			var keepBwepVisible = true;
 			if !ultra_got[27] || altUltra
 				scrSwapWeps()
 			else if !altUltra{
@@ -3805,20 +3806,23 @@ function scrPowers(raceOverwrite = -1) {
 				representingCost = 0;
 				ignoreAmmo = true;
 			}
-			if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0)
+			//var bPuff = canPuffyCheekB;
+			if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0) && (canPuffyCheek <= 0 || KeyCont.key_spec[p] = 1)
 			{
-				if wep_auto[wep] == 1 || wep_auto[wep] == 3 || KeyCont.key_spec[p] == 1
+				if (wep_auto[wep] == 1 || wep_auto[wep] == 3)
 					scrFire()
+					
+				keepBwepVisible = wepVisible;
 			}
 		    scrSwapWeps();
-		
 			if wep == 0 && bwep != 0
 				scrSwapWeps();
+			//canPuffyCheekB = bPuff;
 		    if ultra_got[27]=1 && !altUltra{//mirror hands
 				bwep=twep
 		    }
-    
-    
+			if !keepBwepVisible
+				bwepVisible = keepBwepVisible;
 		}
 
 		//MIND CONTROL

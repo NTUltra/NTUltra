@@ -150,7 +150,7 @@ function scrSwapWeps() {
 	prevcreload = creload;
 	}
 	clicked = 0
-
+	wepVisible = true;
 	if reload > 0
 		can_shoot = 0
 	else

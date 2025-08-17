@@ -91,6 +91,7 @@ friction = 0.45
 maxSpeed = 4;
 accuracy = 1;
 altFire = true;
+wepVisible = true;
 dodgeOffset = choose(10,-10);
 event_user(0);
 alarm[1] = 30;

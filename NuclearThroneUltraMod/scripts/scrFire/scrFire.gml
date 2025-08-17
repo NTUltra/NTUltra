@@ -73,9 +73,10 @@ function scrFire(canDrown = true) {
 			snd_play(snd_hurt);
 			exception = true;
 		}
-		if wep_load[wep] > 5 && reload < 0
+		debug("PUFFING:", canPuffyCheek);
+		if wep_load[wep] > 1 && reload < 0
 		{
-			canPuffyCheek = min(wep_load[wep],10);
+			canPuffyCheek = min(wep_load[wep],6);
 		}
 		if ultra_got[2] && alarm[2] > 0
 		{

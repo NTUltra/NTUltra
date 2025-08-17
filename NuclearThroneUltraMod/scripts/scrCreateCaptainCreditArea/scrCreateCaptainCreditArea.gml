@@ -5,6 +5,10 @@ function scrCreateCaptainCreditArea() {
 	//Main area
 	var actualArea = Player.area;
 	Player.area = 135;
+	with TopCont
+	{
+		darkness = 0;	
+	}
 	var ham = 6;
 	var vam = 10;
 	for (var fxx = -32 * (ham-1); fxx < 32 * ham; fxx += 32;)

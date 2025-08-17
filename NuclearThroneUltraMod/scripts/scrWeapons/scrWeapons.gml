@@ -6448,7 +6448,7 @@ function scrWeapons() {
 	wep_type[574] = 4
 	wep_auto[574] = 0
 	wep_load[574] = 43
-	wep_cost[574] = 8
+	wep_cost[574] = 7
 	wep_sprt[574] = sprLineEverything
 	wep_area[574] = 23
 	wep_text[574] = "don't get in the line of fire"
@@ -10286,11 +10286,23 @@ function scrWeapons() {
 	wep_load[916] = 8
 	wep_cost[916] = 1
 	wep_sprt[916] = sprKunaiWeapon
-	wep_area[916] = 11
+	wep_area[916] = 10
 	wep_text[916] = "suzu"
-	wep_swap[916] = sndSwapBow
+	wep_swap[916] = sndSwapSword
 	wep_rad[916] = 0;
 	wep_popup[916] = "EVERY THIRD KUNAI DEALS#CRITICAL DAMAGE";
+	
+	wep_name[917] = "TRIPLE KUNAI"
+	wep_type[917] = 4
+	wep_auto[917] = 1
+	wep_load[917] = 9
+	wep_cost[917] = 2
+	wep_sprt[917] = sprTripleKunaiWeapon
+	wep_area[917] = 19
+	wep_text[917] = "double suzu"
+	wep_swap[917] = sndSwapSword
+	wep_rad[917] = 0;
+	wep_popup[917] = "EVERY THIRD KUNAI DEALS#CRITICAL DAMAGE";
 
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

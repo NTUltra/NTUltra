@@ -20,3 +20,4 @@ if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_rou
 	instance_destroy(id,false);
 	exit;
 }
+alarm[1] = 30;

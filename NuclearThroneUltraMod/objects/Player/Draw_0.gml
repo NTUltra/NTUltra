@@ -131,9 +131,12 @@ bwepright = right
 
 if bwep != 0 and race != 7 && !instance_exists(PandaSleep)
 {
-	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,yy,image_yscale,bwepright,90+15*right,c_silver,alpha)
-	if scrIsDualWield(bwep) {
-		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2.25,yy,image_yscale,bwepright,90+20*right,c_silver,alpha)	
+	if bwepVisible
+	{
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,yy,image_yscale,bwepright,90+15*right,c_silver,alpha)
+		if scrIsDualWield(bwep) {
+			draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2.25,yy,image_yscale,bwepright,90+20*right,c_silver,alpha)	
+		}
 	}
 }
 
@@ -195,9 +198,12 @@ if (ultra_got[27]=1 && !altUltra)//copy primary
 {
 
 	//first draw secondary on back of roids
-	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
+	if bwepVisible
+	{
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*4,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
 
-	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+right,yy-2,image_xscale,-bwepright,90+right*30,c_white,alpha)
+	}
 
 	twep=bwep;//save secondary in third wepslot
 	bwep=wep;//secondary slot will now be your primary
@@ -249,10 +255,13 @@ if race == 7 and bwep != 0
 			draw_sprite_ext(sprLaserSightPlayer,-1,x,yy-4,point_distance(x,yy,lasx,lasy)/2+2,image_yscale,aimDirection,c_white,alpha)
 		}
 	}
-	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
-	if scrIsDualWield(bwep)
+	if bwepVisible
 	{
-		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),yy+gunY+lengthdir_y(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),image_yscale,bwepright,aimDirection+(-bwepangle*(1-bwkick/30)),c_white,alpha)
+		draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),yy+gunY-4+lengthdir_y(-bwkick,aimDirection+(bwepangle*(1-bwkick/20))),image_yscale,-bwepright,aimDirection+(bwepangle*(1-bwkick/20)),c_white,alpha)
+		if scrIsDualWield(bwep)
+		{
+			draw_sprite_ext(wep_sprt[bwep],triggerfinger,x+lengthdir_x(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),yy+gunY+lengthdir_y(-bwkick,aimDirection+(-bwepangle*(1-bwkick/30))),image_yscale,bwepright,aimDirection+(-bwepangle*(1-bwkick/30)),c_white,alpha)
+		}
 	}
 	if bwep = 63 || wep = 343//Blackhole/Dimension Generator
 	{

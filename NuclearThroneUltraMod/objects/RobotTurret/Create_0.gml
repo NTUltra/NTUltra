@@ -65,7 +65,7 @@ betterTail = 1.5;
 
 clicked = 0
 
-
+wepVisible = true;
 reload = 0//Player.reload
 breload = 0//Player.breload
 skill_got = [];

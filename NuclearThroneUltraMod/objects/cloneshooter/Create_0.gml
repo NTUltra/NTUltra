@@ -1,6 +1,10 @@
 mySize = 2;
 existTime = 0;
 altFire = false;
+canPuffyCheek = 0;
+canPuffyCheekB = 0;
+canPuffyCheekC = 0;
+wepVisible = true;
 depth = 1;
 myConfusion = noone;
 hurt_pitch_variation = 0;

@@ -2,7 +2,6 @@ if alarm[4]>0//boiling veins
 {
 instance_create(x+random(12)-6,y+random(12)-6,Smoke);
 }
-
 ///extra feet dodging bonus
 if skill_got[2] && !instance_exists(LevCont) && instance_exists(Player) && !Player.outOfCombat
 {
@@ -106,6 +105,8 @@ if hammerheadcounter > 0
 	
 	mask_index = msk;
 }
+if instance_exists(Player)
+	wepVisible = Player.wepVisible
 if UberCont.normalGameSpeed == 60
 	isWalking -= 0.5;
 else

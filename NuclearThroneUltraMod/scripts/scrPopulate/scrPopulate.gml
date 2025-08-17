@@ -729,7 +729,7 @@ function scrPopulate() {
 
     //PIZZA SEWER ENTRANCE
 
-    if Player.area = 2 {
+    if Player.area = 2 || Player.area == 110 {
         with Floor {
             if sprite_index = sprFloor2 and image_index = 1 or image_index = 5
 				instance_create(x, y, PizzaEntrance)

@@ -9,7 +9,7 @@ else
 bwepright = right
 
 if bwep != 0 and race != 7
-draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right,c_silver,1)
+	draw_sprite_ext(wep_sprt[bwep],triggerfinger,x-right*2,y,1,bwepright,90+15*right,c_silver,1)
 
 if scrEnableLaserSight()
 {
@@ -111,7 +111,7 @@ if alienIntestines > 0
 	}
 }
 
-if back = 1{
+if back = 1 && wepVisible{
 draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),y+lengthdir_y(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),1,wepright,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20)),c_white,1)
 
 if wep == 63
@@ -133,8 +133,8 @@ triggerfinger+=1;
 if triggerfinger>7 
 triggerfinger=0;
 
-if back = -1{
-draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),y+lengthdir_y(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),1,wepright,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20)),c_white,1)
+if back = -1 && wepVisible{
+	draw_sprite_ext(wep_sprt[wep],triggerfinger,x+lengthdir_x(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),y+lengthdir_y(-wkick,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20))),1,wepright,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(wepangle*(1-wkick/20)),c_white,1)
 if wep == 63
 {
 if can_shoot = 1 and ammo[wep_type[wep]] >= wep_cost[wep]{
