@@ -4,7 +4,7 @@
 function scrLegacyWeaponStart(){
 	//Check if old weaponstart data
 	var saveFileString;
-	saveFileString="ntultra"+string(version)+".sav";
+	saveFileString=game_save_id + "ntultra"+string(version)+".sav";
 	ini_open(saveFileString);
 	var isOld = false;
 	var racedir = 1;

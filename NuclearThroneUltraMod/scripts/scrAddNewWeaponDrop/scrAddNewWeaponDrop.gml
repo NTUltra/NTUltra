@@ -32,7 +32,7 @@ function scrAddNewWeaponDrop(newWep, alsoFound = false){
 				}
 				any_wep_found[newWep] = true;
 				var saveFileString;
-				saveFileString="ntultra"+string(currentSave)+".sav";
+				saveFileString=game_save_id + "ntultra"+string(currentSave)+".sav";
 				ini_open(saveFileString);
 					ini_write_real("STATS","wep_found"+string(raceType)+"-"+string(newWep),1);
 					ini_write_real("STATS","any_wep_found"+string(newWep),1);

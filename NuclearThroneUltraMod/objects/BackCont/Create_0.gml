@@ -39,6 +39,10 @@ if scrIsHardMode()//HARD MODE
 	loops ++;
 canSpawnPopoThisManyTimes = 2 + loops;
 canSpawnPopoThisManyTimes = min(canSpawnPopoThisManyTimes,7);
+if instance_exists(Player)
+{
+	canSpawnPopoThisManyTimes += array_length(Player.crown);	
+}
 spawnedThisManyPopo = 0;
 
 wantVanAmount = 0;

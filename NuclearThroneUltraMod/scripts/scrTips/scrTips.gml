@@ -28,6 +28,7 @@ function scrTips() {
 	{
 	//RANDOM
 	tip = choose(
+	"more idpd spawn the more crowns you have",
 	"you can turn off flashy effects by turning down screenshake and artificial lag to 0",
 	"picking up a weapon reloads your weapons",
 	"always move",
@@ -123,6 +124,7 @@ function scrTips() {
 	"when looping the game wants you dead",
 	/*these are rare*/ choose(
 	"don't get angry just blame the game",
+	"it's oke to put milk before cereal",
 	"don't get mad just blame the dev, but he will tell you: 'skill issue'",
 	"even at 50% loading speed this tip is probably a little too long to read, oh well thats too bad. You didn't miss much though there is nothing here really. Maybe there is a secret though at the end of this loong very long tip. No there really isn't",
 	"no","bob and weave","airhorn.wav","danger zone","no sex jokes","in and about",

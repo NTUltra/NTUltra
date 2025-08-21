@@ -1,4 +1,5 @@
 /// @description Collect
+event_inherited();
 if instance_exists(Player)
 {
 	if isBeingVoided != 1

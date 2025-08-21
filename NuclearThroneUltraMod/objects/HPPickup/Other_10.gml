@@ -1,4 +1,5 @@
 /// @description COLLECT HP
+collected = true;
 if !instance_exists(Player)
 	exit;
 rerolls = 0;

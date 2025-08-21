@@ -1,6 +1,6 @@
 function scrSaveBackup() {
 	var saveFileString;
-	saveFileString="ntultra"+string(version)+"backup.sav";
+	saveFileString=game_save_id +"ntultra"+string(version)+"backup.sav";
 	ini_open(saveFileString);
 
 	scrSaveStats();

@@ -100,7 +100,7 @@ if mode = 0
 		if justUnlockedSecondRow
 		{
 			with CharSelect {
-				if (num >= halfWay && num != 15) || num == 13 
+				if (num >= halfWay && num != 15 && num != 28) || num == 13 
 				{
 					// visible = false;
 					yOffset = -15;

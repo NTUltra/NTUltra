@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.217031,
+  "duration":0.22399093,
   "name":"sndRadMod",
   "parent":{
     "name":"Horror",

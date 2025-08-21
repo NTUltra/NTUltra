@@ -2,7 +2,8 @@
 // /@description
 ///@param
 function scrLoadInRetailSave(){
-	ini_open("tempy.sav");
+	ini_open(game_save_id +"tempy.sav");
+	
 	ini_write_real("tempy","temp",0);
 	ini_close();
 	var filePath = filename_dir("tempy.sav");

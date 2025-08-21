@@ -8,7 +8,7 @@ if instance_exists(Player) && (!cursed) {
 	var sped = 1;
 	if Player.skill_got[3]
 	{
-		extraRange += 26;
+		extraRange += 20//26;
 		sped = 2;
 	}
 	var levelEnded = false;

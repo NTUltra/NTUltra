@@ -171,7 +171,6 @@ if !instance_exists(LevCont) and visible = 1
 		}
 		if jump <= 0 && race != 18
 		{
-			debug("JUMPING RESET");
 			didJumpRoll = false;
 			if !skill_got[5] || !(KeyCont.key_spec[p] = 1 or KeyCont.key_spec[p] = 2)
 			{
@@ -182,7 +181,6 @@ if !instance_exists(LevCont) and visible = 1
 					var n = instance_nearest(x,y,Floor);
 					if n != noone
 					{
-						debug("NANNI!");
 						var o = 16;
 						if n.object_index == FloorExplo
 							o = 8;
@@ -536,6 +534,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
+			instance_create(x,y,PlutoAttack);
 			peaceBarriers += 1;
 			getVision = true;
 			// newMovement = !newMovement;
@@ -554,7 +553,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			with enemy
 			{
-				my_health = 0;
+				//my_health = 0;
 			}
 			//instance_create(x + 64,y,BigJellyFish);
 			/*
@@ -1004,7 +1003,6 @@ if !instance_exists(LevCont) and visible = 1
 					}
 					else
 					{
-						debug("FIRE WHILE 2 ", KeyCont.key_fire[p]);
 						scrFire();
 					}
 					KeyCont.key_fire[p] = 2;//IT IS NO LONGER A SINGLE CLICK
@@ -1044,7 +1042,6 @@ if !instance_exists(LevCont) and visible = 1
 					}
 					else
 					{
-						debug("FIRE WHILE 3 ", KeyCont.key_fire[p]);
 						scrFire();
 					}
 					with YungCuzDupe
@@ -1777,7 +1774,6 @@ if (!instance_exists(LevCont))
 				}
 				else
 				{
-					debug("FIRE WHILE 1 ", KeyCont.key_fire[p]);
 					scrFire();
 				}
 				with YungCuzDupe
@@ -2036,8 +2032,8 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 							}
 							ang += angStep;
 						}
-						DealDamage(1,false,false,false);
-						hitBy = sprRadiationPool;
+						//DealDamage(1,false,false,false);
+						//hitBy = sprRadiationPool;
 						radFloor=0;//allright you've burned now continue
 						//GAMEMODE UNLOCKABLE WALL IS LAVA
 						scrApplyEnemyVenom(0,id);
@@ -2100,8 +2096,8 @@ if (!outOfCombat && !instance_exists(LevCont) && !instance_exists(FloorMaker) &&
 							}
 							ang += angStep;
 						}
-						DealDamage(1,false,false,false);
-						hitBy = sprInvertedRadiationPool;
+						//DealDamage(1,false,false,false);
+						//hitBy = sprInvertedRadiationPool;
 						purpleRadFloor=0;//allright you've burned now continue
 						//GAMEMODE UNLOCKABLE WALL IS LAVA
 						scrApplyEnemyVenom(0,id);

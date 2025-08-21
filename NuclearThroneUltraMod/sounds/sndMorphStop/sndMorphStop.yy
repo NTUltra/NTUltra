@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.721438,
+  "duration":0.0,
   "name":"sndMorphStop",
   "parent":{
     "name":"Energy",

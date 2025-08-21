@@ -9,7 +9,7 @@ if instance_exists(UnlockingSecondRow)
 		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;
 		draw_rectangle(camera_get_view_x(view_camera[0]),min(center,yyy),x,max(center,yyy+24),false);	
 	}
-	if num == 15 || num == 26 || num == 28
+	if num == 29 || num == 28
 	{
 		//Top row
 		var center = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-30;

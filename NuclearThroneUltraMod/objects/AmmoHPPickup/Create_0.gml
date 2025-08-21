@@ -79,6 +79,7 @@ if instance_exists(Player){
 image_speed = 0
 
 event_inherited();
+damageBoost += 2;
 
 supercursed = false;
 as = 6;

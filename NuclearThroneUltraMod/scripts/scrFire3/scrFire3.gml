@@ -4170,5 +4170,55 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//SMART-O-MORPH-O-TRON
+		case 918:
+
+		snd_play_fire(sndSmartgun)
+		var tar = noone;
+		if instance_exists(enemy)
+		{
+			var home = 48 
+			if accuracy > 0
+				home /= accuracy;
+			tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+			if ((tar.team != 0  && tar.team != team && tar.my_health > 0)
+			&& tar.team != team && (accuracy <= 0 || point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) < home)
+			&& !collision_line(x,y,tar.x,tar.y,Wall,false,false))
+			{
+				
+			}
+			else
+			{
+				tar = noone;	
+			}
+		}
+		if tar != noone
+		{
+			with instance_create(x,y,SmartOMorph)
+			{
+				myTarget = tar;
+				targetX = myTarget.x;
+				targetY = myTarget.y;
+				event_user(1);
+			}
+		}
+		else
+		{
+			var hit = collision_line_point(x,y,UberCont.mouse__x,UberCont.mouse__y,Wall,false,false);
+			with instance_create(x,y,SmartOMorph)
+			{
+				targetX = hit[1];
+				targetY = hit[2];
+				followMouse = true;
+				event_user(1);
+			}
+		}
+		BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
+
+		break;
+		
 	}
 }

@@ -1,7 +1,6 @@
 function scrLoad() {
 	var saveFileString;
-	saveFileString = "ntultrapreferences.sav";
-	debug("LOAD");
+	saveFileString = game_save_id + "ntultrapreferences.sav";
 	if file_exists(saveFileString)
 	{
 		ini_open(saveFileString);
@@ -11,7 +10,7 @@ function scrLoad() {
 	else
 	{
 		//Backwards compatability
-		saveFileString = "ntultra"+string(version)+".sav";
+		saveFileString = game_save_id + "ntultra"+string(version)+".sav";
 		if (!file_exists(saveFileString))
 		{
 			instance_create(x,y,CanLoadRetailSave);
@@ -21,7 +20,7 @@ function scrLoad() {
 		scrLoadOptions();
 		ini_close();
 	}
-	saveFileString="ntultra"+string(currentSave)+".sav";
+	saveFileString=game_save_id + "ntultra"+string(currentSave)+".sav";
 	if (!instance_exists(CanLoadRetailSave) && !file_exists(saveFileString))
 	{
 		instance_create(x,y,CanLoadRetailSave);

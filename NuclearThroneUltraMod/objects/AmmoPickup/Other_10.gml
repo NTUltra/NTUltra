@@ -1,4 +1,5 @@
 /// @description Collect AMMO
+event_inherited();
 if !instance_exists(Player)
 	exit;
 	

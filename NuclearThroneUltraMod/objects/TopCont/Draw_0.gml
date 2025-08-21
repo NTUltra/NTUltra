@@ -65,6 +65,10 @@ draw_self();
 	{
 		event_perform(ev_draw,0);	
 	}
+	with SmartOMorph
+	{
+		event_perform(ev_draw,0);	
+	}
 	with VoidBlockProjectile
 	{
 		draw_self();

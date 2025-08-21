@@ -1,4 +1,5 @@
 /// @description Collect
+collected = true;
 if instance_exists(Player)
 {
 	if isBeingVoided != 1

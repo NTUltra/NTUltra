@@ -12,6 +12,7 @@ if instance_exists(Player)
 		sprite_index = sprHPUpg;
 		mask_index = mskWepPickup;
 		additionalRange += 7;
+		damageBoost += 1;
 	}
 	if Player.race == 25 && Player.skill_got[3]//DOCTOR
 		mask_index = mskBigWepPickup;

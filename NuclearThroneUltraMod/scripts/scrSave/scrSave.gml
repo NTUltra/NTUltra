@@ -1,6 +1,8 @@
 function scrSave(saveSlot = currentSave) {
 	var saveFileString;
-	saveFileString="ntultra"+string(saveSlot)+".sav";
+	
+	saveFileString=game_save_id + "ntultra"+string(saveSlot)+".sav";
+	debug(game_save_id);
 	if file_exists(saveFileString)
 	{
 		ini_open(saveFileString);

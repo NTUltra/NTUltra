@@ -1,4 +1,5 @@
 /// @description CollectAmmo
+collected = true;
 if instance_exists(Player)
 {
 

@@ -1,9 +1,12 @@
 /// @description Init
+damageBoost = 0;
+collected = false;
 alarm[11] = 5;
 xprev = x;
 yprev = y;
 depth = -2;
 hasPluto = false;
+plutoDmgAdd = 0;
 suckDirection = 0;
 suckOffset = 0;
 col = make_colour_rgb(190,255,8);
@@ -19,6 +22,7 @@ if instance_exists(Player)
 		if Player.race == 25//DOCTOR
 		{
 			mask_index = mskBigWepPickup;
+			damageBoost += 1;
 		}
 	}
 	if Player.loops > 1

@@ -8,6 +8,8 @@ if rerolls > 1
 {
 	instance_create(x,y,Rad);
 }
+else
+	event_inherited();
 if alarm[4] > 0
 {
 	var n = instance_nearest(x,y,enemy);
