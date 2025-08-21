@@ -157,7 +157,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	}
 	else if scrIsCrown(32)//Crown of Misfortune
 	{
-		itemdrop *= 0.37;
+		itemdrop *= 0.35;
 	}
 	if Player.ultra_got[30] && !Player.altUltra {//Robot regurgitate
 		weapondrop *= 1.15;
@@ -265,6 +265,11 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	{
 		need *= 0.75;
 		canHealth *= 0.5;
+	}
+	if scrIsCrown(32)//Crown of Misfortune
+	{
+		need *= 0.75;
+		canHealth *= 0.75;
 	}
 	if (Player.ultra_got[1])//FISH ULTRA A Confiscate
 	{

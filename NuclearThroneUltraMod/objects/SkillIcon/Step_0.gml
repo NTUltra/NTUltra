@@ -143,13 +143,12 @@ if selected && visible
 		}
 		else if skill = 4 && Player.race == 25//rabitpaw
 		{
-			Player.betterrabbitpaw += 0.07;
+			Player.betterrabbitpaw = 0.08;
 		}
 		else if skill = 5 && Player.race=2
 		{
-		//Unlock atom
-		scrUnlockCharacter(15,"FOR TAKING THRONE BUTT AS CRYSTAL");
-
+			//Unlock atom
+			scrUnlockCharacter(15,"FOR TAKING THRONE BUTT AS CRYSTAL");
 		}
 		/*else if skill == 9
 		{

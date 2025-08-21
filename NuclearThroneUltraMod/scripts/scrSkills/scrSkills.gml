@@ -97,10 +97,10 @@ function scrSkills() {
 	if !UberCont.useSeed && random(500)<1
 		skill_name[4] = "LUCKY FOOT"
 	skill_text[4] = "HIGHER <w>DROP RATE<w>"
-	skill_detail[4] = "35% MORE <y>AMMO<y> AND <r>HEALTH<r> DROPS#5% MORE <w>WEAPONDROPS<w>"
+	skill_detail[4] = "35% MORE <y>AMMO<y> AND <r>HEALTH<r> DROPS#7% MORE <w>WEAPON DROPS<w>"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
-	skill_bons[4] = "+25% DROP RATE";
+	skill_bons[4] = "44% PICKUP DROP RATE#9% WEAPON DROP RATE";
 
 	skill_name[5] = "THRONE BUTT"
 	skill_text[5] = "UPGRADES YOUR SPECIAL ABILITY"
@@ -462,11 +462,11 @@ function scrSkills() {
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
 	
 	skill_name[32] = "ALKALINE SALIVA"
-	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>1<w>";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>2<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>1<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
+	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>2<w>";
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>3<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>1<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
-	skill_bons[32] = "+1 HP HEALING#LONGER IMMUNITY";
+	skill_bons[32] = "+1 HP HEALING#CAN OVERHEAL 3";
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess

@@ -165,7 +165,7 @@ function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true
 				rage = 0;
 			accuracy = standartAccuracy;
 		break;
-		case 31: //TOUGH SHELL
+		/*case 31: //TOUGH SHELL
 			if ultra_got[62] && altUltra//Living armour
 			{
 				maxarmour = max(0, maxarmour - 1)
@@ -182,7 +182,7 @@ function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true
 					prevhealth = my_health;
 				}
 			}
-		break;
+		break;*/
 		case 33: //GLASS ARM CANNON
 			
 			if ultra_got[62] && altUltra

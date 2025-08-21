@@ -733,13 +733,15 @@ if (tookHit)
 					}
 				}*/
 				var healTaken = 0;
-				if prevhealth < maxhealth + 1 + defaultOverhealAddition
+				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
+				if race == 25
+					overHealAllow += 1;
+				if prevhealth < overHealAllow
 				{
-					healTaken = 2;
+					healTaken = 3;
 					if race == 25//Doctor buff
 					{
 						healTaken += 1
-						alarm[3] = max(alarm[3],30);
 					}
 					with instance_create(x,y,HealFX)
 					{
@@ -778,7 +780,7 @@ if (tookHit)
 				}
 				Sleep(50);
 				scrGiveEuphoriaShield();
-				alarm[3] += 20;
+				alarm[3] += 30;
 			}
 		}
 		else if ultra_got[48] && lag > 0
