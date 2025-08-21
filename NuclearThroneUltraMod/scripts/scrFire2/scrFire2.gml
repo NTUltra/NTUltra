@@ -7471,7 +7471,7 @@ function scrFire2(hasTailNow) {
 		snd_play_fire(sndSuperSlugger)
 		var aimDir = aimDirection+(random(12)-6)*accuracy
 		var s = 16
-		var am = 4;//am*am = 16
+		var am = 3;//am*am = 9
 		var offsetStep = 8*accuracy;
 		var offset = offsetStep*am*0.5;
 		var xx = x+lengthdir_x(offset,aimDir-90)+lengthdir_x(offset,aimDir+180);

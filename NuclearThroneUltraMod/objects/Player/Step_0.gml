@@ -2879,12 +2879,12 @@ if hammerheadcounter > 0
 				if race=25
 				{
 					hammerheadDig = 49;
-					alarm[3] = max(alarm[3],51);
+					alarm[3] = max(alarm[3],44);
 				}
 				else
 				{
 					hammerheadDig = 40;
-					alarm[3] = max(alarm[3],41);
+					alarm[3] = max(alarm[3],31);
 				}
 				var debrisAmount = 2;
 				var debrisMultiply = 1.5;

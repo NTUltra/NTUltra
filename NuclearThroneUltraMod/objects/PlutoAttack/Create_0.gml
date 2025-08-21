@@ -2,6 +2,8 @@
 // Inherit the parent event
 event_inherited();
 dmg = 2 + GetPlayerLoops();
+if Player.race == 25
+	dmg += 1;
 dmgBoost = 0;
 lerpTime = 0;
 lerpIncrease = 0.15;

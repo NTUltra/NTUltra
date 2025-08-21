@@ -134,11 +134,11 @@ if selected && visible
 		{
 			if Player.race == 25//Plutonium hunger
 			{
-				Player.betterpluto = 76//100;//108
+				Player.betterpluto = 74//100;//108
 			}
 			else
 			{
-				Player.betterpluto = 68//82//90//98;
+				Player.betterpluto = 64//68//82//90//98;
 			}
 		}
 		else if skill = 4 && Player.race == 25//rabitpaw

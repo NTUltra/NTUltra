@@ -733,7 +733,7 @@ if (tookHit)
 					}
 				}*/
 				var healTaken = 0;
-				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
+				var overHealAllow = maxhealth + 1 + defaultOverhealAddition
 				if race == 25
 					overHealAllow += 1;
 				if prevhealth < overHealAllow
