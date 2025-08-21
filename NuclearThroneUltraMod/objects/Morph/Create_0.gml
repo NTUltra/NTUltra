@@ -1,11 +1,11 @@
 event_inherited();
-image_speed = 0.8;
+image_speed = 0.4;
 
 BackCont.shake += 1
 typ = 0;
 team = 2
 dmg = 1;
-alarm[0] = 8;
+alarm[0] = 7;
 if UberCont.ultramodSwap
 {
 	var um = GetPlayerUltramod()
@@ -18,15 +18,14 @@ if UberCont.ultramodSwap
 }
 if visible
 {
-	repeat(2)
-		with(instance_create(x,y,Smoke)){
+	with(instance_create(x,y,Smoke)){
 		image_blend = make_color_rgb(244,145,255);
 	}
 	repeat(2)
 	{
 		with instance_create(x,y,ImpactFX)
 		{
-			motion_add(random(360),1);
+			motion_add(random(360),2);
 			sprite_index = sprMorphFX;
 		}
 	}

@@ -14,7 +14,7 @@ motion_add(direction,0.8)
 }
 
 if speed > maxSpeed
-speed = maxSpeed
+	speed = maxSpeed
 
 if corpseTarget != noone && instance_exists(corpseTarget) && alarm[2] < 1
 {

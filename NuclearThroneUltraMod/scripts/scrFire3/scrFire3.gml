@@ -3804,7 +3804,7 @@ function scrFire3(hasTailNow){
 		wepVisible = false;
 		with instance_create(x,y,FreezeBolt)
 		{motion_add(aimDirection+(random(4)-2)*other.accuracy,28)
-		image_angle = direction
+		image_angle = direction 
 		team = other.team}
 		
 		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),FrostSpearShank)
@@ -4170,10 +4170,14 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//SMART-O-MORPH-O-TRON
+		//MORPH-O-TRON
 		case 918:
+		
+		if skill_got[17]
+				snd_play_fire(sndSmartOMorphOTronUpg)
+		else
+			snd_play_fire(sndSmartOMorphOTron)
 
-		snd_play_fire(sndSmartgun)
 		var tar = noone;
 		if instance_exists(enemy)
 		{
@@ -4194,29 +4198,37 @@ function scrFire3(hasTailNow){
 		}
 		if tar != noone
 		{
-			with instance_create(x,y,SmartOMorph)
+			with instance_create(x + lengthdir_x(10,aimDirection),y + lengthdir_y(10,aimDirection),SmartOMorph)
 			{
 				myTarget = tar;
 				targetX = myTarget.x;
 				targetY = myTarget.y;
+				direction = aimDirection;
+				speed = 2;
 				event_user(1);
 			}
 		}
 		else
 		{
 			var hit = collision_line_point(x,y,UberCont.mouse__x,UberCont.mouse__y,Wall,false,false);
-			with instance_create(x,y,SmartOMorph)
+			with instance_create(x + lengthdir_x(10,aimDirection),y + lengthdir_y(10,aimDirection),SmartOMorph)
 			{
 				targetX = hit[1];
 				targetY = hit[2];
 				followMouse = true;
+				direction = aimDirection;
+				speed = 2;
 				event_user(1);
 			}
 		}
-		BackCont.viewx2 += lengthdir_x(7,aimDirection+180)*UberCont.opt_shake
-		BackCont.viewy2 += lengthdir_y(7,aimDirection+180)*UberCont.opt_shake
-		BackCont.shake += 4
-		wkick = 4
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5;
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,1);
+		}
+		wkick = 5
 
 		break;
 		

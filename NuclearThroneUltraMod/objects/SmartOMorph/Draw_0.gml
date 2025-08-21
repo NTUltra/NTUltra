@@ -18,9 +18,9 @@ if UberCont.normalGameSpeed == 60
 lerpTime += lerpIncrease * dt;
 lerpTime = min(1,lerpTime);
 var ls = round(lerpStart * 10)*0.1;
-var tx1 = lerp(xstart,offsetX,ls);
+var tx1 = lerp(x,offsetX,ls);
 var tx2 = lerp(offsetX,targetX,ls);
-var ty1 = lerp(ystart,offsetY,ls);
+var ty1 = lerp(y,offsetY,ls);
 var ty2 = lerp(offsetY,targetY,ls);
 var xx = lerp(tx1,tx2,ls);
 var yy = lerp(ty1,ty2,ls);
@@ -31,6 +31,7 @@ var polygonWidth = widthScale;
 var col = colour
 var h = hue;
 draw_set_colour(col);
+draw_circle(xx,yy, max(1,polygonWidth - lerpStart), false);
 for (var t = ls; t <= lerpTime; t += curveDetail)
 {
 	
@@ -46,9 +47,9 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	polygonWidth = widthScale * wt;
 	xPrev = xx;
 	yPrev = yy;
-	tx1 = lerp(xstart,offsetX,t);
+	tx1 = lerp(x,offsetX,t);
 	tx2 = lerp(offsetX,targetX,t);
-	ty1 = lerp(ystart,offsetY,t);
+	ty1 = lerp(y,offsetY,t);
 	ty2 = lerp(offsetY,targetY,t);
 	xx = lerp(tx1,tx2,t);
 	yy = lerp(ty1,ty2,t);

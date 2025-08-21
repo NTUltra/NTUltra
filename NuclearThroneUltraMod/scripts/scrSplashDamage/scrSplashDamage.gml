@@ -32,7 +32,7 @@ function scrSplashDamage(dmg, range, canBoost = true){
 				sprite_index = spr_hurt
 				image_index = 0
 				motion_add(other.direction,2.5)
-				scrForcePosition60fps();
+				//scrForcePosition60fps();
 				if speed > maxSpeed+1
 					speed = maxSpeed+1;
 				snd_play(snd_hurt, hurt_pitch_variation,true)

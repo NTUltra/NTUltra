@@ -4,22 +4,32 @@ if !dealtDamage
 	var db = dmgBoost
 	with instance_create(targetX,targetY,AnimDestroyBloom)
 	{
-		if db == 0
-			sprite_index = sprPlutoHitSmall;
+		if other.energyBrained
+			sprite_index = sprSmartOMorphHitUpg;
 		else
-			sprite_index = sprPlutoHit;
-		image_angle = other.direction;
-		if db > 2
-		{
-			image_xscale += db*0.125;
-			image_yscale = image_xscale;
-		}
+			sprite_index = sprSmartOMorphHit;
+		image_angle = random(360);
+		direction = other.homeDirection;
+		speed = 0.5;	
 	}
 	with instance_create(targetX,targetY,Morph)
 	{
-		snd_play(sndMorphStop,0.1);
+		direction = other.homeDirection;
+		speed = 0.5;	
+		if other.energyBrained
+			snd_play(sndMorphStart,0.1,true,true);
+		else
+			snd_play(sndMorphStop,0.1,true,true);
 	}
-	BackCont.shake += 1;
+	BackCont.shake += 2;
+	var xx = x;
+	var yy = y;
+	x = targetX;
+	y = targetY;
+	scrSplashDamage(dmg + dmgBoost, range, false);
+	x = xx;
+	y = yy;
+	/*
 	with myTarget
 	{
 		if team != 2
@@ -31,5 +41,6 @@ if !dealtDamage
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		}
 	}
+	*/
 	dealtDamage = true;
 }

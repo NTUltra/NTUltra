@@ -8,6 +8,7 @@ scrWeapons();
 roll = 0;
 hurt_pitch_variation = 0.1;
 
+isInvisible = false;
 raddrop=28;
 alarm[1] = 5;
 snd_hurt = sndHitMetal

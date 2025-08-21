@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sndSmartOMorphOTron",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.16893424,
+  "name":"sndSmartOMorphOTron",
+  "parent":{
+    "name":"Bullet",
+    "path":"folders/Sounds/Weapons/Bullet.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndSmartOMorphOTron.wav",
+  "type":0,
+  "volume":1.0,
+}

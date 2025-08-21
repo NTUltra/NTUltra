@@ -1,5 +1,5 @@
 /// @description Init
-maxhealth = 700;
+maxhealth = 660;
 loops = GetPlayerLoops()
 if scrIsHardMode()
 	loops ++;

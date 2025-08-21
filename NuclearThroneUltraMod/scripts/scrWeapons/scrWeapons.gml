@@ -5276,7 +5276,7 @@ function scrWeapons() {
 	wep_load[468] = 8
 	wep_cost[468] = 1
 	wep_sprt[468] = sprUltraMorphORay
-	wep_area[468] = 28
+	wep_area[468] = 25
 	wep_text[468] = ""
 	wep_swap[468] = sndSwapEnergy
 	wep_rad[468] = 7;
@@ -10304,15 +10304,15 @@ function scrWeapons() {
 	wep_rad[917] = 0;
 	wep_popup[917] = "EVERY THIRD KUNAI DEALS#CRITICAL DAMAGE";
 	
-	wep_name[918] = "SMART-O-MORPH-O-TRON"
+	wep_name[918] = "MORPH-O-TRON"
 	wep_type[918] = 5
 	wep_auto[918] = 1
 	wep_load[918] = 4
 	wep_cost[918] = 0.5
-	wep_sprt[918] = sprMachinegun
-	wep_area[918] = 14
+	wep_sprt[918] = sprMorphOTron
+	wep_area[918] = 28
 	wep_text[918] = "smort mort"
-	wep_swap[918] = sndSwapMachinegun
+	wep_swap[918] = sndSwapEnergy
 	wep_rad[918] = 0;
 	wep_popup[918] = "TRACKS NEAR CROSSHAIR";
 
