@@ -35,15 +35,14 @@ if scrIsCrown(32)//Crown of misfortune
 	{
 		if instance_exists(Player) && Player.skill_got[9]
 		{
-			scrCollectHP(1);
+			if !scrIsCrown(2) || random(2) < 1
+				scrCollectHP(1);
 		}
 	}
 	else
 	{
-		if scrIsCrown(2)
+		if !scrIsCrown(2) || random(2) < 1
 			scrCollectHP(1);
-		else
-			scrCollectHP(2);
 	}
 }
 else

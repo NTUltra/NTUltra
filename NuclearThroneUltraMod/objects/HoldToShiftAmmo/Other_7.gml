@@ -1,4 +1,4 @@
-/// @description REROLL
+/// @description Shift ammo
 with Player
 {
 	var t = wep_type[wep];

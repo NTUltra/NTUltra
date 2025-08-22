@@ -111,6 +111,7 @@ if instance_exists(Player)
 	if !instance_exists(PlayerAlarms3)
 		instance_create(x,y,PlayerAlarms3);
 	with PlayerAlarms3 {
+		alarm[7] = 30;
 		if scrIsCrown(36)
 		{
 			alarm[0] = 60;

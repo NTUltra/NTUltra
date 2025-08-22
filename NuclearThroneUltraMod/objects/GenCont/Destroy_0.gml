@@ -218,36 +218,10 @@ if instance_exists(Player)
     
 	    if skill_got[28]//RAGE
 	    {
-	    instance_create(x,y,Rage);
-	    //hammerheadtimer=0 no real need for this it wont occur that you touch the wall 10 steps before leaving level    
+			instance_create(x,y,Rage);
+			//hammerheadtimer=0 no real need for this it wont occur that you touch the wall 10 steps before leaving level    
 	    }    
-	    if skill_got[26]//HAMMER HEAD
-	    {
-			if hammerheadcounter > 0
-			{
-				snd_play(sndHammerHeadEnd);
-				hammerheadcounter = ceil(hammerheadcounter*0.75);
-				scrRaddrop(hammerheadcounter);
-				repeat(hammerheadcounter)
-				{
-					hammerheadcounter --;
-					if (hammerheadcounter > 0)
-					{
-						scrDrop(4,2);
-					}
-					else
-					{
-						scrDrop(35,12);
-					}
-				}
-			}
-			hammerheadcounter = 27;
-			if race=25
-			{
-				hammerheadcounter += 7;
-			}
-	
-	    }
+	    
 	    if ultra_got[3]//FISH's PARTNER
 	    {
 			if !instance_exists(Partner)

@@ -244,7 +244,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 		need += 0.08
 	else 
 		need += 0.3//6
-	if Player.loops < 1
+	if (Player.loops < 1 || Player.skill_got[4])
 	{
 		if random(mh) > h
 		{
@@ -271,6 +271,8 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 		need *= 0.75;
 		canHealth *= 0.75;
 	}
+	if Player.skill_got[9]
+		canHealth *= 1.1;
 	if (Player.ultra_got[1])//FISH ULTRA A Confiscate
 	{
 		var confDroprate = dropRateBuff

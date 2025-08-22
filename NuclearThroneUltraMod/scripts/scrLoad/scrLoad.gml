@@ -13,8 +13,12 @@ function scrLoad() {
 		saveFileString = game_save_id + "ntultra"+string(version)+".sav";
 		if (!file_exists(saveFileString))
 		{
-			instance_create(x,y,CanLoadRetailSave);
-			is_vanilla_player = 0;
+			saveFileString = "ntultra"+string(version)+".sav";
+			if (!file_exists(saveFileString))
+			{
+				instance_create(x,y,CanLoadRetailSave);
+				is_vanilla_player = 0;
+			}
 		}
 		ini_open(saveFileString);
 		scrLoadOptions();

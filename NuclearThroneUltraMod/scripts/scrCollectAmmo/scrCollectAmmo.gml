@@ -181,7 +181,11 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	Player.ammo[type] += amountOfAmmo
 
 	if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
-		Player.ammo[type] = Player.typ_amax[type]
+	{
+		var excessAmount = Player.ammo[type] - Player.typ_amax[type]
+		scrExcessResource(1 + type, excessAmount);
+		Player.ammo[type] = Player.typ_amax[type];
+	}
 
 	if !topHUD
 	{

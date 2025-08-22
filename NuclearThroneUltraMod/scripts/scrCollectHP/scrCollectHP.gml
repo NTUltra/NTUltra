@@ -61,9 +61,9 @@ function scrCollectHP(num = 2){
 			snd_play(sndHealthPickupUpg)
 			
 			if Player.race=25 && random(10)<5//mutation smith/doctor
-				num = 5
+				num = ceil(num * 2.25);
 			else
-				num = 4;
+				num *= 2;
 
 		}
 		else
@@ -94,7 +94,11 @@ function scrCollectHP(num = 2){
 		if Player.my_health + num <= Player.maxhealth + Player.defaultOverhealAddition
 			Player.my_health += num
 		else// if Player.crown != 2
+		{
+			var excessHealth = Player.my_health + num - Player.maxhealth + Player.defaultOverhealAddition;
+			scrExcessResource(0,excessHealth);
 			Player.my_health = max(Player.my_health,Player.maxhealth + Player.defaultOverhealAddition);
+		}
 
 		if UberCont.opt_ammoicon
 		{

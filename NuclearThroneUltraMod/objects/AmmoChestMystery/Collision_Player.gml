@@ -4,7 +4,11 @@ do type = choose(1,2,3,4,5) until type != other.wep_type[other.wep] and type != 
 var ammoBoost = scrGetAmmoBoost();
 other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
+{
+	var excessAmount = other.ammo[type] - other.typ_amax[type];
+	scrExcessResource(1 + type, excessAmount);
 	other.ammo[type] = other.typ_amax[type]
+}
 
 scrChestOpenMindReload(other);
 if (UberCont.opt_ammoicon)

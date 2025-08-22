@@ -1031,3 +1031,17 @@ ammoReduction = 1;
 scrAddNewWeaponDrop(wep, true);
 scrAddNewWeaponDrop(bwep, true);
 scrAddNewWeaponDrop(cwep, true);
+excessResourceDamageBoost = 0;
+excessResourceDamageBoostMax = 0.5;
+excessHealth = 0;
+excessAmmo[0] = 0;
+excessAmmo[1] = 0;
+excessAmmo[2] = 0;
+excessAmmo[3] = 0;
+excessAmmo[4] = 0;
+excessAmmo[5] = 0;
+excessRad = 0;
+excessCash = 0;
+excessVoidBeam = 0;
+maxRad = 9999;
+

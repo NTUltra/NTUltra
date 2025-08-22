@@ -22,7 +22,11 @@ function scrCallculateFinalDamage(inputDamage){
 		{
 			dmgDeal = scrBleedDamage(dmgDeal);
 		}
-		if ( (skill_got[5]) && (race == 11))//HUNTER THRONE BUTT
+		if skill_got[48] || true
+		{
+			dmgDeal = scrExcessResourceDamage(dmgDeal);	
+		}
+		if ((race == 11) && (skill_got[5]))//HUNTER THRONE BUTT
 		{
 			if dmgDeal > 0
 			{

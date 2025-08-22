@@ -61,7 +61,11 @@ function scrLuckyShot(){
 		var ammoBoost = scrGetAmmoBoost();
 	    Player.ammo[type] += round(Player.typ_ammo[type]*0.5) * ammoBoost
 	    if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
+		{
+			var excessAmount = Player.ammo[type] - Player.typ_amax[type];
+			scrExcessResource(1 + type, excessAmount);
 			Player.ammo[type] = Player.typ_amax[type]
+		}
     
 		if (UberCont.opt_ammoicon)
 		{

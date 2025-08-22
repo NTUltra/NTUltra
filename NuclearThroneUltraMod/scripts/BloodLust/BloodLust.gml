@@ -35,7 +35,7 @@ function BloodLust(){
 			);
 			splatDir += angStep;
 		}
-		scrSpawnBloodBullets(x,y,3,14);
+		scrSpawnBloodBullets(x,y,3,14,GetPlayerLoops());
     	snd_play_2d(sndBloodlustProc,0,true);
 	    with instance_create(Player.x,Player.y-8,HealFX)
 	    {

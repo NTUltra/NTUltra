@@ -33,6 +33,10 @@ function scrEnemyTakingDamage() {
 			{
 				dmgTaken = scrBleedDamage(dmgTaken);
 			}
+			if Player.skill_got[48] || true
+			{
+				dmgTaken = scrExcessResourceDamage(dmgTaken);	
+			}
 			if ( (Player.skill_got[5]) && (Player.race == 11))//HUNTER THRONE BUTT
 			{
 				if dmgTaken > 0

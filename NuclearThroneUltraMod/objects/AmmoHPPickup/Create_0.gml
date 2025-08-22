@@ -31,6 +31,7 @@ if scrIsHardMode() //HARD MODE
 
 rerolls = 0;
 loops = 0;
+var rp = 0;
 if instance_exists(Player){
 	loops = Player.loops;
 	scrIsHardMode()
@@ -39,6 +40,8 @@ if instance_exists(Player){
 	{
 		friction = 0.3;
 	}
+	if Player.skill_got[4]
+		rp += 4;
 	//RUSH CROWN
 	if scrIsCrown(4) { alarm[0] *= 0.4}
 
@@ -80,7 +83,7 @@ image_speed = 0
 
 event_inherited();
 damageBoost += 2;
-
+additionalRange += rp;
 supercursed = false;
 as = 6;
 curseSpeed = 1;

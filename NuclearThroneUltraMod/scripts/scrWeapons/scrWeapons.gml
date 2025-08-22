@@ -547,7 +547,7 @@ function scrWeapons() {
 	wep_type[49] = 1
 	wep_auto[49] = 1
 	wep_load[49] = 4
-	wep_cost[49] = 4
+	wep_cost[49] = 3.5
 	wep_sprt[49] = sprQuadrupleMachinegun
 	wep_area[49] = 11
 	wep_text[49] = "the future is here"
@@ -9703,7 +9703,7 @@ function scrWeapons() {
 	wep_name[865] = "BLOOD SEWING NEEDLE"
 	wep_type[865] = 0
 	wep_auto[865] = 1
-	wep_load[865] = 23
+	wep_load[865] = 22
 	wep_cost[865] = 0
 	wep_sprt[865] = sprBloodSewingNeedle
 	wep_area[865] = 8

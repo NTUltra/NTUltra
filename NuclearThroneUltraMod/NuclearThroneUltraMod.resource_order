@@ -2617,6 +2617,8 @@
     {"name":"scrEndCharacters","order":62,"path":"scripts/scrEndCharacters/scrEndCharacters.yy",},
     {"name":"scrEnemyDeathEvent","order":9,"path":"scripts/scrEnemyDeathEvent/scrEnemyDeathEvent.yy",},
     {"name":"scrEnemyTakingDamage","order":15,"path":"scripts/scrEnemyTakingDamage/scrEnemyTakingDamage.yy",},
+    {"name":"scrExcessResource","order":32,"path":"scripts/scrExcessResource/scrExcessResource.yy",},
+    {"name":"scrExcessResourceDamage","order":33,"path":"scripts/scrExcessResourceDamage/scrExcessResourceDamage.yy",},
     {"name":"scrExitCrownVault","order":37,"path":"scripts/scrExitCrownVault/scrExitCrownVault.yy",},
     {"name":"scrExportWeapons","order":88,"path":"scripts/scrExportWeapons/scrExportWeapons.yy",},
     {"name":"scrEyesTelekinesis","order":2,"path":"scripts/scrEyesTelekinesis/scrEyesTelekinesis.yy",},

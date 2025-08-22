@@ -133,7 +133,11 @@ if !instance_exists(GenCont)
 
 					other.ammo[type] += other.typ_ammo[type]*ammoValue*ammoBoost
 					if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
+					{
+						var excessAmount = other.ammo[type] - other.typ_amax[type];
+						scrExcessResource(1 + type, excessAmount);
 						other.ammo[type] = other.typ_amax[type]
+					}
 
 					if (UberCont.opt_ammoicon)
 					{
@@ -162,7 +166,11 @@ if !instance_exists(GenCont)
 
 					other.ammo[type] += other.typ_ammo[type]*ammoValue*ammoBoost
 					if other.ammo[type] > other.typ_amax[type] && !Player.ultra_got[26]
+					{
+						var excessAmount = other.ammo[type] - other.typ_amax[type];
+						scrExcessResource(1 + type, excessAmount);
 						other.ammo[type] = other.typ_amax[type]
+					}
 
 					if (UberCont.opt_ammoicon)
 					{

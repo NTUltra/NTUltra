@@ -2845,6 +2845,8 @@
     {"id":{"name":"scrEndOfRun","path":"scripts/scrEndOfRun/scrEndOfRun.yy",},},
     {"id":{"name":"scrEnemyDeathEvent","path":"scripts/scrEnemyDeathEvent/scrEnemyDeathEvent.yy",},},
     {"id":{"name":"scrEnemyTakingDamage","path":"scripts/scrEnemyTakingDamage/scrEnemyTakingDamage.yy",},},
+    {"id":{"name":"scrExcessResource","path":"scripts/scrExcessResource/scrExcessResource.yy",},},
+    {"id":{"name":"scrExcessResourceDamage","path":"scripts/scrExcessResourceDamage/scrExcessResourceDamage.yy",},},
     {"id":{"name":"scrExitCrownVault","path":"scripts/scrExitCrownVault/scrExitCrownVault.yy",},},
     {"id":{"name":"scrExportWeapons","path":"scripts/scrExportWeapons/scrExportWeapons.yy",},},
     {"id":{"name":"scrEyesTelekinesis","path":"scripts/scrEyesTelekinesis/scrEyesTelekinesis.yy",},},

@@ -1141,7 +1141,8 @@ if KeyCont.key_swap[p] = 1 and bwep != 0 && !instance_exists(PlayerInFakeDeath)
 	}
 }
 
-var mr = GetPlayerMaxRad()
+var mr = GetPlayerMaxRad();
+maxRad = mr;
 if (rad > mr)
 {
 	if level < maxlevel && !hasLeveledUp || scrIsGamemode(22)

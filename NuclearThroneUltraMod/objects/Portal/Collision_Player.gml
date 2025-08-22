@@ -25,6 +25,32 @@ if sprite_index != sprPortalSpawn && sprite_index != sprPinkPortalSpawn && sprit
 				jump = 0;
 				angle = 0;
 				speed = 0;
+				if skill_got[26]//HAMMER HEAD
+			    {
+					if hammerheadcounter > 0
+					{
+						snd_play(sndHammerHeadEnd);
+						hammerheadcounter = ceil(hammerheadcounter*0.75);
+						scrRaddrop(hammerheadcounter);
+						repeat(hammerheadcounter)
+						{
+							hammerheadcounter --;
+							if (hammerheadcounter > 0)
+							{
+								scrDrop(4,2);
+							}
+							else
+							{
+								scrDrop(35,12);
+							}
+						}
+					}
+					hammerheadcounter = 27;
+					if race=25
+					{
+						hammerheadcounter += 7;
+					}
+			    }
 				if skill_got[32] && isAlkaline
 				{
 					var healTaken = 0;

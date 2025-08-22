@@ -16,6 +16,13 @@ if instance_exists(Player)
 		if ultra_got[83]
 			add += 0.2;
 		rad += add;
+		if rad > maxRad
+		{
+				var excessAmount = rad - maxRad
+				if level <= 10
+					excessAmount *= 5;
+				scrExcessResource(7, excessAmount);
+		}
 		if race == 20 && skill_got[maxskill + 1]//Piggy bank
 			piggyBank += add*0.25;
 		snd_play_2d(sndRadPickup,0.05,true);

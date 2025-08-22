@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.17068,
+  "duration":0.17068027,
   "name":"sndRadPickup",
   "parent":{
     "name":"Pickups",

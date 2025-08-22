@@ -733,7 +733,7 @@ if (tookHit)
 					}
 				}*/
 				var healTaken = 0;
-				var overHealAllow = maxhealth + 1 + defaultOverhealAddition
+				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
 				if race == 25
 					overHealAllow += 1;
 				if prevhealth < overHealAllow
@@ -747,7 +747,7 @@ if (tookHit)
 					{
 						depth = other.depth - 1;	
 					}
-					my_health = min(maxhealth + 1 + defaultOverhealAddition,prevhealth+healTaken);
+					my_health = min(overHealAllow,prevhealth+healTaken);
 				}
 				else
 				{
@@ -808,6 +808,7 @@ if (tookHit)
 		}
 		else if armour > 0
 		{
+			peaceBarrierTime = 0;
 			tookDamageThisArea = true;
 			armour -= 1;
 			my_health = prevhealth;
@@ -841,7 +842,12 @@ if (tookHit)
 				armour = maxarmour;
 		}
 		else if ultra_got[62] && altUltra {
+			peaceBarrierTime = 0;
 			my_health = min(1,my_health);
+		}
+		else
+		{
+			peaceBarrierTime = 0;	
 		}
 	}
 }

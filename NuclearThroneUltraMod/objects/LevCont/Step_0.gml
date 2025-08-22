@@ -60,7 +60,6 @@ if KeyCont.key_west[0] == 1
 			{
 				selectedIndex = numberOfUltras + instance_number(SkillIcon) - 1;
 			}
-			debug(selectedIndex);
 			with UltraIcon
 			{
 				if skillIndex == other.selectedIndex
