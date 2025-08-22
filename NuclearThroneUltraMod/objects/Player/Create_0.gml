@@ -1040,6 +1040,7 @@ excessAmmo[2] = 0;
 excessAmmo[3] = 0;
 excessAmmo[4] = 0;
 excessAmmo[5] = 0;
+excessArmour = 0;
 excessRad = 0;
 excessCash = 0;
 excessVoidBeam = 0;

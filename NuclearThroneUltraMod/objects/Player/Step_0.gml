@@ -543,7 +543,7 @@ if !instance_exists(LevCont) and visible = 1
 			//isPermanent = true;
 			//piggyBank = 100;
 			//peaceBarriers += 1;
-			with instance_create_depth(x,y,depth + 1, GainBarrier)
+			with instance_create_depth(x,y,depth + 1, GainExcessResource)
 			{
 				owner = other.id;
 				my_health = other.my_health;
@@ -555,7 +555,6 @@ if !instance_exists(LevCont) and visible = 1
 			{
 				//my_health = 0;
 			}
-			//instance_create(x + 64,y,BigJellyFish);
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.191247,
+  "duration":0.0,
   "name":"sndHorrorCashFlow",
   "parent":{
     "name":"Horror",

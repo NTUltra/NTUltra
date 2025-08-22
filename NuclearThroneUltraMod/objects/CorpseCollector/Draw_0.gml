@@ -22,7 +22,7 @@ draw_surface_ext(surf,cx,cy,1,1,0,c_white,1);
 shader_set(shdDrawLime);
 with projectile
 {
-	if isVenomized == 1
+	if isVenomized == 1 && sprite_exists(sprite_index)
 	{
 		draw_sprite_ext(sprite_index,image_index,x,y,1.5,1.5,image_angle,c_white,1);
 	}
@@ -31,7 +31,7 @@ shader_reset();
 shader_set(shdDrawAqua);
 with projectile
 {
-	if damageBoosted == 1
+	if damageBoosted == 1 && sprite_exists(sprite_index)
 	{
 		draw_sprite_ext(sprite_index,image_index,x,y,1.25,1.25,image_angle,c_white,1);
 	}

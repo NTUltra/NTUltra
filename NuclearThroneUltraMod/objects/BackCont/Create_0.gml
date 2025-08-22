@@ -28,7 +28,7 @@ cave = false;
 viewdist = 8;
 viewdistTarget = viewdist;
 
-shad = noone;//surface_create(view_wview,view_hview)
+shad = -1;//surface_create(view_wview,view_hview)
 
 
 alarm[0] = 1

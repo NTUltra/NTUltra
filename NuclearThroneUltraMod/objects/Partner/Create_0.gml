@@ -12,7 +12,7 @@ friction = 0.4
 right = choose(1,-1)
 
 target = -1
-
+my_health = 999;
 team = 2
 reload=0;
 mySize=1;

@@ -8,6 +8,11 @@ function scrHeal(num = 1, canOverHeal = false){
 		exit;
 	var maxCap = floor(max(Player.maxhealth*2,10));
 	scrPhotosythesis(num);
+	var excessHeal = Player.my_health + num - Player.maxhealth - Player.defaultOverhealAddition
+	if excessHeal > 0
+	{
+			scrExcessResource(0,excessHeal);
+	}
 	if canOverHeal || Player.my_health + num <= Player.maxhealth + Player.defaultOverhealAddition
 		Player.my_health += num
 	else

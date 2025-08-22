@@ -732,17 +732,18 @@ if (tookHit)
 						team = other.team
 					}
 				}*/
-				var healTaken = 0;
+				var healTaken = 3;
 				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
 				if race == 25
+				{
+					healTaken += 1;
 					overHealAllow += 1;
+				}
+				var excessHeal = my_health + healTaken - overHealAllow;
+				if excessHeal > 0
+					scrExcessResource(0,excessHeal);
 				if prevhealth < overHealAllow
 				{
-					healTaken = 3;
-					if race == 25//Doctor buff
-					{
-						healTaken += 1
-					}
 					with instance_create(x,y,HealFX)
 					{
 						depth = other.depth - 1;	

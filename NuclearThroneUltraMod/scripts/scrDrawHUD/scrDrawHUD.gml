@@ -268,6 +268,13 @@ function scrDrawHUD() {
 			draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
 		}
 	}
+	//Excess resource damage boost
+	if dataRef.skill_got[48]  || true
+	{
+		var edx = /*__view_get( e__VW.XView, 0 )+*/110;
+		var edy = /*__view_get( e__VW.YView, 0 )+*/22;
+		draw_text(edx,edy,string(dataRef.excessResourceDamageBoost * 100) + "%");
+	}
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{

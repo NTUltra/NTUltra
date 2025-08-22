@@ -10,6 +10,9 @@ function scrCollectHP(num = 2){
 	
 		//if Player.skill_got[9]
 		//	num = 2;
+		var excessArmour = Player.armour + num - Player.maxarmour;
+		if excessArmour > 0
+			scrExcessResource(8,excessArmour);
 		if UberCont.opt_ammoicon
 		{
 			dir = instance_create(x,y,PopupText)
