@@ -13,6 +13,11 @@ extrafeetalarm = 0;
 extrafeetdodged = false;
 if ultra_got[0] && altUltra
 {
+	var excessCash = cash + 200 - maxCash;
+	if excessCash > 0
+	{
+			scrExcessResource(9,excessCash);
+	}
 	cash = min(cash + 200,maxCash);
 	if cash <= 0
 		inDebt = true;

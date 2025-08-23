@@ -55,7 +55,7 @@ canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
 peaceBarrierTime = 0;
-peaceBarrierDuration = 50;//46 42  48 = 16 seconds 50 = 16.67seconds
+peaceBarrierDuration = 60;//50;//46 42  48 = 16 seconds 50 = 16.67seconds
 peaceBarriers = 0;
 peaceBarriersMax = 3;
 adrenalineAmmoTimer = 999;

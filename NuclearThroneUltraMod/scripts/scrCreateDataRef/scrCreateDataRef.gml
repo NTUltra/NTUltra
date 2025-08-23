@@ -5,6 +5,7 @@ function scrCreateDataRef() {
 	with instance_create(x,y,DataRef)
 	{
 		excessResourceDamageBoost = other.excessResourceDamageBoost;
+		excessResourceDamageBoostMax = other.excessResourceDamageBoostMax;
 		area = other.area;
 		hasUltimateGamble = other.hasUltimateGamble
 		hard = other.hard;

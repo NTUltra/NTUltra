@@ -268,13 +268,7 @@ function scrDrawHUD() {
 			draw_sprite(sprHealthBarPeaceFullArmour,dataRef.peaceBarriers,vx+hx,vy+4);
 		}
 	}
-	//Excess resource damage boost
-	if dataRef.skill_got[48]  || true
-	{
-		var edx = /*__view_get( e__VW.XView, 0 )+*/110;
-		var edy = /*__view_get( e__VW.YView, 0 )+*/22;
-		draw_text(edx,edy,string(dataRef.excessResourceDamageBoost * 100) + "%");
-	}
+	
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
@@ -1530,6 +1524,46 @@ function scrDrawHUD() {
 	else
 	{
 		draw_sprite(sprUltraLevel,0,vx+rto,vy+16);
+	}
+	//Excess resource damage boost
+	if dataRef.skill_got[48]  || true
+	{
+		var edx = hx + 90
+		var edy = vy + 7;
+		var preT = "";
+		var erdb = round(dataRef.excessResourceDamageBoost * 100)
+		if erdb < 10
+			preT = "0";
+		draw_set_halign(fa_left)
+		if instance_exists(GluttonousConsumption)
+		{
+			var glutPart = 0;
+			if GluttonousConsumption.alarm[0] > 0
+			{
+				glutPart = (GluttonousConsumption.alarm[0]/(GluttonousConsumption.totalDuration));	
+				draw_sprite(sprGlutinousBellyHudConsuming,glutPart * GluttonousConsumption.glutFrame,edx,edy);
+			}
+			else
+				draw_sprite(sprGlutinousBellyHudConsuming,10,edx,edy);
+			
+			glutPart = round(glutPart * GluttonousConsumption.glutResourceNumber);
+			preT = "";
+			if glutPart < 10
+			{
+				preT = "0";
+			}
+			draw_text(edx + 1,edy,preT + string(glutPart) + "%");
+		}
+		else if dataRef.excessResourceDamageBoost > 0
+		{
+			draw_sprite(sprGlutinousBellyHud,(erdb/(dataRef.excessResourceDamageBoostMax*100)) * 10,edx,edy);
+			draw_text(edx + 1,edy,preT + string(erdb) + "%");
+		}
+		else
+		{
+			draw_sprite(sprGlutinousBellyHud,0,edx,edy);
+			draw_text(edx + 1,edy,preT + string(erdb) + "%");
+		}
 	}
 	//GOOD O'L HUMPHRY SKILL
 	if dataRef.race == 26 || dataRef.copyPassive == 26

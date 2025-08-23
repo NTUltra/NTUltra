@@ -22,6 +22,11 @@ if gotThroneButt
 					Player.voidBeam += 1;
 				else
 					Player.voidBeam += 5;
+				var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+				if excessVoidBeam > 0
+				{
+					scrExcessResource(10,excessVoidBeam);
+				}
 			}
 			BackCont.shake += 1;
 			radValue *= 0.5;
@@ -66,6 +71,11 @@ if gotThroneButt
 				Player.voidBeam += 5;
 				if isUpg
 					Player.voidBeam += 2;
+				var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+				if excessVoidBeam > 0
+				{
+					scrExcessResource(10,excessVoidBeam);
+				}
 			}
 			if isBeingVoided != 1
 			{
@@ -134,7 +144,14 @@ else
 				if object_index == Rad
 				{
 					if regal
+					{
 						Player.voidBeam += 1;
+						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						if excessVoidBeam > 0
+						{
+							scrExcessResource(10,excessVoidBeam);
+						}
+					}
 					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
 					{
 						shake = 1;
@@ -150,6 +167,11 @@ else
 						Player.voidBeam += 5;
 						if isUpg
 							Player.voidBeam += 2;
+						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						if excessVoidBeam > 0
+						{
+							scrExcessResource(10,excessVoidBeam);
+						}
 					}
 					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
 					{
@@ -186,6 +208,11 @@ else
 						Player.voidBeam += 5;
 						if isUpg
 							Player.voidBeam += 2;
+						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						if excessVoidBeam > 0
+						{
+							scrExcessResource(10,excessVoidBeam);
+						}
 					}
 					BackCont.shake += 2;
 					with instance_create_depth(x,y,depth - 1,VoidBlockBig)
