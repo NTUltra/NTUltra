@@ -22,7 +22,7 @@ function scrCallculateFinalDamage(inputDamage){
 		{
 			dmgDeal = scrBleedDamage(dmgDeal);
 		}
-		if skill_got[48] || true
+		if skill_got[48]
 		{
 			dmgDeal = scrExcessResourceDamage(dmgDeal);	
 		}

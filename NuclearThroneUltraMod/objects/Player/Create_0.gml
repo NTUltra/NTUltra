@@ -840,6 +840,9 @@ strongspirit = false;
 strongspiritused = false;
 hammerheadtimer = 0;
 hammerheadcounter = 0;
+hammerheadcounterMax = 27;
+if race == 25
+	hammerheadcounterMax += 7;
 hammerheadDig = 0;
 digSurface = -1;
 nearWall = false;
@@ -902,7 +905,7 @@ heavyheart = 0;
 
 freeArmourStrike = false;
 if race = 16 {
-    armour = 2;
+    armour = 1;
     maxarmour = 2;
 }
 else {
@@ -965,6 +968,7 @@ onlyusemegold = false;
 if scrCheckGold(wep_name[wep])
 	onlyusemegold = true;
 isAlkaline = true;
+keptAlkaline = false;
 myShield = -1;
 canAnimateDuringImmune = -1;
 if scrIsGamemode(25) && !instance_exists(SurvivalWave)
@@ -1033,6 +1037,8 @@ scrAddNewWeaponDrop(bwep, true);
 scrAddNewWeaponDrop(cwep, true);
 excessResourceDamageBoost = 0;
 excessResourceDamageBoostMax = 0.5;
+if race == 25
+	excessResourceDamageBoostMax = 0.7;
 excessHealth = 0;
 excessAmmo[0] = 0;
 excessAmmo[1] = 0;
@@ -1044,5 +1050,7 @@ excessArmour = 0;
 excessRad = 0;
 excessCash = 0;
 excessVoidBeam = 0;
+excessPortalStrikeAmmo = 0;
+excessRage = 0;
 maxRad = 9999;
 

@@ -186,14 +186,6 @@ if scrIsCrown(22)//Crown of luck
 		}
 	}
 }
-if race=16
-{
-	if skill_got[5]
-		freeArmourStrike = true;
-    armour++;
-}
-if ultra_got[62] && !altUltra//Viking armour up ultra
-	    armour++;
 
 if race == 10 && canHeal//Rebel pasive
 {
@@ -255,30 +247,7 @@ if scrIsCrown(2) && canHeal && !scrIsCrown(22)
 	my_health = max(maxhealth,my_health + overheal);
 	*/
 }
-if scrIsCrown(13)//Crown of drowning
-{
-	ammo[1] += 50;
-	ammo[2] += 5;
-	ammo[3] += 5;
-	ammo[4] += 5;
-	ammo[5] += 5;
-	if !ultra_got[26] {
-		if ammo[1] > typ_amax[1]
-		ammo[1] = typ_amax[1]
 
-		if ammo[2] > typ_amax[2]
-		ammo[2] = typ_amax[2]
-
-		if ammo[3] > typ_amax[3]
-		ammo[3] = typ_amax[3]
-
-		if ammo[4] > typ_amax[4]
-		ammo[4] = typ_amax[4]
-
-		if ammo[5] > typ_amax[5]
-		ammo[5] = typ_amax[5]
-	}
-}
 if scrIsCrown(30)
 {
 	kills = max(0,kills-20);
@@ -1034,7 +1003,7 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 			maxhealth -= 2;
 		if race == 16
 		{
-			armour = min(armour + 1, maxarmour);
+			armour = min(armour, maxarmour);
 		}
 		if skill_got[41]//Nerves of steel
 		{

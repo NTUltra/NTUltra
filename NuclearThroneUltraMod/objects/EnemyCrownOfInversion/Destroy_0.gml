@@ -64,6 +64,10 @@ with Floor
 		}
 	}
 }
+with enemy
+{
+	alarm[1] += irandom_range(30,90);	
+}
 with MusCont
 {
 	audio_stop_sound(song);

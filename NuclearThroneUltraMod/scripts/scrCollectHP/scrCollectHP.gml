@@ -1,7 +1,7 @@
 ///scrCollectHP();
 // /@description
 ///@param
-function scrCollectHP(num = 2){
+function scrCollectHP(num = 2, excessHealReduction = 1){
 	if num < 1
 		exit;
 	if isArmour
@@ -12,7 +12,7 @@ function scrCollectHP(num = 2){
 		//	num = 2;
 		var excessArmour = Player.armour + num - Player.maxarmour;
 		if excessArmour > 0
-			scrExcessResource(8,excessArmour);
+			scrExcessResource(8,excessArmour,excessHealReduction);
 		if UberCont.opt_ammoicon
 		{
 			dir = instance_create(x,y,PopupText)
@@ -98,8 +98,8 @@ function scrCollectHP(num = 2){
 			Player.my_health += num
 		else// if Player.crown != 2
 		{
-			var excessHealth = Player.my_health + num - Player.maxhealth + Player.defaultOverhealAddition;
-			scrExcessResource(0,excessHealth);
+			var excessHealth = min(num,Player.my_health + num - Player.maxhealth + Player.defaultOverhealAddition);
+			scrExcessResource(0,excessHealth,excessHealReduction);
 			Player.my_health = max(Player.my_health,Player.maxhealth + Player.defaultOverhealAddition);
 		}
 

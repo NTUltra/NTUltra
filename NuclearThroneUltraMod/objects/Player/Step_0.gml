@@ -2831,6 +2831,23 @@ if hammerheadcounter > 0
 {
 	var msk = mask_index;
 	mask_index = mskWallBreak;
+	with instance_nearest(x,y,Traps)
+	{
+		if point_distance(x,y,other.x,other.y) < 48
+		{
+			with other
+			{
+				hammerheadcounter --;
+				reload -= 5;
+				breload -= 5;
+				creload -= 5;
+			}
+			snd_play(sndHammerHeadProc);
+			scrDrop(4,2);
+			instance_create(x,y,WallBreakHammerHead);
+			instance_destroy();
+		}
+	}
 	if place_meeting(x,y,WallHitMe)
 	{
 		nearWall = true;

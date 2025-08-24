@@ -1,0 +1,12 @@
+image_index = irandom(image_number);
+image_speed = 0.4;
+alarm[0] = 6;
+alarm[4] = 2;
+alarm[3] = 1;
+team = 2;
+dmg = 5 + GetPlayerLoops() * 0.75;
+lowAlpha = 0.75;
+image_alpha = lowAlpha;
+forceAlphaReduc = 0.7;
+image_xscale = 2;
+image_yscale = image_xscale;

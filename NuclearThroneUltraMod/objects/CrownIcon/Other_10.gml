@@ -392,6 +392,7 @@ if crown == 13
 {
 	with Player {
 		scrWeaponAdjustCost(2);
+		/*
 		ammo[1] += 50;
 		ammo[2] += 5;
 		ammo[3] += 5;
@@ -413,6 +414,7 @@ if crown == 13
 			if ammo[5] > typ_amax[5]
 			ammo[5] = typ_amax[5]
 		}
+		*/
 	}
 }
 

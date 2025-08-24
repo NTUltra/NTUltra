@@ -2,8 +2,8 @@
 // /@description
 ///@param
 function scrCanArmourHeal(shouldTakeAmmo = false) {
-	if armour >= maxarmour && (!skill_got[5] || freeArmourStrike)
-		return false;
+	//if armour >= maxarmour && (!skill_got[5] || freeArmourStrike)
+	//	return false;
 	
 	/*
 		var t = wep_type[wep]

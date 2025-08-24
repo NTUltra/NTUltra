@@ -1902,7 +1902,7 @@ function scrPowers(raceOverwrite = -1) {
 		if race == 4 && (KeyCont.key_spec[p] = 1 || !instance_exists(MeltingDelay))
 		{
 			instance_create(x,y,MeltingDelay);
-			var didKill = false;
+			var didKill = 0;
 			var numberOfEnems = 0;
 			if instance_exists(IDPDVan)
 				numberOfEnems = instance_number(IDPDVan);
@@ -1924,7 +1924,7 @@ function scrPowers(raceOverwrite = -1) {
 							var yy = corpse.yy;
 							if point_distance(xx,yy,other.x,other.y) < 224//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 							{
-								didKill = true;
+								didKill += 1;
 								with instance_create(x,y,BloodStreak)
 								{
 									motion_add(point_direction(Player.x,Player.y,xx,yy),8)
@@ -2005,7 +2005,7 @@ function scrPowers(raceOverwrite = -1) {
 							var yy = corpse.yy;
 							if point_distance(xx,yy,other.x,other.y) < 224//xx > __view_get( e__VW.XView, 0 ) and xx < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and yy > __view_get( e__VW.YView, 0 ) and yy < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
 							{
-								didKill = true;
+								didKill += 1
 								with instance_create(x,y,BloodStreak)
 								{
 									motion_add(point_direction(Player.x,Player.y,xx,yy),8)
@@ -2056,7 +2056,7 @@ function scrPowers(raceOverwrite = -1) {
 						if (image_speed == 0 || alarm[6] < 1) && point_distance(x,y,other.x,other.y) < 224
 						{
 							var ang = random(360)
-							didKill = true;
+							didKill += 1
 							instance_destroy()
 							with instance_create(x,y,BloodStreak)
 							{
@@ -2115,7 +2115,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if (image_speed == 0 || alarm[6] < 1) && point_distance(x,y,other.x,other.y) < 224
 						{
-							didKill = true;
+							didKill += 1
 							instance_destroy()
 							with instance_create(x,y,BloodStreak)
 							{
@@ -2163,7 +2163,7 @@ function scrPowers(raceOverwrite = -1) {
 								//melting ultra a brain capacity
 								DealDamage(dmgDeal,false,true,false);
 								morphMe = 6;
-								didKill = true;
+								didKill += 1
 								with instance_create(x,y,BloodStreak)
 								{
 									motion_add(point_direction(Player.x,Player.y,x,y),8)
@@ -2260,13 +2260,14 @@ function scrPowers(raceOverwrite = -1) {
 				}
 			}
 			
-			if didKill 
+			if didKill > 0
 			{
 				if skill_got[maxskill + 1]
 				{
 					snd_play(sndMeltingImmune,0.1);
-					scrHeal(1);
-					alarm[3] = max(alarm[3], 5);
+					if didKill > 9
+						scrHeal(1,false,true,0.2);
+					alarm[3] = max(alarm[3], clamp(floor(didKill*0.5),5,16));
 					scrGiveEuphoriaShield();
 				}
 				if !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)

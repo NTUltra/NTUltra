@@ -21,7 +21,14 @@ else
 	}
 if scrIsCrown(32)//Crown of misfortune
 {
-	scrCollectAmmo(ammoValue * 1.25, cursed, supercursed);
+	if scrIsCrown(5)//Crown of guns
+	{
+		scrCollectAmmo(ammoValue * 0.5, cursed, supercursed);
+	}
+	else
+	{
+		scrCollectAmmo(ammoValue * 1.25, cursed, supercursed);
+	}
 	var stoppedVenom = false;
 	with EnemyVenom
 	{
@@ -36,13 +43,13 @@ if scrIsCrown(32)//Crown of misfortune
 		if instance_exists(Player) && Player.skill_got[9]
 		{
 			if !scrIsCrown(2) || random(2) < 1
-				scrCollectHP(1);
+				scrCollectHP(1,0.25);
 		}
 	}
 	else
 	{
 		if !scrIsCrown(2) || random(2) < 1
-			scrCollectHP(1);
+			scrCollectHP(1,0.25);
 	}
 }
 else

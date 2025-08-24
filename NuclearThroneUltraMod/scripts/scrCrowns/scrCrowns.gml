@@ -81,7 +81,7 @@ function scrCrowns() {
 	crown_tips[12] = "looking for the blue stuff"
 
 	crown_name[13] = "[CROWN OF DROWNING]"
-	crown_text[13] = "DOUBLE <y>AMMO<y> COST#AT THE END OF EACH AREA#GAIN SOME <y>AMMO<y>#WHENEVER YOU RUN OUT OF <y>AMMO<y>#YOUR <y>CROWN<y> SUMMONS A <pi>TINY<pi> <p>KRAKEN<p>"
+	crown_text[13] = "DOUBLE <y>AMMO<y> COST#AT THE <w>START <w> OF EACH  <w>AREA <w>#GAIN SOME <y>AMMO<y>#WHENEVER YOU RUN OUT OF <y>AMMO<y>#YOUR <y>CROWN<y> SUMMONS A <pi>TINY<pi> <p>KRAKEN<p>"
 	crown_used[13] = 0
 	crown_tips[13] = "sinking"
 /*

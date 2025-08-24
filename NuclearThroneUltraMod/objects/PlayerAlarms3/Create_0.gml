@@ -23,6 +23,8 @@ voidSpheres = ds_list_create();
 voidSphereAngle = 0;
 voidSphereRotationSpeed = 4;
 voidSphereDistance = 96;
+
+forceEarlyInit = false;
 //13.4
 //20.8
 //0.065 0.054 

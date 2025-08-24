@@ -21,7 +21,7 @@ if !dealtDamage
 		else
 			snd_play(sndMorphStop,0.1,true,true);
 	}
-	BackCont.shake += 2;
+	BackCont.shake += 1;
 	var xx = x;
 	var yy = y;
 	x = targetX;

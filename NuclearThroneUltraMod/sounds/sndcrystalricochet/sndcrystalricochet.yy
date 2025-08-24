@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.839688,
+  "duration":0.8397052,
   "name":"sndCrystalRicochet",
   "parent":{
     "name":"Player",

@@ -406,7 +406,7 @@ function scrSkills() {
 
 	skill_name[26] = "HAMMER HEAD"
 	skill_text[26] = "<w>DIG<w> THROUGH SOME <w>WALLS<w>##<w>RELOAD<w> YOUR WEAPONS AND#BECOME <aq>IMMUNE<aq> WHILE <w>DIGGING<w>";
-	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU <w>RELOAD<w> YOUR WEAPONS,#YOU ARE <aq>IMMUNE<aq> AND MOVE <w>FASTER<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> NEXT AREA"
+	skill_detail[26] = "<w>DIG<w> THROUGH A LIMITED NUMBER OF <w>WALLS<w>#WHILE <w>DIGGING<w> YOU <w>RELOAD<w> YOUR WEAPONS,#YOU ARE <aq>IMMUNE<aq> AND MOVE <w>FASTER<w>#FIND <y>RES<y><g>OUR<g><r>CES<r> IN WALLS##UNUSED WALLBREAKS#GIVE <y>RES<y><g>OUR<g><r>CES<r> <w>NEXT<w> AREA"
 	skill_tips[26] = "hello welcome to my#minecraft let's play"
 	skill_msnd[26] =  sndMutHammerHead
 	skill_bons[26] = "PUSH THROUGH +25% MORE WALLS#LONGER DIG IMMUNITY#EVEN FASTER MOVEMENT";
@@ -425,7 +425,11 @@ function scrSkills() {
 
 	skill_name[28] = "RAGE"
 	skill_text[28] = "<r>KILLS<r> SLOWLY INCREASE:#<w>RELOAD SPEED<w> AND <w>DROP RATE<w>#AND DECREASES <w>ACCURACY<w>";
-	skill_detail[28] = "EACH <r>KILL<r> INCREASES:#<w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE <w>28<w> <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE"
+	skill_detail[28] = "EACH <r>KILL<r> INCREASES:#<w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE <w>28<w> <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE";
+	if instance_exists(Player) && Player.skill_got[48]
+	{
+		skill_detail[28] += "<w>EXCESS<w> <r>RAGE<r> STACKS <g>GLUTINOUS BELLY<g>"
+	}
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 	skill_bons[28] = "GAIN +25% MORE RAGE#LOSE 5 LESS RAGE ON HIT";
@@ -463,7 +467,7 @@ function scrSkills() {
 	
 	skill_name[32] = "ALKALINE SALIVA"
 	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>2<w>";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>3<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>2<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>"
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>3<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>2<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>#NOT TAKING DAMAGE <r>HEALS<r> IN THE <w>NEXT<w> AREA"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
 	skill_bons[32] = "+1 HP HEALING#CAN OVERHEAL 3";
@@ -619,18 +623,19 @@ function scrSkills() {
 	
 	
 	skill_name[48] = "GLUTINOUS BELLY"
-	skill_text[48] = "<w>STACK<w> UP ON <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
-	skill_detail[48] = "<w>STACK<w> UP ON <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL UP TO <w>50%<w> MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
+	skill_text[48] = "<w>STACK<w> UP ON ANY<w> EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
+	skill_detail[48] = "<w>STACK<w> UP ON <w>ANY EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL UP TO <w>50%<w> MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
 	if instance_exists(Player) && Player.race == 29 && Player.skill_got[maxskill + 1]//No thing regal
-		skill_detail[48] = "<w>STACK<w> UP ON <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL UP TO <w>50%<w> MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>##<p>VOID BEAM<p> RESOURCE CAN ALSO <w>STACK<w>";
-	if instance_exists(Player) && Player.race == 21 && Player.ultra_got[0] &&  Player.altUltra//Cash flow
-		skill_detail[48] = "<w>STACK<w> UP ON <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL UP TO <w>50%<w> MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>##<y>CASH<y> RESOURCE CAN ALSO <w>STACK<w>";
-	
+		skill_detail[48] += "#<p>VOID BEAM<p> RESOURCE CAN ALSO <w>STACK<w>";
+	else if instance_exists(Player) && Player.race == 21  && canCheckUltra && Player.ultra_got[0] &&  Player.altUltra//Cash flow
+		skill_detail[48] += "#<y>CASH<y> RESOURCE CAN ALSO <w>STACK<w>";
+	if instance_exists(Player) && Player.skill_got[28]//Rage
+		skill_detail[48] += "#<r>RAGE<r> CAN ALSO <w>STACK<w>";
 	//skill_text[48] = "EXCESS <r>HEALING<r> GIVES <y>AMMO<y>##EXCESS AMMO STACKS UP TO#EVENTUALLY SPAWN BELLIES#THAT PROTECTS YOU AND RELEASE <g>TOXIC GASS<g>#AND DEALS DAMAGE TO ENEMIES"
 	//skill_text[48] = "AT THE <w>START<w> OF AN <w>AREA<w>:#INCREASE <r>MAX HEALTH<r> FOR EACH <y>AMMO<y> <w>TYPE<w> THAT IS <w>NEAR FULL<w>"
 	//skill_detail[48] = "AT THE <w>START<w> OF AN <w>AREA<w>:#GAIN <w>1<w> <r>MAX HEALTH<r> FOR EACH <y>AMMO<y> <w>TYPE<w> THAT IS <w>NEAR FULL<w>#GAIN AN ADDITIONAL <r>HEALTH<r> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
 	skill_tips[48] = "EAT THE RICH"
-	skill_bons[48] = "+25% DAMAGE CONVERSION#+25% MAX DAMAGE"
+	skill_bons[48] = "+15% DAMAGE CONVERSION#+20% MAX DAMAGE"
 	skill_msnd[48] =  sndMutBouncyFat;
 	/*
 	skill_name[47] = "HOLLOW BONES"

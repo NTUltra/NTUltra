@@ -88,8 +88,18 @@ image_index = 0
 		}
 	}
 }
-if KeyCont.key_spec[p] = 3
+if KeyCont.key_spec[p] = 3 && sprite_index != spr_disappear
 {
+	if alarm[1] < 1 && Player.ultra_got[8]
+		alarm[1] = 4;
+	snd_play(sndCrystalShieldExit,0.02);
+	if Player.skill_got[8]//Gamma Gutseru
+	{
+		snd_play(sndGammaGutsSmall,0.1);
+		with instance_create(x,y,CrystalGamma) {
+			team = Player.team;	
+		}
+	}
 	sprite_index = spr_disappear
 	image_speed = 0.6
 	image_index = 0

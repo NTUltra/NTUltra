@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.381781,
+  "duration":0.0,
   "name":"sndGammaGutsSmall",
   "parent":{
     "name":"Player",

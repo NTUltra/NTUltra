@@ -2,17 +2,20 @@
 ///scrHeal();
 // /@description
 ///@param
-function scrHeal(num = 1, canOverHeal = false){
+function scrHeal(num = 1, canOverHeal = false, canExcessHeal = true,excessHealReduction = 1){
 	if !instance_exists(Player)
 		exit;
 	if !Player.canHeal
 		exit;
 	var maxCap = floor(max(Player.maxhealth*2,10));
 	scrPhotosythesis(num);
-	var excessHeal = Player.my_health + num - Player.maxhealth - Player.defaultOverhealAddition
-	if excessHeal > 0
+	if canExcessHeal && !canOverHeal
 	{
-			scrExcessResource(0,excessHeal);
+		var excessHeal = min(num,Player.my_health + num - Player.maxhealth - Player.defaultOverhealAddition)
+		if excessHeal > 0
+		{
+			scrExcessResource(0,excessHeal, excessHealReduction);
+		}
 	}
 	if canOverHeal || Player.my_health + num <= Player.maxhealth + Player.defaultOverhealAddition
 		Player.my_health += num

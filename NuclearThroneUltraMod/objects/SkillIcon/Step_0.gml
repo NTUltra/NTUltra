@@ -110,7 +110,14 @@ if selected && visible
 				Player.my_health += 4
 			}
 
-		}
+		}/*
+		else if skill == 26
+		{
+			with Player
+			{
+				hammerheadcounter = hammerheadcounterMax;	
+			}
+		}*/
 		/*else if skill == 31//Tough shell
 		{
 			if Player.ultra_got[62] && Player.altUltra//Living armour

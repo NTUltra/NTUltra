@@ -210,8 +210,6 @@ if Player.crownpoints > 0
 						crown = 33;
 						Player.consecutiveCrownVisits = 0;
 					}
-					else if (scrIsCrown(22) && !scrIsCrown(32))//Luck to misfortune
-						crown = 32
 					else if (scrIsCrown(4) && !scrIsCrown(34))//Rush to Time
 						crown = 34;
 					else if (scrIsCrown(7) && !scrIsCrown(28) && !(scrIsGamemode(26) && UberCont.isLeaderboardGamemode))//Blood to Apocalypse
@@ -224,8 +222,6 @@ if Player.crownpoints > 0
 						crown = 28;
 					else if (scrIsCrown(29))//Purity
 						crown = 29;
-					else if (scrIsCrown(32))//Misfortune
-						crown = 32;
 					else if (scrIsCrown(34))//Time
 						crown = 34;
 					else if (scrIsCrown(33))//Echo
@@ -252,6 +248,10 @@ if Player.crownpoints > 0
 						if Player.level > 9
 							sprite_index = sprCrownOfReincarnationUpgraded;
 					}
+				}
+				else if crown == 22 && (scrIsCrown(22) || (!UberCont.canMultiCrown && scrIsCrown(32)))//Luck to misfortune
+				{
+					crown = 32;	
 				}
 				else if crown == 1 && UberCont.canMultiCrown
 				{

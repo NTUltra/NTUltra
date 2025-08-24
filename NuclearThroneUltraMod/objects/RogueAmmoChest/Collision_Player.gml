@@ -12,7 +12,11 @@ if scrIsCrown(4)
 //num*=2;
 other.rogueammo+=num;
 if other.rogueammo > other.rogueammomax
-other.rogueammo = other.rogueammomax
+{
+	var excessPortalStrike = other.rogueammo - other.rogueammomax;
+	scrExcessResource(11,excessPortalStrike);
+	other.rogueammo = other.rogueammomax
+}
 
 var dir = instance_create(x,y,PopupText)
 if UberCont.opt_ammoicon

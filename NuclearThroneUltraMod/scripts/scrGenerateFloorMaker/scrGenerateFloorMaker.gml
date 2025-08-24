@@ -211,6 +211,10 @@ function scrGenerateFloorMaker(limiter) {
 				fc ++;
 		}
 		myFloors += 1;
+		if myFloors > 1 && !instance_exists(StartChestLocation) && point_distance(xstart,ystart,x,y) > 32
+		{
+			instance_create(x,y,StartChestLocation);
+		}
 		if UberCont.firstFloorMaker
 		{
 			//SetSeed();

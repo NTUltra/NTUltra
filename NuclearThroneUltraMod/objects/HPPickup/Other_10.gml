@@ -3,6 +3,15 @@ collected = true;
 if !instance_exists(Player)
 	exit;
 rerolls = 0;
+var stoppedVenom = false;
+with EnemyVenom
+{
+	if venomized
+	{
+		stoppedVenom = true;
+		instance_destroy();	
+	}
+}
 if scrIsCrown(32)//Crown of misfortune
 {
 	if scrIsCrown(5)//Crown of guns
@@ -13,21 +22,25 @@ if scrIsCrown(32)//Crown of misfortune
 	{
 		scrCollectAmmo(ammoValue * 1.25);
 	}
-}
-var stoppedVenom = false;
-with EnemyVenom
-{
-	if venomized
+	if stoppedVenom
 	{
-		stoppedVenom = true;
-		instance_destroy();	
+		if instance_exists(Player) && Player.skill_got[9]
+		{
+			if !scrIsCrown(2) || random(2) < 1
+				scrCollectHP(1, 0.25);
+		}
 	}
-}
-if stoppedVenom
-{
-	if instance_exists(Player) && Player.skill_got[9]
-		scrCollectHP(ammoValue);
+	else if !scrIsCrown(2) || random(2) < 1
+		scrCollectHP(1, 0.25);
 }
 else
-	scrCollectHP(ammoValue * 2);
+{
+	if stoppedVenom
+	{
+		if instance_exists(Player) && Player.skill_got[9]
+			scrCollectHP(ammoValue);
+	}
+	else
+		scrCollectHP(ammoValue * 2);
+}
 instance_destroy()

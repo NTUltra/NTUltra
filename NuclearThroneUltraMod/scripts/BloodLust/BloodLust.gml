@@ -43,7 +43,7 @@ function BloodLust(){
 	    }
     
 	    num = 1
-		scrHeal(1);
+		scrHeal(1,false,true,0.16);
 		if instance_exists(YungCuzDupe)
 		{
 			var healedOne = false;

@@ -88,6 +88,15 @@ function scrDrawBloom() {
 				draw_sprite_ext(sprGammaGuts,0,x - vx,y - vy,1.5,1.5,image_angle,c_white,ba);
 		}
 	}
+	with CrystalGamma
+	{
+		if alarm[0] > 0
+			draw_sprite_ext(sprGammaGutsBlast,image_index,x,y,1.5,1.5,image_angle,c_white,image_alpha - forceAlphaReduc);
+		if alarm[1] > 0		
+			draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,image_xscale * 1.5, image_yscale * 1.5,image_angle,c_white,1 - forceAlphaReduc);
+		else
+			draw_sprite_ext(sprite_index,image_index,x - vx,y - vy,image_xscale * 1.5, image_yscale * 1.5,image_angle,c_white,min(image_alpha + 0.2,ba) - forceAlphaReduc);
+	}
 	with ToxicGas
 	draw_sprite_ext(sprite_index,-1,x - vx,y - vy,2,2,image_angle,c_white,ba)
 	with ToxicThrowerGas

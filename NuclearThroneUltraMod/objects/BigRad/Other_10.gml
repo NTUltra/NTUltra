@@ -75,10 +75,17 @@ if instance_exists(Player)
 						else if Player.my_health > Player.maxhealth
 						dir.mytext = "OVER MAX HP"
 					}
-					if my_health + num <= maxhealth
+					if my_health + num <= maxhealth + defaultOverhealAddition
 						my_health += num
 					else// if Player.crown != 2
-						my_health = max(my_health,maxhealth);
+					{
+						var excessHeal = min(num,my_health + num - maxhealth - defaultOverhealAddition)
+						if excessHeal > 0
+						{
+							scrExcessResource(0,excessHeal, 0.21);
+						}
+						my_health = max(my_health,maxhealth + defaultOverhealAddition);
+					}
 				}
 			}
 		}

@@ -384,5 +384,21 @@ function scrPopChests() {
 			}
 		}
 	}
+	if Player.skill_got[23]//OPEN MIND
+	{
+			with StartChestLocation {
+				var walls = ds_list_create();
+				var al = instance_place_list(x,y,WallHitMe,walls,false);
+				for (var i = 0; i < al; i++)
+				{
+					with walls[| i]
+					{
+						instance_destroy();
+					}
+				}
+				ds_list_destroy(walls);
+				alarm[0] = 2;
+			}
+	}
 	SetSeed();
 }

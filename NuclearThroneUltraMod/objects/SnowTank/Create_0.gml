@@ -23,7 +23,7 @@ wave = 0
 replace=false;
 if instance_exists(Player)
 {
-	if random(35) < 1 + min(24,Player.loops * 3) and (Player.subarea > 1 || Player.loops > 0)
+	if random(40) < 1 + min(24,Player.loops * 3) and (Player.subarea > 1 || Player.loops > 0)
 	{
 		replace=true;
 		instance_destroy()

@@ -49,6 +49,8 @@ snd_play_2d(sndLilHunterLaunch)
 }
 else
 {
+	if random(3) < 1
+		walk = alarm[1];
 //DON'T FLY
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 || (dis < 250 && random(10) < 2)
 {

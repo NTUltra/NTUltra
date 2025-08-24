@@ -29,10 +29,11 @@ if instance_exists(Player)
 	{
 		//GAMMA GUTS
 		gammaGuts = true;
-		dmg = 9;
+		dmg = 9.5;
 		if Player.race == 25
 			dmg = 11;
 	}
+	dmg += GetPlayerLoops();
 	if Player.ultra_got[6] && !Player.altUltra
 	{
 		maxSpeed += 2;	

@@ -492,7 +492,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		
 	 
 		ultra_name[62] = "ARMOUR UP"
-		ultra_text[62] = "GAIN ONE EXTRA <gb>ARMOUR<gb> EACH AREA#INCREASE <gb>ARMOUR<gb> MAX BY TWO"
+		ultra_text[62] = "GAIN <w>1<w> EXTRA <gb>ARMOUR<gb> AT THE <w>START<w> OF EACH AREA#INCREASE <gb>ARMOUR<gb> MAX BY <w>2<w>"
 		ultra_tips[62] = "tank up"
 	
 		//IF no health mutations

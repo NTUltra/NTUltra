@@ -37,8 +37,10 @@ if !instance_exists(GenCont)
 				ammo[t] += typ_ammo[t]*other.ammoValue*ammoBoost
 				var amount = typ_ammo[t]*other.ammoValue*ammoBoost;
 				var excess = ammo[t] - typ_amax[t];
-				if ammo[t] > typ_amax[t]
+				if ammo[t] > typ_amax[t] && !ultra_got[26]
 					ammo[t] = typ_amax[t];
+				if ultra_got[26]
+					excess = 0;
 				if amount - max(0,excess) > 0
 					scrAmmoPickupText(t, amount - max(0,excess));
 		
@@ -60,7 +62,7 @@ if !instance_exists(GenCont)
 						amount = typ_amax[t] * excessPercentage;
 						ammo[t] += amount
 						excess = ammo[t] - typ_amax[t];
-						if ammo[t] > typ_amax[t]
+						if ammo[t] > typ_amax[t] && !ultra_got[26]
 							ammo[t] = typ_amax[t];
 						if amount - max(0,excess) > 0
 							scrAmmoPickupText(t, amount - max(0,excess));
@@ -69,8 +71,10 @@ if !instance_exists(GenCont)
 				if excess > 0
 				{
 					var excessPercentage = excess / typ_amax[t];
+					var am = 4;
 					if canMeleeAmmo
 					{
+						am += 1;
 						t = irandom_range(0,5);
 						var tadd = irandom_range(1,5);
 					}
@@ -81,7 +85,7 @@ if !instance_exists(GenCont)
 					}
 					//Spread out the remaining ammo
 					var done = false;
-					repeat(4)
+					repeat(am)
 					{
 						if !done
 						{
@@ -117,6 +121,13 @@ if !instance_exists(GenCont)
 									scrAmmoPickupText(t, amount - max(0,excess));
 							}
 						}
+					}
+					//Still ammo left!?
+					if !done && skill_got[48]
+					{
+						done = false;
+						var excessAmount = ammo[t] - typ_amax[t];
+						scrExcessResource(t, excessAmount);
 					}
 				}
 			}

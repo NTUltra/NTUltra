@@ -65,9 +65,14 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 				var allammotypes=5;
 				repeat(5)
 				{
-					ammo[allammotypes] += typ_ammo[allammotypes]
-					if ammo[allammotypes] > typ_amax[allammotypes]
+					ammo[allammotypes] += typ_ammo[allammotypes];
+					
+					if ammo[allammotypes] > typ_amax[allammotypes] && !ultra_got[26]
+					{
+						var excessAmount = ammo[allammotypes] - typ_amax[allammotypes]
+						scrExcessResource(1 + allammotypes, excessAmount);
 						ammo[allammotypes] = typ_amax[allammotypes]
+					}
 					if (UberCont.opt_ammoicon)
 					{
 						dir = instance_create(x,y,PopupText);
@@ -132,25 +137,30 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 			}
 			
 			if ammoMultiple > 0{
-				ammo[wep_type[targetPickup.wep]] += typ_ammo[targetPickup.wep_type[targetPickup.wep]]*ammoMultiple
-				if ammo[wep_type[targetPickup.wep]] > typ_amax[targetPickup.wep_type[targetPickup.wep]] && !ultra_got[26]
-					ammo[wep_type[targetPickup.wep]] = typ_amax[targetPickup.wep_type[targetPickup.wep]]
+				var wt = wep_type[targetPickup.wep];
+				ammo[wt] += typ_ammo[wt]*ammoMultiple
+				if ammo[wt] > typ_amax[wt] && !ultra_got[26]
+				{
+					var excessAmount = ammo[wt] - typ_amax[wt]
+					scrExcessResource(1 + wt, excessAmount);
+					ammo[wt] = typ_amax[wt]
+				}
 				snd_play(sndAmmoPickup,0,true);
 				if (UberCont.opt_ammoicon)
 				{
 					dir = instance_create(x,y,PopupText);
 					dir.sprt = sprAmmoIconsPickup
-					dir.ii = targetPickup.wep_type[targetPickup.wep];
-					dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple);
-					if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
+					dir.ii = wt;
+					dir.mytext = "+"+string(typ_ammo[wt]*ammoMultiple);
+					if ammo[wt] == typ_amax[wt]
 						dir.mytext = "MAX";
 				}
 				else
 				{
 					dir = instance_create(x,y,PopupText)
-					dir.mytext = "+"+string(typ_ammo[wep_type[targetPickup.wep]]*ammoMultiple)+" "+string(typ_name[wep_type[targetPickup.wep]])
-					if ammo[wep_type[targetPickup.wep]] == typ_amax[targetPickup.wep_type[targetPickup.wep]]
-						dir.mytext = "MAX "+string(typ_name[wep_type[targetPickup.wep]])
+					dir.mytext = "+"+string(typ_ammo[wt]*ammoMultiple)+" "+string(typ_name[wt])
+					if ammo[wt] == typ_amax[wt]
+						dir.mytext = "MAX "+string(typ_name[wt])
 				}
 			}
 			targetPickup.ammo = 0
@@ -739,21 +749,17 @@ if (tookHit)
 					healTaken += 1;
 					overHealAllow += 1;
 				}
-				var excessHeal = my_health + healTaken - overHealAllow;
+				var excessHeal = min(healTaken,prevhealth + healTaken - overHealAllow);
 				if excessHeal > 0
 					scrExcessResource(0,excessHeal);
-				if prevhealth < overHealAllow
+					
+				with instance_create(x,y,HealFX)
 				{
-					with instance_create(x,y,HealFX)
-					{
-						depth = other.depth - 1;	
-					}
-					my_health = min(overHealAllow,prevhealth+healTaken);
+					depth = other.depth - 1;	
 				}
-				else
-				{
+				my_health = min(overHealAllow,prevhealth+healTaken);
+				if prevhealth > my_health
 					my_health = prevhealth;
-				}
 				scrPhotosythesis(healTaken);
 				with instance_create(x,y,SharpTeeth)
 					owner=other.id;

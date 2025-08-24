@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.588562,
+  "duration":0.5885714,
   "name":"sndAbsorbingPoresHeal",
   "parent":{
     "name":"Pickups",

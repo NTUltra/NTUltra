@@ -29,10 +29,14 @@ if enemyHealthWasChanged || playerHealthWasChanged
 							canAmmo = true;
 							adrenalineAmmoTimer = adrenalineAmmoCooldown;
 						}
-						if (adrenalineHealTimer <= 0 && (other.my_health < other.maxhealth || (adrenalineHealTimer + adrenalineHealCooldown <= 0 && other.armour < other.maxarmour)))
-						{
-							canAdrenalineHeal = true;
-							adrenalineHealTimer = adrenalineHealCooldown;
+						if (adrenalineHealTimer <= 0)
+						{ 
+							if (other.my_health < other.maxhealth || (adrenalineHealTimer + adrenalineHealCooldown <= 0 && other.maxarmour > 0 && other.armour < other.maxarmour))
+							{
+								canAdrenalineHeal = true;
+								adrenalineHealTimer = adrenalineHealCooldown;
+							}
+							adrenalineHealTimer = 0;
 						}
 					}
 					adrenalineAmmoTimer = other.adrenalineAmmoTimer;
@@ -52,7 +56,7 @@ if enemyHealthWasChanged || playerHealthWasChanged
 							scrHeal(1);
 							snd_play(sndAdrenalineHeal,0.01);
 						}
-						else if armour < maxarmour
+						else if maxarmour > 0 && armour < maxarmour
 						{
 							armour = min(maxarmour,armour + 1);
 							snd_play(sndArmourHeal,0.01);

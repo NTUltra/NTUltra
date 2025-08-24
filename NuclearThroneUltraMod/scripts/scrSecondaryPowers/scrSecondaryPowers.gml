@@ -134,6 +134,13 @@ function scrSecondaryPowers() {
 						with CrystalShield
 						{
 							instance_destroy();
+							if Player.skill_got[8]//Gamma Gutseru
+							{
+								snd_play(sndGammaGutsSmall,0.1);
+								with instance_create(x,y,CrystalGamma) {
+									team = Player.team;	
+								}
+							}
 							with instance_create(x,y,AnimDestroy)
 							{
 								sprite_index = other.spr_disappear;

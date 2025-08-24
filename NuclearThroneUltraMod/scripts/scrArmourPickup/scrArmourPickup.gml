@@ -2,6 +2,7 @@
 // /@description
 ///@param
 function scrArmourPickup(num){
+	snd_play_2d(sndArmourHeal);
 	if UberCont.opt_ammoicon
 	{
 		dir = instance_create(x,y,PopupText)
@@ -19,6 +20,8 @@ function scrArmourPickup(num){
 	}
 	with Player
 	{
+		var excessAmount = armour + num - maxarmour;
+		scrExcessResource(8, excessAmount);
 		armour = min(maxarmour,armour + num);
 	}
 }

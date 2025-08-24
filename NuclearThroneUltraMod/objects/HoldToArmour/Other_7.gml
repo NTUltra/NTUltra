@@ -10,6 +10,11 @@ with Player
 		else
 		{
 			armour += 1;
+			if armour > maxarmour
+			{
+				scrExcessResource(8,1);
+				armour = maxarmour;	
+			}
 		}
 		BackCont.shake += 5;
 		snd_play_2d(sndArmourHeal);

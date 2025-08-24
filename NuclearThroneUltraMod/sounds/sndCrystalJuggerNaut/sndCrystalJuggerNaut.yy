@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.726688,
+  "duration":0.0,
   "name":"sndCrystalJuggerNaut",
   "parent":{
     "name":"Crystal",

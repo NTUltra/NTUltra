@@ -681,22 +681,37 @@ function scrPopulate() {
 		}
     }
 
-    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
+    if !((Player.area == 118 || Player.area == 9) && Player.subarea == 3) && !scrIsGamemode(40){
         if Player.area < 5 {
             with WeaponChest
-            instance_create(x, y, Bandit)
+			{
+				if point_distance(x,y,Player.x,Player.y) > 96
+					instance_create(x, y, Bandit)
+			}
             with RadChest
-            instance_create(x, y, Bandit)
+			{
+				if point_distance(x,y,Player.x,Player.y) > 96
+					instance_create(x, y, Bandit)
+			}
             with AmmoChest
-            instance_create(x, y, Bandit)
+			{
+				if point_distance(x,y,Player.x,Player.y) > 96
+					instance_create(x, y, Bandit)
+			}
         }
-        else if Player.area != 101 && Player.area != 128 && Player.area != 138 && Player.area != 140 && Player.area != 139 && !scrIsGamemode(40) && point_distance(x,y,Player.x,Player.y) > 96{
+        else if Player.area != 101 && Player.area != 128 && Player.area != 138 && Player.area != 140 && Player.area != 139 && !scrIsGamemode(40){
             with WeaponChest
-            instance_create(x, y, Grunt)
+			{
+				if point_distance(x,y,Player.x,Player.y) > 96
+					instance_create(x, y, Grunt)
+			}
             //with RadChest
             //instance_create(x,y,Grunt)
             with AmmoChest
-            instance_create(x, y, Grunt)
+			{
+				if point_distance(x,y,Player.x,Player.y) > 96
+					instance_create(x, y, Grunt)
+			}
         }
     }
     //populate pizza sewers

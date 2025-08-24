@@ -33,7 +33,7 @@ function scrEnemyTakingDamage() {
 			{
 				dmgTaken = scrBleedDamage(dmgTaken);
 			}
-			if Player.skill_got[48] || true
+			if Player.skill_got[48]
 			{
 				dmgTaken = scrExcessResourceDamage(dmgTaken);	
 			}

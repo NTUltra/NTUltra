@@ -101,7 +101,7 @@ function scrRaces() {
 	race_butt[4] = "BIGGER <w>CORPSE<w> EXPLOSIONS"
 	race_butt_detail[4] = "TRIPLE <r>BLOOD<r> <w>CORPSE<w> EXPLOSIONS";
 	race_vision[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME#AND <r>HEALS<r> <w>1<w>";
-	race_vision_detail[4] = race_vision[4];
+	race_vision_detail[4] = "<w>ACTIVE<w> MAKES YOU <aq>IMMUNE<aq>#FOR A SHORT TIME#BLOWING UP <w>MORE CORPSES<w>#INCREASES <aq>IMMUNE<aq> TIME#BLOWING UP ATLEAST <w>10<w> CORPSES <r>HEALS<r> <w>1<w>";
 	race_lock[4] = "DIE TO UNLOCK"
 	race_have[4] = 0
 	race_swep[4] = 1
@@ -730,12 +730,19 @@ function scrRaces() {
 		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN AN AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
 		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> <w>COLLECTS<w> SOME <y>RES<y><g>OUR<g><r>CES<r>"
 		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
-		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
+		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>";
+		race_vision_detail[29] = race_vision[29] + "#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
+		/*
+		if instance_exists(Player) && Player.skill_got[48]
+		{
+				race_vision_detail[29] += "<w>EXCESS<w> <v>VOID BEAM<v> RESOURCE STACKS <g>GLUTINOUS BELLY<g>"
+		}
+		*/
 		//<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>"
 		//Resources used in void consumption stack up into a void beam that you can fire by pressing <w>[E]<w> You are immune while firing void beam
 		//Resources lost get put into a chest that you can either explode or collect
 		//race_vision[29] = "PRESS <w>[E]<w> TO:#ENTER VOID MODE AT THE COST OF <w>2<w><r>HP<r>#WHILE IN VOID MODE#YOU ARE IMMUNE BUT CANNOT COLLECT RESOURCES OR FIRE";
-		race_vision_detail[29] = "PRESS <w>[E]<w> TO:#SEND YOUR VOID COMSUMPTION TOWARD NEARBY ENEMIES";
+		//race_vision_detail[29] = "PRESS <w>[E]<w> TO:#SEND YOUR VOID COMSUMPTION TOWARD NEARBY ENEMIES";
 		if isUnique
 		{
 			race_vision[29] = string_replace_all(race_vision[29],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");

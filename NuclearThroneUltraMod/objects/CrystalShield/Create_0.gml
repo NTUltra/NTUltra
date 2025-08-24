@@ -3,7 +3,7 @@ time = 0
 team =2
 p = 0
 friction = 0.45
-
+alarm[2] = 15;
 alarm[6] = 1;
 wave=0;
 sprite_index=sprShield
@@ -20,6 +20,7 @@ if instance_exists(Player)
 		dmg = 3;
 		if Player.race == 25
 			dmg = 4;
+		dmg += GetPlayerLoops() * 0.5
 	}
 	if(Player.ultra_got[8]==1)
 	{

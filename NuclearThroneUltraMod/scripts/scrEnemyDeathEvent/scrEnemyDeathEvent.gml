@@ -382,8 +382,12 @@ function scrEnemyDeathEvent(isSheep = false){
 				rage+=1;
 				if isdoc || (ultra_got[19] && !altUltra)
 					rage += 0.25;
-				if rage>500//MAX RAGE
-					rage=500;//340
+				if rage > 500//MAX RAGE
+				{
+					var excessRage = rage - 500;
+					scrExcessResource(12,excessRage);
+					rage = 500;//340
+				}
 				rageIndicator += 1;
 				if rageIndicator > 19
 				{

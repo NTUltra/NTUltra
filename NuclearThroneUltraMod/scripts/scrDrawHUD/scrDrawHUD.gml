@@ -1,6 +1,7 @@
 
 function scrDrawHUD() {
 	var canMeleeAmmo = scrIsCrown(40);
+	var rightSideHealthBarHud = 0;
 	if instance_exists(DataRef)
 	{
 		var dataRef = DataRef;
@@ -226,6 +227,7 @@ function scrDrawHUD() {
 	var gotArmour = 0;
 	if dataRef.skill_got[41] && armour == 1
 		gotArmour = 2;
+	rightSideHealthBarHud += 16 * maxArmour;
 	repeat(maxArmour)
 	{
 		dir++;
@@ -235,6 +237,7 @@ function scrDrawHUD() {
 	{
 		dir++;
 		draw_sprite(sprSerpentHUD,dataRef.freeArmourStrike ? 0 : 1,vx+armourX+(15*dir),vy+4);
+		rightSideHealthBarHud += 16;
 	}
 	if (dataRef.ultra_got[62] && dataRef.altUltra)
 	{
@@ -272,6 +275,7 @@ function scrDrawHUD() {
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
+		rightSideHealthBarHud = 11;
 		var spr = sprRogueAmmoHUD;
 		if dataRef.ultra_got[85]=1
 		{
@@ -1526,9 +1530,10 @@ function scrDrawHUD() {
 		draw_sprite(sprUltraLevel,0,vx+rto,vy+16);
 	}
 	//Excess resource damage boost
-	if dataRef.skill_got[48]  || true
+	if dataRef.skill_got[48]
 	{
-		var edx = hx + 90
+		draw_set_color(c_white)
+		var edx = hx + 90 + rightSideHealthBarHud;
 		var edy = vy + 7;
 		var preT = "";
 		var erdb = round(dataRef.excessResourceDamageBoost * 100)
@@ -1556,7 +1561,10 @@ function scrDrawHUD() {
 		}
 		else if dataRef.excessResourceDamageBoost > 0
 		{
-			draw_sprite(sprGlutinousBellyHud,(erdb/(dataRef.excessResourceDamageBoostMax*100)) * 10,edx,edy);
+			var gSpr = sprGlutinousBellyHud
+			if instance_exists(GluttonousAdding)
+				gSpr = sprGlutinousBellyHudAdding;
+			draw_sprite(gSpr,(erdb/(dataRef.excessResourceDamageBoostMax*100)) * 10,edx,edy);
 			draw_text(edx + 1,edy,preT + string(erdb) + "%");
 		}
 		else

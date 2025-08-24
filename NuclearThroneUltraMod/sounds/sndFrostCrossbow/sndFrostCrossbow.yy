@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.508345,
+  "duration":0.50834465,
   "name":"sndFrostCrossbow",
   "parent":{
     "name":"Bolts",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndFrostCrossbow.ogg",
+  "soundFile":"sndFrostCrossbow.wav",
   "type":0,
   "volume":1.0,
 }

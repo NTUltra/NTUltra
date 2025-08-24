@@ -17,7 +17,11 @@ with Player
 	}	
 	rogueammo+=num;
 	if rogueammo > rogueammomax
-	rogueammo = rogueammomax
+	{
+		var excessPortalStrike = rogueammo - rogueammomax;
+		scrExcessResource(11,excessPortalStrike);
+		rogueammo = rogueammomax
+	}
 
 	var dir = instance_create(other.x,other.y,PopupText)
 	if UberCont.opt_ammoicon
