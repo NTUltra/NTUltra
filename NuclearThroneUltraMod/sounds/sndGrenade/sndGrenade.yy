@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.199184,
+  "duration":1.1991837,
   "name":"sndGrenade",
   "parent":{
     "name":"Weapons",

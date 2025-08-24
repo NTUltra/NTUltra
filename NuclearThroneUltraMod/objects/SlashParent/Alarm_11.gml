@@ -72,7 +72,7 @@ else if um == ultramods.krakenMelee
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0
@@ -101,11 +101,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 4;
+			dmg += 3;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0
@@ -134,11 +134,11 @@ else if um == ultramods.krakenMelee
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg += 4;
+			dmg += 3;
 		}
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		event_perform(ev_alarm,0)
 		visible = 0

@@ -5,3 +5,4 @@ text = "";
 bolded = false;
 alarm[1] = 50;
 alarm[2] = 40;
+alarm[3] = 9;

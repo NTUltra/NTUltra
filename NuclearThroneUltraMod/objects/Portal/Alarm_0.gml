@@ -1,8 +1,12 @@
 /// @description Sounds after repos
-snd_play_2d(sndPortalOpen);
 var snd = sndPortalAppear;
 if inverted
+{
 	snd = sndInvertedPortalAppear;
+	snd_play_2d(sndInvertedPortalOpen);
+}
+else
+	snd_play_2d(sndPortalOpen);
 var xx = x;
 var yy = y;
 if instance_exists(Player)

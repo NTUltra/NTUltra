@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.44229,
+  "duration":0.5277778,
   "name":"sndSlingShot",
   "parent":{
     "name":"Bolts",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndSlingShot.ogg",
+  "soundFile":"sndSlingShot.wav",
   "type":0,
   "volume":1.0,
 }

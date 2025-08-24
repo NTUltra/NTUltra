@@ -153,7 +153,7 @@ function scrSecretUltraStat() {
 	//VIKING 
 	//61
 	secret_ultra_name[18] = "CAPTAIN OF THE KRAKEN"
-	secret_ultra_text[18] = "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#<p>TENTACLES<p> ARE LONGER#<p>KRAKEN<p> WEAPONS COST 30% LESS <y>AMMO<y>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>"
+	secret_ultra_text[18] =  "<p>KRAKEN<p> WEAPONS DEAL MORE DAMAGE#AND REFUND <w>25%<w> <y>AMMO<y>#<p>TENTACLES<p> ARE LONGER AND <g>VENOMOUS<g>##<p>TENTACLE<p> <gb>ARMOUR<gb> <w>STRIKE<w>#WHENEVER YOU LOSE <gb>ARMOUR<gb>#SPAWN A <pi>TINY<pi> <p>KRAKEN<p>"
 	secret_ultra_tips[18] = "from the sea she came"
 	secret_ultra_hint[18] = "OCEAN";
 	secret_ultra_unlk[18] = "HOLD A KRAKEN WEAPON\nOR HAVE ALIEN INTESTINES\nOR HAVE CROWN OF DROWNING\nOR BE IN THE OASIS";

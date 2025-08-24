@@ -548,6 +548,7 @@ if !instance_exists(LevCont) and visible = 1
 				owner = other.id;
 				my_health = other.my_health;
 			}
+			instance_create(x,y,ShowVoidEssenceTemporarily);
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
@@ -679,7 +680,7 @@ if !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "WEAPON "+string(wep)+"#"+string(wep_name[wep])+"!";
 		    }
-		if (keyboard_check_pressed(ord("3")))
+		if (keyboard_check_pressed(ord("5")))
 		    {
 			    if(wep - 50 < 0) {
 					wep = maxwep + wep - 50;
@@ -695,7 +696,7 @@ if !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "WEAPON "+string(wep)+"#"+string(wep_name[wep])+"!";
 		    }
-		if (keyboard_check_pressed(ord("4")))
+		if (keyboard_check_pressed(ord("6")))
 		    {
 			    if(wep + 50 > maxwep ) {
 					wep = 50 + wep - maxwep;
@@ -711,14 +712,46 @@ if !instance_exists(LevCont) and visible = 1
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "WEAPON "+string(wep)+"#"+string(wep_name[wep])+"!";
 		    }
-		if (keyboard_check_pressed(ord("5")))
+		if (keyboard_check_pressed(ord("3")))
+		    {
+			    if(wep - 10 < 0) {
+					wep = maxwep + wep - 10;
+				} else {
+					wep = wep - 10;
+				}
+				if bwep == 0
+					bwep = wep;
+				reload = 0;
+				var type = wep_type[wep];
+				ammo[type] = typ_amax[type];
+				scrWeaponHold();
+				thing = instance_create(x,y,PopupText)
+				thing.mytext = "WEAPON "+string(wep)+"#"+string(wep_name[wep])+"!";
+		    }
+		if (keyboard_check_pressed(ord("4")))
+		    {
+			    if(wep + 10 > maxwep ) {
+					wep = 10 + wep - maxwep;
+				} else {
+					wep = wep + 10;
+				}
+				if bwep == 0
+					bwep = wep;
+				reload = 0;
+				var type = wep_type[wep];
+				ammo[type] = typ_amax[type];
+				scrWeaponHold();
+				thing = instance_create(x,y,PopupText)
+				thing.mytext = "WEAPON "+string(wep)+"#"+string(wep_name[wep])+"!";
+		    }
+		if (keyboard_check_pressed(ord("7")))
 		    {
 				ultramod --;
 				ultramod = max(0,ultramod);
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "Ultramod -- "+string(ultramod);
 		    }
-		if (keyboard_check_pressed(ord("6")))
+		if (keyboard_check_pressed(ord("8")))
 		    {
 				ultramod ++;
 				thing = instance_create(x,y,PopupText)
@@ -1682,11 +1715,9 @@ if (!instance_exists(LevCont))
 		*/
 		if skill_got[35]//PUFFY CHEEKS
 		{
-			breload -= 0.4;
-			creload -= 0.4;
-			var crm = 0.4;
-			if race == 25//Doctor puffy cheeks
-				crm = 0.3;
+			breload -= 0.3;
+			creload -= 0.3;
+			var crm = 0.5;
 	
 			var cr = (prevreload - reload)*crm;
 			if cr > 0 && reload < 0

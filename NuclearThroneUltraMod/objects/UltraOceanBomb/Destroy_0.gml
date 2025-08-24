@@ -29,11 +29,7 @@ repeat(amount)
 		ammo = 32
 		sprite_index=sprUltraTentacle;
 		ultra=true;
-		dmg = 9;
-		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-		{
-			dmg += 2;
-		}
+		dmg += 6;
 		scrCopyWeaponMod(other);
 		event_perform(ev_alarm,0)
 		visible = 0

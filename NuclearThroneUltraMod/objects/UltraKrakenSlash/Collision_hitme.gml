@@ -18,11 +18,7 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		ammo = other.length
 		sprite_index=sprUltraTentacle;
 		ultra=true;
-		dmg = 9;
-		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-		{
-			dmg += 2;
-		}
+		dmg += 6;
 		event_perform(ev_alarm,0)
 		visible = 0
 		with instance_create(x,y,LightningSpawn)

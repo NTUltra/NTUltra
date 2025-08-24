@@ -1,18 +1,35 @@
 if other.team != team and other.my_health > 0 && instance_exists(myHead) && !array_contains(myHead.hits,other.id)
 {
 	myHead.hits[array_length(myHead.hits)] = other.id;
+	var me = id;
 	with other
 	{
 		if team == 0
 			DealDamage(other.dmg * 0.5)
 		else
 			DealDamage(other.dmg)
-		if instance_exists(Player)
+		if other.myHead.applyVenom && other.myHead.alarm[1]  < 1
 		{
-			//freeze bitch!
-			if alarm[11]<1&&my_health>0&&Player.ultra_got[63] {
-				scrFreezeTarget(15);
+			var d = point_direction(other.x,other.y,x,y);
+			with instance_create(other.x,other.y,AcidStreak)
+			{
+				motion_add(d + random_range(10,-10),8);
+				image_angle = direction;
 			}
+			with instance_create(x,y,Venom)
+			{
+				scrCopyWeaponMod(me);
+				team = me.team;
+				owner = other.id;
+				dmg += 3;
+				rate -= 2;
+				amount += 1;
+			}
+			other.myHead.alarm[1] = 40;//9 * 4
+		}
+		//freeze bitch!
+		if other.myHead.shouldFreeze && alarm[11]<1 && my_health>0{
+			scrFreezeTarget(15);
 		}
 		sprite_index = spr_hurt
 		image_index = 0
@@ -28,9 +45,6 @@ if other.team != team and other.my_health > 0 && instance_exists(myHead) && !arr
 		with SerpentStrike
 			amountofenemies=other.amountofenemies
 	}
-
-
 	instance_create(x,y,Dust)
-
 }
 

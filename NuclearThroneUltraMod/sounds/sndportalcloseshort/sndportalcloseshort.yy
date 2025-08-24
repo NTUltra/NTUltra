@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.850816,
+  "duration":0.0,
   "name":"sndPortalCloseShort",
   "parent":{
     "name":"Menu",

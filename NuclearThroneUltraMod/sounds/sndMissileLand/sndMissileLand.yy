@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.5605,
+  "duration":0.56052154,
   "name":"sndMissileLand",
   "parent":{
     "name":"Weapons",

@@ -3,7 +3,7 @@ instance_create(x,y,Dust)
 if !hasSplit
 {
 	snd_play(sndDebrisHitUpg);
-	var am = 6;
+	var am = debrisAmount;
 	repeat(am)
 	{
 		with instance_create(x,y,Dust)

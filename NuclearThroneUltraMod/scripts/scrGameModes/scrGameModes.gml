@@ -264,7 +264,7 @@ function scrGameModes() {
 	gamemode_nocombo[35] = [7,14,15,23,24,26,27,28,30,37,8];
 	
 	gamemode[36] = "ULTRA MOD START";
-	gamemode_unlock[36] = "BEAT THE THIRD#ULTRA MOD CHALLENGE";
+	gamemode_unlock[36] = "BEAT THE THIRD#ULTRA MOD CHALLENGE#IN THE CROWN VAULT";
 	gamemode_have[36] = 0;
 	gamemode_tip[36] = "ROLL CREDITS";
 	gamemode_description[36] = "START WITH AN ULTRA MOD";
@@ -327,7 +327,7 @@ function scrGameModes() {
 	gamemode_nocombo[45] = [26,27,37,8,25,42,44,40];
 	
 	gamemode[46] = "ANY START WEAPON";//
-	gamemode_unlock[46] = "COMPLETE THE QUEST FROM A SUSPICIOUS CURSED FIEND IN THE CROWNVAULT";
+	gamemode_unlock[46] = "COMPLETE THE QUEST FROM A SUSPICIOUS CURSED FIEND IN THE CROWN VAULT";
 	gamemode_have[46] = 0;
 	gamemode_tip[46] = "WHATEVER YOU WANT";
 	gamemode_description[46] = "";

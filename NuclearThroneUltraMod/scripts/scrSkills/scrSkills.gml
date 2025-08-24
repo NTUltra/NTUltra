@@ -511,9 +511,9 @@ function scrSkills() {
 	
 	skill_name[35] = "PUFFY CHEEKS"
 	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 50% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 60% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 50% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "CAN LOAD UP TO FOUR SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";

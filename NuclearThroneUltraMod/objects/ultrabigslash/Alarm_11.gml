@@ -92,7 +92,7 @@ else {
 		dmg = ddd;//6 dmg = 1dmg
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle;
 		team = other.team
@@ -121,7 +121,7 @@ else {
 		dmg = ddd;//6 dmg = 1dmg
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle-( 30*acc);
 		team = other.team
@@ -150,7 +150,7 @@ else {
 		dmg = ddd;//6 dmg = 1dmg
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle+( 30*acc);
 		team = other.team
@@ -179,7 +179,7 @@ else {
 		dmg = ddd;//6 dmg = 1dmg
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle-( 60*acc);
 		team = other.team

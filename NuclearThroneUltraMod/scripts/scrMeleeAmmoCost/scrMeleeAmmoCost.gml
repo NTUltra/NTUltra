@@ -85,7 +85,7 @@ function scrMeleeAmmoCost(myCost = 1){
 			    }
 				if ultra_got[61] && altUltra && other.object_index == KrakenSlash
 				{
-					myCost *= 0.7;
+					myCost *= 0.75;
 				}
 				if scrIsCrown(39)
 				{

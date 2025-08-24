@@ -18,6 +18,7 @@ fork = 0//6;
 branch = 0//20;
 canSwap = false;
 alarm[2] = 5;
+applyVenom = false;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
@@ -32,12 +33,12 @@ if instance_exists(Player)
 	}
 	if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 	{
-		image_speed-=0.1;
-		dmg += 2;
+		image_speed -= 0.05;
+		applyVenom = true;
+		dmg += 1;
 		bloodDelay -= 1;
 		alarm[2] += 1;
-		fork = 8;
-		image_yscale += 0.3;
+		image_yscale += 0.25;
 	}
 	if Player.ultra_got[96]{
 		canSwap = true;

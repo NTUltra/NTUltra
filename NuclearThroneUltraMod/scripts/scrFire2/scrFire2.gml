@@ -4416,11 +4416,7 @@ function scrFire2(hasTailNow) {
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg = 8;//10+irandom(4)
-			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-			{
-				dmg += 1;
-			}
+			dmg += 5;
 			image_angle = aimDirection+(random(60)-30)*other.accuracy
 			team = other.team
 			ammo = 45//24
@@ -10276,60 +10272,60 @@ function scrFire2(hasTailNow) {
 	
 	//LIGHTNING CRASH
 	case 529:
-	if Player.skill_got[17] = 1
-		snd_play_fire(sndLightningCannonUpg)
-	else
-		snd_play_fire(sndLightningCannon)
+		if Player.skill_got[17] = 1
+			snd_play_fire(sndLightningCannonUpg)
+		else
+			snd_play_fire(sndLightningCannon)
 
-	var am = 12;
-	var angStep = 360/am;
-	angStep *= accuracy;
-	var angg = aimDirection - (angStep * (am*0.5));
-	repeat(am)
-	{
+		var am = 12;
+		var angStep = 360/am;
+		angStep *= accuracy;
+		var angg = aimDirection - (angStep * (am*0.5));
+		repeat(am)
+		{
+			with instance_create(x,y,Lightning)
+			{image_angle = angg;
+				iframeskip = max(0,iframeskip-0.04);
+				accuracy = 40;
+				branch = 100;
+				team = other.team
+				ammo = 16;
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle}
+			angg += angStep
+		}
+		angStep *= 0.5;
 		with instance_create(x,y,Lightning)
-		{image_angle = angg;
+		{
+			image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
+			accuracy += 10;
+			branch = 60;
 			iframeskip = max(0,iframeskip-0.04);
-			accuracy = 40;
-			branch = 100;
 			team = other.team
-			ammo = 16;
-		event_perform(ev_alarm,0)
-		with instance_create(x,y,LightningSpawn)
-		image_angle = other.image_angle}
-		angg += angStep
-	}
-	angStep *= 0.5;
-	with instance_create(x,y,Lightning)
-	{
-		image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
-		accuracy += 10;
-		branch = 60;
-		iframeskip = max(0,iframeskip-0.04);
-		team = other.team
-		ammo = 24;
-		event_perform(ev_alarm,0)
-		with instance_create(x,y,LightningSpawn)
-			image_angle = other.image_angle
-	}
-	with instance_create(x,y,Lightning)
-	{
-		image_angle = aimDirection-angStep+(random(6)-3)*other.accuracy;
-		accuracy += 10;
-		branch = 60;
-		iframeskip = max(0,iframeskip-0.04);
-		team = other.team
-		ammo = 24;
-		event_perform(ev_alarm,0)
-		with instance_create(x,y,LightningSpawn)
-			image_angle = other.image_angle
-	}
+			ammo = 24;
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+				image_angle = other.image_angle
+		}
+		with instance_create(x,y,Lightning)
+		{
+			image_angle = aimDirection-angStep+(random(6)-3)*other.accuracy;
+			accuracy += 10;
+			branch = 60;
+			iframeskip = max(0,iframeskip-0.04);
+			team = other.team
+			ammo = 24;
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+				image_angle = other.image_angle
+		}
 
-	BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 12
-	wkick += 4
-	scrSpinnableWeapon(wep);
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 12
+		wkick += 4
+		scrSpinnableWeapon(wep);
 	break;
 	
 	//ULTRA HEAVY REVOLVER
@@ -15391,11 +15387,7 @@ function scrFire2(hasTailNow) {
 	{
 		sprite_index=sprUltraTentacle;
 		ultra=true;
-		dmg = 9;
-		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-		{
-			dmg += 2;
-		}
+		dmg += 6;
 		image_angle = aimDirection+(random(60)-30)*other.accuracy
 		team = other.team
 		ammo = 16//24

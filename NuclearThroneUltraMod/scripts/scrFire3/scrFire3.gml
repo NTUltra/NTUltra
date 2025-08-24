@@ -1709,11 +1709,7 @@ function scrFire3(hasTailNow){
 		{
 			sprite_index=sprUltraTentacle;
 			ultra=true;
-			dmg = 9;//10+irandom(4)
-			if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
-			{
-				dmg += 2;
-			}
+			dmg += 6;//10+irandom(4)
 			image_angle = aimDirection+(random(60)-30)*other.accuracy
 			team = other.team
 			ammo = 20//24
@@ -3329,6 +3325,38 @@ function scrFire3(hasTailNow){
 		
 		//SLINGSHOT
 		case 895:
+			with ChargeSlingshot {
+				if scrChargeRelease()
+				{
+					instance_destroy();
+				}
+			}
+			with instance_create(x,y,ChargeSlingshot)
+			{
+				type = other.wep_type[other.wep];
+				maxcharge = 6;//maxrate
+				originalMaxCharge = maxcharge;
+				creator = other.id
+				chargetime = 5;
+				costtime = 18;
+				cost = 1;
+				team = other.team
+				if Player.skill_got[42]
+				{
+					chargetime = 2;
+					maxcharge++;
+					costtime *= Player.betterTail;
+					if Player.ultra_got[97] && !Player.altUltra
+					{
+						chargetime = 1;
+						rate = maxcharge;
+						maxcharge++;
+					}
+					scrActivateTail(hasTailNow);
+				}
+				event_perform(ev_alarm,0);
+				alarm[1] = costtime;
+			}/*
 			snd_play_fire(sndSlingShot)
 			with instance_create(x,y,SlingShotRock)
 			{
@@ -3339,11 +3367,13 @@ function scrFire3(hasTailNow){
 				team = other.team
 			}
 			if !skill_got[2]
-				motion_add(aimDirection,1);
+				motion_add(aimDirection + 180,1);
 			BackCont.viewx2 += lengthdir_x(15,aimDirection+180)*UberCont.opt_shake
 			BackCont.viewy2 += lengthdir_y(15,aimDirection+180)*UberCont.opt_shake
 			BackCont.shake += 2
-			wkick = -5
+						*/
+
+			wkick = 2
 			
 		break;
 		
@@ -4232,5 +4262,129 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//KRAKEN CRASH
+		case 919:
+			snd_play_fire(sndRoll);
+			snd_play_fire(sndBloodLauncher);
+			snd_play_fire(choose(sndWater1,sndWater2) );
+			var am = 12;
+			var angStep = 360/am;
+			angStep *= accuracy;
+			var angg = aimDirection - (angStep * (am*0.5));
+			repeat(am)
+			{
+				with instance_create(x,y,Tentacle)
+				{
+					image_angle = angg;
+					creator=other.id;
+					team = other.team
+					ammo = 15
+					event_perform(ev_alarm,0)
+					visible = 0
+					with instance_create(x,y,LightningSpawn)
+					{
+						sprite_index=sprTentacleSpawn
+						image_angle = other.image_angle
+						direction = image_angle;
+						speed = 2;
+					}
+				}
+				angg += angStep
+			}
+			angStep *= 0.5;
+			with instance_create(x,y,Tentacle)
+			{
+				image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
+				creator=other.id;
+				team = other.team
+				ammo = 18
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				{
+					sprite_index=sprTentacleSpawn
+					image_angle = other.image_angle
+					
+				}
+			}
+			with instance_create(x,y,Tentacle)
+			{
+				Image_angle = aimDirection+angStep+(random(6)-3)*other.accuracy;
+				creator=other.id;
+				team = other.team
+				ammo = 18
+				event_perform(ev_alarm,0)
+				visible = 0
+				with instance_create(x,y,LightningSpawn)
+				{
+					sprite_index=sprTentacleSpawn
+					image_angle = other.image_angle
+				}
+			}
+			BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += 12
+			wkick += 4
+			scrSpinnableWeapon(wep);
+		break;
+		
+		//MISSILE TRON
+		case 920:
+		
+		snd_play_fire(sndMissileRain)
+
+		var tar = noone;
+		if instance_exists(enemy)
+		{
+			var home = 48 
+			if accuracy > 0
+				home /= accuracy;
+			tar = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
+			if ((tar.team != 0  && tar.team != team && tar.my_health > 0)
+			&& tar.team != team && (accuracy <= 0 || point_distance(UberCont.mouse__x,UberCont.mouse__y,tar.x,tar.y) < home)
+			&& !collision_line(x,y,tar.x,tar.y,Wall,false,false))
+			{
+				
+			}
+			else
+			{
+				tar = noone;	
+			}
+		}
+		if tar != noone
+		{
+			with instance_create(x + lengthdir_x(10,aimDirection),y + lengthdir_y(10,aimDirection),SmartMissile)
+			{
+				myTarget = tar;
+				targetX = myTarget.x;
+				targetY = myTarget.y;
+				direction = aimDirection;
+				speed = 2;
+				event_user(1);
+			}
+		}
+		else
+		{
+			var hit = collision_line_point(x,y,UberCont.mouse__x,UberCont.mouse__y,Wall,false,false);
+			with instance_create(x + lengthdir_x(10,aimDirection),y + lengthdir_y(10,aimDirection),SmartMissile)
+			{
+				targetX = hit[1];
+				targetY = hit[2];
+				followMouse = true;
+				direction = aimDirection;
+				speed = 2;
+				event_user(1);
+			}
+		}
+		BackCont.viewx2 += lengthdir_x(11,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(11,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3;
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,2);
+		}
+		wkick = 6
+
+		break;
 	}
 }

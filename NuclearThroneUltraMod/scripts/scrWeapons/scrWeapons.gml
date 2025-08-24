@@ -5954,7 +5954,7 @@ function scrWeapons() {
 	wep_sprt[529] = sprLightningCrash
 	wep_area[529] = 14
 	wep_text[529] = "crash test"
-	wep_swap[529] = sndSwapBow
+	wep_swap[529] = sndSwapEnergy
 	wep_rad[529] = 0;
 	
 	wep_name[530] = "ULTRA HEAVY REVOLVER"
@@ -10044,13 +10044,14 @@ function scrWeapons() {
 	wep_name[895] = "SLINGSHOT"
 	wep_type[895] = 3
 	wep_auto[895] = 0
-	wep_load[895] = 32
+	wep_load[895] = 20//32
 	wep_cost[895] = 3
 	wep_sprt[895] = sprSlingShot
 	wep_area[895] = 2
 	wep_text[895] = "tossing rocks"
 	wep_swap[895] = sndSwapBow
 	wep_rad[895] = 0;
+	wep_popup[895] = "HOLD [FIRE] TO CHARGE#THEN RELEASE TO FIRE";
 	
 	wep_name[896] = "BASEBALL BAT"
 	wep_type[896] = 0
@@ -10315,7 +10316,30 @@ function scrWeapons() {
 	wep_swap[918] = sndSwapEnergy
 	wep_rad[918] = 0;
 	wep_popup[918] = "TRACKS NEAR CROSSHAIR";
-
+	
+	wep_name[919] = "KRAKEN CRASH"
+	wep_type[919] = 4
+	wep_auto[919] = 1
+	wep_load[919] = 22
+	wep_cost[919] = 5
+	wep_sprt[919] = sprLightningCrash
+	wep_area[919]= 14
+	wep_text[919] = "its just alien intestines"
+	wep_swap[919] = sndSwapDragon
+	wep_rad[919] = 0;
+	
+	wep_name[920] = "MISSILE TRON"
+	wep_type[920] = 4
+	wep_auto[920] = 1
+	wep_load[920] = 5
+	wep_cost[920] = 0.5
+	wep_sprt[920] = sprMissileTron
+	wep_area[920] = 23
+	wep_text[920] = "micro missiles"
+	wep_swap[920] = sndSwapExplosive
+	wep_rad[920] = 0;
+	wep_popup[920] = "TRACKS NEAR CROSSHAIR";
+	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

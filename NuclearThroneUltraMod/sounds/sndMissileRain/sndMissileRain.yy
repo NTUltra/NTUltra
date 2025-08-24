@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.20575,
+  "duration":0.21199547,
   "name":"sndMissileRain",
   "parent":{
     "name":"Weapons",

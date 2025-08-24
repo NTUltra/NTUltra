@@ -165,6 +165,7 @@ if round(ammo) > 0
 {
 	with instance_create(x,y,Tentacle)
 	{
+		applyVenom = other.applyVenom
 		final = 1;
 		image_yscale = other.image_yscale + 0.04;
 		alarm[2] = other.alarm[2];

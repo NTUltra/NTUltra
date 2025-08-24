@@ -45,7 +45,7 @@ else // if um == ultramods.krakenMelee
 		dmg = ddd;//6 dmg = 1dmg
 		if instance_exists(Player) && Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle;
 		team = other.team
@@ -76,7 +76,7 @@ else // if um == ultramods.krakenMelee
 		dmg = ddd;//6 dmg = 1dmg
 		if Player.ultra_got[61] && Player.altUltra//Captain of the kraken
 		{
-			dmg += 2;
+			dmg += 1;
 		}
 		image_angle = other.image_angle+(choose(10,-10)*acc);
 		team = other.team
