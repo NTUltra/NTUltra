@@ -247,6 +247,12 @@ if scrIsGamemode(8) && area != 0
 
         amb = amb102
     }
+	else if area = 148 || area == 149 {
+
+        song = musUltraInvertedRoute;
+
+        amb = ambUltra138;
+    }
 	else if area == 126 {
 
         song = musUltra126

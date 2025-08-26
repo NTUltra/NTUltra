@@ -68,7 +68,7 @@ pullstrength = 0;
 pullRange = 96
 isPink = false;
 isHQ = false;
-if !inverted && (currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)) || (currentarea == 112 && currentsubarea == 2)
+if !inverted && (currentarea  == 8 || (currentarea == 7 && currentsubarea == 3)) || (currentarea == 112 && currentsubarea == 2) || currentarea == 148
 {
 	isPink = true;
 	sprite_index = sprPinkPortalSpawn;

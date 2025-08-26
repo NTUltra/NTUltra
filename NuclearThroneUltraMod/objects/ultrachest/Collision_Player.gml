@@ -111,7 +111,7 @@ if !instance_exists(GenCont)
 				type = other.wep_type[other.wep]
 			var ammoBoost = scrGetAmmoBoost();
 			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
-			if other.ammo[type] > other.typ_amax[type] && !ultra_got[26]
+			if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 			{
 				var excessAmount = ammo[type] - typ_amax[type];
 				scrExcessResource(1 + type, excessAmount);
@@ -140,7 +140,7 @@ if !instance_exists(GenCont)
 			else
 				type = other.wep_type[other.bwep]
 			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
-			if other.ammo[type] > other.typ_amax[type] && !ultra_got[26]
+			if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 			{
 				var excessAmount = ammo[type] - typ_amax[type];
 				scrExcessResource(1 + type, excessAmount);
@@ -172,7 +172,7 @@ if !instance_exists(GenCont)
 					type = other.wep_type[other.cwep]
 
 				other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
-				if other.ammo[type] > other.typ_amax[type] && !ultra_got[26]
+				if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 				{
 					var excessAmount = ammo[type] - typ_amax[type];
 					scrExcessResource(1 + type, excessAmount);

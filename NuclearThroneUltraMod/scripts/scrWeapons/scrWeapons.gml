@@ -3575,10 +3575,10 @@ function scrWeapons() {
 	wep_name[318] = "SUPER TOXIC CROSSBOW"
 	wep_type[318] = 3
 	wep_auto[318] = 0
-	wep_load[318] = 36
+	wep_load[318] = 37
 	wep_cost[318] = 5
 	wep_sprt[318] = sprSuperToxicBow
-	wep_area[318] = 7
+	wep_area[318] = 8
 	wep_text[318] = "diarrhea"
 	wep_swap[318] = sndSwapBow
 	wep_rad[318] = 0;
@@ -10322,7 +10322,7 @@ function scrWeapons() {
 	wep_auto[919] = 1
 	wep_load[919] = 22
 	wep_cost[919] = 5
-	wep_sprt[919] = sprLightningCrash
+	wep_sprt[919] = sprKrakenCrash
 	wep_area[919]= 14
 	wep_text[919] = "its just alien intestines"
 	wep_swap[919] = sndSwapDragon

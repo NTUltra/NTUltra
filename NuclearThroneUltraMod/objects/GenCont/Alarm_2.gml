@@ -755,7 +755,8 @@ if ((Player.area == 7 || Player.area == 108) && Player.subarea == 2)
 	with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,BloodCowSkull)
 }
-if ((Player.area == 144 || Player.area == 145))
+//Rad land Blood land & Ultra scrap Bandit land
+if ((Player.area == 144 || Player.area == 145 || Player.area == 146 || Player.area == 147 || Player.area == 136 || Player.area == 113 || Player.area == 149 || Player.area == 150))
 {
 	with instance_furthest(Player.x+random(128)-64+32,Player.y+random(128)-64+32,Floor)
 		instance_create(x+16,y+16,VoidEntrance)

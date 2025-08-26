@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":3,
   "conversionMode":0,
-  "duration":207.46968,
+  "duration":207.46971,
   "name":"musUltraInvertedRoute",
   "parent":{
     "name":"Music & amb",

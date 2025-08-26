@@ -91,6 +91,9 @@ function scrAreaFullName(area){
 			case 135://Headquarters
 				txt = "I.D.P.D. HQ"
 			break;
+			case 148://Headquarters
+				txt = "I.D.P.D. FREAK HQ"
+			break;
 			case 136://Ultra scrapyard
 				txt = "ULTRA SCRAPYARD"
 			break;
@@ -218,6 +221,13 @@ function scrAreaFullName(area){
 			break;
 			case 147: //BLOOD LAND
 				txt = "BLOOD LAND";
+				upsideDown = true;
+			break;
+			case 149: //ACID DREAM
+				txt = "ACID DREAM";
+			break;
+			case 150: //ACID DREAM (black and white)
+				txt = "ACID DREAM";
 				upsideDown = true;
 			break;
 		}

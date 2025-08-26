@@ -23,7 +23,7 @@ else
 		area = PitNavigation.currentArea;
 	scrTopArea(area);
 }
-image_index = choose(0,1,2,3,4,5,6,7)
+image_index = irandom(image_number);
 image_speed = 0
 
 visible=false;

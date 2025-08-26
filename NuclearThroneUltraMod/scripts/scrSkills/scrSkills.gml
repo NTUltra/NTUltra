@@ -678,6 +678,13 @@ function scrSkills() {
 	skill_bons[47] = "+30% STACK"
 	skill_msnd[47] =  sndMutBouncyFat;
 	
+	skill_name[47] = "RAVENOUS APETITE"
+	skill_text[47] = "KILLS INCREASE DAMAGE YOU DEAL#UP TO 50%#RESETS EACH AREA"
+	skill_detail[47] = "KILLS INCREASE DAMAGE YOU DEAL#UP TO 50%#RESETS EACH AREA"
+	skill_tips[47] = "killing spree"
+	skill_bons[47] = MORE DAMAGE BOOST PER KILL#+15% DAMAGE BOOST MAX"
+	skill_msnd[47] =  sndMutBouncyFat;
+	
 	skill_name[48] = "IRON NAILS"
 	skill_text[48] = "ALL WEAPONS ARE AUTO#CONTINUOUSLY FIRING WEAPONS:#INCREASES <w>RELOAD SPEED<w>#AND RESTORES: <y>AMMO<y> OR <gb>ARMOUR<gb>"
 	skill_detail[48] = "ALL WEAPONS ARE<w>AUTOMATIC<w>#WEAPONS <w>FIRE FASTER<w>#THE <w>LONGER<w> YOU HOLD DOWN THE <w>TRIGGER<w>##CONTINOUSLY FIRING WEAPONS:#RESTORES <y>AMMO<y>#OR <gb>ARMOUR<gb> IF YOU HAVE <gb>ARMOUR<gb>#(WEAPON SPECIFIC MUTATION)"

@@ -27,7 +27,7 @@ if instance_exists(Player) && instance_exists(creator)
 		motion_add(d+(random(10)-5)*other.creator.accuracy,8+(other.rate*1.25))
 		image_angle = direction
 		team = other.team
-		if rate < 4
+		if other.rate < 4
 			dmg -= 2;
 		if maxcharged
 		{

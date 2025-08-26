@@ -643,6 +643,11 @@ function scrMakeFloor(limiter) {
 		}
 	}
 	
+	//Acid Dream
+	if area = 149 || area == 150{ 
+		instance_create(x,y,Floor)
+	}
+	
 	//jungle
 	if area = 114 || area == 123{
 		if random(8) < 1 && instance_number(Floor) % 5 == 0 && instance_number(Floor) < goal * 0.75
@@ -901,6 +906,16 @@ function scrMakeFloor(limiter) {
 	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,90,-90)
 	else if ((area == 9 || area == 118) && subarea == 3)
 	trn = 0;
+	else if area == 149 || area == 150
+	{
+		trn = 0;
+		if myFloors > spiral
+		{
+			trn = 90;
+			turnsTaken += 1;
+			spiral = myFloors + turnsTaken;
+		}
+	}
 	else if area == 100
 	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,180,180)
 	else if area == 103 || area == 125

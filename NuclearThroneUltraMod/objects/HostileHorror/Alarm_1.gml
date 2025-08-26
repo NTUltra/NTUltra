@@ -1,5 +1,7 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
+if wasBehindWall
+	exit;
 if sleeping && alarm[2] < 1
 {
 	alarm[2] = 1;
@@ -56,6 +58,7 @@ if target != noone {
 				}
 			}
 			else if ran < 30 {
+				wasBehindWall = true;
 		        motion_add(random(360), acc)
 		        walk = alarm[1] + random(actTime);
 		        if hspeed > 0
@@ -65,7 +68,12 @@ if target != noone {
 			}
 			else if ran < 80
 			{
+				wasBehindWall = true;
 				event_user(2);
+			}
+			else
+			{
+				wasBehindWall = true;	
 			}
 	    }
 	}

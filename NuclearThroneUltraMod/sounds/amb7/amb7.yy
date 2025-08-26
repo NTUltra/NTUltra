@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":45.747753,
+  "duration":45.747757,
   "name":"amb7",
   "parent":{
     "name":"Music & amb",

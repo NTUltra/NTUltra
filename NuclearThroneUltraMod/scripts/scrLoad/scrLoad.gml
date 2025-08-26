@@ -1,6 +1,19 @@
 function scrLoad() {
 	var saveFileString;
 	saveFileString = game_save_id + "ntultrapreferences.sav";
+	//Backwards compatability
+	if (!file_exists(saveFileString))
+	{
+		saveFileString = game_save_id + "ntultrapreferences.sav";
+		if (!file_exists(saveFileString))
+		{
+			saveFileString = "ntultrapreferences.sav";
+			if (!file_exists(saveFileString))
+			{
+				saveFileString = working_directory + "ntultrapreferences.sav";
+			}
+		}
+	}
 	if file_exists(saveFileString)
 	{
 		ini_open(saveFileString);
@@ -16,8 +29,12 @@ function scrLoad() {
 			saveFileString = "ntultra"+string(version)+".sav";
 			if (!file_exists(saveFileString))
 			{
-				instance_create(x,y,CanLoadRetailSave);
-				is_vanilla_player = 0;
+				saveFileString = working_directory + "ntultra"+string(version)+".sav";
+				if (!file_exists(saveFileString))
+				{
+					instance_create(x,y,CanLoadRetailSave);
+					is_vanilla_player = 0;
+				}
 			}
 		}
 		ini_open(saveFileString);

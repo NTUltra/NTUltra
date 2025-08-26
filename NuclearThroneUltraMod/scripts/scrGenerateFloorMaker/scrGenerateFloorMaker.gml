@@ -160,6 +160,8 @@ function scrGenerateFloorMaker(limiter) {
 				if Player.loops > 0
 					goal -= 10;
 			}
+			else if Player.area == 149 || Player.area == 150
+				goal = 120+s;
 			if scrIsGamemode(6)//small levels
 			{
 				goal=45+s;

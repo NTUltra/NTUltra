@@ -74,7 +74,7 @@ with Player
 		}
 		with instance_create(x,y,Termite)
 		{
-			dmg += other.dmg;
+			dmg += d;
 			motion_add(random(360),3)
 			team = 2;
 		}

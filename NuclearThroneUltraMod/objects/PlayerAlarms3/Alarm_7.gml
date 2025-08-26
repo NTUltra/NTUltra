@@ -1,5 +1,5 @@
 /// @description Start of Area effects that should be visible
-if !forceEarlyInit && instance_exists(Spiral) || instance_exists(GenCont) || instance_exists(SpiralCont)
+if !forceEarlyInit && instance_exists(Spiral) || instance_exists(GenCont) || instance_exists(SpiralCont) || instance_exists(StartDaily) || !instance_exists(BackCont)
 	alarm[7] = 10;
 else
 {

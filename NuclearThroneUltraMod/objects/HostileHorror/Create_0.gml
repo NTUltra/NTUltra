@@ -37,3 +37,4 @@ consecutiveShots = 0;
 lightingLength = 9;
 alarm[4] = 7;
 projectileType = HostileHorrorBullet;
+wasBehindWall = false;

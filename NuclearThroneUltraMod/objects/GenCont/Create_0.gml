@@ -509,6 +509,8 @@ else if Player.area == 144 || Player.area == 145//Sludge land
 	goal = 160 + s;
 else if Player.area == 142 || Player.area == 143//Pipewoorld
 	goal = 60 + s;
+else if Player.area == 149 || Player.area == 150//Acid Dream
+goal = 140;
 if scrIsGamemode(6) && !((Player.area = 6 || Player.area = 112) && Player.subarea=2)//small levels
 {
 	goal=70+s;
