@@ -276,6 +276,10 @@ function scrFire(canDrown = true) {
 	}
 	if object_index == Player
 	{
+		with AcidDreamControl
+		{
+			event_user(0);	
+		}
 		if (ultra_got[43] && !altUltra) {
 			with instance_create(x,y,CloneShooter) {
 				snd_play(sndHitscan,0.1,true);
@@ -5279,7 +5283,7 @@ function scrFire(canDrown = true) {
 			scrFire2(hasTailNow);
 	break;
 	}//end of huge switch
-
+	
 	if (IDKWID)
 	{
 	wep=75;

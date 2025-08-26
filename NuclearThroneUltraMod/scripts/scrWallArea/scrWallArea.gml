@@ -360,9 +360,9 @@ function scrWallArea(area){
 	break;
 	
 	case 150:
-	topspr=sprWall150Top;
-	outspr=sprWall50Out;
-	sprite_index = sprWall150Bot;
+	topspr=sprWall149Top;
+	outspr=sprWall149Out;
+	sprite_index = sprWall149Bot;
 	break;
 	
 	default:

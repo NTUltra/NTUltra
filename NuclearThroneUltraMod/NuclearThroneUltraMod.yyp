@@ -507,6 +507,7 @@
     {"id":{"name":"AboutToGas","path":"objects/AboutToGas/AboutToGas.yy",},},
     {"id":{"name":"AboutToLightningWall","path":"objects/AboutToLightningWall/AboutToLightningWall.yy",},},
     {"id":{"name":"Acid","path":"objects/Acid/Acid.yy",},},
+    {"id":{"name":"AcidDreamControl","path":"objects/AcidDreamControl/AcidDreamControl.yy",},},
     {"id":{"name":"AcidStreak","path":"objects/AcidStreak/AcidStreak.yy",},},
     {"id":{"name":"AdrenalineHeal","path":"objects/AdrenalineHeal/AdrenalineHeal.yy",},},
     {"id":{"name":"All","path":"objects/All/All.yy",},},

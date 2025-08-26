@@ -1,7 +1,7 @@
 image_speed = 0
 depth = 8;
 
-if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes) || scrHasNeverEnteredVoid()
+if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes)// || scrHasNeverEnteredVoid()
 {
 	instance_destroy(id,false);
 	exit;

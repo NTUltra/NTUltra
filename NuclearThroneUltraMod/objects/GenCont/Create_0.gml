@@ -252,6 +252,9 @@ if instance_exists(Player)
 			case 148:
 				__background_set_colour( make_color_rgb(26,20,18) )
 			break;
+			case 149:
+				__background_set_colour( make_color_rgb(138,68,175) )
+			break;
 		}
 	}
 	else
@@ -391,6 +394,8 @@ if instance_exists(Player)
 		__background_set_colour( make_color_rgb(10, 66, 76) )
 		else if Player.area == 148//Blood land
 		__background_set_colour( make_color_rgb(190, 211, 204) )
+		else if Player.area == 149//Acid Dream
+		__background_set_colour( make_color_rgb(108, 229, 16) )
 	}
 }
 else

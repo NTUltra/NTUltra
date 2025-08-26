@@ -340,6 +340,7 @@
     {"name":"AboutToGas","order":2,"path":"objects/AboutToGas/AboutToGas.yy",},
     {"name":"AboutToLightningWall","order":9,"path":"objects/AboutToLightningWall/AboutToLightningWall.yy",},
     {"name":"Acid","order":56,"path":"objects/Acid/Acid.yy",},
+    {"name":"AcidDreamControl","order":63,"path":"objects/AcidDreamControl/AcidDreamControl.yy",},
     {"name":"AcidStreak","order":35,"path":"objects/AcidStreak/AcidStreak.yy",},
     {"name":"AdrenalineHeal","order":56,"path":"objects/AdrenalineHeal/AdrenalineHeal.yy",},
     {"name":"All","order":11,"path":"objects/All/All.yy",},
