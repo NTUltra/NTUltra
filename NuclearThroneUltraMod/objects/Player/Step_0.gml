@@ -2872,9 +2872,9 @@ if hammerheadcounter > 0
 				reload -= 5;
 				breload -= 5;
 				creload -= 5;
+				scrDrop(4,2);
 			}
 			snd_play(sndHammerHeadProc);
-			scrDrop(4,2);
 			instance_create(x,y,WallBreakHammerHead);
 			instance_destroy();
 		}

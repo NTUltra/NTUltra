@@ -1,6 +1,5 @@
 event_inherited();
 image_speed = 0.5
-
 BackCont.shake += 2
 
 team = 2

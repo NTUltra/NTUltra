@@ -340,6 +340,10 @@ if instance_exists(Player)
 		with instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,WeaponMod)
 			shouldClose = false;
 	}
+	if Player.area == 149
+	{
+		instance_create(instance_nearest(Player.x,Player.y,Floor).x+16, instance_nearest(Player.x,Player.y,Floor).y+16,AcidDreamBoss)
+	}
 }
 
 snd_play_2d(sndPortalOpen)

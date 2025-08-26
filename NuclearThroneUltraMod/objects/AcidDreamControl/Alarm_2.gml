@@ -1,1 +1,1 @@
-/// @description delay before can shift again
+/// @description Delay before you can shift again

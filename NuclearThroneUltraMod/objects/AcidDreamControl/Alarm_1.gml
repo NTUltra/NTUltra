@@ -1,5 +1,6 @@
 /// @description shift colour
-shiftValue = max(5,BackCont.shake * 1.5);
+if !(UberCont.opt_shake == 0 && UberCont.opt_freeze == 0)
+	shiftValue = max(5,BackCont.shake * 2);
 hue += shiftValue;
 
 while hue > 255
