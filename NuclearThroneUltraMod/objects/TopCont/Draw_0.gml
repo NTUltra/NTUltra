@@ -13,7 +13,7 @@ draw_self();
 }
 	with Top
 	{
-		if visible{
+		if visible {
 			draw_sprite_ext(sprite_index,image_index,x+16,y-8,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 			draw_sprite_ext(sprite_index,image_index,x,y-8+16,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 			draw_sprite_ext(sprite_index,image_index,x+16,y-8+16,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
@@ -79,7 +79,7 @@ if instance_exists(Spiral)
 
 with TopDecal
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
-if UberCont.opt_enemy_xray
+if UberCont.opt_enemy_xray && !instance_exists(Menu)
 {
 		shader_set(shdDither);
 		var alph = gpu_get_alphatestenable();

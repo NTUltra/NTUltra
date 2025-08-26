@@ -1,5 +1,5 @@
 raddrop = 50
-maxhealth = 380;
+maxhealth = 360;
 scrBossHealthBuff();
 mySize = 4
 event_inherited()
@@ -72,7 +72,7 @@ head3Animation = 0;
 alarm[1] = 10;
 firstTime = true;
 wkick = 0
-actTime = 9;
+actTime = 10;
 
 acc = 1;
 maxSpeed = 3.5;

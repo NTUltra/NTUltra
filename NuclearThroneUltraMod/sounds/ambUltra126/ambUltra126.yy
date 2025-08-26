@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":3,
   "conversionMode":0,
-  "duration":69.89632,
+  "duration":69.896324,
   "name":"ambUltra126",
   "parent":{
     "name":"Music & amb",

@@ -145,7 +145,7 @@ if selected && visible
 			}
 			else
 			{
-				Player.betterpluto = 64//68//82//90//98;
+				Player.betterpluto = 60//68//82//90//98;
 			}
 		}
 		else if skill = 4 && Player.race == 25//rabitpaw

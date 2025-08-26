@@ -9033,7 +9033,7 @@ function scrWeapons() {
 	wep_type[806] = 3
 	wep_auto[806] = 1
 	wep_load[806] = 20
-	wep_cost[806] = 10
+	wep_cost[806] = 9
 	wep_sprt[806] = sprPowerBoltLauncher
 	wep_area[806] = 9
 	wep_text[806] = "lots of ammo lots of damage, hard to handle"

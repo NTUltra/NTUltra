@@ -749,7 +749,7 @@ if (tookHit)
 					healTaken += 1;
 					overHealAllow += 1;
 				}
-				var excessHeal = min(healTaken,prevhealth + healTaken - overHealAllow);
+				var excessHeal = min(healTaken,my_health + healTaken - overHealAllow);
 				if excessHeal > 0
 					scrExcessResource(0,excessHeal);
 					
@@ -757,7 +757,7 @@ if (tookHit)
 				{
 					depth = other.depth - 1;	
 				}
-				my_health = min(overHealAllow,prevhealth+healTaken);
+				my_health = min(overHealAllow,my_health+healTaken);
 				if prevhealth > my_health
 					my_health = prevhealth;
 				scrPhotosythesis(healTaken);

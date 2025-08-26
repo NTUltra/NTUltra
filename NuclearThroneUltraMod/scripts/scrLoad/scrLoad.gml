@@ -1,16 +1,16 @@
 function scrLoad() {
 	var saveFileString;
-	saveFileString = game_save_id + "ntultrapreferences.sav";
+	saveFileString = "ntultrapreferences.sav";
 	//Backwards compatability
 	if (!file_exists(saveFileString))
 	{
-		saveFileString = game_save_id + "ntultrapreferences.sav";
+		saveFileString = working_directory + "ntultrapreferences.sav";
 		if (!file_exists(saveFileString))
 		{
-			saveFileString = "ntultrapreferences.sav";
+			saveFileString = program_directory + "ntultrapreferences.sav";
 			if (!file_exists(saveFileString))
 			{
-				saveFileString = working_directory + "ntultrapreferences.sav";
+				saveFileString = game_save_id + "ntultrapreferences.sav";
 			}
 		}
 	}
@@ -20,32 +20,26 @@ function scrLoad() {
 		scrLoadOptions();
 		ini_close();
 	}
-	else
+	//Backwards compatability
+	saveFileString = "ntultra"+string(version)+".sav";
+	if (!file_exists(saveFileString))
 	{
-		//Backwards compatability
-		saveFileString = game_save_id + "ntultra"+string(version)+".sav";
+		saveFileString = working_directory + "ntultra"+string(version)+".sav";
 		if (!file_exists(saveFileString))
 		{
-			saveFileString = "ntultra"+string(version)+".sav";
+			saveFileString = program_directory + "ntultra"+string(version)+".sav";
 			if (!file_exists(saveFileString))
 			{
-				saveFileString = working_directory + "ntultra"+string(version)+".sav";
-				if (!file_exists(saveFileString))
-				{
-					instance_create(x,y,CanLoadRetailSave);
-					is_vanilla_player = 0;
-				}
+				saveFileString = game_save_id + "ntultra"+string(version)+".sav";
 			}
 		}
-		ini_open(saveFileString);
-		scrLoadOptions();
-		ini_close();
 	}
-	saveFileString=game_save_id + "ntultra"+string(currentSave)+".sav";
-	if (!instance_exists(CanLoadRetailSave) && !file_exists(saveFileString))
+	if (!instance_exists(CanLoadRetailSave)  && !file_exists(saveFileString))
 	{
 		instance_create(x,y,CanLoadRetailSave);
+		is_vanilla_player = 0;
 	}
+	saveFileString=game_save_id + "ntultra"+string(currentSave)+".sav";
 	ini_open(saveFileString);
 	scrLoadStats();
 	scrLoadGameSpecificOptions();

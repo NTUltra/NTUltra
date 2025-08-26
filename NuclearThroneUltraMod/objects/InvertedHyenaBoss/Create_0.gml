@@ -1,6 +1,6 @@
 event_inherited();
 raddrop = 70
-maxhealth = 340;
+maxhealth = 320;
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 meleedamage = 6

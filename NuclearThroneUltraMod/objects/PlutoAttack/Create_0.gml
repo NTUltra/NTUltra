@@ -32,9 +32,16 @@ if  myTarget != noone
 		targetY = myTarget.y;
 		direction = point_direction(x,y,targetX,targetY);
 		var dis = point_distance(x,y,targetX,targetY);
-		offsetX = x + lengthdir_x(dis*0.5,direction) + lengthdir_x(dis * curveAmount,direction + curveDirection);
-		offsetY = y + lengthdir_y(dis*0.5,direction) + lengthdir_y(dis * curveAmount,direction + curveDirection);
-		alarm[0] = 1;
+		if dis < 300
+		{
+			offsetX = x + lengthdir_x(dis*0.5,direction) + lengthdir_x(dis * curveAmount,direction + curveDirection);
+			offsetY = y + lengthdir_y(dis*0.5,direction) + lengthdir_y(dis * curveAmount,direction + curveDirection);
+			alarm[0] = 1;
+		}
+		else
+		{
+			instance_destroy();	
+		}
 	}
 	else
 	{

@@ -10,5 +10,5 @@ invertAcidColour = make_colour_hsv(irandom(255),0,140);
 with AcidDreamControl
 {
 	event_user(0);
-	alarm[3] = 300;
+	alarm[3] = 600;
 }
