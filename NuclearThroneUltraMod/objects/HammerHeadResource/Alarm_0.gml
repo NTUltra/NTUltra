@@ -5,7 +5,12 @@ if topindex < 4
 	scrRaddrop(14);
 } else if topindex < 7
 {
-	scrDrop(200,0);
+	if topindex == 6
+		scrDrop(200,0,false,0,100);
+	else if topindex == 5
+		scrDrop(200,0,true);
+	else
+		scrDrop(200,0);
 }
 else
 {

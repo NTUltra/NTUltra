@@ -1,8 +1,9 @@
 raddrop = 2
 maxhealth = 5
 mySize = 1
-droprate = 5;
-
+droprate = 3;
+if instance_exists(Player) && Player.skill_got[4]
+	droprate += 2;
 event_inherited()
 meleedamage = 3
 

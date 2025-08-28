@@ -1,4 +1,4 @@
-scrDrop(5,25)
+scrDrop(droprate,25)
 
 if (charge || fire)
 {

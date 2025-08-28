@@ -25,5 +25,7 @@ function scrReplaceAllColourCodes(txt, exceptionCode = "") {
 		returnTxt = string_replace_all(returnTxt,"<b>","");
 	if exceptionCode != "<v>"
 		returnTxt = string_replace_all(returnTxt,"<v>","");
+	if exceptionCode != "<rp>"
+		returnTxt = string_replace_all(returnTxt,"<rp>","");
 	return returnTxt;
 }

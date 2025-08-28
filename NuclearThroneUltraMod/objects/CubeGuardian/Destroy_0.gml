@@ -1,4 +1,4 @@
-scrDrop(12,6)
+scrDrop(droprate,6)
 
 if (charge)
 {

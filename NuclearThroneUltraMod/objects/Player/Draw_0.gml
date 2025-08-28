@@ -300,7 +300,7 @@ if instance_exists(Decoy) || rollIframe > 0 || instance_exists(Ghosting)
 	playerAlpha = max(0.2,alpha - 0.6);
 if hammerheadDig <= 0
 {
-	if alarm[3] > 0
+	if alarm[3] > 0  && UberCont.canShader
 	{
 		shader_set(shdDrawAqua);
 			draw_sprite_ext(sprite_index,image_index,x+1,yy+1,right,image_yscale,angle,c_white,alpha);
@@ -325,7 +325,7 @@ else
 	draw_clear_alpha(c_black,0);
 	var xxx = 1 + surface_get_width(digSurface) * 0.5;
 	var yyy = 1 + sprite_height * 0.5;
-	if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0))
+	if ((gunGodImmune && alarm[3] > 0) || (ultra_got[75] && speed == 0) && UberCont.canShader)
 	{
 		shader_set(shdDrawWhite);
 			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy+1,right,image_yscale,angle,c_white,alpha);
@@ -334,7 +334,7 @@ else
 			draw_sprite_ext(sprite_index,image_index,xxx-1,yyy+1,right,image_yscale,angle,c_white,alpha);
 		shader_reset();
 	}
-	else if alarm[3] > 0
+	else if alarm[3] > 0 && UberCont.canShader
 	{
 		shader_set(shdDrawAqua);
 			draw_sprite_ext(sprite_index,image_index,xxx+1,yyy+1,right,image_yscale,angle,c_white,alpha);

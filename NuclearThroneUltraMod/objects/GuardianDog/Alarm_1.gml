@@ -6,7 +6,7 @@ function startJump() {
     speed *= 0.2;
     alarm[2] = 20; //chargeup time
 }
-
+sleeping = false;
 alarm[1] = actTime + random(actTime)
 scrTarget()
 walk = 0

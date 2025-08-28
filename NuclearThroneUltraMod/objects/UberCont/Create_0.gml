@@ -4,10 +4,11 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.B."
-subUpdateVersion = "34";
+subUpdateVersion = "36";
 notUpdated = "";
 serverIp = "00.00.000.000"serverPort = 0000;
 currentSave = 0;
+canShader = shaders_are_supported()
 //if file_exists("icheat.txt") or file_exists("ICHEAT.txt") or file_exists("ICHEAT.TXT") or file_exists("icheat.TXT")
 //public = 0
 /*

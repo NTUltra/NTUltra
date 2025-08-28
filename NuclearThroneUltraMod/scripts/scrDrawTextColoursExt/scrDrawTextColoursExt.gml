@@ -38,4 +38,9 @@ function scrDrawTextColoursExt(xx,yy,txt,s,w){
 		var voidColour = make_colour_rgb(89,147,178);
 		draw_text_ext_colour(xx,yy,scrFilterText(txt,"<v>"),s,w,voidColour,voidColour,voidColour,voidColour,1);
 	}
+	if (string_replace_all(txt,"<rp>","") != txt)
+	{
+		var rabbitColour = make_colour_rgb(250,186,255);
+		draw_text_ext_colour(xx,yy,scrFilterText(txt,"<rp>"),s,w,rabbitColour,rabbitColour,rabbitColour,rabbitColour,1);
+	}
 }

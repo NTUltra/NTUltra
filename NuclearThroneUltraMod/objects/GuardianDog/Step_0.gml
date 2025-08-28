@@ -1,6 +1,7 @@
 event_inherited()
-
-if speed < 2 && sprite_index != spr_fire
+if sleeping
+	speed = 1;
+else if speed < 2 && sprite_index != spr_fire
 	speed = 2;
 else if jumpUp || jumpDown
 {

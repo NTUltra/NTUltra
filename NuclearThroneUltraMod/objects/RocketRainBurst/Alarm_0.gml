@@ -11,7 +11,7 @@ if instance_exists(creator)
 	snd_play(sndMissileRain,0.2,true);
 	var t = clamp((maxAmmo - ammo) / (3*accuracy),0,1);
 	var xx = lerp(x,UberCont.mouse__x,t);
-	var yy = lerp(y,UberCont.mouse__y,t);
+	var yy = lerp(y,UberCont.mouse__y - 16,t);
 	with instance_create(x,y,LobRocket)
 	{
 		team = other.team

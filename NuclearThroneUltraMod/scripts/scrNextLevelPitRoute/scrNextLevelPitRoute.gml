@@ -9,7 +9,8 @@ function scrNextLevelPitRoute() {
 			{
 				with UberCont
 				{
-					portalEssence += 4 * scrGetPortalEssenceBoost();
+					if !scrIsCrown(44)
+						portalEssence += 4 * scrGetPortalEssenceBoost();
 				}
 				area = 141;
 				subarea = 1;

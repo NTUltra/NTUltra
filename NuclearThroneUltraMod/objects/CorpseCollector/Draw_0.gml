@@ -19,7 +19,8 @@ for (var i = 0; i < al; i++;)
 surface_reset_target();
 draw_surface_ext(surf,cx,cy,1,1,0,c_white,1);
 //DRAW VENOMIZED PROJECTILES
-shader_set(shdDrawLime);
+if UberCont.canShader
+	shader_set(shdDrawLime);
 with projectile
 {
 	if isVenomized == 1 && sprite_exists(sprite_index)

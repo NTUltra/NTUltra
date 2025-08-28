@@ -4,6 +4,8 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 		return noone;
 	var isHard = scrIsHardMode();
 	var nsb = 0;
+	var rpB = 3;
+	var dropSpeed = 2;
 	if instance_exists(DropReducer) && GetPlayerLoops() > 0 || isHard
 	{
 		var reductions = max(0.1,1 - (instance_number(DropReducer) * 0.1));
@@ -215,8 +217,12 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 			pickup = instance_create(x,y,RoguePickup)
 			with pickup
 			{
+				speed = dropSpeed;
+				direction = other.direction;
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
+					direction = point_direction(x,y,Player.x,Player.y);
+					speed = rpB
 					with instance_create(x,y,RabbitPawFX)
 					{
 						speed = other.speed;
@@ -328,7 +334,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 				instance_destroy();
 			with pickup {
 				isArmour = true;
-				speed = 1;
+				speed = dropSpeed;
 				direction = other.direction;
 				sprite_index = sprArmourPickup;
 				if scrIsCrown(32)//Misfortune
@@ -337,6 +343,8 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 				}
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
+					direction = point_direction(x,y,Player.x,Player.y);
+					speed = rpB
 					with instance_create(x,y,RabbitPawFX)
 					{
 						speed = other.speed;
@@ -354,8 +362,12 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 			with WantHealth
 				instance_destroy();
 			with pickup {
+				speed = dropSpeed;
+				direction = other.direction;
 				if (rabbit > 0 && random(1) < rabbit+0.1)
 				{
+					direction = point_direction(x,y,Player.x,Player.y);
+					speed = rpB
 					with instance_create(x,y,RabbitPawFX)
 					{
 						speed = other.speed;
@@ -377,8 +389,12 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 					with WantHealth
 						instance_destroy();
 					with pickup {
+						speed = dropSpeed;
+						direction = other.direction;
 						if (rabbit > 0 && random(1) < rabbit+0.1)
 						{
+							direction = point_direction(x,y,Player.x,Player.y);
+							speed = rpB
 							with instance_create(x,y,RabbitPawFX)
 							{
 								speed = other.speed;
@@ -404,8 +420,12 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 				}
 				pickup = instance_create(x,y,AmmoPickup)
 				with pickup {
+					speed = dropSpeed;
+					direction = other.direction;
 					if (rabbit > 0 && random(1) < rabbit+0.1)
 					{
+						direction = point_direction(x,y,Player.x,Player.y);
+						speed = rpB
 						with instance_create(x,y,RabbitPawFX)
 						{
 							speed = other.speed;

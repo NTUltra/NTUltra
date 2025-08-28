@@ -24,6 +24,11 @@ else
 	if !instance_exists(RegalNavigation) && !instance_exists(SecretSheepNavigation)
 		with UberCont
 		{
+			if scrIsCrown(44)
+			{
+				instance_create(x,y,ShowVoidEssenceTemporarily);
+				portalEssence += 17 * scrGetPortalEssenceBoost();
+			}
 			var al = array_length(voidChallengeGoing);
 			for (var i = 0; i < al; i ++)
 			{

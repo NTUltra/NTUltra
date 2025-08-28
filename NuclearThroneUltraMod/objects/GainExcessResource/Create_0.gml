@@ -8,5 +8,13 @@ alpha = 0.3;
 alphaIncrease  = 0.2;
 scaleIncrease = 0.275;
 fullTimeDelay = 4;
-shaderColour = shader_get_uniform(shdDrawColour, "f_colour");
 colour = [0.98,0.72,0];
+shaderColour = 0;
+if UberCont.canShader
+{
+	instance_destroy();
+}
+else
+{
+	shaderColour = shader_get_uniform(shdDrawColour, "f_colour");
+}

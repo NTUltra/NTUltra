@@ -771,6 +771,13 @@ function scrPopulate() {
 	        }
 	        until instance_number(PizzaEntrance) <= 1
 		}
+		if Player.area == 110
+		{
+			with PizzaEntrance
+			{
+				sprite_index = sprPizzaEntranceInverted;	
+			}
+		}
     }
 	
 	with Player

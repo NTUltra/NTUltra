@@ -12,7 +12,7 @@ if instance_exists(Floor) && !place_meeting(x,y,Floor)
 		y = n.y + o;
 	}
 }
-scrDrop(16,0)
+scrDrop(droprate,0)
 
 event_inherited()
 x = ogx;

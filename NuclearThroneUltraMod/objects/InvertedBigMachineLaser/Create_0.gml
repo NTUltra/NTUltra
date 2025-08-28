@@ -18,10 +18,10 @@ maxSpeed = 2.25;
 maxSpeed += min(1.75,loops*0.25);
 maxAmmo = 4;
 fireRate = 2;
-laserDelay = 60;
+laserDelay = 65;
 if loops > 0
 {
-	maxAmmo = 6 + min(10,loops);
+	maxAmmo = 5 + min(10,loops);
 	fireRate = 1;
-	laserDelay = 55 - min(30,loops*5);
+	laserDelay = 65 - min(30,loops*5);
 }

@@ -5,6 +5,9 @@ if GetPlayerLoops() < 1
 mySize = 4
 RogueIDPD=false;
 scrCrownOfPopoRad(15);
+droprate = 5;
+if instance_exists(Player) && Player.skill_got[4]
+	droprate += 5;
 event_inherited()
 didOpen = false;
 meleedamage = 20

@@ -1,6 +1,6 @@
 scrDrop(80,2)
-scrDrop(12,0)
-scrDrop(8,0)
+scrDrop(droprate + 7,0)
+scrDrop(droprate,0)
 speed = 0;
 my_health = 0;
 event_inherited();

@@ -79,7 +79,7 @@ if instance_exists(Spiral)
 
 with TopDecal
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,image_alpha)
-if UberCont.opt_enemy_xray && !instance_exists(Menu)
+if UberCont.opt_enemy_xray && UberCont.canShader
 {
 		shader_set(shdDither);
 		var alph = gpu_get_alphatestenable();

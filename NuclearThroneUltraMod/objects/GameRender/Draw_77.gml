@@ -1,5 +1,5 @@
 /// @description Draw game
-if instance_exists(Acid) && UberCont.isPaused == 0
+if instance_exists(Acid) && UberCont.isPaused == 0 && UberCont.canShader
 {
 	shader_set(shdAcid);
 	shader_set_uniform_f(Acid.hueShift,Acid.hue);

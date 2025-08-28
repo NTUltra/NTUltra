@@ -37,6 +37,8 @@ function scrBossKill(shouldBreakWalls = true) {
 		}
 		with Player
 		{
+			if scrIsCrown(44)
+				UberCont.portalEssence += 1 * scrGetPortalEssenceBoost();
 			if skill_got[7] {
 				//Bloodlust
 				snd_play_2d(sndBloodlustProc,0,true);

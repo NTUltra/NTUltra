@@ -235,6 +235,15 @@ if Player.crownpoints > 0
 				}
 				else if crown == 8 && Player.tookDestiny && !(UberCont.canMultiCrown && scrIsCrown(8))//Crown of sloth secret
 					crown = 24;
+				else if crown == 9 && !scrHasNeverEnteredVoid() && 
+				(Player.lastarea == 1 || Player.lastarea == 105
+				|| Player.lastarea == 10 || Player.lastarea == 121
+				|| Player.lastarea == 101 || Player.lastarea == 122
+				|| Player.lastarea == 139 || Player.crownvisits <= 0)
+				{
+					//Start of 'loop' crown of void replaces love
+					crown = 44;
+				}
 				else if crown == 11
 				{
 					if Player.crownvisits <= 0 && !scrIsGamemode(26) && !scrIsGamemode(27) && !scrIsGamemode(37)
@@ -577,6 +586,8 @@ else
 	if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
 		Player.skill_got[41] = 1;
 	}
+	if scrHasNeverEnteredVoid()
+		Player.skill_got[47] = 1;
 	if !Player.skill_got[27] && Player.ultra_got[73] || (Player.guarenteedReroll > 0)//Melting ultra A patience
 	{
 		Player.skill_got[27] = 1;
@@ -798,6 +809,8 @@ if !UberCont.unlocked_alt_routes && !scrIsGamemode(26) && !scrIsGamemode(27) {
 if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrIsGamemode(26) && !scrIsGamemode(27) {
 	Player.skill_got[41] = 0;
 }
+if scrHasNeverEnteredVoid()
+	Player.skill_got[47] =0;
 if preventDoublePatience
 	Player.skill_got[27] = 0;
 if scrIsGamemode(32){

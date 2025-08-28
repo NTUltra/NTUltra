@@ -113,7 +113,7 @@ if !instance_exists(GenCont)
 			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 			if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 			{
-				var excessAmount = ammo[type] - typ_amax[type];
+				var excessAmount = other.ammo[type] - other.typ_amax[type];
 				scrExcessResource(1 + type, excessAmount);
 				other.ammo[type] = other.typ_amax[type]
 			}
@@ -142,7 +142,7 @@ if !instance_exists(GenCont)
 			other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 			if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 			{
-				var excessAmount = ammo[type] - typ_amax[type];
+				var excessAmount = other.ammo[type] - other.typ_amax[type];
 				scrExcessResource(1 + type, excessAmount);
 				other.ammo[type] = other.typ_amax[type]
 			}
@@ -174,7 +174,7 @@ if !instance_exists(GenCont)
 				other.ammo[type] += other.typ_ammo[type]*3*ammoBoost
 				if other.ammo[type] > other.typ_amax[type] && !other.ultra_got[26]
 				{
-					var excessAmount = ammo[type] - typ_amax[type];
+					var excessAmount = other.ammo[type] - other.typ_amax[type];
 					scrExcessResource(1 + type, excessAmount);
 					other.ammo[type] = other.typ_amax[type]
 				}

@@ -38,9 +38,9 @@ else
 	if stoppedVenom
 	{
 		if instance_exists(Player) && Player.skill_got[9]
-			scrCollectHP(ammoValue);
+			scrCollectHP(ammoValue, 1.125);
 	}
 	else
-		scrCollectHP(ammoValue * 2);
+		scrCollectHP(ammoValue * 2, 1.125);
 }
 instance_destroy()

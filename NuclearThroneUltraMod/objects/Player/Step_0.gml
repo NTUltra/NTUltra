@@ -1651,7 +1651,7 @@ if (!instance_exists(LevCont))
 			reload -= reduction
 			breload -= reduction*0.5;
 			creload -= reduction*0.5;
-		}
+		}/*
 		if skill_got[34] {
 			reload -= 0.1;
 			breload -= 0.1;
@@ -1663,7 +1663,7 @@ if (!instance_exists(LevCont))
 				breload -= 0.020;
 				creload -= 0.020;
 			}*/
-		}
+		//}
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{
 			var t = wep_type[wep];

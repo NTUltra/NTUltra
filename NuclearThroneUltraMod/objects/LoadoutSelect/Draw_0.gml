@@ -102,7 +102,8 @@ if (hasNoMenuOpen()
 			{
 				if selected && bselected
 				{
-					shader_set(shdDrawLime);
+					if UberCont.canShader
+						shader_set(shdDrawLime);
 					draw_sprite_ext(sprite,imageIndex,xx+2,yy+2,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx+2,yy-2,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx-2,yy-2,1,1,0,c_white,1);
@@ -111,7 +112,8 @@ if (hasNoMenuOpen()
 					draw_sprite_ext(sprite,imageIndex,xx,yy+2,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx+2,yy,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx-2,yy,1,1,0,c_white,1);
-					shader_set(shdDrawWhite);
+					if UberCont.canShader
+						shader_set(shdDrawWhite);
 					draw_sprite_ext(sprite,imageIndex,xx+1,yy+1,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx+1,yy-1,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx-1,yy-1,1,1,0,c_white,1);
@@ -120,10 +122,13 @@ if (hasNoMenuOpen()
 				}
 				else 
 				{
-					if selected
-						shader_set(shdDrawWhite);
-					else
-						shader_set(shdDrawLime);
+					if UberCont.canShader
+					{
+						if selected
+							shader_set(shdDrawWhite);
+						else
+							shader_set(shdDrawLime);
+					}
 					draw_sprite_ext(sprite,imageIndex,xx+1,yy+1,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx+1,yy-1,1,1,0,c_white,1);
 					draw_sprite_ext(sprite,imageIndex,xx-1,yy-1,1,1,0,c_white,1);
@@ -161,13 +166,15 @@ if (hasNoMenuOpen()
 		{
 			if (bwep == -1)
 			{
-				shader_set(shdDrawLime);
+				if UberCont.canShader
+					shader_set(shdDrawLime);
 				draw_sprite_ext(sprRandomWeapon,0,xx+2,yyy+3,wepScale,wepScale,0,c_white,1);
 				draw_sprite_ext(sprRandomWeapon,0,xx+2,yyy-1,wepScale,wepScale,0,c_white,1);
 				draw_sprite_ext(sprRandomWeapon,0,xx-2,yyy-1,wepScale,wepScale,0,c_white,1);
 				draw_sprite_ext(sprRandomWeapon,0,xx-2,yyy+3,wepScale,wepScale,0,c_white,1);
 			}
-			shader_set(shdDrawWhite);
+			if UberCont.canShader
+				shader_set(shdDrawWhite);
 			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy+2,wepScale,wepScale,0,c_white,1);
 			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy,wepScale,wepScale,0,c_white,1);
 			draw_sprite_ext(sprRandomWeapon,0,xx-1,yyy,wepScale,wepScale,0,c_white,1);
@@ -177,7 +184,8 @@ if (hasNoMenuOpen()
 		}
 		else if (bwep == -1)
 		{
-			shader_set(shdDrawWhite);
+			if UberCont.canShader
+				shader_set(shdDrawWhite);
 			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy+2,wepScale,wepScale,0,c_lime,1);
 			draw_sprite_ext(sprRandomWeapon,0,xx+1,yyy,wepScale,wepScale,0,c_lime,1);
 			draw_sprite_ext(sprRandomWeapon,0,xx-1,yyy,wepScale,wepScale,0,c_lime,1);
@@ -208,7 +216,8 @@ if (hasNoMenuOpen()
 			var yyy = yy + 1;
 			if (UberCont.crown_start[Menu.race])
 			{
-				shader_set(shdDrawWhite);
+				if UberCont.canShader
+					shader_set(shdDrawWhite);
 				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yyy+2,crownScale,crownScale,0,c_white,1);
 				draw_sprite_ext(sprLoadoutCrown,0,xx+1,yyy,crownScale,crownScale,0,c_white,1);
 				draw_sprite_ext(sprLoadoutCrown,0,xx-1,yyy,crownScale,crownScale,0,c_white,1);
@@ -254,7 +263,8 @@ if (hasNoMenuOpen()
 			if bwep != -2
 			{
 				col = c_white;
-				shader_set(shdDrawLime);
+				if UberCont.canShader
+					shader_set(shdDrawLime);
 				draw_sprite_ext(sprDoubleWeapon,0,dwx+1,dwy+1,ds,ds,0,c_white,1);
 				draw_sprite_ext(sprDoubleWeapon,0,dwx+1,dwy-1,ds,ds,0,c_white,1);
 				draw_sprite_ext(sprDoubleWeapon,0,dwx-1,dwy-1,ds,ds,0,c_white,1);

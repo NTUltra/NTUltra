@@ -1,7 +1,9 @@
 raddrop = 19
 maxhealth = 160
 mySize = 4;
-
+droprate = 10;
+if instance_exists(Player) && Player.skill_got[4]
+	droprate += 5;
 event_inherited()
 meleedamage = 6;
 
@@ -30,12 +32,12 @@ snd_melee = sndDogGuardianMelee;
 justjumped = false;
 instance_create(x,y,BigWallBreak);
 scrAddDrops(1);
-
 actTime = 12;
 maxSpeed = 2;
 maxJumpSpeed = 7.9;
 jumpAcc = 0.5;
 jumpDuration = 5.75;
+sleeping = true;
 loops = GetPlayerLoops();
 if loops > 0
 {

@@ -19,7 +19,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 	// 1 bullet is equal to 4,636363636363636‬ shotgun ammo
 	//Shotgun is ammovalue * 4.636363636363636 <= this number is gathered by dividing both max ammos 255/55 = 4.636363636363636
 	//So if i want bullet to be 0.001% I want for shotgun 0.001%*4,636363636363636‬
-
+	var theExcess = max(0,excessAmount);
 	with Player
 	{
 		if skill_got[48]
@@ -38,7 +38,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 			}
 			snd_play_2d(sndExcessResource,0.1);
 			var resourceConversionMultiplier = 1;
-			var equippedTypeAddition = 0.75;
+			var equippedTypeAddition = 0.8;
 			var addDmgBoost = 0;
 			var am = 0;
 			if race == 25
@@ -47,9 +47,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 			switch (resourceType)
 			{
 				case 0://Health
-					excessHealth += excessAmount;
+					excessHealth += theExcess;
 					//1 health = 5%
-					addDmgBoost += excessAmount * 0.05 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.0425 * resourceConversionMultiplier;
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						colour[0] = 1;
@@ -63,8 +63,8 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[0] += excessAmount;
-					am = excessAmount * 0.0023181818181816 * resourceConversionMultiplier
+					excessAmmo[0] += theExcess;
+					am = theExcess * 0.0023181818181816 * resourceConversionMultiplier
 					//1 Melee ammo = 0.07% * 3
 					addDmgBoost += am;
 					if scrMeleeWeapons(wep)
@@ -79,9 +79,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[1] += excessAmount;
+					excessAmmo[1] += theExcess;
 					//1 Bullet ammo = 0.01% * 3
-					am = excessAmount * 0.0003 * resourceConversionMultiplier
+					am = theExcess * 0.0003 * resourceConversionMultiplier
 					addDmgBoost += am
 					if wep_type[wep] == 1
 						addDmgBoost += am * equippedTypeAddition
@@ -95,9 +95,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[2] += excessAmount;
+					excessAmmo[2] += theExcess;
 					//1 Shotgun ammo = 0.046%*3
-					am = excessAmount * 0.001390909090908 * resourceConversionMultiplier
+					am = theExcess * 0.001390909090908 * resourceConversionMultiplier
 					addDmgBoost += am
 					if wep_type[wep] == 2
 						addDmgBoost += am * equippedTypeAddition
@@ -111,9 +111,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[3] += excessAmount;
+					excessAmmo[3] += theExcess;
 					//1 Bolt ammo = 0.046%*2
-					am = excessAmount * 0.001390909090908 * resourceConversionMultiplier
+					am = theExcess * 0.001390909090908 * resourceConversionMultiplier
 					addDmgBoost += am
 					if wep_type[wep] == 3
 						addDmgBoost += am * equippedTypeAddition
@@ -127,9 +127,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[4] += excessAmount;
+					excessAmmo[4] += theExcess;
 					//1 Explosive ammo = 0.046%*2
-					am = excessAmount * 0.001390909090908 * resourceConversionMultiplier
+					am = theExcess * 0.001390909090908 * resourceConversionMultiplier
 					addDmgBoost += am
 					if wep_type[wep] == 4
 						addDmgBoost += am * equippedTypeAddition
@@ -143,9 +143,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					{
 						owner = other.id;
 					}
-					excessAmmo[5] += excessAmount;
+					excessAmmo[5] += theExcess;
 					//1 Energy ammo = 0.046%*2
-					am = excessAmount * 0.001390909090908 * resourceConversionMultiplier
+					am = theExcess * 0.001390909090908 * resourceConversionMultiplier
 					addDmgBoost += am
 					if wep_type[wep] == 5
 						addDmgBoost += am * equippedTypeAddition
@@ -155,7 +155,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						addDmgBoost += am * equippedTypeAddition
 				break;
 				case 7://Rad
-					excessRad += excessAmount;
+					excessRad += theExcess;
 					
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
@@ -171,14 +171,14 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					}
 					//Before max level 0.1%
 					if level < maxlevel
-						addDmgBoost += excessAmount * 0.001 * resourceConversionMultiplier;
+						addDmgBoost += theExcess * 0.001 * resourceConversionMultiplier;
 					else//1 Rad = 0.0008%
-						addDmgBoost += excessAmount * 0.000008 * resourceConversionMultiplier;
+						addDmgBoost += theExcess * 0.000008 * resourceConversionMultiplier;
 				break;
 				case 8://Armour
-					excessArmour += excessAmount;
-					//1 armour = 6%
-					addDmgBoost += excessAmount * 0.06;
+					excessArmour += theExcess;
+					//1 armour = 5.5%
+					addDmgBoost += theExcess * 0.055;
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						colour[0] = 0.61;
@@ -188,9 +188,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					}
 				break;
 				case 9://Cash
-					excessCash += excessAmount;
+					excessCash += theExcess;
 					//1 Cash = 0.1%
-					addDmgBoost += excessAmount * 0.001 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.001 * resourceConversionMultiplier;
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						colour[0] = 0.80;
@@ -212,9 +212,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[2] = 0.25;
 						owner = other.id;
 					}
-					excessVoidBeam += excessAmount;
+					excessVoidBeam += theExcess;
 					//1 VoidBeam = 0.005%
-					addDmgBoost += excessAmount * 0.00005 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.00005 * resourceConversionMultiplier;
 				break;
 				case 11://Portal strike ammo
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
@@ -224,9 +224,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[2] = 0.88;
 						owner = other.id;
 					}
-					excessPortalStrikeAmmo += excessAmount;
+					excessPortalStrikeAmmo += theExcess;
 					//1 Portal strike = 3.5%
-					addDmgBoost += excessAmount * 0.035 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.035 * resourceConversionMultiplier;
 				break;
 				case 12://Rage
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
@@ -236,9 +236,9 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[2] = 0.078;
 						owner = other.id;
 					}
-					excessRage += excessAmount;
+					excessRage += theExcess;
 					//1 Rage = 0.15% thats 10 kills at max rage gives 1.5% damage boost
-					addDmgBoost += excessAmount * 0.0015 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.0015 * resourceConversionMultiplier;
 				break;
 				case 13://Hammerhead charges
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
@@ -249,7 +249,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						owner = other.id;
 					}
 					//1 Hammerhead = 0.33% hammerheadcounterMax = 27
-					addDmgBoost += excessAmount * 0.0033 * resourceConversionMultiplier;
+					addDmgBoost += theExcess * 0.0033 * resourceConversionMultiplier;
 				break;
 			}
 			if !instance_exists(GluttonousAdding)

@@ -297,6 +297,11 @@ function scrCrowns() {
 	crown_used[43] = 0
 	crown_tips[43] = "quick start"
 	
+	crown_name[44] = "[CROWN OF VOID]"
+	crown_text[44] = "GAIN <r>NO<r> <p>PORTAL ESSENCE<p> WHEN ENTERING A <p>PORTAL<p>#INSTEAD GET <w>1<w> <p>PORTAL ESSENCE<p> WHEN YOU <r>KILL<r> A <r>BOSS<r>#AND <w>17<w> WHEN YOU <w>LOOP<w>"
+	crown_used[44] = 0
+	crown_tips[44] = "void trip"
+	
 	//CROWN OF PUFFERFISH
 	/*
 	crown_name[44] = "[CROWN OF PUFFERFISH]"
@@ -312,17 +317,8 @@ function scrCrowns() {
 	crown_tips[35] = "again"
 	*/
 	
-	/*
-	//Only available in first crown vaults or crown start
-	crown_name[43] = "[CROWN OF VOID]"
-	crown_text[43] = "GAIN NO PORTAL ESSENCE WHEN ENTERING A PORTAL#INSTEAD GET 1 PORTAL ESSENCE WHEN YOU KILL A BOSS#AND 20 WHEN YOU LOOP"
-	crown_used[43] = 0
-	crown_tips[43] = "quick start"
-	*/
 	
 	crownmax = 23
-	secretcrownmax = 21;
-
-
+	secretcrownmax = 22;
 
 }

@@ -22,7 +22,8 @@ function scrNextLevel(skipping = false) {
 	{
 		with UberCont
 		{
-			portalEssence += 1 * scrGetPortalEssenceBoost();
+			if !scrIsCrown(44)
+				portalEssence += 1 * scrGetPortalEssenceBoost();
 		}
 		scrAddArea(area);
 		scrAddToRoute(area);
@@ -142,7 +143,8 @@ function scrNextLevel(skipping = false) {
 					subarea = 1;
 					with UberCont
 					{
-						portalEssence += 4 * scrGetPortalEssenceBoost();
+						if !scrIsCrown(44)
+							portalEssence += 4 * scrGetPortalEssenceBoost();
 					}
 				}
 				else

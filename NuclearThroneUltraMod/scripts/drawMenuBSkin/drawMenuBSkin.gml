@@ -35,7 +35,8 @@ function drawMenuBSkin(skin,race,theColour){
 	{
 		var spr = asset_get_index("sprMutant" + string(race)+"Idle");
 	}
-	shader_set(shdDrawWhite);
+	if UberCont.canShader
+		shader_set(shdDrawWhite);
 	draw_sprite_ext(spr,imageIndex,xx+1,yy+1,1,1,0,theColour,1);
 	draw_sprite_ext(spr,imageIndex,xx+1,yy-1,1,1,0,theColour,1);
 	draw_sprite_ext(spr,imageIndex,xx-1,yy-1,1,1,0,theColour,1);

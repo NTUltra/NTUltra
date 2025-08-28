@@ -1,5 +1,6 @@
 /// @description Draw an outline
-shader_set(shdDrawRed);
+if UberCont.canShader
+	shader_set(shdDrawRed);
 draw_sprite(sprite_index,image_index,x+1,y+1);
 draw_sprite(sprite_index,image_index,x+1,y-1);
 draw_sprite(sprite_index,image_index,x-1,y-1);

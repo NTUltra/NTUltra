@@ -18,14 +18,14 @@ if instance_exists(BigMachine)
 maxSpeed = 2.5;
 maxAmmo = 5;
 fireRate = 4;
-laserDelay = 70;
+laserDelay = 75;
 loops = GetPlayerLoops();
-maxSpeed += min(2.5,loops*0.25);
+maxSpeed += min(2,loops*0.25);
 if loops > 0
 {
-	maxAmmo = 7 + min(10,loops);
+	maxAmmo = 6 + min(10,loops);
 	fireRate = 2;
-	laserDelay = 65 - min(30,loops*5);
+	laserDelay = 70 - min(30,loops*5);
 	if loops > 1
 		fireRate = 1;
 }

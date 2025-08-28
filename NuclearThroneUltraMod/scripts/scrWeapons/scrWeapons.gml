@@ -9943,10 +9943,10 @@ function scrWeapons() {
 	wep_name[886] = "IRON BURST GUN"
 	wep_type[886] = 3
 	wep_auto[886] = 2
-	wep_load[886] = 8
+	wep_load[886] = 9
 	wep_cost[886] = 5
 	wep_sprt[886] = sprIronBurstGun
-	wep_area[886] = 16
+	wep_area[886] = 17
 	wep_text[886] = "makes up for an iron deficiency"
 	wep_swap[886] = sndSwapBow
 	wep_rad[886] = 0;
@@ -10229,7 +10229,7 @@ function scrWeapons() {
 	wep_load[911] = 26
 	wep_cost[911] = 0
 	wep_sprt[911] = sprDeathScythe
-	wep_area[911] = 17
+	wep_area[911] = 24//17
 	wep_text[911] = "Corpses freeze"
 	wep_swap[911] = sndSwapSword
 	wep_rad[911] = 0;

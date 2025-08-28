@@ -63,6 +63,7 @@ function scrDrawHUD() {
 	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	{
 		var hx = 20;
+		rightSideHealthBarHud -= 90//No healthbar
 		vy -= yo;
 		if dataRef.skill_got[36] //Absorbing pores
 			hx += 2;
@@ -275,7 +276,7 @@ function scrDrawHUD() {
 	//ROGUE AMMO
 	if (dataRef.race=22 || dataRef.copyPassive == 22) && dataRef.ultra_got[88] != 1
 	{
-		rightSideHealthBarHud = 11;
+		rightSideHealthBarHud += 11;
 		var spr = sprRogueAmmoHUD;
 		if dataRef.ultra_got[85]=1
 		{

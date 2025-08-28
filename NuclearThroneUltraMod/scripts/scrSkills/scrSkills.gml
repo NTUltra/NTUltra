@@ -47,8 +47,8 @@ function scrSkills() {
 	skill_name[2] = "EXTRA FEET"
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
-	skill_text[2] = "WALK <w>FASTER<w>#DODGING GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>"
-	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES#DROP <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_text[2] = "WALK <w>FASTER<w>#DODGING <rp>SOMETIMES<rp> GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>"
+	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> <rp>SOMETIMES<rp>#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "+20% MORE SPEED#MORE RESOURCES ON DODGE#BIGGER DODGE SHIELD";
@@ -96,8 +96,8 @@ function scrSkills() {
 	skill_name[4] = "RABBIT PAW"
 	if !UberCont.useSeed && random(500)<1
 		skill_name[4] = "LUCKY FOOT"
-	skill_text[4] = "HIGHER <w>DROP RATE<w>"
-	skill_detail[4] = "<w>35%<w> MORE <y>AMMO<y> AND <r>HEALTH<r> DROPS#<w>7%<w> MORE <w>WEAPON DROPS<w>"
+	skill_text[4] = "HIGHER <w>DROP<w> <rp>CHANCE<rp>"
+	skill_detail[4] = "<w>35%<w> <rp>MORE<rp> <y>AMMO<y> AND <r>HEALTH<r> <w>DROPS<w>#<w>7%<w> <rp>MORE<rp> <w>WEAPON DROPS<w>"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 	skill_bons[4] = "44% PICKUP DROP RATE#9% WEAPON DROP RATE";
@@ -178,12 +178,12 @@ function scrSkills() {
 
 	
 	skill_name[9] = "SECOND STOMACH"
-	skill_text[9] = "MORE <r>HP<r> FROM MEDKITS";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-	skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
+	skill_text[9] = "MORE <r>HP<r> FROM <r>HEALTH<r> <rp>DROPS<rp>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+	skill_detail[9] = "DOUBLE <r>HP<r> FROM <r>MEDKITS<r> & <r>MEDCHESTS<r>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{
-		skill_text[9] = "MORE <r>HP<r> FROM MEDKITS#MEDKITS <r>HEAL<r> <w>DUPLICATES<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
-		skill_detail[9] = "DOUBLE <r>HP<r> FROM MEDKITS & MEDCHESTS#MEDKITS <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
+		skill_text[9] = "MORE <r>HP<r> FROM <r>HEALTH<r> <rp>DROPS<rp>#<r>HEALTH<r> <rp>DROPS<rp> <r>HEAL<r> <w>DUPLICATES<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+		skill_detail[9] = "DOUBLE <r>HP<r> FROM <r>MEDKITS<r> & <r>MEDCHESTS<r>#<r>MEDKITS<r> <r>HEAL<r> ALL <w>DUPLICATES<w> <w>1 HP<w>";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	}
 	skill_tips[9] = "stomach rumbles"
 	if isHand
@@ -214,7 +214,7 @@ function scrSkills() {
 	}
 	else
 	{
-		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP RATE<w> INCREASE#7% <y>AMMO<y> <w>COST<w> REDUCTION"
+		skill_detail[10] = "ABOUT DOUBLE HIGHER <y>AMMO MAX<y>#MINOR <y>AMMO<y> <w>DROP<w> <rp>CHANCE<rp> INCREASE#7% <y>AMMO<y> <w>COST<w> REDUCTION"
 	}
 	skill_tips[10] = "back muscle works like mini rabbit paw"
 	skill_msnd[10] =  sndMutBackMuscle
@@ -226,15 +226,15 @@ function scrSkills() {
 	//skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
-	skill_text[11] = "DEAL <w>FIXED<w> EXTRA DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
-	skill_detail[11] = "ADD A <w>FIXED<w> 0.5 EXTRA DAMAGE#TO ALL INSTANCES OF DAMAGE#DEALT TO ENEMIES##65% OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
+	skill_text[11] = "DEAL SLIGTHLY MORE DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
+	skill_detail[11] = "ADD A <w>FIXED +0.5<w> EXTRA DAMAGE#TO ALL INSTANCES OF DAMAGE#DEALT TO ENEMIES##<w>65%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>##GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	skill_bons[11] = "80% INSTEAD#+0.15 FIXED DAMAGE";
 
 	skill_name[12] = "EUPHORIA"
-	skill_text[12] = "SLOWER ENEMY BULLETS#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
-	skill_detail[12] = "SLOWER ENEMY BULLETS#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT#AND CASTS A <aq>SHIELD<aq>"
+	skill_text[12] = "<w>SLOWER ENEMY BULLETS<w>#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
+	skill_detail[12] = "<w>SLOWER ENEMY BULLETS<w>#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT#AND CASTS A <aq>SHIELD<aq>"
 	skill_tips[12] = "time passes slowly"
 	skill_msnd[12] =  sndMutEuphoria
 	skill_bons[12] = "+25% IMMUNE TIME#BIGGER PROTECTION BUBBLE";
@@ -252,8 +252,8 @@ function scrSkills() {
 	skill_name[14] = "BOILING VEINS"
 	if !UberCont.useSeed && random(900)<1
 		skill_name[14] = "HOT HEAD"
-	skill_text[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER 4<r>HP<r>"
-	skill_detail[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER 4<r>HP<r>##(WEAPON SPECIFIC MUTATION)";
+	skill_text[14] = "<w>EXPLOSIONS<w> <r>BURN<r> ENEMIES#TAKE <w>NO DAMAGE<w> FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER <w>4<w><r>HP<r>"
+	skill_detail[14] = "<w>EXPLOSIONS<w> <r>BURN<r> ENEMIES#TAKE <w>NO DAMAGE<w> FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER <w>4<w><r>HP<r>##(WEAPON SPECIFIC MUTATION)";
 	if instance_exists(Player) && Player.race == 13
 	{
 			
@@ -424,11 +424,11 @@ function scrSkills() {
 
 
 	skill_name[28] = "RAGE"
-	skill_text[28] = "<r>KILLS<r> SLOWLY INCREASE:#<w>RELOAD SPEED<w> AND <w>DROP RATE<w>#AND DECREASES <w>ACCURACY<w>";
-	skill_detail[28] = "EACH <r>KILL<r> INCREASES:#<w>DROP RATE<w>, ALL WEAPON <w>RELOAD SPEED<w>#AND DECREASES <w>ACCURACY<w> SLIGHTLY##LOSE <w>28<w> <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE";
+	skill_text[28] = "<r>KILLS<r> SLOWLY <w>INCREASE<w>:#<w>RELOAD SPEED<w> AND <w>DROP<w> <rp>CHANCE<rp>#AND <r>DECREASE<r> <w>ACCURACY<w>";
+	skill_detail[28] = "EACH <r>KILL<r> <w>INCREASES<w>:#<w>DROP<w> <rp>CHANCE<rp>, ALL WEAPON <w>RELOAD SPEED<w>#AND <r>DECREASES<r> <w>ACCURACY<w> SLIGHTLY##LOSE <w>28<w> <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE";
 	if instance_exists(Player) && Player.skill_got[48]
 	{
-		skill_detail[28] += "<w>EXCESS<w> <r>RAGE<r> STACKS <g>GLUTINOUS BELLY<g>"
+		skill_detail[28] += "#<w>EXCESS<w> <r>RAGE<r> STACKS <g>GLUTINOUS BELLY<g>"
 	}
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
@@ -474,12 +474,12 @@ function scrSkills() {
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "35% LESS ENEMY <r>HP<r>#-2 <r>MAX HP<r>"
-	skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <r>MAX HP<r>"
+	skill_text[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#<w>-2<w> <r>MAX HP<r>"
+	skill_detail[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "35% LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
-		skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#-2 <gb>MAX ARMOUR<gb>"
+		skill_text[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
+		skill_detail[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -502,25 +502,25 @@ function scrSkills() {
 	skill_bons[34] = "+5% SECONDARY RELOAD#+2% DROP CHANCE";
 	*/
 	skill_name[34] = "FLEXIBLE ELBOWS"
-	skill_text[34] = "<w>RELOADING<w> SOMETIMES <g>SLAPS<g> ENEMIES"
-	skill_detail[34] = "+10% <w>RELOAD SPEED<w> ON ALL WEAPONS##WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#CHANCE DEPENDS ON:#BASE RELOAD TIME & DROP RATE#(+2 DAMAGE EACH LOOP)"
+	skill_text[34] = "<w>RELOADING<w> <rp>SOMETIMES<rp> <g>SLAPS<g> ENEMIES"
+	skill_detail[34] = "WHENEVER YOU <w>RELOAD<w> A WEAPON#ROLL FOR A CHANCE#TO <w>SLAP<w> <y>RES<y><g>OUR<g><r>CES<r>#OUT OF A NEARBY ENEMY#<rp>CHANCE<rp> DEPENDS ON:#BASE RELOAD TIME & <w>DROP<w> <rp>CHANCE<rp>#(+2 DAMAGE EACH LOOP)"
 	skill_tips[34] = "looting and shooting"
 	skill_msnd[34] =  sndMutFlexibleElbows
-	skill_bons[34] = "12% RELOAD SPEED INSTEAD#+50% SLAP DAMAGE";
+	skill_bons[34] = "+50% SLAP DAMAGE";
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 50% <w>RELOAD SPEED<w>##+40% SECONDARY <w>RELOAD SPEED<w>"
+	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>THREE<w> SHOTS#EXTRA SHOTS LOAD AT 50% <w>RELOAD SPEED<w>##+40% <w>OFFHAND RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> OFFHAND <w>RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
 	skill_bons[35] = "CAN LOAD UP TO FOUR SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
 	
 	skill_name[36] = "ABSORBING PORES"
 	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
-	skill_detail[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w> ALL YOUR WEAPONS#<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY 150TH <g>RAD<g> <r>HEALS<r> <w>1<w><r>HP<r>"
+	skill_detail[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w> ALL YOUR WEAPONS#<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY <w>150TH<w> <g>RAD<g> <r>HEALS<r> <w>1<w><r>HP<r>"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
 	skill_bons[36] = "-30 (20%) RADS REQUIRED"
@@ -577,7 +577,7 @@ function scrSkills() {
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"
-	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE 50% MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE 100% FASTER#INCREASE MAX CHARGE##HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
+	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE <w>50%<w> MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE <w>100%<w> FASTER#INCREASE MAX CHARGE##HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
 	skill_tips[42] = "tail is a weapon specific mutation"
 	skill_msnd[42] =  sndMutTailEnd;
 	skill_bons[42] = "+20% CHARGE RATE & BURST AMOUNT"
