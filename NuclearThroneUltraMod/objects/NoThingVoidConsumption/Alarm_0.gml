@@ -265,7 +265,6 @@ if targetedOne
 		}
 		else
 		{*/
-			noThingHealth += 1;
 			maxhealth += 1;
 						
 			if !instance_exists(NoThingHealth)
@@ -276,6 +275,7 @@ if targetedOne
 			{
 				with NoThingHealth
 				{
+					noThingHealth += 1;
 					alarm[0] = lifeDuration;	
 				}
 			}

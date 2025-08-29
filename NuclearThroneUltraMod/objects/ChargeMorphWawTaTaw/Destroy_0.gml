@@ -21,10 +21,16 @@ if instance_exists(Player)
 	}
 	if instance_exists(creator)
 	{
-		with instance_create(x,y,Laser)
+		with instance_create(x,y,MorphWawTaTaw)
 		{
-			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(2)-1)*other.creator.accuracy
-			image_yscale=0.2+other.rate*0.3
+			alarm[0] = 10 + other.rate;
+			owner = other.creator;
+			mywep = other.mywep;
+			camKick = 5;
+			camShake = 3;
+			wkick = 4;
+			image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+(random(2)-1)*other.creator.accuracy;
+			prevangle = image_angle;
 			team = other.team
 			scrCopyWeaponMod(other);
 			event_perform(ev_alarm,0)

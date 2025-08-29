@@ -21,7 +21,7 @@ offsetX2 = x;
 offsetY2 = y;
 targetX = x;
 targetY = y;
-curveAmount = 0.025 + random(1.125);
+curveAmount = 32;
 dealtDamage = false;
 hue = irandom(255);
 hueShift = 20;
@@ -32,11 +32,22 @@ accuracy = 0.75;
 energyBrained = false;
 range = 24;
 homeDirection = direction;
+ending = false;
+camKick = 5;
+camShake = 3;
+wkick = 4;
+mywep = 0;
+offset = 16;
+hit = [];
+owner = -1;
+pitch = 0;
+alarm[0] = 10;
 if instance_exists(Player)
 {
 	accuracy = Player.accuracy * 0.75;
 	if Player.skill_got[17]
 	{
+		curveAmount += 32;
 		energyBrained = true;
 		dmg += 6;
 		minWidth *= 1.5;

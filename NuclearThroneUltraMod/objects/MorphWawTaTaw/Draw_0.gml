@@ -11,7 +11,6 @@ else if myTarget != noone && instance_exists(myTarget)
 	targetY = myTarget.y;
 }
 
-draw_primitive_begin(pr_trianglestrip);
 var dt = 1;
 if UberCont.normalGameSpeed == 60
 	dt = 0.5;
@@ -41,10 +40,11 @@ var polygonWidth = widthScale;
 var col = colour
 var h = hue;
 draw_set_colour(col);
-draw_circle(xx,yy, max(1,polygonWidth - lerpStart), false);
+draw_circle(xx1,yy1, max(1,polygonWidth - lerpStart), false);
+draw_primitive_begin(pr_trianglestrip);
 for (var t = ls; t <= lerpTime; t += curveDetail)
 {
-	
+	/*
 	if t > 0.5
 	{
 		wt = (0.5*widthTimeScalar) - (((t - 0.5) * widthTimeScalar) * widthReturnScalar) 
@@ -55,21 +55,27 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	}
 	wt += minWidth;
 	polygonWidth = widthScale * wt;
+	*/
 	xPrev1 = xx1;
 	yPrev1 = yy1;
 	xPrev2 = xx2;
 	yPrev2 = yy2;
-	curve1 = quadratic_curve(ls,x,y,offsetX1,offsetY1,targetX,targetY);
-	curve2 = quadratic_curve(ls,x,y,offsetX2,offsetY2,targetX,targetY);
+	curve1 = quadratic_curve(t,x,y,offsetX1,offsetY1,targetX,targetY);
+	curve2 = quadratic_curve(t,x,y,offsetX2,offsetY2,targetX,targetY);
 	xx1 = curve1[0];
 	yy1 = curve1[1];
 	xx2 = curve2[0];
 	yy2 = curve2[1];
-	var dir = point_direction(xPrev,yPrev,xx,yy);
-	draw_vertex(xPrev + lengthdir_x(polygonWidth,dir + 90), yPrev + lengthdir_y(polygonWidth,dir + 90));
-	draw_vertex(xPrev + lengthdir_x(polygonWidth,dir - 90), yPrev + lengthdir_y(polygonWidth,dir - 90));
-	draw_vertex(xx + lengthdir_x(polygonWidth,dir + 90), yy + lengthdir_y(polygonWidth,dir + 90));
-	draw_vertex(xx + lengthdir_x(polygonWidth,dir - 90), yy + lengthdir_y(polygonWidth,dir - 90));
+	draw_circle(xx1,yy1,2,false);
+	draw_circle(xx2,yy2,2,false);
+	draw_circle(xPrev1,xPrev1,2,false);
+	draw_circle(xPrev2,xPrev2,2,false);
+	draw_vertex(xPrev1, yPrev1);
+	draw_vertex(xPrev2, yPrev2);
+	draw_vertex(xx1, xx1);
+	draw_vertex(xx1, xx1);
+	draw_vertex(xx2, xx2);
+	draw_vertex(xPrev2, yPrev2);
 	h = hue + (t * hueWithinShift);
 	while (h > 255)
 	{
@@ -79,13 +85,13 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	
 	draw_set_colour(col);
 }
+draw_primitive_end();
 hue += dt * hueShift;
 while (hue > 255)
 {
 	hue -= 255;	
 }
-draw_primitive_end();
-if lerpTime > lerpStarting
+if ending
 	lerpStart += lerpIncrease * dt * endingBoost;
 //lerpStart = min(lerpStart,1);
 if lerpStart >= lerpStartingCircle

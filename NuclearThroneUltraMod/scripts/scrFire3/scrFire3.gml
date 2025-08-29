@@ -4390,8 +4390,9 @@ function scrFire3(hasTailNow){
 		//CHARGE MORPH-O-WAW-TA-TAW
 		case 921:
 
-		with instance_create(x,y,ChargeLaser)
+		with instance_create(x,y,ChargeMorphWawTaTaw)
 		{
+			mywep = other.wep;
 			maxcharge=25;//maxrate
 			type = 5;
 			cost = 1;
@@ -4412,7 +4413,6 @@ function scrFire3(hasTailNow){
 				maxcharge *= Player.betterTail;
 				scrActivateTail(hasTailNow);
 			}
-			event_perform(ev_alarm,0)
 			alarm[1] = costtime;
 		}
 

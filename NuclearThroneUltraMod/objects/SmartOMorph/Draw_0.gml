@@ -52,7 +52,7 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	polygonWidth = widthScale * wt;
 	xPrev = xx;
 	yPrev = yy;
-	curve = quadratic_curve(ls,x,y,offsetX,offsetY,targetX,targetY);
+	curve = quadratic_curve(t,x,y,offsetX,offsetY,targetX,targetY);
 	xx = curve[0];
 	yy = curve[1];
 	var dir = point_direction(xPrev,yPrev,xx,yy);

@@ -10041,7 +10041,7 @@ function scrWeapons() {
 	wep_rad[894] = 0;
 	wep_popup[894] = "WORKS WITH RECYCLE GLAND!#AND ENERGY BRAIN";
 	
-	wep_name[895] = "SLINGSHOT"
+	wep_name[895] = "CHARGE SLINGSHOT"
 	wep_type[895] = 3
 	wep_auto[895] = 0
 	wep_load[895] = 20//32
