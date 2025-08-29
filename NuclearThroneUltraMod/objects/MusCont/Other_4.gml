@@ -329,7 +329,7 @@ if scrIsGamemode(8) && area != 0
         song = musUltraThePit
         amb = ambUltra126;
     }
-	if instance_exists(PitNavigation) && area != 140
+	if instance_exists(PitNavigation) && area == 141
 	{
 		song = musUltra127;
 		amb = ambUltra126;//musUltraInvertedRoute;

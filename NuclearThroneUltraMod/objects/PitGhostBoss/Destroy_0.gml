@@ -21,6 +21,12 @@ with ThePit
 	{
 		portalEssence += 6 * scrGetPortalEssenceBoost();
 	}
+	with PlayerSpawn
+	{
+		lastarea = 139;
+		lastsubarea = 1;
+		inverted = true;
+	}
 	with Player
 	{
 		lastarea = 139;

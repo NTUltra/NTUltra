@@ -20,6 +20,7 @@ function scrNextLevelPitRoute() {
 				hard = max(hard,0);
 			}
 		break
+		case 100:
 		case 139://THE PIT
 			inverted = true;
 			area = 140;//Get regal!
@@ -34,7 +35,7 @@ function scrNextLevelPitRoute() {
 				instance_destroy();
 		break;
 	}
-	if loops < 1
+	if loops < 1 && area != 100
 	{
 		hard += 1;
 		if scrIsCrown(10)

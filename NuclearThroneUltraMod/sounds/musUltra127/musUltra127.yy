@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":3,
   "conversionMode":0,
-  "duration":181.21066,
+  "duration":181.21068,
   "name":"musUltra127",
   "parent":{
     "name":"Music & amb",

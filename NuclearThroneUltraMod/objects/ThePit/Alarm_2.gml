@@ -15,8 +15,8 @@ with Player
 	snd_play(sndGhostTeleport2);
 	var i = 0;
 	BackCont.shake += 10;
-	var ghosts = [sprPitGhost,sprPitGhostLaserGuy,sprPitGhostExploder,sprPitGhostSpawner,sprPitGhost,sprPitGhostSpawner];
-	repeat(6)
+	var ghosts = [sprPitGhost,sprPitGhostLaserGuy,sprPitGhostExploder,sprPitGhostSpawner];
+	repeat(4)
 	{
 		var xx = x + lengthdir_x(96,ang)
 		var yy = y + lengthdir_x(96,ang)

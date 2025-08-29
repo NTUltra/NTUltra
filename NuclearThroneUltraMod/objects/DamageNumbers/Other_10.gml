@@ -38,7 +38,8 @@ draw_clear_alpha(c_black,0);
 	{
 		if dmgs != "" && dmgs != "00"
 		{
-			var al = string_length(string(dmgs));
+			dmgs = string_digits(dmgs);
+			var al = string_length(dmgs);
 			var step = sprite_get_width(sprt)*useSize;
 			for (var i = 0; i < al; i ++)
 			{

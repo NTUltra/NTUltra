@@ -258,10 +258,6 @@ if Player.crownpoints > 0
 							sprite_index = sprCrownOfReincarnationUpgraded;
 					}
 				}
-				else if crown == 22 && (scrIsCrown(22) || (!UberCont.canMultiCrown && scrIsCrown(32)))//Luck to misfortune
-				{
-					crown = 32;	
-				}
 				else if crown == 1 && UberCont.canMultiCrown
 				{
 					crown_name[1] = "[NONE]"
@@ -297,6 +293,10 @@ if Player.crownpoints > 0
 				else if crown == 21 && ((Player.my_health < Player.maxhealth) || (scrIsCrown(39) && UberCont.canMultiCrown && (Player.maxhealth == 1 || Player.my_health > Player.maxhealth)))
 				{
 					crown = 39;//CROWN OF DANGER
+				}
+				else if crown == 22 && (scrIsCrown(22) || (!UberCont.canMultiCrown && scrIsCrown(32)))//Luck to misfortune
+				{
+					crown = 32;	
 				}
 				else if crown == 17 && (Player.lastarea == 1 || Player.lastarea == 2 || Player.lastarea == 3 || Player.lastarea == 4 || Player.lastarea == 5 || Player.lastarea == 6 || Player.lastarea == 9)
 				{

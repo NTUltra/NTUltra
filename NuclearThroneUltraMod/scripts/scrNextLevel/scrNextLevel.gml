@@ -1,5 +1,6 @@
 /// @description areas regular
 function scrNextLevel(skipping = false) {
+	debug("Next level");
 	if instance_exists(VoidDetour)
 	{
 		if VoidDetour.goneIn
@@ -128,6 +129,7 @@ function scrNextLevel(skipping = false) {
 	lastsubarea = subarea;
 	if instance_exists(PitNavigation)
 	{
+		debug("Does pit nav");
 		scrNextLevelPitRoute();	
 	}
 	else

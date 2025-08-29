@@ -63,7 +63,6 @@ function scrDrawHUD() {
 	if !(dataRef.ultra_got[62] && dataRef.altUltra)
 	{
 		var hx = 20;
-		rightSideHealthBarHud -= 90//No healthbar
 		vy -= yo;
 		if dataRef.skill_got[36] //Absorbing pores
 			hx += 2;
@@ -186,6 +185,7 @@ function scrDrawHUD() {
 	else
 	{
 		armourX = 7;
+		rightSideHealthBarHud -= 90//No healthbar
 	}
 	if dataRef.race == 22
 		armourX += 12;

@@ -38,7 +38,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 			}
 			snd_play_2d(sndExcessResource,0.1);
 			var resourceConversionMultiplier = 1;
-			var equippedTypeAddition = 0.8;
+			var equippedTypeAddition = 0.75;
 			var addDmgBoost = 0;
 			var am = 0;
 			if race == 25

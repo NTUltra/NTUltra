@@ -1,6 +1,7 @@
 /// @description
 // Inherit the parent event
 event_inherited();
+canBeAngled = false;
 dmg = 20;
 dmgBoost = 0;
 lerpTime = 0;

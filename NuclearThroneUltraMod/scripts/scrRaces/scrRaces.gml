@@ -527,7 +527,7 @@ function scrRaces() {
 		race_vision_detail[21] = string_replace_all(race_vision_detail[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
 	}
 	//race_lock[21] = "GO GO GHOST BUSTING!"
-	race_lock[21] = "DEFEAT HOSTILE HORROR#IN THE RADIATION SLUDGE TRENCH"
+	race_lock[21] = "DEFEAT HOSTILE HORROR\nIN THE RADIATION SLUDGE TRENCH"
 	race_have[21] = 0
 	race_swep[21] = 1
 	race_bskin[21] = 0
