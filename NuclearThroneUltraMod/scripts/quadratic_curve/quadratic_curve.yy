@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"quadratic_curve",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"quadratic_curve",
+  "parent":{
+    "name":"BestScripts",
+    "path":"folders/Scripts/BestScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

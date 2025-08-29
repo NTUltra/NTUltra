@@ -1,7 +1,7 @@
 loops = GetPlayerLoops();
 maxhealth = 60;
 if loops > 0 || scrIsHardMode()
-	maxhealth = 100 * clamp(loops*3,1,5)
+	maxhealth = 120 * clamp(loops*6,1,14)
 mySize = 2
 
 spr_idle = sprBigFishSkullOpen

@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.257219,
+  "duration":0.0,
   "name":"sndLightning2",
   "parent":{
     "name":"Energy",

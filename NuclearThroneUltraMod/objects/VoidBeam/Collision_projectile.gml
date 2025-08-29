@@ -18,7 +18,7 @@ else if team != other.team
 			image_xscale = point_distance(x,y,xstart,ystart)*0.5;
 		}
 	}
-	else// if (other.typ == 2 || other.typ == 3 || other.typ == 1)
+	else if other.typ != 4
 	{
 		snd_play(sndProjectileDestroy,0.1,true);
 		BackCont.shake += 1;

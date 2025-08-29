@@ -18,12 +18,17 @@ if UberCont.normalGameSpeed == 60
 lerpTime += lerpIncrease * dt;
 lerpTime = min(1,lerpTime);
 var ls = round(lerpStart * 10)*0.1;
+/*
 var tx1 = lerp(x,offsetX,ls);
 var tx2 = lerp(offsetX,targetX,ls);
 var ty1 = lerp(y,offsetY,ls);
 var ty2 = lerp(offsetY,targetY,ls);
 var xx = lerp(tx1,tx2,ls);
 var yy = lerp(ty1,ty2,ls);
+*/
+var curve = quadratic_curve(ls,x,y,offsetX,offsetY,targetX,targetY);
+var xx = curve[0];
+var yy = curve[1];
 var xPrev = xx;
 var yPrev = yy;
 var wt;
@@ -47,12 +52,9 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	polygonWidth = widthScale * wt;
 	xPrev = xx;
 	yPrev = yy;
-	tx1 = lerp(x,offsetX,t);
-	tx2 = lerp(offsetX,targetX,t);
-	ty1 = lerp(y,offsetY,t);
-	ty2 = lerp(offsetY,targetY,t);
-	xx = lerp(tx1,tx2,t);
-	yy = lerp(ty1,ty2,t);
+	curve = quadratic_curve(ls,x,y,offsetX,offsetY,targetX,targetY);
+	xx = curve[0];
+	yy = curve[1];
 	var dir = point_direction(xPrev,yPrev,xx,yy);
 	draw_vertex(xPrev + lengthdir_x(polygonWidth,dir + 90), yPrev + lengthdir_y(polygonWidth,dir + 90));
 	draw_vertex(xPrev + lengthdir_x(polygonWidth,dir - 90), yPrev + lengthdir_y(polygonWidth,dir - 90));

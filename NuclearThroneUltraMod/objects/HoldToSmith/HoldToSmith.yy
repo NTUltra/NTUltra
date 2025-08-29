@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprHoldTo",
-    "path":"sprites/sprHoldTo/sprHoldTo.yy",
+    "name":"sprHoldToDelayed",
+    "path":"sprites/sprHoldToDelayed/sprHoldToDelayed.yy",
   },
   "spriteMaskId":null,
   "visible":true,

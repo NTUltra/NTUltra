@@ -382,6 +382,11 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with HammerThrow
+{
+	if canDealDamage > 0 || alarm[2] > 0
+		draw_self();
+}
 with EnemyBullet2WallHugger
 {
 	draw_self();

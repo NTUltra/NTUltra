@@ -18,7 +18,6 @@ if my_health > 0 && isInteractableNow && !instance_exists(HyenaBoss) && !instanc
 		}
 		snd_play(sndCursedReminder,0,0,true,1,false,false,1);
 		KeyCont.key_pick[Player.p] = 2;
-		mask_index = mskPickupThroughWall;
 		isInteractableNow = false;
 		maxhealth = 150 * clamp(loops*5,1,10)
 		my_health = maxhealth;
@@ -27,6 +26,7 @@ if my_health > 0 && isInteractableNow && !instance_exists(HyenaBoss) && !instanc
 		{
 			event_perform(ev_alarm,0);
 		}
+		mask_index = mskPickupThroughWall;
 		with Player {
 			curse = 1;
 			bcurse = 1;

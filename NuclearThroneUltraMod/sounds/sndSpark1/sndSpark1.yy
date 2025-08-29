@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.192062,
+  "duration":0.1920635,
   "name":"sndSpark1",
   "parent":{
     "name":"Energy",

@@ -878,7 +878,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 		}
 
-
+		//weaponsmith Weapon Smith
 		if race == 17
 		{
 			var isRerollingInstead = false;
@@ -953,6 +953,32 @@ function scrPowers(raceOverwrite = -1) {
 		    else if !isRerollingInstead && bwep != 0
 			{
 				instance_create(x,y,HoldToSmith);
+			}
+			if instance_exists(HammerThrow)
+			{
+				with HammerThrow
+				{
+					if (canDealDamage == 1 || canDealDamage == 0) && alarm[2] < 1
+					{
+						snd_play_fire(choose(sndKunai1,sndKunai2));
+						event_user(2);
+					}
+				}
+			}
+			else if !instance_exists(HammerThrowCooldown)
+			{
+				var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
+				BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+				BackCont.shake += 8
+				snd_play_fire(choose(sndChickenThrow,sndKunaiCrit2));
+				with instance_create(x,y,HammerThrow)
+				{
+					dmg += other.level + other.loops;
+					motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
+					image_angle = direction
+					team = other.team;
+				}
 			}
 		}
 

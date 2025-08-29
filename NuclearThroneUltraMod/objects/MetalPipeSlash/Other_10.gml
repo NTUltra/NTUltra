@@ -1,4 +1,4 @@
-/// @description xxx
+/// @description Wow
 
 // Inherit the parent event
 event_inherited();

@@ -25,22 +25,15 @@ if um == ultramods.bulletShotgun
 	instance_destroy(id,false);
 	with instance_create(x,y,Laser)
 	{
-		image_yscale += 0.12;
-		defaultPierce += 32
+		image_yscale += 0.25;
 		scrCopyWeaponMod(other);
 		isog = false;
-		image_angle = other.direction-5;
+		image_angle = other.direction;
 		team = other.team
-		event_perform(ev_alarm,0);
-	}
-	with instance_create(x,y,Laser)
-	{
-		image_yscale += 0.12;
-		defaultPierce += 32
-		scrCopyWeaponMod(other);
-		isog = false;
-		image_angle = other.direction+5;
-		team = other.team
+		sprite_index = sprUltraLaser;
+		defaultPierce *= 2;
+		isUltra=true;
+		dmg += 0.25;
 		event_perform(ev_alarm,0);
 	}
 } else if um == ultramods.boltBullet

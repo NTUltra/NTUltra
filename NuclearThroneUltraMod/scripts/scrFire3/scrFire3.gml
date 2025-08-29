@@ -4386,5 +4386,36 @@ function scrFire3(hasTailNow){
 		wkick = 6
 
 		break;
+		
+		//CHARGE MORPH-O-WAW-TA-TAW
+		case 921:
+
+		with instance_create(x,y,ChargeLaser)
+		{
+			maxcharge=25;//maxrate
+			type = 5;
+			cost = 1;
+			creator = other.id
+			chargetime = 3;
+			costtime = 11;
+			team = other.team
+			if Player.skill_got[42]
+			{
+				chargetime = 2;
+				rate += 4;
+				costtime *= Player.betterTail;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					rate += 8;
+					chargetime = 1
+				}
+				maxcharge *= Player.betterTail;
+				scrActivateTail(hasTailNow);
+			}
+			event_perform(ev_alarm,0)
+			alarm[1] = costtime;
+		}
+
+		break;
 	}
 }

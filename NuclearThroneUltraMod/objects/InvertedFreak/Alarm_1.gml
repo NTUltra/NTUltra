@@ -52,7 +52,10 @@ if target != noone
 							}
 							instance_destroy(id,false);
 							with instance_create(x,y,RabbitPawFX)
+							{
+								image_xscale = other.right;
 								sprite_index = sprFreak1Fuse;
+							}
 						}
 					}
 				}
