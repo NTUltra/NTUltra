@@ -41,7 +41,10 @@ function scrMakeFloor(limiter) {
 	}else instance_create(x,y,Floor)} 
 
 	if area = 0 or area = 2 or area = 102 or area = 6 or area = 110 or area = 112
-		instance_create(x,y,Floor)
+	{
+		if !place_meeting(x,y,Floor)
+			instance_create(x,y,Floor)
+	}
 	if area == 119 || area == 120
 	{
 		instance_create(x,y,Floor)

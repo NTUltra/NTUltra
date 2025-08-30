@@ -43,25 +43,31 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 			var am = 0;
 			if race == 25
 				resourceConversionMultiplier = 1.15;
+			if excessResourceDamageBoost < 0.1
+				resourceConversionMultiplier += 0.1;
+			else if excessResourceDamageBoost > 0.35
+				resourceConversionMultiplier -= 0.12;
 			resourceConversionMultiplier *= excessHealReduction;
 			switch (resourceType)
 			{
 				case 0://Health
 					excessHealth += theExcess;
-					//1 health = 5%
-					addDmgBoost += theExcess * 0.0425 * resourceConversionMultiplier;
+					//1 health = 4%
+					addDmgBoost += theExcess * 0.04 * resourceConversionMultiplier;
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						colour[0] = 1;
 						colour[1] = 0;
 						colour[2] = 0;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 				break;
 				case 1://Melee Ammo
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[0] += theExcess;
 					am = theExcess * 0.0023181818181816 * resourceConversionMultiplier
@@ -78,6 +84,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[1] += theExcess;
 					//1 Bullet ammo = 0.01% * 3
@@ -94,6 +101,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[2] += theExcess;
 					//1 Shotgun ammo = 0.046%*3
@@ -110,6 +118,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[3] += theExcess;
 					//1 Bolt ammo = 0.046%*2
@@ -126,6 +135,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[4] += theExcess;
 					//1 Explosive ammo = 0.046%*2
@@ -142,6 +152,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 				with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessAmmo[5] += theExcess;
 					//1 Energy ammo = 0.046%*2
@@ -165,15 +176,16 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						owner = other.id;
 						alphaIncrease += 0.2;
 						alpha += 0.1;
-						scale += 0.25;
+						scale += 0.2;
 						scaleIncrease += 0.04;
 						fullTimeDelay = 2;
+						sprite_index = other.sprite_index;
 					}
 					//Before max level 0.1%
 					if level < maxlevel
 						addDmgBoost += theExcess * 0.001 * resourceConversionMultiplier;
-					else//1 Rad = 0.0008%
-						addDmgBoost += theExcess * 0.000008 * resourceConversionMultiplier;
+					else//1 Rad = 0.0007%
+						addDmgBoost += theExcess * 0.000007 * resourceConversionMultiplier;
 				break;
 				case 8://Armour
 					excessArmour += theExcess;
@@ -185,12 +197,13 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[1] = 0.64;
 						colour[2] = 0.8;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 				break;
 				case 9://Cash
 					excessCash += theExcess;
-					//1 Cash = 0.1%
-					addDmgBoost += theExcess * 0.001 * resourceConversionMultiplier;
+					//1 Cash = 0.005%
+					addDmgBoost += theExcess * 0.00005 * resourceConversionMultiplier;
 					with instance_create_depth(x,y,depth + 1, GainExcessResource)
 					{
 						colour[0] = 0.80;
@@ -202,6 +215,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						scale += 0.25;
 						scaleIncrease += 0.04;
 						fullTimeDelay = 2;
+						sprite_index = other.sprite_index;
 					}
 				break;
 				case 10://VoidBeam
@@ -211,6 +225,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[1] = 0.2;
 						colour[2] = 0.25;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessVoidBeam += theExcess;
 					//1 VoidBeam = 0.005%
@@ -223,6 +238,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[1] = 0.40;
 						colour[2] = 0.88;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessPortalStrikeAmmo += theExcess;
 					//1 Portal strike = 3.5%
@@ -235,6 +251,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[1] = 0.4;
 						colour[2] = 0.078;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					excessRage += theExcess;
 					//1 Rage = 0.15% thats 10 kills at max rage gives 1.5% damage boost
@@ -247,6 +264,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 						colour[1] = 0.31;
 						colour[2] = 0.725;
 						owner = other.id;
+						sprite_index = other.sprite_index;
 					}
 					//1 Hammerhead = 0.33% hammerheadcounterMax = 27
 					addDmgBoost += theExcess * 0.0033 * resourceConversionMultiplier;

@@ -7,7 +7,10 @@ if time == 1
 	BackCont.viewy2 += lengthdir_y(19,hk+180)*UberCont.opt_shake;
 	
 	followOwner = false;
-	with scrDrop(18,4)
+	var dropChance = 17;
+	if instance_exists(Player) && Player.skill_got[4]
+		dropChance += 3;
+	with scrDrop(dropChance,4)
 	{
 		x = other.tx;
 		y = other.ty;
@@ -38,7 +41,7 @@ if time == 1
 			{
 				if id != direct && team != 2 && my_health > 0
 				{
-					DealDamage(d)
+					DealDamage(d,false,true,false)
 					sprite_index = spr_hurt
 					image_index = 0
 					motion_add(hk + 160,5)

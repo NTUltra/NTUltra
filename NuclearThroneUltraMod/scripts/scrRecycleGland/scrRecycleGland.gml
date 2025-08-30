@@ -14,7 +14,7 @@ function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true){
 				{
 					var excessAmmo = Player.ammo[1] - Player.typ_amax[1];
 					if excessAmmo > 0
-						scrExcessResource(1,excessAmmo);
+						scrExcessResource(1,excessAmmo,0.75);
 					Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
 				}
 			}

@@ -10339,7 +10339,7 @@ function scrWeapons() {
 	wep_swap[920] = sndSwapExplosive
 	wep_rad[920] = 0;
 	wep_popup[920] = "TRACKS NEAR CROSSHAIR";
-	
+	/*
 	wep_name[921] = "CHARGE MORPH-O-WAW-TA-TAW"
 	wep_type[921] = 5
 	wep_auto[921] = 0
@@ -10350,7 +10350,7 @@ function scrWeapons() {
 	wep_text[921] = "wobly o wobly"
 	wep_swap[921] = sndSwapEnergy
 	wep_rad[921] = 0;
-	
+	*/
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	

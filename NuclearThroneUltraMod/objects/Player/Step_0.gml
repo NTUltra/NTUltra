@@ -536,7 +536,8 @@ if !instance_exists(LevCont) and visible = 1
 		if keyboard_check_pressed(ord("V")) {
 			instance_create(x,y,PlutoAttack);
 			peaceBarriers += 1;
-			//getVision = true;
+			getVision = true;
+			voidBeam = voidBeamMax;
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
@@ -2474,8 +2475,12 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
 		instance_create(x,y,EuphoriaBlock);
+		var dropChance = 40;
+		if skill_got[4]
+			dropChance += 10;
 		if race == 25 {
-			if scrDrop(60,7) != noone
+			dropChance += 10;
+			if scrDrop(dropChance,7) != noone
 				snd_play(sndExtraFeetDodge);
 			else
 			{
@@ -2490,7 +2495,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 		}
 		else
 		{
-			if scrDrop(50,5) != noone
+			if scrDrop(dropChance,5) != noone
 				snd_play(sndExtraFeetDodge);
 			else
 			{

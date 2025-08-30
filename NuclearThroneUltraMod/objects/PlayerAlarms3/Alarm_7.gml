@@ -31,6 +31,7 @@ else
 			rad += excessRad;
 			excessRad = 0;
 			cash += excessCash;
+			cash = min(cash,maxCash);
 			if excessCash > 0
 			{
 				snd_play_2d(sndHorrorCashFlowEnd);
@@ -352,6 +353,20 @@ else
 			}
 			with instance_create(x,y,SharpTeeth)
 				owner=other.id;
+		}
+		//Cash Flow
+		if ultra_got[0] && altUltra
+		{
+			var ec = min(200,cash + 200 - maxCash);
+			if ec > 0
+			{
+					scrExcessResource(9,ec);
+			}
+			cash = min(cash + 200,maxCash);
+			if cash <= 0
+				inDebt = true;
+			else 
+				inDebt = false;
 		}
 	}
 }

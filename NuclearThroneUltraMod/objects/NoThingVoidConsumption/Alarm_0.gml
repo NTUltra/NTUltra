@@ -22,9 +22,10 @@ if gotThroneButt
 					Player.voidBeam += 1;
 				else
 					Player.voidBeam += 5;
-				var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+				var excessVoidBeam = min(5,Player.voidBeam - Player.voidBeamMax);
 				if excessVoidBeam > 0
 				{
+					Player.voidBeam = Player.voidBeamMax;
 					scrExcessResource(10,excessVoidBeam);
 				}
 			}
@@ -71,9 +72,10 @@ if gotThroneButt
 				Player.voidBeam += 5;
 				if isUpg
 					Player.voidBeam += 2;
-				var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+				var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
 				if excessVoidBeam > 0
 				{
+					Player.voidBeam = Player.voidBeamMax;
 					scrExcessResource(10,excessVoidBeam);
 				}
 			}
@@ -146,9 +148,10 @@ else
 					if regal
 					{
 						Player.voidBeam += 1;
-						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						var excessVoidBeam = min(1, Player.voidBeam - Player.voidBeamMax);
 						if excessVoidBeam > 0
 						{
+							Player.voidBeam = Player.voidBeamMax;
 							scrExcessResource(10,excessVoidBeam);
 						}
 					}
@@ -167,9 +170,10 @@ else
 						Player.voidBeam += 5;
 						if isUpg
 							Player.voidBeam += 2;
-						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
 						if excessVoidBeam > 0
 						{
+							Player.voidBeam = Player.voidBeamMax;
 							scrExcessResource(10,excessVoidBeam);
 						}
 					}
@@ -208,9 +212,10 @@ else
 						Player.voidBeam += 5;
 						if isUpg
 							Player.voidBeam += 2;
-						var excessVoidBeam = Player.voidBeam - Player.voidBeamMax
+						var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
 						if excessVoidBeam > 0
 						{
+							Player.voidBeam = Player.voidBeamMax;
 							scrExcessResource(10,excessVoidBeam);
 						}
 					}

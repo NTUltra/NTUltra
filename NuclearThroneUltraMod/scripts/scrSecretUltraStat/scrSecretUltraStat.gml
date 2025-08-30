@@ -2,7 +2,7 @@ function scrSecretUltraStat() {
 	
 	//0
 	secret_ultra_name[0] = "CASH FLOW"
-	secret_ultra_text[0] = "REPLACE BEAM WITH <y>CASH FLOW<y>#GET 100 <y>CASH<y> EVERY AREA#<y>CASH<y> MAXIMUM IS 500#KILLS GENERATE <y>CASH<y>##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN <r>DEBT<r>#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF <r>DEBT<r> AT THE START OF AN AREA"
+	secret_ultra_text[0] = "REPLACE BEAM WITH <y>CASH FLOW<y>#GET 100 <y>CASH<y> EVERY AREA#<r>KILLS<r> GENERATE <y>CASH<y>##YOU CAN KEEP USING ACTIVE#EVEN WHILE IN <r>DEBT<r>#BUT ACTIVE WILL BE LOCKED UNTIL#OUT OF <r>DEBT<r> AT THE START OF AN AREA"
 	secret_ultra_tips[0] = "C.R.E.A.M."
 	secret_ultra_hint[0] = "GOLDEN";
 	secret_ultra_unlk[0] = "HOLD A GOLDEN WEAPON";
@@ -322,7 +322,7 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[39] = "HAVE AN AMMO GENERATING MUTATION\nOR CROWN OF GREED";
 	
 	secret_ultra_name[40] = "INFINITY"
-	secret_ultra_text[40] = "USING <v>VOID CONSUMPTION<v>:#<w>TEMPORARILY<w> GRANTS <w>INFINITE AMMO<w>"
+	secret_ultra_text[40] = "COLLECT <w>50%<w> MORE <p>PORTAL ESSENCE<p>##WHENEVER YOU GAIN <y>AMMO<y>#GAIN MORE BASED ON#THE TOTAL <p>PORTAL ESSENCE<p> YOU HOLD"
 	secret_ultra_tips[40] = "8"
 	secret_ultra_hint[40] = "NULL AMMO";
 	secret_ultra_unlk[40] = "HAVE ATLEAST ONE AMMO TYPE\nNEAR EMPTY";

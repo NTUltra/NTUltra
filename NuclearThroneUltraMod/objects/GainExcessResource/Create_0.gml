@@ -10,8 +10,9 @@ scaleIncrease = 0.275;
 fullTimeDelay = 4;
 colour = [0.98,0.72,0];
 shaderColour = 0;
-if UberCont.canShader
+if !UberCont.canShader || instance_number(GainExcessResource) > 10
 {
+	visible = false;
 	instance_destroy();
 }
 else
