@@ -1,8 +1,6 @@
 raddrop = 14
 maxhealth = 75//80
 mySize = 2
-if instance_exists(Player) && Player.skill_got[4]
-	droprate += 2;
 event_inherited()
 meleedamage = 5
 spr_idle = sprRhinoFreakIdle
