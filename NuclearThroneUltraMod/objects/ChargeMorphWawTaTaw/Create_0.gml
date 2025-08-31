@@ -1,8 +1,9 @@
 event_inherited();
 rate = 1;
+mySound = noone
 if (instance_exists(Player) && Player.skill_got[42])
-	snd_play(sndChargeMedium);
+	mySound = snd_play(sndChargeShort);
 else
-	snd_play(sndChargeLong);
+	mySound = snd_play(sndChargeMedium);
 chargeType = scrGetChargeType();
 mywep = 0;

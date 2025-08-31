@@ -1,7 +1,9 @@
-/// @description Damage
+/// @description Damage End
 if !dealtDamage
 {
 	var db = dmgBoost
+	if audio_is_playing(sndWawTaTawEnd)
+			audio_stop_sound(sndWawTaTawEnd);
 	with instance_create(targetX,targetY,AnimDestroyBloom)
 	{
 		if other.energyBrained
@@ -9,19 +11,20 @@ if !dealtDamage
 		else
 			sprite_index = sprSmartOMorphHit;
 		image_angle = random(360);
-		direction = other.homeDirection;
+		direction = other.direction;
 		speed = 0.5;	
+		snd_play(sndWawTaTawExplo,0.01);
 	}
 	with instance_create(targetX,targetY,Morph)
 	{
-		direction = other.homeDirection;
+		direction = other.direction;
 		speed = 0.5;	
 		if other.energyBrained
 			snd_play(sndMorphStart,0.1,true,true);
 		else
 			snd_play(sndMorphStop,0.1,true,true);
 	}
-	BackCont.shake += 1;
+	BackCont.shake += 10;
 	var xx = x;
 	var yy = y;
 	x = targetX;

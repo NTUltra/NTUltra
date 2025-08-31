@@ -2,11 +2,11 @@
 // Inherit the parent event
 event_inherited();
 canBeAngled = false;
-dmg = 3;
+dmg = 12;
 dmgBoost = 0;
 lerpTime = 0;
 lerpIncrease = 0.2;
-endingBoost = 1.5;
+endingBoost = 1.125;
 lerpStart = 0;
 lerpStarting = 0.7;
 lerpStartingCircle = 0.6;
@@ -22,7 +22,6 @@ offsetX2 = x;
 offsetY2 = y;
 targetX = x;
 targetY = y;
-curveAmount = 32;
 dealtDamage = false;
 hue = irandom(255);
 hueShift = 20;
@@ -38,26 +37,30 @@ camKick = 5;
 camShake = 3;
 wkick = 4;
 mywep = 0;
-offset = 16;
+offset = 8;
 hit = [];
 owner = -1;
 pitch = 0;
-alarm[0] = 10;
 alarm[1] = 2;
-curveAmountIncrease = 2;
+curveAmount = 38;
+curveAmountIncrease = 7;
+curveAmountDecrease = 13;
 curvePart = 0.1;
 curvePartIncrease = 0.2;
 curvePartMax = 1.1;
 curvePartMin = -0.1;
+minCurveAmount = 10;
 if instance_exists(Player)
 {
 	accuracy = Player.accuracy * 0.75;
 	if Player.skill_got[17]
 	{
 		curvePartIncrease += 0.1;
-		curveAmount += 32;
+		curveAmount += 9 + Player.betterlaserbrain;
+		curveAmountIncrease += 1;
+		curveAmountDecrease += 1;
 		energyBrained = true;
-		dmg += 0.25;
+		dmg += 1;
 		minWidth *= 1.5;
 		hueShift += 10;
 		widthScale += 2;

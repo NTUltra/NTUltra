@@ -21,5 +21,7 @@ if rate < maxcharge &&instance_exists(Player)
 }
 else
 {
+	with mySound
+		instance_destroy();
 	alarm[1] = 0;
 }

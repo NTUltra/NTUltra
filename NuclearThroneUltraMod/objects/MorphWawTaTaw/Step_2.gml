@@ -3,8 +3,10 @@ var dt = 1;
 if UberCont.normalGameSpeed == 60
 	dt = 0.5;
 if owner > -1 && instance_exists(owner) {
-	if owner.wep != mywep
+	if owner.wep != mywep && ending == 0
+	{
 		event_perform(ev_alarm,0);
+	}
 	prevangle = image_angle;
 	
 	image_angle = point_direction(owner.x,owner.y,UberCont.mouse__x,UberCont.mouse__y);
@@ -18,18 +20,18 @@ if owner > -1 && instance_exists(owner) {
 	Wall,true,true);
 	BackCont.viewx2 = BackCont.viewx + lengthdir_x(camKick,image_angle+180)*UberCont.opt_shake
 	BackCont.viewy2 = BackCont.viewy + lengthdir_y(camKick,image_angle+180)*UberCont.opt_shake
-	BackCont.shake = max(BackCont.shake,camShake);
+	BackCont.shake = max(BackCont.shake,camShake * UberCont.opt_shake);
 	owner.wkick = wkick;
-	if alarm[3] < 1
+	
+	if ending == 0
 	{
-		if audio_is_playing(sndWazerStart)
-			audio_sound_pitch(sndWazerStart,pitch);
-		else if !audio_is_playing(sndWazerLoop)
-			snd_play(sndWazerLoop,0,false,false,2,false,false,0.8,true,owner);
-		if audio_is_playing(sndWazerLoop)
-			audio_sound_pitch(sndWazerLoop,pitch);
 		pitch += abs(angle_difference(image_angle,prevangle))*0.02;
-		pitch = clamp(pitch - 0.1,0.96,1.8);
+		pitch = clamp(pitch - 0.1,0.9,1.3);
+		if !audio_is_playing(sndWawTaTawLoop)
+			snd_loop(sndWawTaTawLoop);
+			//snd_play_2d(sndWawTaTawLoop,0,false,false,2,false,false,0.8,true,owner);
+		if audio_is_playing(sndWawTaTawLoop)
+			audio_sound_pitch(sndWawTaTawLoop,pitch);
 	}
 	targetX = hit[1];
 	targetY = hit[2];
@@ -39,12 +41,21 @@ if owner > -1 && instance_exists(owner) {
 	offsetX2 = x + lengthdir_x(dis*curvePart,direction) + lengthdir_x(curveAmount,direction - 90);
 	offsetY2 = y + lengthdir_y(dis*curvePart,direction) + lengthdir_y(curveAmount,direction - 90);
 	image_xscale = point_distance(x,y,targetX,targetY);
-	image_yscale = curveAmount * 0.5;
+	image_yscale = (curveAmount * 0.5) + 1;
 	if  ending > 0
 	{
-		curveAmount -= curveAmountIncrease * dt;
-		if curveAmount < 1
+		curveAmount -= curveAmountDecrease * dt;
+		if curveAmount < minCurveAmount
+		{
+			curveAmount = minCurveAmount
+			if ending != 2
+			{
 			ending = 2;
+				if audio_is_playing(sndWawTaTawLoop)
+					audio_stop_sound(sndWawTaTawLoop);
+				snd_play(sndWawTaTawEnd);
+			}
+		}
 	}
 	else
 	{

@@ -14,9 +14,9 @@ for (var i = 0; i < al; i++)
 			{
 				instance_create(x,y,Morph);
 				if instance_exists(Player) && Player.skill_got[17] 
-					snd_play(sndMorphStart);
+					snd_play(sndMorphStart,0.1,true);
 				else
-					snd_play(sndMorphStop);
+					snd_play(sndMorphStop,0.1,true);
 				snd_play(snd_hurt, hurt_pitch_variation)
 				sprite_index = spr_hurt;
 				image_index = 0;
@@ -25,3 +25,11 @@ for (var i = 0; i < al; i++)
 	}
 }
 ds_list_destroy(hits);
+with owner
+{
+	wkick = other.wkick + 1;
+	if object_index != Player || !skill_got[2]
+	{
+		motion_add(other.image_angle+180,2)
+	}
+}

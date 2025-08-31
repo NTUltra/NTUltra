@@ -10344,8 +10344,8 @@ function scrWeapons() {
 	wep_type[921] = 5
 	wep_auto[921] = 0
 	wep_load[921] = 15
-	wep_cost[921] = 1
-	wep_sprt[921] = sprChargeLaserGun
+	wep_cost[921] = 2
+	wep_sprt[921] = sprChargeMorphOWawTaTaw
 	wep_area[921] = 30
 	wep_text[921] = "wobly o wobly"
 	wep_swap[921] = sndSwapEnergy

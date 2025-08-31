@@ -68,11 +68,11 @@ draw_self();
 	with SmartOMorph
 	{
 		event_perform(ev_draw,0);	
-	}
+	}/*
 	with MorphWawTaTaw
 	{
 		event_perform(ev_draw,0);	
-	}
+	}*/
 	with VoidBlockProjectile
 	{
 		draw_self();
