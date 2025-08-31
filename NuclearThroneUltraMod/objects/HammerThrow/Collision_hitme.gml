@@ -19,21 +19,27 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 		else
 		{
 			if sprite_index != spr_hurt
-			snd_play(snd_hurt, hurt_pitch_variation,true)
-			
-			if other.canDealDamage > 0 && team != 0
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+			if team == 0//Hit prop
+			{
+				if sprite_index != spr_hurt
+				{
+					DealDamage(max(floor(other.dmg * 0.25),1));
+					sprite_index = spr_hurt
+					image_index = 0
+				}
+			}
+			else if other.canDealDamage > 0
 			{
 				sprite_index = spr_hurt
 				image_index = 0
-				scrForcePosition60fps();
-				if speed > maxSpeed+1
-					speed = maxSpeed+1;
-				walk = 0;
 				if other.canDealDamage == 1
 				{
+					walk = 0;
 					DealDamage(other.dmg);
 					motion_add(other.direction,6)
 					var duration = 30;
+					/*
 					if instance_exists(myConfusion)
 					{
 						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
@@ -50,8 +56,8 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 						}
 					}
 					else
-					{
-						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
+					{**/
+						if my_health > 0 && alarm[1] > 0 && alarm[11] < duration
 						{
 							alarm[11] += duration
 							alarm[1] += duration;
@@ -63,7 +69,7 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 								alarm[0] = duration;
 							}
 						}
-					}
+					//}
 				}
 				else
 				{

@@ -23,7 +23,7 @@ if instance_exists(Player)
 	{
 		with instance_create(x,y,MorphWawTaTaw)
 		{
-			alarm[0] = 10 + other.rate;
+			alarm[0] = 10 + (other.rate * 3);
 			owner = other.creator;
 			mywep = other.mywep;
 			camKick = 5;

@@ -9,6 +9,17 @@ with Player
 	}
 	if bwep!=0
 	{
+		if instance_exists(HammerThrow)
+		{
+			with HammerThrow
+			{
+				if (canDealDamage == 1 || canDealDamage == 0) && alarm[2] < 1
+				{
+					snd_play_fire(choose(sndKunai1,sndKunai2));
+					event_user(2);
+				}
+			}
+		}
 	    //var upgradechance = wep_area[wep]-wep_area[bwep];
 	    if scrCheckGold(wep_name[wep]) && scrCheckGold(wep_name[bwep])
 	    scrUnlockBSkin(17,"FOR COMBINING TWO GOLDEN WEAPONS",0);

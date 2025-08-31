@@ -1178,11 +1178,13 @@ var mr = GetPlayerMaxRad();
 maxRad = mr;
 if (rad > mr)
 {
-	if level < maxlevel && !hasLeveledUp || scrIsGamemode(22)
+	if level < maxlevel && hasLeveledUp < 2 || scrIsGamemode(22)
 	{
 		//rad -= level*60
-		if scrIsGamemode(22) || (altUltra && ultra_got[33])
-			hasLeveledUp = true;
+		if scrIsGamemode(22)
+			hasLeveledUp += 1;
+		if  (altUltra && ultra_got[33])
+			hasLeveledUp = 2;
 		if race == 29
 		{
 			BackCont.shake += 100;

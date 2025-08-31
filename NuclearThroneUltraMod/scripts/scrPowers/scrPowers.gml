@@ -974,6 +974,9 @@ function scrPowers(raceOverwrite = -1) {
 				snd_play_fire(choose(sndChickenThrow,sndKunaiCrit2));
 				with instance_create(x,y,HammerThrow)
 				{
+					if other.skill_got[5]
+						sprite_index = sprHammerThrowLightning;
+					loops = other.loops;
 					dmg += other.level + other.loops;
 					motion_add(aimDirection+(random(6)-3)*other.accuracy,20)
 					image_angle = direction

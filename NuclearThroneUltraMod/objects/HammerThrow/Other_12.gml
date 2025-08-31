@@ -23,20 +23,12 @@ if instance_exists(Player)
 		shuffleTime = 2;
 		shufleDamage = 1;
 		snd_play(choose(sndSpark1,sndSpark2),0.1,true);
-		var xz = x;
-		var yz = y;
-		while (place_meeting(xz,yz,Wall))
-		{
-			xz =+ lengthdir_x(2,direction);
-			yz =+ lengthdir_y(2,direction);
-		}
-		xz =+ lengthdir_x(8,direction);
-		yz =+ lengthdir_y(8,direction);
 		var ang = direction;
 		repeat(3)
 		{
-			with instance_create(xz,yz,Lightning)
+			with instance_create(x,y,Lightning)
 			{
+				dmg += other.loops;
 				image_angle = ang;
 				team = other.team
 				ammo = 6;

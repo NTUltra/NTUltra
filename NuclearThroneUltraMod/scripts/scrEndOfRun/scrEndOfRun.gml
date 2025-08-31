@@ -64,7 +64,7 @@ function scrEndOfRun(){
 		dropLimit = 0;
 		areasVisited = 0;
 		lastwishused=false;
-		hasLeveledUp = false;
+		hasLeveledUp = 0;
 		usedUltraMutationStart = false;
 		triedToGoHQThisLoop = false;
 		loadedRun = false;

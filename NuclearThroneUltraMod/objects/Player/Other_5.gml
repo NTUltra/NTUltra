@@ -18,7 +18,7 @@ if (ultra_got[33] && !altUltra && my_health <= 0)
 {
 	scrChickenRegen(1);
 }
-hasLeveledUp = false;
+hasLeveledUp = 0;
 jump = 0;
 roll = 0;
 didJumpRoll = false;

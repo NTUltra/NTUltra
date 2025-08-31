@@ -2,7 +2,7 @@
 // Inherit the parent event
 event_inherited();
 canBeAngled = false;
-dmg = 20;
+dmg = 3;
 dmgBoost = 0;
 lerpTime = 0;
 lerpIncrease = 0.2;
@@ -33,7 +33,7 @@ accuracy = 0.75;
 energyBrained = false;
 range = 24;
 homeDirection = direction;
-ending = false;
+ending = 0;
 camKick = 5;
 camShake = 3;
 wkick = 4;
@@ -43,14 +43,21 @@ hit = [];
 owner = -1;
 pitch = 0;
 alarm[0] = 10;
+alarm[1] = 2;
+curveAmountIncrease = 2;
+curvePart = 0.1;
+curvePartIncrease = 0.2;
+curvePartMax = 1.1;
+curvePartMin = -0.1;
 if instance_exists(Player)
 {
 	accuracy = Player.accuracy * 0.75;
 	if Player.skill_got[17]
 	{
+		curvePartIncrease += 0.1;
 		curveAmount += 32;
 		energyBrained = true;
-		dmg += 6;
+		dmg += 0.25;
 		minWidth *= 1.5;
 		hueShift += 10;
 		widthScale += 2;

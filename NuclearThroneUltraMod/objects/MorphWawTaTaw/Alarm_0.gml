@@ -1,2 +1,3 @@
 /// @description start the end
-//ending = true;
+ending += 1;
+debug("ending");

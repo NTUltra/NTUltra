@@ -1,5 +1,8 @@
 /// @description Update
-if owner > -1 && instance_exists(owner) && !ending {
+var dt = 1;
+if UberCont.normalGameSpeed == 60
+	dt = 0.5;
+if owner > -1 && instance_exists(owner) {
 	if owner.wep != mywep
 		event_perform(ev_alarm,0);
 	prevangle = image_angle;
@@ -31,8 +34,31 @@ if owner > -1 && instance_exists(owner) && !ending {
 	targetX = hit[1];
 	targetY = hit[2];
 	var dis = point_distance(x,y,targetX,targetY);
-	offsetX1 = x + lengthdir_x(dis*0.5,direction) + lengthdir_x(curveAmount,direction + 90);
-	offsetY1 = y + lengthdir_y(dis*0.5,direction) + lengthdir_y(curveAmount,direction + 90);
-	offsetX2 = x + lengthdir_x(dis*0.5,direction) + lengthdir_x(curveAmount,direction - 90);
-	offsetY2 = y + lengthdir_y(dis*0.5,direction) + lengthdir_y(curveAmount,direction - 90);
+	offsetX1 = x + lengthdir_x(dis*curvePart,direction) + lengthdir_x(curveAmount,direction + 90);
+	offsetY1 = y + lengthdir_y(dis*curvePart,direction) + lengthdir_y(curveAmount,direction + 90);
+	offsetX2 = x + lengthdir_x(dis*curvePart,direction) + lengthdir_x(curveAmount,direction - 90);
+	offsetY2 = y + lengthdir_y(dis*curvePart,direction) + lengthdir_y(curveAmount,direction - 90);
+	image_xscale = point_distance(x,y,targetX,targetY);
+	image_yscale = curveAmount * 0.5;
+	if  ending > 0
+	{
+		curveAmount -= curveAmountIncrease * dt;
+		if curveAmount < 1
+			ending = 2;
+	}
+	else
+	{
+		curveAmount += curveAmountIncrease * dt;
+	}
+	curvePart += curvePartIncrease;
+	if curvePart > curvePartMax
+	{
+		curvePart = curvePartMax;
+		curvePartIncrease *= -1;
+	}
+	else if curvePart < curvePartMin
+	{
+		curvePart = curvePartMin;
+		curvePartIncrease *= -1;
+	}
 }

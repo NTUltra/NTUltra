@@ -4393,17 +4393,17 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,ChargeMorphWawTaTaw)
 		{
 			mywep = other.wep;
-			maxcharge=25;//maxrate
+			maxcharge = 10;//maxrate
 			type = 5;
 			cost = 1;
 			creator = other.id
 			chargetime = 3;
-			costtime = 11;
+			costtime = 4;
 			team = other.team
 			if Player.skill_got[42]
 			{
 				chargetime = 2;
-				rate += 4;
+				rate += 2;
 				costtime *= Player.betterTail;
 				if Player.ultra_got[97] && !Player.altUltra
 				{
@@ -4413,6 +4413,7 @@ function scrFire3(hasTailNow){
 				maxcharge *= Player.betterTail;
 				scrActivateTail(hasTailNow);
 			}
+			event_perform(ev_alarm,0)
 			alarm[1] = costtime;
 		}
 

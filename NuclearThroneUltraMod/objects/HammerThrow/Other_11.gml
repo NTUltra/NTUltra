@@ -17,20 +17,12 @@ if instance_exists(Player)
 		else
 			snd_play(sndLightning1,0.1,true)
 		
-		var xz = x;
-		var yz = y;
-		while (place_meeting(xz,yz,Wall))
-		{
-			xz =+ lengthdir_x(2,direction + 180);
-			yz =+ lengthdir_y(2,direction + 180);
-		}
-		xz =+ lengthdir_x(8,direction + 180);
-		yz =+ lengthdir_y(8,direction + 180);
 		var ang = direction;
 		repeat(3)
 		{
-			with instance_create(xz,yz,Lightning)
+			with instance_create(xprev,yprev,Lightning)
 			{
+				dmg += other.loops;
 				image_angle = ang;
 				team = other.team
 				ammo = 10;

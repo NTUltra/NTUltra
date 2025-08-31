@@ -8,7 +8,8 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 norecycle=false;
-dmg = 2;
+loops = 0;
+dmg = 3;
 alarm[11] = 1;
 cost = 1;
 radCost = 0;

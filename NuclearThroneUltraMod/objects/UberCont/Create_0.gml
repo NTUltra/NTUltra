@@ -237,7 +237,7 @@ popoRan = 0;
 pandaRan = 20;
 isLeaderboardGamemode = false;
 viewDailyGamemode = false;
-hasLeveledUp = false;
+hasLeveledUp = 0;
 usedUltraMutationStart = false;
 triedToGoHQThisLoop = false;
 
