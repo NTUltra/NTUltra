@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrHasNeverEnteredVoid",
+  "%Name":"scrTotalAmountOfMutantsthatVisitedTheVoidEver",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrHasNeverEnteredVoid",
+  "name":"scrTotalAmountOfMutantsthatVisitedTheVoidEver",
   "parent":{
     "name":"Menus",
     "path":"folders/Scripts/Menus.yy",

@@ -26,7 +26,7 @@ if (loops > 0 && array_length(UberCont.voidSpecialConditions) > 0)
 //Only do unique character onces
 if (UberCont.char_void_entered[race] == 1)
 {
-	if scrUniqueVoidRace(race) || scrHasNeverEnteredVoid() == 1
+	if scrUniqueVoidRace(race) || scrTotalAmountOfMutantsthatVisitedTheVoidEver() == 1
 	{
 		//UNIQUE DIALOGUERS
 		killerSequence = true;

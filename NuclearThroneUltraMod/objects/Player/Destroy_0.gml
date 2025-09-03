@@ -8,6 +8,14 @@ with Ally
 {
 	grabbed = false;	
 }
+with UberCont
+{
+	UberCont.voidShopHealthTracker = log2(UberCont.voidShopHealthUpgrade/25);
+	UberCont.voidShopMutationTracker = log2(UberCont.voidShopMutationUpgrade/40);
+	debug("UberCont.voidShopHealthTracker ",UberCont.voidShopHealthTracker);
+	debug("UberCont.voidShopMutationTracker ",UberCont.voidShopMutationTracker);
+
+}
 if scrIsGamemode(8)
 {
 	with VanFan

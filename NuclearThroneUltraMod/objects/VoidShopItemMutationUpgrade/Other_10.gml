@@ -14,5 +14,7 @@ with Player
 	}
 }
 UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 2);
-//UberCont.maxHpIncrease += 1
+UberCont.voidShopMutationTracker = max(0, UberCont.voidShopMutationUpgrade - 1);
 cost = UberCont.voidShopMutationUpgrade;
+if UberCont.voidShopMutationTracker > 0
+	cost = 10;

@@ -3,7 +3,10 @@ if introSpiel
 {
 	with TextHandler
 	{
-		text = "ANOTHER ONE OF YOU MUTATED RATS";
+		if Player.race == 29
+			text = "WELCOME BACK NO THING";
+		else
+			text = "ANOTHER ONE OF YOU MUTATED RATS";
 	}
 	alarm[2] = 5;
 }

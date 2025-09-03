@@ -75,8 +75,19 @@ if instance_exists(Player){
 			speed *= 0.9
 		}
 	}
-	alarm[0] *= 1 - min(0.25,loops*0.125);
+	var l = loops;
+	if instance_exists(Player) && Player.skill_got[4]
+	{
+		l = max(0,l - 1);
+		alarm[0] *= 1 - min(0.25,l*0.125);
+		alarm[0] += 10;
+	}
+	else
+	{
+		alarm[0] *= 1 - min(0.25,l*0.125);	
+	}
 	alarm[0] = max(alarm[0],1);
+	
 }
 
 image_speed = 0

@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+instance_create(x,y,FakeCrown);
 with Player
 {
 	scrGiveCrownPoints(1);

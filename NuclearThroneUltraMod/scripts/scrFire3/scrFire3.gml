@@ -2937,7 +2937,6 @@ function scrFire3(hasTailNow){
 		if !instance_exists(SixShooter)
 		{
 			with instance_create(x,y,SixShooter) {
-				// alarm[0] = other.wep_load[other.wep] = other.wep_load_base[other.wep] * extraLoad;
 				owner = other.id;	
 			}
 		}

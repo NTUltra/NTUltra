@@ -4,7 +4,10 @@ if introSpiel
 {
 	with TextHandler
 	{
-		text = "OH, FIRST TIME HERE " + raceName
+		if Player.race == 29
+			text = "WELCOME BACK NO THING!";
+		else
+			text = "OH, FIRST TIME HERE " + raceName
 	}
 	alarm[2] = 5;
 }

@@ -1221,7 +1221,7 @@ if (rad > mr)
 		UberCont.highestReachedLevel = max(UberCont.highestReachedLevel, level);
 		if level==8 && loops < 1 && race == 25 && (area < 4 || area == 105 || area == 110 || area == 106 || area == 103 || area == 102 || area == 101 || area == 10)
 			scrUnlockBSkin(25,"FOR REACHING LEVEL 8#BEFORE THE LABS#AS MUTATION DOCTOR",0);
-		if area != 100 && area != 135
+		if scrIsInEnemyFreeArea()
 			repeat(min(15,level-6))
 				instance_create(x,y,IDPDSpawn)
 		/*

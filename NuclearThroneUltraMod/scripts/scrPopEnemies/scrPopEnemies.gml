@@ -38,7 +38,7 @@ function scrPopEnemies() {
 	}
 	if scrIsGamemode(45) && random(3) < 1.25
 	{
-		if spawnarea != 100 || random(5) < 1
+		if spawnarea != 137 && (spawnarea != 100 || random(5) < 1)
 			spawnarea = scrGetRandomArea();
 	}
     //DESERT

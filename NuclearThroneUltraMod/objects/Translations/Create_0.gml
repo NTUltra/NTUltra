@@ -648,4 +648,64 @@ loreDump = [
 			"Now you have defeated protomind from this world*Do you feel whole again?",
 		]
 	],
+	[
+		//THIEF
+		[
+			//FIRST TIME
+			"I barely sensed you",
+		],
+		[
+			//LOOP 1
+			"We in the void simply look for a way to return*You can help us with your portal essence*Collect portal essence by going through portals*Any portal, except for the green ones",
+			"I will be watching you Thief",
+			"All that stealing will eventually catch up to you",
+			"You can't deceive us",
+		],
+		[
+			//LOOP 2
+			"Every world you leave behind, dies",
+			"Your powers of deception are impressive*But you won't be able to fool me",
+			"your mutation has made you a better listener"
+		],
+		[
+			//LOOP 3
+			"Your growth in power has become a threat*We shall inevitably face off against each other",
+			"Your enemies do not see you coming*But I will",
+			"I do not like what I cannot see",
+		],
+		[
+			//SPECIAL
+			"You've robbed us!",
+		]
+	],
+	[
+		//NO THING
+		[
+			//FIRST TIME
+			"No Thing...",
+			"Young creature of void*Make us proud"
+		],
+		[
+			//LOOP 1
+			"You know what we want",
+			"I will be watching over you No Thing",
+			"You've been blessed to collect the essence yourself*Continue to do so for us",
+			"Do not stray of our purpose out there"
+		],
+		[
+			//LOOP 2
+			"Do not betray us",
+			"Your determination seems off?",
+			"Watch it No Thing*If you continue to grow in power*We are forced to face off",
+		],
+		[
+			//LOOP 3
+			"Trator!*your growth in power is exceeding mine*We shall inevitably face off against each other",
+			"Not what you used to be*But slowly reclaiming your power*A shattered deity*The inverted proto mutant",
+		],
+		[
+			//SPECIAL
+			"",
+		]
+	],
 ]

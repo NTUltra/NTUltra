@@ -138,6 +138,8 @@ function scrEndOfRun(){
 		voidChallengeCompleted= [false,false,false,false,false,false];
 		voidShopHealthUpgrade = 25;
 		voidShopMutationUpgrade = 40;
+		voidShopHealthTracker = 0;
+		voidShopMutationTracker = 0;
 		voidExtremeChallenges = false;
 		voidMutationDeposit = [];
 		voidWeaponDeposit = [];

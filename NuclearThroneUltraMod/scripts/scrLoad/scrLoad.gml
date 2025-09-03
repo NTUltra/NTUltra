@@ -36,7 +36,6 @@ function scrLoad() {
 		instance_create(x,y,CanLoadRetailSave);
 		is_vanilla_player = 0;
 	}
-	saveFileString=game_save_id + "ntultra"+string(currentSave)+".sav";
 	ini_open(saveFileString);
 	scrLoadStats();
 	scrLoadGameSpecificOptions();

@@ -154,7 +154,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[19] = "nutritious"
 */
 	ultra_name[19] = "APEX PREDATOR"
-	ultra_text[19] = "BETTER <w>KILL MUTATIONS<w>#(TRIGGER FINGERS, LUCKY SHOT, RAGE...)##REPLACE <g>SNARE<g> WITH <w>SPRINT<w>#<w>KILLS<w> MAKE YOU <aq>IMMUNE<aq>#FOR A SHORT DURATION#MOVING <w>FASTER<w> INCREASES THE DURATION#EFFECT CAN STACK WITH MULTIPLE KILLS#THRONE BUTT INCREASES THE DURATION"
+	ultra_text[19] = "BETTER <w>KILL MUTATIONS<w>#(TRIGGER FINGERS, LUCKY SHOT, RAGE...)##REPLACE <g>SNARE<g> WITH <w>SPRINT<w>#<w>KILLS<w> <rp>CAN<rp> <g>SNARE<g> AND MAKE YOU <aq>IMMUNE<aq>#FOR A SHORT DURATION#MOVING <w>FASTER<w> INCREASES THE DURATION#DURATION CAN STACK WITH MULTIPLE KILLS"
 	ultra_tips[19] = "nutritious"
 	
 	if altOverride || (instance_exists(Player) &&  Player.race == 5 && (Player.altUltra))

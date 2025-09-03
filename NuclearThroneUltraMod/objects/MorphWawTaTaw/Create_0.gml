@@ -2,7 +2,7 @@
 // Inherit the parent event
 event_inherited();
 canBeAngled = false;
-dmg = 12;
+dmg = 14;
 dmgBoost = 0;
 lerpTime = 0;
 lerpIncrease = 0.2;
@@ -60,7 +60,7 @@ if instance_exists(Player)
 		curveAmountIncrease += 1;
 		curveAmountDecrease += 1;
 		energyBrained = true;
-		dmg += 1;
+		dmg += 2;
 		minWidth *= 1.5;
 		hueShift += 10;
 		widthScale += 2;

@@ -6,3 +6,5 @@ spawnLocationY = y - 32;
 spr_item = sprVoidItemMutationUpgrade;
 name = "+1 MUTATION";
 cost = UberCont.voidShopMutationUpgrade;
+if UberCont.voidShopMutationTracker > 0
+	cost = 10;

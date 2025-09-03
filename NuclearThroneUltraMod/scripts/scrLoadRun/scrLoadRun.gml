@@ -189,8 +189,20 @@ function scrLoadRun(selectedRunIndex){
 				UberCont.voidShopHealthUpgrade = encryptedRun.voidShopHealthUpgrade;
 			if UberCont.voidShopHealthUpgrade < 20
 				UberCont.voidShopHealthUpgrade = 60;
+			if variable_struct_exists(encryptedRun, "voidShopHealthTracker")
+				UberCont.voidShopHealthTracker = encryptedRun.voidShopHealthTracker;
+			else
+			{
+				UberCont.voidShopHealthTracker = log2(UberCont.voidShopHealthUpgrade/25);
+			}
 			if variable_struct_exists(encryptedRun, "voidShopMutationUpgrade")
 				UberCont.voidShopMutationUpgrade = encryptedRun.voidShopMutationUpgrade;
+			if variable_struct_exists(encryptedRun, "voidShopMutationTracker")
+				UberCont.voidShopMutationTracker = encryptedRun.voidShopMutationTracker;
+			else
+			{
+				UberCont.voidShopMutationTracker = log2(UberCont.voidShopMutationTracker/40);
+			}
 			if variable_struct_exists(encryptedRun, "voidExtremeChallenges")
 				UberCont.voidExtremeChallenges = encryptedRun.voidExtremeChallenges;	
 			if variable_struct_exists(encryptedRun, "voidWeaponDeposit")

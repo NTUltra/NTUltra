@@ -31,4 +31,3 @@ with Player
 		}
 	}
 }
-cost *= 2;

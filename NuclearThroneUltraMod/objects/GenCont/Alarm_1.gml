@@ -418,3 +418,9 @@ with NoProtoChest
 	}
 	instance_destroy();	
 }
+if instance_exists(Player)
+with Friend
+{
+	if Player.area == 137
+		instance_deactivate_object(id);
+}

@@ -4,7 +4,7 @@
 event_inherited();
 spr_item = sprVoidItemEliteWeaponChest;
 name = "ELITE WEAPON CHEST";
-cost = 7;
+cost = 6;
 spawnLocationY = y - 16;
 wep = [];
 scrWeapons();

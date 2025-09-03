@@ -30,5 +30,8 @@ with Player
 	}
 }
 UberCont.voidShopHealthUpgrade = round(UberCont.voidShopHealthUpgrade * 2)
-//UberCont.maxHpIncrease += 1
+UberCont.voidShopHealthTracker = max(0, UberCont.voidShopHealthTracker - 1);
 cost = UberCont.voidShopHealthUpgrade;
+if UberCont.voidShopHealthTracker > 0
+	cost = 5
+//UberCont.maxHpIncrease += 1

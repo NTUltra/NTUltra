@@ -1,7 +1,7 @@
-///xxx();
+///scrTotalAmountOfMutantsthatVisitedTheVoidEver();
 // /@description
 ///@param
-function scrHasNeverEnteredVoid(){
+function scrTotalAmountOfMutantsthatVisitedTheVoidEver(){
 	with UberCont
 	{
 		var i = 1;
