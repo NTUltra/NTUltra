@@ -18,8 +18,7 @@ for (var i = 0; i < al; i++;)
 }
 if fps_real < min(44,fps)
 {
-	
-	amount = max(amount - 100,0);
+	amount = max(amount - 100,1);
 	if amount < maxAmount*0.5
 	{
 		with FX

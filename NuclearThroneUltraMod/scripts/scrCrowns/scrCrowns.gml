@@ -298,7 +298,7 @@ function scrCrowns() {
 	crown_tips[43] = "quick start"
 	
 	crown_name[44] = "[CROWN OF VOID]"
-	crown_text[44] = "GAIN <r>NO<r> <p>PORTAL ESSENCE<p>#WHEN ENTERING A <p>PORTAL<p>##INSTEAD GET <w>1<w> <p>PORTAL ESSENCE<p>#WHEN YOU <r>KILL<r> A <r>BOSS<r>#AND <w>17<w> WHEN YOU <w>LOOP<w>"
+	crown_text[44] = "GAIN <r>NO<r> <p>PORTAL ESSENCE<p>#WHEN ENTERING A <p>PORTAL<p>##INSTEAD GET <w>1<w> <p>PORTAL ESSENCE<p>#WHEN YOU <r>KILL<r> A <r>BOSS<r>#AND <w>18<w> WHEN YOU <w>LOOP<w>"
 	crown_used[44] = 0
 	crown_tips[44] = "void trip"
 	

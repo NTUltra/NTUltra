@@ -27,7 +27,7 @@ else
 			if scrIsCrown(44)
 			{
 				instance_create(x,y,ShowVoidEssenceTemporarily);
-				portalEssence += 17 * scrGetPortalEssenceBoost();
+				portalEssence += 18 * scrGetPortalEssenceBoost();
 			}
 			var al = array_length(voidChallengeGoing);
 			for (var i = 0; i < al; i ++)

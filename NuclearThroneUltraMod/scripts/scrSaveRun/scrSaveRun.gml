@@ -7,6 +7,8 @@ function scrSaveRun(runI) {
 		useSeed = true;
 		hasBeenSaved = true;
 		encrypted_run_data = scrCopyPlayData();
+		//Run saving/loading specific data
+		encrypted_run_data.version = UberCont.updateVersion + UberCont.subUpdateVersion;
 		var saveString = json_stringify(encrypted_run_data);
 		var hash = sha1_string_utf8(saveString);
 		saveString += "#" + hash + "#";

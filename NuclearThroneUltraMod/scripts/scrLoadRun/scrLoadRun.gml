@@ -74,10 +74,24 @@ function scrLoadRun(selectedRunIndex){
 			Player.typ_amax[5] = encryptedRun.maxammo[5];
 			var targetLength = array_length(Player.skill_got);
 			Player.skill_got = encryptedRun.skill_got;
+			var shouldGetRegal = false;
+			if targetLength < array_length(Player.skill_got) && Player.skill_got[array_length(Player.skill_got) - 1]
+			{
+				shouldGetRegal = true;
+				Player.skill_got[array_length(Player.skill_got) - 1] = false;//Removing the last skill
+			}
 			while (array_length(Player.skill_got) < targetLength)
 			{
 				Player.skill_got[array_length(Player.skill_got)] = 0;
 			}
+			if shouldGetRegal
+			{
+				Player.skill_got[array_length(Player.skill_got) - 1] = true;
+				UberCont.gotRegalThisRun = true;
+			}
+			else if variable_struct_exists(encryptedRun, "gotRegalThisRun")
+				UberCont.gotRegalThisRun = encryptedRun.gotRegalThisRun;
+			
 			targetLength = array_length(Player.ultra_got);
 			Player.ultra_got = encryptedRun.ultra_got;
 			while (array_length(Player.ultra_got) < targetLength)

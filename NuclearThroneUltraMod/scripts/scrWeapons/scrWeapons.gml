@@ -10113,7 +10113,7 @@ function scrWeapons() {
 	wep_type[901] = 4
 	wep_auto[901] = 0
 	wep_load[901] = 35
-	wep_cost[901] = 3
+	wep_cost[901] = 3.5
 	wep_sprt[901] = sprBoomBlaster
 	wep_area[901] = 12
 	wep_text[901] = "DIRECT HITS THAT DON'T KILL REDUCE RELOAD TIME"

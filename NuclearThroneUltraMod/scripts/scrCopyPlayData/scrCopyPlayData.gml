@@ -167,6 +167,7 @@ function scrCopyPlayData(){
 		hogWepmod4: Player.hogWepmod4,
 		hogCurse: Player.hogCurse,
 		hogIsPermanent: Player.hogIsPermanent,
+		gotRegalThisRun: UberCont.gotRegalThisRun,
 		/*
 		duoPartner1: UberCont.duoPartner[0],
 		duoPartner2: UberCont.duoPartner[1],

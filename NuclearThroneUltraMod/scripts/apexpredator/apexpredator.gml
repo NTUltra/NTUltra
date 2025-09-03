@@ -3,7 +3,7 @@
 ///@param
 function ApexPredator(){
 	if Player.ultra_got[19] && !Player.altUltra  {
-		if random(100) < 7
+		if random(100) < 11
 		{
 			//Snare
 			if Player.skill_got[5]
@@ -49,6 +49,7 @@ function ApexPredator(){
 		}
 		with Player
 		{
+			/*
 			if myShield == -1 || !instance_exists(myShield)
 			{
 				myShield = instance_create(x,y,EuphoriaShield);
@@ -56,7 +57,7 @@ function ApexPredator(){
 				{
 					owner = other.id;
 				}
-			}
+			}*/
 			snd_hurt = sndDamageNegate;
 			if alarm[3] < 70
 			{
