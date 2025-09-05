@@ -122,14 +122,14 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(image_angle,4);
 						}
 					}
-					var d = 20 + level * 5;
+					var d = 15 + level * 5;
 					with n
 					{
 						if other.skill_got[5]
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
 							instance_create(x,y,ThiefStab);
-							DealDamage(d + 25 + min(100,l*2) + l + my_health*0.25);
+							DealDamage(d + 20 + min(100,l*2) + l + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40
@@ -150,7 +150,7 @@ function scrPowers(raceOverwrite = -1) {
 								range -= 2;
 								image_xscale *= 0.5;
 								image_yscale = image_xscale;
-								dmg = 11 + l;
+								dmg = 10 + l;
 								visible = false;
 							}
 							DealDamage(d + min(100,l*2) + l);
@@ -260,6 +260,24 @@ function scrPowers(raceOverwrite = -1) {
 					if !skill_got[2]
 					{
 						motion_add(stabDir,6);
+					}
+				}
+			}
+			else if instance_exists(CarVenus)
+			{
+				var n = instance_nearest(x,y,CarVenus)
+				if n != noone && distance_to_object(n) < 66 + (skill_got[5]*24) && !collision_line(x,y,n.x,n.y,Wall,false,false)
+				{
+					var stabDir = point_direction(x,y,n.x,n.y);
+					with instance_create(x,y,AnimDestroyTop)
+					{
+						image_angle = stabDir
+						sprite_index = sprThiefSteal;
+						motion_add(image_angle,4);
+					}
+					with CarVenus
+					{
+						event_user(0);	
 					}
 				}
 			}

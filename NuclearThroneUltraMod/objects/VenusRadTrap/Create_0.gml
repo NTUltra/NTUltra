@@ -24,7 +24,7 @@ active = 0;
 alarm[1] = 60;//30+random(90)
 alarm[3] = 30;
 wkick = 0
-actTime = 14;
+actTime = 15;
 
 activateRange = 44;
 acc = 0;

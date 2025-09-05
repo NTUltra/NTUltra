@@ -14,7 +14,7 @@ if other.team != team
 		{
 			DealDamage(other.dmg);
 			if other.alarm[2] < 1
-				instance_create(x,y,MeatExplosion);
+				instance_create(x,y,other.explosionType);
 			snd_play(snd_hurt, hurt_pitch_variation)
 			sprite_index = spr_hurt
 			image_index = 0

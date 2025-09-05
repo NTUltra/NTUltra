@@ -50,7 +50,7 @@ boilingMax = 40;
 boilingAmount = 0;
 tookDamageThisArea = false;
 isInInverted = false;
-puffyCheekAmount = 3;
+puffyCheekAmount = 2;
 canPuffyCheek = 0;
 canPuffyCheekB = 0;
 canPuffyCheekC = 0;
@@ -92,7 +92,7 @@ metabolismBreak = 3;
 triggerMetabolism = false;
 ignoreMetabolism = false;
 hollowBonesCounter = 0;
-hollowBonesTrigger = 0.18;
+hollowBonesTrigger = 0.24;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -446,8 +446,8 @@ if race == 25
 	peaceBarriersMax += 1;
 	peaceBarrierDuration *= 0.8;
 	metabolismBreak = 2;
-	puffyCheekAmount = 4;
-	hollowBonesTrigger = 0.15
+	puffyCheekAmount = 3;
+	hollowBonesTrigger = 0.19
 }
 if race == 14//Panda
 {

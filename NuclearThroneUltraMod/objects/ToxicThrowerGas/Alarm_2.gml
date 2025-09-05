@@ -21,7 +21,7 @@ if instance_exists(Player) && instance_exists(enemy)
 			if dis < 32
 			{
 				direction = d;
-				speed = min(speed,2);
+				speed = max(speed,2);
 			}
 			if speed < 1
 			{

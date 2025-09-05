@@ -22,7 +22,9 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			snd_play(snd_hurt, hurt_pitch_variation,true);
 			if (other.object_index != MoodFlame && instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
 			{
-				scrMoodSwingStun(5);
+				scrMoodSwingStun(4);
+				scrMoodSwingLightningArc(22,other.x,other.y,other.team,other.dmg)
+				scrMoodSwingToxicBullet(other.x,other.y,1);
 				scrMoodSwingIcicle(1, id);
 			}
 		}

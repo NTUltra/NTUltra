@@ -39,12 +39,14 @@ if al > 0 && alarm[0] < 1
 								
 									sprite_index = spr_hurt
 									image_index = 0
-									if (Player.skill_got[43] && team != 0)
+									if (Player.skill_got[43] && other.canMood)
 									{
-										scrMoodSwingStun(6);
-										if Player.ultra_got[97] && !Player.altUltra {
+										scrMoodSwingLightningArc(32, xx, yy, other.team, other.dmg);
+										if Player.ultra_got[97] && !Player.altUltra && other.team != 0 {
+											scrMoodSwingStun(5);
 											scrMoodSwingIcicle(2, id);
 											scrMoodSwingFlameSpread(24);
+											scrMoodSwingToxicBullet(other.x,other.y,2,other.direction);
 										}
 									}
 									else

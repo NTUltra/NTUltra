@@ -16,7 +16,7 @@ if !byPassCheck && (type == 3 || inverted)
 		}
 	}
 	var atLeast = 30;
-	if totalHp < atLeast && !bossLeft && numEn < 4 && !instance_exists(WantBoss) && !instance_exists(becomenemy)
+	if totalHp < atLeast && !bossLeft && numEn < 4 && !instance_exists(WantBoss) && !instance_exists(becomenemy) && !instance_exists(BecomeScrapBoss)
 	{
 		goTime = true;
 	}

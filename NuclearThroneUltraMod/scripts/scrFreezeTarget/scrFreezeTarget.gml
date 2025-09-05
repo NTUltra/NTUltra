@@ -45,5 +45,7 @@ function scrFreezeTarget(stunTime,frostDamage = 2){
 		{
 			scrMoodSwingStun(7);
 			scrMoodSwingFlameSpread(24);
+			scrMoodSwingLightningArc(22,x,y,2,4);
+			scrMoodSwingToxicBullet(x,y,1);
 		}
 }

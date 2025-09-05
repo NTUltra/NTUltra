@@ -34,6 +34,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			{
 				scrMoodSwingStun(5);
 				scrMoodSwingIcicle(1, id);
+				scrMoodSwingToxicBullet(other.x,other.y,1,other.direction);
 			}
 		}
 	}

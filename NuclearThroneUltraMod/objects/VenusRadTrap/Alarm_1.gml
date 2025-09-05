@@ -53,7 +53,7 @@ if target != noone {
 					sprite_index = sprInvertedGuardianBulletSpawn;
 				}
 			}
-			alarm[1] = actTime * 5;
+			alarm[1] = actTime * 15;
         }
     }
 }

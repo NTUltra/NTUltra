@@ -1,7 +1,10 @@
 ///@description AI
 alarm[1] = actTime + random(actTime);
 if wasBehindWall
+{
+	wasBehindWall = false;
 	exit;
+}
 if sleeping && alarm[2] < 1
 {
 	alarm[2] = 1;

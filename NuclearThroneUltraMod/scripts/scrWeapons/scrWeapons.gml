@@ -8360,7 +8360,7 @@ function scrWeapons() {
 	wep_load[746] = 7
 	wep_cost[746] = 2.5
 	wep_sprt[746] = sprSuckCannon
-	wep_area[746] = 8
+	wep_area[746] = 7
 	wep_text[746] = "suck up enemy projectiles!"
 	wep_swap[746] = sndSwapEnergy
 	wep_rad[746] = 0;
@@ -9999,7 +9999,7 @@ function scrWeapons() {
 	wep_type[891] = 5
 	wep_auto[891] = 0
 	wep_load[891] = 120
-	wep_cost[891] = 8
+	wep_cost[891] = 9
 	wep_sprt[891] = sprOctagun
 	wep_area[891] = 4
 	wep_text[891] = "octagon of death"
@@ -10350,6 +10350,40 @@ function scrWeapons() {
 	wep_text[921] = "wobly o wobly"
 	wep_swap[921] = sndSwapEnergy
 	wep_rad[921] = 0;
+	
+	wep_name[922] = "SICKLE"
+	wep_type[922] = 0
+	wep_auto[922] = 0
+	wep_load[922] = 14
+	wep_cost[922] = 0
+	wep_sprt[922] = sprSickle
+	wep_area[922] = 9
+	wep_text[922] = "agriculture"
+	wep_swap[922] = sndSwapSword
+	wep_rad[922] = 0;
+	
+	wep_name[923] = "BURST CROSSBOW"
+	wep_type[923] = 3
+	wep_auto[923] = 2
+	wep_load[923] = 45
+	wep_cost[923] = 2
+	wep_sprt[923] = sprBurstCrossbow
+	wep_area[923] = 2
+	wep_text[923] = ""
+	wep_swap[923] = sndSwapBow
+	wep_rad[923] = 0;
+	
+	wep_name[924] = "BLOODY BONE"
+	wep_type[924] = 0
+	wep_auto[924] = 0
+	wep_load[924] = 20
+	wep_cost[924] = 0
+	wep_sprt[924] = sprBloodHammer
+	wep_area[924] = 2
+	wep_text[924] = "don't miss"
+	wep_swap[924] = sndSwapExplosive
+	wep_rad[924] = 0;
+	wep_popup[924] = "MISSING DAMAGES YOU";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

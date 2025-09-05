@@ -25,7 +25,7 @@ if instance_exists(Player) && Player.skill_got[29]
 	scrGiveSnooze();
 }
 wkick = 0
-actTime = 10;
+actTime = 12;
 aimLerp = 0.3;
 sleeping = true;
 projectileSpeed = 11;

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.573844,
+  "duration":0.57385486,
   "name":"sndSplinterMinigun",
   "parent":{
     "name":"Bolts",

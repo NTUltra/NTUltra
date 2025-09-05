@@ -460,7 +460,8 @@ function scrSkills() {
 	else
 	skill_name[31] = "TOUGH SHELL"
 	skill_text[31] = /*"+1 <r>MAX HP<r>#*/"<w>REDUCE<w> INCOMING <r>DAMAGE<r>"
-	skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN <w>2<w> <r>DAMAGE<r> TO YOU#DEALS <w>1<w> LESS <r>DAMAGE<r>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
+	//skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN <w>2<w> <r>DAMAGE<r> TO YOU#DEALS <w>1<w> LESS <r>DAMAGE<r>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
+	skill_detail[31] = "ALL INCOMING <r>ENEMY DAMAGE<r>#IS REDUCED BY <w>1<w>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
@@ -510,13 +511,13 @@ function scrSkills() {
 	
 	
 	skill_name[35] = "PUFFY CHEEKS"
-	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
-	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> SECONDARY <w>RELOAD SPEED<w>"
+	skill_text[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>2<w> SHOTS#INCREASE SECONDARY <w>RELOAD SPEED<w>";
+	skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>2<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> SECONDARY <w>RELOAD SPEED<w>"
 	if instance_exists(Player) && Player.cwep != 0
-		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>3<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> OFFHAND <w>RELOAD SPEED<w>"
+		skill_detail[35] = "YOU CAN PREEMPTIVELY <w>RELOAD<w>#UP TO <w>2<w> SHOTS#EXTRA SHOTS LOAD AT <w>50% RELOAD SPEED<w>##<w>+40%<w> OFFHAND <w>RELOAD SPEED<w>"
 	skill_tips[35] = "big round cheeks"
 	skill_msnd[35] =  sndMutPuffyCheeks
-	skill_bons[35] = "CAN LOAD UP TO FOUR SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
+	skill_bons[35] = "CAN LOAD UP TO 3 SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
 	
 	skill_name[36] = "ABSORBING PORES"
 	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
@@ -585,11 +586,11 @@ function scrSkills() {
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
 	
 	skill_name[43] = "MOOD SWING"
-	skill_text[43] = "<r>FIRE<r> SPREADS#<p>TENTACLES<p> AND <b>LIGHTNING<b> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#WHEN <g>TOXIC<g> HITS A WALL#IT CONVERTS TO BULLETS#"
-	skill_detail[43] = "<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> ARE <w>LONGER<w># AND<w>STUN<w> ENEMIES#STUNNED ENEMIES DONT ACT OR MOVE#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#ICICLES CAN ONCE AGAIN FREEZE#WHEN <g>TOXIC<g> HITS A WALL#IT CONVERTS TO BULLETS#(WEAPON SPECIFIC MUTATION)";
+	skill_text[43] = "<r>FIRE<r> SPREADS#<b>LIGHTNING<b> ARCS#<p>TENTACLES<p> <w>STUN<w> ENEMIES#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#WHEN <g>TOXIC<g> HITS A WALL#IT CONVERTS TO BULLETS#"
+	skill_detail[43] = "<r>FIRE<r> SPREADS TO NEARBY ENEMIES#<p>TENTACLES<p> AND <b>LIGHTNING<b> ARE <w>LONGER<w># AND <w>STUN<w> ENEMIES#STUNNED ENEMIES DONT ACT OR MOVE#<aq>FROST<aq> BREAKS INTO <w>ICICLES<w>#ICICLES CAN ONCE AGAIN FREEZE#WHEN <g>TOXIC<g> HITS A WALL#IT CONVERTS TO BULLETS#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[43] = "feeling like an element"
 	skill_msnd[43] =  sndMutMoodSwing
-	skill_bons[43] = "+FIRE RANGE, LONGER STUN#MORE ICICLES#TOXIC BULLETS ANGLE TOWARDS ENEMIES"
+	skill_bons[43] = "+FIRE RANGE, LONGER ARC#LONGER STUN, MORE ICICLES#MORE ACCURATE TOXIC BULLETS#"
 	if betterWepSpecific
 		skill_bons[43] = "ALL EFFECTS OCCUR ON ALL ELEMENTS"
 	
@@ -616,9 +617,9 @@ function scrSkills() {
 	
 	skill_name[47] = "HOLLOW BONES"
 	skill_text[47] = "<w>SPENDING<w> <y>AMMO<y>#CAN CAUSE AN <p>IMPLOSION<p>!"
-	skill_detail[47] = "EVERY <w>18%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO IMPLODE#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
+	skill_detail[47] = "EVERY <w>24%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO IMPLODE#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
 	skill_tips[47] = "there is an emptyness inside"
-	skill_bons[47] = "EVERY 15% AMMO SPENT#+25% BIGGER IMPLOSION"
+	skill_bons[47] = "EVERY 19% AMMO SPENT#+25% BIGGER IMPLOSION"
 	skill_msnd[47] =  sndMutBouncyFat;
 	
 	

@@ -13,8 +13,10 @@ with Player
 		alarm[1] = 60;
 	}
 }
-UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 2);
-UberCont.voidShopMutationTracker = max(0, UberCont.voidShopMutationUpgrade - 1);
-cost = UberCont.voidShopMutationUpgrade;
+if UberCont.voidShopMutationTracker <= 0
+	UberCont.voidShopMutationUpgrade = round(UberCont.voidShopMutationUpgrade * 2)
+UberCont.voidShopMutationTracker = max(0, UberCont.voidShopMutationTracker - 1);
 if UberCont.voidShopMutationTracker > 0
-	cost = 10;
+	cost = 10
+else
+	cost = UberCont.voidShopMutationUpgrade;

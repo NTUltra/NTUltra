@@ -4,6 +4,7 @@ if instance_exists(HostileHorror)
 	//There should be only one proto statue in the area so that is fine
 	if speed = 0
 	{
+		collected = true;
 		instance_destroy()
 		var nh = instance_nearest(x,y,HostileHorror);
 		if instance_exists(nh) && nh != noone

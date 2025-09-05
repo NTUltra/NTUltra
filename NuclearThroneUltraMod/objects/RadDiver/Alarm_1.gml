@@ -3,7 +3,8 @@ alarm[1] = actTime + random(actTime);
 sleeping = false;
 scrTarget()
 if target != noone  && instance_exists(target){
-if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
+	shootCooldown -= 1;
+	if shootCooldown < 0 && collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         gunangle = point_direction(x, y, target.x, target.y);
         sprite_index = spr_fire;
 		image_index = 0;
@@ -30,6 +31,12 @@ if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 				}
 			}
 			alarm[1] = actTime * 4;
+			shootCooldown = 5;
+			with RadDiver
+			{
+				if shootCooldown < 2
+					shootCooldown += 1;	
+			}
 	}
     else 
 	{

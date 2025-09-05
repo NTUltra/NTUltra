@@ -43,8 +43,10 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 				}
 				scrMoodSwingStun(6);
 				if Player.ultra_got[97] && !Player.altUltra {
+					scrMoodSwingLightningArc(24, xx, yy, other.team, other.dmg);
 					scrMoodSwingIcicle(2, id);
 					scrMoodSwingFlameSpread(24);
+					scrMoodSwingToxicBullet(other.x,other.y,2, other.direction);
 				}
 			}
 			else if team != 0 {

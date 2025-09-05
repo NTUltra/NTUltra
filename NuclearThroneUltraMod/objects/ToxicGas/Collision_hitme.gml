@@ -40,6 +40,15 @@ else if image_xscale > 0.22 && alarm[11] < 1
 				if object_index == Player {
 					hitBy = other.sprite_index;	
 				}
+				else
+				{
+					if (instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
+					{
+						scrMoodSwingStun(1, 0);
+						scrMoodSwingLightningArc(22,other.x,other.y,2,other.dmg);
+						scrMoodSwingIcicle(1, id);
+					}
+				}
 	        }
 	    }
 	}

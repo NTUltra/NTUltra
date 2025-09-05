@@ -35,7 +35,8 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 				image_index = 0
 				if other.canDealDamage == 1
 				{
-					walk = 0;
+					if mySize < 8
+						walk = 0;
 					DealDamage(other.dmg);
 					motion_add(other.direction,6)
 					var duration = 30;

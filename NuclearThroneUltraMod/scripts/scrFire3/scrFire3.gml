@@ -4416,5 +4416,97 @@ function scrFire3(hasTailNow){
 		}
 
 		break;
+		
+		//SICKLE
+		case 922:
+
+		snd_play_fire(choose(sndSword1,sndSword2))
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+		{
+			sprite_index = sprSickleSlash;
+			mask_index = mskSickleSlash;
+			dmg = 20
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,5)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = -4
+
+		break;
+		
+		//BURST CROSSBOW
+		case 923:
+		snd_play(sndSuperCrossbow);
+		var aimDir = aimDirection+180;
+		with instance_create(x,y,BoltBurst)
+		{
+			accuracy = 5*other.accuracy;
+			percAccuracy = other.accuracy;
+			mox=UberCont.mouse__x;
+			moy=UberCont.mouse__y;
+			creator = other.id
+			ammo = 2
+			maxammo = ammo;
+			time = 5
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+
+		BackCont.viewx2 += lengthdir_x(10,aimDir)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDir)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 6
+
+		break;
+		
+		//BLOODY BONE
+		case 924:
+
+		snd_play_fire(sndBloodHammer)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BloodSlashRetail)
+		{
+			explosionType = SmallMeatExplosion;
+			dmg = 6;
+			owner = other.id;
+			longarms = 0
+			sprite_index = sprSmallBloodSlash;
+			mask_index = mskSmallBloodSlash;
+			image_yscale = choose(1,-1);
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,2.7+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection,2);
+			motion_add(aimDirection,6)
+		}
+		BackCont.viewx2 += lengthdir_x(13,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(13,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -4
+
+		break;
+		
 	}
 }

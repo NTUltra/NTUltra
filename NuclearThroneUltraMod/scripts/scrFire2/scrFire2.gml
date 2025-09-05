@@ -1527,13 +1527,15 @@ function scrFire2(hasTailNow) {
 		motion_add(aimDirection+180,0.5)
 	}
 	with instance_create(x,y,Lightning)
-	{image_angle = aimDirection+(random(26)-13)*other.accuracy
+	{
+		image_angle = aimDirection+(random(26)-13)*other.accuracy
 		iframeskip -= 0.03;
-	team = other.team
-	ammo = 26
-	event_perform(ev_alarm,0)
-	with instance_create(x,y,LightningSpawn)
-	image_angle = other.image_angle}
+		team = other.team
+		ammo = 26
+		event_perform(ev_alarm,0)
+		with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle
+	}
 
 	BackCont.viewx2 += lengthdir_x(6,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(6,aimDirection+180)*UberCont.opt_shake
@@ -13227,6 +13229,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,BouncerBoltBurst)
 	{
 		accuracy = 40*other.accuracy;
+		percAccuracy = other.accuracy;
 		mox=UberCont.mouse__x;
 		moy=UberCont.mouse__y;
 		creator = other.id

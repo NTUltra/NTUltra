@@ -2,7 +2,7 @@
 if !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(StunLockout) && instance_exists(enemy)
 	with Player
 	{
-		if !outOfCombat
+		if !outOfCombat && humphrySkill > 5
 		{
 			humphrySkill *= other.humphryAmount;
 			if humphrySkill > 250
@@ -13,7 +13,7 @@ if !instance_exists(GenCont) && !instance_exists(LevCont) && !instance_exists(St
 				humphrySkill *= 0.85;
 			if humphrySkill > 1000
 				humphrySkill *= 0.7;
-			humphrySkill = max(0, humphrySkill - other.humphryConstantAmount);
+			humphrySkill = max(5, humphrySkill - other.humphryConstantAmount);
 		}
 	}
 alarm[6] = humphryDelay;

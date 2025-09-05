@@ -594,7 +594,7 @@ if UberCont.voidChallengeGoing[1] && !exception && armour <= 0 && !instance_exis
 var damageReduced = 0;
 if (skill_got[31])
 {
-	if (tookHit)
+	if (tookHit && !exception)
 	{
 		var dmgTaken = prevhealth - my_health;
 		var maxDmg = 8;
@@ -613,7 +613,7 @@ if (skill_got[31])
 		    my_health += 2;
 			damageReduced += 2;
 	    }
-	    else if (( dmgTaken > 2 ))
+	    else if (( dmgTaken > 1 ))
 	    {
 		    my_health += 1;
 			damageReduced += 1;

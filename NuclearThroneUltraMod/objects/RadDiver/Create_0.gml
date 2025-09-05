@@ -18,9 +18,9 @@ snd_dead = sndRadDiverDead
 //behavior
 walk = 0
 gunangle = random(360)
-alarm[1] = 30+random(90)
+alarm[1] = 60+random(90)
 wkick = 0
-actTime = 16;
+actTime = 19;
 
 acc = 0.6;
 maxSpeed = 1.25;
@@ -31,3 +31,4 @@ maxAmountOfProjectiles = min(30,12 + loops);
 damageMultiplier = 3;
 isInverted = false;
 toTarget = false;
+shootCooldown = 2;

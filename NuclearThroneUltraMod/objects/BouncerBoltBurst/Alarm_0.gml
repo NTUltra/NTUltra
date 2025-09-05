@@ -8,13 +8,13 @@ if instance_exists(creator)
 x = creator.x
 y = creator.y
 //FIRING
-snd_play(sndSplinterMinigun,0.02,true,false,2,false,false,0.7);
-var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (accuracy * sin(ammo*3.15));
+snd_play(sndCrossbow,0.02,true,false,2,false,false,0.7);
+var dir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y) + (accuracy * sin(ammo*3.15)) + ((random(8)-4) * percAccuracy);
 with instance_create(x,y,BouncerBolt)//5 splinters
 {
 	if other.ultramodded
 		alarm[11] = 0;
-	motion_add(dir+random(8)-4,20)
+	motion_add(dir,20)
 		scrCopyWeaponMod(other);
 	image_angle = direction
 	team = other.team

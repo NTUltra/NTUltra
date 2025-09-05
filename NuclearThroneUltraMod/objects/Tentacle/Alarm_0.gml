@@ -143,10 +143,6 @@ var ammoDecrease = 1;
 		{
 			ammoDecrease -= 0.11;
 		}
-		if skill_got[43]//Mood swing
-		{
-			ammoDecrease -= 0.075;
-		}
 		if skill_got[30] == 1//Power craving
 			modBoost = 0.08;
 	}

@@ -29,3 +29,4 @@ if instance_exists(Player)
 }
 hitEnemy = false;
 owner = -1;
+explosionType = MeatExplosion;
