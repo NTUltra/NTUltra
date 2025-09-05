@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+canBeKilled = false;
 if scrIsGamemode(10) || (instance_exists(UberCont) && !UberCont.unlocked_alt_routes)
 {
 	instance_destroy(id,false);

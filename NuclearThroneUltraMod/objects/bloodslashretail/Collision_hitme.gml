@@ -1,6 +1,7 @@
 if other.team != team
 {
 	var inArray = array_contains(hitEntities,other.id);
+	var dir = direction;
 	hitEnemy = true;
 	with BloodSlashRetail
 		hitEnemy = true;
@@ -14,7 +15,12 @@ if other.team != team
 		{
 			DealDamage(other.dmg);
 			if other.alarm[2] < 1
-				instance_create(x,y,other.explosionType);
+			{
+				with instance_create(x,y,other.explosionType)
+				{
+					motion_add(dir,1);
+				}
+			}
 			snd_play(snd_hurt, hurt_pitch_variation)
 			sprite_index = spr_hurt
 			image_index = 0

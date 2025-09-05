@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.490719,
+  "duration":0.49072564,
   "name":"sndLaserCannonCharge",
   "parent":{
     "name":"Weapons",

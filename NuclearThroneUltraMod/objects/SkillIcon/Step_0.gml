@@ -212,7 +212,7 @@ if selected && visible
 		{
 			Player.betterrecyclegland = 9;
 			if Player.ultra_got[97] && !Player.altUltra
-				Player.betterrecyclegland = 16;
+				Player.betterrecyclegland = 15;
 
 		}
 		else if skill = 17 && Player.race = 25
@@ -224,9 +224,9 @@ if selected && visible
 		}
 		else if skill = 21//bolt marrow
 		{
-		Player.betterboltmarrow = 7;
-		if Player.ultra_got[97] && !Player.altUltra
-		Player.betterboltmarrow=20;
+			Player.betterboltmarrow = 7;
+			if Player.ultra_got[97] && !Player.altUltra
+				Player.betterboltmarrow = 20;
 		}
 		else if skill == 42//Tail end
 		{

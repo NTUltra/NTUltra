@@ -538,6 +538,7 @@ if !instance_exists(LevCont) and visible = 1
 			peaceBarriers += 1;
 			getVision = true;
 			voidBeam = voidBeamMax;
+			scrApplyEnemyVenom(3,id);
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
@@ -553,10 +554,10 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
-			with enemy
+			/**with enemy
 			{
 				my_health = 0;
-			}
+			}*/
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)
@@ -582,7 +583,6 @@ if !instance_exists(LevCont) and visible = 1
 			//scrApplyEnemyVenom(1,id);
 		}
 		if keyboard_check_pressed(ord("B")) {
-			instance_create(x,y,WallBreak);
 			wepmod1 ++;
 			wepmod2 ++;
 			wepmod3 ++;
@@ -615,8 +615,6 @@ if !instance_exists(LevCont) and visible = 1
 			rad = GetPlayerMaxRad()*2;
 		}
 		if keyboard_check_pressed(ord("M")) {
-		    instance_create(x+64,y,BigWallBreak);
-			instance_create(x+64,y,MutationChoiceReward);
 		}
 		if keyboard_check_pressed(ord("T")) {
 			if instance_exists(Portal) && scrIsGamemode(25)
@@ -1859,7 +1857,7 @@ if ultra_got[108] && place_meeting(x,y,HandTrail)
 {
 	tempMaxSpeed += 1;
 }
-if wep == 531//Coffee makes you faster
+if wep == 531 || wep == 925//Coffee makes you faster and ammo generator
 {
 	tempMaxSpeed += 1;
 }

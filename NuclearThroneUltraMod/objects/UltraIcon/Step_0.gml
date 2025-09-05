@@ -756,7 +756,7 @@ if (selected && visible &&
 				}
 				if skill_got[21]//bolt marrow
 				{
-					betterboltmarrow = 10;
+					betterboltmarrow = 20;
 				}
 				if skill_got[42]//Tail end
 				{

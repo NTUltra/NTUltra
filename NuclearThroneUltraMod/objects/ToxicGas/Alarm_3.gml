@@ -10,7 +10,7 @@ if n != noone && point_distance(n.x+8,n.y+8,x,y) < 24
 	{
 		vspeed *= -1;
 	}
-	scrMoodSwingToxicBullet(x,y,1.5);
+	scrMoodSwingToxicBullet(x,y,1.5,direction,isDoc);
 	instance_destroy();
 }
 alarm[3] = 1;

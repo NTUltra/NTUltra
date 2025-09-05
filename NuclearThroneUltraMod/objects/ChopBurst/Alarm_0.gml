@@ -12,7 +12,7 @@ if instance_exists(creator)
 
 	with instance_create(x,y,Bullet1)
 	{
-		motion_add(other.fireAim,24 - other.ammo)
+		motion_add(other.fireAim,max(6,24 - other.ammo))
 		image_angle = direction
 		team = other.team
 		scrCopyWeaponMod(other);

@@ -23,6 +23,8 @@ if instance_exists(owner)
 		{
 			toCheck += 1;	
 		}
+		if Player.skill_got[31]//Tough shell
+			toCheck -= 1;
 		toCheck += max(0,Player.skill_got[46] ? Player.peaceBarriers : 0) + ((Player.skill_got[38] && Player.metabolism == Player.metabolismBreak) ? 1 : 0) + max(0,Player.lag) + max(0,Player.armour);
 		while (checkingDamage > 0 && toCheck - checkingDamage < breakPoint) {
 			checkingDamage *= 0.5

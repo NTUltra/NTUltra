@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":1.293832,
+  "duration":1.2938322,
   "name":"sndVoidStyle",
   "parent":{
     "name":"Player",

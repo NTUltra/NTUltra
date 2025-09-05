@@ -8291,7 +8291,7 @@ function scrWeapons() {
 	wep_name[740] = "CHARGE BAYONETTE RIFLE"
 	wep_type[740] = 2
 	wep_auto[740] = 0
-	wep_load[740] = 18
+	wep_load[740] = 15
 	wep_cost[740] = 1
 	wep_sprt[740] = sprBayonetteRifle
 	wep_area[740] = 7
@@ -10376,14 +10376,38 @@ function scrWeapons() {
 	wep_name[924] = "BLOODY BONE"
 	wep_type[924] = 0
 	wep_auto[924] = 0
-	wep_load[924] = 20
+	wep_load[924] = 18
 	wep_cost[924] = 0
-	wep_sprt[924] = sprBloodHammer
+	wep_sprt[924] = sprBloodyBone
 	wep_area[924] = 2
-	wep_text[924] = "don't miss"
+	wep_text[924] = "hitting projectiles also counts as not missing"
 	wep_swap[924] = sndSwapExplosive
 	wep_rad[924] = 0;
 	wep_popup[924] = "MISSING DAMAGES YOU";
+	
+	wep_name[925] = "ENERGY AMMO GENERATOR"
+	wep_type[925] = 5
+	wep_auto[925] = 0
+	wep_load[925] = 300
+	wep_cost[925] = -10
+	wep_sprt[925] = sprEnergyAmmoGenerator
+	wep_area[925] = 24
+	wep_text[925] = "generates ammo through the power of the void"
+	wep_swap[925] = sndSwapExplosive
+	wep_rad[925] = 0;
+	wep_popup[925] = "GIVES ENERGY AMMO";
+	
+	wep_name[926] = "VOID ORB"
+	wep_type[926] = 4
+	wep_auto[926] = 3
+	wep_load[926] = 30
+	wep_cost[926] = 2
+	wep_sprt[926] = sprVoidOrbWeapon
+	wep_area[926] = 27
+	wep_text[926] = "projectile speed boost increases the distance of the void orb"
+	wep_swap[926] = sndSwapMachinegun
+	wep_rad[926] = 0;
+	wep_popup[926] = "ORB OBLITERATES ALL IT TOUCHES";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

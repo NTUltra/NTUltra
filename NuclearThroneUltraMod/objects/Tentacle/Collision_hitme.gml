@@ -42,10 +42,10 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 					hasStunned = true;	
 				}
 				scrMoodSwingStun(6);
-				if Player.ultra_got[97] && !Player.altUltra {
-					scrMoodSwingLightningArc(24, xx, yy, other.team, other.dmg);
-					scrMoodSwingIcicle(2, id);
-					scrMoodSwingFlameSpread(24);
+				if Player.ultra_got[97] && !Player.altUltra{
+					scrMoodSwingLightningArc(22, other.x,other.y, other.team, max(1,other.dmg - 1));
+					scrMoodSwingIcicle(1, id);
+					scrMoodSwingFlameSpread(22);
 					scrMoodSwingToxicBullet(other.x,other.y,2, other.direction);
 				}
 			}

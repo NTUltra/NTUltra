@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":0.650938,
+  "duration":0.6509524,
   "name":"sndVoidBlasterBigHit",
   "parent":{
     "name":"Player",

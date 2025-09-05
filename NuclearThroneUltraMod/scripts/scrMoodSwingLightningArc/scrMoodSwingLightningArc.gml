@@ -2,6 +2,9 @@
 // /@description
 ///@param
 function scrMoodSwingLightningArc(range,xx,yy, wantTeam, damage){
+	if UberCont.recursionCheck > 20
+		return;
+	UberCont.recursionCheck += 1;
 	var n = instance_nearest_notme(x,y,enemy);
 	if n != noone && instance_exists(n) && distance_to_object(n) < range && n.team != 2 && n.my_health > 0 && !collision_line(x,y,n.x,n.y,Wall,false,false)
 	{

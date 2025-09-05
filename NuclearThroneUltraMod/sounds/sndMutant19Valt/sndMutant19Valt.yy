@@ -9,7 +9,7 @@
   "bitRate":192,
   "compression":0,
   "conversionMode":0,
-  "duration":2.632031,
+  "duration":0.0,
   "name":"sndMutant19Valt",
   "parent":{
     "name":"Skeleton",

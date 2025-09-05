@@ -1,0 +1,1 @@
+/// @description Cant die for atleast 3 seconds

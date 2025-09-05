@@ -9,7 +9,7 @@ if instance_exists(creator)
 	snd_play(sndChopSplinterGun,0.1,true)
 	with instance_create(x,y,Splinter)
 	{
-		motion_add(other.fireAim,24 - other.ammo)
+		motion_add(other.fireAim,max(6,24 - other.ammo))
 		image_angle = direction
 		team = other.team
 		scrCopyWeaponMod(other);

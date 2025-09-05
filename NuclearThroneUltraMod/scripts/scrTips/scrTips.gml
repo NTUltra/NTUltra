@@ -8,6 +8,7 @@ function scrTips() {
 		tip = choose("WELCOME TO NUCLEAR THRONE!","TRY TO ALWAYS STAY ON THE MOVE",
 		"ENEMIES DROP HEALTH AND AMMO","HEALTH CAN DROP MORE OFTEN WHEN IT'S LOW",
 		"most projectiles can be deflected or destroyed by melee#except for pink squares",
+		"weapon chests usually drop better weapons compared to random enemy drops",
 		"pink square bullets toxic gas and fire cannot be deflected","director weapons can be redirected by firing again",
 		"sheep have a high chance to drop health, ammo and radiation", "use radiation to mutate!","pick your mutations wisely",
 		"the number next to a weapon indicates its tier","do not stick with a low tier weapon for too long", "always try out a new weapon",

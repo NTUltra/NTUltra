@@ -11,7 +11,7 @@ function scrSplashDamage(dmg, range, canBoost = true){
 			if team != Player.team
 				exit;
 			range *= 1.5;
-			dmg *= 1.15;
+			dmg *= 1.25;
 		}
 	}
 	var direct = other.id;

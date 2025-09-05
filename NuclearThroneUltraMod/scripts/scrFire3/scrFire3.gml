@@ -4428,7 +4428,7 @@ function scrFire3(hasTailNow){
 		{
 			sprite_index = sprSickleSlash;
 			mask_index = mskSickleSlash;
-			dmg = 20
+			dmg = 23
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection,2.7+longarms)
@@ -4476,14 +4476,14 @@ function scrFire3(hasTailNow){
 		//BLOODY BONE
 		case 924:
 
-		snd_play_fire(sndBloodHammer)
+		snd_play_fire(sndBloodyBone)
 
 		instance_create(x,y,Dust)
 
-		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BloodSlashRetail)
+		with instance_create(x+lengthdir_x(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(4+((Player.skill_got[13]+bettermelee)*20),aimDirection),BloodSlashRetail)
 		{
 			explosionType = SmallMeatExplosion;
-			dmg = 6;
+			dmg = 11;
 			owner = other.id;
 			longarms = 0
 			sprite_index = sprSmallBloodSlash;
@@ -4506,6 +4506,70 @@ function scrFire3(hasTailNow){
 		BackCont.shake += 4
 		wkick = -4
 
+		break;
+		
+		//ENERGY AMMO GENERATOR
+		case 925:
+			snd_play_fire(sndEnergyPelletBounce);
+			var t =wep_type[wep];
+			if (instance_exists(Player) && !Player.ultra_got[26])
+			{
+				if (Player.ammo[t] + Player.wep_cost[wep] >= Player.typ_amax[t])
+				{
+					reload -= wep_load[wep] - 10;
+					Player.ammo[t] = Player.typ_amax[t];
+					dir = instance_create(x,y,PopupText)
+					dir.mytext = "ALREADY FULL ";
+					dir.sprt = sprAmmoIconsEmpty
+					dir.ii = t;
+				}
+				else {
+					var excessAmount = ammo[t] - typ_amax[t];
+					if excessAmount > 0
+					{
+						scrExcessResource(1 + t, excessAmount);
+						Player.ammo[t] = Player.typ_amax[t];
+					}
+				}
+			}
+			repeat(4)
+				with instance_create(x,y,Smoke)
+				{
+					motion_add(aimDirection+(random(30)-15)*other.accuracy,5)
+				}
+
+			wkick = 3;
+			BackCont.viewx2 += lengthdir_x(5,aimDirection+180)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(5,aimDirection+180)*UberCont.opt_shake
+			BackCont.shake += 3
+		break;
+		
+		//VOID ORB
+		case 926:
+
+			with instance_create(x,y,VoidOrb)
+			{
+				speed = 2;
+				creator = other.id
+				team = other.team
+				alarm[1] = 11;
+				if Player.skill_got[42]
+				{
+					snd_play_fire(sndVoidStyle)
+					alarm[1] *= Player.betterTail
+					alarm[1] = max(11,alarm[1] - 1);
+				}
+				else
+				{
+					snd_play_fire(sndVoidBlasterBigHit)
+				}
+				canBeMoved = true;
+				hadSpeedApplied = false;
+				scrGiveProjectileStats();
+				canBeMoved = false;
+				debug(speed);
+				distanceOffset += speed * 3;
+			}
 		break;
 		
 	}

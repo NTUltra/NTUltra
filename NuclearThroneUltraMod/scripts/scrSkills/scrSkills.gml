@@ -275,7 +275,7 @@ function scrSkills() {
 	skill_msnd[15] =  sndMutShotGunShoulders
 	skill_bons[15] = "+25% WALLBOUNCE# + 10% SPLASH DAMAGE RANGE";
 	if betterWepSpecific
-		skill_bons[15] = "+75% WALLBOUNCE#+50% SPLASH DAMAGE RANGE#+10% SPLASH DAMAGE";
+		skill_bons[15] = "+75% WALLBOUNCE#+25% SPLASH DAMAGE RANGE#+10% SPLASH DAMAGE";
 
 	skill_name[16] = "RECYCLE GLAND"
 	skill_text[16] = "SOME <y>BULLETS<y> BECOME <y>AMMO<y>#HIT <w>BULLETS<w> DEAL <r>SPLASH DAMAGE<r>";
@@ -288,7 +288,7 @@ function scrSkills() {
 	skill_msnd[16] =  sndMutRecycleGland
 	skill_bons[16] = "+9% CHANCE#+10% SPLASH DAMAGE RANGE";
 	if betterWepSpecific
-		skill_bons[16] = "+7% CHANCE#+40% SPLASH DAMAGE RANGE#+15% SPLASH DAMAGE";
+		skill_bons[16] = "+15% CHANCE#+25% SPLASH DAMAGE RANGE";
 
 	skill_name[17] = "ENERGY BRAIN"
 	skill_text[17] = "<g>ENERGY<g> WEAPONS DEAL MORE DAMAGE"
@@ -358,7 +358,7 @@ function scrSkills() {
 	skill_msnd[21] =  sndMutBoltMarrow
 	skill_bons[21] = "+25% HOMING";
 	if betterWepSpecific
-		skill_bons[21] = "+85% HOMING";
+		skill_bons[21] = "+85% HOMING#+25% PIERCE";
 
 	skill_name[22] = "SHARP STRESS"
 	if scrIsGamemode(24)

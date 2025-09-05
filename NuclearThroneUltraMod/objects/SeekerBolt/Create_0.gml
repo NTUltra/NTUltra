@@ -18,6 +18,8 @@ if instance_exists(Player){
 	if Player.skill_got[21] = 1//bolt marrow
 	{
 		bm = 1;
+		if Player.ultra_got[97] && !Player.altUltra
+			bm += 0.5;
 		dmg ++;
 		friction+=0.1;
 	}

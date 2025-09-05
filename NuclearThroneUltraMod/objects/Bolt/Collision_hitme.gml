@@ -3,11 +3,8 @@ if candmg and other.team != team
 	if (!array_contains(hitEntities,other.id))
 	{
 		event_user(2);
-		var actualDmg =	scrCallculateFinalDamage(dmg);
-		if team == 2 && instance_exists(Player) && Player.skill_got[21]
-			var pierceDmg = actualDmg*0.75
-		else
-			var pierceDmg = actualDmg*0.5
+		var actualDmg = scrCallculateFinalDamage(dmg);
+		var pierceDmg = scrGetBoltPierceDamage(actualDmg);
 		if other.object_index == Player
 		{
 			other.hitBy = sprite_index;

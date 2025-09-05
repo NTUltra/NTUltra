@@ -2,10 +2,7 @@
 var dis = 450;
 var nearestTarget = noone;
 var actualDmg =	scrCallculateFinalDamage(dmg);
-if team == 2 && instance_exists(Player) && Player.skill_got[21]
-	var pierceDmg = actualDmg*0.75
-else
-	var pierceDmg = actualDmg*0.5
+var pierceDmg = scrGetBoltPierceDamage(actualDmg);
 		
 BackCont.shake += 1;
 with hitme

@@ -4093,6 +4093,7 @@ function scrFire(canDrown = true) {
 
 	with instance_create(x,y,ShotgunBurst)
 	{
+		projectileVelocity += 2;
 	creator = other.id
 	ammo = 5
 	time = 2

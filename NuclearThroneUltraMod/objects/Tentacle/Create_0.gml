@@ -19,6 +19,7 @@ branch = 0//20;
 canSwap = false;
 alarm[2] = 5;
 applyVenom = false;
+canMood = true;
 if instance_exists(Player)
 {
 	if Player.skill_got[19]==1
