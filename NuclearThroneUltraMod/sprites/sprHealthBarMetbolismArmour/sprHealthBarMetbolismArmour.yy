@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprHealthBarMetbolismArmour",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ea06f322-e780-4d25-8b83-87bebc31e678","name":"ea06f322-e780-4d25-8b83-87bebc31e678","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7d483b75-8abd-4a08-8e8e-122d8547550a","name":"7d483b75-8abd-4a08-8e8e-122d8547550a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ea06f322-e780-4d25-8b83-87bebc31e678","name":"ea06f322-e780-4d25-8b83-87bebc31e678","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7d483b75-8abd-4a08-8e8e-122d8547550a","name":"7d483b75-8abd-4a08-8e8e-122d8547550a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,21 +72,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ea06f322-e780-4d25-8b83-87bebc31e678","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"88f035bd-a357-4945-96ab-a35f86daeb79","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5e7566fa-9bdb-48c5-9ee7-b1a4bb6e01ac","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2814f8ff-068e-43e7-8752-0f819695ea1a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b9de887f-e83c-4c35-92ad-efa610999588","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7d483b75-8abd-4a08-8e8e-122d8547550a","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e90cb919-3aa1-4207-b39d-456935ea99f3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ea06f322-e780-4d25-8b83-87bebc31e678","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"88f035bd-a357-4945-96ab-a35f86daeb79","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"323cb107-50fa-4a95-bed4-e6e75d0fd331","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5e7566fa-9bdb-48c5-9ee7-b1a4bb6e01ac","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2a512281-fd15-4a88-894e-0d2d1d8d0891","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2814f8ff-068e-43e7-8752-0f819695ea1a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"96cfeb65-124a-4b5d-8a1c-da67e79cfa8b","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b9de887f-e83c-4c35-92ad-efa610999588","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7d483b75-8abd-4a08-8e8e-122d8547550a","path":"sprites/sprHealthBarMetbolismArmour/sprHealthBarMetbolismArmour.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e90cb919-3aa1-4207-b39d-456935ea99f3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

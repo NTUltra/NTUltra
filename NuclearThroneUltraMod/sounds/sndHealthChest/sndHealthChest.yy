@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndHealthChest",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":0.757347,
+  "exportDir":"",
   "name":"sndHealthChest",
   "parent":{
     "name":"Pickups",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndHealthChest",
-  "type":0,
   "volume":1.0,
 }

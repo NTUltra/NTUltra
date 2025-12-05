@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndMutLuckyShot",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":0.0,
+  "exportDir":"",
   "name":"sndMutLuckyShot",
   "parent":{
     "name":"Mutations",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndMutLuckyShot",
-  "type":0,
   "volume":1.0,
 }

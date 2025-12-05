@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraDiscGuyHurt",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3f935914-f903-47c7-83a9-039ffd227d57","name":"3f935914-f903-47c7-83a9-039ffd227d57","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3f935914-f903-47c7-83a9-039ffd227d57","name":"3f935914-f903-47c7-83a9-039ffd227d57","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3f935914-f903-47c7-83a9-039ffd227d57","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"010467f2-33cb-42bb-8579-2eb13b9d01d8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7c2258ec-78e3-4425-9009-c856c0750991","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"57c68b50-ad88-4f48-a822-30153c5e2221","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3f935914-f903-47c7-83a9-039ffd227d57","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"010467f2-33cb-42bb-8579-2eb13b9d01d8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f713f209-12a5-49a6-b52a-a1bbe11cecd9","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7c2258ec-78e3-4425-9009-c856c0750991","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f8e6dc72-9e4b-4eaf-970c-a24d52216bc2","path":"sprites/sprUltraDiscGuyHurt/sprUltraDiscGuyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"57c68b50-ad88-4f48-a822-30153c5e2221","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

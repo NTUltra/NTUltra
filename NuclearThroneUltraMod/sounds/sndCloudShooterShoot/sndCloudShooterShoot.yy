@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndCloudShooterShoot",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.184312,
+  "exportDir":"",
   "name":"sndCloudShooterShoot",
   "parent":{
     "name":"Clouds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndCloudShooterShoot.ogg",
-  "type":0,
   "volume":1.0,
 }

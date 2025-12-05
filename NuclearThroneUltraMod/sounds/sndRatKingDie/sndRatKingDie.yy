@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndRatKingDie",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":1.0506803,
+  "exportDir":"",
   "name":"sndRatKingDie",
   "parent":{
     "name":"Regular",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndRatKingDie",
-  "type":0,
   "volume":1.0,
 }

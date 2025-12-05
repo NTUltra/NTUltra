@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndBloodCannonEnd",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":2.6080499,
+  "exportDir":"",
   "name":"sndBloodCannonEnd",
   "parent":{
     "name":"Explosive",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndBloodCannonEnd",
-  "type":0,
   "volume":1.0,
 }

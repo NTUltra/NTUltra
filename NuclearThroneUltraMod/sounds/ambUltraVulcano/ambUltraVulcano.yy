@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"ambUltraVulcano",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":30.0,
+  "exportDir":"",
   "name":"ambUltraVulcano",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"ambUltraVulcano.ogg",
-  "type":0,
   "volume":1.0,
 }

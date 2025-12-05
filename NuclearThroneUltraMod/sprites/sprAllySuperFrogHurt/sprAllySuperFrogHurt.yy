@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprAllySuperFrogHurt",
   "bboxMode":1,
   "bbox_bottom":23,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"684710bc-4cdf-442f-94db-c8004ab8687a","name":"684710bc-4cdf-442f-94db-c8004ab8687a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"007bdd0e-d081-4ca5-b855-0f56565010df","name":"007bdd0e-d081-4ca5-b855-0f56565010df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"684710bc-4cdf-442f-94db-c8004ab8687a","name":"684710bc-4cdf-442f-94db-c8004ab8687a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"007bdd0e-d081-4ca5-b855-0f56565010df","name":"007bdd0e-d081-4ca5-b855-0f56565010df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8ae5781f-b922-48d0-b3ce-47bc90b8bc37","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"684710bc-4cdf-442f-94db-c8004ab8687a","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"70398f9b-88a0-4dbb-b5c2-f7b6d4f21ead","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"007bdd0e-d081-4ca5-b855-0f56565010df","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"97072e62-20b9-45fa-af0a-98e3055ae322","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"338c10e9-edb2-4c70-9c39-49bdfaebf7c4","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8ae5781f-b922-48d0-b3ce-47bc90b8bc37","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"684710bc-4cdf-442f-94db-c8004ab8687a","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"70398f9b-88a0-4dbb-b5c2-f7b6d4f21ead","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"007bdd0e-d081-4ca5-b855-0f56565010df","path":"sprites/sprAllySuperFrogHurt/sprAllySuperFrogHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"97072e62-20b9-45fa-af0a-98e3055ae322","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

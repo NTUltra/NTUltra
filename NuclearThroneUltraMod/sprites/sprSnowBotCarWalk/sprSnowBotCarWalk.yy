@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprSnowBotCarWalk",
   "bboxMode":1,
   "bbox_bottom":63,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e265b7df-b542-4ed9-94c9-1226021aa53b","name":"e265b7df-b542-4ed9-94c9-1226021aa53b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"969661fa-d6b3-495f-aa31-a62d8c07e166","name":"969661fa-d6b3-495f-aa31-a62d8c07e166","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"67ee1513-4a72-420f-b643-28f7fd794fa2","name":"67ee1513-4a72-420f-b643-28f7fd794fa2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"436941e2-7059-4bef-be10-77e284247b97","name":"436941e2-7059-4bef-be10-77e284247b97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e265b7df-b542-4ed9-94c9-1226021aa53b","name":"e265b7df-b542-4ed9-94c9-1226021aa53b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"969661fa-d6b3-495f-aa31-a62d8c07e166","name":"969661fa-d6b3-495f-aa31-a62d8c07e166","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"67ee1513-4a72-420f-b643-28f7fd794fa2","name":"67ee1513-4a72-420f-b643-28f7fd794fa2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"436941e2-7059-4bef-be10-77e284247b97","name":"436941e2-7059-4bef-be10-77e284247b97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,30 +75,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3c22190a-2c06-4307-9a3f-75267707fbf2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f3e40d00-d28b-4729-b64d-caf9f7c0495c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e265b7df-b542-4ed9-94c9-1226021aa53b","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"683251df-c7a3-4761-aa28-c1f078923b45","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"438b6b1e-04a8-4445-a1d0-abebdb0e5458","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c6f19502-8371-43cd-a40c-aa70b5f0eb9f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"969661fa-d6b3-495f-aa31-a62d8c07e166","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"53ffcaae-9cb3-4d65-989d-e9949a7f5c8b","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"67ee1513-4a72-420f-b643-28f7fd794fa2","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"04b53014-3776-43ac-a6d4-53c1c5ac8f9a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"436941e2-7059-4bef-be10-77e284247b97","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f06990aa-5c8d-458c-8bff-c5af2a1149bb","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ace87a62-94b9-45ba-9e4c-161da5bdd126","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3c22190a-2c06-4307-9a3f-75267707fbf2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c6b2c1d-bcd1-4772-85d8-5ca86b4e0397","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f3e40d00-d28b-4729-b64d-caf9f7c0495c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e265b7df-b542-4ed9-94c9-1226021aa53b","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"683251df-c7a3-4761-aa28-c1f078923b45","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"101d2215-af96-4af6-a20a-ef366f5c1fc5","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"438b6b1e-04a8-4445-a1d0-abebdb0e5458","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"18b179b5-77b1-4b49-a867-0f4e83903c0b","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c6f19502-8371-43cd-a40c-aa70b5f0eb9f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"969661fa-d6b3-495f-aa31-a62d8c07e166","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"53ffcaae-9cb3-4d65-989d-e9949a7f5c8b","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"67ee1513-4a72-420f-b643-28f7fd794fa2","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"04b53014-3776-43ac-a6d4-53c1c5ac8f9a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"436941e2-7059-4bef-be10-77e284247b97","path":"sprites/sprSnowBotCarWalk/sprSnowBotCarWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f06990aa-5c8d-458c-8bff-c5af2a1149bb","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

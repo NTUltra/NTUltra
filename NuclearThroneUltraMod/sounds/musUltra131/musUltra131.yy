@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltra131",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":93.68923,
+  "exportDir":"",
   "name":"musUltra131",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltra131.ogg",
-  "type":0,
   "volume":1.0,
 }

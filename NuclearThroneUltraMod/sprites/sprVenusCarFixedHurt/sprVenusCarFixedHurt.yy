@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprVenusCarFixedHurt",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b91f99ec-ca5e-4afa-9609-2fdecaac66c3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"81d5acfb-010a-48ce-9a03-cf249529c4fb","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b44ea0f6-924c-4f3b-b826-8b50546c944c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fc206ca9-8ad0-4baf-a896-b81c1bb0f539","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b91f99ec-ca5e-4afa-9609-2fdecaac66c3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d916461-68c1-4828-b4c8-ef2f29f8f844","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"81d5acfb-010a-48ce-9a03-cf249529c4fb","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e21ae38f-82e4-4cb2-badf-c859bc5004f2","path":"sprites/sprVenusCarFixedHurt/sprVenusCarFixedHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b44ea0f6-924c-4f3b-b826-8b50546c944c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

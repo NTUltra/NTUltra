@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltra133",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":93.74359,
+  "exportDir":"",
   "name":"musUltra133",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltra133.ogg",
-  "type":0,
   "volume":1.0,
 }

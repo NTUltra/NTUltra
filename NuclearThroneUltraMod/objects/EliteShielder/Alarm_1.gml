@@ -2,13 +2,12 @@ alarm[1] = actTime+random(5)
 Shielding=false;
 
 if team=2
-scrRogueTarget()
+	scrRogueTarget()
 else
-scrTarget();
+	scrTarget();
 
 if target != noone && instance_exists(target)
 {
-
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400
 	{
 		if wasBehindWall

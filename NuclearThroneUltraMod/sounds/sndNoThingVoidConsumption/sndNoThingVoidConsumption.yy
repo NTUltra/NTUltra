@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndNoThingVoidConsumption",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":1.9040363,
+  "exportDir":"",
   "name":"sndNoThingVoidConsumption",
   "parent":{
     "name":"NoThing",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndNoThingVoidConsumption.ogg",
-  "type":0,
   "volume":1.0,
 }

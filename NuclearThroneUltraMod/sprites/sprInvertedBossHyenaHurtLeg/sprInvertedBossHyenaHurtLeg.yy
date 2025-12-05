@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedBossHyenaHurtLeg",
   "bboxMode":0,
   "bbox_bottom":122,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"186d0787-4713-4b82-bb98-b6879423bf24","name":"186d0787-4713-4b82-bb98-b6879423bf24","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"186d0787-4713-4b82-bb98-b6879423bf24","name":"186d0787-4713-4b82-bb98-b6879423bf24","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,15 +75,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fb51cdd5-52f3-42fb-99c6-67fea8dbbd3f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0500608b-a5ef-4d05-8d1c-9fe1b346fa81","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"186d0787-4713-4b82-bb98-b6879423bf24","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c5be78f3-d14b-4318-aa47-621b0610b83a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"34f2253c-84f4-4a0e-ac0f-81457163d1c7","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fb51cdd5-52f3-42fb-99c6-67fea8dbbd3f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f868bfd2-59d9-43d0-aac5-b65f3a1a049e","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0500608b-a5ef-4d05-8d1c-9fe1b346fa81","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"186d0787-4713-4b82-bb98-b6879423bf24","path":"sprites/sprInvertedBossHyenaHurtLeg/sprInvertedBossHyenaHurtLeg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c5be78f3-d14b-4318-aa47-621b0610b83a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

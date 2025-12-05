@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprEnemySquareHomeDisappear",
   "bboxMode":0,
   "bbox_bottom":17,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"54009b73-3d91-4828-a39d-47fa14f59492","name":"54009b73-3d91-4828-a39d-47fa14f59492","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"54009b73-3d91-4828-a39d-47fa14f59492","name":"54009b73-3d91-4828-a39d-47fa14f59492","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a2909bdd-fc13-4fdb-a2bb-c3c888a7267a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d69a777f-3c10-423b-81bd-7a5cce5882c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54009b73-3d91-4828-a39d-47fa14f59492","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8aa9875c-4ae2-4d86-9643-4f29636fbb90","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6dae2556-5cd7-4b42-82bb-d9f2b2006f44","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a2909bdd-fc13-4fdb-a2bb-c3c888a7267a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca289796-79f9-42c2-bb37-0453c9fa59a5","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d69a777f-3c10-423b-81bd-7a5cce5882c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"54009b73-3d91-4828-a39d-47fa14f59492","path":"sprites/sprEnemySquareHomeDisappear/sprEnemySquareHomeDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8aa9875c-4ae2-4d86-9643-4f29636fbb90","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

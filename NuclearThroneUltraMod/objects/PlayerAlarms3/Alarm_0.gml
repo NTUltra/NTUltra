@@ -31,12 +31,12 @@ if enemyHealthWasChanged || playerHealthWasChanged
 						}
 						if (adrenalineHealTimer <= 0)
 						{ 
+							//adrenalineHealTimer = 0;
 							if (other.my_health < other.maxhealth || (adrenalineHealTimer + adrenalineHealCooldown <= 0 && other.maxarmour > 0 && other.armour < other.maxarmour))
 							{
 								canAdrenalineHeal = true;
 								adrenalineHealTimer = adrenalineHealCooldown;
 							}
-							adrenalineHealTimer = 0;
 						}
 					}
 					adrenalineAmmoTimer = other.adrenalineAmmoTimer;

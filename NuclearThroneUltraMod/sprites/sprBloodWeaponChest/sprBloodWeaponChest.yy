@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBloodWeaponChest",
   "bboxMode":0,
   "bbox_bottom":14,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"054d0361-36ce-4913-9398-fec16f48002e","name":"054d0361-36ce-4913-9398-fec16f48002e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"72f8afc0-600a-45cb-848d-0d88063f7695","name":"72f8afc0-600a-45cb-848d-0d88063f7695","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"054d0361-36ce-4913-9398-fec16f48002e","name":"054d0361-36ce-4913-9398-fec16f48002e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"72f8afc0-600a-45cb-848d-0d88063f7695","name":"72f8afc0-600a-45cb-848d-0d88063f7695","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -39,13 +39,7 @@
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
     "right":0,
-    "tileMode":[
-      0,
-      0,
-      0,
-      0,
-      0,
-    ],
+    "tileMode":[0,0,0,0,0,],
     "top":0,
   },
   "origin":4,
@@ -95,27 +89,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"054d0361-36ce-4913-9398-fec16f48002e","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"de2627f7-8172-4834-87ad-d1553a4c7732","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"35a6fd94-c1b3-40d7-9caa-e0e49c2a3fbd","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8073cc61-7bae-42d9-b7fb-1a5f169e328a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8f7ee146-6f64-4661-b5dd-1ded97aa8e3c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"72f8afc0-600a-45cb-848d-0d88063f7695","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"95d0ab74-c305-4570-b055-ee5fd7a58d18","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"acc07739-127d-4b46-9b59-fa85a16537e3","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"09f2b42f-cc1b-4ccb-b626-b6d61f937251","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"054d0361-36ce-4913-9398-fec16f48002e","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"de2627f7-8172-4834-87ad-d1553a4c7732","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"df32ebfc-c6a9-4b8b-a1be-98ca36dfa08b","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"35a6fd94-c1b3-40d7-9caa-e0e49c2a3fbd","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8fe4fae-0181-4c9a-87ae-d993ea480892","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8073cc61-7bae-42d9-b7fb-1a5f169e328a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fc5a32dc-a9d8-4755-8388-82aac33c5485","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8f7ee146-6f64-4661-b5dd-1ded97aa8e3c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"72f8afc0-600a-45cb-848d-0d88063f7695","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"95d0ab74-c305-4570-b055-ee5fd7a58d18","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb13bc48-a44e-4b87-ab48-6e4ea3398cae","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"acc07739-127d-4b46-9b59-fa85a16537e3","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e5eaea1-a130-45a3-a68a-c5dd7437b97b","path":"sprites/sprBloodWeaponChest/sprBloodWeaponChest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"09f2b42f-cc1b-4ccb-b626-b6d61f937251","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

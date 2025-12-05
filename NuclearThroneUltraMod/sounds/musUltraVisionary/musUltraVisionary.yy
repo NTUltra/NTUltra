@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltraVisionary",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
-  "duration":68.674706,
+  "duration":68.665375,
+  "exportDir":"",
   "name":"musUltraVisionary",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltraVisionary.ogg",
-  "type":1,
   "volume":1.0,
 }

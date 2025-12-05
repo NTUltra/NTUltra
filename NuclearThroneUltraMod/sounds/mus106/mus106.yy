@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"mus106",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":132.0,
+  "exportDir":"",
   "name":"mus106",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"mus106.ogg",
-  "type":0,
   "volume":1.0,
 }

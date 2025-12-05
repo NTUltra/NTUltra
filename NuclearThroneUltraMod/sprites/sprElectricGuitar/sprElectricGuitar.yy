@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprElectricGuitar",
   "bboxMode":0,
   "bbox_bottom":9,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8032ab18-7c45-49e0-856e-b79e932a434b","name":"8032ab18-7c45-49e0-856e-b79e932a434b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ef27fa9a-34a8-493e-9716-df247c69218f","name":"ef27fa9a-34a8-493e-9716-df247c69218f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8032ab18-7c45-49e0-856e-b79e932a434b","name":"8032ab18-7c45-49e0-856e-b79e932a434b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ef27fa9a-34a8-493e-9716-df247c69218f","name":"ef27fa9a-34a8-493e-9716-df247c69218f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,27 +74,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"eb5aa931-4625-45ea-96d4-393bc0172deb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8032ab18-7c45-49e0-856e-b79e932a434b","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f6baa3e2-274d-4ed3-9aad-a7ce7eeb2ebe","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef27fa9a-34a8-493e-9716-df247c69218f","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c23a8197-f173-43bd-b038-845fbb471af2","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ca8699b7-b886-4792-92cf-8b8c46940321","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a251ef4-15e5-4602-bcbb-c1c4453e05f7","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c32737b7-ddd3-4d42-b099-b34fff5a8b62","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"86c1a70e-d5d7-45dc-8524-27e0b083c066","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9a2a909d-ce45-4644-b098-c1bf0d4be4b7","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"eb5aa931-4625-45ea-96d4-393bc0172deb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8032ab18-7c45-49e0-856e-b79e932a434b","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f6baa3e2-274d-4ed3-9aad-a7ce7eeb2ebe","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef27fa9a-34a8-493e-9716-df247c69218f","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c23a8197-f173-43bd-b038-845fbb471af2","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e4591a7a-2e0d-4876-b2a0-8f678d8966c5","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ca8699b7-b886-4792-92cf-8b8c46940321","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"032e6a62-ea1e-4599-9e48-2f837bacf70a","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7a251ef4-15e5-4602-bcbb-c1c4453e05f7","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a6cab60-2fdd-4f21-8a31-ac7cd4f44ad0","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c32737b7-ddd3-4d42-b099-b34fff5a8b62","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bfd8e8dd-6fd5-4de9-8956-64d63018d16e","path":"sprites/sprElectricGuitar/sprElectricGuitar.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"86c1a70e-d5d7-45dc-8524-27e0b083c066","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

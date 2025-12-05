@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprEnemyLaserStartWallPierce",
   "bboxMode":1,
   "bbox_bottom":11,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"49582f76-7870-4523-9a18-77f001e272db","name":"49582f76-7870-4523-9a18-77f001e272db","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"49582f76-7870-4523-9a18-77f001e272db","name":"49582f76-7870-4523-9a18-77f001e272db","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"43f60ef3-acb5-49da-8336-4e9ad3e0807d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8a03e616-78e9-4fa0-b015-e5569363cc8c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"49582f76-7870-4523-9a18-77f001e272db","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c19669b3-6141-4eac-a113-6de6b1a8c020","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"87c2116c-cdd2-4cb5-b207-052f2baf2eda","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a8dbc986-d0b5-45ee-a402-6b8370fe5202","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"43f60ef3-acb5-49da-8336-4e9ad3e0807d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe0c02c8-76ec-4087-a953-d0dbf41fd963","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8a03e616-78e9-4fa0-b015-e5569363cc8c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"49582f76-7870-4523-9a18-77f001e272db","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c19669b3-6141-4eac-a113-6de6b1a8c020","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e885f48-023f-48b2-98ae-a4810bd9f2aa","path":"sprites/sprEnemyLaserStartWallPierce/sprEnemyLaserStartWallPierce.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"87c2116c-cdd2-4cb5-b207-052f2baf2eda","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

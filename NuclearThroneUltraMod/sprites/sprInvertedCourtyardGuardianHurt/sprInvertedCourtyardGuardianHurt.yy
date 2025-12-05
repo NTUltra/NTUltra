@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedCourtyardGuardianHurt",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dcf583f2-6575-4c07-95ef-eb0a199aa436","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d32af295-99be-4dac-b2c2-89fb76c4c698","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ad502f45-ff28-4144-8786-4e6c51890c54","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"feecd3f6-6c39-4c6c-b230-db1172fa040b","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dcf583f2-6575-4c07-95ef-eb0a199aa436","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"507dc224-30cd-4f94-a1fd-4837a1ce1036","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d32af295-99be-4dac-b2c2-89fb76c4c698","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4125ec72-3903-4134-b9ce-9a4c9f1a3796","path":"sprites/sprInvertedCourtyardGuardianHurt/sprInvertedCourtyardGuardianHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ad502f45-ff28-4144-8786-4e6c51890c54","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

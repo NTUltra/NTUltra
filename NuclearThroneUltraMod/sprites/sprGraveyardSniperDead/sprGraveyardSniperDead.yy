@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprGraveyardSniperDead",
   "bboxMode":0,
   "bbox_bottom":18,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"23e48040-10da-4ce1-9b2b-17653365d393","name":"23e48040-10da-4ce1-9b2b-17653365d393","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1a492199-fe3e-454e-8707-15bb9be23fb2","name":"1a492199-fe3e-454e-8707-15bb9be23fb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b9a958be-4728-4080-b3dc-2be4565e9e23","name":"b9a958be-4728-4080-b3dc-2be4565e9e23","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e21d0d2c-438b-4371-8340-18414da6ddb5","name":"e21d0d2c-438b-4371-8340-18414da6ddb5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"be0209c0-8913-49ae-8fcf-ce351ef54776","name":"be0209c0-8913-49ae-8fcf-ce351ef54776","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"23e48040-10da-4ce1-9b2b-17653365d393","name":"23e48040-10da-4ce1-9b2b-17653365d393","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1a492199-fe3e-454e-8707-15bb9be23fb2","name":"1a492199-fe3e-454e-8707-15bb9be23fb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b9a958be-4728-4080-b3dc-2be4565e9e23","name":"b9a958be-4728-4080-b3dc-2be4565e9e23","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e21d0d2c-438b-4371-8340-18414da6ddb5","name":"e21d0d2c-438b-4371-8340-18414da6ddb5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"be0209c0-8913-49ae-8fcf-ce351ef54776","name":"be0209c0-8913-49ae-8fcf-ce351ef54776","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23e48040-10da-4ce1-9b2b-17653365d393","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fb8a4d2e-d59e-40bd-91fc-736599c243c5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a492199-fe3e-454e-8707-15bb9be23fb2","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4befc6b7-90c6-4bb5-8072-4e1cc32276cd","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9a958be-4728-4080-b3dc-2be4565e9e23","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5350233b-7fd2-4f66-b245-38bf0c461505","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e21d0d2c-438b-4371-8340-18414da6ddb5","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1244c323-caa8-446c-9e6c-8d709f303acd","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"00e50a66-b35a-4982-bb1c-580c2708b0b2","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be0209c0-8913-49ae-8fcf-ce351ef54776","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c869aaaf-a3df-4ea7-897f-7e2700ca301e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"23e48040-10da-4ce1-9b2b-17653365d393","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fb8a4d2e-d59e-40bd-91fc-736599c243c5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a492199-fe3e-454e-8707-15bb9be23fb2","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4befc6b7-90c6-4bb5-8072-4e1cc32276cd","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9a958be-4728-4080-b3dc-2be4565e9e23","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5350233b-7fd2-4f66-b245-38bf0c461505","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e21d0d2c-438b-4371-8340-18414da6ddb5","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1244c323-caa8-446c-9e6c-8d709f303acd","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"25f191cd-4383-4dab-88a1-c7c6cf7b91ba","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"00e50a66-b35a-4982-bb1c-580c2708b0b2","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"be0209c0-8913-49ae-8fcf-ce351ef54776","path":"sprites/sprGraveyardSniperDead/sprGraveyardSniperDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c869aaaf-a3df-4ea7-897f-7e2700ca301e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

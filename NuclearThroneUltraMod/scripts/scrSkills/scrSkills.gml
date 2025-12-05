@@ -226,7 +226,7 @@ function scrSkills() {
 	//skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
-	skill_text[11] = "DEAL SLIGTHLY MORE DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
+	skill_text[11] = "DEAL SLIGHTLY MORE DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
 	skill_detail[11] = "ADD A <w>FIXED +0.5<w> EXTRA DAMAGE#TO ALL INSTANCES OF DAMAGE#DEALT TO ENEMIES##<w>65%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>##GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace

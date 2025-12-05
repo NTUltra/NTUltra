@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"amb100",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":0,
-  "bitRate":8,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":0,
   "conversionMode":0,
   "duration":40.0,
+  "exportDir":"",
   "name":"amb100",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"amb100.ogg",
-  "type":0,
   "volume":1.0,
 }

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedSandWormTurnAround",
   "bboxMode":1,
   "bbox_bottom":63,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4e5cbe01-c9a3-4fef-a39d-838d54189ac5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"56f5bd3a-a1df-41d4-b684-10229ce30ffa","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1e8f9030-72ef-4558-87ae-89b059ad5235","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"10a114bf-f656-46ab-a7a9-4cfe155e279b","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4e5cbe01-c9a3-4fef-a39d-838d54189ac5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a3b3365-b564-4fb8-bbbf-9e7cf2ef7ce5","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"56f5bd3a-a1df-41d4-b684-10229ce30ffa","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9b85c69-e8ff-4fd1-b423-ba6bb5520e7c","path":"sprites/sprInvertedSandWormTurnAround/sprInvertedSandWormTurnAround.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1e8f9030-72ef-4558-87ae-89b059ad5235","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

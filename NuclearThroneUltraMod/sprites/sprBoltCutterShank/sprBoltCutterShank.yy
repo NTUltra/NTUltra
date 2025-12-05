@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBoltCutterShank",
   "bboxMode":1,
   "bbox_bottom":95,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ee6175c3-d708-48f8-b0da-442869914685","name":"ee6175c3-d708-48f8-b0da-442869914685","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ee6175c3-d708-48f8-b0da-442869914685","name":"ee6175c3-d708-48f8-b0da-442869914685","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ee6175c3-d708-48f8-b0da-442869914685","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"adf5bdd7-0b57-41cd-b22f-1efed8cb360c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"34e0c1b5-ba8c-43ad-9ecb-9a9b26fd8f55","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"be9bffae-7dcc-47a0-a6f6-4f1f130bfb80","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ee6175c3-d708-48f8-b0da-442869914685","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"adf5bdd7-0b57-41cd-b22f-1efed8cb360c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3468c9a4-70ce-4a26-ab1c-49a9eddbbf6c","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"34e0c1b5-ba8c-43ad-9ecb-9a9b26fd8f55","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1627e10c-2d06-4a84-a5d1-0b928afbcc89","path":"sprites/sprBoltCutterShank/sprBoltCutterShank.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"be9bffae-7dcc-47a0-a6f6-4f1f130bfb80","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

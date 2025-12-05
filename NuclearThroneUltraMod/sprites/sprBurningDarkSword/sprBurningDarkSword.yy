@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBurningDarkSword",
   "bboxMode":0,
   "bbox_bottom":11,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"cdf612e2-068c-4424-aad6-4e819005585b","name":"cdf612e2-068c-4424-aad6-4e819005585b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"60210cba-e65f-41eb-8f24-ab7b058302b5","name":"60210cba-e65f-41eb-8f24-ab7b058302b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ffbecfd2-6831-4424-bef7-5aa785b70022","name":"ffbecfd2-6831-4424-bef7-5aa785b70022","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"48be736a-b692-4540-bdb3-e909b9a173c0","name":"48be736a-b692-4540-bdb3-e909b9a173c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cdf612e2-068c-4424-aad6-4e819005585b","name":"cdf612e2-068c-4424-aad6-4e819005585b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"60210cba-e65f-41eb-8f24-ab7b058302b5","name":"60210cba-e65f-41eb-8f24-ab7b058302b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ffbecfd2-6831-4424-bef7-5aa785b70022","name":"ffbecfd2-6831-4424-bef7-5aa785b70022","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"48be736a-b692-4540-bdb3-e909b9a173c0","name":"48be736a-b692-4540-bdb3-e909b9a173c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,27 +74,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cdf612e2-068c-4424-aad6-4e819005585b","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c7957a2-cb8c-4a59-a5eb-d32b3f385ce5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"60210cba-e65f-41eb-8f24-ab7b058302b5","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2f7f61fc-cc9d-4315-9d1f-2cc584a547a7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ffbecfd2-6831-4424-bef7-5aa785b70022","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e2d4a9e0-c4f7-465e-8212-72f46b53510c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7eb736e5-17b9-4f6c-b82a-a8df62467536","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d443639d-e134-4dc4-bb2e-94e18e978c02","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"48be736a-b692-4540-bdb3-e909b9a173c0","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9283973d-89bc-410c-9513-a9cfaff2ae41","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f851d5d5-ef66-44a6-914e-345f22e26632","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cdf612e2-068c-4424-aad6-4e819005585b","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8c7957a2-cb8c-4a59-a5eb-d32b3f385ce5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"60210cba-e65f-41eb-8f24-ab7b058302b5","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2f7f61fc-cc9d-4315-9d1f-2cc584a547a7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ffbecfd2-6831-4424-bef7-5aa785b70022","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e2d4a9e0-c4f7-465e-8212-72f46b53510c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"88a0a549-6bf9-4e55-ae75-208e2a4aa189","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7eb736e5-17b9-4f6c-b82a-a8df62467536","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d599b9a5-25f6-4eaa-9048-5ff8ad2a1e5b","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d443639d-e134-4dc4-bb2e-94e18e978c02","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"48be736a-b692-4540-bdb3-e909b9a173c0","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9283973d-89bc-410c-9513-a9cfaff2ae41","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8cd08572-63a1-419c-a49e-bcdfd93a3e52","path":"sprites/sprBurningDarkSword/sprBurningDarkSword.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f851d5d5-ef66-44a6-914e-345f22e26632","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

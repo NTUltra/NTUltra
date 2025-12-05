@@ -29,7 +29,6 @@ function collision_line_point(argument0, argument1, argument2, argument3, argume
 	        var ny = y1 + (y2 - y1) * np;
 	        var px = x1 + (x2 - x1) * p0;
 	        var py = y1 + (y2 - y1) * p0;
-	        var nr = collision_rectangle(px, py, nx, ny, qi, qp, qn);
 			var nr = collision_line(px, py, nx, ny, qi, qp, qn);
 	        if (nr != noone) {
 	            rr = nr;

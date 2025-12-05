@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprVulcanoRock3Hurt",
   "bboxMode":0,
   "bbox_bottom":16,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dd8d739a-7b8a-4e2c-b9fd-617f5e624ccf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1d12d663-cd95-480f-96db-c85a6edc4e53","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a95ef846-afe4-471a-b69a-e0901ebedf31","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dd8d739a-7b8a-4e2c-b9fd-617f5e624ccf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"01d84a28-c0dc-4d0e-b2d3-a032afc5befc","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1d12d663-cd95-480f-96db-c85a6edc4e53","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3f497b5a-ca3e-4021-8927-9ed629e2aede","path":"sprites/sprVulcanoRock3Hurt/sprVulcanoRock3Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a95ef846-afe4-471a-b69a-e0901ebedf31","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

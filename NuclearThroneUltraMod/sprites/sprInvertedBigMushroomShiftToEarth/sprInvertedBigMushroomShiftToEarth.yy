@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedBigMushroomShiftToEarth",
   "bboxMode":0,
   "bbox_bottom":43,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -69,12 +69,8 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","path":"sprites/sprInvertedBigMushroomShiftToEarth/sprInvertedBigMushroomShiftToEarth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"064d609f-183a-4355-a473-e2af081a98ff","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","path":"sprites/sprInvertedBigMushroomShiftToEarth/sprInvertedBigMushroomShiftToEarth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7be30fcb-c321-4022-9361-36730b5592d7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"50365eb5-9e8e-43e6-a73a-7a37ba18f270","path":"sprites/sprInvertedBigMushroomShiftToEarth/sprInvertedBigMushroomShiftToEarth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"064d609f-183a-4355-a473-e2af081a98ff","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e131faf-87d7-41d0-b0d0-6b38021e77d3","path":"sprites/sprInvertedBigMushroomShiftToEarth/sprInvertedBigMushroomShiftToEarth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7be30fcb-c321-4022-9361-36730b5592d7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

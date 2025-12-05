@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedGoldWormHurt",
   "bboxMode":0,
   "bbox_bottom":41,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"72e52fc1-56ea-4877-b459-167c5c5ce7b6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3882fc81-a78c-414d-9034-b00d72db9a5a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ecda8f53-477d-47f9-90e4-bb046d17b54e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5f3690ed-60ce-42ec-944a-066ae4eb6298","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"72e52fc1-56ea-4877-b459-167c5c5ce7b6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a53acc03-cb0a-4402-a833-91a1ba9a0fd8","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3882fc81-a78c-414d-9034-b00d72db9a5a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7c16f4d-db46-4bc2-bf4b-54cc30f1bf0c","path":"sprites/sprInvertedGoldWormHurt/sprInvertedGoldWormHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ecda8f53-477d-47f9-90e4-bb046d17b54e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

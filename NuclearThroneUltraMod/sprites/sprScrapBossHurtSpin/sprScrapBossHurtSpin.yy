@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprScrapBossHurtSpin",
   "bboxMode":1,
   "bbox_bottom":95,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"82732caa-1d6b-454a-aaa8-388108c9a4cd","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"687d4755-0cb7-4d45-9509-93781f733fde","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8e958234-751a-4216-9b7b-842358f98fb8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"06c8bfa0-3dd0-4def-80b3-ee9deae0a2bf","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"82732caa-1d6b-454a-aaa8-388108c9a4cd","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6c3a8a73-315c-4733-a3e7-9260010a75d3","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"687d4755-0cb7-4d45-9509-93781f733fde","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cbe2e931-f9be-437b-8d2e-b13cbd583f53","path":"sprites/sprScrapBossHurtSpin/sprScrapBossHurtSpin.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8e958234-751a-4216-9b7b-842358f98fb8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

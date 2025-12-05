@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedVulcanoRock1Dead",
   "bboxMode":0,
   "bbox_bottom":21,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a81e76ea-6717-4d56-8806-b47a80a7478d","name":"a81e76ea-6717-4d56-8806-b47a80a7478d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6188466e-d6de-41f1-831f-398c31cd6d62","name":"6188466e-d6de-41f1-831f-398c31cd6d62","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a81e76ea-6717-4d56-8806-b47a80a7478d","name":"a81e76ea-6717-4d56-8806-b47a80a7478d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6188466e-d6de-41f1-831f-398c31cd6d62","name":"6188466e-d6de-41f1-831f-398c31cd6d62","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,21 +72,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b9f9969d-c039-45d1-b179-97ba7759e27c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4179fc36-954e-46c4-87d3-472992201508","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"07720f42-3ea8-4381-893b-8a8bf99f905c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a81e76ea-6717-4d56-8806-b47a80a7478d","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3bda4019-132a-4d08-9145-e698d32858a0","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6188466e-d6de-41f1-831f-398c31cd6d62","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6d30535b-b337-4905-8599-d5a2cb86d6e5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b27ccdc-e136-4edc-8de0-22cdbf148676","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b9f9969d-c039-45d1-b179-97ba7759e27c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6206c2f4-7b1b-4564-b4a2-cd2733f98c8c","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4179fc36-954e-46c4-87d3-472992201508","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"da580395-4c9f-4cd1-aded-fa1fa432e42c","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"07720f42-3ea8-4381-893b-8a8bf99f905c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a81e76ea-6717-4d56-8806-b47a80a7478d","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3bda4019-132a-4d08-9145-e698d32858a0","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6188466e-d6de-41f1-831f-398c31cd6d62","path":"sprites/sprInvertedVulcanoRock1Dead/sprInvertedVulcanoRock1Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6d30535b-b337-4905-8599-d5a2cb86d6e5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

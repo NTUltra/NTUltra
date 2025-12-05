@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprPitGhostBossHurt",
   "bboxMode":0,
   "bbox_bottom":48,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"56cc74cb-584f-4f7d-8ca1-4215660baf21","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1968f6b9-66bd-4355-82fb-da188c81ad4a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c6493c02-fc29-4add-8266-49b711dda13e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a834ee91-90cd-4ebe-8890-4dd0561c1cce","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"56cc74cb-584f-4f7d-8ca1-4215660baf21","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"65fcd17f-7bff-4683-a8e4-a861c93438c4","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1968f6b9-66bd-4355-82fb-da188c81ad4a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"dd13a1c9-b6ee-44b7-9da0-224f5e65afdd","path":"sprites/sprPitGhostBossHurt/sprPitGhostBossHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c6493c02-fc29-4add-8266-49b711dda13e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

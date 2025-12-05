@@ -538,7 +538,7 @@ if !instance_exists(LevCont) and visible = 1
 			peaceBarriers += 1;
 			getVision = true;
 			voidBeam = voidBeamMax;
-			scrApplyEnemyVenom(3,id);
+			//scrApplyEnemyVenom(3,id);
 			// newMovement = !newMovement;
 			Sleep(100);
 			//getVision = true;
@@ -554,10 +554,10 @@ if !instance_exists(LevCont) and visible = 1
 			UberCont.portalEssence += 200;
 			rage = 500;
 			var dangle = random(1)*360;
-			/**with enemy
+			with enemy
 			{
 				my_health = 0;
-			}*/
+			}
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
 			var n = instance_nearest(x,y,WallHitMe)

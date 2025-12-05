@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndYungCuzStartHack4",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.591156,
+  "exportDir":"",
   "name":"sndYungCuzStartHack4",
   "parent":{
     "name":"Fx",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndYungCuzStartHack4.ogg",
-  "type":0,
   "volume":1.0,
 }

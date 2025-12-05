@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedGoldNecromancerDead",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"36232ca4-fe11-40c7-a193-cc6ab9998763","name":"36232ca4-fe11-40c7-a193-cc6ab9998763","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"36232ca4-fe11-40c7-a193-cc6ab9998763","name":"36232ca4-fe11-40c7-a193-cc6ab9998763","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f89ecaed-2dd1-4d7c-bc78-22d8c634ca68","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a5ee366b-1462-4895-bdf1-25970730f500","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"36232ca4-fe11-40c7-a193-cc6ab9998763","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"293771d1-37d3-4e6a-b911-d929a1e74a82","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"584705fe-1225-4d1c-ba85-e64b327f0320","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"54eb4646-450f-4a9a-97d0-91ee46c845cc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"045cba22-bcf6-4c19-8cbb-ff99011a2dbc","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5da29ed7-f5c3-4c25-9e53-9b8028dee13d","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f89ecaed-2dd1-4d7c-bc78-22d8c634ca68","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca8e304e-204c-49ae-a124-6ccbf8929f2c","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a5ee366b-1462-4895-bdf1-25970730f500","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"36232ca4-fe11-40c7-a193-cc6ab9998763","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"293771d1-37d3-4e6a-b911-d929a1e74a82","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bcfdfc84-fa90-4523-b804-8e85d24776fd","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"584705fe-1225-4d1c-ba85-e64b327f0320","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b873b7f7-8cc7-4dc3-b1b8-0cf85a99c133","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"54eb4646-450f-4a9a-97d0-91ee46c845cc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7ebe83d-3325-4eeb-884d-8c3385f06680","path":"sprites/sprInvertedGoldNecromancerDead/sprInvertedGoldNecromancerDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"045cba22-bcf6-4c19-8cbb-ff99011a2dbc","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprCrown1HurtEnemy",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d27e3cbf-923d-444d-aa01-25d477975809","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7b9f6f55-5e51-45b4-a625-c3883b9a72e9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6df312bb-fabf-4151-817e-828b4aa64dfb","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa6125a3-1518-4c02-a36c-b4560e46eaca","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d27e3cbf-923d-444d-aa01-25d477975809","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f107c04e-8f63-4b9b-bae7-6b7bb9f9cdb9","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7b9f6f55-5e51-45b4-a625-c3883b9a72e9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"14df6722-5e07-4da6-b27e-5e85b538f3e8","path":"sprites/sprCrown1HurtEnemy/sprCrown1HurtEnemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6df312bb-fabf-4151-817e-828b4aa64dfb","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

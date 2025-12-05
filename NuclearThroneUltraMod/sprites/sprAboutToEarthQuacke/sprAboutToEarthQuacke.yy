@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprAboutToEarthQuacke",
   "bboxMode":1,
   "bbox_bottom":31,
@@ -12,17 +12,17 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"77503b87-c707-42dd-9b5f-94d3763919f2","name":"77503b87-c707-42dd-9b5f-94d3763919f2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"286452ff-6975-460a-99de-75a147708475","name":"286452ff-6975-460a-99de-75a147708475","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"691b80ea-6279-4793-82c3-e666f7f27850","name":"691b80ea-6279-4793-82c3-e666f7f27850","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e12d7f3c-fe5b-4895-afc1-193904365eec","name":"e12d7f3c-fe5b-4895-afc1-193904365eec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8cef697e-7c78-49a8-99ed-c062e56e3642","name":"8cef697e-7c78-49a8-99ed-c062e56e3642","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"882a8b51-2528-43d6-b8ff-313cdaafb944","name":"882a8b51-2528-43d6-b8ff-313cdaafb944","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"75fedf58-b921-48a8-be10-e8b000826796","name":"75fedf58-b921-48a8-be10-e8b000826796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"77503b87-c707-42dd-9b5f-94d3763919f2","name":"77503b87-c707-42dd-9b5f-94d3763919f2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"286452ff-6975-460a-99de-75a147708475","name":"286452ff-6975-460a-99de-75a147708475","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"691b80ea-6279-4793-82c3-e666f7f27850","name":"691b80ea-6279-4793-82c3-e666f7f27850","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e12d7f3c-fe5b-4895-afc1-193904365eec","name":"e12d7f3c-fe5b-4895-afc1-193904365eec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8cef697e-7c78-49a8-99ed-c062e56e3642","name":"8cef697e-7c78-49a8-99ed-c062e56e3642","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"882a8b51-2528-43d6-b8ff-313cdaafb944","name":"882a8b51-2528-43d6-b8ff-313cdaafb944","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"75fedf58-b921-48a8-be10-e8b000826796","name":"75fedf58-b921-48a8-be10-e8b000826796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,39 +78,17 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"400ea2cd-dfda-4345-82aa-6b37d7711d9d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"77503b87-c707-42dd-9b5f-94d3763919f2","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"57278367-21d1-4fda-9795-5299d51c35d3","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"286452ff-6975-460a-99de-75a147708475","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b38f279b-defa-4149-96d4-c50535d7df96","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"691b80ea-6279-4793-82c3-e666f7f27850","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"69c09fa9-757c-45ea-be89-3c6f03f29065","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e12d7f3c-fe5b-4895-afc1-193904365eec","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3f6e2641-429f-4ba4-844f-e99de75d5b8f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8cef697e-7c78-49a8-99ed-c062e56e3642","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"624e6fc5-5585-4e63-8774-430a3c74cd92","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"882a8b51-2528-43d6-b8ff-313cdaafb944","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"52e3cf93-c4d3-42de-a1b6-8686fbfd5567","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"639f76d6-2992-42f1-974a-efc6d03e4c8d","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8fc5f996-afff-437d-8c32-8ce5732cb28a","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"955fb6f1-97ba-4b0b-8ddb-58b5a4b63490","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"75fedf58-b921-48a8-be10-e8b000826796","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"189943fa-4e9d-4d62-af07-175bc1d24394","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4b82f61e-3e4e-486d-8b8f-691f353d4c8d","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"400ea2cd-dfda-4345-82aa-6b37d7711d9d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"77503b87-c707-42dd-9b5f-94d3763919f2","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"57278367-21d1-4fda-9795-5299d51c35d3","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"286452ff-6975-460a-99de-75a147708475","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b38f279b-defa-4149-96d4-c50535d7df96","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"691b80ea-6279-4793-82c3-e666f7f27850","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"69c09fa9-757c-45ea-be89-3c6f03f29065","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e12d7f3c-fe5b-4895-afc1-193904365eec","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3f6e2641-429f-4ba4-844f-e99de75d5b8f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8cef697e-7c78-49a8-99ed-c062e56e3642","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"624e6fc5-5585-4e63-8774-430a3c74cd92","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"882a8b51-2528-43d6-b8ff-313cdaafb944","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"52e3cf93-c4d3-42de-a1b6-8686fbfd5567","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"834ffb84-e62d-4ea1-b9cf-9298a30ddb4e","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"639f76d6-2992-42f1-974a-efc6d03e4c8d","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"01876993-37b7-4c8f-9c78-7b5ad5b9d218","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8fc5f996-afff-437d-8c32-8ce5732cb28a","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"985f5b49-c1f7-448f-af7b-8c0d6d474c98","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"955fb6f1-97ba-4b0b-8ddb-58b5a4b63490","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"75fedf58-b921-48a8-be10-e8b000826796","path":"sprites/sprAboutToEarthQuacke/sprAboutToEarthQuacke.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"189943fa-4e9d-4d62-af07-175bc1d24394","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

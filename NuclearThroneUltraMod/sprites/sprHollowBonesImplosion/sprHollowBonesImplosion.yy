@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprHollowBonesImplosion",
   "bboxMode":0,
   "bbox_bottom":95,
@@ -12,15 +12,15 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6ea44f98-d148-426e-a8ee-3d112382946c","name":"6ea44f98-d148-426e-a8ee-3d112382946c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e032cb70-0034-4d36-b5e1-71b4428b3208","name":"e032cb70-0034-4d36-b5e1-71b4428b3208","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6ea44f98-d148-426e-a8ee-3d112382946c","name":"6ea44f98-d148-426e-a8ee-3d112382946c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e032cb70-0034-4d36-b5e1-71b4428b3208","name":"e032cb70-0034-4d36-b5e1-71b4428b3208","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,33 +78,15 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3ea96ca8-6a06-4338-8170-19f47dfa17c8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b09ca254-cc77-4d34-a385-f68df9e5ac62","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"748cb4d4-30ff-4211-ac2f-89c30ee2566b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6ea44f98-d148-426e-a8ee-3d112382946c","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8d399e19-8886-4a22-8276-b30957da26e6","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"82d73401-04b8-452e-b95d-b76ef50622d3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"af30b1b3-7c04-4c9a-b6c0-1e04efe959a5","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e032cb70-0034-4d36-b5e1-71b4428b3208","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d4cdb1ca-d982-47f4-9d6f-85b2f222cec5","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"40d3e4d1-83f6-4bd4-a806-a577f049bb88","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"abb01121-8a79-4a02-9021-f2dcb8994b9d","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1350e7f2-3ce2-455e-b0c9-d98f806b5128","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3ea96ca8-6a06-4338-8170-19f47dfa17c8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc74f70c-7e37-44a1-bea4-3e9b382a9dcd","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b09ca254-cc77-4d34-a385-f68df9e5ac62","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"14aac5d8-3f6c-45a8-b3f3-de30d24cdab7","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"748cb4d4-30ff-4211-ac2f-89c30ee2566b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6ea44f98-d148-426e-a8ee-3d112382946c","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8d399e19-8886-4a22-8276-b30957da26e6","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"14b12c7f-ad50-4e54-b015-a4d14c2c6c36","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"82d73401-04b8-452e-b95d-b76ef50622d3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ce7f06c7-0cdd-4ed0-b56e-5be0e8c5d975","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"af30b1b3-7c04-4c9a-b6c0-1e04efe959a5","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e032cb70-0034-4d36-b5e1-71b4428b3208","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d4cdb1ca-d982-47f4-9d6f-85b2f222cec5","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cac24255-6f0a-4d61-ac77-b9e6d517df56","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"40d3e4d1-83f6-4bd4-a806-a577f049bb88","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"12406af4-3e7e-4f70-b63f-579bb2d9e2da","path":"sprites/sprHollowBonesImplosion/sprHollowBonesImplosion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"abb01121-8a79-4a02-9021-f2dcb8994b9d","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

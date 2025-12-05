@@ -4852,7 +4852,7 @@ function scrWeapons() {
 	wep_type[430] = 2
 	wep_auto[430] = 0
 	wep_load[430] = 28
-	wep_cost[430] = 4
+	wep_cost[430] = 5
 	wep_sprt[430] = sprSlugCannon
 	wep_area[430] = 12
 	wep_text[430] = "CTRL + S"
@@ -9247,7 +9247,7 @@ function scrWeapons() {
 	wep_name[825] = "ENERGY SPEAR"
 	wep_type[825] = 5
 	wep_auto[825] = 1
-	wep_load[825] = 16
+	wep_load[825] = 14
 	wep_cost[825] = 2
 	wep_sprt[825] = sprEnergySpear
 	wep_area[825] = 15
@@ -10408,6 +10408,17 @@ function scrWeapons() {
 	wep_swap[926] = sndSwapMachinegun
 	wep_rad[926] = 0;
 	wep_popup[926] = "ORB OBLITERATES ALL IT TOUCHES";
+	
+	wep_name[927] = "ULTRA EXPLOSIVE REVOLVER"
+	wep_type[927] = 1
+	wep_auto[927] = 1
+	wep_load[927] = 11
+	wep_cost[927] = 5
+	wep_sprt[927] = sprUltraExplosiveRevolver
+	wep_area[927] = 20
+	wep_text[927] = "NUKE PISTOL"
+	wep_swap[927] = sndSwapMachinegun
+	wep_rad[927] = 5;
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

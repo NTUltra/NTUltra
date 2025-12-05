@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBigVultureSkullDead",
   "bboxMode":0,
   "bbox_bottom":36,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"516fa853-6878-4b33-a889-eb015ff9cff3","name":"516fa853-6878-4b33-a889-eb015ff9cff3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"516fa853-6878-4b33-a889-eb015ff9cff3","name":"516fa853-6878-4b33-a889-eb015ff9cff3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7b317128-e2cd-43d6-b09a-d74b77a70688","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"516fa853-6878-4b33-a889-eb015ff9cff3","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"269ab3be-69b4-4b4f-9020-8e971ffde1e7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fb05c6f4-9bd7-4837-a4bb-27cb890cf060","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6e68a704-ad4c-47dc-9107-316462cbc4cf","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7b317128-e2cd-43d6-b09a-d74b77a70688","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"516fa853-6878-4b33-a889-eb015ff9cff3","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"269ab3be-69b4-4b4f-9020-8e971ffde1e7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a147aeb7-dac7-4f4b-83a4-aa03b7296e36","path":"sprites/sprBigVultureSkullDead/sprBigVultureSkullDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fb05c6f4-9bd7-4837-a4bb-27cb890cf060","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

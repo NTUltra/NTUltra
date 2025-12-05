@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltraInvertedRoute",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":207.46971,
+  "exportDir":"",
   "name":"musUltraInvertedRoute",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltraInvertedRoute.wav",
-  "type":1,
   "volume":1.0,
 }

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraBigDogMissileHurt",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"55033066-8117-4dc9-86e8-2c5396ff706f","name":"55033066-8117-4dc9-86e8-2c5396ff706f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"55033066-8117-4dc9-86e8-2c5396ff706f","name":"55033066-8117-4dc9-86e8-2c5396ff706f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"55033066-8117-4dc9-86e8-2c5396ff706f","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"68ec8bc1-5c4e-4120-80dc-264ad168c753","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ddbc8ce1-5761-4bd1-a7bc-e81b365de5f7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8d00b670-ada3-4b01-b87b-bf63aced38c7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"55033066-8117-4dc9-86e8-2c5396ff706f","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"68ec8bc1-5c4e-4120-80dc-264ad168c753","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8853e1d-29e1-49e2-9cb5-489e7adee2a1","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ddbc8ce1-5761-4bd1-a7bc-e81b365de5f7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4046da82-3b3b-4b2c-a0d5-e0ff867a646c","path":"sprites/sprUltraBigDogMissileHurt/sprUltraBigDogMissileHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8d00b670-ada3-4b01-b87b-bf63aced38c7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

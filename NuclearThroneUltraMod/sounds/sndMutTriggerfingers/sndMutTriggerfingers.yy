@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndMutTriggerfingers",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":2.364063,
+  "exportDir":"",
   "name":"sndMutTriggerfingers",
   "parent":{
     "name":"Mutations",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndMutTriggerfingers",
-  "type":0,
   "volume":1.0,
 }

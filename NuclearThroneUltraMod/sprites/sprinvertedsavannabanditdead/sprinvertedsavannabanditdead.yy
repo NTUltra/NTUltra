@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedSavannaBanditDead",
   "bboxMode":1,
   "bbox_bottom":23,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"68b787b4-09ae-409d-85aa-aadf474c55a6","name":"68b787b4-09ae-409d-85aa-aadf474c55a6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"462a805c-f610-477d-8ad3-74005d78c79a","name":"462a805c-f610-477d-8ad3-74005d78c79a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7c610f48-8aba-4223-8634-d632190cf3c3","name":"7c610f48-8aba-4223-8634-d632190cf3c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"68b787b4-09ae-409d-85aa-aadf474c55a6","name":"68b787b4-09ae-409d-85aa-aadf474c55a6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"462a805c-f610-477d-8ad3-74005d78c79a","name":"462a805c-f610-477d-8ad3-74005d78c79a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7c610f48-8aba-4223-8634-d632190cf3c3","name":"7c610f48-8aba-4223-8634-d632190cf3c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8e15f95d-19b7-49d2-822a-774b83aef0ee","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"68b787b4-09ae-409d-85aa-aadf474c55a6","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a5f50f0a-eaa8-4b60-a52b-c17d83cad83c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"04c87541-e81e-44e5-892f-a7b85b56ebd6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"462a805c-f610-477d-8ad3-74005d78c79a","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e1b0f94c-204b-45e5-8d98-61ee88aacb63","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c610f48-8aba-4223-8634-d632190cf3c3","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"83663751-3964-4bd9-aca3-becc7073f3a2","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4087557e-7057-4f6b-bc89-d025d9459920","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4bd2c05-d0b3-4bdf-b7a9-f2f0b083b8ba","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8e15f95d-19b7-49d2-822a-774b83aef0ee","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"68b787b4-09ae-409d-85aa-aadf474c55a6","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a5f50f0a-eaa8-4b60-a52b-c17d83cad83c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"979752d6-54cf-4f29-843b-ac4b2c8f920f","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"04c87541-e81e-44e5-892f-a7b85b56ebd6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"462a805c-f610-477d-8ad3-74005d78c79a","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e1b0f94c-204b-45e5-8d98-61ee88aacb63","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c610f48-8aba-4223-8634-d632190cf3c3","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"83663751-3964-4bd9-aca3-becc7073f3a2","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"14866ef5-295c-43c7-8a69-cc52ee0e461a","path":"sprites/sprInvertedSavannaBanditDead/sprInvertedSavannaBanditDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4087557e-7057-4f6b-bc89-d025d9459920","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

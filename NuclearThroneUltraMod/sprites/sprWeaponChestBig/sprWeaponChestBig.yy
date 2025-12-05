@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprWeaponChestBig",
   "bboxMode":1,
   "bbox_bottom":23,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fb581978-9942-4bfa-bd95-455c8e528bd8","name":"fb581978-9942-4bfa-bd95-455c8e528bd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d5675220-77b6-4358-9f61-65d64f80b303","name":"d5675220-77b6-4358-9f61-65d64f80b303","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"345b88aa-240d-4e29-877e-dae5612160d2","name":"345b88aa-240d-4e29-877e-dae5612160d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fb581978-9942-4bfa-bd95-455c8e528bd8","name":"fb581978-9942-4bfa-bd95-455c8e528bd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d5675220-77b6-4358-9f61-65d64f80b303","name":"d5675220-77b6-4358-9f61-65d64f80b303","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"345b88aa-240d-4e29-877e-dae5612160d2","name":"345b88aa-240d-4e29-877e-dae5612160d2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,27 +74,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"26633c54-194d-4473-9c1d-842875a264ed","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb581978-9942-4bfa-bd95-455c8e528bd8","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cf5016cc-a5de-4774-b117-748c1d1b89b7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bc9a5c2b-dbe2-4f7a-a236-c5e21a5debfa","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d5675220-77b6-4358-9f61-65d64f80b303","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"413283fc-f6d4-4c45-97a4-f928fad5968c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"27600f5b-eb1f-473e-90f8-44d23bf6376d","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d65c9a93-333a-4f4e-bf86-3de535048cc1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"345b88aa-240d-4e29-877e-dae5612160d2","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a84931c-a6a7-426b-872d-86eac995850e","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb32e765-a55c-4b28-b0fa-c68158bfd1ee","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"26633c54-194d-4473-9c1d-842875a264ed","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb581978-9942-4bfa-bd95-455c8e528bd8","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cf5016cc-a5de-4774-b117-748c1d1b89b7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d3f2220-3022-405c-aeba-60f46cbe12fd","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bc9a5c2b-dbe2-4f7a-a236-c5e21a5debfa","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d5675220-77b6-4358-9f61-65d64f80b303","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"413283fc-f6d4-4c45-97a4-f928fad5968c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f70f2625-8733-4aa2-b62c-8d2c6ec89f42","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"27600f5b-eb1f-473e-90f8-44d23bf6376d","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e82df4b-5585-40d8-b3ae-4a71d77d482d","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d65c9a93-333a-4f4e-bf86-3de535048cc1","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"345b88aa-240d-4e29-877e-dae5612160d2","path":"sprites/sprWeaponChestBig/sprWeaponChestBig.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7a84931c-a6a7-426b-872d-86eac995850e","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

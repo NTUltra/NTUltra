@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"amb0c",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":27.535261,
+  "exportDir":"",
   "name":"amb0c",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"amb0c.ogg",
-  "type":0,
   "volume":1.0,
 }

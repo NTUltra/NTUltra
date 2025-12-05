@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"mskBloodSewingNeedleCurveLine",
   "bboxMode":0,
   "bbox_bottom":22,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"30530f31-9e49-4cd8-9905-a707d39bde51","name":"30530f31-9e49-4cd8-9905-a707d39bde51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4076fec3-1af3-4041-a215-1d67dc26d159","name":"4076fec3-1af3-4041-a215-1d67dc26d159","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"30530f31-9e49-4cd8-9905-a707d39bde51","name":"30530f31-9e49-4cd8-9905-a707d39bde51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4076fec3-1af3-4041-a215-1d67dc26d159","name":"4076fec3-1af3-4041-a215-1d67dc26d159","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,30 +75,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"63efdc56-570e-4520-ab9f-30b8ee17126e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"77572464-f8fd-4853-891e-b1a33382b4ab","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d31c3d08-8665-46dd-b209-41a8f2f8b2ba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f19ee459-08d4-401b-af02-cb3d384c0666","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"829ee68f-37e6-44f0-865c-3b9b0dea1dc3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30530f31-9e49-4cd8-9905-a707d39bde51","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2713d65d-8eaf-48d2-b52d-c1c94ffc84e7","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4076fec3-1af3-4041-a215-1d67dc26d159","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d6a42ac9-d0aa-43c0-93ea-62fbdb1ca012","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"551504d6-5226-43e0-b7b4-746c16eb8bd9","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fee4d4c8-a035-45e7-a88c-6c7d60dce10b","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"63efdc56-570e-4520-ab9f-30b8ee17126e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a13b638c-aa1b-4e10-9958-adff0e7f1ebc","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"77572464-f8fd-4853-891e-b1a33382b4ab","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"76b40ed8-fc0d-4351-a62e-8879d258d4eb","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d31c3d08-8665-46dd-b209-41a8f2f8b2ba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3a030a8-ca12-49d4-a079-484f62b3e5ec","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f19ee459-08d4-401b-af02-cb3d384c0666","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e3e9f1a-5eed-4977-b918-4e07aa51b264","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"829ee68f-37e6-44f0-865c-3b9b0dea1dc3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"30530f31-9e49-4cd8-9905-a707d39bde51","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2713d65d-8eaf-48d2-b52d-c1c94ffc84e7","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4076fec3-1af3-4041-a215-1d67dc26d159","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d6a42ac9-d0aa-43c0-93ea-62fbdb1ca012","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"504370a9-9b02-4d2e-aa9c-667ca814dbd1","path":"sprites/mskBloodSewingNeedleCurveLine/mskBloodSewingNeedleCurveLine.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"551504d6-5226-43e0-b7b4-746c16eb8bd9","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

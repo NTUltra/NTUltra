@@ -30,7 +30,7 @@ if target != noone && instance_exists(target)
 				gunangle = point_direction(x,y,target.x,target.y)
 
 				scrTarget()
-				if random(5) < 1 and target != noone && instance_exists(Wall)
+				if random(5) < 1 and target != noone && instance_exists(target) && instance_exists(Wall)
 				{
 					with Raven
 					{

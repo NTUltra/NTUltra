@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedBloodCowHurt",
   "bboxMode":0,
   "bbox_bottom":35,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,15 +72,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b4d2edf5-f6c9-4400-aae4-ccb95b4cb64b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"46e0426c-590c-4a22-801b-66d4f68e2191","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5d64d4ab-30a9-466b-adca-1d19b16c8582","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0b72cacd-ad24-49d7-8108-b89a632b9aa0","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b4d2edf5-f6c9-4400-aae4-ccb95b4cb64b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"159af0f2-7e2f-4ec0-a169-2319df6e6696","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"46e0426c-590c-4a22-801b-66d4f68e2191","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a6b6eaa-ae06-4cfb-a9af-74fcde193d6e","path":"sprites/sprInvertedBloodCowHurt/sprInvertedBloodCowHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5d64d4ab-30a9-466b-adca-1d19b16c8582","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

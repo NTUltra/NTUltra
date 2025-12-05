@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedGoldJungleFlyHurt",
   "bboxMode":0,
   "bbox_bottom":29,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e974d228-ab06-4455-9892-139ad065d185","name":"e974d228-ab06-4455-9892-139ad065d185","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4cb62450-e634-4673-87b7-fb3d28681e47","name":"4cb62450-e634-4673-87b7-fb3d28681e47","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e974d228-ab06-4455-9892-139ad065d185","name":"e974d228-ab06-4455-9892-139ad065d185","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4cb62450-e634-4673-87b7-fb3d28681e47","name":"4cb62450-e634-4673-87b7-fb3d28681e47","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"668b24ed-2191-4bbf-b2f5-6fc881e3ee12","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e974d228-ab06-4455-9892-139ad065d185","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd559dc1-b645-4185-a3a3-a9870b8b0cd5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4cb62450-e634-4673-87b7-fb3d28681e47","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0b5c8148-8778-4809-9a27-6148fe42c46d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f29f30d1-3fcc-4267-a375-66f6acf5d1be","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"668b24ed-2191-4bbf-b2f5-6fc881e3ee12","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e974d228-ab06-4455-9892-139ad065d185","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cd559dc1-b645-4185-a3a3-a9870b8b0cd5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4cb62450-e634-4673-87b7-fb3d28681e47","path":"sprites/sprInvertedGoldJungleFlyHurt/sprInvertedGoldJungleFlyHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0b5c8148-8778-4809-9a27-6148fe42c46d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

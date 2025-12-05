@@ -1,4 +1,8 @@
 //UNLOCK EASY MODE
+with enemy
+{
+	target = noone;	
+}
 if area=1 && subarea=1 && loops=0 && visible && my_health < 1
 scrUnlockGameMode(9,"FOR DYING ON 1-1#YOU DID THAT ON PURPOSE")
 audio_stop_sound(sndFishRollUpgLoop);
@@ -12,8 +16,6 @@ with UberCont
 {
 	UberCont.voidShopHealthTracker = log2(UberCont.voidShopHealthUpgrade/25);
 	UberCont.voidShopMutationTracker = log2(UberCont.voidShopMutationUpgrade/40);
-	debug("UberCont.voidShopHealthTracker ",UberCont.voidShopHealthTracker);
-	debug("UberCont.voidShopMutationTracker ",UberCont.voidShopMutationTracker);
 
 }
 if scrIsGamemode(8)

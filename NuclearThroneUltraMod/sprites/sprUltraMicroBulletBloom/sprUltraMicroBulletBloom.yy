@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraMicroBulletBloom",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e0b497e0-18cc-4696-a0a1-9888c7fa7df1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"154f2fb6-cf0e-4d29-99d6-fdadded8def2","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6589313a-5509-4a9d-958a-23ad58f7757e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"918e4a99-11d5-4b4d-8f4f-3e5a9f8e9464","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e0b497e0-18cc-4696-a0a1-9888c7fa7df1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e7dfe8d6-e6c9-40a9-a591-ead6c32b78e1","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"154f2fb6-cf0e-4d29-99d6-fdadded8def2","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"98fefc20-647c-4789-ae80-7b2a82b62ffb","path":"sprites/sprUltraMicroBulletBloom/sprUltraMicroBulletBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6589313a-5509-4a9d-958a-23ad58f7757e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedHyperCrystalHurt",
   "bboxMode":0,
   "bbox_bottom":89,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8d160850-379d-42e1-a77b-fe18770d7c95","name":"8d160850-379d-42e1-a77b-fe18770d7c95","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8d160850-379d-42e1-a77b-fe18770d7c95","name":"8d160850-379d-42e1-a77b-fe18770d7c95","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8d160850-379d-42e1-a77b-fe18770d7c95","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6e14d497-04f8-44a2-893b-b5820ef581ff","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"54cfaadd-db93-4f64-ab53-95962399bd82","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4c2fc94e-ebd1-4d66-83f2-bfdb3e6ba3d1","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8d160850-379d-42e1-a77b-fe18770d7c95","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6e14d497-04f8-44a2-893b-b5820ef581ff","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a57adaf5-3fde-4f46-bd09-12d780fee0dd","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"54cfaadd-db93-4f64-ab53-95962399bd82","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"976edca0-f4ac-4b2c-85a0-efa0117654f9","path":"sprites/sprInvertedHyperCrystalHurt/sprInvertedHyperCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4c2fc94e-ebd1-4d66-83f2-bfdb3e6ba3d1","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

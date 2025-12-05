@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprDogGuardianLand",
   "bboxMode":0,
   "bbox_bottom":49,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4ff79f8b-b177-4203-8824-fab07bf3d987","name":"4ff79f8b-b177-4203-8824-fab07bf3d987","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4ff79f8b-b177-4203-8824-fab07bf3d987","name":"4ff79f8b-b177-4203-8824-fab07bf3d987","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f9654ebc-3ed0-433a-bb0b-0e43196616eb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"05bacc2c-fef4-43b3-82f9-c3adb6946072","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4ff79f8b-b177-4203-8824-fab07bf3d987","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b43ad555-103c-4bb7-81d9-8531eeddafba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e5e1c5d2-ca50-4686-a88b-497d89c424de","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f9654ebc-3ed0-433a-bb0b-0e43196616eb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"98e457d3-5e1e-4ab1-bdcd-1ece506a0ece","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"05bacc2c-fef4-43b3-82f9-c3adb6946072","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4ff79f8b-b177-4203-8824-fab07bf3d987","path":"sprites/sprDogGuardianLand/sprDogGuardianLand.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b43ad555-103c-4bb7-81d9-8531eeddafba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedSnowBotCarLift",
   "bboxMode":1,
   "bbox_bottom":63,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"172ec06c-3421-4f7f-97c1-01134aed571a","name":"172ec06c-3421-4f7f-97c1-01134aed571a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"172ec06c-3421-4f7f-97c1-01134aed571a","name":"172ec06c-3421-4f7f-97c1-01134aed571a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d37670eb-ae00-4e15-b9e2-932a56093e05","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ccde28de-51bf-44d4-92a8-ad5ea02f376b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a77ccb16-9fdc-4631-9874-4e8c75367a94","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"172ec06c-3421-4f7f-97c1-01134aed571a","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8797163a-5efd-4d8e-8e24-6a825d7215d9","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e19a22bc-a76f-41f0-9ace-14b2eec7fb33","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d37670eb-ae00-4e15-b9e2-932a56093e05","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"41ca0824-8377-40b2-943b-0e85e4d16a2b","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ccde28de-51bf-44d4-92a8-ad5ea02f376b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b760caa-e04c-4dff-86eb-fb4f499c8e64","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a77ccb16-9fdc-4631-9874-4e8c75367a94","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"172ec06c-3421-4f7f-97c1-01134aed571a","path":"sprites/sprInvertedSnowBotCarLift/sprInvertedSnowBotCarLift.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8797163a-5efd-4d8e-8e24-6a825d7215d9","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

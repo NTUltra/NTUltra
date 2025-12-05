@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprRogueEliteBuffPopoHurt",
   "bboxMode":1,
   "bbox_bottom":25,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd78c2aa-74c2-4674-b599-b9390627ad4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"394b18c4-dab6-4e6e-bd3b-0734b6d3494e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d3876cb2-b626-4637-a503-a8d763001344","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b620d9f-1bdd-4d08-8f72-0792a2bb2315","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cd78c2aa-74c2-4674-b599-b9390627ad4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd1a36ae-7d60-4dad-bb6d-b9118dcd1f5f","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"394b18c4-dab6-4e6e-bd3b-0734b6d3494e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fbb98468-d7b5-44d1-9d12-66889a4dc778","path":"sprites/sprRogueEliteBuffPopoHurt/sprRogueEliteBuffPopoHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d3876cb2-b626-4637-a503-a8d763001344","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

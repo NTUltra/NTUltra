@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBossHyenaHead2Hurt",
   "bboxMode":0,
   "bbox_bottom":83,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6300241b-6a6a-47a4-8b72-300cc6859b36","name":"6300241b-6a6a-47a4-8b72-300cc6859b36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"65458914-bdf3-4c7b-b305-803e014e6735","name":"65458914-bdf3-4c7b-b305-803e014e6735","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6300241b-6a6a-47a4-8b72-300cc6859b36","name":"6300241b-6a6a-47a4-8b72-300cc6859b36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"65458914-bdf3-4c7b-b305-803e014e6735","name":"65458914-bdf3-4c7b-b305-803e014e6735","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,15 +75,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6300241b-6a6a-47a4-8b72-300cc6859b36","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2bb60de9-2716-45b4-8f14-4ac6a47bf71a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"01518994-796e-4b86-ac2a-914a695ca624","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"65458914-bdf3-4c7b-b305-803e014e6735","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a5d9e10d-ab3f-49b6-b26e-7388f9118023","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6300241b-6a6a-47a4-8b72-300cc6859b36","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2bb60de9-2716-45b4-8f14-4ac6a47bf71a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b8b9c014-19bc-4df7-ac75-eb96b763b5eb","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"01518994-796e-4b86-ac2a-914a695ca624","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"65458914-bdf3-4c7b-b305-803e014e6735","path":"sprites/sprBossHyenaHead2Hurt/sprBossHyenaHead2Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a5d9e10d-ab3f-49b6-b26e-7388f9118023","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

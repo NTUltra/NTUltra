@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprRogueSegwayIDPDWalk",
   "bboxMode":1,
   "bbox_bottom":38,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -69,12 +69,8 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f758b36f-cde8-4c70-9e1e-420e0805fa57","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"32d39a27-da20-40ca-9a24-bda0ea4d2773","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9ce4217-35cf-4b6c-8588-9a2cd8839dd8","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f758b36f-cde8-4c70-9e1e-420e0805fa57","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8991d004-a483-4023-8b8d-f8c5a22aedeb","path":"sprites/sprRogueSegwayIDPDWalk/sprRogueSegwayIDPDWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"32d39a27-da20-40ca-9a24-bda0ea4d2773","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

@@ -4,19 +4,22 @@ if completedChallenge && !collectedRewards
 	collectedRewards = true;
 	with UberCont
 	{
-		if voidChallengeGoing[0] && !voidChallengeCompleted[0]
+		if  voidChallengeGoing[0] && !voidChallengeCompleted[0]
 		{
 			voidChallengeCompleted[0] = true;
 			voidChallengeGoing[0] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
+			if (instance_exists(Player) && Player.race == 29)
+				scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 		}
 		if voidChallengeGoing[1] && !voidChallengeCompleted[1]
 		{
 			voidChallengeCompleted[1] = true;
 			voidChallengeGoing[1] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
+			
 			with Player
 			{
+				if race == 29
+					scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 				var currentLives = array_length(livesRegain);
 				var si = currentLives;
 				skeletonlives += 1;
@@ -38,7 +41,8 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[2] = true;
 			voidChallengeGoing[2] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
+			if (instance_exists(Player) && Player.race == 29)
+				scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with Player
 			{
 				if ultra_got[62] && altUltra//LIVING ARMOUR
@@ -72,7 +76,6 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[3] = true;
 			voidChallengeGoing[3] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;
@@ -80,6 +83,8 @@ if completedChallenge && !collectedRewards
 			}
 			with Player
 			{
+				if race == 29
+					scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 				if array_length(UberCont.voidWeaponDeposit) > 0
 					wep = UberCont.voidWeaponDeposit[0];
 				if array_length(UberCont.voidWeaponDeposit) > 1
@@ -100,13 +105,14 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[4] = true;
 			voidChallengeGoing[4] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;
 			}
 			with Player
 			{
+				if race == 29
+					scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 				maxlevel++;
 				refundPoints = array_length(UberCont.skillDeposit);
 				with instance_create(x,y,PopupText)
@@ -122,13 +128,14 @@ if completedChallenge && !collectedRewards
 		{
 			voidChallengeCompleted[5] = true;
 			voidChallengeGoing[5] = false;
-			scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 			with UberCont
 			{
 				levelIncrease ++;
 			}
 			with Player
 			{
+				if race == 29
+					scrUnlockCSkin(29,"FOR COMPLETING A VOID CHALLENGE!#AS NO THING");
 				maxlevel++;
 				with instance_create(x,y,PopupText)
 				{

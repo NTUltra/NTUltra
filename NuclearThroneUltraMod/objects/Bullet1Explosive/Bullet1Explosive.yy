@@ -43,6 +43,9 @@
     "name":"sprBullet1Explosive",
     "path":"sprites/sprBullet1Explosive/sprBullet1Explosive.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskBullet1",
+    "path":"sprites/mskBullet1/mskBullet1.yy",
+  },
   "visible":true,
 }

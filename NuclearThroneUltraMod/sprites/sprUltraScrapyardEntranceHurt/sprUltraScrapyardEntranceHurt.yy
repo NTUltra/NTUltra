@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraScrapyardEntranceHurt",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2ec46547-1fbf-4425-920e-16f840350ec0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b25967a9-bfdd-4365-a611-00c65018a318","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0f8ff557-55c4-435b-a263-a2a0cb9e1bdc","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8b4aaa6c-6476-4713-9644-e8a9765676b4","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2ec46547-1fbf-4425-920e-16f840350ec0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8286f9b-1ee0-4b80-802e-2bac556f8c61","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b25967a9-bfdd-4365-a611-00c65018a318","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f5013d7-20dc-400f-bd33-b1bf9ac3960b","path":"sprites/sprUltraScrapyardEntranceHurt/sprUltraScrapyardEntranceHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0f8ff557-55c4-435b-a263-a2a0cb9e1bdc","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

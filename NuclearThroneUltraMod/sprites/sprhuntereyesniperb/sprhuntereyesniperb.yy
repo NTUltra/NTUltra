@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprHunterEyeSniperB",
   "bboxMode":1,
   "bbox_bottom":13,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"dcc7bd77-2a1e-4dca-9484-af8244602098","name":"dcc7bd77-2a1e-4dca-9484-af8244602098","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dcc7bd77-2a1e-4dca-9484-af8244602098","name":"dcc7bd77-2a1e-4dca-9484-af8244602098","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"572e6f9e-fcc5-487a-a5b5-e20f1f358709","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dcc7bd77-2a1e-4dca-9484-af8244602098","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8abe61a0-1d88-49fc-846e-421b728c140e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8ea33398-eea4-4854-9f12-423ea0f68d95","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d925d6b7-c6bd-4e39-80c4-16840e3c3dce","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"572e6f9e-fcc5-487a-a5b5-e20f1f358709","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"dcc7bd77-2a1e-4dca-9484-af8244602098","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8abe61a0-1d88-49fc-846e-421b728c140e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d8f49352-cf15-4a2d-9aaa-8ed41014077f","path":"sprites/sprHunterEyeSniperB/sprHunterEyeSniperB.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8ea33398-eea4-4854-9f12-423ea0f68d95","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

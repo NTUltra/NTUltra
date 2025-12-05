@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedVulcanoRock1Hurt",
   "bboxMode":0,
   "bbox_bottom":20,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2963a376-28e1-4ed2-9841-e69cf574f543","name":"2963a376-28e1-4ed2-9841-e69cf574f543","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6860963e-8114-4f37-bd94-a8ecf29ac133","name":"6860963e-8114-4f37-bd94-a8ecf29ac133","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2963a376-28e1-4ed2-9841-e69cf574f543","name":"2963a376-28e1-4ed2-9841-e69cf574f543","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6860963e-8114-4f37-bd94-a8ecf29ac133","name":"6860963e-8114-4f37-bd94-a8ecf29ac133","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f1e4f014-b0cc-4c25-a248-ac084822be53","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2963a376-28e1-4ed2-9841-e69cf574f543","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1b2f32af-7421-4b52-8416-fba01f9b04c8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6860963e-8114-4f37-bd94-a8ecf29ac133","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"783dc1d5-307e-4ae4-9680-bc6e235af5ba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7950a74c-db46-4458-a265-1ca21e3c3d2f","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f1e4f014-b0cc-4c25-a248-ac084822be53","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2963a376-28e1-4ed2-9841-e69cf574f543","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1b2f32af-7421-4b52-8416-fba01f9b04c8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6860963e-8114-4f37-bd94-a8ecf29ac133","path":"sprites/sprInvertedVulcanoRock1Hurt/sprInvertedVulcanoRock1Hurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"783dc1d5-307e-4ae4-9680-bc6e235af5ba","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprHotDrakeFlameCannonBloom",
   "bboxMode":0,
   "bbox_bottom":19,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4cfecc22-f7ff-451e-b893-886b60b14eba","name":"4cfecc22-f7ff-451e-b893-886b60b14eba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4cfecc22-f7ff-451e-b893-886b60b14eba","name":"4cfecc22-f7ff-451e-b893-886b60b14eba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4cfecc22-f7ff-451e-b893-886b60b14eba","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4e9e755b-a5fe-4d53-bead-a5bab9512d77","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d3a4aa8d-1c25-4ebd-9e4a-f956b6f049ad","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d67c5c05-6d2f-4fdc-8ce4-1d4271a58b30","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"aafd2dfd-86b6-4b80-9885-ce3d2c342118","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4cfecc22-f7ff-451e-b893-886b60b14eba","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4e9e755b-a5fe-4d53-bead-a5bab9512d77","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ab6037da-65c3-485e-a53e-907a45b4cbf8","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d3a4aa8d-1c25-4ebd-9e4a-f956b6f049ad","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d40547b-9754-41bf-acd8-b0a412c3fc9f","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d67c5c05-6d2f-4fdc-8ce4-1d4271a58b30","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f889b01c-9a15-46fb-9bbb-26c0695eb1f9","path":"sprites/sprHotDrakeFlameCannonBloom/sprHotDrakeFlameCannonBloom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"aafd2dfd-86b6-4b80-9885-ce3d2c342118","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

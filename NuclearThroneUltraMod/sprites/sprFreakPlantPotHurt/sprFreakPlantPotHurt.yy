@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprFreakPlantPotHurt",
   "bboxMode":0,
   "bbox_bottom":27,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,15 +72,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a9e69c3-728c-4287-968a-30d632464093","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"98335b78-aa26-48bb-93cd-3bbd2ae6a8e7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e9a8b527-38da-4b94-a34e-c5d5075e828d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"abab0bb8-1188-42c0-b616-7e2e2b9ccbb2","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7a9e69c3-728c-4287-968a-30d632464093","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3287c30-9c2f-4a05-b2af-e3356eadc121","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"98335b78-aa26-48bb-93cd-3bbd2ae6a8e7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c63abff8-5195-4e67-895c-d9c4bf8e6645","path":"sprites/sprFreakPlantPotHurt/sprFreakPlantPotHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e9a8b527-38da-4b94-a34e-c5d5075e828d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

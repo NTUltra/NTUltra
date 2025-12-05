@@ -13,7 +13,11 @@ if canDealDamage == 2
 	}
 	if timeIncrease > timeIncreaseMax
 		timeIncrease = timeIncreaseMax;
-	var curve = quadratic_curve(time,collisionX,collisionY,offsetX,offsetY,Player.x,Player.y);
+	var curve;
+	if instance_exists(Player)
+		curve = quadratic_curve(time,collisionX,collisionY,offsetX,offsetY,Player.x,Player.y);
+	else
+		curve = quadratic_curve(time,collisionX,collisionY,offsetX,offsetY,xstart,ystart);
 	image_angle = point_direction(x,y,curve[0],curve[1]);
 	x = curve[0];
 	y = curve[1];

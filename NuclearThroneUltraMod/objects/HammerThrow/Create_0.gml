@@ -10,7 +10,6 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 norecycle=false;
 loops = 0;
 dmg = 3;
-alarm[11] = 1;
 cost = 1;
 radCost = 0;
 xprev = xstart;

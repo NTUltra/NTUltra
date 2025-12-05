@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprFrostSwordGun",
   "bboxMode":1,
   "bbox_bottom":15,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"de612db6-4c83-4573-b0d1-103c14298c97","name":"de612db6-4c83-4573-b0d1-103c14298c97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"07d82408-f319-4cc8-9929-8a218c71b0f0","name":"07d82408-f319-4cc8-9929-8a218c71b0f0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b1ce00b9-b77a-495e-8f78-ae3455877948","name":"b1ce00b9-b77a-495e-8f78-ae3455877948","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"de612db6-4c83-4573-b0d1-103c14298c97","name":"de612db6-4c83-4573-b0d1-103c14298c97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"07d82408-f319-4cc8-9929-8a218c71b0f0","name":"07d82408-f319-4cc8-9929-8a218c71b0f0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b1ce00b9-b77a-495e-8f78-ae3455877948","name":"b1ce00b9-b77a-495e-8f78-ae3455877948","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,27 +74,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"de612db6-4c83-4573-b0d1-103c14298c97","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0000e6fe-bca7-4072-bc98-57fdf09c892b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f4f5b1e3-46bd-43a9-bb2b-428c2d205a0b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"07d82408-f319-4cc8-9929-8a218c71b0f0","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5d38f044-8286-47a4-aa41-14a2b07aee21","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9cbe5fb8-7bec-4055-a38c-8dfc99d435a7","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6552c1c0-ea2b-4818-80a5-5c7df04b2b30","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"366f2928-21d5-4997-8a1f-679b6b16a522","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b1ce00b9-b77a-495e-8f78-ae3455877948","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e419e110-a558-47ef-8aab-af080f65f773","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"de612db6-4c83-4573-b0d1-103c14298c97","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0000e6fe-bca7-4072-bc98-57fdf09c892b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"75d3d7f5-d2c6-4779-98b2-4ad250a89ee0","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f4f5b1e3-46bd-43a9-bb2b-428c2d205a0b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"07d82408-f319-4cc8-9929-8a218c71b0f0","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5d38f044-8286-47a4-aa41-14a2b07aee21","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4532a27-0b03-4d2f-84f8-b8835bccf78d","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9cbe5fb8-7bec-4055-a38c-8dfc99d435a7","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5f4f5f39-de7b-42b7-9286-fbfc01a92b51","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6552c1c0-ea2b-4818-80a5-5c7df04b2b30","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d6cd3b29-a86a-4ab4-8c07-c59ff37749e9","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"366f2928-21d5-4997-8a1f-679b6b16a522","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b1ce00b9-b77a-495e-8f78-ae3455877948","path":"sprites/sprFrostSwordGun/sprFrostSwordGun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e419e110-a558-47ef-8aab-af080f65f773","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

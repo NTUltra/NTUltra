@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltraChimera1",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":182.06322,
+  "exportDir":"",
   "name":"musUltraChimera1",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltraChimera1.ogg",
-  "type":0,
   "volume":1.0,
 }

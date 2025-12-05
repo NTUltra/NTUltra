@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndIDPDPortalSpawn",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":5.448073,
+  "exportDir":"",
   "name":"sndIDPDPortalSpawn",
   "parent":{
     "name":"IDPD sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndIDPDPortalSpawn",
-  "type":0,
   "volume":0.9,
 }

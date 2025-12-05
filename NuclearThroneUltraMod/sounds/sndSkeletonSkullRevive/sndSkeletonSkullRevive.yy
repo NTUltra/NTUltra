@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndSkeletonSkullRevive",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":0.5975,
+  "exportDir":"",
   "name":"sndSkeletonSkullRevive",
   "parent":{
     "name":"Skeleton",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndSkeletonSkullRevive.ogg",
-  "type":0,
   "volume":1.0,
 }

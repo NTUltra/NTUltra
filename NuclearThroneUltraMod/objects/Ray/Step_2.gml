@@ -4,7 +4,7 @@ if(instance_exists(creator)){
 	y = creator.y+lengthdir_y(15,direction);
 	var mx = UberCont.mouse__x;
 	var my = UberCont.mouse__y;
-	direction = point_direction(x,y,mx,my);
+	direction = point_direction(creator.x,creator.y,mx,my);
 	var xx = x + lengthdir_x(range,direction);
 	var yy = y + lengthdir_y(range,direction);
 	//Lock on

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprCrystalTorpedoCDisappear",
   "bboxMode":0,
   "bbox_bottom":53,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"34d5f217-0a6c-4c51-b41e-49e526dbc7f7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0ba8f695-937b-4d72-8010-cd7b39c73015","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"28f81c19-a0cc-4b1e-b706-3ffbc8efc2ce","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"63796b57-0a43-45ae-b810-887dfa6ef5d1","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"34d5f217-0a6c-4c51-b41e-49e526dbc7f7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1b53d709-0db1-4ff9-9c48-09ae5d48b7ce","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0ba8f695-937b-4d72-8010-cd7b39c73015","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a1f6265-3af7-4170-b3fc-0afc0b7d547b","path":"sprites/sprCrystalTorpedoCDisappear/sprCrystalTorpedoCDisappear.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"28f81c19-a0cc-4b1e-b706-3ffbc8efc2ce","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedAssassinBossRespawn",
   "bboxMode":0,
   "bbox_bottom":24,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9890a2cb-03f4-410c-bf06-c46424fa39ce","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9fccb2f6-e482-4d9d-8f95-d2ef628cca15","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e402a932-a98d-4410-83ee-cb1d31ee8066","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3dc5f2e6-77e1-4ae6-8861-8489aa718e02","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"31df3748-0ad2-4b0e-95f3-02de3d67153e","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd41f2d1-4a6f-4801-ae98-8410c1323d05","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f370e918-2ebb-4960-a8e7-f5fc4cad4f12","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9890a2cb-03f4-410c-bf06-c46424fa39ce","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e44ae46-71b8-4d64-8f2c-fcfe7fe853ae","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9fccb2f6-e482-4d9d-8f95-d2ef628cca15","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4500bf63-502b-40a5-9b88-c655eaa3faf7","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e402a932-a98d-4410-83ee-cb1d31ee8066","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ad936288-6833-4898-9a9d-d6e17d0c7b66","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3dc5f2e6-77e1-4ae6-8861-8489aa718e02","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"74b774e1-0648-42eb-bf85-d7d92211d1e5","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"31df3748-0ad2-4b0e-95f3-02de3d67153e","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d680d0f1-b812-486d-bf3e-1a4141187fa1","path":"sprites/sprInvertedAssassinBossRespawn/sprInvertedAssassinBossRespawn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cd41f2d1-4a6f-4801-ae98-8410c1323d05","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

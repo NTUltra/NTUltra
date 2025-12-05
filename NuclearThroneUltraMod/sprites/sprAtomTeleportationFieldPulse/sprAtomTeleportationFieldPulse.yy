@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprAtomTeleportationFieldPulse",
   "bboxMode":1,
   "bbox_bottom":47,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a2229c19-b71d-4429-849e-11f64bb74cdc","name":"a2229c19-b71d-4429-849e-11f64bb74cdc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"08560810-0b14-48bf-a701-84d72e45c93b","name":"08560810-0b14-48bf-a701-84d72e45c93b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a2229c19-b71d-4429-849e-11f64bb74cdc","name":"a2229c19-b71d-4429-849e-11f64bb74cdc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"08560810-0b14-48bf-a701-84d72e45c93b","name":"08560810-0b14-48bf-a701-84d72e45c93b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2229c19-b71d-4429-849e-11f64bb74cdc","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4940c7b3-4b51-4313-b2e5-d0cc4c52d50e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7701e984-239f-4e0e-a86b-371b608f2536","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7106a393-c567-4797-9b97-c782c0bfb37d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"44dc9544-ef98-44e8-8072-0f796d689a3c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a2bef757-ba44-4ddf-964e-578e9028acd3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"08560810-0b14-48bf-a701-84d72e45c93b","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f61e28ac-ca35-48de-a99b-5bc3d4c6f12f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2229c19-b71d-4429-849e-11f64bb74cdc","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4940c7b3-4b51-4313-b2e5-d0cc4c52d50e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cddf28e8-7230-4d82-8468-2e3c3c5f43c8","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7701e984-239f-4e0e-a86b-371b608f2536","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8d23d26-b8e1-47f9-b29d-5babf98b2010","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7106a393-c567-4797-9b97-c782c0bfb37d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"83f5b755-102b-4ecc-8805-fbd19ce6ca29","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"44dc9544-ef98-44e8-8072-0f796d689a3c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"708a2e0a-0362-4541-a7bd-d6b40ae2e83a","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a2bef757-ba44-4ddf-964e-578e9028acd3","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"08560810-0b14-48bf-a701-84d72e45c93b","path":"sprites/sprAtomTeleportationFieldPulse/sprAtomTeleportationFieldPulse.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f61e28ac-ca35-48de-a99b-5bc3d4c6f12f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

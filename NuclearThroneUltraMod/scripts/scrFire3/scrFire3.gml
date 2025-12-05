@@ -4572,5 +4572,27 @@ function scrFire3(hasTailNow){
 			}
 		break;
 		
+		//HEAVY EXPLOSIVE REVOLVER
+		case 927:
+
+		snd_play_fire(sndHeavyRevolver)
+		repeat(2)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+
+		with instance_create(x,y,HeavyExplosiveBullet)
+		{
+			motion_add(aimDirection+(random(4)-2)*other.accuracy,22 - other.accuracy * 2)
+			image_angle = direction
+			team = other.team
+		}
+
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 6
+		wkick = 6
+
+		break;
+		
 	}
 }

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltraVulcano",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":160,
-  "compression":1,
+  "channelFormat":1,
+  "compression":3,
+  "compressionQuality":5,
   "conversionMode":0,
-  "duration":81.893875,
+  "duration":81.8398,
+  "exportDir":"",
   "name":"musUltraVulcano",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltraVulcano",
-  "type":1,
   "volume":1.0,
 }

@@ -6,6 +6,7 @@ function scrMeleeAmmoCost(myCost = 1){
 	{
 		var hasEnoughAmmo = false;
 		var hasEnoughRads = true;
+		var isDrown = scrIsCrown(13);
 		with Player
 		{
 			var targetAmmo = other.meleeAmmoType;
@@ -35,7 +36,7 @@ function scrMeleeAmmoCost(myCost = 1){
 					else
 						myCost *= 0.95;
 				}
-				if scrIsCrown(13)
+				if isDrown
 					myCost *= 2;
 				if ultra_got[15]
 				{
@@ -98,7 +99,7 @@ function scrMeleeAmmoCost(myCost = 1){
 						myCost *= 1.1;
 					}	
 				}
-				if alarm[2] > 0 || ammo[targetAmmo] >= myCost
+				if alarm[2] > 0 || (ammo[targetAmmo] >= myCost || (isDrown && ammo[targetAmmo] > 0))
 					hasEnoughAmmo = true;
 			//}
 		}
@@ -133,7 +134,16 @@ function scrMeleeAmmoCost(myCost = 1){
 			{
 				scrSpendingAmmo(targetAmmo,myCost);
 				if alarm[2] < 1
+				{
 					ammo[targetAmmo] -= myCost;
+					if isDrown && ammo[targetAmmo] <= 0
+					{
+						with Crown
+						{
+							event_user(0);	
+						}
+					}
+				}
 			}
 		}
 		else 

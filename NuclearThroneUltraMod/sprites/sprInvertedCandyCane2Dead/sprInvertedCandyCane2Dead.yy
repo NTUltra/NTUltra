@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedCandyCane2Dead",
   "bboxMode":0,
   "bbox_bottom":23,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"613f1ce4-702b-4538-be65-c55dec4669e9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"43067dd0-1910-4982-b4c9-997a2b06cfc8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7ade6f9a-c255-4df7-9216-4bdf6f41825f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe50aae6-3611-4d29-bfc2-30f438c5c5b6","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"613f1ce4-702b-4538-be65-c55dec4669e9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"54ca4ad8-1bcb-4e15-a84a-fbb8c34e765d","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"43067dd0-1910-4982-b4c9-997a2b06cfc8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f62f21bd-6fc4-4a0d-a432-dd9b6a461fe8","path":"sprites/sprInvertedCandyCane2Dead/sprInvertedCandyCane2Dead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7ade6f9a-c255-4df7-9216-4bdf6f41825f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

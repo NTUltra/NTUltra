@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraLaserCrystalHurt",
   "bboxMode":1,
   "bbox_bottom":47,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"801a1b29-4d6d-43b3-a1fc-e648867b4ae5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"444e6dca-b714-41fe-9b1d-081fad1b05c7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"aa13126b-dd5d-4264-a2c5-2712b0c38099","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"98f3bfaf-527d-49d3-a192-1964e6c8ed18","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"801a1b29-4d6d-43b3-a1fc-e648867b4ae5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7a580f85-7958-4f82-aba3-223c4eb2f7a9","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"444e6dca-b714-41fe-9b1d-081fad1b05c7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cccc299f-aa9f-4a43-aa50-12e33de7cf92","path":"sprites/sprUltraLaserCrystalHurt/sprUltraLaserCrystalHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"aa13126b-dd5d-4264-a2c5-2712b0c38099","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

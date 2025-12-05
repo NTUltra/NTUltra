@@ -12,3 +12,6 @@ norecycle=false;
 dmg = 2;
 cost = 2;
 alarm[11] = 1;
+bloomSprite = sprBullet1;
+recycleAmount = 2;
+recycleRad = 0;

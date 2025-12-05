@@ -1910,8 +1910,8 @@ function scrPowers(raceOverwrite = -1) {
 					reload = min(reload + wep_load[wep],wep_load[wep]);
 					can_shoot = 0
 					var dir = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y)+180;
-					var xx = UberCont.mouse__x + lengthdir_x(1,dir);
-					var yy = UberCont.mouse__y + lengthdir_y(1,dir);
+					var xx = UberCont.mouse__x + lengthdir_x(4,dir);
+					var yy = UberCont.mouse__y + lengthdir_y(4,dir);
 					with instance_create(xx,yy,CloneShooter)
 					{
 						wepflip = other.wepflip;
@@ -3857,7 +3857,7 @@ function scrPowers(raceOverwrite = -1) {
 			//var bPuff = canPuffyCheekB;
 			if can_shoot = 1 and ((ignoreAmmo || ammo[wep_type[wep]] >= representingCost || wep_type[wep] == 0) and rad>=wep_rad[wep] || alarm[2]>0) && (canPuffyCheek <= 0 || KeyCont.key_spec[p] = 1)
 			{
-				if (wep_auto[wep] == 1 || wep_auto[wep] == 3)
+				if (KeyCont.key_spec[p] == 1 || wep_auto[wep] == 1 || wep_auto[wep] == 3)
 					scrFire()
 					
 				keepBwepVisible = wepVisible;

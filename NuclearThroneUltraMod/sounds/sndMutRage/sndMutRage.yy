@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sndMutRage",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":1,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":2.832041,
+  "exportDir":"",
   "name":"sndMutRage",
   "parent":{
     "name":"Mutations",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sndMutRage",
-  "type":0,
   "volume":1.0,
 }

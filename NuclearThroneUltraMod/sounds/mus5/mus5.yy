@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"mus5",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":138.24,
+  "exportDir":"",
   "name":"mus5",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"mus5.ogg",
-  "type":1,
   "volume":1.0,
 }

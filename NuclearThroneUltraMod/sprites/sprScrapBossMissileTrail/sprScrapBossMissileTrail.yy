@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprScrapBossMissileTrail",
   "bboxMode":0,
   "bbox_bottom":8,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"899ebd28-c1bd-4213-a937-25f806c89796","name":"899ebd28-c1bd-4213-a937-25f806c89796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"046f7099-ffd6-4233-a2a8-ec632351243b","name":"046f7099-ffd6-4233-a2a8-ec632351243b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"899ebd28-c1bd-4213-a937-25f806c89796","name":"899ebd28-c1bd-4213-a937-25f806c89796","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"046f7099-ffd6-4233-a2a8-ec632351243b","name":"046f7099-ffd6-4233-a2a8-ec632351243b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1182d66f-48f6-4c25-b8c0-5333323eed33","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"899ebd28-c1bd-4213-a937-25f806c89796","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f5229153-2b03-4f1f-a075-2656d6589761","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"046f7099-ffd6-4233-a2a8-ec632351243b","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c0f3bb8-de55-42f3-acf0-a1d4facd5da7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"131da451-54da-4f1c-acd2-b2d6790a3c3b","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1182d66f-48f6-4c25-b8c0-5333323eed33","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"899ebd28-c1bd-4213-a937-25f806c89796","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f5229153-2b03-4f1f-a075-2656d6589761","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"046f7099-ffd6-4233-a2a8-ec632351243b","path":"sprites/sprScrapBossMissileTrail/sprScrapBossMissileTrail.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8c0f3bb8-de55-42f3-acf0-a1d4facd5da7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedBigMushroomEarthHurt",
   "bboxMode":0,
   "bbox_bottom":44,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3118964c-397c-4507-a600-bff26e1a353f","name":"3118964c-397c-4507-a600-bff26e1a353f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2803ae70-2189-4fef-bba1-7cee8051ab36","name":"2803ae70-2189-4fef-bba1-7cee8051ab36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3118964c-397c-4507-a600-bff26e1a353f","name":"3118964c-397c-4507-a600-bff26e1a353f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2803ae70-2189-4fef-bba1-7cee8051ab36","name":"2803ae70-2189-4fef-bba1-7cee8051ab36","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3118964c-397c-4507-a600-bff26e1a353f","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8cf68118-be65-4f27-96f3-5b7afafc1929","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"721ae332-9786-4f36-9edd-f72b903722b6","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2803ae70-2189-4fef-bba1-7cee8051ab36","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f909b9b8-7f3e-404f-9519-f330109cadd3","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3118964c-397c-4507-a600-bff26e1a353f","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8cf68118-be65-4f27-96f3-5b7afafc1929","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"93ed6ec0-e345-43de-93ea-8450bfa3f9c2","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"721ae332-9786-4f36-9edd-f72b903722b6","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2803ae70-2189-4fef-bba1-7cee8051ab36","path":"sprites/sprInvertedBigMushroomEarthHurt/sprInvertedBigMushroomEarthHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f909b9b8-7f3e-404f-9519-f330109cadd3","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

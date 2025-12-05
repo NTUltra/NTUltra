@@ -1,7 +1,7 @@
 /// @description
 if my_health <= 0 && !canBeKilled
 {
-	alarm[9] = 150;
+	alarm[9] = 70;
 	canBeKilled = true;
 }
 // Inherit the parent event

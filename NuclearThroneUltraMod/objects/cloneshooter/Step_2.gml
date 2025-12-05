@@ -72,8 +72,8 @@ if instance_exists(Player)
 	else
 	{
 		theAim = point_direction(Player.x,Player.y,UberCont.mouse__x,UberCont.mouse__y);
-		x = UberCont.mouse__x + lengthdir_x(2,theAim+180);
-		y = UberCont.mouse__y + lengthdir_y(2,theAim+180);
+		x = UberCont.mouse__x + lengthdir_x(8,theAim+180);
+		y = UberCont.mouse__y + lengthdir_y(8,theAim+180);
 	}
 }
 else 

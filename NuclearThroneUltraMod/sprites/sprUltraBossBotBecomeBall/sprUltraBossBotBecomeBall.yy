@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprUltraBossBotBecomeBall",
   "bboxMode":1,
   "bbox_bottom":63,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"357873f7-5ed9-40b4-a84b-232b37743a95","name":"357873f7-5ed9-40b4-a84b-232b37743a95","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"70e626ba-fed5-4e95-9289-0beb052194a8","name":"70e626ba-fed5-4e95-9289-0beb052194a8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"357873f7-5ed9-40b4-a84b-232b37743a95","name":"357873f7-5ed9-40b4-a84b-232b37743a95","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"70e626ba-fed5-4e95-9289-0beb052194a8","name":"70e626ba-fed5-4e95-9289-0beb052194a8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"357873f7-5ed9-40b4-a84b-232b37743a95","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"16788f4b-0d5d-4126-b59e-69d04aad26ad","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e0b19127-3eb1-4ba6-928d-4416e86641f1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"70e626ba-fed5-4e95-9289-0beb052194a8","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bb54145a-21fb-40fc-8de3-f0a93ef605c7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e52c5716-fbe8-42de-b22a-93279c93787f","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"357873f7-5ed9-40b4-a84b-232b37743a95","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"16788f4b-0d5d-4126-b59e-69d04aad26ad","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e073ac9-22b4-496b-9bf0-66b6c213f9a0","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e0b19127-3eb1-4ba6-928d-4416e86641f1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"70e626ba-fed5-4e95-9289-0beb052194a8","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bb54145a-21fb-40fc-8de3-f0a93ef605c7","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"54eb82f9-bceb-4081-812c-e52f1e4499e8","path":"sprites/sprUltraBossBotBecomeBall/sprUltraBossBotBecomeBall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e52c5716-fbe8-42de-b22a-93279c93787f","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

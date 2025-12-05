@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBanditBossDead",
   "bboxMode":1,
   "bbox_bottom":47,
@@ -12,15 +12,15 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e6c02d91-439d-4682-96d7-a837715278ac","name":"e6c02d91-439d-4682-96d7-a837715278ac","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6df26997-a641-4f44-a445-ca696451ac87","name":"6df26997-a641-4f44-a445-ca696451ac87","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3673250b-6aec-467b-9084-3159d3796cc9","name":"3673250b-6aec-467b-9084-3159d3796cc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"813a3818-3dd2-476c-8a7b-f73df059343e","name":"813a3818-3dd2-476c-8a7b-f73df059343e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e6c02d91-439d-4682-96d7-a837715278ac","name":"e6c02d91-439d-4682-96d7-a837715278ac","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6df26997-a641-4f44-a445-ca696451ac87","name":"6df26997-a641-4f44-a445-ca696451ac87","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3673250b-6aec-467b-9084-3159d3796cc9","name":"3673250b-6aec-467b-9084-3159d3796cc9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"813a3818-3dd2-476c-8a7b-f73df059343e","name":"813a3818-3dd2-476c-8a7b-f73df059343e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -76,33 +76,15 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0e50d396-f694-49ee-bd8c-26374560fc73","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d9c89081-da6d-400b-ad1d-a299347a4518","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e6c02d91-439d-4682-96d7-a837715278ac","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a9cb0c3-b267-404b-b94f-ca4b298b7e73","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ff3230d3-c395-47c8-b796-be07c7dffcf9","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"40df3421-94bc-4ca2-8c4e-f6dcdaa8a8ba","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6df26997-a641-4f44-a445-ca696451ac87","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c31d465e-0fb2-4849-bba8-e456095c0f06","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dedd8fe2-4bc6-4a71-837e-475d6be30793","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3673250b-6aec-467b-9084-3159d3796cc9","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c9e3cc52-7c8f-4b72-9c20-57faa8a64a87","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"813a3818-3dd2-476c-8a7b-f73df059343e","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fa56bb57-0ec9-4c82-8075-631141a05e26","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"77bc079c-52e0-46f4-a59c-4386b2a166ea","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0e50d396-f694-49ee-bd8c-26374560fc73","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3a27f25-8a8f-4294-bbe8-11a8bba71653","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d9c89081-da6d-400b-ad1d-a299347a4518","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e6c02d91-439d-4682-96d7-a837715278ac","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7a9cb0c3-b267-404b-b94f-ca4b298b7e73","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8fd560e0-da1b-45cc-81a4-3aab236e340d","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ff3230d3-c395-47c8-b796-be07c7dffcf9","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"283157a0-a7e1-428c-a479-cdc80f8c0f9a","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"40df3421-94bc-4ca2-8c4e-f6dcdaa8a8ba","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6df26997-a641-4f44-a445-ca696451ac87","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c31d465e-0fb2-4849-bba8-e456095c0f06","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"29cdf65b-d7fb-420d-b74e-97034052f5a3","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dedd8fe2-4bc6-4a71-837e-475d6be30793","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3673250b-6aec-467b-9084-3159d3796cc9","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c9e3cc52-7c8f-4b72-9c20-57faa8a64a87","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"813a3818-3dd2-476c-8a7b-f73df059343e","path":"sprites/sprBanditBossDead/sprBanditBossDead.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fa56bb57-0ec9-4c82-8075-631141a05e26","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -19,26 +19,26 @@ if instance_exists(creator)
 		}
 		var typeOfSlash = ammo % 3;
 		var spr = sprHeavySlash;
-		var wantDmg = 16;
+		var wantDmg = 14;
 		Player.wepangle = -Player.wepangle
 		switch (typeOfSlash)
 		{
 			case 0:
 				spr = sprHeavySlash;
-				wantDmg = 16;
+				wantDmg = 14;
 				aimDir -= 50*Player.accuracy;
 				snd_play_fire(sndHammer)
 				break;
 			case 1:
 				spr = sprVeryHeavySlash;
-				wantDmg = 20;
+				wantDmg = 17;
 				snd_play_fire(sndShovel)
 				BackCont.shake += 2
 				break;
 			case 2:
 				snd_play_fire(sndWrench)
 				spr = sprSlash;
-				wantDmg = 12;
+				wantDmg = 10;
 				aimDir += 50*Player.accuracy;
 				break;
 		}

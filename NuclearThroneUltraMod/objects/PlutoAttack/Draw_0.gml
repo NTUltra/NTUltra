@@ -4,7 +4,6 @@ if myTarget != noone && instance_exists(myTarget)
 	targetX = myTarget.x;
 	targetY = myTarget.y;
 }
-
 draw_primitive_begin(pr_trianglestrip);
 var dt = 1;
 if UberCont.normalGameSpeed == 60
@@ -63,14 +62,14 @@ draw_primitive_end();
 if lerpTime > lerpStarting
 	lerpStart += lerpIncrease * dt;
 lerpStart = min(lerpStart,1);
-if lerpStart >= lerpStartingCircle
+if lerpStart >= lerpStartingCircle || dealtDamage
 {
-	lerpStart -= lerpIncrease * dt * 0.5
 	draw_circle(targetX,targetY, (polygonWidth + lerpStart) * 2, false);
 	event_user(0);
 	if ls >= 1
 	{
 		instance_destroy();	
 	}
+	lerpStart -= lerpIncrease * dt * 0.5
 }
 draw_set_colour(c_white);

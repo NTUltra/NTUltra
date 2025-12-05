@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprBigFishSkullOpenHurt",
   "bboxMode":0,
   "bbox_bottom":34,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -70,15 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"366136b4-fe0e-4a75-be16-f6ab50b16449","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9a5457f0-99c2-446f-b970-74470af2fd9f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"104a27f9-2dfd-4e93-97ac-5483e304c4fd","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"79a03e3e-cd03-424b-ad5c-04cd1f7e23d5","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"366136b4-fe0e-4a75-be16-f6ab50b16449","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5edc2fc7-1b2f-44f6-828a-5c7a26b8eabb","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9a5457f0-99c2-446f-b970-74470af2fd9f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c5ed9b9c-e2ee-4e23-b118-6cdb6344cb4a","path":"sprites/sprBigFishSkullOpenHurt/sprBigFishSkullOpenHurt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"104a27f9-2dfd-4e93-97ac-5483e304c4fd","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":{

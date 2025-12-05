@@ -8,7 +8,7 @@ startMsk = mskSpearSlashStart;
 endSpr = sprEnergySpearSlashEnd;
 endMsk = mskSpearSlashEnd;
 maxRange += 20;
-dmg = 28;
+dmg = 30;
 if instance_exists(Player)
 {
 	if Player.skill_got[17]

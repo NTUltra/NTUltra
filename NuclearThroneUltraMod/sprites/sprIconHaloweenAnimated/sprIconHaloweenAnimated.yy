@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprIconHaloweenAnimated",
   "bboxMode":0,
   "bbox_bottom":58,
@@ -12,24 +12,24 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a31ee029-791d-4650-bd37-06c6bb4abf39","name":"a31ee029-791d-4650-bd37-06c6bb4abf39","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"92d1822e-84cd-4242-9000-047dd53b551b","name":"92d1822e-84cd-4242-9000-047dd53b551b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"07bbd933-42e6-4ef3-802d-077f8e814068","name":"07bbd933-42e6-4ef3-802d-077f8e814068","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"255f0784-e6d4-47e8-92ec-7023a7853d90","name":"255f0784-e6d4-47e8-92ec-7023a7853d90","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9546b1c0-aab6-43a0-9827-cab217d89cba","name":"9546b1c0-aab6-43a0-9827-cab217d89cba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"200e229a-cb77-4577-b75b-30de64e0ab30","name":"200e229a-cb77-4577-b75b-30de64e0ab30","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f6319165-72e6-45da-8e20-183544c9629f","name":"f6319165-72e6-45da-8e20-183544c9629f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f2bb5274-7f70-40a2-9c93-209b7e608654","name":"f2bb5274-7f70-40a2-9c93-209b7e608654","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1a77d28f-b221-4459-b620-b9e9465b1614","name":"1a77d28f-b221-4459-b620-b9e9465b1614","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a31ee029-791d-4650-bd37-06c6bb4abf39","name":"a31ee029-791d-4650-bd37-06c6bb4abf39","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"92d1822e-84cd-4242-9000-047dd53b551b","name":"92d1822e-84cd-4242-9000-047dd53b551b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"07bbd933-42e6-4ef3-802d-077f8e814068","name":"07bbd933-42e6-4ef3-802d-077f8e814068","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"255f0784-e6d4-47e8-92ec-7023a7853d90","name":"255f0784-e6d4-47e8-92ec-7023a7853d90","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9546b1c0-aab6-43a0-9827-cab217d89cba","name":"9546b1c0-aab6-43a0-9827-cab217d89cba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"200e229a-cb77-4577-b75b-30de64e0ab30","name":"200e229a-cb77-4577-b75b-30de64e0ab30","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f6319165-72e6-45da-8e20-183544c9629f","name":"f6319165-72e6-45da-8e20-183544c9629f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f2bb5274-7f70-40a2-9c93-209b7e608654","name":"f2bb5274-7f70-40a2-9c93-209b7e608654","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1a77d28f-b221-4459-b620-b9e9465b1614","name":"1a77d28f-b221-4459-b620-b9e9465b1614","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -91,60 +91,24 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a31ee029-791d-4650-bd37-06c6bb4abf39","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0c84c89b-95de-47a7-89ce-3699370c0f61","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"92d1822e-84cd-4242-9000-047dd53b551b","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e843bc7a-08b3-4fd0-be37-b60856facf53","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"07bbd933-42e6-4ef3-802d-077f8e814068","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7afae79f-92d0-4ca4-8714-9fa497f10025","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"255f0784-e6d4-47e8-92ec-7023a7853d90","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"aac6195c-e3ab-476e-a29b-0d65b75ad551","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9546b1c0-aab6-43a0-9827-cab217d89cba","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f08045e9-8dbd-402f-8cd8-ea73a26ce557","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"629fee1d-1482-48e7-bdff-4cfc43cbcfa9","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"606de3c8-41c1-4d2b-abd9-a9c474113b09","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6d773e17-77e2-4126-8d6c-0f42eb200314","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c1df2c0e-b03d-4c9d-8180-d43214e59c0e","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"55a62ac4-fcf1-4d9e-b0e3-d086c76607e8","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0d27f77b-da07-4e25-8af3-3b93ef08d7f0","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"200e229a-cb77-4577-b75b-30de64e0ab30","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ea77d2c9-2074-4c98-936b-05e306acc1cf","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f6319165-72e6-45da-8e20-183544c9629f","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b6b60ff0-c659-407e-9a7f-04aaf56504e7","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ca843ce3-ca01-4fd6-9c7a-f09aece35b68","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6c043ada-1edc-46ed-a82d-21d5818d5c16","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e591ce56-b676-4823-a053-246c5912d66f","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f2bb5274-7f70-40a2-9c93-209b7e608654","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4889350d-783c-492c-ab20-203bf2e6f6a5","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a77d28f-b221-4459-b620-b9e9465b1614","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cf8baf5e-9485-4d9e-a486-677727e53d82","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a31ee029-791d-4650-bd37-06c6bb4abf39","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0c84c89b-95de-47a7-89ce-3699370c0f61","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"92d1822e-84cd-4242-9000-047dd53b551b","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e843bc7a-08b3-4fd0-be37-b60856facf53","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"07bbd933-42e6-4ef3-802d-077f8e814068","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7afae79f-92d0-4ca4-8714-9fa497f10025","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"255f0784-e6d4-47e8-92ec-7023a7853d90","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"aac6195c-e3ab-476e-a29b-0d65b75ad551","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9546b1c0-aab6-43a0-9827-cab217d89cba","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f08045e9-8dbd-402f-8cd8-ea73a26ce557","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5c13fb1e-a87e-4974-a59f-835d28ad69fb","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"629fee1d-1482-48e7-bdff-4cfc43cbcfa9","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e1694d8a-7c1e-4cf6-b644-a933fb331647","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"606de3c8-41c1-4d2b-abd9-a9c474113b09","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b33d50fa-93bb-4f88-ae6f-311f9aeb86ac","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6d773e17-77e2-4126-8d6c-0f42eb200314","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"87929036-5cb1-4ce9-bcdd-1e1fcef936c3","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c1df2c0e-b03d-4c9d-8180-d43214e59c0e","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"47e2bcdd-e99a-4163-b6cc-84f19ed0a810","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"55a62ac4-fcf1-4d9e-b0e3-d086c76607e8","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8bf46a5-4b3d-4d9b-95e8-5064fd8b1094","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0d27f77b-da07-4e25-8af3-3b93ef08d7f0","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"200e229a-cb77-4577-b75b-30de64e0ab30","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ea77d2c9-2074-4c98-936b-05e306acc1cf","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f6319165-72e6-45da-8e20-183544c9629f","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b6b60ff0-c659-407e-9a7f-04aaf56504e7","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"df6577ef-aac5-4e38-960c-b3aa5f42caa1","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ca843ce3-ca01-4fd6-9c7a-f09aece35b68","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9e8337e3-af72-4b46-bc31-fc5afe1d9788","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6c043ada-1edc-46ed-a82d-21d5818d5c16","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4d69fb26-8324-4a5a-8879-41a0c14359a1","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e591ce56-b676-4823-a053-246c5912d66f","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f2bb5274-7f70-40a2-9c93-209b7e608654","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4889350d-783c-492c-ab20-203bf2e6f6a5","IsCreationKey":false,"Key":16.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a77d28f-b221-4459-b620-b9e9465b1614","path":"sprites/sprIconHaloweenAnimated/sprIconHaloweenAnimated.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cf8baf5e-9485-4d9e-a486-677727e53d82","IsCreationKey":false,"Key":17.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

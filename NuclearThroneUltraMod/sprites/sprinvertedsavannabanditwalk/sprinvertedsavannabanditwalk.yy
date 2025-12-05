@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprInvertedSavannaBanditWalk",
   "bboxMode":1,
   "bbox_bottom":23,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"88a7005a-371a-4b85-a115-d94d21a95f88","name":"88a7005a-371a-4b85-a115-d94d21a95f88","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bc02299e-7ff6-42af-a555-b1b7f838b732","name":"bc02299e-7ff6-42af-a555-b1b7f838b732","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"88a7005a-371a-4b85-a115-d94d21a95f88","name":"88a7005a-371a-4b85-a115-d94d21a95f88","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bc02299e-7ff6-42af-a555-b1b7f838b732","name":"bc02299e-7ff6-42af-a555-b1b7f838b732","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"88a7005a-371a-4b85-a115-d94d21a95f88","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d4edbfbe-6dee-49d1-a3c1-a366ce121b9f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc02299e-7ff6-42af-a555-b1b7f838b732","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d0949622-3998-42bc-9881-f25f2b500ec0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3d98ec40-f697-4a14-a4ac-1b7ba8990029","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"68b3d14a-0440-4842-8e20-bcb0afd7aa98","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2bf5f2fa-a43d-46c7-92bb-a06b42665f53","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a7672da1-de85-4518-a2f4-0b30e4949b9f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"88a7005a-371a-4b85-a115-d94d21a95f88","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d4edbfbe-6dee-49d1-a3c1-a366ce121b9f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc02299e-7ff6-42af-a555-b1b7f838b732","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d0949622-3998-42bc-9881-f25f2b500ec0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"01326c69-040c-4dd8-b0cc-7e54ebe4c95f","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3d98ec40-f697-4a14-a4ac-1b7ba8990029","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"68114a7e-dd26-4fc2-8b1f-7a0c22c90421","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"68b3d14a-0440-4842-8e20-bcb0afd7aa98","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"42d2cf58-bfdb-48fd-ade8-ef27f4662a73","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2bf5f2fa-a43d-46c7-92bb-a06b42665f53","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ea86e3f3-c08e-4f5a-ba1e-0921c472f1af","path":"sprites/sprInvertedSavannaBanditWalk/sprInvertedSavannaBanditWalk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a7672da1-de85-4518-a2f4-0b30e4949b9f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

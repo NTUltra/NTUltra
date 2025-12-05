@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sprRustySawnOffShotgun",
   "bboxMode":0,
   "bbox_bottom":8,
@@ -12,13 +12,13 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"96213b0a-05bf-41cd-abec-02aac328cae1","name":"96213b0a-05bf-41cd-abec-02aac328cae1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b9914291-a158-4977-a2cd-4708b57c7ff8","name":"b9914291-a158-4977-a2cd-4708b57c7ff8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5c717773-41d0-431a-870a-ba534cd414af","name":"5c717773-41d0-431a-870a-ba534cd414af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"417763cd-fbe4-400e-9b8c-9446f5f44784","name":"417763cd-fbe4-400e-9b8c-9446f5f44784","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"96213b0a-05bf-41cd-abec-02aac328cae1","name":"96213b0a-05bf-41cd-abec-02aac328cae1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b9914291-a158-4977-a2cd-4708b57c7ff8","name":"b9914291-a158-4977-a2cd-4708b57c7ff8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5c717773-41d0-431a-870a-ba534cd414af","name":"5c717773-41d0-431a-870a-ba534cd414af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"417763cd-fbe4-400e-9b8c-9446f5f44784","name":"417763cd-fbe4-400e-9b8c-9446f5f44784","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,27 +74,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"96213b0a-05bf-41cd-abec-02aac328cae1","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"678f9fe4-5809-4d5d-94d0-7bffc60ec562","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9914291-a158-4977-a2cd-4708b57c7ff8","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4c36fa4d-77aa-4573-9ecc-f3dd0155bb60","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5c717773-41d0-431a-870a-ba534cd414af","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2fca74be-253e-4e36-9158-37b5c5e1a112","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9861314c-de65-4882-8184-5bb4ba35ab01","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8513132d-46f8-476d-a022-3f263e752136","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5b3bcde4-d0f0-4e95-b077-6d05eed5feb6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"417763cd-fbe4-400e-9b8c-9446f5f44784","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"90b6bc0e-182c-41df-aa5c-95396ca95259","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"96213b0a-05bf-41cd-abec-02aac328cae1","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"678f9fe4-5809-4d5d-94d0-7bffc60ec562","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9914291-a158-4977-a2cd-4708b57c7ff8","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4c36fa4d-77aa-4573-9ecc-f3dd0155bb60","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5c717773-41d0-431a-870a-ba534cd414af","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2fca74be-253e-4e36-9158-37b5c5e1a112","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cc1b16c4-634d-4b7b-b2ed-2216ac112466","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9861314c-de65-4882-8184-5bb4ba35ab01","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"85847b9b-14e9-447c-bcbe-97f47f9b6540","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8513132d-46f8-476d-a022-3f263e752136","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c08a36ba-79e5-4a36-a23f-4f4fb8daa9ec","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5b3bcde4-d0f0-4e95-b077-6d05eed5feb6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"417763cd-fbe4-400e-9b8c-9446f5f44784","path":"sprites/sprRustySawnOffShotgun/sprRustySawnOffShotgun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"90b6bc0e-182c-41df-aa5c-95396ca95259","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

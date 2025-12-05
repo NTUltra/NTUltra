@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"ambUltra132",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":192,
+  "channelFormat":0,
   "compression":3,
+  "compressionQuality":6,
   "conversionMode":0,
   "duration":69.00531,
+  "exportDir":"",
   "name":"ambUltra132",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"ambUltra132.ogg",
-  "type":0,
   "volume":1.0,
 }

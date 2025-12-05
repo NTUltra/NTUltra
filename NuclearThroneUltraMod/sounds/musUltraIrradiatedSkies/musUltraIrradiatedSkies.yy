@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"musUltraIrradiatedSkies",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":160,
+  "channelFormat":1,
   "compression":3,
+  "compressionQuality":5,
   "conversionMode":0,
   "duration":103.38463,
+  "exportDir":"",
   "name":"musUltraIrradiatedSkies",
   "parent":{
     "name":"Music & amb",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"musUltraIrradiatedSkies.ogg",
-  "type":1,
   "volume":1.0,
 }
