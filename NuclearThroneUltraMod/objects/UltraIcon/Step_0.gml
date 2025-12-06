@@ -640,10 +640,10 @@ if (selected && visible &&
 			area = 104;
 			with MusCont
 			{
-				audio_stop_sound(song);
+				scrStopSong();
 				song = mus107;//Don't play this as we are sneaking
 				amb = amb100;
-				snd_loop(amb);
+				scrPlayAmbience();
 				audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 			}
 			visitedCrib = true;

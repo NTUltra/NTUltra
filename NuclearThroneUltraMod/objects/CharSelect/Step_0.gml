@@ -118,8 +118,8 @@ if Menu.camLerp >= 1 && button = 1 and (selected || hovering) and image_index !=
     
 	with MusCont {
 		confirmSound = other.snd_cnfm;
-		audio_stop_sound(amb);
-		audio_stop_sound(song);
+		scrStopAmbience();
+		scrStopSong();
 	}
 	
     UberCont.racepick = Menu.race

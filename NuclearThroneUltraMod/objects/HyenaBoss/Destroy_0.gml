@@ -4,18 +4,18 @@ scrBossKill();
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(HyenaBoss) == 1
 	with MusCont
 	{
-		audio_stop_sound(song);
+		scrStopSong();
 		if instance_exists(Player) && Player.area == 2
 		{
 			song = mus2;
 			amb = amb2;
 			if !audio_is_playing(song)
 			{
-				snd_loop(song);
+				scrPlaySong();
 			}
 			if !audio_is_playing(amb)
 			{
-				snd_loop(amb);
+				scrPlayAmbience();
 			}
 		}
 		else

@@ -35,7 +35,7 @@ with MusCont
 //optimise sound_discard(song)
 //optimise sound_discard(amb)
 
-audio_stop_sound(song);
+scrStopSong();
 song = musBossDead
 snd_play(song)
 //snd_loop(amb)

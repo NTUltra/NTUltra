@@ -8,14 +8,14 @@ alarm[2] = inputDelay;
 canSkip = true;
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = musCredits;
-	snd_loop(song);
+	scrPlaySong();
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	
 	amb = amb0c;
 	if !audio_is_playing(amb)
-		snd_loop(amb)
+		scrPlayAmbience()
 	audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 }
 type = 0;

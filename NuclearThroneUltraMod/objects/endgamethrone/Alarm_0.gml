@@ -12,7 +12,7 @@ if instance_exists(CampFireOff)
 		alarm[1] = 90;
 		with MusCont
 		{
-			audio_stop_sound(song);
+			scrStopSong();
 			song = musThemeP;
 			snd_play(song);
 			audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

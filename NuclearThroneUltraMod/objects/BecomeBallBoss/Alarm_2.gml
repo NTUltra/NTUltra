@@ -9,9 +9,9 @@ if instance_exists(Player)
 		snd_play(sndBallBossWake);
 		with MusCont
 		{
-			audio_stop_sound(song);
+			scrStopSong();
 			song = musUltraChimera1;
-			snd_loop(song);
+			scrPlaySong();
 			audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 		}
 	}

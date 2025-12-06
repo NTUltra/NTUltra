@@ -6,7 +6,7 @@ Sleep(50)
 /// @description Spectacular
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) == 1
 with MusCont {
-	audio_stop_sound(song)
+	scrStopSong()
 	if instance_exists(Player) 
 	{
 		if Player.area == 2
@@ -16,7 +16,7 @@ with MusCont {
 		else if Player.area == 10
 			song = musUltra10;
 	}
-	snd_loop(song)
+	scrPlaySong()
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

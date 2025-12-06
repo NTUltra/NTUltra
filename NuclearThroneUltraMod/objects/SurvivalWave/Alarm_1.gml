@@ -79,9 +79,9 @@ if !scrIsGamemode(25)
 		}
 		with MusCont
 		{
-			audio_stop_sound(song);
+			scrStopSong();
 			song = mus100
-			snd_loop(song);
+			scrPlaySong();
 		}
 		alarm[4] = 0;
 		with Player

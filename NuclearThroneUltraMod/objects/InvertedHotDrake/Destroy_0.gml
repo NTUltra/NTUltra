@@ -9,7 +9,7 @@ audio_stop_sound(sndDragonLoop)
 with MusCont
 {
 
-audio_stop_sound(song);
+scrStopSong();
 song = musUltraBossWin
 snd_play_2d(song)
 //snd_loop(amb)

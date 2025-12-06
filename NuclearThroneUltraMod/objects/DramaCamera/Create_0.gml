@@ -55,7 +55,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
     with MusCont
     {
 	    //audio_stop_all()
-		audio_stop_sound(song);
+		scrStopSong();
 	    //optimise 
     
 	    //sound_discard(song)
@@ -172,7 +172,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(SandWorm) && !instance_exi
 		}
 		else
 		{*/
-		    snd_loop(song)
+		    scrPlaySong()
 			audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 		    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 		    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

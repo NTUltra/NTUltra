@@ -7,7 +7,7 @@ with Player
 {
 	with MusCont
 	{
-		audio_stop_sound(song);	
+		scrStopSong();	
 	}
 	visible = true;
 	x = VoidMaster.x;

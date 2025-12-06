@@ -31,9 +31,9 @@ if fakeded > 0
 			with MusCont
 			{
 				if audio_is_playing(song)
-					audio_stop_sound(song);
+					scrStopSong();
 				song = musUltraAssassinBoss;
-				snd_loop(song)
+				scrPlaySong()
 				audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 			}
 		}

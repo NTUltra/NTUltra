@@ -71,9 +71,9 @@ if instance_exists(Player)
 		alarm[3] = 0;
 		with MusCont
 		{
-			audio_stop_sound(song);
+			scrStopSong();
 			song = mus100
-			snd_loop(song);
+			scrPlaySong();
 		}
 		snd_play_2d(Player.snd_lowh);
 		scrActivateAllOutOfRange();

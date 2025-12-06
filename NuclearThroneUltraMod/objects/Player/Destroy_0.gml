@@ -56,7 +56,7 @@ if actualLives < 1 && !reincarnate && visible && my_health < 1
 	with MusCont
 	{
 	if audio_exists(song)
-	audio_stop_sound(song);
+	scrStopSong();
 	}
 	if race == 29 || (race == 3 && bskin == 6)
 	{

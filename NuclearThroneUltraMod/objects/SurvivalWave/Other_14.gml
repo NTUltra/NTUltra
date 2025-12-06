@@ -107,9 +107,9 @@ wantWave = [];
 
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = asset_get_index(property.song);
-	snd_loop(song);
+	scrPlaySong();
 	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 waveLength = array_length(wave);

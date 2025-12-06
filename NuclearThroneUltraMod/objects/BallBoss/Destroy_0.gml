@@ -23,7 +23,7 @@ with UberCont
 instance_create(x,y,AreaResetter);
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = sndVaultBossWin
 	snd_play_2d(song)
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

@@ -7,10 +7,10 @@ alarm[0] = 30;
 active = false;
 with MusCont
 {
-	audio_stop_sound(song);
-	audio_stop_sound(amb);
+	scrStopSong();
+	scrStopAmbience();
 	amb = amb0c;
-	snd_loop(amb);
+	scrPlayAmbience();
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

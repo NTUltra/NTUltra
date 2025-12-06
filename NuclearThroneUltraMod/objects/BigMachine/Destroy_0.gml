@@ -43,7 +43,7 @@ if instance_number(BigMachine) < 2 && !instance_exists(SurvivalWave) && !instanc
 {
 with MusCont
 {
-audio_stop_sound(song)
+scrStopSong()
 
 song = musUltraBossWin
 snd_play_2d(song)

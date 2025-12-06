@@ -1,6 +1,6 @@
 /// @description Spectacular
 with MusCont {
-	audio_stop_sound(song)
+	scrStopSong()
 }
 with BigGenerator
 {

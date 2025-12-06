@@ -1,6 +1,6 @@
 /// @description Spectacular
 with MusCont {
-	audio_stop_sound(song)
+	scrStopSong()
 }
 snd_play_2d(sndNothing2DeadStart);
 with projectile

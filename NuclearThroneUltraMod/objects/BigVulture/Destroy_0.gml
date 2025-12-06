@@ -70,7 +70,7 @@ repeat(4+irandom(2))
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(BigVulture) == 1
 	with MusCont
 	{
-		audio_stop_sound(song);
+		scrStopSong();
 		song = musUltraBossWin
 		snd_play_2d(song)
 		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

@@ -10,7 +10,7 @@ song = musThemeA;
 amb = amb0;
 if !UberCont.playFullyCompleted
 	snd_play(song)
-snd_loop(amb)
+scrPlayAmbience()
 alarm[0] = 1360
 snd_play(sndRestart)
 

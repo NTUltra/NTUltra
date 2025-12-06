@@ -77,7 +77,7 @@ if !active
 		image_index = 0;
 		with MusCont
 		{
-			audio_stop_sound(song);	
+			scrStopSong();	
 		}
 		if audio_is_playing(sndBecomeNothingIdle)
 				audio_stop_sound(sndBecomeNothingIdle);

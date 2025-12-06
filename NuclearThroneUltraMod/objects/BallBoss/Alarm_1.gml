@@ -122,9 +122,9 @@ else if !reachLowHealth && my_health < maxhealth * 0.35
 	instance_create(x,y,PortalEnviromentReplacerVoid);
 	with MusCont
 	{
-		audio_stop_sound(song);
+		scrStopSong();
 		song = musUltraChimera2;
-		snd_loop(song);
+		scrPlaySong();
 		audio_sound_gain(song, clamp(UberCont.opt_musvol*1.05,0, 1), 0);
 	}
 	alarm[3] = 1;

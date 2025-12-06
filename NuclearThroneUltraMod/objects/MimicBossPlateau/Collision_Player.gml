@@ -11,7 +11,7 @@ if !used
 		snd_play_2d(sndVoidCreepEnd);
 		with MusCont
 		{
-			audio_stop_sound(song);	
+			scrStopSong();	
 		}
 		with instance_create(x,y,DarkOverlay)
 		{

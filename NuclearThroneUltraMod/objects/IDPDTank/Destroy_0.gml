@@ -39,6 +39,6 @@ if (!instance_exists(SurvivalWave) && instance_number(IDPDTank) == 1)
 {
 	with MusCont
 	{
-		audio_stop_sound(song);
+		scrStopSong();
 	}
 }

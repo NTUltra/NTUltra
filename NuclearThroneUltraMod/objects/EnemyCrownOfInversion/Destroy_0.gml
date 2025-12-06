@@ -70,9 +70,9 @@ with enemy
 }
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = musUltra129;
-	snd_loop(song);
+	scrPlaySong();
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
     
     audio_sound_gain(song,max(0,UberCont.opt_musvol),0);

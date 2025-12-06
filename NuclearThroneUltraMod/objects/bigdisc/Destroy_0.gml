@@ -49,7 +49,7 @@ scrEnemyDeathEvent();
 Sleep(50)
 if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_number(object_index) < 2 && !instance_exists(PitNavigation)
 	with MusCont {
-		audio_stop_sound(song)
+		scrStopSong()
 		if instance_exists(Player) 
 		{
 			if Player.area == 5
@@ -59,7 +59,7 @@ if !instance_exists(SurvivalWave) && !instance_exists(WantBoss) && instance_numb
 			else if Player.area == 117 || Player.area == 124
 				song = musUltraMushroomland;
 		}
-		snd_loop(song)
+		scrPlaySong()
 		audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 		audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 		audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

@@ -3,16 +3,16 @@ with MusCont
 {
 	if audio_is_playing(song)
 	{
-		audio_stop_sound(song);	
+		scrStopSong();	
 	}
 	if audio_is_playing(amb)
 	{
-		audio_stop_sound(amb);	
+		scrStopAmbience();	
 	}
 	song = musUltraInvertedRoute;
 	amb = ambUltra138;
-	snd_loop(song);
-	snd_loop(amb);
+	scrPlaySong();
+	scrPlayAmbience();
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 	audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 	audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

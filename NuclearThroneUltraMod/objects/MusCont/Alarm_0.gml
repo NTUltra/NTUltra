@@ -3,8 +3,8 @@ if !UberCont.playFullyCompleted
 	audio_stop_all()
 
 	song = musThemeB;
-	snd_loop(song)
-	snd_loop(amb)
+	scrPlaySong()
+	scrPlayAmbience()
 
 
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);

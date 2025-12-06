@@ -7,13 +7,13 @@ if instance_exists(Player)
 }
 if scrIsGamemode(25) && area != 0
 {
-    audio_stop_sound(song);
+    scrStopSong();
     song = mus100;
     amb = amb100;
     if !audio_is_playing(song)
-		snd_loop(song)
+		scrPlaySong()
     if !audio_is_playing(amb)
-		snd_loop(amb)
+		scrPlayAmbience()
 
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
@@ -29,12 +29,12 @@ if scrIsGamemode(25) && area != 0
 }
 if scrIsGamemode(8) && area != 0
 {
-    audio_stop_sound(song);
-    audio_stop_sound(amb);
+    scrStopSong();
+    scrStopAmbience();
 
     song = sndChubbyEmuSong;
     if !audio_is_playing(song)
-		snd_loop(song)
+		scrPlaySong()
 
     //audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))
 	audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
@@ -315,8 +315,8 @@ if scrIsGamemode(8) && area != 0
     }
 	else if area == 137 {
 		//VOID is completely silent
-		audio_stop_sound(song);
-		audio_stop_sound(amb);
+		scrStopSong();
+		scrStopAmbience();
 		exit;
     }
 	else if area == 138 || area == 140{
@@ -348,25 +348,25 @@ if scrIsGamemode(8) && area != 0
 	if song != prevSong || amb != prevAmb
 	{
 	    audio_stop_all();
-	    snd_loop(song);
-	    snd_loop(amb);
+	    scrPlaySong();
+	    scrPlayAmbience();
 	}
 	if !audio_is_playing(song)
 	{
-		snd_loop(song);
+		scrPlaySong();
 	}
 	if !audio_is_playing(amb)
 	{
-		snd_loop(amb);
+		scrPlayAmbience();
 	}
 	
 	if area == 119 || area == 120//Throne 2
 	{
-		audio_stop_sound(song);
-		audio_stop_sound(amb);
+		scrStopSong();
+		scrStopAmbience();
 		amb = amb0b;
 		audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
-		snd_loop(amb);
+		scrPlayAmbience();
 	}
 	
 	//audio_master_gain(max(0, sqrt(UberCont.opt_sfxvol)))

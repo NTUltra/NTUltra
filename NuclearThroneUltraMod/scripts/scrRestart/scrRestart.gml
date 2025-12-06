@@ -31,7 +31,7 @@ function scrRestart() {
 		audio_stop_all();
 		with MusCont {
 			amb = amb0c;
-			snd_loop(amb);
+			scrPlayAmbience();
 			audio_group_set_gain(agsfx,max(0, UberCont.opt_sfxvol),0);
 		    audio_sound_gain(song,max(0,UberCont.opt_musvol),0);
 		    audio_sound_gain(amb,max(0,UberCont.opt_ambvol),0);

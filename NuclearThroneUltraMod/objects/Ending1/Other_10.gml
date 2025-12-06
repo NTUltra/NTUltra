@@ -1,10 +1,10 @@
 /// @description Start the scene
 with MusCont
 {
-	audio_stop_sound(amb);
+	scrStopAmbience();
 	amb = amb106;
 	if !audio_is_playing(amb)
-		snd_loop(amb)
+		scrPlayAmbience()
 	audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 }
 alarm[0] = 120;

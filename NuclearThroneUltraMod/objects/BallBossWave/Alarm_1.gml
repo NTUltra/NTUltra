@@ -3,7 +3,7 @@ if instance_number(enemy) <= instance_number(IDPDVan) && !instance_exists(LilHun
 {
 	with MusCont
 	{
-		audio_stop_sound(song);
+		scrStopSong();
 		//song = mus100
 		//snd_loop(song);
 	}

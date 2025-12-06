@@ -110,9 +110,9 @@ with BossReward
 }
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = other.song;
-	snd_loop(song);
+	scrPlaySong();
 	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 var i = 0;

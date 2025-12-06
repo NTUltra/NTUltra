@@ -4730,9 +4730,9 @@ repeat(1+loops)
 #region loop and song
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = other.song;
-	snd_loop(song);
+	scrPlaySong();
 	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 waveLength = array_length(wave);

@@ -4,7 +4,7 @@ with MusCont
 {
 	amb = amb0c;
 	if !audio_is_playing(amb)
-		snd_loop(amb)
+		scrPlayAmbience()
 }
 if !instance_exists(MusCont)
 {

@@ -24,8 +24,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		//scrEndOfRun(); already run in player destroy
 		with MusCont
 		{
-			audio_stop_sound(song);
-			audio_stop_sound(amb);
+			scrStopSong();
+			scrStopAmbience();
 			song = musThemeA;
 			amb = amb0;
 		}

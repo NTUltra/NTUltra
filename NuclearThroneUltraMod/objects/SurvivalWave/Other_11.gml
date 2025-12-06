@@ -32,9 +32,9 @@ snd_play_2d(sndCrownCurses);
 song = musUltraReflection;
 with MusCont
 {
-	audio_stop_sound(song);
+	scrStopSong();
 	song = other.song;
-	snd_loop(song);
+	scrPlaySong();
 	audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 }
 with Player
