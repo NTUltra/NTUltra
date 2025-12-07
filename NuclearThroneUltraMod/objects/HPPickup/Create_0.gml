@@ -14,7 +14,7 @@ if instance_exists(Player)
 		additionalRange += 7;
 		damageBoost += 1;
 	}
-	if Player.race == 25 && Player.skill_got[3]//DOCTOR
+	if Player.race == 25 && Player.skill_got[9]//DOCTOR
 		mask_index = mskBigWepPickup;
 	if Player.ultra_got[62] && Player.altUltra
 	{

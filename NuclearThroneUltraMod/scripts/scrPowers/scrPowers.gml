@@ -716,7 +716,7 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					wepCost = 2;
 				}
-			    if (max(0.1,wepCost/typ_ammo[wep_type[wep]]) > random(1 - consecutiveGoodBloodGambles)/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
+			    if (max(0.1,wepCost/typ_ammo[wep_type[wep]]) > random(1 - consecutiveGoodBloodGambles) * luck/**(1+(skill_got[5]*0.35) )*/  )//If this is true take damage
 			    {//thronebutt adds 1/3 chance of not taking damage
 					if !scrIsCrown(41) || my_health > 2
 					{

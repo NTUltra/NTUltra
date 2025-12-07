@@ -71,6 +71,7 @@ if instance_exists(Player)
 				ic += 12;
 			if Player.race == 27
 				ic += 12;
+			ic *= Player.luck;
 		}
 		with WepPickup
 		{

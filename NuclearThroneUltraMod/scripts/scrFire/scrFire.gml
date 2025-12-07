@@ -225,7 +225,7 @@ function scrFire(canDrown = true) {
 		{
 	//	    if KeyCont.key_spec[Player.p] = 1 or KeyCont.key_spec[Player.p] = 2
 	//	    {
-		        if random(100)<(
+		        if random(100) * luck<(
 					(wac/typ_ammo[wep_type[wep]])*0.69
 				)*100
 				{

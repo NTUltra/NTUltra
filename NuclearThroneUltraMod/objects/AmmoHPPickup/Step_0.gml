@@ -6,7 +6,7 @@ else
 var sped = 1;
 var gotPluto = false;
 if instance_exists(Player) {
-	if Player.skill_got[3]
+	if Player.skill_got[3] && (object_index != HPPickup || Player.skill_got[9])
 	{
 		gotPluto = true;
 		sped = 2;
@@ -22,7 +22,11 @@ if !supercursed || gotPluto
 		if !inverted && alarm[1] < 1
 			levelEnded = true;
 	}
-	var range = Player.betterpluto + additionalRange;
+	var range = additionalRange;
+	if object_index == HPPickup
+		range += Player.betterplutoSecondStomach;
+	else
+		range += Player.betterpluto;
 	if (cursed)
 	{
 		range *= 0.5;

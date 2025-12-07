@@ -141,29 +141,42 @@ if selected && visible
 		{
 			if Player.race == 25//Plutonium hunger
 			{
-				Player.betterpluto = 74//100;//108
+				Player.betterpluto = strongestAttractValue//100;//108
 			}
 			else
 			{
-				Player.betterpluto = 60//68//82//90//98;
+				Player.betterpluto = strongerAttractValue//68//82//90//98;
 			}
 		}
-		else if skill = 4 && Player.race == 25//rabitpaw
+		else if skill = 4
 		{
-			Player.betterrabbitpaw = 0.08;
+			Player.luck = 1.2
+			if Player.race == 25//rabitpaw
+			{
+				Player.betterrabbitpaw = 0.08;
+				Player.luck = 1.25
+			}
 		}
 		else if skill = 5 && Player.race=2
 		{
 			//Unlock atom
 			scrUnlockCharacter(15,"FOR TAKING THRONE BUTT AS CRYSTAL");
 		}
-		/*else if skill == 9
+		else if skill == 9
 		{
 			with Player
 			{
-				defaultOverhealAddition += 1;	
+				//defaultOverhealAddition += 1;	
+				if race == 25//Plutonium hunger
+				{
+					betterplutoSecondStomach = strongestAttractValue//100;//108
+				}
+				else
+				{
+					betterplutoSecondStomach = strongerAttractValue//68//82//90//98;
+				}
 			}
-		}*/
+		}
 		else if skill == 10
 		{
 			with Player

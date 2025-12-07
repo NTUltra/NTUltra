@@ -9,7 +9,7 @@ function scrFlexibleElbowReload(wp){
 		var theChance = 60;
 		while (loader > 0)
 		{
-			if (random(theChance) < loader)
+			if (random(theChance) * luck < loader)
 			{
 				if slapped == noone || !instance_exists(slapped)
 				{

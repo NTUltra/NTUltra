@@ -1,5 +1,5 @@
 ///scrSpendingAmmo();
-// /@description
+// /@description scrSpendingAmmo
 ///@param
 function scrSpendingAmmo(weaponType, ammoAmount) {
 	with Player

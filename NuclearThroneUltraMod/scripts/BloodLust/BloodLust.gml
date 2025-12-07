@@ -10,7 +10,7 @@ function BloodLust(){
 		chance += 1;//Took a hit not from self damage and is now low on health
 	if Player.loops < 1
 		chance += 0.5;
-    if Player.skill_got[7] = 1 and Player.canHeal && random(100) <  chance//7.69% chance
+    if Player.skill_got[7] = 1 and Player.canHeal && random(100) <  chance * Player.luck//7.69% chance
     {
 		var splatDir = random(360);
 		var rpt = 1+mySize;

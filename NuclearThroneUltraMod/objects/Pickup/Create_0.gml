@@ -15,7 +15,17 @@ additionalRange = 0;
 isBeingVoided = 0;
 if instance_exists(Player)
 {
-	if Player.skill_got[3]
+	if Player.skill_got[9] && object_index == HPPickup
+	{
+		hasPluto = true;
+		alarm[6] = 1;
+		if Player.race == 25//DOCTOR
+		{
+			mask_index = mskBigWepPickup;
+			damageBoost += 1;
+		}
+	}
+	else if Player.skill_got[3] && object_index != HPPickup
 	{
 		hasPluto = true;
 		alarm[6] = 1;

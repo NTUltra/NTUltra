@@ -7,7 +7,7 @@ for (var i = 0; i < al; i++)
 	var othr = projs[| i];
 	if team != othr.team && instance_exists(Player)
 	{
-		if Player.speed > 0 && random(10) < Player.speed
+		if Player.speed > 0 && random(10) < Player.speed * Player.luck
 		{
 			if othr.isGrenade
 			{

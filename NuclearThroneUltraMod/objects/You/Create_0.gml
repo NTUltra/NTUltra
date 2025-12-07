@@ -35,9 +35,10 @@ skill_got = Player.skill_got;
 bettermelee=Player.bettermelee;
 betterlaserbrain=Player.betterlaserbrain;
 betterpluto=Player.betterpluto;
+betterplutoSecondStomach = Player.betterplutoSecondStomach;
 betterrabbitpaw=Player.betterrabbitpaw;
 betterboltmarrow=Player.betterboltmarrow;
-
+luck = Player.luck;
 //sprites
 spr_idle = Player.spr_idle
 spr_walk = Player.spr_walk

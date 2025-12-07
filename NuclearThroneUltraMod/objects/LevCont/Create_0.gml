@@ -810,7 +810,7 @@ if !UberCont.unlocked_more_crowns && !UberCont.unlocked_more_characters && !scrI
 	Player.skill_got[41] = 0;
 }
 if scrTotalAmountOfMutantsthatVisitedTheVoidEver() <= 0
-	Player.skill_got[47] =0;
+	Player.skill_got[47] = 0;
 if preventDoublePatience
 	Player.skill_got[27] = 0;
 if scrIsGamemode(32){

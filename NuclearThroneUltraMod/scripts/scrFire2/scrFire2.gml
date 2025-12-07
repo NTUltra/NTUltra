@@ -7610,7 +7610,7 @@ function scrFire2(hasTailNow) {
 				motion_add(aimDir,2);
 			}
 		//Heal chance
-		if Player.canHeal && object_index == Player && random(100) < 7.7//7.69% chance
+		if Player.canHeal && object_index == Player && random(100) * Player.luck < 7.7//7.69% chance
 		{
 			with instance_create(x,y-8,HealFX)
 			{

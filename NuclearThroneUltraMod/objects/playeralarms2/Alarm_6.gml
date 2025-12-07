@@ -8,7 +8,7 @@ with enemy
 	)
 	{//eyes ultra c brainwash
 		target = -1;
-		if (my_health < 200 && random(100) < 50)
+		if (my_health < 200 && random(100) < 50 * Player.luck)
 		{
 			var nearest = instance_nearest_notme(x,y,enemy);
 			if instance_exists(nearest) && nearest != noone && nearest.team != 0

@@ -9,7 +9,7 @@ function scrAmbidexturous(wp){
 	while (loader > 0)
 	{
 		if (random(theChance) < loader &&
-		random(100) < ((wep_cost[wep]/typ_ammo[wep_type[wep]]) * 1.4) * 100)
+		random(100) * luck < ((wep_cost[wep]/typ_ammo[wep_type[wep]]) * 1.4) * 100)
 		{
 			heals += 1;
 		}

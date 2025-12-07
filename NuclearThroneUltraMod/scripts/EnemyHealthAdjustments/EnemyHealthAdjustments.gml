@@ -54,7 +54,7 @@ function EnemyHealthAdjustments(){
 			//hpReduction += round(maxhealth*0.2);
 			my_health *= 0.95;
 		}
-		if (scrIsCrown(22) && random(100 + my_health) < 50)//Crown of luck
+		if (scrIsCrown(22) && random(100 + my_health) < 50 * Player.luck)//Crown of luck
 		{
 			//my_health = floor(my_health*0.1);
 			my_health = floor(my_health * (0.1 + clamp(ogmaxhealth*0.00005,0,0.15)));

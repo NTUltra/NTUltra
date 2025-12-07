@@ -78,11 +78,13 @@ rad = 999;
 //Unused but referenced
 bettermelee = 0;
 betterlaserbrain = 0;
-betterpluto = 30;
+betterpluto = defaultAttractValue;
+betterplutoSecondStomach = defaultAttractValue;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
 betterTail = 1.5;
+luck = [1,1];
 curse = 0;
 bcurse = 0;
 existTime = 30;

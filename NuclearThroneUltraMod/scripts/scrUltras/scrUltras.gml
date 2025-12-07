@@ -15,7 +15,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"
-	ultra_text[1] = "ENEMIES SOMETIMES DROP <w>CHESTS<w>#OPENING CHESTS CASTS A <aq>SHIELD<aq>#(EFFECTED BY DROP RATE)#<g>OPEN MIND<g> INCREASES#CHANCE BY 10%"
+	ultra_text[1] = "ENEMIES <rp>SOMETIMES<rp> DROP <w>CHESTS<w>#OPENING CHESTS CASTS A <aq>SHIELD<aq>#(EFFECTED BY <rp>DROP RATE<rP>)#<g>OPEN MIND<g> INCREASES#<rp>CHANCE<rp> BY <w>10%<w>"
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"
@@ -91,7 +91,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
 
 	ultra_name[11] = "BRAIN STYLE"
-	ultra_text[11] = "FULLY SEE IN THE <p>DARK<p>#SOME ENEMIES ATTACK OTHER ENEMIES"
+	ultra_text[11] = "FULLY SEE IN THE <p>DARK<p>#<rp>SOME<rp> ENEMIES ATTACK OTHER ENEMIES"
 	ultra_tips[11] = "brain style works on bosses!"
 	
 	ultra_name[12] = "PSYCHONAUT STYLE"//thats a refrence
@@ -216,7 +216,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	//STEROIDS 
 	ultra_name[25] = "AMBIDEXTUROUS"
-	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU#CHANCE DEPENDS ON:#RELOAD TIME AND AMMO COST#CAN <r>OVERHEAL<r> UP TO <w>2<w> ABOVE MAX"
+	ultra_text[25] = "<r>WEAPON CHESTS<r> DROP#TWO OF THE SAME WEAPON#FIRING WHILE HAVING TWO#OF THE SAME WEAPONS#SLOWLY <r>HEALS<r> YOU#<rp>CHANCE<rp> DEPENDS ON:#RELOAD TIME AND AMMO COST#CAN <r>OVERHEAL<r> UP TO <w>2<w> ABOVE MAX"
 	ultra_tips[25] = "big wep chests drop two duplicates"
 
 	ultra_name[26] = "GET LOADED"
@@ -259,9 +259,9 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		
 		ultra_name[30] = "REGURGITATE"
 		if altOverride || (instance_exists(Player) && !isOtherCharacter && Player.skill_got[23])//Has open mind
-			ultra_text[30] = "EATING WEAPONS HAS A 40% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON";
+			ultra_text[30] = "EATING WEAPONS HAS A 40% <rp>CHANCE<rp>#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON";
 		else
-			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% CHANCE#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON"
+			ultra_text[30] = "+15% <w>WEAPON DROP RATE<w>#EATING WEAPONS HAS A 30% <rp>CHANCE<rp>#TO DROP <w>CHESTS<w>##EATING A WEAPON DROPS IT LIKE A TURRET#THE <w>TURRET<w> FIRES THE EATEN WEAPON"
 		ultra_tips[30] = "2% more chance for weapon chests"
 		
 		if altOverride || (instance_exists(Player) && Player.race == 8 && (Player.altUltra))
@@ -500,7 +500,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		{
 			ultra_name[62] = "LIVING ARMOUR"
 			//ultra_text[62] = "REPLACE 50% OF YOUR <r>HEALTH<r> WITH <gb>MAX ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS##(SECOND STOMACH DOUBLES ARMOUR#FROM ARMOUR DROPS)#(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
-			ultra_text[62] = "REPLACE ALL OF YOUR <r>HEALTH<r> WITH <gb>MAX ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS#<gb>ARMOUR<gb> DROPS HAVE A LOW CHANCE TO APPEAR##(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
+			ultra_text[62] = "REPLACE ALL OF YOUR <r>HEALTH<r> WITH <gb>MAX ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS#<gb>ARMOUR<gb> DROPS HAVE A LOW <rp>CHANCE<rp> TO APPEAR##(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
 			ultra_tips[62] = "iron woman"
 		}
 		
@@ -555,7 +555,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	    //ANGEL 
 	    ultra_name[69] = "PROTECTOR"
-	    ultra_text[69] = "MOVING CAN SOMETIMES#<pi>DEFLECT<pi> PROJECTILES"
+	    ultra_text[69] = "MOVING CAN <rp>SOMETIMES<rp>#<pi>DEFLECT<pi> PROJECTILES"
 	    ultra_tips[69] = "guardian"
     
 	    ultra_name[70] = "DESCENT"
@@ -616,7 +616,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 19 && Player.ultimategamble==true)
 	{
 	    ultra_name[76] = "THE ULTIMATE GAMBLE"
-	    ultra_text[76] = "<w>50% CHANCE<w> TO <r>DIE<r> OR TO GET#<w>TWO RANDOM<w> <g>ULTRA MUTATIONS<g>#FROM <w>ANOTHER CHARACTER<w>#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)##<r>YOU CANNOT USE ANY<r> <w>LIVES!<w>"
+	    ultra_text[76] = "<w>50%<w> <rp>CHANCE<rp> TO <r>DIE<r> OR TO GET#<w>TWO RANDOM<w> <g>ULTRA MUTATIONS<g>#FROM <w>ANOTHER CHARACTER<w>#DOESN'T INCLUDE THINGS YOU CAN'T USE#(SUCH AS PLANT'S SNARE RELATED ULTRAS)##<r>YOU CANNOT USE ANY<r> <w>LIVES!<w>"
 	    ultra_tips[76] = "that went well!"
 	}
 
@@ -848,7 +848,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 		//THIEF
 	    ultra_name[109] = "HIDDEN IN PLAIN SIGHT"
-	    ultra_text[109] = "SOME <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <w>ALWAYS<w> <p>HIDE<p> YOU##SWAPPING <p>STEALTH<p> BRIEFLY MAKES YOU <aq>IMMUNE<aq>"
+	    ultra_text[109] = "<rp>SOME<rp> <w>KILLS<w> CAN SPAWN A <p>HIDING FIELD<p>#THAT CAN <w>ALWAYS<w> <p>HIDE<p> YOU##SWAPPING <p>STEALTH<p> BRIEFLY MAKES YOU <aq>IMMUNE<aq>"
 	    ultra_tips[109] = "they will never see you coming"
         
 	    ultra_name[110] = "INVULNERABLE INVISIBILITY"
@@ -892,7 +892,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"
-	ultra_text[115] = "<r>HEALTH<r> AND <y>AMMO<y> DROPS CAN BE <p>CONSUMED<p> TWICE"
+	ultra_text[115] = "<r>HEALTH<r> AND <y>AMMO<y> DROPS#CAN BE <p>CONSUMED<p> TWICE"
 	ultra_tips[115] = "absolute"
     /*
 	ultra_name[116] = "DYING WHEN AT OR ABOVE LEVEL 10#WILL RESET YOUR LEVEL TO 1 AND PREVENT DEATH"
@@ -900,7 +900,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[116] = "discipline those projectiles!"
 	*/
 	ultra_name[116] = "NIL"
-	ultra_text[116] = "FOR EACH <r>HEALTH<r> MISSING:#GAIN A <p>VOID SPHERE<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
+	ultra_text[116] = "FOR EACH <r>HEALTH<r> MISSING:#GAIN A <p>VOID SPHERE<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE AND#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
 	ultra_tips[116] = "absent"
 	
 	maxultra = 116;

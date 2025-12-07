@@ -36,7 +36,7 @@ if instance_exists(Player){
 	loops = Player.loops;
 	scrIsHardMode()
 		alarm[0] *= 0.8;
-	if Player.skill_got[3]
+	if Player.skill_got[3] && object_index != HPPickup
 	{
 		friction = 0.3;
 	}
@@ -98,8 +98,6 @@ additionalRange += rp;
 supercursed = false;
 as = 6;
 curseSpeed = 1;
-//if instance_exists(Player) && Player.skill_got[3]
-//	as = 8;
 if UberCont.normalGameSpeed == 60
 {
 	as *= 0.5;

@@ -5,7 +5,7 @@ function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true){
 	//RECYCLE GLAND
 	if instance_exists(Player) {
 		if Player.skill_got[16] {
-			if random(100) < 65 + Player.betterrecyclegland
+			if random(100) < 65 * Player.luck + Player.betterrecyclegland
 			{
 				Player.ammo[1] += ammoIncrease
 				Player.rad += radIncrease;

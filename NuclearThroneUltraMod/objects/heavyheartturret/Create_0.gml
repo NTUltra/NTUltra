@@ -60,12 +60,13 @@ wepright = 1
 projectileSpeed = 1;
 bettermelee = 0;
 betterlaserbrain = 0;
-betterpluto = 30;
+betterpluto = defaultAttractValue;
+betterplutoSecondStomach = defaultAttractValue;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
 betterTail = 1.5;
-
+luck = 1;
 reload = 0//Player.reload
 breload = 0//Player.breload
 

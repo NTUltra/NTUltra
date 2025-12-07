@@ -98,6 +98,8 @@ function scrCopyPlayData(){
 		bettermelee: Player.bettermelee,
 		betterlaserbrain: Player.betterlaserbrain,
 		betterpluto: Player.betterpluto,
+		betterplutoSecondStomach: Player.betterplutoSecondStomach,
+		luck: Player.luck,
 		betterrabbitpaw: Player.betterrabbitpaw,
 		betterrecyclegland: Player.betterrecyclegland,
 		betterboltmarrow: Player.betterboltmarrow,

@@ -124,7 +124,9 @@ with Player//Data to keep
 		bettermelee = other.bettermelee;
 		betterlaserbrain = other.betterlaserbrain;
 		betterpluto = other.betterpluto;
+		betterplutoSecondStomach = other.betterplutoSecondStomach;
 		betterrabbitpaw = other.betterrabbitpaw;
+		luck = other.luck;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;
 		betterTail = other.betterTail;

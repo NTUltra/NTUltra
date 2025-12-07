@@ -53,10 +53,11 @@ function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true
 				maxSpeed -= 0.5;
 		break;
 		case 3: //PLUTONIUM HUNGER
-			betterpluto = 30;
+			betterpluto = defaultAttractValue;
 		break;
 		case 4: //RABBIT PAW
 			betterrabbitpaw = 0;
+			luck = 1;
 		break;
 		case 5: //but BUTT
 			if race == 1//Fish lose extra value of ammo drops
@@ -75,6 +76,7 @@ function scrLoseSkill(skillIndex, disableInstead = false, shouldLevelDown = true
 		case 9: //SECOND STOMACH
 			//defaultOverhealAddition -= 1;
 			defaultOverhealAddition = max(0,defaultOverhealAddition);
+			betterplutoSecondStomach = defaultAttractValue;
 		break;
 		case 10: //BACK MUSCLE
 			if ultra_got[85]

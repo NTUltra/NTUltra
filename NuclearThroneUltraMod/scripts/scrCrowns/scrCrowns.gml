@@ -76,7 +76,7 @@ function scrCrowns() {
 	crown_tips[11] = "new born"
 
 	crown_name[12] = "[CROWN OF INVERSION]"
-	crown_text[12] = "HIGHER CHANCE FOR#<w>INVERTED PORTALS<w> TO APPEAR"
+	crown_text[12] = "HIGHER <rp>CHANCE<rp> FOR#<w>INVERTED PORTALS<w> TO APPEAR"
 	crown_used[12] = 0
 	crown_tips[12] = "looking for the blue stuff"
 
@@ -146,7 +146,7 @@ function scrCrowns() {
 	crown_tips[21] = "a risk worth taking"
 	
 	crown_name[22] = "[CROWN OF LUCK]"
-	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#CHANCE ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>##(CHANCE IS LOWER FOR#HIGHER HEALTH ENEMIES)"
+	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#<rp>CHANCE<rp> ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>##(CHANCE IS LOWER FOR#HIGHER HEALTH ENEMIES)"
 	crown_used[22] = 0
 	crown_tips[22] = "crown of 1hp equality"
 	
@@ -213,7 +213,7 @@ function scrCrowns() {
 	
 	//MISFORTUNE have luck
 	crown_name[32] = "[CROWN OF MISFORTUNE]"
-	crown_text[32] = "SIGNIFICANTLY LOWER <w>DROP RATE<w>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>#INCREASE <y>AMMO<y> VALUE OF DROPS"
+	crown_text[32] = "SIGNIFICANTLY LOWER <rp>DROP RATE<rp>#PICKUPS GIVE BOTH <r>HEALTH<r> AND <y>AMMO<y>#INCREASE <y>AMMO<y> VALUE OF DROPS"
 	crown_used[32] = 0
 	crown_tips[32] = "don't leave it up to chance"
 	

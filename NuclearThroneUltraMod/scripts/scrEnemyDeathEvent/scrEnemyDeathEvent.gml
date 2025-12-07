@@ -29,7 +29,7 @@ function scrEnemyDeathEvent(isSheep = false){
 		//Thief hidden in plain sight
 		if Player.ultra_got[109]
 		{
-			if random(100) < 30
+			if random(100) * Player.luck < 30
 			{
 				instance_create(x,y,ThiefHidingField);
 				snd_play(sndThiefHidingField,0.1);

@@ -156,11 +156,11 @@ function scrBasicRobotEat(xx,yy,eatWep, canForceHeal = true){
 	//ROBOT Ultra B Regurgitate
 	if Player.ultra_got[30] && !Player.altUltra
 	{
-		if random(100) < 50 + (Player.skill_got[23]*10)//original 43% chance
+		if random(100) < 50 * Player.luck + (Player.skill_got[23]*10)//original 43% chance
 		{
 			snd_play_2d(sndRegurgitate);
 		    var dir;
-		    dir=random(100);
+		    dir = random(100);
 		    {
 		        if dir>77
 		        {

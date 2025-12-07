@@ -1,5 +1,5 @@
 /// @description Init
-image_speed = 0.33;
+image_speed = 0.35;
 dmg = 0.5;
 team = 2;
 depth = -2;

@@ -439,10 +439,12 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		bettermelee = other.bettermelee;;
 		betterlaserbrain = other.betterlaserbrain;
 		betterpluto = other.betterpluto;
+		betterplutoSecondStomach = other.betterplutoSecondStomach;
 		betterrabbitpaw = other.betterrabbitpaw;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;
 		betterTail = other.betterTail;
+		luck = other.luck
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
 		hard = other.hard;

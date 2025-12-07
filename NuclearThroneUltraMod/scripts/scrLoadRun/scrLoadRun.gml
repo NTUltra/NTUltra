@@ -262,10 +262,19 @@ function scrLoadRun(selectedRunIndex){
 			Player.bettermelee = encryptedRun.bettermelee;
 			Player.betterlaserbrain = encryptedRun.betterlaserbrain;
 			Player.betterpluto = max(Player.betterpluto,encryptedRun.betterpluto);
+			if variable_struct_exists(encryptedRun, "betterplutoSecondStomach")
+				Player.betterplutoSecondStomach = max(Player.betterplutoSecondStomach,encryptedRun.betterplutoSecondStomach);
+			else if encryptedRun.skill_got[9]
+			{
+				if encryptedRun.race == 25
+					Player.betterplutoSecondStomach = strongestAttractValue;
+				else
+					Player.betterplutoSecondStomach = strongerAttractValue;
+			}
 			Player.betterrabbitpaw = encryptedRun.betterrabbitpaw;
 			Player.betterrecyclegland = encryptedRun.betterrecyclegland;
 			Player.betterboltmarrow = encryptedRun.betterboltmarrow;
-			if variable_struct_exists(encryptedRun, "maxspeed")
+			if variable_struct_exists(encryptedRun, "betterTail")
 				Player.betterTail = encryptedRun.betterTail;
 			Player.bskin = encryptedRun.bskin;
 			Player.accuracy = encryptedRun.accuracy;
@@ -278,6 +287,16 @@ function scrLoadRun(selectedRunIndex){
 				Player.maxSpeed = encryptedRun.maxspeed;
 			else
 				Player.maxSpeed = encryptedRun.maxSpeed;
+			if variable_struct_exists(encryptedRun, "luck")
+				Player.luck = encryptedRun.luck;
+			else if encryptedRun.skill_got[4]
+			{
+				Player.luck = 1.2;
+				if Player.race == 25//rabitpaw
+				{
+					Player.luck = 1.25;
+				}
+			}
 			Player.hammerheadcounter = encryptedRun.hammerheadcounter;
 			Player.lag = encryptedRun.lag;
 			Player.visitedCrib = encryptedRun.visitedCrib;

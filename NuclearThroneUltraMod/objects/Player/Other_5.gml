@@ -1035,6 +1035,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		bettermelee = other.bettermelee;
 		betterlaserbrain = other.betterlaserbrain;
 		betterpluto = max(betterpluto,other.betterpluto);
+		luck = other.luck;
+		betterplutoSecondStomach = max(betterplutoSecondStomach, other.betterplutoSecondStomach);
 		betterrabbitpaw = other.betterrabbitpaw;
 		betterrecyclegland = other.betterrecyclegland;
 		betterboltmarrow = other.betterboltmarrow;

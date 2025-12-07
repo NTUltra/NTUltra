@@ -6,7 +6,7 @@ function scrLuckyShot(){
 	var ran = 10;
 	if Player.race == 25 || (Player.ultra_got[19] && !Player.altUltra)
 		chance = 2.6
-	if Player.skill_got[6] = 1 and random(ran) < chance//0.214% 0.23%
+	if Player.skill_got[6] = 1 and random(ran) < chance * Player.luck//0.214% 0.23%
     {
 		var canMeleeAmmo = scrIsCrown(40);
 		snd_play_2d(sndLuckyShotProc,0,true);

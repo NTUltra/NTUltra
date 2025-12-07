@@ -65,6 +65,9 @@ game_end();
 exit;
 }
 //*/
+#macro defaultAttractValue 30
+#macro strongerAttractValue 60
+#macro strongestAttractValue 74
 randomize();
 if !audio_group_is_loaded(agsfx)
 	audio_group_load(agsfx);

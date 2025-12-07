@@ -35,7 +35,7 @@ function scrCollectHP(num = 2, excessHealReduction = 1){
 		with instance_create(x,y,SmallChestPickup)
 		{
 			image_angle = other.image_angle;
-			if instance_exists(Player) && Player.skill_got[3]
+			if instance_exists(Player) && Player.skill_got[9]
 			{
 				sprite_index = sprPickupArmourPickupUpg;
 				motion_add(image_angle - 90,2);
@@ -122,7 +122,7 @@ function scrCollectHP(num = 2, excessHealReduction = 1){
 			else if Player.my_health > Player.maxhealth
 			dir.mytext = "OVER MAX HP"
 		}
-		if instance_exists(Player) && Player.skill_got[3]
+		if instance_exists(Player) && Player.skill_got[9]
 		{
 			with instance_create(x,y,SmallChestPickup)
 			{

@@ -167,8 +167,8 @@ function scrRaces() {
 	race_name[7] = "STEROIDS"
 	race_pass[7] = "IS LESS <w>ACCURATE<w>#ALL WEAPONS ARE FULLY AUTOMATIC"
 	race_acti[7] = "<w>DUAL WIELDING<w>"
-	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER"
-	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A CHANCE TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
+	race_butt[7] = "FIRING WITH ONE WEAPON#HAS A <rp>CHANCE<rp> TO#GIVE <y>AMMO<y> FOR THE OTHER"
+	race_butt_detail[7] = "FIRING WITH ONE WEAPON#HAS A <rp>CHANCE<rp> TO#GIVE <y>AMMO<y> FOR THE OTHER#MORE EFFECTIVE WHEN#FIRING BOTH WEAPONS"
 	//race_vision[7] = "HOLD <w>[E]<w> TO:#FIRE BOTH WEAPONS <w>ACCURATELY<w>#AT A FASTER RELOAD SPEED#BUT YOU ARE STATIONARY";
 	race_vision[7] = "PRESS <w>[E]<w> TO:#TOGGLE <w>FIRING STANCE<w>##<w>NORMAL<w> OR##<w>CROUCHED<w>:#FIRE AT A <w>HIGHER ACCURACY<w> AND#FASTER <w>RELOAD SPEED<w>#BUT YOU ARE ALMOST <r>STATIONARY<r>";
 	if isUnique
@@ -666,7 +666,7 @@ function scrRaces() {
 	race_cskin_lock[26] = "REACH 500 SKILL!"
 	
 	race_name[27] = "HANDS"
-	race_pass[27] = "HIGHER CHANCE FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> <w>2<w><r>HP<r>"
+	race_pass[27] = "HIGHER <rp>CHANCE<rp> FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> <w>2<w><r>HP<r>"
 	race_acti[27] = "PRESS/HOLD TO <w>GRAB<w>#CHESTS/WEAPONS/ENEMIES"
 	race_butt[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE"
 	race_butt_detail[27] = "<w>PUSH<w> ENEMIES INSTEAD#YOUR HAND DEALS MORE DAMAGE##ENEMIES PUNCHED INTO WALLS#TAKE EVEN MORE DAMAGE"
@@ -729,7 +729,7 @@ function scrRaces() {
 		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
 		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN AN AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>"
 		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> <w>COLLECTS<w> SOME <y>RES<y><g>OUR<g><r>CES<r>"
-		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL RESOURCES FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
+		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL <y>RES<y><g>OUR<g><r>CES<r>#FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
 		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>";
 		race_vision_detail[29] = race_vision[29] + "#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
 		/*
