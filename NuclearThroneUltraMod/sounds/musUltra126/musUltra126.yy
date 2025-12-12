@@ -10,7 +10,7 @@
   "compression":3,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":182.4494,
+  "duration":182.44942,
   "exportDir":"",
   "name":"musUltra126",
   "parent":{
