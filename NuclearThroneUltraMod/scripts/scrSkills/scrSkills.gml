@@ -178,7 +178,7 @@ function scrSkills() {
 
 	
 	skill_name[9] = "SECOND STOMACH"
-	skill_text[9] = "MORE <r>HP<r> FROM <r>HEALTH<r> <rp>DROPS<rp>#STRONGER <r>HP<r> DROP ATTRACT POWER";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
+	skill_text[9] = "MORE <r>HP<r> FROM <r>HEALTH<r> DROPS#STRONGER <r>HP<r> DROP ATTRACT POWER";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>";
 	skill_detail[9] = "DOUBLE <r>HP<r> FROM <r>MEDKITS<r> & <r>MEDCHESTS<r>#DOUBLE <r>HP<r> DROP ATTRACT POWER";//#YOU CAN ALWAYS <r>OVERHEAL<r> <w>1<w>"
 	if instance_exists(Player) && (Player.race == 12)//YC
 	{

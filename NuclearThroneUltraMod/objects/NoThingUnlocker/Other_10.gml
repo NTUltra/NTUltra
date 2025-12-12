@@ -38,13 +38,13 @@ else if closingWords
 	{
 		case 0:
 			with TextHandler {
-				text = "WELL LOOKS LIKE YOU FREED ONE OF US";
+				text = "LOOKS LIKE YOU FREED ONE OF US";
 			}
 			alarm[2] = 5;
 		break;
 		case 1:
 			with TextHandler {
-				text = "THE REST OF US WANT MORE PORTAL ESSENCE";
+				text = "THE OTHER VOID DWELLER WANT MORE PORTAL ESSENCE";
 			}
 			alarm[2] = 5;
 		break;

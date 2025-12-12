@@ -4,16 +4,16 @@
 //REAL STUFF
 area = 0
 
-
 audio_stop_all();
 song = musThemeA;
+currentSong = "";
+currentAmb = "";
 amb = amb0;
 if !UberCont.playFullyCompleted
 	snd_play(song)
 scrPlayAmbience()
 alarm[0] = 1360
 snd_play(sndRestart)
-
 //variable used to allow confirmation sound to play
 //written to by the CharSelect object
 confirmSound = false;

@@ -84,6 +84,7 @@
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Audio","folderPath":"folders/Scripts/Audio.yy","name":"Audio","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"BestScripts","folderPath":"folders/Scripts/BestScripts.yy","name":"BestScripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"compatibility","folderPath":"folders/Scripts/compatibility.yy","name":"compatibility","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"action","folderPath":"folders/Scripts/compatibility/action.yy","name":"action","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -96,7 +97,6 @@
     {"$GMFolder":"","%Name":"Enemy","folderPath":"folders/Scripts/Enemy.yy","name":"Enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fancy Aesthetics","folderPath":"folders/Scripts/Fancy Aesthetics.yy","name":"Fancy Aesthetics","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Gamemode","folderPath":"folders/Scripts/Gamemode.yy","name":"Gamemode","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Audio","folderPath":"folders/Scripts/Audio.yy","name":"Audio","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Init loading&saving","folderPath":"folders/Scripts/Init loading&saving.yy","name":"Init loading&saving","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Leaderboard","folderPath":"folders/Scripts/Leaderboard.yy","name":"Leaderboard","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"LevelGen","folderPath":"folders/Scripts/LevelGen.yy","name":"LevelGen","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -494,7 +494,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.2.212",
   },
   "name":"NuclearThroneUltraMod",
   "resources":[
@@ -2676,7 +2676,6 @@
     {"id":{"name":"ApexPredator","path":"scripts/ApexPredator/ApexPredator.yy",},},
     {"id":{"name":"ApplyEuphoria","path":"scripts/ApplyEuphoria/ApplyEuphoria.yy",},},
     {"id":{"name":"array_contains_get_index","path":"scripts/array_contains_get_index/array_contains_get_index.yy",},},
-    {"id":{"name":"array_contains","path":"scripts/array_contains/array_contains.yy",},},
     {"id":{"name":"BloodLust","path":"scripts/BloodLust/BloodLust.yy",},},
     {"id":{"name":"CapSpeed","path":"scripts/CapSpeed/CapSpeed.yy",},},
     {"id":{"name":"choosetest","path":"scripts/choosetest/choosetest.yy",},},

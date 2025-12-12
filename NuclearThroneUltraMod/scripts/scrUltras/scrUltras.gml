@@ -15,7 +15,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 
 	//FISH
 	ultra_name[1] = "CONFISCATE"
-	ultra_text[1] = "ENEMIES <rp>SOMETIMES<rp> DROP <w>CHESTS<w>#OPENING CHESTS CASTS A <aq>SHIELD<aq>#(EFFECTED BY <rp>DROP RATE<rP>)#<g>OPEN MIND<g> INCREASES#<rp>CHANCE<rp> BY <w>10%<w>"
+	ultra_text[1] = "ENEMIES <rp>SOMETIMES<rp> DROP <w>CHESTS<w>#OPENING CHESTS CASTS A <aq>SHIELD<aq>#(EFFECTED BY <rp>DROP RATE<rp>)#<g>OPEN MIND<g> INCREASES#<rp>CHANCE<rp> BY <w>10%<w>"
 	ultra_tips[1] = "that's mine"
 
 	ultra_name[2] = "GUN WARRANT"

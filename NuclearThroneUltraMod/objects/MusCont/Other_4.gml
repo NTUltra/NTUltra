@@ -345,11 +345,33 @@ if scrIsGamemode(8) && area != 0
     audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 
     audio_sound_gain(sndBossWin, max(0, UberCont.opt_musvol), 0);
-	if song != prevSong || amb != prevAmb
+	if (song != prevSong || amb != prevAmb)
 	{
-	    audio_stop_all();
-	    scrPlaySong();
-	    scrPlayAmbience();
+		var shouldPlayNewSong = true;
+		if UberCont.isUpdate100
+		{
+			var fName = program_directory + "mus/";
+			var str = string(song);
+			if str != "ref sound -1"
+			{
+		        if string_replace(str,"musUltra","") == str
+				{
+		            fName += string_replace(str,"mus","");
+					fName = string_replace(fName,"ref sound ","");
+					if fName == currentSong
+					{
+						shouldPlayNewSong = false;
+					}
+				}
+			}
+		}
+		if shouldPlayNewSong
+		{
+			audio_stop_all();
+		    scrPlaySong();
+		    scrPlayAmbience();
+		}
+		
 	}
 	if !audio_is_playing(song)
 	{

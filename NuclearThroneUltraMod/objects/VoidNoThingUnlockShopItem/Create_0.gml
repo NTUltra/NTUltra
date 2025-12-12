@@ -5,4 +5,4 @@ event_inherited();
 
 spr_item = mskPickupThroughWall;
 name = "WAKE UP MUTANT?";
-cost = 18;
+cost = 19;
