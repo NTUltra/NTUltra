@@ -7,6 +7,12 @@ function scrChooseGamemodesWeekly(){
 	var option = [];
 	if gamemode == 26//Daily race
 		gamemode = 1;
+		
+	if gamemode[1] == 19
+	{
+		option[0] = irandom_range(1,100);//Disc amount
+		option[1] = irandom_range(1,5);//Disc damage	
+	}
 	switch (gamemode[0])
 	{
 		case 1://One weapon only
@@ -51,7 +57,7 @@ function scrChooseGamemodesWeekly(){
 		break;
 		case 19://Disc room
 			option[0] = irandom_range(1,100);//Disc amount
-			option[1] = irandom_range(1,20);//Disc damage
+			option[1] = irandom_range(1,10);//Disc damage
 		break;
 		case 21://Loop start
 			gamemode = [21, 36, 43]//Loop Start + ultra mod start + multi crown

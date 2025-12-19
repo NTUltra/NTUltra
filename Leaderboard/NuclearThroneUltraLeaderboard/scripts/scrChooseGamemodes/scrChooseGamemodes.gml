@@ -7,6 +7,7 @@ function scrChooseGamemodes(){
 	var option = [];
 	if gamemode == 26//Daily race
 		gamemode = 1;
+	
 	switch (gamemode[0])
 	{
 		case 1://One weapon only
@@ -35,8 +36,8 @@ function scrChooseGamemodes(){
 		break;
 		case 15://NO mutations
 			gamemode = [19,16,4]; //DISC ROOM, SPIKE TRAPS, WALL IS LAVA
-			option[0] = irandom_range(1,100);//Disc amount
-			option[1] = irandom_range(1,20);//Disc damage
+			option[0] = irandom_range(1,40);//Disc amount
+			option[1] = irandom_range(1,5);//Disc damage
 		break;
 		case 16://SPIKE TRAPS
 			gamemode = [34, 30, 43]//HARD MODE + Ultra mutation start + Multi-Crown
@@ -82,8 +83,8 @@ function scrChooseGamemodes(){
 		break;
 		case 41://Double enemy HP
 			gamemode = [6, 19, 9]//Claustophobia + Disc room + casual mode
-			option[0] = irandom_range(1,100);//Disc amount
-			option[1] = irandom_range(1,20);//Disc damage
+			option[0] = irandom_range(1,40);//Disc amount
+			option[1] = irandom_range(1,5);//Disc damage
 		break;
 		case 42:
 			gamemode = [46,0,0]//any start
@@ -102,7 +103,7 @@ function scrChooseGamemodes(){
 			option[0] = scrRollSpecificWeapon();
 		break;
 		case 46:
-			gamemode = [46,41,0]//Anys tarting wep and double hp
+			gamemode = [46,41,0]//Anys starting wep and double hp
 			option[0] = scrRollSpecificWeapon();
 		break;
 		case 47:

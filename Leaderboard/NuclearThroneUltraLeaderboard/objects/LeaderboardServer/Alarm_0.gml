@@ -51,6 +51,7 @@ if day != yesterday
 		var gamemodeReturn = scrChooseGamemodesWeekly();
 		weekGamemode = gamemodeReturn[0];
 		weeklyOption = gamemodeReturn[1];
+		show_debug_message(weekGamemode);
 		show_debug_message(weeklyOption);
 		//week ++;
 		//show_debug_message(string(weekGamemode));

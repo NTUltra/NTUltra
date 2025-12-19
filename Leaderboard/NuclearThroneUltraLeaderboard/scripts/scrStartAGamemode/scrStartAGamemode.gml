@@ -2,7 +2,8 @@
 // /@description
 ///@param
 function scrStartAGamemode(socket,sendBuffer, seed, gamemode, option){
-	
+	show_debug_message("STARTIONG");
+	show_debug_message(gamemode);
 	buffer_write(sendBuffer,buffer_u16,seed);
 	buffer_write(sendBuffer,buffer_u8,gamemode[0]);
 	buffer_write(sendBuffer,buffer_u8,gamemode[1]);
