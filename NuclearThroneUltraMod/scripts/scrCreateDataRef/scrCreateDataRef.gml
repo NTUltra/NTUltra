@@ -8,7 +8,8 @@ function scrCreateDataRef() {
 		excessResourceDamageBoostMax = other.excessResourceDamageBoostMax;
 		area = other.area;
 		hasUltimateGamble = other.hasUltimateGamble
-		hard = other.hard;
+		baseWeaponTier = other.baseWeaponTier;
+		gameDifficulty = other.gameDifficulty;
 		loops = other.loops;
 		hitBy = other.hitBy;
 		ultramod = other.ultramod;

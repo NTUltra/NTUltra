@@ -819,7 +819,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[105] = "let me touch you"
     
 	ultra_name[106] = "NEGATIVE ENVIROMENT"
-	ultra_text[106] = "WALLS CONTAIN SWARM BOLTS#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR 3 <r>HP<r>"
+	ultra_text[106] = "WALLS CONTAIN <w>SWARM BOLTS<w>#<w>INVERTED PORTALS<w>#(OVER) <r>HEAL<r> YOU FOR <w>3<w> <r>HP<r>"
 	ultra_tips[106] = "I'm a glass half empty kinda hand"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 27 && Player.altUltra)

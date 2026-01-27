@@ -69,7 +69,8 @@ finalTime = txttime;
 
 lastwishused=false;
 kills = 0;
-hard = 0;
+baseWeaponTier = 0;
+gameDifficulty = 0;
 
 tomorrow = 0;
 todaysSeed = -1;

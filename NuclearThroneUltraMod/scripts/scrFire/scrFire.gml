@@ -4170,15 +4170,15 @@ function scrFire(canDrown = true) {
 	}
 
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+(random(6)-3)*other.accuracy,16.5+random(2))
+	{motion_add(aimDirection+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection+15*other.accuracy+(random(6)-3)*other.accuracy,16.5+random(2))
+	{motion_add(aimDirection+14*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bullet6)
-	{motion_add(aimDirection-15*other.accuracy+(random(6)-3)*other.accuracy,16.5+random(2))
+	{motion_add(aimDirection-14*other.accuracy+(random(6)-3)*other.accuracy,17+random(2))
 	image_angle = direction
 	team = other.team}
 

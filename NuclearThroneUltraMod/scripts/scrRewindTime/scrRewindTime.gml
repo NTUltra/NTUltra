@@ -20,7 +20,8 @@ function scrRewindTime(){
 		lastsubarea = TimeRewinder.lastsubarea;
 		area = TimeRewinder.area;
 		subarea = TimeRewinder.subarea;
-		hard = TimeRewinder.hard;
+		baseWeaponTier = TimeRewinder.baseWeaponTier;
+		gameDifficulty = TimeRewinder.gameDifficulty;
 		oasis = TimeRewinder.oasis;
 		inverted = TimeRewinder.inverted;
 		freeAmmoRound = TimeRewinder.freeAmmoRound;

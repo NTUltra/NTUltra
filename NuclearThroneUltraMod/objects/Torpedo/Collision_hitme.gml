@@ -1,6 +1,6 @@
 if other.team != team
 {
-	var actualDmg =	scrCallculateFinalDamage(pierceDamage); 
+	var actualDmg =	scrCalculateFinalDamage(pierceDamage); 
 	if other.my_health > actualDmg
 	{
 		instance_destroy();

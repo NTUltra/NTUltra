@@ -6,7 +6,8 @@ function scrSyncDuo(oldguy,newguy){
 		x = oldguy.x;
 		y = oldguy.y;
 		scrForcePosition60fps();
-		hard = oldguy.hard;
+		baseWeaponTier = oldguy.baseWeaponTier;
+		gameDifficulty = oldguy.gameDifficulty;
 		area = oldguy.area;
 		subarea = oldguy.subarea;
 		lastarea = oldguy.lastarea;

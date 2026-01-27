@@ -1,7 +1,7 @@
 /// @description Deal Damage
 if other.team != team and other.my_health > 0
 {
-	var actualDmg =	scrCallculateFinalDamage(dmg);
+	var actualDmg =	scrCalculateFinalDamage(dmg);
 	if other.my_health > actualDmg
 	{
 		instance_destroy();

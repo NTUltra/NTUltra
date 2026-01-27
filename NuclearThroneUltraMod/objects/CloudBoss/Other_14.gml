@@ -7,7 +7,10 @@ if instance_exists(Player) && !place_meeting(x,y,Tangle)
 		sprite_index = other.spr_disappear;
 	}
 	target = Player;
-	y = Player.y + 96;
+	if bottomAttack
+		y = Player.y + 96;
+	else
+		y = Player.y - 96;
 	x = Player.x;
 	scrForcePosition60fps();
 	alarm[5] = sneakTime + irandom(60);

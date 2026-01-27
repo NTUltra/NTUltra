@@ -123,12 +123,14 @@ if !instance_exists(GenCont)
 						}
 					}
 					//Still ammo left!?
-					if !done && skill_got[48]
+					/*
+					if !done && skill_got[488]
 					{
 						done = false;
 						var excessAmount = ammo[t] - typ_amax[t];
 						scrExcessResource(t, excessAmount);
 					}
+					*/
 				}
 			}
 		}

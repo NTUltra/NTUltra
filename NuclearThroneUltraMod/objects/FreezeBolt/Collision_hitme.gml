@@ -2,7 +2,7 @@ if candmg and other.team != team
 {
 	if (!array_contains(hitEntities,other.id))
 	{
-		var actualDmg = scrCallculateFinalDamage(dmg);
+		var actualDmg = scrCalculateFinalDamage(dmg);
 		var pierceDmg = scrGetBoltPierceDamage(actualDmg);
 		if other.object_index == Player
 		{

@@ -1,7 +1,7 @@
 /// @description Target the next enemy!
 var dis = 450;
 var nearestTarget = noone;
-var actualDmg =	scrCallculateFinalDamage(dmg);
+var actualDmg =	scrCalculateFinalDamage(dmg);
 var pierceDmg = scrGetBoltPierceDamage(actualDmg);
 		
 BackCont.shake += 2;

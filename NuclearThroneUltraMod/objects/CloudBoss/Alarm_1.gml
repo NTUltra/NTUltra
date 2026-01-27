@@ -17,6 +17,7 @@ if target != noone {
 			walk = alarm[1];
         }
         else {
+			motion_add(gunangle,maxSpeed * 0.5);
             var ran = random(121);
 			if ran < 23
 			{

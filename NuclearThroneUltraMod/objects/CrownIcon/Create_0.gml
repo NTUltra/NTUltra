@@ -8,7 +8,8 @@ if instance_exists(Player)
 race=Player.race;
 lastarea=Player.lastarea;
 loops=Player.loops;
-hard=Player.hard;
+baseWeaponTier=Player.baseWeaponTier;
+gameDifficulty=Player.gameDifficulty;
 kills=Player.kills;
 subarea=Player.subarea;
 area=Player.area;

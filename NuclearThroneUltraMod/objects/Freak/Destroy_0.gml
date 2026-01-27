@@ -8,7 +8,7 @@ if fuseAmount > 0
 	repeat(fuseAmount)
 	{
 		with instance_create(x,y,Freak) {
-			droprate = 4;
+			droprate = 3;
 			raddrop = 0;
 			raddrop = 0;
 			existTime = 30;

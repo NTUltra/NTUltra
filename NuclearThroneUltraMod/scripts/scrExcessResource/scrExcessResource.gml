@@ -1,5 +1,6 @@
 /// @description scrExcessResource
 function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
+	return;
 	/*resourceType
 	0 = health;
 	1 = ammo 0; melee
@@ -22,7 +23,7 @@ function scrExcessResource(resourceType, excessAmount, excessHealReduction = 1){
 	var theExcess = max(0,excessAmount);
 	with Player
 	{
-		if skill_got[48]
+		if skill_got[488]
 		{
 			if instance_exists(PlayerAlarms3) && PlayerAlarms3.alarm[7] > 0
 			{

@@ -940,7 +940,8 @@ if (selected && visible &&
 					lastarea = other.lastarea;
 					area = other.area//other.lastarea;
 					loops = other.loops;
-					hard = other.hard;
+					baseWeaponTier = other.baseWeaponTier;
+					gameDifficulty = other.gameDifficulty;
 					kills = other.kills;
 					subarea=other.subarea;
 					ultra_got[73]=1;//you picked redemption

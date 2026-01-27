@@ -3,6 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
+shouldApplyMiniVenom = true;
 typ = 3;
 dmg = 10;
 projectileToSpawn = InvertedExploGuardianSquareBullet;

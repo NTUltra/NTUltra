@@ -248,7 +248,8 @@ if (type == network_type_data) {
 			{
 				with Player
 				{
-					hard = 12;
+					baseWeaponTier = 12;
+					gameDifficulty = 13;
 					loops = 1;	
 				}
 			}
@@ -303,7 +304,8 @@ if (type == network_type_data) {
 					anyMutation += 1;
 					if !instance_exists(PlayerSpawn)
 					{
-						hard = 3;
+						baseWeaponTier = 3;
+						gameDifficulty = 2;
 						instance_create(x,y,HardModeChest);
 					}
 					//Also in Player create
@@ -314,7 +316,8 @@ if (type == network_type_data) {
 				with Player
 				{
 					area = 100;
-					hard -= 1;
+					baseWeaponTier -= 1;
+					gameDifficulty -= 1;
 					crownvisits = -1;
 				}
 			}

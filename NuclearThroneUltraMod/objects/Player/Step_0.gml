@@ -620,7 +620,7 @@ if !instance_exists(LevCont) and visible = 1
 			if instance_exists(Portal) && scrIsGamemode(25)
 			{
 				subarea++;
-				hard += 1.25;
+				baseWeaponTier += 1.25;
 				thing = instance_create(x,y,PopupText)
 				thing.mytext = "SUBAREA++! "+string(subarea);
 				if scrIsGamemode(42)
@@ -781,9 +781,10 @@ if !instance_exists(LevCont) and visible = 1
 			/*
 		    
 			*/
-			hard++;
+			baseWeaponTier++;
+			gameDifficulty ++;
 			thing = instance_create(x + dcos(dangle)*24,y + dsin(dangle)*24,PopupText);
-			thing.mytext = "INCREASE TIER/DIFFICULTY! "+string(hard);
+			thing.mytext = "INCREASE TIER/DIFFICULTY! "+string(baseWeaponTier)+"/"+string(gameDifficulty);
 		    }
 		if (keyboard_check_pressed(ord("Y")))
 		    {
@@ -1652,19 +1653,7 @@ if (!instance_exists(LevCont))
 			reload -= reduction
 			breload -= reduction*0.5;
 			creload -= reduction*0.5;
-		}/*
-		if skill_got[34] {
-			reload -= 0.1;
-			breload -= 0.1;
-			creload -= 0.1;
-			/*
-			if race == 25
-			{
-				reload -= 0.020;
-				breload -= 0.020;
-				creload -= 0.020;
-			}*/
-		//}
+		}
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{
 			var t = wep_type[wep];
@@ -1681,7 +1670,6 @@ if (!instance_exists(LevCont))
 			at = ammo[t]/typ_amax[t]*m;
 			if t != 0
 				creload -= at;
-		
 		}
 		if ultra_got[24] && !altUltra// YV ultra D
 		{

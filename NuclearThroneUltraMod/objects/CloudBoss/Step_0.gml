@@ -44,7 +44,10 @@ if alarm[5] > 0
 	if instance_exists(Player)
 	{
 		x = Player.x;
-		y = Player.y + 96;
+		if bottomAttack
+			y = Player.y + 96;
+		else
+			y = Player.y - 96;
 		scrForcePosition60fps();
 	}
 }

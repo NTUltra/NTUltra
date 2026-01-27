@@ -5,7 +5,7 @@ if other.team != team
 	//vspeed *= -1;
 	if (!array_contains(hitEntities,other.id))
 	{
-		var actualDmg =	scrCallculateFinalDamage(dmg);
+		var actualDmg =	scrCalculateFinalDamage(dmg);
 		var pierceDmg = actualDmg*0.5
 		if other.my_health < pierceDmg
 		{

@@ -11,7 +11,7 @@ function scrDecideToxicWep() {
 	var tier = 3;
 	if instance_exists(Player)
 	{
-		tier += Player.hard;
+		tier += Player.baseWeaponTier;
 	}
 		var maxTries = 5000;
 		if Player.race = 8

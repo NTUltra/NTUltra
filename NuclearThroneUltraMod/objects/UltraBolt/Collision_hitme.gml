@@ -1,7 +1,7 @@
 if (candmg && other.team != team && other.my_health > 0 && !array_contains(hitEntities,other.id))
 {
 	hitEntities[array_length(hitEntities)] = other.id;
-	var actualDmg = scrCallculateFinalDamage(dmg);
+	var actualDmg = scrCalculateFinalDamage(dmg);
 	with other
 	{
 		if my_health >= actualDmg

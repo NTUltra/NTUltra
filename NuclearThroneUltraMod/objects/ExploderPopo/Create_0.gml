@@ -5,7 +5,12 @@ mySize = 1
 scrCrownOfPopoRad(3);
 event_inherited()
 male=choose(true,false);
-
+droprate = 0;
+if instance_exists(Player) && Player.skill_got[4]
+{
+	droprate = 12;
+	scrInitDrops(1);
+}
 spr_idle = sprExploderPopo
 spr_walk = sprExploderPopoWalk
 spr_hurt = sprExploderPopoHurt

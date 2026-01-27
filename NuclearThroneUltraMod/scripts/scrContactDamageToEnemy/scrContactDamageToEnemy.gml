@@ -32,7 +32,7 @@ function scrContactDamageToEnemy(hitEnemy){
 				snd_play(sndGammaGutsProc);
 				with hitEnemy
 				{
-					var dmgTaken = scrCallculateFinalDamage(contactDmg);
+					var dmgTaken = scrCalculateFinalDamage(contactDmg);
 					if my_health - dmgTaken <= 0
 					{
 						actuallyDead = true;

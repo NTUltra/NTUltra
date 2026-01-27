@@ -17,7 +17,7 @@ function scrDecideCurse(){
 		instance_destroy(id,false);
 		instance_create(x,y,BigWeaponChest);
 		}
-		else if object_index == WeaponChest && (random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.hard>2){//8
+		else if object_index == WeaponChest && (random(16)<1+Player.curse+Player.bcurse+Player.ccurse&&Player.baseWeaponTier>2){//8
 			curse = 0
 			instance_destroy(id,false);
 			instance_create(x,y,EliteWeaponChest);
@@ -26,7 +26,7 @@ function scrDecideCurse(){
 			curse = 1
 		else if scrIsCrown(14) && random(7)<5//Or you have a weapon mod
 			curse = 1
-		else if Player.hard > 4 and random(20) < 1
+		else if Player.baseWeaponTier > 4 and random(20) < 1
 			curse = 1;
 		else if Player.ultra_got[72] && !Player.altUltra && random(7)<5//AScent angel
 			curse = 1;

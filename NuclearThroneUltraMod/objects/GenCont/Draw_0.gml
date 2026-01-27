@@ -47,7 +47,7 @@ text = "KILLS: "+string(Player.kills)+"#";
 else
 text=" #";
 
-text="DIFFICULTY: "+string(Player.hard)+"#"+text;
+text="DIFFICULTY: "+string(Player.gameDifficulty)+"#"+text;
 
 
 area = Player.area;

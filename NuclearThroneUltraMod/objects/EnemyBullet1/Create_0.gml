@@ -7,5 +7,7 @@ hitSprite = sprEnemyBulletHit;
 norecycle = true;
 cost = 0.5;
 radCost = 0;
+venomHits = 0;
+venomDamage = 0;
 if scrIsHardMode()//HARD MODE
 	dmg = 4;

@@ -32,5 +32,6 @@ if team != other.team
 			}
 		}
 	}
+	scrPlasmaPush();
 }
 

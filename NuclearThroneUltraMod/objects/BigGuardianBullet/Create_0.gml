@@ -2,9 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
+venomHits = 2;
+venomDamage = 2;
 stopSpeed = 0.2;//0.18
 owner = -1;
-dmg = 12;
+dmg = 8;
 team = 1;
 typ = 2;
 image_speed = 0.4;

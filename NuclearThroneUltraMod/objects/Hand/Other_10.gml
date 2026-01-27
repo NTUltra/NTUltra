@@ -29,7 +29,12 @@ if instance_exists(Player)
 	}
 	else if Player.ultra_got[107] && !place_meeting(x,y,EuphoriaBlock)
 	{
-		instance_create(x,y,EuphoriaBlock);
+		with instance_create(x,y,EuphoriaBlock)
+		{
+			image_speed = 1;
+			image_xscale = 0.75;
+			image_yscale = 0.75;
+		}
 	}
 }
 if loseTarget

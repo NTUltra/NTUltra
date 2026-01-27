@@ -6,6 +6,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[0] = "C.R.E.A.M."
 	secret_ultra_hint[0] = "GOLDEN";
 	secret_ultra_unlk[0] = "HOLD A GOLDEN WEAPON";
+	secret_ultra_char[0] = 21;
 	
 
 	//FISH
@@ -15,6 +16,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[1] = "loaded and goated"
 	secret_ultra_hint[1] = "EYEPATCH";
 	secret_ultra_unlk[1] = "USE C-SKIN";
+	secret_ultra_char[1] = 1;
 
 	//CRYSTAL 
 	//6
@@ -23,6 +25,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[2] = "cursed crystal"
 	secret_ultra_hint[2] = "CURSED";
 	secret_ultra_unlk[2] = "HOLD A CURSED WEAPON";
+	secret_ultra_char[2] = 2;
 
 	//EYES 
 	//9
@@ -31,6 +34,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[3] = "something strange"
 	secret_ultra_hint[3] = "TRIPLE EYES";
 	secret_ultra_unlk[3] = "HAVE THREE EYES MUTATIONS";
+	secret_ultra_char[3] = 3;
 
 	//MELTING 
 	//13
@@ -39,6 +43,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[4] = "the face of death"
 	secret_ultra_hint[4] = "ONE";
 	secret_ultra_unlk[4] = "HAVE 1 MAX HP";
+	secret_ultra_char[4] = 4;
 
 	//PLANT
 	//20
@@ -47,6 +52,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[5] = "SONIC BOOM!"
 	secret_ultra_hint[5] = "SPEED";
 	secret_ultra_unlk[5] = "HAVE CROWN OF SPEED\nAND EXTRA FEET";
+	secret_ultra_char[5] = 5;
 
 	//Y.V. YUNG VENUZ YV
 	//23
@@ -55,6 +61,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[6] = "why would you forsake us gun god?"
 	secret_ultra_hint[6] = "MELEE";
 	secret_ultra_unlk[6] = "ALL WEAPONS YOU HOLD MUST BE MELEE";
+	secret_ultra_char[6] = 6;
 
     
 	//STEROIDS 
@@ -64,6 +71,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[7] = "GET KNOCKED OUT"
 	secret_ultra_hint[7] = "COPY WIELD";
 	secret_ultra_unlk[7] = "HOLD TWO OF THE SAME WEAPON TYPE";
+	secret_ultra_char[7] = 7;
 
 
 	//ROBOT 
@@ -73,6 +81,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[8] = "gold tastes good"
 	secret_ultra_hint[8] = "EAT THE RICH";
 	secret_ultra_unlk[8] = "BE GOLDEN ROBOT\nBY EATING A GOLDEN WEAPON\nUSING A-SKIN";
+	secret_ultra_char[8] = 8;
 
     
 	//CHICKEN 
@@ -82,12 +91,14 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[9] = "rise and rise again"
 	secret_ultra_hint[9] = "FIRE";
 	secret_ultra_unlk[9] = "HOLD A FIRE WEAPON";
+	secret_ultra_char[9] = 9;
 	//35
 	secret_ultra_name[10] = "SUCOF"
 	secret_ultra_text[10] = "EMIT <w>SESREVER<w> EVITCA"//ACTIVE REVERSES PROJECTILES | EMIT SESREVER EVITCA
 	secret_ultra_tips[10] = "reverse time"
 	secret_ultra_hint[10] = "OPPOSITES";
 	secret_ultra_unlk[10] = "HAVE CROWN OF INVERSION";
+	secret_ultra_char[10] = 9;
 
 
 	//REBEL
@@ -97,6 +108,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[11] = "she is a maniac!"
 	secret_ultra_hint[11] = "ULTRA / ANTI-HEAL";
 	secret_ultra_unlk[11] = "HAVE NO HEALING MUTATIONS\nOR HOLD AN ULTRA WEAPON";
+	secret_ultra_char[11] = 10;
 
 
 	//HUNTER 
@@ -106,6 +118,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[12] = "proper eyesight"
 	secret_ultra_hint[12] = "MIND'S EYE";
 	secret_ultra_unlk[12] = "HAVE TWO OF THESE\nENERGY BRAIN, EAGLE EYES, OPEN MIND\nOR CROWN OF BLINDNESS";
+	secret_ultra_char[12] = 11;
 
 
 	//YUNG CUZ 
@@ -115,6 +128,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[13] = "pay up"
 	secret_ultra_hint[13] = "GREEN RADIATION";
 	secret_ultra_unlk[13] = "HAVE ABSORBING PORES\nAND PLUTONIUM HUNGER\nOR HOLD AN ULTRA WEAPON";
+	secret_ultra_char[13] = 12;
 
     
 	//SHEEP 
@@ -124,12 +138,14 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[14] = "S.A.S."
 	secret_ultra_hint[14] = "SECRET QUEEN";
 	secret_ultra_unlk[14] = "HAVE A SECRET CROWN";
+	secret_ultra_char[14] = 13;
 	//51
 	secret_ultra_name[15] = "HYPNOTIZE"
 	secret_ultra_text[15] = "ENEMIES REACT AND MOVE SLOWER##ACTIVE CHANGES INTO <pi>HYPNOSIS<pi>#<pi>HYPNOSIS<pi> RE-ACTIVATES YOUR <w>PASSIVE<w>#CAN BE USED 3 TIMES EACH AREA#THRONE BUTT INCREASES USES TO 5"
 	secret_ultra_tips[15] = "no one expects a sheep to carry a gun"
 	secret_ultra_hint[15] = "WEAK CHARGE";
 	secret_ultra_unlk[15] = "DO NOT HAVE EXTRA FEET\nAND GAMMA GUTS";
+	secret_ultra_char[15] = 13;
 
 
 	//PANDA 
@@ -139,6 +155,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[16] = "how does it do that"
 	secret_ultra_hint[16] = "WEAK PAWS";
 	secret_ultra_unlk[16] = "HAVE EITHER FLEXIBLE ELBOWS,\nIMPACT WRISTS OR LONG ARMS\nAND NO THRONEBUTT";
+	secret_ultra_char[16] = 14;
 
 
 	//ATOM 
@@ -148,6 +165,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[17] = "breaking apart reality"
 	secret_ultra_hint[17] = "KING OF RAPID DESTRUCTION";
 	secret_ultra_unlk[17] = "DO NOT HAVE ENERGY BRAIN\nAND HAVE EITHER CROWN OF APOCALYPSE\nOR CROWN OF HASTE\nOR CROWN OF DEATH";
+	secret_ultra_char[17] = 15;
 
 
 	//VIKING 
@@ -157,12 +175,14 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[18] = "from the sea she came"
 	secret_ultra_hint[18] = "OCEAN";
 	secret_ultra_unlk[18] = "HOLD A KRAKEN WEAPON\nOR HAVE ALIEN INTESTINES\nOR HAVE CROWN OF DROWNING\nOR BE IN THE OASIS";
+	secret_ultra_char[18] = 16;
 	//62
 	secret_ultra_name[19] = "LIVING ARMOUR"
 	secret_ultra_text[19] = "REPLACE ALL OF YOUR <r>HEALTH<r> WITH <gb>MAX ARMOUR<gb>##<r>HEALTH<r> DROPS BECOME <gb>ARMOUR<gb> DROPS#<gb>ARMOUR<gb> DROPS HAVE A LOW CHANCE TO APPEAR##(HEALING MUTATIONS DO NOT#REGENERATE ARMOUR)"
 	secret_ultra_tips[19] = "iron woman"
 	secret_ultra_hint[19] = "NO HIT POINTS";
 	secret_ultra_unlk[19] = "DO NOT HAVE BLOODLUST,\nABSORBING PORES, ALKALINE SALIVA\nAND TOUGH SHELL";
+	secret_ultra_char[19] = 16;
 
     
 	//WEAPON SMITH WEAPONSMITH
@@ -172,12 +192,14 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[20] = "slide swapping!"
 	secret_ultra_hint[20] = "SINGLE ARMAMENT";
 	secret_ultra_unlk[20] = "HOLD ONLY ONE WEAPON";
+	secret_ultra_char[20] = 17;
 	//68
 	secret_ultra_name[21] = "ENGINUITY"
 	secret_ultra_text[21] = "YOUR ACTIVE BECOMES:#CHANGE YOUR WEAPON#INTO ONE OF THE SAME TIER#YOU CAN GO THROUGH#ALL AVAILABLE WEAPONS##WHENEVER YOU <w>CHANGE<w> OR <w>SWAP<w> WEAPONS#SPAWN <pi>MORPH<pi> ON YOUR <w>CROSSHAIR<w>#<p>THRONEBUTT<p> INCREASES MORPH AMOUNT"
 	secret_ultra_tips[21] = "moldable weapons"
 	secret_ultra_hint[21] = "REMORPH";
 	secret_ultra_unlk[21] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";
+	secret_ultra_char[21] = 17;
 	
 
 	//ANGEL
@@ -187,6 +209,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[22] = "right back at ya"
 	secret_ultra_hint[22] = "BROKEN";
 	secret_ultra_unlk[22] = "REDUCE YOUR MAX HP\nOR HAVE CROWN OF MISFORTUNE";
+	secret_ultra_char[22] = 18;
 		
     
 	//SKELETON 
@@ -196,12 +219,14 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[23] = "i used to have skin and warm blood"
 	secret_ultra_hint[23] = "BLOOD GUN";
 	secret_ultra_unlk[23] = "HOLD A BLOOD WEAPON";
+	secret_ultra_char[23] = 19;
 	//76
 	secret_ultra_name[24] = "THE ULTIMATE GAMBLE"
 	secret_ultra_text[24] = "50% CHANCE TO <r>DIE<r> OR TO GET#TWO RANDOM ULTRA <g>MUTATIONS<g>#FROM ANOTHER CHARACTER#DOESN'T INCLUDE THINGS YOU CAN'T USE#(such as plant's snare related ultras)"
 	secret_ultra_tips[24] = "that went well!"
 	secret_ultra_hint[24] = "REBORN";
 	secret_ultra_unlk[24] = "USED A LIFE";
+	secret_ultra_char[24] = 19;
 
 	//BUSINESSHOG 
 	//77
@@ -210,6 +235,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[25] = "tax evasion"
 	secret_ultra_hint[25] = "<3 GUNS";
 	secret_ultra_unlk[25] = "HAVE HEAVY HEART#OR CROWN OF GUNS";
+	secret_ultra_char[25] = 20;
     
     
 	//HORROR 
@@ -223,6 +249,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[26] = "rogue freak"
 	secret_ultra_hint[26] = "EMPTY LIFE";
 	secret_ultra_unlk[26] = "HAVE AN EMPTY LIFE";
+	secret_ultra_char[26] = 22;
     
     
 	//FROG
@@ -232,6 +259,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[27] = "porkupain"
 	secret_ultra_hint[27] = "SPIKE WIELDER";
 	secret_ultra_unlk[27] = "ALL WEAPONS YOU HOLD MUST BE BOLT-TYPE";
+	secret_ultra_char[27] = 23;
 
 	//Elementor
 	//93
@@ -240,6 +268,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[28] = "blow"
 	secret_ultra_hint[28] = "PATIENCE"
 	secret_ultra_unlk[28] = "USE PATIENCE\nOR HAVE A REROLL READY";
+	secret_ultra_char[28] = 24;
     
 
 	//DOCTOR
@@ -249,6 +278,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[29] = "retired to a farm"
 	secret_ultra_hint[29] = "BOLT SPECIALIST";
 	secret_ultra_unlk[29] = "HAVE NO WEAPON MUTATIONS\nEXCEPT FOR BOLT MARROW";
+	secret_ultra_char[29] = 25;
 
 
 	//GOOD O'L HUMPHRY
@@ -258,6 +288,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[30] = "teach them a lesson!"
 	secret_ultra_hint[30] = "DIRECTING TO ZERO";
 	secret_ultra_unlk[30] = "HAVE 0 SKILL OR\nHOLD A DIRECTOR WEAPON";
+	secret_ultra_char[30] = 26;
 		
 	//HANDS
 	//Secret B skin ultra
@@ -267,6 +298,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[31] = "secret b-skin ultra mutation"
 	secret_ultra_hint[31] = "HOT";
 	secret_ultra_unlk[31] = "USE B-SKIN";
+	secret_ultra_char[31] = 27;
 	//Secret C skin ultra
 	//107
 	secret_ultra_name[32] = "BOOM HANDS!"
@@ -274,6 +306,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[32] = "secret c-skin ultra mutation"
 	secret_ultra_hint[32] = "POPO";
 	secret_ultra_unlk[32] = "USE C-SKIN";
+	secret_ultra_char[32] = 27;
 	
 	//109
 	secret_ultra_name[33] = "KILL KILL KILL"
@@ -281,30 +314,35 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[33] = "KILL KILL KILL"
 	secret_ultra_hint[33] = "KILL KILL KILL BLOOD BLOOD BLOOD";
 	secret_ultra_unlk[33] = "HAVE CROWN OF BLOOD/APOCALYPSE\nOR PLAY GORE GALORE GAMEMODE";
+	secret_ultra_char[33] = 5;
 	
 	secret_ultra_name[34] = "VOID STYLE"
 	secret_ultra_text[34] = "YOUR ACTIVE CHANGES INTO <v>VOID<v> <w>PULL<w>#BURST PULL ALL <r>ENEMIES<r>#AND <r>ENEMY<r> <w>PROJECTILES<w> TOWARDS YOU#CREATE A <v>VOID<v> <w>CIRCLE<w> AROUND YOURSELF#THAT CONSUMES PROJECTILES#AND DEALS DAMAGE TO ENEMIES"
 	secret_ultra_tips[34] = "see into the void"
 	secret_ultra_hint[34] = "VOID KING GUTS";
 	secret_ultra_unlk[34] = "HAVE GAMMA GUTS AND NO CROWN";
+	secret_ultra_char[34] = 3;
 	
 	secret_ultra_name[35] = "VENUZIAN AIRHORN"
 	secret_ultra_text[35] = "NEAR <w>INFINITE RELOAD SPEED!<w>#ALL RELOAD YOU CHEAT#WILL NEED TO BE RELOADED NEXT AREA"
 	secret_ultra_tips[35] = "infinite trigger finger"
 	secret_ultra_hint[35] = "INNATE FIRE RATE";
 	secret_ultra_unlk[35] = "DO NOT HAVE MORE THAN ONE\nRELOAD MUTATION";
+	secret_ultra_char[35] = 6;
 	
 	secret_ultra_name[36] = "GODS DON'T DIE"
 	secret_ultra_text[36] = "WHEN BOTH YOUR GUNS ARE <w>RELOADED<w>#YOU ARE <aq>IMMUNE<aq> FOR 2 SECONDS"
 	secret_ultra_tips[36] = "gun god gun god gun god"
 	secret_ultra_hint[36] = "GODS DON'T DIE";
 	secret_ultra_unlk[36] = "DO NOT HAVE ANY\nDEATH PREVENTION MUTATIONS";
+	secret_ultra_char[36] = 6;
 	
 	secret_ultra_name[37] = "CURSED TECHNOLOGY"
 	secret_ultra_text[37] = "INSTALL <g>LASER<g> <w>DEFENSE<w> SYSTEM#<p>CURSED PICKUPS<p> ATTACK ENEMIES#EATING <p>CURSED WEAPONS<p> (OVER) <r>HEALS<r> <w>1<w><r>HP<r>##ONCE PER AREA:#WHEN TAKING <aq>LETHAL DAMAGE<aq>#<p>TELEPORT<p> AWAY FROM ENEMIES"
 	secret_ultra_tips[37] = "eating guns from other dimensions"
 	secret_ultra_hint[37] = "SPOILED FOOD";
 	secret_ultra_unlk[37] = "BE CURSED ROBOT\nBY EATING A CURSED WEAPON\nUSING A-SKIN";
+	secret_ultra_char[37] = 8;
 	
 	var regalBut = "E";
 		if instance_exists(UberCont)
@@ -314,18 +352,21 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[38] = "BY THE POWER OF THE SUN!"
 	secret_ultra_hint[38] = "DOUBLE HEALING";
 	secret_ultra_unlk[38] = "HAVE ATLEAST TWO\nHEALING MUTATIONS";
+	secret_ultra_char[38] = 5;
 	
 	secret_ultra_name[39] = "GREEDY THIEF"
 	secret_ultra_text[39] = "INCREASE HOW MUCH <y>AMMO<y> YOU <w>STEAL<w>##FOR EACH <y>AMMO TYPE<y> THAT IS#AT OR ABOVE BASE MAX:#GAIN <w>+1<w> <r>MAX HP<r>#GAIN <w>+2<w> FOR EACH <w>EQUIPPED<w> <y>AMMO<y> <w>TYPE<w>"
 	secret_ultra_tips[39] = "the collector"
 	secret_ultra_hint[39] = "AMMO GREED";
 	secret_ultra_unlk[39] = "HAVE AN AMMO GENERATING MUTATION\nOR CROWN OF GREED";
+	secret_ultra_char[39] = 28;
 	
 	secret_ultra_name[40] = "INFINITY"
 	secret_ultra_text[40] = "COLLECT <w>50%<w> MORE <p>PORTAL ESSENCE<p>##WHENEVER YOU GAIN <y>AMMO<y>#GAIN MORE BASED ON#THE TOTAL <p>PORTAL ESSENCE<p> YOU HOLD"
 	secret_ultra_tips[40] = "8"
 	secret_ultra_hint[40] = "NULL AMMO";
 	secret_ultra_unlk[40] = "HAVE ATLEAST ONE AMMO TYPE\nNEAR EMPTY";
+	secret_ultra_char[40] = 29;
 	
 	//84
 	secret_ultra_name[41] = "MORPHING CAT"
@@ -333,6 +374,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[41] = "cute kitty with big guns"
 	secret_ultra_hint[41] = "KILLER CAT";
 	secret_ultra_unlk[41] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";
+	secret_ultra_char[41] = 21;
 	
 	maxsecretultra = array_length(secret_ultra_name);
 	
@@ -342,7 +384,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[maxsecretultra + 1] = "challenge run"
 	secret_ultra_hint[maxsecretultra + 1] = "";
 	secret_ultra_unlk[maxsecretultra + 1] = "WIELD NO WEAPON";
-	
+	secret_ultra_char[maxsecretultra + 1] = 0;
 
 	/*
 	secret_ultra_name[38] = "CRYSTALINE TORPEDO"
@@ -350,6 +392,7 @@ function scrSecretUltraStat() {
 	secret_ultra_tips[38] = "the boulder"
 	secret_ultra_hint[38] = "CAVES";
 	secret_ultra_unlk[38] = "REACH LEVEL ULTRA IN CRYSTAL CAVES";
+	secret_ultra_char[38] = 1;
 	*/
 	
 	/*

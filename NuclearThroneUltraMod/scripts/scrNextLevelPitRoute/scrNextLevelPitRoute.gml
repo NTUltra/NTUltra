@@ -16,8 +16,10 @@ function scrNextLevelPitRoute() {
 				subarea = 1;
 				lastarea = 141;
 				lastsubarea = 1;
-				hard -= 1;
-				hard = max(hard,0);
+				baseWeaponTier -= 1;
+				gameDifficulty -= 1;
+				baseWeaponTier = max(baseWeaponTier,0);
+				gameDifficulty = max(gameDifficulty,0);
 			}
 		break
 		case 100:
@@ -25,7 +27,8 @@ function scrNextLevelPitRoute() {
 			inverted = true;
 			area = 140;//Get regal!
 			subarea = 1;
-			hard += 1;
+			baseWeaponTier += 1;
+			gameDifficulty += 1;
 		break;
 		case 107:
 			//Jungle to palace and end
@@ -37,10 +40,12 @@ function scrNextLevelPitRoute() {
 	}
 	if loops < 1 && area != 100
 	{
-		hard += 1;
+		baseWeaponTier += 1;
+		gameDifficulty += 1;
 		if scrIsCrown(10)
 		{
-			hard += 1;
+			baseWeaponTier += 1;
+			gameDifficulty += 1;
 		}
 	}
 }

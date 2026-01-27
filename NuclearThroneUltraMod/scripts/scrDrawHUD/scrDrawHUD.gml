@@ -1531,7 +1531,8 @@ function scrDrawHUD() {
 		draw_sprite(sprUltraLevel,0,vx+rto,vy+16);
 	}
 	//Excess resource damage boost
-	if dataRef.skill_got[48]
+	/*
+	if dataRef.skill_got[488]
 	{
 		draw_set_color(c_white)
 		var edx = hx + 90 + rightSideHealthBarHud;
@@ -1574,6 +1575,7 @@ function scrDrawHUD() {
 			draw_text(edx + 1,edy,preT + string(erdb) + "%");
 		}
 	}
+	*/
 	//GOOD O'L HUMPHRY SKILL
 	if dataRef.race == 26 || dataRef.copyPassive == 26
 	{

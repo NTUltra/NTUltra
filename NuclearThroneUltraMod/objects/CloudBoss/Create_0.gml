@@ -44,10 +44,10 @@ squareOffset = 17;
 homingSpeed = 1.5;
 laserAmount = 6;
 smackRange = 12;
-sneakTell = 20;
+sneakTell = 15;
 smackSpeed = 14;
 reachedHalfHp = false;
-sneakTime = 30;
+sneakTime = 20;
 isInverted = false;
 homingDurationAdjustment = 15;
 if loops > 0
@@ -60,3 +60,4 @@ if loops > 0
 }
 instance_create(x,y,DramaCamera);
 scrAddDrops(2);
+bottomAttack = choose(true,false);

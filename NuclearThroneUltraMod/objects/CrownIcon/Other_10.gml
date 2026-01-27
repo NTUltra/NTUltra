@@ -164,7 +164,8 @@ if crown == 34
 		subarea = Player.lastsubarea;
 		lastarea = Player.lastarea;
 		lastsubarea = Player.lastsubarea;
-		hard = Player.hard;
+		baseWeaponTier = Player.baseWeaponTier;
+		gameDifficulty = Player.gameDifficulty;
 		oasis = Player.oasis;
 		inverted = Player.inverted;
 		freeAmmoRound = Player.freeAmmoRound;
@@ -333,7 +334,8 @@ if crown == 11
 		lastwishused = false;
 		area = other.area//other.lastarea;
 		loops = other.loops;
-		hard = other.hard;
+		baseWeaponTier = other.baseWeaponTier;
+		gameDifficulty = other.gameDifficulty;
 		kills = other.kills;
 		subarea=other.subarea;
 		boostLevel = boost;
@@ -377,7 +379,7 @@ if crown == 43//FROG
 		//FROG
 		with Player
 		{
-			hard += 2;
+			baseWeaponTier += 2;
 			rad = max(rad,GetPlayerMaxRad()) + 1;
 			if area == 100
 				lastarea = 2;

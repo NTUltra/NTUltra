@@ -10,7 +10,12 @@ spr_walk = sprBigMaggotIdle
 spr_hurt = sprBigMaggotHurt
 spr_dead = sprBigMaggotDead
 
-
+droprate = 0;
+scrInitDrops(1);
+if instance_exists(Player) && Player.skill_got[4]
+{
+	droprate = 10;
+}
 
 snd_hurt = sndBigMaggotHit
 snd_dead = sndBigMaggotDie

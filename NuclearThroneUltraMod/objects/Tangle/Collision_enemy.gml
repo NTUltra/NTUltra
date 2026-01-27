@@ -8,7 +8,7 @@ with other
 	    if Player.skill_got[5] && !totemImmune && my_health > 0
 	    {
 			var baseDmg = maxhealth*0.35;
-			var actualDmg = scrCallculateFinalDamage(baseDmg)
+			var actualDmg = scrCalculateFinalDamage(baseDmg)
 		    if  my_health <= actualDmg//Plant thronebutt
 		    {
 				snd_play(sndPlantTBKill);

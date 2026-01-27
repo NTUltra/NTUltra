@@ -7,6 +7,8 @@ if instance_exists(Player)
 	with Player
 	{
 		var add = other.radValue;
+		if scrIsCrown(12)
+			add -= crownOfInversionRadReduction;
 		if scrIsCrown(4)
 			add += 0.18;
 		else if scrIsCrown(18)

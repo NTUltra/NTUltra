@@ -7,7 +7,12 @@ maxhealth=17;
 
 event_inherited()
 meleedamage = 3
-
+droprate = 0;
+if instance_exists(Player) && Player.skill_got[4]
+{
+	droprate = 10;
+	scrInitDrops(1);
+}
 spr_idle = sprInvertedWolfIdle
 spr_walk = sprInvertedWolfWalk
 spr_hurt = sprInvertedWolfHurt

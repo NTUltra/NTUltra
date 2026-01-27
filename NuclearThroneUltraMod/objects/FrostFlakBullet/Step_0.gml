@@ -9,3 +9,9 @@ instance_destroy()
 
 image_speed = speed/12
 
+if collision_line_width(xprev,yprev,x,y,Wall,false,false,1)
+{
+	event_user(0);
+}
+xprev = x;
+yprev = y;

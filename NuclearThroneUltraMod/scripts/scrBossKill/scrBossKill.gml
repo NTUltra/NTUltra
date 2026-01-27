@@ -9,13 +9,52 @@ function scrBossKill(shouldBreakWalls = true) {
 			instance_create(x-16,y+16,WallBreakWallOnly);
 			instance_create(x-16,y-16,WallBreakWallOnly);
 		}
+		var wx = x;
+		var wy = y;
 		if Player.ultra_got[77] && !Player.altUltra
 		{
-			instance_create(x,y,UltraChest);
+			if collision_point(x,y,Floor,false,false)
+				instance_create(x,y,UltraChest);
+			else
+			{
+				var n = instance_nearest(x,y,Floor);
+				if n != noone
+				{
+					var o = 16;
+					if n.object_index = FloorExplo
+					{
+						o = 8;
+					}
+					wx = n.x + o;
+					wy = n.y + o;
+				}
+			}
+			instance_create(wx,wy,UltraChest);
 		}
 		else if Player.race == 20//Business hog
 		{
-			instance_create(x,y,GoldChest);
+			if collision_point(x,y,Floor,false,false)
+				instance_create(x,y,GoldChest);
+			else
+			{
+				if collision_point(x,y,Floor,false,false)
+					instance_create(x,y,UltraChest);
+				else
+				{
+					var n = instance_nearest(x,y,Floor);
+					if n != noone
+					{
+						var o = 16;
+						if n.object_index = FloorExplo
+						{
+							o = 8;
+						}
+						wx = n.x + o;
+						wy = n.y + o;
+					}
+				}
+				instance_create(wx,wy,GoldChest);
+			}
 		}
 			
 		if Player.ultra_got[2]

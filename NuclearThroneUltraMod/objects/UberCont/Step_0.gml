@@ -87,7 +87,8 @@ if (canRestart && isPaused == 1 && !instance_exists(PlayerSpawn) && !instance_ex
 		with Player
 		{
 			other.kills = kills;
-			other.hard = hard;
+			other.baseWeaponTier = baseWeaponTier;
+			other.gameDifficulty = gameDifficulty;
 			skeletonlives = 0;
 			ultra_got[87] = 0;
 			instance_destroy()
@@ -337,7 +338,8 @@ else
 		else if instance_exists(Player) && !instance_exists(StartDaily)///PAUSE IN-GAME
 		{
 			kills=Player.kills
-			hard=Player.hard;
+			baseWeaponTier=Player.baseWeaponTier;
+			gameDifficulty=Player.gameDifficulty;
 			event_user(0);
 			alarm[7] = 1;
 			isPaused = 1

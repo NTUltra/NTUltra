@@ -43,7 +43,7 @@ if canSpawn
 		angle += angleStep;
 	}
 }
-var drop = scrDrop(90,0);
+var drop = scrDrop(75,0);
 if shootOutPickup && drop != noone
 {
 	with drop

@@ -4,7 +4,12 @@ meleedamage = 2
 mySize = 1
 
 event_inherited()
-
+droprate = 0;
+if instance_exists(Player) && Player.skill_got[4]
+{
+	droprate = 10;
+	scrInitDrops(1);
+}
 spr_idle = sprWolfIdle
 spr_walk = sprWolfWalk
 spr_hurt = sprWolfHurt

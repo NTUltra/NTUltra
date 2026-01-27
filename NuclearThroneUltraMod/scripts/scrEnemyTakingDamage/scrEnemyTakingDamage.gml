@@ -33,10 +33,12 @@ function scrEnemyTakingDamage() {
 			{
 				dmgTaken = scrBleedDamage(dmgTaken);
 			}
-			if Player.skill_got[48]
+			/*
+			if Player.skill_got[488]
 			{
 				dmgTaken = scrExcessResourceDamage(dmgTaken);	
 			}
+			*/
 			if ( (Player.skill_got[5]) && (Player.race == 11))//HUNTER THRONE BUTT
 			{
 				if dmgTaken > 0
@@ -73,9 +75,9 @@ function scrEnemyTakingDamage() {
 			}
 			if (Player.skill_got[37]) //ECSTATIC FISTS
 			{
-				var part = 0.3333333333333333333333333333333;
+				var part = 0.3//0.3333333333333333333333333333333;
 				if Player.race == 25 //Doctor
-					part = 0.42;
+					part = 0.38//42;
 				var dmgBuff = 1;
 				if Player.ultra_got[62] && Player.altUltra && Player.armour > 0 && Player.maxarmour > 0
 				{

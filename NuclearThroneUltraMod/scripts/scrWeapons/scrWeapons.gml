@@ -5810,7 +5810,7 @@ function scrWeapons() {
 	wep_cost[516] = 7
 	wep_sprt[516] = sprSuperPenetrator
 	wep_area[516] = 12
-	wep_text[516] = "really hard penetration!"
+	wep_text[516] = "really deep penetration!"
 	wep_swap[516] = sndSwapBow
 	wep_rad[516] = 0;
 	
@@ -8313,8 +8313,8 @@ function scrWeapons() {
 	wep_name[742] = "MAGGOT LAUNCHER"
 	wep_type[742] = 1
 	wep_auto[742] = 1
-	wep_load[742] = 7
-	wep_cost[742] = 4
+	wep_load[742] = 6
+	wep_cost[742] = 5
 	wep_sprt[742] = sprMaggotLauncher
 	wep_area[742] = 5
 	wep_text[742] = "fires maggots"
@@ -9036,7 +9036,7 @@ function scrWeapons() {
 	wep_cost[806] = 9
 	wep_sprt[806] = sprPowerBoltLauncher
 	wep_area[806] = 9
-	wep_text[806] = "lots of ammo lots of damage, hard to handle"
+	wep_text[806] = "lots of ammo lots of damage, difficult to handle"
 	wep_swap[806] = sndSwapBow
 	wep_rad[806] = 0;
 	wep_popup[806] = "REFUNDS AMMO ON EACH HIT";

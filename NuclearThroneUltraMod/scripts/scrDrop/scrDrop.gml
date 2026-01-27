@@ -1,4 +1,4 @@
-function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnlyDropHealth = 0) {
+function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnlyDropHealth = 0, forcePaw = false) {
 	var pickup = noone;
 	if UberCont.dropLimit > 400
 		return noone;
@@ -105,7 +105,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 			dropRateBuff = 0.07;
 		else
 			dropRateBuff = 0;
-		rabbit = (Player.skill_got[4]*(0.33+Player.betterrabbitpaw));
+		rabbit = forcePaw || (Player.skill_got[4]*(0.33+Player.betterrabbitpaw));
 		dropRateBuff += 0.98 + rabbit
 		//+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.00009))//max is 50%

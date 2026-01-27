@@ -2,6 +2,8 @@
 
 // Inherit the parent event
 event_inherited();
+venomDamage = 0;
+venomHits = 0;
 stopSpeed = 0.2;//0.18
 owner = -1;
 dmg = 12;

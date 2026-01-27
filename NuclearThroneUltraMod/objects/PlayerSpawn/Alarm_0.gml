@@ -69,7 +69,8 @@ with Player//Data to keep
 	lastarea = other.lastarea;
 	area = other.area//other.lastarea;
 	loops = other.loops;
-	hard = other.hard;
+	baseWeaponTier = other.baseWeaponTier;
+	gameDifficulty = other.gameDifficulty;
 	kills = other.kills;
 	subarea= other.subarea;
 	boostLevel = other.level;
@@ -132,7 +133,8 @@ with Player//Data to keep
 		betterTail = other.betterTail;
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
-		hard = other.hard;
+		baseWeaponTier = other.baseWeaponTier;
+		gameDifficulty = other.gameDifficulty;
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;

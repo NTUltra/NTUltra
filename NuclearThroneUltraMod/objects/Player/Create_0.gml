@@ -360,7 +360,8 @@ area = 1
 subarea = 0
 lastarea = 1
 lastsubarea = 1;
-hard = 0
+baseWeaponTier = 0
+gameDifficulty = 0;
 
 skillsChosen = 0; //To check for ultra mutation (always last)
 totalSkills = 0;
@@ -660,7 +661,8 @@ if scrIsHardMode()//HARD MODE
 	anyMutation += 1;
 	if !instance_exists(PlayerSpawn)
 	{
-		hard = 3;
+		baseWeaponTier = 3;
+		gameDifficulty = 2;
 		instance_create(x,y,HardModeChest);
 	}
 	//Also in startDaily
@@ -676,7 +678,8 @@ swapChar = false;
 crownvisits = 0
 reincarnate = false;
 if scrIsGamemode(21) { //loop start
-    hard = 12;
+    baseWeaponTier = 12;
+	gameDifficulty = 14;
     loops = 1;
 }
 var r = UberCont.racepick;
@@ -685,7 +688,8 @@ if r == 0
 if scrIsGamemode(36)//Ultra mod start
 {
 	area = 100;
-    hard -= 1;
+    baseWeaponTier -= 1;
+	gameDifficulty -= 1;
     crownvisits = -1;
 	//instance_create(0,0,PauseTimer);
 }

@@ -11,4 +11,4 @@ with instance_create(x+lengthdir_x(smackRange,90),y+lengthdir_y(smackRange,90),N
 	team = other.team
 }
 vspeed = 2;
-alarm[1] = actTime * 2;
+alarm[1] = actTime * 1.5;

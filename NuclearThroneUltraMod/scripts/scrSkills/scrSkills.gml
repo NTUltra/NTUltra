@@ -47,8 +47,8 @@ function scrSkills() {
 	skill_name[2] = "EXTRA FEET"
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
-	skill_text[2] = "WALK <w>FASTER<w>#DODGING <rp>SOMETIMES<rp> GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>"
-	skill_detail[2] = "MORE <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> <rp>SOMETIMES<rp>#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON RECOIL#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_text[2] = "WALK <w>FASTER<w>#<w>DODGING<w> PROJECTILES GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#STOP EXTERNAL MOVEMENT CHANGES"
+	skill_detail[2] = "WALK <w>FASTER<w>#CLOSE PROJECTILE <w>DODGES<w> SOMETIMES#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>##WALK NORMAL ON ALL <w>TERRAIN<w>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON <w>RECOIL<w>#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "+20% MORE SPEED#MORE RESOURCES ON DODGE#BIGGER DODGE SHIELD";
@@ -226,8 +226,8 @@ function scrSkills() {
 	//skill_text[11] = "20% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS"
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
-	skill_text[11] = "DEAL SLIGHTLY MORE DAMAGE#SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>"; 
-	skill_detail[11] = "ADD A <w>FIXED +0.5<w> EXTRA DAMAGE#TO ALL INSTANCES OF DAMAGE#DEALT TO ENEMIES##<w>65%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>##GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP"
+	skill_text[11] = "SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>##DEAL <w>FIXED<w> EXTRA DAMAGE"; 
+	skill_detail[11] = "<w>65%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP##DEAL <w>+0.5<w> EXTRA DAMAGE"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
 	skill_bons[11] = "80% INSTEAD#+0.15 FIXED DAMAGE";
@@ -252,8 +252,8 @@ function scrSkills() {
 	skill_name[14] = "BOILING VEINS"
 	if !UberCont.useSeed && random(900)<1
 		skill_name[14] = "HOT HEAD"
-	skill_text[14] = "<w>EXPLOSIONS<w> <r>BURN<r> ENEMIES#TAKE <w>NO DAMAGE<w> FROM#<w>EXPLOSIONS<w>, <w>FIRE<w> AND <w>FROST<w>#WHEN UNDER <w>4<w><r>HP<r>"
-	skill_detail[14] = "<w>EXPLOSIONS<w> <r>BURN<r> ENEMIES#TAKE <w>NO DAMAGE<w> FROM#<w>EXPLOSIONS<w>, <w>FIRE<w>, <w>FROST<w>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER <w>4<w><r>HP<r>##(WEAPON SPECIFIC MUTATION)";
+	skill_text[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <r>FIRE<r> AND <aq>FROST<aq>#WHEN UNDER <w>4<w><r>HP<r>";
+	skill_detail[14] = "EXPLOSIONS <r>BURN<r> ENEMIES#NO DAMAGE FROM#<w>EXPLOSIONS<w>, <r>FIRE<r>, <aq>FROST<aq>#AND YOU CAN'T BE <w>FROZEN<w>#WHEN UNDER <w>4<w><r>HP<r>##(WEAPON SPECIFIC MUTATION)";
 	if instance_exists(Player) && Player.race == 13
 	{
 			
@@ -426,10 +426,11 @@ function scrSkills() {
 	skill_name[28] = "RAGE"
 	skill_text[28] = "<r>KILLS<r> SLOWLY <w>INCREASE<w>:#<w>RELOAD SPEED<w> AND <w>DROP<w> <rp>CHANCE<rp>#AND <r>DECREASE<r> <w>ACCURACY<w>";
 	skill_detail[28] = "EACH <r>KILL<r> <w>INCREASES<w>:#<w>DROP<w> <rp>CHANCE<rp>, ALL WEAPON <w>RELOAD SPEED<w>#AND <r>DECREASES<r> <w>ACCURACY<w> SLIGHTLY##LOSE <w>28<w> <r>RAGE<r> EACH TIME YOU GET HIT##SELF INFLICTED DAMAGE#DOES NOT REDUCE RAGE";
-	if instance_exists(Player) && Player.skill_got[48]
+	/*
+	if instance_exists(Player) && Player.skill_got[488]
 	{
 		skill_detail[28] += "#<w>EXCESS<w> <r>RAGE<r> STACKS <g>GLUTINOUS BELLY<g>"
-	}
+	}*/
 	skill_tips[28] = "dodge to kill"
 	skill_msnd[28] =  sndMutRage
 	skill_bons[28] = "GAIN +25% MORE RAGE#LOSE 5 LESS RAGE ON HIT";
@@ -459,9 +460,14 @@ function scrSkills() {
 	skill_name[31] = "TURTLE SHELL"
 	else
 	skill_name[31] = "TOUGH SHELL"
+<<<<<<< Updated upstream
 	skill_text[31] = /*"+1 <r>MAX HP<r>#*/"<w>REDUCE<w> INCOMING <r>DAMAGE<r>"
 	//skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN <w>2<w> <r>DAMAGE<r> TO YOU#DEALS <w>1<w> LESS <r>DAMAGE<r>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
 	skill_detail[31] = "ALL INCOMING <r>ENEMY DAMAGE<r>#IS REDUCED BY <w>1<w>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
+=======
+	skill_text[31] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
+	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN <w>2<w> DAMAGE TO YOU#DEALS <w>ONE LESS<w> DAMAGE##NOTHING CAN DEAL MORE#THAN <w>8<w> DAMAGE TO YOU"
+>>>>>>> Stashed changes
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
@@ -491,7 +497,7 @@ function scrSkills() {
 			skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
-	skill_bons[33] = "25% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
+	skill_bons[33] = "26% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
 	
 	/* OLD
 	skill_name[34] = "FLEXIBLE ELBOWS"
@@ -520,7 +526,7 @@ function scrSkills() {
 	skill_bons[35] = "CAN LOAD UP TO 3 SHOTS"//"+25% EXTRA SHOT LOAD SPEED#(TOTAL: 70%)";
 	
 	skill_name[36] = "ABSORBING PORES"
-	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<w>ITEMS<w> GIVE <g>RADS<g>";
+	skill_text[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w>#<r>HP<r> AND <y>AMMO<y> <w>DROPS<w> GIVE <g>RADS<g>";
 	skill_detail[36] = "<g>RADS<g> <r>HEAL<r> AND <w>RELOAD<w> ALL YOUR WEAPONS#<y>AMMO<y> AND <r>HP<r> DROPS GIVE <g>RADS<g>##EVERY <w>150TH<w> <g>RAD<g> <r>HEALS<r> <w>1<w><r>HP<r>"
 	skill_tips[36] = "osmosis"
 	skill_msnd[36] =  sndMutAbsorbingPores
@@ -529,15 +535,15 @@ function scrSkills() {
 	
 	skill_name[37] = "ECSTATIC FISTS"//REJUVINATED SKIN
 	skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <r>HEALTH<r> IS";
-	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+33% AT <r>MAX HP<r>"
+	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+30% AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS";
-		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+33% AT <gb>MAX ARMOUR<gb>"
+		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+30% AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists
-	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 42%)"
+	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 38%)"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY <w>FOURTH<w> HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
@@ -548,7 +554,7 @@ function scrSkills() {
 	
 	skill_name[39] = "ALIEN INTESTINES"
 	skill_text[39] = "<g>ACTIVE<g> SPAWNS <p>TENTACLES<p>"
-	skill_detail[39] = "WHENEVER YOU TRY TO USE YOUR <g>ACTIVE<g>#OR WHEN YOU RELEASE YOUR ACTIVE#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
+	skill_detail[39] = "WHENEVER YOU <w>TRY<w> TO USE YOUR <g>ACTIVE<g>#OR WHEN YOU RELEASE YOUR ACTIVE#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
 	skill_tips[39] = "spatial anomaly"
 	skill_msnd[39] =  sndMutAlienIntestines
 	skill_bons[39] = "CHARGES FASTER"
@@ -622,7 +628,7 @@ function scrSkills() {
 	skill_bons[47] = "EVERY 19% AMMO SPENT#+25% BIGGER IMPLOSION"
 	skill_msnd[47] =  sndMutBouncyFat;
 	
-	
+	/*
 	skill_name[48] = "GLUTINOUS BELLY"
 	skill_text[48] = "<w>STACK<w> UP ON ANY<w> EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
 	skill_detail[48] = "<w>STACK<w> UP ON <w>ANY EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r>#TO DEAL UP TO <w>50%<w> MORE <r>DAMAGE<r>#COLLECT <w>EXCESS<w> <y>RES<y><g>OUR<g><r>CES<r> IN THE <w>NEXT AREA<w>";
@@ -638,6 +644,7 @@ function scrSkills() {
 	skill_tips[48] = "EAT THE RICH"
 	skill_bons[48] = "+15% DAMAGE CONVERSION#+20% MAX DAMAGE"
 	skill_msnd[48] =  sndMutBouncyFat;
+	*/
 	/*
 	skill_name[47] = "HOLLOW BONES"
 	skill_text[47] = "EVERY SO MUCH <y>AMMO<y> YOU SPEND#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <p>IMPLODE<p>";

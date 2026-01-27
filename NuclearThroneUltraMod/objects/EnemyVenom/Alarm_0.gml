@@ -73,12 +73,5 @@ with owner
 	}
 	sprite_index = spr_hurt;
 	image_index = 0;
-}/*
-if !instance_exists(owner) || owner == noone || toCheck < breakPoint
-{
-	instance_destroy();	
 }
-else
-{*/
-	alarm[0] = rate;	
-//}
+alarm[0] = rate;	

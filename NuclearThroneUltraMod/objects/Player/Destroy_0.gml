@@ -397,7 +397,8 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 	area = other.area//other.lastarea;
 	subarea=other.subarea;
 	loops = other.loops;
-	hard = other.hard;
+	gameDifficulty = other.gameDifficulty;
+	baseWeaponTier = other.baseWeaponTier;
 	kills = other.kills;
 	myCorpse = other.myCorpse;
 	level = max(other.boostLevel,other.level);
@@ -447,7 +448,8 @@ with instance_create(x,y,PlayerSpawn)//Data to keep
 		luck = other.luck
 		accuracy = other.accuracy;
 		standartAccuracy = other.standartAccuracy;
-		hard = other.hard;
+		baseWeaponTier = other.baseWeaponTier;
+		gameDifficulty = other.gameDifficulty;
 		maxSpeed = other.maxSpeed;
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;
@@ -565,7 +567,8 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 			BackCont.kills = kills
 			BackCont.area = area
 			BackCont.subarea = subarea
-			BackCont.hard = hard
+			BackCont.baseWeaponTier = baseWeaponTier
+			BackCont.gameDifficulty = gameDifficulty
 			BackCont.loops = loops
 			if my_health <= 0 && visible
 				with GameRender
@@ -592,8 +595,8 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 				cbst_kill[other.race] = other.kills
 
 			//best difficulty
-			if other.hard>cbst_diff[other.race]
-				cbst_diff[other.race]=other.hard
+			if other.baseWeaponTier>cbst_diff[other.race]
+				cbst_diff[other.race]=other.baseWeaponTier
 
 			//best loops
 			if other.loops> cbst_loop[other.race]
@@ -614,9 +617,13 @@ else if !reincarnate && actualLives < 1 && !instance_exists(UltraIcon)
 				if other.kills > cbst_kill[0]
 					cbst_kill[0] = other.kills
 
+				//best weaponTier
+				//if other.baseWeaponTier>cbst_wep_tier[0]
+				//	cbst_wep_tier[0]=other.baseWeaponTier
+					
 				//best difficulty
-				if other.hard>cbst_diff[0]
-					cbst_diff[0]=other.hard
+				if other.gameDifficulty>cbst_diff[0]
+					cbst_diff[0]=other.gameDifficulty
 
 				//best loops
 				if other.loops> cbst_loop[0]

@@ -75,8 +75,9 @@ function scrCrowns() {
 	crown_used[11] = 0
 	crown_tips[11] = "new born"
 
+	#macro crownOfInversionRadReduction 0.4
 	crown_name[12] = "[CROWN OF INVERSION]"
-	crown_text[12] = "HIGHER <rp>CHANCE<rp> FOR#<w>INVERTED PORTALS<w> TO APPEAR"
+	crown_text[12] = "HIGHER CHANCE FOR#<w>INVERTED PORTALS<w> TO APPEAR#<w>-40%<w> <g>RADIATION<g> VALUE"
 	crown_used[12] = 0
 	crown_tips[12] = "looking for the blue stuff"
 

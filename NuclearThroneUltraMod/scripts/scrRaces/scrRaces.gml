@@ -663,7 +663,7 @@ function scrRaces() {
 	race_fskin[26] = 0
 	race_gskin[26] = 0
 	race_bskin_lock[26] = "PERFORM 20 CLOSE DODGES#USING EXTRA FEET#IN ONE RUN#AS HUMPHRY"//"COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
-	race_cskin_lock[26] = "REACH 500 SKILL!"
+	race_cskin_lock[26] = "STUN 50 ENEMIES#STOP 50 PROJECTILES#IN ONE RUN"
 	
 	race_name[27] = "HANDS"
 	race_pass[27] = "HIGHER <rp>CHANCE<rp> FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> <w>2<w><r>HP<r>"
@@ -760,4 +760,51 @@ function scrRaces() {
 		race_bskin_lock[29] = "(NOT IMPLEMENTED)#REACH PALACE#WHILE BELOW LEVEL 6#AS NO THING"
 		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE#AS NO THING"
 		
+			race_name[30] = "SLOBBER"
+			race_pass[30] = "FIND MORE <r>HP<r> CHESTS#MORE DUPES = MORE <y>AMMO<y> FROM PICKUPS"
+			race_acti[30] = "<w>SPLIT<w>"
+			race_butt[30] = "AT THE START OF EACH AREA:#SUMMON <w>ONE DUPLICATE<w> CALLED <pi>YUNGER CUZ<pi>##YUNGER CUZ'S SHOTS#<w>REFUND 25%<w> <y>AMMO<y> AND <w>RELOAD TIME<w>"
+			race_butt_detail[30] = race_butt[12];
+			race_vision[30] = "HOLD <w>[E]<w> TO:#TURN YOUR <w>DUPLICATES<w> INTO <p>HACKS<p>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>";
+			race_vision_detail[30] = "HOLD <w>[E]<w> TO:#TURN YOUR DUPLICATES INTO <p>HACKS<p>#TEMPORARILY ENABLED <w>IN ORDER<w>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>##AFTER ALL HACKS ARE ENABLED (3+ DUPES)#NEXT DUPLICATES INCREASES <w>DURATION<w>";
+			if isUnique
+			{
+				race_vision[30] = string_replace_all(race_vision[30],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+				race_vision_detail[30] = string_replace_all(race_vision_detail[30],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			}
+			race_lock[30] = "REACH SEWER PIPE NETWORK"
+			race_have[30] = 0
+			race_swep[30] = 867//Toxic hand cannonn
+			race_bskin[30] = 0
+			race_cskin[30] = 0
+			race_dskin[30] = 0
+			race_eskin[30] = 0
+			race_fskin[30] = 0
+			race_gskin[30] = 0
+			race_bskin_lock[30] = "HACK THE GAME#USING Y.C.'S REGAL VISION"
+			race_cskin_lock[30] = "AS SLOBBER#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
+	
+		race_name[31] = "WOLVES PAIR"//MANTIS
+		race_pass[31] = "BONDED LIVES#A: DAMAGE TAKEN BY ENEMIES IS SPLIT TO NEARBY ENEMIES#B: DAMAGE TAKEN BY MULTIPLE NEARBY ENEMIES IS COMBINED TO THE STRONGEST ENEMY"
+		race_acti[31] = "A: <aq>FROST BITE<aq> B: <w>GRAPPLE BITE<w>"
+		race_butt[31] = "A: FROST IS FROSTIER#B: GRAPPLE IMMUNE"
+		race_butt_detail[31] = race_butt[12];
+		race_vision[31] = "NO LONGER SWAP WOLF EACH AREA#INSTEAD: HOLD <w>[E]<w> TO:#SWAP BETWEEN WOLVES";
+		race_vision_detail[31] = "NO LONGER SWAP MUTANT EACH AREA#HOLD <w>[E]<w> TO:#SWAP BETWEEN WOLVES";
+		if isUnique
+		{
+			race_vision[31] = string_replace_all(race_vision[30],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+			race_vision_detail[31] = string_replace_all(race_vision_detail[30],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
+		}
+		race_lock[31] = "REACH SEWER PIPE NETWORK"
+		race_have[31] = 0
+		race_swep[31] = 90//ASSAULT PISTOL
+		race_bskin[31] = 0
+		race_cskin[31] = 0
+		race_dskin[31] = 0
+		race_eskin[31] = 0
+		race_fskin[31] = 0
+		race_gskin[31] = 0
+		race_bskin_lock[31] = "GRAPPLE DASH THROUGH 12 ENEMIES"
+		race_cskin_lock[31] = "AS WOLF FREEZE THE DRAGON'S FIRE";
 }

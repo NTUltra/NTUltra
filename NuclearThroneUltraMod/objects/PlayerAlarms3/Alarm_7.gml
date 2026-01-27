@@ -6,7 +6,7 @@ else
 	forceEarlyInit = true;//Just to make sure it does not do this init again (by force)
 	with Player
 	{
-		if skill_got[48]
+		if false// && skill_got[488]
 		{
 			if excessResourceDamageBoost > 0
 			{

@@ -57,7 +57,8 @@ function scrNextLevel(skipping = false) {
 					lastarea = other.lastarea;
 					lastsubarea = other.lastsubarea;
 					subarea = other.subarea;
-					hard = other.hard;
+					baseWeaponTier = other.baseWeaponTier;
+					gameDifficulty = other.gameDifficulty;
 					oasis = other.oasis;
 					inverted = other.inverted;
 					freeAmmoRound = other.freeAmmoRound;
@@ -106,21 +107,25 @@ function scrNextLevel(skipping = false) {
 					if scrIsCrown(24)
 						hard += 1;
 					else*/
-						hard -= 1;
+						baseWeaponTier -= 1;
+						gameDifficulty -= 1;
 			    }
 			}
 		}
 	}
-	var prevHard = hard;
+	var prevHard = baseWeaponTier;
 	if !skipping && scrIsGamemode(25)//Survival
 	{
 		area = 116;
 		subarea ++;
-		if subarea < 8
-			hard+=1.25;
+		gameDifficulty += 1;
+		if subarea < 6
+		{
+			baseWeaponTier += 1.25;
+		}
 		else
 		{
-			hard += 0.75;
+			baseWeaponTier += 0.75;
 		}
 		exit;
 	}
@@ -154,8 +159,10 @@ function scrNextLevel(skipping = false) {
 					lastarea = 9;
 					lastsubarea = 1;
 					inverted = false;
-					hard -= 1;
-					hard = max(hard,0);
+					baseWeaponTier -= 1;
+					gameDifficulty -= 1;
+					baseWeaponTier = max(baseWeaponTier,0);
+					gameDifficulty = max(gameDifficulty,0);
 					with RegalNavigation
 					{
 						instance_destroy();	
@@ -172,8 +179,10 @@ function scrNextLevel(skipping = false) {
 				}
 				else
 				{
-					hard -= 1;
-					hard = max(hard,0);
+					baseWeaponTier -= 1;
+					gameDifficulty -= 1;
+					baseWeaponTier = max(baseWeaponTier,0);
+					gameDifficulty = max(gameDifficulty,0);
 					with SecretSheepNavigation
 					{
 						other.lastarea = lastarea;
@@ -193,8 +202,10 @@ function scrNextLevel(skipping = false) {
 				lastarea = 1;
 				lastsubarea = 1;
 				inverted = false;
-				hard -= 1;
-				hard = max(hard,0);
+				baseWeaponTier -= 1;
+				gameDifficulty -= 1;
+				baseWeaponTier = max(baseWeaponTier,0);
+				gameDifficulty = max(gameDifficulty,0);
 			}
 			scrAddArea(area);
 			scrAddToRoute(area);
@@ -400,7 +411,7 @@ function scrNextLevel(skipping = false) {
 						hard -= 1;
 					else
 					*/
-						hard += 1;
+						baseWeaponTier += 1;
 				}
 				else
 				{
@@ -409,7 +420,8 @@ function scrNextLevel(skipping = false) {
 						hard -= 1.5;
 					else
 					*/
-						hard += 1.25;
+						baseWeaponTier += 1.25;
+						gameDifficulty += 1.25;
 				}
 			}
 			else if area == 10 && subarea < 2
@@ -419,7 +431,8 @@ function scrNextLevel(skipping = false) {
 					hard -= 2;
 				else
 				*/
-					hard += 2;
+					baseWeaponTier += 2;
+					gameDifficulty += 2;
 			}
 			else if (
 			//!(area = 7 && subarea == 1) //Vulcano 1
@@ -438,7 +451,8 @@ function scrNextLevel(skipping = false) {
 						hard -= 0.5;
 					else
 					*/
-						hard += 0.25;
+						baseWeaponTier += 0.25;
+						gameDifficulty += 0.25;
 				}
 				else
 				{
@@ -447,26 +461,35 @@ function scrNextLevel(skipping = false) {
 						hard -= 1;
 					else
 					*/
-						hard += 1;
+						baseWeaponTier += 1;
+						gameDifficulty += 1;
 				}
 			}
-			if loops > 0 && hard - prevHard > 0
+			if loops > 0 && baseWeaponTier - prevHard > 0
 			{
-				hard -= 0.25;
+				baseWeaponTier -= 0.25;
+				gameDifficulty -= 0.5;
 			}
 			if scrIsCrown(10)
-				hard += 0.5;
+			{
+				baseWeaponTier += 0.5;
+				gameDifficulty += 0.5;
+			}
 			if scrIsGamemode(34)//HARD
-				hard += 0.1;
-			hard = max(0,hard);
+			{
+				baseWeaponTier += 0.1;
+				gameDifficulty += 0.15;
+			}
+			baseWeaponTier = max(0,baseWeaponTier);
+			gameDifficulty = max(0,gameDifficulty);
 		}
 	}
 	if loops < 1
 	{
 		if scrIsCrown(10)
-			hard = min(18,hard);
+			baseWeaponTier = min(18,baseWeaponTier);
 		else
-			hard = min(12,hard);	
+			baseWeaponTier = min(12,baseWeaponTier);	
 	}
 	if !skipping
 	{

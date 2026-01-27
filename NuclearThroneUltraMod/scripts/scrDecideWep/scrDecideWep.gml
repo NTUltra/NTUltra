@@ -13,7 +13,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		dataRef = DataRef;
 	else
 		return 0;
-	if dataRef.hard > 13 || dataRef.hard < 2
+	if dataRef.baseWeaponTier > 13 || dataRef.baseWeaponTier < 2
 	{
 		maxTriesParam *= 0.5;
 	}
@@ -35,7 +35,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		if !dataRef.altUltra && dataRef.ultra_got[29]==1//Refined taste
 		{
 			wepTier += choose(1,2);
-			minWepArea = min(7,dataRef.hard+wepTier);
+			minWepArea = min(7,dataRef.baseWeaponTier+wepTier);
 			minWepArea = floor(minWepArea);
 			maxTries += 20;
 		}
@@ -51,7 +51,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 				return scrDecideWepGold();	
 			}
 		}
-		wepTier += dataRef.hard;
+		wepTier += dataRef.baseWeaponTier;
 		if isFactory
 		{
 			wepTier += 2;

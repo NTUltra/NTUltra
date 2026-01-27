@@ -6,7 +6,12 @@ if instance_exists(Player) && Player.skill_got[4]
 	droprate += 2;
 event_inherited();
 meleedamage = 3
-
+droprate = 0;
+if instance_exists(Player) && Player.skill_got[4]
+{
+	droprate = 10;
+	scrInitDrops(1);
+}
 actTime = 10;
 spr_normal = sprExploGuardianWalk;
 spr_idle = spr_normal;

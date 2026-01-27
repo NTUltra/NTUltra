@@ -2201,7 +2201,7 @@ function scrPowers(raceOverwrite = -1) {
 					}
 				}
 				if ultra_got[13] && !altUltra {
-					var dmgDeal = scrCallculateFinalDamage(5);
+					var dmgDeal = scrCalculateFinalDamage(5);
 					if gotButt
 					{
 						with enemy {
@@ -2847,6 +2847,12 @@ function scrPowers(raceOverwrite = -1) {
 			var itemGrab = false;
 			var listOfHandTargets = [];
 			var h = 0;
+			var handTargetX = UberCont.mouse__x;
+			var handTargetY = UberCont.mouse__y;
+			var htdir = point_direction(x,y,handTargetX,handTargetY)
+			var htdis = min(point_distance(x,y,handTargetX,handTargetY),300);
+			handTargetX = x + lengthdir_x(htdis,htdir);
+			handTargetY = y + lengthdir_y(htdis,htdir);
 			if instance_number(Hand) > 1
 			{
 				with Hand

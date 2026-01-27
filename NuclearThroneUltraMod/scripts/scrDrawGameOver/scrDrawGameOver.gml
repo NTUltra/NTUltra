@@ -26,7 +26,7 @@ function scrDrawGameOver() {
 	if (!scrIsGamemode(25) && !scrIsGamemode(8))
 	{
 		killText = string(BackCont.kills);
-		tierText = string(BackCont.hard);
+		tierText = string(BackCont.baseWeaponTier);
 		gameover = gameoverText//+"##KILLS: "+string(BackCont.kills)+"#TIER: "+string(BackCont.hard)
 	}
 	else if (scrIsGamemode(25))
@@ -35,7 +35,7 @@ function scrDrawGameOver() {
 		gameover = gameoverText
 		//gameover = "WAVE: "+string(BackCont.subarea)+"##KILLS: "+string(BackCont.kills)+"#TIER: "+string(BackCont.hard)
 		killText = string(BackCont.kills);
-		tierText = string(BackCont.hard);
+		tierText = string(BackCont.baseWeaponTier);
 	}
 
 	var normalMode = scrIsOnlyNormalGamemode();

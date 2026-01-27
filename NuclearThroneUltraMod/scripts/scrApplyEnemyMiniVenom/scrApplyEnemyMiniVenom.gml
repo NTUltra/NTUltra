@@ -1,0 +1,21 @@
+///scrApplyEnemyMiniVenom();
+// /@description
+///@param
+function scrApplyEnemyMiniVenom(applierTeam, target, vDamage, vHits) {
+	if target.team != 0
+		with instance_create(x,y,EnemyMiniVenom)
+		{
+			dmg = vDamage;
+			maxHits = vHits;
+			team = applierTeam;
+			owner = target;
+			if owner.object_index == Player
+			{
+				with GameRender
+				{
+					venomized = true;	
+				}
+				venomized = true;
+			}
+		}
+}

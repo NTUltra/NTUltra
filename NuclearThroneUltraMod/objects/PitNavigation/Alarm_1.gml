@@ -18,7 +18,8 @@ if instance_exists(Player)
 			{
 				if scrIsCrown(10)
 				{
-					hard += 1;	
+					baseWeaponTier += 1;
+					gameDifficulty += 1;
 				}	
 			}
 		break;
@@ -27,8 +28,8 @@ if instance_exists(Player)
 			currentArea = 106;
 			with Player
 			{
-				hard += 1;
-				
+				baseWeaponTier += 1;
+				gameDifficulty += 1;
 			}
 			event_user(0);
 		break;
@@ -44,7 +45,8 @@ if instance_exists(Player)
 			{
 				if scrIsCrown(10)
 				{
-					hard += 1;	
+					baseWeaponTier += 1;	
+					gameDifficulty += 1;
 				}
 			}
 			event_user(0);
@@ -60,7 +62,8 @@ if instance_exists(Player)
 			currentArea = 112;
 			with Player
 			{
-				hard += 1;	
+				baseWeaponTier += 1;	
+				gameDifficulty += 1;	
 			}
 			event_user(0);
 		break;

@@ -98,7 +98,7 @@ if isPaused == 1 && alarm[7] < 1
 				timer="OFF"
 
 
-				var d = " TIER: "+string(hard);
+				var d = " TIER: "+string(baseWeaponTier);
 
 				txt0 = "#OPTIONS############################CONTINUE [ESC] ------------ QUIT [ENTER]"
 

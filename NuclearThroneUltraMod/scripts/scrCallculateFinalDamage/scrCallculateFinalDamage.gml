@@ -1,7 +1,7 @@
-///xxx();
+///scrCalculateFinalDamage();
 // /@description
 ///@param
-function scrCallculateFinalDamage(inputDamage){
+function scrCalculateFinalDamage(inputDamage){
 	var dmgDeal = inputDamage;
 	var hitTarget = id;
 	with Player
@@ -22,10 +22,12 @@ function scrCallculateFinalDamage(inputDamage){
 		{
 			dmgDeal = scrBleedDamage(dmgDeal);
 		}
-		if skill_got[48]
+		/*
+		if skill_got[488]
 		{
 			dmgDeal = scrExcessResourceDamage(dmgDeal);	
 		}
+		*/
 		if ((race == 11) && (skill_got[5]))//HUNTER THRONE BUTT
 		{
 			if dmgDeal > 0

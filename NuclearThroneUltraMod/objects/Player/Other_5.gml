@@ -140,8 +140,8 @@ else if patience > 0
 invertedportalcounter=0;
 
 
-if hard > UberCont.cbst_diff[race]
-UberCont.cbst_diff[race] = hard
+if gameDifficulty > UberCont.cbst_diff[race]
+UberCont.cbst_diff[race] = gameDifficulty
 
 if (race == 19 && skill_got[maxskill + 1] && !instance_exists(SkeletonSkullDestroyed))
 {
@@ -945,7 +945,8 @@ if scrIsGamemode(23) && !instance_exists(Menu) && instance_number(Player) == 1//
 		ultimategamble = other.ultimategamble;
 		kills = other.kills;
 		crownvisits = other.crownvisits;
-		hard = other.hard;
+		baseWeaponTier = other.baseWeaponTier;
+		gameDifficulty = other.gameDifficulty;
 		//PLANT
 		hammerheadcounter = other.hammerheadcounter;
 		lag = other.lag;

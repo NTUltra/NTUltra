@@ -59,7 +59,7 @@ if UberCont.public = 0 {
 		if scrIsGamemode(25)
 		{
 			subarea = 18;
-			hard = 18 * 1.25;
+			baseWeaponTier = 18 * 1.25;
 		}
 		else
 		{
@@ -144,7 +144,7 @@ if UberCont.public = 0 {
 
     if keyboard_check_pressed(ord("L")) {
         subarea = 3
-        hard += 1
+        baseWeaponTier += 1
         repeat(12)
         instance_create(x, y, BigRad)
         instance_create(x, y, BigWeaponChest)
@@ -161,7 +161,7 @@ if UberCont.public = 0 {
     }
 
     if keyboard_check_pressed(vk_add) {
-        hard += 1
+        baseWeaponTier += 1
     }
     if (keyboard_check_pressed(ord("H"))) {
         var dangle = random(1) * 360;

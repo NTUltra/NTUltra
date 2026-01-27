@@ -282,7 +282,7 @@ function scrLoadRun(selectedRunIndex){
 			Player.kills = encryptedRun.kills;
 			UberCont.loadedKills = Player.kills;
 			Player.crownvisits = encryptedRun.crownvisits;
-			Player.hard = encryptedRun.hard;
+			Player.baseWeaponTier = encryptedRun.baseWeaponTier;
 			if variable_struct_exists(encryptedRun, "maxspeed")
 				Player.maxSpeed = encryptedRun.maxspeed;
 			else
