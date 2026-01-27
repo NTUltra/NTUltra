@@ -460,14 +460,9 @@ function scrSkills() {
 	skill_name[31] = "TURTLE SHELL"
 	else
 	skill_name[31] = "TOUGH SHELL"
-<<<<<<< Updated upstream
 	skill_text[31] = /*"+1 <r>MAX HP<r>#*/"<w>REDUCE<w> INCOMING <r>DAMAGE<r>"
 	//skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN <w>2<w> <r>DAMAGE<r> TO YOU#DEALS <w>1<w> LESS <r>DAMAGE<r>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
 	skill_detail[31] = "ALL INCOMING <r>ENEMY DAMAGE<r>#IS REDUCED BY <w>1<w>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
-=======
-	skill_text[31] = "+1 <r>MAX HP<r>#<w>REDUCE INCOMING DAMAGE<w>"
-	skill_detail[31] = "+1 <r>MAX HP<r>#EVERYTHING THAT DEALS#MORE THAN <w>2<w> DAMAGE TO YOU#DEALS <w>ONE LESS<w> DAMAGE##NOTHING CAN DEAL MORE#THAN <w>8<w> DAMAGE TO YOU"
->>>>>>> Stashed changes
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
