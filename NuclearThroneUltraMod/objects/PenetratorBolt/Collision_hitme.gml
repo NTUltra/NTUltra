@@ -2,7 +2,7 @@ if (speed > 0 || alarm[1] > 0) && other.team != team
 {
 	if !array_contains(hitEntities,other.id)
 	{
-		
+		speed = min(30,speed + 6);
 		hitEntities[array_length(hitEntities)] = other.id;
 		with other
 		{

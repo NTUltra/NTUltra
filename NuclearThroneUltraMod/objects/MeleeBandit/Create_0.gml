@@ -3,7 +3,9 @@ maxhealth = 7
 meleedamage = 0
 mySize = 1
 //bloodempty=0;
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 2;
 event_inherited()
 existTime = 0;
 spr_idle = sprMeleeIdle

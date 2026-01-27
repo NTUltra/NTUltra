@@ -2,7 +2,9 @@ raddrop = 1;
 maxhealth = 1
 mySize = 0
 
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 1;
 
 event_inherited()
 meleedamage = 1
@@ -13,7 +15,6 @@ spr_dead = sprMaggotDeadInvert
 //behavior
 alarm[1] = 10+random(10)
 charge = false;
-loops = GetPlayerLoops();
 maxSpeed = 2.5;
 if loops > 0
 	maxSpeed = 3;

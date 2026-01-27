@@ -144,6 +144,12 @@ if (KeyCont.key_paus[0] = 1) ||
 	for (var i = 0; i < al; i++) {
 		instance_deactivate_object(keepDeactive[| i]);	
 	}
+	if tipDataRef != noone && instance_exists(tipDataRef)
+	{
+		with tipDataRef
+			instance_destroy();
+	}
+	tipDataRef = noone;
 	if normalGameSpeed == 30
 		with FPSHACK
 			instance_destroy();
@@ -340,6 +346,12 @@ else
 			kills=Player.kills
 			baseWeaponTier=Player.baseWeaponTier;
 			gameDifficulty=Player.gameDifficulty;
+			with tipDataRef
+				instance_destroy();
+			with Player
+			{
+				other.tipDataRef = scrCreateDataRef();	
+			}
 			event_user(0);
 			alarm[7] = 1;
 			isPaused = 1

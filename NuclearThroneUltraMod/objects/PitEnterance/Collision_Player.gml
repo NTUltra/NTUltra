@@ -20,6 +20,8 @@ if !disable
 			if spr_idle == sprBigVultureSkullOpen
 			{
 				my_health = 0;
+				alarm[9] = 0;
+				canBeKilled = true;
 				snd_play(sndGhostBossExplosionAttack,0.1)
 				with instance_create(x,y,BecomeGhostExplosion)
 				{

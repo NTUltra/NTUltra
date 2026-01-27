@@ -16,4 +16,5 @@ if instance_exists(Player) && !place_meeting(x,y,Tangle)
 	alarm[5] = sneakTime + irandom(60);
 	alarm[1] = alarm[5] + sneakTell;
 	mask_index = mskPickupThroughWall;
+	bottomAttack = choose(true,false);
 }

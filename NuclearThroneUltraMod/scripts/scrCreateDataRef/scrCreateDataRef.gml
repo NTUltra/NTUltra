@@ -2,8 +2,8 @@
 // /@description
 ///@param
 function scrCreateDataRef() {
-	with instance_create(x,y,DataRef)
-	{
+	var dtr = instance_create(x,y,DataRef)
+	with dtr {
 		excessResourceDamageBoost = other.excessResourceDamageBoost;
 		excessResourceDamageBoostMax = other.excessResourceDamageBoostMax;
 		area = other.area;
@@ -13,6 +13,12 @@ function scrCreateDataRef() {
 		loops = other.loops;
 		hitBy = other.hitBy;
 		ultramod = other.ultramod;
+			//Tip data
+			crown = other.crown;
+			crown_tips = other.crown_tips;
+			wep_text = other.wep_text;
+			skill_tips = other.skill_tips;
+		
 		ultra_got = other.ultra_got;
 		ultra_name = other.ultra_name;
 		ultra_text = other.ultra_text;
@@ -122,4 +128,5 @@ function scrCreateDataRef() {
 		chickenFocusDelayTime = 0;
 		isMarksMan = other.isMarksMan;
 	}
+	return dtr;
 }

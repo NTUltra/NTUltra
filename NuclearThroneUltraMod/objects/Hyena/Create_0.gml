@@ -1,7 +1,9 @@
 raddrop = 9
 maxhealth = 12
 mySize = 2
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 3;
 event_inherited()
 meleedamage = 3
 

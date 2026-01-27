@@ -804,7 +804,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		{
 			ultra_name[104] = "GRUMPY LECTURE"
 			//TODO change to unequipped ammo
-		    ultra_text[104] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
+		    ultra_text[104] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES#REDUCED ACTIVE RANGE (TARGETING PROJECTILES)"
 		    ultra_tips[104] = "teach them a lesson!"
 		}
 		/*

@@ -2,7 +2,9 @@ raddrop = 6
 maxhealth = 14
 meleedamage = 0
 mySize = 1
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 2;
 event_inherited()
 
 spr_idle = sprVultureIdle
@@ -37,7 +39,7 @@ alarm[2] = 1;
 
 gunSpr = sprVultureGun;
 fuckyou = false;
-if GetPlayerLoops() > 9
+if loops > 9
 {
 	gunSpr = sprVultureBazooka;
 	fuckyou = true;

@@ -3,7 +3,9 @@ maxhealth = 5
 meleedamage = 0
 mySize = 1
 
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 2;
 
 event_inherited()
 spr_idle = sprExploderIdle

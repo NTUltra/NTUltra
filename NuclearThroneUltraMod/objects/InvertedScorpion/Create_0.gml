@@ -2,8 +2,8 @@ raddrop = 13
 maxhealth = 9
 mySize = 2
 
-if UberCont.loops>1
-maxhealth=12;
+if UberCont.loops>0
+	maxhealth = 15;
 
 event_inherited()
 meleedamage = 5

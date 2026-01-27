@@ -1,2 +1,2 @@
-/// @description Ghsot explosion sound
+/// @description Ghost explosion sound
 snd_play(sndGhostBossExplosionAttack);

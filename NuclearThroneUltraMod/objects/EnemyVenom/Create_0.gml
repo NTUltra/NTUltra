@@ -14,4 +14,3 @@ if instance_exists(Player) && Player.altUltra && Player.ultra_got[39]
 {
 	maxDamage = 3;	
 }
-maxHits = 9999;

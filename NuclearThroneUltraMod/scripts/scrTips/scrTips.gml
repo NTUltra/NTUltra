@@ -1,9 +1,12 @@
 function scrTips() {
 	tiptype = choose(0,0,0,0,0,0,0,0,0,1,1,1,2,2,3,4,5,choose(0,6,0,0,1,1,2,2,3,4,5,5,6,6,7,7,7))
-	if !instance_exists(Player)
+	var dataRef = Player;
+	if !instance_exists(dataRef)
+		dataRef = DataRef;
+	if !instance_exists(dataRef)
 		tiptype = 0
 	tip = "";
-	if (deaths < 20 || !UberCont.unlocked_alt_routes) && instance_exists(Player) && Player.loops < 1
+	if (deaths < 20 || !UberCont.unlocked_alt_routes) && instance_exists(dataRef) && dataRef.loops < 1
 	{
 		tip = choose("WELCOME TO NUCLEAR THRONE!","TRY TO ALWAYS STAY ON THE MOVE",
 		"ENEMIES DROP HEALTH AND AMMO","HEALTH CAN DROP MORE OFTEN WHEN IT'S LOW",
@@ -299,84 +302,84 @@ function scrTips() {
 	{
 	//AREA BASED
 
-	if Player.area = 0
+	if dataRef.area = 0
 	tip = choose("it's dark here","your friends were here")
-	if Player.area = 1
+	if dataRef.area = 1
 	tip = choose("welcome to the future","the wasteland calls you","scorching sun","watch out for maggots","let's do this","dust surrounds you","the wind hurts","use the skulls to go to a different area","today is the day","try destroying the skulls","many routes to take","here we go again","1-1 but sand")
-	if Player.area = 2
+	if dataRef.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge","the sewers has very little item drops","very few ammo and health drops here")
-	if Player.area = 3
+	if dataRef.area = 3
 	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
-	if Player.area = 4
+	if dataRef.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","nearly there")
-	if Player.area = 5
+	if dataRef.area = 5
 	tip = choose("wear a scarf","they used to have electricity","miss the sun","civilization","walk softly",choose("cold potatoes","there is a pink sheep nearby","there is no yeti","there is no yeti","there is no yeti","lill hunter is a bitch"))
-	if Player.area = 6
+	if dataRef.area = 6
 	tip = choose("beep boop","nerds","don't push any buttons","randa","almost halfway there","where they're made","freaks can merge","big machine's core takes more damage","watch out for machinery","where some of them were made")
-	if Player.area = 100
+	if dataRef.area = 100
 	tip = choose("aw yes","take a crown to uncurse your weapon","there is value here","visit this place atleast twice","let's hope its not toxic again","precursors",
 	"old torches","you can get 3 mods#on a single weapon","mods stack","take a crown to unlock#crown start for this character","most weapon mods benefit from#weapon specific mutations","a weapon you mod will always come through the portal, you can pick it up next area",
 	"power craving spawns more mods","open mind can spawn two proto chests","weapon mods can be rerolled#when you have 3","when you mod a weapon it will always come through the portal with you even if you leave it")
-	if Player.area = 102
+	if dataRef.area = 102
 	tip = choose("hunger...","it smells nice here","wait for it....")
-	if Player.area = 103
+	if dataRef.area = 103
 	tip = choose("space...","always wanted to go here","so much money","4 years later...")
 
-	if Player.area = 104
+	if dataRef.area = 104
 	tip = choose("mony","home","where the guns at")
-	if Player.area = 105
+	if dataRef.area = 105
 	tip = choose("inverted","another dimension","same world","mystery","blue","wormhole","what is this place","blueberry","im blue da ba dee!","interdimensional travel","this is not the wastelands?!","SHORTCUT!")
-	if Player.area = 7
+	if dataRef.area = 7
 	tip = choose("inferno","hell","its getting hot in here", "vulcano", "hot", "heat", "lava", "magma","lava damages over time",
 	"boiling veins protects you#against lava","don't stand#too long in lava","hot feet","tomato sauce","do not run away from a dragon fight!","do not flee from thy dragon")
-	if Player.area = 8
+	if dataRef.area = 8
 	tip = choose("sweet","wonderland","evil cards","play your cards right","other world","this does not belong","teapots of doom","cotton candy floors","do not eat the mushrooms",choose("I'm not even a fan of#alice in wonderland","non cannon","dumb shit","regrets","this area was a mistake"))
-	if Player.area == 9
+	if dataRef.area == 9
 	tip = choose("the palace","This place is old","nearly there","almost there","the time has come");
-	if Player.area = 118
+	if dataRef.area = 118
 	tip = choose("the inverted palace","regular portals","greatness awaits","to evade","one more step");
-	if Player.area = 10
+	if dataRef.area = 10
 	tip = choose("dry grass","savanna","they eat each other","they attack together","bring a good starting weapon","they heal off of corpses","this route is difficult!");
-	if Player.area = 106
+	if dataRef.area = 106
 	tip = choose("inverted darkness","back to the other dimension","pls explain","inverted worlds are great","visit inverted world on loop","good luck getting through this"
 	,"white ravens")
-	if Player.area = 107
+	if dataRef.area = 107
 	tip = choose("black snow?","mud?","explosions everywhere!","should not have come here","the greed is real","do you want to die?","inverted demons","chocolate city")
-	if Player.area = 101
+	if dataRef.area = 101
 	tip = choose("water","hold your breath","big fish here","you should come here more often","ocean man!","swimming","you can use lightning here")
-	if Player.area = 108
+	if dataRef.area = 108
 	tip = choose("true hell","frozen vulcano","ice cold","hellheim","frost and lightning")
-	if Player.area = 109
+	if dataRef.area = 109
 	tip = choose("this place is very deadly","don't get nuked","try not to burn","don't blow up","why are you here","your run ends now")
-	if Player.area = 110
+	if dataRef.area = 110
 	tip = choose("not sure what the smell is","blue toxic?","glitchy","things are going wrong","get out of here")
-	if Player.area = 111
+	if dataRef.area = 111
 	tip = choose("not cursed caves","green & blue","caves part 2","weird","odd","spinach caves","broccoli")
-	if Player.area = 112
+	if dataRef.area = 112
 	tip = choose("buttons","balls","what was made here","experiments gone wrong","you have entered the danger zone")
-	if Player.area = 113
+	if dataRef.area = 113
 	tip = choose("welcome to banditland","bandits with erasers","laserbandits","when the night falls","tonight bandit party","be afraid of the bandit")
-	if Player.area = 114
+	if dataRef.area = 114
 	tip = choose("jungle","ugga bugga","wet grass","green","plants","extinct pandas","beware of the apex predator")
-	if Player.area = 115
+	if dataRef.area = 115
 	tip = choose("cheese caves","cursed caves","gouda")//Fun fact I used to live in Gouda
-	if Player.area = 116
+	if dataRef.area = 116
 	tip = choose("survival arena","when starting a wave#chests and weapon drops get destroyed","how long","go on","another one down","dont forget to drink water")
-	if Player.area = 117
+	if dataRef.area = 117
 	tip = choose("mushrooms with guns","mushroom land","infected mushrooms","don't eat the mushrooms")
-	if Player.area = 119
+	if dataRef.area = 119
 	tip = choose("friends","I will save you all!","never stop","return","loop","throne II","we're here");
-	if Player.area = 120
+	if dataRef.area = 120
 	tip = choose("empty","nothingness","void","  "," ... ","no one here","inbetween","can they be trusted?");
-	if Player.area = 121
+	if dataRef.area = 121
 	tip = choose("risk it","fast route","they are fast","colourful grass","watch yourself out there","inverted savanna")
-	if Player.area = 122
+	if dataRef.area = 122
 	tip = choose("stinky water","something is not right","gas underwater?","toxic ocean","polder","dont drink this water","only toxic here","100% toxic weapon mod","toxic weapon chest!")
-	if Player.area = 123
+	if dataRef.area = 123
 	tip = choose("pink and blue jungle","inverted bush box moves straight","inverted jungle","though faster and more aggressive#enemies here have less hp and drop more rads","land of square");
-	if Player.area = 124
+	if dataRef.area = 124
 	tip = choose("buff mushrooms hiding in the dark","lots of radiation here","dark mushrooms","lightning mushrooms","inside out mushrooms","don't eat the mushroom","in a shocking turn of events")
-	if Player.area = 125
+	if dataRef.area = 125
 	tip = choose("if you hold two melee weapons#as yv while reaching ultra#you can choose a secret ultra","blue gold","who's mansion is this?",
 	"POPPOP increases projectile speed!",
 	"thanks melee god",
@@ -388,49 +391,50 @@ function scrTips() {
 	"jackhammers with 6 senses",
 	"shovels that hate texas",
 	"axes that wear vests it")
-	if Player.area = 126
+	if dataRef.area = 126
 	tip = choose("skeletons","graveyard","crawling bones","don't get overwhelmed","be wary of skeletons","the dead walk","sniper skeletons are stationary","kill the cursed fish to uncurse yourself",choose("emo land","goth land","dark world","boneyard","cemetary","halloween"))
-	if Player.area = 127
+	if dataRef.area = 127
 	tip = choose("love & death","crowd","sprawling bones","the brink","for all that have fallen","crawl","bloodshed forever")
-	if Player.area = 128
+	if dataRef.area = 128
 	tip = choose("crown crown crown crown","crown crown","more crowns","get crown","royalty","kings and queens of wasteland","watch out for the crowns")
-	if Player.area = 129
+	if dataRef.area = 129
 	tip = choose("blood line","multi crown")
-	if Player.area = 130
+	if dataRef.area = 130
 	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","factory","weapons here","robots","what are they building in there","beat the boss to get your gun back");
-	if Player.area = 131
+	if dataRef.area = 131
 	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","inverted factory","this is not normal","automation");
-	if Player.area = 132
+	if dataRef.area = 132
 	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","cursed factory","mistakes were built","cursed robots");
-	if Player.area = 133
+	if dataRef.area = 133
 	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","golden factory","bling bling guns","gold digging");
-	if Player.area = 134
+	if dataRef.area = 134
 	tip = choose("high quality weapons can be found here","all weapons dropped here will be of a higher tier","ultra factory","supreme technology","top of the line","ultra robots");
-	if Player.area = 135//HQ
+	if dataRef.area = 135//HQ
 	tip = choose("become the captain","nono popo","end this","stop the chase","end the popo");
-	if Player.area = 136//Ultra scrapyard
+	if dataRef.area = 136//Ultra scrapyard
 	tip = choose("get an ultra weapon here","its green","irradiated beyond belief","radiation");
-	if Player.area = 137//VOID
+	if dataRef.area = 137//VOID
 	tip = choose("void","nothing","empty","the good? the bad and the ugly","...","essence","space in between worlds","nothingness","darkness","the unknown","not of our worlds");
-	if Player.area = 138//CLOUDLAND
+	if dataRef.area = 138//CLOUDLAND
 	tip = choose("fluff","grenades fall down","corpses fall down","bullet heaven","aero","no earth here","no cover","venomous sky creatures","beware of bites","green skies","radiated skies","grenades fall down","bodies will fall","don't look down","the clouds","into the sky","skywards!","venom damages you until you are at 1hp or you pickup hp");
-	if Player.area = 139//THE PIT
-	tip = choose("vault available here on loop","the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?");
-	if Player.area = 140//INVCLOUDLAND
+	if dataRef.area = 139//THE PIT
+	tip = choose("vault available here on loop","the pit","ghosts materialize when you get close","ghost phase when far away","be wary of ghosts","the pit connects to inverted worlds","the depths","try gamma guts","ghosts just want a hug","hunting ghosts","who ya gonna call!?"
+	,"laser shooting ghosts drop health","ghosts that spawn other ghosts drop weapons","ghost explosions can hurt you but drift away from you");
+	if dataRef.area = 140//INVCLOUDLAND
 	tip = choose("pink clouds","inverted skies","venomous monsters","they fly","lasers and bullets","cotton candy clouds");
-	if Player.area = 141//INVERSION GAUNTLET
+	if dataRef.area = 141//INVERSION GAUNTLET
 	tip = choose("???","everywhere and nowhere","the storm","everything is connected","into the storm","start the gauntlet");
-	if Player.area = 142//Pipe world
+	if dataRef.area = 142//Pipe world
 	tip = choose("sewer pipe network","pipes","connecting...","subworld","skipping ahead","beware of venomous slime!");
-	if Player.area = 143//INV Pipe world
+	if dataRef.area = 143//INV Pipe world
 	tip = choose("repeating pipes","more pipes","not leaving the network","connecting deeper");
-	if Player.area = 144//RADIATION SLUDGE LAND
+	if dataRef.area = 144//RADIATION SLUDGE LAND
 	tip = choose("radiation sludge","time to level up!","infinite radiation here","beware of radiation traps","sludge speeds you up","sludge is venomous!","flying characters don't get sludge rads unless extra feet");
-	if Player.area = 145//RADIATION SLUDGE LAND
+	if dataRef.area = 145//RADIATION SLUDGE LAND
 	tip = choose("purple sludge","more sludge");
-	if Player.area = 146//BLOOD LAND
+	if dataRef.area = 146//BLOOD LAND
 	tip = choose("blood weapon chest here","red","meat","blood");
-	if Player.area = 147//BLOOD LAND
+	if dataRef.area = 147//BLOOD LAND
 	tip = choose("toxic blood","green blood");
 	
 	}
@@ -438,36 +442,36 @@ function scrTips() {
 	{
 	//CHARACTER BASED
 
-	if Player.race = 0
+	if dataRef.race = 0
 	tip = choose("random shifts shapes","clearly the most powerful","never the same","shapeless","passive: anything","active: anything","noone compares","random..."
 	,"roll extends gamma guts range","decided through the inbetween")
 
-	if Player.race = 1
+	if dataRef.race = 1
 	tip = choose("last day before retirement","duty calls","it's ok to eat","gills on your neck","like kevin costner","rolling...","fish can play guitar"
 	,"fish can dodge roll","fish can roll","waterboost boosts moves almost anything","roll has a few immunity frames#though the timing is tight!")
 
-	if Player.race = 2
+	if dataRef.race = 2
 	tip = choose("crystal can handle this","family","this is no problem","crystal is hard","crystal is tough","crystal rocks","crystal has this under control",
 	"shield does not block square projectiles!","be aware of the square","Shield does not block toxic gas", "shield does not block fire","shield does not block lasers"
 	,"shield can block a lot","cursed")
 
-	if Player.race = 3
+	if dataRef.race = 3
 	tip = choose("eyes sees everything","don't blink","all these thoughts","eyes can't speak","telekinesis pushes bullets away","telekinesis pulls in enemies","look into my eyes!"
 	,"watch where you're going","eyes can see the inbetween","stare into the void","it will stare back","watch out when using telekinesis close to enemies","euphoria can be quite good with telekinesis",
 	"control the battlefield","we have a vision!")
 
-	if Player.race = 4
+	if dataRef.race = 4
 	tip = choose("it's so cold out here","melting is tired","everything hurts","cough","fragile but strong","your active can be held down","share the pain","connected through pain",
 	"the body is weak but the mind is strong","want rest","remember who you are")
 
-	if Player.race = 5
+	if dataRef.race = 5
 	tip = choose("kill kill kill","death death death","blood blood blood","slay slay slay","fast fast fast","go go go","shoot shoot shoot","murder murder murder",
 	"eat eat eat","the apex predator","annihilate eliminate destroy","all shall die","plant is fast","no mercy","photosynthesizing...","plant can hold RMB to see further"
 	,"trap the enemy", "use active again#while seed is in mid-air#to instantly pop it","carnage","consume consume consume", "destroy destroy destroy",
 	"snare can prevent enemies from teleporting","most enemies cannot escape your snare","pur bloodlust",
 	"annihilate annihalte annihilate", "obliterate obliterate obliterate","snare prevents enemies from teleporting!")
 
-	if Player.race = 6
+	if dataRef.race = 6
 	tip = choose("yung venuz is so cool",
 	"yung venuz is the best",
 	"so cool",
@@ -489,26 +493,26 @@ function scrTips() {
 	"pop pop has a slightly quicker reload speed#compared to normally firing twice",
 	"pop pop increases projectile velocity")
 
-	if Player.race = 7
+	if dataRef.race = 7
 	tip = choose("time to flex","steroids could do pushups forever","steroids used to be a scientist","appreciate revolvers","get shots","get strong"
 	,"eat 14 eggs in the morning","steroids knew","read a book","wield two guns!")
 
-	if Player.race = 8
+	if dataRef.race = 8
 	tip = choose("6b 69 6c 6c#61 6c 6c#68 75 6d 61 6e 73","72 6f 62 6f 74","3c 33","74 61 73 74 79","guns for breakfast","I'm afraid I can't let you do that",
 	"don't forget to eat weapons","eating a weapon instantly reloads your other weapon","auto eat weapons left in the area",
 	"robot can eat cursed weapons without taking damage while having thronebutt","thronebutt allows you to eat cursed weapons")
 
-	if Player.race = 9
+	if dataRef.race = 9
 	tip = choose("remember the training","focus","go","never surrender","amateur hour is over","again","in cold shadows",
 	"slow down time","hyper fast reactions","chicken used to slow down time#in the vanilla game","can't throw weapons",
 	"fan of action movies","we do it for real now","don't ever die!","never give up!","focus allows you to take risks")
 
-	if Player.race = 10//Rebel
+	if dataRef.race = 10//Rebel
 	tip = choose("forget the old days","change is coming","a new generation","it will get better","spawning new allies heals old ones","allies take damage over time","making babies hurts","where do these allies come from?"
 	,"allies gain health each loop","your ally's bullets trigger recycle gland","try ultra modding your ally's bullets","you can throw you allies","use your allies as shields","something speaks to you","how are you holding all these allies?",
 	"allies can wander of and kill stuff")
 
-	if Player.race = 11//hunter
+	if dataRef.race = 11//hunter
 	tip = choose("never miss",
 	"ranged assassin",
 	"never see you coming",
@@ -523,14 +527,14 @@ function scrTips() {
 	"always on the hunt","next target","bigger target","when a marked target dies the marker snaps to a nearby enemy"
 	)
 
-	if Player.race = 12//yung cuz
+	if dataRef.race = 12//yung cuz
 	tip = choose("always in the shadow","yung cuz is so cool","the better shape",
 	,"how to kill a god","waka waka","buddies cost#half your MAX HP","noscope","golden tv"
 	,"mlg","prodigy","up n cmin","buddies return to you#when you stand still","\u0023yc",
 	"you have to get good","duplicates get your mutations","yc is a god gamer","I'm number 1","clones","duplicate!","ctrl + C#ctrl + V",
 	"your duplicates copy your mutations","your dupes also get your mutations#though sometimes a slightly worse version","gamers")
 
-	if Player.race = 13//sheep
+	if dataRef.race = 13//sheep
 	tip = choose("BAAHHH","don't mess with me"
 	,"BAAAA","BAHHH","moo?","silence of the lamb","just a sheep","peaceful","embrace the chaos",
 	,"sheeps don't harm people","shawarma","charge allows you#to move through#some projectiles",
@@ -540,7 +544,7 @@ function scrTips() {
 	,"sheep can tackle vans!","sheep is very good at taking out idpd vans","is it a disguise?","from the 4th universe"
 	)
 
-	if Player.race = 14//panda
+	if dataRef.race = 14//panda
 	tip = choose("never let go of your bamboo","rng","portal magic","what is a panda doing here",
 	"don't want to be here","help me","panda used to be a pacifist",
 	"throw weapons to#conserve ammo","throw damage scales#with your level","your thrown weapons will return to you",
@@ -550,67 +554,67 @@ function scrTips() {
 	,"your active can be held down"
 	)
 
-	if Player.race = 15//Atom
+	if dataRef.race = 15//Atom
 	tip = choose("molecules","don't touch each other","elite being","not an accurate#representation of reality","science bitch!","balance of the universe","telefrag",
 	"lava does not burn you because you fly","cobwebs dont slow you because you fly","primal force","primival essence","return to the beginning","dematerialize","explode",
 	,"from the other side","split the atom","atoms for peace","Entropy","she blinded me with science","don't touch me")
 
-	if Player.race = 16//Viking
+	if dataRef.race = 16//Viking
 	tip = choose("the radioactive sea","ocean fire","sea serpent","you've come from far","water dragon","tough!","weapon smith made viking's armour","serpent queen","venomous"
 	,"rock hard","serpent strike","bitten by a radioactive serpent","armour strike damage scales#depending on your level","armour strike damage is more#when you are a higher level","3030"
 	,"don't look in her eyes","the serpents have their own will","keep the serpents under control","armour blocks a full instance of damage!")
 
-	if Player.race = 17//WEAPONSMITH
+	if dataRef.race = 17//WEAPONSMITH
 	tip = choose("anvil","you keep your weapon mods#when upgrading","you upgrade one of your#two weapons at random","weapon smith forges weapons for the other mutants",
 	"weapon smith made viking's axe#its one of his best works",
 	"the weapon that gets upgraded#is chosen randomly","weaponsmith used to be a smoker","hide your face","made of stone","no trousers","weaponsmith is a metalhead")
 
-	if Player.race = 18//ANGEL
+	if dataRef.race = 18//ANGEL
 	tip = choose("ascend","the wall is not the enemy","fly over cars","you fly normally over all terrains","rogue guardian","you don't get pushed off of props",
 	"lava does not burn you because you fly","cobwebs dont slow you because you fly",
 	"I believe I can fly","don't serve gorillaman","angel can fly over lava","grow your wings","you can deflect melee damage","you can deflect contact damage","active costs less when#at or above full health",
 	"deflect can deal#gamma guts damage","you are immune while deflecting","you can deflect contact damage",
 	"angel can deflect contact damage")
 
-	if Player.race = 19//SKELETON
+	if dataRef.race = 19//SKELETON
 	tip = choose("hard","dusty","dry","nothing...","bones","blood gamble chance#depends on ammo cost","survive","do not give up","keep going","the body has 69 bones","forget who you were","continue","become strong")
 
-	if Player.race = 20//BUSINESS HOG
+	if dataRef.race = 20//BUSINESS HOG
 	tip = choose("post apocalyptic capitalism","delusional capitalist","mutated money","Making Nuclear Throne great again"
 	,"Gad dang hippies","dollar dollar bill y'all","pay to win","games as a service","NFT (nuclear fucking throne)","please provide your creditcard information"
 	,"your guns are stored#in the blockchain","stealing","scheming","cash explosion works with recycle gland and tail's end!","hog steals from anyone#even gods")
 
-	if Player.race = 21//HORROR
+	if dataRef.race = 21//HORROR
 	tip = choose("Enemies absorb the beam's rads","horrifying","pure energy",
 	"Horror's beam destroys projectiles","Horror's beam powers up over time","Power","The horror","In the zone",
 	"Radiation is everywhere","Green puppy","The beam homes in on your crosshair")
 
-	if Player.race = 22//ROGUE
+	if dataRef.race = 22//ROGUE
 	tip = choose("Keep moving","Never look back","Never slow down","They're getting closer","Never stop","Another world lost","gone rogue","you can cancel portalstrike with e (use key)")
 
-	if Player.race = 23//FROG
+	if dataRef.race = 23//FROG
 	tip = choose("Wait for me","Don't hold it up","Keep going","Let it all out","Gas is good","Bloated","Restless","Let's go","Can't wait","frog likes to sing","strangely attractive?")
 
-	if Player.race = 24//ELEMENTOR
+	if dataRef.race = 24//ELEMENTOR
 	tip = choose("mushroom of all the elements!","toxic is not! one of the elements","fire burns away toxic","frost freezes fire",
 	"you can walk through your own walls","you can terraform away existing walls to create tunnels!","terraform costs secondary ammo",
 	"use your defenses!","lets get that moodswing","lightning is stronger!","kraken is stronger!",
 	"fire is stronger!","frost is stronger!","though elements are a little stronger you can still have a good build without them",
 	"Mushroom power","the elements","your walls block projectiles","fire, frost, kraken and lightning are all stronger!")//"You can only place walls#against other walls","Create walls from other walls",
 
-	if Player.race = 25//DOCTOR
+	if dataRef.race = 25//DOCTOR
 	tip = choose("Efficient rad intake","Underleveled?","Second opinion","Trust me,#I'm a doctor","You can use that extra limb#to walk faster","That mutation seems good to me",
 	"Try to stay close to radiation","don't do drugs kids","Doctor used to work in the labs","nasty experiments","The mutation doctor","every single mutation is better!","get vaccinated"
 	,"proper self care","what kind of doctor?")
 
-	if Player.race = 26//GOOD OL' HUMPHRY
+	if dataRef.race = 26//GOOD OL' HUMPHRY
 	tip = choose("Rusty old soldier","Grandpa","When Humphry pulls out a gun","The real deal","experienced","fallout shelter"
 	,"Out of the fallout shelter","focus and discipline","experience","shrink and slow projectiles", "radiation aged him",
 	"humphry has mastered the art#of shrinking bullets","super soldier","he knew","paranoia","prepare for anything#even if it's not real?",
 	"skill increases all damage you deal","damage buffs are multiplicative!"
 	,"immortal soldier","overkill","S S S#Slow Shrink Stun","active costs additional skill on loop","your active costs more skill on loop")
 	
-	if Player.race = 27//HANDS
+	if dataRef.race = 27//HANDS
 	tip = choose("look ma! no face","don't get too touchy","proto","the only inverted mutant","pull my finger","hand from the other side",
 	"let's give each other a helping hand","reach out","what is on the other side?","GET OVER HERE!","walking backwards","strong handshake",
 	"you can grab through walls","your hand break walls","you can grab chests","some enemies are too heavy#to grab","your active gets +1 damage#when you reach level ultra"
@@ -618,27 +622,27 @@ function scrTips() {
 	"when hands pulls someone in they become more vulnerable to certain types of damage that check for enemy i-frames",
 	,"your active can be held down")
 	
-	if Player.race = 28//Thief
+	if dataRef.race = 28//Thief
 	tip = choose("Thief can steal ammo and health drops","your starting daggers deal double damage when backstabbing an enemy","thief is faster while invisible",
 	"break line of sight to enemies to go invisible","thief does not fight fair","you don't take contact damage while in stealth","you can't deal contact damage while in stealth",
 	"hypersomnia activates after you first reveal yourself","Thief's stab can target invisible enemies"
 	,"you can still steal while not invisible","active damage scales each loop","stealth stab damage increases each level")
 	
-	if Player.race = 29//No thing
+	if dataRef.race = 29//No thing
 	tip = choose("0"," ","your starting void pistol deals more damage to higher health enemies",
 	"your starting void pistol destroys pickups and rads","void consumption does not destroy new pickups","void consumption destroys all types of enemy projectiles"
 	,"void consumption spheres can stack damage when overlapping the same enemy","creature of the void")
 	
 	}
 	else if tiptype = 3 //WEAPONS
-		tip = Player.wep_text[Player.wep]
+		tip = dataRef.wep_text[dataRef.wep]
 	else if tiptype = 4//MUTATIONS
 	{
 		var hasSomeMutations = false;
 		var i = 0;
-		repeat(Player.maxskill + 2)
+		repeat(dataRef.maxskill + 2)
 		{
-			if Player.skill_got[i]
+			if dataRef.skill_got[i]
 			{
 				hasSomeMutations = true;
 				continue;
@@ -648,9 +652,9 @@ function scrTips() {
 		if (hasSomeMutations)
 		{
 			dir = 0
-			do dir = round(random(Player.maxskill + 1))
-			until Player.skill_got[dir] = 1
-			tip = Player.skill_tips[dir]
+			do dir = round(random(dataRef.maxskill + 1))
+			until dataRef.skill_got[dir] = 1
+			tip = dataRef.skill_tips[dir]
 		}
 		else
 		{
@@ -658,23 +662,23 @@ function scrTips() {
 		}
 	}
 	else if tiptype = 5 	//CROWNS
-		tip = Player.crown_tips[Player.crown[clamp(irandom(array_length(Player.crown)-1),0,array_length(Player.crown)-1)]]
+		tip = dataRef.crown_tips[dataRef.crown[clamp(irandom(array_length(dataRef.crown)-1),0,array_length(dataRef.crown)-1)]]
 	else if tiptype = 6  //ULTRAS
 	{
-	if Player.level>=10
+	if dataRef.level>=10
 	    {
 	dir=0
-	do dir = round(random(Player.maxultra))
-	    until Player.ultra_got[dir] = 1
-	    tip = Player.ultra_tips[dir]
+	do dir = round(random(dataRef.maxultra))
+	    until dataRef.ultra_got[dir] = 1
+	    tip = dataRef.ultra_tips[dir]
     
 	    }
 	    else 
 	    tip=""
 	}
 	else if tiptype == 7 ///GAMEMODE
-		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[clamp(irandom(array_length(UberCont.opt_gamemode)-1),0,array_length(Player.crown)-1)]];
-	if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
+		tip = UberCont.gamemode_tip[UberCont.opt_gamemode[clamp(irandom(array_length(UberCont.opt_gamemode)-1),0,array_length(dataRef.crown)-1)]];
+	if instance_exists(dataRef) && dataRef.ultra_got[19] && dataRef.altUltra
 	{
 		tip = "KILL KILL KILL";	
 	}
@@ -682,5 +686,6 @@ function scrTips() {
 	if tip = "" || tip == undefined
 		scrTips();
 
-	tip = string(tip);
+	tip = string_upper(string(tip));
+	return tip;
 }

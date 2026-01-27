@@ -1,8 +1,9 @@
 raddrop = 4//original bandit 2
 maxhealth = 3
 
-if UberCont.loops>1
-maxhealth=4;
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth = 6;
 
 meleedamage = 0
 mySize = 1
@@ -13,7 +14,7 @@ if scrIsHardMode() && random(5) < 1//HARD MODE
 	instance_destroy(id,false);
 	instance_create(x,y,UltraBandit);
 }
-if GetPlayerLoops() > 2
+if loops > 2
 {
 	if random(3) < 1 || (instance_exists(Player) && Player.area != 1)
 	{

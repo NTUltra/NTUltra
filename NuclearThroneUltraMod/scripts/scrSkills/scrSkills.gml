@@ -1,6 +1,6 @@
 
 function scrSkills() {
-	maxskill = 48;
+	maxskill = 47;
 
 
 	dir = 0
@@ -48,7 +48,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(600) < 1
 		skill_name[2] = "SPEED UP"
 	skill_text[2] = "WALK <w>FASTER<w>#<w>DODGING<w> PROJECTILES GIVES <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>#STOP EXTERNAL MOVEMENT CHANGES"
-	skill_detail[2] = "WALK <w>FASTER<w>#CLOSE PROJECTILE <w>DODGES<w> SOMETIMES#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>##WALK NORMAL ON ALL <w>TERRAIN<w>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON <w>RECOIL<w>#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"//"MORE SPEED,#WALK NORMAL ON ALL TERRAIN#CLOSE DODGES SOMETIMES#DROP A WEAPON/ITEM & ALWAYS DROP RADS"
+	skill_detail[2] = "WALK <w>FASTER<w>#CLOSE PROJECTILE <w>DODGES<w> SOMETIMES#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>##WALK NORMAL ON ALL <w>TERRAIN<w>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON <w>RECOIL<w>#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"
 	skill_tips[2] = choose("run forever","run forever","run forever","you can't be displaced#when you have extra feet");
 	skill_msnd[2] =  sndMutExtraFeet
 	skill_bons[2] = "+20% MORE SPEED#MORE RESOURCES ON DODGE#BIGGER DODGE SHIELD";
@@ -65,12 +65,11 @@ function scrSkills() {
 				skill_name[2] = "EXTRA FINGERS"
 			if Player.race == 1
 			{
-				skill_detail[2] = "FASTER <w>ROLL<w>#MORE WALK <w>SPEED<w>#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"
+				skill_detail[2] = "WALK <w>FASTER<w>#FASTER <w>ROLL<w>#CLOSE PROJECTILE <w>DODGES<w> SOMETIMES#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>##WALK NORMAL ON ALL <w>TERRAIN<w>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON <w>RECOIL<w>#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"
 			}
 			else if Player.race == 13
 			{
-			
-				skill_detail[2] = "FASTER <pi>CHARGE<pi>#MORE <pi>CHARGE<pi> <w>CONTROL<w>#MORE WALK <w>SPEED<w>,#WALK NORMAL ON ALL <w>TERRAIN<w>#CLOSE <w>DODGES<w> SOMETIMES DROP <y>RES<y><g>OUR<g><r>CES<r>#CAN'T BE <w>DISPLACED<w> BY ENEMIES"
+				skill_detail[2] = "WALK <w>FASTER<w>#FASTER <pi>CHARGE<pi>#CLOSE PROJECTILE <w>DODGES<w> SOMETIMES#<w>DROP<w> <y>RES<y><g>OUR<g><r>CES<r>#AND CASTS A <aq>SHIELD<aq>##WALK NORMAL ON ALL <w>TERRAIN<w>#CAN'T BE <w>DISPLACED<w> BY ENEMIES#NEGATE WEAPON <w>RECOIL<w>#INCREASE RESISTANCE TO <p>PORTAL<p> PULL"
 			}
 			else
 			{
@@ -97,7 +96,7 @@ function scrSkills() {
 	if !UberCont.useSeed && random(500)<1
 		skill_name[4] = "LUCKY FOOT"
 	skill_text[4] = "HIGHER <w>DROP<w> <rp>CHANCE<rp>#INCREASE <rp>LUCK<rp>"
-	skill_detail[4] = "<w>+30% ITEM <w>DROPS#<w>+5% WEAPON<w> DROPS##<w>+20%<w> <rp>LUCK<rp>#INCREASE ODDS OF POSITIVE OUTCOMES#FROM <rp>RANDOM CHANCES<rp>"
+	skill_detail[4] = "<w>+30% ITEM <w>DROPS#<w>+5% WEAPON<w> DROPS##<w>+20%<w> <rp>LUCK<rp>:#INCREASE ODDS OF POSITIVE OUTCOMES#FROM <rp>RANDOM CHANCES<rp>"
 	skill_tips[4] = "feeling lucky"
 	skill_msnd[4] =  sndMutRabbitPaw
 	skill_bons[4] = "+37% PICKUP DROP RATE#+7% WEAPON DROP RATE#+25% LUCK";
@@ -462,7 +461,7 @@ function scrSkills() {
 	skill_name[31] = "TOUGH SHELL"
 	skill_text[31] = /*"+1 <r>MAX HP<r>#*/"<w>REDUCE<w> INCOMING <r>DAMAGE<r>"
 	//skill_detail[31] = /*"+1 <r>MAX HP<r>#*/"EVERYTHING THAT DEALS#MORE THAN <w>2<w> <r>DAMAGE<r> TO YOU#DEALS <w>1<w> LESS <r>DAMAGE<r>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
-	skill_detail[31] = "ALL INCOMING <r>ENEMY DAMAGE<r>#IS REDUCED BY <w>1<w>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
+	skill_detail[31] = "ALL INCOMING <r>DAMAGE<r>#IS REDUCED BY <w>1<w>##NOTHING CAN DEAL MORE#THAN <w>7<w> <r>DAMAGE<r> TO YOU"
 	skill_tips[31] = "damage reduction!"
 	skill_msnd[31] =  sndToughShell
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
@@ -492,7 +491,7 @@ function scrSkills() {
 			skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
-	skill_bons[33] = "26% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
+	skill_bons[33] = "25% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
 	
 	/* OLD
 	skill_name[34] = "FLEXIBLE ELBOWS"
@@ -530,11 +529,11 @@ function scrSkills() {
 	
 	skill_name[37] = "ECSTATIC FISTS"//REJUVINATED SKIN
 	skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <r>HEALTH<r> IS";
-	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#+30% AT <r>MAX HP<r>"
+	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#<w>+30%<w> AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS";
-		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#+30% AT <gb>MAX ARMOUR<gb>"
+		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#<w>+30%<w> AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists
@@ -549,7 +548,7 @@ function scrSkills() {
 	
 	skill_name[39] = "ALIEN INTESTINES"
 	skill_text[39] = "<g>ACTIVE<g> SPAWNS <p>TENTACLES<p>"
-	skill_detail[39] = "WHENEVER YOU <w>TRY<w> TO USE YOUR <g>ACTIVE<g>#OR WHEN YOU RELEASE YOUR ACTIVE#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
+	skill_detail[39] = "WHENEVER YOU <w>TRY<w> TO USE YOUR <g>ACTIVE<g>#OR WHEN YOU <w>RELEASE<w> YOUR <g>ACTIVE<g>#<p>TENTACLES<p> COME OUT OF YOUR BODY!##MORE POWERFUL THE LONGER#YOU WAIT BETWEEN USES";
 	skill_tips[39] = "spatial anomaly"
 	skill_msnd[39] =  sndMutAlienIntestines
 	skill_bons[39] = "CHARGES FASTER"
@@ -617,8 +616,8 @@ function scrSkills() {
 	skill_bons[46] = "+23% CHARGE RATE#CAN CHARGE UP TO 4 BARRIERS"
 	
 	skill_name[47] = "HOLLOW BONES"
-	skill_text[47] = "<w>SPENDING<w> <y>AMMO<y>#CAN CAUSE AN <p>IMPLOSION<p>!"
-	skill_detail[47] = "EVERY <w>24%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO IMPLODE#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
+	skill_text[47] = "<w>SPENDING<w> <y>AMMO<y>#CAN CAUSE AN <v>IMPLOSION<v>!"
+	skill_detail[47] = "EVERY <w>24%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <v>IMPLODE<v>#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
 	skill_tips[47] = "there is an emptyness inside"
 	skill_bons[47] = "EVERY 19% AMMO SPENT#+25% BIGGER IMPLOSION"
 	skill_msnd[47] =  sndMutBouncyFat;

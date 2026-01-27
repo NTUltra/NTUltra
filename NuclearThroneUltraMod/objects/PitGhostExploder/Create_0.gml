@@ -1,5 +1,8 @@
 raddrop = 5
 maxhealth = 16
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 3;
 mySize = 1
 event_inherited()
 team = 7;
@@ -31,6 +34,5 @@ targetX = x;
 targetY = y;
 targetLerp = 0;
 goToTarget = false;
-loops = GetPlayerLoops();
 if loops > 0
 	actTime = 13;

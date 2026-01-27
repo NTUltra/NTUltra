@@ -422,8 +422,8 @@ function scrRaces() {
 	race_name[17] = "WEAPONSMITH"//WEAPON SMITH
 	race_pass[17] = "START WITH A RANDOM <w>WEAPON MOD<w>#ENEMIES DROP MORE WEAPONS#LOWER <y>TIER<y> WEAPONS"
 	race_acti[17] = "<gb>HAMMER THROW<gb>#HOLD TO <w>UPGRADE<w> TWO WEAPONS"
-	race_butt[17] = "<b>LIGHTNING<b> <gb>HAMMER<gb>##HIGHER <y>TIER<y> WHEN <w>UPGRADING<w>#HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM <w>ONCE<w>"
-	race_butt_detail[17] = "<b>LIGHTNING<b> <gb>HAMMER<gb>##ALWAYS <w>+1<w> <g><g>TIER WHEN <w>UPGRADING<w>#INCREASE UPGRADE <y>TIER<y> MAXIMUM#HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM#CAN BE DONE <w>ONCE<w> PER WEAPON MOD"
+	race_butt[17] = "<b>LIGHTNING<b> <gb>HAMMER<gb>##HIGHER <y>TIER<y> WHEN <w>UPGRADING<w>##HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM <w>ONCE<w>"
+	race_butt_detail[17] = "<b>LIGHTNING<b> <gb>HAMMER<gb>##ALWAYS <w>+1<w> <g><g>TIER WHEN <w>UPGRADING<w>#INCREASE UPGRADE <y>TIER<y> MAXIMUM##HOLD ACTIVE ON <w>WEAPON MODS<w>#TO <w>RE-ROLL<w> THEM#CAN BE DONE <w>ONCE<w> PER WEAPON MOD"
 	race_vision[17] = "HOLD <w>[E]<w> TO:#<w>SHIFT<w> <y>AMMO TYPE<y>";
 	race_vision_detail[17] = "HOLD <w>[E]<w> TO:#<w>SHIFT<w> <y>AMMO TYPE<y>#OF YOUR <w>PRIMARY<w> TO THE RIGHT##SHIFTING <y>BULLETS<y> CHANGES <y>AMMO<y> COST";
 	if isUnique
@@ -663,7 +663,7 @@ function scrRaces() {
 	race_fskin[26] = 0
 	race_gskin[26] = 0
 	race_bskin_lock[26] = "PERFORM 20 CLOSE DODGES#USING EXTRA FEET#IN ONE RUN#AS HUMPHRY"//"COMPLETE A#MAIN AREA#AFTER THE SCRAPYARD#WITHOUT MISSING#AS GOOD OL'HUMPHRY"
-	race_cskin_lock[26] = "STUN 50 ENEMIES#STOP 50 PROJECTILES#IN ONE RUN"
+	race_cskin_lock[26] = "USE HALT TO:#STUN 100 ENEMIES AND#STOP 100 PROJECTILES#IN ONE RUN"
 	
 	race_name[27] = "HANDS"
 	race_pass[27] = "HIGHER <rp>CHANCE<rp> FOR <w>INVERTED PORTALS<w>#<w>INVERTED PORTALS<w> (OVER) <r>HEAL<r> <w>2<w><r>HP<r>"

@@ -5,6 +5,8 @@ function scrDrawHUD() {
 	if instance_exists(DataRef)
 	{
 		var dataRef = DataRef;
+		if UberCont.isPaused > 0
+			exit;
 	}
 	else if instance_exists(Player)
 	{

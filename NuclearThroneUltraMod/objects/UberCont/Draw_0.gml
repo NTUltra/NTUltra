@@ -68,7 +68,7 @@ if isPaused == 1 && alarm[7] < 1
 				if (UberCont.ctot_void_entered > 0)
 				{
 					var vx = camera_get_view_x(view_camera[0]) + 12 + 24
-					var ty = camera_get_view_y(view_camera[0]) + 32;
+					var ty = camera_get_view_y(view_camera[0]) + 24;
 					draw_set_halign(fa_left)
 					draw_set_valign(fa_middle)
 					draw_sprite(sprPortalEssenceHUD,0,vx - 2, ty);
@@ -98,9 +98,9 @@ if isPaused == 1 && alarm[7] < 1
 				timer="OFF"
 
 
-				var d = " TIER: "+string(baseWeaponTier);
+				var t = " TIER: "+string(baseWeaponTier) + " DIFFICULTY: " + string(gameDifficulty);
 
-				txt0 = "#OPTIONS############################CONTINUE [ESC] ------------ QUIT [ENTER]"
+				txt0 = "##OPTIONS###########################CONTINUE [ESC] ------------ QUIT [ENTER]"
 
 				if UberCont.opt_loading == 4
 					var loadspeed = "MAX#"
@@ -124,7 +124,7 @@ if isPaused == 1 && alarm[7] < 1
 
 
 
-				stxt0 = "#OPTIONS"
+				stxt0 = "##OPTIONS"
 				stxt1 = "######AUDIO####VISUALS##########OTHER####"
 				stxt2 = txt2
 
@@ -139,7 +139,7 @@ if isPaused == 1 && alarm[7] < 1
 							gamemodeScrollString += " + ";
 					}
 				}
-				var yyy = __view_get( e__VW.YView, 0 ) + 16;
+				var yyy = __view_get( e__VW.YView, 0 ) + 24;
 				gmwidth = max(0,string_width(gamemodeScrollString) - __view_get( e__VW.WView, 0 ));
 				var xx = lerp(
 				__view_get( e__VW.XView, 0 )+(__view_get( e__VW.WView, 0 )*0.5) - gmwidth*0.5,
@@ -199,12 +199,34 @@ if isPaused == 1 && alarm[7] < 1
 				event_perform(ev_draw,0)
 
 				draw_set_valign(fa_top)
+				// TIP
+				draw_set_colour(c_dkgray);
+					var tipX = camera_get_view_x(view_camera[0]) + tipScrollX;
+					var tipY = camera_get_view_y(view_camera[0]) + 8;
+					draw_text(tipX,tipY,tip);
+					var dt = 1;
+					if UberCont.normalGameSpeed == 60
+						dt = 0.5;
+					if tipScrollDelay > 0
+						tipScrollDelay -= 1 * dt;
+					else
+					{
+						tipScrollX -= tipScrollRate * dt;
+						if tipScrollX <= -tipScrollWidth
+						{
+							tip = scrTips();
+							tip = string_replace_all(tip,"#","  ");
+							tipScrollWidth = string_width(tip);
+							tipScrollX = camera_get_view_width(view_camera[0]) + 8;
+							tipScrollDelayDuration = tipScrollDelay;
+						}
+					}
 				//Top text...
 				var xx = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5;
 				draw_set_color(c_gray)
 				draw_set_halign(fa_left)
 				var kt = "KILLS: "+string(kills)+" "
-				var xxx = xx - (string_width(kt+text+d)*0.5);
+				var xxx = xx - (string_width(kt+text+t)*0.5);
 				draw_text(xxx,yy,string_hash_to_newline("####"+kt))
 				xxx = xxx + string_width(kt);
 				if upsideDown
@@ -216,7 +238,7 @@ if isPaused == 1 && alarm[7] < 1
 					draw_text(xxx,yy,string_hash_to_newline("####"+text))
 				draw_set_halign(fa_left)
 				xxx = xxx + string_width(text);
-				draw_text(xxx,yy,string_hash_to_newline("####"+d))
+				draw_text(xxx,yy,string_hash_to_newline("####"+t))
 
 				draw_set_color(c_black)
 				draw_set_halign(fa_center)
@@ -259,9 +281,9 @@ if isPaused == 1 && alarm[7] < 1
 			draw_set_color(c_white)
 			var ultraScale = 1;
 			var xx = (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]))-12 - 24
-			var yy = camera_get_view_y(view_camera[0])+32;
+			var uiy = camera_get_view_y(view_camera[0]) + 24
 			if mouse_x > xx - 12 && mouse_x < xx + 12
-			&& mouse_y > yy - 12 && mouse_y < yy + 12
+			&& mouse_y > uiy - 12 && mouse_y < uiy + 12
 			{
 				ultraScale = 1.4;
 				if mouse_check_button_pressed(mb_left)
@@ -271,7 +293,8 @@ if isPaused == 1 && alarm[7] < 1
 			}
 			draw_sprite_ext(sprUltraInfo,0,
 			xx,
-			yy,ultraScale,ultraScale,0,c_white,ultraScale-0.1);
+			uiy,
+			ultraScale,ultraScale,0,c_white,ultraScale-0.1);
 			xx = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])-8;
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_bottom);

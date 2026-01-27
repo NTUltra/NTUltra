@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.B."
-subUpdateVersion = "42";
+subUpdateVersion = "43";
 notUpdated = "";
 serverIp = "86.94.124.128"serverPort = 1414;
 currentSave = 0;
@@ -269,3 +269,15 @@ loadRunMenuState = 0;
 selectedRun = 4;
 loadedRunFiles = false;
 savedRuns = [];
+
+deaths = 0;
+tip = "";
+tipScrollX = 0;
+tipScrollWidth = 0;
+tipScrollDelay = 2;
+tipScrollDelayDuration = tipScrollDelay;
+tipScrollRate = 4;
+tipDataRef = noone;
+
+humprhyStunTracker = 0;
+humphryStopTracker = 0;

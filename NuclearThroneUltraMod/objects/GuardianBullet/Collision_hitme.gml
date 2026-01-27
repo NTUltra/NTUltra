@@ -11,7 +11,7 @@ if other.team != team and other.my_health > 0
 		if object_index == Player {
 			hitBy = other.sprite_index;
 		}
-		scrApplyEnemyMiniVenom(other.team,id);
+		scrApplyEnemyMiniVenom(other.team,id,1,2);
 	}
 	instance_destroy()
 }

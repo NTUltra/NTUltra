@@ -8,7 +8,10 @@ repeat(2)
 		var requirement = scrChooseSecretUltraToGetUnlockRequirementFor();
 		with instance_create(x,yy,PopupText)
 		{
-			mytext = UberCont.secret_ultra_unlk[requirement];
+			var r = "";
+			if instance_exists(Player)
+				r = Player.race_name[UberCont.secret_ultra_char[requirement]];
+			mytext = r +"#" + UberCont.secret_ultra_unlk[requirement];
 			theColour = c_lime;
 			moveSpeed = 0.25;
 			alarm[1] = 90;

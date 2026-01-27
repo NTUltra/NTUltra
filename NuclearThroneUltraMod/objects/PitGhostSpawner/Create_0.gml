@@ -1,5 +1,8 @@
 raddrop = 12
-maxhealth = 23
+maxhealth = 23;
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 3;
 mySize = 1
 event_inherited()
 team = 7;
@@ -23,7 +26,7 @@ actTime = 15;
 acc = 1;
 maxSpeed = 4.5;
 materializeRange = 164;
-if GetPlayerLoops() > 0
+if loops > 0
 {
 	materializeRange = 132;
 	actTime = 12;

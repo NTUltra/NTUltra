@@ -135,6 +135,18 @@ function scrEndOfRun(){
 		time_hours=0;
 		finalTime = txttime;
 		txttime="00:00:00:00";
+		tip = "";
+		tipScrollX = 0;
+		tipScrollWidth = 0;
+		tipScrollDelayDuration = tipScrollDelay;
+		if tipDataRef != noone && instance_exists(tipDataRef)
+		{
+			with tipDataRef
+				instance_destroy();
+		}
+		tipDataRef = noone;
+		humprhyStunTracker = 0;
+		humphryStopTracker = 0;
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		hasBeenSaved = false;

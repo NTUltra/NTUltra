@@ -2,9 +2,10 @@ raddrop = 2
 maxhealth = 4
 meleedamage = 0
 mySize = 1
-
-event_inherited()
 loops = GetPlayerLoops();
+if loops > 0
+	maxhealth = 8;
+event_inherited()
 actTime = 15;
 tellTime = 15;
 minRange = 54;

@@ -7648,7 +7648,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,PenetratorBolt)
 	{
-		motion_add(aimDirection+(random(4)-2)*other.accuracy,18)
+		motion_add(aimDirection+(random(4)-2)*other.accuracy,16)
 		image_angle = direction
 		team = other.team
 	}
@@ -7667,7 +7667,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x,y,PenetratorBolt)
 	{
-		motion_add(aimDirection+(random(12)-6)*other.accuracy,18)
+		motion_add(aimDirection+(random(12)-6)*other.accuracy,16)
 		image_angle = direction
 		team = other.team
 	}
@@ -9885,19 +9885,19 @@ function scrFire2(hasTailNow) {
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection+5*other.accuracy,18)
+	{motion_add(aimDirection+5*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection-5*other.accuracy,18)
+	{motion_add(aimDirection-5*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection+10*other.accuracy,18)
+	{motion_add(aimDirection+10*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 	with instance_create(x,y,Bolt)
-	{motion_add(aimDirection-10*other.accuracy,18)
+	{motion_add(aimDirection-10*other.accuracy,17)
 	image_angle = direction
 	team = other.team}
 

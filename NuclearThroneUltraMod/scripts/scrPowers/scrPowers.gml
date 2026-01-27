@@ -2679,14 +2679,17 @@ function scrPowers(raceOverwrite = -1) {
 			else
 			{
 				var effective = false;
-				if ultra_got[104] && altUltra
+				var u104 = ultra_got[104];
+				var projectilesAffected = 0;
+				if u104 && altUltra
 				{
 					snd_play_fire(sndDirector);
 					BackCont.shake += 8
 					with projectile
 					{
-						if team != other.team
+						if team != other.team  && point_distance(x,y,other.x,other.y) < 200
 						{
+							projectilesAffected += 1;
 							if isGrenade
 							{
 								with instance_create(x,y,Notice)
@@ -2729,9 +2732,9 @@ function scrPowers(raceOverwrite = -1) {
 					var buffActive = ultra_got[104] * 0.6;
 					with projectile
 					{
-						if (team!= other.team
-						&& x > other.x - 170 && x < other.x + 170 && y > other.y - 130 && y < other.y + 130)
+						if (team!= other.team && point_distance(x,y,other.x,other.y) < 300)
 						{
+							projectilesAffected += 1;
 							if (image_xscale > 0.15 + buffActive && image_yscale > 0.2 && speed > 2)
 							{
 								image_xscale *= 0.75;
@@ -2742,7 +2745,7 @@ function scrPowers(raceOverwrite = -1) {
 									x = xprevious;
 									y = yprevious;
 								}
-							} else if (other.ultra_got[104])
+							} else if (u104)
 							{
 								effective = true;
 								with instance_create(x,y,Notice)
@@ -2765,6 +2768,7 @@ function scrPowers(raceOverwrite = -1) {
 					duration += 8;
 					confspr = sprEnemyUltraConfusion;
 				}
+				var enemiesStunned = 0;
 				with enemy
 				{
 					effective = true;
@@ -2773,6 +2777,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
 						{
+							enemiesStunned += 1;
 							var mydur = duration * 0.5;
 							with myConfusion
 							{
@@ -2788,6 +2793,7 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
 						{
+							enemiesStunned += 1;
 							alarm[11] += duration
 							alarm[1] += duration;
 							myConfusion = instance_create(x,y-max(sprite_height*0.75,8),HumphryConfuse)
@@ -2822,6 +2828,15 @@ function scrPowers(raceOverwrite = -1) {
 						if ultra_got[104] && altUltra
 							instance_create(x,y,UseUnequippedAmmo);
 						instance_create(x,y,HumphryDiscipline);
+					}
+					with UberCont
+					{
+						humphryStopTracker += projectilesAffected;
+						humprhyStunTracker += enemiesStunned;
+						if humphryStopTracker >= 100 && humprhyStunTracker >= 100
+						{
+							scrUnlockCSkin(26,"FOR STUNNING 100 ENEMIES#AND STOPPING 100 PROJECTILES", 0);
+						}
 					}
 				}
 				else

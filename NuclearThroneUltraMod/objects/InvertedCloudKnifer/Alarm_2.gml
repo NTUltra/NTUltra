@@ -6,6 +6,7 @@ snd_play(sndFreakBanditSmack,0.1);
 var o = 60 - min(loops*2,30);
 with instance_create(x,y,NarrowEnemyVenomShank)
 {
+	depth = other.depth - 10;
 	sprite_index = sprBigEnemyNarrowVenomShank;
 	mask_index = mskBigEnemyNarrowVenomShank;
 	bleedAngle = other.gunangle - (30 * sign(other.wepangle));
@@ -16,6 +17,7 @@ with instance_create(x,y,NarrowEnemyVenomShank)
 }
 with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle - o),NarrowEnemyVenomShank)
 {
+	depth = other.depth - 10;
 	sprite_index = sprBigEnemyNarrowVenomShank;
 	mask_index = mskBigEnemyNarrowVenomShank;
 	bleedAngle = other.gunangle - o - (30 * sign(other.wepangle));

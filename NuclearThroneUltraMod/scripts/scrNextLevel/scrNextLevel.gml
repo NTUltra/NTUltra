@@ -420,7 +420,7 @@ function scrNextLevel(skipping = false) {
 						hard -= 1.5;
 					else
 					*/
-						baseWeaponTier += 1.25;
+						baseWeaponTier += 1;
 						gameDifficulty += 1.25;
 				}
 			}
@@ -461,7 +461,7 @@ function scrNextLevel(skipping = false) {
 						hard -= 1;
 					else
 					*/
-						baseWeaponTier += 1;
+						baseWeaponTier += 0.75;
 						gameDifficulty += 1;
 				}
 			}

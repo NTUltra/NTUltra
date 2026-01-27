@@ -5,6 +5,7 @@ motion_add(gunangle,6)
 snd_play(sndFreakBanditSmack,0.1);
 with instance_create(x+lengthdir_x(smackRange,gunangle),y+lengthdir_y(smackRange,gunangle),NarrowEnemyVenomShank)
 {
+	depth = other.depth - 10;
 	sprite_index = sprBigEnemyNarrowVenomShank;
 	mask_index = mskBigEnemyNarrowVenomShank;
 	bleedAngle = other.gunangle - (30 * sign(other.wepangle));

@@ -1,7 +1,7 @@
 /// @description Avoid player
 if instance_exists(Player)
 {
-	var len = 1;
+	var len = 0.5;
 	var dir = point_direction(Player.x,Player.y,x,y)
 	if place_meeting(x,y,Player)
 	{

@@ -64,11 +64,11 @@ upsideDown = res[1];
 draw_set_color(c_black)
 
 
-var theText = string_hash_to_newline(string(text)+"#GENERATING... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+string_upper(tip));
+var theText = string_hash_to_newline(string(text)+"#GENERATING... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+tip);
 if instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
-		theText = string_hash_to_newline(string(text)+"#KILL KILL KILL... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+string_upper(tip));
+		theText = string_hash_to_newline(string(text)+"#KILL KILL KILL... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+tip);
 if kutgrap
-	theText = string_hash_to_newline(string(text)+"#OBLITERATING... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+string_upper(tip));
+	theText = string_hash_to_newline(string(text)+"#OBLITERATING... "+string(100 - min(100,round((alarm[3]/loadTime)*100)))+"%##"+tip);
 draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1,theText,s,w)
 draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2+1,theText,s,w)
 draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )/2+1,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )/2,theText,s,w)
@@ -103,7 +103,7 @@ else
 }
 
 draw_set_valign(fa_middle)
-draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5,string_hash_to_newline("#####"+string_upper(tip)),s,w)
+draw_text_ext(__view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5,__view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5,string_hash_to_newline("#####"+tip),s,w)
 draw_set_valign(fa_top)
 
 hudSurface = -1;

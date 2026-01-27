@@ -410,8 +410,11 @@ repeat(UberCont.racemax)
 }
 
 scrTips()
-
-
+UberCont.deaths = deaths;
+UberCont.tip = string_replace_all(tip,"#","  ");
+UberCont.tipScrollWidth = string_width(tip);
+UberCont.tipScrollX = camera_get_view_width(view_camera[0]) + 8;
+UberCont.tipScrollDelayDuration = UberCont.tipScrollDelay;
 goal = 100//110
 if instance_exists(Player){
 var s = clamp(Player.loops*5,0,30);

@@ -2,8 +2,9 @@ raddrop = 11
 maxhealth = 15
 mySize = 2
 
-
-
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 5;
 event_inherited()
 
 meleedamage = 5
@@ -27,9 +28,9 @@ replace=false;
 range = 160;
 if instance_exists(Player)
 {
-	if Player.loops > 0
+	if loops > 0
 		range += 70;
-	if random(30) < 1 + min(26,Player.loops * 3) and (Player.subarea > 1 || Player.loops > 0)
+	if random(30) < 1 + min(26,loops * 3) and (Player.subarea > 1 || loops > 0)
 	{
 		replace=true;
 		instance_destroy()

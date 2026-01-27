@@ -1,6 +1,9 @@
 raddrop = 3;
 maxhealth = 8;
 mySize = 1
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 3;
 event_inherited()
 team = 7;
 canFly = true;
@@ -31,6 +34,5 @@ targetX = x;
 targetY = y;
 targetLerp = 0;
 goToTarget = false;
-loops = GetPlayerLoops();
 if loops > 0
 	actTime -= 2;

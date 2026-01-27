@@ -6,7 +6,7 @@ function scrApplyEnemyMiniVenom(applierTeam, target, vDamage, vHits) {
 		with instance_create(x,y,EnemyMiniVenom)
 		{
 			dmg = vDamage;
-			maxHits = vHits;
+			maxDamage = vHits - 1;
 			team = applierTeam;
 			owner = target;
 			if owner.object_index == Player
