@@ -378,7 +378,10 @@ function scrNextLevel(skipping = false) {
 			area = 117;
 			subarea = 1;
 			if !skipping
-				hard += 1;
+			{
+				gameDifficulty += 1;
+				baseWeaponTier += 1;
+			}
 		}
 		else if area == 9 && subarea > 2
 		{
