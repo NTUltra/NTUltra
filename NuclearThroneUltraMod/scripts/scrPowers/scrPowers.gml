@@ -99,10 +99,7 @@ function scrPowers(raceOverwrite = -1) {
 		{
 			//var n = instance_nearest(x,y,enemy)
 			if thiefTarget != noone {//n != noone && instance_exists(n) && distance_to_object(n) < 66 + (skill_got[5]*24) && !collision_line(x,y,n.x,n.y,Wall,false,false) {
-				//var tn = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-				//Prioritize enemy near the aim of the player
-				//if tn != noone && instance_exists(tn) && distance_to_object(tn) < 70
-					//n = tn;
+				var lev = level;
 				var n = thiefTarget;
 				var stabDir = point_direction(x,y,n.x,n.y);
 				var l = loops;
@@ -122,13 +119,15 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(image_angle,4);
 						}
 					}
-					var d = 15 + level * 5;
+					var d = 10 + lev * 5;
 					with n
 					{
 						if other.skill_got[5]
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
-							instance_create(x,y,ThiefStab);
+							with instance_create(x,y,ThiefStab) {
+								dmg = 10 + lev + l;
+							}
 							DealDamage(d + 20 + min(100,l*2) + l + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
@@ -150,7 +149,7 @@ function scrPowers(raceOverwrite = -1) {
 								range -= 2;
 								image_xscale *= 0.5;
 								image_yscale = image_xscale;
-								dmg = 10 + l;
+								dmg = 3 + lev + l;
 								visible = false;
 							}
 							DealDamage(d + min(100,l*2) + l);
@@ -227,7 +226,7 @@ function scrPowers(raceOverwrite = -1) {
 							snd_play(sndThiefStealUpg,0.01);
 							DealDamage(18 + min(20,l * 2) + l);
 							with instance_create(x,y,ThiefStab) {
-								dmg = 15 + min(10,l) + l;	
+								dmg = 5 + lev + min(10,l) + l;	
 							}
 							motion_add(stabDir,6)
 							with instance_create(x,y,AnimDestroyTop)
