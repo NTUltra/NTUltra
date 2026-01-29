@@ -4,6 +4,8 @@ alarm[1] = 1;
 image_speed = 0.7;
 gotRegal = false;
 gotThroneButt = false;
+listOfVoidedThings = [];
+flippedSpheres = false;
 if instance_exists(Player)
 {
 	with Player

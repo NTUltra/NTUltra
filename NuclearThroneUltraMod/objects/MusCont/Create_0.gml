@@ -9,6 +9,8 @@ song = musThemeA;
 currentSong = "";
 currentAmb = "";
 amb = amb0;
+song = -1;
+amb = -1;
 if !UberCont.playFullyCompleted
 	snd_play(song)
 scrPlayAmbience()

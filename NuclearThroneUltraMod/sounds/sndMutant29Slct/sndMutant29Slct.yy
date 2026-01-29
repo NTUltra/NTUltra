@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndMutant29Slct",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.14272109,
+  "exportDir":"",
+  "name":"sndMutant29Slct",
+  "parent":{
+    "name":"Hands",
+    "path":"folders/Sounds/Player/Hands.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMutant29Slct.wav",
+  "volume":1.0,
+}

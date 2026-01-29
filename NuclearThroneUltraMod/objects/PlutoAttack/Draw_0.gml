@@ -51,13 +51,6 @@ for (var t = ls; t <= lerpTime; t += curveDetail)
 	draw_vertex(xx + lengthdir_x(polygonWidth,dir + 90), yy + lengthdir_y(polygonWidth,dir + 90));
 	draw_vertex(xx + lengthdir_x(polygonWidth,dir - 90), yy + lengthdir_y(polygonWidth,dir - 90));
 }
-/*
-var dir = point_direction(xPrev,yPrev,xx,yy);
-draw_vertex(xPrev + lengthdir_x(polygonWidth,dir + 90), yPrev + lengthdir_y(polygonWidth,dir + 90));
-draw_vertex(xPrev + lengthdir_x(polygonWidth,dir - 90), yPrev + lengthdir_y(polygonWidth,dir - 90));
-draw_vertex(xx + lengthdir_x(polygonWidth,dir + 90), yy + lengthdir_y(polygonWidth,dir + 90));
-draw_vertex(xx + lengthdir_x(polygonWidth,dir - 90), yy + lengthdir_y(polygonWidth,dir - 90));
-*/
 draw_primitive_end();
 if lerpTime > lerpStarting
 	lerpStart += lerpIncrease * dt;

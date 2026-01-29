@@ -6,54 +6,80 @@ var regal = gotRegal;
 var targetedOne = false;
 var preSound = false;
 var me = id;
-if gotThroneButt
+var tb = gotThroneButt;
+var scaleIncrease = 0;
+var bloqueType = VoidBlock;
+if tb
+{
+	scaleIncrease = 0.125;
+	bloqueType = VoidBlockBig;
+}
+if true || gotThroneButt
 {
 	var nullVoid = Player.ultra_got[115] ? 1 : 0;
 	var rads = ds_list_create();
 	var al = instance_place_list(x,y,Rad,rads,false);
 	for (var i = 0; i < al; i++;)
 	{
-		with rads[| i]
+		if !array_contains(listOfVoidedThings,rads[| i])
 		{
-			targetedOne = true;
-			if regal 
+			array_push(listOfVoidedThings,rads[| i]);
+			with rads[| i]
 			{
-				if object_index == Rad
-					Player.voidBeam += 1;
-				else
-					Player.voidBeam += 5;
-				var excessVoidBeam = min(5,Player.voidBeam - Player.voidBeamMax);
-				if excessVoidBeam > 0
+				targetedOne = true;
+				if regal 
 				{
-					Player.voidBeam = Player.voidBeamMax;
-					scrExcessResource(10,excessVoidBeam);
+					if object_index == Rad
+						Player.voidBeam += 1;
+					else
+						Player.voidBeam += 5;
+					var excessVoidBeam = min(5,Player.voidBeam - Player.voidBeamMax);
+					if excessVoidBeam > 0
+					{
+						Player.voidBeam = Player.voidBeamMax;
+						scrExcessResource(10,excessVoidBeam);
+					}
 				}
-			}
-			BackCont.shake += 1;
-			radValue *= 0.5;
-			isBeingVoided += nullVoid;
-			if isBeingVoided != 1
-			{
-				preSound = true;
-				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
-				{
-					shake = 1;
-					sprite_index = other.sprite_index;
-					createdBy = me;
-					blockType = VoidBlockBig;
-				}
-			}
-			else
-			{
-				//Null instant consumption
 				BackCont.shake += 1;
-				with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+				//radValue *= 0.5;
+				isBeingVoided += nullVoid;
+				if isBeingVoided != 1
 				{
-					createdBy = me;
+					preSound = true;
+					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+					{
+						shake = 1;
+						sprite_index = other.sprite_index;
+						createdBy = me;
+						blockType = bloqueType;
+						image_xscale -= 0.125;
+						image_yscale -= 0.125;
+					}
 				}
+				else
+				{
+					//Null instant consumption
+					BackCont.shake += 1;
+					with instance_create_depth(x,y,depth - 1,bloqueType)
+					{
+						createdBy = me;
+						dmg = min(dmg,1);
+						image_xscale -= 0.125;
+						image_yscale -= 0.125;
+					}
+				}
+				event_user(0);
+				if instance_exists(Player)
+					with instance_create(x,y,VoidCollectRad)
+					{
+						myTarget = Player;
+						direction = point_direction(x,y,myTarget.x,myTarget.y);
+						var dis = point_distance(x,y,myTarget.x,myTarget.y);
+						offsetX = x + lengthdir_x(dis*0.5,direction) + lengthdir_x(dis * curveAmount,direction + curveDirection);
+						offsetY = y + lengthdir_y(dis*0.5,direction) + lengthdir_y(dis * curveAmount,direction + curveDirection);
+					}
+				isBeingVoided += nullVoid;
 			}
-			event_user(0);
-			isBeingVoided += nullVoid;
 		}
 	}
 	ds_list_destroy(rads);
@@ -61,189 +87,198 @@ if gotThroneButt
 	var al = instance_place_list(x,y,AmmoPickup,ammoPickups,false);
 	for (var i = 0; i < al; i++;)
 	{
-		with ammoPickups[| i]
+		if !array_contains(listOfVoidedThings,ammoPickups[| i])
 		{
-			targetedOne = true;
-			var isUpg = sprite_index == sprHPUpg;
-			BackCont.shake += 2;
-			ammoValue *= 0.5;
-			if regal
+			array_push(listOfVoidedThings,ammoPickups[| i]);
+			with ammoPickups[| i]
 			{
-				Player.voidBeam += 5;
-				if isUpg
-					Player.voidBeam += 2;
-				var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
-				if excessVoidBeam > 0
-				{
-					Player.voidBeam = Player.voidBeamMax;
-					scrExcessResource(10,excessVoidBeam);
-				}
-			}
-			if isBeingVoided != 1
-			{
-				preSound = true;
-				with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
-				{
-					shake = 2;
-					sprite_index = other.sprite_index;
-					if isUpg
-					{
-						image_xscale += 0.25;
-						image_yscale += 0.25;
-					}
-					else
-					{
-						image_xscale += 0.125;
-						image_yscale += 0.125;
-					}
-					createdBy = me;
-					blockType = VoidBlockBig;
-				}
-			}
-			else
-			{
-				//Null instant consumption
+				targetedOne = true;
+				var isUpg = sprite_index == sprHPUpg;
 				BackCont.shake += 2;
-				with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+				ammoValue *= 0.5;
+				if regal
 				{
+					Player.voidBeam += 5;
 					if isUpg
+						Player.voidBeam += 2;
+					var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
+					if excessVoidBeam > 0
 					{
-						image_xscale += 0.25;
-						image_yscale += 0.25;
+						Player.voidBeam = Player.voidBeamMax;
+						scrExcessResource(10,excessVoidBeam);
 					}
-					else
-					{
-						image_xscale += 0.125;
-						image_yscale += 0.125;
-					}
-					createdBy = me;
 				}
+				if isBeingVoided != 1
+				{
+					preSound = true;
+					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+					{
+						shake = 2;
+						sprite_index = other.sprite_index;
+						image_xscale += scaleIncrease;
+						image_yscale += scaleIncrease;
+						if isUpg
+						{
+							image_xscale += 0.125;
+							image_yscale += 0.125;
+						}
+						createdBy = me;
+						blockType = bloqueType;
+					}
+				}
+				else
+				{
+					//Null instant consumption
+					BackCont.shake += 2;
+					with instance_create_depth(x,y,depth - 1,bloqueType)
+					{
+						image_xscale += scaleIncrease;
+						image_yscale += scaleIncrease;
+						if isUpg
+						{
+							image_xscale += 0.125;
+							image_yscale += 0.125;
+						}
+						createdBy = me;
+					}
+				}
+				if tb
+					event_user(0);
+				else
+					instance_destroy();
 			}
-			event_user(0);
 		}
 	}
 	ds_list_destroy(ammoPickups);
 }
+/*
 else
 {
 	var pickups = ds_list_create();
 	var al = instance_place_list(x,y,Pickup,pickups,false);
 	for (var i = 0; i < al; i++;)
 	{
-		if Player.ultra_got[115]
+		if !array_contains(listOfVoidedThings,pickups[| i])
 		{
+			array_push(listOfVoidedThings,pickups[| i]);
+			if Player.ultra_got[115]
+			{
+				with pickups[| i]
+				{
+					isBeingVoided += 1;
+				}
+			}
 			with pickups[| i]
 			{
+				targetedOne = true;
+				if isBeingVoided != 1
+				{
+					preSound = true;
+					if object_index == Rad
+					{
+						if regal
+						{
+							Player.voidBeam += 1;
+							var excessVoidBeam = min(1, Player.voidBeam - Player.voidBeamMax);
+							if excessVoidBeam > 0
+							{
+								Player.voidBeam = Player.voidBeamMax;
+								scrExcessResource(10,excessVoidBeam);
+							}
+						}
+						with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+						{
+							shake = 1;
+							sprite_index = other.sprite_index;
+							createdBy = me;
+						}
+					}
+					else
+					{
+						var isUpg = sprite_index == sprHPUpg;
+						if regal
+						{
+							Player.voidBeam += 5;
+							if isUpg
+								Player.voidBeam += 2;
+							var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
+							if excessVoidBeam > 0
+							{
+								Player.voidBeam = Player.voidBeamMax;
+								scrExcessResource(10,excessVoidBeam);
+							}
+						}
+						with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
+						{
+							shake = 2;
+							sprite_index = other.sprite_index;
+							createdBy = me;
+							blockType = VoidBlockBig;
+							if isUpg
+							{
+								image_xscale += 0.125;
+								image_yscale += 0.125;
+							}
+						}
+					}
+					instance_destroy();
+				}
+				else
+				{
+					if object_index == Rad
+					{
+						if regal
+							Player.voidBeam += 1;
+						BackCont.shake += 1;
+						with instance_create_depth(x,y,depth - 1,VoidBlock)
+						{
+							createdBy = me;
+						}
+					}
+					else
+					{
+						var isUpg = sprite_index == sprHPUpg;
+						if regal
+						{
+							Player.voidBeam += 5;
+							if isUpg
+								Player.voidBeam += 2;
+							var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
+							if excessVoidBeam > 0
+							{
+								Player.voidBeam = Player.voidBeamMax;
+								scrExcessResource(10,excessVoidBeam);
+							}
+						}
+						BackCont.shake += 2;
+						with instance_create_depth(x,y,depth - 1,VoidBlockBig)
+						{
+							createdBy = me;
+							if isUpg
+							{
+								image_xscale += 0.125;
+								image_yscale += 0.125;
+							}
+						}
+					}
+				}
 				isBeingVoided += 1;
 			}
-		}
-		with pickups[| i]
-		{
-			targetedOne = true;
-			if isBeingVoided != 1
-			{
-				preSound = true;
-				if object_index == Rad
-				{
-					if regal
-					{
-						Player.voidBeam += 1;
-						var excessVoidBeam = min(1, Player.voidBeam - Player.voidBeamMax);
-						if excessVoidBeam > 0
-						{
-							Player.voidBeam = Player.voidBeamMax;
-							scrExcessResource(10,excessVoidBeam);
-						}
-					}
-					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
-					{
-						shake = 1;
-						sprite_index = other.sprite_index;
-						createdBy = me;
-					}
-				}
-				else
-				{
-					var isUpg = sprite_index == sprHPUpg;
-					if regal
-					{
-						Player.voidBeam += 5;
-						if isUpg
-							Player.voidBeam += 2;
-						var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
-						if excessVoidBeam > 0
-						{
-							Player.voidBeam = Player.voidBeamMax;
-							scrExcessResource(10,excessVoidBeam);
-						}
-					}
-					with instance_create_depth(x,y,depth - 1,BecomeVoidBlock)
-					{
-						shake = 2;
-						sprite_index = other.sprite_index;
-						createdBy = me;
-						blockType = VoidBlockBig;
-						if isUpg
-						{
-							image_xscale += 0.125;
-							image_yscale += 0.125;
-						}
-					}
-				}
-				instance_destroy();
-			}
-			else
-			{
-				if object_index == Rad
-				{
-					if regal
-						Player.voidBeam += 1;
-					BackCont.shake += 1;
-					with instance_create_depth(x,y,depth - 1,VoidBlock)
-					{
-						createdBy = me;
-					}
-				}
-				else
-				{
-					var isUpg = sprite_index == sprHPUpg;
-					if regal
-					{
-						Player.voidBeam += 5;
-						if isUpg
-							Player.voidBeam += 2;
-						var excessVoidBeam = min(7,Player.voidBeam - Player.voidBeamMax)
-						if excessVoidBeam > 0
-						{
-							Player.voidBeam = Player.voidBeamMax;
-							scrExcessResource(10,excessVoidBeam);
-						}
-					}
-					BackCont.shake += 2;
-					with instance_create_depth(x,y,depth - 1,VoidBlockBig)
-					{
-						createdBy = me;
-						if isUpg
-						{
-							image_xscale += 0.125;
-							image_yscale += 0.125;
-						}
-					}
-				}
-			}
-			isBeingVoided += 1;
 		}
 	}
 	ds_list_destroy(pickups);
 }
+*/
 if targetedOne
 {
 	speed -= 0.5;
 	speed = max(0,speed);
 	BackCont.shake += 4;
-	with PlayerAlarms3 {
-		voidSphereAngle *= -1;	
-	}
+	if !flippedSpheres
+		with PlayerAlarms3 {
+			voidSphereAngle *= -1;	
+		}
+	flippedSpheres = true;
 	if Player.ultra_got[113] && !Player.altUltra
 	{
 		BackCont.shake += 2;

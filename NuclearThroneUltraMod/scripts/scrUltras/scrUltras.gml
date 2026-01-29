@@ -888,7 +888,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	}
         
 	ultra_name[114] = "ABYSS"
-	ultra_text[114] = "WHEN YOU <r>KILL<r> AN <r>ENEMY<r>#<w>ALL<w> <r>ENEMIES<r> OF THAT <w>TYPE<w>#WILL BE SENT TO THE <w>NEXT AREA<w>##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN#DOES NOT WORK ON BOSSES#SENT OVER ENEMIES LOSE 25% <r>HEALTH<r>"
+	ultra_text[114] = "WHEN YOU <r>KILL<r> AN <r>ENEMY<r>#<w>ALL<w> <r>ENEMIES<r> OF THAT <w>TYPE<w>#WILL BE SENT TO THE <w>NEXT AREA<w>##THE ENEMY TYPE SENT OVER#CANNOT CROSS OVER AGAIN#DOES NOT WORK ON BOSSES#SENT OVER ENEMIES LOSE <w>25%<w> <r>HEALTH<r>"
 	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"
@@ -900,7 +900,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[116] = "discipline those projectiles!"
 	*/
 	ultra_name[116] = "NIL"
-	ultra_text[116] = "FOR EACH <r>HEALTH<r> MISSING:#GAIN A <p>VOID SPHERE<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE AND#DELETING ENEMY PROJECTILES"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
+	ultra_text[116] = "GAIN A <p>VOID SPHERE<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE AND#DELETING ENEMY PROJECTILES##GAIN <w>TWO<w> ADDITIONAL <p>VOID SPHERES<p>#FOR EACH <r>HEALTH<r> OR <gb>ARMOUR<gb> MISSING"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
 	ultra_tips[116] = "absent"
 	
 	maxultra = 116;

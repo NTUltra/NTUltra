@@ -435,7 +435,7 @@ else
 				var xx = __view_get( e__VW.XView, 0 )+16;
 				var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 				var step = 31;
-				scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
+				scrollWidth = step - 300//+ (-(__view_get( e__VW.WView, 0 ))) - 8
 				scroll = 0;
 				var gotNoSkills = true;
 				for (var i = 0; i <= Player.maxultra; i++) {
@@ -689,7 +689,7 @@ else
 		var xx = __view_get( e__VW.XView, 0 )+16;
 		var yy = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-28;
 		var step = 31;
-		scrollWidth = step + (-(__view_get( e__VW.WView, 0 ))) - 8
+		scrollWidth = step - 300;//(-(__view_get( e__VW.WView, 0 ))) - 8
 		scroll = 0;
 		instance_create(x,y,AllMutationsLeft);
 		instance_create(x,y,AllMutationsRight);

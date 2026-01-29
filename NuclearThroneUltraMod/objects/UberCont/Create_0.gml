@@ -4,9 +4,9 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.B."
-subUpdateVersion = "43";
+subUpdateVersion = "44";
 notUpdated = "";
-serverIp = "86.94.124.128"serverPort = 1414;
+serverIp = "77.249.12.209"serverPort = 1414;
 currentSave = 0;
 canShader = shaders_are_supported();
 isUpdate100 = file_exists(program_directory + "mus/1");

@@ -413,7 +413,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					dir = instance_create(x,y,PopupText)
 					dir.mytext = string(wep_name[wep])+"!"
 					if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
-						with instance_create(x,y,PopupText)
+						with instance_create(x,y + 16,PopupText)
 						{
 							moveSpeed = 0.25;
 							alarm[1] = 80;

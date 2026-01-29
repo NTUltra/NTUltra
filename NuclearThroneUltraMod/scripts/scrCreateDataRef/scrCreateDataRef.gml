@@ -18,6 +18,7 @@ function scrCreateDataRef() {
 			crown_tips = other.crown_tips;
 			wep_text = other.wep_text;
 			skill_tips = other.skill_tips;
+			ultra_tips = other.ultra_tips;
 		
 		ultra_got = other.ultra_got;
 		ultra_name = other.ultra_name;

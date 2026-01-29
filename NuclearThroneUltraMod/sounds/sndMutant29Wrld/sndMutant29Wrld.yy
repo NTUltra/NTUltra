@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.0339003,
+  "duration":1.0952154,
   "exportDir":"",
   "name":"sndMutant29Wrld",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndMutant29Wrld.ogg",
+  "soundFile":"sndMutant29Wrld.wav",
   "volume":1.0,
 }

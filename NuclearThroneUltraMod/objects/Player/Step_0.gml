@@ -1184,7 +1184,7 @@ if (rad > mr)
 			hasLeveledUp += 1;
 		if  (altUltra && ultra_got[33])
 			hasLeveledUp = 2;
-		if race == 29
+		if race == 29 && level % 2 == 1
 		{
 			BackCont.shake += 100;
 			Sleep(20);

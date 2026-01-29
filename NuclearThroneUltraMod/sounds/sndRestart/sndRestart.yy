@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.787687,
+  "duration":0.78768706,
   "exportDir":"",
   "name":"sndRestart",
   "parent":{

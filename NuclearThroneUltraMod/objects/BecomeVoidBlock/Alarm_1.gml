@@ -6,6 +6,10 @@ with instance_create_depth(x,y,depth,blockType)
 {
 	image_xscale = other.image_xscale;
 	image_yscale = other.image_yscale;
+	if image_xscale < 1
+	{
+		dmg = min(dmg,1);
+	}
 	createdBy = other.createdBy;
 }
 instance_destroy();

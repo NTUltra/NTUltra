@@ -69,9 +69,7 @@ exit;
 #macro strongerAttractValue 60
 #macro strongestAttractValue 74
 randomize();
-if !audio_group_is_loaded(agsfx)
-	audio_group_load(agsfx);
-	
+audio_group_load(agsfx);
 if !instance_exists(UberCont)
 {
 	instance_create(0,0,UberCont)
