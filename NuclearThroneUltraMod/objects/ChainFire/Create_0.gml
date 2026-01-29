@@ -10,10 +10,6 @@ hitEntities = [];
 cx = xstart;
 cy = ystart;
 bounce = 0;
-if instance_exists(Player) && Player.skill_got[15]//Shotgun shoulder
-{
-	bounce += 1;
-}
 xprev = x;
 yprev = y;
 myHspeed = 0;

@@ -13,7 +13,3 @@ cost = 3;
 radCost = 2;
 alarm[11] = 1;
 bounces = 4;
-if instance_exists(Player) && Player.skill_got[15]
-{
-	bounces += 2;	
-}

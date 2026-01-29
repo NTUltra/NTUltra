@@ -11,10 +11,6 @@ dmg = 9;
 image_speed = 0.5
 friction = 0;
 bounces = 8;
-if instance_exists(Player) && Player.skill_got[15]
-{
-	bounces += 1;
-}
 sprite_index = sprPingPongBall;
 image_index = irandom_range(0,4);
 switch (image_index)

@@ -15,11 +15,3 @@ friction = 0.1;
 alarm[1]=140;
 snd_loop(sndSnowBlowerLoop);
 dmg = 10;
-shotgunShoulders = false;
-
-/* */
-/*  */
-if instance_exists(Player) && Player.skill_got[15]
-{
-	shotgunShoulders = true;	
-}

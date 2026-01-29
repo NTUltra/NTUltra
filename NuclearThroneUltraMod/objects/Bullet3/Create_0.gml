@@ -10,12 +10,6 @@ typ = 1 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 RecycleGlandType();
 hitWall=0;
 maxWallHits = 2;
-shotgunShoulder = false;
-if instance_exists(Player) && Player.skill_got[15]
-{
-	maxWallHits += 1;
-	shotgunShoulder = true;
-}
 dmg=4;
 norecycle = false;
 alarm[11] = 1;

@@ -4,7 +4,7 @@ trailColour = c_lime;
 dmg = 17//5 normal splinter
 typ = 2 //0 = normal, 1 = deflectable, 2 = destructable
 wallHits = -1;
-if instance_exists(Player) && Player.skill_got[15]
+if instance_exists(Player) && Player.skill_got[21]
 	wallHits -= 1;
 theGass = UltraToxicThrowerGas
 hitEntities = [];

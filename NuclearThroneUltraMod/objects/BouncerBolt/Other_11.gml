@@ -7,10 +7,7 @@ if hits > 0
 	snd_play(sndShotgunHitWall,0.1,true);
 	instance_create(x,y,Smoke);
 	hits--;
-	if shotgunShoulder
-	{
-		speed = max(speed,28 - (hits*2));
-	}
+	speed = max(speed,28 - (hits*2));
 }
 else {
 	event_inherited();	

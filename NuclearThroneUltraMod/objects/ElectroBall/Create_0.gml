@@ -15,17 +15,11 @@ dmgReduction = 0;
 target=noone;
 hitEntities = [];
 bounce = 1;
-shotgunShoulders = 0;
 if instance_exists(Player)
 {
 	if Player.skill_got[17]
 	{
 		dmg += 1;
-	}
-	if Player.skill_got[15]
-	{
-		bounce += 1;
-		shotgunShoulders += 14;
 	}
 }
 originalDirection=point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);

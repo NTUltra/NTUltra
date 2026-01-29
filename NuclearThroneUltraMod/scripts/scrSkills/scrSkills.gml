@@ -268,8 +268,8 @@ function scrSkills() {
 	skill_name[15] = "SHOTGUN SHOULDERS"
 	if isHand
 		skill_name[15] = "SHOTGUN KNUCKLES"
-	skill_text[15] = "SHOTGUN SHELLS <pi>BOUNCE<pi> FURTHER#AND DEAL <r>SPLASH DAMAGE<r>";
-	skill_detail[15] = "MOST <pi>BOUNCING PROJECTILES<pi>#BOUNCE FURTHER#<w>SHELLS<w> BOUNCE TOWARDS <r>ENEMIES<r>#<w>SHELLS<w> DEAL <r>SPLASH DAMAGE<r>#<w>SHELLS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
+	skill_text[15] = "SHOTGUN SHELLS <pi>BOUNCE<pi> FURTHER#AND DEAL <r>SPLASH DAMAGE<r>#<w>SHELLS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES";
+	skill_detail[15] = "SHOTGUN SHELLS <pi>BOUNCE<pi> FURTHER#<w>SHELLS<w> BOUNCE TOWARDS <r>ENEMIES<r>#<w>SHELLS<w> DEAL <r>SPLASH DAMAGE<r>#<w>SHELLS<w> CAN'T BE <pi>DEFLECTED<pi> BY ENEMIES#(WEAPON SPECIFIC MUTATION)";
 	skill_tips[15] = choose("shells are friends","shotgun shoulders\nextends close range damage\nfrom shotguns","shotgun shoulders\nincreases bouncer bullets bounces by 1","shotgun shoulders:\nincreases swordgun bounces")
 	skill_msnd[15] =  sndMutShotGunShoulders
 	skill_bons[15] = "+25% WALLBOUNCE# + 10% SPLASH DAMAGE RANGE";

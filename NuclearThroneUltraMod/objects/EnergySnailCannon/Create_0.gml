@@ -28,10 +28,6 @@ ballY = y;
 knockback = 6;
 if instance_exists(Player)
 {
-	if Player.skill_got[15] = 1
-	{
-		bounce += 1;	
-	}
 	if Player.skill_got[17] = 1
 	{
 		dmg += 6;
