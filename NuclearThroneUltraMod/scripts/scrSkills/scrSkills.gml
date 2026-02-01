@@ -617,9 +617,9 @@ function scrSkills() {
 	
 	skill_name[47] = "HOLLOW BONES"
 	skill_text[47] = "<w>SPENDING<w> <y>AMMO<y>#CAN CAUSE AN <v>IMPLOSION<v>!"
-	skill_detail[47] = "EVERY <w>24%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <v>IMPLODE<v>#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
+	skill_detail[47] = "EVERY <w>30%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <v>IMPLODE<v>#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
 	skill_tips[47] = "there is an emptyness inside"
-	skill_bons[47] = "EVERY 19% AMMO SPENT#+25% BIGGER IMPLOSION"
+	skill_bons[47] = "EVERY 23% AMMO SPENT#+25% BIGGER IMPLOSION"
 	skill_msnd[47] =  sndMutBouncyFat;
 	
 	/*

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.4640362,
   "exportDir":"",
   "name":"sndMutant10LowH",
   "parent":{

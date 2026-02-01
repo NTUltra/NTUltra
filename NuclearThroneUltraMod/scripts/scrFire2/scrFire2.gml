@@ -16553,7 +16553,7 @@ function scrFire2(hasTailNow) {
 	}
 	if !skill_got[2]
 	{
-		motion_add(aimDirection+180,2)
+		motion_add(aimDirection+180,1)
 	}
 	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
 	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake

@@ -103,6 +103,8 @@ function scrCreateDataRef() {
 		skillpoints = other.skillpoints;
 		rad = other.rad;
 		radPickedUp = other.radPickedUp;
+		horrorRad = other.horrorRad;
+		horrorRadMax = other.horrorRadMax;
 		maxRadPickedUp = other.maxRadPickedUp;
 		piggyBank = other.piggyBank
 		maxPiggyBank = other.maxPiggyBank;

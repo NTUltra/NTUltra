@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":2.56932,
+  "duration":2.5693197,
   "exportDir":"",
   "name":"sndThiefHidingField",
   "parent":{

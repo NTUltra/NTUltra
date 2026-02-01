@@ -1515,9 +1515,12 @@ function scrDrawHUD() {
 			px += 5;
 		draw_sprite(sprPiggyBankHUD,(dataRef.piggyBank/dataRef.maxPiggyBank)*12,px,vy+4)	
 	}
+	if dataRef.race == 21 && !(dataRef.ultra_got[0] && dataRef.altUltra)
+		draw_sprite(sprHorrorBar,(dataRef.horrorRad/dataRef.horrorRadMax)*21,vx+ro,vy+4)
 	if dataRef.skillpoints > 0
 		draw_sprite(sprExpBarLevel,0,vx+ro,vy+4)
 	draw_sprite(sprExpBar,(dataRef.rad/maxRad)*16,vx+ro,vy+4)
+
 	var lvl = dataRef.level
 	if lvl != 10
 	{

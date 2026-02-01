@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":3.112312,
+  "duration":3.112313,
   "exportDir":"",
   "name":"sndMutant27Crwn",
   "parent":{

@@ -273,7 +273,7 @@ if Menu.camLerp >= 1 && button = 1 and (selected || hovering) and image_index !=
     snd_slct=sndMutant27Slct;
     break;
 	case 28:
-    snd_slct=sndMutant27Slct;
+    snd_slct=sndMutant28Slct;
     break;
 	case 29:
     snd_slct=sndMutant29Slct;

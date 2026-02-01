@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndMutant28LowA",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.84818596,
+  "exportDir":"",
+  "name":"sndMutant28LowA",
+  "parent":{
+    "name":"Thief",
+    "path":"folders/Sounds/Player/Thief.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMutant28LowA.wav",
+  "volume":1.0,
+}

@@ -2469,6 +2469,7 @@ function scrFire3(hasTailNow){
 
 		with instance_create(x,y,ToxicCannonBall)
 		{
+			dmg = 10;
 			alarm[0] = 10;
 			motion_add(aimDirection,4)
 			alarm[3] = 5;
@@ -4591,6 +4592,63 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
 		BackCont.shake += 6
 		wkick = 6
+
+		break;
+		
+		//DISC CANNON
+		case 928:
+
+		snd_play_fire(sndSuperDiscGun)
+
+		with instance_create(x+lengthdir_x(8,aimDirection),y+lengthdir_y(8,aimDirection),DiscCannon)
+		{
+			motion_add(aimDirection+(random(4)-2)*other.accuracy,10)
+			image_angle = direction
+			team = other.team
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,10);
+			motion_add(aimDirection+180,5)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 8
+
+		break;
+		
+		//TURTLE DISC GUN
+		case 929:
+		snd_play_fire(sndTurtleShotgun)
+		repeat(3)
+		{
+			with instance_create(x,y,Smoke)
+				motion_add(aimDirection+(random(16)-8)*other.accuracy,3+random(2))
+		}
+		repeat(3)
+		{
+			with instance_create(x,y,Dust)
+				motion_add(aimDirection+(random(16)-8)*other.accuracy,3+random(2))
+		}
+		with instance_create(x,y,DiscBurst)
+		{
+			creator = other.id
+			ammo = 4
+			time = 4
+			team = other.team
+			alarm[0] = 15;
+			if Player.skill_got[42]
+			{
+				alarm[0] = 8;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					alarm[0] = 1;
+				}
+				scrActivateTail(hasTailNow);
+			}
+		}
 
 		break;
 		

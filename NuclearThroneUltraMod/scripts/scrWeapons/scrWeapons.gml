@@ -206,7 +206,7 @@ function scrWeapons() {
 	wep_load[18] = 8
 	wep_cost[18] = 1
 	wep_sprt[18] = sprDiscGun
-	wep_area[18] = 3
+	wep_area[18] = 2
 	wep_text[18] = "we hereby sincerely apologize"
 	wep_swap[18] = sndSwapBow
 	wep_rad[18] = 0;
@@ -7560,6 +7560,7 @@ function scrWeapons() {
 	wep_text[674] = "Melee bullets"
 	wep_swap[674] = sndSwapMachinegun
 	wep_rad[674] = 0;
+	wep_popup[674] = "IS CONSIDERED A MELEE WEAPON";
 	
 	wep_name[675] = "ULTRA ASSAULT RIFLE"
 	wep_type[675] = 1
@@ -10419,6 +10420,29 @@ function scrWeapons() {
 	wep_text[927] = "NUKE PISTOL"
 	wep_swap[927] = sndSwapMachinegun
 	wep_rad[927] = 5;
+	
+	wep_name[928] = "DISC CANNON"
+	wep_type[928] = 3
+	wep_auto[9286] = 0
+	wep_load[928] = 44
+	wep_cost[928] = 8
+	wep_sprt[928] = sprDiscCannnonGun
+	wep_area[928] = 13
+	wep_text[928] = "thats some risky setup"
+	wep_swap[928] = sndSwapBow
+	wep_rad[928] = 0;
+	
+	wep_name[929] = "TURTLE DISC GUN"
+	wep_type[929] = 3
+	wep_auto[929] = 1
+	wep_load[929] = 40
+	wep_cost[929] = 5
+	wep_sprt[929] = sprTurtleDiscGun
+	wep_area[929] = 0
+	wep_text[929] = "even more dangerous than the regular disc gun"
+	wep_swap[929] = sndSwapBow
+	wep_rad[929] = 0;
+	wep_popup[929] = "DELAYED FIRE#DISCS DEAL MORE DAMAGE#TO ENEMIES";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

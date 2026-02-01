@@ -13,7 +13,7 @@ accuracycharge *= accuracyBoost;
 if instance_exists(enemy)
 {
 	var enem = instance_nearest(UberCont.mouse__x,UberCont.mouse__y,enemy);
-	if ultraD && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<48
+	if ultraD && instance_exists(enem) && enem.team != team && point_distance(UberCont.mouse__x,UberCont.mouse__y,enem.x,enem.y)<48
 	{
 	direction=point_direction(x,y,enem.x,enem.y);
 	image_angle=direction;

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.235102,
+  "duration":0.23219955,
   "exportDir":"",
   "name":"sndThiefKnife2",
   "parent":{

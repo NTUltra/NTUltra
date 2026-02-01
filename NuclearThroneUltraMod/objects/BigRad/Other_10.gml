@@ -37,6 +37,11 @@ if instance_exists(Player)
 			creload -= radd;
 			if race == 20 && skill_got[maxskill + 1]//Piggy bank
 				piggyBank += add*0.25;
+			if race == 21
+			{
+				horrorRad += add * 0.35;
+				horrorRad = min(horrorRad,horrorRadMax);
+			}
 			if canHeal
 			{
 				radPickedUp += add;

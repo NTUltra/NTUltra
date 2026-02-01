@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":3.300748,
+  "duration":3.3007483,
   "exportDir":"",
   "name":"sndMutant16Valt",
   "parent":{

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.636969,
+  "duration":2.636984,
   "exportDir":"",
   "name":"sndVikingArmourStrike",
   "parent":{

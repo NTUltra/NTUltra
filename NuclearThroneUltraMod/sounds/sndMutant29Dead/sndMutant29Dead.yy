@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.5508163,
+  "duration":1.6645125,
   "exportDir":"",
   "name":"sndMutant29Dead",
   "parent":{

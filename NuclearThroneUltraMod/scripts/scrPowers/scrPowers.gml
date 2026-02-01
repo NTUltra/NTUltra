@@ -396,7 +396,7 @@ function scrPowers(raceOverwrite = -1) {
 			}
 			else
 			{
-				if rad<=0
+				if rad<= 0 && horrorRad <= 0
 				{
 					snd_play_2d(sndHorrorEmpty);
 					scrEmptyRad();
@@ -419,8 +419,6 @@ function scrPowers(raceOverwrite = -1) {
 						cost *= 0.5;
 						horrordelay = !horrordelay;
 					}
-					rad -= cost;
-
 				    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
 				    {
 					    bskin=other.bskin
@@ -442,7 +440,10 @@ function scrPowers(raceOverwrite = -1) {
 					    ammo=50
 					    charge=other.horrorcharge;
 					    event_perform(ev_alarm,0)
-					    rad=1;
+						if other.horrorRad <= 0
+							rad = 1;
+						else
+							rad = 0;
 				        with instance_create(x,y,LightningSpawn)
 				        {
 					        if other.bskin=1
@@ -458,6 +459,8 @@ function scrPowers(raceOverwrite = -1) {
 							image_angle = other.image_angle
 				        }
 				    }
+					spendHorrorRads(cost);
+					horrorRad = max(horrorRad,0);
 					rad = max(rad,0);
 				}
 			}
@@ -3329,7 +3332,7 @@ function scrPowers(raceOverwrite = -1) {
 					}
 				}
 			}
-			else if rad>0
+			else if rad > 0 || horrorRad > 0
 			{
 				if !instance_exists(HorrorSuckDelay)
 					instance_create(x,y,HorrorSuckDelay);
@@ -3339,85 +3342,171 @@ function scrPowers(raceOverwrite = -1) {
 						alarm[0] = suckDelay;	
 					}
 
-			if horrorcharge=origincharge
-				snd_play_2d(sndHorrorBeam);
+				if horrorcharge=origincharge
+					snd_play_2d(sndHorrorBeam);
 
-			if horrorcharge<maxcharge
-			{
-				if  UberCont.normalGameSpeed == 60
-					horrorcharge += 0.1+(skill_got[5]*0.1);
-				else
-					horrorcharge += 0.2+(skill_got[5]*0.2);
-			}
-			if skill_got[5]
-			{
-				if  UberCont.normalGameSpeed == 60
-					horrorhealtime += 0.5;
-				else
-					horrorhealtime++;
+				if horrorcharge<maxcharge
+				{
+					if  UberCont.normalGameSpeed == 60
+						horrorcharge += 0.1+(skill_got[5]*0.1);
+					else
+						horrorcharge += 0.2+(skill_got[5]*0.2);
+				}
+				if skill_got[5]
+				{
+					if  UberCont.normalGameSpeed == 60
+						horrorhealtime += 0.5;
+					else
+						horrorhealtime++;
 
-			    if horrorhealtime>70
-			    {
-				    if my_health < maxhealth
+				    if horrorhealtime>70
 				    {
-				        my_health++;
-				        with instance_create(x,y,HealFX)
-							sprite_index=sprHorrorTB;
-						snd_play(sndHealthPickup);
-						var dir;
-						if UberCont.opt_ammoicon
-						{
-							dir = instance_create(x,y,PopupText)
-							dir.sprt = sprHPIconPickup;
-							dir.mytext = "+1"
-							if Player.my_health = Player.maxhealth
-								dir.mytext = "MAX"
-							else if Player.my_health > Player.maxhealth
-								dir.mytext = "OVER MAX"
-						}
-						else
-						{
-							dir = instance_create(x,y,PopupText)
-							dir.mytext = "+1 HP";
-							if Player.my_health = Player.maxhealth
-								dir.mytext = "MAX HP"
-							else if Player.my_health > Player.maxhealth
-								dir.mytext = "OVER MAX HP"
-						}
-				    }
+					    if my_health < maxhealth
+					    {
+					        my_health++;
+					        with instance_create(x,y,HealFX)
+								sprite_index=sprHorrorTB;
+							snd_play(sndHealthPickup);
+							var dir;
+							if UberCont.opt_ammoicon
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.sprt = sprHPIconPickup;
+								dir.mytext = "+1"
+								if Player.my_health = Player.maxhealth
+									dir.mytext = "MAX"
+								else if Player.my_health > Player.maxhealth
+									dir.mytext = "OVER MAX"
+							}
+							else
+							{
+								dir = instance_create(x,y,PopupText)
+								dir.mytext = "+1 HP";
+								if Player.my_health = Player.maxhealth
+									dir.mytext = "MAX HP"
+								else if Player.my_health > Player.maxhealth
+									dir.mytext = "OVER MAX HP"
+							}
+					    }
         
-				    horrorhealtime=0;
-			    }
+					    horrorhealtime=0;
+				    }
 
-			if !(audio_is_playing(sndHorrorLoopTB))
-			snd_loop(sndHorrorLoopTB);
+				if !(audio_is_playing(sndHorrorLoopTB))
+				snd_loop(sndHorrorLoopTB);
 
     
-			}
-			else if !(audio_is_playing(sndHorrorLoop))
-				snd_loop(sndHorrorLoop);
-
-			if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
-			{
-
-				// this makes the beam more efficient
-				//if random(3)<2
-				var cost = 1.3;
-				if ultra_got[83]
-					cost = 1.2;
-				if  UberCont.normalGameSpeed == 60
-				{
-					cost *= 0.5;
-					horrordelay = !horrordelay;
 				}
-				rad -= cost;
-				if !horrordelay
+				else if !(audio_is_playing(sndHorrorLoop))
+					snd_loop(sndHorrorLoop);
+
+				if (horrorcharge>7||random(7)<horrorcharge||horrorcharge=origincharge)
 				{
-					if horrorcharge>12&&random(2)<1
+
+					// this makes the beam more efficient
+					//if random(3)<2
+					var cost = 1.3;
+					if ultra_got[83]
+						cost = 1.2;
+					if  UberCont.normalGameSpeed == 60
 					{
-						rad -= cost;
-					    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-					    {
+						cost *= 0.5;
+						horrordelay = !horrordelay;
+					}
+					
+					if !horrordelay
+					{
+						if horrorcharge>12&&random(2)<1
+						{
+						    with instance_create(x+lengthdir_x(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.7),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+						    {
+							    bskin=other.bskin
+							    if bskin = 1
+									sprite_index=sprHorrorBeamB;
+								else if bskin = 2
+									sprite_index=sprHorrorBeamC;
+								else if bskin = 3
+									sprite_index=sprHorrorBeamD;
+								else if bskin = 4
+									sprite_index=sprHorrorBeamE;
+    
+							    originnr=instance_number(HorrorBeam);
+    
+							    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+							    team = other.team
+							    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+							    ammo=50
+							    charge=other.horrorcharge;
+							    event_perform(ev_alarm,0)
+								if other.horrorRad <= 0
+									rad = 1;
+								else
+									rad = 0;
+						        with instance_create(x,y,LightningSpawn)
+						        {
+						        if other.bskin=1
+									sprite_index=sprHorrorBeamSpawnB
+								else if other.bskin=2
+									sprite_index=sprHorrorBeamSpawnC
+								else if other.bskin=3
+									sprite_index=sprHorrorBeamSpawnD
+								else if other.bskin=4
+									sprite_index=sprHorrorBeamSpawnE
+						        else
+									sprite_index=sprHorrorBeamSpawn
+						        image_angle = other.image_angle
+						        }
+						    }
+							spendHorrorRads(cost);
+						}
+
+						with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+						{
+							bskin=other.bskin
+							if bskin = 1
+								sprite_index=sprHorrorBeamB;
+							else if bskin = 2
+								sprite_index=sprHorrorBeamC;
+							else if bskin = 3
+								sprite_index=sprHorrorBeamD;
+							else if bskin = 4
+								sprite_index=sprHorrorBeamE;
+
+							originnr=instance_number(HorrorBeam);
+
+							image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
+							team = other.team
+							motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
+							ammo=50
+							charge=other.horrorcharge;
+							if other.horrorRad <= 0
+								rad = 1;
+							else
+								rad = 0;
+							event_perform(ev_alarm,0)
+						    with instance_create(x,y,LightningSpawn)
+						    {
+						    if other.bskin=1
+								sprite_index=sprHorrorBeamSpawnB
+							else if other.bskin=2
+								sprite_index=sprHorrorBeamSpawnC
+							else if other.bskin=3
+								sprite_index=sprHorrorBeamSpawnD
+							else if other.bskin=4
+								sprite_index=sprHorrorBeamSpawnE
+						    else
+								sprite_index=sprHorrorBeamSpawn
+						    image_angle = other.image_angle
+						    }
+						}
+					}
+					spendHorrorRads(cost);
+				}
+
+				if random(4)<1
+				{
+				    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
+				    {
 					    bskin=other.bskin
 					    if bskin = 1
 							sprite_index=sprHorrorBeamB;
@@ -3435,50 +3524,14 @@ function scrPowers(raceOverwrite = -1) {
 					    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
 					    ammo=50
 					    charge=other.horrorcharge;
+						if other.horrorRad <= 0
+							rad = 1;
+						else
+							rad = 0;
 					    event_perform(ev_alarm,0)
-					    rad=1;
-					        with instance_create(x,y,LightningSpawn)
-					        {
-					        if other.bskin=1
-								sprite_index=sprHorrorBeamSpawnB
-							else if other.bskin=2
-								sprite_index=sprHorrorBeamSpawnC
-							else if other.bskin=3
-								sprite_index=sprHorrorBeamSpawnD
-							else if other.bskin=4
-								sprite_index=sprHorrorBeamSpawnE
-					        else
-								sprite_index=sprHorrorBeamSpawn
-					        image_angle = other.image_angle
-					        }
-					    }
-
-					}
-
-					with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-					{
-					bskin=other.bskin
-					if bskin = 1
-						sprite_index=sprHorrorBeamB;
-					else if bskin = 2
-						sprite_index=sprHorrorBeamC;
-					else if bskin = 3
-						sprite_index=sprHorrorBeamD;
-					else if bskin = 4
-						sprite_index=sprHorrorBeamE;
-
-					originnr=instance_number(HorrorBeam);
-
-					image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-					team = other.team
-					motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-					ammo=50
-					charge=other.horrorcharge;
-					rad=1;
-					event_perform(ev_alarm,0)
-					    with instance_create(x,y,LightningSpawn)
-					    {
-					    if other.bskin=1
+				        with instance_create(x,y,LightningSpawn)
+				        {
+				        if other.bskin=1
 							sprite_index=sprHorrorBeamSpawnB
 						else if other.bskin=2
 							sprite_index=sprHorrorBeamSpawnC
@@ -3486,58 +3539,17 @@ function scrPowers(raceOverwrite = -1) {
 							sprite_index=sprHorrorBeamSpawnD
 						else if other.bskin=4
 							sprite_index=sprHorrorBeamSpawnE
-					    else
+				        else
 							sprite_index=sprHorrorBeamSpawn
-					    image_angle = other.image_angle
-					    }
-					}
+				        image_angle = other.image_angle
+				        }
+				    }
 				}
-			}
-
-			if random(4)<1
-			{
-			    with instance_create(x+lengthdir_x(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),y+lengthdir_y(random(horrorcharge*0.6),point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)),HorrorBeam)
-			    {
-			    bskin=other.bskin
-			    if bskin = 1
-					sprite_index=sprHorrorBeamB;
-				else if bskin = 2
-					sprite_index=sprHorrorBeamC;
-				else if bskin = 3
-					sprite_index=sprHorrorBeamD;
-				else if bskin = 4
-					sprite_index=sprHorrorBeamE;
-    
-			    originnr=instance_number(HorrorBeam);
-    
-			    image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)
-			    team = other.team
-			    motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y),6);
-			    ammo=50
-			    charge=other.horrorcharge;
-				rad=1;
-			    event_perform(ev_alarm,0)
-			        with instance_create(x,y,LightningSpawn)
-			        {
-			        if other.bskin=1
-						sprite_index=sprHorrorBeamSpawnB
-					else if other.bskin=2
-						sprite_index=sprHorrorBeamSpawnC
-					else if other.bskin=3
-						sprite_index=sprHorrorBeamSpawnD
-					else if other.bskin=4
-						sprite_index=sprHorrorBeamSpawnE
-			        else
-						sprite_index=sprHorrorBeamSpawn
-			        image_angle = other.image_angle
-			        }
-			    }
-			}
 
 		
-			BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-			BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
-			BackCont.shake += 0.9
+				BackCont.viewx2 += lengthdir_x(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+				BackCont.viewy2 += lengthdir_y(8,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
+				BackCont.shake += 0.9
 
 
 			}
@@ -3549,6 +3561,7 @@ function scrPowers(raceOverwrite = -1) {
 				scrEmptyRad();
 			}
 			rad = max(rad,0);
+			horrorRad = max(horrorRad,0);
 		}
 
 

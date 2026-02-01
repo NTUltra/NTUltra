@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.609524,
+  "duration":0.60952383,
   "exportDir":"",
   "name":"sndThiefHide",
   "parent":{

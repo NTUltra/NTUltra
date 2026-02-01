@@ -222,6 +222,7 @@ function scrLoadRace() {
 	spr_go_sit = sprMutant27BIdle;//TODO
 	spr_sit = sprMutant27BIdle;//TODO
 	break;
+	//Thief
 	case 28:
 	spr_idle=sprMutant27BIdle;
 	spr_walk=sprMutant27BWalk;
@@ -1257,21 +1258,21 @@ function scrLoadRace() {
 	snd_good=[sndMutant27Chst2,sndMutant27Chst3];
 	break;
 	
-	case 28://
-	snd_hurt=sndMutant10Hurt;
-	snd_dead=sndMutant10Dead;
-	snd_lowa=sndMutant10LowA;
-	snd_lowh=sndMutant10LowH;//
-	snd_crwn=sndMutant10Crwn;
-	snd_chst=sndMutant10Chst;//chst
-	snd_wrld=sndMutant10Wrld;
-	snd_thrn=sndMutant10Thrn;//
-	snd_valt=sndMutant10Valt;
-	snd_cpt=sndMutant10Cpt;//Captain win (unused for now)
+	case 28://Thief
+	snd_hurt=sndMutant28Hurt;
+	snd_dead=sndMutant28Dead;
+	snd_lowa=sndMutant28LowA;
+	snd_lowh=sndMutant28LowH;//
+	snd_crwn=sndMutant28Crwn;
+	snd_chst=sndMutant28Chst;//chst
+	snd_wrld=sndMutant28Wrld;
+	snd_thrn=sndMutant28Thrn;//
+	snd_valt=sndMutant28Valt;
+	snd_cpt=sndMutant28Thrn;//Captain win (unused for now)
 	//snd_good=[sndMutant27Chst2,sndMutant27Chst3];
 	break;
 	
-	case 29://
+	case 29://No thing
 	snd_hurt=sndMutant29Hurt;
 	snd_dead=sndMutant29Dead;
 	snd_lowa=sndMutant29LowA;

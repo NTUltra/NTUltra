@@ -4,8 +4,7 @@ if instance_exists(Player)
 {
 	var wantSphereAmount = Player.maxhealth - Player.my_health;
 	wantSphereAmount += max(0,Player.maxarmour - Player.armour);
-	wantSphereAmount *= 2;
-	wantSphereAmount += 1;
+	wantSphereAmount += 2;
 	if wantSphereAmount == 0
 	{
 		ds_list_clear(voidSpheres);

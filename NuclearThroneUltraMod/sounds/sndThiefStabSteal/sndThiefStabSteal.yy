@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.404807,
+  "duration":1.4048072,
   "exportDir":"",
   "name":"sndThiefStabSteal",
   "parent":{

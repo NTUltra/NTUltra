@@ -92,7 +92,7 @@ metabolismBreak = 3;
 triggerMetabolism = false;
 ignoreMetabolism = false;
 hollowBonesCounter = 0;
-hollowBonesTrigger = 0.24;
+hollowBonesTrigger = 0.3;
 restarted = false;
 hurt_pitch_variation = 0;
 reachedUltra = false;
@@ -450,7 +450,7 @@ if race == 25
 	peaceBarrierDuration *= 0.8;
 	metabolismBreak = 2;
 	puffyCheekAmount = 3;
-	hollowBonesTrigger = 0.19
+	hollowBonesTrigger = 0.23
 }
 if race == 14//Panda
 {
@@ -813,7 +813,19 @@ chickenFocusInUse = false;
 voidBeam = 0;
 voidBeamMax = 175;
 rad = 0
-
+horrorRadMax = 35;
+horrorRad = horrorRadMax;
+function spendHorrorRads(cost)
+{
+	if horrorRad > 0
+	{
+		horrorRad -= cost;
+		if horrorRad < 0
+			rad += horrorRad;
+	}
+	else
+		rad -= cost;	
+}
 if race == 28
 {
 	scrActivateThiefStealth();

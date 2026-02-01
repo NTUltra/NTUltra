@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.598685,
+  "duration":1.5986848,
   "exportDir":"",
   "name":"sndMutant1Chst",
   "parent":{

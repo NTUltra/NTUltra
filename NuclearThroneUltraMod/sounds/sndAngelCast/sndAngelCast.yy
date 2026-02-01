@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.608005,
+  "duration":1.6080046,
   "exportDir":"",
   "name":"sndAngelCast",
   "parent":{

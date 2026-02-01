@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":3.660658,
+  "duration":3.6606576,
   "exportDir":"",
   "name":"sndThiefStealUpg",
   "parent":{

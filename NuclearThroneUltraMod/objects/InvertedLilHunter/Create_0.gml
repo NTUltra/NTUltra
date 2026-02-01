@@ -1,5 +1,8 @@
 raddrop = 50
 maxhealth = 175;
+loops = GetPlayerLoops();
+if loops > 0
+	maxhealth += 50;
 meleedamage = 1
 mySize = 1
 scrBossHealthBuff();
@@ -9,13 +12,7 @@ event_inherited()
 actTime = 10;
 reachedHalfHealth = false;
 team = 3;
-loop=false;
-
-if instance_exists(Player){
-	if Player.loops>0
-	loop=true;
-
-}
+loop = loops > 0;
 if loop 
 	actTime -= 2;
 spr_idle = sprInvertedLilHunter

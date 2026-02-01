@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.4660544,
+  "duration":0.55818594,
   "exportDir":"",
   "name":"sndMutant29Hurt",
   "parent":{

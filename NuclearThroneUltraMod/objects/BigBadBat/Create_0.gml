@@ -46,7 +46,7 @@ laserOffset = 36;
 myLasers = [];
 ticksBeforeSpiral = 2;
 image_xscale = 1;
-actTime = 20;
+actTime = 15;
 scrTarget();
 angle = random(360);
 myBat = SquareBat;

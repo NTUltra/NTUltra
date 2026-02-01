@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.517347,
+  "duration":0.5173469,
   "exportDir":"",
   "name":"sndMutant1Slct",
   "parent":{
