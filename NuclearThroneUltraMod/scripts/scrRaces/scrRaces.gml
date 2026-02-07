@@ -722,8 +722,8 @@ function scrRaces() {
 		race_eskin[28] = 0
 		race_fskin[28] = 0
 		race_gskin[28] = 0
-		race_bskin_lock[28] = "(NOT IMPLEMENTED)#STEAL FROM ANOTHER THIEF AS THIEF"
-		race_cskin_lock[28] = "(NOT IMPLEMENTED)#DEAL OVER 300 DAMAGE TO AN ENEMY#IN A SINGLE STAB (THRONEBUTT)"
+		race_bskin_lock[28] = "STEAL 1000 AMMO#IN ONE RUN"
+		race_cskin_lock[28] = "DEAL OVER 200 DAMAGE TO AN ENEMY#IN A SINGLE STEALTH STAB (THRONE BUTT)"
 		
 		race_name[29] = "NO THING"
 		
@@ -761,7 +761,7 @@ function scrRaces() {
 		race_eskin[29] = 0
 		race_fskin[29] = 0
 		race_gskin[29] = 0
-		race_bskin_lock[29] = "(NOT IMPLEMENTED)#REACH PALACE#WHILE BELOW LEVEL 6#AS NO THING"
+		race_bskin_lock[29] = "VOID CONSUME 20 HP DROPS#IN ONE RUN"
 		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE#AS NO THING"
 		/*
 			race_name[30] = "SLOBBER"
@@ -789,7 +789,7 @@ function scrRaces() {
 			race_cskin_lock[30] = "AS SLOBBER#COMPLETE 3 AREAS#IN A ROW#WITHOUT HAVING#MORE THAN 1 MAX HP";
 	
 		race_name[31] = "WOLVES PAIR"//MANTIS
-		race_pass[31] = "BONDED LIVES#A: DAMAGE TAKEN BY ENEMIES IS SPLIT TO NEARBY ENEMIES#B: DAMAGE TAKEN BY MULTIPLE NEARBY ENEMIES IS COMBINED TO THE STRONGEST ENEMY"
+		race_pass[31] = "BONDED LIVES#A: DAMAGE DEALT TO ENEMIES IS SPLIT TO NEARBY ENEMIES#B: DAMAGE DEALT TO MULTIPLE NEARBY ENEMIES IS COMBINED TARGETING STRONGEST ENEMY"
 		race_acti[31] = "A: <aq>FROST BITE<aq> B: <w>GRAPPLE BITE<w>"
 		race_butt[31] = "A: FROST IS FROSTIER#B: GRAPPLE IMMUNE"
 		race_butt_detail[31] = race_butt[12];
