@@ -147,6 +147,8 @@ function scrEndOfRun(){
 		tipDataRef = noone;
 		humprhyStunTracker = 0;
 		humphryStopTracker = 0;
+		noThingHpConsumedTracker = 0;
+		thiefAmmoStolenTracker = 0;
 		vansSlapped = 0;
 		lastSaveLoop = -1;
 		hasBeenSaved = false;

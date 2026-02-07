@@ -761,7 +761,7 @@ function scrRaces() {
 		race_eskin[29] = 0
 		race_fskin[29] = 0
 		race_gskin[29] = 0
-		race_bskin_lock[29] = "VOID CONSUME 20 HP DROPS#IN ONE RUN"
+		race_bskin_lock[29] = "VOID CONSUME 10 HP DROPS#IN ONE RUN"
 		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE#AS NO THING"
 		/*
 			race_name[30] = "SLOBBER"

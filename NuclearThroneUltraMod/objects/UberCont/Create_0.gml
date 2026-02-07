@@ -281,3 +281,7 @@ tipDataRef = noone;
 
 humprhyStunTracker = 0;
 humphryStopTracker = 0;
+
+noThingHpConsumedTracker = 0;
+
+thiefAmmoStolenTracker = 0;

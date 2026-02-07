@@ -125,10 +125,19 @@ function scrPowers(raceOverwrite = -1) {
 						if other.skill_got[5]
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
+							var totalStabDamage = 0;
+							var aoe = lev * 2 + l;
+							totalStabDamage += aoe;
 							with instance_create(x,y,ThiefStab) {
-								dmg = lev * 2 + l;
+								dmg = aoe;
 							}
-							DealDamage(d + 20 + min(100,l*2) + l + my_health*0.25);
+							var directDmg = d + 20 + min(100,l*2) + l + my_health*0.25;
+							totalStabDamage += directDmg;
+							if directDmg >= 200
+							{
+								scrUnlockCSkin(28,"FOR DEALING OVER 200 DAMAGE IN A SINGLE STAB!");	
+							}
+							DealDamage(directDmg);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
 							BackCont.viewy2 += lengthdir_y(50,stabDir)*UberCont.opt_shake
 							BackCont.shake += 40

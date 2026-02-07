@@ -104,7 +104,7 @@ for (var i = 0; i < al; i++;)
 }
 ds_list_destroy(rads);
 var ammoPickups = ds_list_create();
-var al = instance_place_list(x,y,AmmoPickup,ammoPickups,false);
+var al = instance_place_list(x,y,AmmoHPPickup,ammoPickups,false);
 for (var i = 0; i < al; i++;)
 {
 	if !array_contains(listOfVoidedThings,ammoPickups[| i])
@@ -112,6 +112,18 @@ for (var i = 0; i < al; i++;)
 		array_push(listOfVoidedThings,ammoPickups[| i]);
 		with ammoPickups[| i]
 		{
+			if object_index == HPPickup
+			{
+				with UberCont
+				{
+					noThingHpConsumedTracker += 1;
+					if noThingHpConsumedTracker >= 10
+					{
+						noThingHpConsumedTracker = -999;
+						scrUnlockBSkin(29,"FOR VOID CONSUMING 10 HP DROPS!");
+					}
+				}
+			}
 			targetedOne = true;
 			var isUpg = sprite_index == sprHPUpg;
 			BackCont.shake += 2;
