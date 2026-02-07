@@ -268,7 +268,7 @@ function scrLeaderboardRace(race,bskin,altUltra,area){
 	return sprMutant27CIdle;
 	break;
 	case 28:
-	return sprMutant28CIdleConceal;
+	return sprMutant28CIdle;
 	break;
 	case 29:
 	return sprMutant29CIdle;

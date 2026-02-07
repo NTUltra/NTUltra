@@ -14,9 +14,30 @@ function scrActivateThiefStealth(){
 		spr_idle = sprMutant28IdleConceal;
 		spr_walk = sprMutant28WalkConceal;
 	}
+	else if bskin == 1
+	{
+		spr_idle = sprMutant28BIdleConceal;
+		spr_walk = sprMutant28BWalkConceal;
+	}
+	else if bskin == 2
+	{
+		spr_idle = sprMutant28CIdleConceal;
+		spr_walk = sprMutant28CWalkConceal;
+	}
 	with instance_create(x,y,AnimDestroyTop)
 	{
-		sprite_index = sprMutant28Conceal;
+		if other.bskin == 1
+		{
+			sprite_index = sprMutant28BConceal;
+		}
+		else if other.bskin == 2
+		{
+			sprite_index = sprMutant28CConceal;
+		}
+		else
+		{
+			sprite_index = sprMutant28Conceal;
+		}
 		image_xscale = other.right;
 	}
 	repeat(6)
