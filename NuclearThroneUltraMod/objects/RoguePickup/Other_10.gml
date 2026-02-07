@@ -46,6 +46,7 @@ with Player
 
 }
 snd_play(sndRogueCanister);
-instance_destroy()
+if isBeingVoided != 1
+	instance_destroy()
 
 instance_create(x,y,SmallChestPickup)

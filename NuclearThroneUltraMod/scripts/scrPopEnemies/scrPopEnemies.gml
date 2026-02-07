@@ -1560,9 +1560,14 @@ function scrPopEnemies() {
 	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, GhostGuardian,ExploGuardian))
 	        } else {
 	            var ran = random(100);
-	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, GuardianDog, CubeGuardian,CloudKnifer,CloudShooter))
-	            } else if ran > 30 {
+	            if ran > 65 {
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, CubeGuardian,CloudKnifer,CloudShooter));
+	            } 
+				else if ran > 60
+				{
+					instance_create(x + 16, y + 16, choose(GuardianDog, PalaceGuardian, ExploGuardian, ExploGuardian, GhostGuardian, CubeGuardian,CloudKnifer,CloudShooter));
+				}
+				else if ran > 40 {
 					instance_create(x + 16, y + 16, choose(Sniper, JungleBandit, ExploFreak))
 				}
 				else if instance_number(enemy) < 1
@@ -1575,10 +1580,13 @@ function scrPopEnemies() {
 	            instance_create(x + 16, y + 16, choose(GuardianDog, GuardianDog, /*GhostGuardian,*/ExploGuardian))
 	        } else {
 	            var ran = random(100);
-
-	            if ran > 55 {
-	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, /*GhostGuardian,*/ GuardianDog))
+	            if ran > 65 {
+	                instance_create(x + 16, y + 16, choose(PalaceGuardian, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, /*GhostGuardian,*/))
 	            }
+				else if ran > 60
+				{
+					instance_create(x + 16, y + 16, choose(GuardianDog, PalaceGuardian, ExploGuardian, ExploGuardian, CubeGuardian, /*GhostGuardian,*/))
+				}
 				else if instance_number(enemy) < 1
 				{
 					instance_create(x + 16, y + 16,PalaceGuardian);

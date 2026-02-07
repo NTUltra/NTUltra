@@ -687,6 +687,14 @@ function scrDrawHUD() {
 				{
 					draw_sprite_ext(sprSpikedFrogHUD,0,xx,yy,1,1,0,c_white,1);
 				}
+				else if dir == 110 && dataRef.altUltra && dataRef.race == 28
+				{
+					draw_sprite_ext(sprGreedyThiefHUD,0,xx,yy,1,1,0,c_white,1);
+				}
+				else if dir == 113 && dataRef.altUltra && dataRef.race == 29
+				{
+					draw_sprite_ext(sprInfinityHUD,0,xx,yy,1,1,0,c_white,1);
+				}
 			    else {//if !(dir=79 && dataRef.race=21){//Horror don't draw skeleton's ultra
 					draw_sprite_ext(sprUltraIconHUD,dir,xx,yy,1,1,0,c_white,1);
 				}
@@ -1502,13 +1510,13 @@ function scrDrawHUD() {
 	var rto = 11;
 	if dataRef.skill_got[36]//Absorbing pores
 	{
-		ro = 1;//-3
+		ro = 2;//-3
 		rto = 9 //-3;
 		draw_sprite(sprAbsorbingRadBar,(dataRef.radPickedUp/dataRef.maxRadPickedUp)*18,vx+ 16,vy+4)	
 	}
 	if dataRef.race == 20 && dataRef.skill_got[dataRef.maxskill + 1]//Piggy bank
 	{
-		ro = 1;//-3
+		ro = 2;//-3
 		rto = 9 //-3;
 		var px = vx + 16;
 		if dataRef.skill_got[36]
@@ -1518,7 +1526,12 @@ function scrDrawHUD() {
 	if dataRef.race == 21 && !(dataRef.ultra_got[0] && dataRef.altUltra)
 		draw_sprite(sprHorrorBar,(dataRef.horrorRad/dataRef.horrorRadMax)*21,vx+ro,vy+4)
 	if dataRef.skillpoints > 0
-		draw_sprite(sprExpBarLevel,0,vx+ro,vy+4)
+	{
+		if dataRef.race == 21
+			draw_sprite(sprExpBarLevel,1,vx+ro,vy+4)
+		else
+			draw_sprite(sprExpBarLevel,0,vx+ro,vy+4)
+	}
 	draw_sprite(sprExpBar,(dataRef.rad/maxRad)*16,vx+ro,vy+4)
 
 	var lvl = dataRef.level

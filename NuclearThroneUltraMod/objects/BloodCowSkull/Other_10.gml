@@ -43,6 +43,7 @@ if my_health > 0 && isInteractableNow && !instance_exists(WantBoss) && !instance
 		}
 		instance_create(x,y,NoHealing);
 		with Player {
+			baseWeaponTier += 0.25;
 			my_health = 3;
 			prevhealth = 3;
 			snd_play(choose(snd_lowa,snd_lowh));

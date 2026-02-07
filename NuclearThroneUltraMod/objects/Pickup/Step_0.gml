@@ -1,4 +1,4 @@
-if instance_exists(HorrorSuckDelay)
+if instance_exists(HorrorSuckDelay) || alarm[9] > 0
 {
 	image_index = 0;
 	exit;
@@ -59,6 +59,7 @@ if instance_exists(Player) && (!cursed) {
 		    isGettingSucked = true;
 			if place_meeting(x,y,Player)
 			{
+				isBeingVoided = 0;
 				event_user(0);	
 			}
 		}
@@ -73,6 +74,7 @@ if instance_exists(Player) && (!cursed) {
 			}
 			if place_meeting(x,y,Implosion)
 			{
+				isBeingVoided = 0;
 				event_user(0);
 			}
 		}
@@ -88,6 +90,7 @@ if instance_exists(Player) && (!cursed) {
 			}
 			if place_meeting(x,y,Hand)
 			{
+				isBeingVoided = 0;
 				event_user(0);
 			}
 		}
@@ -106,6 +109,7 @@ if instance_exists(Player) && (!cursed) {
 				}
 				if place_meeting(x,y,YungCuzDupe)
 				{
+					isBeingVoided = 0;
 					event_user(0);
 				}
 			}
@@ -114,6 +118,7 @@ if instance_exists(Player) && (!cursed) {
 				isGettingSucked = false;
 				if place_meeting(x,y,Player)
 				{
+					isBeingVoided = 0;
 					event_user(0);	
 				}
 			}
@@ -123,6 +128,7 @@ if instance_exists(Player) && (!cursed) {
 		    isGettingSucked = false;
 			if place_meeting(x,y,Player)
 			{
+				isBeingVoided = 0;
 				event_user(0);	
 			}
 		}

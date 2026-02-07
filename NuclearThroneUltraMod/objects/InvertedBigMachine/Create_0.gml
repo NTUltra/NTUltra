@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 40
-maxhealth = 480
+maxhealth = 490
 if loops
 	maxhealth += 260;
 mySize = 5

@@ -1,5 +1,5 @@
 raddrop = 12
-maxhealth = 120//60 in BANNILLA;
+maxhealth = 200//60 in BANNILLA;
 scrBossHealthBuff();
 mySize = 1
 event_inherited();
@@ -18,7 +18,7 @@ snd_melee = sndDogGuardianMelee
 //behavior
 walk = 0
 gunangle = 0;
-alarm[1] = 30;
+alarm[1] = 20;
 if instance_exists(Player) && Player.skill_got[29]
 {
 	alarm[1]+=45;

@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 2
-maxhealth = 3;
+maxhealth = 2;
 EnemyHealthAdjustments();
 meleedamage = 1
 spr_idle = sprMiniSlimeIdle;

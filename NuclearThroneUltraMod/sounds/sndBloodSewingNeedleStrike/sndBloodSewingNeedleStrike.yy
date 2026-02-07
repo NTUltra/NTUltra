@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.795283,
+  "duration":0.79528344,
   "exportDir":"",
   "name":"sndBloodSewingNeedleStrike",
   "parent":{

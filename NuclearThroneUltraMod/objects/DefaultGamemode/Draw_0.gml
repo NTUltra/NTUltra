@@ -12,6 +12,11 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 	{
 		UberCont.opt_gamemode = [UberCont.opt_default_gm];
 	}
+	//Update character description for 'normal' mode
+	with Menu
+	{
+		scrRaces();
+	}
 }
 if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
@@ -24,6 +29,11 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont
 	if shouldSwap
 	{
 		UberCont.opt_gamemode = [UberCont.opt_default_gm];
+	}
+	//Update character description for 'normal' mode
+	with Menu
+	{
+		scrRaces();
 	}
 }
 

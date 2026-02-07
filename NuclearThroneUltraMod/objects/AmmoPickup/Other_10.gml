@@ -56,5 +56,5 @@ else
 {
 	scrCollectAmmo(ammoValue, cursed, supercursed);
 }
-
-instance_destroy();
+if isBeingVoided != 1
+		instance_destroy()

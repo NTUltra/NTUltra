@@ -9,7 +9,7 @@ else
 	spr_idle = spr_stop;
 	image_index = 0
 	sprite_index = spr_idle
-	alarm[0] = actTime*2
+	alarm[0] = actTime*1.5
 	
 	if (isHardMode) {
 		var am = 6;

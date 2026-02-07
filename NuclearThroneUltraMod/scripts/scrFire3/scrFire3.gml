@@ -2333,6 +2333,7 @@ function scrFire3(hasTailNow){
 		}
 		with instance_create(x,y,IcicleBurst)
 		{
+			damageIncrease = 0.5;
 			creator = other.id
 			ammo = 4//16
 			time = 3
@@ -2395,7 +2396,7 @@ function scrFire3(hasTailNow){
 			motion_add(aimDirection + 180,1)
 			image_angle = direction;
 		}
-		with instance_create(x + lengthdir_x(16,aimDirection+180),y + lengthdir_y(16,aimDirection+180),SewingNeedle)
+		with instance_create(x + lengthdir_x(16,aimDirection+180),y + lengthdir_y(16,aimDirection+180),BloodSewingNeedle)
 		{
 			longarms += (Player.skill_got[13]+other.bettermelee)*2
 			if Player.skill_got[13]
@@ -4649,6 +4650,105 @@ function scrFire3(hasTailNow){
 				scrActivateTail(hasTailNow);
 			}
 		}
+
+		break;
+		
+		//SEWING NEEDLE
+		case 930:
+
+		snd_play_fire(sndSewingNeedle)
+
+		instance_create(x,y,Dust);
+		with instance_create(x + lengthdir_x(16,aimDirection+180),y + lengthdir_y(16,aimDirection+180),BloodSewingNeedle)
+		{
+			needleRange -= 32;
+			isBlood = false;
+			dmg = 4;
+			sprite_index = sprSewingNeedleCurveLine;
+			longarms += (Player.skill_got[13]+other.bettermelee)*2
+			if Player.skill_got[13]
+			{
+				needleRange += sprWdth;
+				if Player.ultra_got[97] && !Player.altUltra
+					needleRange += sprWdth * 2;
+			}
+			image_yscale += other.bettermelee * 2;
+			motion_add(aimDirection,longarms)
+			image_angle = direction
+			team = other.team
+			event_user(1);
+		}
+		if !skill_got[2]
+		{
+			//scrMoveContactSolid(aimDirection + 180,2);
+			motion_add(aimDirection+180,3)
+		}
+		wepangle = -wepangle
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = -7
+
+		break;
+		
+		//KRAKEN LOBBER
+		case 931:
+		snd_play_fire(sndChickenThrow)
+		snd_play_fire(sndClusterLauncher)
+
+		with instance_create(x,y,KrakenLobGrenade)
+		{
+			accuracy = other.accuracy;
+		sticky = 0
+		motion_add(aimDirection+(random(6)-3)*other.accuracy,8)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,KrakenLobGrenade)
+		{
+			accuracy = other.accuracy;
+			alarm[2] -= 2;
+		sticky = 0
+		motion_add(aimDirection+(random(12)-6)*other.accuracy,6.25)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(16,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wepangle = -wepangle
+		wkick = -5
+		break;
+		
+		//LONG SWORD
+		case 932:
+
+		snd_play_fire(sndSword2)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+		{
+			sprite_index = sprLongSlash;
+			mask_index = mskLongSlash;
+			snd_wallhit = sndCrowbarHitWall;
+			dmg = 25
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,10);
+			scrMoveContactSolid(aimDirection,3)
+		}
+		BackCont.viewx2 += lengthdir_x(20,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = -4
 
 		break;
 		

@@ -83,8 +83,7 @@ function scrTips() {
 	"don't forget to update your game <3",
 	"tapping fires some weapons quicker",
 	"HP will only drop when damaged",
-	"shotgun shoulders:\nincreases bouncer bullets bounces",
-	"shotgun shoulders:\nincreases sword gun bounces",
+	"shotgun shoulders stops your shotguns from being deflected by enemies",
 	"Check out the Ultra mod wiki!",
 	"Check out the ultra mod discord!",
 	"When you respawn#you level up faster",
@@ -309,7 +308,7 @@ function scrTips() {
 	if dataRef.area = 2
 	tip = choose("don't drink the water","the sewers stink","don't touch the frogs","don't eat the rat meat","danger","water dripping","sludge everywhere","frog loves to sing","the sludge","the sewers has very little item drops","very few ammo and health drops here")
 	if dataRef.area = 3
-	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons")
+	tip = choose("shoot robots on sight","thank goodness snipers only have one eye","there used to be trees here","look up","rust everywhere","the sound of birds","don't cross the streams","climb over cars","thieves can steal ammo","thieves can steal weapons","try to kill the snipers around big dog before aggravating  big dog")
 	if dataRef.area = 4
 	tip = choose("oh no","good luck","spiderwebs everywhere","reflections on the walls","skin is crawling","nearly there")
 	if dataRef.area = 5

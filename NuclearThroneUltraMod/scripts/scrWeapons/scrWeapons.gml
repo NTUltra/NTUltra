@@ -8583,9 +8583,9 @@ function scrWeapons() {
 	wep_type[766] = 1
 	wep_auto[766] = 0
 	wep_load[766] = 18
-	wep_cost[766] = 14.5
+	wep_cost[766] = 15
 	wep_sprt[766] = sprHeavyDenseGun
-	wep_area[766] = 5
+	wep_area[766] = 6
 	wep_text[766] = "a brick"
 	wep_swap[766] = sndSwapPistol
 	wep_rad[766] = 0;
@@ -10076,7 +10076,7 @@ function scrWeapons() {
 	wep_swap[897] = sndSwapHammer
 	wep_rad[897] = 0;
 	
-	wep_name[898] = "TASER"
+	wep_name[898] = "ELECTRICAL BATON"
 	wep_type[898] = 0
 	wep_auto[898] = 0
 	wep_load[898] = 21
@@ -10444,6 +10444,40 @@ function scrWeapons() {
 	wep_rad[929] = 0;
 	wep_popup[929] = "DELAYED FIRE#DISCS DEAL MORE DAMAGE#TO ENEMIES";
 	
+	wep_name[930] = "SEWING NEEDLE"
+	wep_type[930] = 0
+	wep_auto[930] = 1
+	wep_load[930] = 25
+	wep_cost[930] = 0
+	wep_sprt[930] = sprSewingNeedle
+	wep_area[930] = 5
+	wep_text[930] = "sewing cloth"
+	wep_swap[930] = sndSwapSword
+	wep_rad[930] = 0;
+	
+	wep_name[931] = "KRAKEN LOBBER"
+	wep_type[931] = 4
+	wep_auto[931] = 0
+	wep_load[931] = 25
+	wep_cost[931] = 4
+	wep_sprt[931] = sprKrakenLobber
+	wep_area[931] = 12
+	wep_text[931] = "airborne kraken!"
+	wep_swap[931] = sndSwapExplosive
+	wep_rad[931] = 0;
+	wep_popup[931] = "CAN BE TOSSED OVER WALLS";
+	
+	wep_name[932] = "LONG SWORD"
+	wep_type[932] = 0
+	wep_auto[932] = 0
+	wep_load[932] = 22
+	wep_cost[932] = 0
+	wep_sprt[932] = sprLongSword
+	wep_area[932] = 10
+	wep_text[932] = "just a broad sword"
+	wep_swap[932] = sndSwapHammer
+	wep_rad[932] = 0;
+	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l
 	
@@ -10482,7 +10516,8 @@ function scrWeapons() {
 	}
 	
 	//0 = melee 1 = bullets 2 = shells 3 = bolts 4 = explosives 5 = energy
-	typ_ammo[0] = 4 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
+	//typ_ammo[0] = 4 typ_ammo[1] = 33 typ_ammo[2] = 8 typ_ammo[3] = 7 typ_ammo[4] = 6 typ_ammo[5] = 9
+	typ_ammo[0] = 4 typ_ammo[1] = 32 typ_ammo[2] = 7 typ_ammo[3] = 6 typ_ammo[4] = 5 typ_ammo[5] = 8
 	typ_amax_base[0] = 33 typ_amax_base[1] = 255 typ_amax_base[2] = 55 typ_amax_base[3] = 55 typ_amax_base[4] = 55 typ_amax_base[5] = 55
 	if instance_exists(Player) {
 		if Player.race = 1 {

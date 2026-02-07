@@ -29,7 +29,7 @@ if instance_exists(Player)
 			piggyBank += add*0.25;
 		if race == 21
 		{
-			horrorRad += add * 0.35;
+			horrorRad += add * 0.3;
 			horrorRad = min(horrorRad,horrorRadMax);
 		}
 		snd_play_2d(sndRadPickup,0.05,true);

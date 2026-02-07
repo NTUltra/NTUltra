@@ -9,10 +9,10 @@
 // Inherit the parent event
 event_inherited();
 raddrop = 100
-maxhealth = 400
+maxhealth = 450
 loops = GetPlayerLoops()
 if GetPlayerLoops() > 0
-	maxhealth = 640;
+	maxhealth = 650;
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 EnemyHealthAdjustments();
@@ -26,7 +26,7 @@ spr_actual_idle = spr_idle;
 spr_actual_hurt = spr_hurt;
 spr_stop = sprInvertedScrapBossStop;
 spr_charge = sprInvertedScrapBossCharge;
-
+projectileSpeed += 0.25;
 actTime -= 4;
 maxSpinSpeed += 0.2;
 fireRate -= 1;

@@ -13,8 +13,8 @@ repeat(2)
 				r = Player.race_name[UberCont.secret_ultra_char[requirement]];
 			mytext = r +"#" + UberCont.secret_ultra_unlk[requirement];
 			theColour = c_lime;
-			moveSpeed = 0.25;
-			alarm[1] = 90;
+			moveSpeed = 0.01;
+			alarm[1] = 120;
 		}    
 		yy += 32;
 		with UberCont

@@ -7,6 +7,7 @@ if KeyCont.key_pick[Player.p] = 1 && !instance_exists(BallMom) && !instance_exis
 	{
 		area = 142;
 		subarea = 1;
+		baseWeaponTier += 1.25;
 	}
 	mask_index = mskPickupThroughWall;
 	with instance_create(x,y,Portal)

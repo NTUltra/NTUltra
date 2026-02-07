@@ -14,7 +14,7 @@ else
 	else
 	{
 		ammo = 0
-		walk = (actTime*2)+random(actTime)
+		walk = (actTime*1.5)+random(actTime)
 		motion_add(random(360),1)
 		alarm[0] = walk+actTime
 	}

@@ -208,7 +208,7 @@ if isInverted
 		var shake = UberCont.opt_shake;
 		UberCont.opt_shake *= 0.01;
 		if walkDir > 0
-			walkDir = 0.7;
+			walkDir = 0.65;
 		while(amountOfWalls > 0)
 		{
 			for (var i = 0; i < amountOfWalls; i++) {

@@ -110,7 +110,8 @@ else
 			}
 			with Player
 			{
-				my_health --;
+				if my_health > 1
+					my_health --;
 				snd_play(snd_hurt);
 				sprite_index = spr_hurt;
 				image_index = 0;

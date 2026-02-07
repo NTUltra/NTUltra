@@ -765,7 +765,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	if altOverride || (instance_exists(Player) &&  Player.race == 25 && Player.altUltra)
 	{
 		ultra_name[97] = "BEEKEEPER"
-		ultra_text[97] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>#ENEMIES HOLD 25% MORE <g>RADS<g>"
+		ultra_text[97] = "<g>RADIATION<g> SPAWNS <w>SWARM BOLTS<w>#ENEMIES HOLD <w>25%<w> MORE <g>RADS<g>"
 		ultra_tips[97] = "retired to a farm"
 	}
     
@@ -892,7 +892,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[114] = "send them inbetween"
         
 	ultra_name[115] = "NULL"
-	ultra_text[115] = "<r>HEALTH<r> AND <y>AMMO<y> DROPS#CAN BE <p>CONSUMED<p> TWICE"
+	ultra_text[115] = "<y>RES<y><g>OUR<g><r>CES<r>#CAN BE <p>CONSUMED<p> TWICE"
 	ultra_tips[115] = "absolute"
     /*
 	ultra_name[116] = "DYING WHEN AT OR ABOVE LEVEL 10#WILL RESET YOUR LEVEL TO 1 AND PREVENT DEATH"
@@ -900,7 +900,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	ultra_tips[116] = "discipline those projectiles!"
 	*/
 	ultra_name[116] = "NIL"
-	ultra_text[116] = "GAIN TWO <p>VOID SPHERES<p>#THAT SPIRALS AROUND YOU#DEALING DAMAGE AND#DELETING ENEMY PROJECTILES##GAIN AN ADDITIONAL <p>VOID SPHERE<p>#FOR EACH <r>HEALTH<r> OR <gb>ARMOUR<gb> MISSING"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
+	ultra_text[116] = "GAIN TWO <p>VOID SPHERES<p>#THAT SPIRAL AROUND YOU#DEALING DAMAGE AND#DELETING ENEMY PROJECTILES##GAIN AN ADDITIONAL <p>VOID SPHERE<p>#FOR EACH <r>HEALTH<r> OR <gb>ARMOUR<gb> MISSING"// AND<w>COLLECTING<w> <y>RES<y><g>OUR<g><r>CES<r>"
 	ultra_tips[116] = "absent"
 	
 	maxultra = 116;

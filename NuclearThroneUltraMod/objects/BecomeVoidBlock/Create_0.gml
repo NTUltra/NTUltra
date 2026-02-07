@@ -8,3 +8,4 @@ alarm[0] = 1;
 alarm[1] = 15;
 blockType = VoidBlock;
 shake = 1;
+dmg = 99;

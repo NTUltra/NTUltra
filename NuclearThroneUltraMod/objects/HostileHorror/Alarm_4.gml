@@ -1,3 +1,3 @@
 /// @description Intro
 instance_create(x,y,DramaCamera);
-alarm[1] += 90;
+alarm[1] += 40;

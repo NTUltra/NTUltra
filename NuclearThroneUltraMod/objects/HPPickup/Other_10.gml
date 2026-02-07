@@ -43,4 +43,5 @@ else
 	else
 		scrCollectHP(ammoValue * 2, 1.125);
 }
-instance_destroy()
+if isBeingVoided != 1
+	instance_destroy()

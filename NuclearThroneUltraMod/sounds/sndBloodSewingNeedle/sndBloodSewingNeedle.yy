@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.135488,
+  "duration":1.1354876,
   "exportDir":"",
   "name":"sndBloodSewingNeedle",
   "parent":{

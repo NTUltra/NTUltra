@@ -1,8 +1,8 @@
 raddrop = 85
-maxhealth = 450//300
+maxhealth = 500//300
 loops = GetPlayerLoops()
 if loops > 0
-	maxhealth = 700;
+	maxhealth = 750;
 maxhealth += clamp(20*loops,0,200);
 scrBossHealthBuff();
 meleedamage = 0
@@ -32,7 +32,7 @@ gunangle = point_direction(x,y,target.x,target.y)
 else
 gunangle = 0
 
-alarm[0] = 20
+alarm[0] = 15
 ammo = 15
 turn = choose(1,-1)
 walk = 0
@@ -81,9 +81,9 @@ actTime = 10;
 loops = GetPlayerLoops();
 missileType = ScrapBossMissile;
 missileAmount = 2;
-fireRate = 6;
+fireRate = 5;
 turnSpeed = 4;
-projectileSpeed = 2;
+projectileSpeed = 2.5;
 if loops > 0
 {
 	actTime = 9;
@@ -92,7 +92,7 @@ if loops > 0
 if loops > 1
 {
 	projectileSpeed += 1;
-	fireRate = 5;
+	fireRate = 4;
 	turnSpeed = 6;
 	maxSpinSpeed += 0.2;
 }

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.462834,
+  "duration":0.46283448,
   "exportDir":"",
   "name":"sndBoltCutter",
   "parent":{

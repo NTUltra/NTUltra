@@ -517,10 +517,10 @@ function scrRaces() {
 	race_name[21] = "HORROR"
 	race_pass[21] = "EXTRA <g>MUTATION<g> CHOICE"//"BLAST ARMOUR, HEAT"
 	race_acti[21] = "<g>RADIATION<g> BEAM"//"PORTAL STRIKE"
-	race_butt[21] = "BEAM CHARGES QUICKER AND <r>HEALS<r>#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>"
+	race_butt[21] = "BEAM CHARGES QUICKER AND <r>HEALS<r>#<w>RELEASING<w> <gg>BEAM<g>#FIRES A <w>BIG BALL<w> OF <g>RADIATION<g>"
 	race_butt_detail[21] = "BEAM CHARGES 30% QUICKER#BEAM <r>HEALS<r> EVERY 2 SECONDS#RELEASING BEAM#FIRES A BIG BALL OF <g>RADIATION<g>"
-	race_vision[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#AND FIRE A BIG BALL OF <g>RADIATION<g>";
-	race_vision_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A BIG BALL OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
+	race_vision[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#AND FIRE A <g>BIG BALL<g> OF <g>RADIATION<g>";
+	race_vision_detail[21] = "PRESS <w>[E]<w> TO:#SUCK UP ALL <g>RADIATION<g> IN EXISTENCE#<w>CONSUME HALF<w> OF THEM TO FIRE#A <g>BIG BALL<g> OF <g>RADIATION<g>#<w>COLLECT<w> THE <w>OTHER HALF<w>#(REQUIRES A MINIMUM AMOUNT OF RADS)";
 	if isUnique
 	{
 		race_vision[21] = string_replace_all(race_vision[21],"PRESS <w>[E]","PRESS <w>["+regalBut+"]");
@@ -726,11 +726,15 @@ function scrRaces() {
 		race_cskin_lock[28] = "(NOT IMPLEMENTED)#DEAL OVER 300 DAMAGE TO AN ENEMY#IN A SINGLE STAB (THRONEBUTT)"
 		
 		race_name[29] = "NO THING"
-		race_pass[29] = "START WITH <w>1<w><r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+		
+		if scrIsGamemode(9)
+			race_pass[29] = "START WITH <w>3<w> <r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
+		else
+			race_pass[29] = "START WITH <w>1<w> <r>HP<r>#GAIN <r>HP<r> AS YOU <w>LEVEL UP<w>"//#GET <g>ULTRA<g> AT LEVEL 5#UPGRADE ULTRA AT LEVEL 10"
 		race_acti[29] = "<v>VOID CONSUMPTION<v>:#CONSUME <y>RES<y><g>OUR<g><r>CES<r> IN AN AREA#TO <r>DESTROY<r> <w>EVERYTHING<w>#CONSUMED <g>RADS<g> GET COLLECTED"
 		race_butt[29] = "BETTER <v>VOID CONSUMPTION<v>#<v>VOID CONSUMPTION<v> <w>COLLECTS<w>#SOME <y>AMMO<y> AND <r>HEALTH<r> DROPS"
 		race_butt_detail[29] = "BIGGER <v>VOID CONSUMPTION<v>#<w>COLLECT<w> ALL <y>AMMO<y> AND<g> <r>HEALTH<r> DROPS#FOR HALF VALUE WHEN <v>VOID CONSUMING<v>"
-		race_vision[29] = "<y>RES<y><g>OUR<g><r>CES<r> LOST IN <v>VOID CONSUMPTION<v>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>";
+		race_vision[29] = "<v>VOID CONSUMED<v> <y>RES<y><g>OUR<g><r>CES<r>#CHARGE UP A <v>VOID BEAM<v>#PRESS <w>[E]<w> TO#UNLEASH THE <v>VOID BEAM<v>";
 		race_vision_detail[29] = race_vision[29] + "#<aq>IMMUNE<aq> WHILE FIRING <v>VOID BEAM<v>";
 		/*
 		if instance_exists(Player) && Player.skill_got[48]
@@ -759,7 +763,7 @@ function scrRaces() {
 		race_gskin[29] = 0
 		race_bskin_lock[29] = "(NOT IMPLEMENTED)#REACH PALACE#WHILE BELOW LEVEL 6#AS NO THING"
 		race_cskin_lock[29] = "COMPLETE A VOID CHALLENGE#AS NO THING"
-		
+		/*
 			race_name[30] = "SLOBBER"
 			race_pass[30] = "FIND MORE <r>HP<r> CHESTS#MORE DUPES = MORE <y>AMMO<y> FROM PICKUPS"
 			race_acti[30] = "<w>SPLIT<w>"
@@ -807,4 +811,5 @@ function scrRaces() {
 		race_gskin[31] = 0
 		race_bskin_lock[31] = "GRAPPLE DASH THROUGH 12 ENEMIES"
 		race_cskin_lock[31] = "AS WOLF FREEZE THE DRAGON'S FIRE";
+		*/
 }

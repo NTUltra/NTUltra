@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 4
-maxhealth = 16;
+maxhealth = 14;
 EnemyHealthAdjustments();
 meleedamage = 4
 spr_idle = sprInvertedBigSlimeIdle;
@@ -10,7 +10,7 @@ spr_fire = sprInvertedBigSlimeFire;
 spr_dead = sprInvertedBigSlimeDead
 
 //behavior
-actTime = 16;
+actTime = 17;
 acc = 0.8;
 maxSpeed = 3;
 projectileSpeed = 3.25;

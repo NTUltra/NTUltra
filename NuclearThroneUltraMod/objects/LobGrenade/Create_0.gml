@@ -15,3 +15,4 @@ rotationSpeed = 20;
 if hspeed > 0
 	rotationSpeed = -20;
 accuracy = 1;
+dropGrenadeType = DropGrenade;

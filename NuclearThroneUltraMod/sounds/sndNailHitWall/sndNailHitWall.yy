@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.513938,
+  "duration":0.5139456,
   "exportDir":"",
   "name":"sndNailHitWall",
   "parent":{

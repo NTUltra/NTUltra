@@ -126,7 +126,7 @@ function scrPowers(raceOverwrite = -1) {
 						{
 							snd_play(sndThiefStabStealUpg,0.01);
 							with instance_create(x,y,ThiefStab) {
-								dmg = 10 + lev + l;
+								dmg = lev * 2 + l;
 							}
 							DealDamage(d + 20 + min(100,l*2) + l + my_health*0.25);
 							BackCont.viewx2 += lengthdir_x(50,stabDir)*UberCont.opt_shake
@@ -145,8 +145,7 @@ function scrPowers(raceOverwrite = -1) {
 							snd_play(sndThiefStabSteal,0.01);
 							with instance_create(x,y,ThiefStab)
 							{
-								range *= 0.5;
-								range -= 2;
+								range *= 0.6;
 								image_xscale *= 0.5;
 								image_yscale = image_xscale;
 								dmg = 3 + lev + l;
@@ -167,7 +166,7 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index = spr_hurt
 						image_index = 0
 						snd_play(snd_hurt, hurt_pitch_variation,true)
-						with scrDrop(20,8) {
+						with scrDrop(16,8) {
 							motion_add(stabDir + 180, 3);	
 						}
 					}
@@ -412,8 +411,11 @@ function scrPowers(raceOverwrite = -1) {
 						}
 					//First rad for game feel
 					var cost = 1.06;
+					
 					if ultra_got[83]
 						cost = 0.95;
+					if level >= 10
+						cost += 0.2;
 					if  UberCont.normalGameSpeed == 60
 					{
 						cost *= 0.5;
@@ -3408,6 +3410,10 @@ function scrPowers(raceOverwrite = -1) {
 					var cost = 1.3;
 					if ultra_got[83]
 						cost = 1.2;
+					if level >= 10
+					{
+						cost += 0.75;
+					}
 					if  UberCont.normalGameSpeed == 60
 					{
 						cost *= 0.5;
@@ -4164,168 +4170,12 @@ function scrPowers(raceOverwrite = -1) {
 				speed = 2;
 				if other.skill_got[5]
 					speed += 2;
-			}
-			//ALL RADS PICKUPS ETC GO FUCKING EXPLODE
-			/*
-			if false && instance_exists(Pickup)
-			{
-				var regal = (!instance_exists(VoidBeam) && skill_got[maxskill + 1])
-				var targetedOne = false;
-				if skill_got[5]
-				{
-					var nullVoid = ultra_got[115] ? 1 : 0
-					with Rad
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							if regal 
-							{
-								if object_index == Rad
-									other.voidBeam += 1;
-								else
-									other.voidBeam += 5;
-							}
-							BackCont.shake += 1;
-							radValue *= 0.5;
-							instance_create(x,y,VoidBlockBig);
-							isBeingVoided += nullVoid;
-							event_user(0);
-							isBeingVoided += nullVoid;
-						}
-					}
-					with AmmoPickup
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							BackCont.shake += 2;
-							ammoValue *= 0.5;
-							if regal
-								other.voidBeam += 5;
-							with instance_create(x,y,VoidBlockBig) {
-								image_xscale += 0.125;
-								image_yscale += 0.125;
-							}
-							event_user(0);
-						}
-					}
-				}
 				else
 				{
-					if ultra_got[115]
-					{
-						with Pickup
-						{
-							if object_index != Rad && object_index != BigRad && point_distance(x,y,other.x,other.y) < 300
-								isBeingVoided += 1;
-						}
-					}
-					with Pickup
-					{
-						if point_distance(x,y,other.x,other.y) < 300
-						{
-							targetedOne = true;
-							if isBeingVoided != 1
-								instance_destroy();
-							isBeingVoided += 1;
-							if object_index == Rad
-							{
-								BackCont.shake += 1;
-								if regal
-									other.voidBeam += 1;
-								instance_create(x,y,VoidBlock);
-							}
-							else
-							{
-								BackCont.shake += 2;
-								if regal
-									other.voidBeam += 5;
-								instance_create(x,y,VoidBlockBig);
-							}
-						}
-					}
-				}
-				if targetedOne
-				{
-					BackCont.shake += 4;
-					with PlayerAlarms3 {
-						voidSphereAngle *= -1;	
-					}
-					if ultra_got[113] && !altUltra
-					{
-						BackCont.shake += 2;
-						repeat(2)
-							with instance_create(x + random_range(12,-12),y + random_range(12,-12),PlutoFX)
-							{
-								sprite_index = sprVoidBulletTrail;
-								image_index = irandom(image_number - 1);
-								motion_add(random(360),1);
-							}
-						/*if altUltra
-						{
-							alarm[2] = 25;
-							if !instance_exists(GunWarrant)
-								instance_create(x,y,GunWarrant);
-							else
-							{
-								with GunWarrant
-								{
-									sprite_index = sprGunWarrantStart;
-									image_index = 0;
-								}
-							}
-						}
-						else
-						{*/
-						/*
-							noThingHealth += 1;
-							maxhealth += 1;
-						
-							if !instance_exists(NoThingHealth)
-							{
-								instance_create(x,y,NoThingHealth);
-							}
-							else
-							{
-								with NoThingHealth
-								{
-									alarm[0] = lifeDuration;	
-								}
-							}
-						//}
-					}
-					if instance_exists(VoidBlock)
-					{
-						if skill_got[5]
-							snd_play_2d(sndVoidConsumptionL,0.01);
-						else
-							snd_play_2d(sndVoidConsumptionS,0.01);
-					}
-					else
-					{
-						if skill_got[5]
-							snd_play_2d(sndVoidConsumptionXL,0.01);
-						else
-							snd_play_2d(sndVoidConsumptionM,0.01);
-					}
-					with VoidBlock
-					{
-						if chain < 2
-						{
-							image_index = 0;
-							image_xscale = max(image_xscale, 1.125);
-							image_yscale = image_xscale;
-							image_speed = 0.4;
-						}
-						chain += 1;
-					}
-					voidBeam = min(voidBeam,voidBeamMax);
-					if BackCont.shake > 60
-						BackCont.shake = 60;
+					image_xscale = 0.75;
+					image_yscale = image_xscale;
 				}
 			}
-			*/
 		}
 	}//END OF HOLD RMB
 	else if audio_is_playing(sndEyesLoop) or audio_is_playing(sndChickenLoop) or audio_is_playing(sndEyesLoopUpg) 

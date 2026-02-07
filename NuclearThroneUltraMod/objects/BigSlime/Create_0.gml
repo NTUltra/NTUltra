@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 4
-maxhealth = 18;
+maxhealth = 17;
 EnemyHealthAdjustments();
 meleedamage = 3
 spr_idle = sprBigSlimeIdle;
@@ -13,7 +13,7 @@ snd_hurt = sndHitPlant
 snd_dead = sndFrogExplode
 
 //behavior
-actTime = 18;
+actTime = 20;
 acc = 0.8;
 maxSpeed = 2.5;
 projectileSpeed = 3.25;

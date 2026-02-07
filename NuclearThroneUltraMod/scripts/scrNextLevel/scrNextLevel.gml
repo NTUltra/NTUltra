@@ -467,12 +467,12 @@ function scrNextLevel(skipping = false) {
 						baseWeaponTier += 0.75;
 						gameDifficulty += 1;
 				}
-			}
+			}/*
 			if loops > 0 && baseWeaponTier - prevHard > 0
 			{
 				baseWeaponTier -= 0.25;
 				gameDifficulty -= 0.5;
-			}
+			}*/
 			if scrIsCrown(10)
 			{
 				baseWeaponTier += 0.5;

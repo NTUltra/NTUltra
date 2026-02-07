@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.348313,
+  "duration":0.34433106,
   "exportDir":"",
   "name":"sndMetalPipe",
   "parent":{

@@ -5,7 +5,7 @@ function scrTurnOffInvisibility(fromPower = false, justTurnOff = false, fromDama
 	if skill_got[29] && firstReveal//Hypersomnia
 	{
 		firstReveal = false;
-		var t = 290;
+		var t = 240;
 		if t > 0
 		{
 			with enemy

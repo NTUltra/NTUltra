@@ -1,8 +1,9 @@
 if image_index < 1
-image_index += random(0.04)
+	image_index += random(0.04)
 else
     image_index += 0.4;
-
+if alarm[9] > 0
+	exit;
 var sped = 1;
 var gotPluto = false;
 if instance_exists(Player) {
@@ -58,6 +59,7 @@ if !supercursed || gotPluto
 			isGettingSucked = true;
 			if place_meeting(x,y,Player)
 			{
+				isBeingVoided = 0;
 				event_user(0);
 				continue;
 			}
@@ -86,6 +88,7 @@ if !supercursed || gotPluto
 				
 					if place_meeting(x,y,Implosion)
 					{
+						isBeingVoided = 0;
 						event_user(0);
 						continue;
 					}
@@ -103,6 +106,7 @@ if !supercursed || gotPluto
 					y += lengthdir_y(as, suckDirection)
 				if place_meeting(x,y,Hand)
 				{
+					isBeingVoided = 0;
 					event_user(0);
 					continue;
 				}
@@ -122,6 +126,7 @@ if !supercursed || gotPluto
 						y += lengthdir_y(as, suckDirection)
 					if place_meeting(x,y,YungCuzDupe)
 					{
+						isBeingVoided = 0;
 						event_user(0);
 						continue;
 					}
@@ -142,6 +147,7 @@ if !supercursed || gotPluto
 		}
 		if place_meeting(x,y,Player)
 		{
+			isBeingVoided = 0;
 			event_user(0);
 		}
 	}

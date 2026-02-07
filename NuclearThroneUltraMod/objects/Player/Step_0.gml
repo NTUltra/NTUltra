@@ -1589,6 +1589,12 @@ if (!instance_exists(LevCont))
 		{
 			//nerves of steel g  STRESS
 			var reduction = 0;
+			var minimumBoostAtMissingHealth = 0.6;// 0.6125
+			var stressBoost = 0.8;
+			if race == 25
+			{
+				stressBoost = 0.9;
+			}
 			if ultra_got[62] && altUltra//Living armour 
 			{
 				stressTargetHealth = min(stressTargetHealth,armour);
@@ -1597,35 +1603,16 @@ if (!instance_exists(LevCont))
 					//Default reduction 1/8 = 0.125 =  1 - 0.125 = 0.875;
 					if maxarmour < 2
 					{
-						reduction = max(0.875 * 0.7,(1-(1/6))*0.7)
+						reduction = max(minimumBoostAtMissingHealth,(1-(1/6))*stressBoost)
 					}
 					else
 					{
-						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxarmour))*0.7)
+						reduction = max(minimumBoostAtMissingHealth,(1-(stressTargetHealth/maxarmour))*stressBoost)
 					}
 				}
 				else
 				{
-					reduction = (1-(stressTargetHealth/maxarmour))*0.7
-				}
-			}
-			else if race == 25
-			{
-				stressTargetHealth = min(stressTargetHealth,my_health);
-				if my_health < 2
-				{
-					if maxhealth < 2
-					{
-						reduction = max(0.875 * 0.7,(1-(1/6))*0.75)
-					}
-					else
-					{
-						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.75)
-					}
-				}
-				else
-				{
-					reduction = (1-(stressTargetHealth/maxhealth))*0.75
+					reduction = (1-(stressTargetHealth/maxarmour))*stressBoost
 				}
 			}
 			else
@@ -1635,24 +1622,24 @@ if (!instance_exists(LevCont))
 				{
 					if maxhealth < 2
 					{
-						reduction = max(0.875 * 0.7,(1-(1/6))*0.7)
+						reduction = max(minimumBoostAtMissingHealth,(1-(1/6))*stressBoost)
 					}
 					else
 					{
-						reduction = max(0.875 * 0.7,(1-(stressTargetHealth/maxhealth))*0.7)
+						reduction = max(minimumBoostAtMissingHealth,(1-(stressTargetHealth/maxhealth))*stressBoost)
 					}
 				}
 				else
 				{
-					reduction = (1-(stressTargetHealth/maxhealth))*0.7//*1//0.35 the original has 80% boost
+					reduction = (1-(stressTargetHealth/maxhealth))*stressBoost//*1//0.35 the original has 80% boost
 				}
 			}
 			if scrIsGamemode(24)//SHARP STRESS GAMEMODE
 				reduction *= level;
 			reduction = max(reduction,0);
 			reload -= reduction
-			breload -= reduction*0.5;
-			creload -= reduction*0.5;
+			//breload -= reduction*0.5;
+			//creload -= reduction*0.5;
 		}
 		if altUltra && ultra_got[4]//FISH CAN GUN secret ultra
 		{

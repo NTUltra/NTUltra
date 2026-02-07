@@ -715,7 +715,7 @@ if race = 29
 	maxhealth = 1;
 }
 if race = 4 //melting
-maxhealth = 2
+	maxhealth = 2
 
 if race == 19 //skeleton
 {

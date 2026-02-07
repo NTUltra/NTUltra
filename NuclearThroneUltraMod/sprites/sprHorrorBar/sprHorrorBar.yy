@@ -44,7 +44,7 @@
   ],
   "name":"sprHorrorBar",
   "nineSlice":null,
-  "origin":2,
+  "origin":1,
   "parent":{
     "name":"UnsortedProp",
     "path":"folders/Sprites/Enviroment/UnsortedProp.yy",
@@ -159,7 +159,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":4,
+    "xorigin":2,
     "yorigin":0,
   },
   "swatchColours":null,
