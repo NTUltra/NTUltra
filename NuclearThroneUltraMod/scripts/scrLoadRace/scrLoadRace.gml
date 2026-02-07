@@ -228,7 +228,7 @@ function scrLoadRace() {
 	spr_walk=sprMutant28BWalk;
 	spr_hurt=sprMutant28BHurt;
 	spr_dead=sprMutant28BDead;
-	spr_go_sit = sprMutant28GoSit;
+	spr_go_sit = sprMutant28BGoSit;
 	spr_sit = sprMutant28BSit;
 	break;
 	case 29:
