@@ -27,8 +27,8 @@ if !instance_exists(GenCont)
 		viewdistTarget = 9
 	}
 
-	if Player.wep_type[Player.wep] = 3
-	viewdistTarget = 5
+	if scrEnableLaserSight()
+		viewdistTarget = 5
 
 	if(Player.skill_got[19]) {//EAGLE EYES
 		viewdistTarget = 4;

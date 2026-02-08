@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.422812,
+  "duration":0.4228118,
   "exportDir":"",
   "name":"sndTaserUpg",
   "parent":{

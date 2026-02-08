@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.27102,
+  "duration":0.2710204,
   "exportDir":"",
   "name":"sndTaser",
   "parent":{

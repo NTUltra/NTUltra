@@ -1735,7 +1735,7 @@ function scrWeapons() {
 	wep_load[155] = 3
 	wep_cost[155] = 2
 	wep_sprt[155] = sprMiniIncinerator
-	wep_area[155] = 8
+	wep_area[155] = 7
 	wep_text[155] = "junior firestarter"
 	wep_swap[155] = sndSwapFlame
 	wep_rad[155] = 0;
@@ -2250,7 +2250,7 @@ function scrWeapons() {
 	wep_auto[200] = 0
 	wep_load[200] = 10//18 usual new chicken 16
 	wep_cost[200] = 0
-	wep_sprt[200] = sprStick
+	wep_sprt[200] = sprPandaStick
 	wep_area[200] = -1
 	wep_text[200] = "panda does not like using weapons"
 	wep_swap[200] = sndSwapHammer
@@ -7975,7 +7975,7 @@ function scrWeapons() {
 	wep_sprt[711] = sprMetalPipe
 	wep_area[711] = 0
 	wep_text[711] = "melee can deflect enemy bullets#except for pink squares#flames and toxic"
-	wep_swap[711] = sndSwapMachinegun
+	wep_swap[711] = sndSwapHammer
 	wep_rad[711] = 0;
 	wep_popup[711] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
 	
@@ -10461,7 +10461,7 @@ function scrWeapons() {
 	wep_load[931] = 25
 	wep_cost[931] = 4
 	wep_sprt[931] = sprKrakenLobber
-	wep_area[931] = 12
+	wep_area[931] = 13
 	wep_text[931] = "airborne kraken!"
 	wep_swap[931] = sndSwapExplosive
 	wep_rad[931] = 0;
@@ -10484,10 +10484,56 @@ function scrWeapons() {
 	wep_load[933] = 17
 	wep_cost[933] = 3
 	wep_sprt[933] = sprFireStrike
-	wep_area[933] = 6
+	wep_area[933] = 7
 	wep_text[933] = "rain down hellfire"
 	wep_swap[933] = sndSwapFlame
 	wep_rad[933] = 0;
+	
+	wep_name[934] = "TREE BRANCH"
+	wep_type[934] = 0
+	wep_auto[934] = 0
+	wep_load[934] = 14
+	wep_cost[934] = 0
+	wep_sprt[934] = sprWoodenStick
+	wep_area[934] = 0
+	wep_text[934] = "a tree branch is quite rare to find these days"
+	wep_swap[934] = sndSwapHammer
+	wep_rad[934] = 0;
+	wep_popup[934] = "CAN DEFLECT BULLETS#EXCEPT SQUARES";
+	
+	wep_name[935] = "VENOMOUS SYRINGE"
+	wep_type[935] = 0
+	wep_auto[935] = 0
+	wep_load[935] = 12
+	wep_cost[935] = 0
+	wep_sprt[935] = sprVenomousSyringe
+	wep_area[935] = 1
+	wep_text[935] = "filled with scorpion venom"
+	wep_swap[935] = sndSwapSword
+	wep_rad[935] = 0;
+	
+	wep_name[936] = "E-M-SQUARE"
+	wep_type[936] = 5
+	wep_auto[936] = 0
+	wep_load[936] = 17
+	wep_cost[936] = 2.5
+	wep_sprt[936] = sprEMSquare
+	wep_area[936] = 1
+	wep_text[936] = "Energy Melee Square"
+	wep_swap[936] = sndSwapEnergy
+	wep_rad[936] = 0;
+	
+	wep_name[937] = "FRAGMENT REVOLVER"
+	wep_type[937] = 1
+	wep_auto[937] = 0
+	wep_load[937] = 15
+	wep_cost[937] = 2
+	wep_sprt[937] = sprFragmentRevolver
+	wep_area[937] = 0
+	wep_text[937] = "bullets split into splinters"
+	wep_swap[937] = sndSwapPistol
+	wep_rad[937] = 0;
+	wep_popup[934] = "AMMO TYPE CYCLES BETWEEN BOLT AND BULLET";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

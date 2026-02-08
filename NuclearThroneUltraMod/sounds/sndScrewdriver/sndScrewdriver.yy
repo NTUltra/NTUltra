@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.184014,
+  "duration":0.1840136,
   "exportDir":"",
   "name":"sndScrewdriver",
   "parent":{

@@ -4776,5 +4776,124 @@ function scrFire3(hasTailNow){
 
 		break;
 		
+		//TREE BRANCH
+		case 934:
+
+		snd_play_fire(sndTreeBranch)
+
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(3+((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+		{
+			image_yscale *= choose(1,-1);
+			sprite_index = sprTreeSlash;
+			mask_index = mskTreeSlash;
+			snd_wallhit = sndTreeBranchHit;
+			walled = 0;
+			dmg = 7
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection,3.2+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		motion_add(aimDirection,1)
+		BackCont.viewx2 += lengthdir_x(6,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(6,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -3
+
+		break;
+		
+		//VENOMOUS SYRINGE
+		case 935:
+
+		snd_play_fire(sndFreakBanditSmack)
+		instance_create(x,y,Dust)
+		with instance_create(x+lengthdir_x(2+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(2+(Player.skill_got[13]+bettermelee)*10,aimDirection),VenomShank)
+		{
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+(random(10)-5)*other.accuracy,3+longarms)
+			image_angle = direction
+			team = other.team
+		}
+
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,2)
+			scrMoveContactSolid(aimDirection,0.5)
+		}
+		BackCont.viewx2 += lengthdir_x(8,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(8,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 1
+		wkick = -8
+
+		break;
+		
+		//E-M-SQUARE
+		case 936:
+
+		if Player.skill_got[17]
+			snd_play_fire(sndEMSquareUpg)
+		else
+			snd_play_fire(sndEMSquare)
+		instance_create(x,y,Dust)
+
+		with instance_create(x+lengthdir_x(3+(Player.skill_got[13]+bettermelee)*10,aimDirection),y+lengthdir_y(3+(Player.skill_got[13]+bettermelee)*10,aimDirection),EnergyShank)
+		{
+			dmg = 35;
+			longarms = 0
+			longarms = (Player.skill_got[13]+other.bettermelee)*3
+			motion_add(aimDirection+(random(10)-5)*other.accuracy,3+longarms)
+			image_angle = direction
+			team = other.team
+			sprite_index = sprSquareShank;
+			mask_index = mskSquareShank;
+		}
+		wepangle = -wepangle
+		if !skill_got[2]
+		{
+			motion_add(aimDirection,4)
+		}
+		BackCont.viewx2 += lengthdir_x(17,aimDirection)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(17,aimDirection)*UberCont.opt_shake
+		BackCont.shake += 2
+		wkick = -7
+
+		break;
+		
+		//FRAGMENT REVOLVER
+		case 937:
+
+		snd_play_fire(sndGoldPistol)
+
+		with instance_create(x,y,Shell)
+		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		if wep_type[937] == 1
+		{
+			ammo[wep_type[937]] -= wep_cost[937]
+			wep_type[937] = 3;
+			
+		}
+		else
+		{
+			wep_type[937] = 1;
+		}
+		with instance_create(x,y,FragmentBullet)
+		{motion_add(aimDirection+(random(10)-5)*other.accuracy,20)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 4
+		wkick = 4
+
+		break
+		
 	}
 }

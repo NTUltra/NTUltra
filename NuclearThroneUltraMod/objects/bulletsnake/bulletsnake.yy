@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprScorpionBullet",
-    "path":"sprites/sprScorpionBullet/sprScorpionBullet.yy",
+    "name":"sprScorpionBulletPlayer",
+    "path":"sprites/sprScorpionBulletPlayer/sprScorpionBulletPlayer.yy",
   },
   "spriteMaskId":{
     "name":"mskBullet1",

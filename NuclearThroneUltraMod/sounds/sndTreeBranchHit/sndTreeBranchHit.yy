@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndTreeBranchHit",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.26360545,
+  "exportDir":"",
+  "name":"sndTreeBranchHit",
+  "parent":{
+    "name":"Weapons",
+    "path":"folders/Sounds/Weapons.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndTreeBranchHit.wav",
+  "volume":1.0,
+}

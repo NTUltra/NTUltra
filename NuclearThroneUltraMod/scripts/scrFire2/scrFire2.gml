@@ -4995,9 +4995,7 @@ function scrFire2(hasTailNow) {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 3
-		if other.altFire
-			ammo += 1;
+		ammo = 4
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5018,9 +5016,7 @@ function scrFire2(hasTailNow) {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 3
-		if !other.altFire
-			ammo += 1;
+		ammo = 4
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5890,9 +5886,7 @@ function scrFire2(hasTailNow) {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id
-		ammo = 3
-		if other.altFire
-			ammo += 1;
+		ammo = 4
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
@@ -5913,9 +5907,7 @@ function scrFire2(hasTailNow) {
 		mox=UberCont.mouse__x + ldx;
 		moy=UberCont.mouse__y + ldy;
 		creator = other.id;
-		ammo = 3
-		if !other.altFire
-			ammo += 1;
+		ammo = 4
 		time = 1
 		team = other.team
 		event_perform(ev_alarm,0) 
