@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sndSwapSword",
+  "%Name":"sndLongSwordHitWall",
   "audioGroupId":{
     "name":"agsfx",
     "path":"audiogroups/agsfx",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.7306803,
+  "duration":0.18553288,
   "exportDir":"",
-  "name":"sndSwapSword",
+  "name":"sndLongSwordHitWall",
   "parent":{
     "name":"Melee",
     "path":"folders/Sounds/Weapons/Melee.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndSwapSword",
+  "soundFile":"sndLongSwordHitWall.wav",
   "volume":1.0,
 }

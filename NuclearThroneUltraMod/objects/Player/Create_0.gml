@@ -826,6 +826,19 @@ function spendHorrorRads(cost)
 	else
 		rad -= cost;	
 }
+function thiefStealAmmo(percentageAmmo)
+{
+	var ammoAdd = scrCollectAmmo(percentageAmmo);
+	with UberCont
+	{
+		thiefAmmoStolenTracker += ammoAdd;
+		if thiefAmmoStolenTracker >= 500
+		{
+			thiefAmmoStolenTracker = -9999;
+			scrUnlockBSkin(28,"FOR STEALING 500 AMMO");
+		}
+	}
+}
 if race == 28
 {
 	scrActivateThiefStealth();

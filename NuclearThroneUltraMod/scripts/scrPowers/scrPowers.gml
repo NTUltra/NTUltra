@@ -181,11 +181,13 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if ultra_got[110] && altUltra
 					{
-						scrCollectAmmo(1);
+						thiefStealAmmo(1);
 						BackCont.shake += 4;
 					}
 					else
-						scrCollectAmmo(0.5);
+					{
+						thiefStealAmmo(0.5);
+					}
 					if !skill_got[2]
 					{
 						motion_add(stabDir,7);
@@ -198,9 +200,13 @@ function scrPowers(raceOverwrite = -1) {
 					if other.ultra_got[111]
 					{
 						if other.ultra_got[110] && altUltra
-							scrCollectAmmo(0.3);
+						{
+							thiefStealAmmo(0.3);
+						}
 						else
-							scrCollectAmmo(0.15);
+						{
+							thiefStealAmmo(0.15);
+						}
 						with instance_create(x,y,AnimDestroyTop)
 						{
 							image_angle = stabDir
@@ -214,9 +220,9 @@ function scrPowers(raceOverwrite = -1) {
 					else
 					{
 						if other.ultra_got[110] && altUltra
-							scrCollectAmmo(0.25);
+							thiefStealAmmo(0.25);
 						else
-							scrCollectAmmo(0.125);
+							thiefStealAmmo(0.125);
 						with instance_create(x,y,AnimDestroyTop)
 						{
 							image_angle = stabDir

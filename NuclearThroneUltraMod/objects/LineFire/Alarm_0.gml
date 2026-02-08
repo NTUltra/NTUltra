@@ -24,8 +24,8 @@ with instance_create(x,y,Flame)
 team = other.team
 scrCopyWeaponMod(other);
 move_contact_solid(direction,4)
-dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
 }
+dir += 1 x += lengthdir_x(4,direction) y += lengthdir_y(4,direction)
 //}
 
 }

@@ -722,7 +722,7 @@ function scrRaces() {
 		race_eskin[28] = 0
 		race_fskin[28] = 0
 		race_gskin[28] = 0
-		race_bskin_lock[28] = "STEAL 1000 AMMO#IN ONE RUN"
+		race_bskin_lock[28] = "STEAL 500 AMMO#IN ONE RUN"
 		race_cskin_lock[28] = "DEAL OVER 200 DAMAGE TO AN ENEMY#IN A SINGLE STEALTH STAB (THRONE BUTT)"
 		
 		race_name[29] = "NO THING"

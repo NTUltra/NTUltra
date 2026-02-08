@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.365375,
+  "duration":0.0,
   "exportDir":"",
   "name":"sndSword1",
   "parent":{

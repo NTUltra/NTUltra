@@ -12,6 +12,8 @@ if instance_exists(creator)
 		var aimDir = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 		with creator
 		{
+			if object_index == Player
+				scrWeaponHold();
 			if other.ammo % 2 == other.oddEven
 			{
 				snd_play_fire(sndThiefKnife1)
@@ -21,7 +23,7 @@ if instance_exists(creator)
 					sprite_index = sprThiefShank;
 					mask_index = mskDaggerShank;
 					owner = other.id;
-					dmg = 6;
+					dmg = 5;
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDir-(10*other.accuracy),4+longarms)
@@ -39,7 +41,7 @@ if instance_exists(creator)
 					sprite_index = sprThiefShank;
 					mask_index = mskDaggerShank;
 					owner = other.id;
-					dmg = 6;
+					dmg = 5;
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDir+(10*other.accuracy),4+longarms)

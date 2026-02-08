@@ -42,7 +42,17 @@ function scrTurnOffInvisibility(fromPower = false, justTurnOff = false, fromDama
 		thiefStabs = 0;
 		justAsheep = false;
 		isInvisible = false;
-		if bskin == 0
+		if bskin == 2
+		{
+			spr_idle = sprMutant28CIdle;
+			spr_walk = sprMutant28CWalk;
+		}
+		else if bskin == 1
+		{
+			spr_idle = sprMutant28BIdle;
+			spr_walk = sprMutant28BWalk;
+		}
+		else
 		{
 			spr_idle = sprMutant28Idle;
 			spr_walk = sprMutant28Walk;

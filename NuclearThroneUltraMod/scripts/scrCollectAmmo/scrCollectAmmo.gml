@@ -6,6 +6,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		return;
 	var type = -1;
 	var canMeleeAmmo = scrIsCrown(40);
+	var amountOfAmmo = 0;
 	with Player
 	{
 		var pt = wep_type[wep];//primary ammo type
@@ -177,7 +178,7 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 	if isSuperCursed
 		gain_multiplier += 0.5
 	
-	var amountOfAmmo = max(1,floor((Player.typ_ammo[type]+extra) * gain_multiplier));
+	amountOfAmmo = max(1,floor((Player.typ_ammo[type]+extra) * gain_multiplier));
 	Player.ammo[type] += amountOfAmmo
 
 	if Player.ammo[type] > Player.typ_amax[type] && !Player.ultra_got[26]
@@ -229,4 +230,5 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 			}	
 		}
 	}
+	return amountOfAmmo;
 }

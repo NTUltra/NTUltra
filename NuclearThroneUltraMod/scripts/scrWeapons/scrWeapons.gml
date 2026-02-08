@@ -9569,7 +9569,7 @@ function scrWeapons() {
 	wep_name[853] = "ENERGY POP RIFLE"
 	wep_type[853] = 5
 	wep_auto[853] = 3
-	wep_load[853] = 15
+	wep_load[853] = 14
 	wep_cost[853] = 1.5
 	wep_sprt[853] = sprEnergyPopRifle
 	wep_area[853] = 2
@@ -10470,13 +10470,24 @@ function scrWeapons() {
 	wep_name[932] = "LONG SWORD"
 	wep_type[932] = 0
 	wep_auto[932] = 0
-	wep_load[932] = 22
+	wep_load[932] = 20
 	wep_cost[932] = 0
 	wep_sprt[932] = sprLongSword
 	wep_area[932] = 10
 	wep_text[932] = "just a broad sword"
-	wep_swap[932] = sndSwapHammer
+	wep_swap[932] = sndSwapSword
 	wep_rad[932] = 0;
+	
+	wep_name[933] = "FIRE STRIKE"
+	wep_type[933] = 4
+	wep_auto[933] = 2
+	wep_load[933] = 17
+	wep_cost[933] = 3
+	wep_sprt[933] = sprFireStrike
+	wep_area[933] = 6
+	wep_text[933] = "rain down hellfire"
+	wep_swap[933] = sndSwapFlame
+	wep_rad[933] = 0;
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

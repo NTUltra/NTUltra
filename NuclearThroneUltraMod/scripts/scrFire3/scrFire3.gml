@@ -4722,7 +4722,7 @@ function scrFire3(hasTailNow){
 		//LONG SWORD
 		case 932:
 
-		snd_play_fire(sndSword2)
+		snd_play_fire(sndLongSword)
 
 		instance_create(x,y,Dust)
 
@@ -4730,7 +4730,7 @@ function scrFire3(hasTailNow){
 		{
 			sprite_index = sprLongSlash;
 			mask_index = mskLongSlash;
-			snd_wallhit = sndCrowbarHitWall;
+			snd_wallhit = sndLongSwordHitWall;
 			dmg = 25
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -4749,6 +4749,30 @@ function scrFire3(hasTailNow){
 		BackCont.viewy2 += lengthdir_y(20,aimDirection)*UberCont.opt_shake
 		BackCont.shake += 4
 		wkick = -4
+
+		break;
+		
+		//FIRE STRIKE
+		case 933:
+
+		snd_play_fire(sndFlare)
+
+		with instance_create(x,y,FireStrike)
+		{
+			motion_add(aimDirection+(random(2)-1)*other.accuracy,11);
+			image_angle = direction
+			team = other.team
+			creator = other.id
+			ammo = 11
+			time = 1
+			team = other.team
+			event_perform(ev_alarm,1);
+		}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 8
 
 		break;
 		
