@@ -386,6 +386,10 @@ with EnemyBullet1Square
 	if draw
 		draw_self();
 }
+with MimicOrb
+{
+	draw_self();
+}
 with HammerThrow
 {
 	if canDealDamage > 0 || alarm[2] > 0

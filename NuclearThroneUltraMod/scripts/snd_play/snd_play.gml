@@ -1,5 +1,5 @@
 
-function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = false, volume = 0.8,loop = false,owner = -1,specificPitch = 0, overlapRange = 70, falOff = 50, falOffMax = 400) {
+function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = false, volume = 0.8,loop = false,ownerParam = -1,specificPitch = 0, overlapRange = 70, falOff = 50, falOffMax = 400) {
 	//SS_Init();
 	if noOverlap && audio_is_playing(sndId)
 		return false;
@@ -35,8 +35,13 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 			else
 				audio_sound_pitch(audio_play_sound_on(emitter,sndId,loop,priority), 1 + (random(randompitch)*2 - randompitch));
 			alarm[0] = 30 * audio_sound_length(sndId);
-			if owner > 0
+			if ownerParam > 0
+			{
+				owner = ownerParam
+				if loop
+					alarm[0] = 0;
 				alarm[1] = 1;
+			}
 			if instance_exists(Player) && Player.chickenFocusInUse
 				event_user(0);
 		}

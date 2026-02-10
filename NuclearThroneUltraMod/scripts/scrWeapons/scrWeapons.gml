@@ -181,7 +181,7 @@ function scrWeapons() {
 	wep_name[16] = "SMG"
 	wep_type[16] = 1
 	wep_auto[16] = 1
-	wep_load[16] = 3
+	wep_load[16] = 2.75
 	wep_cost[16] = 1
 	wep_sprt[16] = sprSmg
 	wep_area[16] = 2
@@ -7476,7 +7476,7 @@ function scrWeapons() {
 	wep_name[667] = "MICRO SMG"
 	wep_type[667] = 1
 	wep_auto[667] = 1
-	wep_load[667] = 2
+	wep_load[667] = 1.75
 	wep_cost[667] = 0.5
 	wep_sprt[667] = sprMicroSMG
 	wep_area[667] = 2
@@ -7878,7 +7878,7 @@ function scrWeapons() {
 	wep_name[703] = "MICRO MACHINEGUN"
 	wep_type[703] = 1
 	wep_auto[703] = 1
-	wep_load[703] = 3
+	wep_load[703] = 2.75
 	wep_cost[703] = 0.5
 	wep_sprt[703] = sprMicroMachinegun
 	wep_area[703] = 0
@@ -7889,7 +7889,7 @@ function scrWeapons() {
 	wep_name[704] = "ROCKET CLAP"
 	wep_type[704] = 4
 	wep_auto[704] = 0
-	wep_load[704] = 20
+	wep_load[704] = 18
 	wep_cost[704] = 2
 	wep_sprt[704] = sprRocketClap
 	wep_area[704] = 0
@@ -7901,11 +7901,11 @@ function scrWeapons() {
 	wep_name[705] = "GRENADE STRIKE LAUNCHER"
 	wep_type[705] = 4
 	wep_auto[705] = 2
-	wep_load[705] = 22
+	wep_load[705] = 21
 	wep_cost[705] = 1
 	wep_sprt[705] = sprGrenadeStrikeLauncher
 	wep_area[705] = 0
-	wep_text[705] = "be carefull with that explosion LINE"
+	wep_text[705] = "be careful with that explosion LINE"
 	wep_swap[705] = sndSwapExplosive
 	wep_rad[705] = 0;
 	wep_popup[705] = "DON'T BLOW YOURSELF UP!";
@@ -10526,14 +10526,84 @@ function scrWeapons() {
 	wep_name[937] = "FRAGMENT REVOLVER"
 	wep_type[937] = 1
 	wep_auto[937] = 0
-	wep_load[937] = 15
+	wep_load[937] = 17
 	wep_cost[937] = 2
 	wep_sprt[937] = sprFragmentRevolver
 	wep_area[937] = 0
 	wep_text[937] = "bullets split into splinters"
 	wep_swap[937] = sndSwapPistol
 	wep_rad[937] = 0;
-	wep_popup[934] = "AMMO TYPE CYCLES BETWEEN BOLT AND BULLET";
+	wep_popup[937] = "AMMO TYPE CYCLES BETWEEN BOLT AND BULLET";
+	
+	wep_name[938] = "FRAGMENT RIFLE"
+	wep_type[938] = 1
+	wep_auto[938] = 0
+	wep_load[938] = 10
+	wep_cost[938] = 2
+	wep_sprt[938] = sprFragmentRifle
+	wep_area[938] = 3
+	wep_text[938] = "bullets filled with splinters"
+	wep_swap[938] = sndSwapMachinegun
+	wep_rad[938] = 0;
+	wep_popup[938] = "AMMO TYPE CYCLES BETWEEN BOLT AND BULLET";
+	
+	wep_name[939] = "TRIPLE FRAGMENT RIFLE"
+	wep_type[939] = 1
+	wep_auto[939] = 1
+	wep_load[939] = 7
+	wep_cost[939] = 5
+	wep_sprt[939] = sprTripleFragmentRifle
+	wep_area[939] = 13
+	wep_text[939] = "bullets split into splinters"
+	wep_swap[939] = sndSwapMachinegun
+	wep_rad[939] = 0;
+	wep_popup[939] = "AMMO TYPE CYCLES BETWEEN BOLT AND BULLET";
+	
+	wep_name[940] = "SPLINTER WAVE GUN"
+	wep_type[940] = 3
+	wep_auto[940] = 2
+	wep_load[940] = 18
+	wep_cost[940] = 3
+	wep_sprt[940] = sprSplinterWaveGun
+	wep_area[940] = 12
+	wep_text[940] = "Perfect oval"
+	wep_swap[940] = sndSwapShotgun
+	wep_rad[940] = 0;
+	
+	wep_name[941] = "INFINITY NAIL GUN"
+	wep_type[941] = 3
+	wep_auto[941] = 1
+	wep_load[941] = 22
+	wep_cost[941] = 0
+	wep_sprt[941] = sprInfinityNailGun
+	wep_area[941] = 31
+	wep_text[941] = "8"
+	wep_swap[941] = sndSwapMotorized
+	wep_rad[941] = 0;
+	
+	wep_name[942] = "TELEPATHIC SEEKER"
+	wep_type[942] = 3
+	wep_auto[942] = 0
+	wep_load[942] = 25
+	wep_cost[942] = 4
+	wep_sprt[942] = sprTelepathicSeeker
+	wep_area[942] = 21
+	wep_text[942] = "SEEK AND DESTROY"
+	wep_swap[942] = sndSwapBow
+	wep_rad[942] = 0;
+	wep_popup[942] = "MIMICS YOUR CROSSHAIR";
+	
+	wep_name[943] = "ORBS OF MIMICRY"
+	wep_type[943] = 5
+	wep_auto[943] = 0
+	wep_load[943] = 20
+	wep_cost[943] = 4
+	wep_sprt[943] = sprOrbsOfMimicry
+	wep_area[943] = 21
+	wep_text[943] = "the orb mimics your movement"
+	wep_swap[943] = sndSwapEnergy
+	wep_rad[943] = 0;
+	wep_popup[943] = "MIMICS YOUR MOVEMENT";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

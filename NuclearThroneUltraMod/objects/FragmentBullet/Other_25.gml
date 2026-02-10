@@ -1,2 +1,2 @@
 /// @description Deflected
-sprite_index = sprHandCannonBulletDeflected;
+sprite_index = sprFragmentBulletDeflected;

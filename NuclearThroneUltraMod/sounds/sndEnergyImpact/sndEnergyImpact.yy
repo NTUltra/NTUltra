@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.254989,
+  "duration":0.2771882,
   "exportDir":"",
   "name":"sndEnergyImpact",
   "parent":{

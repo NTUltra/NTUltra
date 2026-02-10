@@ -3,4 +3,4 @@
 // Inherit the parent event
 event_inherited();
 cost = 4;
-dmg += 1;
+dmg += 2;

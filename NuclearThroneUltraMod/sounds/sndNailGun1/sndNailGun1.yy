@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.547813,
+  "duration":0.54782313,
   "exportDir":"",
   "name":"sndNailGun1",
   "parent":{

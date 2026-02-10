@@ -287,7 +287,7 @@ function scrSecretUltraStat() {
 	secret_ultra_text[30] = "ACTIVE COSTS <w>UNEQUIPPED<w> <y>AMMO<y>#INSTEAD OF SKILL#ACTIVE <pi>DEFLECTS<pi> & DESTROYS#ALL ENEMY PROJECTILES"
 	secret_ultra_tips[30] = "teach them a lesson!"
 	secret_ultra_hint[30] = "DIRECTING TO ZERO";
-	secret_ultra_unlk[30] = "HAVE 0 SKILL OR\nHOLD A DIRECTOR WEAPON";
+	secret_ultra_unlk[30] = "HAVE 0 SKILL OR\nHOLD A DIRECTOR/SEEKER/SWARM WEAPON";
 	secret_ultra_char[30] = 26;
 		
 	//HANDS

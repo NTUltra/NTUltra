@@ -4869,22 +4869,24 @@ function scrFire3(hasTailNow){
 		//FRAGMENT REVOLVER
 		case 937:
 
-		snd_play_fire(sndGoldPistol)
+		snd_play_fire(sndFragmentRevolver)
 
-		with instance_create(x,y,Shell)
-		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 		if wep_type[937] == 1
 		{
+			repeat(2)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 			ammo[wep_type[937]] -= wep_cost[937]
 			wep_type[937] = 3;
-			
+			wep_swap[937] = sndSwapBow
 		}
 		else
 		{
 			wep_type[937] = 1;
+			wep_swap[937] = sndSwapPistol
 		}
 		with instance_create(x,y,FragmentBullet)
-		{motion_add(aimDirection+(random(10)-5)*other.accuracy,20)
+		{motion_add(aimDirection+(random(14)-7)*other.accuracy,20)
 		image_angle = direction
 		team = other.team}
 
@@ -4894,6 +4896,161 @@ function scrFire3(hasTailNow){
 		wkick = 4
 
 		break
+		
+		//FRAGMENT RIFLE
+		case 938:
+
+		snd_play_fire(sndFragmentRifle)
+
+		
+		if wep_type[938] == 1
+		{
+			repeat(2)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+			ammo[wep_type[938]] -= wep_cost[938]
+			wep_type[938] = 3;
+			wep_swap[938] = sndSwapBow
+		}
+		else
+		{
+			wep_type[938] = 1;
+			wep_swap[938] = sndSwapPistol
+		}
+		with instance_create(x,y,FragmentBullet)
+		{motion_add(aimDirection+(random(8)-4)*other.accuracy,26)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 3
+		wkick = 3
+
+		break
+		
+		//FRAGMENT RIFLE
+		case 939:
+
+		snd_play_fire(sndTripleFragmentRifle)
+
+		
+		if wep_type[939] == 1
+		{
+			repeat(5)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+			ammo[wep_type[939]] -= wep_cost[939]
+			wep_type[939] = 3;
+			wep_swap[939] = sndSwapBow
+		}
+		else
+		{
+			wep_type[939] = 1;
+			wep_swap[939] = sndSwapPistol
+		}
+		with instance_create(x,y,FragmentBullet)
+		{motion_add(aimDirection+(random(6)-3)*other.accuracy,29)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,FragmentBullet)
+		{motion_add(aimDirection+(11 + random(6)-3)*other.accuracy,27)
+		image_angle = direction
+		team = other.team}
+		with instance_create(x,y,FragmentBullet)
+		{motion_add(aimDirection+(-11 + random(6)-3)*other.accuracy,27)
+		image_angle = direction
+		team = other.team}
+
+		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(14,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 4
+
+		break
+		
+		//SPLINTER WAVE GUN
+		case 940:
+		snd_play_fire(sndWaveGun);
+		snd_play_fire(sndSuperSplinterGun);
+		with instance_create(x,y,SplinterWaveBurst)
+		{
+		creator = other.id
+		ammo = 12
+		time = 1
+		team = other.team
+		event_perform(ev_alarm,0) 
+		}
+
+		break;
+		
+		//INFINITY SPLINTER
+		case 941:
+		snd_play_fire(sndWaveGun);
+		snd_play_fire(choose(sndNailGun1,sndNailGun2,sndNailGun3));
+		with instance_create(x,y,NailWaveBurst)
+		{
+			creator = other.id
+			ammo = 20
+			time = 1
+			cycles = 2;
+			team = other.team
+			event_perform(ev_alarm,0) 
+		}
+
+		break;
+		
+		//TELEPATHIC SEEKER
+		case 942:
+		snd_play_fire(sndSeekerShotgun)
+
+		with instance_create(x+lengthdir_x(4,aimDirection),y+lengthdir_y(4,aimDirection),SeekDestroy)
+		{motion_add(aimDirection,4)
+		image_angle = direction
+		team = other.team
+		followRate = clamp(0.6/other.accuracy,0,1);
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,8);
+			motion_add(aimDirection+180,5)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 7
+
+		break;
+		
+		//MIMICRY ORB
+		case 943:
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndMimicryOrbUpg)
+		else
+		snd_play_fire(sndMimicryOrb)
+
+		with instance_create(x+lengthdir_x(4,aimDirection),y+lengthdir_y(4,aimDirection),MimicOrb)
+		{
+			motion_add(aimDirection,9)
+			aimPrevious = aimDirection;
+			creator = other.id;
+			image_angle = direction
+			team = other.team
+			followRate = clamp(0.5/other.accuracy,0,2);
+		}
+
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,8);
+			motion_add(aimDirection+180,5)
+		}
+		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(12,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = 7
+
+		break;
 		
 	}
 }

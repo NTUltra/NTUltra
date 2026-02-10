@@ -1,5 +1,5 @@
 /// @description Explode into more bullets
-var am = 6;
+var am = 5;
 var angstep = 360/am;
 var ang = direction;
 var maxdis = 32;
@@ -17,11 +17,12 @@ if maxdis < 32
 repeat(am)
 {
 	with instance_create(x,y,Splinter)
-	{motion_add(ang,24)
+	{motion_add(ang,other.speed + 2)
 	image_angle = direction
 	team = other.team}
 	ang += angstep;
 }
-	snd_play(sndSplinterPistol);
+if !audio_is_playing(sndSplinterPistol)
+	snd_play(sndSplinterPistol,0.01,true);
 	BackCont.shake += 5
 	

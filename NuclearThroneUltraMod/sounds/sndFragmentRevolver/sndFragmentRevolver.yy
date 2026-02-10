@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndFragmentRevolver",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.41501135,
+  "exportDir":"",
+  "name":"sndFragmentRevolver",
+  "parent":{
+    "name":"Bolts",
+    "path":"folders/Sounds/Weapons/Bolts.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndFragmentRevolver.wav",
+  "volume":1.0,
+}

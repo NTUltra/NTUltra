@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.379969,
+  "duration":0.37997732,
   "exportDir":"",
   "name":"sndPistol",
   "parent":{

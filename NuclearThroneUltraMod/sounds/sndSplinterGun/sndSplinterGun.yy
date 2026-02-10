@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.507219,
+  "duration":0.50723356,
   "exportDir":"",
   "name":"sndSplinterGun",
   "parent":{

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":2.666667,
+  "duration":2.6666667,
   "exportDir":"",
   "name":"sndEnergyShotgun",
   "parent":{

@@ -14613,7 +14613,7 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-		direction = aimDirection+(random(30)-15)*other.accuracy;
+		direction = aimDirection+(random(24)-12)*other.accuracy;
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();

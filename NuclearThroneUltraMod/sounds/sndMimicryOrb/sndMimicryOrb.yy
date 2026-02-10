@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndMimicryOrb",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":1.1456916,
+  "exportDir":"",
+  "name":"sndMimicryOrb",
+  "parent":{
+    "name":"plasma",
+    "path":"folders/Sounds/Weapons/Energy/plasma.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMimicryOrb.wav",
+  "volume":1.0,
+}

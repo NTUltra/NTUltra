@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.854739,
+  "duration":0.85473925,
   "exportDir":"",
   "name":"sndMiniPlasmaImpact",
   "parent":{
