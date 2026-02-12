@@ -4854,7 +4854,7 @@ function scrWeapons() {
 	wep_load[430] = 28
 	wep_cost[430] = 5
 	wep_sprt[430] = sprSlugCannon
-	wep_area[430] = 12
+	wep_area[430] = 13
 	wep_text[430] = "CTRL + S"
 	wep_swap[430] = sndSwapExplosive
 	wep_rad[430] = 0;
@@ -7388,7 +7388,7 @@ function scrWeapons() {
 	wep_load[659] = 15
 	wep_cost[659] = 5
 	wep_sprt[659] = sprZyndroxoogenBullet
-	wep_area[659] = 17
+	wep_area[659] = 18
 	wep_text[659] = "experiments"
 	wep_swap[659] = sndSwapCursed
 	wep_rad[659] = 0;
@@ -9174,7 +9174,7 @@ function scrWeapons() {
 	wep_load[818] = 30
 	wep_cost[818] = 1
 	wep_sprt[818] = sprHotPogoStick
-	wep_area[818] = 9
+	wep_area[818] = 8
 	wep_text[818] = "THATS A LOTTA DAMAGE!"
 	wep_swap[818] = sndSwapHammer
 	wep_rad[818] = 0;
@@ -10288,7 +10288,7 @@ function scrWeapons() {
 	wep_load[916] = 8
 	wep_cost[916] = 1
 	wep_sprt[916] = sprKunaiWeapon
-	wep_area[916] = 10
+	wep_area[916] = 9
 	wep_text[916] = "suzu"
 	wep_swap[916] = sndSwapSword
 	wep_rad[916] = 0;
@@ -10507,7 +10507,7 @@ function scrWeapons() {
 	wep_load[935] = 12
 	wep_cost[935] = 0
 	wep_sprt[935] = sprVenomousSyringe
-	wep_area[935] = 1
+	wep_area[935] = 0
 	wep_text[935] = "filled with scorpion venom"
 	wep_swap[935] = sndSwapSword
 	wep_rad[935] = 0;
@@ -10518,7 +10518,7 @@ function scrWeapons() {
 	wep_load[936] = 17
 	wep_cost[936] = 2.5
 	wep_sprt[936] = sprEMSquare
-	wep_area[936] = 1
+	wep_area[936] = 0
 	wep_text[936] = "Energy Melee Square"
 	wep_swap[936] = sndSwapEnergy
 	wep_rad[936] = 0;
@@ -10593,7 +10593,7 @@ function scrWeapons() {
 	wep_rad[942] = 0;
 	wep_popup[942] = "MIMICS YOUR CROSSHAIR";
 	
-	wep_name[943] = "ORBS OF MIMICRY"
+	wep_name[943] = "ORB OF MIMICRY"
 	wep_type[943] = 5
 	wep_auto[943] = 0
 	wep_load[943] = 20
@@ -10604,6 +10604,41 @@ function scrWeapons() {
 	wep_swap[943] = sndSwapEnergy
 	wep_rad[943] = 0;
 	wep_popup[943] = "MIMICS YOUR MOVEMENT";
+	
+	wep_name[944] = "CRITICAL SNIPER"
+	wep_type[944] = 1
+	wep_auto[944] = 0
+	wep_load[944] = 28
+	wep_cost[944] = 5
+	wep_sprt[944] = sprCriticalSniper
+	wep_area[944] = 7
+	wep_text[944] = "critical hit chance increases if you have rabbit paw"
+	wep_swap[944] = sndSwapPistol
+	wep_rad[944] = 0;
+	wep_popup[944] = "CHANCE TO DEAL DOUBLE DAMAGE#EXCESS DAMAGE RELOADS THIS GUN";
+	
+	wep_name[945] = "THOMPER"
+	wep_type[945] = 4
+	wep_auto[945] = 2
+	wep_load[945] = 34
+	wep_cost[945] = 3
+	wep_sprt[945] = sprThomper
+	wep_area[945] = 0
+	wep_text[945] = "Energy Melee Square"
+	wep_swap[945] = sndSwapMotorized
+	wep_rad[945] = 0;
+	
+	wep_name[946] = "FRAGILE PROTO HAMMER"
+	wep_type[946] = 0
+	wep_auto[946] = 0
+	wep_load[946] = 60
+	wep_cost[946] = 0
+	wep_sprt[946] = sprFragileProtoHammer
+	wep_area[946] = 0
+	wep_text[946] = "once wielded by the proto mutant#but now only has one use left#don't miss!"
+	wep_swap[946] = sndSwapHammer
+	wep_rad[946] = 0;
+	wep_popup[946] = "MAKES YOU SLOWER#BREAKS AFTER A SINGLE USE#DEALS 1000 DAMAGE";
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

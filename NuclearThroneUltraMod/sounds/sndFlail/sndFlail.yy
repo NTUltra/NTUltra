@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.664156,
+  "duration":0.66417235,
   "exportDir":"",
   "name":"sndFlail",
   "parent":{

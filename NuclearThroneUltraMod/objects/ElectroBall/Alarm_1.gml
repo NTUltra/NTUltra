@@ -1,6 +1,6 @@
 /// @description Trace lightning to nearby electroballs
 target = noone;
-if instance_exists(ElectroBall) && instance_number(ElectroBall) > 1
+if instance_exists(ElectroBall) && instance_number(ElectroBall) > 1 && UberCont.recursionCheck < 20
 {
 	target = instance_nearest_notme(x,y,ElectroBall)
 

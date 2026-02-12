@@ -1,6 +1,6 @@
 /// @description Collect AMMO
 event_inherited();
-if !instance_exists(Player)
+if !instance_exists(Player) || !canCollect
 	exit;
 	
 rerolls = 0;

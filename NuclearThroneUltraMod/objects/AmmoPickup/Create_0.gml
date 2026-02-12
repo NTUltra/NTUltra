@@ -1,7 +1,11 @@
 event_inherited();
 additionalRange += 6;
-if scrIsGamemode(48)
+canCollect = true;
+if scrIsGamemode(48) && object_index == AmmoPickup
+{
+	canCollect = false;
 	instance_destroy(id,false);
+}
 isArmour = false;
 ammoValue = 1;
 if sprite_index == sprAmmo {

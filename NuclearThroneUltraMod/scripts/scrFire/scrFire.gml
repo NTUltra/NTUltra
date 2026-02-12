@@ -72,6 +72,7 @@ function scrFire(canDrown = true) {
 			image_index = 0;
 			snd_play(snd_hurt);
 			exception = true;
+			hitBy = wep_sprt[wep];
 		}
 		if wep_load[wep] > 1 && reload < 0
 		{

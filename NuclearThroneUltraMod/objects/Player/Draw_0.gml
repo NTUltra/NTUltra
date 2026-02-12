@@ -26,7 +26,7 @@ if jump > 0
 	yy = y - jumpY;
 }
 var aimDirection = point_direction(x,yy,UberCont.mouse__x,UberCont.mouse__y);
-if wep == 818 // POGO STICK
+if wep == 818 || wep == 945// POGO STICK
 {
 	var f = 270;//point_direction(x,y,FocusAim.x,FocusAim.y);
 	aimDirection += angle_difference(f,aimDirection) * 0.9;

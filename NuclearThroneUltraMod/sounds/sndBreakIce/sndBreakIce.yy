@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.829417,
+  "duration":0.8294331,
   "exportDir":"",
   "name":"sndBreakIce",
   "parent":{

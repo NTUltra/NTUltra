@@ -7,7 +7,7 @@ sprite_index = spr_idle
 
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 220
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400
 {
 if random(2) < 1
 {

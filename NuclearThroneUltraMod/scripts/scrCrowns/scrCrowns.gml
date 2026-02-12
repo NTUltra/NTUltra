@@ -302,7 +302,18 @@ function scrCrowns() {
 	crown_text[44] = "GAIN <r>NO<r> <p>PORTAL ESSENCE<p>#WHEN ENTERING A <p>PORTAL<p>##INSTEAD GET <w>1<w> <p>PORTAL ESSENCE<p>#WHEN YOU <r>KILL<r> A <r>BOSS<r>#AND <w>18<w> WHEN YOU <w>LOOP<w>"
 	crown_used[44] = 0
 	crown_tips[44] = "void trip"
+	/*
+	crown_name[45] = "[CROWN OF REGERSSION]"
+	crown_text[45] = "REDUCE DIFFCULTY BY 4#REDUCE WEAPON TIER BY 8#WEAPON TIER INCREASES +25% EACH AREA"
+	crown_used[45] = 0
+	crown_tips[45] = "returning"
 	
+	//Have two healing mutations
+	crown_name[46] = "[CROWN OF TANK]"
+	crown_text[46] = "INCREASE YOUR MAX HEALTH BY 150%#TRIPLE ALL ENEMY HEALTH"
+	crown_used[46] = 0
+	crown_tips[46] = "slow down the pace"
+	*/
 	//CROWN OF PUFFERFISH
 	/*
 	crown_name[44] = "[CROWN OF PUFFERFISH]"

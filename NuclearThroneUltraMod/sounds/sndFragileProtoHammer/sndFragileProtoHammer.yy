@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndFragileProtoHammer",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.0902041,
+  "exportDir":"",
+  "name":"sndFragileProtoHammer",
+  "parent":{
+    "name":"Melee",
+    "path":"folders/Sounds/Weapons/Melee.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndFragileProtoHammer.wav",
+  "volume":1.0,
+}

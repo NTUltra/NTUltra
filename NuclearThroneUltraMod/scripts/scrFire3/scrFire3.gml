@@ -2376,6 +2376,7 @@ function scrFire3(hasTailNow){
 					if instance_exists(Player)
 						resetSpeed = Player.maxSpeed;
 				}
+				maxSpeed *= 0.5;
 			}
 		}
 		BackCont.viewx2 += lengthdir_x(80,aimDirection)*UberCont.opt_shake
@@ -5023,7 +5024,7 @@ function scrFire3(hasTailNow){
 
 		break;
 		
-		//MIMICRY ORB
+		//ORB OF MIMICRY
 		case 943:
 		if Player.skill_got[17] = 1
 		snd_play_fire(sndMimicryOrbUpg)
@@ -5050,6 +5051,92 @@ function scrFire3(hasTailNow){
 		BackCont.shake += 8
 		wkick = 7
 
+		break;
+		
+		//CRITICAL SNIPER
+		case 944:
+
+		//snd_play_fire(sndPistol)
+		snd_play(sndCriticalSniper,0.01,true);
+		with instance_create(x,y,Shell)
+			motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
+		if !skill_got[2]
+		{
+			scrMoveContactSolid(aimDirection + 180,13);
+			motion_add(aimDirection+180,16)
+		}
+		with instance_create(x,y,CriticalMicroBullet)
+		{
+			direction = aimDirection+(random(4)-2)*other.accuracy;
+			image_angle = direction;
+			team = other.team
+			scrGiveProjectileStats();
+			with instance_create_depth(x+lengthdir_x(8,direction),y+lengthdir_y(8,direction),depth - 1,AnimDestroyBloom)
+			{
+				image_speed = 0.5;
+				motion_add(other.direction,1);
+				sprite_index = sprCriticalSniperBloom;
+				image_angle = direction;
+			}
+			event_perform(ev_alarm,0);
+		}
+
+		BackCont.viewx2 += lengthdir_x(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(30,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 5
+		wkick = 5
+
+		break;
+		
+		//THOMPER
+		case 945:
+
+			snd_play_fire(sndJackHammer);
+			with instance_create(x,y,ThomperBurst)
+			{
+				creator = other.id
+				ammo = 3
+				time = 9
+				team = other.team
+				event_perform(ev_alarm,0) 
+			}
+
+		break;
+		
+		//FRAGILE PROTO HAMMER
+		case 946:
+
+			snd_play_fire(sndFragileProtoHammer)
+
+			instance_create(x,y,Dust)
+			repeat(4)
+			{
+				with instance_create(x,y,Dust)
+				{
+					motion_add(aimDirection + random_range(20,-20),3 + random(2));	
+				}
+			}
+			with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),Slash)
+			{
+				sprite_index = sprProtoSlash;
+				mask_index = mskProtoSlash;
+				dmg = 1000
+				longarms = 0
+				longarms = (Player.skill_got[13]+other.bettermelee)*3
+				motion_add(aimDirection,2.7+longarms)
+				image_angle = direction
+				team = other.team
+			}
+			wepangle = -wepangle
+			if !skill_got[2]
+			{
+				scrMoveContactSolid(aimDirection,8);
+				motion_add(aimDirection,30)
+			}
+			BackCont.viewx2 += lengthdir_x(80,aimDirection)*UberCont.opt_shake
+			BackCont.viewy2 += lengthdir_y(80,aimDirection)*UberCont.opt_shake
+			BackCont.shake += 80
+			wep = 0;
 		break;
 		
 	}

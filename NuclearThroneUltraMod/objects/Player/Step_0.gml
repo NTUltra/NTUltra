@@ -1836,10 +1836,12 @@ if wep == 531 || wep == 925//Coffee makes you faster and ammo generator
 {
 	tempMaxSpeed += 1;
 }
-if wep == 751//Coffee makes you faster
+else if wep == 751//Coffee makes you faster
 {
 	tempMaxSpeed += 2;
 }
+if !skill_got[2] && (wep == 946 || bwep == 946)//proto hammer
+	tempMaxSpeed -= 0.75;
 if hammerheadDig > 0
 {
 	tempMaxSpeed += 1.5;

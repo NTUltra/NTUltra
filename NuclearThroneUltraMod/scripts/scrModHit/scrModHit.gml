@@ -227,19 +227,20 @@ function scrModHit(projectileRef) {
 					var nearest = noone;
 					if instance_exists(enemy) && instance_number(enemy) > 1
 						nearest = instance_nearest_notme(x,y,enemy);
-					with instance_create(other.x,other.y,Lightning)
-					{
-						if nearest != noone && instance_exists(nearest)
-							image_angle = point_direction(x,y,nearest.x,nearest.y)+random(14)-7;//Instance nearest not me?
-						else
-							image_angle = random(360);
-						accuracy --;
-						team = 2
-						ammo = len + 2;
-						event_perform(ev_alarm,0)
-						with instance_create(x,y,LightningSpawn)
-						image_angle = other.image_angle
-					}
+					if UberCont.recursionCheck < 28
+						with instance_create(other.x,other.y,Lightning)
+						{
+							if nearest != noone && instance_exists(nearest)
+								image_angle = point_direction(x,y,nearest.x,nearest.y)+random(14)-7;//Instance nearest not me?
+							else
+								image_angle = random(360);
+							accuracy --;
+							team = 2
+							ammo = len + 2;
+							event_perform(ev_alarm,0)
+							with instance_create(x,y,LightningSpawn)
+							image_angle = other.image_angle
+						}
 				break;
 
 				case 7://TENTACLES!?

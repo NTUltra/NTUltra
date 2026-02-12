@@ -1,7 +1,7 @@
 ///scrSplashDamage();
 // /@description
 ///@param
-function scrSplashDamage(dmg, range, canBoost = true){
+function scrSplashDamage(dmg, range, canBoost = true, knockback = 2.5){
 	if instance_exists(Player) && canBoost
 	{
 		if Player.race == 25
@@ -31,7 +31,7 @@ function scrSplashDamage(dmg, range, canBoost = true){
 				DealDamage(dmg)
 				sprite_index = spr_hurt
 				image_index = 0
-				motion_add(other.direction,2.5)
+				motion_add(point_direction(other.x,other.y,x,y),knockback)
 				//scrForcePosition60fps();
 				if speed > maxSpeed+1
 					speed = maxSpeed+1;

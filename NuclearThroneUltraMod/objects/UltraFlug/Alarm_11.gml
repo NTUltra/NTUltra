@@ -72,8 +72,9 @@ else if um == ultramods.shotgunSplinterElectro
 	image_angle = direction}
 	with instance_create(x,y,ElectroBallBig)
 	{
-		balls = 12;
-		dmgReduction = 2;
+		balls = 6;
+		dmg += 1;
+		dmgReduction = 1;
 		electroDelay = 16;
 		damageDelay += 5;
 		scrCopyWeaponMod(other);

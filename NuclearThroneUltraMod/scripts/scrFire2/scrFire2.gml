@@ -15664,7 +15664,7 @@ function scrFire2(hasTailNow) {
 		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 	}
 	altFire = !altFire;
-	with instance_create(x,y,MicroBullet)
+	with instance_create(x,y,CriticalMicroBullet)
 	{
 		direction = aimDirection+(random(8)-4)*other.accuracy;
 		image_angle = direction;
@@ -15679,10 +15679,10 @@ function scrFire2(hasTailNow) {
 		event_perform(ev_alarm,0);
 	}
 
-	BackCont.viewx2 += lengthdir_x(4,aimDirection+180)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(4,aimDirection+180)*UberCont.opt_shake
-	BackCont.shake += 2
-	wkick = 2
+	BackCont.viewx2 += lengthdir_x(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(20,aimDirection+180)*UberCont.opt_shake
+	BackCont.shake += 4
+	wkick = 5
 
 	break;
 	

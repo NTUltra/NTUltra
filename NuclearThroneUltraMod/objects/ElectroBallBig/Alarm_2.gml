@@ -15,4 +15,4 @@ with instance_create(x,y,Lightning)
 		image_angle = other.image_angle
 }
 
-alarm[2] = 10;
+alarm[2] = electroDelay;

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndCriticalSniper",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":1.1256689,
+  "exportDir":"",
+  "name":"sndCriticalSniper",
+  "parent":{
+    "name":"Regular",
+    "path":"folders/Sounds/Enemies/Regular.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndCriticalSniper.wav",
+  "volume":1.0,
+}

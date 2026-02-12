@@ -1,6 +1,6 @@
 function scrDeleteGameSave(saveSlot) {
 	var saveFileString;
-	saveFileString="ntultra"+string(saveSlot)+".sav";
+	saveFileString=game_save_id +"ntultra"+string(saveSlot)+".sav";
 	if file_exists(saveFileString)
 	{
 		file_delete(saveFileString);
