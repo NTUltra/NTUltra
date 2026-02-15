@@ -12,3 +12,4 @@ wep = 0;
 chooseTimer = 0;
 scrRaces();
 scrStartingWeapons();
+wantedToReroll = [];

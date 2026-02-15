@@ -7,7 +7,7 @@ function scrChooseSecretUltraToGetUnlockRequirementFor() {
 	with UberCont
 	{
 		var dir = 0;
-		repeat(maxsecretultra + 1)
+		repeat(maxsecretultraOne)
 		{
 			if (ctot_secret_ultra_taken[dir] < 1 &&
 			secret_ultra_requirement_unlocked[dir] < 1)
@@ -18,5 +18,8 @@ function scrChooseSecretUltraToGetUnlockRequirementFor() {
 			dir++;
 		}
 	}
-	return listOfPossibleSecrets[irandom(array_length(listOfPossibleSecrets)-1)];
+	if array_length(listOfPossibleSecrets) > 0
+		return listOfPossibleSecrets[irandom(array_length(listOfPossibleSecrets)-1)];
+	else
+		return -1;
 }

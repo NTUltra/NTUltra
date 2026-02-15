@@ -10,7 +10,7 @@ with Player
 	{
 		mytext = "+1 CROWN!"
 		theColour = c_lime;
-		moveSpeed = 1;
+		vspeed = -1;
 		alarm[1] = 60;
 	}
 }

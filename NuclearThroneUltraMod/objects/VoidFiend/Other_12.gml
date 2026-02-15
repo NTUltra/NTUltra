@@ -88,6 +88,14 @@ if !openedShop
 				image_speed = 0.4;
 			}
 		}
+		if instance_exists(Player) && UberCont.gotRegalThisRun
+		{
+			with instance_create(x - 128,yy + 94,VoidShopItemAddRegalVision)
+			{
+				image_index = 0;
+				image_speed = 0.35;
+			}
+		}
 		if UberCont.total_run_slots > 0 && UberCont.total_run_slots < UberCont.max_run_slots
 		{
 			with instance_create(x + 32,yy + 94,VoidShopItemSaveSlotIncrease)

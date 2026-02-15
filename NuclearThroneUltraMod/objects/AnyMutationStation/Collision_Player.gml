@@ -18,7 +18,7 @@ if KeyCont.key_pick[other.p] = 1
 	{
 		mytext = "CHOOSE ANY MUTATION!"
 		theColour = c_lime;
-		moveSpeed = 1;
+		vspeed = -1;
 		alarm[1] = 60;
 	}
 	with CorpseCollector

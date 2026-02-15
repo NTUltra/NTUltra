@@ -9,7 +9,7 @@ with Player
 	{
 		mytext = "REGAL VISIONS!"
 		theColour = c_lime;
-		moveSpeed = 1;
+		vspeed = -1;
 		alarm[1] = 60;
 	}
 }

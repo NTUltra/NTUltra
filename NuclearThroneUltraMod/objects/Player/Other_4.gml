@@ -3,6 +3,11 @@
 //visitedCrib=true
 if instance_exists(Credits)
 	exit;
+if area != 1 && shouldTakeRegalStart
+{
+	shouldTakeRegalStart = false;
+	UberCont.regal_start[race] -= 1;
+}
 lockout = false;
 //}
 swapChar = false;

@@ -22,7 +22,7 @@ with Player
 	{
 		mytext = "LOST "+other.skill_name[chosenSkillToLose];
 		theColour=c_red;
-		moveSpeed = 1;
+		vspeed = -1;
 		alarm[1] = 60;
 	}
 	level = currentLevel;

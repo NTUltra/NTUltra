@@ -4,6 +4,7 @@
 function scrCreateDataRef() {
 	var dtr = instance_create(x,y,DataRef)
 	with dtr {
+		shouldTakeRegalStart = other.shouldTakeRegalStart;
 		excessResourceDamageBoost = other.excessResourceDamageBoost;
 		excessResourceDamageBoostMax = other.excessResourceDamageBoostMax;
 		area = other.area;

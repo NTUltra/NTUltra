@@ -15,7 +15,7 @@ switch(array_length(UberCont.collectedRewards))
 		{
 			mytext = "CROWNVAULTS NOW HEAL!"
 			theColour = c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 	break;
@@ -26,7 +26,7 @@ switch(array_length(UberCont.collectedRewards))
 		{
 			mytext = "+10% RADIATION VALUE!"
 			theColour = c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 	break;
@@ -39,7 +39,7 @@ switch(array_length(UberCont.collectedRewards))
 			{
 				mytext = "+" + string(gotamount) + " PORTAL ESSENCE!"
 				theColour = c_lime;
-				moveSpeed = 1;
+				vspeed = -1;
 				alarm[1] = 60;
 			}
 		}
@@ -57,7 +57,7 @@ switch(array_length(UberCont.collectedRewards))
 		{
 			mytext = "UNLOCKED RE-ROLL STATION!"
 			theColour = c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 		//UNLOCK GOOD OL' HUMPHRY
@@ -84,7 +84,7 @@ switch(array_length(UberCont.collectedRewards))
 				{
 					mytext = "+1 MUTATION!"
 					theColour = c_lime;
-					moveSpeed = 1;
+					vspeed = -1;
 					alarm[1] = 60;
 				}
 			}
@@ -101,7 +101,7 @@ switch(array_length(UberCont.collectedRewards))
 					{
 						mytext = "+1 MAX ARMOUR!"
 						theColour = c_lime;
-						moveSpeed = 1;
+						vspeed = -1;
 						alarm[1] = 60;
 					}
 				}
@@ -113,7 +113,7 @@ switch(array_length(UberCont.collectedRewards))
 					{
 						mytext = "+1 MAX HP!"
 						theColour = c_lime;
-						moveSpeed = 1;
+						vspeed = -1;
 						alarm[1] = 60;
 					}
 				}

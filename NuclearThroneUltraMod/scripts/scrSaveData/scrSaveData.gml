@@ -4,6 +4,8 @@ function scrSaveData() {
 		ini_write_real("DATA","selected_start_wep"+string(dir),selected_start_wep[dir]);
 		ini_write_real("DATA","selected_start_bwep"+string(dir),selected_start_bwep[dir]);
 		ini_write_real("DATA","secondary_start_wep"+string(dir),secondary_start_wep[dir]);
+		ini_write_real("DATA","regal_start"+string(dir),regal_start[dir]);
+		ini_write_real("DATA","regal_start_enabled"+string(dir),regal_start_enabled[dir]);
 		ini_write_real("DATA","race_have"+string(dir),race_have[dir]);
 		ini_write_real("DATA","bskin"+string(dir),race_bskin[dir]);
 		ini_write_real("DATA","cskin"+string(dir),race_cskin[dir]);

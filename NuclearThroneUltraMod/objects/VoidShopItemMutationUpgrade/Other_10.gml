@@ -9,7 +9,7 @@ with Player
 	{
 		mytext = "+1 MUTATION!"
 		theColour = c_lime;
-		moveSpeed = 1;
+		vspeed = -1;
 		alarm[1] = 60;
 	}
 }

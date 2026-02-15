@@ -363,6 +363,7 @@ if visible && my_health < 1
 with instance_create(x,y,PlayerSpawn)//Data to keep
 {
 	//alarm[3]=300;//immunity
+	shouldTakeRegalStart = other.shouldTakeRegalStart;
 	rushcrownlevels = other.rushcrownlevels;
 	wep = other.wep;
 	canblacksword = other.canblacksword;

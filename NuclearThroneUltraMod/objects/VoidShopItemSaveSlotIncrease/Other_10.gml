@@ -14,7 +14,7 @@ with UberCont
 			{
 				mytext = "MAX SAVE SLOTS REACHED!"
 				theColour=c_lime;
-				moveSpeed = 1;
+				vspeed = -1;
 				alarm[1] = 60;
 			}
 			instance_create(x,y,VoidShopItemEliteWeaponChest);
@@ -27,7 +27,7 @@ with UberCont
 		{
 			mytext = "+1 SAVE SLOT!"
 			theColour = c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 	}

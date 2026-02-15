@@ -29,7 +29,7 @@ if chooseTimer == 0
 		if wep > maxwep
 			wep = 1;
 		var tries = maxwep * 2;
-		while (tries > 0 && wantTier > -2 && wep_area[wep] != wantTier && wep != other.originalWep)
+		while (tries > 0 && wantTier > -2 && wep_area[wep] != wantTier && wep != other.originalWep && array_contains(other.wantedToReroll, wep))
 		{
 			wep ++;
 			if wep > maxwep
@@ -46,7 +46,7 @@ if chooseTimer == 0
 		with instance_create(x,y,PopupText) {
 			mytext = other.wep_name[other.wep];
 			theColour=c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 		scrWeaponHold();
@@ -58,8 +58,14 @@ else
 {
 	with Player
 	{
+		//Reset weapon
 		var targetWep = wep;
-		if bwep == other.chosenWep
+		if cwep == other.chosenWep
+		{
+			cwep = other.originalWep;
+			targetWep = cwep;
+		}
+		else if bwep == other.chosenWep
 		{
 			bwep = other.originalWep;
 			targetWep = bwep;
@@ -69,7 +75,7 @@ else
 		with instance_create(x,y,PopupText) {
 			mytext = other.wep_name[targetWep];
 			theColour=c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 		scrWeaponHold();
@@ -77,3 +83,4 @@ else
 	chooseTimer = 0;
 	cost = 1;
 }
+array_push(wantedToReroll,Player.wep);

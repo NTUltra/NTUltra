@@ -235,7 +235,6 @@ if (hasNoMenuOpen()
 		{
 			//CROWN LOCKED
 			draw_sprite_ext(sprLoadoutCrown,1,xx,yy,1.5,1.5,0,c_white,1);
-			//draw_sprite_ext(sprLocked,0,xx,yy,0.75,0.75,0,c_white,1);
 		}
 		var dwx = sx + doubleWeaponOffset;
 		var dwy = __view_get( e__VW.YView, 0 )+64
@@ -281,7 +280,51 @@ if (hasNoMenuOpen()
 		{
 			draw_sprite_ext(sprDoubleWeapon,1,dwx,dwy,ds,ds,0,c_white,ds);
 		}
-
+		//REGAL START
+		dwx -= 12
+		var regalAmount = string(UberCont.regal_start[race])
+		var rgtx = dwx - 4;
+		var rgty = dwy - 4;
+		var regalCounterColour = c_gray;
+		ds = 1;
+		var regalIndex = 0;
+		var regalDisable = scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37)
+		if UberCont.regal_start[race] > 0
+		{
+			regalIndex = 1;
+			regalCounterColour = c_ltgray;
+			if UberCont.regal_start[race] > 9
+			{
+				rgtx -= 6;
+				dwx -= 4;
+			}
+			if (UberCont.mouse__x > dwx - 12 && UberCont.mouse__x < dwx + 6 && UberCont.mouse__y > dwy - 12 && UberCont.mouse__y < dwy + 12)
+			{
+				ds = 1.5;
+				if UberCont.regal_start_enabled[race]
+					hoverText = "DISABLE REGAL VISION";
+				else
+					hoverText = "ENABLE REGAL VISION";
+				if regalDisable
+				{
+					hoverText = "DISABLED IN WEEKLY/DAILY"
+				}
+				if mouse_check_button_pressed(mb_left)
+					UberCont.regal_start_enabled[race] = !UberCont.regal_start_enabled[race];
+			}
+			if UberCont.regal_start_enabled[race] && !regalDisable
+			{
+				regalIndex = 2;
+				regalCounterColour = c_white;
+			}
+		}
+		draw_text_colour(rgtx + 1,rgty,regalAmount,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(rgtx + 1,rgty + 1,regalAmount,c_black,c_black,c_black,c_black,1);
+		draw_text_colour(rgtx,rgty,regalAmount,regalCounterColour,regalCounterColour,regalCounterColour,regalCounterColour,1);
+		dwx -= 12;
+		
+		draw_sprite_ext(sprRegalStart,regalIndex,dwx,dwy,ds,ds,0,c_white,ds);
+		
 		draw_sprite_ext(sprSkinSelect,0,sx + 32,__view_get( e__VW.YView, 0 )+66,scale,scale,0,c_white,scale-0.1);
 		draw_set_valign(fa_bottom)
 		

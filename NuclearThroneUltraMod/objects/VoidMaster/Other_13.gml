@@ -32,7 +32,7 @@ if completedChallenge && !collectedRewards
 				{
 					mytext = "+1 LIFE!"
 					theColour = c_lime;
-					moveSpeed = 1;
+					vspeed = -1;
 					alarm[1] = 60;
 				}
 			}
@@ -53,7 +53,7 @@ if completedChallenge && !collectedRewards
 					{
 						mytext = "+1 MAX ARMOUR!"
 						theColour = c_lime;
-						moveSpeed = 1;
+						vspeed = -1;
 						alarm[1] = 60;
 					}
 				}
@@ -65,7 +65,7 @@ if completedChallenge && !collectedRewards
 					{
 						mytext = "+1 MAX HP!"
 						theColour = c_lime;
-						moveSpeed = 1;
+						vspeed = -1;
 						alarm[1] = 60;
 					}
 				}
@@ -96,7 +96,7 @@ if completedChallenge && !collectedRewards
 				{
 					mytext = "+1 MAX LEVEL!"
 					theColour = c_lime;
-					moveSpeed = 1;
+					vspeed = -1;
 					alarm[1] = 60;
 				}
 			}
@@ -119,7 +119,7 @@ if completedChallenge && !collectedRewards
 				{
 					mytext = "+1 MAX LEVEL!"
 					theColour = c_lime;
-					moveSpeed = 1;
+					vspeed = -1;
 					alarm[1] = 60;
 				}
 			}
@@ -141,7 +141,7 @@ if completedChallenge && !collectedRewards
 				{
 					mytext = "+1 MAX LEVEL!"
 					theColour = c_lime;
-					moveSpeed = 1;
+					vspeed = -1;
 					alarm[1] = 60;
 				}
 			}

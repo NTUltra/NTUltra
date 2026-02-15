@@ -625,8 +625,7 @@ skillpoints = 0;
 crownpoints = 0
 refundPoints = 0;
 getVision = false;
-if scrIsGamemode(49)
-	getVision = true;
+
 
 kills = 0
 
@@ -1084,4 +1083,12 @@ excessVoidBeam = 0;
 excessPortalStrikeAmmo = 0;
 excessRage = 0;
 maxRad = 9999;
-
+shouldTakeRegalStart = false;
+if scrIsGamemode(49) || (UberCont.regal_start_enabled[race] && UberCont.regal_start[race] > 0 && !instance_exists(StartDaily))
+{
+	getVision = true;
+	if !scrIsGamemode(49)
+	{
+		shouldTakeRegalStart = true;
+	}
+}

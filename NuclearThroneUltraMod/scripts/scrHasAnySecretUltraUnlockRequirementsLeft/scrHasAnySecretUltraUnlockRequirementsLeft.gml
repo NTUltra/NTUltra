@@ -5,7 +5,7 @@ function scrHasAnySecretUltraUnlockRequirementsLeft(){
 	with UberCont
 	{
 		var dir = 0;
-		repeat(maxsecretultra + 1)
+		repeat(maxsecretultraOne)
 		{
 			if (ctot_secret_ultra_taken[dir] < 1 &&
 			secret_ultra_requirement_unlocked[dir] < 1)

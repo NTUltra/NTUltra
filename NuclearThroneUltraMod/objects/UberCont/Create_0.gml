@@ -1,10 +1,10 @@
 //VERSION STUFF ETC.
 version = 000
 encryptedVersion = 003;
-public = 0 //1 is no cheats and release
+public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.B."
-subUpdateVersion = "48";
+subUpdateVersion = "49";
 notUpdated = "";
 serverIp = "77.249.12.209"serverPort = 1414;
 currentSave = 0;

@@ -1331,7 +1331,7 @@ if (selected && visible &&
 						difTaken ++;	
 					}
 				}
-				for (var i = 0; i < maxsecretultra + 1; i++) {
+				for (var i = 0; i < maxsecretultraOne; i++) {
 					if (ctot_secret_ultra_taken[i] > 0)
 					{
 						difTaken ++;	

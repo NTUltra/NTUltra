@@ -376,15 +376,15 @@ function scrSecretUltraStat() {
 	secret_ultra_unlk[41] = "HOLD A MORPH WEAPON OR MOD\nOR KILL CHESIRE CAT\nOR REACH ULTRA IN WONDERLAND";
 	secret_ultra_char[41] = 21;
 	
-	maxsecretultra = array_length(secret_ultra_name);
-	
+	maxsecretultra = 41//array_length(secret_ultra_name);
+	maxsecretultraOne = maxsecretultra + 1;
 	//109
-	secret_ultra_name[maxsecretultra + 1] = "TRASH"
-	secret_ultra_text[maxsecretultra + 1] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
-	secret_ultra_tips[maxsecretultra + 1] = "challenge run"
-	secret_ultra_hint[maxsecretultra + 1] = "";
-	secret_ultra_unlk[maxsecretultra + 1] = "WIELD NO WEAPON";
-	secret_ultra_char[maxsecretultra + 1] = 0;
+	secret_ultra_name[maxsecretultraOne] = "TRASH"
+	secret_ultra_text[maxsecretultraOne] = "<pi>DIE<pi> WHENEVER YOU TAKE DAMAGE"
+	secret_ultra_tips[maxsecretultraOne] = "challenge run"
+	secret_ultra_hint[maxsecretultraOne] = "";
+	secret_ultra_unlk[maxsecretultraOne] = "WIELD NO WEAPONS";
+	secret_ultra_char[maxsecretultraOne] = 0;
 
 	/*
 	secret_ultra_name[38] = "CRYSTALINE TORPEDO"

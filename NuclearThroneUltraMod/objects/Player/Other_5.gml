@@ -39,6 +39,11 @@ if (area == 1 || area == 101 || area == 10 || area == 105 || area == 122 || area
 			other.canblacksword=true
 	}
 }
+if area != 1 && shouldTakeRegalStart
+{
+	shouldTakeRegalStart = false;
+	UberCont.regal_start[race] -= 1;
+}
 ///next level what procedure
 /*
 if ( loops mod 2 == 0  && loops>1)

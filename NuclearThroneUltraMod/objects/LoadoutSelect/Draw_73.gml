@@ -27,7 +27,7 @@ if (hasNoMenuOpen() && race != 0)
 			//drawMenuBSkin(skin,race,c_black);
 			if (scale > 1)
 			{
-				draw_sprite(sprLocked,0,lx - 32,ly);
+				draw_sprite(sprLocked,0,lx - 48,ly);
 				ly += 34;
 				draw_set_halign(fa_right)
 				draw_text_color(lx,ly+1,string_hash_to_newline(race_bskin_lock[race]),c_black,c_black,c_black,c_black,1);
@@ -55,7 +55,7 @@ if (hasNoMenuOpen() && race != 0)
 			//drawMenuBSkin(skin,race,c_black);
 			if (scale > 1)
 			{
-				draw_sprite(sprLocked,0,lx - 32,ly);
+				draw_sprite(sprLocked,0,lx - 48,ly);
 				ly += 34;
 				draw_set_halign(fa_right)
 				draw_text_color(lx,ly+1,string_hash_to_newline(race_cskin_lock[race]),c_black,c_black,c_black,c_black,1);

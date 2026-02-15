@@ -15664,7 +15664,7 @@ function scrFire2(hasTailNow) {
 		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 	}
 	altFire = !altFire;
-	with instance_create(x,y,CriticalMicroBullet)
+	with instance_create(x,y,MicroBullet)
 	{
 		direction = aimDirection+(random(8)-4)*other.accuracy;
 		image_angle = direction;
@@ -17511,7 +17511,7 @@ function scrFire2(hasTailNow) {
 		}
 	break;
 	
-	//GOLDENMICRO MACHINEGUN
+	//GOLDEN MICRO MACHINEGUN
 	case 765:
 
 	//snd_play_fire(sndPistol)

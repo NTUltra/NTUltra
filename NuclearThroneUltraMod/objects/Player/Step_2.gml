@@ -415,7 +415,7 @@ if (instance_exists(WepPickup) || instance_exists(ThrowWep)) && !instance_exists
 					if array_length(wep_popup) > wep && is_string(wep_popup[wep]) {
 						with instance_create(x,y + 16,PopupText)
 						{
-							moveSpeed = 0.25;
+							vspeed = -1;
 							alarm[1] = 80;
 							theColour = c_green;
 							mytext = other.wep_popup[other.wep];

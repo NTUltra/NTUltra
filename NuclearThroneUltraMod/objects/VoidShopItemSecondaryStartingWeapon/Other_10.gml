@@ -10,7 +10,7 @@ with instance_create(x,y,PopupText)
 {
 	mytext = "SECONDARY STARTING WEAPON UNLOCKED FOR\n" + Player.race_name[Player.race];
 	theColour = c_lime;
-	moveSpeed = 1;
+	vspeed = -1;
 	alarm[1] = 60;
 }
 event_user(1);

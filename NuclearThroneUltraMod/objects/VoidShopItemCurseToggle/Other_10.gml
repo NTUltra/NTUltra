@@ -11,7 +11,7 @@ with Player
 		{
 			mytext = "CURSE ON"
 			theColour = c_purple;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 	}
@@ -22,7 +22,7 @@ with Player
 		{
 			mytext = "CURSE OFF"
 			theColour = c_lime;
-			moveSpeed = 1;
+			vspeed = -1;
 			alarm[1] = 60;
 		}
 		if scrIsCrown(14) {

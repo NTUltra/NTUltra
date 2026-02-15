@@ -8,7 +8,7 @@ with instance_create(x,y,PopupText)
 {
 	mytext = "-1 IDPD VAN THIS RUN!";
 	theColour=c_lime;
-	moveSpeed = 1;
+	vspeed = -1;
 	alarm[1] = 60;
 }
 cost = 16;
