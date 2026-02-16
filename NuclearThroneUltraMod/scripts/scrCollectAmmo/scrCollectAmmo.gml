@@ -30,8 +30,12 @@ function scrCollectAmmo(gain_multiplier = 1, isCursed = false, isSuperCursed = f
 		speed = spd;
 	}
 	var randomAmmo = true;
-	var prioritizeSecondary = choose(true,true,false);
-	if prioritizeSecondary
+	var prioritizeSecondary = random(100) < 70;
+	if (pt == 0 || st == 0) && random(100) < 30
+	{
+		randomAmmo = true;
+	}
+	else if prioritizeSecondary
 	{
 		if (sa < sc && (!canMeleeAmmo && st != 0) && ((!canMeleeAmmo && pt == 0)
 			|| (pa < pc)))

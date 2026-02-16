@@ -25,7 +25,7 @@ function scrTips() {
 		"hover over HUD elements in the top of your screen#such as mutations and weapons#for a short explanation",
 		"you can speed up this loading screen#in the options menu","most ultra mutations can destroy squares",
 		"when you reach level 10 you get your ultra mutation!","destroy the generators to loop","characters you looped with get a green border",
-		"just have fun", "don't get baited by items", "wield one strong slow firing weapon#and one quick firing weapon",
+		"just have fun", "don't get baited by items", "wield one strong slow firing weapon#and one quick firing weapon","holding a melee weapon reduces the odds you get the ammo type you want",
 		"crowns can be very beneficial in certain situations!","taking a crown unlocks crown start!","golden weapons can be unlocked as starting weapons");
 	}
 	else if tiptype = 0
@@ -36,6 +36,7 @@ function scrTips() {
 	"you can turn off flashy effects by turning down screenshake and artificial lag to 0",
 	"picking up a weapon reloads your weapons",
 	"always move",
+	"holding a melee weapon reduces the odds you get the ammo type you want",
 	"characters you looped with show a green border",
 	"beware of the pit!",
 	"ghosts are real",

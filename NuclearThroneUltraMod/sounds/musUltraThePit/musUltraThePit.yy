@@ -10,7 +10,7 @@
   "compression":3,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":160.7882,
+  "duration":160.78821,
   "exportDir":"",
   "name":"musUltraThePit",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"musUltraThePit.ogg",
+  "soundFile":"musUltraThePit.wav",
   "volume":1.0,
 }
