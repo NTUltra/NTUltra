@@ -2333,7 +2333,7 @@ function scrPowers(raceOverwrite = -1) {
 					snd_play(sndMeltingImmune,0.1);
 					if didKill > 9
 						scrHeal(1,false,true,0.2);
-					alarm[3] = max(alarm[3], clamp(floor(didKill*0.5),5,16));
+					alarm[3] = max(alarm[3], clamp(floor(didKill*0.5),3,10));
 					scrGiveEuphoriaShield();
 				}
 				if !audio_is_playing(sndCorpseExploUpg) && !audio_is_playing(sndCorpseExplo)

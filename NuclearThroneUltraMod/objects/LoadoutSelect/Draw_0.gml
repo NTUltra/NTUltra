@@ -285,14 +285,14 @@ if (hasNoMenuOpen()
 		var regalAmount = string(UberCont.regal_start[race])
 		var rgtx = dwx - 4;
 		var rgty = dwy - 4;
-		var regalCounterColour = c_gray;
+		var regalCounterColour = c_dkgray;
 		ds = 1;
 		var regalIndex = 0;
 		var regalDisable = scrIsGamemode(26) || scrIsGamemode(27) || scrIsGamemode(37)
 		if UberCont.regal_start[race] > 0
 		{
 			regalIndex = 1;
-			regalCounterColour = c_ltgray;
+			regalCounterColour = c_gray;
 			if UberCont.regal_start[race] > 9
 			{
 				rgtx -= 6;
@@ -381,6 +381,14 @@ if (hasNoMenuOpen()
 		var renderAny = true;
 		if (UberCont.crown_start[Menu.race])
 			draw_sprite_ext(sprLoadoutCrown,0,xx,yy + 2,2,2,0,c_white,1);
+		if UberCont.regal_start[Menu.race] > 0 && UberCont.regal_start_enabled[Menu.race]
+		{
+			var regX = xx - 20;
+			var regY = yy + 3;
+			var regS = 1.5;
+			draw_sprite_ext(sprRegalStart,regI,regX,regY,regS,regS,0,c_white,1);
+			xx -= 14;
+		}
 		if (isOverwriteWeapon && UberCont.wep_found[Menu.race,UberCont.opt_gm1wep])
 		{
 			if (UberCont.opt_gm1wep == 0)

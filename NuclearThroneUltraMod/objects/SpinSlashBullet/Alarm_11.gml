@@ -5,7 +5,7 @@ y = yprevious;
 if um == ultramods.bloodMelee
 {
 	snd_play(sndHeavyBloodPistol,0.1,true);
-	var am = 14;
+	var am = 4;
 	var angstep = 360/am;
 	var ang = image_angle + angstep
 	repeat(am)
@@ -35,7 +35,7 @@ else if um == ultramods.krakenMelee
 		with instance_create(x,y,Tentacle)
 		{
 			isog = false;
-			dmg = 4;//6 dmg = 1dmg
+			dmg += 1;//6 dmg = 1dmg
 			image_angle = ang;
 			team = other.team
 			ammo = spd;

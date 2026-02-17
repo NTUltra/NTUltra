@@ -1,5 +1,5 @@
 
-function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = false, volume = 0.8,loop = false,ownerParam = -1,specificPitch = 0, overlapRange = 70, falOff = 50, falOffMax = 400) {
+function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = true, priority = 2,noOverlap = false, noOverlapWhenNear = true, volume = 0.8,loop = false,ownerParam = -1,specificPitch = 0, overlapRange = 70, falOff = 50, falOffMax = 400) {
 	//SS_Init();
 	if noOverlap && audio_is_playing(sndId)
 		return false;
@@ -17,6 +17,7 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 			if nearest.mySound == sndId
 			{
 				audio_stop_sound(sndId);
+				instance_destroy();
 			}
 		}
 	}

@@ -6,11 +6,11 @@ with Player
 		scrUnlockBSkin(12,"FOR HACKING THE GAME",0);
 		snd_play_2d(sndYungCuzStartHack,0.1);
 		var nums = instance_number(YungCuzDupe)
-		var duration =  140;
+		var duration =  170;
 		var snd = sndYungCuzStartHack1;
 		if nums > 3
 		{
-			duration += (nums - 3) * 30;
+			duration += (nums - 3) * 45;
 			snd = sndYungCuzStartHack4;
 		}
 		if nums > 1

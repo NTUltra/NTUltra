@@ -206,6 +206,20 @@ if crown == 3 && Player.maxhealth > 1
 		UberCont.maxHpIncrease --;
 	}
 }
+//CROWN OF TANK
+if crown == 45 && Player.maxhealth > 1
+{
+	if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+	{
+		Player.maxarmour += round(Player.maxarmour * 0.5)
+	}
+	else
+	{
+		var add = round(Player.maxhealth * 0.5)
+		Player.maxhealth += add
+		UberCont.maxHpIncrease += add
+	}
+}
 //CROWN OF PROTECTION
 if crown == 20
 {

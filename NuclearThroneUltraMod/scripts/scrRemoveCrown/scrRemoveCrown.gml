@@ -18,6 +18,22 @@ function scrRemoveCrown(oldcrown){
 			UberCont.maxHpIncrease ++;
 		}
 	}
+	//CROWN OF TANK
+	if oldcrown == 45
+	{
+		if instance_exists(Player) && Player.ultra_got[62] && Player.altUltra//Living armour
+		{
+			Player.maxarmour -= round(Player.maxarmour * 0.5);
+			Player.maxarmour = max(1,Player.maxarmour);
+		}
+		else
+		{
+			var add = round(Player.maxhealth * 0.5)
+			Player.maxhealth -= add
+			UberCont.maxHpIncrease -= add
+			Player.maxhealth = max(1,Player.maxhealth);
+		}
+	}
 	if oldcrown == 4
 	{
 		Player.rushcrownlevels = 0;	

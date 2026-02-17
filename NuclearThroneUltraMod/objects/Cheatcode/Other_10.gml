@@ -8,7 +8,6 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		exit;
 	with UberCont
 	{
-		var dir=0;
 		about_to_unlock_alt_routes = 1
 		unlocked_alt_routes = true;
 		unlocked_inverted_areas = true;
@@ -19,6 +18,7 @@ if (hundredPercentI) >= array_length(hundredPercent)
 		//unlocked_inverted_areas = ini_read_real("STATS","unlocked_inverted_areas",0);
 		unlocked_more_crowns = 1
 		//unlocked_more_characters = ini_read_real("STATS","unlocked_more_characters",0);
+		var dir=0;
 		repeat(racemax+1)
 		{
 			race_have[dir]=1
@@ -27,11 +27,11 @@ if (hundredPercentI) >= array_length(hundredPercent)
 			secondary_start_wep[dir] = 1;
 			got_regal[dir] = 1;
 			//Crownstart unlock
-			//ctot_all_crowns_taken[dir,1] = 1;
-			ctot_crown_taken[dir,0] = 1;
+			ctot_all_crowns_taken[dir] = 1;
+			ctot_crown_taken[dir,2] = 1;
 			dir++
 		}
-
+		debug(ctot_all_crowns_taken);
 		var dir=0;
 
 		repeat(maxgamemode+1)

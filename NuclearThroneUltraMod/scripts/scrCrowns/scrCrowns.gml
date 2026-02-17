@@ -147,7 +147,7 @@ function scrCrowns() {
 	crown_tips[21] = "a risk worth taking"
 	
 	crown_name[22] = "[CROWN OF LUCK]"
-	crown_text[22] = "START EACH AREA WITH 1 <r>HP<r>#<rp>CHANCE<rp> ANY ENEMY#SPAWNS IN WITH 10% <r>HP<r>##(CHANCE IS LOWER FOR#HIGHER HEALTH ENEMIES)"
+	crown_text[22] = "START EACH AREA WITH <w>1<w> <r>HP<r>#<rp>CHANCE<rp> ANY ENEMY#SPAWNS IN WITH <w>10%<w> <r>HP<r>##(CHANCE IS LOWER FOR#HIGHER HEALTH ENEMIES)"
 	crown_used[22] = 0
 	crown_tips[22] = "crown of 1hp equality"
 	
@@ -302,17 +302,21 @@ function scrCrowns() {
 	crown_text[44] = "GAIN <r>NO<r> <p>PORTAL ESSENCE<p>#WHEN ENTERING A <p>PORTAL<p>##INSTEAD GET <w>1<w> <p>PORTAL ESSENCE<p>#WHEN YOU <r>KILL<r> A <r>BOSS<r>#AND <w>18<w> WHEN YOU <w>LOOP<w>"
 	crown_used[44] = 0
 	crown_tips[44] = "void trip"
+	
+	//Have two healing mutations
+	crown_name[45] = "[CROWN OF TANK]"
+	crown_text[45] = "INCREASE YOUR <r>MAX HP<r> BY <w>150%<w>#<r>TRIPLE ALL ENEMY HP<r>"
+	crown_used[45] = 0
+	crown_tips[45] = "slow down the pace"
+	
 	/*
+	
 	crown_name[45] = "[CROWN OF REGERSSION]"
 	crown_text[45] = "REDUCE DIFFCULTY BY 4#REDUCE WEAPON TIER BY 8#WEAPON TIER INCREASES +25% EACH AREA"
 	crown_used[45] = 0
 	crown_tips[45] = "returning"
 	
-	//Have two healing mutations
-	crown_name[46] = "[CROWN OF TANK]"
-	crown_text[46] = "INCREASE YOUR MAX HEALTH BY 150%#TRIPLE ALL ENEMY HEALTH"
-	crown_used[46] = 0
-	crown_tips[46] = "slow down the pace"
+	
 	*/
 	//CROWN OF PUFFERFISH
 	/*
@@ -331,6 +335,6 @@ function scrCrowns() {
 	
 	
 	crownmax = 23
-	secretcrownmax = 22;
+	secretcrownmax = 23;
 
 }

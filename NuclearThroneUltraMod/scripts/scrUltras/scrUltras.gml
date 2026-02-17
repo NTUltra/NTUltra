@@ -371,18 +371,18 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[45] = "like one"
     
 	    ultra_name[46] = "MLG SQUAD"
-	    ultra_text[46] = "CREATE MAX 4 DUPES#DUPES DON'T DECREASE#YOUR MAX <r>HP<r>"
+	    ultra_text[46] = "DUPES COST NO <w>MAX<w> <r>HP<r>#CAN ONLY CREATE UP TO <w>4<w> DUPES"
 	    ultra_tips[46] = "teamwork"
 		
 	    ultra_name[47] = "SPAM"
-	    ultra_text[47] = "DUPES COST 2 <r>HP<r>#INSTEAD OF MAX <r>HP#ALL DUPLICATES TAKE <w>25%<w> LESS <w>RELOAD TIME<w>"
+	    ultra_text[47] = "DUPES COST <w>2<w> <r>HP<r>#INSTEAD OF <w>MAX<w> <r>HP<r>#ALL DUPLICATES TAKE <w>25%<w> LESS <w>RELOAD TIME<w>"
 	    ultra_tips[47] = "annoying"
 		
 		//Pluto and no rhino skin?
 		if altOverride || (instance_exists(Player) &&  Player.race == 12 && (Player.altUltra))
 		{
 			ultra_name[47] = "GREEN TEAM"
-		    ultra_text[47] = "SPAWNING DUPES COSTS <g>RADS<g>#INSTEAD OF MAX <r>HP<r>"
+		    ultra_text[47] = "SPAWNING DUPES COSTS <g>RADS<g>#INSTEAD OF <w>MAX<w> <r>HP<r>"
 		    ultra_tips[47] = "pay up"
 		}
     

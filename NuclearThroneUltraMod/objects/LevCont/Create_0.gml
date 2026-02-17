@@ -290,6 +290,10 @@ if Player.crownpoints > 0
 				{
 					crown = 40;//CROWN OF THOUSAND CUTS	
 				}
+				else if crown == 20 && scrHasHealingMutations(2)//CROWN OF TANK
+				{
+					crown = 45
+				}
 				else if crown == 21 && ((Player.my_health < Player.maxhealth) || (scrIsCrown(39) && UberCont.canMultiCrown && (Player.maxhealth == 1 || Player.my_health > Player.maxhealth)))
 				{
 					crown = 39;//CROWN OF DANGER

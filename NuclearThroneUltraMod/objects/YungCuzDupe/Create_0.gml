@@ -192,7 +192,7 @@ if skill_got[32]
 returntoplayer=0;
 returntoplayerfast=0;
 
-depth = Player.depth + 1;
+depth = Player.depth + 2;
 
 myShield = -1;
 image_angle = 0;

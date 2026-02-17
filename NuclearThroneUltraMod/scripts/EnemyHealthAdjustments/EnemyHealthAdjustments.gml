@@ -18,6 +18,11 @@ function EnemyHealthAdjustments(){
 			maxhealth *= 1.1;
 		if scrIsCrown(10)
 			maxhealth *= 1.15;//Crown of difficulty
+		//Crown of tank
+		if scrIsCrown(45)
+		{
+			maxhealth *= 3;
+		}
 		if Player.isMarksMan {
 			if Player.loops > 0
 				Player.ammo[1] += max(0.5,maxhealth*0.095);

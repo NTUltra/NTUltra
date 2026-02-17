@@ -5,4 +5,4 @@ event_inherited();
 
 spr_item = sprVoidItemAddRegalVision;
 name = "ADD 1 REGAL VISION START";
-cost = 4;
+cost = 5;

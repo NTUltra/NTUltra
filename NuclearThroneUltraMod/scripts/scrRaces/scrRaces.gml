@@ -299,7 +299,7 @@ function scrRaces() {
 	race_butt[12] = "AT THE START OF EACH AREA:#SUMMON <w>ONE DUPLICATE<w> CALLED <pi>YUNGER CUZ<pi>##YUNGER CUZ'S SHOTS#<w>REFUND 25%<w> <y>AMMO<y> AND <w>RELOAD TIME<w>"
 	race_butt_detail[12] = race_butt[12];
 	race_vision[12] = "HOLD <w>[E]<w> TO:#TURN YOUR <w>DUPLICATES<w> INTO <p>HACKS<p>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>";
-	race_vision_detail[12] = "HOLD <w>[E]<w> TO:#TURN YOUR DUPLICATES INTO <p>HACKS<p>#TEMPORARILY ENABLED <w>IN ORDER<w>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>##AFTER ALL HACKS ARE ENABLED (3+ DUPES)#NEXT DUPLICATES INCREASES <w>DURATION<w>";
+	race_vision_detail[12] = "HOLD <w>[E]<w> TO:#TURN YOUR DUPLICATES INTO <p>HACKS<p>#TEMPORARILY ENABLED <w>IN ORDER<w>#<w>AIMBOT<w>, <y>INFINITE AMMO<y> AND <aq>GHOSTING<aq>#(PHASE THROUGH WALLS & PROJECTILES)";
 	if isUnique
 	{
 		race_vision[12] = string_replace_all(race_vision[12],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
