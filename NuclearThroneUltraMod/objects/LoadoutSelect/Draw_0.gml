@@ -386,7 +386,7 @@ if (hasNoMenuOpen()
 			var regX = xx - 20;
 			var regY = yy + 3;
 			var regS = 1.5;
-			draw_sprite_ext(sprRegalStart,regI,regX,regY,regS,regS,0,c_white,1);
+			draw_sprite_ext(sprRegalStart,3,regX,regY,regS,regS,0,c_white,1);
 			xx -= 14;
 		}
 		if (isOverwriteWeapon && UberCont.wep_found[Menu.race,UberCont.opt_gm1wep])
