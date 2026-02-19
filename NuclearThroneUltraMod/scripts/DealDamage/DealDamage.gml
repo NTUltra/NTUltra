@@ -6,11 +6,11 @@ function DealDamage(theDamage, isPerFrame = false,boostDamage = true, canMod = t
 	if my_health > 0
 	{
 		my_health -= theDamage;
-		if variable_instance_exists(other, "team") && team != 2 && team != 0
+		if team != 2 && team != 0
 		{
 			if other.team == 2
 			{
-				if canMod && variable_instance_exists(other, "wepFire")
+				if canMod// && variable_instance_exists(other, "wepFire")
 					scrModHit(other);
 				if (boostDamage)
 				{
@@ -19,7 +19,7 @@ function DealDamage(theDamage, isPerFrame = false,boostDamage = true, canMod = t
 				}
 			}
 		}
-		if variable_instance_exists(other, "isVenomized") && other.isVenomized == 1
+		if other.isVenomized == 1
 		{
 			var projectileRef = other;
 			projectileRef.isVenomized += 1;

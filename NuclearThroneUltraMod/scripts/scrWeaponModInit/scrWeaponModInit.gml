@@ -11,7 +11,7 @@ function scrWeaponModInit(){
 	confDropChanceIndex = -1;
 	itemDropChanceIndex = -1;
 	weaponDropChanceIndex = -1;
-	wepFire = 0;
+	wepFire = -1;
 	isVenomized = 0;
 	hadSpeedApplied = false;
 	poppop = false;

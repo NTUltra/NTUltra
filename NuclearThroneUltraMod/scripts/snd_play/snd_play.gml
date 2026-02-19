@@ -17,7 +17,8 @@ function snd_play(sndId, randompitch = 0, cancelPrev = false, usesLocation = tru
 			if nearest.mySound == sndId
 			{
 				audio_stop_sound(sndId);
-				instance_destroy();
+				with nearest
+					instance_destroy();
 			}
 		}
 	}
