@@ -2,7 +2,7 @@
 // /@description
 ///@param
 function scrApplyEnemyMiniVenom(applierTeam, target, vDamage, vHits) {
-	if target.team != 0 && target.my_health > 0
+	if instance_exists(target) && target.team != 0 && target.my_health > 0
 		with instance_create(x,y,EnemyMiniVenom)
 		{
 			dmg = vDamage;

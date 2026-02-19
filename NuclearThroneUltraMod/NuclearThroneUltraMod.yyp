@@ -6446,6 +6446,8 @@
     {"id":{"name":"sprCrown41Walk","path":"sprites/sprCrown41Walk/sprCrown41Walk.yy",},},
     {"id":{"name":"sprCrown43Idle","path":"sprites/sprCrown43Idle/sprCrown43Idle.yy",},},
     {"id":{"name":"sprCrown43Walk","path":"sprites/sprCrown43Walk/sprCrown43Walk.yy",},},
+    {"id":{"name":"sprCrown44Idle","path":"sprites/sprCrown44Idle/sprCrown44Idle.yy",},},
+    {"id":{"name":"sprCrown44Walk","path":"sprites/sprCrown44Walk/sprCrown44Walk.yy",},},
     {"id":{"name":"sprCrown4Idle","path":"sprites/sprCrown4Idle/sprCrown4Idle.yy",},},
     {"id":{"name":"sprCrown4Walk","path":"sprites/sprCrown4Walk/sprCrown4Walk.yy",},},
     {"id":{"name":"sprCrown5Idle","path":"sprites/sprCrown5Idle/sprCrown5Idle.yy",},},

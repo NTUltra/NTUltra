@@ -10,7 +10,7 @@ if other.team != team and other.my_health > 0
 				sprite_index = spr_hurt
 				image_index = 0
 				DealDamage(other.dmg)
-				if other.venomDamage > 0
+				if other.venomDamage > 0 && my_health > 0
 				{
 					scrApplyEnemyMiniVenom(other.team,id,other.venomDamage, other.venomHits);
 				}
@@ -26,7 +26,7 @@ if other.team != team and other.my_health > 0
 		{
 			snd_play(snd_hurt, hurt_pitch_variation)
 			DealDamage(other.dmg);
-			if other.venomDamage > 0
+			if other.venomDamage > 0 && my_health > 0
 			{
 				scrApplyEnemyMiniVenom(other.team,id,other.venomDamage, other.venomHits);
 			}

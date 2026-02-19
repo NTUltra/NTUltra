@@ -9,5 +9,6 @@ cost = 0.5;
 radCost = 0;
 venomHits = 0;
 venomDamage = 0;
+team = 2;
 if scrIsHardMode()//HARD MODE
 	dmg = 4;

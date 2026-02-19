@@ -1,6 +1,6 @@
 image_speed=0;
 projectileHitBrake = 3.5;
-breakImmunity = 6;
+breakImmunity = 3;
 loseOnBreak = 12;
 enemyHitbrake = 5;
 bloomSprite = sprSheepDashBloom;
@@ -41,7 +41,7 @@ if instance_exists(Player)
 		breakReduction = 4;
 		sprite_index=sprSheepDashFXultra;
 		projectileHitBrake-= 1;
-		breakImmunity = 7;
+		breakImmunity = 5;
 		loseOnBreak = 9;
 		enemyHitbrake -= 1.4;
 		dmg = baseDmg*damageBoost;

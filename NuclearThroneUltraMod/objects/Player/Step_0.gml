@@ -3168,7 +3168,7 @@ if instance_exists(Tangle)
 	if UberCont.normalGameSpeed == 60
 		dt = 1.25;
 	var al = array_length(projs);
-	if Player.ultra_got[20] && !Player.altUltra//plant STEREO ultra D
+	if ultra_got[20] && !altUltra//plant STEREO ultra D
 	{
 		for (var i = 0; i < al; i ++) {
 			with projs[i]
@@ -3180,7 +3180,7 @@ if instance_exists(Tangle)
 					scrForcePosition60fps();
 
 				}
-				else if team != Player.team && canBeMoved
+				else if team != other.team && canBeMoved
 				{
 					x -= hspeed * 0.75 * dt;
 					y -= vspeed * 0.75 * dt;
@@ -3205,7 +3205,7 @@ if instance_exists(Tangle)
 		}
 	}
 }
-if Player.ultra_got[34]//Chicken Ultra B ninja
+if ultra_got[34]//Chicken Ultra B ninja
 {
 //some melee exceptions
 	if scrMeleeWeapons(wep)
@@ -3222,7 +3222,7 @@ if Player.ultra_got[34]//Chicken Ultra B ninja
 		}
 	}
 }
-if Player.ultra_got[111]//Knife skills
+if ultra_got[111]//Knife skills
 {
 	//if scrMeleeWeapons(wep)
 	//{
