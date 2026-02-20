@@ -1,4 +1,7 @@
 /// @description dmg
+team = -1 ;
+wepFire = -1;
+isVenomized = 0;
 image_speed = 0.4;
 dmg = 4;
 isEasy = false;

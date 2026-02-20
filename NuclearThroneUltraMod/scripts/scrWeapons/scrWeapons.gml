@@ -7576,7 +7576,7 @@ function scrWeapons() {
 	wep_name[676] = "MICRO ASSAULT RIFLE"
 	wep_type[676] = 1
 	wep_auto[676] = 3
-	wep_load[676] = 13
+	wep_load[676] = 12
 	wep_cost[676] = 3
 	wep_sprt[676] = sprMicroAssaultRifle
 	wep_area[676] = 1
@@ -10169,7 +10169,7 @@ function scrWeapons() {
 	wep_name[906] = "OLD SLUGGER"
 	wep_type[906] = 2
 	wep_auto[906] = 0
-	wep_load[906] = 50
+	wep_load[906] = 55
 	wep_cost[906] = 4
 	wep_sprt[906] = sprOldSlugger
 	wep_area[906] = 1

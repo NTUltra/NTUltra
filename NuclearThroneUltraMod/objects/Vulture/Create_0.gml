@@ -1,5 +1,5 @@
 raddrop = 6
-maxhealth = 14
+maxhealth = 15
 meleedamage = 0
 mySize = 1
 loops = GetPlayerLoops();

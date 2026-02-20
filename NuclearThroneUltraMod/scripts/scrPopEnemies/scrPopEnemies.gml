@@ -396,11 +396,11 @@ function scrPopEnemies() {
 	        }
 	        else {
 	            if random(4) < 1
-	            instance_create(x + 16, y + 16, choose(MeleeBandit, Sniper, MeleeFake, Sniper, MeleeFake, Sniper, Sniper, Exploder, Thief))
+	            instance_create(x + 16, y + 16, choose(MeleeBandit, Sniper, MeleeFake, Sniper, MeleeFake, Sniper, Sniper, Exploder, Thief, Salamander))
 	            else {
 	                if random(10) < 1 {
 	                    if random(8) < 1 instance_create(x + 16, y + 16, Car)
-	                    //instance_create(x+16+random(4)-2,y+16+random(4)-2,Raven)
+	                    instance_create(x+16+random(4)-2,y+16+random(4)-2,Raven)
 	                    instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, Raven)
 	                }
 	                else

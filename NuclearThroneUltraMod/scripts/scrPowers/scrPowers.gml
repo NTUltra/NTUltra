@@ -175,7 +175,7 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index = spr_hurt
 						image_index = 0
 						snd_play(snd_hurt, hurt_pitch_variation,true)
-						with scrDrop(16,8) {
+						with scrDrop(13,8) {
 							motion_add(stabDir + 180, 3);	
 						}
 					}
@@ -249,7 +249,7 @@ function scrPowers(raceOverwrite = -1) {
 								sprite_index = sprThiefStealHitUpg;
 								image_angle = random(360);
 							}
-							with scrDrop(9,3) {
+							with scrDrop(5,2) {
 								motion_add(stabDir + 180, 3);
 							}
 						}

@@ -62,7 +62,7 @@ else { //PRE LOOP
     if target != noone {
         if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 			var dis = point_distance(target.x, target.y, x, y);
-            if dis > 64 && dis < 200 {
+            if dis > 64 && dis < 350 {
                 if random(3) < 1 {
 					oooimgonnashoot = true;
                 }

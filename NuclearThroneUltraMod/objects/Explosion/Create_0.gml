@@ -41,6 +41,8 @@ else
 }
 
 team = -1
+wepFire = -1;
+isVenomized = 0;
 if instance_exists(Player) {
 	if Player.ultra_got[57]
 	{

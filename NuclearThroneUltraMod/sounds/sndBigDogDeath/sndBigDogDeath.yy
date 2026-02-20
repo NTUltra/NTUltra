@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":3.725351,
+  "duration":3.7253516,
   "exportDir":"",
   "name":"sndBigDogDeath",
   "parent":{

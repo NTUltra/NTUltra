@@ -8,7 +8,7 @@ event_inherited()
 meleedamage = 3
 
 loops = GetPlayerLoops();
-maxSpeed = 3.9;
+maxSpeed = 3.95;
 actTime = 14;
 healTime = 15;
 if loops > 0
@@ -19,7 +19,7 @@ if loops > 0
 if loops > 4
 	maxSpeed = 4.5;
 
-acc = 0.6;
+acc = 0.7;
 accCharge = 1.7;
 spr_idle = sprHyenaIdle
 spr_eat = sprHyenaEat;

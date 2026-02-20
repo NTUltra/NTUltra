@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.625011,
+  "duration":0.6250113,
   "exportDir":"",
   "name":"sndBigDogHit",
   "parent":{

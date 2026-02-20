@@ -30,7 +30,7 @@ if oooimgonnashoot {
 		snd_play(sndEnemyFire);
 	}
     with instance_create(x, y, proj) {
-        motion_add(other.gunangle + random(20) - 10, 3.5)
+        motion_add(other.gunangle + random(20) - 10, 3.75)
         image_angle = direction
         team = other.team
     }
