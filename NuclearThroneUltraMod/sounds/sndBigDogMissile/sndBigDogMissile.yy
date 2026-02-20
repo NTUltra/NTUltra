@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.23424,
+  "duration":1.2342404,
   "exportDir":"",
   "name":"sndBigDogMissile",
   "parent":{

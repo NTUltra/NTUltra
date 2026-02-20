@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndScrapDogFire",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.32700682,
+  "exportDir":"",
+  "name":"sndScrapDogFire",
+  "parent":{
+    "name":"Regular",
+    "path":"folders/Sounds/Enemies/Regular.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndScrapDogFire.wav",
+  "volume":1.0,
+}

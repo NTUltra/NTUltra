@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":3.407687,
+  "duration":3.4076872,
   "exportDir":"",
   "name":"sndBigDogSpin",
   "parent":{

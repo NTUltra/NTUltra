@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndScrapDogShot",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.098322,
+  "exportDir":"",
+  "name":"sndScrapDogShot",
+  "parent":{
+    "name":"Regular",
+    "path":"folders/Sounds/Enemies/Regular.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndScrapDogShot.wav",
+  "volume":1.0,
+}

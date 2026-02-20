@@ -584,6 +584,8 @@ function scrShadows() {
 	draw_sprite(shd24,0,x-vx,y-vy+1)
 	with BuffMushroom
 	draw_sprite(shd48,0,x-vx,y-vy)
+	with ScrapDog
+	draw_sprite(shdScrapDog,0,x-vx,y-vy)
 	with RhinoFreak
 	draw_sprite(shd48,0,x-vx,y-vy)
 	with InvertedRhinoFreak

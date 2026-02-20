@@ -534,7 +534,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
-			instance_create(x,y,PlutoAttack);
+			instance_create(x + 48,y,ScrapDog);
 			peaceBarriers += 1;
 			getVision = true;
 			voidBeam = voidBeamMax;
@@ -556,7 +556,7 @@ if !instance_exists(LevCont) and visible = 1
 			var dangle = random(1)*360;
 			with enemy
 			{
-				my_health = 0;
+				//my_health = 0;
 			}
 			/*
 			var f = instance_nearest(x + dcos(dangle)*128,y + dsin(dangle)*64,Floor);
