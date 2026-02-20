@@ -18,12 +18,12 @@ tellTime = 4
 actTime = 17;
 maxAmmo = 6;
 ammo = maxAmmo;
-pspeed = 9;
+pspeed = 10;
 if loops > 0
 {
 	tellTime = 3;
 	actTime = 14;
-	pspeed = 12;
+	pspeed = 14;
 }
 else
 {

@@ -13,7 +13,7 @@ isBoss = true;
 team = 3;
 loop= loops > 0;
 reachedHalfHealth = false;
-actTime = 14;
+actTime = 13;
 
 if loops > 0
 	actTime -= 2;

@@ -34,7 +34,7 @@ xx=x;
 yy=y;
 freeze = 20
 
-actTime = 12;
+actTime = 11;
 loops = GetPlayerLoops();
 maxAmmo = 6;
 if loops > 2

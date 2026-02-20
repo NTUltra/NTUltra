@@ -21,7 +21,7 @@ chance = 10;
 acc = 2;
 maxSpeed = 3;
 speedBuff = 3;
-projectileSpeed = 2;
+projectileSpeed = 2.35;
 
 instance_create(x,y,BigWallBreak);
 alarm[2] = 3;

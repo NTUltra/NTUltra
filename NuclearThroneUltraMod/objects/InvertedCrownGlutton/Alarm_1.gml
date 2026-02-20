@@ -157,6 +157,7 @@ else if random(10) < 1 {
 if !reachedHalfway && my_health < maxhealth * 0.7
 {	
 	actTime -= 1;
+	projectileSpeed += 0.25;
 	reachedHalfway = true;
 	event_user(0);
 	with instance_create_depth(x,y,depth,crowns[5])
@@ -171,6 +172,7 @@ if !reachedHalfway && my_health < maxhealth * 0.7
 else if !reached75 && my_health < maxhealth * 0.4
 {
 	actTime -= 2;
+	projectileSpeed += 0.25;
 	reached75 = true;
 	event_user(0);
 	with instance_create_depth(x,y,depth,crowns[6])

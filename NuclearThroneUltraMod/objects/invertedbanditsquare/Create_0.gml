@@ -11,3 +11,4 @@ maxDetectRange += 20;
 actTime -= 4;
 maxSpeed = 4;
 pSpeed += 0.5;
+attackRangeattackRange += 20;

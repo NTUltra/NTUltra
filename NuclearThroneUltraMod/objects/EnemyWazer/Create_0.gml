@@ -4,10 +4,10 @@ typ = 5;
 team = 1;
 image_yscale = 1;
 laserRange = 3;
-laserRangeIncrease = 5 + min(5,GetPlayerLoops());
+laserRangeIncrease = 8 + min(7,GetPlayerLoops());
 if instance_exists(Player) && Player.skill_got[12]
 {
-	laserRangeIncrease -= 2;
+	laserRangeIncrease -= 3;
 	image_yscale = 0.8;
 }
 maxRange = 800;

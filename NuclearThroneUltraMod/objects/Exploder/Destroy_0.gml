@@ -13,7 +13,7 @@ repeat(14)
     dir += 25
     with instance_create(x,y,EnemyBullet2)
     {
-    motion_add(dir,3)
+    motion_add(dir,3.5)
 	alarm[3] = 10;
     image_angle = direction
     team = other.team

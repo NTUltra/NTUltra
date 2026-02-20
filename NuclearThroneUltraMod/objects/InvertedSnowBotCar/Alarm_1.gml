@@ -1,10 +1,10 @@
-alarm[1] = 19
+alarm[1] = 15
 scrTarget()
 meleedamage = 0
 sprite_index = spr_idle
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 and point_distance(x,y,target.x,target.y) < 200
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 and point_distance(x,y,target.x,target.y) < 240
 {
 
 gunangle = point_direction(x,y,target.x,target.y)+random(8)-4
@@ -12,7 +12,7 @@ gunangle = point_direction(x,y,target.x,target.y)+random(8)-4
 instance_create(x-5,y,Notice);
 instance_create(x,y,Notice);
 instance_create(x+5,y,Notice);
-alarm[3] = 8;
+alarm[3] = 10;
 
 
 

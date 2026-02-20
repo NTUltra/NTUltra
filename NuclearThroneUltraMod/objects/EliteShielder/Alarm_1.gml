@@ -8,12 +8,12 @@ else
 
 if target != noone && instance_exists(target)
 {
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 400
+	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(x,y,target.x,target.y) < 500
 	{
 		if wasBehindWall
 		{
 			wasBehindWall = false;
-			alarm[1] += 20;
+			alarm[1] += 15;
 			exit;
 		}
 	//SEE TARGET

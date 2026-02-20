@@ -16,6 +16,7 @@ spr_dead = sprVultureDead
 snd_hurt = sndVultureHurt
 snd_dead = sndVultureDeath
 
+range = 250;
 //behavior
 walk = 0
 direction = random(360);
@@ -39,6 +40,11 @@ alarm[2] = 1;
 
 gunSpr = sprVultureGun;
 fuckyou = false;
+if loops > 0
+{
+	actTime -= 5;
+	range += 100;
+}
 if loops > 9
 {
 	gunSpr = sprVultureBazooka;

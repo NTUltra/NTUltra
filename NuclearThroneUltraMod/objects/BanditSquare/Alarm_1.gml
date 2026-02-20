@@ -7,7 +7,7 @@ if target != noone
 	var dis = point_distance(target.x,target.y,x,y);
 	if dis > minDistance && dis < maxDetectRange
 	{
-		if random(2) < 1 && dis < 180
+		if random(2) < 1 && dis < attackRange
 		{
 			gunangle = point_direction(x,y,target.x,target.y)
 

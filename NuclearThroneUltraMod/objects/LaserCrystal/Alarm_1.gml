@@ -5,31 +5,31 @@ if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 scrTarget()
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 170
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 300
 {
-if point_distance(x,y,target.x,target.y) > 50
-{
-	event_user(0);
-	ammo = maxAmmo
-	alarm[2] = tellTime
-	snd_play(sndLaserCrystalCharge)
-	gunangle = point_direction(x,y,target.x,target.y)
-	sprite_index = spr_fire
-	alarm[1] = 90+random(10)
-	if instance_exists(Player)
+	if point_distance(x,y,target.x,target.y) > 48
 	{
-	if Player.loops>0
-	alarm[1] = 60+random(30);
-	}
+		event_user(0);
+		ammo = maxAmmo
+		alarm[2] = tellTime
+		snd_play(sndLaserCrystalCharge)
+		gunangle = point_direction(x,y,target.x,target.y)
+		sprite_index = spr_fire
+		alarm[1] = 90+random(10)
+		if instance_exists(Player)
+		{
+		if Player.loops>0
+		alarm[1] = 60+random(30);
+		}
 
-}
-else
-{
-if random(3) < 1
-	direction = point_direction(x,y,target.x,target.y)
-else
-	direction = choose(direction,point_direction(x,y,target.x,target.y)+90+random(180))
-}
+	}
+	else
+	{
+	if random(3) < 1
+		direction = point_direction(x,y,target.x,target.y)
+	else
+		direction = choose(direction,point_direction(x,y,target.x,target.y)+90+random(180))
+	}
 }
 else if random(3) < 1
 direction = random(360)

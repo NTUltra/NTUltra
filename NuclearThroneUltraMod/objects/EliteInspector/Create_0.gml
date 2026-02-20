@@ -51,12 +51,12 @@ alarm[3] = 2;
 actTime = 10;
 loops = GetPlayerLoops();
 maxSpeed = 3;
-range = 70;
-tellTime = 8;
+range = 80;
+tellTime = 10;
 if loops > 2
 {
 	actTime = 8;
 	maxSpeed = 3.2;
-	range += 16;
+	range += 32;
 	tellTime -= 1;
 }

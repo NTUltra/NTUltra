@@ -26,4 +26,4 @@ walk = 0
 gunangle = random(360)
 alarm[1] = 15+random(60)
 
-actTime = 20;
+actTime = 15;

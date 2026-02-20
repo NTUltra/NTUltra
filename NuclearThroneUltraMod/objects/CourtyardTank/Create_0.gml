@@ -1,5 +1,5 @@
 raddrop = 6
-maxhealth = 40
+maxhealth = 42
 mySize = 3
 
 event_inherited()

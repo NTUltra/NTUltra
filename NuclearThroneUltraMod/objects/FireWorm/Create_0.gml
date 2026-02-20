@@ -23,14 +23,14 @@ actTime = 15;
 maxSpeed = 2;
 acc = 0.6;
 myLaser = -1;
-laserDuration = 70;
+laserDuration = 50;
 laserDirection = 0;
 tellTime = 26;
 laserOffsetMax = 30;
 laserOffset = 0;
 laserDir = 1;
 angleStep = 1;
-maxRange = 160;
+maxRange = 220;
 maxRange += min(GetPlayerLoops()*30,300);
 lox = 16;//Laser offset X
 instance_create(x,y,BigWallBreak);

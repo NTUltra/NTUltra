@@ -20,7 +20,7 @@ alarm[1] = 30+random(90)
 alarm[10] = 0;
 actTime = 16;
 acc = 1;
-projectileSpeed = 2.8;
+projectileSpeed = 2.95;
 maxSpeed = 4;
 
 maxammo = 3;

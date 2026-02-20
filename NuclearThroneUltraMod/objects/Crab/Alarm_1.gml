@@ -1,8 +1,8 @@
-alarm[1] = actTime+random(10)
+alarm[1] = actTime+random(actTime)
 scrTarget()
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 && point_distance(target.x,target.y,x,y)<120
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and random(2) < 1 && point_distance(target.x,target.y,x,y)<300
 {
 ammo = maxAmmo
 alarm[2] = 1

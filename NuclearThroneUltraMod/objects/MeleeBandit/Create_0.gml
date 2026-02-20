@@ -13,7 +13,7 @@ spr_walk = sprMeleeWalk
 spr_hurt = sprMeleeHurt
 spr_dead = sprMeleeDead
 
-
+range = 72;
 
 snd_hurt = sndAssassinHit
 snd_dead = sndAssassinDie

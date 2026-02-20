@@ -9,7 +9,7 @@ if ammo > 0
 		{
 			raddrop = 0;
 			countKill = false;
-			motion_add(other.gunangle,other.pspeed)
+			motion_add(other.gunangle,other.pspeed - 1)
 			image_angle = direction
 			team = other.team
 			charge = true;

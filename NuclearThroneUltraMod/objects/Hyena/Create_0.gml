@@ -9,12 +9,12 @@ meleedamage = 3
 
 loops = GetPlayerLoops();
 maxSpeed = 3.9;
-actTime = 15;
+actTime = 14;
 healTime = 15;
 if loops > 0
 {
 	maxSpeed = 4.1;
-	actTime = 10;
+	actTime = 190;
 }
 if loops > 4
 	maxSpeed = 4.5;

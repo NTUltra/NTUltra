@@ -5,6 +5,7 @@ mySize = 2
 event_inherited()
 meleedamage = 5
 
+range = 250;
 spr_idle = sprJungleFlyIdle
 spr_walk = sprJungleFlyWalk
 spr_hurt = sprJungleFlyHurt

@@ -42,7 +42,7 @@ if target==Player
 		exit;
 	}
     //SEE PLAYER AND FAR ENOUGH AND NOT SHOUTING "FREEZE MOTHERFUCKER"
-    if random(3) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 200
+    if random(3) < 1 and freeze > 40 && point_distance(target.x,target.y,x,y) < 350
     {
 		//FIRE
 		alarm[2]=3;

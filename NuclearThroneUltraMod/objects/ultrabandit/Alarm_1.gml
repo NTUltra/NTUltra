@@ -5,7 +5,7 @@ scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
         if point_distance(target.x, target.y, x, y) > 32 {
-			if random(6) < 1 && point_distance(target.x, target.y, x, y) < 200 {
+			if random(6) < 1 && point_distance(target.x, target.y, x, y) < 350 {
 				gunangle = point_direction(x, y, target.xprevious, target.yprevious)
 				alarm[2] = 3;
 				alarm[1] += 12;

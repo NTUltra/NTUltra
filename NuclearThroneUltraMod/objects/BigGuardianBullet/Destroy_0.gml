@@ -23,7 +23,7 @@ if canSpawn
 	repeat(amount)
 	{
 		var offset = 0;
-		var pspd = 2;
+		var pspd = 2.25;
 		repeat(4 + loops)
 		{
 			if owner > -1 && instance_exists(owner)
@@ -37,8 +37,8 @@ if canSpawn
 					team = other.team
 					owner = other.owner;
 				}
-		offset += 0.5;
-		pspd+=0.5;
+			offset += 0.5;
+			pspd+=0.5;
 		}
 		angle += angleStep;
 	}

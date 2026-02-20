@@ -8,7 +8,7 @@ motion_add(direction,1);
 	{
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
-		if x > Player.x - 160 && x < Player.x + 160 && y > Player.y - 120 && y < Player.y + 120 && random(2) < 1
+		if x > Player.x - 250 && x < Player.x + 250 && y > Player.y - 250 && y < Player.y + 250 && random(2) < 1
 		{
 			speed = 0;
 			charge = true;
@@ -27,13 +27,12 @@ motion_add(direction,1);
 			direction = point_direction(x,y,target.x,target.y)+random(80)-40;
 			alarm[1] -= 6;
 			speed = 2;
-			}
-
+		}
 
 	if target.x < x
-	right = -1
+		right = -1
 	else if target.x > x
-	right = 1
+		right = 1
 		motion_add(point_direction(x,y,target.x,target.y)+random(80)-40,1);
 	}
 	else if random(4) < 1

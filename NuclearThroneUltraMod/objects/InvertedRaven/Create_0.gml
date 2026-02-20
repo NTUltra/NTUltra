@@ -30,3 +30,9 @@ targetx = x;
 targety = y;
 ravenFly = InvertedRavenFly;
 wasBehindWall = false;
+maxRange = 300;
+loops = GetPlayerLoops();
+if loops > 0
+{
+	maxRange += 60;
+}

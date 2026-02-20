@@ -13,7 +13,7 @@ if target != noone && instance_exists(target)
 		}
 		if point_distance(target.x,target.y,x,y) > minRange
 		{
-			if random(4) < 1 && point_distance(target.x,target.y,x,y) < maxRange
+			if random(fireChance) < 1 && point_distance(target.x,target.y,x,y) < maxRange
 			{
 				//FIRE
 				alarm[2] = 1;

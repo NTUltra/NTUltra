@@ -13,7 +13,7 @@ spr_dead = sprInvertedCourtyardGuardianDead
 //behavior
 actTime = 13;
 acc = 1.2;
-projectileSpeed = 3.3;
+projectileSpeed = 3.4;
 maxSpeed = 5;
 
 maxammo = 4;

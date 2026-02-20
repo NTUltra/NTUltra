@@ -17,11 +17,14 @@ alarm[2] = 1;
 
 gunSpr = sprInvertedVultureGun;
 fuckyou = false;
-if GetPlayerLoops() > 9
+if loops > 9
 {
 	gunSpr = sprInvertedVultureBazooka;
 	fuckyou = true;
 }
 actTime = 17;
+if loops > 0
+	actTime -= 5;
+range += 50;
 eatTime = 10;
 maxSpeed = 4;

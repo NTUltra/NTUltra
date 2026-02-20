@@ -39,10 +39,12 @@ maxSpeed = 3;
 actTime = 21;
 pSpeed = 3.6;
 minDistance = 54;
+attackRange = 200;
 if loops > 0
 {
 	actTime = 13;
-	maxDetectRange += 90;
+	maxDetectRange += 100;
+	attackRange += 100;
 	pSpeed = 4.1;
 	minDistance = 0;
 }

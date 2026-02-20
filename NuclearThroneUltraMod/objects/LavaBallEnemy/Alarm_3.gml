@@ -14,7 +14,7 @@ direction = point_direction(x,y,target.xprevious,target.yprevious)
             {
 	            sprite_index = sprFireLilHunter
 				dmg += 1;
-	            motion_add(other.direction+random(16)-6,4+random(4))
+	            motion_add(other.direction+random(16)-6,6+random(3))
 	            image_angle = direction
 	            team = other.team
             }
@@ -27,7 +27,7 @@ direction = point_direction(x,y,target.xprevious,target.yprevious)
             {
             sprite_index = sprFireLilHunter
 			dmg += 1;
-            motion_add(other.direction+random(12)-6,4+random(4))
+            motion_add(other.direction+random(12)-6,5+random(3))
             image_angle = direction
             team = other.team
             }

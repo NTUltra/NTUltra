@@ -9,7 +9,7 @@ spr_dead = sprInvertedJungleAssassinDead
 maxSpeed = 4.5;
 tellTime = 10;
 actTime = 1;
-range = 80;
+range = 84;
 isInverted = true;
 if loops > 0
 	tellTime = 8;

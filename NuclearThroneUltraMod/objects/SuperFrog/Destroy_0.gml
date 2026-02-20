@@ -13,7 +13,7 @@ if !sleeping
 		dir += angStep
 		with instance_create(x,y,EnemyBullet2)
 		{
-		motion_add(dir,4)
+		motion_add(dir,4.25)
 		image_angle = direction
 		team = other.team
 		}

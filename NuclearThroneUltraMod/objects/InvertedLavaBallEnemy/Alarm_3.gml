@@ -13,14 +13,14 @@ if instance_exists(Player)
 
             with instance_create(x,y,EnemyIceFlame)
             {
-            motion_add(other.direction+random(12)-6+30,3+random(4))
+            motion_add(other.direction+random(12)-6+30,5+random(3))
             image_angle = direction
             team = other.team
             }
             
             with instance_create(x,y,EnemyIceFlame)
             {
-            motion_add(other.direction+random(12)-6-30,3+random(4))
+            motion_add(other.direction+random(12)-6-30,5+random(3))
             image_angle = direction
             team = other.team
             }
@@ -30,14 +30,14 @@ if instance_exists(Player)
     {
             with instance_create(x,y,EnemyIceFlame)
             {
-            motion_add(other.direction+random(16)-6+30,2+random(3))
+            motion_add(other.direction+random(16)-6+30,4+random(3))
             image_angle = direction
             team = other.team
             }
             
             with instance_create(x,y,EnemyIceFlame)
             {
-            motion_add(other.direction+random(16)-6-30,2+random(3))
+            motion_add(other.direction+random(16)-6-30,4+random(3))
             image_angle = direction
             team = other.team
             }

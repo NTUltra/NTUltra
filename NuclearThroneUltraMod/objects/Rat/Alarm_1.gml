@@ -1,5 +1,5 @@
 scrTarget()
-alarm[1] = 10+random(30)
+alarm[1] = 10+random(20)
 
 if instance_exists(Player)
 {

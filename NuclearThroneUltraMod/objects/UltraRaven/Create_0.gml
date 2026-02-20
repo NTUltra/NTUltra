@@ -1,6 +1,9 @@
 event_inherited();
 raddrop = 16;
 maxhealth = 25;
+fireChance = 3;
+maxRange += 50;
+minRange = 14;
 EnemyHealthAdjustments();
 spr_idle = sprUltraRavenIdle;
 spr_walk = sprUltraRavenWalk;

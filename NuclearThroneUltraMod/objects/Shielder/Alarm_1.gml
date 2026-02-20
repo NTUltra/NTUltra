@@ -1,4 +1,4 @@
-alarm[1] = 17+random(5)
+alarm[1] = 15+random(5)
 if loops > 0
 	alarm[1] -= 2;
 Shielding=false;
@@ -16,7 +16,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	if wasBehindWall
 	{
 		wasBehindWall = false;
-		alarm[1] += 20;
+		alarm[1] += 15;
 		exit;
 	}
 //SEE TARGET
@@ -78,7 +78,7 @@ right = 1
 else if hspeed < 0
 right = -1
 }
-else if freeze > 40 and random(4) < 1 and point_distance(x,y,target.x,target.y) < 96
+else if freeze > 40 and random(4) < 1 and point_distance(x,y,target.x,target.y) < 128
 {
 	wasBehindWall = true;
 //SHIELD

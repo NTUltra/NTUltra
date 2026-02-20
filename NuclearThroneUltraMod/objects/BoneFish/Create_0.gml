@@ -18,7 +18,7 @@ snd_hurt = sndHitFlesh
 walk = 0
 alarm[1] = 15+random(60)
 maxSpeed = 3.9
-actTime = 19;
+actTime = 17;
 loops = GetPlayerLoops();
 if loops > 0
 {

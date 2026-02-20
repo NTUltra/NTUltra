@@ -5,7 +5,7 @@ scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
 		var dis = point_distance(target.x, target.y, x, y);
-        if dis > 58  && dis < 200{
+        if dis > 58  && dis < 250{
             if random(4) < 1 {
 				alarm[2] = 2;
 				alarm[1] += 2;

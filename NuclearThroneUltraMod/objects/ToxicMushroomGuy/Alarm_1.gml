@@ -4,7 +4,7 @@ alarm[1] = actTime + random(actTime)
 scrTarget()
 if target != noone {
     if collision_line(x, y, target.x, target.y, Wall, 0, 0) < 0 {
-        if !justBehindWall && random(3) < 1  && point_distance(x,y,target.x,target.y) < 200{
+        if !justBehindWall && random(3) < 1  && point_distance(x,y,target.x,target.y) < 250{
 			event_user(0);
         }
         else {

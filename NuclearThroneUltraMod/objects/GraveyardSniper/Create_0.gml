@@ -25,11 +25,11 @@ tellTime = 7
 actTime = 25;
 maxAmmo = 4;
 ammo = maxAmmo;
-pspeed = 6.9;
+pspeed = 8;
 if loops > 0
 {
 	tellTime = 5;
 	actTime = 18;
-	pspeed = 9;
+	pspeed = 11;
 }
 alarm[3] = 10 + irandom(10);

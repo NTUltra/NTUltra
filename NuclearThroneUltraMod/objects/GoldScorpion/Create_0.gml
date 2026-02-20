@@ -16,7 +16,7 @@ snd_dead = sndGoldScorpionDead;
 snd_melee = sndGoldScorpionMelee
 
 //behavior
-range = 200;
+range = 250;
 ammo = 10
 walk = 0
 if instance_exists(Player)

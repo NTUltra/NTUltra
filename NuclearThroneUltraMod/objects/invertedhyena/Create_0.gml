@@ -8,12 +8,12 @@ maxhealth = 7;
 meleedamage = 4;
 EnemyHealthAdjustments();
 maxSpeed = 4.2;
-actTime = 12;
+actTime = 11;
 healTime = 12;
 if loops > 0
 {
 	maxSpeed = 4.4;
-	actTime = 10;
+	actTime = 9;
 }
 if loops > 3
 	maxSpeed = 4.7;

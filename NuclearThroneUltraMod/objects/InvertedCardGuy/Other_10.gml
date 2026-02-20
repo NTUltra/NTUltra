@@ -6,23 +6,23 @@ snd_play(sndSuperSlugger)
 	var d = gunangle;
 	with instance_create(x,y,EnemyBouncerBullet)
 	{
-		motion_add(d - 12,2.4)
+		motion_add(d - 12,2.5)
 		image_angle = direction
 		team = other.team
 	}with instance_create(x,y,EnemyBullet1)
 	{
-	motion_add(d + 12,2.4)
+	motion_add(d + 12,2.5)
 	image_angle = direction
 	team = other.team
 	}with instance_create(x,y,EnemyBouncerBullet)
 	{
-	motion_add(d - 6,3.4)
+	motion_add(d - 6,3.5)
 	image_angle = direction
 	team = other.team
 	}
 	with instance_create(x,y,EnemyBullet1)
 	{
-	motion_add(d + 6,3.4)
+	motion_add(d + 6,3.5)
 	image_angle = direction
 	team = other.team
 	}
@@ -36,12 +36,12 @@ snd_play(sndSuperSlugger)
 
 	with instance_create(x,y,EnemyBouncerBullet)
 	{
-	motion_add(d + 24,2.4)
+	motion_add(d + 24,2.5)
 	image_angle = direction
 	team = other.team
 	}with instance_create(x,y,EnemyBouncerBullet)
 	{
-	motion_add(d - 24,2.4)
+	motion_add(d - 24,2.5)
 	image_angle = direction
 	team = other.team
 	}

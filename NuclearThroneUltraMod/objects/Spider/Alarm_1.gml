@@ -1,7 +1,7 @@
 scrTarget()
 //alarm[1] = 20+random(10)
 
-alarm[1] = 10+random(10);
+alarm[1] = 9+random(9);
 
 maxSpeed = 3
 if target != noone

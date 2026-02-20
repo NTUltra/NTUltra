@@ -28,10 +28,13 @@ maxAmmo = 3;
 actTime = 18;
 projectileSpeed = 4;
 loops = GetPlayerLoops();
-minRange = 60;
-maxRange = 180;
+minRange = 48;
+maxRange = 250;
+fireChance = 4;
 if loops > 0
 {
+	fireChance = 3;
+	maxRange += 100;
 	minRange = 15;
 	ammo = 4;
 	actTime -= 4;

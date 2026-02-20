@@ -6,12 +6,12 @@ snd_play(sndEraser)
 	var d = gunangle;
 	with instance_create(x,y,EnemyBullet1)
 	{
-		motion_add(d - 12,3)
+		motion_add(d - 12,3.2)
 		image_angle = direction
 		team = other.team
 	}with instance_create(x,y,EnemyBullet1)
 	{
-	motion_add(d + 12,3)
+	motion_add(d + 12,3.2)
 	image_angle = direction
 	team = other.team
 	}with instance_create(x,y,EnemyBullet1Square)

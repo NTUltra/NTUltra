@@ -9,7 +9,7 @@ scrBossHealthBuff();
 
 
 event_inherited()
-actTime = 10;
+actTime = 9;
 reachedHalfHealth = false;
 team = 3;
 loop = loops > 0;

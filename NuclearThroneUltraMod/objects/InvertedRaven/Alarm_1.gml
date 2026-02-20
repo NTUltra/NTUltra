@@ -12,7 +12,7 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	}
 if point_distance(target.x,target.y,x,y) > 15
 {
-if random(3) < 1 && point_distance(target.x,target.y,x,y) < 280
+if random(3) < 1 && point_distance(target.x,target.y,x,y) < maxRange
 {
 //FIRE
 alarm[2] = 1

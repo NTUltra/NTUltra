@@ -16,7 +16,7 @@ if target != noone
 			direction = pdir+random(20)-10
 			motion_add(direction,2);
 		}
-		else if dis > 64 && dis < 128 && ran >= 95 && alarm[3] < 1 && totalAmmo > 0
+		else if dis > 64 && dis < range && ran >= 95 && alarm[3] < 1 && totalAmmo > 0
 		{
 			direction = pdir+random(180)-90
 			gunangle = pdir

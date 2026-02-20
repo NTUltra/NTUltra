@@ -18,11 +18,11 @@ snd_melee = sndGoldScorpionMelee
 //behavior
 ammo = 20
 walk = 0
-range = 220;
+range = 300;
 if instance_exists(Player)
 {
 	if Player.loops > 0
-		range += 70;
+		range += 100;
 	gunangle = point_direction(x,y,Player.x,Player.y);
 }
 else

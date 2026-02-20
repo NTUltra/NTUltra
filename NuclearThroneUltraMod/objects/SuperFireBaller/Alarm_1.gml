@@ -1,4 +1,4 @@
-alarm[1] = 25+random(20)
+alarm[1] = 20+random(20)
 if sprite_index != spr_hurt
 sprite_index = spr_idle
 scrTarget()
@@ -6,7 +6,7 @@ if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if random(5) < 4 && point_distance(x,y,target.x,target.y)<180
+if random(5) < 4 && point_distance(x,y,target.x,target.y)<250
 {
 	snd_play(sndSuperFireballerFire, 0.05)
 	direction = point_direction(x,y,target.x,target.y)+180

@@ -1,6 +1,7 @@
 event_inherited();
 raddrop = 18
 maxhealth = 14
+range = 96;
 EnemyHealthAdjustments();
 spr_idle = sprUltraMeleeIdle
 spr_walk = sprUltraMeleeWalk

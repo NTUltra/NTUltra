@@ -1,4 +1,4 @@
-alarm[1] = 10+random(4)
+alarm[1] = actTime+random(4)
 canDodge = true;
 if loop
 	alarm[1] -= 6;
