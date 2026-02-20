@@ -9,3 +9,5 @@ audio_emitter_gain(emitter, 0.8);
 audio_emitter_falloff(emitter, 50, 400, 1);
 alarm[6] = 1;
 exploSound = sndFlareExplode;
+xprev = x;
+yprev = y;

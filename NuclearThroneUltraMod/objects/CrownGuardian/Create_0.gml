@@ -1,5 +1,5 @@
-raddrop = 12
-maxhealth = 40
+raddrop = 6
+maxhealth = 50
 meleedamage = 0
 mySize = 2
 
@@ -20,10 +20,11 @@ snd_melee = sndScorpionMelee
 
 //behavior
 walk = 0
-alarm[1] = 25
+alarm[1] = 15
 alarm[3] = 10;
 gunangle = random(360)
 candeflect = 0
 canfire = 1
-
+indexTracker = image_index;
+loops = GetPlayerLoops();
 instance_create(x,y,WallBreakWallOnly);

@@ -9,7 +9,7 @@ spr_dead = sprInvertedBuffGatorDead
 
 actTime -= 4;
 tellTime -= 4;
-range = 142;
+range = 160;
 maxSpeed = 3.4;
 loops = GetPlayerLoops();
 if loops > 0

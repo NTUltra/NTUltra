@@ -9,7 +9,7 @@ var l = min(3,loops);
 repeat(20)
 {
 	with instance_create(x, y, EnemyBullet3) {
-	    motion_add(ang, 10 + l)
+	    motion_add(ang, 10.25 + l)
 	    image_angle = direction
 	    team = other.team
 	}

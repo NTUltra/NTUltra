@@ -1151,33 +1151,41 @@ function scrPopEnemies() {
     }
 
 
-    //VENUZ AIRHORN.WAV its OGG now..
+    //VENUZ AIRHORN.WAV its OGG now.. MANSION
     if spawnarea = 103 {
 		if loops > 0
 		{
 			if random(5) < 1
 	        instance_create(x + 16, y + 16, choose(FireBaller, Jock, FireBaller, Jock, FireBaller, SuperFireBaller,BuffMushroom))
-	        else if random(4) < 1 {
+	        else if random(3) < 1 {
 	            if random(5) < 1 && instance_exists(Player) {
 	                if point_distance(x, y, Player.x, Player.y) > 64
 	                instance_create(x + 16, y + 16, GoldBarrel)
 	            }
 	            repeat(3)
-	            instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge,GhostGuardian,JellyFish))
+					instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge,GhostGuardian,JellyFish))
 	        }
+			else if !instance_exists(enemy)
+			{
+				instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge))
+			}
 		}
 		else
 		{
 	        if random(5) < 1
 	        instance_create(x + 16, y + 16, choose(FireBaller, Jock, FireBaller, Jock, FireBaller, SuperFireBaller))
-	        else if random(4) < 1 {
+	        else if random(3) < 1 {
 	            if random(5) < 1 && instance_exists(Player) {
 	                if point_distance(x, y, Player.x, Player.y) > 64
 	                instance_create(x + 16, y + 16, GoldBarrel)
 	            }
 	            repeat(3)
-	            instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge))
+				 instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge))
 	        }
+			else if !instance_exists(enemy)
+			{
+				instance_create(x + 16, y + 16, choose(Molefish, Molefish, Molefish, Molefish, Molesarge))
+			}
 		}
     }
 	if spawnarea = 125 {

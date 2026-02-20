@@ -6,7 +6,7 @@ if target != noone
 {
 if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
-if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 130
+if point_distance(target.x,target.y,x,y) > 48 and point_distance(target.x,target.y,x,y) < 160
 {
 	if random(2) < 1 && existTime > 20
 	{

@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 0 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32.B."
-subUpdateVersion = "49";
+subUpdateVersion = "50";
 notUpdated = "";
 serverIp = "77.249.12.209"serverPort = 1414;
 currentSave = 0;

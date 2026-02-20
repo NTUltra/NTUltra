@@ -10,5 +10,5 @@ EnemyHealthAdjustments();
 meleedamage = 6
 discSpeed += 0.2;
 actTime -= 1;
-range = 300;
+range = 500;
 loops += 3;

@@ -2,6 +2,8 @@
 event_inherited();
 owner = noone;
 team = 1;
+wepFire = -1;
+isVenomized = 0;
 dmg = 1;
 rate = 15;
 if scrIsGamemode(9)
@@ -10,6 +12,7 @@ alarm[0] = rate;
 venomized = false;//Wether or not its targeting player
 maxDamage = 999;
 hits = 0;
+
 if instance_exists(Player) && Player.altUltra && Player.ultra_got[39]
 {
 	maxDamage = 3;	

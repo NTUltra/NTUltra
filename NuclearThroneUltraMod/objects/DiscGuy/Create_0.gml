@@ -15,7 +15,7 @@ snd_dead = sndWolfDead;
 snd_hurt = sndSnowTankHurt;
 
 walk=0;
-range = 230;
+range = 350;
 acc = 0.8;
 maxSpeed = 3;
 //behavior

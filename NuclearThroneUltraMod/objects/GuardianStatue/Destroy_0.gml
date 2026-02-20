@@ -26,7 +26,17 @@ instance_destroy()}
 
 }
 
-instance_create(x,y,CrownGuardian)
+with instance_create(x,y,CrownGuardian)
+{
+	if instance_exists(Player)
+	{
+		if Player.skill_got[29]//insomnia
+		{
+			alarm[1] += 20;
+			scrGiveSnooze(0);
+		}
+	}	
+}
 
 //with CrownPickup
 //instance_destroy()

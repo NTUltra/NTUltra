@@ -4,7 +4,9 @@ function scrModHit(projectileRef) {
 	// scrSheepHit();
 	//Sedatives
 	var wp = projectileRef.wepFire;
-	if Player.ultra_got[100] && team != projectileRef.team && my_health > 0 && wp != -1
+	if wp == -1
+		return;
+	if Player.ultra_got[100] && team != projectileRef.team && my_health > 0
 	{
 		target = noone;
 		walk = 0;

@@ -24,7 +24,7 @@ maxSpeed = 2.8;
 wkick = 0
 actTime = 10;
 tellTime = 12;
-range = 132;
+range = 150;
 loops = GetPlayerLoops();
 pspeed = 8 + min(loops,2);
 if loops > 0
