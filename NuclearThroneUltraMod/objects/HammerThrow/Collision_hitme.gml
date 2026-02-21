@@ -40,24 +40,6 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 					DealDamage(other.dmg);
 					motion_add(other.direction,6)
 					var duration = 30;
-					/*
-					if instance_exists(myConfusion)
-					{
-						if alarm[1] > 1 && alarm[1] < 20 && alarm[11] < 20
-						{
-							var mydur = duration * 0.25;
-							with myConfusion
-							{
-								alarm[0] += mydur;
-								image_speed = 0.4;
-								image_index = 0;
-							}
-							alarm[11] += mydur
-							alarm[1] += mydur;
-						}
-					}
-					else
-					{**/
 						if my_health > 0 && alarm[1] > 0 && alarm[11] < duration
 						{
 							alarm[11] += duration
@@ -70,7 +52,6 @@ if canDealDamage > 0 && other.team != team and other.my_health > 0
 								alarm[0] = duration;
 							}
 						}
-					//}
 				}
 				else
 				{

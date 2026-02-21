@@ -2,12 +2,15 @@
 if ammo == maxAmmo
 {
 	snd_play(sndScrapDogFire);
-	sprite_index = spr_fire;
-	image_index = 0;
 }
 else if ammo < maxAmmo - 3
 {
 	snd_play(sndScrapDogShot);
+}
+if sprite_index != spr_hurt
+{
+	sprite_index = spr_fire;
+	image_index = 0;
 }
 if ammo > 0
 {
@@ -18,7 +21,7 @@ if ammo > 0
 if ammo % gap != 1
 {
 	with instance_create(x, y, EnemyBullet1) {
-	    motion_add(other.gunangle, 4)
+	    motion_add(other.gunangle, other.projectileSpeed)
 	    image_angle = direction
 	    team = other.team
 	}

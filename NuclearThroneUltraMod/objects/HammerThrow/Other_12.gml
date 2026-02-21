@@ -14,7 +14,7 @@ BackCont.viewy2 += lengthdir_y(20,direction)*UberCont.opt_shake
 var shuffleTime = 9;
 if speed > 0
 	shuffleTime -= 2;
-alarm[4] = 3;
+alarm[4] = 5;
 if instance_exists(Player)
 {
 	if Player.skill_got[5]

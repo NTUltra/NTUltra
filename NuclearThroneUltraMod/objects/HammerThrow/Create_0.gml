@@ -9,7 +9,7 @@ they have a FORCE and can be 0 or DIRECTIONAL */
 typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
 norecycle=false;
 loops = 0;
-dmg = 3;
+dmg = 2;
 cost = 1;
 radCost = 0;
 xprev = xstart;

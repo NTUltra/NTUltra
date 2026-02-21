@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":5.900522,
+  "duration":5.9005218,
   "exportDir":"",
   "name":"sndSnowBlowerLoop",
   "parent":{

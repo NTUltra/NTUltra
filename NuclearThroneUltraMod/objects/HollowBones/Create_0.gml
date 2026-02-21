@@ -2,6 +2,8 @@
 image_speed = 0.4;
 dmg = 2;//over 7 instances of damage
 loops = GetPlayerLoops();
+wepFire = -1;
+isVenomized = 0;
 dmg += loops/7;
 team = 2;
 depth = -2;

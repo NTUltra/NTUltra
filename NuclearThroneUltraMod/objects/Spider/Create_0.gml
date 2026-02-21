@@ -15,11 +15,8 @@ snd_hurt = sndHitRock
 //behavior
 walk = 0
 alarm[1] = 30+random(90)
-maxSpeed = 3.7
+defaultSpeed = 3.5;
+maxSpeed = defaultSpeed
+attackSpeed = 5.5;
 
-if instance_exists(Player)
-{
-if Player.loops>0
-maxSpeed = 4.9
-}
-
+actTime = 10;

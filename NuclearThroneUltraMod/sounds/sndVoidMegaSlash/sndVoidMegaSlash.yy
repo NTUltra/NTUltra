@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.079906,
+  "duration":2.0799093,
   "exportDir":"",
   "name":"sndVoidMegaSlash",
   "parent":{

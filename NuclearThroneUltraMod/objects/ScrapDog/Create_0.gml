@@ -31,3 +31,5 @@ spreadRange = 40;
 gunangleStep = 0;
 alarm[3] = 1;
 missileType = ScrapDogMissile;
+gonnaShoot = false;
+projectileSpeed = 3.7;

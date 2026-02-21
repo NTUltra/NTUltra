@@ -232,8 +232,8 @@ function scrSkills() {
 	skill_bons[11] = "80% INSTEAD#+0.15 FIXED DAMAGE";
 
 	skill_name[12] = "EUPHORIA"
-	skill_text[12] = "<w>SLOWER ENEMY BULLETS<w>#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
-	skill_detail[12] = "<w>SLOWER ENEMY BULLETS<w>#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT#AND CASTS A <aq>SHIELD<aq>"
+	skill_text[12] = "<w>SLOWER<w> AND <w>SMALLER<w> <r>ENEMY BULLETS<r>#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
+	skill_detail[12] = "<w>20% SLOWER<w> <r>ENEMY BULLETS<r>#<w>SHRINK<w> <r>ENEMY BULLETS<r> BY <w>10%<w>#WHEN YOU GET HIT YOU GAIN#<aq>INVINCIBILITY<aq> FOR A SHORT MOMENT#AND CASTS A <aq>SHIELD<aq>"
 	skill_tips[12] = "time passes slowly"
 	skill_msnd[12] =  sndMutEuphoria
 	skill_bons[12] = "+25% IMMUNE TIME#BIGGER PROTECTION BUBBLE";
@@ -620,7 +620,7 @@ function scrSkills() {
 	skill_detail[47] = "EVERY <w>30%<w> <y>AMMO<y>#OF <y>BASE AMMO MAX<y> YOU <w>SPEND<w>:#CAUSES YOUR NEXT INSTANCE OF <w>DAMAGE<w>#TO <v>IMPLODE<v>#DEALING ADDITIONAL DAMAGE,#<w>SLOWING<w> ENEMIES#AND DESTROYING ENEMY PROJECTILES"
 	skill_tips[47] = "there is an emptyness inside"
 	skill_bons[47] = "EVERY 23% AMMO SPENT#+25% BIGGER IMPLOSION"
-	skill_msnd[47] =  sndMutBouncyFat;
+	skill_msnd[47] =  sndMutHollowBones;
 	
 	/*
 	skill_name[48] = "GLUTINOUS BELLY"

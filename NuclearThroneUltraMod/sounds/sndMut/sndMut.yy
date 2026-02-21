@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.962585,
+  "duration":1.9625851,
   "exportDir":"",
   "name":"sndMut",
   "parent":{

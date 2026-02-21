@@ -40,23 +40,7 @@ if loops>0
 			gunangle += angStep
 		}
 
-	}/*
-	if loops>3
-	{
-		var angStep = 360/3;
-		repeat(3)
-		{
-			if choose(true,true,false)
-			with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1Square)
-			{
-				motion_add(other.gunangle,3+random(1))
-				image_angle = direction
-				team = other.team
-			}
-			gunangle += angStep;
-		}
-
-	}*/
+	}
 }
 var angStep = 360/6;
 repeat(5)//6
@@ -69,15 +53,18 @@ repeat(5)//6
 	}
 	gunangle += angStep;
 }
-angStep *= 2;
-repeat(3)//6
+if ammo % 3 != 0
 {
-	with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1Square)
+	angStep *= 2;
+	repeat(3)//6
 	{
-		motion_add(other.gunangle,2)
-		image_angle = direction
-		team = other.team
+		with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1Square)
+		{
+			motion_add(other.gunangle,2)
+			image_angle = direction
+			team = other.team
+		}
+		gunangle += angStep;
 	}
-	gunangle += angStep;
 }
 gunangle += turnSpeed*turn

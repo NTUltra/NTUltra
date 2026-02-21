@@ -205,15 +205,15 @@ function scrPopProps() {
 	instance_create(x+16,y+16,choose(Tires,Car))
 	if spawnarea = 5||spawnarea = 107
 	{
-	if random(35) < 1 && !place_meeting(x,y,Wall)
-	instance_create(x+16,y+16,choose(SnowMan,SodaMachine))
-	else if random(3) < 1
-	{
-	repeat(3) 
-	instance_create(x+16,y+16,StreetLight)
-	}
-	else if !place_meeting(x,y,Wall)
-	instance_create(x+16,y+16,choose(Hydrant,Car))
+		if random(35) < 1 && !place_meeting(x,y,Wall)
+		instance_create(x+16,y+16,choose(SnowMan,SodaMachine))
+		else if random(3) < 1
+		{
+		repeat(3) 
+		instance_create(x+16,y+16,StreetLight)
+		}
+		else if !place_meeting(x,y,Wall)
+		instance_create(x+16,y+16,choose(Hydrant,Car))
 	}
 	if spawnarea == 6 and random(4) < 1 && !place_meeting(x,y,Wall)
 	instance_create(x+16,y+16,choose(Tube,Tube,Tube,Tube,MutantTube))

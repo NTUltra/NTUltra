@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.395011,
+  "duration":0.39501134,
   "exportDir":"",
   "name":"sndMutant1Cnfm",
   "parent":{

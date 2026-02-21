@@ -1,5 +1,9 @@
 function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/, specificType = false) {
 	var wepTier = wepTierParam - 1;
+	if wepTier < 3 && random(4) < 1
+	{
+		wepTier = 0;
+	}
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
 	var minWepArea = minWepAreaParam;
@@ -65,6 +69,7 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 		{
 			wepTier -= 1;
 		}
+		wepTier = max(0,wepTier);
 		var triesForSpecificTier = 0;
 		var maxValidTierWep = 0;
 		if specificType || scrIsGamemode(31)//Only melee

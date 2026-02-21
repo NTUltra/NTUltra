@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndMutHollowBones",
+  "audioGroupId":{
+    "name":"agsfx",
+    "path":"audiogroups/agsfx",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":1.9625851,
+  "exportDir":"",
+  "name":"sndMutHollowBones",
+  "parent":{
+    "name":"Mutations",
+    "path":"folders/Sounds/Mutations.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndMutHollowBones.wav",
+  "volume":1.0,
+}

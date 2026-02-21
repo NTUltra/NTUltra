@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.296625,
+  "duration":1.296644,
   "exportDir":"",
   "name":"sndVoidBlaster",
   "parent":{

@@ -26,14 +26,14 @@ function scrMakeFloor(limiter) {
 	{
 	area = Player.area
 	subarea=Player.subarea;}
-	if area = 1|| area = 105 || area = 113{ if random(3) < 1
+	if area = 1|| area = 105 || area = 113{ if random(4) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
 	instance_create(x,y+32,Floor)
 	}else instance_create(x,y,Floor)}
 
-	if area=101 || area == 122{ if random(2) < 1.4
+	if area=101 || area == 122{ if random(3) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
@@ -881,9 +881,9 @@ function scrMakeFloor(limiter) {
 
 	//HOW high the chances are for a certain turn (or no turn)
 	//if area = 1
-	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90,180)
+	trn = choose(0,0,0,0,0,0,0,0,0,0,90,-90,90,-90,180)
 	if area = 2 or area = 102 or area = 110
-	trn = choose(0,0,0,0,0,0,0,0,90,-90,90,-90,180)
+	trn = choose(0,0,0,0,0,0,0,0,0,90,-90,90,-90,180)
 	else if area = 3 || area = 106 || area == 136
 	trn = choose(0,0,0,0,90,-90)
 	else if area = 4 || area = 111 || area = 115
@@ -1064,7 +1064,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x+16,y+16,AmmoChest)
 		instance_create(x,y,Floor)}
 		}
-		if random(8) < 1
+		if random(10) < 1
 		with instance_create(x,y,FloorMaker) { limiter = scrGenerateFloorMaker(limiter)};
 	}
 	if area == 138 || area == 140//CLOUD

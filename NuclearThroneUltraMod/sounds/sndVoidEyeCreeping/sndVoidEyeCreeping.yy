@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.003129,
+  "duration":1.0031292,
   "exportDir":"",
   "name":"sndVoidEyeCreeping",
   "parent":{

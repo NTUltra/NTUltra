@@ -4,7 +4,7 @@ if (instance_exists(Player) && !Player.justAsheep) sleeping = false;;
 scrTarget()
 if target != noone {
 	var dis = point_distance(target.x, target.y, x, y);
-    if dis > 48  && dis < 200 {
+    if dis > 48  && dis < 300 {
 		var ran = random(10);
 		
 		

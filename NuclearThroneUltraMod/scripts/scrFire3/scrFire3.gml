@@ -4791,7 +4791,7 @@ function scrFire3(hasTailNow){
 			mask_index = mskTreeSlash;
 			snd_wallhit = sndTreeBranchHit;
 			walled = 0;
-			dmg = 7
+			dmg = 6
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection,3.2+longarms)

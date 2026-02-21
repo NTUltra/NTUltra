@@ -471,49 +471,51 @@ function scrPopulate() {
     //making sure there are enough enemies and spawning props/lil walls
 
     with Floor {
-	if object_index != FloorExplo
-	{
-        if instance_exists(Player) {
-            if (spawnarea = 3 && Player.subarea = 3) || (spawnarea = 7 && Player.subarea = 3) //exceptions pls for bosses
-            {
-                if instance_number(enemy) < (3 + min(40,hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280) {
-                    if random(5) < 1
-                    scrPopEnemies()
-                }
-            } else {
-                if instance_number(enemy) < (3 + min(40,hard) * 0.65) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
-                scrPopEnemies()
-            }
-        }
+		if object_index != FloorExplo
+		{
+			if !place_meeting(x, y, RadChest) && !place_meeting(x, y, chestprop)
+			{
+		        if instance_exists(Player) {
+		            if (spawnarea = 3 && Player.subarea = 3) || (spawnarea = 7 && Player.subarea = 3) //exceptions pls for bosses
+		            {
+		                if instance_number(enemy) < (10 + min(40,hard) * 0.65) && point_distance(x, y, Player.x, Player.y) > 100 {
+		                    if random(4) < 1
+								scrPopEnemies()
+		                }
+		            } else {
+		                if instance_number(enemy) < (10 + min(40,hard) * 0.65) && point_distance(x, y, Player.x, Player.y) > 96
+							scrPopEnemies()
+		            }
+		        }
 
-        //CROWN OF BLOOD
-        if instance_exists(Player) {
-            if (scrIsCrown(7) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 210 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
-            {
-				scrPopEnemies()
-			}
+		        //CROWN OF BLOOD
+		        if instance_exists(Player) {
+		            if (scrIsCrown(7) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 128)
+		            {
+						scrPopEnemies()
+					}
 				
-            if (scrIsCrown(28) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 180 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280))
-            {    
-				repeat(3)
-					scrPopEnemies()
-			}
-			if (scrIsGamemode(20) and random(3) < 1 && point_distance(x, y, Player.x, Player.y) > 240 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 290))
-			{
-				scrPopEnemies();
-			}
-			if scrIsGamemode(6)//Claustrophobia
-			{
-				if point_distance(x, y, Player.x, Player.y) > 100 and!place_meeting(x, y, RadChest) and!place_meeting(x, y, AmmoChest) and!place_meeting(x, y, WeaponChest) and((x + 16 != Player.x and y + 16 != Player.y) or point_distance(x, y, Player.x, Player.y) > 280)
-				{
-					//repeat(2)
+		            if (scrIsCrown(28) and random(8 + min(40,hard)) < min(30,hard) and point_distance(x, y, Player.x, Player.y) > 160)
+		            {    
+						repeat(3)
+							scrPopEnemies()
+					}
+					if (scrIsGamemode(20) and random(3) < 1 && point_distance(x, y, Player.x, Player.y) > 224)
+					{
 						scrPopEnemies();
-				}
+					}
+					if scrIsGamemode(6)//Claustrophobia
+					{
+						if point_distance(x, y, Player.x, Player.y) > 64
+						{
+							//repeat(2)
+								scrPopEnemies();
+						}
+					}
+		        }
+		        scrPopProps()
 			}
-        }
-
-        scrPopProps()
-	}
+		}
     }
 
     with NOWALLSHEREPLEASE

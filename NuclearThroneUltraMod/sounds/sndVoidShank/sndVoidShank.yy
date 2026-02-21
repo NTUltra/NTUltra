@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.792,
+  "duration":1.7920182,
   "exportDir":"",
   "name":"sndVoidShank",
   "parent":{

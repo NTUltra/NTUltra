@@ -26,7 +26,7 @@ if instance_exists(Player)
 	if Player.loops > 9
 		proj = EnemyBouncerBullet
 }
-acc = 0.1;
+acc = 0.2;
 maxSpeed = 2;
 scrInitDrops(1);
 draw = true;

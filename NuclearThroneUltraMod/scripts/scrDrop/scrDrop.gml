@@ -237,19 +237,15 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 
 	if Player.ammo[Player.wep_type[Player.wep]] < Player.typ_amax[Player.wep_type[Player.wep]]*(0.2-(Player.skill_got[10]*0.04))
 		need += 0.7//3
-	else if Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*(0.6-(Player.skill_got[10]*0.1))
+	else if Player.ammo[Player.wep_type[Player.wep]] > Player.typ_amax[Player.wep_type[Player.wep]]*(0.55-(Player.skill_got[10]*0.1))
 		need += 0.08 
-	else 
-		need += 0.3//6
 
 	if Player.bwep == 0 
 		need += 0.3//6
 	else if Player.ammo[Player.wep_type[Player.bwep]] < Player.typ_amax[Player.wep_type[Player.bwep]]*(0.2-(Player.skill_got[10]*0.04))
 		need += 0.7//3
-	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.6-(Player.skill_got[10]*0.1))
+	else if Player.ammo[Player.wep_type[Player.bwep]] > Player.typ_amax[Player.wep_type[Player.bwep]]*(0.55-(Player.skill_got[10]*0.1))
 		need += 0.08
-	else 
-		need += 0.3//6
 	if (Player.loops < 1 || Player.skill_got[4])
 	{
 		if random(mh) > h
@@ -271,6 +267,10 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	{
 		need *= 0.75;
 		canHealth *= 0.5;
+	}
+	else if h < 4 && mh > 3
+	{
+		mh += 1;	
 	}
 	if scrIsCrown(32)//Crown of Misfortune
 	{

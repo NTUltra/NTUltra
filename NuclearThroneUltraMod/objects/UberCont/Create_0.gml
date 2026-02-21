@@ -53,6 +53,7 @@ lastSaveLoop = -1;
 areasVisited = 0;
 hasBeenSaved = false;
 loadedRun = false;
+isInInverted = false;
 
 //window_set_max_height(1440);
 //window_set_max_width(1920);

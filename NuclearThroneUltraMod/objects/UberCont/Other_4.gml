@@ -8,6 +8,7 @@ if instance_exists(Player)
 	area=Player.area;
 	subarea=Player.subarea;
 	loops=Player.loops;
+	isInInverted = Player.isInInverted;
 }
 if area == 1 || area == 105 || area == 10 || area == 7 || area == 108 || area == 113 || area == 110 || area == 3 || area == 106 || area == 126 || area == 127 || area == 120 || area == 121 || area == 10
 	snd_wallbreak = sndWallBreakRock;

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.143781,
+  "duration":1.1437869,
   "exportDir":"",
   "name":"sndVoidSuck",
   "parent":{

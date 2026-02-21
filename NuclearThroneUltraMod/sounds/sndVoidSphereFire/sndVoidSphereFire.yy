@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.23725623,
+  "duration":0.23435374,
   "exportDir":"",
   "name":"sndVoidSphereFire",
   "parent":{

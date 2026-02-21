@@ -18,14 +18,14 @@ snd_melee = sndGoldScorpionMelee;
 walk = 0
 alarm[1] = 30+random(90)
 alarm[10] = 0;
-actTime = 23;
+actTime = 22;
 
 circleMode = false;
 circleDistance = 80;
 angle = 0;
 rotationSpeed = choose(2,-2);
-projectileSpeed = 4;
-projectileSpeedCircle = 3;
+projectileSpeed = 4.125;
+projectileSpeedCircle = 3.25;
 lp = 0.118;
 maxSpeed = 4;
 isInverted = false;
@@ -39,5 +39,5 @@ loops = GetPlayerLoops();
 
 if loops > 0
 {
-	actTime = 18;	
+	actTime = 17;	
 }

@@ -84,8 +84,10 @@ missileAmount = 2;
 fireRate = 5;
 turnSpeed = 4;
 projectileSpeed = 2.5;
+stepAmount = 5;
 if loops > 0
 {
+	stepAmount += 1
 	actTime = 9;
 	missileAmount = 4;
 }
@@ -96,6 +98,8 @@ if loops > 1
 	turnSpeed = 6;
 	maxSpinSpeed += 0.2;
 }
+if loops > 3
+	stepAmount += 1;
 if instance_exists(Player) && Player.skill_got[29] {
 	alarm[0] += 60;
 	alarm[1] = alarm[0];

@@ -1,23 +1,21 @@
 ///AI
 if instance_exists(Player)
 {
-alarm[1] = 4;
+	alarm[1] = 4;
 
-scrTarget()
-if target != noone
-{
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
+	scrTarget()
+	if target != noone
 	{
-		if point_distance(target.x,target.y,x,y) > 16
+		if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 		{
 			if hidden
 			{
-				if (point_distance(target.x,target.y,x,y) < 132)
+				if (point_distance(target.x,target.y,x,y) < 200)
 				{
 					image_speed = 0.4;
 				}
 			}
-			else if alarm[2] < 1 && point_distance(target.x,target.y,x,y) < 160
+			else if alarm[2] < 1 && point_distance(target.x,target.y,x,y) < 250
 			{
 				if random(4) < 1 || Player.loops > 1
 				{
@@ -25,18 +23,17 @@ if target != noone
 					ammo = maxAmmo;
 					if (instance_exists(Player) && Player.loops > 0)
 					{
-						alarm[2] = 18;
+						alarm[2] = 10;
 					}
 					else
 					{
-						alarm[2] = 30;
+						alarm[2] = 20;
 					}
+					alarm[1] += alarm[2];
 				}
 			}
-
 		}
 	}
-}
 }
 else
 {

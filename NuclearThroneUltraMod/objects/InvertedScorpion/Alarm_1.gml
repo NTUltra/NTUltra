@@ -1,4 +1,4 @@
-alarm[1] = 10+random(10)
+alarm[1] = 10+random(9)
 scrTarget()
 if target != noone
 {

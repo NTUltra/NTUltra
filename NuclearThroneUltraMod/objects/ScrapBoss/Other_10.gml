@@ -66,8 +66,8 @@ if loops>0
 }
 else
 { 
-	var angStep = 360/6;
-	repeat(5)//6
+	var angStep = 360/stepAmount;
+	repeat(stepAmount - 1)//6
 	{
 		with instance_create(x+lengthdir_x(24,gunangle),y+lengthdir_y(16,gunangle),EnemyBullet1)
 		{

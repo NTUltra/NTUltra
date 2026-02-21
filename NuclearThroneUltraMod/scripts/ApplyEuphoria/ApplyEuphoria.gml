@@ -11,9 +11,11 @@ function ApplyEuphoria(){
 				speed += 0.35;
 				speed *= 1.22;
 			}
-			if Player.skill_got[12] = 1
+			if Player.skill_got[12]
 			{
-				speed = speed*0.78
+				speed = speed * 0.8
+				image_xscale -= 0.1;
+				image_yscale -= 0.1;
 			}
 			if scrIsCrown(24)//Crown of sloth
 			{
@@ -23,7 +25,7 @@ function ApplyEuphoria(){
 			if scrIsGamemode(9)
 			{
 				//Easy mode adjustments
-				speed = speed*0.9
+				speed = speed * 0.9
 				image_xscale -= 0.1;
 				image_yscale -= 0.1;
 			}

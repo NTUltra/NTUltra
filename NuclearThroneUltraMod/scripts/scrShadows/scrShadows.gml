@@ -488,6 +488,8 @@ function scrShadows() {
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with BanditSquare
 		draw_sprite(shd24,0,x-vx,y-vy)
+	with SnowBandit
+		draw_sprite(shd24,0,x-vx,y-vy)
 	with LaserBandit
 		draw_sprite(shd24,0,x-vx,y-vy)
 	with EraserBandit

@@ -154,8 +154,8 @@ function scrPowers(raceOverwrite = -1) {
 							snd_play(sndThiefStabSteal,0.01);
 							with instance_create(x,y,ThiefStab)
 							{
-								range *= 0.6;
-								image_xscale *= 0.5;
+								range *= 0.5;
+								image_xscale *= 0.45;
 								image_yscale = image_xscale;
 								dmg = 3 + lev + l;
 								visible = false;
@@ -181,12 +181,12 @@ function scrPowers(raceOverwrite = -1) {
 					}
 					if ultra_got[110] && altUltra
 					{
-						thiefStealAmmo(1);
+						thiefStealAmmo(0.5);
 						BackCont.shake += 4;
 					}
 					else
 					{
-						thiefStealAmmo(0.5);
+						thiefStealAmmo(0.25);
 					}
 					if !skill_got[2]
 					{
@@ -201,11 +201,11 @@ function scrPowers(raceOverwrite = -1) {
 					{
 						if other.ultra_got[110] && altUltra
 						{
-							thiefStealAmmo(0.3);
+							thiefStealAmmo(0.15);
 						}
 						else
 						{
-							thiefStealAmmo(0.15);
+							thiefStealAmmo(0.075);
 						}
 						with instance_create(x,y,AnimDestroyTop)
 						{
@@ -220,9 +220,9 @@ function scrPowers(raceOverwrite = -1) {
 					else
 					{
 						if other.ultra_got[110] && altUltra
-							thiefStealAmmo(0.25);
-						else
 							thiefStealAmmo(0.125);
+						else
+							thiefStealAmmo(0.075);
 						with instance_create(x,y,AnimDestroyTop)
 						{
 							image_angle = stabDir

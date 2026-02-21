@@ -704,7 +704,7 @@ function scrWeapons() {
 	wep_text[62] = "not the real one"
 	wep_swap[62] = sndSwapMachinegun
 	wep_rad[62] = 0;
-	wep_popup[62] = "FIRES SHELLS/PELLETS";
+	wep_popup[62] = "FIRES SHOTGUN SHELLS";
 
 	wep_name[63] = "BLACKHOLE GENERATOR"
 	wep_type[63] = 5
@@ -2911,7 +2911,7 @@ function scrWeapons() {
 	wep_text[259] = "make a decision, gun!"
 	wep_swap[259] = sndSwapMachinegun
 	wep_rad[259] = 0;
-	wep_popup[259] = "FIRES SHELLS/PELLETS#AND BULLETS";
+	wep_popup[259] = "FIRES SHOTGUN SHELLS#AND BULLETS";
 
 	wep_name[260] = "HYPER HEAVY SLUGGER"
 	wep_type[260] = 2
@@ -3989,7 +3989,7 @@ function scrWeapons() {
 	wep_name[355] = "JAWBREAKER"
 	wep_type[355] = 2
 	wep_auto[355] = 2
-	wep_load[355] = 15
+	wep_load[355] = 17
 	wep_cost[355] = 1.25
 	wep_sprt[355] = sprJawbreaker
 	wep_area[355] = 1
@@ -4324,7 +4324,7 @@ function scrWeapons() {
 	wep_name[383] = "GOLDEN JAWBREAKER"
 	wep_type[383] = 2
 	wep_auto[383] = 2
-	wep_load[383] = 14
+	wep_load[383] = 16
 	wep_cost[383] = 1.25
 	wep_sprt[383] = sprGoldenJawbreaker
 	wep_area[383] = 17
@@ -7965,7 +7965,7 @@ function scrWeapons() {
 	wep_text[710] = "a little bit of something"
 	wep_swap[710] = sndSwapMachinegun
 	wep_rad[710] = 0;
-	wep_popup[710] = "FIRES BULLETS#AND SHELLS/PELLETS";
+	wep_popup[710] = "FIRES BULLETS#AND SHELLS";
 	
 	wep_name[711] = "METAL PIPE"
 	wep_type[711] = 0
@@ -8505,7 +8505,7 @@ function scrWeapons() {
 	wep_type[759] = 5
 	wep_auto[759] = 0
 	wep_load[759] = 12
-	wep_cost[759] = 4
+	wep_cost[759] = 5
 	wep_sprt[759] = sprTriagon
 	wep_area[759] = 1
 	wep_text[759] = "triangle of death"
@@ -9271,7 +9271,7 @@ function scrWeapons() {
 	wep_type[827] = 5
 	wep_auto[827] = 1
 	wep_load[827] = 48
-	wep_cost[827] = 5
+	wep_cost[827] = 6
 	wep_sprt[827] = sprThunderStrike
 	wep_area[827] = 2
 	wep_text[827] = "combine this gun with reload speed increasing mutations"
@@ -10000,7 +10000,7 @@ function scrWeapons() {
 	wep_type[891] = 5
 	wep_auto[891] = 0
 	wep_load[891] = 120
-	wep_cost[891] = 9
+	wep_cost[891] = 20
 	wep_sprt[891] = sprOctagun
 	wep_area[891] = 4
 	wep_text[891] = "octagon of death"

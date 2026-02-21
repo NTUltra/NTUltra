@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.994671,
+  "duration":1.9946712,
   "exportDir":"",
   "name":"sndSnowTankShoot",
   "parent":{

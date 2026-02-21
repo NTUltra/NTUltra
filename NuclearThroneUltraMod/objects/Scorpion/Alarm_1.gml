@@ -1,4 +1,4 @@
-alarm[1] = 30+random(10)
+alarm[1] = 25+random(10)
 scrTarget()
 if target != noone
 {

@@ -27,6 +27,6 @@ spr_actual_hurt = spr_hurt;
 spr_stop = sprInvertedScrapBossStop;
 spr_charge = sprInvertedScrapBossCharge;
 projectileSpeed += 0.25;
-actTime -= 4;
+actTime -= 3;
 maxSpinSpeed += 0.2;
 fireRate -= 1;

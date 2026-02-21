@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.967208,
+  "duration":1.9672109,
   "exportDir":"",
   "name":"sndMutInnerPeace",
   "parent":{

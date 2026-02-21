@@ -1,12 +1,4 @@
-event_inherited()
-
-if walk > 0
-{
-walk -= 1
-motion_add(direction,2)
-}
-
-
+///@description Can Dodge
 
 if dodge > -7
 {
@@ -43,12 +35,4 @@ sprite_index=spr_walk;
 gunangle = direction
 }}
 
-if hspeed > 0
-right = 1
-else if hspeed < 0
-right = -1
-
-
-if speed > maxSpeed
-speed = maxSpeed
-
+event_inherited()

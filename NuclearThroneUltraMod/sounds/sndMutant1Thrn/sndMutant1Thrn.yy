@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.925896,
+  "duration":1.9258957,
   "exportDir":"",
   "name":"sndMutant1Thrn",
   "parent":{
