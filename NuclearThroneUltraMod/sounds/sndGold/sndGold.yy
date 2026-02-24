@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.979375,
+  "duration":0.97938776,
   "exportDir":"",
   "name":"sndGold",
   "parent":{

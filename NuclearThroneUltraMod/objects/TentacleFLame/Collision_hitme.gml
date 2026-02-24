@@ -24,12 +24,15 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 			{
 				scrMoodSwingStun(4);
 				scrMoodSwingLightningArc(22,other.x,other.y,other.team,other.dmg)
+				with Flame
+					canMood = false;
 				scrMoodSwingToxicBullet(other.x,other.y,1);
 				scrMoodSwingIcicle(1, id);
 			}
 		}
 		with instance_create(x,y,Tentacle)
 		{
+			canMood = other.canMood;
 			creator = other.id;
 			image_angle = other.direction + random_range(90,-90);
 			team = other.team

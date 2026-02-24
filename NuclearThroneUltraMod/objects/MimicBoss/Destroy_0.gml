@@ -15,7 +15,7 @@ if instance_exists(Player)
 		scrUnlockCSkin(15,"FOR KILLING ATOM AS ATOM",0);
 }
 scrDrop(100,0);
-scrDrop(100,0);
+scrDrop(25,0);
 scrBossKill();
 event_inherited()
 if instance_number(MimicBoss) < 2

@@ -21,6 +21,7 @@ else
 image_xscale += ceil(longarms);
 with instance_create(x,y,BloodSewingNeedleLine)
 {
+	isBlood = other.isBlood;
 	dmg = other.dmg * 2;
 	if other.sprite_index == sprSewingNeedleCurveLine
 		sprite_index = sprSewingNeedleLine;

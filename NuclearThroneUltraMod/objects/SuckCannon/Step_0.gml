@@ -7,15 +7,7 @@ if owner != noone && instance_exists(owner)
 	y = owner.y;
 	prevangle = image_angle;
 	image_angle = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
-	/*
-	with owner
-	{
-		if !skill_got[2]
-		{
-			scrMoveContactSolid(other.image_angle + 180,0.01);
-			motion_add(other.image_angle+180,0.01)
-		}	
-	}*/
+	var isUltra = object_index == UltraSuckCannon
 	var projs = ds_list_create();
 	var al = instance_place_list(x,y,projectile,projs,false);
 	var o = owner;
@@ -23,7 +15,7 @@ if owner != noone && instance_exists(owner)
 	for (var i = 0; i < al; i++)
 	{
 		with projs[| i] {
-			if team != other.team && canBeMoved
+			if team != other.team && canBeMoved && !collision_line(x,y,other.x,other.y,Wall,false,false)
 			{
 				if typ == other.cantSuck
 				{
@@ -56,7 +48,7 @@ if owner != noone && instance_exists(owner)
 
 	if dust
 	{
-		if object_index == UltraSuckCannon
+		if isUltra
 		{
 			var ang = image_angle - 40;
 			var angStep = 20;
@@ -100,7 +92,7 @@ if owner != noone && instance_exists(owner)
 					var myAng = ang+random_range(8,-8);
 					var xx = x + lengthdir_x(dis,myAng);
 					var yy = y + lengthdir_y(dis,myAng);
-					if (collision_point(xx,yy,Floor,false,false))
+					if (collision_point(xx,yy,Floor,false,false) && !collision_line(xx,yy,other.x,other.y,Wall,false,false))
 						with instance_create(xx,yy,Dust)
 						{
 							depth = 6;
@@ -121,26 +113,29 @@ if owner != noone && instance_exists(owner)
 	var pl = instance_place_list(x,y,Pickup,pickups,false);
 	for (var i = 0; i < pl; i++)
 	{
-		with pickups[| i] {
-			x += lengthdir_x(s,other.image_angle + 180);
-			y += lengthdir_y(s,other.image_angle + 180);
-		}
+		if (isUltra || !collision_line(x,y,pickups[| i].x,pickups[| i].y,Wall,false,false))
+			with pickups[| i] {
+				x += lengthdir_x(s,other.image_angle + 180);
+				y += lengthdir_y(s,other.image_angle + 180);
+			}
 	}
 	var weppickups = ds_list_create();
 	var wpl = instance_place_list(x,y,WepPickup,weppickups,false);
 	for (var i = 0; i < wpl; i++)
 	{
-		with weppickups[| i] {
-			x += lengthdir_x(s,other.image_angle + 180);
-			y += lengthdir_y(s,other.image_angle + 180);
-		}
+		if (isUltra || !collision_line(x,y,weppickups[| i].x,weppickups[| i].y,Wall,false,false))
+			with weppickups[| i] {
+				x += lengthdir_x(s,other.image_angle + 180);
+				y += lengthdir_y(s,other.image_angle + 180);
+			}
 	}
 	var enems = ds_list_create();
 	var dss = instance_place_list(x,y,hitme,enems,false);
 	for (var i = 0; i < dss; i++)
 	{
+		
 		with enems[| i] {
-			if team != other.team
+			if team != other.team && (isUltra || !collision_line(x,y,other.x,other.y,Wall,false,false))
 			{
 				if sprite_index != spr_hurt
 				{

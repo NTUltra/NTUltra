@@ -6,7 +6,9 @@ if al > 0 && alarm[0] < 1
 		if (i % 2 == 0)//Only half of the lightning has collision to optimize
 		{
 			with instance_create(x,y,Flame)
-			{	team = other.team
+			{	
+				canMood = other.canMood;
+				team = other.team
 				image_speed = 0.6;
 				motion_add(other.direction,1);
 			}

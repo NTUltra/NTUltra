@@ -7,7 +7,6 @@ if instance_exists(creator)
 	snd_play(sndSplinterMinigun,0.1);
 	//FIRING
 	var sino = (((sin((ammo/maxAmmo) * cycles * pi) + 1) * 0.5) - 0.5) * 32 * creator.accuracy;
-	debug((((sin((ammo/maxAmmo) * cycles * pi) + 1) * 0.5) - 0.5));
 	with Splinter
 	{
 		if team == other.team

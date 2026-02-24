@@ -4,7 +4,7 @@ typ = 5;
 team = 1;
 image_yscale = 1;
 laserRange = 3;
-laserRangeIncrease = 8 + min(7,GetPlayerLoops());
+laserRangeIncrease = 7 + min(7,GetPlayerLoops());
 if instance_exists(Player) && Player.skill_got[12]
 {
 	laserRangeIncrease -= 3;

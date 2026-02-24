@@ -28,9 +28,13 @@ if sprite_index == sprAmmo {
 		else if object_index != HPPickup && Player.skill_got[3]
 		{
 			curselevel --;
+			as *= 1.25;
 		}
 		if object_index == HPPickup && Player.skill_got[9]
+		{
 			curselevel -= 1;
+			as *= 1.2;
+		}
 		if curselevel == 2 {
 			if random(2) < 1 {
 				cursed = true;

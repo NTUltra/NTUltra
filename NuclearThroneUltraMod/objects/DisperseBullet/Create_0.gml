@@ -11,7 +11,7 @@ time=1;
 alarm[0]=1;
 RecycleGlandType();
 norecycle = false;
-dmg = 3;
+dmg = 4;
 alarm[1] = 30;
 if instance_exists(Player) && Player.ultra_got[28]//roids ultra d
 { dmg += 1;}

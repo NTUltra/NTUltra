@@ -8,7 +8,7 @@ if walk > 0
 	motion_add(point_direction(x,y,xstart,ystart),acc * 0.25);
 	
 }
-if point_distance(xstart,ystart,x,y) > 500
+if point_distance(xstart,ystart,x,y) > 350
 {
 	direction = point_direction(x,y,xstart,ystart);	
 }

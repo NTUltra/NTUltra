@@ -10,7 +10,8 @@ if other.team != team && (!inArray || other.sprite_index != other.spr_hurt)
 		if my_health > 0
 		{
 			DealDamage(other.dmg);
-			instance_create(x,y,MeatExplosion);
+			if other.isBlood
+				instance_create(x,y,MeatExplosion);
 			snd_play(snd_hurt, hurt_pitch_variation)
 			sprite_index = spr_hurt
 			image_index = 0

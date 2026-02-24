@@ -37,16 +37,17 @@ if other.team != team and other.my_health > 0//the thing I hit must not be mysel
 			other.dmg = max(2,other.dmg - 1);
 			if (instance_exists(Player) && Player.skill_got[43]) && team != 0 && !other.hasStunned
 			{
-				with Tentacle
-				{
-					hasStunned = true;	
-				}
 				scrMoodSwingStun(6);
 				if Player.ultra_got[97] && !Player.altUltra{
 					scrMoodSwingLightningArc(22, other.x,other.y, other.team, max(1,other.dmg - 1));
 					scrMoodSwingIcicle(1, id);
 					scrMoodSwingFlameSpread(22);
 					scrMoodSwingToxicBullet(other.x,other.y,2, other.direction);
+				}
+				with Tentacle
+				{
+					hasStunned = true;
+					canMood = false;
 				}
 			}
 			else if team != 0 {

@@ -26,13 +26,13 @@ maxAmmo = 8;
 ammo = maxAmmo;
 image_speed = 0;
 trackingStrength = 0.4;
-projectileSpeed = 6.25;
+projectileSpeed = 7;
 loops = GetPlayerLoops()
 proj = EnemyBullet1
 if loops > 0
 {
 	trackingStrength = 0.7;
-	projectileSpeed = 8.1;
+	projectileSpeed = 99;
 	if loops > 1
 		trackingStrength = 0.75;
 	if loops > 6

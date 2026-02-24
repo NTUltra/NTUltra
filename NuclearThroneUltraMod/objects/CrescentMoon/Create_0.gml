@@ -36,5 +36,7 @@ alarmRate = 3;
 justRegenerated = 10;
 alarm[2] = alarmRate;
 team = 2;
+wepFire = -1;
+isVenomized = 0;
 maxDeflect = sprite_get_number(spr) - 1;
 squares = {};

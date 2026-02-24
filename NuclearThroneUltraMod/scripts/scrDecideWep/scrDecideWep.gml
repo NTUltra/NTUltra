@@ -1,9 +1,5 @@
 function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepAreaParam = 0/*, areaWepTries = 0*/, specificType = false) {
 	var wepTier = wepTierParam - 1;
-	if wepTier < 3 && random(4) < 1
-	{
-		wepTier = 0;
-	}
 	var maxTries = maxTriesParam;
 	var cursed = cursedParam;
 	var minWepArea = minWepAreaParam;
@@ -56,6 +52,10 @@ function scrDecideWep(wepTierParam, maxTriesParam = 10, cursedParam = 0, minWepA
 			}
 		}
 		wepTier += dataRef.baseWeaponTier;
+		if wepTier < 4 && dataRef.race != 8 && dataRef.race != 17 && random(3) < 1
+		{
+			wepTier = 0;
+		}
 		if isFactory
 		{
 			wepTier += 2;

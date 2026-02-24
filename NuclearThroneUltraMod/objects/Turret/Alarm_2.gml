@@ -5,9 +5,10 @@ if frozen
 	exit;
 }
 scrTarget()
-var dis = point_distance(target.x,target.y,x,y);
-if target != noone
+var dis = 999;
+if target != noone && instance_exists(target)
 {
+	dis = point_distance(target.x,target.y,x,y);
 	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && dis < 300
 	{
 		//Tracking

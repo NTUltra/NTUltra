@@ -1135,7 +1135,10 @@ function scrSecondaryPowers() {
 			case 29:
 				if !isOverlapping && KeyCont.key_regal[p] == 1 && !instance_exists(VoidBeam)
 				{
-					if (voidBeam >= voidBeamMax)
+					var vbm = voidBeamMax;
+					if loops > 0
+						vbm += 25;
+					if (voidBeam >= vbm)
 					{
 						snd_play_2d(sndVoidBeam);
 						instance_create(x,y,VoidBeam);

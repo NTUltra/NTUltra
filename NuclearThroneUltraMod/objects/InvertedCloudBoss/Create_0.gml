@@ -7,7 +7,7 @@ maxhealth = 380
 scrBossHealthBuff();
 EnemyHealthAdjustments();
 acc += 2;
-maxSpeed += 1.5;
+maxSpeed += 1;
 spr_idle = sprInvertedCloudBoss
 spr_walk = sprInvertedCloudBoss
 spr_hurt = sprInvertedCloudBossHurt;

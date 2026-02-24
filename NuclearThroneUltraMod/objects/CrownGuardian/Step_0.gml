@@ -32,14 +32,10 @@ else if speed > 1 && walk > 0
 					with instance_create(x,y,Deflect)
 						image_angle = other.direction
 				}
-				sprite_index = spr_deflect;
-				image_index = 0;
 			}
 			else if pj.typ == 2
 			{
 				snd_play(sndProjectileDestroy,0.1,true);
-				sprite_index = spr_deflect;
-				image_index = 0;
 				with other
 					instance_destroy()
 			}

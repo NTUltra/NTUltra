@@ -15,6 +15,7 @@ rotation = random_range(8,-8);
 alarm[2] = 1
 dmg = 2;
 mustDealDamageOnce = false;
+canMood = true;
 if instance_exists(Player)
 {
 	if Player.race == 24

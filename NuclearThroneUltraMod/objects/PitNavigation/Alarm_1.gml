@@ -70,6 +70,10 @@ if instance_exists(Player)
 		case 112:
 		//Inv Labs to inv froz
 			currentArea = 107
+			with Player
+			{
+				baseWeaponTier += 1;	
+			}
 			event_user(0);
 		break;
 		case 107:

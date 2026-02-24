@@ -102,7 +102,7 @@ with instance_create(x,y,ElementorHeadMenu)
 
 if UberCont.race_have[20] = 1//BusinessHog
 {
-char[20] = instance_create(150,124,CampChar)
+char[20] = instance_create(150,130,CampChar)
 char[20].sprite_index = sprBusinessHogMenu
 char[20].spr_menu = sprBusinessHogMenuSelected
 char[20].spr_to = sprBusinessHogMenuSelect

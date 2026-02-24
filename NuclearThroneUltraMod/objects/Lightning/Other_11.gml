@@ -31,5 +31,8 @@ if Player.race == 24
 	accuracy -= 2;
 	imageSpeed -= 0.1;
 	fork --;
-	sprite_index = sprLightningUpg;
+	if sprite_index == sprLightningMood
+		sprite_index = sprLightningMoodUpg;
+	else
+		sprite_index = sprLightningUpg;
 }

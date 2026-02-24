@@ -4,3 +4,4 @@
 event_inherited();
 dmg -= 1;
 alarm[3] = 5;
+ApplyEuphoria();

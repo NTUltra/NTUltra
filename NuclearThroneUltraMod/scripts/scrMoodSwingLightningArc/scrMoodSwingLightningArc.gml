@@ -1,15 +1,15 @@
 ///scrMoodSwingLightningArc();
 // /@description
 ///@param
-function scrMoodSwingLightningArc(range,xx,yy, wantTeam, damage){
+function scrMoodSwingLightningArc(range,xx,yy, wantTeam, damage, lightningType = Lightning){
 	if UberCont.recursionCheck > 20
 		return;
 	UberCont.recursionCheck += 1;
 	var n = instance_nearest_notme(x,y,enemy);
-	if n != noone && instance_exists(n) && distance_to_object(n) < range && n.team != 2 && n.my_health > 0 && !collision_line(x,y,n.x,n.y,Wall,false,false)
+	if other.canMood && n != noone && instance_exists(n) && distance_to_object(n) < range && n.team != 2 && n.my_health > 0 && !collision_line(x,y,n.x,n.y,Wall,false,false)
 	{
 		var dir = point_direction(xx,yy,n.x,n.y);
-		with instance_create(xx,yy,Lightning)
+		with instance_create(xx,yy,lightningType)
 		{
 			if !audio_is_playing(sndSpark1) && !audio_is_playing(sndSpark2)
 				snd_play(choose(sndSpark1,sndSpark2),0.01,true,true,5,true,true,0.4);

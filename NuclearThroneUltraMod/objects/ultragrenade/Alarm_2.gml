@@ -15,6 +15,8 @@ if speed < 1
 	var suckStrength = 2;
 	for (var i = 0; i < al; i++) {
 		with enems[| i] {
+			if object_index == Player && skill_got[2]
+				continue;
 			var d = point_direction(x,y,other.x,other.y);
 			if place_free(x+lengthdir_x(suckStrength,d),y)
 				x += lengthdir_x(suckStrength,d)

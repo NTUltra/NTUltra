@@ -9,6 +9,9 @@ dustAmount = 4;
 tangleNumber = 0;
 alarm[1] = 1;
 dmg = 2.5;
+team = 2;
+wepFire = -1;
+isVenomized = 0;
 if instance_exists(Player)
 {
 	dmg += Player.loops * 0.5;

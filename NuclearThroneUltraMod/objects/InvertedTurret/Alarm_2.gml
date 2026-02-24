@@ -5,9 +5,9 @@ if frozen
 	exit;
 }
 scrTarget()
-if target != noone
+if target != noone && instance_exists(target)
 {
-	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 && point_distance(target.x,target.y,x,y) < 128
+	if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 	{
 		//Tracking
 		gunangle += angle_difference(point_direction(x,y,target.x,target.y),gunangle)*other.trackingStrength;

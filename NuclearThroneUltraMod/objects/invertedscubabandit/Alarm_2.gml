@@ -5,7 +5,7 @@ if ammo > 0
 	repeat(2)
 		with instance_create(x,y,EnemyIceFlame)
 		{
-			motion_add(other.gunangle+random(30)-15,3+random(4))
+			motion_add(other.gunangle+random(30)-15,4+random(4))
 			image_angle = direction
 			team = other.team
 		}

@@ -2155,7 +2155,15 @@ function scrFire3(hasTailNow){
 		
 		//CHARGE LIGHTNING BOW
 		case 857:
-
+		altFire = !altFire;
+		if altFire
+		{
+			wep_type[857] = 3;
+		}
+		else
+		{
+			wep_type[857] = 5;
+		}
 		with ChargeLightningBow {
 			if scrChargeRelease()
 			{
@@ -2193,6 +2201,15 @@ function scrFire3(hasTailNow){
 			{
 				instance_destroy();
 			}
+		}
+		altFire = !altFire;
+		if altFire
+		{
+			wep_type[858] = 3;
+		}
+		else
+		{
+			wep_type[858] = 4;
 		}
 		with instance_create(x,y,ChargeExplosiveBow)
 		{
@@ -4664,7 +4681,7 @@ function scrFire3(hasTailNow){
 		{
 			needleRange -= 32;
 			isBlood = false;
-			dmg = 4;
+			dmg = 5;
 			sprite_index = sprSewingNeedleCurveLine;
 			longarms += (Player.skill_got[13]+other.bettermelee)*2
 			if Player.skill_got[13]
@@ -4732,7 +4749,7 @@ function scrFire3(hasTailNow){
 			sprite_index = sprLongSlash;
 			mask_index = mskLongSlash;
 			snd_wallhit = sndLongSwordHitWall;
-			dmg = 25
+			dmg = 30
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3
 			motion_add(aimDirection,3+longarms)
@@ -5137,6 +5154,87 @@ function scrFire3(hasTailNow){
 			BackCont.viewy2 += lengthdir_y(80,aimDirection)*UberCont.opt_shake
 			BackCont.shake += 80
 			wep = 0;
+		break;
+		
+		//HYPER ENERGY BLASTER
+		case 947:
+
+		snd_play_fire(sndEnergyBlasterCharge)
+
+		with instance_create(x,y,EnergyBlaster)
+		{
+			creator = other.id
+			ammo = 5+((Player.skill_got[17]+other.betterlaserbrain)*2)
+			time = 1
+			team = other.team
+			alarm[0] = 8//15 originally
+			alarm[1] = alarm[0] + ammo*time;
+			if Player.skill_got[42]
+			{
+				alarm[0] = max(1,alarm[0]*0.25);
+				if Player.ultra_got[97] && !Player.altUltra
+					alarm[0] = 1;
+			}
+		}
+
+		break;
+		
+		//GOLDEN THUNDER STRIKE
+		case 948:
+
+		if Player.skill_got[17] = 1
+		snd_play_fire(sndThunderStrikeUpg)
+		else
+		snd_play_fire(sndThunderStrike)
+		snd_play(sndGold);
+		var len = 70;
+		var hit = collision_line_point(x,y,
+		x + lengthdir_x(len,aimDirection),
+		y + lengthdir_y(len,aimDirection),
+		Wall,false,false);
+		while place_meeting(hit[1],hit[2],Wall)
+		{
+			hit[1] += lengthdir_x(2,aimDirection + 180);
+			hit[2] += lengthdir_y(2,aimDirection + 180);
+		}
+		with instance_create(hit[1],hit[2],LightningBeam) {
+			team = other.team;
+			direction = aimDirection;
+			speed = 1;
+		}
+		with instance_create(x,y,Lightning)
+		{
+			image_angle = aimDirection;
+			team = other.team
+			ammo = 6
+			event_perform(ev_alarm,0)
+			with instance_create(x,y,LightningSpawn)
+			image_angle = other.image_angle
+		}
+		var ang = aimDirection + 60 + ((random(6)-3)*other.accuracy);
+		repeat(3)
+		{
+			with instance_create(hit[1],hit[2],Lightning)
+			{
+				image_angle = ang;
+				team = other.team
+				ammo = 12
+				event_perform(ev_alarm,0)
+				with instance_create(x,y,LightningSpawn)
+				image_angle = other.image_angle
+			}
+			ang += 120;
+		}
+
+		BackCont.viewx2 += lengthdir_x(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(10,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 8
+		wkick = -8
+		if !skill_got[2]
+		{
+			motion_add(aimDirection + 180,3)
+			scrMoveContactSolid(aimDirection + 180,8)
+		}
 		break;
 		
 	}

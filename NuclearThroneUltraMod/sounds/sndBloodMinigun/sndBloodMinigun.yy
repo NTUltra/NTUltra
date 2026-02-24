@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.329433,
+  "duration":0.3294331,
   "exportDir":"",
   "name":"sndBloodMinigun",
   "parent":{

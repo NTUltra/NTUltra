@@ -639,6 +639,36 @@ function scrPopEnemies1vs1(area, subarea, loops){
 	{
 		enem = InvertedCloudShooter;
 	}
+	else if area == 142 // Pipe
+	{
+		enem = Slime;
+		sBuff = 1.8;
+	}
+	else if area == 142 //Inv Pipe
+	{
+		enem = InvertedSlime;
+		sBuff = 1.8;
+	}
+	else if area == 144 //Rad
+	{
+		if loops > 0
+			enem = HostileHorror;
+		enem = RadDiver;
+	}
+	else if area == 145 //Inv Rad
+	{
+		if loops > 0
+			enem = InvertedHostileHorror;
+		enem = InvertedRadDiver;
+	}
+	else if area == 146 //Bloodland
+	{
+		enem = BloodCow;
+	}
+	else if area == 147 //Inv Bloodland
+	{
+		enem = InvertedBloodCow;
+	}
 	if enem != noone
 		scrSpawnBoss(enem);
 	with enemy

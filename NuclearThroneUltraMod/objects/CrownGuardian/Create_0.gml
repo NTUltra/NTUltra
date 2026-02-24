@@ -20,7 +20,7 @@ snd_melee = sndScorpionMelee
 
 //behavior
 walk = 0
-alarm[1] = 15
+alarm[1] = 5
 alarm[3] = 10;
 gunangle = random(360)
 candeflect = 0

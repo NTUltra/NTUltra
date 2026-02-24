@@ -5,7 +5,7 @@ alarm[1] = 8+random(10)//30+r10
 scrTarget()
 if target != noone
 {
-if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 70
+if collision_line(x,y,target.x,target.y,Wall,0,0) < 0 and point_distance(x,y,target.x,target.y) < 200
 {
 ammo = 4//duration of lightning
 alarm[2] = 10//laser=30

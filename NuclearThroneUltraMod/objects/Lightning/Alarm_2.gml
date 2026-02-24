@@ -46,14 +46,14 @@ if al > 0 && alarm[0] < 1
 										
 									if (Player.skill_got[43] && other.canMood)
 									{
-										other.canMood = false;
-										scrMoodSwingLightningArc(32, xx, yy, other.team, other.dmg);
+										scrMoodSwingLightningArc(32, xx, yy, other.team, other.dmg, other.object_index);
 										if Player.ultra_got[97] && !Player.altUltra && other.team != 0{
 											scrMoodSwingStun(5);
 											scrMoodSwingIcicle(1, id);
 											scrMoodSwingFlameSpread(24);
 											scrMoodSwingToxicBullet(other.x,other.y,2,other.direction);
 										}
+										other.canMood = false;
 									}
 									else
 									{

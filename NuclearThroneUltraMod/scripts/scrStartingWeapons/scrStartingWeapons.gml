@@ -42,6 +42,7 @@ function scrStartingWeapons() {
 	start_wep[40]=731
 	start_wep[41]=765
 	start_wep[42]=771
+	start_wep[43]=948
 	//39 + 11 char specific starting
 	var dir=1;
 
@@ -91,9 +92,10 @@ function scrStartingWeapons() {
 	start_wep_have[40,dir]=0
 	start_wep_have[41,dir]=0
 	start_wep_have[42,dir]=0
+	start_wep_have[43,dir]=0
 
 	dir++;
 	}
 
-	maxstartwep=42;
+	maxstartwep=43;
 }

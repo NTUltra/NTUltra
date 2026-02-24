@@ -1,25 +1,30 @@
 ///scrRecycleGland();
 // /@description
 ///@param
-function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true){
+function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true, ammoType = 1, splashColour = c_yellow){
 	//RECYCLE GLAND
 	if instance_exists(Player) {
 		if Player.skill_got[16] {
 			if random(100) < 65 * Player.luck + Player.betterrecyclegland
 			{
-				Player.ammo[1] += ammoIncrease
+				Player.ammo[ammoType] += ammoIncrease
 				Player.rad += radIncrease;
-				instance_create(x,y,RecycleGland);
+				with instance_create(x,y,RecycleGland) {
+					if ammoType == 5
+						sprite_index = sprRecycleGlandEnergy;
+					else if ammoType == 4
+						sprite_index = sprRecycleGlandIcicle;
+				}
 				if !Player.ultra_got[26]
 				{
-					var excessAmmo = Player.ammo[1] - Player.typ_amax[1];
+					var excessAmmo = Player.ammo[ammoType] - Player.typ_amax[ammoType];
 					if excessAmmo > 0
-						scrExcessResource(1,excessAmmo,0.75);
-					Player.ammo[1] = min(Player.ammo[1],Player.typ_amax[1]);
+						scrExcessResource(ammoType + 1,excessAmmo,0.75);
+					Player.ammo[ammoType] = min(Player.ammo[ammoType],Player.typ_amax[ammoType]);
 				}
 			}
 			if canSplashDamage
-				scrSplashDamage(clamp(ceil(dmg*0.5),1,8),min(28,18 + dmg));
+				scrSplashDamage(clamp(ceil(dmg*0.5),1,8),min(28,18 + dmg),true,2.5,splashColour);
 		}
 	}
 }

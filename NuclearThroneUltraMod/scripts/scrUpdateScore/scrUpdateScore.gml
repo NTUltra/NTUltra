@@ -111,6 +111,7 @@ function scrUpdateScore(theOther, isPerliminary = false){
 				//}
 			}
 			if !scrIsGamemode(26) && !isPerliminary{
+				debug("SEND WEEKLY");
 				instance_create(x,y,SendWeekly);
 			}
 		}

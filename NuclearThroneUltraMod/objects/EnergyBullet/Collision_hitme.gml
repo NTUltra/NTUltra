@@ -30,7 +30,7 @@ if other.team != team and other.my_health > 0
 				speed = maxSpeed+1;
 		}
 	}
-	scrRecycleGland(cost,radCost);
+	scrRecycleGland(cost,radCost, true, 5,c_lime);
 }
 
 

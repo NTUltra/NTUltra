@@ -22,6 +22,7 @@ spr_hurt = false;
 my_health = 0;
 dodgeAble = true;
 pierceWall = false;
+canMood = true;
 depth = -1;
 if scrIsGamemode(33)//All Deflector
 {

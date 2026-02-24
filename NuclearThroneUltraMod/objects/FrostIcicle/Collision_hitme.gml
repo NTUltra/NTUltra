@@ -12,6 +12,7 @@ if other.team != team and other.my_health > 0 and other.object_index!=Player && 
 		image_index = 0
 		speed = 0;
 	}
+	scrRecycleGland(0.5,0,true,4,c_aqua);
 	with instance_create(x,y,BulletHit)
 		sprite_index = sprFreezeBulletHit;
 }

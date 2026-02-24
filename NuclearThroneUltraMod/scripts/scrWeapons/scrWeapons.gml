@@ -4876,7 +4876,7 @@ function scrWeapons() {
 	wep_load[432] = 34
 	wep_cost[432] = 2.5
 	wep_sprt[432] = sprChunkyBladeGun
-	wep_area[432] = 13
+	wep_area[432] = 15
 	wep_text[432] = "grand blade"
 	wep_swap[432] = sndSwapBow
 	wep_rad[432] = 0;
@@ -4962,7 +4962,7 @@ function scrWeapons() {
 	wep_name[440] = "THE PENETRATOR"
 	wep_type[440] = 3
 	wep_auto[440] = 0
-	wep_load[440] = 26
+	wep_load[440] = 23
 	wep_cost[440] = 2
 	wep_sprt[440] = sprPenetrator
 	wep_area[440] = 4
@@ -7939,7 +7939,7 @@ function scrWeapons() {
 	wep_load[708] = 12
 	wep_cost[708] = 2
 	wep_sprt[708] = sprDoubleDiscGun
-	wep_area[708] = 4
+	wep_area[708] = 3
 	wep_text[708] = "D.D.G."
 	wep_swap[708] = sndSwapBow
 	wep_rad[708] = 0;
@@ -8328,7 +8328,7 @@ function scrWeapons() {
 	wep_load[743] = 26
 	wep_cost[743] = 4
 	wep_sprt[743] = sprWomboComboSuckerPuncher
-	wep_area[743] = 15
+	wep_area[743] = 14
 	wep_text[743] = "consecutive normal punches"
 	wep_swap[743] = sndSwapShotgun
 	wep_rad[743] = 0;
@@ -8359,7 +8359,7 @@ function scrWeapons() {
 	wep_type[746] = 5
 	wep_auto[746] = 3
 	wep_load[746] = 7
-	wep_cost[746] = 2.5
+	wep_cost[746] = 2
 	wep_sprt[746] = sprSuckCannon
 	wep_area[746] = 7
 	wep_text[746] = "suck up enemy projectiles!"
@@ -9275,7 +9275,7 @@ function scrWeapons() {
 	wep_sprt[827] = sprThunderStrike
 	wep_area[827] = 2
 	wep_text[827] = "combine this gun with reload speed increasing mutations"
-	wep_swap[827] = sndSwapPistol
+	wep_swap[827] = sndSwapEnergy
 	wep_rad[827] = 0;
 	
 	wep_name[828] = "NAIL SHOTGUN"
@@ -9649,7 +9649,7 @@ function scrWeapons() {
 	wep_name[860] = "ENERGY SNAIL GUN"
 	wep_type[860] = 5
 	wep_auto[860] = 0
-	wep_load[860] = 40
+	wep_load[860] = 35
 	wep_cost[860] = 3
 	wep_sprt[860] = sprEnergySnailGun
 	wep_area[860] = 2
@@ -10639,6 +10639,29 @@ function scrWeapons() {
 	wep_swap[946] = sndSwapHammer
 	wep_rad[946] = 0;
 	wep_popup[946] = "MAKES YOU SLOWER#BREAKS AFTER A SINGLE USE#DEALS 1000 DAMAGE";
+	
+	wep_name[947] = "HYPER ENERGY BLASTER"
+	wep_type[947] = 5
+	wep_auto[947] = 3
+	wep_load[947] = 9
+	wep_cost[947] = 4.5
+	wep_sprt[947] = sprHyperEnergyBlaster
+	wep_area[947] = 10
+	wep_text[947] = "Synergizes with three weapon specific mutations"
+	wep_swap[947] = sndSwapEnergy
+	wep_rad[947] = 0;
+	wep_popup[947] = "WORKS WITH RECYCLE GLAND!#AND ENERGY BRAIN";
+	
+	wep_name[948] = "GOLDEN THUNDER STRIKE"
+	wep_type[948] = 5
+	wep_auto[948] = 1
+	wep_load[948] = 47
+	wep_cost[948] = 6
+	wep_sprt[948] = sprGoldenThunderStrike
+	wep_area[948] = 2
+	wep_text[948] = "holy god of thunder"
+	wep_swap[948] = sndSwapEnergy
+	wep_rad[948] = 0;
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

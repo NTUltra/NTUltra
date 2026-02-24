@@ -30,6 +30,7 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 		}
 		with instance_create(x,y,Lightning)
 		{
+			canMood = other.canMood;
 			image_angle = other.direction + random_range(90,-90);
 			dmg -= 1;
 			team = other.team

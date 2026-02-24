@@ -11,6 +11,9 @@ SetSeed();
 scrDecideInvader();
 var spawnarea =  Player.area;
 var subarea =  Player.subarea;
+var lps = Player.loops;
+if scrIsHardMode()
+	lps += 1;
 if ( !((spawnarea == 9 || spawnarea == 118) && subarea == 3) && !((spawnarea == 6 || spawnarea == 112) && subarea == 2)
 	&& !(spawnarea == 119 || spawnarea == 120)
 	&& spawnarea != 100 && spawnarea != 104
@@ -48,9 +51,9 @@ if (Player.area = 3 and Player.subarea = 3)
 		var ds = point_distance(n.x,n.y,f.x,f.y)*0.6;
 		var nn = instance_nearest(n.x+lengthdir_x(ds,d),n.y+lengthdir_y(ds,d),Floor);
 		instance_create(nn.x+16,nn.y+16,DragonSkull);
-		if Player.loops > 4
+		if lps > 4
 		{
-			scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+			scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((lps-4)*0.5),1,3));
 		}
 	}
 }
@@ -115,9 +118,9 @@ if Player.area = 106 and Player.subarea = 3 && !scrIsGamemode(40)
 {
 	var n = instance_furthest(Player.x,Player.y,Floor)
 	instance_create(n.x+16, n.y+16,BecomeInvertedScrapBoss)
-	if Player.loops > 4
+	if lps > 4
 	{
-		scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+		scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((lps-4)*0.5),1,3));
 	}
 	var f = instance_furthest(n.x,n.y,Floor);
 	var d = point_direction(n.x,n.y,f.x,f.y);
@@ -130,28 +133,28 @@ if Player.area = 114 and Player.subarea = 2 && !scrIsGamemode(40)
 {
 	if (scrIsGamemode(44)) {
 		scrSpawnBoss(BecomeScrapBoss);
-		if (Player.loops > 4)
-			scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+		if (lps > 4)
+			scrSpawnMoreBosses(BecomeScrapBoss,1+clamp(floor((lps-4)*0.5),1,3));
 	}
 	else
 	{
 		scrSpawnBoss(BecomeJungleBoss);
-		if (Player.loops > 4)
-			scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+		if (lps > 4)
+			scrSpawnMoreBosses(BecomeJungleBoss,1+clamp(floor((lps-4)*0.5),1,3));
 	}
 }
 if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 {
 	if (scrIsGamemode(44)) {
 		scrSpawnBoss(BecomeInvertedScrapBoss);
-		if (Player.loops > 4)
-			scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+		if (lps > 4)
+			scrSpawnMoreBosses(BecomeInvertedScrapBoss,1+clamp(floor((lps-4)*0.5),1,3));
 	}
 	else
 	{
 		scrSpawnBoss(BecomeInvertedJungleBoss);
-		if (Player.loops > 4)
-			scrSpawnMoreBosses(BecomeInvertedJungleBoss,1+clamp(floor((Player.loops-4)*0.5),1,3));
+		if (lps > 4)
+			scrSpawnMoreBosses(BecomeInvertedJungleBoss,1+clamp(floor((lps-4)*0.5),1,3));
 	}
 }
 	if (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
@@ -160,105 +163,105 @@ if Player.area = 123 and Player.subarea = 2 && !scrIsGamemode(40)
 	if (Player.area = 107 and Player.subarea = 3) && !scrIsGamemode(40)//inverted frozen city
 	instance_create(instance_furthest(Player.x,Player.y,Floor).x+16, instance_furthest(Player.x,Player.y,Floor).y+16,InvertedLilHunter)
 
-	if (Player.loops>1) && (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
+	if (lps>1) && (Player.area = 5 and Player.subarea = 3) && !scrIsGamemode(40)
 	{
 		if scrIsGamemode(44)
 		{
-			repeat(clamp(floor((Player.loops-1)*0.2),0,2))
+			repeat(clamp(floor((lps-1)*0.2),0,2))
 				instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,BigBadBat);
 		}
 		else
 		{
-			repeat(clamp(floor((Player.loops-1)*0.25),0,3))
+			repeat(clamp(floor((lps-1)*0.25),0,3))
 				instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,LilHunter);
 		}
 	}
-	if (Player.loops>1) && (Player.area = 107 and Player.subarea = 3) && !scrIsGamemode(40)
+	if (lps>1) && (Player.area = 107 and Player.subarea = 3) && !scrIsGamemode(40)
 	{
-		repeat(clamp(floor((Player.loops-1)*0.25),1,3))
+		repeat(clamp(floor((lps-1)*0.25),1,3))
 			instance_create(instance_furthest(Player.x,Player.y,Floor).x+132, instance_furthest(Player.x,Player.y,Floor).y+32,InvertedLilHunter);
 	}
-if Player.loops > 1 && (Player.area == 5 && Player.subarea == 2) && !scrIsGamemode(40)
+if lps > 1 && (Player.area == 5 && Player.subarea == 2) && !scrIsGamemode(40)
 {
 	scrSpawnBoss(BigDisc);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(BigDisc,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(BigDisc,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if Player.loops > 0 && (Player.area == 107 && Player.subarea == 2)
+if lps > 0 && (Player.area == 107 && Player.subarea == 2)
 {
 	scrSpawnBoss(InvertedBigDisc);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(InvertedBigDisc,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && (Player.area == 2 && Player.subarea == 1))
+if (lps > 0 && (Player.area == 2 && Player.subarea == 1))
 {
 	scrSpawnBoss(BallMom);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(BallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(BallMom,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && (Player.area == 110 && Player.subarea == 1) )
+if (lps > 0 && (Player.area == 110 && Player.subarea == 1) )
 {
 	scrSpawnBoss(InvertedBallMom);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(InvertedBallMom,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(InvertedBallMom,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 101 && Player.subarea == 2)))
+if (lps > 1 && ((Player.area == 101 && Player.subarea == 2)))
 {
 	scrSpawnBoss(BigJellyFish);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(BigJellyFish,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(BigJellyFish,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 122 && Player.subarea == 2)) )
+if (lps > 1 && ((Player.area == 122 && Player.subarea == 2)) )
 {
 	scrSpawnBoss(InvertedBigJellyFish);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(InvertedBigJellyFish,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(InvertedBigJellyFish,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 10 && Player.subarea == 2)))
+if (lps > 1 && ((Player.area == 10 && Player.subarea == 2)))
 {
 	scrSpawnBoss(HyenaBoss);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(HyenaBoss,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(HyenaBoss,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 121 && Player.subarea == 2)) )
+if (lps > 1 && ((Player.area == 121 && Player.subarea == 2)) )
 {
 	scrSpawnBoss(InvertedHyenaBoss);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(InvertedHyenaBoss,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(InvertedHyenaBoss,1+clamp(floor((lps-4)*0.25),1,2));
 }
 
-if (Player.loops > 0 && ((Player.area == 4) && Player.subarea == 1))
+if (lps > 0 && ((Player.area == 4) && Player.subarea == 1))
 {
 	scrSpawnBoss(HyperCrystal);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(HyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(HyperCrystal,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && ((Player.area == 111) && Player.subarea == 1))
+if (lps > 0 && ((Player.area == 111) && Player.subarea == 1))
 {
 	scrSpawnBoss(InvertedHyperCrystal);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(InvertedHyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(InvertedHyperCrystal,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && Player.area == 115 && Player.subarea == 1)
+if (lps > 0 && Player.area == 115 && Player.subarea == 1)
 {
 	scrSpawnBoss(CursedHyperCrystal);
-	if (Player.loops > 5)
-		scrSpawnMoreBosses(CursedHyperCrystal,1+clamp(floor((Player.loops-4)*0.25),1,2));
+	if (lps > 5)
+		scrSpawnMoreBosses(CursedHyperCrystal,1+clamp(floor((lps-4)*0.25),1,2));
 }
-if (Player.loops > 0 && Player.area == 6 && Player.subarea == 1)
+if (lps > 0 && Player.area == 6 && Player.subarea == 1)
 {
 	scrSpawnTechnomancer(Technomancer);
 }
-if (Player.loops > 0 && Player.area == 112 && Player.subarea == 1)
+if (lps > 0 && Player.area == 112 && Player.subarea == 1)
 {
 	scrSpawnTechnomancer(InvertedTechnomancer);
 }
-if (Player.loops > 1 && Player.area == 117)
+if (lps > 1 && Player.area == 117)
 {
 	scrSpawnBoss(BecomeMushroomBoss)
 	scrSpawnMoreBosses(BecomeMushroomBoss,3);
 }
-if (Player.loops > 1 && Player.area == 124)
+if (lps > 1 && Player.area == 124)
 {
 	//INV mushroomland
 	scrSpawnBoss(BecomeInvertedMushroomBoss)
@@ -342,7 +345,7 @@ if Player.area = 100
 	{
 		instance_create(x+16,y+16,CrownPickup)
 	    
-		if Player.loops > 0 || scrIsGamemode(36)//Ultra mod start
+		if lps > 0 || scrIsGamemode(36)//Ultra mod start
 		{
 			var xx = x;
 			var yy = y;
@@ -388,7 +391,7 @@ if Player.area = 100
 				xx += xstep;
 			}
 		}
-		if (Player.loops > 0)
+		if (lps > 0)
 		{
 			//Reroll station
 			if (instance_exists(Player))
@@ -689,15 +692,15 @@ if Player.area = 100
 		}
 	}
 }
-else if ((Player.area > 2 || (Player.area == 1 && Player.loops > 0)) and 
-(Player.subarea = 2 || (Player.area == 139 && Player.loops > 0) || (Player.area == 138 && Player.subarea == 1))
+else if ((Player.area > 2 || (Player.area == 1 && lps > 0)) and 
+(Player.subarea = 2 || (Player.area == 139 && lps > 0) || (Player.area == 138 && Player.subarea == 1))
 && Player.area!=101&&Player.area!=6
 && Player.area!=102 && Player.area!=103 && Player.area != 125 && Player.area!=104 && Player.area != 4 && Player.area != 111
 && Player.area!=112 && Player.area!=113 && Player.area!=114 && Player.area != 123 && Player.area != 124 && Player.area != 117
 && Player.area != 128 && Player.area != 129 && Player.area != 131
 && (Player.area < 130 || Player.area == 139)
 && Player.area!=115 && Player.area!=116 && !scrIsGamemode(25)
-&& !(Player.area == 9 && Player.loops > 9) && !(Player.area == 118 && Player.loops > 9))
+&& !(Player.area == 9 && lps > 9) && !(Player.area == 118 && lps > 9))
 {
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/3+random(128)-64,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/3+random(128)-64,Floor){
 		if Player.area=104 {
@@ -713,7 +716,7 @@ else if ((Player.area > 2 || (Player.area == 1 && Player.loops > 0)) and
 
 if Player.area=1 || Player.area == 105
 {
-	if Player.subarea == 1 && Player.loops < 2
+	if Player.subarea == 1 && lps < 2
 	{
 		instance_create(0,0,RetailOasis);
 	}
@@ -814,7 +817,7 @@ if (Player.area == 134)
 }
 
 
-if ((Player.area == 8 || Player.area == 109) && Player.loops > 1 && Player.subarea == 1)
+if ((Player.area == 8 || Player.area == 109) && lps > 1 && Player.subarea == 1)
 {
 	//Mushroomland
 	with instance_nearest((instance_furthest(Player.x,Player.y,Floor).x*2+Player.x)/4+random(128)-64+32,(instance_furthest(Player.x,Player.y,Floor).y*2+Player.y)/4+random(128)-64+32,Floor)

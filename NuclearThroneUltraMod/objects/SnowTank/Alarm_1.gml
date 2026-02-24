@@ -14,6 +14,8 @@ if collision_line(x,y,target.x,target.y,Wall,0,0) < 0
 {
 if ammo <= 0 and random(3) < 1 and point_distance(x,y,target.x,target.y) > 64 and point_distance(x,y,target.x,target.y) < 300
 {
+	with SnowTank
+		alarm[1] += 10;
 snd_play(sndSnowTankAim)
 scrTarget()
 if target != noone

@@ -29,14 +29,14 @@ if target != noone {
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;
 			if isInverted
 			{
-				spd += 0.125;
+				spd += 0.2;
 				with instance_create(x + lengthdir_x(len,gunangle + 270), y + lengthdir_y(len,gunangle + 270), EnemyBullet1Small) {
-	                motion_add(other.gunangle + 6, spd + 0.1)
+	                motion_add(other.gunangle + 6, spd - 0.2)
 	                image_angle = direction
 	                team = other.team
 	            }
 				with instance_create(x + lengthdir_x(len,gunangle - 270), y + lengthdir_y(len,gunangle - 270), EnemyBullet1Small) {
-	                motion_add(other.gunangle - 6, spd + 0.1)
+	                motion_add(other.gunangle - 6, spd - 0.2)
 	                image_angle = direction
 	                team = other.team
 	            }
@@ -52,12 +52,12 @@ if target != noone {
                 team = other.team
             }
 			with instance_create(x + lengthdir_x(len,gunangle + 90), y + lengthdir_y(len,gunangle + 90), EnemyBullet1Small) {
-                motion_add(other.gunangle + 4, spd)
+                motion_add(other.gunangle + 4, spd - 0.125)
                 image_angle = direction
                 team = other.team
             }
 			with instance_create(x + lengthdir_x(len,gunangle - 90), y + lengthdir_y(len,gunangle - 90), EnemyBullet1Small) {
-                motion_add(other.gunangle - 4, spd)
+                motion_add(other.gunangle - 4, spd - 0.125)
                 image_angle = direction
                 team = other.team
             }

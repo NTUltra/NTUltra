@@ -23,8 +23,9 @@ maxAmmo = 3;
 ammo = maxAmmo;
 fireRate = 3;
 actTime = 11;
-laserDuration = 48;
+laserDuration = 55;
 maxRange += 100;
+tellTime = 20;
 /*
 actTime = 9;
 maxSpeed = 2.4;

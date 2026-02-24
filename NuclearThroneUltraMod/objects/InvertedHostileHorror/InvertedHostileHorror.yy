@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprEnemyHorrorIdle",
-    "path":"sprites/sprEnemyHorrorIdle/sprEnemyHorrorIdle.yy",
+    "name":"sprInvertedEnemyHorrorIdle",
+    "path":"sprites/sprInvertedEnemyHorrorIdle/sprInvertedEnemyHorrorIdle.yy",
   },
   "spriteMaskId":{
     "name":"mskBandit",

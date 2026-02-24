@@ -14613,7 +14613,7 @@ function scrFire2(hasTailNow) {
 	altFire = !altFire;
 	with instance_create(x,y,MicroBullet)
 	{
-		direction = aimDirection+(random(24)-12)*other.accuracy;
+		direction = aimDirection+(random(26)-13)*other.accuracy;
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();
@@ -18100,18 +18100,18 @@ function scrFire2(hasTailNow) {
 		maxcharge = 6;//maxrate
 		type = 0;
 		creator = other.id
-		chargetime = 7;
+		chargetime = 6;
 		team = other.team
 		if Player.skill_got[42]
 		{
 			maxcharge += 1;
-			chargetime = 5;
+			chargetime = 4;
 			rate += 1;
 			costtime *= Player.betterTail;
 			if Player.ultra_got[97] && !Player.altUltra
 			{
 				rate += 1;
-				chargetime = 3;
+				chargetime = 2;
 			}
 			maxcharge *= Player.betterTail;
 			scrActivateTail(hasTailNow);
@@ -18129,18 +18129,18 @@ function scrFire2(hasTailNow) {
 		maxcharge = 5;//maxrate
 		type = 0;
 		creator = other.id
-		chargetime = 6;
+		chargetime = 5;
 		team = other.team
 		if Player.skill_got[42]
 		{
 			maxcharge += 1;
-			chargetime = 4;
+			chargetime = 3;
 			rate += 1;
 			costtime *= Player.betterTail;
 			if Player.ultra_got[97] && !Player.altUltra
 			{
 				rate += 1;
-				chargetime = 2;
+				chargetime = 1;
 			}
 			maxcharge *= Player.betterTail;
 			scrActivateTail(hasTailNow);

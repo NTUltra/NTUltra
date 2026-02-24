@@ -5,3 +5,5 @@ alarm[1] = 4;//Some sparks
 alarm[2] = 2;//intro smack
 alarm[4] = 22;//pre ultra sound
 team = 2;
+wepFire = -1;
+isVenomized = 0;

@@ -1,7 +1,7 @@
 ///scrSplashDamage();
 // /@description
 ///@param
-function scrSplashDamage(dmg, range, canBoost = true, knockback = 2.5){
+function scrSplashDamage(dmg, range, canBoost = true, knockback = 2.5, splashColour = c_yellow){
 	if instance_exists(Player) && canBoost
 	{
 		if Player.race == 25
@@ -21,6 +21,7 @@ function scrSplashDamage(dmg, range, canBoost = true, knockback = 2.5){
 		with instance_create(x,y,SplashDamageFX)
 		{
 			radius = range - 4;
+			col = splashColour;
 		}
 	for (var i = 0; i < al; i++) {
 		// code here

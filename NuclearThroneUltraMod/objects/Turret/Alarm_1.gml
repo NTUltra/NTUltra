@@ -12,7 +12,7 @@ if instance_exists(Player)
 			{
 				if (point_distance(target.x,target.y,x,y) < 200)
 				{
-					image_speed = 0.4;
+					image_speed = 0.55;
 				}
 			}
 			else if alarm[2] < 1 && point_distance(target.x,target.y,x,y) < 250

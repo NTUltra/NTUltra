@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprHostileHorrorBullet",
-    "path":"sprites/sprHostileHorrorBullet/sprHostileHorrorBullet.yy",
+    "name":"sprInvertedHostileHorrorBullet",
+    "path":"sprites/sprInvertedHostileHorrorBullet/sprInvertedHostileHorrorBullet.yy",
   },
   "spriteMaskId":{
     "name":"mskEnemyBullet1",

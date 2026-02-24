@@ -82,6 +82,11 @@ if target != noone {
 			{
 				alarm[1] = actTime;	
 			}
+			if (dis > 128) {
+	            motion_add(gunangle,maxSpeed);
+				alarm[1] = actTime;
+				walk = alarm[1];
+	        }
         }
 
         if walk > 0 && random(2) < 1

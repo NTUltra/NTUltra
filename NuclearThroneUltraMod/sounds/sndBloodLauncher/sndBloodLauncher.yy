@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":2.053333,
+  "duration":2.0533333,
   "exportDir":"",
   "name":"sndBloodLauncher",
   "parent":{

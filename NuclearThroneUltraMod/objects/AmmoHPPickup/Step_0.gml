@@ -76,6 +76,14 @@ if !supercursed || gotPluto
 			if levelEnded || !collision_line(x,y,x,y + lengthdir_y(slowSuck, suckDirection),Wall,false,false)
 				y += lengthdir_y(slowSuck, suckDirection)
 		}
+		else if !collision_line(x,y,Player.x,Player.y,Wall,false,false) {
+			var verySlowSuck = as*0.01;
+			suckDirection = point_direction(x, y, Player.x, Player.y)
+			if levelEnded || !collision_line(x,y,x + lengthdir_x(verySlowSuck, suckDirection),y,Wall,false,false)
+				x += lengthdir_x(verySlowSuck, suckDirection)
+			if levelEnded || !collision_line(x,y,x,y + lengthdir_y(verySlowSuck, suckDirection),Wall,false,false)
+				y += lengthdir_y(verySlowSuck, suckDirection)	
+		}
 		if instance_exists(Implosion) {
 			if point_distance(x, y, Implosion.x, Implosion.y) < range {
 				repeat(sped)

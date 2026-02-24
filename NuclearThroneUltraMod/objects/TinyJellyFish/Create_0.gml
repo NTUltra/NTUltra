@@ -11,12 +11,12 @@ spr_hurt = sprTinyJellyFishHurt
 spr_dead = sprTinyJellyFishDead
 snd_hurt = sndHitFlesh
 scrTarget();
-acc = 0.12;
-maxSpeed = 2.6;
+acc = 0.14;
+maxSpeed = 2.75;
 draw = true;
 blink = 6;
 trailSprite = sprScrapBossMissileTrail;
-alarm[1] = 15;
+alarm[1] = 12;
 sleeping = true;
 image_xscale = choose(1,-1);
 right = image_xscale;

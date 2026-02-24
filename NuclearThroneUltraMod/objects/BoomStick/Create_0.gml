@@ -1,7 +1,7 @@
 /// @description Big Damage
 // Inherit the parent event
 event_inherited();
-dmg = 45;
+dmg = 50;
 hitEntities = [];
 image_speed = 0.4;
 alarm[0] = 2;

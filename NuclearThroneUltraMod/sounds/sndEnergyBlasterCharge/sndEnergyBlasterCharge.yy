@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.2995,
+  "duration":0.29950112,
   "exportDir":"",
   "name":"sndEnergyBlasterCharge",
   "parent":{

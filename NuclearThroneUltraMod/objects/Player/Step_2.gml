@@ -726,22 +726,11 @@ if (tookHit)
 			if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 			{
 				isAlkaline = false;
+				my_health = max(my_health,prevhealth);
 				with EnemyVenom
 				{
 					instance_destroy();	
 				}
-				/*
-				var n = instance_nearest(x,y,enemy)
-				if n != noone
-				{
-					snd_play_fire(sndBlobFireS);
-					with instance_create(x,y,UltraBlobBall)
-					{
-						motion_add(point_direction(x,y,n.x,n.y),14);
-						dmg = 100;
-						team = other.team
-					}
-				}*/
 				var healTaken = 3;
 				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
 				if race == 25
@@ -788,6 +777,7 @@ if (tookHit)
 				Sleep(50);
 				scrGiveEuphoriaShield();
 				alarm[3] += 30;
+				prevhealth = my_health;
 			}
 		}
 		else if ultra_got[48] && lag > 0

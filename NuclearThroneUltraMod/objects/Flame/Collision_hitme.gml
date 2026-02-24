@@ -35,6 +35,10 @@ if other.team != team and other.my_health > 0 && (other.team!=2 || image_index<5
 				scrMoodSwingStun(5);
 				scrMoodSwingIcicle(1, id);
 				scrMoodSwingLightningArc(22,other.x,other.y,2,max(1,other.dmg - 1));
+				with Flame
+				{
+					canMood = false;	
+				}
 				scrMoodSwingToxicBullet(other.x,other.y,1,other.direction);
 			}
 		}

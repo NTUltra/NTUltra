@@ -16,7 +16,7 @@ sprite_index = spr_fire
 	{
 		image_angle = point_direction(x,y,Player.x,Player.y)+(random(30)-15)
 		team = other.team
-		ammo = 8
+		ammo = 10
 		event_perform(ev_alarm,0)
 		with instance_create(x,y,LightningSpawn)
 		image_angle = other.image_angle

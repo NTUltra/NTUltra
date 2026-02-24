@@ -17,9 +17,9 @@ if target != noone
 					image_speed = 0.8;
 				}
 			}
-			else if alarm[2] < 1 && point_distance(target.x,target.y,x,y) < 160
+			else if alarm[2] < 1 && point_distance(target.x,target.y,x,y) < 300
 			{
-				if random(2) < 1 || Player.loops > 1
+				if random(3) < 1 || Player.loops > 1
 				{
 					gunangle = point_direction(x,y,target.x,target.y)
 					ammo = maxAmmo;

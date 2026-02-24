@@ -36,7 +36,7 @@ else
 	actTime = 13;
 
 acc = 2;
-maxSpeed = 3;
+maxSpeed = 2.5;
 time = 0;
 squareProjectileSpeed = 4.5;
 squareProjectileSpeedOff = 5.8

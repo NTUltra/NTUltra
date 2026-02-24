@@ -17,6 +17,8 @@ if other.team != team && other.team !=2
 				{
 					scrMoodSwingStun(1, 0);
 					scrMoodSwingLightningArc(22,other.x,other.y,2,max(1,other.dmg - 1));
+					with ToxicThrowerGas
+						canMood = false;
 					scrMoodSwingIcicle(1, id);
 				}
 	    }

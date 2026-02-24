@@ -46,6 +46,8 @@ else if image_xscale > 0.22 && alarm[11] < 1
 					{
 						scrMoodSwingStun(1, 0);
 						scrMoodSwingLightningArc(22,other.x,other.y,2,max(1,other.dmg - 1));
+						with ToxicGas
+							canMood = false;
 						scrMoodSwingIcicle(1, id);
 					}
 				}

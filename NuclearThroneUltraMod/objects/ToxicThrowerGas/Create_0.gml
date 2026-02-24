@@ -19,7 +19,7 @@ dodgeAble = false;
 moodSwingable = false;
 isDoc = false;
 avoidPlayer = true;
-canArc = true;
+canMood = true;
 if instance_exists(Player)
 {
 	if Player.race=23

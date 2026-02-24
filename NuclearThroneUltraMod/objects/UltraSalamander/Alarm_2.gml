@@ -9,7 +9,7 @@ if ammo > 0
 	sprite_index = spr_fire
 	with instance_create(x,y,EnemyBullet2)
 	{
-		motion_add(other.gunangle+random(4)-2,4)
+		motion_add(other.gunangle+random(4)-2,4.125)
 		team = other.team
 		image_angle = direction;
 	}
