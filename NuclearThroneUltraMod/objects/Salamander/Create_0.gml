@@ -33,10 +33,10 @@ angleStep = 2;
 alarm[1] = 30+random(90)
 tellTime = 10;
 alarm[3] = 10;
-projectileSpeed = 9;
+projectileSpeed = 10;
 if GetPlayerLoops() > 0
 {
 	actTime -= 7;
 	maxRange = 320;
-	projectileSpeed = 10;
+	projectileSpeed = 11;
 }

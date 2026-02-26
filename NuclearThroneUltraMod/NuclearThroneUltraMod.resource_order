@@ -2190,6 +2190,7 @@
     {"name":"TripwireStick","order":173,"path":"objects/TripwireStick/TripwireStick.yy",},
     {"name":"TsunamiBall","order":340,"path":"objects/TsunamiBall/TsunamiBall.yy",},
     {"name":"Tube","order":6,"path":"objects/Tube/Tube.yy",},
+    {"name":"TurnLimiter","order":30,"path":"objects/TurnLimiter/TurnLimiter.yy",},
     {"name":"Turret","order":14,"path":"objects/Turret/Turret.yy",},
     {"name":"Turtle","order":16,"path":"objects/Turtle/Turtle.yy",},
     {"name":"Tutorializer","order":47,"path":"objects/Tutorializer/Tutorializer.yy",},

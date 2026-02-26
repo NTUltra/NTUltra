@@ -2406,6 +2406,7 @@
     {"id":{"name":"TripwireStick","path":"objects/TripwireStick/TripwireStick.yy",},},
     {"id":{"name":"TsunamiBall","path":"objects/TsunamiBall/TsunamiBall.yy",},},
     {"id":{"name":"Tube","path":"objects/Tube/Tube.yy",},},
+    {"id":{"name":"TurnLimiter","path":"objects/TurnLimiter/TurnLimiter.yy",},},
     {"id":{"name":"Turret","path":"objects/Turret/Turret.yy",},},
     {"id":{"name":"Turtle","path":"objects/Turtle/Turtle.yy",},},
     {"id":{"name":"Tutorializer","path":"objects/Tutorializer/Tutorializer.yy",},},

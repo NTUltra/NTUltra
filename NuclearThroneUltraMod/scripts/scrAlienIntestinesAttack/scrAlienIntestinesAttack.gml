@@ -23,7 +23,7 @@ function scrAlienIntestinesAttack(){
 	var aimDirection = point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y);
 	BackCont.shake += alienIntestines*0.2;
 	var i = 0;
-	var tentacleLength = round(lerp(2,18,min(1,other.alienIntestines/220)));
+	var tentacleLength = round(lerp(2,16,min(1,other.alienIntestines/220)));
 	repeat(round(lerp(1,6,min(1,alienIntestines / 160))))
 	{
 		with instance_create(x,y,Tentacle)
@@ -50,7 +50,7 @@ function scrAlienIntestinesAttack(){
 		}
 		i++;
 	}
-	var tentacleLength = lerp(3,19,min(1,other.alienIntestines/250));
+	var tentacleLength = lerp(3,18,min(1,other.alienIntestines/250));
 	var am = round(lerp(1,26,min(1,alienIntestines / 325)))
 	if am > 0
 	{

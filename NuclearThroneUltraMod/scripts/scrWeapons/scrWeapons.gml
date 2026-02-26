@@ -9999,8 +9999,8 @@ function scrWeapons() {
 	wep_name[891] = "OCTAGUN"
 	wep_type[891] = 5
 	wep_auto[891] = 0
-	wep_load[891] = 120
-	wep_cost[891] = 20
+	wep_load[891] = 130
+	wep_cost[891] = 25
 	wep_sprt[891] = sprOctagun
 	wep_area[891] = 4
 	wep_text[891] = "octagon of death"
@@ -10046,7 +10046,7 @@ function scrWeapons() {
 	wep_type[895] = 3
 	wep_auto[895] = 0
 	wep_load[895] = 20//32
-	wep_cost[895] = 3
+	wep_cost[895] = 2.5
 	wep_sprt[895] = sprSlingShot
 	wep_area[895] = 2
 	wep_text[895] = "tossing rocks"

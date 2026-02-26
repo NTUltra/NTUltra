@@ -55,7 +55,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x-32,y,Floor)
 		instance_create(x-32,y-32,Floor)
 	}
-	if area = 3 || area = 106 || area == 136 { if random(9) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
+	if area = 3 || area = 106 || area == 136 { if random(8) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
 	{
 		instance_create(x,y,Floor)
 		instance_create(x+32,y,Floor)
@@ -1002,6 +1002,29 @@ function scrMakeFloor(limiter) {
 			instance_create(x,y,WallBreak);
 		}
 	}
+	//Turn limiting
+	if trn != 0 && (area == 1 || area == 3 || area == 4 || area == 5 || area == 8 
+	|| area == 105 || area == 106 || area == 107 || area == 111 || area == 109)
+	{
+		var canTurn = true;
+		with TurnLimiter
+		{
+			count -= 1;
+			if count <= 0
+				instance_destroy();
+			else
+				 canTurn = false;
+		}
+		if !canTurn
+			trn = 0;
+		else
+		{
+			with instance_create(x,y,TurnLimiter)
+			{
+				count = 2;
+			}
+		}
+	}
 	direction += trn
 	if ((area=7||area=108) && subarea=3) || area=104
 		direction=0;
@@ -1332,9 +1355,7 @@ function scrMakeFloor(limiter) {
 			instance_create(x,y+32,Floor)
 		}
 	}
-
-	x += lengthdir_x(32,direction);
-	y += lengthdir_y(32,direction);
+	
 	
 	if area == 146 || area == 147//Bloodland double step
 	{
@@ -1343,6 +1364,13 @@ function scrMakeFloor(limiter) {
 		instance_create(x,y,Floor);
 		x += lengthdir_x(32,direction);
 		y += lengthdir_y(32,direction);
+	}
+	else
+	{
+		do {
+			x += lengthdir_x(32,direction);
+			y += lengthdir_y(32,direction);
+		} until (!place_meeting(x,y,Floor))
 	}
 
 	return limiter;
