@@ -1,5 +1,6 @@
 
 function scrMakeFloor(limiter) {
+	var floorStep = 32;
 	with UberCont
 	{
 		var a = loops;
@@ -26,14 +27,14 @@ function scrMakeFloor(limiter) {
 	{
 	area = Player.area
 	subarea=Player.subarea;}
-	if area = 1|| area = 105 || area = 113{ if random(4) < 1
+	if area = 1|| area = 105 || area = 113{ if random(3.5) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
 	instance_create(x,y+32,Floor)
 	}else instance_create(x,y,Floor)}
 
-	if area=101 || area == 122{ if random(3) < 1
+	if area=101 || area == 122{ if random(2.5) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
@@ -90,7 +91,7 @@ function scrMakeFloor(limiter) {
 	}
 
 	if area = 5 || area = 107 
-	{ if ( (subarea != 3 &&random(10) < 1) || (subarea == 3 && random(20)<1 ) )//frozzen city 11
+	{ if ( (subarea != 3 &&random(9) < 1) || (subarea == 3 && random(17)<1 ) )//frozzen city 11
 	{
 		if random(2) < 1
 		{
@@ -1368,8 +1369,8 @@ function scrMakeFloor(limiter) {
 	else
 	{
 		do {
-			x += lengthdir_x(32,direction);
-			y += lengthdir_y(32,direction);
+			x += lengthdir_x(floorStep,direction);
+			y += lengthdir_y(floorStep,direction);
 		} until (!place_meeting(x,y,Floor))
 	}
 

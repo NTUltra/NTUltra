@@ -1,6 +1,6 @@
 /// @description dmg
 team = -1 ;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 image_speed = 0.4;
 dmg = 4;

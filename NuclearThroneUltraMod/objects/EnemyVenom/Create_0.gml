@@ -2,7 +2,7 @@
 event_inherited();
 owner = noone;
 team = 1;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 dmg = 1;
 rate = 15;

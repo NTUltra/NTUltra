@@ -2,6 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
+canBeMoved = false;
 canBeAngled = false;
 alarm[2] = 1;
 image_speed = 0;

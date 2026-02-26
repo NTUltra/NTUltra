@@ -19,4 +19,4 @@ immuneToTypeDamage = 0;//0 = noting 1 = toxicGas
 canGhost = true;
 team = 0;
 isVenomized = false;
-wepFire = -1;
+wepFire = -2;

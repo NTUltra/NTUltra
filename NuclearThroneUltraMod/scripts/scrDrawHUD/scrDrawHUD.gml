@@ -304,7 +304,8 @@ function scrDrawHUD() {
 	}
 
 	//GAMEMODES
-	if ((!scrIsOnlyNormalGamemode() || array_length(UberCont.voidChallengeGoing) > 0) && !instance_exists(LevCont))
+	var isInGm = !scrIsOnlyNormalGamemode();
+	if ((isInGm || array_length(UberCont.voidChallengeGoing) > 0) && !instance_exists(LevCont))
 	{
 		var xxx = camera_get_view_x(view_camera[0]);
 		var yyy = camera_get_view_y(view_camera[0]) + __view_get( e__VW.HView, 0 );
@@ -334,7 +335,8 @@ function scrDrawHUD() {
 							gamemodeScrollString += "\n";
 					}
 				}
-				scrDrawHelp(gamemodeScrollString);
+				if gamemodeScrollString != ""
+					scrDrawHelp(gamemodeScrollString);
 			}
 		}
 		if (gamemodeDynamicHud > 0)
@@ -361,7 +363,7 @@ function scrDrawHUD() {
 				draw_sprite(sprDailyChallengeHUD,0,vx+2,voidY);
 				voidX += 16;
 			}
-			else
+			else if isInGm
 			{
 				draw_set_colour(c_white);
 				draw_sprite(sprGamemodeHUD,0,vx+2,voidY);

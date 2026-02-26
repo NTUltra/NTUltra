@@ -1,14 +1,15 @@
 /// @description ultramod
-exit;
 var um = GetPlayerUltramod()
 if um == ultramods.bulletShotgun
 {
-	with instance_create(x,y,Bullet2)
+	snd_play_fire(sndHyperSlugger)
+	with instance_create(x,y,HeavySlug)
 	{
+		dmg = other.dmg + 25;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
-		speed = 18;
+		speed = 32;
 		team = other.team;
 		alarm[11] = 0;
 	}
@@ -17,15 +18,15 @@ if um == ultramods.bulletShotgun
 } else if um == ultramods.boltBullet
 {
 	instance_destroy(id,false);
-	snd_play_fire(sndCriticalSniper)
-	with instance_create(x,y,CriticalMicroBullet)
+	snd_play_fire(sndIronGun)
+	with instance_create(x,y,InstantNail)
 	{
-		dmg = 12;
+		dmg += 4;
 		scrCopyWeaponMod(other);
 		direction = other.direction;
 		image_angle = direction;
 		team = other.team;
-		alarm[11] = 0;
+		event_perform(ev_alarm,0);
 	}
 	canDamage = false;
 }
@@ -34,20 +35,17 @@ else if um == ultramods.laserBullet
 	with Player
 	{
 		if Player.skill_got[17] = 1
-			snd_play(sndMicroLaserUpg,0.03,true);
+			snd_play(sndLaserUpg,0.03,true);
 		else
-			snd_play(sndMicroLaser,0.03,true);
+			snd_play(sndLaser,0.03,true);
 	}
 	instance_destroy(id,false);
 	canDamage = false;
 	with instance_create(x,y,Laser)
 	{
+		dmg += 2;
+		image_yscale += 0.6;
 		team = other.team
-		sprite_index = sprMicroLaser;
-		knockback = 2;
-		defaultPierce -= 8;
-		image_yscale -= 0.3;
-		dmg -= 1.5;
 		scrCopyWeaponMod(other);
 		isog = false;
 		image_angle = other.direction;
@@ -61,17 +59,17 @@ else if um == ultramods.bulletPlasma
 	with Player
 	{
 		if skill_got[17] = 1
-			snd_play_fire(sndPlasmaMinigunUpg)
+			snd_play_fire(sndPlasmaUpg)
 		else
-			snd_play_fire(sndPlasmaMinigun)	
+			snd_play_fire(sndPlasma)	
 	}
-	with instance_create(x,y,MiniPlasmaBall)
+	with instance_create(x,y,PlasmaBall)
 	{
-		acc += 6;
-		maxSpeed += 8;
-		dmg = 1;
+		nomscale += 0.5;
+		acc += 8;
+		dmg += 3;
+		maxSpeed += 10;
 		scrCopyWeaponMod(other);
-		ptime = 6;
 		direction = other.direction;
 		originalDirection = direction;
 		image_angle = direction;

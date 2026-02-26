@@ -2315,7 +2315,7 @@ function scrWeapons() {
 	wep_name[206] = "SMALL MISSILE LAUNCHER"
 	wep_type[206] = 4
 	wep_auto[206] = 0
-	wep_load[206] = 35
+	wep_load[206] = 33
 	wep_cost[206] = 2
 	wep_sprt[206] = sprSmallMissileLauncher
 	wep_area[206] = 10
@@ -5433,7 +5433,7 @@ function scrWeapons() {
 	wep_load[482] = 8
 	wep_cost[482] = 1.25
 	wep_sprt[482] = sprBoomORay
-	wep_area[482] = 14
+	wep_area[482] = 16
 	wep_text[482] = "the ray of dank"
 	wep_swap[482] = sndSwapExplosive
 	wep_rad[482] = 0;

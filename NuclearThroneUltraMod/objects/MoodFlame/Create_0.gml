@@ -8,7 +8,7 @@
 
 // Inherit the parent event
 event_inherited();
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 dmg -= 0.5;
 stretchTime = 6;

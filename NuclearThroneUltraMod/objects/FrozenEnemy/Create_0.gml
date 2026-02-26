@@ -2,7 +2,7 @@ image_speed = 0;
 debrisAmount = 2;
 owner = noone;
 team = 2;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 spriteSize = 0;
 if instance_exists(Player) && Player.race == 24

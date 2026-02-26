@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.737219,
+  "duration":0.7372336,
   "exportDir":"",
   "name":"sndHyperSlugger",
   "parent":{

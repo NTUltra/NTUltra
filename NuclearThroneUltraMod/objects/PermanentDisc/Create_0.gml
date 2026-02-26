@@ -3,7 +3,7 @@
 depth = 1;
 alarm[0] = 15
 team=2;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 if random(5)<1
 fire=true

@@ -11,6 +11,6 @@ queue = 0;
 hook = 0;
 scrInitDrops(1);
 team = 2;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 loops = GetPlayerLoops();

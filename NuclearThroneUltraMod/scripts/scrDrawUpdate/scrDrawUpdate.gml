@@ -24,14 +24,14 @@ function scrDrawUpdate() {
 		}
 		if keyboard_check_pressed(ord("C"))
 		{
-			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/824529/310000");
+			url_open("https://erdeppol.itch.io/nuclear-throne-ultra-mod/devlog/1414548/320000");
 		}
 	var txt0 = @"#UPDATE [32.00.00]
 	
 	* ADDED TWO NEW MUTANTS!
 	
-	* REBALANCED THE GAME TO BE HARDER
-	AND MORE LIKE VANILLA
+	* REBALANCED ENEMIES TO BE
+	MORE DIFFICULT AND LIKE VANILLA
 	
 	* ADDED THREE NEW AREAS
 	
@@ -39,7 +39,15 @@ function scrDrawUpdate() {
 	
 	* ADDED A LOOP 2+ BOSS IN SAVANNA AND OASIS
 	
-	* ADDED NEW CROWNS
+	* ADDED TWO NEW CROWNS
+	
+	* ADDED A NEW MUTATION
+	
+	* MINOR REWORKS FOR SOME MUTATIONS
+	
+	* ADJUSTED SOME AREA GENERATION
+	
+	* LOTS MORE BALANCE CHANGES
 		
 	PRESS [B] FOR UPDATES ON BLUESKY
 	PRESS [D] TO JOIN THE DISCORD

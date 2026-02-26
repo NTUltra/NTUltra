@@ -1,10 +1,10 @@
 function scrModHit(projectileRef) {
-	if !instance_exists(Player) || team == 2
+	if !instance_exists(Player)
 		exit;
 	// scrSheepHit();
 	//Sedatives
 	var wp = projectileRef.wepFire;
-	if wp == -1
+	if wp < -1
 		return;
 	if Player.ultra_got[100] && team != projectileRef.team && my_health > 0
 	{
@@ -17,7 +17,7 @@ function scrModHit(projectileRef) {
 		with projectile
 		{
 			if wepFire == wp
-				wepFire = -1;
+				wepFire = -2;
 		}
 		projectileRef.wepFire = 0;
 		if alarm[1] > 2 && alarm[1] < 30 && alarm[11] < 5

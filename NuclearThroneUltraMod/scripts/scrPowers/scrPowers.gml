@@ -119,7 +119,7 @@ function scrPowers(raceOverwrite = -1) {
 							motion_add(image_angle,4);
 						}
 					}
-					var d = 10 + lev * 5;
+					var d = 5 + lev * 5;
 					with n
 					{
 						if other.skill_got[5]
@@ -175,7 +175,14 @@ function scrPowers(raceOverwrite = -1) {
 						sprite_index = spr_hurt
 						image_index = 0
 						snd_play(snd_hurt, hurt_pitch_variation,true)
-						with scrDrop(13,8) {
+						var dropI = 8;
+						var dropW = 5;
+						if other.skill_got[4]
+						{
+							dropI += 2;
+							dropW += 1;
+						}
+						with scrDrop(dropI,dropW) {
 							motion_add(stabDir + 180, 3);	
 						}
 					}

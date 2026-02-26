@@ -14,7 +14,7 @@ with Lightning
 				{
 					with instance_create(x,y,Flame)
 					{
-						wepFire = -1;
+						wepFire = -2;
 						image_xscale -= 0.2;
 						image_yscale -= 0.2;
 						image_speed += 0.35;
@@ -42,7 +42,7 @@ with Laser
 		{
 			with instance_create(xx,yy,Flame)
 			{
-				wepFire = -1;
+				wepFire = -2;
 				image_xscale -= 0.2;
 				image_yscale -= 0.2;
 				image_speed += 0.35;
@@ -65,7 +65,7 @@ with projectile
 	{
 		with instance_create(x,y,Flame)
 		{
-			wepFire = -1;
+			wepFire = -2;
 			image_xscale -= 0.2;
 			image_yscale -= 0.2;
 			image_speed += 0.35;

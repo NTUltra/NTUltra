@@ -1,6 +1,6 @@
 target = -1
 team = 1;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;
 enemies = max(instance_number(enemy),5);
 if instance_exists(Player)

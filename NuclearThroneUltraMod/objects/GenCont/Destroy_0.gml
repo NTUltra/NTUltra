@@ -318,7 +318,7 @@ if instance_exists(Player)
 		}
 	    if skill_got[29]//hypersomnia insomnia
 	    {
-			var t = 250;//9.5S
+			var t = 240;//9.5S
 		    if race = 25
 		    {
 				t = 350;

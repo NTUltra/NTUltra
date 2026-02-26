@@ -14,5 +14,5 @@ maxSpeed = 2;
 walk = 0
 hoverTime = 0;
 team = 2;
-wepFire = -1;
+wepFire = -2;
 isVenomized = 0;

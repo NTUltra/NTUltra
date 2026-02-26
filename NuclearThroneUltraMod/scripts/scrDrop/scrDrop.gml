@@ -53,7 +53,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 	{
 		if Player.loops < 1
 		{
-			itemdrop *= 1.07;	
+			itemdrop *= 1.05;
 		}
 		var mh = Player.maxhealth;
 		var h = Player.my_health;
@@ -105,7 +105,7 @@ function scrDrop(itemdrop, weapondrop, onlyAmmo = false, weaponTier = 0, canOnly
 			dropRateBuff = 0.07;
 		else
 			dropRateBuff = 0;
-		rabbit = forcePaw || (Player.skill_got[4]*(0.33+Player.betterrabbitpaw));
+		rabbit = forcePaw || (Player.skill_got[4]*(0.30+Player.betterrabbitpaw));
 		dropRateBuff += 0.98 + rabbit
 		//+ rebelBuff
 		+ (Player.skill_got[28]*(Player.rage*0.00009))//max is 50%
