@@ -4,8 +4,11 @@ function scrPopulate() {
 	if scrIsGamemode(25) || scrIsGamemode(8)
 	return;
 	var hard = Player.gameDifficulty;
+	var lps = GetPlayerLoops();
 	if scrIsCrown(24)//Crown of sloth backup difficulty
-		hard = max(9 + (Player.loops*3),hard);
+		hard = max(9 + (lps*3),hard);
+	if scrIsHardMode()
+		lps += 1;
     //setting area and spawning some enemies
     with Floor {
 	if object_index != FloorExplo
@@ -41,7 +44,7 @@ function scrPopulate() {
             scrPopChests();
             exit;
         }
-        if Player.area = 104 || (Player.area == 6 && Player.subarea == 2 && Player.loops > 0) {
+        if Player.area = 104 || (Player.area == 6 && Player.subarea == 2 && lps > 0) {
             exit;
         }
 
@@ -563,31 +566,31 @@ function scrPopulate() {
 	    if Player.area = 1 and Player.subarea = 3 {
 			if scrIsHardMode()
 			{
-				repeat(clamp(Player.loops + 1,1,10) + 1)
+				repeat(clamp(lps + 1,1,10) + 1)
 					instance_create(x, y, WantBoss)
 			}else
 			{
-				repeat(clamp(Player.loops + 1,1,10))
+				repeat(clamp(lps + 1,1,10))
 				instance_create(x, y, WantBoss)
 			}
 	    }
 	
 		if Player.area = 4 and Player.subarea = 2 {
 	        instance_create(x, y, WantBoss)//Big bad bat
-			if Player.loops > 11
+			if lps > 11
 				instance_create(x, y, WantBoss)
 	    }
 		if Player.area == 144 || Player.area == 145{
 	        instance_create(x, y, WantBoss)//Big bad bat
-			if Player.loops > 11
+			if lps > 11
 				instance_create(x, y, WantBoss)
 	    }
 		if Player.area = 111 and Player.subarea = 2 {
 	        instance_create(x, y, WantBoss)//Inverted big bad
-			if Player.loops > 11
+			if lps > 11
 				instance_create(x, y, WantBoss)
 	    }
-		if Player.loops > 1 && (Player.area == 9 || Player.area == 118) && Player.subarea == 2 {
+		if lps > 1 && (Player.area == 9 || Player.area == 118) && Player.subarea == 2 {
 	        instance_create(x, y, WantBoss)//Wall Crawler WallCrawler
 	    }
 		if (Player.area == 126 || Player.area == 127) {//Graveyard fish
@@ -604,7 +607,7 @@ function scrPopulate() {
 		}
 		//spawn SEWER FISH boss
 		/*
-	    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and Player.loops > 1 {
+	    if (Player.area = 2 || Player.area == 110) and Player.subarea = 1 and lps > 1 {
 			instance_create(x, y, WantBoss)
 	    }
 		*/
@@ -612,45 +615,45 @@ function scrPopulate() {
 	    //spawn INVERTED desert boss
 	    if Player.area = 105 and Player.subarea = 3 {
 			if scrIsHardMode()
-				repeat(clamp(Player.loops + 1,1,6) + 1)
+				repeat(clamp(lps + 1,1,6) + 1)
 					instance_create(x, y, WantBoss)
 			else
-				repeat(clamp(Player.loops + 1,1,6))
+				repeat(clamp(lps + 1,1,6))
 					instance_create(x, y, WantBoss)
 	    }
 		//Sandworm
-		if (Player.loops > 1 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
+		if (lps > 1 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {
 	        instance_create(x, y, WantBoss)
 	    }
 		//Big vulture
 		if ( (Player.area == 10 || Player.area == 121) and Player.subarea = 3 ) {
-	        repeat(ceil(max(1,Player.loops*0.5)))
+	        repeat(ceil(max(1,lps*0.5)))
 				instance_create(x, y, WantBoss)
 	    }
 
 	    //spawn OASIS boss
 	    if (Player.area = 101 || Player.area == 122) and Player.subarea == 3 {
-	        repeat(ceil(max(1,Player.loops*0.5)))
+	        repeat(ceil(max(1,lps*0.5)))
 	        instance_create(x, y, WantBoss)
 	    }
 
-	    if (Player.area == 3 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-	        repeat(min(3,ceil(Player.loops*0.25)))
+	    if (Player.area == 3 && Player.subarea = 1 && lps > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(lps*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }
 
-	    if (Player.area == 106 && Player.subarea = 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-	        repeat(min(3,ceil(Player.loops*0.25)))
+	    if (Player.area == 106 && Player.subarea = 1 && lps > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(lps*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }
 		
-		if (Player.area == 142 && Player.subarea == 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-	        repeat(min(3,ceil(Player.loops*0.25)))
+		if (Player.area == 142 && Player.subarea == 1 && lps > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(lps*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }
 
-	    if (Player.area == 143 && Player.subarea == 1 && Player.loops > 0) { //SPAWN ASSASSINBOSS
-	        repeat(min(3,ceil(Player.loops*0.25)))
+	    if (Player.area == 143 && Player.subarea == 1 && lps > 0) { //SPAWN ASSASSINBOSS
+	        repeat(min(3,ceil(lps*0.25)))
 	        instance_create(x, y, WantBoss);
 	    }
 	}

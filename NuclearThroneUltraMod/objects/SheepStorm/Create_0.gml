@@ -10,6 +10,9 @@ gotVision = false;
 dmg = baseDmg;
 depth = -1;
 breakReduction = 0;
+team = 2;
+wepFire = -2;
+isVenomized = 0;
 if instance_exists(Player)
 {
 	if scrIsHardMode()

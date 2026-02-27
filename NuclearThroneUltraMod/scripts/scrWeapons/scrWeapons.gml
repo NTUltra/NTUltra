@@ -10658,7 +10658,7 @@ function scrWeapons() {
 	wep_load[948] = 47
 	wep_cost[948] = 6
 	wep_sprt[948] = sprGoldenThunderStrike
-	wep_area[948] = 2
+	wep_area[948] = 18
 	wep_text[948] = "holy god of thunder"
 	wep_swap[948] = sndSwapEnergy
 	wep_rad[948] = 0;

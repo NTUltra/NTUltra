@@ -1,7 +1,7 @@
 /// @description Init
 game_set_speed(10, gamespeed_fps);
-updateVersion = "32.00";
-betaVersion = "32.00";
+updateVersion = "32.02";
+betaVersion = "32.02";
 serverPort = 1414;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
@@ -18,7 +18,7 @@ else {
 }
 day = -1;
 week = -1;
-/*
+/*hn
 	if we want to load in a manual week set week to the previous one (thats a number)
 	Then when the new week hits it will run the new code there for the first time,
 	So you can force your rng there

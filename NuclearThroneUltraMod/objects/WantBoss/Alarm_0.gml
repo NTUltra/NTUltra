@@ -2,6 +2,9 @@
 x = __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 )*0.5
 y = __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )*0.5
 alarm[1] = 0;
+var lps = GetPlayerLoops();
+if scrIsHardMode()
+	lps += 1;
 if instance_exists(Player)
 {
 	target = Player;	
@@ -34,9 +37,9 @@ if target != noone && instance_exists(target)
 	{
 		with instance_nearest(target.x,target.y,CanSpawnBoss)
 		{
-			if other.area == 103 && instance_exists(Player) && Player.loops > 4
+			if other.area == 103 && instance_exists(Player) && lps > 4
 			{
-				if Player.loops % 2 == 1
+				if lps % 2 == 1
 					instance_create(x,y,BigBadBat);
 				else
 					instance_create(x,y,InvertedBigBadBat);
@@ -115,7 +118,7 @@ if target != noone && instance_exists(target)
 				with instance_create(x+16,y+16,InvertedBigBadBat) {
 					my_health *= 2;	
 				}
-				repeat(1 + min(6,BackCont.loops))
+				repeat(1 + min(6,lps))
 				{
 					instance_create(x+16,y+16, InvertedExploGuardian);
 				}
@@ -130,7 +133,7 @@ if target != noone && instance_exists(target)
 					y = n.y;
 				}
 				instance_create(x+16,y+16,UltraBigDog);
-				repeat(1 + min(6,BackCont.loops))
+				repeat(1 + min(6,lps))
 				{
 					instance_create(x+16,y+16, PalaceGuardian);
 				}
@@ -138,7 +141,7 @@ if target != noone && instance_exists(target)
 			}
 			else
 			{
-			    if (other.area=3 || other.area == 142) && other.loops>0 && instance_exists(Floor)//scrapyard
+			    if (other.area=3 || other.area == 142) && lps>0 && instance_exists(Floor)//scrapyard
 			    {
 					if scrIsGamemode(44)
 					{
@@ -151,7 +154,7 @@ if target != noone && instance_exists(target)
 							instance_create(x+16,y+16,AssassinBoss);
 					}
 			    }
-			    else if other.area == 106 && (other.loops > 0 || instance_exists(PitNavigation)) && instance_exists(Floor)//inverted scrapyard
+			    else if other.area == 106 && (lps > 0 || instance_exists(PitNavigation)) && instance_exists(Floor)//inverted scrapyard
 			    {
 					with instance_nearest(instance_furthest(x+random(120)-60,y+random(120)-60,Floor),instance_furthest(x+random(120)-60,y+random(120)-60,Floor),Floor)
 						instance_create(x+16,y+16,InvertedAssassinBoss);

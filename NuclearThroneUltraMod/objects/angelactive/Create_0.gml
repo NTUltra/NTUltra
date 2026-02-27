@@ -36,6 +36,7 @@ if instance_number(AngelActive) > 1
 */
 alarm[0] = amount;
 team = 2;
+dmg = 0;
 if instance_exists(Player)
 {
 	team=Player.team;
@@ -53,5 +54,8 @@ if instance_exists(Player)
 		}
 	}
 }
+team = 2;
+wepFire = -2;
+isVenomized = 0;
 moving = false;
 image_speed = (image_number-1)/alarm[0];
