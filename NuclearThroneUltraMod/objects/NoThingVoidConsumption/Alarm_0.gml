@@ -205,37 +205,22 @@ if targetedOne
 				image_index = irandom(image_number - 1);
 				motion_add(random(360),1);
 			}
-		/*if altUltra
+
+		Player.maxhealth += 1;
+						
+		if !instance_exists(NoThingHealth)
 		{
-			alarm[2] = 25;
-			if !instance_exists(GunWarrant)
-				instance_create(x,y,GunWarrant);
-			else
-			{
-				with GunWarrant
-				{
-					sprite_index = sprGunWarrantStart;
-					image_index = 0;
-				}
-			}
+			instance_create(x,y,NoThingHealth);
 		}
 		else
-		{*/
-			maxhealth += 1;
-						
-			if !instance_exists(NoThingHealth)
+		{
+			with NoThingHealth
 			{
-				instance_create(x,y,NoThingHealth);
+				noThingHealth += 1;
+				event_user(0);
+				alarm[0] = max(alarm[0],lifeDuration);	
 			}
-			else
-			{
-				with NoThingHealth
-				{
-					noThingHealth += 1;
-					alarm[0] = lifeDuration;	
-				}
-			}
-		//}
+		}
 	}
 	if preSound
 		instance_create_depth(x,y,depth,VoidBlockSound);

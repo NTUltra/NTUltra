@@ -11,6 +11,14 @@ typ = 0 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflects
 canBeMoved = false;
 image_speed = 0;
 image_yscale = 4;
+scaleDecrease = 0.2;
+homeBoost = 1;
+if instance_exists(Player) && Player.skill_got[5]
+{
+	image_yscale = 6;
+	scaleDecrease = 0.4;
+	homeBoost = 1.33;
+}
 target=enemy;
 amountofenemies=0;
 sprHead = sprSerpentStrikeHead;

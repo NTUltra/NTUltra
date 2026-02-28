@@ -1,46 +1,48 @@
 function scrBlankArmour() {
 	if ultra_got[64]//BLANK ARMOUR
 	{
+		var baseD = 19 + loops;
+		with enemy{
+			if point_distance(x,y,other.x,other.y) < 450
+			{
+				//if sprite_index!=spr_hurt{
+				snd_play(snd_hurt, hurt_pitch_variation,true)
+				with instance_create(x,y,Flash)
+				{
+					alpha = 0.4;
+					alarm[1] = 4;
+				}
+				Sleep(20);
+				direction = point_direction(x,y,Player.x,Player.y)+180;
+				if place_free(x+lengthdir_x(4,direction),y)
+					x += lengthdir_x(4,direction)
+				if place_free(x,y+lengthdir_y(4,direction))
+					y += lengthdir_y(4,direction)
 
-	with enemy{
-	if x > __view_get( e__VW.XView, 0 ) and x < __view_get( e__VW.XView, 0 )+__view_get( e__VW.WView, 0 ) and y > __view_get( e__VW.YView, 0 ) and y < __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )
-	{
-	//if sprite_index!=spr_hurt{
-	snd_play(snd_hurt, hurt_pitch_variation,true)
-	with instance_create(x,y,Flash)
-	{
-		alpha = 0.4;
-		alarm[1] = 4;
-	}
-	Sleep(20);
 
-	if place_free(x+lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180),y)
-	x += lengthdir_x(4,point_direction(x,y,Player.x,Player.y)+180)
-	if place_free(x,y+lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180))
-	y += lengthdir_y(4,point_direction(x,y,Player.x,Player.y)+180)
+				DealDamage(baseD + ceil(my_health*0.1),false,true,false);
+				sprite_index = spr_hurt
+				image_index = 0
+				//motion_add(other.direction,6)
 
-
-	DealDamage(24,false,true,false);
-	sprite_index = spr_hurt
-	image_index = 0
-	//motion_add(other.direction,6)
-
-	//with instance_create(x,y,SharpTeeth)
-	//owner=other.id;
-	//}
-
-	motion_add(other.direction+180,10);
-	}}
-	with projectile
-	{
-		if team!=other.team
-		{
-			if isGrenade
-				instance_destroy(id,false);
-			else
-				instance_destroy();
+				//with instance_create(x,y,SharpTeeth)
+				//owner=other.id;
+				//}
+				if alarm[1] > 0
+					alarm[1] += 10;
+				motion_add(other.direction,10);
+			}
 		}
-	}
+		with projectile
+		{
+			if team!=other.team
+			{
+				if isGrenade
+					instance_destroy(id,false);
+				else
+					instance_destroy();
+			}
+		}
 
 	}
 	if ultra_got[61] && altUltra {

@@ -1,6 +1,6 @@
 /// @description change col
-col = c_black;
-alarm[1] = 2;
+useCol = col;
+alarm[1] = choose(2,3);
 
 
 

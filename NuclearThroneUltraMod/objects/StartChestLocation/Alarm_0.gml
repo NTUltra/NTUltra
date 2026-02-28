@@ -3,7 +3,6 @@ with WeaponChest
 {
 	if !other.myWeaponChest
 	{
-		debug("MOVE WEAPON CHEST");
 		other.myWeaponChest = true;
 		x = other.x  + 8;
 		y = other.y + 8;

@@ -833,7 +833,7 @@ if (tookHit)
 					rage -= 2;
 			}
 			scrBlankArmour();
-			if ultra_got[64]
+			if skill_got[5]
 				scrSerpentArmourStrike();
 			if armour > maxarmour
 				armour = maxarmour;

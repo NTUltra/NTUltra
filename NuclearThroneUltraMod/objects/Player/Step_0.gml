@@ -534,7 +534,7 @@ if !instance_exists(LevCont) and visible = 1
 	if UberCont.public==0 && !keyboard_check(vk_control) && !keyboard_check(vk_shift){
 	//hacks
 		if keyboard_check_pressed(ord("V")) {
-			instance_create(x + 48,y,ScrapDog);
+			humphrySkill += 1000;
 			peaceBarriers += 1;
 			getVision = true;
 			voidBeam = voidBeamMax;

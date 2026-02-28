@@ -12,13 +12,13 @@ aimDir += (sin(ammo*0.1)*2);
 if ammo < 150 && instance_exists(target)
 {
 	var dif = angle_difference(point_direction(x,y,target.x,target.y), image_angle);
-	if (point_distance(x,y,target.x,target.y) < 96 && abs(dif) < 28)
+	if (point_distance(x,y,target.x,target.y) < 96 * homeBoost && abs(dif) < 28 * homeBoost)
     {
-		aimDir += dif*0.6;
+		aimDir += dif * 0.6 * homeBoost;
     }
 	else
 	{
-		aimDir += dif * 0.003;
+		aimDir += dif * 0.003 * homeBoost;
 	}
 }
 aimDir += angle_difference(originalAngle,aimDir)*0.01;

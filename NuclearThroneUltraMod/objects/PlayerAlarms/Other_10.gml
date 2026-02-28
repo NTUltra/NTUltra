@@ -32,17 +32,11 @@ if instance_exists(Player)
 		alarm[3] = 60;
 	if Player.race == 26 || Player.copyPassive == 26//HUMPHRY
 	{
-		humphryDelay = 7;
-		humphryAmount = 0.94;
+		humphryDelay = 10;
+		humphryAmount = 0.95;
 		humphryConstantAmount = 1;
 		if Player.loops > 0
-			humphryDelay --;
-		if Player.skill_got[5]
-		{
-			humphryAmount = 0.95;
-			humphryConstantAmount = 0;
-			humphryDelay += 2;
-		}
+			humphryDelay -= 3;
 		alarm[6] = 60;
 	}
 	if scrIsCrown(25)

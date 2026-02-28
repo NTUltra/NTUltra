@@ -1005,6 +1005,7 @@ function scrMakeFloor(limiter) {
 	}
 	//Turn limiting
 	if trn != 0 && (area == 1 || area == 3 || area == 4 || area == 5 || area == 8 
+	|| area == 6 || area == 112
 	|| area == 105 || area == 106 || area == 107 || area == 111 || area == 109)
 	{
 		var canTurn = true;

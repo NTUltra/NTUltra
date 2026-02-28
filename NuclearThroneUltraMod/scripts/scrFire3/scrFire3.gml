@@ -4906,6 +4906,12 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,FragmentBullet)
 		{motion_add(aimDirection+(random(14)-7)*other.accuracy,20)
 		image_angle = direction
+		weaponType = other.wep_type[937];
+		if weaponType == 3
+		{
+			splashColour = c_black;
+			cost = 1;
+		}
 		team = other.team}
 
 		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake
@@ -4938,6 +4944,12 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,FragmentBullet)
 		{motion_add(aimDirection+(random(8)-4)*other.accuracy,26)
 		image_angle = direction
+		weaponType = other.wep_type[938];
+		if weaponType == 3
+		{
+			splashColour = c_black;
+			cost = 1;
+		}
 		team = other.team}
 
 		BackCont.viewx2 += lengthdir_x(12,aimDirection+180)*UberCont.opt_shake
@@ -4970,14 +4982,32 @@ function scrFire3(hasTailNow){
 		with instance_create(x,y,FragmentBullet)
 		{motion_add(aimDirection+(random(6)-3)*other.accuracy,29)
 		image_angle = direction
+		weaponType = other.wep_type[939];
+		if weaponType == 3
+		{
+			splashColour = c_black;
+			cost = 1;
+		}
 		team = other.team}
 		with instance_create(x,y,FragmentBullet)
 		{motion_add(aimDirection+(11 + random(6)-3)*other.accuracy,27)
 		image_angle = direction
+		weaponType = other.wep_type[939];
+		if weaponType == 3
+		{
+			splashColour = c_black;
+			cost = 1;
+		}
 		team = other.team}
 		with instance_create(x,y,FragmentBullet)
 		{motion_add(aimDirection+(-11 + random(6)-3)*other.accuracy,27)
 		image_angle = direction
+		weaponType = other.wep_type[939];
+		if weaponType == 3
+		{
+			splashColour = c_black;
+			cost = 1;
+		}
 		team = other.team}
 
 		BackCont.viewx2 += lengthdir_x(14,aimDirection+180)*UberCont.opt_shake

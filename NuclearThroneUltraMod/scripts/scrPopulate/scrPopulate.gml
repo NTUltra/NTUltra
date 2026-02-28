@@ -564,15 +564,8 @@ function scrPopulate() {
 	{
 	    //spawn desert boss
 	    if Player.area = 1 and Player.subarea = 3 {
-			if scrIsHardMode()
-			{
-				repeat(clamp(lps + 1,1,10) + 1)
-					instance_create(x, y, WantBoss)
-			}else
-			{
-				repeat(clamp(lps + 1,1,10))
+			repeat(clamp(lps + 1,1,10))
 				instance_create(x, y, WantBoss)
-			}
 	    }
 	
 		if Player.area = 4 and Player.subarea = 2 {
@@ -614,12 +607,8 @@ function scrPopulate() {
 
 	    //spawn INVERTED desert boss
 	    if Player.area = 105 and Player.subarea = 3 {
-			if scrIsHardMode()
-				repeat(clamp(lps + 1,1,6) + 1)
-					instance_create(x, y, WantBoss)
-			else
-				repeat(clamp(lps + 1,1,6))
-					instance_create(x, y, WantBoss)
+			repeat(clamp(lps + 1,1,6))
+				instance_create(x, y, WantBoss)
 	    }
 		//Sandworm
 		if (lps > 1 && (Player.area = 105 || Player.area == 1) && Player.subarea == 2) {

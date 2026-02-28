@@ -1,5 +1,6 @@
 /// @description Buff enemies
 alarm[0] = 5;
+var ls = loops;
 var enemies = ds_list_create();
 var al = instance_place_list(x,y,enemy,enemies,false);
 for (var i = 0; i < al; i++)
@@ -16,13 +17,13 @@ for (var i = 0; i < al; i++)
 					depth = other.depth - 2;
 				}
 				if !totemBuffed {
-					var healthBuff = min(150,maxhealth);
+					var healthBuff = min(125,maxhealth * 0.5) + ls;
 					my_health += healthBuff;
 					maxhealth += healthBuff;
-					raddrop *= 1.5;
+					raddrop *= 1.25;
 					totemBuffed = true;
 				} else {
-					my_health += maxhealth*0.25;
+					my_health += min(30,maxhealth*0.25) + ls;
 					my_health = min(my_health,maxhealth);
 				}
 				if alarm[1] > 10

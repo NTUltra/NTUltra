@@ -2645,9 +2645,15 @@ function scrPowers(raceOverwrite = -1) {
 		//Good O'l Humphry
 		if race == 26 && !instance_exists(HumphryDiscipline) && !instance_exists(HumphryDelay)//Good O'l Humphry
 		{
+			with PlayerAlarms
+			{
+				alarm[6] += 5;
+			}
 			var insufficientFunds = true;
 			var failText = "NOT ENOUGH AMMO";
 			var cost = 8;
+			if skill_got[5]
+				cost = 7;
 			if ultra_got[104] && altUltra
 			{
 				var t1 = wep_type[wep];
@@ -2676,12 +2682,26 @@ function scrPowers(raceOverwrite = -1) {
 			else {
 				failText = "NOT ENOUGH SKILL";
 				var cost = 5;
+				if skill_got[5]
+					cost = 3;
 				if ultra_got[104] && !altUltra
+				{
 					cost = 10
+					if skill_got[5]
+						cost = 8;
+				}
 				if loops > 0
 				{
-					cost += 2;
-					cost += (humphrySkill * 0.15);
+					cost += 3;
+					if skill_got[5]
+					{
+						cost -= 1;
+						cost += (humphrySkill * 0.14);
+					}
+					else
+					{
+						cost += (humphrySkill * 0.15);
+					}
 				}
 				if humphrySkill >= cost//used to be 50//10%?
 				{
@@ -2793,6 +2813,28 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					duration += 8;
 					confspr = sprEnemyUltraConfusion;
+				}
+				if skill_got[5]
+				{
+					if !instance_exists(HumphryHealth)
+					{
+						maxhealth += 2;
+						my_health += 2;
+						with instance_create(x,y,HumphryHealth)
+						{
+							lifeDuration = duration;
+							alarm[0] = lifeDuration;
+						}
+					}
+					else
+					{
+						with HumphryHealth
+						{
+							lifeDuration = duration;
+							alarm[0] = max(alarm[0],lifeDuration);
+						}
+						
+					}
 				}
 				var enemiesStunned = 0;
 				with enemy

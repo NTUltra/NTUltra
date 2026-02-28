@@ -15,3 +15,5 @@ cost = 1;
 radCost = 0;
 xprev = xstart;
 yprev = ystart;
+weaponType = 1;
+splashColour = c_yellow

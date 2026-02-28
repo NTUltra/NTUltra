@@ -14,6 +14,8 @@ function scrRecycleGland(ammoIncrease, radIncrease = 0, canSplashDamage = true, 
 						sprite_index = sprRecycleGlandEnergy;
 					else if ammoType == 4
 						sprite_index = sprRecycleGlandIcicle;
+					else if ammoType == 3
+						sprite_index = sprRecycleGlandBolt;
 				}
 				if !Player.ultra_got[26]
 				{

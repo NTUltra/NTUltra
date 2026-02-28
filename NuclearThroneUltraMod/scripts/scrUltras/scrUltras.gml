@@ -515,7 +515,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		*/
     
 	    ultra_name[64] = "BLANK ARMOUR"
-	    ultra_text[64] = "WHENEVER YOU LOSE <gb>ARMOUR<gb>#TRIGGER <w>SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#<w>CLEAR<w> ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
+	    ultra_text[64] = "WHENEVER YOU LOSE <gb>ARMOUR<gb> OR USE <w>SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>#<w>CLEAR<w> ALL PROJECTILES#AND DEAL A MASSIVE AMOUNT OF DAMAGE#TO ALL ENEMIES ON SCREEN"
 	    ultra_tips[64] = "come at me bro"
     
 	//WEAPON SMITH WEAPONSMITH
@@ -875,7 +875,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	
 	//NO THING NoThing
 	ultra_name[113] = "ZERO"
-	ultra_text[113] = "WHENEVER YOU <v>VOID CONSUME<v>:#<w>TEMPORARILY<w> INCREASES <r>MAX HEALTH<r> BY <w>1<w>"
+	ultra_text[113] = "WHENEVER YOU <v>VOID CONSUME<v>:#<w>TEMPORARILY<w> INCREASE <r>MAX HEALTH<r> BY <w>1<w>"
 	ultra_tips[113] = "0"
 	
 	if altOverride || (instance_exists(Player) && Player.race == 29 && Player.altUltra)

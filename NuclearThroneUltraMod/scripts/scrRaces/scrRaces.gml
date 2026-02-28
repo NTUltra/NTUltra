@@ -27,8 +27,8 @@ function scrRaces() {
 	race_name[1] = "FISH"
 	race_pass[1] = "GETS MORE <y>AMMO<y>"
 	race_acti[1] = "<aq>DODGE<aq> <w>ROLL<w>"
-	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>#MORE <y>AMMO<y> FROM DROPS"
-	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>##GET EVEN MORE <y>AMMO<y>#FROM <y>AMMO<y> PICKUPS";
+	race_butt[1] = "<aq>WATER<aq> <w>BOOST<w>"
+	race_butt_detail[1] = "<aq>WATER<aq> <w>BOOST<w>#UNLIMITED <w>ROLLING<w>#CHARGE A <aq>WAVE<aq> WHILE <w>ROLLING<w>#<aq>WAVE<aq> REDIRECTS <w>ENEMIES<w> AND <w>PROJECTILES<w>";
 	race_vision[1] = "FISH CAN <w>JUMP<w>";
 	race_vision_detail[1] = "ACTIVE LETS YOU <w>JUMP<w>#CAN STILL <w>ROLL<w> MID AIR!";
 	race_lock[1] = "UNLOCKED FROM THE START"
@@ -397,8 +397,8 @@ function scrRaces() {
 	race_name[16] = "VIKING"
 	race_pass[16] = "REDUCED <r>MAX HP<r>#HAS <gb>ARMOUR<gb>##<p>PORTALS<p> GIVE <gb>ARMOUR<gb>"
 	race_acti[16] = "<g>SERPENT<g> <gb>ARMOUR<gb> <w>STRIKE<w>"//ARMOUR STRIKE
-	race_butt[16] = "INCREASE <gb>MAX ARMOUR<gb> BY ONE#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS FREE"
-	race_butt_detail[16] = race_butt[16];
+	race_butt[16] = "BETTER <w>SERPENT<w> <gb>ARMOUR STRIKE<gb>#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS <g>FREE<g>##WHENEVER YOU LOSE <gb>ARMOUR<gb>#TRIGGER <w>SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>"
+	race_butt_detail[16] = "WIDER AND MORE ACCURATE#<w>SERPENT<w> <gb>ARMOUR STRIKE<gb>#FIRST <gb>ARMOUR<gb> <w>STRIKE<w> EACH AREA IS <g>FREE<g>##WHENEVER YOU LOSE <gb>ARMOUR<gb>#TRIGGER <w>SERPENT<w> <gb>ARMOUR<gb> <w>STRIKE<w>";
 	race_vision[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y> TO <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>##CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
 	race_vision_detail[16] = "HOLD <w>[E]<w> TO:#CONVERT <y>AMMO<y>#TO ONE <gb>ARMOUR<gb>#AND APPLY <g>VENOM<g> TO <r>ENEMIES<r>#COSTS ABOUT 5 AMMO DROPS#8 WHEN USING UNEQUIPPED AMMO#PRIORITIZES SECONDARY AMMO#WHEN ON <gb>MAX ARMOUR<gb>:#CAN ALSO <w>CONVERT<w> TO#<g>THRONEBUTT<g> <gb>ARMOUR STRIKE<gb>";
 	if isUnique
@@ -415,7 +415,7 @@ function scrRaces() {
 	race_eskin[16] = 0
 	race_fskin[16] = 0
 	race_gskin[16] = 0
-	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 5 ARMOUR#AS VIKING"
+	race_bskin_lock[16] = "COMPLETE A LEVEL#WITH 4 ARMOUR#AS VIKING"
 	race_cskin_lock[16] = "KILL 16 ENEMIES#IN ONE ARMOUR STRIKE"
 	altSkinAmount[16] = 1;
 
@@ -644,8 +644,10 @@ function scrRaces() {
 	//race_pass[26] = "LESS <r>MAX HP<r>#DEALING DAMAGE BUILDS UP <w>SKILL<w>##SKILL INCREASES ALL <w>DAMAGE DEALT<w>##SKILL DECREASES OVER TIME#AND WHEN YOU <aq>TAKE DAMAGE<aq>#"//"HITTING SHOTS BUILDS SKILL#MISSING RESETS SKILL#UNTIL YOU HIT A SHOT AGAIN#SKILL INCREASES DAMAGE"
 	race_pass[26] = "LESS <r>MAX HP<r>#<w>DEALING DAMAGE<w> BUILDS UP <w>SKILL<w>#SKILL INCREASES YOUR <w>DAMAGE<w>"
 	race_acti[26] = "<w>HALT<w> - COSTS <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
-	race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
-	race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
+	//race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
+	//race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
+	race_butt[26] = "REDUCE <w>HALT<w> COST#WHILE <w>HALT<w> IS ACTIVE:#GAIN <w>+2<w> TEMPORARY <r>HEALTH<r>"
+	race_butt_detail[26] = race_butt[26];
 	race_vision[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#<w>DEAL DAMAGE<w> TO <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN MORE <w>SKILL<w> DURING STUN";
 	race_vision_detail[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#DEAL <w>DAMAGE<w> TO ALL <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN ADDITIONAL <w>SKILL<w> FOR#THE DAMAGE YOU DEAL USING THIS#<w>SKILL<w> DOES NOT DRAIN WHILE <w>STUNNED<w>";
 	if isUnique

@@ -365,16 +365,17 @@ if selected && visible
 		}
 		else if skill == 5
 		{
+			/*
 			if Player.race = 1//thronebut for fish
 			{
 				with Player//update the ammo values
 					scrWeapons();
-			}
+			}*/
 			if Player.race = 16//VIKING
 			{
-				Player.maxarmour+=1;
+				//Player.maxarmour+=1;
 				Player.freeArmourStrike = true;
-				Player.armour+=1;//kindness here
+				//Player.armour+=1;//kindness here
 			}
 			if scrIsCrown(34)
 			{

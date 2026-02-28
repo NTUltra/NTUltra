@@ -32,8 +32,8 @@ if other.team != team and other.my_health > 0
 	}
 	instance_create(x,y,BulletHit)
 
-if !norecycle
-scrRecycleGland(cost,radCost);
+	if !norecycle
+		scrRecycleGland(cost,radCost,true, weaponType, splashColour);
 
 }
 
