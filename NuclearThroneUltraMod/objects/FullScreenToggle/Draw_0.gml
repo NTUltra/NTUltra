@@ -20,9 +20,13 @@ if UberCont.mouse__x > x and UberCont.mouse__x < x+8 and UberCont.mouse__y > y a
 			UberCont.opt_fulscrn = 0
 
 		window_set_fullscreen(UberCont.opt_fulscrn)
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 		{
 			scrEnableBigScreen();
+		}
+		else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			scrEnableVeryBigScreen();
 		}
 		else {
 			scrDisableBigScreen();	

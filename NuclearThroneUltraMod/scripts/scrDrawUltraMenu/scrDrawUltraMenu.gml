@@ -6,8 +6,10 @@ function scrDrawUltraMenu(race, widescreen = 0) {
 	draw_set_valign(fa_top);
 	draw_set_colour(c_black);
 	var xo = 0;
-	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 		xo = 108;
+	else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		xo = 216;
 	
 	var b = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) - widescreen - 3;
 	var w =  camera_get_view_width(view_camera[0]);

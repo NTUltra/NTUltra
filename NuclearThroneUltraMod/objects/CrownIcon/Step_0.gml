@@ -1,6 +1,9 @@
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 {
 	x = xstart+54;	
+} else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+{
+	x = xstart+108;	
 } else
 	x = xstart;
 if (KeyCont.key_spec[p] == 1 && !instance_exists(UnlockingSecondRow) && (crown == 21 || crown == 35))

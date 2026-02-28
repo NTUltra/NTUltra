@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrEnableVeryBigScreen",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrEnableVeryBigScreen",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Scripts/Menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

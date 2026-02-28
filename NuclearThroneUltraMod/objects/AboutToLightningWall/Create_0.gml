@@ -5,3 +5,5 @@ target = noone;
 alarm[0] = 2;
 myWall = noone;
 team = 1;
+wepFire = -1;
+isVenomized = 0;

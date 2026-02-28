@@ -1,14 +1,14 @@
 /// @description Init
 game_set_speed(10, gamespeed_fps);
-updateVersion = "32.02";
-betaVersion = "32.02";
+updateVersion = "32.03";
+betaVersion = "32.03";
 serverPort = 1414;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
 disableDebug = false;
 if disableDebug
 	visible = false;
-maxwep = 881;
+maxwep = 948;
 network_set_config(network_config_use_non_blocking_socket, 1);
 if (hostSocket < 0) {
 	show_debug_message("FAILED TO HOST GAME\nTRY AGAIN LATER");	

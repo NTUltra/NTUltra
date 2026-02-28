@@ -181,11 +181,16 @@ function scrDrawGameOver() {
 		
 		var syy = yy + 22;
 		var titleWidth = 210;
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 		{
 			titleWidth = 310;
 			var sxx = vx + wh - 144
 			var splatStep = 96;
+		} else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			titleWidth = 410;
+			var sxx = vx + wh - 168
+			var splatStep = 112;
 		} else {
 			var sxx = vx + wh - 120
 			var splatStep = 80;
@@ -280,13 +285,19 @@ function scrDrawGameOver() {
 		var vMargin = 20;
 		var hMargin = 20;
 		var wxo = 4;
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 		{
 			titleWidth = 310;
 			var wxx = vx + wh - 144 - 12
 			surfW += 80;
 			wxo += 16;
-		} else {
+		} else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		{
+			titleWidth = 410;
+			var wxx = vx + wh - 168 - 12
+			surfW += 160;
+			wxo += 32;
+		}else {
 			var wxx = vx + wh - 120
 		}
 		var wepsurfx = wxx - wxo

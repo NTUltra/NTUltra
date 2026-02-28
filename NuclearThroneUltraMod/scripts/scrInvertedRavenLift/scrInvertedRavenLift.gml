@@ -38,7 +38,8 @@ function scrInvertedRavenLift() {
 	            image_index = 0;
 	            nofly = 50;
 				alarm[2] = 0;
-				scrChangeRaven(InvertedRavenFly)
+				if target != noone && instance_exists(target)
+					scrChangeRaven(InvertedRavenFly)
 	        }/*
 			else
 			{

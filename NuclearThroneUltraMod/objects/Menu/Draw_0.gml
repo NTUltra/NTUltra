@@ -83,7 +83,12 @@ if widescreen > 0
 			rn = "BUSINESS\nHOG";
 		else if race == 26
 			rn = "GOOD OL'\nHUMPHRY";
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2//WIDE SCREEN MORE SPACE FOR PORTRAIT!
+		{
+			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 92 + additional,min(1,portraitLerp));
+			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ) + 2,portraitLerp - 1);
+		}
+		else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1//WIDE SCREEN MORE SPACE FOR PORTRAIT!
 		{
 			bpx = lerp(__view_get( e__VW.XView, 0 )-106,__view_get( e__VW.XView, 0 ) + 92 + additional,min(1,portraitLerp));
 			tpx = lerp(__view_get( e__VW.XView, 0 )-string_width(rn),__view_get( e__VW.XView, 0 ) + 2,portraitLerp - 1);
@@ -132,8 +137,10 @@ else
 	if (!scrIsOnlyNormalGamemode())
 	{
 		//draw_text_color(__view_get( e__VW.XView, 0 )+32,__view_get( e__VW.YView, 0 )-40 + widescreen,string_hash_to_newline("GAMEMODE:#"+gamemode[UberCont.opt_gamemode[0]]),c_white,c_white,c_white,c_white,1);
-		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 			var sw = 216;
+		else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+			var sw = 216 * 2;
 		else
 			var sw = 118;
 		

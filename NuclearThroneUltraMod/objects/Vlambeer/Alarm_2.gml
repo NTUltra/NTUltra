@@ -27,8 +27,10 @@ with instance_create(x,y,Player)
 	area = 100;
 	lockout = true;
 }
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 	scrEnableBigScreen();
+else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	scrEnableVeryBigScreen();
 if !instance_exists(BackCont)
 	instance_create(0,0,BackCont)
 if !instance_exists(TopCont)

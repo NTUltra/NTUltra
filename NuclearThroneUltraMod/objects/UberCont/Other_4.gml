@@ -1,6 +1,8 @@
 dropLimit = 0;
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 	scrEnableBigScreen();
+else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	scrEnableVeryBigScreen();
 else
 	scrDisableBigScreen();
 if instance_exists(Player)

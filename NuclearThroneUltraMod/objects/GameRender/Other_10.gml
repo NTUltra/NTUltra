@@ -6,8 +6,10 @@ if dataRef == noone
 if dataRef != noone && instance_exists(dataRef)
 {
 	var extraSpace = 12 - (max(-1,dataRef.maxarmour-1-dataRef.hudArmourSpace))
-	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+	if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 		extraSpace += 4;
+	else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+		extraSpace += 8;
 	if dataRef.totalSkills > extraSpace
 	{
 		alarm[1] = 1;

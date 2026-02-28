@@ -43,18 +43,20 @@ if target != noone && instance_exists(target)
 				}
 			}
 		}
-		else
+		else if target != noone && instance_exists(target)
 		{
-		direction = point_direction(target.x,target.y,x,y)+180+random(20)-10
-		speed = 0.4
-		walk = 40+random(10)
-		gunangle = point_direction(x,y,target.x,target.y)
+			direction = point_direction(target.x,target.y,x,y)+180+random(20)-10
+			speed = 0.4
+			walk = 40+random(10)
+			gunangle = point_direction(x,y,target.x,target.y)
 		}
-
-		if target.x < x
-			right = -1
-		else if target.x > x
-			right = 1
+		if target != noone && instance_exists(target)
+		{
+			if target.x < x
+				right = -1
+			else if target.x > x
+				right = 1
+		}
 	}
 	else if instance_number(enemy) < 10
 	{
@@ -68,8 +70,8 @@ if target != noone && instance_exists(target)
 			image_index = 0;
 		    nofly = 50;
 			alarm[2] = 0;
-		
-			scrChangeRaven(ravenFly)
+			if target != noone && instance_exists(target)
+				scrChangeRaven(ravenFly)
 		}
 		target = t;
 	} 

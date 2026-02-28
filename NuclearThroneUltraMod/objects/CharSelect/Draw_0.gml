@@ -58,9 +58,13 @@ else
 	y = yOffset + __view_get( e__VW.YView, 0 )+__view_get( e__VW.HView, 0 )-49
 	//x = view_xview+8+xstep;
 }
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 {
 	x += 54;	
+}
+else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+{
+	x += 140;
 }
 //yy=32;//48
 /*

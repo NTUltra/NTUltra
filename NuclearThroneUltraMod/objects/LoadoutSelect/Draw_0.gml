@@ -1,8 +1,13 @@
 var hoverText = "";
 var xo = 0;
-if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+var additionalX = 0;
+if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 2
 	xo = 108;
-draw_sprite_ext(sprLoadoutOpenArrowSplatBright,3,__view_get( e__VW.XView, 0 )+xo+300 + 16,
+else if UberCont.opt_sideart == sprite_get_number(sprSideArt) + 1
+{
+	xo = 296;
+}
+draw_sprite_ext(sprLoadoutOpenArrowSplatBright,3,__view_get( e__VW.XView, 0 )+xo+300 + 16 + additionalX,
 lerp(__view_get( e__VW.YView, 0 ) - 100,__view_get( e__VW.YView, 0 ) + 48,newMenuTime),1,1,0,c_white,1);
 var splx = __view_get( e__VW.XView, 0 )+xo+304;
 var sply = lerp(__view_get( e__VW.YView, 0 ) + 300,__view_get( e__VW.YView, 0 )+174,newMenuTime);
