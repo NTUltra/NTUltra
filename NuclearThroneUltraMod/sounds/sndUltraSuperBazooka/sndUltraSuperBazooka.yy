@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.811937,
+  "duration":1.8119501,
   "exportDir":"",
   "name":"sndUltraSuperBazooka",
   "parent":{

@@ -10,7 +10,9 @@ currentSong = "";
 currentAmb = "";
 amb = amb0;
 song = -1;
+songStream = -1;
 amb = -1;
+ambStream = -1;
 if !UberCont.playFullyCompleted
 	snd_play(song)
 scrPlayAmbience()

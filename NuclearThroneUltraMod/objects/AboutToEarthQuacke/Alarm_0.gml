@@ -15,7 +15,7 @@ for (var i = 0; i < al; i++)
 		{
 			if object_index == Player
 				hitBy = other.sprite_index;
-			DealDamage(other.dmg)
+			DealDamage(other.dmg,false,false,false)
 			sprite_index = spr_hurt
 			image_index = 0
 			motion_add(other.image_angle,4)

@@ -329,7 +329,7 @@ else
 		{
 			keptAlkaline = false;
 			var healTaken = 3;
-			var overHealAllow = maxhealth + 2 + defaultOverhealAddition
+			var overHealAllow = maxhealth + 1 + defaultOverhealAddition
 			if race == 25
 			{
 				healTaken += 1;

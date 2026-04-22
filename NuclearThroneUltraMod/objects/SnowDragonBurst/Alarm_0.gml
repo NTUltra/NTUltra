@@ -12,7 +12,7 @@ y = creator.y
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,10+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5,11+random(3))
 team = other.team
 scrCopyWeaponMod(other);
 }
@@ -20,7 +20,7 @@ scrCopyWeaponMod(other);
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5+8,9+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5+8,10+random(3))
 team = other.team
 scrCopyWeaponMod(other);
 }
@@ -29,7 +29,7 @@ scrCopyWeaponMod(other);
 repeat(2)
 {
 with instance_create(x,y,IceFlame)
-{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5-8,9+random(3))
+{motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(10)-5-8,10+random(3))
 team = other.team
 scrCopyWeaponMod(other);}
 }

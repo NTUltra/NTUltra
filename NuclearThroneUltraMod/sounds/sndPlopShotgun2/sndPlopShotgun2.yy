@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":1.154558,
+  "duration":1.1545578,
   "exportDir":"",
   "name":"sndPlopShotgun2",
   "parent":{

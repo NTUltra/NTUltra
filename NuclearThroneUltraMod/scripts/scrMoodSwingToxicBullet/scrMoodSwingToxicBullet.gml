@@ -1,5 +1,5 @@
 /// @description
-function scrMoodSwingToxicBullet(xx,yy, damage, dir = direction, isDoc = true){
+function scrMoodSwingToxicBullet(xx,yy, damage, dir = direction, isDoc = true, ignoreTarget = noone){
 	var n = instance_nearest(xx,yy,enemy)
 	var spd = 16;
 	if n != noone && n.team != 2
@@ -16,6 +16,7 @@ function scrMoodSwingToxicBullet(xx,yy, damage, dir = direction, isDoc = true){
 		}
 	}
 	with instance_create(xx,yy,ToxicConvertedBullet) {
+		ignoreMe = ignoreTarget;
 		dmg = damage;
 		direction = dir;
 		image_angle = direction;

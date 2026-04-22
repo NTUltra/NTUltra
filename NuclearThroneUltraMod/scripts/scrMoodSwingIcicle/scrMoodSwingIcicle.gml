@@ -18,9 +18,9 @@ function scrMoodSwingIcicle(am, hitTarget){
 		with instance_create(x,y,FrostIcicle)
 		{
 			ignoreMe = hitTarget;
-			motion_add(ang,24)
+			motion_add(ang,22)
 			image_angle = direction
-			team = other.team
+			team = 2;
 			frostDamage = clamp(am - 1,0,floor(am * 0.5));
 		}
 		ang += angStep;

@@ -24,12 +24,14 @@ if shotgunshouldered && speed > 2
 	if sprite_index == sprBullet12
 	{
 		sprite_index = sprBullet12HighDamage;
-		dmg = 5;
+		dmg = max(dmg,5);
 		alarm[1] += 3;
 	}
 	else if sprite_index == sprBullet12Disappear
 	{
 		sprite_index = sprBullet12;
+		dmg = max(dmg,4);
+		alarm[1] += 2;
 	}
 }
 if wallbounce < 6

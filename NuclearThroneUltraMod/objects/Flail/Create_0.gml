@@ -3,5 +3,6 @@
 // Inherit the parent event
 event_inherited();
 hits ++;
-dmg = 13
+dmg = 15
 image_speed = 0.5;
+bleedAngle = 0;

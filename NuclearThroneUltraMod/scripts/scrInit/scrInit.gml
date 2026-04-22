@@ -43,10 +43,18 @@ function scrInit() {
 	//Track weapons for thief unlock
 	var n = string(scrCountWeaponsFound());
 	race_lock[28] = "FIND "+ n +"/100 DIFFERENT WEAPONS"
+	if n >= 100
+	{
+		scrUnlockCharacter(28,"FOR FINDING 100 UNIQUE WEAPONS");
+	}
 	
 	//To those who missed it
 	if scrCheckOneGold()//do all characters have at least one golden weapon
 	{
 		scrUnlockCSkin(6,"FOR UNLOCKING ONE GOLDEN WEAPON#ON ALL CHARACTERS",0);
+	}
+	if scrCheckAllGold()//does a char have all gold weps
+	{
+		scrUnlockBSkin(6,"FOR UNLOCKING ALL GOLDEN WEAPONS#ON ONE CHARACTER",0);
 	}
 }

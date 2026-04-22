@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.20399094,
+  "duration":0.2,
   "exportDir":"",
   "name":"sndBloodHitWall",
   "parent":{

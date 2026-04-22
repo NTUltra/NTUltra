@@ -1,6 +1,6 @@
 event_inherited()
 raddrop = 14
-maxhealth = 65;
+maxhealth = 60;
 EnemyHealthAdjustments();
 spr_idle = sprInvertedScrapDogIdle;
 spr_fire = sprInvertedScrapDogFire;

@@ -1,12 +1,12 @@
 /// @description scrStopAmbience
 function scrStopAmbience(){
-	if audio_exists(amb) && audio_is_playing(amb) && amb != -1
+	if audio_is_playing(amb)
 	{
-		try {
-			audio_stop_sound(amb);
-			//audio_destroy_stream(amb);
-		}
-		catch (e) {}
-		amb = -1;
+	    audio_stop_sound(amb);
+	}
+
+	if audio_exists(ambStream)
+	{
+	    audio_destroy_stream(ambStream);
 	}
 }

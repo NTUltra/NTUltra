@@ -37,12 +37,12 @@ alarm[1] = 15+random(10)
 
 wkick = 0
 angle = 0
-tellTime = 21;
-actTime = 12;
+tellTime = 18;
+actTime = 10;
 if GetPlayerLoops() > 0
 {
 	tellTime = 16;
-	actTime = 10;
+	actTime = 8;
 }
 freeze = 0
 if instance_exists(Player)

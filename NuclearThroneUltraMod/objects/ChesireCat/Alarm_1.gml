@@ -8,6 +8,17 @@ if firstTime
 		scrGiveSnooze();
 	}
 }
+with Player
+{
+	if justAsheep
+	{
+		instance_create(other.x-5,other.y-16,Notice);
+		instance_create(other.x+5,other.y-16,Notice);	
+	}
+	justAsheep = false;	
+	if race == 28
+		scrTurnOffInvisibility()
+}
 drama=true;
 //if sprite_index != spr_hurt
 sprite_index = spr_idle

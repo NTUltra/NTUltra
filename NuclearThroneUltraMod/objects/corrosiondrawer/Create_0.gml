@@ -6,3 +6,7 @@ alarm[1] = 1;
 alpha = 1;
 dmg = 1;
 dmg += GetPlayerLoops()*0.05;
+
+team = 2;
+wepFire = -1;
+isVenomized = 0;

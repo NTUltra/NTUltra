@@ -8,12 +8,13 @@ offy = random(2)-1
 
 alarm[0]=120;
 
-dmg = 8;
+dmg = 7;
 dealtDamage = false;
 stickTarget = noone;
-hitTime = 10;
+hitTime = 12;
 
 alarm[11] = 1;
 xprev = x;
 yprev = y;
 hitEntities = [];
+trailColour = make_colour_rgb(255,76,76);

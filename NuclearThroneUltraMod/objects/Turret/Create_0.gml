@@ -32,7 +32,7 @@ proj = EnemyBullet1
 if loops > 0
 {
 	trackingStrength = 0.7;
-	projectileSpeed = 99;
+	projectileSpeed = 9;
 	if loops > 1
 		trackingStrength = 0.75;
 	if loops > 6

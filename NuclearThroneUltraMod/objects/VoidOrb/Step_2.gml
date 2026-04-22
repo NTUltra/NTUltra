@@ -32,4 +32,3 @@ if instance_exists(creator)
 	image_xscale += rate;
 	image_yscale += rate;
 }
-instance_destroy();

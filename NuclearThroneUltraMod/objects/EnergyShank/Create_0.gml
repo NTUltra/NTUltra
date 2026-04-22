@@ -10,6 +10,6 @@ if instance_exists(Player)
 		shk ++;
 	}
 }
-dmg=22;
+dmg=21;
 typ = 0 //0 = nothing, 1 = deflectable, 2 = destructable, 3 = deflectable
 

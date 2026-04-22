@@ -13,7 +13,7 @@ if other.team != team && other.team !=2
 		    sprite_index = spr_hurt
 		    image_index = 0
 		    BackCont.shake += 1
-			if (instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
+			if (other.canMood && instance_exists(Player) && Player.skill_got[43] && Player.ultra_got[97] && !Player.altUltra && team != 0)
 				{
 					scrMoodSwingStun(1, 0);
 					scrMoodSwingLightningArc(22,other.x,other.y,2,max(1,other.dmg - 1));

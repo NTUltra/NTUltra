@@ -621,8 +621,8 @@ function scrRaces() {
 	race_acti[25] = "CONVERT <r>LIFE<r> TO <g>RADS<g>"
 	race_butt[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES NEARBY#AND STEALS SOME OF THEIR <g>RADS<g>##<w>ACTIVE<w> CAN NO LONGER <r>KILL<r> YOU"
 	race_butt_detail[25] = "YOUR <w>ACTIVE<w> ALSO#DEALS DAMAGE TO ALL ENEMIES NEARBY#AND STEALS SOME OF THEIR <g>RADS<g>#DAMAGE IS EQUAL TO YOUR <g>LEVEL<g> + <g>LOOP<g>##<w>ACTIVE<w> CAN NO LONGER <r>KILL<r> YOU"
-	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>";
-	race_vision_detail[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#INSTANTLY <w>COLLECT<w> ALL RADS#ALL <w>PICKUPS<w> AND <g>RADS<g>#SPREAD THE <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#<r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>#ENABLE <g>MUTATIONS<g> AT THE END OF THE <w>AREA<w>";
+	race_vision[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#OVER <r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>";
+	race_vision_detail[25] = "HOLD <w>[E]<w> TO:#<w>TEMPORARILY<w> DISABLE <w>2<w> RANDOM <g>MUTATIONS<g>#AND START A <p>PLAGUE<p>#INSTANTLY <w>COLLECT<w> ALL RADS#ALL <w>PICKUPS<w> AND <g>RADS<g>#SPREAD THE <p>PLAGUE<p>#AT THE END OF THE <p>PLAGUE<p>#OVER <r>HEAL<r> BASED ON <g>RADIATION<g> YOU <w>COLLECTED<w>#ENABLE <g>MUTATIONS<g> AT THE END OF THE <w>AREA<w>";
 	if isUnique
 	{
 		race_vision[25] = string_replace_all(race_vision[25],"HOLD <w>[E]","PRESS <w>["+regalBut+"]");
@@ -646,7 +646,7 @@ function scrRaces() {
 	race_acti[26] = "<w>HALT<w> - COSTS <w>SKILL<w>"//"SLOW AND SHRINK#ENEMY PROJECTILES#AT THE COST OF#unequipped AMMO"//DISCIPLINE those bullets
 	//race_butt[26] = "#<w>SKILL<w> DECREASES SLOWER"
 	//race_butt_detail[26] = "#<w>SKILL<w> DECREASES 25% SLOWER#KEEP 5% MORE SKILL WHEN GETTING HIT"
-	race_butt[26] = "REDUCE <w>HALT<w> COST#WHILE <w>HALT<w> IS ACTIVE:#GAIN <w>+2<w> TEMPORARY <r>HEALTH<r>"
+	race_butt[26] = "REDUCE <w>HALT<w> COST#WHILE <w>HALT<w> IS ACTIVE:#GAIN <w>+3<w> TEMPORARY <r>HEALTH<r>"
 	race_butt_detail[26] = race_butt[26];
 	race_vision[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#<w>DEAL DAMAGE<w> TO <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN MORE <w>SKILL<w> DURING STUN";
 	race_vision_detail[26] = "PRESS <w>[E]<w> TO:#<w>STUN<w> YOURSELF AND#DEAL <w>DAMAGE<w> TO ALL <r>ENEMIES<r> <w>NEAR<w> YOU#GAIN ADDITIONAL <w>SKILL<w> FOR#THE DAMAGE YOU DEAL USING THIS#<w>SKILL<w> DOES NOT DRAIN WHILE <w>STUNNED<w>";

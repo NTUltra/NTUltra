@@ -35,9 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"mskBullet1",
-    "path":"sprites/mskBullet1/mskBullet1.yy",
+    "name":"mskDevestator",
+    "path":"sprites/mskDevestator/mskDevestator.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"mskDevestator",
+    "path":"sprites/mskDevestator/mskDevestator.yy",
+  },
   "visible":false,
 }

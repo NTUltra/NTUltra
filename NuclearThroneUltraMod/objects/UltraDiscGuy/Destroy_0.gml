@@ -3,25 +3,25 @@ if !sleeping
 {
 	with instance_create(x,y,EnemySquareDisc)
 	{
-		motion_add(90,5);
+		motion_add(90,4.5);
 		image_angle = direction
 		team = other.team
 	}
 	with instance_create(x,y,EnemySquareDisc)
 	{
-		motion_add(0,5);
+		motion_add(0,4.5);
 		image_angle = direction
 		team = other.team
 	}
 	with instance_create(x,y,EnemySquareDisc)
 	{
-		motion_add(270,5);
+		motion_add(270,4.5);
 		image_angle = direction
 		team = other.team
 	}
 	with instance_create(x,y,EnemySquareDisc)
 	{
-		motion_add(180,5);
+		motion_add(180,4.5);
 		image_angle = direction
 		team = other.team
 	}

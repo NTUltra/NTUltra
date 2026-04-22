@@ -1008,7 +1008,7 @@ if !instance_exists(LevCont) and visible = 1
 		var holdKey = (KeyCont.key_fire[p] = 1 or KeyCont.key_fire[p] = 2 or keyfire > 0)
 		if ((canPuffyCheek <= 0 || KeyCont.key_fire[p] = 1))
 		{
-			if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire < 1 && holdKey && !scrIsChargeWeapon(wep)))
+			if (((wep_auto[wep] == 0 || wep_auto[wep] == 2) and clicked = 1) || (autoFire <= 0 && holdKey && !scrIsChargeWeapon(wep)))
 			{
 				if ultra_got[44] == 1 && instance_exists(Marker)
 				{
@@ -1044,7 +1044,7 @@ if !instance_exists(LevCont) and visible = 1
 				//if reload > 0
 				if ((reload > 0 || canPuffyCheek > 0) && !canInfiniteFire)
 					can_shoot = 0;
-	    		autoFire = 6;
+	    		autoFire = 5;
 				clicked = 0;
 			}
 			else if ((wep_auto[wep] = 1 || wep_auto[wep] == 3) && holdKey)
@@ -1434,7 +1434,7 @@ if (!instance_exists(LevCont))
 		if reload <= 0 && can_shoot == 0
 		{
 			
-			autoFire = 6;
+			autoFire = 5;
 			can_shoot = 1
 			if ultra_got[21] && altUltra
 				canInfiniteFire = 1;
@@ -2452,7 +2452,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			sprite_index = sprExtraFeetCloseDodge;	
 		}
 		instance_create(x,y,EuphoriaBlock);
-		var dropChance = 40;
+		var dropChance = 20;
 		if skill_got[4]
 			dropChance += 10;
 		if race == 25 {
@@ -2462,7 +2462,7 @@ if skill_got[2] && !instance_exists(LevCont) && !outOfCombat
 			else
 			{
 				snd_play(sndExtraFeetDodgeFail);
-				var am = 4;
+				var am = 3;
 				repeat(am)
 					with instance_create(x,y,Rad)
 					{

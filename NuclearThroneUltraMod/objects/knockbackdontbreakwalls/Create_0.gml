@@ -1,4 +1,7 @@
 /// @description Init
+team = 2;
+wepFire = -1;
+isVenomized = 0;
 target = -1;
 pushStrength = 70;
 pushSpeed = 15;

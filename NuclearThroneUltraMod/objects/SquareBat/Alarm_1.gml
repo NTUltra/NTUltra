@@ -27,6 +27,10 @@ if target != noone {
 			var dir = point_direction(x,y,target.x,target.y) + random_range(10,-10);
 			sprite_index = spr_fire;
 			alarm[2] = sprite_get_number(spr_fire)/image_speed;
+			with SquareBat
+			{
+				alarm[1] += 2;	
+			}
 			snd_play(sndEnemyFire);
 			with instance_create(x,y,EnemyBullet1Square)
 			{

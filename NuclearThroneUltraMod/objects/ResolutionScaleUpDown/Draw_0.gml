@@ -4,7 +4,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 {
 	snd_play_2d(sndClick);
 	if UberCont.opt_resolution_scale <= 1
-		UberCont.opt_resolution_scale = 16;
+		UberCont.opt_resolution_scale = 8;
 	else
 		UberCont.opt_resolution_scale *= 0.5;
 		
@@ -23,7 +23,7 @@ if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x and UberCont.mo
 else if mouse_check_button_pressed(mb_left) and UberCont.mouse__x > x+10 and UberCont.mouse__x < x+18 and UberCont.mouse__y > y and UberCont.mouse__y < y+8
 {
 	snd_play_2d(sndClick);
-	if UberCont.opt_resolution_scale >= 16
+	if UberCont.opt_resolution_scale >= 8
 		UberCont.opt_resolution_scale = 1;
 	else
 		UberCont.opt_resolution_scale *= 2;

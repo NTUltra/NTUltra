@@ -32,5 +32,5 @@
     "path":"sprites/sprNOWALLS/sprNOWALLS.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

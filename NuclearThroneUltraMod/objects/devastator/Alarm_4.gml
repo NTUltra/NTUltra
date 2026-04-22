@@ -1,6 +1,6 @@
 /// @description Wall collision
 
-if place_meeting(x,y,Wall)
+if collision_line(xprevious,yprevious,x,y,Wall,false,false)
 {
 	instance_destroy();
 }

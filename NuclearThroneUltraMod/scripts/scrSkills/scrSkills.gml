@@ -467,11 +467,11 @@ function scrSkills() {
 	skill_bons[31] = "EVERYTHING THAT DEALS#MORE THAN 4 DAMAGE TO YOU#DEALS TWO LESS DAMAGE#6 DAMAGE MAX";
 	
 	skill_name[32] = "ALKALINE SALIVA"
-	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>2<w>";
-	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>3<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>2<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>#NOT TAKING DAMAGE <r>HEALS<r> IN THE <w>NEXT<w> AREA"
+	skill_text[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD#CAN <r>OVERHEAL<r> <w>1<w>";
+	skill_detail[32] = "FIRST <aq>HIT<aq> YOU TAKE IN AN AREA#<r>HEALS<r> YOU INSTEAD (<w>3<w><r>HP<r>)#CAN <r>OVERHEAL<r> <w>1<w>##CAN <w>CLEANSE<w> <r>ENEMY<r> <g>VENOM<g>#NOT TAKING DAMAGE <r>HEALS<r> IN THE <w>NEXT<w> AREA"
 	skill_tips[32] = "alkaline saliva prevents lethal damage if thats the first hit you take"
 	skill_msnd[32] =  sndMutAlkalineSaliva
-	skill_bons[32] = "+1 HP HEALING#CAN OVERHEAL 3";
+	skill_bons[32] = "+1 HP HEALING#CAN OVERHEAL 2";
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess

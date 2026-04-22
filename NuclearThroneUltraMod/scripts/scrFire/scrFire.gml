@@ -3941,7 +3941,7 @@ function scrFire(canDrown = true) {
 	repeat(8)
 	{
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(40)-20)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,14+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -4944,9 +4944,9 @@ function scrFire(canDrown = true) {
 	with instance_create(x,y,CarThrow)
 	{
 		scrGiveProjectileStats();
-		dmg = 5;
+		dmg = 10;
 		team = other.team
-		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,20)
 	}
 
 	BackCont.viewx2 += lengthdir_x(-7,aimDirection+180)*UberCont.opt_shake

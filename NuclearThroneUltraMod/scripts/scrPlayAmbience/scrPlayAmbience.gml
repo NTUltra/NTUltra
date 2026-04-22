@@ -19,11 +19,12 @@ function scrPlayAmbience(){
 			exit;
 		}
         fName = string_replace(fName,"ref sound ","");
-        amb = audio_create_stream(fName);
+		if !audio_exists(ambStream)
+			ambStream = audio_create_stream(fName);
 		if !audio_is_playing(amb) && fName != currentAmb
 		{
 			currentAmb = fName;
-	        snd_loop(amb);
+	        amb = snd_loop(ambStream);
 	        audio_sound_gain(amb, max(0, UberCont.opt_ambvol), 0);
 	        alarm[1] = 1;
 		}

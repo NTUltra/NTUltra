@@ -10,7 +10,7 @@ image_speed = 0;
 image_xscale = 0.5;
 image_yscale = 0.5;
 typ = 4 //0 = normal, 1 = deflectable, 2 = destructable, 3 = deflectable
-dmg = 30;
+dmg = 35;
 alarm[11] = 0;
 canBeMoved = false;
 creator = noone;

@@ -200,7 +200,7 @@ function scrGenerateFloorMaker(limiter) {
 		if canCount
 			fc ++;
 	}
-	var maxLimit = 600;
+	var maxLimit = 300;
 	if instance_exists(MushroomBoss)
 	{
 		fc = 0;

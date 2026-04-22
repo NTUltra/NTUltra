@@ -5,7 +5,7 @@ event_inherited();
 shk = 0;
 canAlwaysDeflect = true;
 norecycle = false;
-dmg = 4;
+dmg = 6;
 image_speed -= 0.1;
 snd_wallhit = sndHitWall;
 if UberCont.ultramodSwap

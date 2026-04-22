@@ -56,7 +56,7 @@ function scrSpawnSomeEnemies(){
 						{
 							instance_create(x + 16 + random(4) - 2, y + 16 + random(4) - 2, UltraCrystal);
 						}
-						else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108 && spawnarea != 146 && spawnarea != 147
+						else if spawnarea != 6 && spawnarea != 112 && spawnarea != 117 && spawnarea != 124 && spawnarea != 7 && spawnarea != 108 && spawnarea != 146 && spawnarea != 147 && spawnarea != 138
 						{
 							//Not mushroom vulcano or labs
 							if ran < 35

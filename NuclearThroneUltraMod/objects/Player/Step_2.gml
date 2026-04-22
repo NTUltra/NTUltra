@@ -726,13 +726,14 @@ if (tookHit)
 			if ((damageTaken > 0 /*&& prevhealth < maxhealth) || (my_health <= 0 &&  armour < 1*/))
 			{
 				isAlkaline = false;
+				peaceBarrierTime = 0;
 				my_health = max(my_health,prevhealth);
 				with EnemyVenom
 				{
 					instance_destroy();	
 				}
 				var healTaken = 3;
-				var overHealAllow = maxhealth + 2 + defaultOverhealAddition
+				var overHealAllow = maxhealth + 1 + defaultOverhealAddition
 				if race == 25
 				{
 					healTaken += 1;
@@ -783,6 +784,7 @@ if (tookHit)
 		else if ultra_got[48] && lag > 0
 		{
 			lag -= 1;
+			peaceBarrierTime = 0;
 			alarm[3] = max(alarm[3],12);//before your lag lowers again}
 		}
 		else if (skill_got[46]) && peaceBarriers > 0
@@ -833,7 +835,7 @@ if (tookHit)
 					rage -= 2;
 			}
 			scrBlankArmour();
-			if skill_got[5]
+			if skill_got[5] && race == 16
 				scrSerpentArmourStrike();
 			if armour > maxarmour
 				armour = maxarmour;
@@ -893,12 +895,15 @@ if tookHit
 ///strong spirit justasheep
 if(my_health <= 0 && maxhealth > 0)
 {
+	if armour > 0
+		armour = 0;
     if skill_got[25]//strong spirit
     {
 	    if strongspirit==true&&strongspiritused==false
 	    {
 		    snd_play(sndStrongSpiritLost);
 		    my_health = 1;
+			peaceBarrierTime = 0;
 			BackCont.shake += 10;
 			Sleep(50);
 			alarm[3] += 18;
@@ -925,9 +930,11 @@ if(my_health <= 0 && maxhealth > 0)
 			alarm[7] = 30;
 		instance_create(x,y,CantGainSkill);
 	    my_health = 1;
+		peaceBarrierTime = 0;
     }
 	if my_health <= 0 && instance_exists(SkeletonSkull)
 	{
+		peaceBarrierTime = 0;
 		repeat(10)
 			instance_create(x,y,Dust);
 		snd_play(sndExplosionS);
@@ -1014,6 +1021,7 @@ if(my_health <= 0 && maxhealth > 0)
 		}
 		snd_play(sndCursedPickup);
 		my_health = 1;
+		peaceBarrierTime = 0;
 		BackCont.shake += 10;
 		Sleep(50);
 		alarm[3] += 14;
@@ -1034,6 +1042,7 @@ if(my_health <= 0 && maxhealth > 0)
 			my_health = 1;	
 		}
 		lastWishPrevent = false;
+		peaceBarrierTime = 0;
 		snd_hurt = sndDamageNegate;
 		snd_play_2d(sndMutLastWish);
 		scrGiveEuphoriaShield();
@@ -1059,6 +1068,7 @@ if(my_health <= 0 && maxhealth > 0)
 		BackCont.shake += 10;
 		Sleep(50);
 		my_health = 1;
+		peaceBarrierTime = 0;
 		scrGiveEuphoriaShield();
 		alarm[3] += 7;
 		var al = 6;//weapon types total

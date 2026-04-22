@@ -14,6 +14,9 @@ right = choose(1,-1)
 target = -1
 my_health = 999;
 team = 2
+wepFire = -1;
+isVenomized = 0;
+
 reload=0;
 mySize=1;
 //behavior

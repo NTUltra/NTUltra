@@ -27,7 +27,7 @@ function scrMakeFloor(limiter) {
 	{
 	area = Player.area
 	subarea=Player.subarea;}
-	if area = 1|| area = 105 || area = 113{ if random(3.5) < 1
+	if area = 1|| area = 105 || area = 113{ if random(3.25) < 1
 	{instance_create(x,y,Floor)
 	instance_create(x+32,y,Floor)
 	instance_create(x+32,y+32,Floor)
@@ -56,7 +56,7 @@ function scrMakeFloor(limiter) {
 		instance_create(x-32,y,Floor)
 		instance_create(x-32,y-32,Floor)
 	}
-	if area = 3 || area = 106 || area == 136 { if random(8) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
+	if area = 3 || area = 106 || area == 136 { if random(7) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
 	{
 		instance_create(x,y,Floor)
 		instance_create(x+32,y,Floor)
@@ -1001,6 +1001,7 @@ function scrMakeFloor(limiter) {
 		}
 		else {
 			instance_create(x,y,WallBreak);
+			instance_create(x,y,NOWALLSHEREPLEASE);
 		}
 	}
 	//Turn limiting
@@ -1366,6 +1367,11 @@ function scrMakeFloor(limiter) {
 		instance_create(x,y,Floor);
 		x += lengthdir_x(32,direction);
 		y += lengthdir_y(32,direction);
+	}
+	else if area == 142 || area == 143
+	{
+		x += lengthdir_x(floorStep,direction);
+		y += lengthdir_y(floorStep,direction);	
 	}
 	else
 	{

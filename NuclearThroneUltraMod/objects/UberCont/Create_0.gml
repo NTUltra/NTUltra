@@ -4,7 +4,7 @@ encryptedVersion = 003;
 public = 1 //1 is no cheats and release
 defaultPublic = public;
 updateVersion = "32."
-subUpdateVersion = "03";
+subUpdateVersion = "10";
 notUpdated = "";
 serverIp = "77.249.12.209"serverPort = 1414;
 currentSave = 0;
@@ -221,6 +221,7 @@ if !instance_exists(Cursor)
 canSpawnInversionShards = false;
 collectedInversionShards = 0;
 collectedInversionShardReward = false;
+collectedNewInversionShard = false;
 extraVan = 0;
 skillDeposit = [];
 droppedWeapons = [];

@@ -1,8 +1,10 @@
 if other.team != team and other.my_health > 0
 {
 	var deal = dmg;
-	if alarm[3] > 0
+	if alarm[6] > 0
+	{
 		deal *= 2;
+	}
 	if UberCont.normalGameSpeed == 60
 		deal *= 0.5;
 	with other

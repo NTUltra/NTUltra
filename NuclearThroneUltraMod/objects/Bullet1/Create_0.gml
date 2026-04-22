@@ -17,3 +17,4 @@ xprev = xstart;
 yprev = ystart;
 weaponType = 1;
 splashColour = c_yellow
+ignoreMe = noone;

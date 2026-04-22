@@ -79,8 +79,8 @@ with Player
 			team = 2;
 		}
 	}
-					
-	scrHeal(healAmount);
+	healAmount = min(healAmount, 6);
+	scrHeal(healAmount, true);
 	if healAmount > 2
 		snd_play_2d(sndDoctorPlagueBigHeal);
 	else if healAmount > 0

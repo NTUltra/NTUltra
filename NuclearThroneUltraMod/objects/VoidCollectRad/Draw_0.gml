@@ -63,7 +63,7 @@ if lerpStart >= lerpStartingCircle
 {
 	draw_circle(targetX,targetY, (polygonWidth + lerpStart) * 2, false);
 	event_user(0);
-	if ls >= 1
+	if ls >= 1 - lerpIncrease * dt
 	{
 		instance_destroy();	
 	}

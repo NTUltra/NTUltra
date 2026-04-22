@@ -3,7 +3,7 @@
 ///@param
 function ApexPredator(){
 	if Player.ultra_got[19] && !Player.altUltra  {
-		if random(100) < 11 * luck
+		if random(100) < 11 * Player.luck
 		{
 			//Snare
 			if Player.skill_got[5]

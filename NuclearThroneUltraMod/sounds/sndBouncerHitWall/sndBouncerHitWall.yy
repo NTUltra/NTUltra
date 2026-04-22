@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.093531,
+  "duration":0.09353741,
   "exportDir":"",
   "name":"sndBouncerHitWall",
   "parent":{

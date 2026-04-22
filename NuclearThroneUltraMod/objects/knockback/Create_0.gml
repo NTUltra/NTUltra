@@ -6,3 +6,6 @@ lerpTime = 1;
 lerpCalc = 0.17;
 lerpCalcBack = 0.17;
 dealtDamage = true;
+team = 2;
+wepFire = -1;
+isVenomized = 0;

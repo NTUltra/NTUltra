@@ -24,7 +24,7 @@ function scrAlienIntestinesAttack(){
 	BackCont.shake += alienIntestines*0.2;
 	var i = 0;
 	var tentacleLength = round(lerp(2,16,min(1,other.alienIntestines/220)));
-	repeat(round(lerp(1,6,min(1,alienIntestines / 160))))
+	repeat(round(lerp(1,5,min(1,alienIntestines / 160))))
 	{
 		with instance_create(x,y,Tentacle)
 		{
@@ -51,7 +51,7 @@ function scrAlienIntestinesAttack(){
 		i++;
 	}
 	var tentacleLength = lerp(3,18,min(1,other.alienIntestines/250));
-	var am = round(lerp(1,26,min(1,alienIntestines / 325)))
+	var am = round(lerp(1,21,min(1,alienIntestines / 325)))
 	if am > 0
 	{
 		var i = 0;

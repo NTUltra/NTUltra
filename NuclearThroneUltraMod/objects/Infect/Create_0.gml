@@ -2,6 +2,9 @@ var len = 24;
 var ang = random(360);
 loops = GetPlayerLoops();
 dmg = 10 + loops;
+team = 2;
+wepFire = -2;
+isVenomized = 0;
 dmgScale = loops * 0.5;
 dmgAdd = loops * 0.3;
 repeat(12)

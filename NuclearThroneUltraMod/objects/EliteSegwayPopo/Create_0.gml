@@ -29,13 +29,13 @@ wkick = 0
 angle = 0
 wepangle = choose(-140,140)
 wepflip = 1
-smackTell = 7;
-smackDetectionRange = 74;
+smackTell = 6;
+smackDetectionRange = 80;
 goForSmackRange = 150;
 smackRange = 8;
 smackSpeed = 6;
-tellTime = 11;
-actTime = 6;
+tellTime = 10;
+actTime = 5;
 wasBehindWall = false;
 freeze = 0
 if instance_exists(Player)

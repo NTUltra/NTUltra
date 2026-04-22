@@ -38,8 +38,8 @@
     "path":"sprites/sprDisperseBullet/sprDisperseBullet.yy",
   },
   "spriteMaskId":{
-    "name":"mskBullet1",
-    "path":"sprites/mskBullet1/mskBullet1.yy",
+    "name":"mskDispersers",
+    "path":"sprites/mskDispersers/mskDispersers.yy",
   },
   "visible":true,
 }

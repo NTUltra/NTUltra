@@ -3053,7 +3053,7 @@ function scrWeapons() {
 	wep_name[272] = "GHOST BLADE"
 	wep_type[272] = 4
 	wep_auto[272] = 0
-	wep_load[272] = 41
+	wep_load[272] = 38
 	wep_cost[272] = 1.5
 	wep_sprt[272] = sprGhostBlade
 	wep_area[272] = 16
@@ -3087,7 +3087,7 @@ function scrWeapons() {
 	wep_name[275] = "GHOST SHOVEL"
 	wep_type[275] = 4
 	wep_auto[275] = 0
-	wep_load[275] = 76
+	wep_load[275] = 73
 	wep_cost[275] = 2
 	wep_sprt[275] = sprGhostShovel
 	wep_area[275] = 19
@@ -3420,7 +3420,7 @@ function scrWeapons() {
 	wep_name[305] = "FROST BLOWER"
 	wep_type[305] = 4
 	wep_auto[305] = 3
-	wep_load[305] = 4
+	wep_load[305] = 5
 	wep_cost[305] = 1
 	wep_sprt[305] = sprSnowBlower
 	wep_area[305] = 10
@@ -3497,7 +3497,7 @@ function scrWeapons() {
 	wep_name[311] = "BLASPHEMIA"
 	wep_type[311] = 0
 	wep_auto[311] = 0
-	wep_load[311] = 17//15
+	wep_load[311] = 19//15
 	wep_cost[311] = 0
 	wep_sprt[311] = sprYVExcalibur1
 	wep_area[311] = -2
@@ -3536,7 +3536,7 @@ function scrWeapons() {
 	wep_sprt[314] = sprChargeSplinterGun
 	wep_area[314] = 9
 	wep_text[314] = "hold and hold longer"
-	wep_swap[314] = sndSwapShotgun
+	wep_swap[314] = sndSwapBow
 	wep_rad[314] = 0;
 
 	wep_name[315] = "MONEY GUN"
@@ -3619,8 +3619,8 @@ function scrWeapons() {
 	wep_name[322] = "FROST DRAGON"
 	wep_type[322] = 4
 	wep_auto[322] = 3
-	wep_load[322] = 4
-	wep_cost[322] = 0.75
+	wep_load[322] = 6
+	wep_cost[322] = 1
 	wep_sprt[322] = sprSnowDragon
 	wep_area[322] = 14
 	wep_text[322] = "cold breath"
@@ -4025,7 +4025,7 @@ function scrWeapons() {
 	wep_load[358] = 20
 	wep_cost[358] = 3
 	wep_sprt[358] = sprIonTeleporter
-	wep_area[358] = 10
+	wep_area[358] = -1
 	wep_text[358] = "just like atom"
 	wep_swap[358] = sndSwapEnergy
 	wep_rad[358] = 0;
@@ -4044,7 +4044,7 @@ function scrWeapons() {
 	wep_name[360] = "FLAIL"
 	wep_type[360] = 0
 	wep_auto[360] = 0
-	wep_load[360] = 27
+	wep_load[360] = 26
 	wep_cost[360] = 0
 	wep_sprt[360] = sprFlail
 	wep_area[360] = 10
@@ -5452,7 +5452,7 @@ function scrWeapons() {
 	wep_name[484] = "GHOST DAGGER"
 	wep_type[484] = 4
 	wep_auto[484] = 0
-	wep_load[484] = 21
+	wep_load[484] = 20
 	wep_cost[484] = 1
 	wep_sprt[484] = sprGhostDagger
 	wep_area[484] = 15
@@ -5607,7 +5607,7 @@ function scrWeapons() {
 	wep_name[498] = "DEVASTATOR"
 	wep_type[498] = 5
 	wep_auto[498] = 0
-	wep_load[498] = 50//60 normally
+	wep_load[498] = 47//60 normally
 	wep_cost[498] = 8
 	wep_sprt[498] = sprDevastator
 	wep_area[498] = 15
@@ -5618,7 +5618,7 @@ function scrWeapons() {
 	wep_name[499] = "ANNIHILATOR"
 	wep_type[499] = 4
 	wep_auto[499] = 0
-	wep_load[499] = 48//60 normally
+	wep_load[499] = 46//60 normally
 	wep_cost[499] = 6
 	wep_sprt[499] = sprAnnihilator
 	wep_area[499] = 13
@@ -6126,10 +6126,10 @@ function scrWeapons() {
 	wep_name[545] = "SUPER LIGHTNING CROSSBOW"
 	wep_type[545] = 3
 	wep_auto[545] = 1
-	wep_load[545] = 38
+	wep_load[545] = 40
 	wep_cost[545] = 6.5
 	wep_sprt[545] = sprSuperLightningCrossbow
-	wep_area[545] = 13
+	wep_area[545] = 14
 	wep_text[545] = ""
 	wep_swap[545] = sndSwapBow
 	wep_rad[545] = 0;
@@ -6249,7 +6249,7 @@ function scrWeapons() {
 	wep_name[556] = "ELIMINATOR"
 	wep_type[556] = 3
 	wep_auto[556] = 0
-	wep_load[556] = 50
+	wep_load[556] = 46
 	wep_cost[556] = 8
 	wep_sprt[556] = sprEliminator
 	wep_area[556] = 16
@@ -8005,7 +8005,7 @@ function scrWeapons() {
 	wep_name[714] = "GHOST SPEAR"
 	wep_type[714] = 4
 	wep_auto[714] = 0
-	wep_load[714] = 40
+	wep_load[714] = 38
 	wep_cost[714] = 2
 	wep_sprt[714] = sprGhostSpear
 	wep_area[714] = 16
@@ -8683,8 +8683,8 @@ function scrWeapons() {
 	wep_name[775] = "AUTO LEACHER"
 	wep_type[775] = 3
 	wep_auto[775] = 1
-	wep_load[775] = 7
-	wep_cost[775] = 2
+	wep_load[775] = 9
+	wep_cost[775] = 1.5
 	wep_sprt[775] = sprAutoLeacher
 	wep_area[775] = 16
 	wep_text[775] = "how does the blood transfer to you?"
@@ -8694,7 +8694,7 @@ function scrWeapons() {
 	wep_name[776] = "SUPER INFUSER"
 	wep_type[776] = 3
 	wep_auto[776] = 0
-	wep_load[776] = 29
+	wep_load[776] = 31
 	wep_cost[776] = 7.5
 	wep_sprt[776] = sprSuperInfuser
 	wep_area[776] = 12
@@ -9103,7 +9103,7 @@ function scrWeapons() {
 	wep_type[812] = 4
 	wep_auto[812] = 3
 	wep_load[812] = 14
-	wep_cost[812] = 3
+	wep_cost[812] = 2.5
 	wep_sprt[812] = sprGhostDrill1
 	wep_area[812] = 25
 	wep_text[812] = "DRILLS ANYTHING"
@@ -9326,7 +9326,7 @@ function scrWeapons() {
 	wep_name[832] = "TURTLE SHOTGUN"
 	wep_type[832] = 2
 	wep_auto[832] = 2
-	wep_load[832] = 40
+	wep_load[832] = 38
 	wep_cost[832] = 3.5
 	wep_sprt[832] = sprTurtleShotgun
 	wep_area[832] = 2
@@ -9338,7 +9338,7 @@ function scrWeapons() {
 	wep_name[833] = "STAR GRENADE LAUNCHER"
 	wep_type[833] = 4
 	wep_auto[833] = 0
-	wep_load[833] = 30
+	wep_load[833] = 28
 	wep_cost[833] = 2
 	wep_sprt[833] = sprStarGrenadeLauncher
 	wep_area[833] = 2
@@ -10366,7 +10366,7 @@ function scrWeapons() {
 	wep_name[923] = "BURST CROSSBOW"
 	wep_type[923] = 3
 	wep_auto[923] = 2
-	wep_load[923] = 45
+	wep_load[923] = 43
 	wep_cost[923] = 2
 	wep_sprt[923] = sprBurstCrossbow
 	wep_area[923] = 2
@@ -10662,6 +10662,28 @@ function scrWeapons() {
 	wep_text[948] = "holy god of thunder"
 	wep_swap[948] = sndSwapEnergy
 	wep_rad[948] = 0;
+	
+	wep_name[949] = "SPLURGE"
+	wep_type[949] = 1
+	wep_auto[949] = 1
+	wep_load[949] = 14
+	wep_cost[949] = 10
+	wep_sprt[949] = sprSplurge
+	wep_area[949] = 7
+	wep_text[949] = "splurges a bunch of bullet and shotgun shells"
+	wep_swap[949] = sndSwapShotgun
+	wep_rad[949] = 0;
+	
+	wep_name[950] = "ULTRA CHARGE SPLINTERGUN"
+	wep_type[950] = 3
+	wep_auto[950] = 0
+	wep_load[950] = 12
+	wep_cost[950] = 1
+	wep_sprt[950] = sprUltraChargeSplinterGun
+	wep_area[950] = 33
+	wep_text[950] = "ultimate charge"
+	wep_swap[950] = sndSwapBow
+	wep_rad[950] = 2;
 	
 	//Swiss army bowwa
 	//Charge boomerang;,\,l

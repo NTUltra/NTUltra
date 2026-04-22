@@ -1296,7 +1296,7 @@ function scrPowers(raceOverwrite = -1) {
 				}
 				else
 				{
-					canSpawn = 	rad > radCost;
+					canSpawn = rad > radCost;
 				}
 			}
 			else if !ultra_got[46]
@@ -1325,9 +1325,9 @@ function scrPowers(raceOverwrite = -1) {
 				if ultra_got[47] {
 					if !altUltra
 					{
-						if armour > 0
-							armour -= 1;
-						else
+						//if armour > 0
+						//	armour -= 1;
+						//else
 							DealDamage(2,false,false,false)//1/8--->0.875
 						hitBy = sprite_index;
 					}
@@ -2818,8 +2818,8 @@ function scrPowers(raceOverwrite = -1) {
 				{
 					if !instance_exists(HumphryHealth)
 					{
-						maxhealth += 2;
-						my_health += 2;
+						maxhealth += 3;
+						my_health += 3;
 						with instance_create(x,y,HumphryHealth)
 						{
 							lifeDuration = duration;

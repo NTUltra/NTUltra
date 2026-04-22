@@ -9,4 +9,5 @@ alarm[4] = 10;
 fireDelay = 4;
 projectileSpeed = 6;
 fullCircle = 0;
+gunAngle = 0;
 friction = 0.06;

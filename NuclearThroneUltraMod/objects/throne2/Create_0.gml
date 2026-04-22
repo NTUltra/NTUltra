@@ -1,5 +1,5 @@
 raddrop = 70
-maxhealth = 1050
+maxhealth = 1100
 loops = GetPlayerLoops();
 if scrIsHardMode()
 	maxhealth += 150;

@@ -6,9 +6,9 @@ with other
     if team != other.team
     {
 		if UberCont.normalGameSpeed == 60
-			DealDamage(other.dmg * 0.5, true);
+			DealDamage(other.dmg * 0.5, true,false,false);
 		else
-			DealDamage(other.dmg, true);
+			DealDamage(other.dmg, true,false,false);
 	    sprite_index = spr_hurt;
 	    image_index = 0
 		motion_add(other.dashDir,20);

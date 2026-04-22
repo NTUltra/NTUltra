@@ -1,4 +1,4 @@
 /// @description xxx
 event_inherited();
-pspeed = 5.1;
+pspeed = 6;
 ultramodded = false;

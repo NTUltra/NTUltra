@@ -14,6 +14,7 @@ motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180+random(5
 
 with instance_create(x,y,Bullet3)
 {
+	maxWallHits += 1;
 	if other.ultramodded
 		alarm[11] = 0;
 motion_add(point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+random(12)-6,other.pspeed)
@@ -21,7 +22,7 @@ image_angle = direction
 team = other.team
 scrCopyWeaponMod(other);
 }
-
+pspeed = max(pspeed - 0.15, 5);
 BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,UberCont.mouse__x,UberCont.mouse__y)+180)*UberCont.opt_shake
 BackCont.shake += 3

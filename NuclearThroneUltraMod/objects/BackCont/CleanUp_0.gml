@@ -1,4 +1,4 @@
-if (noone != -1 && surface_exists(shad))
+if (shad != -1 && surface_exists(shad))
 {
     surface_free(shad);
 }

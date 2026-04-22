@@ -42,8 +42,8 @@
     "path":"sprites/sprDisperseScytherBullet/sprDisperseScytherBullet.yy",
   },
   "spriteMaskId":{
-    "name":"mskSpinSlashBullet",
-    "path":"sprites/mskSpinSlashBullet/mskSpinSlashBullet.yy",
+    "name":"mskDispersers",
+    "path":"sprites/mskDispersers/mskDispersers.yy",
   },
   "visible":true,
 }

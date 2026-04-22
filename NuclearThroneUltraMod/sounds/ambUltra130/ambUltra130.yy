@@ -10,7 +10,7 @@
   "compression":3,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":70.02,
+  "duration":69.973335,
   "exportDir":"",
   "name":"ambUltra130",
   "parent":{

@@ -10,7 +10,7 @@ if myGuy != noone && instance_exists(myGuy)
 			sprite_index = spr_idle;
 			BackCont.shake *= 0.5;
 		}
-		my_health = prevhealth;
+		my_health = max(1,prevhealth);
 	}
 	if myGuy.x < x
 		right = -1

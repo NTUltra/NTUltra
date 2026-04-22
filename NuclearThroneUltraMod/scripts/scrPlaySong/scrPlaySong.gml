@@ -15,15 +15,16 @@ function scrPlaySong(){
         else
 		{
 			if !audio_is_playing(song)
-				snd_loop(song);
+				song = snd_loop(song);
 			exit;
 		}
         fName = string_replace(fName,"ref sound ","");
-        song = audio_create_stream(fName);
+		if !audio_exists(songStream)
+			songStream = audio_create_stream(fName);
 		if !audio_is_playing(song) && fName != currentSong
 		{
 			currentSong = fName;
-			snd_loop(song);
+			song = snd_loop(songStream);
 			audio_sound_gain(song, max(0, UberCont.opt_musvol), 0);
 			alarm[1] = 1;
 		}

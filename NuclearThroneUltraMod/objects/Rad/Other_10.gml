@@ -11,7 +11,7 @@ if instance_exists(Player)
 			add -= crownOfInversionRadReduction;
 		if scrIsCrown(4)
 			add += 0.18;
-		else if scrIsCrown(18)
+		if scrIsCrown(18)
 			add += 0.5;
 		if UberCont.radUp
 			add += 0.1;

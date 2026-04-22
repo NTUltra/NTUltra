@@ -204,7 +204,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
     
 	    ultra_name[24] = "VERIFY VENUZ"
 	    ultra_text[24] = "EVERY OTHER <w>POP POP<w> ALSO FIRES#YOUR SECONDARY WEAPON#CAN POP FULL <w>AUTO<w>#+50% SECONDARY <w>RELOAD SPEED<w>"
-	    ultra_tips[24] = "poppoppoppoppoppoppoppop"
+	    ultra_tips[24] = "@twitter fuk u"
 		
 		if altOverride || (instance_exists(Player) && Player.race == 6 && (Player.altUltra))
 		{
@@ -505,7 +505,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 		}
 		
 	    ultra_name[63] = "COLD HEART"
-	    ultra_text[63] = "<gb>ARMOUR<gb> <w>STRIKE<w> USES 2<r>HP<r>#INSTEAD OF <gb>ARMOUR<gb>##<gb>ARMOUR<gb> STRIKE <aq>FREEZES<aq> ENEMIES##WHILE YOU HAVE <gb>ARMOUR<gb>#PRIMARY <w>RELOAD SPEED<w> +20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
+	    ultra_text[63] = "<gb>ARMOUR<gb> <w>STRIKE<w> USES <w>2<w><r>HP<r>#INSTEAD OF <gb>ARMOUR<gb>##<gb>ARMOUR<gb> STRIKE <aq>FREEZES<aq> ENEMIES##WHILE YOU HAVE <gb>ARMOUR<gb>#PRIMARY <w>RELOAD SPEED<w> +20%"//"ARMOUR STRIKE FREEZES ENEMIES#AND DEALS MORE DAMAGE#WHEN YOU HAVE NO MORE ARMOUR#YOU CAN USE 2HP TO USE AN ARMOUR STRIKE"
 	    ultra_tips[63] = "hearth strike"
 		
 		/*

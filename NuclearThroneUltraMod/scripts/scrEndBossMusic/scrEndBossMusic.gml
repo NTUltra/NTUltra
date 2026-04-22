@@ -7,7 +7,6 @@ function scrEndBossMusic(){
 	{
 	//optimise sound_discard(song)
 	//optimise sound_discard(amb)
-
 	scrStopSong();
 	song = musUltraBossWin
 	audio_play_sound(song,1,false)

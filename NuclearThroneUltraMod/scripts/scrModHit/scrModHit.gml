@@ -11,7 +11,7 @@ function scrModHit(projectileRef) {
 		target = noone;
 		walk = 0;
 		var sleepAmount = 10;
-		if wp != 0
+		if wp > 0 && wp < array_length(Player.wep_load[wp])
 			sleepAmount = ceil(Player.wep_load[wp]*0.75);
 		sleepAmount = max(1,sleepAmount);
 		with projectile

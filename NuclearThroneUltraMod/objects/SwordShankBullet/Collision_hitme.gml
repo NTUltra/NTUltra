@@ -7,7 +7,7 @@ if other.team != team and other.my_health > 0
 			snd_play(snd_hurt, hurt_pitch_variation,true)
 		if (!array_contains(other.hitEntities,id))
 		{
-			DealDamage(ceil(other.dmg*8));
+			DealDamage(ceil(other.dmg*9));
 			if my_health > 0
 				other.speed -= 1;
 		}

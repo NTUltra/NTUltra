@@ -978,8 +978,8 @@ function scrFire2(hasTailNow) {
 		spr_hurt = sprGoldenCarHurt
 		//spr_dead = sprScorchmark
 		team = other.team
-		dmg = 5;
-		motion_add(aimDirection+(random(8)-4)*other.accuracy,16)
+		dmg = 10;
+		motion_add(aimDirection+(random(8)-4)*other.accuracy,20)
 	}
 
 	BackCont.viewx2 += lengthdir_x(-8,aimDirection+180)*UberCont.opt_shake
@@ -2578,7 +2578,7 @@ function scrFire2(hasTailNow) {
 	repeat(7)
 	{
 	with instance_create(x,y,Bullet1)
-	{motion_add(aimDirection+(random(36)-18)*other.accuracy,12+random(6))
+	{motion_add(aimDirection+(random(36)-18)*other.accuracy,15+random(6))
 	image_angle = direction
 	team = other.team}
 	}
@@ -3290,7 +3290,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,SnowBurst)
 	{
 	creator = other.id
-	ammo = 7
+	ammo = 8
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -3481,7 +3481,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 25 + ceil(ls*0.5)//28
+					dmg = 24 + ceil(ls*0.5)//28
 					sprite_index = sprExcaliburSlash;
 					mask_index = mskExcaliburSlash;
 					longarms = 0
@@ -3509,7 +3509,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),BigPandaSlash)
 				{
-					dmg = 31 + ceil(ls*0.5)//35
+					dmg = 30 + ceil(ls*0.5)//35
 					sprite_index = sprExcaliburBigSlash;
 					image_yscale = choose(1,-1);
 					mask_index = mskBigSlash;
@@ -3566,7 +3566,7 @@ function scrFire2(hasTailNow) {
 				instance_create(x,y,Dust)
 				with instance_create(x+lengthdir_x(((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(((Player.skill_got[13]+bettermelee)*20),aimDirection),ExcaliburHammerBoom)
 				{
-					dmg = 26 + ls
+					dmg = 25 + ls
 					longarms = 0
 					longarms = (Player.skill_got[13]+other.bettermelee)*3
 					motion_add(aimDirection,2.7+longarms)
@@ -3851,7 +3851,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x,y,SnowDragonBurst)
 	{
 	creator = other.id
-	ammo = 4
+	ammo = 6
 	time = 1
 	team = other.team
 	event_perform(ev_alarm,0) 
@@ -5174,8 +5174,9 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),Flail)
 	{
+		bleedAngle = aimDirection - (30 * sign(other.wepangle));
 	longarms = 0
-	dmg = 14;
+	dmg = 17;
 	longarms = (Player.skill_got[13]+other.bettermelee)*3
 	motion_add(aimDirection,2.7+longarms)
 	image_angle = direction
@@ -5185,11 +5186,11 @@ function scrFire2(hasTailNow) {
 	wepangle = -wepangle
 	if !skill_got[2]
 	{
-		scrMoveContactSolid(aimDirection,2);
+		scrMoveContactSolid(aimDirection,3);
 		motion_add(aimDirection,0.5)
 	}
-	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 4
 	wkick = -5
 
@@ -5287,7 +5288,7 @@ function scrFire2(hasTailNow) {
 	repeat(7)
 	{
 	with instance_create(x,y,Splinter)
-	{motion_add(aimDirection+(random(20)-40)*other.accuracy,15+random(10))
+	{motion_add(aimDirection+(random(40)-20)*other.accuracy,15+random(10))
 	image_angle = direction
 	team = other.team}
 	}
@@ -5314,7 +5315,7 @@ function scrFire2(hasTailNow) {
 	motion_add(aimDirection+other.right*100+random(60)-30,2+random(2))
 
 	with instance_create(x,y,Bullet3)
-	{motion_add(aimDirection+(random(20)-10)*other.accuracy,6.0)//5.5)
+	{motion_add(aimDirection+(random(20)-10)*other.accuracy,7)//5.5)
 	image_angle = direction
 	team = other.team}
 
@@ -8948,7 +8949,7 @@ function scrFire2(hasTailNow) {
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),ExplosionFlail)
 	{
 	longarms = 0
-	dmg = 17;
+	dmg = 20;
 	if Player.skill_got[42]
 	{
 		ammo = ceil(ammo*Player.betterTail);
@@ -8967,8 +8968,8 @@ function scrFire2(hasTailNow) {
 		scrMoveContactSolid(aimDirection,2);
 		motion_add(aimDirection,0.6)
 	}
-	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = -6
 
@@ -12374,7 +12375,7 @@ function scrFire2(hasTailNow) {
 
 	with instance_create(x+lengthdir_x(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),y+lengthdir_y(4+(Player.skill_got[13]+bettermelee)*20,aimDirection),PlasmaFlail)
 	{
-		dmg = 14;
+		dmg = 18;
 		longarms = 0
 		
 		longarms = (Player.skill_got[13]+other.bettermelee)*3
@@ -12390,8 +12391,8 @@ function scrFire2(hasTailNow) {
 		scrMoveContactSolid(aimDirection,3);
 		motion_add(aimDirection,0.5)
 	}
-	BackCont.viewx2 += lengthdir_x(10,aimDirection)*UberCont.opt_shake
-	BackCont.viewy2 += lengthdir_y(10,aimDirection)*UberCont.opt_shake
+	BackCont.viewx2 += lengthdir_x(18,aimDirection)*UberCont.opt_shake
+	BackCont.viewy2 += lengthdir_y(18,aimDirection)*UberCont.opt_shake
 	BackCont.shake += 6
 	wkick = -6
 
@@ -16359,7 +16360,7 @@ function scrFire2(hasTailNow) {
 	snd_play_fire(sndMicroMicroLauncher);
 	with instance_create(x,y,MicroMicroNade)
 	{
-		direction = aimDirection+(random(16)-8)*other.accuracy;
+		direction = aimDirection+(random(8)-4)*other.accuracy;
 		image_angle = direction;
 		team = other.team
 		scrGiveProjectileStats();

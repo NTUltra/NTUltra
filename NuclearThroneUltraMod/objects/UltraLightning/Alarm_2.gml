@@ -46,7 +46,7 @@ if al > 0 && alarm[0] < 1
 											scrMoodSwingStun(5);
 											scrMoodSwingIcicle(2, id);
 											scrMoodSwingFlameSpread(24);
-											scrMoodSwingToxicBullet(other.x,other.y,2,other.direction);
+											scrMoodSwingToxicBullet(other.x,other.y,2,other.direction,true,id);
 										}
 									}
 									else

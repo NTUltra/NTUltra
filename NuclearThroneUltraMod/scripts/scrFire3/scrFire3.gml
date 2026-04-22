@@ -1443,14 +1443,15 @@ function scrFire3(hasTailNow){
 		}
 		with instance_create(x,y,ShotgunBurst)
 		{
+			projectileVelocity += 0.5;
 			creator = other.id
 			ammo = 4
 			time = 4
 			team = other.team
-			alarm[0] = 15;
+			alarm[0] = 13;
 			if Player.skill_got[42]
 			{
-				alarm[0] = 8;
+				alarm[0] = 7;
 				if Player.ultra_got[97] && !Player.altUltra
 				{
 					alarm[0] = 1;
@@ -4566,7 +4567,6 @@ function scrFire3(hasTailNow){
 		
 		//VOID ORB
 		case 926:
-
 			with instance_create(x,y,VoidOrb)
 			{
 				speed = 2;
@@ -5265,6 +5265,84 @@ function scrFire3(hasTailNow){
 			motion_add(aimDirection + 180,3)
 			scrMoveContactSolid(aimDirection + 180,8)
 		}
+		break;
+		
+		//SPLURGE
+		case 949:
+
+		snd_play_fire(sndDoubleShotgun)
+		snd_play_fire(choose(sndPlopShotgun1,sndPlopShotgun2))
+		var splurgeRange = 40;
+		var splurgeRangeHalf = splurgeRange * 0.5;
+		var splurgeSpd = 16;
+		var splurgeSpdRan = 8;
+		repeat(3)
+		{
+			with instance_create(x,y,Bullet1)
+			{
+				motion_add(aimDirection+(random(splurgeRange)-splurgeRangeHalf)*other.accuracy,splurgeSpd+random(splurgeSpdRan))
+				image_angle = direction
+				team = other.team
+			}
+		}
+		repeat(3)
+		{
+			with instance_create(x,y,Bullet12)
+			{
+				motion_add(aimDirection+(random(splurgeRange)-splurgeRangeHalf)*other.accuracy,splurgeSpd + 3 + random(splurgeSpdRan))
+				image_angle = direction
+				team = other.team
+			}
+		}
+		repeat(3)
+		{
+			with instance_create(x,y,Bullet2)
+			{
+				motion_add(aimDirection+(random(splurgeRange)-splurgeRangeHalf)*other.accuracy,splurgeSpd + 5 + random(splurgeSpdRan))
+				image_angle = direction
+				team = other.team
+			}
+		}
+
+		BackCont.viewx2 += lengthdir_x(13,aimDirection+180)*UberCont.opt_shake
+		BackCont.viewy2 += lengthdir_y(13,aimDirection+180)*UberCont.opt_shake
+		BackCont.shake += 9
+		wkick = 7
+
+		break;
+		
+		//ULTRA CHARGE SPLINTERGUN
+		case 950:
+
+		with instance_create(x,y,UltraChargeSplinterGun)
+		{
+			maxcharge=28;//maxrate
+			type=3;
+			cost=1;
+			creator = other.id
+			//ammo = 9
+			chargetime = 2
+			costtime = 14
+			team = other.team
+			if Player.skill_got[42]
+			{
+				chargetime = 1;
+				costtime *= Player.betterTail;
+				rate += 2;
+				if Player.ultra_got[97] && !Player.altUltra
+				{
+					chargetime = 1;
+					rate += 2;
+					//Player.ammo[type]-=cost;
+					//scrSpendingAmmo(wep_type[wep],wep_cost[wep]);
+				}
+				maxcharge *= Player.betterTail;
+				scrActivateTail(hasTailNow);
+			}
+			event_perform(ev_alarm,0)
+			event_perform(ev_alarm,1) 
+		}
+
 		break;
 		
 	}

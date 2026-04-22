@@ -7,6 +7,7 @@ var yy = y+lengthdir_y(l,d);
 snd_play(sndPlasmaHit,0.1,false)
 with instance_create(xx,yy,PlasmaImpact)
 {
+	dmg += 1;
 	direction = d;
 	speed += 1;
 	team = other.team;

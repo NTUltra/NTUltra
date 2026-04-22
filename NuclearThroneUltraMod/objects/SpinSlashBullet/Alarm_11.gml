@@ -12,7 +12,7 @@ if um == ultramods.bloodMelee
 	{
 		with instance_create(x,y,BloodBullet)
 		{
-			dmg = 3;
+			dmg = 5;
 			scrCopyWeaponMod(other);
 			direction = ang;
 			image_angle = direction;
