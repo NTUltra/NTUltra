@@ -1,7 +1,7 @@
 /// @description Init
 game_set_speed(10, gamespeed_fps);
-updateVersion = "32.11";
-betaVersion = "32.11";
+updateVersion = "32.12";
+betaVersion = "32.12";
 serverPort = 1414;
 hostSocket = network_create_server(network_socket_tcp,real(serverPort),64);
 totalDailies = 0;
