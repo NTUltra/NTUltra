@@ -9076,7 +9076,7 @@ function scrFire2(hasTailNow) {
 	{
 	creator = other.id
 	ammo = 3
-	time = 2
+	time = 3
 	team = other.team
 	event_perform(ev_alarm,0) 
 	}

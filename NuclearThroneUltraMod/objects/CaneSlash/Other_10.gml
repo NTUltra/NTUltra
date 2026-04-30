@@ -6,7 +6,7 @@ if array_length(hitEntities) > 0 && instance_exists(hitEntities[array_length(hit
 {
 	if !hitEntities[array_length(hitEntities) - 1].totemImmune
 	{
-		var drop = scrDrop(15,0,true);
+		var drop = scrDrop(12,0,true);
 		if drop != noone
 		{
 			BackCont.shake += 20;

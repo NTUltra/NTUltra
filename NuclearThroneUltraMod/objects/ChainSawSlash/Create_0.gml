@@ -4,3 +4,4 @@
 event_inherited();
 dmg = 2.5;
 rotation = 40;
+shk = 0.5;

@@ -31,7 +31,7 @@ if active
 				sprite_index=sprFrogHeal;
 			}
 			snd_play(sndBloodlustProc);
-			my_health += 8 + min(42,loops*2);
+			my_health += 2 + min(60,loops*5);
 			my_health = min(maxhealth,my_health);
 		}
 	}

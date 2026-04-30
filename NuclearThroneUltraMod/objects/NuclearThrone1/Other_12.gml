@@ -2,9 +2,13 @@
 bigballs = true;
 with NuclearThrone1Side
 {
-	if isLeft
-		alarm[2] = firerate * 9;
-	else
-		alarm[2] = firerate * 5;
+	if alarm[2] < 1
+	{
+		if isLeft
+			alarm[2] = max(1,firerate * 9 * badboyBuff);
+		else
+			alarm[2] = max(1,firerate * 5 * badboyBuff);
+	}
 }
-alarm[1] += 20;	
+if badboyBuff == 1
+	alarm[1] += 20;

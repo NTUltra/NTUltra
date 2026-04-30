@@ -80,7 +80,8 @@ if alarm[3] > 0
 
 		if dodge > -dodgeDelay// && alarm[2] < 1
 		{
-			sprite_index=spr_walk;
+			if sprite_index != spr_hurt
+				sprite_index = spr_walk;
 			if UberCont.normalGameSpeed == 60
 			{
 				dodge -= 0.5
@@ -89,8 +90,8 @@ if alarm[3] > 0
 					alarm[2] += 0.25;
 				if dodge > 0
 				{
-					if round(dodge) == dodge
-						sprite_index=spr_walk;
+					if sprite_index != spr_hurt && round(dodge) == dodge
+						sprite_index = spr_walk;
 					move_contact_solid(direction,maxSpeed*0.5)
 				}
 			}
@@ -102,7 +103,8 @@ if alarm[3] > 0
 					alarm[2] += 0.5;
 				if dodge > 0
 				{
-					sprite_index=spr_walk;
+					if sprite_index != spr_hurt
+					sprite_index = spr_walk;
 					move_contact_solid(direction,maxSpeed)
 				}
 			}

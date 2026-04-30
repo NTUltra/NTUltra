@@ -6,11 +6,19 @@ if target != noone && instance_exists(target)
 	snd_play(sndBigBallFire);
 	var addspeed = point_distance(x,y,target.xprevious,target.yprevious)*0.0153;
 	addspeed = min(addspeed,20);
+	if instance_exists(NuclearThrone1)
+	{
+		if NuclearThrone1.badboyBuff != 1
+		{
+			addspeed *= 1.25;
+		}
+	}
 	if isThrone2
 	{
 		dir += choose(random_range(25,55),random_range(-25,-55));
-		addspeed *= 0.95;
+		addspeed *= 0.975;
 	}
+	
 	if typ == 2
 	{
 		if isInverted

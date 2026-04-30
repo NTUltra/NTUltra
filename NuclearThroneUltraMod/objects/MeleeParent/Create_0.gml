@@ -22,7 +22,7 @@ friction = 0.1
 
 snd_wallhit=sndMeleeWall;
 snd_hit=sndHitWall;
-shk = 5;
+shk = 4;
 if UberCont.ultramodSwap
 {
 	var um = GetPlayerUltramod()

@@ -56,18 +56,24 @@ function scrMakeFloor(limiter) {
 		instance_create(x-32,y,Floor)
 		instance_create(x-32,y-32,Floor)
 	}
-	if area = 3 || area = 106 || area == 136 { if random(7) < 1 || ( subarea=3&&random(5)<1 )//random 8 scrapyard
-	{
-		instance_create(x,y,Floor)
-		instance_create(x+32,y,Floor)
-		instance_create(x+32,y+32,Floor)
-		instance_create(x,y+32,Floor)
-		instance_create(x,y-32,Floor)
-		instance_create(x-32,y,Floor)
-		instance_create(x+32,y-32,Floor)
-		instance_create(x-32,y-32,Floor)
-		instance_create(x-32,y+32,Floor)
-	}else instance_create(x,y,Floor)} 
+	if area = 3 || area = 106 || area == 136 { 
+		if random(5) < 1
+		{
+			instance_create(x,y,Floor)
+			instance_create(x+32,y,Floor)
+			instance_create(x+32,y+32,Floor)
+			instance_create(x,y+32,Floor)
+			instance_create(x,y-32,Floor)
+			instance_create(x-32,y,Floor)
+			instance_create(x+32,y-32,Floor)
+			instance_create(x-32,y-32,Floor)
+			instance_create(x-32,y+32,Floor)
+		}
+		else 
+		{
+			instance_create(x,y,Floor);
+		}
+	} 
 
 	if area = 4|| area = 111 || area = 115//caves?
 	instance_create(x,y,Floor)

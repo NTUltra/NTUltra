@@ -2684,8 +2684,8 @@ function scrFire3(hasTailNow){
 		with instance_create(x+lengthdir_x(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),y+lengthdir_y(6+((Player.skill_got[13]+bettermelee)*20),aimDirection),CaneSlash)
 		{
 			image_yscale *= sign(other.wepangle);
-			snd_wallhit = choose(sndMeleeSpearHit1,sndMeleeSpearHit2);;
-			dmg = 24
+			snd_wallhit = choose(sndMeleeSpearHit1,sndMeleeSpearHit2);
+			dmg = 23
 			canAlwaysDeflect = true;
 			longarms = 0
 			longarms = (Player.skill_got[13]+other.bettermelee)*3

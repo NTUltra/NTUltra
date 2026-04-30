@@ -2,7 +2,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+gunAngle = 0;
 rotation = 20;
 alarm[1] = 1;
 alarm[4] = 10;

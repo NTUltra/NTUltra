@@ -5298,6 +5298,7 @@
     {"id":{"name":"mskRad","path":"sprites/mskRad/mskRad.yy",},},
     {"id":{"name":"mskRadDiver","path":"sprites/mskRadDiver/mskRadDiver.yy",},},
     {"id":{"name":"mskRapierSlash","path":"sprites/mskRapierSlash/mskRapierSlash.yy",},},
+    {"id":{"name":"mskRapierSlashTip","path":"sprites/mskRapierSlashTip/mskRapierSlashTip.yy",},},
     {"id":{"name":"mskRat","path":"sprites/mskRat/mskRat.yy",},},
     {"id":{"name":"mskReviveArea","path":"sprites/mskReviveArea/mskReviveArea.yy",},},
     {"id":{"name":"mskRocket","path":"sprites/mskRocket/mskRocket.yy",},},

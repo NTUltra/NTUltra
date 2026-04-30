@@ -5014,6 +5014,7 @@
     {"name":"mskRad","order":10,"path":"sprites/mskRad/mskRad.yy",},
     {"name":"mskRadDiver","order":21,"path":"sprites/mskRadDiver/mskRadDiver.yy",},
     {"name":"mskRapierSlash","order":132,"path":"sprites/mskRapierSlash/mskRapierSlash.yy",},
+    {"name":"mskRapierSlashTip","order":225,"path":"sprites/mskRapierSlashTip/mskRapierSlashTip.yy",},
     {"name":"mskRat","order":14,"path":"sprites/mskRat/mskRat.yy",},
     {"name":"mskReviveArea","order":31,"path":"sprites/mskReviveArea/mskReviveArea.yy",},
     {"name":"mskRocket","order":550,"path":"sprites/mskRocket/mskRocket.yy",},

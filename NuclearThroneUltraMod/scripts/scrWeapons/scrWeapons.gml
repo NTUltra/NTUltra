@@ -918,7 +918,7 @@ function scrWeapons() {
 	wep_text[81] = "SLASH SLASH SLASH SLASH SLASH"
 	wep_swap[81] = sndSwapSword
 	wep_rad[81] = 0;
-	wep_popup[81] = "this is considered a 'melee weapon'";
+	wep_popup[81] = "THIS IS CONSIDERED A 'MELEE WEAPON'";
 
 	wep_name[82] = "MEGA LASER PISTOL"
 	wep_type[82] = 5
@@ -2854,7 +2854,7 @@ function scrWeapons() {
 	wep_text[254] = "shank them to dead"
 	wep_swap[254] = sndSwapSword
 	wep_rad[254] = 0;
-	wep_popup[254] = "this is considered a 'melee weapon'";
+	wep_popup[254] = "THIS IS CONSIDERED A 'MELEE WEAPON'";
 
 	wep_name[255] = "ENERGY SHANK GUN"
 	wep_type[255] = 5
@@ -5475,7 +5475,7 @@ function scrWeapons() {
 	wep_name[486] = "LIGHTNING JACKHAMMER"
 	wep_type[486] = 5
 	wep_auto[486] = 3
-	wep_load[486] = 6
+	wep_load[486] = 7
 	wep_cost[486] = 1
 	wep_sprt[486] = sprLightningJackHammer
 	wep_area[486] = 17
@@ -8869,6 +8869,7 @@ function scrWeapons() {
 	wep_text[791] = "someone left this here?"
 	wep_swap[791] = sndSwapSword
 	wep_rad[791] = 0;
+	wep_popup[791] = "DEALS MORE DAMAGE AT THE TIP!";
 	
 	wep_name[792] = "LIGHTNING NUNCHAKU"
 	wep_type[792] = 0
@@ -9795,7 +9796,7 @@ function scrWeapons() {
 	wep_name[873] = "CANE"
 	wep_type[873] = 0
 	wep_auto[873] = 0
-	wep_load[873] = 14
+	wep_load[873] = 15
 	wep_cost[873] = 0
 	wep_sprt[873] = sprCane
 	wep_area[873] = 13

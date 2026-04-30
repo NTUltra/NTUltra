@@ -15,6 +15,7 @@ else
 
 with instance_create(x,y,Lightning)
 {
+	dmg -= 1;
 	image_angle = other.direction+180;
 	team = other.team
 	ammo = other.lightningAmmo

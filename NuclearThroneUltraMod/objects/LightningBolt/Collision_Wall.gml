@@ -18,6 +18,7 @@ snd_play(sndLightning1,0.1,true)
 
 with instance_create(x,y,Lightning)
 {
+	dmg -= 1;
 	image_angle = other.direction+180;
 team = other.team
 ammo = other.lightningAmmo + 4;

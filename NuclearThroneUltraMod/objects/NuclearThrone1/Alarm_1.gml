@@ -29,12 +29,12 @@ if target != noone && instance_exists(target)
 	//my_health = 1;
 	var ran = random(100);
 	badboyBuff = 1;
-	if target.x < x - 128 || target.x > x + 128 && ran > 50
+	if target.x < x - 85 || target.x > x + 85
 	{
 		fireTriShot = false;
-		badboyBuff = 0.5; //Player is a bad boy double the firerate
-		alarm[1] *= 0.5;
+		badboyBuff = 0.25; //Player is a bad boy double the firerate
 		event_user(2);
+		alarm[1] = ceil(alarm[1] * 0.2);
 	}
 	walkDir = 0;
 	if (Player.y < y + 40 && ran > 50 || Player.y < y)
@@ -43,7 +43,8 @@ if target != noone && instance_exists(target)
 		walk = alarm[1];
 		walkDir = -1.5;
 		fireTriShot = false;
-		bigballs = false;
+		if badboyBuff == 1
+			bigballs = false;
 		maxSpeed = 5;
 	}
 	else if ((target.y - y > 180 && ran > 40) || ran > 94 || target.y - y > 220)
@@ -57,23 +58,25 @@ if target != noone && instance_exists(target)
 		if target.y - y > 350
 			walkDir += 0.3;
 		fireTriShot = false;
-		bigballs = false;
+		if badboyBuff == 1
+			bigballs = false;
 		maxSpeed = 3 * walkDir;
 	}
 	else if target.x > beamL && target.x < beamR && ran > 55
 	{
 		//In center
-		bigballs = false;
+		if badboyBuff == 1
+			bigballs = false;
 		fireTriShot = false;
 		event_user(0);//BEAM START
 	}
-	else if ran > 40 && cantrishot
+	else if ran > 40 && cantrishot && badboyBuff == 1
 	{
 		//Tri shot
 		bigballs = false;
 		event_user(1);
 	}
-	else
+	else if badboyBuff == 1
 	{
 		fireTriShot = false;
 		event_user(2);
