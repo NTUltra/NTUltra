@@ -18,7 +18,7 @@ function scrFire(canDrown = true) {
 	{
 		with ReloadableGun
 		{
-			if owner == other.id
+			if owner == other.id && wep == other.wep
 			{
 				if ammo > maxAmmo
 				{

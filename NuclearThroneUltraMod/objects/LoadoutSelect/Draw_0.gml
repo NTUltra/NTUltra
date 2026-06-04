@@ -334,7 +334,7 @@ if (hasNoMenuOpen()
 		draw_set_valign(fa_bottom)
 		
 		//SKIN
-		if skin=1 && UberCont.race_bskin[race]=1
+		if skin=1 && UberCont.race_bskin[race]>=1
 		{//you have this one
 			drawMenuBSkin(skin,race,c_white);
 		}
@@ -342,7 +342,7 @@ if (hasNoMenuOpen()
 		{//you DONT have this one
 			drawMenuBSkin(skin,race,c_black);
 		}
-		else if skin=2 && UberCont.race_cskin[race]=1
+		else if skin=2 && UberCont.race_cskin[race]>=1
 		{//you have this one
 			drawMenuBSkin(skin,race,c_white);
 		}

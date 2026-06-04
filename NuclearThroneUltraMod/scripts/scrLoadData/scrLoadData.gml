@@ -6,14 +6,14 @@ function scrLoadData() {
 	selected_start_bwep[dir] = ini_read_real("DATA","selected_start_bwep"+string(dir),-2);
 	secondary_start_wep[dir] = ini_read_real("DATA","secondary_start_wep"+string(dir),0);
 	regal_start[dir] = ini_read_real("DATA","regal_start"+string(dir),0);
-	regal_start_enabled[dir] = ini_read_real("DATA","regal_start_enabled"+string(dir),0);
-	race_have[dir] = ini_read_real("DATA","race_have"+string(dir),race_have[dir]);
-	race_bskin[dir] = ini_read_real("DATA","bskin"+string(dir),race_bskin[dir]);
-	race_cskin[dir] = ini_read_real("DATA","cskin"+string(dir),race_cskin[dir]);
-	race_dskin[dir] = ini_read_real("DATA","dskin"+string(dir),race_dskin[dir]);
-	race_eskin[dir] = ini_read_real("DATA","eskin"+string(dir),race_eskin[dir]);
-	race_fskin[dir] = ini_read_real("DATA","fskin"+string(dir),race_fskin[dir]);
-	race_gskin[dir] = ini_read_real("DATA","gskin"+string(dir),race_gskin[dir]);
+	regal_start_enabled[dir] = min(1,ini_read_real("DATA","regal_start_enabled"+string(dir),0));
+	race_have[dir] = min(1,ini_read_real("DATA","race_have"+string(dir),race_have[dir]));
+	race_bskin[dir] = min(1,ini_read_real("DATA","bskin"+string(dir),race_bskin[dir]));
+	race_cskin[dir] = min(1,ini_read_real("DATA","cskin"+string(dir),race_cskin[dir]));
+	race_dskin[dir] = min(1,ini_read_real("DATA","dskin"+string(dir),race_dskin[dir]));
+	race_eskin[dir] = min(1,ini_read_real("DATA","eskin"+string(dir),race_eskin[dir]));
+	race_fskin[dir] = min(1,ini_read_real("DATA","fskin"+string(dir),race_fskin[dir]));
+	race_gskin[dir] = min(1,ini_read_real("DATA","gskin"+string(dir),race_gskin[dir]));
 	skin[dir] = ini_read_real("DATA","skin"+string(dir),0);
 	crown_start[dir] = ini_read_real("DATA","crown_start"+string(dir),false);
 

@@ -10,7 +10,7 @@ function scrUnlockGameMode(gm, unlockText, specificGamemode = 0) {
 		}
 
 		with UberCont
-		scrSave();
+			scrSave();
 		
 		return true;
 	}

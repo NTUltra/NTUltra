@@ -92,6 +92,8 @@ if instance_exists(Player)
 	reload = 0//Player.reload
 	breload = 0//Player.breload
 	team = Player.team
+	wepFire = Player.wepFire;
+	isVenomized = Player.isVenomized;
 	mySize = Player.mySize
 
 	accuracy = Player.accuracy

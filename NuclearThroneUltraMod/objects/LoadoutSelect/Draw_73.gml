@@ -18,7 +18,7 @@ if (hasNoMenuOpen() && race != 0)
 		var ly =__view_get( e__VW.YView, 0 ) + 66;
 		var lx = sx + 16;
 		//SKIN
-		if skin=1 && UberCont.race_bskin[race]=1
+		if skin=1 && UberCont.race_bskin[race]>=1
 		{//you have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("B"),c_white,c_white,c_white,c_white,1);
 			//drawMenuBSkin(skin,race,c_white);
@@ -46,7 +46,7 @@ if (hasNoMenuOpen() && race != 0)
 				draw_set_halign(fa_left)
 			}
 		}
-		else if skin=2 && UberCont.race_cskin[race]=1
+		else if skin=2 && UberCont.race_cskin[race]>=1
 		{//you have this one
 			//draw_text_color(sx+1,__view_get( e__VW.YView, 0 )+67,string_hash_to_newline("C"),c_white,c_white,c_white,c_white,1);
 			//drawMenuBSkin(skin,race,c_white);

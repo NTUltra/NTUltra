@@ -2948,9 +2948,6 @@ function scrFire3(hasTailNow){
 		//SIX SHOOTER
 		case 881:
 
-		
-		with instance_create(x,y,Shell)
-		motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 		var currentShot = 6;
 		var isFinalShot = false;
 		var move = 5;
@@ -2958,12 +2955,14 @@ function scrFire3(hasTailNow){
 		if !instance_exists(SixShooter)
 		{
 			with instance_create(x,y,SixShooter) {
+				wep = other.wep;
 				owner = other.id;	
 			}
 		}
 		else
 		{
 			with SixShooter {
+				wep = other.wep;
 				isFinalShot = finalShot;
 				currentShot = ammo;
 			}
@@ -2973,6 +2972,9 @@ function scrFire3(hasTailNow){
 				motion_add(aimDirection+(random(8)-4)*other.accuracy,2+random(3))
 		if isFinalShot
 		{
+			repeat(6)
+			with instance_create(x,y,Shell)
+				motion_add(aimDirection+other.right*100+random(50)-25,2+random(2))
 			move += 1;
 			shakey += 5;
 			wkick = 6;

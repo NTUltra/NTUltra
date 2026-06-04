@@ -157,7 +157,7 @@ if hover && !(instance_exists(Player) && Player.ultra_got[19] && Player.altUltra
 	else
 		draw_text_colour(xx + 8,yy,"RMB TO SHOW DETAILS",c_gray,c_gray,c_gray,c_gray,1);
 }
-if candrawoutline && UberCont.ctot_skill_taken[skill] == 0 && showNew
+if candrawoutline && skill < array_length(UberCont.ctot_skill_taken) && skill >= 0 && UberCont.ctot_skill_taken[skill] == 0 && showNew
 {
 	var col = c_white;
 	if showTimer < 8

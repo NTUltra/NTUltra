@@ -24,7 +24,8 @@ friction = 0.4;
 right = choose(1,-1)
 
 team = 2
-
+wepFire = -2;
+isVenomized = 0;
 //scrWeapons();
 
 spr_idle = sprRobotTurret
