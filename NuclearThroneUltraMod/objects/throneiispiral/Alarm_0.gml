@@ -1,6 +1,6 @@
+alarm[0] = 1;
 if fps_real >= fps
 {
-	alarm[0] = 1;
 	image_angle += 8+sin(image_angle/300)*1
 
 	time += 1
