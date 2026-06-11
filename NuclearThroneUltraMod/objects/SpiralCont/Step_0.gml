@@ -1,5 +1,5 @@
 /// @description FPS spiral
-if alarm[1] < 1
+if alarm[1] < 1 && fps_real >= fps
 {
 	var newSpiral = noone;
 	var is60fps = UberCont.normalGameSpeed == 60 ? 0.5 : 1

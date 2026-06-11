@@ -2,7 +2,6 @@ if UberCont.public = 0 {
     //CHEATS
 
     if keyboard_check_pressed(ord("Z")) {
-
         Player.ammo[1] += 200
         Player.ammo[2] += 20
         Player.ammo[3] += 20

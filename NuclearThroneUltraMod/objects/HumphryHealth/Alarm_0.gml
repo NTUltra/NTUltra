@@ -5,8 +5,11 @@ with Player
 {
 	maxhealth -= 1;
 	my_health -= 1;
+	prevhealth -= 1;
 	maxhealth = max(1,maxhealth);
 	my_health = max(1,my_health);
+	prevhealth = max(1,prevhealth);
+	exception = true;
 }
 with PlayerSpawn {
 	maxhealth -= 1;
