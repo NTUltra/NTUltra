@@ -63,6 +63,7 @@ if loops > 0
 if loops > 1
 {
 	crossAmount += 1;	
+	actTime -= 1;
 }
 if loops > 2
 {
@@ -78,6 +79,7 @@ if loops > 3
 	crossAmount ++;
 	pSpeedAccurate += 0.5;
 	maxAmmo ++;
+	fireRate -= 1;
 }
 if loops > 4
 {
@@ -90,12 +92,20 @@ if loops > 4
 if loops > 5
 {
 	actTime -= 3;// thats 9
+	fireRate -= 1;
 	pSpeedAccurate += 0.5;
+	rotationSpeed *= 1.05;
 }
 if loops > 6
 {
 	maxAmmo ++;	
+	crossAmount ++;
+	crossPspeed += 1;
+	pSpeedAccurate += 0.5;
+	fireRate = max(fireRate - (loops - 6),2);
 }
+actTime = max(2,actTime - (loops * 0.5));
+fireRate = max(fireRate,2);
 if target != noone
 	angle = point_direction(target.x,target.y,x,y);
 else

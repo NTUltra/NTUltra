@@ -77,5 +77,5 @@ crossAmmo --;
 if crossAmmo > 0
 {
 	alarm[4] = 2;
-	alarm[1] += 3;
+	alarm[1] = max(3,alarm[1]);
 }

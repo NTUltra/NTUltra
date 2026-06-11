@@ -32,6 +32,6 @@ if target != noone && instance_exists(target)
 	if ammo > 0
 	{
 		alarm[3] = fireRate;
-		alarm[1] += alarm[3]+30;
+		alarm[1] += alarm[3]+(actTime * 2);
 	}
 }

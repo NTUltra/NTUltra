@@ -33,6 +33,6 @@ if target != noone
 	if ammo > 0
 	{
 		alarm[2] = fireRate;
-		alarm[1] += alarm[2]+30;
+		alarm[1] += alarm[2]+(actTime * 2);
 	}
 }

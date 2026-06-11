@@ -55,6 +55,7 @@ if !reachedHalfHP && my_health < maxhealth * 0.5
 {
 	reachedHalfHP = true;
 	actTime -= 2;
+	actTime = max(1,actTime);
 	rotationSpeed *= 1.1;
 	fireRate -= 1
 	crossAmount ++;
