@@ -383,7 +383,7 @@ betterplutoSecondStomach = defaultAttractValue;
 betterrabbitpaw = 0.0;
 betterrecyclegland = 0;
 betterboltmarrow = 0;
-betterTail = 1.5;
+betterTail = 1.33;
 luck = 1;
 scrRaces()
 bskin = UberCont.skin[race];

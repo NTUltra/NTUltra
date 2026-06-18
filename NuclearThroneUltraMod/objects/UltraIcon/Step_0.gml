@@ -760,7 +760,7 @@ if (selected && visible &&
 				}
 				if skill_got[42]//Tail end
 				{
-					betterTail = 2.1;
+					betterTail = 2;
 				}
 				with Player
 				{

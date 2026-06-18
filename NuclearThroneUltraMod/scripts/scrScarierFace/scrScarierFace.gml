@@ -4,9 +4,9 @@
 function scrScarierFace(theDamage, isPerFrame){
 	//Player.ultra_got[57] 
 	if (instance_exists(Player) && Player.skill_got[11]) {
-		var flatDmg = 0.5;
+		var flatDmg = 0.3;
 		if Player.race == 25
-			flatDmg += 0.15
+			flatDmg += 0.1
 		if isPerFrame
 			my_health -= min(theDamage * 0.5,((flatDmg - 0.1)*0.5));
 		else
@@ -39,7 +39,7 @@ function scrScarierFace(theDamage, isPerFrame){
 		Player.excessDamageDeal = 0;
 		//my_health = prevhealth - dmgTaken;
 		if (my_health < 0) {
-			var part = -0.64;
+			var part = -0.5;//-0.64;
 			if my_health < - 150
 			{
 				part = -0.1;
@@ -50,14 +50,14 @@ function scrScarierFace(theDamage, isPerFrame){
 			}
 			else if my_health < - 90
 			{
-				part = -0.4;
+				part = -0.3;
 			}
 			else if my_health < - 80
 			{
-				part = -0.65;
+				part = -0.4;
 			} else if my_health < - 50
 			{
-				part = - 0.7;
+				part = - 0.45;
 			}
 			if Player.race == 25 //Doctor
 				part -= 0.15;

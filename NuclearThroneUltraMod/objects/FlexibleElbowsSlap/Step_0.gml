@@ -7,7 +7,7 @@ if time == 1
 	BackCont.viewy2 += lengthdir_y(19,hk+180)*UberCont.opt_shake;
 	
 	followOwner = false;
-	var dropChance = 17;
+	var dropChance = 14;
 	if instance_exists(Player) && Player.skill_got[4]
 		dropChance += 3;
 	with scrDrop(dropChance,4)
@@ -23,14 +23,14 @@ if time == 1
 		snd_play(sndExplosion);
 		snd_play(sndSlap,0.03);
 		instance_create(x,y,ImpactFX);
-		var d = 8 + other.loops;
+		var d = 4 + other.loops;
 		if instance_exists(Player) && Player.race == 25
 		{
-			DealDamage(25 + (other.loops*2),false,true,false);
+			DealDamage(17 + (other.loops*2),false,true,false);
 			d += 1;
 		}
 		else
-			DealDamage(20 + (other.loops*2),false,true,false);
+			DealDamage(13 + (other.loops*2),false,true,false);
 		
 		var direct = other.id;
 		var hits = ds_list_create();

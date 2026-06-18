@@ -1072,9 +1072,9 @@ if(my_health <= 0 && maxhealth > 0)
 		scrGiveEuphoriaShield();
 		alarm[3] += 7;
 		var al = 6;//weapon types total
-		var takePercentage = 0.75;
+		var takePercentage = 0.8;
 		if race == 25
-			takePercentage = 0.55;
+			takePercentage = 0.6;
 		var baseammo;
 		baseammo[0] = 33 baseammo[1] = 255 baseammo[2] = 55 baseammo[3] = 55 baseammo[4] = 55 baseammo[5] = 55;
 		var lostAmmo = 0;
@@ -1090,7 +1090,7 @@ if(my_health <= 0 && maxhealth > 0)
 			var wasAbove = (ammo[i] > 0);
 			var usePercentage = takePercentage;
 			if i == wep_type[wep] || i == wep_type[bwep] {
-				usePercentage -= 0.2;
+				usePercentage -= 0.25;
 			}
 			if !wasAbove
 				usePercentage -= 0.05;

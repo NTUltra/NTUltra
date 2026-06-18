@@ -226,10 +226,10 @@ function scrSkills() {
 	//50% OF EXCESS DAMAGE YOU DEAL#IS ADDED TO YOUR NEXT HIT
 	//+5%
 	skill_text[11] = "SOME <w>EXCESS<w> <r>DAMAGE<r> TRANSFERS TO#THE NEXT <r>DAMAGE<r> YOU <w>DEAL<w>##DEAL <w>FIXED<w> EXTRA DAMAGE"; 
-	skill_detail[11] = "<w>65%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP##DEAL <w>+0.5<w> EXTRA DAMAGE"
+	skill_detail[11] = "<w>50%<w> OF <w>EXCESS<w> <r>DAMAGE<r> YOU <w>DEAL<w>#IS ADDED TO THE <w>NEXT<w> <r>DAMAGE<r> YOU <w>DEAL<w>#GETS LESS EFFECTIVE THE MORE#EXCESS DAMAGE YOU STACK UP##DEAL <w>+0.3<w> EXTRA DAMAGE"
 	skill_tips[11] = "imprint fear"//"mirrors will break"
 	skill_msnd[11] =  sndMutScarierFace
-	skill_bons[11] = "80% INSTEAD#+0.15 FIXED DAMAGE";
+	skill_bons[11] = "65% INSTEAD#+0.1 FIXED DAMAGE";
 
 	skill_name[12] = "EUPHORIA"
 	skill_text[12] = "<w>SLOWER<w> AND <w>SMALLER<w> <r>ENEMY BULLETS<r>#SHORT <aq>INVINCIBILITY<aq> UPON GETTING HIT";
@@ -475,12 +475,12 @@ function scrSkills() {
 	
 	
 	skill_name[33] = "GLASS ARM CANNON"//Metroid reference I guess
-	skill_text[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#<w>-2<w> <r>MAX HP<r>"
-	skill_detail[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <r>MAX HP<r>"
+	skill_text[33] = "<w>33%<w> LESS ENEMY <r>HP<r>#<w>-2<w> <r>MAX HP<r>"
+	skill_detail[33] = "<w>33%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
-		skill_text[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
-		skill_detail[33] = "<w>35%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <gb>MAX ARMOUR<gb>"
+		skill_text[33] = "<w>33%<w> LESS ENEMY <r>HP<r>#-2 <gb>MAX ARMOUR<gb>"
+		skill_detail[33] = "<w>33%<w> LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS#<w>-2<w> <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[33] = "fragile"
 	skill_msnd[33] =  sndMutGlassArmCannon
@@ -488,7 +488,7 @@ function scrSkills() {
 	{
 		if (Player.race == 4 && Player.maxhealth <= 2 && UberCont.ctot_skill_taken[33] <= 0)
 		{
-			skill_detail[33] = "35% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
+			skill_detail[33] = "33% LESS ENEMY <r>HP<r>#SLIGHTLY LESS EFFECTIVE#ON BIG HEALTHPOOLS##-2 <r>MAX HP<r>#<pi>TAKING THIS WONT KILL YOU<pi> <r><3<r>"	
 		}
 	}
 	skill_bons[33] = "25% LESS ENEMY HP INSTEAD#KEEP YOUR HEALTH";
@@ -529,15 +529,15 @@ function scrSkills() {
 	
 	skill_name[37] = "ECSTATIC FISTS"//REJUVINATED SKIN
 	skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <r>HEALTH<r> IS";
-	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#<w>+30%<w> AT <r>MAX HP<r>"
+	skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <r>HEALTH<r> IS#<w>+20%<w> AT <r>MAX HP<r>"
 	if canCheckUltra && Player.ultra_got[62] && Player.altUltra //Living armour
 	{
 		skill_text[37] = "YOU DEAL <w>MORE DAMAGE<w>#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS";
-		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#<w>+30%<w> AT <gb>MAX ARMOUR<gb>"
+		skill_detail[37] = "ALL <w>DAMAGE<w> TO ENEMIES IS INCREASED#BASED ON HOW FULL YOUR <gb>ARMOUR<gb> IS#<w>+20%<w> AT <gb>MAX ARMOUR<gb>"
 	}
 	skill_tips[37] = "glock those gun"
 	skill_msnd[37] =  sndMutEcstaticFists
-	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 38%)"
+	skill_bons[37] = "+25% DAMAGE INCREASE (TOTAL: 25%)"
 	
 	skill_name[38] = "ENRICHED METABOLISM"
 	skill_text[38] = "<aq>NEGATE<aq> EVERY <w>FOURTH<w> HIT YOU TAKE#AND GET <y>AMMO<y> INSTEAD"
@@ -555,7 +555,7 @@ function scrSkills() {
 	
 	skill_name[40] = "BOUNCY FAT"
 	skill_text[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE <w>LETHAL DAMAGE<w>#<aq>PREVENT<aq> IT AND LOSE <y>AMMO<y> INSTEAD";
-	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE <w>LETHAL DAMAGE<w>#<aq>PREVENT<aq> IT AND LOSE#<w>75%<w> OF BASE TOTAL <y>AMMO<y>#<w>20%<w> LESS FOR TYPES YOU'RE HOLDING"
+	skill_detail[40] = "IF YOU HAVE <y>AMMO<y> AND TAKE <w>LETHAL DAMAGE<w>#<aq>PREVENT<aq> IT AND LOSE#<w>80%<w> OF BASE TOTAL <y>AMMO<y>#<w>25%<w> LESS FOR TYPES YOU'RE HOLDING"
 	skill_tips[40] = "layer of fat"
 	skill_msnd[40] =  sndMutBouncyFat;
 	skill_bons[40] = "-27% AMMO COST (TOTAL: 55%)"
@@ -578,10 +578,10 @@ function scrSkills() {
 	
 	skill_name[42] = "THE TAIL'S END"
 	skill_text[42] = "<w>BURST<w> WEAPONS FIRE MORE#<w>CHARGE<w> WEAPONS CHARGE MUCH FASTER"
-	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE <w>50%<w> MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE <w>100%<w> FASTER#INCREASE MAX CHARGE##HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
+	skill_detail[42] = "<w>BURST<w> WEAPONS FIRE <w>33%<w> MORE FREE SHOTS#<w>CHARGE<w> WEAPONS CHARGE <w>100%<w> FASTER#INCREASE MAX CHARGE##HOVER OVER WEAPON IN HUD#TO SEE IF IT IS A BURST WEAPON#(WEAPON SPECIFIC MUTATION)"
 	skill_tips[42] = "tail is a weapon specific mutation"
 	skill_msnd[42] =  sndMutTailEnd;
-	skill_bons[42] = "+20% CHARGE RATE & BURST AMOUNT"
+	skill_bons[42] = "+25% CHARGE RATE & BURST AMOUNT"
 	if betterWepSpecific
 		skill_bons[42] = "DOUBLE BURST & INSTA CHARGE"
 	

@@ -23,27 +23,27 @@ function scrPowers(raceOverwrite = -1) {
 		if UberCont.normalGameSpeed == 60
 		{
 			if alienIntestines < 20
-				alienIntestines += 0.6;
+				alienIntestines += 0.5;
 			else
-				alienIntestines += 0.17;
+				alienIntestines += 0.15;
 			if loops > 0
-				alienIntestines += 0.03;
+				alienIntestines += 0.025;
 			if race == 25
 			{
-				alienIntestines += 0.06;	
+				alienIntestines += 0.05;	
 			}
 		}
 		else
 		{
 			if alienIntestines < 20
-				alienIntestines += 1.2;
+				alienIntestines += 1
 			else
-				alienIntestines += 0.34;
+				alienIntestines += 0.3;
 			if loops > 0
-				alienIntestines += 0.06;
+				alienIntestines += 0.05;
 			if race == 25
 			{
-				alienIntestines += 0.12;
+				alienIntestines += 0.1;
 			}
 		}
 	}
