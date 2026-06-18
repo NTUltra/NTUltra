@@ -3217,7 +3217,7 @@ if ultra_got[34]//Chicken Ultra B ninja
 				dmg *= 1.15;
 				dmg = ceil(dmg);
 				BackCont.shake += 2;
-				image_speed *= 0.8;
+				image_speed *= 0.85;
 			}
 		}
 	}

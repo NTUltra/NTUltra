@@ -7,7 +7,7 @@ if swapChar
 if ultra_got[16]
 {
 	meltingd = lastEnemyKilled;
-	lastEnemyKilled = [noone, noone];
+	lastEnemyKilled = [noone, noone, noone];
 }
 if race == 28
 {

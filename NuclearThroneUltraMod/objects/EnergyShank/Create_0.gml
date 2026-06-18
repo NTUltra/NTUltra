@@ -1,5 +1,4 @@
 event_inherited();
-image_speed = 0.4
 shk = 4;
 if instance_exists(Player)
 {

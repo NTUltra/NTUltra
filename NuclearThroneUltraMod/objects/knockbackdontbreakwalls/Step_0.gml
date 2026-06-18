@@ -2,6 +2,7 @@
 lerpTime -= lerpCalcBack;
 if target != noone && instance_exists(target)
 {
+	wepFire = -1;
 	with target
 	{
 		speed = other.pushSpeed/max(1,(mySize*0.5));

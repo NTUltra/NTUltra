@@ -1,6 +1,6 @@
 event_inherited();
 meleeAmmoType = 0;
-image_speed = 0.4;
+image_speed = 0.5;
 canBeAngled = false;
 appliedBoost = false;
 appliedAmmoChange = false;

@@ -8073,7 +8073,7 @@ function scrWeapons() {
 	wep_type[720] = 4
 	wep_auto[720] = 0
 	wep_load[720] = 70
-	wep_cost[720] = 22
+	wep_cost[720] = 30
 	wep_sprt[720] = sprRogueVanCannon
 	wep_area[720] = -1
 	wep_text[720] = "rogue power"
@@ -10001,7 +10001,7 @@ function scrWeapons() {
 	wep_type[891] = 5
 	wep_auto[891] = 0
 	wep_load[891] = 130
-	wep_cost[891] = 25
+	wep_cost[891] = 30
 	wep_sprt[891] = sprOctagun
 	wep_area[891] = 4
 	wep_text[891] = "octagon of death"

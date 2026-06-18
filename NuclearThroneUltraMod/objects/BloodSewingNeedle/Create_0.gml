@@ -9,4 +9,4 @@ time = 0;
 needleRange = 104;
 sprWdth = 34;
 right = 1;
-image_speed += 0.15;
+image_speed += 0.1;

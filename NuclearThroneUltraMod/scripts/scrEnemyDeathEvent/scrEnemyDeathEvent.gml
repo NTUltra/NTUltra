@@ -473,7 +473,7 @@ function scrEnemyDeathEvent(isSheep = false){
 					{
 						lastEnemyKilled[lastEnemyKilledIndex] = other.object_index;
 						lastEnemyKilledIndex += 1;
-						if lastEnemyKilledIndex > 1
+						if lastEnemyKilledIndex > 2
 							lastEnemyKilledIndex = 0;
 					}
 				}

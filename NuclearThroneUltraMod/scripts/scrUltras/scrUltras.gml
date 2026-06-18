@@ -119,7 +119,7 @@ function scrUltras(altOverride = false, resetUltraGot = true) {
 	    ultra_tips[15] = "ultra ultra ultra ultra"
     
 	    ultra_name[16] = "DOOMED"
-	    ultra_text[16] = "<w>LAST TWO<w> TYPES OF ENEMIES#THAT DIED IN AN AREA#ARE <r>DEAD<r> IN THE NEXT AREA##MORE <r>BLOOD<r> DAMAGE"
+	    ultra_text[16] = "<w>LAST THREE<w> TYPES OF ENEMIES#THAT DIED IN AN AREA#ARE <r>DEAD<r> IN THE NEXT AREA##MORE <r>BLOOD<r> DAMAGE"
 	    ultra_tips[16] = "blood sweat and tears"
 		
     

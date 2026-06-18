@@ -6,7 +6,7 @@ if other.team != team
 		if alarm[1] < 1
 		{
 			if !inArray
-				hitEntities[array_length(hitEntities)] = other.id;
+				array_push(hitEntities,other.id);
 			event_user(0);
 			with other
 			{
