@@ -450,7 +450,7 @@ if race == 25
 	peaceBarrierDuration *= 0.8;
 	metabolismBreak = 2;
 	puffyCheekAmount = 3;
-	hollowBonesTrigger = 0.23
+	hollowBonesTrigger = 0.27
 }
 if race == 14//Panda
 {

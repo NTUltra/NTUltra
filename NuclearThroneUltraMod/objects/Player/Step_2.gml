@@ -906,14 +906,14 @@ if(my_health <= 0 && maxhealth > 0)
 			peaceBarrierTime = 0;
 			BackCont.shake += 10;
 			Sleep(50);
-			alarm[3] += 18;
+			alarm[3] += 15;
 			snd_hurt = sndDamageNegate;
 			scrGiveEuphoriaShield();
 		    strongspiritused=true;
 		    strongspirit=false;
 			with instance_create(x,y,StrongSpiritBlock)
 			{
-				image_speed = 0.5;
+				image_speed = 0.6;
 			}
 	    }
     }
