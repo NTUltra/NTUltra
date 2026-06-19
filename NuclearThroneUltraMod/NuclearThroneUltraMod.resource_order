@@ -11023,6 +11023,7 @@
     {"name":"sprTimeThrower","order":143,"path":"sprites/sprTimeThrower/sprTimeThrower.yy",},
     {"name":"sprTinyJellyFish","order":29,"path":"sprites/sprTinyJellyFish/sprTinyJellyFish.yy",},
     {"name":"sprTinyJellyFishDead","order":31,"path":"sprites/sprTinyJellyFishDead/sprTinyJellyFishDead.yy",},
+    {"name":"sprTinyJellyFishExplode","order":38,"path":"sprites/sprTinyJellyFishExplode/sprTinyJellyFishExplode.yy",},
     {"name":"sprTinyJellyFishHurt","order":30,"path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},
     {"name":"sprTinyKraken","order":507,"path":"sprites/sprTinyKraken/sprTinyKraken.yy",},
     {"name":"sprTinyKrakenDead","order":509,"path":"sprites/sprTinyKrakenDead/sprTinyKrakenDead.yy",},

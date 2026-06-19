@@ -3,7 +3,7 @@ maxhealth = 1
 mySize = 1
 
 event_inherited()
-meleedamage = 3
+meleedamage = 4
 
 spr_idle = sprTinyJellyFish
 spr_walk = sprTinyJellyFish
@@ -12,7 +12,7 @@ spr_dead = sprTinyJellyFishDead
 snd_hurt = sndHitFlesh
 scrTarget();
 acc = 0.14;
-maxSpeed = 2.75;
+maxSpeed = 2.7;
 draw = true;
 blink = 6;
 trailSprite = sprScrapBossMissileTrail;
@@ -21,3 +21,6 @@ sleeping = true;
 image_xscale = choose(1,-1);
 right = image_xscale;
 esplode = false;
+loops = GetPlayerLoops();
+isEsploding = false;
+esplodeTime = 10;

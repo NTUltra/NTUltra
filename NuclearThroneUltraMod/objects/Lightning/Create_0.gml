@@ -28,3 +28,4 @@ enemyAccuracy = 24;
 rootX = x;
 rootY = y;
 canMood = true;
+startDelay = 1;

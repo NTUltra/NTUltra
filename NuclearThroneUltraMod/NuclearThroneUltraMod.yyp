@@ -11455,6 +11455,7 @@
     {"id":{"name":"sprTimeThrower","path":"sprites/sprTimeThrower/sprTimeThrower.yy",},},
     {"id":{"name":"sprTinyJellyFish","path":"sprites/sprTinyJellyFish/sprTinyJellyFish.yy",},},
     {"id":{"name":"sprTinyJellyFishDead","path":"sprites/sprTinyJellyFishDead/sprTinyJellyFishDead.yy",},},
+    {"id":{"name":"sprTinyJellyFishExplode","path":"sprites/sprTinyJellyFishExplode/sprTinyJellyFishExplode.yy",},},
     {"id":{"name":"sprTinyJellyFishHurt","path":"sprites/sprTinyJellyFishHurt/sprTinyJellyFishHurt.yy",},},
     {"id":{"name":"sprTinyKraken","path":"sprites/sprTinyKraken/sprTinyKraken.yy",},},
     {"id":{"name":"sprTinyKrakenDead","path":"sprites/sprTinyKrakenDead/sprTinyKrakenDead.yy",},},

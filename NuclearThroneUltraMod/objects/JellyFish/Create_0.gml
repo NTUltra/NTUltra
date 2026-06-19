@@ -4,7 +4,7 @@ mySize = 1
 
 
 event_inherited()
-meleedamage = 2
+meleedamage = 4
 
 spr_idle = sprJellyFish
 spr_walk = sprJellyFish
@@ -23,7 +23,7 @@ ammo = maxAmmo;
 alarm[1] = 30+random(90)
 maxSpeed = 2.5;
 loops = GetPlayerLoops();
-length = 5;
+length = 6;
 if loops > 0
 {
 	actTime = 6;

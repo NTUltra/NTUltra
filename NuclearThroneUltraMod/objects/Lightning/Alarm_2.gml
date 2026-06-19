@@ -91,7 +91,7 @@ if al > 0 && alarm[0] < 1
 							}
 							if sprite_index != spr_hurt && canHit
 							{
-								DealDamage(3)
+								DealDamage(4)
 								sprite_index = spr_hurt
 								image_index = 0
 								snd_play(snd_hurt, hurt_pitch_variation,true)

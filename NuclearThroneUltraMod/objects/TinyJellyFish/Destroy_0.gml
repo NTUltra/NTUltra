@@ -14,11 +14,23 @@ if (esplode)
 		var ang = random(360);
 		var am = 3;
 		var angStep = 360/am;
-		var l = 2;
+		var l = 4;
+		var sl = 0.5;
+		if loops > 1
+		{
+			sl = 0;
+			l += 2;
+		}
+		else if loops > 0
+		{
+			sl = 0.25;
+			l += 1;
+		}
 		repeat(am)
 		{
 			with instance_create(x,y,Lightning)
 			{
+				startDelay += sl;
 				image_angle = ang;
 				team = other.team
 				ammo = l;
