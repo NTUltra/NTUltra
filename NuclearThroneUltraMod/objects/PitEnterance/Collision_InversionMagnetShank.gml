@@ -6,6 +6,15 @@ with BigVultureSkull
 {
 	my_health = 0;
 }
+with BigFishSkull
+{
+	my_health = 0;
+}
+with GraveyardEntrance
+{
+	my_health = 0;
+}
+var ar = 1;
 with instance_create(x,y,Portal)
 {
 	type = 1
@@ -16,6 +25,7 @@ with instance_create(x,y,Portal)
 	scrForcePosition60fps();
 	with Player
 	{
+		ar = area;
 		area = 139
 		subarea = 0
 		lockout = true;
@@ -37,5 +47,5 @@ with enemy
 with instance_create(x,y,PortalEnviromentReplacer)
 {
 	area = 139;
-	prevArea = 1;
+	prevArea = ar;
 }

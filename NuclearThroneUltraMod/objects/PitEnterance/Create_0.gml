@@ -5,3 +5,10 @@ image_speed = 0;
 direction = 180;
 name = "?NEKORB SMEES SIHT";
 disable = false;
+with Player
+{
+	if area == 105
+		other.sprite_index = sprGhostPitEnteranceInverted;
+	else if area == 10
+		other.sprite_index = sprGhostPitEnteranceSavanna;
+}

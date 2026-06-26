@@ -5,7 +5,7 @@ if instance_number(enemy) = 0 or my_health < maxhealth
 	{
 		snd_play(sndAssassinGetUp);
 		my_health = other.my_health;
-		alarm[1] = 5;
+		alarm[1] = other.wakeDelay;
 		existTime = 30;
 	}
 }

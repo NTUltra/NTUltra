@@ -33,6 +33,6 @@ spawnAmount[0] = 2;
 spawnAmount[1] = 2;
 spawnAmount[2] = 1;
 spawnAmount[3] = 1;
-activeMeleDamage = 5;
+activeMeleDamage = 6;
 halfHealth = false;
 actTime = 12;

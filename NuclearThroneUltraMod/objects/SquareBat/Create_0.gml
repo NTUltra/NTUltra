@@ -16,7 +16,7 @@ snd_melee = sndGoldScorpionMelee;
 
 //behavior
 walk = 0
-alarm[1] = 30+random(90)
+alarm[1] = 60+random(90)
 alarm[10] = 0;
 actTime = 22;
 

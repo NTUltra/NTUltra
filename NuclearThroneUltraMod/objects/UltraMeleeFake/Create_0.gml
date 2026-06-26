@@ -1,6 +1,7 @@
 event_inherited();
 raddrop = 18
-maxhealth = 14
+maxhealth = 14;
+wakeDelay = 4;
 EnemyHealthAdjustments();
 spr_idle = sprite_index
 spr_hurt = sprUltraMeleeHurt

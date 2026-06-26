@@ -11,7 +11,7 @@ if target != noone {
 		if ran < 0.5
 		{
 			circleMode = false
-			walk = actTime + random_range(-4,6);
+			walk = actTime + random_range(-3,6);
 		} else if dis < 140 && ran < 4
 		{
 			circleMode = true;

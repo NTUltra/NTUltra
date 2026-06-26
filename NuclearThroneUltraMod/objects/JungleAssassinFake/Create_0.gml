@@ -1,6 +1,7 @@
 event_inherited()
 raddrop = 8
-maxhealth = 12
+maxhealth = 12;
+wakeDelay = 7;
 EnemyHealthAdjustments();
 wakeTime = 10;
 wakeObject = JungleAssassin;

@@ -1,6 +1,6 @@
 image_index = 0
 //bloodempty=0
-
+wakeDelay = 13;
 raddrop = 12
 maxhealth = 8
 meleedamage = 1

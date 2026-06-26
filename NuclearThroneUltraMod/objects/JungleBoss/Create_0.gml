@@ -39,7 +39,7 @@ spawnAmount[2] = 1;
 spawnAmount[3] = 1;
 activeMeleDamage = 5;
 halfHealth = false;
-actTime = 14;
+actTime = 15;
 alarm[10] = 0;
 
 if instance_exists(Player) && Player.skill_got[29] {

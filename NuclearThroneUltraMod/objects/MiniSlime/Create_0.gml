@@ -17,4 +17,4 @@ projectileSpeed = 2.2;
 acidAmount = 3;
 droprate = 10;
 slimeExplosion = noone;
-shdOffset = -6;
+shdOffset = -7;

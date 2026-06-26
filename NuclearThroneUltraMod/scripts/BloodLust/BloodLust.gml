@@ -8,8 +8,10 @@ function BloodLust(){
 		chance = 9.5
 	if instance_exists(DropReducer) && Player.my_health < Player.maxhealth && Player.my_health <= 2
 		chance += 1;//Took a hit not from self damage and is now low on health
+	else if  Player.my_health <= 2
+		chance += 0.5
 	if Player.loops < 1
-		chance += 0.5;
+		chance += 1;
     if Player.skill_got[7] = 1 and Player.canHeal && random(100) <  chance * Player.luck//7.69% chance
     {
 		var splatDir = random(360);

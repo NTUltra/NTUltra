@@ -11,10 +11,43 @@ if !disable
 			alarm[1] = max(alarm[1],30);
 		}
 	}
+	with BigFishSkull
+	{
+		if alarm[1] > 0
+		{
+			alarm[1] = max(alarm[1],30);
+		}
+	}
 	if KeyCont.key_pick[other.p] = 1
 	{
 		KeyCont.key_pick[Player.p] = 2;
 		disable = true;
+		with BigFishSkull
+		{
+			if spr_idle == sprBigFishSkullOpen
+			{
+				my_health = 0;
+				alarm[9] = 0;
+				canBeKilled = true;
+				snd_play(sndGhostBossExplosionAttack,0.1)
+				with instance_create(x,y,BecomeGhostExplosion)
+				{
+					team = 7;
+					sprite_index = sprGhostAboutToExplodeMedium;
+					explosionSize = 2;
+					if instance_exists(Player)
+						motion_add(point_direction(Player.x,Player.y,x,y),0.25);
+				}
+				if GetPlayerLoops() > 0
+				{
+					with other
+					{
+						instance_create(x,y,WantToGoToPitBro);
+						
+					}
+				}
+			}
+		}
 		with BigVultureSkull
 		{
 			if spr_idle == sprBigVultureSkullOpen
@@ -35,6 +68,7 @@ if !disable
 				{
 					with other
 					{
+						var ar = 1;
 						with instance_create(x,y,Portal)
 						{
 							type = 1
@@ -45,6 +79,7 @@ if !disable
 							scrForcePosition60fps();
 							with Player
 							{
+								ar = area;
 								area = 139
 								subarea = 0
 								lockout = true;
@@ -66,8 +101,59 @@ if !disable
 						with instance_create(x,y,PortalEnviromentReplacer)
 						{
 							area = 139;
-							prevArea = 1;
+							prevArea = ar;
 						}
+					}
+				}
+			}
+		}
+		with GraveyardEntrance
+		{
+			my_health = 0;
+			alarm[9] = 0;
+			canBeKilled = true;
+			snd_play(sndGhostBossExplosionAttack,0.1)
+			with instance_create(x,y,BecomeGhostExplosion)
+			{
+				team = 7;
+				sprite_index = sprGhostAboutToExplodeMedium;
+				explosionSize = 2;
+				if instance_exists(Player)
+					motion_add(point_direction(Player.x,Player.y,x,y),0.25);
+			}
+			if GetPlayerLoops() > 0
+			{
+				with other
+				{
+					var ar = 1;
+					with instance_create(x,y,Portal)
+					{
+						type = 1
+						pullstrength = 3;
+						alarm[1] = 1;
+						x = other.x;
+						y = other.y;
+						scrForcePosition60fps();
+						with Player
+						{
+							ar = area;
+							area = 139
+							subarea = 0
+							lockout = true;
+							x = other.x;
+							y = other.y;
+							scrForcePosition60fps();
+						}
+					}
+					with enemy
+					{
+						my_health = 0;
+						prevhealth = 0;
+					}
+					with instance_create(x,y,PortalEnviromentReplacer)
+					{
+						area = 139;
+						prevArea = ar;
 					}
 				}
 			}

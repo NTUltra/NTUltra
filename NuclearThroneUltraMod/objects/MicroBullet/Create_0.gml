@@ -1,6 +1,6 @@
 event_inherited();
 typ = 2 
-dmg = 2;
+dmg = 2.3;
 dmgPercentage = 0;
 aimed = false;
 lp = 0;

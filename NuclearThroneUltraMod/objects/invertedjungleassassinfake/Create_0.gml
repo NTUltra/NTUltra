@@ -1,6 +1,8 @@
 event_inherited()
-raddrop = 12
-maxhealth = 7
+raddrop = 12;
+wakeDelay = 8;
+maxhealth = 7;
+wakeDelay = 5;
 EnemyHealthAdjustments();
 spr_idle = sprite_index
 spr_hurt = sprInvertedJungleAssassinHurt

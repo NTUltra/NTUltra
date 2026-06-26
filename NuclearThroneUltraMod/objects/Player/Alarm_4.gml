@@ -3,7 +3,7 @@ if boilingAmount > 0
 {
 	boilingAmount -= 1;
 	
-	if boilingAmount > 10
+	if boilingAmount > 10 && !isInvisible
 	{
 		if boilingAmount == 28
 			snd_play(sndVeinsPop);

@@ -25,7 +25,8 @@ if instance_exists(Player) && Player.subarea != 1
 	}
 }
 if loops < 1
-	alarm[2] = 1
+	alarm[2] = 20
+alarm[4] = 20;
 // instance_create(x,y,BigWallBreak);
 y -= 16;
 x -= 16;
